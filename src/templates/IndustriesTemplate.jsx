@@ -24,6 +24,7 @@ import {
   FaTrophy,
   FaAward,
   FaLeaf,
+  FaLock,
   
 } from "react-icons/fa";
 
@@ -80,6 +81,9 @@ const iconMap = {
   //manufacturing
   Award:FaAward,
   Leaf:FaLeaf,
+
+  //travel-logistics
+  Lock:FaLock,
 };
 
 /* =======================
@@ -91,25 +95,15 @@ export default function IndustriesTemplate() {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
+useEffect(() => {
     async function loadJSON() {
       try {
         setLoading(true);
-        // Try multiple import paths
-        let data;
-        try {
-          data = await import(`../../data/industries/${id}.json`);
-        } catch {
-          try {
-            data = await import(`../../data/industries/${id}.json`);
-          } catch {
-            data = await import(`@/data/industries/${id}.json`);
-          }
-        }
+        const data = await import(`../data/industries/${id}.json`);
         setIndustry(data.default);
         setLoading(false);
       } catch (e) {
-        console.error("JSON not found for industry:", id, e);
+        console.error("JSON not found for service:", id);
         setError(true);
         setLoading(false);
       }
@@ -144,15 +138,15 @@ export default function IndustriesTemplate() {
           className="space-y-6 text-center"
         >
           <div className="text-6xl">⚠️</div>
-          <h1 className="text-3xl font-bold text-white">Industry Not Found</h1>
+          <h1 className="text-3xl font-bold text-white">Service Not Found</h1>
           <p className="text-[var(--text-gray)]">
-            The industry you're looking for doesn't exist.
+            The service you're looking for doesn't exist.
           </p>
           <Link
             to="/industries"
             className="inline-flex items-center gap-2 px-6 py-3 btn-primary"
           >
-            <FaHome /> Back to Industries
+            <FaHome /> Back to Services
           </Link>
         </motion.div>
       </div>

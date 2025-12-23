@@ -13,8 +13,8 @@ import {
   FaStar,
 } from "react-icons/fa";
 import { useLocation } from 'react-router-dom';
-// import HeroSection from "../../components/layout/HeroSection";
-import BackgroundGrid from "../../components/layout/BackgroundGrid.jsx";
+import BackgroundGrid from "../../components/layout/BackgroundGrid";
+
 
 /* =======================
    ANIMATIONS
