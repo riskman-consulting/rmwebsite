@@ -1,16 +1,24 @@
 {
   "mainNav": [
     { "label": "Home", "type": "link", "path": "/" },
-    { "label": "About", "type": "link", "path": "/about" },
-
+    { "label": "About", "type": "mega", "key": "about" },
     { "label": "Services", "type": "mega", "key": "services" },
     { "label": "Industries", "type": "mega", "key": "industries" },
-
     { "label": "Insights", "type": "mega", "key": "insights" },
-
     { "label": "Contact", "type": "link", "path": "/contact" }
   ],
 
+  "aboutMegaMenu": [
+    {
+      "title": "Leadership",
+      "items": [
+        { "label": "Co-founding Partners", "path": "/about#co-founders" },
+        { "label": "Service Leaders", "path": "/about#service-leaders" },
+        {"label":"Team Leaders","path":"/about/#team-leaders"}
+      ]
+    }
+  ],
+  
   "servicesMegaMenu": [
     {
       "title": "Risk Advisory",
@@ -27,7 +35,8 @@
         { "label": "Data Privacy", "path": "/services/data-privacy" },
         { "label": "SOC Services", "path": "/services/soc-services" },
         { "label": "ISO Certifications", "path": "/services/iso-certifications" },
-        { "label": "EPC Risk Management Solutions", "path": "/services/epc-risk-management"}      ]
+        { "label": "EPC Risk Management Solutions", "path": "/services/epc-risk-management"}
+      ]
     },
 
     {
@@ -72,7 +81,7 @@
     }
   ],
 
- "insightsMegaMenu": [
+  "insightsMegaMenu": [
     {
       "title": "Insights & Resources",
       "items": [
@@ -83,4 +92,3 @@
     }
   ]
 }
-

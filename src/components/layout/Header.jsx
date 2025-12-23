@@ -7,7 +7,7 @@ import MegaMenu from "./MegaMenu";
 import { Menu, X, ChevronDown, ArrowRight, Phone } from "lucide-react";
 
 
-const { mainNav, servicesMegaMenu, industriesMegaMenu, insightsMegaMenu } = menus;
+const { mainNav, servicesMegaMenu, industriesMegaMenu, insightsMegaMenu,aboutMegaMenu } = menus;
 
 const gradientBg = "bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600";
 const activeLinkClasses = "text-indigo-600 font-semibold relative";
@@ -31,10 +31,17 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [desktopOpenMenu, setDesktopOpenMenu] = useState(null);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState({});
-  const [scrolled, setScrolled] = useState(false);
   const closeTimeoutRef = useRef(null);
   const [selected,setSelected]=useState(false);
+  const[activeMega,setActiveMega]=useState(null);
+  const[scrolled,setScrolled]=useState(false);
 
+  
+useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 80);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   
 useEffect(() => {
   const changeNavbarRoutes = [
@@ -104,6 +111,7 @@ useEffect(() => {
     if (key === "services") return servicesMegaMenu;
     if (key === "industries") return industriesMegaMenu;
     if (key === "insights") return insightsMegaMenu;
+    if(key=== "about")  return aboutMegaMenu;
     return [];
   };
 
