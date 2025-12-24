@@ -7,7 +7,7 @@ import MegaMenu from "./MegaMenu";
 import { Menu, X, ChevronDown, ArrowRight, Phone } from "lucide-react";
 
 
-const { mainNav, servicesMegaMenu, industriesMegaMenu, insightsMegaMenu,aboutMegaMenu } = menus;
+const { mainNav, servicesMegaMenu, industriesMegaMenu, insightsMegaMenu, aboutMegaMenu } = menus;
 
 const gradientBg = "bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600";
 const activeLinkClasses = "text-indigo-600 font-semibold relative";
@@ -32,32 +32,32 @@ export default function Header() {
   const [desktopOpenMenu, setDesktopOpenMenu] = useState(null);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState({});
   const closeTimeoutRef = useRef(null);
-  const [selected,setSelected]=useState(false);
-  const[activeMega,setActiveMega]=useState(null);
-  const[scrolled,setScrolled]=useState(false);
+  const [selected, setSelected] = useState(false);
+  const [activeMega, setActiveMega] = useState(null);
+  const [scrolled, setScrolled] = useState(false);
 
   
-useEffect(() => {
+  useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 80);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   
-useEffect(() => {
-  const changeNavbarRoutes = [
-    "/services",
-    "/industries",
-    "/about",
-    "/contact",
-    "/insights",
-  ];
+  useEffect(() => {
+    const changeNavbarRoutes = [
+      "/services",
+      "/industries",
+      "/about",
+      "/contact",
+      "/insights",
+    ];
 
-  const shouldChangeNavbar = changeNavbarRoutes.some((route) =>
-    location.pathname.startsWith(route)
-  );
+    const shouldChangeNavbar = changeNavbarRoutes.some((route) =>
+      location.pathname.startsWith(route)
+    );
 
-  setSelected(shouldChangeNavbar);
-}, [location.pathname]);
+    setSelected(shouldChangeNavbar);
+  }, [location.pathname]);
 
 
   useEffect(() => {
@@ -111,14 +111,14 @@ useEffect(() => {
     if (key === "services") return servicesMegaMenu;
     if (key === "industries") return industriesMegaMenu;
     if (key === "insights") return insightsMegaMenu;
-    if(key=== "about")  return aboutMegaMenu;
+    if (key === "about") return aboutMegaMenu;
     return [];
   };
 
   return (
     <header
       className={`fixed top-0 left-0 w-full z-[100] transition-all duration-300 ${
-        selected ? "bg-black":scrolled
+        selected ? "bg-black" : scrolled
           ? "bg-[#05051e]"
           : "bg-[#05051e]"
       }`}
@@ -221,9 +221,10 @@ useEffect(() => {
                 );
               }
 
-              // MEGA MENUS
+              // MEGA MENUS - NOW CLICKABLE
               if (item.type === "mega") {
                 const megaSections = getMegaData(item.key);
+                const isActive = location.pathname.startsWith(item.path);
 
                 return (
                   <div
@@ -232,8 +233,13 @@ useEffect(() => {
                     onMouseEnter={() => handleMenuEnter(item.label)}
                     onMouseLeave={handleMenuLeave}
                   >
-                    <button 
-                      className="flex items-center gap-1 text-sm font-medium text-white transition-colors duration-200 hover:text-indigo-600"
+                    <Link
+                      to={item.path}
+                      className={`flex items-center gap-1 text-sm font-medium transition-colors duration-200 ${
+                        isActive 
+                          ? "text-indigo-600" 
+                          : "text-white hover:text-indigo-600"
+                      }`}
                     >
                       {item.label}
                       <ChevronDown
@@ -242,7 +248,7 @@ useEffect(() => {
                           desktopOpenMenu === item.label ? "rotate-180" : ""
                         }`}
                       />
-                    </button>
+                    </Link>
 
                     <AnimatePresence>
                       {desktopOpenMenu === item.label && (
@@ -331,11 +337,12 @@ useEffect(() => {
                   );
                 }
 
-                // DROPDOWNS & MEGAS
+                // DROPDOWNS & MEGAS - NOW WITH CLICKABLE HEADER
                 if (item.type === "dropdown" || item.type === "mega") {
                   const isOpen = mobileDropdownOpen[item.label];
                   const megaData =
                     item.type === "mega" ? getMegaData(item.key) : null;
+                  const isActive = item.path && location.pathname.startsWith(item.path);
 
                   return (
                     <motion.div
@@ -344,18 +351,31 @@ useEffect(() => {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: idx * 0.05 }}
                     >
-                      <button
-                        className="flex items-center justify-between w-full px-3 py-3 text-base font-medium transition-colors rounded-lg text-slate-800 hover:bg-slate-50"
-                        onClick={() => toggleMobileDrop(item.label)}
-                      >
-                        <span>{item.label}</span>
-                        <ChevronDown
-                          size={18}
-                          className={`transition-transform duration-200 ${
-                            isOpen ? "rotate-180" : ""
+                      {/* Main clickable link with dropdown toggle */}
+                      <div className="flex items-center gap-2">
+                        <Link
+                          to={item.path}
+                          onClick={() => setMobileOpen(false)}
+                          className={`flex-1 px-3 py-3 text-base font-medium transition-colors rounded-lg ${
+                            isActive
+                              ? "bg-indigo-50 text-indigo-600"
+                              : "text-slate-800 hover:bg-slate-50"
                           }`}
-                        />
-                      </button>
+                        >
+                          {item.label}
+                        </Link>
+                        <button
+                          className="p-2 transition-colors rounded-lg hover:bg-slate-100"
+                          onClick={() => toggleMobileDrop(item.label)}
+                        >
+                          <ChevronDown
+                            size={18}
+                            className={`transition-transform duration-200 ${
+                              isOpen ? "rotate-180" : ""
+                            }`}
+                          />
+                        </button>
+                      </div>
 
                       <AnimatePresence>
                         {isOpen && (

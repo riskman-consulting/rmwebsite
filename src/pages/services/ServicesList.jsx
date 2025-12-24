@@ -18,6 +18,7 @@ import {
   FaCheckCircle,
 } from "react-icons/fa";
 import allServices from "../../data/services-master-list.json";
+import BackgroundGrid from "../../components/layout/BackgroundGrid";
 
 /* =======================
    ANIMATIONS
@@ -89,7 +90,7 @@ const ServiceCard = ({ service, index }) => {
       <Link to={`/services/${service.id}`}>
         <motion.div
           whileHover={{ scale: 1.05, y: -8 }}
-          className="bg-[var(--dark-navy-light)] backdrop-blur-sm border border-white/5 rounded-2xl overflow-hidden h-full relative cursor-pointer transition-all duration-500 hover:border-[var(--accent-blue)]/50 hover:shadow-2xl hover:shadow-[var(--accent-blue)]/30"
+          className="bg-zinc-800 backdrop-blur-sm border border-white/5 rounded-2xl overflow-hidden h-full relative cursor-pointer transition-all duration-500 hover:border-[var(--accent-blue)]/50 hover:shadow-2xl hover:shadow-[var(--accent-blue)]/30"
         >
           {/* Animated gradient background */}
           <motion.div
@@ -202,8 +203,28 @@ export default function ServicesList() {
 
   return (
     <div className="min-h-screen bg-[var(--dark-navy)] text-white overflow-x-hidden">
+      <BackgroundGrid/>
       {/* ================= HERO ================= */}
       <section className="relative isolate min-h-[60vh] flex items-center justify-center section-padding overflow-hidden">
+
+        <div className="absolute inset-0 z-0">
+    <div className="absolute inset-0 bg-gradient-to-b from-[var(--dark-navy)]/90 via-[var(--dark-navy)]/70 to-[var(--dark-navy)] z-10" />
+    <img
+      src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&h=1080&fit=crop&q=80"
+      alt="Professional Services"
+      className="object-cover w-full h-full opacity-30"
+    />
+    {/* Animated pattern overlay */}
+    <div 
+      className="absolute inset-0 opacity-20 z-5" 
+      style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234f46e5' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+      }}
+    />
+    <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-purple-900/20 z-5" />
+  </div>
+
+        
         <motion.div
           className="bg-glow-blue absolute top-[-200px] right-[-100px]"
           animate={{
@@ -270,7 +291,7 @@ export default function ServicesList() {
 
             <motion.p
               variants={fadeInUp}
-              className="text-xl md:text-2xl text-[var(--text-gray)] max-w-3xl mx-auto leading-relaxed"
+              className="max-w-3xl mx-auto text-xl leading-relaxed text-white md:text-2xl"
             >
               Enterprise-grade advisory across risk, audit, cybersecurity, and
               assurance
@@ -280,11 +301,11 @@ export default function ServicesList() {
       </section>
 
       {/* ================= SERVICES GRID ================= */}
-      <section className="relative section-padding isolate">
+      <section className="relative bg-black section-padding isolate">
         <div className="container mx-auto max-w-7xl">
           {/* Section Header */}
           <motion.div
-            className="mb-16 text-center"
+            className="mb-16 text-start"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -292,7 +313,7 @@ export default function ServicesList() {
             <h2 className="mb-6 text-4xl font-bold md:text-5xl">
               Our <span className="gradient-text">Service Offerings</span>
             </h2>
-            <p className="text-lg text-[var(--text-gray)] max-w-3xl mx-auto">
+            <p className="max-w-3xl text-base text-white text-start">
               Discover how RiskMan services and solutions help you turn risk
               into resilience and growth
             </p>
@@ -308,16 +329,16 @@ export default function ServicesList() {
       </section>
 
       {/* ================= WHY CHOOSE RISKMAN ================= */}
-      <section className="relative section-padding isolate">
+      <section className="relative bg-black section-padding isolate">
         <div className="bg-glow-purple absolute top-[100px] right-[-200px]" />
 
-        <div className="container mx-auto max-w-7xl">
+        <div className="container max-w-7xl">
           <motion.h2
             variants={fadeInUp}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="mb-16 text-4xl font-bold text-center md:text-5xl"
+            className="mb-16 text-4xl font-bold text-start md:text-5xl"
           >
             Why Choose
             <br />
@@ -354,7 +375,7 @@ export default function ServicesList() {
                   y: -5,
                   transition: { duration: 0.3 },
                 }}
-                className="bg-gradient-to-br from-[var(--accent-blue)]/10 to-[var(--accent-purple)]/10 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center group relative overflow-hidden cursor-pointer"
+                className="relative p-8 overflow-hidden text-center border cursor-pointer bg-zinc-800 backdrop-blur-sm border-white/10 rounded-2xl group"
               >
                 {/* Glow effect */}
                 <motion.div
@@ -390,7 +411,7 @@ export default function ServicesList() {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="section-padding text-center bg-gradient-to-b from-transparent to-[var(--dark-navy-light)] relative isolate">
+      <section className="relative text-center bg-black section-padding isolate">
         <div className="bg-glow-blue absolute top-[50px] left-[-100px]" />
 
         <div className="container relative z-10 max-w-6xl mx-auto">

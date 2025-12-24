@@ -95,5 +95,11 @@
     "label": "Media Clients Served"
   },
   
-  "clientLogos": ["BBC", "Netflix-logo", "CNN-logo", "Verizon"]
+  "clientLogos": ["BBC", "Netflix-logo", "CNN-logo", "Verizon"],
+  "cta": {
+        "heading": "Ready to Transform Your Media Operations?",
+        "text": "Partner with RiskMan for content security, compliance advisory, and digital transformation solutions designed for media and entertainment companies.",
+        "button": "Schedule a Consultation",
+        "link": "/contact"
+ }
 }

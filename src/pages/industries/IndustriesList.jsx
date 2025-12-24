@@ -15,6 +15,7 @@ import {
   FaLightbulb,
 } from "react-icons/fa";
 import industries from "../../data/industries-master-list.json";
+import BackgroundGrid from "../../components/layout/BackgroundGrid";
 
 /* =======================
    ANIMATIONS
@@ -80,7 +81,7 @@ const IndustryCard = ({ industry, index }) => {
       <Link to={`/industries/${industry.id}`}>
         <motion.div
           whileHover={{ scale: 1.05, y: -8 }}
-          className="bg-[var(--dark-navy-light)] backdrop-blur-sm border border-white/5 rounded-2xl overflow-hidden h-full relative cursor-pointer transition-all duration-500 hover:border-[var(--accent-blue)]/50 hover:shadow-2xl hover:shadow-[var(--accent-blue)]/30"
+          className="bg-zinc-800 backdrop-blur-sm border border-white/5 rounded-2xl overflow-hidden h-full relative cursor-pointer transition-all duration-500 hover:border-[var(--accent-blue)]/50 hover:shadow-2xl hover:shadow-[var(--accent-blue)]/30"
         >
           {/* Animated gradient background */}
           <motion.div
@@ -183,7 +184,9 @@ const IndustryCard = ({ industry, index }) => {
 ======================= */
 export default function IndustriesList() {
   return (
-    <div className="min-h-screen bg-[var(--dark-navy)] text-white overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden text-white bg-black">
+
+      <BackgroundGrid/>
       {/* ================= HERO ================= */}
       <section className="relative isolate min-h-[60vh] flex items-center justify-center section-padding overflow-hidden">
         <motion.div
@@ -252,7 +255,7 @@ export default function IndustriesList() {
 
             <motion.p
               variants={fadeInUp}
-              className="text-xl md:text-2xl text-[var(--text-gray)] max-w-3xl mx-auto leading-relaxed"
+              className="max-w-3xl mx-auto text-xl leading-relaxed text-white md:text-2xl"
             >
               Sector-focused expertise delivering risk, compliance, and resilience
             </motion.p>
@@ -265,7 +268,7 @@ export default function IndustriesList() {
         <div className="container mx-auto max-w-7xl">
           {/* Section Header */}
           <motion.div
-            className="mb-16 text-center"
+            className="mb-16 text-start"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -273,7 +276,7 @@ export default function IndustriesList() {
             <h2 className="mb-6 text-4xl font-bold md:text-5xl">
               Tailored <span className="gradient-text">Industry Solutions</span>
             </h2>
-            <p className="text-lg text-[var(--text-gray)] max-w-3xl mx-auto">
+            <p className="max-w-3xl text-base text-white text-start">
               Designed for sector-specific regulatory, operational, and strategic challenges
             </p>
           </motion.div>
@@ -301,7 +304,7 @@ export default function IndustriesList() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="mb-16 text-4xl font-bold text-center md:text-5xl"
+            className="mb-16 text-4xl font-bold text-start md:text-5xl"
           >
             Industry-Specific
             <br />
@@ -338,7 +341,7 @@ export default function IndustriesList() {
                   y: -5,
                   transition: { duration: 0.3 },
                 }}
-                className="bg-gradient-to-br from-[var(--accent-blue)]/10 to-[var(--accent-purple)]/10 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center group relative overflow-hidden cursor-pointer"
+                className="relative p-8 overflow-hidden text-center border cursor-pointer bg-zinc-800 backdrop-blur-sm border-white/10 rounded-2xl group"
               >
                 {/* Glow effect */}
                 <motion.div
@@ -374,7 +377,7 @@ export default function IndustriesList() {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="section-padding text-center bg-gradient-to-b from-transparent to-[var(--dark-navy-light)] relative isolate">
+      <section className="relative text-center bg-black section-padding isolate">
         <div className="bg-glow-blue absolute top-[50px] left-[-100px]" />
 
         <div className="container relative z-10 max-w-6xl mx-auto">

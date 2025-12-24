@@ -1,10 +1,10 @@
 {
   "mainNav": [
     { "label": "Home", "type": "link", "path": "/" },
-    { "label": "About", "type": "mega", "key": "about" },
-    { "label": "Services", "type": "mega", "key": "services" },
-    { "label": "Industries", "type": "mega", "key": "industries" },
-    { "label": "Insights", "type": "mega", "key": "insights" },
+    { "label": "About", "type": "mega", "key": "about","path":"/about"},
+    { "label": "Services", "type": "mega", "key": "services","path":"/services" },
+    { "label": "Industries", "type": "mega", "key": "industries","path":"/industries" },
+    { "label": "Insights", "type": "mega", "key": "insights","path":"/insights" },
     { "label": "Contact", "type": "link", "path": "/contact" }
   ],
 
@@ -14,7 +14,8 @@
       "items": [
         { "label": "Co-founding Partners", "path": "/about#co-founders" },
         { "label": "Service Leaders", "path": "/about#service-leaders" },
-        {"label":"Team Leaders","path":"/about/#team-leaders"}
+        {"label":"Team Leaders","path":"/about/#team-leaders"},
+        {"label":"Alliance Partners","path":"/about/#alliance-partners"}
       ]
     }
   ],

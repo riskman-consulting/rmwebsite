@@ -25,6 +25,13 @@ import {
   FaAward,
   FaLeaf,
   FaLock,
+  FaSun,
+  FaFilm,
+  FaCode,
+  FaCompass,
+  FaDatabase,
+  FaBan,
+  
   
 } from "react-icons/fa";
 
@@ -84,6 +91,17 @@ const iconMap = {
 
   //travel-logistics
   Lock:FaLock,
+
+  //energy utilities
+  Sun:FaSun,
+
+  //media 
+  Film:FaFilm,
+  Code:FaCode,
+  Database:FaDatabase,
+  Compass:FaCompass,
+  ShieldOff:FaBan,
+  Activity:FaChartLine,
 };
 
 /* =======================

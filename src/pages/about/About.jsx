@@ -14,6 +14,9 @@ import {
 } from "react-icons/fa";
 import { useLocation } from 'react-router-dom';
 import BackgroundGrid from "../../components/layout/BackgroundGrid";
+import AlliancePartnersSection from "./AlllianceSections";
+import TeamMembersSection from "./TeamMembersSection";
+import Events from "./Events";
 
 
 /* =======================
@@ -373,6 +376,24 @@ export default function About() {
 
       <BackgroundGrid/>
       <section className="relative isolate pt-24 min-h-[70vh] flex items-center justify-center">
+      
+      {/* Animated Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#05051e]/90 via-[#05051e]/70 to-[#05051e] z-10" />
+          <img
+            src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&h=1080&fit=crop&q=80"
+            alt="Professional team collaboration"
+            className="object-cover w-full h-full opacity-40"
+          />
+          {/* Animated overlay pattern */}
+          <div className="absolute inset-0 opacity-20 z-5" 
+               style={{
+                 backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234f46e5' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+               }}
+          />
+        </div>
+
+        
         <div className="bg-glow-blue absolute -top-48 right-[-120px] pointer-events-none hidden lg:block" />
         <div className="bg-glow-purple absolute -bottom-48 left-[-150px] pointer-events-none hidden lg:block" />
 
@@ -463,7 +484,7 @@ export default function About() {
       </section>
 
       {/* ================= TRIBUTE SECTION ================= */}
-      <section className="relative py-16 bg-black lg:py-24 isolate">
+      <section className="relative bg-black py-14 md:py-20 isolate">
         <div className="max-w-4xl px-6 mx-auto text-center transition-all duration-300 border border-black shadow-lg lg:px-8 bg-black/10 rounded-3xl hover:border-indigo-300 hover:shadow-2xl">
           <motion.div
             variants={fadeInUp}
@@ -491,7 +512,7 @@ export default function About() {
       </section>
 
       {/* ================= FEATURES ================= */}
-      <section className="relative py-16 bg-black lg:py-24">
+      <section className="relative bg-black py-14 md:py-20">
         <div className="px-6 mx-auto max-w-7xl lg:px-8">
           <motion.div
             className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4"
@@ -524,14 +545,14 @@ export default function About() {
       </section>
 
       {/* ================= MISSION & VISION ================= */}
-      <section className="relative py-16 bg-black lg:py-24 isolate">
+      <section className="relative bg-black py-14 md:py-20 isolate">
         <div className="px-6 mx-auto max-w-7xl lg:px-8">
           <motion.h2
             variants={fadeInUp}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="mb-16 text-4xl font-bold text-center md:text-5xl"
+            className="mb-16 text-3xl font-bold text-start md:text-4xl"
           >
             Mission and
             <br />
@@ -663,7 +684,7 @@ export default function About() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="mb-4 text-4xl font-bold text-center md:text-5xl "
+            className="mb-4 text-4xl font-bold text-start md:text-5xl "
           >
             Co-founding
             <br />
@@ -675,7 +696,7 @@ export default function About() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="max-w-2xl mx-auto mb-12 text-center text-white"
+            className="max-w-2xl mb-12 text-white text-start"
           >
             Meet the visionary leaders driving RiskMan's mission forward
           </motion.p>
@@ -695,7 +716,12 @@ export default function About() {
                   <img
                     src={m.image}
                     alt={m.name}
-                    className="object-cover transition-transform duration-500 rounded-full w-28 h-28"
+                    className="w-28 h-28
+                object-cover rounded-full
+                border-4 border-[var(--accent-blue)]/30
+                grayscale group-hover:grayscale-0
+                hover:scale-105
+                transition-all duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[var(--dark-navy)] to-transparent opacity-60" />
                 </div>
@@ -723,14 +749,14 @@ export default function About() {
       </section>
 
       {/* ================= SERVICE LEADERS ================= */}
-      <section id="service-leaders" className="relative py-16 bg-black lg:py-24 isolate">
+      <section id="service-leaders" className="relative bg-black py-14 md:py-20 isolate">
         <div className="px-6 mx-auto max-w-7xl lg:px-8">
           <motion.h2
             variants={fadeInUp}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="mb-4 text-4xl font-bold text-center md:text-5xl"
+            className="mb-4 text-4xl font-bold text-start md:text-5xl"
           >
             Our Team
             <br />
@@ -742,7 +768,7 @@ export default function About() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="text-center text-[var(--text-gray)] mb-12 max-w-2xl mx-auto"
+            className="max-w-2xl mb-12 text-white text-start"
           >
             Industry experts leading specialized service domains
           </motion.p>
@@ -831,7 +857,7 @@ export default function About() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="mb-4 text-4xl font-bold text-center md:text-5xl"
+            className="mb-4 text-4xl font-bold text-start md:text-5xl"
           >
             Client
             <br />
@@ -843,7 +869,7 @@ export default function About() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="max-w-2xl mx-auto mb-12 text-center text-white"
+            className="max-w-xl mb-10 text-white text-start"
           >
             Hear what our clients say about working with RiskMan
           </motion.p>
@@ -894,14 +920,14 @@ export default function About() {
       </section>
 
       {/* ================= MARQUEE CLIENTS ================= */}
-      <section className="relative py-16 overflow-hidden bg-black lg:py-24 isolate">
-        <div className="px-6 mx-auto max-w-7xl lg:px-8">
+      <section className="relative overflow-hidden bg-black py-14 md:py-20 isolate">
+        <div className="max-w-6xl px-6 lg:px-6">
           <motion.h2
             variants={fadeInUp}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="mb-12 text-4xl font-bold text-center md:text-5xl"
+            className="mb-12 text-3xl font-bold text-start md:text-4xl"
           >
             Our Marquee
             <br />
@@ -928,7 +954,7 @@ export default function About() {
                 {[...clients, ...clients].map((client, i) => (
                   <div
                     key={i}
-                    className="flex items-center justify-center flex-shrink-0 w-48 h-24 px-4 transition-colors bg-zinc-800 rounded-xl hover:bg-white"
+                    className="flex items-center justify-center flex-shrink-0 w-48 h-24 px-4 transition-colors bg-white rounded-xl"
                   >
                     <img
                       src={client.logo}
@@ -954,7 +980,7 @@ export default function About() {
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}
-                className="flex items-center justify-center p-4 transition-colors aspect-square bg-zinc-800 rounded-xl hover:bg-white"
+                className="flex items-center justify-center p-4 transition-colors bg-white/80 aspect-square rounded-xl hover:bg-white"
               >
                 <img
                   src={client.logo}
@@ -966,16 +992,23 @@ export default function About() {
           </div>
         </div>
       </section>
+      
+      <AlliancePartnersSection/>
+
+
+      <TeamMembersSection/>
+
+      <Events/>
 
       {/* ================= FAQ ================= */}
-      <section className="relative py-16 bg-black lg:py-24">
-        <div className="max-w-4xl px-6 mx-auto lg:px-8">
+      <section className="relative bg-black py-14 md:py-20">
+        <div className="max-w-4xl px-6 lg:px-8">
           <motion.h2
             variants={fadeInUp}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="mb-12 text-4xl font-bold text-center md:text-5xl"
+            className="mb-10 text-3xl font-bold text-start md:text-4xl"
           >
             Frequently Asked
             <br />
@@ -1015,7 +1048,7 @@ export default function About() {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="py-16 text-center bg-black lg:py-24">
+      <section className="text-center bg-black py-14 md:py-20">
         <div className="px-6 mx-auto max-w-7xl lg:px-8">
           <motion.h2
             variants={fadeInUp}
@@ -1074,11 +1107,11 @@ export default function About() {
               exit="exit"
               className="relative w-full max-w-2xl border shadow-2xl bg-zinc-800 border-white/10 rounded-3xl"
               onClick={(e) => e.stopPropagation()}
-              style={{
-                background:
-                  "linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%)",
-                backdropFilter: "blur(20px)",
-              }}
+              // style={{
+              //   background:
+              //     "linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%)",
+              //   backdropFilter: "blur(20px)",
+              // }}
             >
               {/* CLOSE BUTTON */}
               <button
@@ -1100,7 +1133,6 @@ export default function About() {
                 w-40 h-40 md:w-48 md:h-48
                 object-cover rounded-full
                 border-4 border-[var(--accent-blue)]/30
-                grayscale hover:grayscale-0
                 hover:scale-105
                 transition-all duration-500
               "
