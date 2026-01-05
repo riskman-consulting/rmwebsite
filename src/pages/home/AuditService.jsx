@@ -1,0 +1,149 @@
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const AuditServices = () => {
+  const [expandedCard, setExpandedCard] = useState(null);
+
+  const services = [
+    {
+      id: 1,
+      title: "Professional Integrity and Expertise",
+      description:
+        "Our services are delivered by highly qualified professionals, ensuring accuracy, independence, and compliance with the highest international auditing standards.",
+      image:
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&q=80&w=800",
+    },
+    {
+      id: 2,
+      title: "Internal Audit Services",
+      description:
+        "We provide comprehensive internal audit solutions that evaluate your operational effectiveness, identify control weaknesses, and recommend improvements.",
+      image:
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&q=80&w=800",
+    },
+    {
+      id: 3,
+      title: "Risk Assurance",
+      description:
+        "Our risk assurance services help you identify, assess, and mitigate business risks while ensuring compliance with regulatory requirements.",
+      image:
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&q=80&w=800",
+    },
+    {
+      id: 4,
+      title: "Compliance & Regulatory Review",
+      description:
+        "Ensuring accuracy, independence, and adherence to the highest regulatory and governance standards.",
+      image:
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&q=80&w=800",
+    },
+  ];
+
+  return (
+    <section
+      className="relative w-full py-20 transition-colors duration-300 bg-bgLight dark:bg-bgDark md:py-28"
+    >
+      {/* ✅ MATCH HEADER CONTAINER */}
+      {/* <div className="w-full max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-14"> */}
+      <div className="container">
+        
+        {/* HEADER */}
+        <div className="grid gap-8 mb-14 lg:grid-cols-2">
+          <div>
+            <p className="mb-3 text-sm font-semibold tracking-wider uppercase text-brandNavy dark:text-brandAccent">
+              Services
+            </p>
+            <h2 className="text-3xl font-bold leading-tight md:text-4xl text-brandDark dark:text-white">
+              Precision. Assurance. <br />
+              Value-Driven Insights.
+            </h2>
+          </div>
+
+          <div className="flex items-center">
+            <p className="text-base leading-relaxed text-brandNavy dark:text-white/70">
+              Our comprehensive audit and assurance services are designed to
+              deliver accurate financial reporting, strengthen internal
+              controls, and enhance stakeholder confidence.
+            </p>
+          </div>
+        </div>
+
+        {/* ACCORDION */}
+        <div className="space-y-4">
+          {services.map((service) => {
+            const isOpen = expandedCard === service.id;
+
+            return (
+              <div
+                key={service.id}
+                className="overflow-hidden transition-all duration-300 border shadow-md rounded-2xl border-borderLight bg-surfaceLight dark:bg-surfaceDark dark:border-borderDark dark:shadow-none hover:shadow-xl hover:border-brandGold dark:hover:border-brandAccent"
+              >
+                {/* BUTTON */}
+                <button
+                  onClick={() =>
+                    setExpandedCard(isOpen ? null : service.id)
+                  }
+                  className="flex items-center justify-between w-full px-6 py-6 transition-colors duration-200 hover:bg-brandGold/5 dark:hover:bg-brandAccent/5"
+                >
+                  <h3 className="text-lg font-semibold text-left md:text-xl text-brandDark dark:text-white">
+                    {service.id}. {service.title}
+                  </h3>
+
+                  <div
+                    className={`
+                      w-10 h-10 rounded-full border-2
+                      flex items-center justify-center
+                      transition-all duration-300
+                      border-brandGold text-brandGold
+                      dark:border-brandAccent dark:text-brandAccent
+                      ${isOpen ? "rotate-180 bg-brandGold text-white dark:bg-brandAccent dark:text-brandDark" : ""}
+                    `}
+                  >
+                    <ChevronDown size={22} />
+                  </div>
+                </button>
+
+                {/* CONTENT */}
+                <div
+                  className={`
+                    overflow-hidden transition-all duration-300 ease-in-out
+                    ${isOpen ? "max-h-[600px]" : "max-h-0"}
+                  `}
+                >
+                  <div className="px-6 pt-4 pb-10 border-t md:px-10 border-borderLight dark:border-borderDark">
+                    <div className="flex flex-col gap-8 lg:flex-row">
+                      <div className="lg:w-1/2">
+                        <img
+                          src={service.image}
+                          alt={service.title}
+                          className="object-cover w-full h-64 rounded-xl ring-1 ring-borderLight dark:ring-borderDark"
+                        />
+                      </div>
+                      <div className="flex items-center lg:w-1/2">
+                        <p className="text-base leading-relaxed text-brandNavy dark:text-white/70">
+                          {service.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* CTA */}
+        <div className="flex justify-center mt-12">
+          <Link to="/services"
+            className="inline-block px-8 py-4 text-lg font-semibold transition-all duration-300 border-2 rounded-full shadow-lg border-brandDark text-brandDark hover:bg-brandDark hover:text-white dark:border-brandAccent dark:text-brandAccent dark:hover:bg-brandAccent dark:hover:text-brandDark hover:shadow-xl hover:scale-105"
+          >
+            View More
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AuditServices;

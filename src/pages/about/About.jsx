@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import {
-
   FaChartLine,
   FaShieldAlt,
   FaUsers,
@@ -11,12 +10,15 @@ import {
   FaTimes,
   FaQuoteLeft,
   FaStar,
+  FaHeart
 } from "react-icons/fa";
 import { useLocation } from 'react-router-dom';
-import BackgroundGrid from "../../components/layout/BackgroundGrid";
+// import BackgroundGrid from "../../component/common/BackgroundGrid";
 import AlliancePartnersSection from "./AlllianceSections";
 import TeamMembersSection from "./TeamMembersSection";
 import Events from "./Events";
+import TestimonialsSection from "./TestimonialsSection";
+import TestimonialSimple from "./TestimonialSimple";
 
 
 /* =======================
@@ -82,22 +84,6 @@ function AnimatedCounter({ end, duration = 2, suffix = "" }) {
   );
 }
 
-
-// useEffect(() => {
-//   if (location.hash) {
-//     const id = location.hash.replace("#", "");
-//     const element = document.getElementById(id);
-
-//     if (element) {
-//       setTimeout(() => {
-//         element.scrollIntoView({
-//           behavior: "smooth",
-//           block: "start",
-//         });
-//       }, 200); // wait for animations/render
-//     }
-//   }
-// }, [location]);
 
 export default function About() {
 
@@ -350,6 +336,12 @@ export default function About() {
     },
   ];
 
+  // =======================CTA==============
+
+
+
+
+
   const location = useLocation();
 
   useEffect(() => {
@@ -363,7 +355,7 @@ export default function About() {
             behavior: "smooth",
             block: "start",
           });
-        }, 200); // wait for animations/render
+        }, 200);
       }
     }
   }, [location]);
@@ -371,79 +363,64 @@ export default function About() {
 
 
   return (
-    <div className="min-h-screen bg-[#05051e] text-white overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-white">
       {/* ================= HERO ================= */}
 
-      <BackgroundGrid/>
-      <section className="relative isolate pt-24 min-h-[70vh] flex items-center justify-center">
-      
-      {/* Animated Background Image with Overlay */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-[#05051e]/90 via-[#05051e]/70 to-[#05051e] z-10" />
+      {/* <BackgroundGrid/> */}
+      <section className="relative min-h-[70vh] flex items-center justify-center bg-surfaceLight dark:bg-surfaceDark">
+        <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920&h=1080&fit=crop&q=80"
-            alt="Professional team collaboration"
-            className="object-cover w-full h-full opacity-40"
+            src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920"
+            className="object-cover w-full h-full opacity-30 dark:opacity-40"
+            alt=""
           />
-          {/* Animated overlay pattern */}
-          <div className="absolute inset-0 opacity-20 z-5" 
-               style={{
-                 backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234f46e5' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-               }}
-          />
+          <div className="absolute inset-0 bg-bgLight/60 dark:bg-bgDark/70" />
         </div>
 
-        
-        <div className="bg-glow-blue absolute -top-48 right-[-120px] pointer-events-none hidden lg:block" />
-        <div className="bg-glow-purple absolute -bottom-48 left-[-150px] pointer-events-none hidden lg:block" />
-
-        <div className="relative z-10 px-6 py-16 mx-auto text-center max-w-7xl lg:px-8 lg:py-24">
-          <motion.div
-            initial="initial"
-            animate="animate"
-            variants={staggerContainer}
+        <div className="relative z-10 max-w-5xl px-6 text-center">
+          <motion.p
+            variants={fadeInUp}
+            className="mb-4 tracking-widest uppercase text-brandNavy dark:text-brandAccent"
           >
-            <motion.p
-              variants={fadeInUp}
-              className="text-[var(--accent-blue-light)] uppercase tracking-wider mb-4"
-            >
-              About RiskMan
-            </motion.p>
+            About RiskMan
+          </motion.p>
 
-            <motion.h1
-              variants={fadeInUp}
-              className="mb-6 text-5xl font-bold md:text-7xl"
-            >
-              Build confidence,
-              <br />
-              <span className="gradient-text">enable clarity & impact</span>
-            </motion.h1>
+          <motion.h1
+            variants={fadeInUp}
+            className="mb-6 text-5xl font-bold md:text-7xl text-brandDark dark:text-white"
+          >
+            Build confidence,
+            <br />
+            <span className="text-brandPrimary dark:text-brandAccent">
+              enable clarity & impact
+            </span>
+          </motion.h1>
 
-            <motion.p
-              variants={fadeInUp}
-              className="max-w-3xl mx-auto text-xl text-white"
-            >
-              Strategic advisory, risk management & sustainable growth.
-            </motion.p>
-          </motion.div>
+          <motion.p
+            variants={fadeInUp}
+            className="text-xl text-textLightSecondary dark:text-textDarkSecondary"
+          >
+            Strategic advisory, risk management & sustainable growth.
+          </motion.p>
         </div>
       </section>
 
+
       {/* ================= ABOUT US SECTION ================= */}
-      <section className="relative py-16 bg-black isolate lg:py-24">
+      {/* <section className="relative py-16 transition-colors duration-300 bg-white isolate lg:py-24 dark:bg-black">
         <div className="grid items-center gap-12 px-6 mx-auto max-w-7xl lg:px-8 md:grid-cols-2">
           <motion.div variants={fadeInUp} initial="initial" whileInView="animate" viewport={{ once: true }}>
             <h2 className="mb-6 text-4xl font-bold md:text-5xl">
-              <span className="text-[var(--accent-blue)]">About us</span>
+              <span className="text-orange-600 dark:text-[var(--accent-blue)]">About us</span>
             </h2>
             <div className="w-24 h-1 mb-8"></div>
 
-            <p className="text-lg text-[var(--text-gray)] leading-relaxed mb-6">
+            <p className="text-lg leading-relaxed mb-6 text-stone-600 dark:text-[var(--text-gray)]">
               At RiskMan, we focus on creating enduring value for our clients, people, communities
               and other stakeholders through our "Customised Solution" based services.
             </p>
 
-            <p className="text-lg text-[var(--text-gray)] leading-relaxed mb-6">
+            <p className="text-lg leading-relaxed mb-6 text-stone-600 dark:text-[var(--text-gray)]">
               RiskMan is a team of experienced professionals with high level of knowledge
               and accomplishments who bring to the table a varied and storied experience set,
               to create outstanding value for its clients and other stakeholders. Rather than being
@@ -451,68 +428,165 @@ export default function About() {
               an entrepreneurial mindset.
             </p>
 
-            <p className="text-lg text-[var(--text-gray)] leading-relaxed mb-8">
+            <p className="text-lg leading-relaxed mb-8 text-stone-600 dark:text-[var(--text-gray)]">
               We are a passionate team and feel excited in making a meaningful impact through our
               experience, competency and ability to deliver sustainable goal with perseverance.
               We endeavor to engage with people in meaningful ways and believe in building
               long term relationship with all our stakeholders.
             </p>
 
-            <div className="bg-gradient-to-r from-[var(--accent-blue)]/10 to-[var(--accent-purple)]/10 border-l-4 border-[var(--accent-blue)] rounded-lg p-6">
-              <p className="text-xl italic font-semibold text-center">
+            <div className="bg-gradient-to-r from-orange-100 to-amber-100 border-l-4 border-orange-600 dark:from-[var(--accent-blue)]/10 dark:to-[var(--accent-purple)]/10 dark:border-[var(--accent-blue)] rounded-lg p-6">
+              <p className="text-xl italic font-semibold text-center text-stone-900 dark:text-white">
                 "RISKMAN IS THE TRUSTED PARTNER IN YOUR SUSTAINABLE GROWTH JOURNEY"
               </p>
             </div>
           </motion.div>
 
           {/* Right: Image */}
-          <motion.div
+      {/* <motion.div
             variants={fadeInUp}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="absolute -inset-4 bg-gradient-to-r from-[var(--accent-blue)] to-[var(--accent-purple)] rounded-3xl blur-2xl opacity-20"></div>
+            <div className="absolute -inset-4 bg-gradient-to-r from-orange-600 to-amber-600 dark:from-[var(--accent-blue)] dark:to-[var(--accent-purple)] rounded-3xl blur-2xl opacity-20"></div>
             <img
               src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=1000&fit=crop"
               alt="About RiskMan"
               className="relative rounded-2xl shadow-2xl w-full h-[600px] object-cover"
             />
           </motion.div>
-        </div>
+        </div> */}
+      {/* </section> */}
+
+
+      {/* ================= INTRODUCTION SECTION ================= */}
+      <section className="relative px-6 py-16 mx-auto lg:py-24 lg:px-8 max-w-7xl bg-surfaceLight dark:bg-surfaceDark">
+        <motion.div
+          variants={fadeInUp}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <p className="mb-6 text-sm font-medium tracking-wider text-brandNavy dark:text-brandAccent">
+            • Introduction
+          </p>
+          <h2 className="text-[2.75rem] md:text-[3.5rem] lg:text-[4rem] font-normal leading-[1.15] max-w-5xl text-brandDark dark:text-white">
+            At RiskMan, we focus on creating enduring value for our clients, people, communities and other stakeholders through our "Customised Solution" based services.
+          </h2>
+        </motion.div>
+
+        <motion.div
+          className="grid gap-8 md:grid-cols-3"
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          variants={staggerContainer}
+        >
+          {/* Card 1: Professional Excellence */}
+          <motion.div
+            variants={fadeInUp}
+            className="relative overflow-hidden group rounded-[2rem] h-[460px] shadow-card-light dark:shadow-card-dark hover:shadow-card-light-hover dark:hover:shadow-card-dark-hover transition-all duration-700"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=1000&fit=crop&q=80"
+              alt="Professional Excellence"
+              className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 transition-opacity duration-300 bg-brandDark/60 group-hover:bg-brandDark/70"></div>
+            <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+              <h3 className="text-[1.75rem] font-semibold leading-tight mb-3">Professional Excellence</h3>
+              <p className="text-[0.95rem] leading-relaxed text-white/85">
+                RiskMan is a team of experienced professionals with high level of knowledge and accomplishments who bring varied and storied experience to create outstanding value.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Card 2: Propreneurial Mindset */}
+          <motion.div
+            variants={fadeInUp}
+            className="relative overflow-hidden group rounded-[2rem] h-[460px] shadow-card-light dark:shadow-card-dark hover:shadow-card-light-hover dark:hover:shadow-card-dark-hover transition-all duration-700"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop&q=80"
+              alt="Propreneurial Mindset"
+              className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 transition-opacity duration-300 bg-brandDark/60 group-hover:bg-brandDark/70"></div>
+            <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+              <h3 className="text-[1.75rem] font-semibold leading-tight mb-3">Propreneurial Mindset</h3>
+              <p className="text-[0.95rem] leading-relaxed text-white/85">
+                Rather than being classical consultants, we take pride in being propreneurs—professionals with an entrepreneurial mindset.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Card 3: Long-term Relationships */}
+          <motion.div
+            variants={fadeInUp}
+            className="relative overflow-hidden group rounded-[2rem] h-[460px] shadow-card-light dark:shadow-card-dark hover:shadow-card-light-hover dark:hover:shadow-card-dark-hover transition-all duration-700"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=1000&fit=crop&q=80"
+              alt="Long-term Relationships"
+              className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 transition-opacity duration-300 bg-brandDark/60 group-hover:bg-brandDark/70"></div>
+            <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+              <h3 className="text-[1.75rem] font-semibold leading-tight mb-3">Long-term Relationships</h3>
+              <p className="text-[0.95rem] leading-relaxed text-white/85">
+                We are passionate about making meaningful impact through our experience and competency. We engage with people meaningfully and believe in building long-term relationships.
+              </p>
+            </div>
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* ================= TRIBUTE SECTION ================= */}
-      <section className="relative bg-black py-14 md:py-20 isolate">
-        <div className="max-w-4xl px-6 mx-auto text-center transition-all duration-300 border border-black shadow-lg lg:px-8 bg-black/10 rounded-3xl hover:border-indigo-300 hover:shadow-2xl">
-          <motion.div
-            variants={fadeInUp}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-[var(--accent-blue)]/10 to-[var(--accent-purple)]/10 backdrop-blur-sm border border-white/10 rounded-3xl p-12 relative overflow-hidden"
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent-blue)]/5 to-[var(--accent-purple)]/5"></div>
-            <div className="relative z-10">
-              <FaQuoteLeft className="text-5xl text-[var(--accent-blue-light)] opacity-30 mx-auto mb-6" />
-              <h3 className="mb-4 text-2xl font-bold md:text-3xl">
-                A Tribute to <span className="gradient-text">Prabir Sen Gupta</span>
-              </h3>
-              <p className="text-lg text-[var(--text-gray)] italic leading-relaxed mb-6">
-                "Excellence is not a destination; it is a continuous journey that never ends."
-              </p>
-              <p className="text-sm text-[var(--text-gray)]">
-                Late Prabir Sen Gupta - Founding Member & Mentor
-              </p>
-              <div className="mt-6 h-1 w-32 bg-gradient-to-r from-[var(--accent-blue)] to-[var(--accent-purple)] mx-auto rounded-full"></div>
+      <section className="relative py-20 bg-surfaceLight dark:bg-surfaceDark">
+        <div className="max-w-6xl px-6 mx-auto grid md:grid-cols-[380px_1fr] gap-10 items-center">
+
+          {/* IMAGE */}
+          <div className="relative">
+            <div className="absolute -inset-4 bg-brandPrimary/10 rounded-3xl blur-2xl opacity-20" />
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+              className="relative h-[420px] w-full object-cover rounded-2xl grayscale hover:grayscale-0 transition"
+              alt=""
+            />
+          </div>
+
+          {/* CONTENT */}
+          <div>
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 rounded-full bg-brandAccent/10 text-brandAccent">
+              <FaHeart /> In Loving Memory
             </div>
-          </motion.div>
+
+            <h2 className="mb-6 text-4xl font-bold">
+              A Tribute to <br />
+              <span className="text-brandPrimary dark:text-brandAccent">
+                Excellence & Leadership
+              </span>
+            </h2>
+
+            <blockquote className="pl-4 mb-4 text-lg italic border-l-4 border-brandAccent text-brandNavy/80 dark:text-white/70">
+              “Excellence is not a destination; it is a continuous journey.”
+            </blockquote>
+
+            <p className="text-brandNavy/70 dark:text-white/60">
+              We honor the legacy of Prabir Sen Gupta whose vision and mentorship
+              laid the foundation for RiskMan.
+            </p>
+          </div>
+
         </div>
       </section>
 
+
       {/* ================= FEATURES ================= */}
-      <section className="relative bg-black py-14 md:py-20">
+      <section className="relative bg-surfaceLight dark:bg-surfaceDark py-14 md:py-20">
         <div className="px-6 mx-auto max-w-7xl lg:px-8">
           <motion.div
             className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4"
@@ -525,19 +599,20 @@ export default function About() {
               <motion.div
                 key={i}
                 variants={fadeInUp}
-                className={`
-                  ${f.type === "gradient" ? "card-gradient" : ""}
-                  ${f.type === "light" ? "card-light" : ""}
-                  ${f.type === "dark" ? "card-dark" : ""}
-                  text-center
-                `}
+                className="group relative p-8 rounded-2xl h-[340px] flex flex-col justify-between cursor-pointer transition-all duration-300 border border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark shadow-lg hover:-translate-y-1 hover:shadow-2xl hover:border-brandGold dark:hover:border-brandAccent text-center"
               >
-                <div className="flex justify-center mb-4">{f.icon}</div>
-                <h3 className="mb-2 text-3xl font-bold">{f.title}</h3>
-                <p className="mb-3 text-lg font-semibold opacity-90">
-                  {f.subtitle}
-                </p>
-                <p className="text-sm opacity-75">{f.description}</p>
+                <div className="flex items-center justify-center w-16 h-16 mx-auto transition-all duration-300 bg-brandDark/10 group-hover:bg-brandDark dark:bg-brandAccent/15 dark:group-hover:bg-brandAccent rounded-xl">
+                  <div className="transition-colors duration-300 text-brandDark group-hover:text-white dark:text-brandAccent dark:group-hover:text-brandDark">
+                    {f.icon}
+                  </div>
+                </div>
+                <div>
+                  <h3 className="mb-2 text-3xl font-bold transition-colors duration-300 text-brandDark dark:text-white">{f.title}</h3>
+                  <p className="mb-3 text-lg font-semibold transition-colors duration-300 text-brandNavy/70 dark:text-white/70">
+                    {f.subtitle}
+                  </p>
+                  <p className="text-sm text-gray-500 transition-colors duration-300 dark:text-gray-400">{f.description}</p>
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -545,93 +620,120 @@ export default function About() {
       </section>
 
       {/* ================= MISSION & VISION ================= */}
-      <section className="relative bg-black py-14 md:py-20 isolate">
-        <div className="px-6 mx-auto max-w-7xl lg:px-8">
-          <motion.h2
+      <section className="relative px-6 py-16 lg:py-24 lg:px-8 bg-surfaceLight dark:bg-surfaceDark">
+        <div className="mx-auto max-w-7xl">
+          <motion.div
             variants={fadeInUp}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="mb-16 text-3xl font-bold text-start md:text-4xl"
+            className="mb-16"
           >
-            Mission and
-            <br />
-            <span className="gradient-text">Vision</span>
-          </motion.h2>
+            <p className="mb-4 text-sm font-medium tracking-wider text-textLightSecondary dark:text-textDarkSecondary">
+              • Who we are
+            </p>
+            <h2 className="text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-normal leading-[1.2] text-brandDark dark:text-brandAccent mb-16">
+              Team reliable care<br />for your healing
+            </h2>
+          </motion.div>
 
-          {/* Mission & Vision Grid */}
-          <div className="grid gap-8 mb-16 md:grid-cols-2 ">
-            {/* Mission */}
+          <div className="grid gap-12 mb-16 md:grid-cols-2">
+            {/* Left: Mission, Vision, Future Goals */}
             <motion.div
               variants={fadeInUp}
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-[var(--accent-blue)]/10 to-[var(--accent-purple)]/10 backdrop-blur-sm border border-white/10 rounded-3xl p-8 text-center relative overflow-hidden group transition-all duration-500 hover:border-[var(--accent-blue)]/50 hover:shadow-2xl hover:shadow-[var(--accent-blue)]/20"
+              className="space-y-8"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent-blue)]/0 to-[var(--accent-purple)]/0 group-hover:from-[var(--accent-blue)]/20 group-hover:to-[var(--accent-purple)]/20 transition-all duration-500"></div>
-              <div className="absolute -inset-1 bg-gradient-to-r from-[var(--accent-blue)] to-[var(--accent-purple)] rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
-              <div className="relative z-10 ">
-                <div className="relative mb-6 ">
-                  <img
-                    src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=300&fit=crop"
-                    alt="Mission"
-                    className="object-cover w-full h-48 transition-opacity duration-500 rounded-xl opacity-60 group-hover:opacity-80"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <h3 className="text-3xl font-bold text-white bg-[var(--dark-navy)]/80 px-6 py-3 rounded-lg group-hover:bg-[var(--dark-navy)]/90 transition-all duration-500">
-                      {missionVision.mission.title}
-                    </h3>
-                  </div>
-                </div>
-                <p className="mb-4 text-lg">{missionVision.mission.content}</p>
-                <div className="space-y-2 text-left">
-                  <p className="mb-2 font-semibold">We believe in:</p>
-                  {missionVision.mission.points.map((point, i) => (
-                    <p key={i} className="pl-4 text-sm opacity-90">
-                      • {point}
-                    </p>
-                  ))}
+              <div>
+                <h3 className="mb-3 text-sm font-bold text-textLight dark:text-textDark">Our Mission:</h3>
+                <p className="text-[0.95rem] leading-relaxed text-textLightSecondary dark:text-textDarkSecondary mb-4">
+                  Our mission is to achieve sustainable growth and build better future for all.
+                </p>
+                <p className="mb-2 text-sm text-textLightMuted dark:text-textDarkMuted">We believe in:</p>
+                <ul className="space-y-2 text-sm text-textLightMuted dark:text-textDarkMuted">
+                  <li>• Embracing technology and innovation</li>
+                  <li>• Being client and people focussed</li>
+                  <li>• Build trust and relationship</li>
+                  <li>• Be prompt and deliver efficient and quality execution</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="mb-3 text-sm font-bold text-textLight dark:text-textDark">Our Vision:</h3>
+                <p className="text-[0.95rem] leading-relaxed text-textLightSecondary dark:text-textDarkSecondary">
+                  Our vision is to become a leading consulting firm in India and globally through rendering sustainable quality services aligned to our mission.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="mb-3 text-sm font-bold text-textLight dark:text-textDark">Future Goals:</h3>
+                <p className="text-[0.95rem] leading-relaxed text-textLightSecondary dark:text-textDarkSecondary">
+                  We focus on maximizing performance, ensuring reliability through customized agreements, and enhancing service productivity while minimizing operational costs.
+                </p>
+              </div>
+
+              {/* Signature */}
+              <div className="pt-8">
+                <div className="text-3xl font-signature text-textLight dark:text-textDark">
+                  RiskMan Team
                 </div>
               </div>
             </motion.div>
 
-            {/* Vision */}
+            {/* Right: Image Grid */}
             <motion.div
-              variants={fadeInUp}
+              className="grid grid-cols-2 gap-4"
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-[var(--accent-blue)]/10 to-[var(--accent-purple)]/10 backdrop-blur-sm border border-white/10 rounded-3xl p-8 text-center relative overflow-hidden group transition-all duration-500 hover:border-[var(--accent-purple)]/50 hover:shadow-2xl hover:shadow-[var(--accent-purple)]/20"
+              variants={staggerContainer}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent-purple)]/0 to-[var(--accent-blue)]/0 group-hover:from-[var(--accent-purple)]/20 group-hover:to-[var(--accent-blue)]/20 transition-all duration-500"></div>
-              <div className="absolute -inset-1 bg-gradient-to-r from-[var(--accent-purple)] to-[var(--accent-blue)] rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
-              <div className="relative z-10">
-                <div className="relative mb-6">
-                  <img
-                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=300&fit=crop"
-                    alt="Vision"
-                    className="object-cover w-full h-48 transition-opacity duration-500 rounded-xl opacity-60 group-hover:opacity-80"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <h3 className="text-3xl font-bold text-white bg-[var(--dark-navy)]/80 px-6 py-3 rounded-lg group-hover:bg-[var(--dark-navy)]/90 transition-all duration-500">
-                      {missionVision.vision.title}
-                    </h3>
-                  </div>
-                </div>
-                <p className="text-lg">{missionVision.vision.content}</p>
-              </div>
+              <motion.div variants={fadeInUp} className="rounded-[1.5rem] overflow-hidden h-[240px]">
+                <img
+                  src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=800&fit=crop"
+                  alt="Team collaboration"
+                  className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+                />
+              </motion.div>
+
+              <motion.div variants={fadeInUp} className="rounded-[1.5rem] overflow-hidden h-[300px] mt-12">
+                <img
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop"
+                  alt="Professional consulting"
+                  className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+                />
+              </motion.div>
+
+              <motion.div variants={fadeInUp} className="rounded-[1.5rem] overflow-hidden h-[200px] -mt-8">
+                <img
+                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=600&fit=crop"
+                  alt="Strategic planning"
+                  className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+                />
+              </motion.div>
+
+              <motion.div variants={fadeInUp} className="rounded-[1.5rem] overflow-hidden h-[260px]">
+                <img
+                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&h=800&fit=crop"
+                  alt="Client engagement"
+                  className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+                />
+              </motion.div>
             </motion.div>
           </div>
 
-          {/* Sustainability Circle with Pillars */}
+          {/* ================= SUSTAINABILITY CIRCLE WITH PILLARS ================= */}
           <div className="mb-12 text-center">
             <div className="inline-flex items-center justify-center gap-4 mb-8">
-              <div className="w-40 h-40 rounded-full bg-gradient-to-r from-[var(--accent-blue)] to-[var(--accent-purple)] flex items-center justify-center">
-                <div className="w-36 h-36 rounded-full bg-[var(--dark-navy)] flex items-center justify-center">
+              <div className="flex items-center justify-center w-40 h-40 border-4 rounded-full shadow-lg border-brandPrimary dark:border-brandAccent">
+                <div className="flex items-center justify-center rounded-full w-36 h-36 bg-surfaceLight dark:bg-surfaceDark">
                   <div className="text-center">
-                    <FaAward className="text-4xl text-[var(--accent-blue-light)] mx-auto mb-2" />
-                    <p className="text-lg font-bold">Sustainability</p>
+                    <svg className="w-12 h-12 mx-auto mb-2 text-brandPrimary dark:text-brandAccent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                    </svg>
+                    <p className="text-lg font-bold text-textLight dark:text-textDark">Sustainability</p>
                   </div>
                 </div>
               </div>
@@ -640,55 +742,106 @@ export default function About() {
 
           {/* Three Pillars */}
           <div className="grid gap-6 md:grid-cols-3">
-            {missionVision.pillars.map((pillar, i) => (
-              <motion.div
-                key={i}
-                variants={fadeInUp}
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}
-                className="bg-zinc-800 backdrop-blur-sm border border-white/5 rounded-2xl p-6 text-center relative overflow-hidden group transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[var(--accent-blue)]/30 cursor-pointer"
-              >
-                {/* Gradient background that appears on hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent-blue)]/0 to-[var(--accent-purple)]/0 group-hover:from-[var(--accent-blue)]/90 group-hover:to-[var(--accent-purple)]/90 transition-all duration-500 rounded-2xl"></div>
-                <div className="absolute -inset-1 bg-gradient-to-r from-[var(--accent-blue)] to-[var(--accent-purple)] rounded-2xl blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
+            {/* Pillar 1: Performance */}
+            <motion.div
+              variants={fadeInUp}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              className="relative p-6 overflow-hidden text-center transition-all duration-300 border cursor-pointer bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-2xl group hover:scale-105 hover:shadow-card-light-hover dark:hover:shadow-card-dark-hover"
+            >
+              <div className="absolute inset-0 transition-all duration-300 opacity-0 bg-brandPrimary group-hover:opacity-10 dark:bg-brandAccent rounded-2xl"></div>
 
-                <div className="relative z-10">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-r from-[var(--accent-blue)] to-[var(--accent-purple)] flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:shadow-lg transition-all duration-500">
-                    {i === 0 && <FaChartLine className="text-2xl" />}
-                    {i === 1 && <FaShieldAlt className="text-2xl" />}
-                    {i === 2 && <FaUsers className="text-2xl" />}
-                  </div>
-                  <h3 className="mb-4 text-2xl font-bold transition-colors duration-500 group-hover:text-white">{pillar.title}</h3>
-                  <div className="space-y-2 text-left">
-                    {pillar.points.map((point, j) => (
-                      <p key={j} className="text-sm text-[var(--text-gray)] group-hover:text-white/90 transition-colors duration-500">
-                        • {point}
-                      </p>
-                    ))}
-                  </div>
+              <div className="relative z-10">
+                <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 transition-all duration-300 rounded-full bg-brandPrimary/10 dark:bg-brandAccent/15 group-hover:scale-110">
+                  <svg className="w-8 h-8 text-brandPrimary dark:text-brandAccent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
                 </div>
-              </motion.div>
-            ))}
+                <h3 className="mb-4 text-2xl font-bold transition-colors duration-300 text-brandDark dark:text-white">Performance</h3>
+                <div className="space-y-2 text-left">
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    • Maximize performance through our services
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    • Ensure our services operate with integrity and objectivity with best-in-class outcomes
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Pillar 2: Reliability */}
+            <motion.div
+              variants={fadeInUp}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              className="relative p-6 overflow-hidden text-center transition-all duration-300 border cursor-pointer bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-2xl group hover:scale-105 hover:shadow-card-light-hover dark:hover:shadow-card-dark-hover"
+            >
+              <div className="absolute inset-0 transition-all duration-300 opacity-0 bg-brandPrimary group-hover:opacity-10 dark:bg-brandAccent rounded-2xl"></div>
+
+              <div className="relative z-10">
+                <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 transition-all duration-300 rounded-full bg-brandPrimary/10 dark:bg-brandAccent/15 group-hover:scale-110">
+                  <svg className="w-8 h-8 text-brandPrimary dark:text-brandAccent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h3 className="mb-4 text-2xl font-bold transition-colors duration-300 text-brandDark dark:text-white">Reliability</h3>
+                <div className="space-y-2 text-left">
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    • Customized agreements that exactly meet service needs and customer's internal strategy
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    • Faster delivery and globally accepted deliverables
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Pillar 3: Cost */}
+            <motion.div
+              variants={fadeInUp}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              className="relative p-6 overflow-hidden text-center transition-all duration-300 border cursor-pointer bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-2xl group hover:scale-105 hover:shadow-card-light-hover dark:hover:shadow-card-dark-hover"
+            >
+              <div className="absolute inset-0 transition-all duration-300 opacity-0 bg-brandPrimary group-hover:opacity-10 dark:bg-brandAccent rounded-2xl"></div>
+
+              <div className="relative z-10">
+                <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 transition-all duration-300 rounded-full bg-brandPrimary/10 dark:bg-brandAccent/15 group-hover:scale-110">
+                  <svg className="w-8 h-8 text-brandPrimary dark:text-brandAccent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <h3 className="mb-4 text-2xl font-bold transition-colors duration-300 text-brandDark dark:text-white">Cost</h3>
+                <div className="space-y-2 text-left">
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    • By focusing on refining elements and investigating on alternative resources
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    • Efficiently managing our sourcing, we aim to enhance service productivity and minimize operational costs
+                  </p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* ================= LEADERSHIP ================= */}
-      <section id="co-founders" className="relative bg-black section-padding">
-        <div className="bg-glow-purple absolute top-[100px] right-[-200px] " />
-
-        <div className="container mx-auto max-w-7xl ">
+      <section id="co-founders" className="relative bg-surfaceLight dark:bg-surfaceDark py-14 md:py-20">
+        <div className="container px-6 mx-auto max-w-7xl">
           <motion.h2
             variants={fadeInUp}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="mb-4 text-4xl font-bold text-start md:text-5xl "
+            className="mb-4 text-4xl font-bold text-start md:text-5xl"
           >
             Co-founding
             <br />
-            <span className="gradient-text">Partners</span>
+            <span className="text-brandPrimary dark:text-brandAccent">Partners</span>
           </motion.h2>
 
           <motion.p
@@ -696,12 +849,12 @@ export default function About() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="max-w-2xl mb-12 text-white text-start"
+            className="max-w-2xl mb-12 text-gray-600 text-start dark:text-gray-400"
           >
             Meet the visionary leaders driving RiskMan's mission forward
           </motion.p>
 
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 ">
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {teamMembers.map((m, i) => (
               <motion.div
                 key={i}
@@ -709,36 +862,30 @@ export default function About() {
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}
-                className="bg-zinc-800 backdrop-blur-sm border border-white/5 rounded-2xl p-6 group cursor-pointer transition-all hover:border-[var(--accent-blue)]/50 "
+                className="p-6 transition-all duration-300 border cursor-pointer bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-2xl group hover:border-brandGold dark:hover:border-brandAccent hover:shadow-2xl hover:-translate-y-1"
                 onClick={() => setSelectedLeader(m)}
               >
-                <div className="flex justify-center mb-4 ">
+                <div className="flex justify-center mb-4">
                   <img
                     src={m.image}
                     alt={m.name}
-                    className="w-28 h-28
-                object-cover rounded-full
-                border-4 border-[var(--accent-blue)]/30
-                grayscale group-hover:grayscale-0
-                hover:scale-105
-                transition-all duration-500"
+                    className="object-cover transition-all duration-500 border-4 rounded-full w-28 h-28 border-brandPrimary/30 dark:border-brandAccent/30 grayscale group-hover:grayscale-0 hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--dark-navy)] to-transparent opacity-60" />
                 </div>
-                <h3 className="mb-2 text-2xl font-bold">{m.name}</h3>
-                <p className="text-[var(--accent-blue-light)] font-semibold mb-3">
+                <h3 className="mb-2 text-2xl font-bold text-brandDark dark:text-white">{m.name}</h3>
+                <p className="mb-3 font-semibold text-brandPrimary dark:text-brandAccent">
                   {m.title}
                 </p>
-                <p className="mb-4 text-sm text-white">{m.bio}</p>
+                <p className="mb-4 text-sm text-gray-600 dark:text-gray-400">{m.bio}</p>
                 <div className="flex items-center gap-4">
                   <a
                     href={m.linkedin}
-                    className="inline-flex items-center gap-2 text-[var(--accent-blue-light)] hover:text-white transition-colors"
+                    className="inline-flex items-center gap-2 transition-colors text-brandPrimary dark:text-brandAccent hover:text-brandNavy dark:hover:text-brandGold"
                     onClick={(e) => e.stopPropagation()}
                   >
                     <FaLinkedin /> LinkedIn
                   </a>
-                  <button className="text-[var(--accent-purple)] hover:text-white transition-colors text-sm">
+                  <button className="text-sm transition-colors text-brandAccent dark:text-brandGoldLight hover:text-brandGold dark:hover:text-brandAccent">
                     Read More →
                   </button>
                 </div>
@@ -749,7 +896,7 @@ export default function About() {
       </section>
 
       {/* ================= SERVICE LEADERS ================= */}
-      <section id="service-leaders" className="relative bg-black py-14 md:py-20 isolate">
+      <section id="service-leaders" className="relative bg-surfaceLight dark:bg-surfaceDark py-14 md:py-20">
         <div className="px-6 mx-auto max-w-7xl lg:px-8">
           <motion.h2
             variants={fadeInUp}
@@ -760,7 +907,7 @@ export default function About() {
           >
             Our Team
             <br />
-            <span className="gradient-text">Service Leaders</span>
+            <span className="text-brandPrimary dark:text-brandAccent">Service Leaders</span>
           </motion.h2>
 
           <motion.p
@@ -768,7 +915,7 @@ export default function About() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="max-w-2xl mb-12 text-white text-start"
+            className="max-w-2xl mb-12 text-gray-600 text-start dark:text-gray-400"
           >
             Industry experts leading specialized service domains
           </motion.p>
@@ -781,25 +928,24 @@ export default function About() {
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}
-                className="bg-zinc-800 backdrop-blur-sm border border-white/10 rounded-2xl p-6 group cursor-pointer transition-all hover:border-[var(--accent-blue)]/50"
+                className="p-6 transition-all duration-500 border cursor-pointer bg-cardLight border-borderLight dark:bg-cardDark dark:border-borderDark rounded-2xl group hover:border-brandPrimary dark:hover:border-brandAccent hover:shadow-card-light-hover dark:hover:shadow-card-dark-hover"
                 onClick={() => setSelectedLeader(leader)}
               >
                 <div className="flex justify-center mb-4">
                   <img
                     src={leader.image}
                     alt={leader.name}
-                    className=" w-24 h-24 rounded-full object-cover border-2 border-[var(--accent-blue)] group-hover:border-[var(--accent-blue-light)] group-hover:scale-110 transition-all duration-500"
+                    className="object-cover w-24 h-24 transition-all duration-500 border-2 rounded-full border-brandPrimary dark:border-brandAccent group-hover:border-brandNavy dark:group-hover:border-brandGold group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--dark-navy)] to-transparent opacity-60" />
                 </div>
-                <h3 className="mb-1 text-xl font-bold">{leader.name}</h3>
-                <p className="text-[var(--accent-blue-light)] font-semibold mb-2 text-sm">
+                <h3 className="mb-1 text-xl font-bold text-brandDark dark:text-white">{leader.name}</h3>
+                <p className="mb-2 text-sm font-semibold text-brandPrimary dark:text-brandAccent">
                   {leader.title}
                 </p>
-                <p className="mb-3 text-xs text-white">
+                <p className="mb-3 text-xs text-gray-500 dark:text-gray-400">
                   {leader.credentials}
                 </p>
-                <button className="text-[var(--accent-purple)] hover:text-white transition-colors text-sm w-full text-left">
+                <button className="w-full text-sm text-left transition-colors text-brandAccent dark:text-brandGoldLight hover:text-brandGold dark:hover:text-brandAccent">
                   View Profile →
                 </button>
               </motion.div>
@@ -814,44 +960,36 @@ export default function About() {
             viewport={{ once: true }}
             className="grid gap-6 mt-12 md:grid-cols-3"
           >
-            <div className="p-8 overflow-hidden text-center border bg-zinc-800 bg-relative backdrop-blur-sm border-white/5 rounded-2xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent-blue)]/5 to-transparent"></div>
-              <div className="relative z-10">
-                <h3 className="mb-2 text-5xl font-bold md:text-6xl gradient-text">
-                  <AnimatedCounter end={50} duration={2.5} suffix="+" />
-                </h3>
-                <p className="text-[var(--text-gray)] text-lg">Team Size</p>
-              </div>
+            <div className="p-8 text-center border shadow-lg rounded-2xl bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark">
+              <h3 className="mb-2 text-5xl font-bold md:text-6xl text-brandPrimary dark:text-brandAccent">
+                <AnimatedCounter end={50} duration={2.5} suffix="+" />
+              </h3>
+              <p className="text-lg text-gray-600 dark:text-gray-400">Team Size</p>
             </div>
 
-            <div className="relative p-8 overflow-hidden text-center border bg-zinc-800 backdrop-blur-sm border-white/5 rounded-2xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent-purple)]/5 to-transparent"></div>
-              <div className="relative z-10">
-                <h3 className="mb-2 text-3xl font-bold md:text-4xl gradient-text">
-                  Qualified & Experienced
-                </h3>
-                <p className="text-[var(--text-gray)] text-lg">Professionals</p>
-              </div>
+            <div className="p-8 text-center border shadow-lg rounded-2xl bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark">
+              <h3 className="mb-2 text-3xl font-bold md:text-4xl text-brandPrimary dark:text-brandAccent">
+                Qualified & Experienced
+              </h3>
+              <p className="text-lg text-gray-600 dark:text-gray-400">Professionals</p>
             </div>
 
-            <div className="relative p-8 overflow-hidden text-center border bg-zinc-800 backdrop-blur-sm border-white/5 rounded-2xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent-blue)]/5 to-transparent"></div>
-              <div className="relative z-10">
-                <h3 className="mb-2 text-3xl font-bold md:text-4xl gradient-text">
-                  Industry / Sector
-                </h3>
-                <p className="text-[var(--text-gray)] text-lg">SMEs</p>
-              </div>
+            <div className="p-8 text-center border shadow-lg rounded-2xl bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark">
+              <h3 className="mb-2 text-3xl font-bold md:text-4xl text-brandPrimary dark:text-brandAccent">
+                Industry / Sector
+              </h3>
+              <p className="text-lg text-gray-600 dark:text-gray-400">SMEs</p>
             </div>
           </motion.div>
         </div>
-      </section>
+      </section >
 
       {/* ================= TESTIMONIALS ================= */}
-      <section className="relative bg-black section-padding isolate ">
-        <div className="bg-glow-blue absolute top-[100px] left-[-200px] " />
+      {/* <TestimonialsSection /> */}
+      {/* <TestimonialSimple /> */}
 
-        <div className="container mx-auto max-w-7xl ">
+      <section className="relative bg-surfaceLight dark:bg-surfaceDark py-14 md:py-20">
+        <div className="container px-6 mx-auto max-w-7xl">
           <motion.h2
             variants={fadeInUp}
             initial="initial"
@@ -861,7 +999,7 @@ export default function About() {
           >
             Client
             <br />
-            <span className="gradient-text">Testimonials</span>
+            <span className="text-brandPrimary dark:text-brandAccent">Testimonials</span>
           </motion.h2>
 
           <motion.p
@@ -869,7 +1007,7 @@ export default function About() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="max-w-xl mb-10 text-white text-start"
+            className="max-w-xl mb-10 text-gray-600 text-start dark:text-gray-400"
           >
             Hear what our clients say about working with RiskMan
           </motion.p>
@@ -882,32 +1020,31 @@ export default function About() {
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-[var(--accent-blue)]/10 to-[var(--accent-purple)]/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6 relative overflow-hidden group transition-all duration-500 hover:border-[var(--accent-blue)]/50 hover:shadow-2xl hover:shadow-[var(--accent-blue)]/20 hover:scale-105"
+                className="relative p-6 overflow-hidden transition-all duration-300 border bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-2xl group hover:border-brandGold dark:hover:border-brandAccent hover:shadow-2xl hover:scale-105"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent-blue)]/0 to-[var(--accent-purple)]/0 group-hover:from-[var(--accent-blue)]/20 group-hover:to-[var(--accent-purple)]/20 transition-all duration-500"></div>
-                <div className="absolute -inset-1 bg-gradient-to-r from-[var(--accent-blue)] to-[var(--accent-purple)] rounded-2xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
-                <FaQuoteLeft className="text-4xl text-[var(--accent-blue-light)] opacity-20 absolute top-4 left-4 group-hover:opacity-40 transition-opacity duration-500" />
+                <div className="absolute inset-0 transition-all duration-300 opacity-0 bg-brandPrimary group-hover:opacity-5 dark:bg-brandAccent"></div>
+                <FaQuoteLeft className="absolute text-4xl transition-opacity duration-500 opacity-20 top-4 left-4 group-hover:opacity-40 text-brandPrimary dark:text-brandAccent" />
                 <div className="relative z-10">
                   <div className="flex items-center gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, j) => (
-                      <FaStar key={j} className="text-lg text-yellow-400 transition-transform duration-300 group-hover:scale-110" style={{ transitionDelay: `${j * 50}ms` }} />
+                      <FaStar key={j} className="text-lg transition-transform duration-300 text-brandGold group-hover:scale-110" style={{ transitionDelay: `${j * 50}ms` }} />
                     ))}
                   </div>
-                  <p className="mb-6 italic text-white transition-colors duration-500">
+                  <p className="mb-6 italic text-gray-600 dark:text-gray-400">
                     "{testimonial.text}"
                   </p>
                   <div className="flex items-center gap-4">
                     <img
                       src={testimonial.image}
                       alt={testimonial.name}
-                      className="w-14 h-14 rounded-full object-cover border-2 border-[var(--accent-blue)] group-hover:border-[var(--accent-blue-light)] group-hover:scale-110 transition-all duration-500"
+                      className="object-cover transition-all duration-500 border-2 rounded-full w-14 h-14 border-brandPrimary dark:border-brandAccent group-hover:border-brandNavy dark:group-hover:border-brandGold group-hover:scale-110"
                     />
                     <div>
-                      <h4 className="font-bold group-hover:text-[var(--accent-blue-light)] transition-colors duration-500">{testimonial.name}</h4>
-                      <p className="text-sm text-[var(--accent-blue-light)]">
+                      <h4 className="font-bold transition-colors duration-300 text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">{testimonial.name}</h4>
+                      <p className="text-sm text-brandPrimary dark:text-brandAccent">
                         {testimonial.role}
                       </p>
-                      <p className="text-xs text-[var(--text-gray)]">
+                      <p className="text-xs text-gray-500 dark:text-gray-400">
                         {testimonial.company}
                       </p>
                     </div>
@@ -919,8 +1056,10 @@ export default function About() {
         </div>
       </section>
 
+
+
       {/* ================= MARQUEE CLIENTS ================= */}
-      <section className="relative overflow-hidden bg-black py-14 md:py-20 isolate">
+      <section className="relative overflow-hidden bg-surfaceLight dark:bg-surfaceDark py-14 md:py-20">
         <div className="max-w-6xl px-6 lg:px-6">
           <motion.h2
             variants={fadeInUp}
@@ -931,7 +1070,7 @@ export default function About() {
           >
             Our Marquee
             <br />
-            <span className="gradient-text">Clients</span>
+            <span className="text-brandPrimary dark:text-brandAccent">Clients</span>
           </motion.h2>
 
           {/* Scrolling Client Logos */}
@@ -954,7 +1093,7 @@ export default function About() {
                 {[...clients, ...clients].map((client, i) => (
                   <div
                     key={i}
-                    className="flex items-center justify-center flex-shrink-0 w-48 h-24 px-4 transition-colors bg-white rounded-xl"
+                    className="flex items-center justify-center flex-shrink-0 w-48 h-24 px-4 transition-colors bg-white border dark:bg-white border-borderLight dark:border-borderDark rounded-xl hover:bg-white dark:hover:bg-brandNavy/20"
                   >
                     <img
                       src={client.logo}
@@ -967,8 +1106,7 @@ export default function About() {
             </div>
 
             {/* Fade edges */}
-            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[var(--dark-navy-light)] to-transparent pointer-events-none" />
-            <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[var(--dark-navy-light)] to-transparent pointer-events-none" />
+
           </div>
 
           {/* Client Grid */}
@@ -980,7 +1118,7 @@ export default function About() {
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}
-                className="flex items-center justify-center p-4 transition-colors bg-white/80 aspect-square rounded-xl hover:bg-white"
+                className="flex items-center justify-center p-4 transition-colors bg-white border dark:bg-white border-borderLight dark:border-borderDark aspect-square rounded-xl hover:bg-white dark:hover:bg-white"
               >
                 <img
                   src={client.logo}
@@ -992,27 +1130,26 @@ export default function About() {
           </div>
         </div>
       </section>
-      
-      <AlliancePartnersSection/>
 
+      <AlliancePartnersSection />
 
-      <TeamMembersSection/>
+      <TeamMembersSection />
 
-      <Events/>
+      <Events />
 
       {/* ================= FAQ ================= */}
-      <section className="relative bg-black py-14 md:py-20">
+      <section className="relative transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark py-14 md:py-20">
         <div className="max-w-4xl px-6 lg:px-8">
           <motion.h2
             variants={fadeInUp}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="mb-10 text-3xl font-bold text-start md:text-4xl"
+            className="mb-10 text-3xl font-bold text-start md:text-4xl text-brandDark dark:text-white"
           >
             Frequently Asked
             <br />
-            <span className="gradient-text">Questions</span>
+            <span className="text-brandPrimary dark:text-brandAccent">Questions</span>
           </motion.h2>
 
           {faqs.map((f, i) => (
@@ -1022,13 +1159,16 @@ export default function About() {
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
-              className="card-dark mb-4 cursor-pointer hover:border-[var(--accent-blue)] transition-colors"
+              className={`mb-4 cursor-pointer transition-all duration-300 border rounded-2xl p-6 ${openFaq === i
+                ? "bg-surfaceLight dark:bg-surfaceDark border-brandGold dark:border-brandAccent shadow-lg"
+                : "bg-surfaceLight/50 dark:bg-surfaceDark/50 border-borderLight dark:border-borderDark hover:border-brandGold dark:hover:border-brandAccent"
+                }`}
               onClick={() => toggleFaq(i)}
             >
               <div className="flex items-center justify-between">
-                <h3 className="text-xl font-semibold">{f.question}</h3>
+                <h3 className="text-xl font-semibold text-brandDark dark:text-white">{f.question}</h3>
                 <FaChevronDown
-                  className={`transition-transform ${openFaq === i ? "rotate-180" : ""
+                  className={`transition-transform text-brandPrimary dark:text-brandAccent ${openFaq === i ? "rotate-180" : ""
                     }`}
                 />
               </div>
@@ -1037,7 +1177,7 @@ export default function About() {
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
                   exit={{ opacity: 0, height: 0 }}
-                  className="mt-4 text-white"
+                  className="mt-4 text-gray-600 dark:text-gray-400"
                 >
                   {f.answer}
                 </motion.p>
@@ -1048,18 +1188,18 @@ export default function About() {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="text-center bg-black py-14 md:py-20">
+      <section className="text-center transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark py-14 md:py-20">
         <div className="px-6 mx-auto max-w-7xl lg:px-8">
           <motion.h2
             variants={fadeInUp}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="mb-6 text-4xl font-bold md:text-5xl"
+            className="mb-6 text-4xl font-bold md:text-5xl text-brandDark dark:text-white"
           >
             Partner With
             <br />
-            <span className="gradient-text">RiskMan Today</span>
+            <span className="text-brandPrimary dark:text-brandAccent">RiskMan Today</span>
           </motion.h2>
 
           <motion.p
@@ -1067,7 +1207,7 @@ export default function About() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="max-w-2xl mx-auto mb-8 text-xl text-white"
+            className="max-w-2xl mx-auto mb-8 text-xl text-gray-600 dark:text-gray-400"
           >
             Strengthen governance, manage risk and drive sustainable growth with
             confidence.
@@ -1080,10 +1220,10 @@ export default function About() {
             viewport={{ once: true }}
             className="flex flex-wrap justify-center gap-4"
           >
-            <a href="/contact" className="inline-block px-8 py-4 text-lg btn-primary">
+            <a href="/contact" className="inline-block px-8 py-4 text-lg text-white transition-all duration-300 rounded-full shadow-lg bg-brandDark hover:bg-brandPrimary dark:bg-brandAccent dark:text-brandDark dark:hover:bg-brandGold hover:shadow-xl hover:scale-105">
               Schedule Consultation
             </a>
-            <a href="/about" className="inline-block px-8 py-4 text-lg btn-secondary">
+            <a href="/about" className="inline-block px-8 py-4 text-lg transition-all duration-300 border-2 rounded-full shadow-lg border-brandDark text-brandDark dark:border-brandAccent dark:text-brandAccent hover:bg-brandDark hover:text-white dark:hover:bg-brandAccent dark:hover:text-brandDark">
               Learn More
             </a>
           </motion.div>
@@ -1097,7 +1237,7 @@ export default function About() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black backdrop-blur-md"
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-md"
             onClick={() => setSelectedLeader(null)}
           >
             <motion.div
@@ -1105,20 +1245,15 @@ export default function About() {
               initial="initial"
               animate="animate"
               exit="exit"
-              className="relative w-full max-w-2xl border shadow-2xl bg-zinc-800 border-white/10 rounded-3xl"
+              className="relative w-full max-w-2xl border shadow-2xl border-borderLight dark:border-borderDark rounded-3xl bg-surfaceLight dark:bg-surfaceDark"
               onClick={(e) => e.stopPropagation()}
-              // style={{
-              //   background:
-              //     "linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%)",
-              //   backdropFilter: "blur(20px)",
-              // }}
             >
               {/* CLOSE BUTTON */}
               <button
                 onClick={() => setSelectedLeader(null)}
-                className="absolute z-10 flex items-center justify-center transition-all rounded-full top-5 right-5 w-9 h-9 bg-white/5 hover:bg-white/10 hover:scale-110"
+                className="absolute z-10 flex items-center justify-center transition-all rounded-full top-5 right-5 w-9 h-9 bg-brandDark/5 dark:bg-white/5 hover:bg-brandDark/10 dark:hover:bg-white/10 hover:scale-110"
               >
-                <FaTimes className="text-white/70 hover:text-white" />
+                <FaTimes className="text-brandDark dark:text-white/70 hover:text-brandPrimary dark:hover:text-white" />
               </button>
 
               {/* CONTENT */}
@@ -1129,51 +1264,42 @@ export default function About() {
                   <img
                     src={selectedLeader.image}
                     alt={selectedLeader.name}
-                    className="
-                w-40 h-40 md:w-48 md:h-48
-                object-cover rounded-full
-                border-4 border-[var(--accent-blue)]/30
-                hover:scale-105
-                transition-all duration-500
-              "
+                    className="object-cover w-40 h-40 transition-all duration-500 border-4 rounded-full md:w-48 md:h-48 border-brandPrimary/30 dark:border-brandAccent/30 hover:scale-105"
                   />
                 </div>
 
                 {/* RIGHT – TEXT */}
                 <div>
-                  <h2 className="mb-1 text-2xl font-bold text-white">
+                  <h2 className="mb-1 text-2xl font-bold text-brandDark dark:text-white">
                     {selectedLeader.name}
                   </h2>
 
-                  <p className="text-[var(--accent-blue-light)] font-semibold mb-2">
+                  <p className="mb-2 font-semibold text-brandPrimary dark:text-brandAccent">
                     {selectedLeader.title}
                   </p>
 
                   {selectedLeader.credentials && (
-                    <p className="mb-3 text-sm text-white">
+                    <p className="mb-3 text-sm text-gray-600 dark:text-gray-400">
                       {selectedLeader.credentials}
                     </p>
                   )}
 
-                  <div className="h-px my-4 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+                  <div className="h-px my-4 bg-borderLight dark:bg-borderDark" />
 
-                  <p className="mb-4 text-sm leading-relaxed text-white">
+                  <p className="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
                     {selectedLeader.fullBio || selectedLeader.bio}
                   </p>
 
                   {selectedLeader.expertise && (
                     <div className="mb-4">
-                      <h3 className="mb-2 text-sm font-semibold text-white">
+                      <h3 className="mb-2 text-sm font-semibold text-brandDark dark:text-white">
                         Areas of Expertise
                       </h3>
                       <div className="flex flex-wrap gap-2">
                         {selectedLeader.expertise.map((exp, i) => (
                           <span
                             key={i}
-                            className="px-3 py-1 text-xs rounded-full
-                                 bg-[var(--accent-blue)]/10
-                                 border border-[var(--accent-blue)]/30
-                                 text-[var(--accent-blue-light)]"
+                            className="px-3 py-1 text-xs border rounded-full bg-brandPrimary/10 border-brandPrimary/20 text-brandPrimary dark:bg-brandAccent/10 dark:border-brandAccent/30 dark:text-brandAccent"
                           >
                             {exp}
                           </span>
@@ -1187,8 +1313,7 @@ export default function About() {
                       href={selectedLeader.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-sm font-semibold
-                           text-[var(--accent-blue-light)] hover:text-white"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-brandPrimary dark:text-brandAccent hover:text-brandNavy dark:hover:text-brandGold"
                     >
                       <FaLinkedin className="text-xl" />
                       Connect on LinkedIn
@@ -1203,4 +1328,3 @@ export default function About() {
     </div>
   );
 }
-

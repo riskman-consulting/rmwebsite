@@ -29,21 +29,31 @@ const alliancePartners = [
     description: "Public accounting firm providing integrated audit services in alliance with RiskMan Consulting.",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop",
     website: "https://www.integritatcpa.com",
-    fullDescription: `RiskMan Consulting, in alliance with Integrität CPA, provides integrated audit services...`,
+    fullDescription: `RiskMan Consulting, in alliance with Integrität CPA, provides integrated audit services.
+
+An integrated audit is an examination of the effectiveness of the internal control over financial reporting and of the financial statements. The Sarbanes-Oxley Act requires larger issuers to have integrated audits (internal control over financial reporting (ICFR) auditor attestation requirements), issuers with $100 million in annual revenue or more. An integrated audit aims to issue a report on the internal control environment, the quality and compliance of financial reporting.
+
+RiskMan Consulting is a firm with various internal control professionals with top tier and high-level corporate experience in testing the internal control environment for operational and financial reporting purposes. Click images below to see each partner's profile.
+
+Integritat CPA began an alliance with RiskMan Consulting in 2024 to pool resources and expertise in performing integrated audits for issuers requiring these audits, in process of uplisting or companies that opt to have integrated audits. The alliance is a dynamic, engaging team with ample years industry experience serving businesses in the US and EU. Through this alliance Integritat CPA continues to realize its mission to make accountability understandable and practical.`,
     services: ["Integrated Audit Services (ICOFR)", "Financial Statement Audits", "Internal Control Testing", "Sarbanes-Oxley Compliance", "Audit & Review Services (US GAAP)"],
     region: "United States & European Union",
   },
-  {
-    name: "GQ Auditores Consultores",
-    shortName: "GQ Auditores",
-    title: "Financial Statement Audits in Spanish",
-    description: "Chilean public accounting firm providing financial statement audit and review services in Spanish.",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop",
-    website: "https://gqauditores.cl",
-    fullDescription: `GQ Auditores Consultores is located in Santiago (Chile)...`,
-    services: ["Financial Statement Audits (US GAAP)", "Financial Statement Reviews (IFRS)", "Bilingual Audit Services", "Going Public Support", "Merger & Reverse Merger Services"],
-    region: "Latin America (Chile) & United States",
-  },
+//   {
+//     name: "GQ Auditores Consultores",
+//     shortName: "GQ Auditores",
+//     title: "Financial Statement Audits in Spanish",
+//     description: "Chilean public accounting firm providing financial statement audit and review services in Spanish.",
+//     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop",
+//     website: "https://gqauditores.cl",
+//     fullDescription: `GQ Auditores Consultores is located in Santiago (Chile), is a public accounting firm registered to provide assurance services in Chile. It regularly provides this service in accordance with IFRS/Chilean GAAP. In alliance with Integritat CPA, GQ Auditores provides financial statement audit and review services in Spanish under US GAAP (US generally accepted accounting standards) and IFRS (international financial reporting standards).
+
+// This alliance facilitates companies in Latin America to obtain audit and review services for going public in the US or Canada and effecting mergers/reverse mergers into US and Canadian public quoted entities. It also accommodates Spanish speaking companies in the US to have audits performed with ease, financial statements and audit reports prepared in Spanish and English with audit documentation prepared in English, as required for AICPA and PCOAB reviews and inspections.
+
+// The alliance merges our common expertise in the US and LATAM markets to realize the mission of making accountability, reporting and compliance practical for emerging businesses.`,
+//     services: ["Financial Statement Audits (US GAAP)", "Financial Statement Reviews (IFRS)", "Bilingual Audit Services", "Going Public Support", "Merger & Reverse Merger Services"],
+//     region: "Latin America (Chile) & United States",
+//   },
   {
     name: "Supriyo Mullick CPA PLLC",
     shortName: "SM CPA",
@@ -51,7 +61,9 @@ const alliancePartners = [
     description: "Delivering insightful, reliable, and globally informed accounting and advisory services.",
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
     website: "https://www.smcpallc.com",
-    fullDescription: `At Supriyo Mullick CPA PLLC, we specialize in delivering insightful...`,
+    fullDescription: `At Supriyo Mullick CPA PLLC, we specialize in delivering insightful, reliable, and globally informed accounting and advisory services. With deep expertise in US GAAP, international financial reporting, and comprehensive business consulting, we serve clients ranging from emerging startups to established enterprises.
+
+Our team combines decades of experience with a commitment to understanding each client's unique needs, ensuring tailored solutions that drive financial clarity, compliance, and strategic growth. Whether you need audit and assurance services, tax planning, or management consulting, we bring precision, integrity, and a client-centered approach to every engagement.`,
     services: ["Financial Statement Audits & Reviews", "Tax Planning & Compliance", "Management Consulting", "Internal Controls", "Business Process Improvement"],
     region: "United States & Global",
   },
@@ -61,13 +73,13 @@ export default function AlliancePartnersSection() {
   const [selectedPartner, setSelectedPartner] = useState(null);
 
   const services = [
-    "Audit", "Accounting", "Tax", "Advisory", 
+    "Audit", "Accounting", "Tax", "Advisory",
     "Bookkeeping", "SOC Compliance", "Internal Controls", "Risk Management"
   ];
 
   return (
     <>
-      <section id="alliance-partners" className="relative overflow-hidden bg-black py-14 md:pt-20 md:pb-0 isolate">
+      <section id="alliance-partners" className="relative overflow-hidden transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark py-14 md:pt-20 md:pb-0 isolate">
         <div className="px-6 mx-auto max-w-7xl lg:px-8">
           <motion.div
             variants={fadeInUp}
@@ -77,10 +89,10 @@ export default function AlliancePartnersSection() {
             className="mb-4 text-center"
           >
             <div className="flex items-start gap-3 mb-4">
-              <FaHandshake className="text-3xl text-[var(--accent-blue-light)]" />
-              <h2 className="text-3xl font-bold md:text-4xl">
+              <FaHandshake className="text-3xl text-brandPrimary dark:text-brandAccent" />
+              <h2 className="text-3xl font-bold md:text-4xl text-brandDark dark:text-white">
                 Strategic<br />
-                <span className="gradient-text">Alliance Partners</span>
+                <span className="text-brandPrimary dark:text-brandAccent">Alliance Partners</span>
               </h2>
             </div>
           </motion.div>
@@ -90,7 +102,7 @@ export default function AlliancePartnersSection() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="max-w-2xl mb-12 text-base text-white text-start"
+            className="max-w-2xl mb-12 text-base text-start text-brandNavy dark:text-gray-400"
           >
             Collaborating with leading firms to deliver comprehensive solutions across audit, compliance, and consulting services.
           </motion.p>
@@ -103,7 +115,7 @@ export default function AlliancePartnersSection() {
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true }}
-                className="bg-zinc-800 backdrop-blur-sm border border-white/10 rounded-3xl p-8 relative overflow-hidden group cursor-pointer transition-all duration-500 hover:border-[var(--accent-blue)]/50 hover:shadow-2xl hover:shadow-[var(--accent-blue)]/20 hover:scale-[1.02]"
+                className="relative p-8 overflow-hidden transition-all duration-300 border cursor-pointer bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark backdrop-blur-sm rounded-3xl group hover:border-brandGold dark:hover:border-brandAccent hover:shadow-2xl hover:-translate-y-1"
                 onClick={() => setSelectedPartner(partner)}
               >
                 <div className="relative z-10">
@@ -111,16 +123,16 @@ export default function AlliancePartnersSection() {
                     <img
                       src={partner.image}
                       alt={partner.name}
-                      className="w-32 h-32 rounded-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500 border-4 border-[var(--accent-blue)]/30 group-hover:border-[var(--accent-blue)]/60"
+                      className="object-cover w-32 h-32 transition-all duration-500 border-4 rounded-full grayscale group-hover:grayscale-0 group-hover:scale-110 border-brandPrimary/30 dark:border-brandAccent/30 group-hover:border-brandPrimary/60 dark:group-hover:border-brandAccent/60"
                     />
                   </div>
-                  <h3 className="mb-2 text-2xl font-bold text-center group-hover:text-[var(--accent-blue-light)] transition-colors duration-500">
+                  <h3 className="mb-2 text-2xl font-bold text-center transition-colors duration-500 text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
                     {partner.shortName}
                   </h3>
-                  <p className="text-[var(--accent-blue-light)] font-semibold mb-3 text-center">{partner.title}</p>
-                  <p className="mb-6 text-sm leading-relaxed text-center text-white/70">{partner.description}</p>
+                  <p className="mb-3 font-semibold text-center text-brandPrimary dark:text-brandAccent">{partner.title}</p>
+                  <p className="mb-6 text-sm leading-relaxed text-center text-brandNavy dark:text-gray-400">{partner.description}</p>
                   <div className="flex justify-center">
-                    <span className="px-4 py-2 text-xs rounded-full bg-[var(--accent-blue)]/20 border border-[var(--accent-blue)]/40 text-[var(--accent-blue-light)]">
+                    <span className="px-4 py-2 text-xs border rounded-full bg-brandPrimary/10 dark:bg-brandAccent/20 border-brandPrimary/30 dark:border-brandAccent/40 text-brandPrimary dark:text-brandAccent">
                       {partner.region}
                     </span>
                   </div>
@@ -132,19 +144,16 @@ export default function AlliancePartnersSection() {
           {/* ================= UPDATED ANIMATED RIBBON ================= */}
           <div className="relative flex items-center justify-center mt-20 mb-10 h-80">
 
-            {/* <div className="absolute w-full h-full bg-[radial-gradient(circle,rgba(59,130,246,0.12)_0%,transparent_70%)] pointer-events-none" /> */}
-            
-            {/* RIBBON 1: Tilting Down Right (Blue/Purple) */}
-            <div 
-              className="absolute w-[150%] z-20 flex items-center overflow-hidden border-y border-white/10"
-              style={{ 
+            {/* RIBBON 1: Tilting Down Right (Light mode) */}
+            <div
+              className="absolute w-[150%] z-20 flex items-center overflow-hidden border-y border-borderLight dark:hidden"
+              style={{
                 transform: "rotate(-4.5deg) translateY(-20px)",
-                transformOrigin:"left center",
-                background: "linear-gradient(90deg, #1e3a8a 0%, #6b21a8 50%, #1e3a8a 100%)",
-                // background: "linear-gradient(90deg, var(--accent-blue) 0%, var(--accent-purple) 100%)",
+                transformOrigin: "left center",
+                backgroundColor: "#001F3F", // brandDark
                 height: "85px",
-                left:"-25%",
-                boxShadow: "0 25px 50px -12px rgba(0,0,0,0.7)"
+                left: "-25%",
+                boxShadow: "0 25px 50px -12px rgba(0, 31, 63, 0.4)"
               }}
             >
               <div className="flex whitespace-nowrap animate-scroll-left">
@@ -160,17 +169,16 @@ export default function AlliancePartnersSection() {
               </div>
             </div>
 
-            {/* RIBBON 2: Tilting Up Right (Green Gradient as per image) */}
-            <div 
-              className="absolute w-[150%] z-10 flex items-center overflow-hidden"
-              style={{ 
+            {/* RIBBON 2: Tilting Up Right (Light mode) */}
+            <div
+              className="absolute w-[150%] z-10 flex items-center overflow-hidden dark:hidden"
+              style={{
                 transform: "rotate(3.5deg)  translateY(30px)",
-                transformOrigin:"right center",
-                background: "linear-gradient(90deg, #4c1d95 0%, #172554 100%)",
-                // background: "linear-gradient(90deg, var(--accent-blue) 0%, var(--accent-purple) 100%)", // Matching the green screenshot
+                transformOrigin: "right center",
+                backgroundColor: "#003366", // brandNavy
                 height: "85px",
-                left:"-25%",
-                boxShadow: "0 15x 35px rgba(0,0,0,0.5)"
+                left: "-25%",
+                boxShadow: "0 15px 35px rgba(0, 51, 102, 0.4)"
               }}
             >
               <div className="flex whitespace-nowrap animate-scroll-right">
@@ -178,6 +186,56 @@ export default function AlliancePartnersSection() {
                   <div key={groupIndex} className="flex items-center gap-12 px-6">
                     {services.map((service, idx) => (
                       <span key={idx} className="text-2xl italic font-black tracking-tighter uppercase text-white/90">
+                        {service}
+                      </span>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* RIBBON 1: Tilting Down Right (Dark mode) */}
+            <div
+              className="absolute w-[150%] z-20 items-center overflow-hidden border-y border-borderDark hidden dark:flex"
+              style={{
+                transform: "rotate(-4.5deg) translateY(-20px)",
+                transformOrigin: "left center",
+                backgroundColor: "#FFC000", // brandAccent
+                height: "85px",
+                left: "-25%",
+                boxShadow: "0 25px 50px -12px rgba(255, 192, 0, 0.4)"
+              }}
+            >
+              <div className="flex whitespace-nowrap animate-scroll-left">
+                {[...Array(4)].map((_, groupIndex) => (
+                  <div key={groupIndex} className="flex items-center gap-12 px-6">
+                    {services.map((service, idx) => (
+                      <span key={idx} className="text-3xl italic font-black tracking-tighter uppercase text-brandDark">
+                        {service}
+                      </span>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* RIBBON 2: Tilting Up Right (Dark mode) */}
+            <div
+              className="absolute w-[150%] z-10 items-center overflow-hidden hidden dark:flex"
+              style={{
+                transform: "rotate(3.5deg)  translateY(30px)",
+                transformOrigin: "right center",
+                backgroundColor: "#FFB800", // brandGold
+                height: "85px",
+                left: "-25%",
+                boxShadow: "0 15px 35px rgba(255, 184, 0, 0.4)"
+              }}
+            >
+              <div className="flex whitespace-nowrap animate-scroll-right">
+                {[...Array(4)].map((_, groupIndex) => (
+                  <div key={groupIndex} className="flex items-center gap-12 px-6">
+                    {services.map((service, idx) => (
+                      <span key={idx} className="text-2xl italic font-black tracking-tighter uppercase text-brandDark/90">
                         {service}
                       </span>
                     ))}
@@ -221,20 +279,74 @@ export default function AlliancePartnersSection() {
               initial="initial"
               animate="animate"
               exit="exit"
-              className="relative w-full max-w-4xl max-h-[90vh] border shadow-2xl bg-zinc-900 border-white/10 rounded-3xl overflow-y-auto"
+              className="relative w-full max-w-4xl max-h-[90vh] border shadow-2xl rounded-3xl overflow-y-auto bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="p-8">
-                <button onClick={() => setSelectedPartner(null)} className="absolute top-6 right-6 text-white/70 hover:text-white">
-                  <FaTimes size={24} />
+                {/* Close button with higher z-index */}
+                <button
+                  onClick={() => setSelectedPartner(null)}
+                  className="absolute z-50 flex items-center justify-center w-10 h-10 transition-all rounded-full top-12 right-12 bg-brandPrimary/10 dark:bg-brandAccent/20 hover:bg-brandPrimary/20 dark:hover:bg-brandAccent/30 hover:scale-110"
+                >
+                  <FaTimes className="text-xl text-brandPrimary dark:text-brandAccent" />
                 </button>
+
+                {/* Header */}
                 <div className="flex flex-col items-center mb-8">
-                  <img src={selectedPartner.image} alt={selectedPartner.name} className="w-32 h-32 rounded-full border-4 border-[var(--accent-blue)] mb-4" />
-                  <h2 className="text-3xl font-bold text-center text-white">{selectedPartner.name}</h2>
+                  <img
+                    src={selectedPartner.image}
+                    alt={selectedPartner.name}
+                    className="w-32 h-32 mb-4 border-4 rounded-full border-brandPrimary dark:border-brandAccent"
+                  />
+                  <h2 className="mb-2 text-3xl font-bold text-center text-brandDark dark:text-white">
+                    {selectedPartner.name}
+                  </h2>
+                  <p className="mb-3 text-lg font-semibold text-center text-brandPrimary dark:text-brandAccent">
+                    {selectedPartner.title}
+                  </p>
+                  <span className="px-4 py-2 text-sm border rounded-full bg-brandPrimary/10 dark:bg-brandAccent/20 border-brandPrimary/30 dark:border-brandAccent/40 text-brandPrimary dark:text-brandAccent">
+                    {selectedPartner.region}
+                  </span>
                 </div>
-                <div className="leading-relaxed whitespace-pre-line text-white/80">
-                  {selectedPartner.fullDescription}
+
+                {/* Description */}
+                <div className="mb-8">
+                  <h3 className="mb-4 text-xl font-bold text-brandDark dark:text-white">About</h3>
+                  <div className="leading-relaxed whitespace-pre-line text-brandNavy dark:text-gray-400">
+                    {selectedPartner.fullDescription}
+                  </div>
                 </div>
+
+                {/* Services */}
+                <div className="mb-6">
+                  <h3 className="mb-4 text-xl font-bold text-brandDark dark:text-white">Services Offered</h3>
+                  <div className="grid gap-3 md:grid-cols-2">
+                    {selectedPartner.services.map((service, idx) => (
+                      <div
+                        key={idx}
+                        className="flex items-start gap-3 p-4 border rounded-xl bg-brandPrimary/10 dark:bg-brandAccent/10 border-borderLight dark:border-borderDark"
+                      >
+                        <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-brandPrimary dark:bg-brandAccent"></div>
+                        <span className="text-sm text-brandNavy dark:text-gray-400">{service}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Website Link */}
+                {selectedPartner.website && (
+                  <div className="flex justify-center pt-6 border-t border-borderLight dark:border-borderDark">
+                    <a
+                      href={selectedPartner.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 rounded-full shadow-lg dark:text-brandDark bg-brandDark hover:bg-brandPrimary dark:bg-brandAccent dark:hover:bg-brandGold hover:shadow-xl hover:scale-105"
+                    >
+                      <FaExternalLinkAlt />
+                      Visit Website
+                    </a>
+                  </div>
+                )}
               </div>
             </motion.div>
           </motion.div>

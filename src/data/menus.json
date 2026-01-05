@@ -1,11 +1,10 @@
 {
   "mainNav": [
-    { "label": "Home", "type": "link", "path": "/" },
-    { "label": "About", "type": "mega", "key": "about","path":"/about"},
-    { "label": "Services", "type": "mega", "key": "services","path":"/services" },
-    { "label": "Industries", "type": "mega", "key": "industries","path":"/industries" },
-    { "label": "Insights", "type": "mega", "key": "insights","path":"/insights" },
-    { "label": "Contact", "type": "link", "path": "/contact" }
+     { "label": "Services", "type": "mega", "key": "services", "path": "/services" },
+     { "label": "Industries", "type": "mega", "key": "industries", "path": "/industries" },
+     {"label":"Solutions","type":"link","key":"solutions","path":"/solutions"},
+    { "label": "About", "type": "mega", "key": "about", "path": "/about" },
+    { "label": "Insights", "type": "mega", "key": "insights", "path": "/insights" }
   ],
 
   "aboutMegaMenu": [
@@ -14,38 +13,37 @@
       "items": [
         { "label": "Co-founding Partners", "path": "/about#co-founders" },
         { "label": "Service Leaders", "path": "/about#service-leaders" },
-        {"label":"Team Leaders","path":"/about/#team-leaders"},
-        {"label":"Alliance Partners","path":"/about/#alliance-partners"}
+        { "label": "Riskman Teams", "path": "/about#riskman-teams" },
+        { "label": "Alliance Partners", "path": "/about#alliance-partners" }
       ]
     }
   ],
   
   "servicesMegaMenu": [
     {
-      "title": "Risk Advisory",
-      "subtitle": "Governance • Compliance • Cyber",
+      "title": "ENTERPRISE SERVICES",
       "items": [
-        { "label": "Risk Advisory", "path": "/services/risk-advisory" },
+       { "label": "Risk Advisory", "path": "/services/risk-advisory" },
+        { "label": "Consulting", "path": "/services/consulting" },
+        { "label": "Outsourcing and Training", "path": "/services/outsourcing-training" },
+        { "label": "Sustainability", "path": "/services/sustainability" },
         { "label": "Financial Advisory", "path": "/services/financial-advisory" },
-        { "label": "Forensic Investigation", "path": "/services/forensic-investigation" },
-        { "label": "PCI DSS Compliance", "path": "/services/pci-dss-compliance" },
-        { "label": "TPRM", "path": "/services/tprm" },
-        { "label": "ITGC & ITAC", "path": "/services/itgc-itac" },
-        { "label": "Cybersecurity", "path": "/services/cybersecurity" },
-        { "label": "IT Risk Management", "path": "/services/it-risk-management" },
-        { "label": "Data Privacy", "path": "/services/data-privacy" },
-        { "label": "SOC Services", "path": "/services/soc-services" },
-        { "label": "ISO Certifications", "path": "/services/iso-certifications" },
-        { "label": "EPC Risk Management Solutions", "path": "/services/epc-risk-management"}
+        { "label": "Forensic and Investigation", "path": "/services/forensic-investigation" }
       ]
     },
-
     {
-      "title": "Consulting",
-      "subtitle": "Strategy • Operations • Transformation",
+      "title": "IT RISK MANAGEMENT",
       "items": [
-        { "label": "Business Consulting", "path": "/services/consulting" },
-        { "label": "IT Consulting", "path": "/services/it-consulting" }
+        { "label": "SOC", "path": "/services/soc-services" },
+        { "label": "ISO Certifications", "path": "/services/iso-certifications" },
+        { "label": "PCI DSS", "path": "/services/pci-dss-compliance" },
+        {"label":"ITGC and ITAC","path":"/services/itgc-itac"},
+        { "label": "IT Risk Management", "path": "/services/it-risk-management" },
+        { "label": "TPRM", "path": "/services/tprm" },
+        { "label": "BCP and DR", "path": "/services/bcp-dr" },
+        { "label": "Cyber Security", "path": "/services/cybersecurity" },
+        { "label": "Data Privacy & Protection", "path": "/services/data-privacy" }
+
       ]
     }
   ],
@@ -61,7 +59,6 @@
         { "label": "Travel & Logistics", "path": "/industries/travel-logistics" }
       ]
     },
-
     {
       "title": "Technology & Digital",
       "items": [
@@ -71,7 +68,6 @@
         { "label": "IT Consulting", "path": "/industries/it-consulting" }
       ]
     },
-
     {
       "title": "Specialized Sectors",
       "items": [

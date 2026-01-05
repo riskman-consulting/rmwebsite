@@ -8,7 +8,7 @@ export default function BlogSingle() {
 
   if (!blog) {
     return (
-      <div className="pt-32 pb-20 text-center text-xl text-red-600">
+      <div className="pt-32 pb-20 text-xl text-center text-red-600">
         Blog Not Found
       </div>
     );

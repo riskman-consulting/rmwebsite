@@ -1,20 +1,21 @@
+/* =====================
+   ROOT LAYOUT FIX
+===================== */
 #root {
-  max-width: none;
-  margin: 0 auto;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
   padding: 0;
   text-align: left;
 }
 
-body{
-  margin:0;
+body {
+  margin: 0;
 }
 
-#root,body #root{
-  width:100%;
-  min-height: 100%;
-}
-
-/* ================= CSS VARIABLES ================= */
+/* =====================
+   CSS VARIABLES (OPTIONAL – SAFE)
+===================== */
 :root {
   --dark-navy: #0f172a;
   --dark-navy-light: #1e293b;
@@ -24,11 +25,15 @@ body{
   --text-gray: #9ca3af;
 }
 
-/* ================= CUSTOM CLASSES ================= */
-
-/* CARD STYLES */
+/* =====================
+   CARD STYLES
+===================== */
 .card-gradient {
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.1) 0%,
+    rgba(168, 85, 247, 0.1) 100%
+  );
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
   padding: 1.5rem;
@@ -50,11 +55,6 @@ body{
   transition: all 0.3s ease;
 }
 
-.card-light:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
 .card-dark {
   background: rgba(30, 41, 59, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -64,60 +64,16 @@ body{
   transition: all 0.3s ease;
 }
 
-.card-dark:hover {
-  border-color: rgba(59, 130, 246, 0.3);
-  background: rgba(30, 41, 59, 0.8);
-}
-
-/* GRADIENT TEXT */
-.gradient-text {
-  background: linear-gradient(135deg, #3b82f6 0%, #a855f7 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* SECTION PADDING */
-.section-padding {
-  padding: 4rem 1.5rem;
-}
-
-@media (min-width: 768px) {
-  .section-padding {
-    padding: 6rem 2rem;
-  }
-}
-
-/* BACKGROUND GLOWS */
-.bg-glow-blue {
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0) 70%);
-  border-radius: 50%;
-  filter: blur(40px);
-  pointer-events: none;
-}
-
-.bg-glow-purple {
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(168, 85, 247, 0.3) 0%, rgba(168, 85, 247, 0) 70%);
-  border-radius: 50%;
-  filter: blur(40px);
-  pointer-events: none;
-}
-
-/* BUTTON STYLES */
+/* =====================
+   BUTTONS
+===================== */
 .btn-primary {
   background: linear-gradient(135deg, #3b82f6 0%, #a855f7 100%);
   color: white;
-  border: none;
   border-radius: 9999px;
   padding: 0.75rem 2rem;
   font-weight: 600;
   transition: all 0.3s ease;
-  display: inline-block;
-  text-decoration: none;
 }
 
 .btn-primary:hover {
@@ -133,66 +89,27 @@ body{
   padding: 0.75rem 2rem;
   font-weight: 600;
   transition: all 0.3s ease;
-  display: inline-block;
-  text-decoration: none;
 }
 
 .btn-secondary:hover {
-  border-color: rgba(59, 130, 246, 1);
   background: rgba(59, 130, 246, 0.1);
-  transform: translateY(-2px);
+  border-color: rgba(59, 130, 246, 1);
 }
 
-/* CONTAINER */
-.container {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
+/* =====================
+   ANIMATIONS
+===================== */
+@keyframes scaleIn {
   from {
-    transform: rotate(0deg);
+    transform: scale(0.9);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    transform: scale(1);
+    opacity: 1;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-@keyframes scaleIn {
-  0% { transform: scale(0.8); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
 }
 
 .animate-scaleIn {
   animation: scaleIn 0.25s ease-out;
 }
-

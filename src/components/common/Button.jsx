@@ -91,7 +91,7 @@ export default function Button({
             <Icon size={iconSize} className="shrink-0" />
           )}
           {!Icon && variant === "primary" && iconPosition === "right" && (
-            <ArrowRight size={iconSize} className="shrink-0 transition-transform group-hover:translate-x-1" />
+            <ArrowRight size={iconSize} className="transition-transform shrink-0 group-hover:translate-x-1" />
           )}
         </>
       )}
@@ -177,4 +177,3 @@ export function DangerButton(props) {
 export function GradientButton(props) {
   return <Button variant="gradient" {...props} />;
 }
-

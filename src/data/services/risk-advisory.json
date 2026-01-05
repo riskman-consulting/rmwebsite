@@ -1,58 +1,378 @@
-{
-  "id": "risk-advisory",
-  "title": "Risk Advisory",
-  "headerImage":"https://www.riskman.in/wp-content/uploads/2023/01/trusted-advisor.jpg",
-  "meta": {
-    "title": "Risk Advisory Services | RiskMan Consulting",
-    "description": "Discover expert Risk Advisory services from RiskMan Consulting. Mitigate business risks with tailored risk management and compliance solutions.",
-    "primaryKeyword": "Risk Advisory",
-    "additionalKeywords": ["Risk Management", "Compliance Solutions", "Business Risk"],
-    "lsiKeywords": ["Risk Assessment", "Enterprise Risk", "Risk Mitigation", "Governance", "Risk Consulting"]
-  },
-  "hero": {
-    "heading": "Navigate uncertainties With RiskMan",
-    "subheading": "Our expert solutions protect your business from Business Risks, ensuring sustainable growth.",
-    "ctaText": "Talk to Us",
-    "ctaLink": "/contact"
-  },
-  "offerings": {
-    "intro": "Our Risk Advisory services deliver comprehensive Risk Assessment and Enterprise Risk strategies. We provide:",
-    "items": [
-      { "title": "Risk Consulting", "desc": "Tailored solutions for Risk Mitigation and strategic planning." },
-      { "title": "Governance", "desc": "Robust frameworks to strengthen oversight." },
-      { "title": "Compliance Audits", "desc": "Ensuring adherence to regulatory standards." },
-      { "title": "Risk Identification", "desc": "Proactive measures to address Business Risks." }
-    ]
-  },
-  "clientSuccess": [
-    { "title": "Global Bank", "desc": "Reduced operational risks by 30% through our Risk Management framework." },
-    { "title": "Tech Firm", "desc": "Achieved 100% compliance with GDPR via our Compliance Solutions." }
-  ],
-  "resources": [
-    { "title": "Whitepaper", "desc": "Mastering Enterprise Risk in 2025" },
-    { "title": "Case Study", "desc": "Risk Mitigation in High-Growth Industries" },
-    { "title": "Blog", "desc": "Why Governance Matters for Business Success" }
-  ],
-  "whyRiskMan": "Choose RiskMan for unparalleled expertise in Risk Advisory. Our team combines deep industry knowledge with innovative Risk Consulting to deliver measurable results.",
-  "relatedOfferings": [
-    { "label": "Financial Advisory", "id": "financial-advisory" },
-    { "label": "IT Risk Management", "id": "it-risk-management" },
-    { "label": "Data Privacy and Protection", "id": "data-privacy" }
-  ],
-  "cta": {
-    "heading": "Ready to mitigate risks?",
-    "text": "Contact RiskMan Consulting for a free Risk Assessment today!",
-    "button": "Contact Us",
-    "link": "/contact"
-  },
-  "faqs": [
-    { "q": "What is Risk Advisory?", "a": "Risk Advisory involves identifying, assessing, and mitigating Business Risks to ensure organizational resilience." },
-    { "q": "How does Risk Management benefit my business?", "a": "Risk Management enhances decision-making, reduces losses, and ensures Compliance Solutions for long-term success." },
-    { "q": "What industries need Risk Advisory services?", "a": "Industries like banking, healthcare, and IT benefit from Risk Consulting to address unique Enterprise Risks." },
-    { "q": "How does RiskMan ensure compliance?", "a": "We conduct thorough audits and implement Governance frameworks to meet regulatory standards." },
-    { "q": "What is the cost of Risk Advisory services?", "a": "Costs vary based on scope. Contact us for a tailored Risk Assessment quote." },
-    { "q": "How long does a Risk Advisory engagement take?", "a": "Engagements typically last 4–12 weeks, depending on complexity and Risk Mitigation needs." },
-    { "q": "Can Risk Advisory improve business efficiency?", "a": "Yes, by streamlining processes and reducing Business Risks, efficiency improves significantly." },
-    { "q": "Why choose RiskMan for Risk Advisory?", "a": "Our expertise in Risk Consulting and proven track record ensure customized, effective solutions." }
-  ]
+﻿{
+  "services": {
+    "risk-advisory": {
+      "id": "risk-advisory",
+      "title": "Risk Advisory",
+      "summary": "Expert-led risk advisory services help you identify, assess, and manage enterprise risks â€” ensuring operational resilience and regulatory compliance in a rapidly evolving world.",
+      "headerImage": "https://www.riskman.in/wp-content/uploads/2023/01/trusted-advisor.jpg",
+      "meta": {
+        "title": "Risk Advisory Services | RiskMan Consulting",
+        "description": "Navigate uncertainties with RiskMan. Our expert solutions protect your business from Business Risks, ensuring sustainable growth.",
+        "primaryKeyword": "Risk Advisory",
+        "additionalKeywords": ["Risk Management", "Enterprise Risk", "Business Risks", "Risk Strategy"],
+        "lsiKeywords": ["Risk Assessment", "Risk Mitigation", "Governance", "Internal Controls", "Operational Resilience"]
+      },
+      "hero": {
+        "tagline": "Enterprise Services",
+        "heading": "Navigate uncertainties With RiskMan",
+        "subheading": "Our expert solutions protect your business from Business Risks, ensuring sustainable growth.",
+        "ctaText": "Talk to Us",
+        "ctaLink": "/contact"
+      },
+      "image":"https://www.riskman.in/wp-content/uploads/2023/01/trusted-advisor.jpg",
+      "offerings": {
+        "intro": "We work closely with your leadership team to shape a risk strategy that aligns with your business goals. From risk governance to internal controls, our insights help create a robust, future-ready risk management framework.",
+        "items": [
+          {
+            "title": "Risk-Based Internal Audit",
+            "desc": "We deliver risk-focused internal audit solutions that go beyond compliance to uncover control weaknesses and operational inefficiencies."
+          },
+          {
+            "title": "Enterprise Risk Management",
+            "desc": "We help organizations design and implement ERM frameworks that identify, assess, and monitor strategic and operational risks."
+          },
+          {
+            "title": "Third-Party Risk Management",
+            "desc": "Our TPRM services enable you to evaluate, monitor, and mitigate risks across your vendor ecosystem."
+          },
+          {
+            "title": "CSA Design and Implementation",
+            "desc": "We design and implement CSA programs that empower business units to assess their own controls and risk exposure."
+          },
+          {
+            "title": "Formulation of Business SOPs",
+            "desc": "We develop clear, compliant, and process-aligned Standard Operating Procedures (SOPs) tailored to your business functions."
+          }
+        ]
+      },
+      "riskProcess": {
+        "title": "Proactive risk advisory backed by insights",
+        "description": "Our risk strategies are rooted in research, driven by data, and aligned with industry best practices. We help organizations anticipate disruptions and turn risks into strategic opportunities.",
+        "steps": [
+          "Risk Analysis & Identification",
+          "Risk Assessment & Prioritization",
+          "Strategic Risk Mitigation and crisis Response Plans",
+          "Monitoring & Continuous Improvement"
+        ]
+      },
+      "clientSuccess": [
+        {
+          "title": "Manufacturing Firm Success",
+          "desc": "Their structured approach to enterprise risk helped us identify gaps we didn't know existed. Our audit readiness improved by 60% within just 3 months.",
+          "author": "Chief Risk Officer",
+          "company": "Leading Manufacturing Firm"
+        }
+      ],
+      "industryInsights": [
+        {
+          "category": "Assurance",
+          "title": "Rising Risk Complexity Across Industries",
+          "description": "Compliance frameworks are becoming more demanding."
+        },
+        {
+          "category": "Clarity",
+          "title": "Regulatory Pressure Driving Controls",
+          "description": "Compliance frameworks are becoming more demanding. Regulatory bodies now expect proactive risk identification, continuous monitoring, and strong internal controls.",
+          "statistic": "92% of companies plan to enhance internal controls and governance in 2025"
+        },
+        {
+          "category": "Control",
+          "title": "The Shift Toward Proactive Risk Management",
+          "description": "Leaders are moving from reactive to proactive risk postures, embedding risk into strategic decisions and performance metrics.",
+          "tags": ["Governance", "Mitigation", "Oversight"]
+        }
+      ],
+      "whyRiskMan": "With a focus on risk management and compliance solutions, we help you navigate complex challenges, ensuring your business thrives in a dynamic environment.",
+      "differentiators": [
+        {
+          "number": "01",
+          "title": "Industry Expertise",
+          "description": "Deep knowledge across sectors to deliver impactful risk solutions."
+        },
+        {
+          "number": "02",
+          "title": "Innovative Approach",
+          "description": "Cutting-edge tools and strategies for effective risk mitigation."
+        },
+        {
+          "number": "03",
+          "title": "Proven Success",
+          "description": "Trusted by global businesses for reliable risk consulting and governance."
+        },
+        {
+          "number": "04",
+          "title": "Risk Mitigation",
+          "description": "Customized strategies to address your unique business risk challenges."
+        }
+      ],
+      "resources": [],
+      "relatedOfferings": [
+        {
+          "label": "Consulting",
+          "id": "consulting"
+        },
+        {
+          "label": "ESG Advisory",
+          "id": "esg-advisory"
+        },
+        {
+          "label": "Financial Advisory",
+          "id": "financial-advisory"
+        }
+      ],
+      "cta": {
+        "heading": "Want to create your risk-resilient enterprise?",
+        "text": "Partner with us to strengthen compliance, enhance governance, and protect what matters most.",
+        "button": "Talk to us",
+        "link": "/contact"
+      },
+      "faqs": [
+        {
+          "q": "What is Risk Advisory?",
+          "a": "Risk Advisory involves identifying, assessing, and mitigating Business Risks to ensure organizational resilience."
+        },
+        {
+          "q": "How does Risk Management benefit my business?",
+          "a": "Risk Management enhances decision-making, reduces operational inefficiencies, and ensures compliance for sustainable growth."
+        },
+        {
+          "q": "What industries need Risk Advisory services?",
+          "a": "All industries including Banking, Healthcare, Manufacturing, Retail, Technology, and Energy benefit from comprehensive risk advisory services."
+        },
+        {
+          "q": "How does RiskMan ensure compliance?",
+          "a": "We conduct thorough risk assessments, implement robust governance frameworks, and provide continuous monitoring to meet regulatory standards."
+        },
+        {
+          "q": "What is the cost of Risk Advisory services?",
+          "a": "Costs vary based on the scope and complexity of your requirements. Contact us for a customized consultation and quote."
+        },
+        {
+          "q": "How long does a Risk Advisory engagement take?",
+          "a": "Engagement duration varies from 3-12 months depending on the complexity and scope of the risk management framework."
+        },
+        {
+          "q": "Can Risk Advisory improve business efficiency?",
+          "a": "Yes, by identifying control weaknesses and operational inefficiencies, our risk advisory services help streamline processes and improve overall business performance."
+        },
+        {
+          "q": "Why choose RiskMan for Risk Advisory?",
+          "a": "RiskMan combines deep industry expertise, innovative methodologies, and a proven track record to deliver customized, effective risk solutions."
+        }
+      ],
+      "homepage": {
+        "trustedBrands": {
+          "title": "Trusted by top global brands across industries",
+          "logos": [
+            {
+              "name": "KHADIM",
+              "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Khadim-logo-3-150x35.webp"
+            },
+            {
+              "name": "NEXVAL",
+              "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Nexval-logo-150x40.webp"
+            },
+            {
+              "name": "THE WORLD BANK",
+              "logo": "https://www.grsproadsafety.org/wp-content/uploads/2023/05/WorldBankLogo.png"
+            },
+            {
+              "name": "Zomato",
+              "logo": "https://www.boardinfinity.com/blog/content/images/2024/09/1712377685818.png"
+            },
+            {
+              "name": "blinkit",
+              "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Blinkit-logo-1-1.webp"
+            },
+            {
+              "name": "care HEALTH INSURANCE",
+              "logo": "https://via.placeholder.com/150x60/1e293b/ef4444?text=Care+Health"
+            }
+          ]
+        }
+      },
+      "blog": {
+        "articles": [
+          {
+            "title": "How to create your purpose-filled career comfortable clothes",
+            "author": "Riskman_admin",
+            "category": "Business",
+            "date": "April 18, 2024",
+            "excerpt": "Over the past three years, marketers have faced journey due to the rapid shifts in consumer.....",
+            "image": "https://www.riskman.in/wp-content/uploads/2024/04/career-clothes-post.jpg"
+          },
+          {
+            "title": "Sitting with your basic goodness top signs that time.",
+            "author": "Riskman_admin",
+            "category": "Business",
+            "date": "April 18, 2024",
+            "excerpt": "Over the past three years, marketers have faced journey due to the rapid shifts in consumer.....",
+            "image": "https://www.riskman.in/wp-content/uploads/2024/04/goodness-signs-post.jpg"
+          },
+          {
+            "title": "How to create your purpose-filled career comfortable clothes",
+            "author": "Riskman_admin",
+            "category": "Business",
+            "date": "April 29, 2024",
+            "excerpt": "How to create your purpose-filled career comfortable clothes Written by WealCoder Post Date comments No Comments Views shares Facebook Twitter Pintarest Myriam was first trained as a sculptor in...",
+            "image": "https://www.riskman.in/wp-content/uploads/2024/04/career-purpose-post.jpg"
+          }
+        ]
+      }
+    },
+    "consulting": {
+      "id": "consulting",
+      "title": "Consulting",
+      "summary": "Strategic business consulting services to help organizations navigate complex challenges and achieve sustainable growth.",
+      "headerImage": "https://www.riskman.in/wp-content/uploads/2023/01/consultation.jpg",
+      "hero": {
+        "tagline": "Strategic Consulting",
+        "heading": "Transform Your Business Strategy",
+        "subheading": "Expert consulting services to drive operational excellence and strategic growth."
+      }
+    },
+    "esg-advisory": {
+      "id": "esg-advisory",
+      "title": "ESG Advisory",
+      "summary": "Environmental, Social, and Governance advisory services to help organizations build sustainable and responsible business practices.",
+      "headerImage": "https://www.riskman.in/wp-content/uploads/2023/01/esg-services.jpg",
+      "hero": {
+        "tagline": "Sustainability Services",
+        "heading": "ESG Advisory Services",
+        "subheading": "Build a sustainable future with comprehensive ESG frameworks and reporting."
+      }
+    },
+    "financial-advisory": {
+      "id": "financial-advisory",
+      "title": "Financial Advisory",
+      "summary": "Comprehensive financial advisory services including financial syndication, credit rating advisory, and strategic financial planning.",
+      "headerImage": "https://www.riskman.in/wp-content/uploads/2023/01/financial-advisory.jpg",
+      "hero": {
+        "tagline": "Financial Services",
+        "heading": "Financial Advisory Services",
+        "subheading": "Expert financial guidance for sustainable business growth and value creation."
+      }
+    },
+    "forensic-investigation": {
+      "id": "forensic-investigation",
+      "title": "Forensic and Investigation",
+      "summary": "Professional forensic accounting and investigation services to detect fraud, financial misconduct, and compliance violations.",
+      "headerImage": "https://www.riskman.in/wp-content/uploads/2023/01/forensic.jpg",
+      "hero": {
+        "tagline": "Forensic Services",
+        "heading": "Forensic and Investigation",
+        "subheading": "Uncover financial irregularities and protect your organization from fraud."
+      }
+    },
+    "soc-services": {
+      "id": "soc-services",
+      "title": "SOC Services",
+      "summary": "System and Organization Controls (SOC) reporting services to demonstrate your organization's commitment to data security and compliance.",
+      "headerImage": "https://www.riskman.in/wp-content/uploads/2023/01/soc-audit.jpg",
+      "hero": {
+        "tagline": "Assurance Services",
+        "heading": "SOC Reporting Services",
+        "subheading": "Build trust with SOC 1, SOC 2, and SOC 3 compliance reports."
+      }
+    },
+    "iso-certifications": {
+      "id": "iso-certifications",
+      "title": "ISO Certifications",
+      "summary": "ISO certification consulting services to help your organization achieve and maintain international quality and security standards.",
+      "headerImage": "https://www.riskman.in/wp-content/uploads/2023/01/iso-certification.jpg",
+      "hero": {
+        "tagline": "Certification Services",
+        "heading": "ISO Certifications",
+        "subheading": "Achieve ISO compliance with expert guidance and implementation support."
+      }
+    },
+    "pci-dss-compliance": {
+      "id": "pci-dss-compliance",
+      "title": "PCI DSS Compliance",
+      "summary": "Payment Card Industry Data Security Standard (PCI DSS) compliance services to protect cardholder data and ensure secure payment processing.",
+      "headerImage": "https://www.riskman.in/wp-content/uploads/2023/01/pci-dss.jpg",
+      "hero": {
+        "tagline": "Payment Security",
+        "heading": "PCI DSS Compliance",
+        "subheading": "Secure payment processing with comprehensive PCI DSS compliance."
+      }
+    },
+    "tprm": {
+      "id": "tprm",
+      "title": "Third-Party Risk Management (TPRM)",
+      "summary": "Our TPRM services enable you to evaluate, monitor, and mitigate risks across your vendor ecosystem.",
+      "headerImage": "https://www.riskman.in/wp-content/uploads/2023/01/tprm.jpg",
+      "hero": {
+        "tagline": "Vendor Risk Management",
+        "heading": "Third-Party Risk Management",
+        "subheading": "Comprehensive vendor risk assessment and ongoing monitoring solutions."
+      }
+    },
+    "itgc-itac": {
+      "id": "itgc-itac",
+      "title": "ITGC and ITAC",
+      "summary": "IT General Controls and IT Application Controls assessment services to ensure the reliability of your technology systems.",
+      "headerImage": "https://www.riskman.in/wp-content/uploads/2023/01/itgc.jpg",
+      "hero": {
+        "tagline": "IT Controls",
+        "heading": "ITGC and ITAC Services",
+        "subheading": "Comprehensive IT controls assessment and validation."
+      }
+    },
+    "it-risk-management": {
+      "id": "it-risk-management",
+      "title": "IT Risk Management",
+      "summary": "Strategic IT risk management services to identify, assess, and mitigate technology-related risks across your organization.",
+      "headerImage": "https://www.riskman.in/wp-content/uploads/2023/01/it-risk.jpg",
+      "hero": {
+        "tagline": "Technology Risk",
+        "heading": "IT Risk Management",
+        "subheading": "Protect your technology infrastructure with comprehensive risk management."
+      }
+    },
+    "cybersecurity": {
+      "id": "cybersecurity",
+      "title": "Cyber Security",
+      "summary": "Comprehensive cybersecurity services to protect your organization from evolving cyber threats and vulnerabilities.",
+      "headerImage": "https://www.riskman.in/wp-content/uploads/2023/01/cybersecurity.jpg",
+      "hero": {
+        "tagline": "Security Services",
+        "heading": "Cyber Security",
+        "subheading": "Advanced cybersecurity solutions to safeguard your digital assets."
+      }
+    },
+    "data-privacy": {
+      "id": "data-privacy",
+      "title": "Data Privacy and Protection",
+      "summary": "Data privacy and protection services to ensure compliance with global data protection regulations and safeguard sensitive information.",
+      "headerImage": "https://www.riskman.in/wp-content/uploads/2023/01/data-privacy.jpg",
+      "hero": {
+        "tagline": "Privacy Compliance",
+        "heading": "Data Privacy and Protection",
+        "subheading": "Comprehensive data privacy compliance and protection strategies."
+      }
+    },
+    "outsourcing-training": {
+      "id": "outsourcing-training",
+      "title": "Outsourcing and Training",
+      "summary": "Corporate training and strategic outsourcing services to build capabilities and optimize business operations.",
+      "headerImage": "https://www.riskman.in/wp-content/uploads/2023/01/training.jpg",
+      "hero": {
+        "tagline": "Capability Building",
+        "heading": "Outsourcing and Training",
+        "subheading": "Strategic outsourcing and comprehensive training programs."
+      }
+    },
+    "bcp-dr": {
+      "id": "bcp-dr",
+      "title": "Business Continuity Planning & Disaster Recovery",
+      "summary": "Business continuity and disaster recovery planning services to ensure organizational resilience and rapid recovery from disruptions.",
+      "headerImage": "https://www.riskman.in/wp-content/uploads/2023/01/bcp-dr.jpg",
+      "hero": {
+        "tagline": "Business Resilience",
+        "heading": "BCP & Disaster Recovery",
+        "subheading": "Comprehensive business continuity and disaster recovery solutions."
+      }
+    }
+  }
 }

@@ -1,53 +1,224 @@
 {
   "id": "consulting",
-  "title": "Business Consulting",
-  "headerImage":"https://img.freepik.com/free-photo/explaining-project-points_1098-15436.jpg?semt=ais_hybrid&w=740&q=80",
-  "meta": {
-    "title": "Business Consulting Services | RiskMan Consulting",
-    "description": "Transform your business with RiskMan Consulting’s expert Business Consulting services. Achieve strategic planning and operational efficiency.",
-    "primaryKeyword": "Business Consulting",
-    "additionalKeywords": ["Strategic Planning", "Operational Efficiency", "Process Optimization"],
-    "lsiKeywords": ["Management Consulting", "Business Strategy", "Performance Improvement", "Organizational Growth"]
-  },
+  "title": "Consulting",
   "hero": {
-    "heading": "Transform your business with RiskMan Consulting",
-    "subheading": "Our expertise in Strategic Planning and Operational Efficiency drives Process Optimization for sustainable success.",
-    "ctaText": "Talk to Us",
-    "ctaLink": "/contact"
+    "heading": "Impactful business",
+    "subheading": "Transform your operations with strategic consulting services",
+    "sections": [
+      {
+        "title": "Approach",
+        "description": "We build frameworks that simplify transitions and drive transformation."
+      },
+      {
+        "title": "Information",
+        "description": "We use analytics to reveal performance gaps and improvement areas."
+      },
+      {
+        "title": "Strategy",
+        "description": "Our strategy delivers measurable gains in efficiency and value."
+      }
+    ],
+    "cta": {
+      "text": "GET STARTED",
+      "link": "/contact"
+    },
+    "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&q=80"
   },
+
+  "mission": {
+    "heading": "We help balance transformation, risk, and performance with your business goals—guiding you through complexity, innovation, and change.",
+    "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&q=80"
+  },
+
   "offerings": {
-    "intro": "Our Business Consulting services include:",
+    "heading": "Our Offerings & Solutions",
+    "subheading": "We understand the importance of balancing transformation, risk, and performance with your overall business objectives.",
+    "cta": {
+      "text": "VIEW ALL SERVICES",
+      "link": "/services"
+    },
     "items": [
-      { "title": "Management Consulting", "desc": "Aligning operations with Business Strategy." },
-      { "title": "Performance Improvement", "desc": "Enhancing Operational Efficiency through data-driven insights." },
-      { "title": "Process Redesign", "desc": "Streamlining workflows for Process Optimization." },
-      { "title": "Change Management", "desc": "Supporting Organizational Growth during transitions." }
+      {
+        "number": "01",
+        "title": "Project Management",
+        "description": "End-to-end project oversight and execution excellence"
+      },
+      {
+        "number": "02",
+        "title": "BI & Analytics – Finance",
+        "description": "Data-driven insights for financial performance optimization"
+      },
+      {
+        "number": "03",
+        "title": "Performance Improvement",
+        "description": "Operational excellence and efficiency enhancement"
+      },
+      {
+        "number": "04",
+        "title": "Robotic Process Automation",
+        "description": "Automated workflows for increased productivity"
+      },
+      {
+        "number": "05",
+        "title": "Process Mining",
+        "description": "Process discovery and optimization through data analysis"
+      }
     ]
   },
-  "clientSuccess": [
-    { "title": "Retail Chain", "desc": "Boosted revenue by 25% through Strategic Planning." },
-    { "title": "Manufacturing Firm", "desc": "Improved Operational Efficiency by 20% via process redesign." }
-  ],
-  "resources": [
-    { "title": "Guide", "desc": "Unlocking Organizational Growth with Business Consulting" },
-    { "title": "Blog", "desc": "The Role of Management Consulting in 2025" }
-  ],
-  "whyRiskMan": "RiskMan’s Consulting Services deliver actionable insights and measurable results, tailored to your industry’s needs.",
+
+  "achievements": {
+    "heading": "Our glory that we work with largest companies globally",
+    "stats": [
+      {
+        "number": "15+",
+        "title": "Avg. Partner Exp",
+        "description": "Over 15 years of average partner experience, who bring results through transformation, analytics, and performance improvement initiatives."
+      },
+      {
+        "number": "500+",
+        "title": "Project success",
+        "description": "Completed 1,200+ consulting projects across industries—ranging from digital transformation to RPA implementation."
+      },
+      {
+        "number": "98%",
+        "title": "Client satisfaction",
+        "description": "Our consulting engagements consistently exceed expectations with industry-leading satisfaction scores."
+      }
+    ]
+  },
+
+  "howWeHelp": {
+    "heading": "Aligning operations with Business Strategy",
+    "description": "RiskMan's Consulting Services deliver actionable insights and measurable results, tailored to your industry's needs.",
+    "cta": {
+      "text": "Contact us",
+      "link": "/contact"
+    },
+    "services": [
+      {
+        "number": "1",
+        "title": "Management consulting"
+      },
+      {
+        "number": "2",
+        "title": "Performance improvement"
+      },
+      {
+        "number": "3",
+        "title": "Change management"
+      }
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80",
+      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80"
+    ]
+  },
+
+  "testimonials": {
+    "heading": "What our clients say about us",
+    "items": [
+      {
+        "quote": "RiskMan helped us complete a system-wide transformation on time. Their approach to project leadership is unmatched.",
+        "author": "Head of Operations",
+        "company": "Global Retail Chain",
+        "image": "https://i.pravatar.cc/150?img=12"
+      },
+      {
+        "quote": "The automation roadmap from RiskMan saved us 400+ hours annually. Their consultants are thorough and proactive.",
+        "author": "CFO",
+        "company": "Fintech Startup",
+        "image": "https://i.pravatar.cc/150?img=47"
+      }
+    ]
+  },
+
+  "blogInsights": {
+    "heading": "Our latest insights",
+    "articles": [
+      {
+        "category": "Business",
+        "date": "June 25, 2025",
+        "title": "Strategic Risk Management: A Proactive Approach to Long-Term Business Success",
+        "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+        "link": "/blog/strategic-risk-management"
+      },
+      {
+        "category": "Business",
+        "date": "April 29, 2024",
+        "title": "Digital Transformation Strategies for Modern Enterprises",
+        "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80",
+        "link": "/blog/digital-transformation"
+      }
+    ]
+  },
+
+  "faqs": {
+    "heading": "Frequently asked questions",
+    "items": [
+      {
+        "question": "What is Business Consulting?",
+        "answer": "Business Consulting helps organizations improve performance through Strategic Planning and Process Optimization.",
+        "expanded": true
+      },
+      {
+        "question": "How can consulting improve Operational Efficiency?",
+        "answer": "Consultants analyze workflows, identify bottlenecks, and implement solutions to enhance operational efficiency.",
+        "expanded": false
+      },
+      {
+        "question": "Who needs Business Consulting services?",
+        "answer": "Companies undergoing growth, transformation, or facing operational challenges benefit from business consulting services.",
+        "expanded": false
+      },
+      {
+        "question": "What is the process of Business Consulting?",
+        "answer": "The process includes assessment, strategy development, implementation planning, and ongoing support.",
+        "expanded": false
+      },
+      {
+        "question": "How long does a consulting project take?",
+        "answer": "Project duration varies from 2-12 months depending on scope and complexity.",
+        "expanded": false
+      },
+      {
+        "question": "What makes RiskMan's Consulting Services unique?",
+        "answer": "Our combination of industry expertise, data-driven approach, and proven methodologies delivers measurable results.",
+        "expanded": false
+      },
+      {
+        "question": "Can consulting help small businesses?",
+        "answer": "Yes, our scalable consulting services are designed to meet the needs of businesses of all sizes.",
+        "expanded": false
+      }
+    ]
+  },
+
   "relatedOfferings": [
-    { "label": "Risk Advisory", "id": "risk-advisory" },
-    { "label": "Financial Advisory", "id": "financial-advisory" },
-    { "label": "IT Consulting", "id": "it-consulting" }
+    { "id": "project-management", "label": "Project Management" },
+    { "id": "performance-improvement", "label": "Performance Improvement" },
+    { "id": "change-management", "label": "Change Management" },
+    { "id": "process-automation", "label": "Process Automation" }
   ],
+
   "cta": {
-    "heading": "Elevate your business today!",
-    "text": "Schedule a Business Consulting session with RiskMan.",
-    "button": "Get Started",
+    "heading": "Transform your business today",
+    "text": "Partner with RiskMan for strategic consulting that drives real results.",
+    "button": "Schedule Consultation",
     "link": "/contact"
   },
-  "faqs": [
-    { "q": "What is Business Consulting?", "a": "Business Consulting helps organizations improve performance through Strategic Planning and Process Optimization." },
-    { "q": "How can consulting improve Operational Efficiency?", "a": "By analyzing workflows and implementing Performance Improvement strategies, we reduce costs and boost productivity." },
-    { "q": "Who needs Business Consulting services?", "a": "Businesses in retail, manufacturing, and IT benefit from Management Consulting for growth." },
-    { "q": "How long does a consulting project take?", "a": "Projects range from 6–16 weeks, depending on scope and objectives." }
-  ]
+
+  "seo": {
+    "metaTitle": "Business Consulting Services | Strategic Planning & Performance | RiskMan",
+    "metaDescription": "Expert business consulting services for transformation, risk management, and operational excellence. 15+ years experience, 500+ successful projects.",
+    "keywords": [
+      "business consulting",
+      "strategic planning",
+      "performance improvement",
+      "management consulting",
+      "operational efficiency",
+      "change management",
+      "business transformation",
+      "process optimization"
+    ]
+  }
 }
