@@ -834,155 +834,637 @@
 
 // export default RiskManTeams;
 
-import React from 'react';
-import { Linkedin } from 'lucide-react';
-import ShantaPal from '../../assets/teams/kolkata/Shanta Pal.png'
-import VishalSharma from '../../assets/teams/kolkata/Vishal Sharma.png'
-import RohitGupta from '../../assets/teams/kolkata/Rohit Gupta.png'
-import Yashvi from '../../assets/teams/kolkata/Yashvi.png'
-import Yugmita from '../../assets/teams/kolkata/Yugmita.png'
-import Debottam from '../../assets/teams/kolkata/Debottam.png'
-import NishanAgarwal from '../../assets/teams/kolkata/Nishan Agarwal.png'
-import Ayush from '../../assets/teams/kolkata/Ayush.png'
-import MayukhDhar from '../../assets/teams/kolkata/Mayukh Dhar.png'
-import Kaushik from '../../assets/teams/kolkata/Kaushik.png'
-import RishbhaJain from '../../assets/teams/delhi/Rishbha Jain.jpg'
-import SakshamAhuja from '../../assets/teams/delhi/Saksham Ahuja.jpeg'
+// import React from 'react';
+// import { Linkedin } from 'lucide-react';
+// import ShantaPal from '../../assets/teams/Shanta Pal.png'
+// import VishalSharma from '../../assets/teams/Vishal Sharma.png'
+// import RohitGupta from '../../assets/teams/Rohit Gupta.png'
+// import Yashvi from '../../assets/teams/Yashvi.png'
+// import Yugmita from '../../assets/teams/Yugmita.png'
+// import Debottam from '../../assets/teams/Debottam.png'
+// import NishanAgarwal from '../../assets/teams/Nishan Agarwal.png'
+// import Ayush from '../../assets/teams/Ayush.png'
+// import MayukhDhar from '../../assets/teams/Mayukh Dhar.png'
+// import Kaushik from '../../assets/teams/Kaushik.png'
+// import RishbhaJain from '../../assets/teams/Rishbha Jain.jpg'
+// import SakshamAhuja from '../../assets/teams/Saksham Ahuja.jpeg'
+// import Priyanshibisht from '../../assets/teams/Priyanshibisht.jpg'
+// import JaiDeep from '../../assets/teams/JaiDeep.png'
+// import monika from '../../assets/teams/Monika.jpeg'
+// import PalakKanoija from '../../assets/teams/Palak Kanoija.jpg'
+// import Pranshul from '../../assets/teams/Pranshul.jpg'
+// import priyanshu from '../../assets/teams/Priyanshu.jpeg'
+// import sidhi from '../../assets/teams/Sidhi.jpeg'
+// import Simran from '../../assets/teams/Simran.jpeg'
+// import Tanisha from '../../assets/teams/Tanisha.jpeg'
+// import Tushar from '../../assets/teams/Tushar.jpg'
+// import VanshGarg from '../../assets/teams/Vansh Garg.jpeg'
+// import VinayakPoddar from '../../assets/teams/Vinayak Poddar.png'
+// import Artika from '../../assets/teams/Artika.jpg'
+// import Angel from '../../assets/teams/Angel.jpeg'
+
+
+// const RiskManTeams = () => {
+//   // All team members in one flat array
+//   const allMembers = [
+//     { id: 1, name: 'Shanta Pal', linkedin: 'https://linkedin.com/in/rajeshkumar', image: ShantaPal },
+//     { id: 2, name: 'Vishal Sharma', image: VishalSharma },
+//     { id: 3, name: 'Rohit Gupta', image: RohitGupta },
+//     { id: 4, name: 'Yashvi Ganeriwal', image: Yashvi },
+//     { id: 5, name: 'Yugmita Kesh', image: Yugmita },
+//     { id: 6, name: 'Debottam Chakraborty', image: Debottam },
+//     { id: 7, name: 'Nishan Agarwal', image: NishanAgarwal },
+//     { id: 8, name: 'Ayush Jha', image: Ayush },
+//     { id: 9, name: 'Mayukh Dhar', image: MayukhDhar },
+//     // { id: 10, name: 'Anirban Biswas', image: AnirbanBiswas },
+//     { id: 11, name: 'Kaushik Somani', image: Kaushik },
+//     { id: 12, name: 'Monika',image: monika },
+//     { id: 13, name: 'Rishbha Jain', image: RishbhaJain },
+//     { id: 14, name: 'Saksham Ahuja', image: SakshamAhuja },
+//     { id: 15, name: 'Priyanshi Bhist', image: Priyanshibisht },
+//     { id: 16, name: 'Palak Kinojia', image: PalakKanoija },
+//     { id: 17, name: 'Vansh Garg',image: VanshGarg },
+//     { id: 18, name: 'Artika', image: Artika },
+//     { id: 19, name: 'Sidhi', image: sidhi },
+//     { id: 20, name: 'Simran', image: Simran },
+//     { id: 21, name: 'Priyanshu', image: priyanshu },
+//     { id: 22, name: 'Tanisha', image: Tanisha },
+//     { id: 23, name: 'Pranshul', linkedin: 'https://linkedin.com/in/pranshul-agarwal', image: Pranshul },
+//     { id: 24, name: 'Angel', image: Angel },
+//     { id: 25, name: 'Vinayak Poddar', image: VinayakPoddar },
+//     { id: 26, name: 'Tushar', image: Tushar },
+//     {id:27, name:'JaiDeep', image:JaiDeep},
+    
+    
+//   ];
+
+//   // Find the middle position for the logo (around index 13)
+//   const logoPosition = 13;
+
+//   return (
+//     <div id="riskman-teams" className="min-h-screen py-16 bg-surfaceLight dark:bg-surfaceDark">
+//       <div className="container px-4 text-center">
+//         {/* Header */}
+//         <div className="mb-12 text-start">
+//           <h1 className="mb-4 text-4xl font-bold md:text-5xl text-brandPrimary dark:text-brandAccent font-heading">
+//             Meet the RiskMan Team
+//           </h1>
+//         </div>
+
+//         {/* Team Grid */}
+//         <div className="grid grid-cols-4 gap-3 mx-auto sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 xl:grid-cols-12 max-w-7xl">
+//           {allMembers.map((member, index) => {
+//             // Insert logo at the middle position
+//             if (index === logoPosition) {
+//               return (
+//                 <React.Fragment key="logo-fragment">
+//                   {/* Logo Cell - single cell size */}
+//                   <div className="flex items-center justify-center p-3 bg-white border-2 rounded-lg shadow-lg aspect-square dark:bg-brandNavy border-borderLight dark:border-borderDark">
+//                     <div className="text-center">
+//                       <img 
+//                         src="/rm.png" 
+//                         alt="RiskMan Logo" 
+//                         className="object-contain w-full h-auto dark:hidden"
+//                       />
+//                       <img 
+//                         src="/riskman-logo-white.svg" 
+//                         alt="RiskMan Logo" 
+//                         className="hidden object-contain w-full h-auto dark:block"
+//                       />
+//                       <div className="mt-1 text-brandPrimary dark:text-brandAccent font-bold text-[8px] leading-tight">
+//                         Certified<br/>Internal<br/>Auditor
+//                       </div>
+//                     </div>
+//                   </div>
+//                   {/* Current member */}
+//                   <div key={member.id} className="relative overflow-hidden transition-all duration-300 border-2 rounded-lg shadow-md aspect-square group hover:shadow-xl border-borderLight dark:border-borderDark hover:border-brandAccent">
+//                     <img
+//                       src={member.image}
+//                       alt={member.name}
+//                       className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
+//                     />
+//                     {/* Overlay on hover */}
+//                     <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-brandDark/80 group-hover:opacity-100">
+//                       {member.linkedin ? (
+//                         <a
+//                           href={member.linkedin}
+//                           target="_blank"
+//                           rel="noopener noreferrer"
+//                           className="p-3 transition-all transform bg-white rounded-full hover:bg-brandAccent hover:scale-110"
+//                           title={member.name}
+//                         >
+//                           <Linkedin size={24} className="text-brandDark" />
+//                         </a>
+//                       ) : (
+//                         <div className="px-3 py-2 text-sm font-semibold text-white rounded-lg bg-brandNavy">
+//                           {member.name}
+//                         </div>
+//                       )}
+//                     </div>
+//                   </div>
+//                 </React.Fragment>
+//               );
+//             }
+
+//             return (
+//               <div key={member.id} className="relative overflow-hidden transition-all duration-300 border-2 rounded-lg shadow-md aspect-square group hover:shadow-xl border-borderLight dark:border-borderDark hover:border-brandAccent">
+//                 <img
+//                   src={member.image}
+//                   alt={member.name}
+//                   className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
+//                 />
+//                 {/* Overlay on hover */}
+//                 <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-brandDark/80 group-hover:opacity-100">
+//                   {member.linkedin ? (
+//                     <a
+//                       href={member.linkedin}
+//                       target="_blank"
+//                       rel="noopener noreferrer"
+//                       className="p-3 transition-all transform bg-white rounded-full hover:bg-brandAccent hover:scale-110"
+//                       title={member.name}
+//                     >
+//                       <Linkedin size={24} className="text-brandDark" />
+//                     </a>
+//                   ) : (
+//                     <div className="px-3 py-2 text-sm font-semibold text-white rounded-lg bg-brandNavy">
+//                       {member.name}
+//                     </div>
+//                   )}
+//                 </div>
+//               </div>
+//             );
+//           })}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default RiskManTeams;
+
+// import React from "react";
+// import { Linkedin } from "lucide-react";
+
+// /* ========= TEAM IMAGES ========= */
+// import ShantaPal from "../../assets/teams/Shanta Pal.png";
+// import VishalSharma from "../../assets/teams/Vishal Sharma.png";
+// import RohitGupta from "../../assets/teams/Rohit Gupta.png";
+// import Yashvi from "../../assets/teams/Yashvi.png";
+// import Yugmita from "../../assets/teams/Yugmita.png";
+// import Debottam from "../../assets/teams/Debottam.png";
+// import NishanAgarwal from "../../assets/teams/Nishan Agarwal.png";
+// import Ayush from "../../assets/teams/Ayush.png";
+// import MayukhDhar from "../../assets/teams/Mayukh Dhar.png";
+// import Kaushik from "../../assets/teams/Kaushik.png";
+// import RishbhaJain from "../../assets/teams/Rishbha Jain.jpg";
+// import SakshamAhuja from "../../assets/teams/Saksham Ahuja.jpeg";
+// import Priyanshibisht from "../../assets/teams/Priyanshibisht.jpg";
+// import JaiDeep from "../../assets/teams/JaiDeep.png";
+// import monika from "../../assets/teams/Monika.jpeg";
+// import PalakKanoija from "../../assets/teams/Palak Kanoija.jpg";
+// import Pranshul from "../../assets/teams/Pranshul.jpg";
+// import priyanshu from "../../assets/teams/Priyanshu.jpeg";
+// import sidhi from "../../assets/teams/Sidhi.jpeg";
+// import Simran from "../../assets/teams/Simran.jpeg";
+// import Tanisha from "../../assets/teams/Tanisha.jpeg";
+// import Tushar from "../../assets/teams/Tushar.jpg";
+// import VanshGarg from "../../assets/teams/Vansh Garg.jpeg";
+// import VinayakPoddar from "../../assets/teams/Vinayak Poddar.png";
+// import Artika from "../../assets/teams/Artika.jpg";
+// import Angel from "../../assets/teams/Angel.jpeg";
+// import AnirbanBiswas from "../../assets/teams/Anirban Biswas.png";
+
+// /* ========= CONFIG ========= */
+// const COLUMNS_DESKTOP = 10;
+// const TILE_CLASS = "w-[96px] h-[96px]";
+
+// /* ========= AUTO LOGO POSITION ========= */
+// function injectLogo(members) {
+//   const total = members.length + 1;
+//   const rows = Math.ceil(total / COLUMNS_DESKTOP);
+
+//   const centerRow = Math.floor(rows / 2);
+//   const centerCol = Math.floor(COLUMNS_DESKTOP / 2);
+
+//   const logoIndex = centerRow * COLUMNS_DESKTOP + centerCol;
+
+//   const grid = [...members];
+//   grid.splice(logoIndex, 0, { type: "logo" });
+
+//   return grid;
+// }
+
+// const RiskManTeams = () => {
+//   const allMembers = [
+//     { id: 1, name: "Shanta Pal", image: ShantaPal },
+//     { id: 2, name: "Vishal Sharma", image: VishalSharma },
+//     { id: 3, name: "Rohit Gupta", image: RohitGupta },
+//     { id: 4, name: "Yashvi Ganeriwal", image: Yashvi },
+//     { id: 5, name: "Yugmita Kesh", image: Yugmita },
+//     { id: 6, name: "Debottam Chakraborty", image: Debottam },
+//     { id: 7, name: "Nishan Agarwal", image: NishanAgarwal },
+//     { id: 8, name: "Ayush Jha", image: Ayush },
+//     { id: 9, name: "Mayukh Dhar", image: MayukhDhar },
+//     { id: 10, name: "Kaushik Somani", image: Kaushik },
+//     { id: 11, name: "Monika", image: monika },
+//     { id: 12, name: "Rishbha Jain", image: RishbhaJain },
+//     { id: 13, name: "Saksham Ahuja", image: SakshamAhuja },
+//     { id: 14, name: "Priyanshi Bisht", image: Priyanshibisht },
+//     { id: 15, name: "Palak Kinojia", image: PalakKanoija },
+//     { id: 16, name: "Vansh Garg", image: VanshGarg },
+//     { id: 17, name: "Artika", image: Artika },
+//     { id: 18, name: "Sidhi", image: sidhi },
+//     { id: 19, name: "Simran", image: Simran },
+//     { id: 20, name: "Priyanshu", image: priyanshu },
+//     { id: 21, name: "Tanisha", image: Tanisha },
+//     { id: 22, name: "Pranshul", image: Pranshul },
+//     { id: 23, name: "Angel", image: Angel },
+//     { id: 24, name: "Vinayak Poddar", image: VinayakPoddar },
+//     { id: 25, name: "Tushar", image: Tushar },
+//     { id: 26, name: "JaiDeep", image: JaiDeep },
+//     { id: 27, name: "Anirban Biswas", image: AnirbanBiswas },
+//   ];
+
+//   const gridItems = injectLogo(allMembers);
+
+//   return (
+//     <section className="py-20 bg-surfaceLight dark:bg-surfaceDark">
+//       <div className="container px-4 mx-auto">
+//         {/* HEADER */}
+//         <h1 className="mb-12 text-4xl font-bold text-brandPrimary dark:text-brandAccent">
+//           Meet the RiskMan Team
+//         </h1>
+
+//         {/* GRID */}
+//         <div className="flex justify-center">
+//           <div
+//             className="
+//               grid gap-3
+//               sm:[grid-template-columns:repeat(6,1fr)]
+//               md:[grid-template-columns:repeat(8,1fr)]
+//               lg:[grid-template-columns:repeat(10,1fr)]
+//             "
+//           >
+//             {gridItems.map((item, idx) =>
+//               item.type === "logo" ? (
+//                 /* LOGO TILE */
+//                 <div
+//                   key={`logo-${idx}`}
+//                   className={`${TILE_CLASS} flex flex-col items-center justify-center bg-white border shadow-sm`}
+//                 >
+//                   <img src="/rm.png" alt="RiskMan" className="w-12 mb-1" />
+//                   {/* <span className="text-[10px] font-semibold text-brandPrimary text-center leading-tight">
+//                     Certified <br /> Internal Auditor
+//                   </span> */}
+//                 </div>
+//               ) : (
+//                 /* MEMBER TILE */
+//                 <div
+//                   key={item.id}
+//                   className={`${TILE_CLASS} bg-white border overflow-hidden`}
+//                 >
+//                   <img
+//                     src={item.image}
+//                     alt={item.name}
+//                     className="object-contain w-full h-full p-1"
+//                   />
+//                 </div>
+//               )
+//             )}
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default RiskManTeams;
+
+import React from "react";
+import { Linkedin } from "lucide-react";
+
+/* ========= TEAM IMAGES ========= */
+import ShantaPal from "../../assets/teams/Shanta Pal.png";
+import VishalSharma from "../../assets/teams/Vishal Sharma.png";
+import RohitGupta from "../../assets/teams/Rohit Gupta.png";
+import Yashvi from "../../assets/teams/Yashvi.png";
+import Yugmita from "../../assets/teams/Yugmita.png";
+import Debottam from "../../assets/teams/Debottam.png";
+import NishanAgarwal from "../../assets/teams/Nishan Agarwal.png";
+import Ayush from "../../assets/teams/Ayush.png";
+import MayukhDhar from "../../assets/teams/Mayukh Dhar.png";
+import Kaushik from "../../assets/teams/Kaushik.png";
+import RishbhaJain from "../../assets/teams/Rishbha Jain.jpg";
+import SakshamAhuja from "../../assets/teams/Saksham Ahuja.jpeg";
+import Priyanshibisht from "../../assets/teams/Priyanshibisht.jpg";
+import JaiDeep from "../../assets/teams/JaiDeep.png";
+import monika from "../../assets/teams/Monika.jpeg";
+import Palak from "../../assets/teams/Palak.jpeg";
+import Pranshul from "../../assets/teams/Pranshul.jpg";
+import priyanshu from "../../assets/teams/Priyanshu.jpeg";
+import sidhi from "../../assets/teams/sidhi.jpeg";
+import Sakshi from "../../assets/teams/sakshi.jpeg";
+import Tanisha from "../../assets/teams/Tanisha.jpeg";
+import Tushar from "../../assets/teams/Tushar.jpg";
+import VanshGarg from "../../assets/teams/Vansh Garg.jpeg";
+import VinayakPoddar from "../../assets/teams/Vinayak Poddar.png";
+import Artika from "../../assets/teams/Artika.jpg";
+import Angel from "../../assets/teams/Angel.jpeg";
+import AnirbanBiswas from "../../assets/teams/Anirban Biswas.png";
+import Vanshika from "../../assets/teams/Vanshika.jpeg";
+import Kartik from "../../assets/teams/kartik.jpg";
+import Pawan from "../../assets/teams/pawan.jpg";
+
+/* ========= CONFIG ========= */
+const COLUMNS_DESKTOP = 10;
+const TILE_CLASS = "w-[96px] h-[96px]";
+
+/* ========= AUTO LOGO POSITION ========= */
+function injectLogo(members) {
+  const total = members.length + 1;
+  const rows = Math.ceil(total / COLUMNS_DESKTOP);
+
+  const centerRow = Math.floor(rows / 2);
+  const centerCol = Math.floor(COLUMNS_DESKTOP / 2);
+
+  const logoIndex = centerRow * COLUMNS_DESKTOP + centerCol;
+
+  const grid = [...members];
+  grid.splice(logoIndex, 0, { type: "logo" });
+
+  return grid;
+}
 
 const RiskManTeams = () => {
-  // All team members in one flat array
   const allMembers = [
-    { id: 1, name: 'Shanta Pal', linkedin: 'https://linkedin.com/in/rajeshkumar', image: ShantaPal },
-    { id: 2, name: 'Vishal Sharma', linkedin: 'https://linkedin.com/in/priyasen', image: VishalSharma },
-    { id: 3, name: 'Rohit Gupta', linkedin: 'https://linkedin.com/in/amitghosh', image: RohitGupta },
-    { id: 4, name: 'Yashvi Ganeriwal', linkedin: 'https://linkedin.com/in/snehac', image: Yashvi },
-    { id: 5, name: 'Yugmita Kesh', linkedin: 'https://linkedin.com/in/arjunb', image: Yugmita },
-    { id: 6, name: 'Debottam Chakraborty', linkedin: 'https://linkedin.com/in/ritudas', image: Debottam },
-    { id: 7, name: 'Nishan Agarwal', linkedin: 'https://linkedin.com/in/soumyam', image: NishanAgarwal },
-    { id: 8, name: 'Ayush Jha', linkedin: 'https://linkedin.com/in/debashisr', image: Ayush },
-    { id: 9, name: 'Mayukh Dhar', linkedin: 'https://linkedin.com/in/ananyab', image: MayukhDhar },
-    { id: 10, name: 'Anirban Biswas', linkedin: 'https://linkedin.com/in/vikrams', image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=10' },
-    { id: 11, name: 'Kaushik Somani', linkedin: 'https://linkedin.com/in/somani-kaushik', image: Kaushik },
-    { id: 12, name: 'Subrata Pal', linkedin: 'https://linkedin.com/in/subratap', image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=12' },
-    { id: 13, name: 'Rishbha Jain', linkedin: 'https://linkedin.com/in/rishbha', image: RishbhaJain },
-    { id: 14, name: 'Saksham Ahuja', linkedin: 'https://linkedin.com/in/nehaverma', image: SakshamAhuja },
-    { id: 15, name: 'Priyanshi Bhist', linkedin: null, image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=15' },
-    { id: 16, name: 'Palak Kinojia', linkedin: null, image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=16' },
-    { id: 17, name: 'Vijay Kumar', linkedin: 'https://linkedin.com/in/vijaykumar', image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=17' },
-    { id: 18, name: 'Anjali Rao', linkedin: 'https://linkedin.com/in/anjalirao', image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=18' },
-    { id: 19, name: 'Karan Malhotra', linkedin: 'https://linkedin.com/in/karanm', image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=19' },
-    { id: 20, name: 'Simran Kaur', linkedin: null, image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=20' },
-    { id: 21, name: 'Sanjay Mehta', linkedin: 'https://linkedin.com/in/sanjaymehta', image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=21' },
-    { id: 22, name: 'Deepika Jain', linkedin: 'https://linkedin.com/in/deepikajain', image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=22' },
-    { id: 23, name: 'Rohit Agarwal', linkedin: null, image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=23' },
-    { id: 24, name: 'Kavita Reddy', linkedin: 'https://linkedin.com/in/kavitareddy', image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=24' },
-    { id: 25, name: 'Vinayak Poddar', linkedin: 'https://linkedin.com/in/manishchopra', image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=25' },
-    { id: 26, name: 'Priyanka Arora', linkedin: null, image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=26' }
+    { id: 1, image: ShantaPal, linkedin: "https://linkedin.com/in/example" },
+    { id: 2, image: VishalSharma },
+    { id: 3, image: RohitGupta },
+    { id: 4, image: Yashvi },
+    { id: 5, image: Yugmita },
+    { id: 6, image: Debottam },
+    { id: 7, image: NishanAgarwal },
+    { id: 8, image: Ayush },
+    { id: 9, image: MayukhDhar },
+    { id: 10, image: Kaushik },
+    { id: 11, image: monika },
+    { id: 12, image: RishbhaJain },
+    { id: 13, image: SakshamAhuja },
+    { id: 14, image: Priyanshibisht },
+    { id: 15, image: Palak },
+    { id: 16, image: VanshGarg },
+    { id: 17, image: Artika },
+    { id: 18, image: sidhi },
+    { id: 19, image: Sakshi },
+    { id: 20, image: priyanshu },
+    { id: 21, image: Tanisha },
+    { id: 22, image: Pranshul, linkedin: "https://linkedin.com/in/example" },
+    { id: 23, image: Angel },
+    { id: 24, image: VinayakPoddar },
+    { id: 25, image: Tushar },
+    { id: 26, image: JaiDeep },
+    { id: 27, image: AnirbanBiswas },
+    { id: 28, image: Vanshika },
+    { id: 29, image: Kartik },
+    { id: 30, image: Pawan },
   ];
 
-  // Find the middle position for the logo (around index 13)
-  const logoPosition = 13;
+  const gridItems = injectLogo(allMembers);
 
   return (
-    <div id="riskman-teams" className="min-h-screen py-16 bg-surfaceLight dark:bg-surfaceDark">
-      <div className="container px-4 text-center">
-        {/* Header */}
-        <div className="mb-12 text-start">
-          <h1 className="mb-4 text-4xl font-bold md:text-5xl text-brandPrimary dark:text-brandAccent font-heading">
-            Meet the RiskMan Team
-          </h1>
-        </div>
+    <section id="riskman-teams" className="py-20 bg-slate-50 dark:bg-surfaceDark">
+      <div className="container">
+        <h1 className="mb-12 text-4xl font-bold text-brandPrimary dark:text-brandAccent">
+          Meet the RiskMan Team
+        </h1>
 
-        {/* Team Grid */}
-        <div className="grid grid-cols-4 gap-3 mx-auto sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 xl:grid-cols-12 max-w-7xl">
-          {allMembers.map((member, index) => {
-            // Insert logo at the middle position
-            if (index === logoPosition) {
-              return (
-                <React.Fragment key="logo-fragment">
-                  {/* Logo Cell - single cell size */}
-                  <div className="flex items-center justify-center p-3 bg-white border-2 rounded-lg shadow-lg aspect-square dark:bg-brandNavy border-borderLight dark:border-borderDark">
-                    <div className="text-center">
-                      <img 
-                        src="/rm.png" 
-                        alt="RiskMan Logo" 
-                        className="object-contain w-full h-auto dark:hidden"
-                      />
-                      <img 
-                        src="/riskman-logo-white.svg" 
-                        alt="RiskMan Logo" 
-                        className="hidden object-contain w-full h-auto dark:block"
-                      />
-                      <div className="mt-1 text-brandPrimary dark:text-brandAccent font-bold text-[8px] leading-tight">
-                        Certified<br/>Internal<br/>Auditor
-                      </div>
-                    </div>
-                  </div>
-                  {/* Current member */}
-                  <div key={member.id} className="relative overflow-hidden transition-all duration-300 border-2 rounded-lg shadow-md aspect-square group hover:shadow-xl border-borderLight dark:border-borderDark hover:border-brandAccent">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
-                    />
-                    {/* Overlay on hover */}
-                    <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-brandDark/80 group-hover:opacity-100">
-                      {member.linkedin ? (
-                        <a
-                          href={member.linkedin}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-3 transition-all transform bg-white rounded-full hover:bg-brandAccent hover:scale-110"
-                          title={member.name}
-                        >
-                          <Linkedin size={24} className="text-brandDark" />
-                        </a>
-                      ) : (
-                        <div className="px-3 py-2 text-sm font-semibold text-white rounded-lg bg-brandNavy">
-                          {member.name}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </React.Fragment>
-              );
-            }
+        <div className="flex justify-center">
+          <div
+            className="
+              grid gap-4
+              sm:[grid-template-columns:repeat(6,1fr)]
+              md:[grid-template-columns:repeat(8,1fr)]
+              lg:[grid-template-columns:repeat(10,1fr)]
+            "
+          >
+            {gridItems.map((item, idx) =>
+              item.type === "logo" ? (
+                /* LOGO TILE */
+                <div
+                  key={`logo-${idx}`}
+                  className={`${TILE_CLASS}
+                    flex flex-col items-center justify-center
+                    rounded-md
+                    bg-white dark:bg-brandNavy
+                    border-2 border-brandAccent
+                    shadow-md`}
+                >
+                  <img src="/rm.png" className="mb-1 w-14 dark:hidden" />
+                  <img
+                    src="/riskman-logo-white.svg"
+                    className="hidden mb-1 w-14 dark:block"
+                  />
+                  {/* <span className="text-[10px] font-semibold text-brandPrimary dark:text-brandAccent text-center leading-tight">
+                    Certified <br /> Internal Auditor
+                  </span> */}
+                </div>
+              ) : (
+                /* MEMBER TILE */
+                <div
+                  key={item.id}
+                  className={`${TILE_CLASS}
+                    relative group overflow-hidden
+                    rounded-md
+                    bg-slate-100 dark:bg-brandDark
+                    border border-slate-200 dark:border-white/10`}
+                >
+                  <img
+                    src={item.image}
+                    alt=""
+                    className="object-cover object-top w-full h-full"
+                  />
 
-            return (
-              <div key={member.id} className="relative overflow-hidden transition-all duration-300 border-2 rounded-lg shadow-md aspect-square group hover:shadow-xl border-borderLight dark:border-borderDark hover:border-brandAccent">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
-                />
-                {/* Overlay on hover */}
-                <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 bg-brandDark/80 group-hover:opacity-100">
-                  {member.linkedin ? (
-                    <a
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 transition-all transform bg-white rounded-full hover:bg-brandAccent hover:scale-110"
-                      title={member.name}
-                    >
-                      <Linkedin size={24} className="text-brandDark" />
-                    </a>
-                  ) : (
-                    <div className="px-3 py-2 text-sm font-semibold text-white rounded-lg bg-brandNavy">
-                      {member.name}
+                  {/* LINKEDIN OVERLAY (ONLY IF EXISTS) */}
+                  {item.linkedin && (
+                    <div className="absolute inset-0 flex items-center justify-center transition-opacity opacity-0 bg-black/60 group-hover:opacity-100">
+                      <a
+                        href={item.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 transition bg-white rounded-full hover:scale-110"
+                      >
+                        <Linkedin size={18} className="text-brandPrimary" />
+                      </a>
                     </div>
                   )}
                 </div>
-              </div>
-            );
-          })}
+              )
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
 export default RiskManTeams;
+
+
+// import React from "react";
+// import { Linkedin } from "lucide-react";
+
+// /* ========= TEAM IMAGES ========= */
+// import ShantaPal from "../../assets/teams/Shanta Pal.png";
+// import VishalSharma from "../../assets/teams/Vishal Sharma.png";
+// import RohitGupta from "../../assets/teams/Rohit Gupta.png";
+// import Yashvi from "../../assets/teams/Yashvi.png";
+// import Yugmita from "../../assets/teams/Yugmita.png";
+// import Debottam from "../../assets/teams/Debottam.png";
+// import NishanAgarwal from "../../assets/teams/Nishan Agarwal.png";
+// import Ayush from "../../assets/teams/Ayush.png";
+// import MayukhDhar from "../../assets/teams/Mayukh Dhar.png";
+// import Kaushik from "../../assets/teams/Kaushik.png";
+// import RishbhaJain from "../../assets/teams/Rishbha Jain.jpg";
+// import SakshamAhuja from "../../assets/teams/Saksham Ahuja.jpeg";
+// import Priyanshibisht from "../../assets/teams/Priyanshibisht.jpg";
+// import JaiDeep from "../../assets/teams/JaiDeep.png";
+// import monika from "../../assets/teams/Monika.jpeg";
+// import PalakKanoija from "../../assets/teams/Palak Kanoija.jpg";
+// import Pranshul from "../../assets/teams/Pranshul.jpg";
+// import priyanshu from "../../assets/teams/Priyanshu.jpeg";
+// import sidhi from "../../assets/teams/Sidhi.jpeg";
+// import Simran from "../../assets/teams/Simran.jpeg";
+// import Tanisha from "../../assets/teams/Tanisha.jpeg";
+// import Tushar from "../../assets/teams/Tushar.jpg";
+// import VanshGarg from "../../assets/teams/Vansh Garg.jpeg";
+// import VinayakPoddar from "../../assets/teams/Vinayak Poddar.png";
+// import Artika from "../../assets/teams/Artika.jpg";
+// import Angel from "../../assets/teams/Angel.jpeg";
+// import AnirbanBiswas from "../../assets/teams/Anirban Biswas.png";
+
+// /* ========= CONFIG ========= */
+// const COLUMNS_DESKTOP = 10;
+// const TILE_CLASS = "w-[96px] h-[96px]";
+
+// /* ========= AUTO LOGO POSITION ========= */
+// function injectLogo(members) {
+//   const total = members.length + 1;
+//   const rows = Math.ceil(total / COLUMNS_DESKTOP);
+
+//   const centerRow = Math.floor(rows / 2);
+//   const centerCol = Math.floor(COLUMNS_DESKTOP / 2);
+
+//   const logoIndex = centerRow * COLUMNS_DESKTOP + centerCol;
+
+//   const grid = [...members];
+//   grid.splice(logoIndex, 0, { type: "logo" });
+
+//   return grid;
+// }
+
+// const RiskManTeams = () => {
+//   const allMembers = [
+//     { id: 1, name: "Shanta Pal",linkedin:"https://www.linkedin.com/in/shanta-pal-8b9b8b1a7/", image: ShantaPal },
+//     { id: 2, name: "Vishal Sharma", image: VishalSharma },
+//     { id: 3, name: "Rohit Gupta", image: RohitGupta },
+//     { id: 4, name: "Yashvi Ganeriwal", image: Yashvi },
+//     { id: 5, name: "Yugmita Kesh", image: Yugmita },
+//     { id: 6, name: "Debottam Chakraborty", image: Debottam },
+//     { id: 7, name: "Nishan Agarwal", image: NishanAgarwal },
+//     { id: 8, name: "Ayush Jha", image: Ayush },
+//     { id: 9, name: "Mayukh Dhar", image: MayukhDhar },
+//     { id: 10, name: "Kaushik Somani", image: Kaushik },
+//     { id: 11, name: "Monika", image: monika },
+//     { id: 12, name: "Rishbha Jain", image: RishbhaJain },
+//     { id: 13, name: "Saksham Ahuja", image: SakshamAhuja },
+//     { id: 14, name: "Priyanshi Bisht", image: Priyanshibisht },
+//     { id: 15, name: "Palak Kinojia", image: PalakKanoija },
+//     { id: 16, name: "Vansh Garg", image: VanshGarg },
+//     { id: 17, name: "Artika", image: Artika },
+//     { id: 18, name: "Sidhi", image: sidhi },
+//     { id: 19, name: "Simran", image: Simran },
+//     { id: 20, name: "Priyanshu", image: priyanshu },
+//     { id: 21, name: "Tanisha", image: Tanisha },
+//     { id: 22, name: "Pranshul", image: Pranshul },
+//     { id: 23, name: "Angel", image: Angel },
+//     { id: 24, name: "Vinayak Poddar", image: VinayakPoddar },
+//     { id: 25, name: "Tushar", image: Tushar },
+//     { id: 26, name: "JaiDeep", image: JaiDeep },
+//     { id: 27, name: "Anirban Biswas", image: AnirbanBiswas },
+//   ];
+
+//   const gridItems = injectLogo(allMembers);
+
+//   return (
+//     <section id="riskman-teams" className="py-20 bg-slate-50 dark:bg-surfaceDark">
+//       <div className="container px-4 mx-auto">
+//         {/* HEADER */}
+//         <h1 className="mb-12 text-4xl font-bold text-brandPrimary dark:text-brandAccent">
+//           Meet the RiskMan Team
+//         </h1>
+
+//         {/* GRID */}
+//         <div className="flex justify-center">
+//           <div
+//             className="
+//               grid gap-4
+//               sm:[grid-template-columns:repeat(6,1fr)]
+//               md:[grid-template-columns:repeat(8,1fr)]
+//               lg:[grid-template-columns:repeat(10,1fr)]
+//             "
+//           >
+//             {gridItems.map((item, idx) =>
+//               item.type === "logo" ? (
+//                 /* LOGO TILE */
+//                 <div
+//                   key={`logo-${idx}`}
+//                   className={`${TILE_CLASS}
+//                     flex flex-col items-center justify-center
+//                     rounded-md
+//                     bg-white dark:bg-brandNavy
+//                     border-2 border-brandAccent
+//                     shadow-md`}
+//                 >
+//                   <img src="/rm.png" alt="RiskMan" className="mb-1 w-14 dark:hidden" />
+
+//                    {/* DARK MODE LOGO */}
+//                   <img
+//                     src="/riskman-logo-white.svg"
+//                     alt="RiskMan"
+//                     className="hidden mb-1 w-14 dark:block"
+//                   />
+//                   {/* <span className="text-[10px] font-semibold text-brandPrimary dark:text-brandAccent text-center leading-tight">
+//                     Certified <br /> Internal Auditor
+//                   </span> */}
+//                 </div>
+//               ) : (
+//                 /* MEMBER TILE */
+//                 <div
+//                   key={item.id}
+//                   className={`${TILE_CLASS}
+//                     overflow-hidden
+//                     rounded-md
+//                     bg-slate-100 dark:bg-brandDark
+//                     border border-slate-200 dark:border-white/10`}
+//                 >
+//                   <img
+//                     src={item.image}
+//                     alt={item.name}
+//                     className="object-cover object-top w-full h-full"
+//                   />
+//                 </div>
+//               )
+//             )}
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default RiskManTeams;
+
+
 
 
 // import React, { useState,useEffect } from 'react';

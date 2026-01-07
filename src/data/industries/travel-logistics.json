@@ -1,121 +1,132 @@
 {
   "id": "travel-logistics",
-  "title": "Travel and Logistics",
-  "headerImage": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/logistics-1024x357.webp", 
-  "heroTagline": "RiskMan helps travel and logistics firms streamline operations, ensure compliance, and enhance customer trust across borders.",
-  
-  "introduction": {
-    "title": "Navigating risk and building resilience in global movement",
-    "content": "RiskMan helps travel and logistics firms streamline operations, ensure compliance, and enhance customer trust across borders.\n\nThis industry faces cyber threats, border compliance issues, and supply chain disruptions. Our tailored solutions build agility, security, and resilience across complex ecosystems.",
-    "subImage": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/travel-employee.webp" 
+  "title": "Travel & Logistics",
+  "heroSection": {
+    "title": "Resilience in Global Movement",
+    "description": "RiskMan helps travel and logistics firms streamline cross-border operations, ensure regulatory compliance, and enhance customer trust through advanced security and resilience frameworks.",
+    "tag": "Global Supply",
+    "primaryCTA": {
+      "text": "Optimize Your Logistics",
+      "action": "/contact"
+    },
+    "heroImage": {
+      "src": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1400",
+      "alt": "Global logistics and supply chain optimization visualization"
+    }
   },
-
-  "keyChallenges": {
-    "title": "Key Challenges We Help You Overcome:",
-    "list": [
-      {
-        "icon": "Scale",
-        "text": "Ensure alignment with international travel and transport regulations."
-      },
-      {
-        "icon": "Lock",
-        "text": "Protect booking engines, logistics platforms, and traveler data from evolving threats."
-      },
-      {
-        "icon": "Leaf",
-        "text": "Align with carbon disclosure and green logistics initiatives through ESG-led transformation."
-      }
-    ]
+  "challengeSection": {
+    "title": "Navigating a Fragmented Risk Landscape",
+    "description": "This industry faces complex cross-border regulations, cyber threats targeting critical infrastructure, and the constant pressure of supply chain disruptions.",
+    "challenges": [
+      "Ensuring constant alignment with diverse international travel, transport, and customs regulations.",
+      "Protecting high-availability booking engines and logistics platforms from ransomware and disruptive cyber threats.",
+      "Meeting aggressive carbon disclosure targets and green logistics mandates through ESG-led transformation."
+    ],
+    "supportingText": "In the world of logistics, agility is built on a foundation of operational visibility and digital security.",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1506704181758-69022687c461?w=1000",
+      "alt": "Modern freight and global transport visualization"
+    }
   },
-
-  "solutions": {
-    "title": "Our Services for Travel & Logistics",
-    "list": [
+  "solutionsSection": {
+    "title": "Movement & Continuity Solutions",
+    "items": [
       {
-        "number": "01",
-        "title": "Cybersecurity",
-        "summary": "Secure your digital content, networks, and streaming platforms against evolving threats with end-to-end security architecture and incident response.",
-        "link": "/services/cyber-security"
+        "id": "01",
+        "title": "Logistics Cybersecurity",
+        "description": "End-to-end security architecture designed to protect tracking systems, networks, and booking engines from targeted ransomware.",
+        "link": "/services/cybersecurity"
       },
       {
-        "number": "02",
-        "title": "Data Privacy & Protection",
-        "summary": "Ensure GDPR, CCPA, and regional compliance while building trust with your audience through responsible data practices.",
+        "id": "02",
+        "title": "Cross-Border Data Privacy",
+        "description": "Ensuring GDPR, CCPA, and regional compliance while managing sensitive traveler and shipment data across jurisdictions.",
         "link": "/services/data-privacy-protection"
       },
       {
-        "number": "03",
-        "title": "TPRM",
-        "summary": "Mitigate risks from production houses, ad tech partners, and distribution vendors with robust third-party evaluation frameworks.",
+        "id": "03",
+        "title": "Supply Chain TPRM",
+        "description": "Continuous monitoring and evaluation of third-party vendors, fulfillment partners, and logistics service providers.",
         "link": "/services/tprm"
       },
       {
-        "number": "04",
-        "title": "ESG Advisory",
-        "summary": "Meet sustainability targets and carbon compliance.",
+        "id": "04",
+        "title": "Sustainability & ESG Advisory",
+        "description": "Strategic guidance to help fleet operators and travel brands meet sustainability targets and carbon compliance mandates.",
         "link": "/services/esg-advisory"
       }
     ]
   },
-
-  "whyPartner": {
-    "title": "Why Partner with RiskMan",
-    "usps": [
-      { "icon": "Industry", "title": "Industry Experience", "summary": "Deep experience in media risk, tech, and compliance ecosystems" },
-      { "icon": "Global", "title": "Global delivery", "summary": "Global delivery model aligned to regional and international regulations" },
-      { "icon": "Business", "title": "Tailor Solutions", "summary": "Agile consulting and cyber risk strategies tailored to fast-paced environments" },
-      { "icon": "User", "title": "Experienced Professionals", "summary": "Our team comprises experts with extensive experience across various industries." }
-    ]
+  "impactHighlight": {
+    "metric": "85%",
+    "label": "Reduction in Supply Chain Vulnerability Score",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1400",
+      "alt": "Global warehouse and logistics fulfillment"
+    }
   },
-
-  "faq": {
-    "title": "Frequently asked questions",
-    "questions": [
+  "whyRiskMan": {
+    "title": "The Logistics Advantage",
+    "description": "We understand the non-stop nature of global movement. Our solutions are built for high-availability and cross-border scale.",
+    "features": [
       {
-        "q": "Can you secure our logistics systems against ransomware?",
-        "a": "Yes. RiskMan provides end-to-end cybersecurity solutions for logistics companies, including ransomware protection, real-time threat monitoring, and endpoint security. Our cyber risk experts design layered defense models that protect mission-critical systems across supply chains."
+        "icon": "Globe",
+        "title": "Cross-Border Reach",
+        "description": "Deep expertise in navigating the complex regulatory landscapes of international travel and transport."
       },
       {
-        "q": "Do you help with global travel regulation compliance?",
-        "a": "Absolutely. Our travel risk advisory services help your organization navigate complex cross-border regulations, including customs, data privacy (GDPR), and aviation or tourism-specific compliance requirements. We ensure your operations stay aligned with local and international mandates."
+        "icon": "Lock",
+        "title": "Ransomware Defense",
+        "description": "Proven strategies to protect critical logistics infrastructure and booking engines from downtime."
       },
       {
-        "q": "What is TPRM and how does it benefit logistics companies?",
-        "a": "Third-Party Risk Management (TPRM) involves assessing and mitigating risks from external vendors, logistics partners, and technology providers. RiskMan helps logistics firms develop a centralized TPRM framework to reduce disruptions, ensure compliance, and improve supply chain visibility."
+        "icon": "Leaf",
+        "title": "Green Logistics",
+        "description": "Integrated ESG frameworks that help you lead the transition to sustainable transport."
       },
       {
-        "q": "Can you help us meet ESG or carbon disclosure requirements?",
-        "a": "Yes. RiskMan’s ESG advisory for logistics assists with sustainability assessments, carbon emissions tracking, and regulatory disclosure alignment (e.g., CSRD, SECR). We help travel and fleet operators build sustainable, transparent operations aligned with investor expectations."
-      },
-      {
-        "q": "How fast can BCP/DR strategies be implemented?",
-        "a": "Most Business Continuity Planning (BCP) and Disaster Recovery (DR) programs can be rolled out within 4–8 weeks, depending on infrastructure. Our consultants build tailored continuity plans that ensure minimal service disruption and fast recovery after outages or geopolitical events."
-      },
-      {
-        "q": "Do you offer compliance solutions for booking platforms?",
-        "a": "Yes. RiskMan provides compliance frameworks for booking platforms, including PCI DSS for payments, GDPR for data handling, and cybersecurity audits to prevent breaches. We’ve secured booking and travel tech platforms across North America, Europe, and APAC."
-      },
-      {
-        "q": "Can RiskMan support global fleet operators?",
-        "a": "Definitely. We support fleet management companies and logistics operators with risk assessments, operational compliance, cybersecurity, and ESG alignment—across geographies. Whether your fleet operates regionally or globally, our solutions scale with your footprint."
-      },
-      {
-        "q": "How do we ensure data privacy across regions?",
-        "a": "Our data privacy and protection services cover compliance with global frameworks like GDPR (Europe), CCPA (California), and PDPA (Asia). RiskMan conducts privacy impact assessments and sets up governance models to ensure regional and international data compliance."
+        "icon": "Activity",
+        "title": "Continuity Pros",
+        "description": "Our BCP/DR strategies are tested for the unique demands of global fleet and freight operations."
       }
     ]
   },
-
-  "stats": {
-    "value": "0+",
-    "label": "Clients"
+  "trustedBrands": {
+    "title": "Validated by Travel Leaders",
+    "logos": [
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Blinkit-logo-1-1-1.webp",
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Care-Health-Insurance-Walk-in-Recruitment-2-1.webp",
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Electrosteel-logo-3-150x35-1.webp",
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Emami-logo-2-1.webp",
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Indiatv-logo-1-1.webp",
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Indorama_Ventures_Logo.svg-2.webp",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Jindal_Steel_and_Power_Logo.svg/2560px-Jindal_Steel_and_Power_Logo.svg.png",
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Zomato-logo-2-1.webp"
+    ]
   },
-  
-  "clientLogos": ["Blinkit-logo-1-1", "Care-Health-Insurance", "Electrosteel-logo", "Emami-logo-2", "Indiatv-logo-1", "Indorama_Ventures_Logo.svg-2", "Jindal-Renewables"],
-  "cta": {
-  "heading": "Ready to Navigate Travel & Logistics Risks?",
-  "text": "Partner with RiskMan for supply chain risk management, compliance, and operational resilience solutions for the travel and logistics sector.",
-  "button": "Optimize Your Operations",
-  "link": "/contact"
-}
+  "frequentlyAskedQuestions": [
+    {
+      "question": "Can you secure our booking platform against cyber attacks?",
+      "answer": "Yes. We conduct penetration testing and implement layered security controls to protect booking engines and customer payment data."
+    },
+    {
+      "question": "How do you help with carbon disclosure in logistics?",
+      "answer": "We assist in setting up tracking frameworks for CO2 emissions and ensure your reporting aligns with international standards like CSRD and SECR."
+    },
+    {
+      "question": "What is TPRM's role in the supply chain?",
+      "answer": "Third-Party Risk Management ensures that your logistics partners, 3PLs, and technology vendors meet your organization's security and reliability standards."
+    },
+    {
+      "question": "How fast can you implement a BCP for fleet operators?",
+      "answer": "We typically roll out tailored Business Continuity Plans for logistics firms within 4 to 8 weeks, depending on the complexity of the fleet and infrastructure."
+    }
+  ],
+  "ctaSection": {
+    "title": "Secure Your Global Movement",
+    "cta": {
+      "text": "Start Now",
+      "action": "/contact"
+    }
+  }
 }

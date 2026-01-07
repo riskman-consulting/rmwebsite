@@ -8,7 +8,7 @@ export default function Careers() {
 
       {/* HERO SECTION */}
       <section className="relative bg-slate-50 py-28">
-        <div className="px-6 mx-auto max-w-7xl">
+        <div className="container">
           <p className="mb-4 text-sm tracking-widest uppercase text-slate-500">
             About RiskMan
           </p>
@@ -20,7 +20,7 @@ export default function Careers() {
       </section>
 
       {/* OUR STORY */}
-      <section className="grid gap-12 px-6 py-20 mx-auto max-w-7xl md:grid-cols-2">
+      <section className="container grid gap-12 py-20 md:grid-cols-2">
         <div>
           <h2 className="mb-6 text-4xl font-bold">
             Build confidence, enable clarity and create impact.
@@ -51,7 +51,7 @@ export default function Careers() {
 
       {/* AWARDS SECTION */}
       <section className="relative py-20">
-        <div className="grid items-center gap-10 px-6 mx-auto max-w-7xl md:grid-cols-2">
+        <div className="container grid items-center gap-10 md:grid-cols-2">
 
           <img
             src="https://images.pexels.com/photos/3182763/pexels-photo-3182763.jpeg"
@@ -69,14 +69,14 @@ export default function Careers() {
 
       {/* WHAT WE STAND FOR */}
       <section className="py-20 bg-white">
-        <div className="px-6 mx-auto mb-16 text-center max-w-7xl">
+        <div className="container mb-16 text-center">
           <p className="mb-2 tracking-wider uppercase text-slate-500">
             RiskMan Story
           </p>
           <h2 className="text-4xl font-bold">What We Stand For</h2>
         </div>
 
-        <div className="grid max-w-6xl gap-10 px-6 mx-auto md:grid-cols-4">
+        <div className="container grid gap-10 md:grid-cols-4">
 
           <div>
             <h3 className="mb-2 text-xl font-semibold">Our Mission</h3>
@@ -119,7 +119,7 @@ export default function Careers() {
 
       {/* LEADERSHIP TEAM */}
       <section className="py-20 bg-slate-100">
-        <div className="px-6 mx-auto max-w-7xl">
+        <div className="container">
 
           <div className="mb-16">
             <p className="mb-2 tracking-widest uppercase text-slate-500">
@@ -164,12 +164,12 @@ export default function Careers() {
 
       {/* TESTIMONIALS */}
       <section className="py-20">
-        <div className="px-6 mx-auto mb-12 text-center max-w-7xl">
+        <div className="container mb-12 text-center">
           <p className="tracking-wide uppercase text-slate-500">Testimonials</p>
           <h2 className="text-4xl font-bold">Clients Feedback</h2>
         </div>
 
-        <div className="grid items-center max-w-5xl gap-12 px-6 mx-auto md:grid-cols-2">
+        <div className="container grid items-center gap-12 md:grid-cols-2">
 
           <img
             src="https://via.placeholder.com/500x600"
@@ -190,7 +190,7 @@ export default function Careers() {
 
       {/* PARTNER COMPANIES */}
       <section className="py-20 bg-slate-50">
-        <div className="px-6 mx-auto max-w-7xl">
+        <div className="container">
 
           <p className="mb-2 tracking-wider uppercase text-slate-500">Trusted</p>
           <h2 className="max-w-2xl mb-6 text-4xl font-bold">

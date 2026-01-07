@@ -47,6 +47,8 @@ function App() {
           <Route path="/services/:id" element={<ServicesTemplate />} />
           <Route path="/industries" element={<IndustriesList />} />
           <Route path="/industries/:id" element={<IndustriesTemplate />} />
+          <Route path="/insights" element={<BlogList />} />
+          <Route path="/insights/:slug" element={<BlogSingle />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/about/careers" element={<Careers />} />

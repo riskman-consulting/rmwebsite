@@ -1,121 +1,129 @@
 {
   "id": "manufacturing",
   "title": "Manufacturing",
-  "headerImage": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/manufac-1024x357.webp", 
-  "heroTagline": "Digitize operations, protect supply chains, and meet global compliance needs in the changing world.",
-  
-  "introduction": {
+  "heroSection": {
+    "tag": "Services Details",
+    "title": "Manufacturing",
+    "description": "Digitize operations, protect supply chains, and meet global compliance needs in a changing world.",
+    "primaryCTA": {
+      "text": "Talk to us",
+      "action": "/contact"
+    },
+    "heroImage": {
+      "src": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1400",
+      "alt": "Advanced robotic manufacturing line"
+    }
+  },
+  "challengeSection": {
     "title": "Turning Industrial Challenges Into Strategic Resilience",
-    "content": "Modern manufacturing is undergoing rapid transformation—with increasing automation, global supply chains, and stricter compliance expectations. These shifts bring opportunities, but also expose critical vulnerabilities across operations, technology, and regulatory obligations.\n\nRiskMan helps manufacturing companies stay ahead of disruption through proactive risk management, compliance alignment, and digital optimization.",
-    "subImage": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/manufacturing.webp" 
+    "description": "Modern manufacturing is undergoing rapid transformation with automation, global supply chains, and stricter compliance expectations.",
+    "supportingText": "Our TISAX and ISO readiness frameworks ensure global manufacturers stay audit-ready and resilient against supply chain disruptions.",
+    "challenges": [
+      "Stay audit-ready with ISO, TISAX, and key manufacturing certifications",
+      "Mitigate third-party risks across global supplier networks",
+      "Align with ESG goals through compliance roadmaps"
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1565034946487-077786996e27?w=1000",
+      "alt": "Quality control and industrial inspection"
+    }
   },
-
-  "keyChallenges": {
-    "title": "Key Challenges We Help You Overcome:",
-    "list": [
+  "solutionsSection": {
+    "title": "Our Solutions for Manufacturing Industry",
+    "items": [
       {
-        "icon": "Award",
-        "text": "Stay audit-ready with ISO, TISAX, and other key manufacturing certifications."
-      },
-      {
-        "icon": "Users",
-        "text": "Mitigate third-party risks across global networks with effective TPRM strategies."
-      },
-      {
-        "icon": "Leaf",
-        "text": "Align with ESG goals through expert-led decarbonization and compliance roadmaps."
-      }
-    ]
-  },
-
-  "solutions": {
-    "title": "Our Services for Manufacturing Industry",
-    "list": [
-      {
-        "number": "01",
-        "title": "BCP/DR",
-        "summary": "Plan and recover from disruptions quickly.",
+        "id": "01",
+        "title": "BCP / DR",
+        "description": "Plan and recover from production disruptions quickly with robust business continuity strategies.",
         "link": "/services/bcp-dr"
       },
       {
-        "number": "02",
+        "id": "02",
         "title": "Data Privacy & Protection",
-        "summary": "Ensure GDPR, CCPA, and regional compliance while building trust with your audience through responsible data practices.",
+        "description": "Ensure GDPR, CCPA, and regional compliance for industrial data and proprietary IP.",
         "link": "/services/data-privacy-protection"
       },
       {
-        "number": "03",
+        "id": "03",
         "title": "TPRM",
-        "summary": "Mitigate risks from production houses, ad tech partners, and distribution vendors with robust third-party evaluation frameworks.",
+        "description": "Mitigate risks from suppliers, vendors, and logistics partners across the global value chain.",
         "link": "/services/tprm"
       },
       {
-        "number": "04",
+        "id": "04",
         "title": "Consulting",
-        "summary": "Optimize operations and manage transformation with strategic advisory, performance improvement, and process automation.",
-        "link": "/services/consulting"
+        "description": "Optimize factory floor operations and manage transformation with strategic industrial advisory.",
+        "link": "/services/risk-advisory"
       }
     ]
   },
-
-  "whyPartner": {
-    "title": "Why Partner with RiskMan",
-    "usps": [
-      { "icon": "Industry", "title": "Industry Experience", "summary": "Deep experience in media risk, tech, and compliance ecosystems" },
-      { "icon": "Global", "title": "Global delivery", "summary": "Global delivery model aligned to regional and international regulations" },
-      { "icon": "Business", "title": "Tailor Solutions", "summary": "Agile consulting and cyber risk strategies tailored to fast-paced environments" },
-      { "icon": "User", "title": "Experienced Professionals", "summary": "Our team comprises experts with extensive experience across various industries." }
+  "impactHighlight": {
+    "metric": "100+",
+    "label": "Global Manufacturers",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1504328332780-fe2d7dee99d5?w=1400",
+      "alt": "Industrial facility and large scale production"
+    }
+  },
+  "trustedBrands": {
+    "title": "Trusted by Global Brands",
+    "description": "We support industrial leaders in building secure, resilient, and sustainable production operations.",
+    "logos": [
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Zomato-logo-2-1.webp",
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Blinkit-logo-1-1-1.webp",
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Khadim-logo-3-150x35-1.webp",
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Care-Health-Insurance-Walk-in-Recruitment-2-1.webp"
     ]
   },
-
-  "faq": {
-    "title": "Frequently asked questions",
-    "questions": [
+  "whyRiskMan": {
+    "title": "Why partner with RiskMan",
+    "description": "A trusted name in industry-aligned risk and compliance solutions.",
+    "features": [
       {
-        "q": "What cybersecurity risks do media companies face today?",
-        "a": "Threats like ransomware, phishing, and content piracy targeting digital IP and user data."
+        "icon": "Briefcase",
+        "title": "Industrial Experience",
+        "description": "Deep experience in manufacturing risk, supply chain resilience, and TISAX compliance."
       },
       {
-        "q": "How does RiskMan help with GDPR or regional content compliance?",
-        "a": "We conduct privacy assessments and create compliance roadmaps tailored to local laws."
+        "icon": "Global",
+        "title": "Global Delivery",
+        "description": "Delivery models aligned with international industrial and environmental regulations."
       },
       {
-        "q": "What is Third-Party Risk Management in media?",
-        "a": "Evaluating and managing risks posed by external vendors, agencies, and partners."
+        "icon": "Settings",
+        "title": "Tailor Solutions",
+        "description": "Agile consulting and risk strategies tailored to the fast-paced automated manufacturing environment."
       },
       {
-        "q": "Do you help with process automation in creative workflows?",
-        "a": "Yes, our consulting services include automation strategies for production, ad ops, and more."
-      },
-      {
-        "q": "Can you help with ISO or SOC certifications for media firms?",
-        "a": "Absolutely. We offer ISO 27001, SOC 2, and other relevant certifications to strengthen governance."
-      },
-      {
-        "q": "How fast can we deploy cybersecurity solutions?",
-        "a": "Depending on scope, quick wins can be delivered within weeks using our pre-built frameworks."
-      },
-      {
-        "q": "What makes RiskMan different from IT firms?",
-        "a": "We combine deep media industry expertise with global regulatory knowledge and risk insight."
-      },
-      {
-        "q": "Do you offer support for international expansion?",
-        "a": "Yes, including regulatory guidance, IT infrastructure review, and compliance alignment."
+        "icon": "UserCheck",
+        "title": "Experienced Professionals",
+        "description": "Our team comprises experts with extensive experience in OT security and industrial audits."
       }
     ]
   },
-
-  "stats": {
-    "value": "0+",
-    "label": "Clients"
+  "ctaSection": {
+    "title": "Enable safer, smarter manufacturing with expert risk solutions.",
+    "cta": {
+      "text": "Let’s Talk",
+      "action": "/contact"
+    }
   },
-  
-  "clientLogos": ["Blinkit-logo-1-1", "Care-Health-Insurance", "Electrosteel-logo", "Emami-logo-2", "Indiatv-logo-1", "Indorama_Ventures_Logo.svg-2", "Jindal-Renewables", "Khadim-logo-3-150x35", "zomato-logo_brandlogos.net_9msh7"],
-  "cta": {
-  "heading": "Ready to Build Manufacturing Resilience?",
-  "text": "Partner with RiskMan for operational risk management, supply chain security, and compliance solutions for manufacturing excellence.",
-  "button": "Optimize Operations",
-  "link": "/contact"
-}
+  "frequentlyAskedQuestions": [
+    {
+      "question": "What cybersecurity risks do manufacturing companies face?",
+      "answer": "Threats include ransomware aimed at production lines, OT attacks on industrial control systems, and supply-chain vulnerabilities."
+    },
+    {
+      "question": "How does RiskMan help with compliance?",
+      "answer": "We align operations with industrial standards like ISO 9001/45001, TISAX, GDPR, and regional safety regulations."
+    },
+    {
+      "question": "Can you help with ISO or SOC certifications?",
+      "answer": "Yes, we provide end-to-end readiness, gap analysis, and final audit support for all major manufacturing frameworks."
+    },
+    {
+      "question": "How fast can cybersecurity solutions be deployed?",
+      "answer": "Depending on scope, critical security controls can start being implemented within weeks to protect industrial assets."
+    }
+  ]
 }

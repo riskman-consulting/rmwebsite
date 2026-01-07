@@ -1,49 +1,245 @@
 {
-  "id": "itgc-itac",
-  "title": "ITGC & ITAC",
-  "headerImage":"https://media.licdn.com/dms/image/v2/D5622AQEhlFgoH7YmQA/feedshare-shrink_800/feedshare-shrink_800/0/1727463401739?e=2147483647&v=beta&t=j8GS1J7sR44dpColRGrkUvK3Q2LpeviHY60lqSdL0NU",
-  "meta": {
-    "title": "ITGC and ITAC Services | RiskMan Consulting",
-    "description": "Strengthen IT with RiskMan Consulting’s ITGC and ITAC services. Ensure IT controls and compliance audit readiness.",
-    "primaryKeyword": "ITGC and ITAC",
-    "additionalKeywords": ["IT Controls", "Compliance Audit", "IT Governance"],
-    "lsiKeywords": ["IT General Controls", "IT Application Controls", "Security Compliance", "Audit Readiness", "IT Risk"]
+  "heroSection": {
+    "title": "Strengthen Your IT Controls",
+    "description": "Ensure robust general and application controls for audit compliance. We help you build secure, reliable, and audit-ready IT environments.",
+    "badge": "ITGC & ITAC",
+    "primaryCTA": {
+      "text": "Strengthen IT Controls",
+      "action": "/contact"
+    },
+    "heroImage": {
+      "src": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400",
+      "alt": "IT governance and control assessment meeting"
+    }
   },
-  "hero": {
-    "heading": "Strengthen Your IT Controls",
-    "subheading": "Ensure robust general and application controls for audit compliance.",
-    "ctaText": "Strengthen IT Controls",
-    "ctaLink": "/contact"
-  },
-  "offerings": {
-    "intro": "Our ITGC & ITAC services include:",
-    "items": [
-      { "title": "IT General Controls Assessment", "desc": "Review access, change, and operations controls." },
-      { "title": "Application Controls Testing", "desc": "Verify accuracy, integrity, and authorization of systems." },
-      { "title": "Audit Readiness Support", "desc": "Prepare IT systems and applications for compliance audits." }
+  "weHelpSection": {
+    "title": "Build a Compliant & Secure IT Foundation",
+    "description": [
+      {
+        "content": "IT General Controls (ITGC) and IT Application Controls (ITAC) are the bedrock of a secure IT environment. We bring deep expertise to help you identify gaps, implement robust controls, and ensure your systems are always audit-ready."
+      },
+      {
+        "title": "Comprehensive Control Assessment",
+        "content": "Our expert team reviews access, change, and operations controls (ITGC) while verifying accuracy, integrity, and authorization within your business applications (ITAC).",
+        "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800"
+      }
     ]
   },
-  "clientSuccess": [
-    { "title": "Banking Firm", "desc": "Achieved complete regulatory IT control compliance." },
-    { "title": "Insurance Company", "desc": "Improved ITGC maturity by 45%." }
-  ],
-  "resources": [
-    { "title": "Guide", "desc": "Understanding ITGC & ITAC" },
-    { "title": "Blog", "desc": "Why IT Controls Matter" }
-  ],
-  "whyRiskMan": "We bring deep IT governance experience to help you build compliant and audit-ready IT control environments.",
-  "relatedOfferings": [
-    { "label": "IT Risk Management", "id": "it-risk-management" },
-    { "label": "Cybersecurity", "id": "cybersecurity" }
-  ],
-  "cta": {
-    "heading": "Enhance Your IT Control Environment",
-    "text": "Get expert ITGC and ITAC support to ensure compliance.",
-    "button": "Improve IT Controls",
-    "link": "/contact"
+  "valueSection": {
+    "title": "Elevate Your IT Governance Maturity",
+    "description": "Effective IT controls do more than just pass audits — they reduce operational risk and increase stakeholder confidence in your digital systems.",
+    "stat": {
+      "value": "45%",
+      "label": "Maturity improvement achieved"
+    },
+    "keyPoints": [
+      "Achieve regulatory compliance success",
+      "Reduce system downtime and errors",
+      "Strengthen logical access security",
+      "Ensure data and transactional integrity"
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=700",
+      "alt": "Professionals analyzing IT control data"
+    }
   },
-  "faqs": [
-    { "q": "What are ITGCs?", "a": "IT General Controls support secure and reliable IT operations." },
-    { "q": "Why do ITACs matter?", "a": "They ensure transactions and data in applications are accurate and authorized." }
+  "solutionSection": {
+    "title": "Our Solutions for IT Governance",
+    "solutions": [
+      {
+        "name": "Access Control Management",
+        "description": "Review and implement robust logical access controls to prevent unauthorized data access."
+      },
+      {
+        "name": "Change Management Review",
+        "description": "Ensure all system changes are authorized, tested, and documented properly."
+      },
+      {
+        "name": "IT Operations Governance",
+        "description": "Verify that data backups, incident management, and job scheduling are operating effectively."
+      },
+      {
+        "name": "Data Integrity Testing",
+        "description": "Validate the accuracy and completeness of data processing within your core applications."
+      },
+      {
+        "name": "Segregation of Duties (SoD)",
+        "description": "Analyze and resolve SoD conflicts to prevent fraud and operational errors."
+      },
+      {
+        "name": "Automated Control Monitoring",
+        "description": "Implement systems for continuous monitoring of critical IT controls for real-time compliance."
+      }
+    ]
+  },
+  "experienceSection": {
+    "years": 25,
+    "title": "Years of IT Governance Expertise",
+    "description": "RiskMan brings over 25 years of average partner experience in IT governance, risk, and compliance. Our team has successfully led complex control assessments for global banking, insurance, and technology enterprises.",
+    "visualGraphic": {
+      "src": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600",
+      "alt": "Senior IT governance consultants during a strategy session"
+    }
+  },
+  "fourStepApproach": {
+    "title": "Our 4-Step IT Control Approach",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Scoping & Risk Assessment",
+        "description": "Identify critical IT systems and applications that impact financial reporting or regulatory compliance."
+      },
+      {
+        "step": 2,
+        "title": "Design Assessment",
+        "description": "Evaluate if the documented controls are designed effectively to mitigate identified risks."
+      },
+      {
+        "step": 3,
+        "title": "Operating Effectiveness",
+        "description": "Test the controls over a sample period to ensure they are working as intended."
+      },
+      {
+        "step": 4,
+        "title": "Reporting & Remediation",
+        "description": "Deliver a detailed findings report and a roadmap to fix any identified gaps."
+      }
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=700",
+      "alt": "Visual representation of the ITGC assessment lifecycle"
+    }
+  },
+  "impactStats": [
+    {
+      "value": "100%",
+      "label": "Regulatory Compliance"
+    },
+    {
+      "value": "45%",
+      "label": "Maturity Improvement"
+    },
+    {
+      "value": "30%",
+      "label": "Risk Exposure Reduction"
+    },
+    {
+      "value": "24/7",
+      "label": "Audit Support"
+    }
+  ],
+  "whyRiskMan": {
+    "title": "Why RiskMan for ITGC & ITAC",
+    "points": [
+      "Deep IT governance and compliance experience",
+      "Proven track record in BFSI and Insurance sectors",
+      "Integrated approach combining IT and Business Risk",
+      "Support for global standards (ISAE, SOC, ISO)",
+      "Focus on practical, actionable remediation advice"
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600",
+      "alt": "Expert IT control auditors"
+    }
+  },
+  "trusteSection": {
+    "title": "Trusted by Industry Leaders",
+    "company": [
+      {
+        "name": "Banking Firm",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Electrosteel-logo-3-150x35-1.webp"
+      },
+      {
+        "name": "Insurance Company",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Care-Health-Insurance-Walk-in-Recruitment-2-1.webp"
+      },
+      {
+        "name": "IndiaTV",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Indiatv-logo-1-1.webp"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Client Success Stories",
+    "reviews": [
+      {
+        "quote": "RiskMan helped us achieve complete regulatory IT control compliance across our complex banking systems. Their expertise in ITGC is unmatched.",
+        "author": "Head of IT Audit",
+        "organization": "Leading Banking Firm"
+      },
+      {
+        "quote": "We improved our ITGC maturity by 45% in just one year. Their practical approach to application controls testing was a game-changer for us.",
+        "author": "CISO",
+        "organization": "National Insurance Company"
+      }
+    ]
+  },
+  "latestInsights": {
+    "title": "IT Governance Insights",
+    "description": "Stay updated on the latest trends in IT controls, audit standards, and regulatory requirements.",
+    "posts": [
+      {
+        "title": "Understanding the Importance of ITGC in 2025",
+        "author": "IT Audit Team",
+        "date": "Jan 03, 2026"
+      },
+      {
+        "title": "Why Application Controls are Critical for Data Integrity",
+        "author": "Risk Advisory",
+        "date": "Dec 20, 2025"
+      },
+      {
+        "title": "Preparing for your SOC Audit: IT Control Best Practices",
+        "author": "Compliance Group",
+        "date": "Nov 15, 2025"
+      }
+    ]
+  },
+  "riskResilientSection": {
+    "title": "Enhance Your IT Control Environment Today",
+    "description": "Get expert ITGC and ITAC support to ensure your systems are compliant, secure, and ready for any audit. Partner with RiskMan to build a resilient IT foundation.",
+    "path": "/contact"
+  },
+  "frequentlyAskedQuestions": [
+    {
+      "id": 1,
+      "question": "What are ITGCs (IT General Controls)?",
+      "answer": "ITGCs are the basic controls applied to secondary IT processes such as system security, change management, and IT operations. They ensure that business applications and computer systems are secure and reliable."
+    },
+    {
+      "id": 2,
+      "question": "Why do ITACs (IT Application Controls) matter?",
+      "answer": "ITACs ensure that transactions and data within specific software applications are accurate, complete, authorized, and valid. They are critical for ensuring the integrity of financial and operational data."
+    },
+    {
+      "id": 3,
+      "question": "How do IT controls support regulatory compliance?",
+      "answer": "Most regulatory frameworks (like SOC 2, ISO 27001, or industry-specific audits) require evidence of robust IT controls. Effective ITGCs and ITACs provide the validation needed to pass these audits."
+    },
+    {
+      "id": 4,
+      "question": "What is the difference between ITGC and ITAC?",
+      "answer": "ITGCs apply to the overall IT environment (like network security or server backups), while ITACs apply to specific business logic and data processing within a particular software application (like an automated invoice approval check)."
+    },
+    {
+      "id": 5,
+      "question": "Can you help with SoD (Segregation of Duties) analysis?",
+      "answer": "Yes, we perform deep-dive SoD reviews to ensure that no single individual has excessive control over a financial or operational process, which is a critical part of IT governance."
+    },
+    {
+      "id": 6,
+      "question": "What are the common ITGC gaps you find?",
+      "answer": "Common gaps include excessive administrative privileges, lack of formal change approval documentation, and inconsistent monitoring of job failures or backups."
+    },
+    {
+      "id": 7,
+      "question": "How often should IT controls be tested?",
+      "answer": "We recommend at least annual testing for most controls, though critical systems may require periodic or continuous monitoring to ensure ongoing compliance."
+    },
+    {
+      "id": 8,
+      "question": "How long does an ITGC assessment typically take?",
+      "answer": "A standard assessment usually takes 4-8 weeks, depending on the number of systems in scope and the complexity of the IT environment."
+    }
   ]
 }

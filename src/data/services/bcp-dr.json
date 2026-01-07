@@ -1,49 +1,228 @@
 {
-  "id": "bcp-dr",
-  "title": "BCP & DR Services",
-  "headerImage":"https://cdn.azeusconvene.com/wp-content/uploads/Why-Your-Business-Needs-a-Business-Continuity-Plan.webp",
-  "meta": {
-    "title": "BCP and DR Services | RiskMan Consulting",
-    "description": "Ensure resilience with RiskMan Consulting’s BCP and DR services. Achieve business continuity and disaster recovery readiness.",
-    "primaryKeyword": "BCP and DR",
-    "additionalKeywords": ["Business Continuity", "Disaster Recovery", "Risk Mitigation"],
-    "lsiKeywords": ["Continuity Planning", "Recovery Strategy", "Business Resilience", "Risk Management", "Emergency Preparedness"]
+  "heroSection": {
+    "title": "Ensure Business Continuity with BCP & DR",
+    "description": "Prepare for disruptions and recover operations faster with structured continuity plans and resilient recovery strategies.",
+    "badge": "Resilience & Continuity",
+    "primaryCTA": {
+      "text": "Build a Resilient Strategy",
+      "action": "/contact"
+    },
+    "heroImage": {
+      "src": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1400",
+      "alt": "Modern operation center monitoring business continuity"
+    }
   },
-  "hero": {
-    "heading": "Ensure Business Continuity with BCP & DR",
-    "subheading": "Prepare for disruptions and recover operations faster with structured continuity plans.",
-    "ctaText": "Build a Resilient Strategy",
-    "ctaLink": "/contact"
-  },
-  "offerings": {
-    "intro": "Our BCP & DR services include:",
-    "items": [
-      { "title": "Business Continuity Planning", "desc": "Develop end-to-end continuity frameworks for critical processes." },
-      { "title": "Disaster Recovery Planning", "desc": "Ensure fast recovery of IT systems and data after disruptions." },
-      { "title": "Crisis Response Management", "desc": "Structured processes for incident handling and emergency response." }
+  "weHelpSection": {
+    "title": "Build Operational Resilience for the Unexpected",
+    "description": [
+      {
+        "content": "In an era of increasing digital and physical disruptions, a robust Business Continuity Plan (BCP) and Disaster Recovery (DR) strategy are essential for survival. We help you move beyond simple backups to a comprehensive resilience framework."
+      },
+      {
+        "title": "Proactive Recovery Readiness",
+        "content": "RiskMan builds tailored continuity strategies ensuring your critical processes and IT systems can recover within your target timeframes, minimizing financial and reputational impact.",
+        "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800"
+      }
     ]
   },
-  "clientSuccess": [
-    { "title": "Healthcare Group", "desc": "Restored operations within 4 hours after a major outage." },
-    { "title": "E-Commerce Company", "desc": "Achieved 99.9% uptime with robust DR implementation." }
-  ],
-  "resources": [
-    { "title": "Guide", "desc": "Business Continuity Essentials" },
-    { "title": "Case Study", "desc": "How DR Improved Resilience for Retail" }
-  ],
-  "whyRiskMan": "RiskMan builds tailored continuity strategies ensuring operational resilience and regulatory compliance.",
-  "relatedOfferings": [
-    { "label": "IT Risk Management", "id": "it-risk-management" },
-    { "label": "Cybersecurity", "id": "cybersecurity" }
-  ],
-  "cta": {
-    "heading": "Strengthen Your Business Continuity",
-    "text": "Get a complete BCP & DR strategy designed for your organization.",
-    "button": "Start Planning",
-    "link": "/contact"
+  "servicesOverview": {
+    "title": "Our Resilience Portfolio",
+    "description": "We provide end-to-end support for business continuity and disaster recovery, ensuring your organization is prepared for any crisis.",
+    "services": [
+      {
+        "title": "Business Continuity Planning",
+        "description": "Develop frameworks for critical business processes, ensuring staff safety and operational recovery.",
+        "cta": "Strategy Details"
+      },
+      {
+        "title": "Disaster Recovery Planning",
+        "description": "Technical recovery strategies for IT infrastructure, applications, and data with defined RTO/RPO targets.",
+        "cta": "IT Recovery"
+      },
+      {
+        "title": "Crisis Management",
+        "description": "Establish command structures and communication protocols for effective incident handling.",
+        "cta": "Response Plan"
+      },
+      {
+        "title": "Resilience Testing",
+        "description": "Conduct tabletop exercises and full-scale disaster simulations to validate plan effectiveness.",
+        "cta": "Testing Support"
+      }
+    ]
   },
-  "faqs": [
-    { "q": "Why is BCP important?", "a": "It ensures operations continue even during disruptions." },
-    { "q": "How often should plans be tested?", "a": "At least twice a year or after major system changes." }
+  "industryUseCases": [
+    {
+      "industry": "Healthcare",
+      "title": "Ensuring Patient Care Continuity",
+      "description": "For a major hospital group, we designed a BCP that ensured critical pathology and surgical systems remained operational during power outages.",
+      "impacts": [
+        "Restored operations within 4 hours",
+        "Zero data loss for patient records",
+        "Regulatory compliance with health standards"
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800",
+        "alt": "Healthcare facility representing continuity"
+      }
+    },
+    {
+      "industry": "E-Commerce",
+      "title": "Scaling DR for Peak Performance",
+      "description": "We implemented a high-availability DR strategy for a global retail platform, ensuring zero downtime during holiday sales spikes.",
+      "impacts": [
+        "Achieved 99.9% uptime across all regions",
+        "30% reduction in recovery time (RTO)",
+        "Improved stakeholder and customer trust"
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1556742049-13da736c74ad?w=800",
+        "alt": "Digital retail operation with high availability"
+      }
+    }
+  ],
+  "helpUsSection": [
+    {
+      "name": "Continuity",
+      "title": "Business Impact Analysis (BIA)",
+      "description": "We identify and prioritize critical business functions and their dependencies to build a foundation for recovery.",
+      "tags": [
+        "Prioritization",
+        "Impact Assessment",
+        "Dependencies"
+      ]
+    },
+    {
+      "name": "Recovery",
+      "title": "RTO & RPO Definition",
+      "description": "We help you define clear Recovery Time Objectives and Recovery Point Objectives tailored to your business needs.",
+      "tags": [
+        "SLAs",
+        "Technical Recovery",
+        "Data Protection"
+      ]
+    },
+    {
+      "name": "Governance",
+      "title": "Crisis Communication",
+      "description": "Our experts design communication trees and protocols to keep internal and external stakeholders informed during a crisis.",
+      "tags": [
+        "Communication",
+        "Stakeholder Management",
+        "PR"
+      ]
+    }
+  ],
+  "impactStats": [
+    {
+      "value": "4 Hours",
+      "label": "Average Recovery Time"
+    },
+    {
+      "value": "99.9%",
+      "label": "System Availability"
+    },
+    {
+      "value": "100+",
+      "label": "Simulations Conducted"
+    },
+    {
+      "value": "Zero",
+      "label": "Data Loss Incidents"
+    }
+  ],
+  "whyRiskMan": {
+    "title": "Why RiskMan for Resilience",
+    "points": [
+      "Customized strategies for zero-downtime objectives",
+      "Experience with complex hybrid-cloud IT environments",
+      "Hands-on support for crisis simulations and testing",
+      "Alignment with ISO 22301 and industry regulations",
+      "Practical focus on staff safety and operational recovery"
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600",
+      "alt": "Resilience planning team"
+    }
+  },
+  "trusteSection": {
+    "title": "Trusted by Resilient Organizations",
+    "company": [
+      {
+        "name": "Healthcare Group",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Care-Health-Insurance-Walk-in-Recruitment-2-1.webp"
+      },
+      {
+        "name": "Electrosteel",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Electrosteel-logo-3-150x35-1.webp"
+      },
+      {
+        "name": "Zomato",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/zomato-logo.webp"
+      }
+    ]
+  },
+  "latestInsights": {
+    "title": "Resilience Insights",
+    "description": "Discover best practices for business continuity and disaster recovery.",
+    "posts": [
+      {
+        "title": "Building a Robust BCP in a Hybrid Work World",
+        "author": "Resilience Team",
+        "date": "Jan 06, 2026"
+      },
+      {
+        "title": "The Evolution of Disaster Recovery: Beyond Backups",
+        "author": "Tech Risk Group",
+        "date": "Dec 10, 2025"
+      }
+    ]
+  },
+  "riskResilientSection": {
+    "title": "Strengthen Your Business Continuity Today",
+    "description": "Partner with RiskMan to build a resilient strategy that keeps your business running no matter what. Get a complete BCP & DR plan tailored to your organization.",
+    "path": "/contact"
+  },
+  "frequentlyAskedQuestions": [
+    {
+      "id": 1,
+      "question": "What is the difference between BCP and DR?",
+      "answer": "BCP (Business Continuity Planning) focuses on keeping business operations running during a disruption, while DR (Disaster Recovery) specifically targets the technical recovery of IT systems, applications, and data."
+    },
+    {
+      "id": 2,
+      "question": "Why is BCP critical for my organization?",
+      "answer": "BCP ensures that your critical business functions continue even during unexpected events like natural disasters, cyberattacks, or supply chain failures, protecting your revenue and reputation."
+    },
+    {
+      "id": 3,
+      "question": "How often should BCP and DR plans be tested?",
+      "answer": "We recommend at least annual testing, with more frequent simulations for high-risk or rapidly changing environments. Testing validates that your plans actually work when needed."
+    },
+    {
+      "id": 4,
+      "question": "What are RTO and RPO?",
+      "answer": "RTO (Recovery Time Objective) is the maximum acceptable time to restore a system after a failure. RPO (Recovery Point Objective) is the maximum acceptable amount of data loss measured in time (e.g., losing the last 15 minutes of data)."
+    },
+    {
+      "id": 5,
+      "question": "Do you help with ISO 22301 certification?",
+      "answer": "Yes, we help organizations design and implement continuity management systems that align with and achieve ISO 22301 certification."
+    },
+    {
+      "id": 6,
+      "question": "Can you support remote workforce continuity?",
+      "answer": "Absolutely. Modern BCP must account for remote work scenarios, ensuring that employees can securely access critical systems from anywhere during a disruption."
+    },
+    {
+      "id": 7,
+      "question": "What is a Business Impact Analysis (BIA)?",
+      "answer": "A BIA is a systematic process to determine the potential effects of an interruption to critical business operations as a result of a disaster, accident, or emergency."
+    },
+    {
+      "id": 8,
+      "question": "How does RiskMan handle crisis communication planning?",
+      "answer": "We develop structured communication protocols, including call trees and notification systems, to ensure all stakeholders receive timely and accurate information during an incident."
+    }
   ]
 }

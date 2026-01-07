@@ -80,7 +80,7 @@ export default function AlliancePartnersSection() {
   return (
     <>
       <section id="alliance-partners" className="relative overflow-hidden transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark py-14 md:pt-20 md:pb-0 isolate">
-        <div className="px-6 mx-auto max-w-7xl lg:px-8">
+        <div className="container">
           <motion.div
             variants={fadeInUp}
             initial="initial"

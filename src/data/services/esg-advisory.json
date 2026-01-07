@@ -1,107 +1,211 @@
 {
-  "id": "esg-advisory",
-  "title": "ESG Advisory",
-
-  "hero": {
-    "heading": "Drive sustainability with ESG Advisory from RiskMan Consulting.",
-    "subheading": "Our Sustainability Consulting and Corporate Responsibility solutions ensure Environmental Compliance for a better future.",
-    "image": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/plantation.webp"
+  "heroSection": {
+    "title": "Drive Sustainability with ESG Advisory",
+    "description": "RiskMan's Environmental, Social, and Governance (ESG) solutions help you build a resilient, ethical, and future-forward business in a changing global landscape.",
+    "badge": "Sustainability & Governance",
+    "primaryCTA": {
+      "text": "Book Consultation",
+      "action": "/contact"
+    },
+    "heroImage": {
+      "src": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/plantation.webp",
+      "alt": "Eco-friendly plantation representing sustainable business growth"
+    }
   },
-
-  "offerings": {
-    "intro": "Our ESG Advisory services provide strategic solutions for sustainability-driven organizations.",
-    "items": [
+  "weHelpSection": {
+    "title": "Sustainability is No Longer Optional",
+    "description": [
       {
-        "title": "ESG Strategy",
-        "desc": "Aligning business goals with Sustainable Business practices."
+        "content": "From climate change to social equity, ESG factors are fundamentally reshaping business value. We help you navigate complex global standards and transform corporate responsibility into a strategic advantage."
       },
       {
-        "title": "Green Initiatives",
-        "desc": "Implementing eco-friendly solutions for Environmental Compliance."
-      },
-      {
-        "title": "Social Impact Programs",
-        "desc": "Enhancing Corporate Responsibility."
-      },
-      {
-        "title": "Governance Framework",
-        "desc": "Strengthening oversight for ESG compliance."
+        "title": "ESG Strategy & Integration",
+        "content": "Our ESG Advisory services combine industry expertise and innovation to deliver impactful sustainability consulting that aligns with your business goals and stakeholder expectations.",
+        "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800"
       }
     ]
   },
-
-  "clientSuccess": [
-    {
-      "title": "Energy Firm",
-      "desc": "Reduced carbon footprint by 40% with Green Initiatives."
-    },
-    {
-      "title": "Retail Brand",
-      "desc": "Improved Social Impact scores through community programs."
-    }
-  ],
-
-  "resources": [
-    {
-      "title": "Building a Sustainable Business in 2025",
-      "desc": "A complete guide to future-ready corporate sustainability strategies.",
-      "link": "/resources/sustainable-business-2025"
-    },
-    {
-      "title": "Mastering ESG Strategy",
-      "desc": "A webinar exploring modern ESG integration frameworks.",
-      "link": "/resources/webinar-esg-strategy"
-    },
-    {
-      "title": "Why Corporate Responsibility Matters",
-      "desc": "An in-depth blog on CSR and long-term value creation.",
-      "link": "/blog/corporate-responsibility"
-    }
-  ],
-
-  "whyRiskMan": "RiskMan’s ESG Advisory services combine expertise and innovation to deliver impactful Sustainability Consulting.",
-
-  "relatedOfferings": [
-    { "id": "risk-advisory", "label": "Risk Advisory" },
-    { "id": "financial-advisory", "label": "Financial Advisory" },
-    { "id": "data-privacy", "label": "Data Privacy and Protection" }
-  ],
-
-  "cta": {
-    "heading": "Go green with RiskMan!",
-    "text": "Schedule an ESG Advisory consultation today.",
-    "button": "Book Consultation",
-    "link": "/contact"
+  "solutionSection": {
+    "title": "Our ESG Solutions",
+    "solutions": [
+      {
+        "name": "ESG Strategy & Roadmap",
+        "description": "Define clear sustainability targets and integrate ESG metrics into your core business strategy for long-term value."
+      },
+      {
+        "name": "Environmental Compliance",
+        "description": "Ensure adherence to global environmental regulations and implement eco-friendly operational initiatives."
+      },
+      {
+        "name": "Social Impact Programs",
+        "description": "Design and execute meaningful social responsibility programs that enhance community trust and employee engagement."
+      },
+      {
+        "name": "Governance Frameworks",
+        "description": "Strengthen boardroom oversight and corporate ethics with robust ESG governance and reporting structures."
+      }
+    ]
   },
-
-  "faqs": [
+  "industryUseCases": [
     {
-      "q": "What is ESG Advisory?",
-      "a": "ESG Advisory helps businesses integrate Environmental Compliance, social, and governance factors."
+      "industry": "Energy",
+      "title": "Accelerating the Green Transition",
+      "description": "We partnered with a major energy firm to overhaul their carbon accounting and implement efficiency-driven green initiatives.",
+      "impacts": [
+        "40% reduction in carbon footprint",
+        "Enhanced investor ESG ratings",
+        "Operational cost savings through efficiency"
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1466611653911-95282fc3656b?w=800",
+        "alt": "Renewable energy infrastructure"
+      }
     },
     {
-      "q": "How does ESG Advisory benefit businesses?",
-      "a": "It enhances Sustainable Business practices, improving reputation and profitability."
+      "industry": "Retail",
+      "title": "Ethical Supply Chain Management",
+      "description": "For a global retail brand, we developed a social impact program aimed at ensuring fair labor practices and sustainable sourcing across global supply chains.",
+      "impacts": [
+        "100% supply chain transparency",
+        "Significant boost in social responsibility scores",
+        "Strengthened customer brand loyalty"
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800",
+        "alt": "Sustainable retail store environment"
+      }
+    }
+  ],
+  "helpUsSection": [
+    {
+      "name": "Standards",
+      "title": "BRSR & Global Reporting",
+      "description": "We specialize in Business Responsibility and Sustainability Reporting (BRSR) for Indian companies and global frameworks like GRI and SASB.",
+      "tags": [
+        "BRSR",
+        "GRI",
+        "Sustainability Reporting"
+      ]
     },
     {
-      "q": "Which industries need ESG Advisory?",
-      "a": "Energy, manufacturing, and retail benefit from Sustainability Consulting."
+      "name": "Finance",
+      "title": "Sustainable Finance & SFDR",
+      "description": "Navigating the Sustainable Finance Disclosure Regulation (SFDR) and help align portfolios with ESG investment criteria.",
+      "tags": [
+        "SFDR",
+        "ESG Investing",
+        "Financial Disclosure"
+      ]
     },
     {
-      "q": "What is an ESG Strategy?",
-      "a": "An ESG Strategy aligns operations with Green Initiatives and Social Impact goals."
+      "name": "Compliance",
+      "title": "Supply Chain ESG Due Diligence",
+      "description": "Assessing environmental and social risks in multi-tier supply chains to ensure ethical and sustainable operations.",
+      "tags": [
+        "Supply Chain",
+        "Due Diligence",
+        "Human Rights"
+      ]
+    }
+  ],
+  "impactStats": [
+    {
+      "value": "40%",
+      "label": "Avg. Carbon Reduction"
     },
     {
-      "q": "How long does an ESG Advisory project take?",
-      "a": "Projects typically last 8–16 weeks, depending on Governance Framework needs."
+      "value": "100+",
+      "label": "ESG Projects Delivered"
     },
     {
-      "q": "Why choose RiskMan for ESG Advisory?",
-      "a": "Our tailored Sustainability Consulting ensures measurable ESG outcomes."
+      "value": "BRSR",
+      "label": "Reporting Specialty"
     },
     {
-      "q": "Can ESG Advisory improve brand reputation?",
-      "a": "Yes, Corporate Responsibility initiatives boost trust and loyalty."
+      "value": "Global",
+      "label": "Standards Covered"
+    }
+  ],
+  "whyRiskMan": {
+    "title": "Why RiskMan for ESG",
+    "points": [
+      "Integrated approach combining environmental science and business strategy",
+      "Deep expertise in India-specific BRSR and global ESG regulations",
+      "Hands-on support for implementation of green initiatives",
+      "Focus on measurable ESG outcomes and long-term value creation",
+      "Technology-enabled sustainability tracking and reporting"
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600",
+      "alt": "Sustainability experts discussing ESG frameworks"
+    }
+  },
+  "articalSection": {
+    "title": "Latest ESG Knowledge Hub",
+    "description": "Explore our publications on building future-ready corporate sustainability strategies.",
+    "articles": [
+      {
+        "title": "Building a Sustainable Business in 2025",
+        "description": "A complete guide to future-ready corporate sustainability strategies and ESG integration.",
+        "path": "/resources/sustainable-business-2025"
+      },
+      {
+        "title": "Mastering ESG Strategy",
+        "description": "A deep dive into modern ESG integration frameworks and stakeholder engagement.",
+        "path": "/resources/webinar-esg-strategy"
+      },
+      {
+        "title": "Why Corporate Responsibility Matters",
+        "description": "An in-depth analysis of CSR and its role in long-term enterprise value creation.",
+        "path": "/blog/corporate-responsibility"
+      }
+    ]
+  },
+  "riskResilientSection": {
+    "title": "Start Your Green Transition Today",
+    "description": "Don't let sustainability be a hurdle. Partner with RiskMan to turn ESG into an opportunity for growth and resilience. Let's build a better future together.",
+    "path": "/contact"
+  },
+  "frequentlyAskedQuestions": [
+    {
+      "id": 1,
+      "question": "What is ESG Advisory?",
+      "answer": "ESG Advisory helps businesses integrate Environmental, Social, and Governance factors into their operations and strategy to drive sustainability, compliance, and long-term value."
+    },
+    {
+      "id": 2,
+      "question": "How does ESG Advisory benefit my business?",
+      "answer": "Beyond compliance, ESG improves operational efficiency, reduces risk, enhances reputation, and attracts investors who increasingly prioritize sustainable businesses."
+    },
+    {
+      "id": 3,
+      "question": "What is BRSR reporting?",
+      "answer": "The Business Responsibility and Sustainability Report (BRSR) is a mandatory ESG disclosure requirement for the top 1,000 listed entities in India, as per SEBI regulations."
+    },
+    {
+      "id": 4,
+      "question": "Which industries need ESG Advisory most?",
+      "answer": "While all sectors benefit, high-impact industries like Energy, Manufacturing, Retail, and BFSI face the most significant regulatory and stakeholder pressure for ESG integration."
+    },
+    {
+      "id": 5,
+      "question": "What is an ESG Roadmap?",
+      "answer": "An ESG roadmap is a strategic plan that outlines an organization's sustainability goals, the steps to achieve them, and the metrics to track progress over a multi-year period."
+    },
+    {
+      "id": 6,
+      "question": "Can ESG Advisory improve brand reputation?",
+      "answer": "Yes, transparent and authentic corporate responsibility initiatives build trust with customers, employees, and the broader community, leading to enhanced brand loyalty."
+    },
+    {
+      "id": 7,
+      "question": "How long does a typical ESG project take?",
+      "answer": "A foundational ESG strategy project typically takes 8-16 weeks, though full implementation and cultural transformation are ongoing processes."
+    },
+    {
+      "id": 8,
+      "question": "How do you measure ESG success?",
+      "answer": "Success is measured through specific KPIs, such as carbon footprint reduction, diversity metrics, governance audit scores, and alignment with global reporting standards."
     }
   ]
 }

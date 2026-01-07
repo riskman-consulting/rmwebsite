@@ -1,49 +1,227 @@
 {
-  "id": "data-privacy",
-  "title": "Data Privacy & Protection",
-  "headerImage":"https://www.pwc.com/glob/dpe/en/inline-images/adobestock-507058455.jpg",
-  "meta": {
-    "title": "Data Privacy & Protection Services | RiskMan Consulting",
-    "description": "Protect sensitive data with RiskMan Consulting’s Data Privacy services. Ensure data protection and privacy compliance.",
-    "primaryKeyword": "Data Privacy",
-    "additionalKeywords": ["Data Protection", "Privacy Compliance", "Data Security"],
-    "lsiKeywords": ["GDPR Compliance", "Data Governance", "Privacy Framework", "Data Breach Prevention", "Security Compliance"]
+  "heroSection": {
+    "title": "Build Digital Trust through Data Privacy",
+    "description": "Navigate the complex landscape of global privacy regulations (GDPR, DPDP, HIPAA) while protecting your most valuable asset — your data.",
+    "badge": "Privacy & Protection",
+    "primaryCTA": {
+      "text": "Strengthen Your Privacy",
+      "action": "/contact"
+    },
+    "heroImage": {
+      "src": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1400",
+      "alt": "Abstract digital data protection visualization"
+    }
   },
-  "hero": {
-    "heading": "Protect your sensitive data with RiskMan",
-    "subheading": "We help you comply with privacy laws and secure critical business information.",
-    "ctaText": "Strengthen Privacy",
-    "ctaLink": "/contact"
-  },
-  "offerings": {
-    "intro": "Our Data Privacy & Protection services include:",
-    "items": [
-      { "title": "Data Protection Frameworks", "desc": "Security controls to safeguard sensitive information." },
-      { "title": "Privacy Compliance", "desc": "GDPR, DPDP, and global privacy law compliance." },
-      { "title": "Data Breach Prevention", "desc": "Prevent breaches with monitoring and proactive controls." }
+  "trusteSection": {
+    "title": "Securing Global Enterprises",
+    "company": [
+      {
+        "name": "Banking Client",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Electrosteel-logo-3-150x35-1.webp"
+      },
+      {
+        "name": "Healthcare Group",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Care-Health-Insurance-Walk-in-Recruitment-2-1.webp"
+      },
+      {
+        "name": "Tech Corp",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Indiatv-logo-1-1.webp"
+      }
     ]
   },
-  "clientSuccess": [
-    { "title": "Banking Client", "desc": "Achieved full GDPR compliance in 10 weeks." },
-    { "title": "Healthcare Group", "desc": "Protected patient data using advanced privacy controls." }
-  ],
-  "resources": [
-    { "title": "Whitepaper", "desc": "Building a Data Privacy Framework" },
-    { "title": "Blog", "desc": "Top Causes of Data Breaches" }
-  ],
-  "whyRiskMan": "Our privacy specialists help organizations implement global privacy frameworks and reduce breach risks.",
-  "relatedOfferings": [
-    { "label": "Cybersecurity", "id": "cybersecurity" },
-    { "label": "IT Risk Management", "id": "it-risk-management" }
-  ],
-  "cta": {
-    "heading": "Protect your organization now",
-    "text": "Get expert guidance on data privacy and compliance.",
-    "button": "Start Now",
-    "link": "/contact"
+  "weHelpSection": {
+    "title": "Privacy as a Competitive Advantage",
+    "description": [
+      {
+        "content": "In an era of high-profile data breaches and strict global regulations, data privacy is no longer just a compliance checkbox — it's a fundamental pillar of customer trust and business integrity."
+      },
+      {
+        "title": "Integrated Privacy Strategy",
+        "content": "RiskMan provides end-to-end data privacy services, from initial impact assessments to the implementation of automated data discovery and protection tools.",
+        "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800"
+      }
+    ]
   },
-  "faqs": [
-    { "q": "What is data privacy?", "a": "It involves protecting personal and sensitive information from unauthorized access." },
-    { "q": "Do all businesses need privacy compliance?", "a": "Yes, if they collect or store personal data." }
+  "valueSection": {
+    "title": "Why Digital Trust Matters",
+    "description": "Protecting privacy is about more than avoiding fines; it's about building lasting relationships with your customers and partners through transparency.",
+    "stat": {
+      "value": "88%",
+      "label": "Consumers prioritize privacy"
+    },
+    "keyPoints": [
+      "Privacy by Design integration",
+      "Global compliance readiness",
+      "Reduced data breach liability",
+      "Enhanced brand reputation"
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1557591954-fd2e816a3df1?w=700",
+      "alt": "Data privacy dashboard representing digital trust"
+    }
+  },
+  "solutionSection": {
+    "title": "Comprehensive Privacy Solutions",
+    "solutions": [
+      {
+        "name": "GDPR & DPDP Compliance",
+        "description": "Full-lifecycle compliance mapping, gap analysis, and documentation for EU and Indian privacy laws."
+      },
+      {
+        "name": "Data Discovery & Mapping",
+        "description": "Automated identification of PII (Personally Identifiable Information) across your entire IT landscape."
+      },
+      {
+        "name": "Privacy Impact Assessment (PIA)",
+        "description": "Deep-dive evaluations of new projects and systems to ensure privacy is built-in from the start."
+      },
+      {
+        "name": "Subject Rights Management",
+        "description": "Streamlined processes for handling Data Subject Access Requests (DSARs) and meeting response timelines."
+      },
+      {
+        "name": "Consent Management",
+        "description": "Implementing robust frameworks to collect, track, and manage user consent across all digital touchpoints."
+      },
+      {
+        "name": "Data Breach Response",
+        "description": "Readiness planning and rapid response workflows for reporting and mitigating data privacy incidents."
+      }
+    ]
+  },
+  "proActiveSection": {
+    "title": "Privacy by Design",
+    "description": "We believe privacy should be proactive, not reactive. Our methodology embeds privacy requirements directly into your software development life cycle (SDLC) and business processes, ensuring protection is foundational and invisible to the user.",
+    "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1000"
+  },
+  "industryUseCases": [
+    {
+      "industry": "BFSI",
+      "title": "GDPR Alignment for Global Banking",
+      "description": "We helped a multinational bank consolidate fragmented customer data stores into a single, GDPR-compliant repository with automated right-to-be-forgotten workflows.",
+      "impacts": [
+        "Full compliance in 10 weeks",
+        "90% reduction in DSAR response time",
+        "Zero findings in subsequent regulatory audits"
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?w=800",
+        "alt": "Secure banking digital vault"
+      }
+    },
+    {
+      "industry": "Healthcare",
+      "title": "DPDP Readiness & DPDP Compliance",
+      "description": "Partnering with a major healthcare provider to implement strict data localization and consent frameworks required by the new DPDP Act.",
+      "impacts": [
+        "Mapped 500+ patient data flows",
+        "Implemented iron-clad consent banners",
+        "Trained 1000+ staff on privacy protocols"
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800",
+        "alt": "Secure healthcare data management"
+      }
+    }
+  ],
+  "impactStats": [
+    {
+      "value": "100%",
+      "label": "Audit Success Rate"
+    },
+    {
+      "value": "10 Weeks",
+      "label": "Rapid Compliance Setup"
+    },
+    {
+      "value": "500+",
+      "label": "PII Data Flows Mapped"
+    },
+    {
+      "value": "Zero",
+      "label": "Regulatory Fines"
+    }
+  ],
+  "whyRiskMan": {
+    "title": "Why RiskMan for Data Privacy",
+    "points": [
+      "Certified IAPP Privacy Professionals (CIPP/E, CIPT)",
+      "Deep understanding of local and international laws",
+      "Technology-agnostic privacy tool implementation",
+      "Proven track record in high-risk sectors (Finance, Healthcare)",
+      "Focus on operationalizing privacy, not just legal advice"
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600",
+      "alt": "Privacy consultants working on data protection"
+    }
+  },
+  "latestInsights": {
+    "title": "Privacy Insights",
+    "description": "Stay ahead of the curve with our expert analysis on the evolving privacy landscape.",
+    "posts": [
+      {
+        "title": "Navigating the New DPDP Act: A Guide for Businesses",
+        "author": "Privacy Team",
+        "date": "Jan 04, 2026"
+      },
+      {
+        "title": "Why Consent is the New Currency of Trust",
+        "author": "Strategic Advisory",
+        "date": "Dec 28, 2025"
+      },
+      {
+        "title": "Top Causes of Data Breaches in 2025",
+        "author": "Cyber Team",
+        "date": "Nov 20, 2025"
+      }
+    ]
+  },
+  "riskResilientSection": {
+    "title": "Build a Privacy-Forward Business Today",
+    "description": "Don't let privacy be a liability. Partner with RiskMan to turn data protection into a trust-building asset. Get started with a privacy gap assessment.",
+    "path": "/contact"
+  },
+  "frequentlyAskedQuestions": [
+    {
+      "id": 1,
+      "question": "What is the difference between Data Security and Data Privacy?",
+      "answer": "Data security focuses on protecting data from unauthorized access through technical tools like encryption. Data privacy focuses on the legal and ethical handling of and permission for data, ensuring transparency and user rights."
+    },
+    {
+      "id": 2,
+      "question": "Do small businesses need GDPR or DPDP compliance?",
+      "answer": "Yes, if you collect or process personal data of individuals from protected regions, the law applies regardless of your business size. Non-compliance can lead to significant fines."
+    },
+    {
+      "id": 3,
+      "question": "What is 'Privacy by Design'?",
+      "answer": "Privacy by Design is an approach to systems engineering which dictates that privacy must be incorporated into technologies and business practices by default, from the very beginning of the design process."
+    },
+    {
+      "id": 4,
+      "question": "How long does a data privacy gap assessment take?",
+      "answer": "A standard assessment for a mid-sized organization typically takes 3-6 weeks, depending on the complexity of your data flows and IT landscape."
+    },
+    {
+      "id": 5,
+      "question": "Can you help act as a Data Protection Officer (DPO)?",
+      "answer": "Yes, we offer 'DPO-as-a-Service' to provide organizations with expert privacy leadership and oversight without the need for a full-time internal hire."
+    },
+    {
+      "id": 6,
+      "question": "What is the most common cause of privacy failures?",
+      "answer": "Most failures stem from a lack of visibility into where data is stored (shadow IT) and improper management of third-party vendor access."
+    },
+    {
+      "id": 7,
+      "question": "How does the new DPDP Act affect Indian companies?",
+      "answer": "The Digital Personal Data Protection (DPDP) Act introduces significant obligations for companies in India, including strict consent requirements and heavy penalties for data breaches."
+    },
+    {
+      "id": 8,
+      "question": "How do you help with DSARs (Data Subject Access Requests)?",
+      "answer": "We help you build automated workflows to identify and retrieve a user's data across multiple systems, ensuring you meet the strict response timelines required by law."
+    }
   ]
 }

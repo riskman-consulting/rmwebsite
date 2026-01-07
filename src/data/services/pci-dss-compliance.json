@@ -1,49 +1,167 @@
 {
-  "id": "pci-dss-compliance",
-  "title": "PCI DSS Compliance",
-  "headerImage":"https://devopsstaging.riskman.in/wp-content/uploads/2025/06/online-protection.webp",
-  "meta": {
-    "title": "PCI DSS Compliance Services | RiskMan Consulting",
-    "description": "Secure payments with RiskMan Consulting’s PCI DSS Compliance services. Ensure payment security and data protection.",
-    "primaryKeyword": "PCI DSS Compliance",
-    "additionalKeywords": ["Payment Security", "Data Protection", "Compliance Audit"],
-    "lsiKeywords": ["Cardholder Data", "PCI Standards", "Security Compliance", "Payment Processing", "Audit Readiness"]
+  "heroSection": {
+    "title": "Secure Payments with PCI DSS Compliance",
+    "description": "Protect cardholder data and meet global PCI DSS standards with RiskMan's comprehensive PCI DSS compliance services.",
+    "badge": "Payment Security",
+    "primaryCTA": {
+      "text": "Protect Payments",
+      "action": "/contact"
+    },
+    "heroImage": {
+      "src": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/online-protection.webp",
+      "alt": "PCI DSS Compliance and Payment Security"
+    }
   },
-  "hero": {
-    "heading": "Secure Payments with PCI DSS Compliance",
-    "subheading": "Protect cardholder data and meet global PCI DSS standards.",
-    "ctaText": "Protect Payments",
-    "ctaLink": "/contact"
-  },
-  "offerings": {
-    "intro": "Our PCI DSS services include:",
-    "items": [
-      { "title": "Cardholder Data Protection", "desc": "Safeguard sensitive payment information." },
-      { "title": "PCI Standards Implementation", "desc": "Ensure full compliance with all PCI DSS requirements." },
-      { "title": "Audit Readiness", "desc": "Prepare for compliance audits with gap assessments." }
+  "coreServices": {
+    "title": "Our PCI DSS Compliance Services",
+    "services": [
+      {
+        "title": "Cardholder Data Protection",
+        "description": "Safeguard sensitive payment information with industry-leading security controls and encryption.",
+        "cta": "Learn More"
+      },
+      {
+        "title": "PCI Standards Implementation",
+        "description": "Ensure full compliance with all PCI DSS requirements through structured implementation.",
+        "cta": "Learn More"
+      },
+      {
+        "title": "Audit Readiness",
+        "description": "Prepare for compliance audits with comprehensive gap assessments and remediation.",
+        "cta": "Learn More"
+      },
+      {
+        "title": "Security Governance",
+        "description": "Establish robust security governance frameworks for ongoing compliance.",
+        "cta": "Learn More"
+      }
     ]
   },
-  "clientSuccess": [
-    { "title": "Retail Chain", "desc": "Secured all payment systems and passed PCI audit." },
-    { "title": "E-Commerce Brand", "desc": "Achieved PCI DSS compliance in under 3 months." }
-  ],
-  "resources": [
-    { "title": "Guide", "desc": "Mastering PCI DSS Compliance" },
-    { "title": "Case Study", "desc": "Securing Cardholder Data in Retail" }
-  ],
-  "whyRiskMan": "Our PCI experts ensure seamless compliance through structured assessments, remediation, and audit support.",
-  "relatedOfferings": [
-    { "label": "Cybersecurity", "id": "cybersecurity" },
-    { "label": "Data Privacy", "id": "data-privacy" }
-  ],
-  "cta": {
-    "heading": "Protect Your Payments!",
-    "text": "Contact RiskMan for PCI DSS Compliance support.",
-    "link": "/contact",
-    "button": "Get PCI Support"
+  "valueSection": {
+    "title": "Why PCI DSS Compliance Matters",
+    "description": "PCI DSS compliance is essential for any business handling payment card data. It protects your customers, reduces fraud risk, and builds trust in your payment systems.",
+    "stat": {
+      "value": "83%",
+      "label": "of data breaches involve payment card data"
+    },
+    "keyPoints": [
+      "Protect customer payment data",
+      "Avoid costly data breaches",
+      "Build customer trust",
+      "Meet regulatory requirements"
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=700",
+      "alt": "Secure payment processing"
+    }
   },
-  "faqs": [
-    { "q": "What is PCI DSS Compliance?", "a": "A global standard ensuring secure handling of payment card data." },
-    { "q": "Who needs PCI DSS?", "a": "Any business handling, processing, or storing cardholder data." }
+  "processSection": {
+    "title": "Our PCI DSS Compliance Process",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Gap Assessment",
+        "description": "Identify current compliance gaps and security vulnerabilities in your payment systems."
+      },
+      {
+        "step": 2,
+        "title": "Remediation Planning",
+        "description": "Develop a comprehensive plan to address gaps and implement required controls."
+      },
+      {
+        "step": 3,
+        "title": "Implementation",
+        "description": "Deploy security controls, policies, and procedures to meet PCI DSS requirements."
+      },
+      {
+        "step": 4,
+        "title": "Validation & Audit",
+        "description": "Conduct validation testing and support your PCI DSS compliance audit."
+      }
+    ]
+  },
+  "whyRiskMan": {
+    "title": "Why Choose RiskMan for PCI DSS Compliance",
+    "points": [
+      "Expert PCI DSS assessors and consultants",
+      "Proven track record with retail and e-commerce clients",
+      "End-to-end compliance support",
+      "Structured assessments and remediation",
+      "Ongoing compliance monitoring"
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600",
+      "alt": "PCI DSS compliance consulting"
+    }
+  },
+  "impactStats": [
+    {
+      "value": "100%",
+      "label": "Audit Success Rate"
+    },
+    {
+      "value": "50+",
+      "label": "Businesses Certified"
+    },
+    {
+      "value": "3 Months",
+      "label": "Average Time to Compliance"
+    },
+    {
+      "value": "24/7",
+      "label": "Compliance Support"
+    }
+  ],
+  "testimonials": {
+    "title": "Client Success Stories",
+    "reviews": [
+      {
+        "quote": "RiskMan helped us achieve PCI DSS compliance in under 3 months. Their structured approach and expert guidance made the entire process seamless.",
+        "author": "IT Director",
+        "organization": "Leading E-Commerce Brand"
+      },
+      {
+        "quote": "We passed our PCI audit on the first attempt thanks to RiskMan's thorough gap assessment and remediation support.",
+        "author": "Security Manager",
+        "organization": "National Retail Chain"
+      }
+    ]
+  },
+  "riskResilientSection": {
+    "title": "Ready to Secure Your Payment Systems?",
+    "description": "Partner with RiskMan to achieve PCI DSS compliance and protect your customers' payment data. Our expert team will guide you through every step of the compliance journey.",
+    "path": "/contact"
+  },
+  "frequentlyAskedQuestions": [
+    {
+      "id": 1,
+      "question": "What is PCI DSS Compliance?",
+      "answer": "PCI DSS (Payment Card Industry Data Security Standard) is a global standard ensuring secure handling of payment card data. It applies to any organization that stores, processes, or transmits cardholder data."
+    },
+    {
+      "id": 2,
+      "question": "Who needs PCI DSS compliance?",
+      "answer": "Any business that accepts, processes, stores, or transmits credit card information must comply with PCI DSS standards, regardless of size or transaction volume."
+    },
+    {
+      "id": 3,
+      "question": "What are the 12 requirements of PCI DSS?",
+      "answer": "PCI DSS has 12 core requirements covering network security, data protection, vulnerability management, access control, monitoring, and security policies."
+    },
+    {
+      "id": 4,
+      "question": "How long does it take to become PCI DSS compliant?",
+      "answer": "The timeline varies based on your current security posture, but typically ranges from 2-6 months with proper planning and resources."
+    },
+    {
+      "id": 5,
+      "question": "What happens if we're not PCI DSS compliant?",
+      "answer": "Non-compliance can result in fines from payment card brands, increased transaction fees, loss of ability to process cards, and reputational damage."
+    },
+    {
+      "id": 6,
+      "question": "Do we need annual PCI DSS assessments?",
+      "answer": "Yes, PCI DSS compliance must be validated annually through self-assessment questionnaires (SAQ) or qualified security assessor (QSA) audits."
+    }
   ]
 }

@@ -19,6 +19,9 @@ import TeamMembersSection from "./TeamMembersSection";
 import Events from "./Events";
 import TestimonialsSection from "./TestimonialsSection";
 import TestimonialSimple from "./TestimonialSimple";
+import AboutUs from "../../assets/images/about-us.jpg";
+import AboutHero from "./AboutHero";
+import jitendra from "../../assets/images/jitendra.jpg";
 
 
 /* =======================
@@ -218,28 +221,28 @@ export default function About() {
      SERVICE LEADERS
   ======================= */
   const serviceLeaders = [
-    {
-      name: "Manish Agarwal",
-      title: "Service Leader",
-      credentials: "Master's in Information Application, CISA, CISM, AWS Solutions Architect, ITIL v4",
-      bio: "Professional with 20+ years of experience across the domain of Information Security. He has played notable roles at IDFC FIRST Bank and Airtel.",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop",
-      expertise: ["Information Security", "BCP", "IT Security Strategy"],
-    },
-    {
-      name: "Amitabh Jain",
-      title: "Service Leader",
-      credentials: "Seasoned Chartered Accountant with 30+ years of experience",
-      bio: "Expert in Financial Services and Business Enterprises. As COO and CFO in Ed-Tech & Vocational Training sector, he excelled in corporate governance, financial services, and risk governance.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
-      expertise: ["Corporate Governance", "Financial Services", "PE Capital"],
-    },
+    // {
+    //   name: "Manish Agarwal",
+    //   title: "Service Leader",
+    //   credentials: "Master's in Information Application, CISA, CISM, AWS Solutions Architect, ITIL v4",
+    //   bio: "Professional with 20+ years of experience across the domain of Information Security. He has played notable roles at IDFC FIRST Bank and Airtel.",
+    //   image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop",
+    //   expertise: ["Information Security", "BCP", "IT Security Strategy"],
+    // },
+    // {
+    //   name: "Amitabh Jain",
+    //   title: "Service Leader",
+    //   credentials: "Seasoned Chartered Accountant with 30+ years of experience",
+    //   bio: "Expert in Financial Services and Business Enterprises. As COO and CFO in Ed-Tech & Vocational Training sector, he excelled in corporate governance, financial services, and risk governance.",
+    //   image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
+    //   expertise: ["Corporate Governance", "Financial Services", "PE Capital"],
+    // },
     {
       name: "Jitendra Khimavat",
       title: "Service Leader",
       credentials: "CA and Certified Internal Auditor (CIA) with 17+ years",
       bio: "Expert in risk-based internal audits, he enhances efficiency, control, compliance, and cost savings across diverse sectors including infrastructure, mining, manufacturing, and finance.",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop",
+      image: jitendra,
       expertise: ["Internal Audits", "Risk Management", "Compliance"],
     },
     {
@@ -367,12 +370,13 @@ export default function About() {
       {/* ================= HERO ================= */}
 
       {/* <BackgroundGrid/> */}
-      <section className="relative min-h-[70vh] flex items-center justify-center bg-surfaceLight dark:bg-surfaceDark">
+      <AboutHero />
+      {/* <section className="relative min-h-[70vh] flex items-center justify-center bg-surfaceLight dark:bg-surfaceDark">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1920"
-            className="object-cover w-full h-full opacity-30 dark:opacity-40"
-            alt=""
+            src={AboutUs}
+            className="object-cover w-full h-full object-[center_20%]"
+            alt="About RiskMan"
           />
           <div className="absolute inset-0 bg-bgLight/60 dark:bg-bgDark/70" />
         </div>
@@ -403,7 +407,7 @@ export default function About() {
             Strategic advisory, risk management & sustainable growth.
           </motion.p>
         </div>
-      </section>
+      </section> */}
 
 
       {/* ================= ABOUT US SECTION ================= */}
@@ -462,8 +466,9 @@ export default function About() {
 
 
       {/* ================= INTRODUCTION SECTION ================= */}
-      <section className="relative px-6 py-16 mx-auto lg:py-24 lg:px-8 max-w-7xl bg-surfaceLight dark:bg-surfaceDark">
-        <motion.div
+      <section className="relative py-16 bg-surfaceLight dark:bg-surfaceDark lg:py-24">
+        <div className="container">
+          <motion.div
           variants={fadeInUp}
           initial="initial"
           whileInView="animate"
@@ -542,6 +547,7 @@ export default function About() {
             </div>
           </motion.div>
         </motion.div>
+        </div>
       </section>
 
       {/* ================= TRIBUTE SECTION ================= */}
@@ -586,8 +592,8 @@ export default function About() {
 
 
       {/* ================= FEATURES ================= */}
-      <section className="relative bg-surfaceLight dark:bg-surfaceDark py-14 md:py-20">
-        <div className="px-6 mx-auto max-w-7xl lg:px-8">
+      <section className="relative py-14 bg-surfaceLight dark:bg-surfaceDark md:py-20">
+        <div className="container">
           <motion.div
             className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4"
             initial="initial"
@@ -620,8 +626,8 @@ export default function About() {
       </section>
 
       {/* ================= MISSION & VISION ================= */}
-      <section className="relative px-6 py-16 lg:py-24 lg:px-8 bg-surfaceLight dark:bg-surfaceDark">
-        <div className="mx-auto max-w-7xl">
+      <section className="relative py-16 bg-surfaceLight dark:bg-surfaceDark lg:py-24">
+        <div className="container">
           <motion.div
             variants={fadeInUp}
             initial="initial"
@@ -830,8 +836,8 @@ export default function About() {
       </section>
 
       {/* ================= LEADERSHIP ================= */}
-      <section id="co-founders" className="relative bg-surfaceLight dark:bg-surfaceDark py-14 md:py-20">
-        <div className="container px-6 mx-auto max-w-7xl">
+      <section id="co-founders" className="relative py-14 bg-surfaceLight dark:bg-surfaceDark md:py-20">
+        <div className="container">
           <motion.h2
             variants={fadeInUp}
             initial="initial"
@@ -896,8 +902,8 @@ export default function About() {
       </section>
 
       {/* ================= SERVICE LEADERS ================= */}
-      <section id="service-leaders" className="relative bg-surfaceLight dark:bg-surfaceDark py-14 md:py-20">
-        <div className="px-6 mx-auto max-w-7xl lg:px-8">
+      <section id="service-leaders" className="relative py-14 bg-surfaceLight dark:bg-surfaceDark md:py-20">
+        <div className="container">
           <motion.h2
             variants={fadeInUp}
             initial="initial"
@@ -988,8 +994,8 @@ export default function About() {
       {/* <TestimonialsSection /> */}
       {/* <TestimonialSimple /> */}
 
-      <section className="relative bg-surfaceLight dark:bg-surfaceDark py-14 md:py-20">
-        <div className="container px-6 mx-auto max-w-7xl">
+      <section className="relative py-14 bg-surfaceLight dark:bg-surfaceDark md:py-20">
+        <div className="container">
           <motion.h2
             variants={fadeInUp}
             initial="initial"
@@ -1059,8 +1065,8 @@ export default function About() {
 
 
       {/* ================= MARQUEE CLIENTS ================= */}
-      <section className="relative overflow-hidden bg-surfaceLight dark:bg-surfaceDark py-14 md:py-20">
-        <div className="max-w-6xl px-6 lg:px-6">
+      <section className="relative overflow-hidden py-14 bg-surfaceLight dark:bg-surfaceDark md:py-20">
+        <div className="container">
           <motion.h2
             variants={fadeInUp}
             initial="initial"
@@ -1138,8 +1144,8 @@ export default function About() {
       <Events />
 
       {/* ================= FAQ ================= */}
-      <section className="relative transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark py-14 md:py-20">
-        <div className="max-w-4xl px-6 lg:px-8">
+      <section className="relative transition-colors duration-300 py-14 bg-surfaceLight dark:bg-surfaceDark md:py-20">
+        <div className="container">
           <motion.h2
             variants={fadeInUp}
             initial="initial"
@@ -1188,8 +1194,8 @@ export default function About() {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="text-center transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark py-14 md:py-20">
-        <div className="px-6 mx-auto max-w-7xl lg:px-8">
+      <section className="text-center transition-colors duration-300 py-14 bg-surfaceLight dark:bg-surfaceDark md:py-20">
+        <div className="container">
           <motion.h2
             variants={fadeInUp}
             initial="initial"

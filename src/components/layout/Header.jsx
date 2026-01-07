@@ -106,7 +106,7 @@ export default function Header() {
               <img
                 src={theme === "dark" ? "/riskman-logo-white.svg" : "/rm.png"}
                 alt="RiskMan"
-                className="h-8 md:h-9 lg:h-10"
+                className="h-7 md:h-8"
               />
             </Link>
 

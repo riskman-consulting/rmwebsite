@@ -1,70 +1,192 @@
 {
-  "id": "it-consulting",
-  "title": "IT Consulting Solutions",
-  "meta": {
-    "title": "IT Consulting Solutions | RiskMan Consulting",
-    "description": "Transform IT with RiskMan's IT Consulting services. Strengthen cybersecurity, IT governance, and operational efficiency.",
-    "primaryKeyword": "IT Consulting",
-    "additionalKeywords": [
-      "Cybersecurity",
-      "Data Privacy",
-      "Operational Efficiency"
+  "heroSection": {
+    "title": "ITeS and IT Consulting",
+    "description": "We support ITeS and IT consulting firms with frameworks for service delivery, data security, and audit readiness.",
+    "badge": "Services Details",
+    "primaryCTA": {
+      "text": "Talk to us",
+      "action": "/contact"
+    },
+    "heroImage": {
+      "src": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1400",
+      "alt": "IT consulting team working in a modern office"
+    }
+  },
+  "weHelpSection": {
+    "title": "Accelerate Growth While Managing Operational Complexity",
+    "description": [
+      {
+        "content": "With evolving client demands, remote delivery models, and constant audit pressures, IT firms must ensure peak security and compliance. RiskMan bridges these gaps with IT risk management, SOC readiness, third-party risk, and ISO certifications."
+      },
+      {
+        "title": "Key Challenges We Address",
+        "content": "We help IT consulting firms achieve certifications quickly to improve credibility and win enterprise clients, secure infrastructure and customer data with multi-layer cybersecurity, and prepare for compliance audits with gap analysis, documentation, and implementation support.",
+        "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800"
+      }
+    ]
+  },
+  "solutionSection": {
+    "title": "Our Solutions for ITeS & Consulting Firms",
+    "solutions": [
+      {
+        "name": "Cybersecurity",
+        "description": "Secure your digital content, networks, and platforms against evolving threats with end-to-end security architecture and incident response."
+      },
+      {
+        "name": "Data Privacy & Protection",
+        "description": "Ensure GDPR, CCPA, and regional compliance while building trust through responsible data practices."
+      },
+      {
+        "name": "IT Risk Management",
+        "description": "Assess, monitor, and mitigate risks across infrastructure and delivery systems."
+      },
+      {
+        "name": "ISO Certifications",
+        "description": "Get ISO 27001, 22301, and 31000 certified to enhance service quality and governance."
+      },
+      {
+        "name": "SOC Readiness",
+        "description": "Prepare for SOC 1 and SOC 2 audits with comprehensive controls and documentation."
+      },
+      {
+        "name": "Third-Party Risk Management",
+        "description": "Manage vendor and partner risks to protect your clients and business operations."
+      }
+    ]
+  },
+  "experienceSection": {
+    "years": 30,
+    "title": "Years of experience",
+    "description": "We bring over 30 years of combined experience in IT consulting, risk management, and compliance, powering every project with proven expertise and purposeful execution.",
+    "visualGraphic": {
+      "src": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600",
+      "alt": "Senior consultants reviewing project strategy"
+    }
+  },
+  "trusteSection": {
+    "title": "Trusted by Global Brands",
+    "company": [
+      {
+        "name": "Electrosteel",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Electrosteel-logo-3-150x35-1.webp"
+      },
+      {
+        "name": "IndiaTV",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Indiatv-logo-1-1.webp"
+      },
+      {
+        "name": "Care Health Insurance",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Care-Health-Insurance-Walk-in-Recruitment-2-1.webp"
+      }
+    ]
+  },
+  "partnerSection": {
+    "title": "Why Partner with RiskMan",
+    "description": "A trusted name in industry-aligned risk and compliance solutions.",
+    "services": [
+      {
+        "name": "Industry Experience",
+        "description": "Deep expertise in media, risk, tech, and compliance ecosystems.",
+        "path": "/about"
+      },
+      {
+        "name": "Global Delivery",
+        "description": "Delivery model aligned to regional and international regulations.",
+        "path": "/about"
+      },
+      {
+        "name": "Tailor Solutions",
+        "description": "Agile consulting and cyber risk strategies for fast-paced environments.",
+        "path": "/contact"
+      },
+      {
+        "name": "Experienced Professionals",
+        "description": "Experts with extensive experience across multiple industries.",
+        "path": "/about"
+      }
+    ]
+  },
+  "valueSection": {
+    "title": "Strengthen Your Firm's Credibility",
+    "description": "Secure client data, align to global standards, and accelerate your growth with our comprehensive IT consulting and risk management solutions.",
+    "stat": {
+      "value": "8-16",
+      "label": "Weeks to ISO Certification"
+    },
+    "keyPoints": [
+      "Achieve certifications quickly",
+      "Secure infrastructure and customer data",
+      "Prepare for compliance audits",
+      "Win enterprise clients with credibility"
     ],
-    "lsiKeywords": [
-      "IT Services",
-      "Security Solutions",
-      "Data Protection",
-      "IT Governance",
-      "Process Optimization"
-    ]
+    "image": {
+      "src": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=700",
+      "alt": "IT consulting strategy meeting"
+    }
   },
-
-  "hero": {
-    "heading": "Transform IT With Expert Consulting",
-    "subheading": "We help businesses modernize IT systems, enhance cybersecurity, and improve operational efficiency.",
-    "ctaText": "Consult IT Experts",
-    "ctaLink": "/contact"
-  },
-
-  "offerings": {
-    "intro": "Our IT Consulting services cover modernization, governance, security, and operational improvement.",
-    "items": [
-      { "title": "Cybersecurity Enhancement", "desc": "Implementing frameworks to protect systems from threats." },
-      { "title": "Data Protection & Privacy", "desc": "Ensuring data security through compliance and governance." },
-      { "title": "IT Governance", "desc": "Strengthening control structures across IT processes." },
-      { "title": "Operational Optimization", "desc": "Improving IT workflows, automation, and system reliability." }
-    ]
-  },
-
-  "clientSuccess": [
-    { "title": "Tech Enterprise", "desc": "Boosted security posture with advanced threat monitoring." },
-    { "title": "Financial Institution", "desc": "Improved IT governance and reduced audit findings by 40%." }
+  "impactStats": [
+    {
+      "value": "30+",
+      "label": "Years of Experience"
+    },
+    {
+      "value": "100+",
+      "label": "IT Firms Supported"
+    },
+    {
+      "value": "8-16",
+      "label": "Weeks to Certification"
+    },
+    {
+      "value": "24/7",
+      "label": "Security Monitoring"
+    }
   ],
-
-  "resources": [
-    { "title": "Guide", "desc": "IT Modernization Blueprint 2025" },
-    { "title": "Case Study", "desc": "Transforming IT Operations for a Global Bank" },
-    { "title": "Blog", "desc": "Top IT Risks and Solutions for 2025" }
-  ],
-
-  "whyRiskMan": "RiskMan brings deep cybersecurity, compliance, and IT governance expertise tailored to your industry.",
-
-  "relatedOfferings": [
-    { "label": "Cybersecurity Services", "path": "/services/cybersecurity" },
-    { "label": "IT Risk Management", "path": "/services/it-risk-management" },
-    { "label": "Data Privacy & Protection", "path": "/services/data-privacy" }
-  ],
-
-  "cta": {
-    "heading": "Upgrade Your IT Operations",
-    "text": "Strengthen your systems, reduce risks, and improve efficiency with expert consulting.",
-    "button": "Request IT Consultation",
-    "link": "/contact"
+  "riskResilientSection": {
+    "title": "Strengthen your firm's credibility, secure client data, and align to global standards",
+    "description": "Partner with RiskMan to accelerate your growth while managing operational complexity. Let's help you achieve certifications, secure infrastructure, and win enterprise clients.",
+    "path": "/contact"
   },
-
-  "faqs": [
-    { "q": "What does IT Consulting include?", "a": "Cybersecurity, IT governance, modernization, and operations optimization." },
-    { "q": "Can you help with cloud migration?", "a": "Yes — we assist with planning, migration, and securing cloud environments." },
-    { "q": "Do you provide cybersecurity frameworks?", "a": "Yes, including NIST, ISO 27001, and Zero Trust models." }
+  "frequentlyAskedQuestions": [
+    {
+      "id": 1,
+      "question": "What certifications do you support?",
+      "answer": "We support SOC 1, SOC 2, ISO 27001, ISO 22301, ISO 31000, and TISAX certifications for IT consulting firms."
+    },
+    {
+      "id": 2,
+      "question": "Can you help us with client audits?",
+      "answer": "Yes, we support internal audits, client-led audits, and regulatory audits with comprehensive documentation and gap analysis."
+    },
+    {
+      "id": 3,
+      "question": "How fast can we get ISO certified?",
+      "answer": "Timelines depend on readiness, but many clients achieve certification within 8–16 weeks with our structured approach."
+    },
+    {
+      "id": 4,
+      "question": "Do you offer cybersecurity as a service?",
+      "answer": "Yes, we offer cybersecurity services including risk assessments, continuous monitoring, and incident response planning."
+    },
+    {
+      "id": 5,
+      "question": "Can you help us enter international markets?",
+      "answer": "Yes, we help through compliance readiness, global certification alignment, and regulatory mapping for international expansion."
+    },
+    {
+      "id": 6,
+      "question": "Is TPRM important for IT firms?",
+      "answer": "Yes, third-party risk management is critical when working with vendors and global clients to protect your business and client data."
+    },
+    {
+      "id": 7,
+      "question": "Can we outsource risk functions?",
+      "answer": "Yes, we provide managed risk and compliance services, allowing you to focus on core business while we handle risk management."
+    },
+    {
+      "id": 8,
+      "question": "Do you offer support for international expansion?",
+      "answer": "Absolutely, we provide regulatory mapping, compliance strategy, and certification support for international market entry."
+    }
   ]
 }

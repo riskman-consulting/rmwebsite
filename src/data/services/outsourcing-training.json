@@ -1,106 +1,269 @@
 {
-  "id": "outsourcing-training",
-  "title": "Outsourcing & Training",
-  "hero": {
-    "heading": "Optimize operations with Outsourcing Services and Training Programs from RiskMan Consulting.",
-    "subheading": "We enhance Business Process Outsourcing and Workforce Development for efficiency and growth.",
-    "image": "https://img.freepik.com/free-photo/two-young-business-colleagues-using-desktop-pc-reading-email-while-working-together-office-focus-is-man_637285-1067.jpg?semt=ais_hybrid&w=740&q=80"
+  "heroSection": {
+    "title": "Outsourcing and Training Services",
+    "description": "Optimize operations with Outsourcing Services and Training Programs from RiskMan Consulting. We enhance Business Process Outsourcing and Workforce Development for efficiency and growth.",
+    "bgImage": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80"
   },
-
-  "offerings": {
-    "intro": "Our Outsourcing Services and Training Programs empower organizations to streamline processes, reduce costs, and upskill their workforce.",
-    "items": [
+  "trusteSection": {
+    "title": "Trusted by 100+ Global Brands",
+    "company": [
       {
-        "title": "BPO Services",
-        "desc": "Streamlined Business Process Outsourcing for cost efficiency."
+        "name": "Electrosteel",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Electrosteel-logo-3-150x35-1.webp"
       },
       {
-        "title": "Employee Training",
-        "desc": "Customized programs for Skill Development."
+        "name": "India TV",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Indiatv-logo-1-1.webp"
       },
       {
-        "title": "Process Automation",
-        "desc": "Enhancing operations with Process Automation."
+        "name": "Indorama Ventures",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Indorama_Ventures_Logo.svg-2-1.webp"
       },
       {
-        "title": "Workforce Upskilling",
-        "desc": "Driving Workforce Development through targeted training."
+        "name": "Jindal Renewables",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Jindal-Renewables-1.webp"
+      },
+      {
+        "name": "Khadim",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Khadim-logo-3-150x35-1.webp"
+      },
+      {
+        "name": "Nexval",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Nexval-logo-150x40-1.webp"
       }
     ]
   },
-
-  "clientSuccess": [
-    {
-      "title": "E-Commerce Firm",
-      "desc": "Reduced costs by 35% with BPO Services."
-    },
-    {
-      "title": "IT Company",
-      "desc": "Improved team performance with tailored Training Programs."
-    }
-  ],
-
-  "resources": [
-    {
-      "title": "Maximizing ROI with Outsourcing Solutions",
-      "desc": "A complete e-book explaining how outsourcing reduces operational overhead while boosting productivity.",
-      "link": "/resources/outsourcing-roi"
-    },
-    {
-      "title": "Impact of Employee Training on Productivity",
-      "desc": "A case study showing measurable improvements in workforce development.",
-      "link": "/resources/employee-training-productivity"
-    },
-    {
-      "title": "The Future of Business Process Outsourcing",
-      "desc": "A blog exploring next-generation outsourcing strategies.",
-      "link": "/blog/future-of-bpo"
-    }
-  ],
-
-  "whyRiskMan": "RiskMan’s Outsourcing Services and Training Programs deliver scalable, cost-effective solutions for businesses worldwide.",
-
-  "relatedOfferings": [
-    { "id": "it-consulting", "label": "IT Consulting" },
-    { "id": "consulting", "label": "Business Consulting" },
-    { "id": "data-privacy", "label": "Data Privacy and Protection" }
-  ],
-
-  "cta": {
-    "heading": "Outsource smarter and train better!",
-    "text": "Contact RiskMan for Outsourcing Solutions today.",
-    "button": "Get Started",
-    "link": "/contact"
+  "weHelpSection": {
+    "title": "Empower Your Business Through Outsourcing & Training",
+    "description": [
+      {
+        "content": "We understand that modern organizations must stay agile while maintaining operational excellence. Our Outsourcing and Training Services are designed to reduce overhead, enhance employee performance, and accelerate growth—without compromising on quality or control."
+      },
+      {
+        "title": "We Deliver More Than Services",
+        "content": "We don't just deliver services—we build value through expertise, innovation, and strategic execution. Our approach combines domain-led expertise with tech-enabled execution to provide end-to-end ownership of your outsourcing and training needs.",
+        "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80"
+      }
+    ]
   },
-
-  "faqs": [
+  "solutionSection": {
+    "title": "How We Help Businesses",
+    "description": "Comprehensive outsourcing and training solutions tailored to your business needs",
+    "solutions": [
+      {
+        "name": "Accounting Outsourcing",
+        "description": "Accurate, transparent, and audit-ready financial support for growing businesses. Streamline your accounting operations with expert-led processes."
+      },
+      {
+        "name": "Compliance Management",
+        "description": "Stay ahead of regulatory and statutory requirements with expert-led compliance solutions. Achieve 98% compliance accuracy."
+      },
+      {
+        "name": "Account Reconciliations",
+        "description": "Fast, error-free reconciliation of accounts, banks, and ledgers with automation-ready tools. Reduce processing time significantly."
+      },
+      {
+        "name": "Professional Training",
+        "description": "Upskill teams in risk management and advisory with targeted, practical training programs. Enhance workforce capabilities."
+      },
+      {
+        "name": "Business Process Outsourcing",
+        "description": "End-to-end BPO solutions that optimize operations, reduce costs by 35%, and maintain quality standards."
+      },
+      {
+        "name": "Workforce Development",
+        "description": "Strategic workforce development programs designed to build capabilities and drive organizational performance."
+      }
+    ]
+  },
+  "partnerSection": {
+    "title": "Our Approach to Excellence",
+    "description": "We deliver measurable business outcomes through a proven methodology",
+    "services": [
+      {
+        "name": "Domain-Led Expertise",
+        "description": "Industry specialists with deep knowledge in accounting, compliance, and training delivery.",
+        "path": "/services/expertise"
+      },
+      {
+        "name": "Tailored Approach",
+        "description": "Customized solutions designed to fit your specific business requirements and objectives.",
+        "path": "/services/approach"
+      },
+      {
+        "name": "Tech-Enabled Execution",
+        "description": "Leverage automation and digital tools for faster, more accurate service delivery.",
+        "path": "/services/technology"
+      },
+      {
+        "name": "End-to-End Ownership",
+        "description": "Complete accountability from planning through execution and ongoing optimization.",
+        "path": "/services/ownership"
+      }
+    ]
+  },
+  "helpUsSection": [
     {
-      "q": "What are Outsourcing Services?",
-      "a": "Outsourcing Services delegate non-core tasks to experts, improving efficiency via Business Process Outsourcing."
+      "name": "Cost Efficiency",
+      "title": "35% Cost Reduction",
+      "description": "Our outsourcing services deliver significant cost savings while maintaining or improving quality standards. Optimize your operational expenses with our proven BPO solutions.",
+      "tags": ["Cost Savings", "Efficiency", "ROI"]
     },
     {
-      "q": "How do Training Programs benefit employees?",
-      "a": "Training Programs enhance skills, boosting Workforce Development and productivity."
+      "name": "Compliance",
+      "title": "98% Compliance Accuracy",
+      "description": "Stay audit-ready with our expert-led compliance management. We ensure your business meets all regulatory and statutory requirements with exceptional accuracy.",
+      "tags": ["Regulatory", "Accuracy", "Audit-Ready"]
     },
     {
-      "q": "Which industries use Outsourcing Services?",
-      "a": "Retail, IT, and e-commerce leverage BPO Services for cost savings."
-    },
-    {
-      "q": "What is Process Automation in outsourcing?",
-      "a": "Process Automation streamlines repetitive tasks, enhancing Outsourcing Solutions."
-    },
-    {
-      "q": "How long do Training Programs take?",
-      "a": "Programs range from 1–6 weeks, tailored to Skill Development needs."
-    },
-    {
-      "q": "Why choose RiskMan for Outsourcing Services?",
-      "a": "Our expertise in BPO Services ensures seamless operations and measurable results."
-    },
-    {
-      "q": "Can small businesses benefit from outsourcing?",
-      "a": "Yes, Outsourcing Services help small businesses scale efficiently."
+      "name": "Growth",
+      "title": "Accelerated Business Growth",
+      "description": "Focus on core business activities while we handle your back-office operations and workforce training. Drive growth without operational bottlenecks.",
+      "tags": ["Scalability", "Performance", "Growth"]
     }
-  ]
+  ],
+  "proActiveSection": {
+    "title": "RiskMan Impact: Measurable Outcomes",
+    "description": "Our services are designed to deliver measurable business outcomes. With 100+ happy clients trusting us, we've consistently achieved 35% cost reduction and 98% compliance accuracy across our engagements. We combine operational excellence with strategic workforce development to drive sustainable business growth.",
+    "image": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80"
+  },
+  "riskAnalysisSection": [
+    "Conduct comprehensive assessment of your current operations and workforce capabilities",
+    "Identify opportunities for outsourcing, automation, and training interventions",
+    "Design customized BPO and training solutions aligned with your business objectives",
+    "Implement solutions with minimal disruption using proven methodologies",
+    "Monitor performance through KPIs: cost savings, accuracy rates, and employee competency",
+    "Continuously optimize processes and update training programs for sustained excellence"
+  ],
+  "testimonialsSection": {
+    "sectionLabel": "CLIENT SUCCESS STORIES",
+    "title": "What Our Clients Say",
+    "testimonials": [
+      {
+        "id": "testimonial-1",
+        "quote": "RiskMan's outsourcing services reduced our accounting costs by 40% while improving accuracy. Their team is professional and responsive.",
+        "author": "CFO",
+        "company": "Manufacturing Enterprise",
+        "image": "https://i.pravatar.cc/150?img=68"
+      },
+      {
+        "id": "testimonial-2",
+        "quote": "The training programs transformed our compliance team's capabilities. We're now consistently achieving 99% accuracy in regulatory reporting.",
+        "author": "Head of Compliance",
+        "company": "Financial Services Firm",
+        "image": "https://i.pravatar.cc/150?img=45"
+      },
+      {
+        "id": "testimonial-3",
+        "quote": "Outstanding reconciliation services! The automation tools they implemented saved us 200+ hours monthly and eliminated errors.",
+        "author": "Finance Director",
+        "company": "Retail Chain",
+        "image": "https://i.pravatar.cc/150?img=29"
+      }
+    ]
+  },
+  "articalSection": {
+    "title": "Latest Insights from Our Experts",
+    "description": "Stay informed with expert insights on outsourcing, training, and workforce development from RiskMan's specialists.",
+    "articles": [
+      {
+        "id": "article-1",
+        "title": "Strategic Risk Management: A Proactive Approach to Long-Term Business Success",
+        "excerpt": "Learn how proactive risk management integrates with outsourcing strategies to build resilient business operations and sustainable competitive advantage.",
+        "category": "Risk Management",
+        "author": "RiskMan Team",
+        "publishedDate": "June 25, 2025",
+        "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&q=80"
+      },
+      {
+        "id": "article-2",
+        "title": "How to Create Your Purpose-Filled Career with Professional Development",
+        "excerpt": "Discover how strategic training and workforce development programs can help your employees build meaningful, purpose-driven careers.",
+        "category": "Workforce Development",
+        "author": "RiskMan Admin",
+        "publishedDate": "April 18, 2024",
+        "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&q=80"
+      },
+      {
+        "id": "article-3",
+        "title": "The Future of BPO: Automation and AI in Outsourcing Services",
+        "excerpt": "Explore how automation and artificial intelligence are revolutionizing business process outsourcing and creating new opportunities for efficiency.",
+        "category": "Technology",
+        "author": "RiskMan Team",
+        "publishedDate": "April 29, 2024",
+        "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80"
+      }
+    ]
+  },
+  "riskResilientSection": {
+    "title": "Elevate Your Operations & Workforce",
+    "description": "Explore our solutions that deliver results. With 35% cost reduction, 98% compliance accuracy, and 100+ satisfied clients, RiskMan is your partner for operational excellence and workforce development. Transform your business today.",
+    "path": "/contact"
+  },
+  "frequentlyAskedQuestions": [
+    {
+      "id": "faq-1",
+      "question": "What outsourcing services does RiskMan provide?",
+      "answer": "RiskMan provides comprehensive outsourcing services including accounting, compliance management, account reconciliations, and business process outsourcing (BPO). Our services are designed to reduce operational costs by 35% while maintaining high quality standards."
+    },
+    {
+      "id": "faq-2",
+      "question": "What types of training programs are available?",
+      "answer": "We offer targeted training programs in risk management, compliance, accounting processes, and advisory services. Our training is practical, hands-on, and designed to upskill teams quickly with measurable improvements in performance."
+    },
+    {
+      "id": "faq-3",
+      "question": "How does outsourcing reduce costs?",
+      "answer": "Outsourcing reduces costs through economies of scale, process optimization, automation implementation, and eliminating overhead associated with in-house operations. Our clients typically achieve 35% cost reduction while improving accuracy and efficiency."
+    },
+    {
+      "id": "faq-4",
+      "question": "What industries do you serve?",
+      "answer": "We serve diverse industries including manufacturing, financial services, retail, healthcare, technology, and professional services. Our domain-led expertise allows us to customize solutions for industry-specific requirements."
+    },
+    {
+      "id": "faq-5",
+      "question": "How do you ensure compliance accuracy?",
+      "answer": "We achieve 98% compliance accuracy through expert-led processes, regular regulatory updates, automated validation tools, and rigorous quality checks. Our team stays current with all statutory and regulatory requirements."
+    },
+    {
+      "id": "faq-6",
+      "question": "Can you customize training programs for our specific needs?",
+      "answer": "Absolutely! All our training programs are tailored to your organization's specific requirements, skill gaps, and business objectives. We conduct needs assessment and design custom curricula that deliver measurable results."
+    },
+    {
+      "id": "faq-7",
+      "question": "What is your approach to outsourcing implementation?",
+      "answer": "Our approach includes four key elements: domain-led expertise, tailored solutions, tech-enabled execution, and end-to-end ownership. We ensure smooth transition with minimal disruption to your operations."
+    },
+    {
+      "id": "faq-8",
+      "question": "How long does it take to see results from outsourcing?",
+      "answer": "Most clients see initial results within 30-60 days of implementation, with full optimization achieved in 3-6 months. Cost savings and efficiency improvements are measurable from the first month."
+    }
+  ],
+  "pageMetadata": {
+    "pageTitle": "Outsourcing and Training Services | BPO & Workforce Development | RiskMan Consulting",
+    "metaDescription": "Transform operations with RiskMan's outsourcing and training services. Expert solutions in accounting, compliance, reconciliations, and workforce training. 35% cost reduction, 98% compliance accuracy.",
+    "keywords": "outsourcing services, training programs, BPO services, business process outsourcing, workforce development, employee training, accounting outsourcing, compliance services, reconciliation services, corporate training, staff development",
+    "ogTitle": "Outsourcing and Training Services - Empower Your Business Operations",
+    "ogDescription": "Enhance business process outsourcing and workforce development with RiskMan's comprehensive solutions. Reduce overhead, enhance performance, and accelerate growth.",
+    "ogImage": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80",
+    "canonicalUrl": "https://riskmanconsulting.com/outsourcing-training",
+    "schemaType": "Service",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "https://riskmanconsulting.com"
+      },
+      {
+        "name": "Services",
+        "url": "https://riskmanconsulting.com/services"
+      },
+      {
+        "name": "Outsourcing and Training",
+        "url": "https://riskmanconsulting.com/outsourcing-training"
+      }
+    ]
+  }
 }
