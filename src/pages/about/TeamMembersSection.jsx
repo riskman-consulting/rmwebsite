@@ -1175,6 +1175,9 @@ import AnirbanBiswas from "../../assets/teams/Anirban Biswas.png";
 import Vanshika from "../../assets/teams/Vanshika.jpeg";
 import Kartik from "../../assets/teams/kartik.jpg";
 import Pawan from "../../assets/teams/pawan.jpg";
+import { teamsImages } from "../../assets/teams";
+
+
 
 
 /* ========= CONFIG ========= */

@@ -194,7 +194,7 @@ export default function About() {
         "CA, CS, CMA, CAIIB with 39+ years of experience across credit rating, corporate banking, risk management and financial consulting.",
       image:
         "https://www.riskman.in/wp-content/uploads/2020/09/sukanta-nag.jpg",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/ca-sukanta-nag",
       fullBio: "CA, CS, CMA, CAIIB and M.Com, with over 39 years of experience spanning Credit Rating, Corporate Management, Risk Management, Financial and Management Consulting. His key strengths are in Understanding the holistic approach to the business and client's need for offering 360-degree solutions and build an effective relationship with them.",
     },
     {
@@ -204,7 +204,7 @@ export default function About() {
         "Ex-Deloitte and Genpact professional with 16+ years in internal audit, ESG, taxation, AI and RPA practices.",
       image:
         "https://www.riskman.in/wp-content/uploads/2020/09/prasen-pal.jpg",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/prasen-pal",
       fullBio: "A CA, ex-Deloitte ERS and Genpact ERC with 16+ years of experience spanning Internal Audits, ESG, Direct and Indirect taxation including GST, Process automation and RPA, adoption of AI. He is instrumental in managing pre-investment, post-investment, and other advisory and outsourced services.",
     },
     {
@@ -214,7 +214,7 @@ export default function About() {
         "CA, CIA, CRMA, CISA with global experience in ERM, SOC, cybersecurity, fraud analytics and IT risk.",
       image:
         "https://www.riskman.in/wp-content/uploads/2020/09/arpit-garg.jpg",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/arpit-garg",
       fullBio: "A CA, CIA, CRMA, CISA, ex-EY, Genpact ERC and SNB with 13+ years of experience spanning Risk-based internal audits, he enhances efficiency, control, compliance, and cost savings across diverse sectors.",
     },
   ];
