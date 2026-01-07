@@ -14,12 +14,12 @@ const BlogSection = () => {
 
   return (
     <section
-      className="py-20 transition-colors duration-300 bg-bgLight dark:bg-bgDark md:py-28"
+      className="transition-colors duration-300 section-padding bg-bgLight dark:bg-bgDark"
     >
       {/* ✅ MATCH HEADER CONTAINER */}
       {/* <div className="w-full max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-14"> */}
       <div className="container">
-        
+
         {/* HEADER */}
         <div className="text-left mb-14">
           <p className="mb-4 text-sm font-semibold tracking-wider uppercase text-brandNavy dark:text-brandAccent">

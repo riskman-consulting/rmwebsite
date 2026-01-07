@@ -66,7 +66,7 @@
 //       {/* ✅ MATCH HEADER CONTAINER */}
 //       {/* <div className="w-full max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-14"> */}
 //       <div className="container">
-        
+
 //         {/* HEADER */}
 //         <div className="mb-16">
 //           <p className="mb-3 text-sm tracking-[0.3em] uppercase text-brandGold dark:text-brandAccent font-semibold">
@@ -79,7 +79,7 @@
 
 //         {/* CONTENT GRID */}
 //         <div className="grid items-center gap-8 lg:grid-cols-12 lg:gap-12">
-          
+
 //           {/* LEFT: Stats */}
 //           <div className="space-y-8 lg:col-span-3">
 //             {/* Client Count */}
@@ -129,7 +129,7 @@
 //                 alt={current.name}
 //                 className="object-cover w-full h-full animate-fadeIn"
 //               />
-              
+
 //               {/* Gradient Overlay */}
 //               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 //             </div>
@@ -137,7 +137,7 @@
 
 //           {/* RIGHT: Testimonial Content */}
 //           <div className="space-y-6 lg:col-span-5">
-            
+
 //             {/* Review Platform Badge */}
 //             <div className="inline-flex items-center gap-2 px-4 py-2 border rounded-full shadow-md bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark">
 //               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none">
@@ -190,7 +190,7 @@
 //               >
 //                 <ChevronLeft className="w-5 h-5" />
 //               </button>
-              
+
 //               <button
 //                 onClick={nextSlide}
 //                 className="flex items-center justify-center w-12 h-12 text-white transition-all duration-200 rounded-full shadow-md bg-gradient-to-r from-brandDark to-brandNavy dark:from-brandAccent dark:to-brandGold dark:text-brandDark hover:shadow-lg hover:scale-105"
@@ -230,7 +230,7 @@
 //             transform: translateY(0);
 //           }
 //         }
-        
+
 //         .animate-fadeIn {
 //           animation: fadeIn 0.5s ease-out;
 //         }
@@ -294,12 +294,12 @@ const Testimonials = () => {
   const current = testimonials[currentIndex];
 
   return (
-    <section className="relative w-full py-20 md:py-28 bg-bgLight dark:bg-bgDark">
+    <section className="relative w-full section-padding bg-bgLight dark:bg-bgDark">
       <div className="container px-5 mx-auto sm:px-8 lg:px-12 max-w-7xl">
-        
+
         {/* Layout Grid */}
         <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
-          
+
           {/* LEFT SIDE - Header */}
           <div>
             <p className="mb-3 text-sm tracking-[0.3em] uppercase text-brandGold dark:text-brandAccent font-semibold">
@@ -312,7 +312,7 @@ const Testimonials = () => {
 
           {/* RIGHT SIDE - Testimonials */}
           <div className="space-y-8">
-            
+
             {/* Avatar Row */}
             <div className="flex gap-4">
               {testimonials.map((testimonial, idx) => (
@@ -326,8 +326,8 @@ const Testimonials = () => {
                 >
                   <div className={`
                     w-14 h-14 rounded-full overflow-hidden border-2 transition-all
-                    ${idx === currentIndex 
-                      ? 'border-brandGold dark:border-brandAccent' 
+                    ${idx === currentIndex
+                      ? 'border-brandGold dark:border-brandAccent'
                       : 'border-transparent'
                     }
                   `}>
@@ -353,7 +353,7 @@ const Testimonials = () => {
 
             {/* Testimonial Card */}
             <div className="p-8 bg-white border shadow-lg dark:bg-surfaceDark rounded-2xl border-borderLight dark:border-borderDark">
-              
+
               {/* Company Badge */}
               <div className="inline-flex items-center gap-2 mb-6">
                 <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-orange-500 to-orange-600">

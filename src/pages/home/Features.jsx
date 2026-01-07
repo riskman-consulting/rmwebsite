@@ -34,7 +34,7 @@
 //     >
 //       {/* ✅ CONSISTENT CONTAINER - Now uses Tailwind config */}
 //       <div className="container">
-        
+
 //         {/* TOP TEXT - RiskMan Brand Colors */}
 //         <div className="grid gap-4 text-2xl font-medium tracking-tight mb-14 lg:text-3xl lg:grid-cols-3">
 //           <div className="text-brandGold dark:text-brandAccent">
@@ -139,7 +139,7 @@
 //   return (
 //     <section className="relative z-20 w-full py-20 transition-colors duration-300 md:py-28 bg-gray-50 dark:bg-gray-950">
 //       <div className="container px-6 mx-auto max-w-7xl">
-        
+
 //         {/* HEADER */}
 //         <div className="mb-16 text-center">
 //           <h2 className="mb-4 text-4xl font-bold text-gray-900 md:text-5xl dark:text-white">
@@ -158,7 +158,7 @@
 
 //         {/* FEATURES GRID WITH CENTER IMAGE */}
 //         <div className="relative grid items-center grid-cols-1 gap-8 lg:grid-cols-3">
-          
+
 //           {/* LEFT FEATURES */}
 //           <div className="space-y-8">
 //             {features.slice(0, 2).map((feature, index) => {
@@ -171,15 +171,15 @@
 //                   <div className="flex items-center justify-center w-12 h-12 mb-4 text-white transition-all duration-300 bg-blue-900 rounded-lg shadow-md group-hover:bg-amber-500 dark:bg-amber-500 dark:group-hover:bg-blue-900">
 //                     <Icon className="w-6 h-6" />
 //                   </div>
-                  
+
 //                   <h3 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">
 //                     {feature.title}
 //                   </h3>
-                  
+
 //                   <p className="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
 //                     {feature.description}
 //                   </p>
-                  
+
 //                   <a href="#" className="inline-flex items-center text-sm font-medium text-blue-900 transition-colors dark:text-amber-500 hover:text-amber-500 dark:hover:text-blue-900">
 //                     Learn More →
 //                   </a>
@@ -252,15 +252,15 @@
 //                   <div className="flex items-center justify-center w-12 h-12 mb-4 text-white transition-all duration-300 bg-blue-900 rounded-lg shadow-md group-hover:bg-amber-500 dark:bg-amber-500 dark:group-hover:bg-blue-900">
 //                     <Icon className="w-6 h-6" />
 //                   </div>
-                  
+
 //                   <h3 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">
 //                     {feature.title}
 //                   </h3>
-                  
+
 //                   <p className="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
 //                     {feature.description}
 //                   </p>
-                  
+
 //                   <button  className="inline-flex items-center text-sm font-medium text-blue-900 transition-colors dark:text-amber-500 hover:text-amber-500 dark:hover:text-blue-900">
 //                     Learn More →
 //                   </button>
@@ -279,7 +279,7 @@
 
 
 import { TrendingUp, Target, Video, Sparkles } from "lucide-react";
-import featuresTeamImg from "../../assets/images/home/features-team-collaboration.png";
+import featuresTeamImage from '../../assets/images/home/features-team-collaboration.png';
 
 const Features = () => {
   const features = [
@@ -314,17 +314,17 @@ const Features = () => {
   ];
 
   return (
-    <section className="relative z-20 w-full py-20 transition-colors duration-300 md:py-28 bg-bgLight dark:bg-bgDark">
+    <section className="relative z-20 w-full transition-colors duration-300 section-padding bg-bgLight dark:bg-bgDark">
       <div className="container">
-        
+
         {/* HEADER */}
-        <div className="mb-16 text-center">
+        <div className="mb-16 text-start">
           <h2 className="mb-4 text-4xl font-bold md:text-5xl text-brandDark dark:text-white">
             Simplify Your Audit Process
             <br />
             with Our Diverse Solution
           </h2>
-          <p className="max-w-2xl mx-auto text-lg text-brandNavy/80 dark:text-gray-400">
+          <p className="max-w-2xl text-lg text-brandNavy/80 dark:text-gray-400">
             RiskMan is a premier audit firm that specializes in creating comprehensive
             audit frameworks. We leverage the power of modern methodologies.
           </p>
@@ -335,7 +335,7 @@ const Features = () => {
 
         {/* FEATURES GRID WITH CENTER IMAGE */}
         <div className="relative grid items-center grid-cols-1 gap-8 lg:grid-cols-3">
-          
+
           {/* LEFT FEATURES */}
           <div className="space-y-8">
             {features.slice(0, 2).map((feature, index) => {
@@ -348,15 +348,15 @@ const Features = () => {
                   <div className="flex items-center justify-center w-12 h-12 mb-4 text-white transition-all duration-300 rounded-lg shadow-md bg-brandGold">
                     <Icon className="w-6 h-6" />
                   </div>
-                  
+
                   <h3 className="mb-2 text-xl font-bold text-brandDark dark:text-white">
                     {feature.title}
                   </h3>
-                  
+
                   <p className="mb-4 text-sm leading-relaxed text-brandNavy/70 dark:text-gray-400">
                     {feature.description}
                   </p>
-                  
+
                   <span className="inline-flex items-center text-sm font-medium transition-colors text-brandGold">
                     Learn More →
                   </span>
@@ -368,26 +368,19 @@ const Features = () => {
           {/* CENTER IMAGE WITH FLOATING CARDS */}
           <div className="relative flex items-center justify-center">
             <div className="relative w-full overflow-hidden shadow-2xl aspect-square rounded-3xl">
-              
-              {/* Light Mode Image */}
-              <img 
-                src={featuresTeamImg}
-                alt="Team collaboration workspace"
-                className="absolute inset-0 object-cover w-full h-full transition-opacity duration-500 dark:opacity-0"
-              />
-              
-              {/* Dark Mode Image */}
-              <img 
-                src={featuresTeamImg} 
-                alt="Professional audit team"
-                className="absolute inset-0 object-cover w-full h-full transition-opacity duration-500 opacity-0 dark:opacity-100"
+
+              {/* Professional Audit Team Collaboration Image */}
+              <img
+                src={featuresTeamImage}
+                alt="Professional audit team collaboration"
+                className="absolute inset-0 object-cover w-full h-full"
               />
 
               {/* Overlay gradient for better card readability */}
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30 dark:to-black/50"></div>
 
               {/* Stats Card - Floating Animation */}
-              <div 
+              <div
                 className="absolute p-5 border shadow-xl top-8 right-8 bg-white/95 backdrop-blur-sm rounded-2xl dark:bg-gray-900/95 border-gray-200/50 dark:border-gray-700/50 animate-float"
                 style={{
                   animation: 'float 6s ease-in-out infinite'
@@ -401,7 +394,7 @@ const Features = () => {
               </div>
 
               {/* Calendar Card - Floating Animation (Delayed) */}
-              <div 
+              <div
                 className="absolute p-4 shadow-xl bottom-8 left-8 bg-white/95 backdrop-blur-sm rounded-2xl dark:bg-gray-900/95 border border-gray-200/50 dark:border-gray-700/50 animate-float-delayed max-w-[280px]"
                 style={{
                   animation: 'float 6s ease-in-out infinite 3s'
@@ -422,11 +415,10 @@ const Features = () => {
                   {['MON', 'TUE', 'WED', 'THU', 'FRI'].map((day, i) => (
                     <div key={i}>
                       <div className="mb-1 text-[10px] font-medium text-brandNavy/50 dark:text-gray-500">{day}</div>
-                      <div className={`py-2 text-sm font-semibold rounded-lg transition-all ${
-                        i === 3 
-                          ? 'bg-brandDark dark:bg-gray-800 text-white' 
-                          : 'text-brandNavy dark:text-gray-300'
-                      }`}>
+                      <div className={`py-2 text-sm font-semibold rounded-lg transition-all ${i === 3
+                        ? 'bg-brandDark dark:bg-gray-800 text-white'
+                        : 'text-brandNavy dark:text-gray-300'
+                        }`}>
                         {12 + i}
                       </div>
                     </div>
@@ -448,15 +440,15 @@ const Features = () => {
                   <div className="flex items-center justify-center w-12 h-12 mb-4 text-white transition-all duration-300 rounded-lg shadow-md bg-brandGold">
                     <Icon className="w-6 h-6" />
                   </div>
-                  
+
                   <h3 className="mb-2 text-xl font-bold text-brandDark dark:text-white">
                     {feature.title}
                   </h3>
-                  
+
                   <p className="mb-4 text-sm leading-relaxed text-brandNavy/70 dark:text-gray-400">
                     {feature.description}
                   </p>
-                  
+
                   <span className="inline-flex items-center text-sm font-medium transition-colors text-brandGold">
                     Learn More →
                   </span>

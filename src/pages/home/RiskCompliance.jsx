@@ -4,8 +4,7 @@ import {
   Users,
   Settings,
 } from "lucide-react";
-
-import riskComplianceImg from "../../assets/images/home/risk-compliance.png";
+import riskComplianceImage from '../../assets/images/home/risk-compliance.png';
 
 // 4. Risk & Compliance Section
 const RiskCompliance = () => {
@@ -42,17 +41,17 @@ const RiskCompliance = () => {
 
   return (
     <section
-      className="py-20 transition-colors duration-300 bg-bgLight dark:bg-bgDark md:py-28"
+      className="transition-colors duration-300 section-padding bg-bgLight dark:bg-bgDark"
     >
       {/* ✅ MATCH HEADER CONTAINER */}
       {/* <div className="w-full max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-14"> */}
       <div className="container">
         <div className="grid items-start gap-12 lg:grid-cols-2">
-          
+
           {/* LEFT – IMAGE */}
           <div className="relative">
             <img
-              src={riskComplianceImg}
+              src={riskComplianceImage}
               alt="Risk & Compliance"
               className="w-full h-full min-h-[520px] lg:min-h-[650px] rounded-3xl object-cover shadow-2xl ring-1 ring-borderLight dark:ring-borderDark"
             />

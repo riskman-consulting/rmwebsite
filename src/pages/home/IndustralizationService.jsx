@@ -124,7 +124,7 @@ export default function IndustrySpecialization() {
   }, []);
 
   return (
-    <section className="relative py-24 overflow-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark">
+    <section className="overflow-hidden transition-colors duration-300 section-padding bg-bgLight dark:bg-bgDark">
       <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
 
       <div className="container relative z-10">

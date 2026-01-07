@@ -40,7 +40,7 @@ function App() {
       <Header theme={theme} setTheme={setTheme} />
       <Toaster position="top-right" />
       
-      <main className="pt-[72px]">
+      <main className="pt-[20px]">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<ServicesList />} />

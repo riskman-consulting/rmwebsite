@@ -1158,7 +1158,7 @@ import RishbhaJain from "../../assets/teams/Rishbha Jain.jpg";
 import SakshamAhuja from "../../assets/teams/Saksham Ahuja.jpeg";
 import Priyanshibisht from "../../assets/teams/Priyanshibisht.jpg";
 import JaiDeep from "../../assets/teams/JaiDeep.png";
-import monika from "../../assets/teams/Monika.jpeg";
+import monika from "../../assets/teams/monika.jpeg";
 import Palak from "../../assets/teams/Palak.jpeg";
 import Pranshul from "../../assets/teams/Pranshul.jpg";
 import priyanshu from "../../assets/teams/Priyanshu.jpeg";

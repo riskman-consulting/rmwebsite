@@ -51,7 +51,7 @@ export default function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-bgLight dark:bg-bgDark">
       {/* Offset content by header height + proper padding */}
-      <div className="pt-[110px] pb-16 lg:pt-[140px] lg:pb-24">
+      <div className="pt-[110px] pb-12 lg:pt-[140px] lg:pb-16">
         {/* ✅ CONSISTENT CONTAINER */}
         <div className="container">
           {/* ✅ PROPER VERTICAL CENTERING GRID */}
@@ -84,7 +84,7 @@ export default function HeroSection() {
               >
                 <span className="block">Clarity, Risk Value </span>
                 <span className="block text-transparent bg-gradient-to-r from-yellow-600 to-yellow-400 bg-clip-text">
-                 & Assurance
+                  & Assurance
                 </span>
               </h1>
 

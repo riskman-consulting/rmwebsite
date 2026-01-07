@@ -1,12 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import internalAuditImg from "../../assets/images/home/internal-audit.png";
-import professionalIntegrityImg from "../../assets/images/home/professional-integrity-export-assurance.png";
-import riskAssuranceImg from "../../assets/images/home/risk-assurance.png";
-import complianceReviewImg from "../../assets/images/home/compliance-review.png";
-
-
+import internalAuditImage from '../../assets/images/home/internal-audit.png'
+import professionalIntegrityExportAssuranceImage from "../../assets/images/home/professional-integrity-export-assurance.png"
+import riskAssuranceImage from "../../assets/images/home/risk-assurance.png"
+import complainReviewImage from '../../assets/images/home/compliance-review.png'
 
 const AuditServicesSplit = () => {
   const [activeService, setActiveService] = useState(null);
@@ -21,7 +19,7 @@ const AuditServicesSplit = () => {
       description:
         "Our services are delivered by highly qualified professionals, ensuring accuracy, independence, and compliance with the highest international auditing standards for complete stakeholder confidence.",
       image:
-        professionalIntegrityImg,
+        professionalIntegrityExportAssuranceImage,
       stats: "International Standards",
     },
     {
@@ -31,7 +29,7 @@ const AuditServicesSplit = () => {
       description:
         "We're always here to help—reach out anytime for comprehensive internal audit solutions that evaluate your operational effectiveness, identify control weaknesses, and recommend strategic improvements.",
       image:
-        internalAuditImg,
+        internalAuditImage,
       stats: "500+ Audits Completed",
     },
     {
@@ -41,7 +39,7 @@ const AuditServicesSplit = () => {
       description:
         "Boost your confidence with powerful risk assurance services that identify, assess, and mitigate business risks while ensuring compliance with regulatory requirements and industry standards.",
       image:
-        riskAssuranceImg,
+        riskAssuranceImage,
       stats: "98% Risk Mitigation Rate",
     },
     {
@@ -51,7 +49,7 @@ const AuditServicesSplit = () => {
       description:
         "Ensuring accuracy, independence, and adherence to the highest regulatory and governance standards, helping your organization maintain compliance and build trust with stakeholders.",
       image:
-        complianceReviewImg,
+        complainReviewImage,
       stats: "100% Compliance Rate",
     },
   ];
@@ -83,7 +81,7 @@ const AuditServicesSplit = () => {
   }, []);
 
   return (
-    <section className="relative z-20 w-full py-20 transition-colors duration-300 md:py-28 bg-bgLight dark:bg-bgDark">
+    <section className="relative z-20 w-full transition-colors duration-300 section-padding bg-bgLight dark:bg-bgDark">
       {/* ✅ USING CONTAINER - Same as Features & HeroSection */}
       <div className="container">
         {/* Header */}
@@ -110,9 +108,8 @@ const AuditServicesSplit = () => {
             return (
               <div
                 key={service.id}
-                className={`flex flex-col gap-8 lg:gap-12 ${
-                  isEven ? "lg:flex-row" : "lg:flex-row-reverse"
-                }`}
+                className={`flex flex-col gap-8 lg:gap-12 ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"
+                  }`}
                 onMouseEnter={() => setActiveService(service.id)}
                 onMouseLeave={() => setActiveService(null)}
               >
@@ -120,43 +117,39 @@ const AuditServicesSplit = () => {
                 <div className="lg:w-1/2">
                   <div
                     data-image-id={service.id}
-                    className={`service-image relative overflow-hidden transition-all duration-700 rounded-3xl shadow-xl group ${
-                      isActive
+                    className={`service-image relative overflow-hidden transition-all duration-700 rounded-3xl shadow-xl group ${isActive
                         ? "ring-4 ring-brandGold dark:ring-brandAccent"
                         : ""
-                    }`}
+                      }`}
                   >
                     <img
                       src={service.image}
                       alt={service.title}
                       className="object-cover w-full transition-transform duration-700 h-96 group-hover:scale-110"
                     />
-                    
+
                     {/* Curtain Effect - Top Half */}
                     <div
-                      className={`absolute top-0 left-0 w-full h-1/2 bg-brandDark dark:bg-brandAccent transition-transform duration-1000 ease-out ${
-                        isRevealed ? "-translate-y-full" : "translate-y-0"
-                      }`}
+                      className={`absolute top-0 left-0 w-full h-1/2 bg-brandDark dark:bg-brandAccent transition-transform duration-1000 ease-out ${isRevealed ? "-translate-y-full" : "translate-y-0"
+                        }`}
                       style={{ transitionDelay: `${index * 150}ms` }}
                     />
-                    
+
                     {/* Curtain Effect - Bottom Half */}
                     <div
-                      className={`absolute bottom-0 left-0 w-full h-1/2 bg-brandDark dark:bg-brandAccent transition-transform duration-1000 ease-out ${
-                        isRevealed ? "translate-y-full" : "translate-y-0"
-                      }`}
+                      className={`absolute bottom-0 left-0 w-full h-1/2 bg-brandDark dark:bg-brandAccent transition-transform duration-1000 ease-out ${isRevealed ? "translate-y-full" : "translate-y-0"
+                        }`}
                       style={{ transitionDelay: `${index * 150}ms` }}
                     />
-                    
+
                     <div className="absolute inset-0 transition-opacity duration-500 opacity-0 bg-brandDark/40 dark:bg-brandAccent/20 group-hover:opacity-100" />
-                    
+
                     {/* Floating Stats Badge */}
                     <div
-                      className={`absolute top-6 left-6 px-4 py-2 bg-white dark:bg-brandDark rounded-full shadow-lg transition-all duration-500 ${
-                        isActive && isRevealed
+                      className={`absolute top-6 left-6 px-4 py-2 bg-white dark:bg-brandDark rounded-full shadow-lg transition-all duration-500 ${isActive && isRevealed
                           ? "opacity-100 translate-y-0"
                           : "opacity-0 -translate-y-4"
-                      }`}
+                        }`}
                     >
                       <div className="flex items-center gap-3">
                         <div className="flex -space-x-2">
@@ -190,11 +183,10 @@ const AuditServicesSplit = () => {
                 {/* Content Side */}
                 <div className="flex flex-col justify-center lg:w-1/2">
                   <div
-                    className={`p-8 transition-all duration-500 border rounded-3xl bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark ${
-                      isActive
+                    className={`p-8 transition-all duration-500 border rounded-3xl bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark ${isActive
                         ? "shadow-2xl border-brandGold dark:border-brandAccent transform lg:scale-105"
                         : "shadow-md"
-                    }`}
+                      }`}
                   >
                     <h3 className="mb-2 text-3xl font-bold md:text-4xl text-brandDark dark:text-white">
                       {service.title}
@@ -206,18 +198,16 @@ const AuditServicesSplit = () => {
                       {service.description}
                     </p>
                     <button
-                      className={`inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold transition-all duration-300 border-2 rounded-full ${
-                        isActive
+                      className={`inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold transition-all duration-300 border-2 rounded-full ${isActive
                           ? "bg-brandGold border-brandGold text-white dark:bg-brandAccent dark:border-brandAccent dark:text-brandDark"
                           : "border-brandDark text-brandDark hover:bg-brandDark hover:text-white dark:border-brandAccent dark:text-brandAccent dark:hover:bg-brandAccent dark:hover:text-brandDark"
-                      }`}
+                        }`}
                     >
                       Learn more
                       <ArrowRight
                         size={18}
-                        className={`transition-transform duration-300 ${
-                          isActive ? "translate-x-1" : ""
-                        }`}
+                        className={`transition-transform duration-300 ${isActive ? "translate-x-1" : ""
+                          }`}
                       />
                     </button>
                   </div>

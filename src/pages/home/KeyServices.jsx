@@ -4,7 +4,7 @@ import riskAssessmentImage from '../../assets/images/home/risk-assessment-audit.
 import operationalFinancialImage from '../../assets/images/home/operational-financial-audit.png';
 import riskComplianceAuditImage from '../../assets/images/home/risk-compliance-audit.png';
 import itCybersecurityImage from '../../assets/images/home/it-cybersecurity-audit.png';
- 
+
 const KeyServices = () => {
   const services = [
     {
@@ -58,14 +58,14 @@ const KeyServices = () => {
       ),
     },
   ];
- 
+
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
- 
+
   return (
     <section
-      className="py-20 transition-colors duration-300 bg-bgLight dark:bg-bgDark md:py-28"
+      className="transition-colors duration-300 section-padding bg-bgLight dark:bg-bgDark"
     >
       <div className="container">
         {/* Centered Header */}
@@ -73,19 +73,19 @@ const KeyServices = () => {
           <p className="mb-4 text-sm font-semibold tracking-wider uppercase text-brandNavy dark:text-brandAccent">
             Key Services
           </p>
- 
+
           <h2 className="mb-6 text-4xl font-bold leading-tight md:text-5xl text-brandDark dark:text-white">
             Comprehensive Audit Solutions
             <br />
             for Every Challenge
           </h2>
- 
+
           <p className="max-w-3xl mb-8 text-lg text-brandNavy dark:text-white/70">
             Explore our specialized internal audit services designed to manage
             risk, enhance control, and ensure operational and regulatory
             excellence.
           </p>
- 
+
           <button
             onClick={scrollTop}
             className="px-8 py-4 font-semibold text-white transition-all duration-300 rounded-full shadow-lg bg-brandDark hover:bg-brandPrimary dark:bg-brandAccent dark:text-brandDark dark:hover:bg-brandGold hover:shadow-xl hover:scale-105"
@@ -93,7 +93,7 @@ const KeyServices = () => {
             Book Consultation
           </button>
         </div>
- 
+
         {/* Balanced 2x2 Grid of Service Cards */}
         <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
           {services.map((service) => (
@@ -107,7 +107,7 @@ const KeyServices = () => {
                 style={{ backgroundImage: `url(${service.image})` }}
               />
               <div className="absolute inset-0 bg-gradient-to-br from-surfaceLight/95 via-surfaceLight/90 to-surfaceLight/85 dark:from-surfaceDark/95 dark:via-surfaceDark/90 dark:to-surfaceDark/85" />
- 
+
               {/* Content Container */}
               <div className="relative z-10 flex flex-col justify-between h-full p-8">
                 {/* Top Section */}
@@ -123,17 +123,17 @@ const KeyServices = () => {
                       {service.id}
                     </span>
                   </div>
- 
+
                   {/* Title & Description */}
                   <h3 className="mb-4 text-2xl font-bold md:text-3xl text-brandDark dark:text-white">
                     {service.title}
                   </h3>
- 
+
                   <p className="leading-relaxed text-brandNavy dark:text-white/70">
                     {service.description}
                   </p>
                 </div>
- 
+
                 {/* Bottom Section - Arrow Button */}
                 <div className="flex justify-end mt-6">
                   <button
@@ -154,5 +154,5 @@ const KeyServices = () => {
     </section>
   );
 };
- 
+
 export default KeyServices;

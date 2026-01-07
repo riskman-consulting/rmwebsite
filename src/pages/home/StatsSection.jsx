@@ -36,7 +36,7 @@
 //       {/* ✅ MATCH HEADER CONTAINER */}
 //       {/* <div className="w-full max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-14"> */}
 //       <div className="container">
-        
+
 //         {/* HEADER */}
 //         <div className="text-left mb-14">
 //           <p className="mb-3 text-sm font-semibold tracking-wider uppercase text-brandNavy dark:text-brandAccent">
@@ -213,7 +213,7 @@
 //                   />
 //                   {/* Gradient Overlay */}
 //                   <div className="absolute inset-0 bg-gradient-to-br from-brandDark/95 via-brandNavy/90 to-brandPrimary/85 dark:from-brandDark/98 dark:via-brandNavy/95 dark:to-brandPrimary/90"></div>
-                  
+
 //                   {/* Accent Glow */}
 //                   <div className="absolute inset-0 transition-opacity duration-500 opacity-0 bg-gradient-to-t from-brandGold/20 via-transparent to-transparent group-hover:opacity-100"></div>
 //                 </div>
@@ -372,7 +372,7 @@
 //               </svg>
 //             </span>
 //           </h2>
-          
+
 //           <p className="mt-6 text-lg leading-relaxed text-brandNavy/70 dark:text-white/60">
 //             Behind every project and milestone are numbers that reflect our growth, dedication, and unwavering commitment to excellence.
 //           </p>
@@ -396,14 +396,14 @@
 //                     alt={stat.label}
 //                     className="object-cover w-full h-full transition-transform duration-1000 group-hover:scale-125 group-hover:rotate-2"
 //                   />
-                  
+
 //                   {/* Multi-layer Gradient Overlay */}
 //                   <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient}`}></div>
 //                   <div className="absolute inset-0 bg-gradient-to-t from-brandDark/50 via-transparent to-transparent"></div>
-                  
+
 //                   {/* Animated Accent Glow */}
 //                   <div className="absolute inset-0 transition-opacity duration-700 opacity-0 bg-gradient-to-tr from-brandGold/0 via-brandGold/20 to-brandAccent/30 group-hover:opacity-100"></div>
-                  
+
 //                   {/* Shimmer Effect */}
 //                   <div className="absolute inset-0 transition-opacity duration-1000 opacity-0 group-hover:opacity-100">
 //                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
@@ -434,7 +434,7 @@
 //                         suffix={stat.suffix}
 //                       />
 //                     </h3>
-                    
+
 //                     {/* Decorative Line */}
 //                     <div className="w-16 h-1 mt-4 transition-all duration-500 rounded-full bg-gradient-to-r from-transparent via-brandGold to-transparent dark:via-brandAccent opacity-60 group-hover:w-24"></div>
 //                   </div>
@@ -460,7 +460,7 @@
 
 //                 {/* Enhanced Border with Corner Accents */}
 //                 <div className="absolute inset-0 transition-all duration-500 border-2 rounded-3xl border-brandGold/30 dark:border-brandAccent/30 group-hover:border-brandGold/60 dark:group-hover:border-brandAccent/60"></div>
-                
+
 //                 {/* Corner Accents */}
 //                 <div className="absolute top-0 left-0 w-6 h-6 transition-opacity duration-500 border-t-2 border-l-2 opacity-0 border-brandGold dark:border-brandAccent rounded-tl-3xl group-hover:opacity-100"></div>
 //                 <div className="absolute bottom-0 right-0 w-6 h-6 transition-opacity duration-500 border-b-2 border-r-2 opacity-0 border-brandGold dark:border-brandAccent rounded-br-3xl group-hover:opacity-100"></div>
@@ -498,7 +498,7 @@ const AnimatedCounter = ({ target, suffix = "" }) => {
           // Element is visible - start animation
           setIsVisible(true);
           setCount(0);
-          
+
           let start = 0;
           const duration = 2000;
           const increment = target / (duration / 16);
@@ -585,7 +585,7 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="relative w-full py-20 overflow-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark md:py-28">
+    <section className="relative w-full overflow-hidden transition-colors duration-300 section-padding bg-bgLight dark:bg-bgDark">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 opacity-30 dark:opacity-20">
         <div className="absolute top-0 right-0 rounded-full w-96 h-96 bg-brandGold/10 blur-3xl"></div>
@@ -609,11 +609,11 @@ const StatsSection = () => {
                 through data
               </span>
               <svg className="absolute left-0 w-full h-3 -bottom-2 text-brandGold/30 dark:text-brandAccent/30" viewBox="0 0 200 12" preserveAspectRatio="none">
-                <path d="M0,7 Q50,0 100,7 T200,7" fill="none" stroke="currentColor" strokeWidth="3"/>
+                <path d="M0,7 Q50,0 100,7 T200,7" fill="none" stroke="currentColor" strokeWidth="3" />
               </svg>
             </span>
           </h2>
-          
+
           <p className="mt-6 text-lg leading-relaxed text-brandNavy/70 dark:text-white/60">
             Behind every project and milestone are numbers that reflect our growth, dedication, and unwavering commitment to excellence.
           </p>
@@ -644,14 +644,14 @@ const StatsSection = () => {
                     alt={stat.label}
                     className="absolute inset-0 object-cover w-full h-full transition-all duration-1000 opacity-0 dark:opacity-100 group-hover:scale-125 group-hover:rotate-2"
                   />
-                  
+
                   {/* Multi-layer Gradient Overlay - Reduced opacity for better image visibility */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient.replace('/95', '/85').replace('/92', '/82').replace('/88', '/78')}`}></div>
                   <div className="absolute inset-0 bg-gradient-to-t from-brandDark/40 via-transparent to-transparent"></div>
-                  
+
                   {/* Animated Accent Glow */}
                   <div className="absolute inset-0 transition-opacity duration-700 opacity-0 bg-gradient-to-tr from-brandGold/0 via-brandGold/20 to-brandAccent/30 group-hover:opacity-100"></div>
-                  
+
                   {/* Shimmer Effect */}
                   <div className="absolute inset-0 transition-opacity duration-1000 opacity-0 group-hover:opacity-100">
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
@@ -682,7 +682,7 @@ const StatsSection = () => {
                         suffix={stat.suffix}
                       />
                     </h3>
-                    
+
                     {/* Decorative Line */}
                     <div className="w-16 h-1 mt-4 transition-all duration-500 rounded-full bg-gradient-to-r from-transparent via-brandGold to-transparent dark:via-brandAccent opacity-60 group-hover:w-24"></div>
                   </div>
@@ -708,7 +708,7 @@ const StatsSection = () => {
 
                 {/* Enhanced Border with Corner Accents */}
                 <div className="absolute inset-0 transition-all duration-500 border-2 rounded-3xl border-brandGold/30 dark:border-brandAccent/30 group-hover:border-brandGold/60 dark:group-hover:border-brandAccent/60"></div>
-                
+
                 {/* Corner Accents */}
                 <div className="absolute top-0 left-0 w-6 h-6 transition-opacity duration-500 border-t-2 border-l-2 opacity-0 border-brandGold dark:border-brandAccent rounded-tl-3xl group-hover:opacity-100"></div>
                 <div className="absolute bottom-0 right-0 w-6 h-6 transition-opacity duration-500 border-b-2 border-r-2 opacity-0 border-brandGold dark:border-brandAccent rounded-br-3xl group-hover:opacity-100"></div>

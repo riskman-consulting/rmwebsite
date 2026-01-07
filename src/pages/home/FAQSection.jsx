@@ -38,13 +38,13 @@ const FAQSection = () => {
 
   return (
     <section
-      className="relative w-full py-20 transition-colors duration-300 bg-bgLight dark:bg-bgDark md:py-28"
+      className="relative w-full transition-colors duration-300 section-padding bg-bgLight dark:bg-bgDark"
     >
       {/* ✅ MATCH HEADER CONTAINER */}
       {/* <div className="w-full max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-14"> */}
       <div className="container">
         <div className="grid items-start gap-12 lg:grid-cols-2">
-          
+
           {/* LEFT – HEADER */}
           <div className="lg:sticky lg:top-24">
             <p className="mb-3 text-sm tracking-[0.2em] uppercase font-semibold text-brandNavy dark:text-brandAccent">
@@ -78,8 +78,8 @@ const FAQSection = () => {
                     rounded-2xl overflow-hidden transition-all duration-300
                     border bg-surfaceLight shadow-md
                     dark:bg-surfaceDark dark:shadow-none
-                    ${isOpen 
-                      ? "border-brandGold dark:border-brandAccent shadow-lg" 
+                    ${isOpen
+                      ? "border-brandGold dark:border-brandAccent shadow-lg"
                       : "border-borderLight dark:border-borderDark hover:bg-brandGold/5 dark:hover:bg-brandAccent/5"}
                   `}
                 >
