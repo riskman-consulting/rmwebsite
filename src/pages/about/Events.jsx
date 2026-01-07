@@ -25,9 +25,9 @@ import bang6 from "../../assets/iia-bangalore/iia-bangalore-6.jpeg"
 import kol2 from "../../assets/iia-kolkata/iia-kolkata-2.jpeg"
 import kol3 from "../../assets/iia-kolkata/iia-kolkata-3.jpg"
 
-import mum1 from "../../assets/IIA-bombay/iia-bombay-1.jpeg";
-import mum5 from "../../assets/IIA-bombay/iia-bombay-5.jpg";
-import mum9 from "../../assets/IIA-bombay/iia-bombay-9.jpg";
+import mum1 from "../../assets/iia-bombay/iia-bombay-1.jpeg";
+import mum5 from "../../assets/iia-bombay/iia-bombay-5.jpg";
+import mum9 from "../../assets/iia-bombay/iia-bombay-9.jpg";
 
 
 
