@@ -1161,7 +1161,7 @@ import JaiDeep from "../../assets/teams/JaiDeep.png";
 import monika from "../../assets/teams/monika.jpeg";
 import Palak from "../../assets/teams/Palak.jpeg";
 import Pranshul from "../../assets/teams/Pranshul.jpg";
-import priyanshu from "../../assets/teams/Priyanshu.jpeg";
+import priyanshu from "../../assets/teams/priyanshu.jpeg";
 import sidhi from "../../assets/teams/sidhi.jpeg";
 import Sakshi from "../../assets/teams/sakshi.jpeg";
 import Tanisha from "../../assets/teams/Tanisha.jpeg";
