@@ -5,6 +5,8 @@ import {
   Settings,
 } from "lucide-react";
 
+import riskComplianceImg from "../../assets/images/home/risk-compliance.png";
+
 // 4. Risk & Compliance Section
 const RiskCompliance = () => {
   const services = [
@@ -50,7 +52,7 @@ const RiskCompliance = () => {
           {/* LEFT – IMAGE */}
           <div className="relative">
             <img
-              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&q=80&w=800"
+              src={riskComplianceImg}
               alt="Risk & Compliance"
               className="w-full h-full min-h-[520px] lg:min-h-[650px] rounded-3xl object-cover shadow-2xl ring-1 ring-borderLight dark:ring-borderDark"
             />

@@ -1,6 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import internalAuditImg from "../../assets/images/home/internal-audit.png";
+import professionalIntegrityImg from "../../assets/images/home/professional-integrity-export-assurance.png";
+import riskAssuranceImg from "../../assets/images/home/risk-assurance.png";
+import complianceReviewImg from "../../assets/images/home/compliance-review.png";
+
+
 
 const AuditServicesSplit = () => {
   const [activeService, setActiveService] = useState(null);
@@ -15,7 +21,7 @@ const AuditServicesSplit = () => {
       description:
         "Our services are delivered by highly qualified professionals, ensuring accuracy, independence, and compliance with the highest international auditing standards for complete stakeholder confidence.",
       image:
-        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&q=80&w=800",
+        professionalIntegrityImg,
       stats: "International Standards",
     },
     {
@@ -25,7 +31,7 @@ const AuditServicesSplit = () => {
       description:
         "We're always here to help—reach out anytime for comprehensive internal audit solutions that evaluate your operational effectiveness, identify control weaknesses, and recommend strategic improvements.",
       image:
-        "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&q=80&w=800",
+        internalAuditImg,
       stats: "500+ Audits Completed",
     },
     {
@@ -35,7 +41,7 @@ const AuditServicesSplit = () => {
       description:
         "Boost your confidence with powerful risk assurance services that identify, assess, and mitigate business risks while ensuring compliance with regulatory requirements and industry standards.",
       image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&q=80&w=800",
+        riskAssuranceImg,
       stats: "98% Risk Mitigation Rate",
     },
     {
@@ -45,7 +51,7 @@ const AuditServicesSplit = () => {
       description:
         "Ensuring accuracy, independence, and adherence to the highest regulatory and governance standards, helping your organization maintain compliance and build trust with stakeholders.",
       image:
-        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&q=80&w=800",
+        complianceReviewImg,
       stats: "100% Compliance Rate",
     },
   ];
@@ -81,14 +87,14 @@ const AuditServicesSplit = () => {
       {/* ✅ USING CONTAINER - Same as Features & HeroSection */}
       <div className="container">
         {/* Header */}
-        <div className="mb-16 text-center">
+        <div className="mb-16 text-start">
           <p className="mb-3 text-sm font-semibold tracking-wider uppercase text-brandNavy dark:text-brandAccent">
             Services
           </p>
           <h2 className="mb-4 text-4xl font-bold md:text-5xl text-brandDark dark:text-white">
             Services we offer
           </h2>
-          <p className="max-w-2xl mx-auto text-lg text-brandNavy/80 dark:text-white/70">
+          <p className="max-w-2xl text-lg text-brandNavy/80 dark:text-white/70">
             From comprehensive audit solutions to seamless compliance
             experiences, our collection is meticulously curated.
           </p>

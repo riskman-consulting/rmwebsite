@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Mail, Phone, MapPin, Send, CheckCircle, Clock, Users, Award, Shield, Zap, TrendingUp, MessageSquare, Calendar, HeadphonesIcon } from "lucide-react";
-
+import contactHeroImg from "../../assets/images/contact/hero-background.png";
+import consultationImg from "../../assets/images/contact/consultation-team.png";
+ 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -12,7 +14,7 @@ export default function Contact() {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [hoveredMethod, setHoveredMethod] = useState(null);
-
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitted(true);
@@ -28,14 +30,14 @@ export default function Contact() {
       });
     }, 3000);
   };
-
+ 
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
+ 
   const contactMethods = [
     {
       id: "email",
@@ -80,7 +82,7 @@ export default function Contact() {
       action: null,
     },
   ];
-
+ 
   const whyContactReasons = [
     {
       icon: <Shield className="text-3xl" />,
@@ -98,7 +100,7 @@ export default function Contact() {
       description: "Join hundreds of satisfied clients who've transformed their risk strategies.",
     },
   ];
-
+ 
   const officeFeatures = [
     {
       icon: <MessageSquare className="text-3xl" />,
@@ -121,7 +123,7 @@ export default function Contact() {
       description: "98% client satisfaction rate"
     }
   ];
-
+ 
   const services = [
     "Business Continuity Planning",
     "Risk Assessment & Analysis",
@@ -130,26 +132,26 @@ export default function Contact() {
     "Cyber Security",
     "Other Services"
   ];
-
+ 
   return (
     <div className="min-h-screen overflow-x-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-white">
       {/* ================= HERO ================= */}
       <section className="relative isolate min-h-[70vh] flex items-center justify-center section-padding overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 z-10 bg-bgLight/80 dark:bg-bgDark/80" />
+          <div className="absolute inset-0 z-10 bg-gradient-to-br from-bgLight/70 via-bgLight/60 to-bgLight/50 dark:from-bgDark/70 dark:via-bgDark/60 dark:to-bgDark/50" />
           <img
-            src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&h=1080&fit=crop&q=80"
-            alt="Contact Us"
-            className="object-cover w-full h-full grayscale opacity-20"
+            src={contactHeroImg}
+            alt="Contact Us - Modern Office"
+            className="object-cover w-full h-full"
           />
         </div>
-
+ 
         <div className="container relative z-10 max-w-6xl mx-auto">
           <div className="text-center">
             <p className="mb-4 text-lg font-semibold tracking-wide uppercase text-brandPrimary dark:text-brandAccent">
               Get in Touch
             </p>
-
+ 
             <h1 className="mb-6 text-5xl font-bold leading-tight md:text-7xl text-brandDark dark:text-white">
               Contact
               <br />
@@ -157,14 +159,14 @@ export default function Contact() {
                 Our Team
               </span>
             </h1>
-
+ 
             <p className="max-w-3xl mx-auto text-xl leading-relaxed md:text-2xl text-brandNavy dark:text-gray-400">
               Ready to strengthen your business resilience? Let's discuss your unique challenges and craft tailored solutions
             </p>
           </div>
         </div>
       </section>
-
+ 
       {/* ================= CONTACT METHODS OVERVIEW ================= */}
       <section className="relative section-padding isolate">
         <div className="container mx-auto max-w-7xl">
@@ -177,7 +179,7 @@ export default function Contact() {
               multiple channels, ensuring you get the support you need.
             </p>
           </div>
-
+ 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {contactMethods.map((method, i) => (
               <div
@@ -187,22 +189,22 @@ export default function Contact() {
                 className="relative p-8 overflow-hidden transition-all duration-300 border cursor-pointer bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-3xl group hover:border-brandGold dark:hover:border-brandAccent hover:shadow-2xl hover:-translate-y-1"
               >
                 <div className="absolute inset-0 transition-all duration-300 opacity-0 bg-brandPrimary group-hover:opacity-5 dark:bg-brandAccent rounded-3xl" />
-
+ 
                 <div className="relative z-10">
                   <div
                     className="flex items-center justify-center w-20 h-20 mb-6 transition-all duration-300 rounded-2xl bg-brandPrimary/10 dark:bg-brandAccent/10 text-brandPrimary dark:text-brandAccent group-hover:bg-brandPrimary dark:group-hover:bg-brandAccent group-hover:text-white dark:group-hover:text-brandDark"
                   >
                     {method.icon}
                   </div>
-
+ 
                   <h3 className="mb-4 text-2xl font-bold transition-colors duration-300 text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
                     {method.title}
                   </h3>
-
+ 
                   <p className="mb-6 leading-relaxed transition-colors duration-300 text-brandNavy dark:text-gray-400 group-hover:text-brandNavy/80 dark:group-hover:text-white/90">
                     {method.description}
                   </p>
-
+ 
                   <div className="mb-6">
                     <h4 className="mb-3 text-sm font-bold text-brandDark dark:text-white">
                       Available For:
@@ -219,7 +221,7 @@ export default function Contact() {
                       ))}
                     </ul>
                   </div>
-
+ 
                   <div className="pt-6 transition-colors duration-300 border-t border-borderLight dark:border-borderDark group-hover:border-brandGold dark:group-hover:border-brandAccent">
                     {method.action ? (
                       <a
@@ -241,7 +243,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
-
+ 
       {/* ================= WHY CONTACT US ================= */}
       <section className="relative section-padding isolate">
         <div className="container mx-auto max-w-7xl">
@@ -253,7 +255,7 @@ export default function Contact() {
               Experience the difference of working with dedicated risk management professionals
             </p>
           </div>
-
+ 
           <div className="grid gap-8 md:grid-cols-3">
             {whyContactReasons.map((reason, i) => (
               <div
@@ -261,16 +263,16 @@ export default function Contact() {
                 className="relative p-8 overflow-hidden text-center transition-all duration-300 border cursor-pointer bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-3xl group hover:border-brandGold dark:hover:border-brandAccent hover:shadow-2xl hover:-translate-y-1"
               >
                 <div className="absolute inset-0 transition-all duration-300 opacity-0 bg-brandPrimary group-hover:opacity-5 dark:bg-brandAccent rounded-3xl" />
-
+ 
                 <div className="relative z-10">
                   <div className="flex items-center justify-center w-20 h-20 mx-auto mb-6 transition-all duration-300 rounded-2xl bg-brandPrimary/10 dark:bg-brandAccent/10 text-brandPrimary dark:text-brandAccent group-hover:bg-brandPrimary dark:group-hover:bg-brandAccent group-hover:text-white dark:group-hover:text-brandDark">
                     {reason.icon}
                   </div>
-
+ 
                   <h3 className="mb-4 text-xl font-bold transition-colors duration-300 text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
                     {reason.title}
                   </h3>
-
+ 
                   <p className="leading-relaxed transition-colors duration-300 text-brandNavy dark:text-gray-400 group-hover:text-brandNavy/80 dark:group-hover:text-white/90">
                     {reason.description}
                   </p>
@@ -280,7 +282,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
-
+ 
       {/* ================= CONTACT FORM WITH IMAGE ================= */}
       <section className="relative section-padding isolate">
         <div className="container mx-auto max-w-7xl">
@@ -294,12 +296,12 @@ export default function Contact() {
                   Message
                 </span>
               </h2>
-
+ 
               <p className="mb-8 text-lg leading-relaxed text-brandNavy dark:text-gray-400">
                 Fill out the form below and our team will get back to you within 24 hours.
                 We're committed to providing prompt, professional responses to all inquiries.
               </p>
-
+ 
               <div className="space-y-6">
                 <div className="grid gap-6 md:grid-cols-2">
                   <div>
@@ -316,7 +318,7 @@ export default function Contact() {
                       placeholder="John Doe"
                     />
                   </div>
-
+ 
                   <div>
                     <label className="block mb-2 text-sm font-semibold text-brandDark dark:text-white">
                       Email Address *
@@ -332,7 +334,7 @@ export default function Contact() {
                     />
                   </div>
                 </div>
-
+ 
                 <div className="grid gap-6 md:grid-cols-2">
                   <div>
                     <label className="block mb-2 text-sm font-semibold text-brandDark dark:text-white">
@@ -347,7 +349,7 @@ export default function Contact() {
                       placeholder="Your Company"
                     />
                   </div>
-
+ 
                   <div>
                     <label className="block mb-2 text-sm font-semibold text-brandDark dark:text-white">
                       Phone Number
@@ -362,7 +364,7 @@ export default function Contact() {
                     />
                   </div>
                 </div>
-
+ 
                 <div>
                   <label className="block mb-2 text-sm font-semibold text-brandDark dark:text-white">
                     Service Interested In
@@ -379,7 +381,7 @@ export default function Contact() {
                     ))}
                   </select>
                 </div>
-
+ 
                 <div>
                   <label className="block mb-2 text-sm font-semibold text-brandDark dark:text-white">
                     Message *
@@ -394,7 +396,7 @@ export default function Contact() {
                     placeholder="Tell us about your requirements..."
                   />
                 </div>
-
+ 
                 <button
                   onClick={handleSubmit}
                   disabled={isSubmitted}
@@ -414,17 +416,17 @@ export default function Contact() {
                 </button>
               </div>
             </div>
-
+ 
             {/* Right: Image with Office Hours */}
             <div className="relative">
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=800&h=600&fit=crop"
-                  alt="Contact Us"
+                  src={consultationImg}
+                  alt="Professional Consultation Team"
                   className="relative object-cover w-full mb-8 border shadow-2xl rounded-3xl border-borderLight dark:border-borderDark"
                 />
               </div>
-
+ 
               {/* Office Hours Card */}
               <div className="relative p-6 overflow-hidden border shadow-lg bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-3xl">
                 <div className="flex items-center gap-3 mb-4">
@@ -450,14 +452,14 @@ export default function Contact() {
           </div>
         </div>
       </section>
-
+ 
       {/* ================= OFFICE FEATURES ================= */}
       <section className="relative section-padding isolate">
         <div className="container mx-auto max-w-7xl">
           <h2 className="mb-16 text-4xl font-bold text-center md:text-5xl text-brandDark dark:text-white">
             What We <span className="text-brandPrimary dark:text-brandAccent">Offer</span>
           </h2>
-
+ 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {officeFeatures.map((feature, i) => (
               <div
@@ -465,16 +467,16 @@ export default function Contact() {
                 className="relative p-6 overflow-hidden text-center transition-all duration-300 border cursor-pointer bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-3xl group hover:border-brandGold dark:hover:border-brandAccent hover:shadow-2xl hover:-translate-y-1"
               >
                 <div className="absolute inset-0 transition-all duration-300 opacity-0 bg-brandPrimary group-hover:opacity-5 dark:bg-brandAccent rounded-3xl" />
-
+ 
                 <div className="relative z-10">
                   <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 transition-all duration-300 rounded-full bg-brandPrimary/10 dark:bg-brandAccent/10 text-brandPrimary dark:text-brandAccent group-hover:bg-brandPrimary dark:group-hover:bg-brandAccent group-hover:text-white dark:group-hover:text-brandDark">
                     {feature.icon}
                   </div>
-
+ 
                   <h3 className="mb-3 text-xl font-bold transition-colors duration-300 text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
                     {feature.title}
                   </h3>
-
+ 
                   <p className="text-sm leading-relaxed transition-colors duration-300 text-brandNavy dark:text-gray-400 group-hover:text-brandNavy/80 dark:group-hover:text-white/90">
                     {feature.description}
                   </p>
@@ -484,7 +486,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
-
+ 
       {/* ================= LOCATION MAP ================= */}
       <section className="relative section-padding isolate">
         <div className="container mx-auto max-w-7xl">
@@ -496,7 +498,7 @@ export default function Contact() {
               Visit our office or schedule a virtual consultation with our team
             </p>
           </div>
-
+ 
           <div className="overflow-hidden border shadow-2xl bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-3xl">
             <div className="relative flex items-center justify-center overflow-hidden h-96 bg-brandPrimary/5 dark:bg-brandAccent/5">
               <div className="relative z-10 text-center">
@@ -513,7 +515,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
-
+ 
       {/* ================= CTA ================= */}
       <section className="text-center section-padding bg-surfaceLight/50 dark:bg-surfaceDark/50">
         <h2 className="mb-6 text-4xl font-bold md:text-5xl text-brandDark dark:text-white">
@@ -523,11 +525,11 @@ export default function Contact() {
             Started
           </span>?
         </h2>
-
+ 
         <p className="max-w-2xl mx-auto mb-8 text-xl text-brandNavy dark:text-gray-400">
           Join hundreds of businesses that trust RiskMan Consulting to protect and grow their operations
         </p>
-
+ 
         <div className="flex flex-wrap justify-center gap-4">
           <a
             href="/services"

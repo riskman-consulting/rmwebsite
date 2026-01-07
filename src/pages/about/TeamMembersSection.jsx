@@ -1165,6 +1165,7 @@ import priyanshu from "../../assets/teams/Priyanshu.jpeg";
 import sidhi from "../../assets/teams/sidhi.jpeg";
 import Sakshi from "../../assets/teams/sakshi.jpeg";
 import Tanisha from "../../assets/teams/Tanisha.jpeg";
+import Simran from "../../assets/teams/Simran.jpeg";
 import Tushar from "../../assets/teams/Tushar.jpg";
 import VanshGarg from "../../assets/teams/Vansh Garg.jpeg";
 import VinayakPoddar from "../../assets/teams/Vinayak Poddar.png";
@@ -1174,6 +1175,7 @@ import AnirbanBiswas from "../../assets/teams/Anirban Biswas.png";
 import Vanshika from "../../assets/teams/Vanshika.jpeg";
 import Kartik from "../../assets/teams/kartik.jpg";
 import Pawan from "../../assets/teams/pawan.jpg";
+
 
 /* ========= CONFIG ========= */
 const COLUMNS_DESKTOP = 10;
@@ -1227,6 +1229,7 @@ const RiskManTeams = () => {
     { id: 28, image: Vanshika },
     { id: 29, image: Kartik },
     { id: 30, image: Pawan },
+    {id:31, image:Simran},
   ];
 
   const gridItems = injectLogo(allMembers);

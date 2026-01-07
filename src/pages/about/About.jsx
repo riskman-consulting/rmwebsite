@@ -22,7 +22,9 @@ import TestimonialSimple from "./TestimonialSimple";
 import AboutUs from "../../assets/images/about-us.jpg";
 import AboutHero from "./AboutHero";
 import jitendra from "../../assets/images/jitendra.jpg";
-
+import professionalExcellenceImg from "../../assets/images/professional_excellence_team.png";
+import propreneurialImg from "../../assets/images/propreneurial_mindset_presentation.png";
+import longtermRelationshipsImg from "../../assets/images/longterm_relationships_handshake.png";
 
 /* =======================
    ANIMATIONS
@@ -496,7 +498,7 @@ export default function About() {
             className="relative overflow-hidden group rounded-[2rem] h-[460px] shadow-card-light dark:shadow-card-dark hover:shadow-card-light-hover dark:hover:shadow-card-dark-hover transition-all duration-700"
           >
             <img
-              src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=1000&fit=crop&q=80"
+              src={professionalExcellenceImg}
               alt="Professional Excellence"
               className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
             />
@@ -515,7 +517,7 @@ export default function About() {
             className="relative overflow-hidden group rounded-[2rem] h-[460px] shadow-card-light dark:shadow-card-dark hover:shadow-card-light-hover dark:hover:shadow-card-dark-hover transition-all duration-700"
           >
             <img
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop&q=80"
+              src={propreneurialImg}
               alt="Propreneurial Mindset"
               className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
             />
@@ -534,7 +536,7 @@ export default function About() {
             className="relative overflow-hidden group rounded-[2rem] h-[460px] shadow-card-light dark:shadow-card-dark hover:shadow-card-light-hover dark:hover:shadow-card-dark-hover transition-all duration-700"
           >
             <img
-              src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=1000&fit=crop&q=80"
+              src={longtermRelationshipsImg}
               alt="Long-term Relationships"
               className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
             />

@@ -457,7 +457,7 @@ const HeroSection = () => {
       {/* Content */}
       <motion.div
         style={{ opacity }}
-        className="container relative z-10 max-w-5xl px-6 mx-auto text-center"
+        className="container relative z-10 text-center"
       >
         {/* Tag */}
         <motion.div
@@ -544,8 +544,8 @@ const StickyServicesSection = () => {
 
   return (
     <section className="relative py-32 bg-bgLight dark:bg-bgDark">
-      <div className="container px-6 mx-auto max-w-7xl">
-        <div className="grid gap-16 lg:grid-cols-2">
+      <div className="container">
+        <div className="grid gap-16 lg:grid-cols-[1fr_1.2fr] items-start">
           {/* LEFT: Enhanced Sticky Content */}
           <div className="lg:sticky lg:top-24 h-fit">
             <motion.div
@@ -774,7 +774,7 @@ const ServiceCardLarge = ({ service, index }) => {
 const AllServicesGrid = () => {
   return (
     <section className="py-32 bg-bgLight dark:bg-bgDark">
-      <div className="container px-6 mx-auto max-w-7xl">
+      <div className="container">
         {/* Section Header */}
         <motion.div
           className="mb-20 text-center"
@@ -940,7 +940,7 @@ const CapabilitiesSection = () => {
         }} />
       </div>
 
-      <div className="container relative z-10 max-w-6xl px-6 mx-auto">
+      <div className="container relative z-10">
         {/* Header */}
         <motion.div
           className="mb-16 text-center"
@@ -1021,7 +1021,7 @@ const CTASection = () => {
         }} />
       </div>
 
-      <div className="container relative z-10 max-w-5xl px-6 mx-auto text-center">
+      <div className="container relative z-10 text-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -17,21 +17,19 @@
       "action": "/contact"
     },
     "heroImage": {
-      "src": "",
+      "src": "https://images.unsplash.com/photo-1577415124269-fc1140a69e91?w=1400",
       "alt": "Professionals discussing risk and compliance strategy"
     }
   },
- 
   "experienceSection": {
     "years": 25,
     "title": "Years average partner experience",
     "description": "We bring over 25 years of average partner experience, powering every project with proven expertise and purposeful execution.",
     "visualGraphic": {
-      "src": "https://dummyimage.com/600x400/002060/ffffff&text=25+Years+Experience+Graphic",
+      "src": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800",
       "alt": "25 years experience visual graphic"
     }
   },
- 
   "servicesOverview": {
     "title": "Uncover truth, prevent fraud, and safeguard reputation",
     "description": "RiskMan’s forensic and investigation services help businesses detect, investigate, and prevent financial misconduct and operational fraud.",
@@ -58,7 +56,6 @@
       }
     ]
   },
- 
   "industryUseCases": [
     {
       "industry": "Banking",
@@ -70,7 +67,7 @@
         "Reduced financial losses"
       ],
       "image": {
-        "src": "https://dummyimage.com/450x300/cccccc/000000&text=Banking+Fraud+Analysis",
+        "src": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800",
         "alt": "Bank professional analyzing fraud risk"
       }
     },
@@ -84,7 +81,7 @@
         "Strengthens audit readiness"
       ],
       "image": {
-        "src": "https://dummyimage.com/450x300/cccccc/000000&text=Healthcare+Compliance",
+        "src": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800",
         "alt": "Healthcare professional reviewing compliance data"
       }
     },
@@ -98,12 +95,11 @@
         "Improves supply chain transparency"
       ],
       "image": {
-        "src": "https://dummyimage.com/450x300/cccccc/000000&text=Supply+Chain+Audit",
+        "src": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800",
         "alt": "Warehouse audit and logistics verification"
       }
     }
   ],
- 
   "fourStepApproach": {
     "title": "Our 4-Step Approach",
     "steps": [
@@ -129,11 +125,10 @@
       }
     ],
     "image": {
-      "src": "https://dummyimage.com/700x450/cccccc/000000&text=Forensic+Consultation+Meeting",
+      "src": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1000",
       "alt": "Forensic consultants discussing investigation results"
     }
   },
- 
   "riskAwarenessSection": {
     "title": "The Hidden Cost of Unchecked Risk",
     "description": "Fraud, misconduct, and due diligence failures silently erode business value every day. Proactive forensic strategies help prevent escalating threats.",
@@ -141,67 +136,65 @@
       {
         "title": "Hidden Financial Drain",
         "description": "Losses accumulate unnoticed through weak controls.",
-        "image": "https://dummyimage.com/300x350/cccccc/000000&text=Financial+Loss"
+        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600"
       },
       {
         "title": "Reactive Discovery",
         "description": "Most fraud cases are detected too late without structured systems.",
-        "image": "https://dummyimage.com/300x350/cccccc/000000&text=Late+Fraud+Detection"
+        "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600"
       },
       {
         "title": "Due Diligence Gaps",
         "description": "Insufficient checks expose organizations to reputational harm.",
-        "image": "https://dummyimage.com/300x350/cccccc/000000&text=Due+Diligence+Failure"
+        "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600"
       },
       {
         "title": "Delayed Detection",
         "description": "Technology gaps delay early warning signals.",
-        "image": "https://dummyimage.com/300x350/000000/ffffff&text=Cyber+Risk+Detection"
+        "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600"
       }
     ]
   },
- 
-  
   "frequentlyAskedQuestions": [
-  {
-    "id": 1,
-    "question": "What are forensic and investigation services?",
-    "answer": "Forensic and investigation services involve examining financial records, digital data, and business processes to detect fraud, misconduct, regulatory breaches, or unethical behavior."
-  },
-  {
-    "id": 2,
-    "question": "When should a company conduct a forensic investigation?",
-    "answer": "A company should initiate a forensic investigation when there are red flags such as unexplained financial losses, whistleblower complaints, internal control failures, or regulatory inquiries."
-  },
-  {
-    "id": 3,
-    "question": "How do forensic investigations help prevent future fraud?",
-    "answer": "Forensic investigations identify root causes of misconduct and control gaps, enabling organizations to strengthen controls, improve monitoring, and prevent recurrence of fraud."
-  },
-  {
-    "id": 4,
-    "question": "What industries commonly require forensic services?",
-    "answer": "Industries such as banking, healthcare, manufacturing, logistics, retail, energy, and technology frequently require forensic services due to regulatory exposure and fraud risk."
-  },
-  {
-    "id": 5,
-    "question": "What is the difference between forensic investigation and internal audit?",
-    "answer": "Internal audit focuses on evaluating controls and processes, while forensic investigation is a targeted, evidence-driven examination conducted when fraud or misconduct is suspected."
-  },
-  {
-    "id": 6,
-    "question": "Can forensic services support legal and regulatory proceedings?",
-    "answer": "Yes, forensic services provide legally defensible documentation, expert reports, and evidence support for regulatory reviews, litigation, and arbitration."
-  },
-  {
-    "id": 7,
-    "question": "How does fraud risk management differ from fraud investigation?",
-    "answer": "Fraud investigation is reactive and focuses on identifying wrongdoing, whereas fraud risk management is proactive and aims to prevent fraud through controls, analytics, and monitoring."
-  },
-  {
-    "id": 8,
-    "question": "Why choose RiskMan for forensic and investigation services?",
-    "answer": "RiskMan combines forensic expertise, industry knowledge, data-driven methodologies, and regulatory alignment to deliver discreet, accurate, and actionable investigation outcomes."
-  }
+    {
+      "id": 1,
+      "question": "What are forensic and investigation services?",
+      "answer": "Forensic and investigation services involve examining financial records, digital data, and business processes to detect fraud, misconduct, regulatory breaches, or unethical behavior."
+    },
+    {
+      "id": 2,
+      "question": "When should a company conduct a forensic investigation?",
+      "answer": "A company should initiate a forensic investigation when there are red flags such as unexplained financial losses, whistleblower complaints, internal control failures, or regulatory inquiries."
+    },
+    {
+      "id": 3,
+      "question": "How do forensic investigations help prevent future fraud?",
+      "answer": "Forensic investigations identify root causes of misconduct and control gaps, enabling organizations to strengthen controls, improve monitoring, and prevent recurrence of fraud."
+    },
+    {
+      "id": 4,
+      "question": "What industries commonly require forensic services?",
+      "answer": "Industries such as banking, healthcare, manufacturing, logistics, retail, energy, and technology frequently require forensic services due to regulatory exposure and fraud risk."
+    },
+    {
+      "id": 5,
+      "question": "What is the difference between forensic investigation and internal audit?",
+      "answer": "Internal audit focuses on evaluating controls and processes, while forensic investigation is a targeted, evidence-driven examination conducted when fraud or misconduct is suspected."
+    },
+    {
+      "id": 6,
+      "question": "Can forensic services support legal and regulatory proceedings?",
+      "answer": "Yes, forensic services provide legally defensible documentation, expert reports, and evidence support for regulatory reviews, litigation, and arbitration."
+    },
+    {
+      "id": 7,
+      "question": "How does fraud risk management differ from fraud investigation?",
+      "answer": "Fraud investigation is reactive and focuses on identifying wrongdoing, whereas fraud risk management is proactive and aims to prevent fraud through controls, analytics, and monitoring."
+    },
+    {
+      "id": 8,
+      "question": "Why choose RiskMan for forensic and investigation services?",
+      "answer": "RiskMan combines forensic expertise, industry knowledge, data-driven methodologies, and regulatory alignment to deliver discreet, accurate, and actionable investigation outcomes."
+    }
   ]
 }

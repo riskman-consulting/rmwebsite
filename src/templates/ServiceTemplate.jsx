@@ -158,7 +158,7 @@ export default function NewServiceTemplate() {
             <div className="absolute inset-0 bg-gradient-to-b from-bgDark/40 via-transparent to-bgDark/95" />
           </div>
 
-          <div className="container relative z-10 px-8 mx-auto max-w-7xl">
+          <div className="container relative z-10">
             <div className="grid items-center gap-16 lg:grid-cols-12">
 
               {/* Left Content Column */}
@@ -276,7 +276,7 @@ export default function NewServiceTemplate() {
         <section className="relative py-32 overflow-hidden transition-colors duration-500 bg-bgLight dark:bg-bgDark">
           <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-borderLight dark:via-borderDark to-transparent" />
 
-          <div className="container relative z-10 px-8 mx-auto max-w-7xl">
+          <div className="container relative z-10">
             <div className="relative mb-20 text-center">
               <div className="absolute inset-0 bg-brandAccent/5 blur-[80px] rounded-full dark:opacity-40 pointer-events-none" />
               <span className="text-brandPrimary dark:text-brandAccent font-semibold text-[10px] uppercase tracking-[0.2em] mb-4 block animate-pulse relative z-10">Core Expertise</span>
@@ -315,7 +315,7 @@ export default function NewServiceTemplate() {
       {/* ================= COMPLIANCE LEVELS (INTERACTIVE) ================= */}
       {complianceLevels?.levels && Array.isArray(complianceLevels.levels) && (
         <section className="relative py-32 overflow-hidden bg-surfaceLight dark:bg-surfaceDark">
-          <div className="container grid items-center gap-20 px-8 mx-auto max-w-7xl md:grid-cols-2">
+          <div className="container grid items-center gap-20 md:grid-cols-2">
             <motion.div variants={fadeInUp} initial="initial" whileInView="animate" viewport={{ once: true }}>
               <span className="text-brandPrimary dark:text-brandAccent font-semibold text-[10px] uppercase tracking-[0.2em] mb-4 block">Strategic Depth</span>
               <h2 className="mb-12 text-4xl font-bold tracking-tight md:text-6xl text-brandDark dark:text-white">
@@ -360,7 +360,7 @@ export default function NewServiceTemplate() {
       {/* ================= WHY COMPLIANCE MATTERS (VISUAL CARDS) ================= */}
       {whyComplianceMatters?.cards && Array.isArray(whyComplianceMatters.cards) && (
         <section className="relative py-32 overflow-hidden bg-bgLight dark:bg-bgDark selection:bg-brandPrimary/30">
-          <div className="container px-8 mx-auto max-w-7xl">
+          <div className="container">
             <div className="mb-20 text-center">
               <span className="text-brandPrimary dark:text-brandAccent font-semibold text-[10px] uppercase tracking-[0.2em] mb-4 block">Risk Impact</span>
               <h2 className="text-4xl font-bold tracking-tight md:text-5xl text-brandDark dark:text-white">
@@ -413,7 +413,7 @@ export default function NewServiceTemplate() {
             <div className="absolute inset-0 bg-gradient-to-b from-brandDark/60 via-transparent to-brandDark/60" />
           </div>
 
-          <div className="container relative z-10 max-w-4xl px-8 mx-auto">
+          <div className="container relative z-10">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <div className="text-6xl md:text-8xl font-bold text-brandAccent tracking-tight drop-shadow-[0_10px_30px_rgba(255,182,0,0.3)]">
                 {statisticsSection.value}{statisticsSection.suffix}
@@ -435,7 +435,7 @@ export default function NewServiceTemplate() {
       {/* ================= HOW WE HELP (FEATURE GRID) ================= */}
       {service.howWeHelp?.services && Array.isArray(service.howWeHelp.services) && (
         <section className="relative py-32 overflow-hidden bg-surfaceLight dark:bg-surfaceDark">
-          <div className="container px-8 mx-auto max-w-7xl">
+          <div className="container">
             <div className="max-w-4xl mb-20">
               <span className="text-brandPrimary dark:text-brandAccent font-semibold text-[10px] uppercase tracking-[0.2em] mb-4 block">Our Approach</span>
               <h2 className="mb-6 text-4xl font-bold leading-none tracking-tight md:text-6xl text-brandDark dark:text-white">
@@ -466,7 +466,7 @@ export default function NewServiceTemplate() {
       {/* ================= VALUE PROPOSITION (SPLIT VISUAL) ================= */}
       {service.valueSection && (
         <section className="relative py-32 overflow-hidden bg-bgLight dark:bg-bgDark border-y border-borderLight dark:border-borderDark">
-          <div className="container grid items-center gap-24 px-8 mx-auto max-w-7xl md:grid-cols-2">
+          <div className="container grid items-center gap-24 md:grid-cols-2">
             <motion.div variants={fadeInUp} initial="initial" whileInView="animate" viewport={{ once: true }} className="space-y-8">
               <span className="text-brandPrimary dark:text-brandAccent font-semibold text-[10px] uppercase tracking-[0.2em] block">Tangible Impact</span>
               <h2 className="text-4xl font-bold leading-tight tracking-tight md:text-6xl text-brandDark dark:text-white">
@@ -525,7 +525,7 @@ export default function NewServiceTemplate() {
       {/* ================= PROCESS (CHEVRON STEPS) ================= */}
       {service.processSection?.steps && Array.isArray(service.processSection.steps) && (
         <section className="relative py-32 overflow-hidden transition-colors bg-surfaceLight dark:bg-surfaceDark">
-          <div className="container px-8 mx-auto max-w-7xl">
+          <div className="container">
             <div className="mb-24 text-center">
               <span className="text-brandPrimary dark:text-brandAccent font-semibold text-[10px] uppercase tracking-[0.2em] mb-4 block">Proven Ecosystem</span>
               <h2 className="text-4xl font-bold tracking-tight md:text-5xl text-brandDark dark:text-white">
@@ -562,25 +562,27 @@ export default function NewServiceTemplate() {
       )}
 
       {service.trustedBy && (
-        <section className="py-24 bg-bgLight dark:bg-bgDark border-y border-borderLight dark:border-borderDark">
-          <div className="container max-w-6xl px-6 mx-auto text-center">
-            <h3 className="mb-4 text-2xl font-bold text-brandDark dark:text-white">
-              {service.trustedBy.title}
-            </h3>
-
-            <p className="mb-12 font-medium text-slate-500 dark:text-gray-400">
-              {service.trustedBy.description}
-            </p>
-
-            <div className="flex flex-wrap items-center justify-center gap-12 md:gap-20">
+        <section className="relative py-32 overflow-hidden transition-colors bg-surfaceLight dark:bg-surfaceDark border-y border-borderLight dark:border-borderDark">
+          <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] grayscale" />
+          <div className="container relative z-10">
+            <div className="max-w-4xl mb-16">
+              <h2 className="mb-6 text-2xl font-bold tracking-tight md:text-3xl text-brandDark dark:text-white">{service.trustedBy.title}</h2>
+              {service.trustedBy.description && (
+                <p className="max-w-2xl text-lg font-medium leading-relaxed text-slate-500 dark:text-white/50">{service.trustedBy.description}</p>
+              )}
+            </div>
+            <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
               {service.trustedBy.logos && Array.isArray(service.trustedBy.logos) && service.trustedBy.logos.map((logo, i) => (
-                <motion.img
-                  whileHover={{ scale: 1.1 }}
+                <motion.div
                   key={i}
-                  src={logo.logo}
-                  alt={logo.name}
-                  className="object-contain w-auto h-8 transition-all duration-500 cursor-default md:h-10 opacity-40 grayscale brightness-0 dark:invert hover:opacity-100 hover:grayscale-0 hover:brightness-100 hover:invert-0"
-                />
+                  className="flex items-center justify-center w-40 h-24 p-6 transition-all duration-300 bg-white border shadow-sm rounded-2xl border-slate-100 dark:bg-white dark:border-slate-100"
+                >
+                  <img
+                    src={logo.logo}
+                    alt={logo.name}
+                    className="object-contain max-w-full max-h-full"
+                  />
+                </motion.div>
               ))}
             </div>
           </div>
@@ -590,7 +592,7 @@ export default function NewServiceTemplate() {
 
       {service.whyRiskMan && (
         <section className="relative py-32 overflow-hidden bg-bgLight dark:bg-bgDark">
-          <div className="container grid items-center gap-20 px-8 mx-auto max-w-7xl md:grid-cols-2">
+          <div className="container grid items-center gap-20 md:grid-cols-2">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -645,7 +647,7 @@ export default function NewServiceTemplate() {
             <div className="absolute inset-0 bg-gradient-to-b from-brandDark/80 via-transparent to-brandDark/80" />
           </div>
 
-          <div className="container relative z-10 px-8 mx-auto max-w-7xl">
+          <div className="container relative z-10">
             <div className="grid gap-10 md:grid-cols-4">
               {service.impactStats.map((s, i) => (
                 <motion.div
@@ -679,7 +681,7 @@ export default function NewServiceTemplate() {
       {/* ================= TESTIMONIALS (CARD REDESIGN) ================= */}
       {service.testimonials?.reviews && Array.isArray(service.testimonials.reviews) && (
         <section className="relative py-32 overflow-hidden bg-bgLight dark:bg-bgDark">
-          <div className="container px-8 mx-auto max-w-7xl">
+          <div className="container">
             <div className="mb-20 text-center">
               <span className="text-brandPrimary dark:text-brandAccent font-semibold text-[10px] uppercase tracking-[0.2em] mb-4 block">Client Perspectives</span>
               <h2 className="text-4xl font-bold tracking-tight md:text-5xl text-brandDark dark:text-white">
@@ -723,7 +725,7 @@ export default function NewServiceTemplate() {
       {/* ================= LATEST INSIGHTS (BLOG CARDS) ================= */}
       {service.latestInsights?.posts && Array.isArray(service.latestInsights.posts) && (
         <section className="relative py-32 overflow-hidden bg-surfaceLight dark:bg-surfaceDark">
-          <div className="container px-8 mx-auto max-w-7xl">
+          <div className="container">
             <div className="flex flex-col justify-between gap-8 mb-20 md:flex-row md:items-end">
               <div className="max-w-2xl">
                 <span className="text-brandPrimary dark:text-brandAccent font-semibold text-[10px] uppercase tracking-[0.2em] mb-4 block">Knowledge Hub</span>
@@ -777,7 +779,7 @@ export default function NewServiceTemplate() {
       {/* ================= TRUSTED COMPANIES (LOGO STRIP) ================= */}
       {trusteSection?.company && (
         <section className="relative py-24 overflow-hidden transition-colors bg-surfaceLight dark:bg-surfaceDark border-y border-borderLight dark:border-borderDark">
-          <div className="container px-8 mx-auto max-w-7xl">
+          <div className="container">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -815,7 +817,7 @@ export default function NewServiceTemplate() {
       {/* ================= WE HELP SECTION (OVERHAUL) ================= */}
       {weHelpSection && (
         <section className="relative py-40 overflow-hidden bg-bgLight dark:bg-bgDark">
-          <div className="container relative z-10 px-8 mx-auto max-w-7xl">
+          <div className="container relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -894,7 +896,7 @@ export default function NewServiceTemplate() {
       {/* ================= SOLUTIONS SECTION (GLASS CARDS) ================= */}
       {solutionSection?.solutions && (
         <section className="relative py-32 overflow-hidden transition-colors bg-surfaceLight dark:bg-surfaceDark">
-          <div className="container px-8 mx-auto max-w-7xl">
+          <div className="container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -942,7 +944,7 @@ export default function NewServiceTemplate() {
       {/* ================= PARTNER SECTION (INTEGRATED EXPERTISE) ================= */}
       {partnerSection && (
         <section className="relative py-40 overflow-hidden transition-colors bg-bgLight dark:bg-bgDark border-y border-borderLight dark:border-borderDark">
-          <div className="container px-8 mx-auto max-w-7xl">
+          <div className="container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1002,7 +1004,7 @@ export default function NewServiceTemplate() {
       {/* ================= EXPERIENCE SECTION (LEGACY & STRENGTH) ================= */}
       {experienceSection && (
         <section className="relative py-40 overflow-hidden transition-colors bg-surfaceLight dark:bg-surfaceDark">
-          <div className="container grid items-center gap-24 px-8 mx-auto max-w-7xl md:grid-cols-2">
+          <div className="container grid items-center gap-24 md:grid-cols-2">
             <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="space-y-10">
               <div className="relative inline-block">
                 <div className="text-[12rem] md:text-[15rem] font-black text-brandPrimary/10 leading-none tracking-tighter select-none">
@@ -1056,7 +1058,7 @@ export default function NewServiceTemplate() {
       {/* ================= SERVICES OVERVIEW (SOPHISTICATED GRID) ================= */}
       {servicesOverview && (
         <section className="relative py-32 overflow-hidden transition-colors bg-surfaceLight dark:bg-surfaceDark">
-          <div className="container px-8 mx-auto max-w-7xl">
+          <div className="container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1106,7 +1108,7 @@ export default function NewServiceTemplate() {
       {/* ================= INDUSTRY USE CASES (STORYTELLING) ================= */}
       {industryUseCases && Array.isArray(industryUseCases) && industryUseCases.length > 0 && (
         <section className="relative py-32 overflow-hidden bg-bgLight dark:bg-bgDark">
-          <div className="container px-8 mx-auto space-y-32 max-w-7xl">
+          <div className="container space-y-32">
             {industryUseCases.map((uc, i) => (
               <motion.div
                 key={i}
@@ -1164,7 +1166,7 @@ export default function NewServiceTemplate() {
       {/* ================= FOUR STEP APPROACH (CHRONOLOGICAL) ================= */}
       {fourStepApproach && fourStepApproach.steps && (
         <section className="relative py-32 overflow-hidden transition-colors bg-surfaceLight dark:bg-surfaceDark border-y border-borderLight dark:border-borderDark">
-          <div className="container px-8 mx-auto max-w-7xl">
+          <div className="container">
             <div className="mb-24 text-center">
               <span className="text-brandPrimary dark:text-brandAccent font-black text-[10px] uppercase tracking-[0.5em] mb-4 block">Strategic Pipeline</span>
               <h2 className="text-4xl font-black leading-none tracking-tighter md:text-5xl text-brandDark dark:text-white">
@@ -1225,7 +1227,7 @@ export default function NewServiceTemplate() {
       {/* ================= INDUSTRY INSIGHTS (SOPHISTICATED CARDS) ================= */}
       {helpUsSection && Array.isArray(helpUsSection) && helpUsSection.length > 0 && (
         <section className="relative py-32 overflow-hidden transition-colors bg-bgLight dark:bg-bgDark">
-          <div className="container px-8 mx-auto max-w-7xl">
+          <div className="container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1290,7 +1292,7 @@ export default function NewServiceTemplate() {
       {/* ================= PROACTIVE SECTION (SPLIT VISUAL) ================= */}
       {proActiveSection && (
         <section className="relative py-32 overflow-hidden transition-colors bg-bgLight dark:bg-bgDark border-y border-borderLight dark:border-borderDark">
-          <div className="container px-8 mx-auto max-w-7xl">
+          <div className="container">
             <div className="grid items-center gap-24 md:grid-cols-2">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -1335,7 +1337,7 @@ export default function NewServiceTemplate() {
       {/* ================= RISK ANALYSIS SECTION (PILL GRID) ================= */}
       {riskAnalysisSection && Array.isArray(riskAnalysisSection) && riskAnalysisSection.length > 0 && (
         <section className="relative py-32 overflow-hidden transition-colors bg-surfaceLight dark:bg-surfaceDark border-y border-borderLight dark:border-borderDark">
-          <div className="container px-8 mx-auto max-w-7xl">
+          <div className="container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1376,7 +1378,7 @@ export default function NewServiceTemplate() {
       {/* ================= ARTICLE SECTION (MODERN CARDS) ================= */}
       {articalSection && (
         <section className="relative py-32 overflow-hidden transition-colors bg-bgLight dark:bg-bgDark border-y border-borderLight dark:border-borderDark">
-          <div className="container px-8 mx-auto max-w-7xl">
+          <div className="container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1518,7 +1520,7 @@ export default function NewServiceTemplate() {
         <section className="relative py-40 overflow-hidden transition-colors bg-brandNavy dark:bg-brandDark">
           <div className="absolute inset-0 opacity-[0.05] pattern-dots-white" />
 
-          <div className="container relative z-10 px-8 mx-auto max-w-7xl">
+          <div className="container relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}

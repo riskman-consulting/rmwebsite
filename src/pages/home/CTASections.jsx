@@ -1,45 +1,46 @@
 import { Linkedin } from "lucide-react";
 
+
 const CTASection = () => {
   const teamMembers = [
-    {
-      name: "Mira Smith",
-      role: "Business Consultant",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-      color: "bg-pink-200",
-      featured: true,
-    },
-    {
-      name: "Sarah Johnson",
-      role: "Financial Advisor",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
-      color: "bg-amber-100",
-    },
-    {
-      name: "Michael Chen",
-      role: "Risk Analyst",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-      color: "bg-blue-200",
-    },
-    {
-      name: "David Park",
-      role: "Compliance Officer",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop",
-      color: "bg-green-200",
-    },
-    {
-      name: "James Wilson",
-      role: "Audit Manager",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
-      color: "bg-orange-200",
-    },
-    {
-      name: "Robert Lee",
-      role: "Senior Auditor",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-      color: "bg-cyan-200",
-    },
-  ];
+  //   {
+  //     name: "Mira Smith",
+  //     role: "Business Consultant",
+  //     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+  //     color: "bg-pink-200",
+  //     featured: true,
+  //   },
+  //   {
+  //     name: "Sarah Johnson",
+  //     role: "Financial Advisor",
+  //     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
+  //     color: "bg-amber-100",
+  //   },
+  //   {
+  //     name: "Michael Chen",
+  //     role: "Risk Analyst",
+  //     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+  //     color: "bg-blue-200",
+  //   },
+  //   {
+  //     name: "David Park",
+  //     role: "Compliance Officer",
+  //     image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop",
+  //     color: "bg-green-200",
+  //   },
+  //   {
+  //     name: "James Wilson",
+  //     role: "Audit Manager",
+  //     image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
+  //     color: "bg-orange-200",
+  //   },
+  //   {
+  //     name: "Robert Lee",
+  //     role: "Senior Auditor",
+  //     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+  //     color: "bg-cyan-200",
+  //   },
+   ];
 
   // Avatar images for top (first 3 members)
   const topAvatars = [
@@ -143,9 +144,9 @@ const CTASection = () => {
         </div>
 
         {/* CAPTION */}
-        <p className="text-sm font-medium text-center text-brandNavy/60 dark:text-white/50">
+        {/* <p className="text-sm font-medium text-center text-brandNavy/60 dark:text-white/50">
           Our leader board
-        </p>
+        </p> */}
       </div>
     </section>
   );

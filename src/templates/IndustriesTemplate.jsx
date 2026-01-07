@@ -255,7 +255,7 @@ export default function IndustriesTemplate() {
             <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-bgLight dark:from-bgDark to-transparent opacity-80" />
           </div>
 
-          <div className="container relative z-10 px-8 mx-auto max-w-7xl">
+          <div className="container relative z-10">
             <div className="max-w-4xl">
               <motion.div variants={staggerContainer} initial="initial" animate="animate">
                 <motion.div variants={fadeInUp} className={`inline-flex items-center gap-3 px-6 py-2 mb-10 text-[11px] font-black tracking-[0.4em] uppercase rounded-full bg-brandDark/10 dark:bg-white/10 border border-brandDark/20 dark:border-white/20 ${themePrimary} dark:${themeAccentText} backdrop-blur-md shadow-sm`}>
@@ -303,7 +303,7 @@ export default function IndustriesTemplate() {
               <div className="absolute inset-0 bg-gradient-to-b from-bgLight/40 via-bgLight/90 to-bgLight dark:from-bgDark/40 dark:via-bgDark/90 dark:to-bgDark" />
             </div>
           )}
-          <div className="container relative z-10 max-w-6xl px-6 mx-auto text-center">
+          <div className="container relative z-10 text-center">
             <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-brandPrimary dark:text-brandAccent text-xs mb-6 tracking-[0.4em] uppercase font-black">
               {industry.heroTagline || "Industry Insight"}
             </motion.p>
@@ -316,7 +316,7 @@ export default function IndustriesTemplate() {
 
       {/* ================= CHALLENGES (NARRATIVE) ================= */}
       <section className="relative z-10 py-40 bg-white/20 dark:bg-black/10 backdrop-blur-md border-y border-borderLight dark:border-white/5">
-        <div className="container px-8 mx-auto max-w-7xl">
+        <div className="container">
           {challengeSection ? (
             <div className="grid items-center gap-24 lg:grid-cols-2">
               <motion.div variants={fadeInLeft} initial="initial" whileInView="animate" viewport={{ once: true }}>
@@ -363,7 +363,7 @@ export default function IndustriesTemplate() {
 
       {/* ================= SOLUTIONS (GRID RE-IMAGINED) ================= */}
       <section className="relative py-40 overflow-hidden bg-bgLight dark:bg-bgDark">
-        <div className="container px-8 mx-auto max-w-7xl">
+        <div className="container">
           <div className="flex flex-col justify-between gap-12 mb-24 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <span className={`${themePrimary} dark:${themeAccentText} font-black text-[10px] uppercase tracking-[0.6em] mb-4 block`}>Our Solutions Architecture</span>
@@ -415,7 +415,7 @@ export default function IndustriesTemplate() {
             <div className="absolute inset-0 bg-gradient-to-b from-bgDark/80 via-transparent to-bgDark/80" />
           </div>
 
-          <div className="container relative z-10 px-8 mx-auto max-w-7xl">
+          <div className="container relative z-10">
             {impactData.stats && Array.isArray(impactData.stats) ? (
               <div className="grid gap-12 md:grid-cols-3">
                 {impactData.stats.map((stat, idx) => (
@@ -458,7 +458,7 @@ export default function IndustriesTemplate() {
 
       {/* ================= WHY RISKMAN (ULTRA PREMIUM) ================= */}
       <section className="relative py-40 overflow-hidden bg-surfaceLight dark:bg-surfaceDark/30">
-        <div className="container px-8 mx-auto max-w-7xl">
+        <div className="container">
           <div className="mb-32 text-center">
             <span className={`${themePrimary} dark:${themeAccentText} font-black text-[10px] uppercase tracking-[0.5em] mb-6 block`}>Excellence in Risk Management</span>
             <h2 className="mb-8 text-3xl font-black leading-none tracking-tighter md:text-5xl">{whyRiskMan?.title || "Industry-Leading Trust"}</h2>
@@ -499,7 +499,7 @@ export default function IndustriesTemplate() {
       {trustedBrands && (
         <section className="relative py-32 overflow-hidden bg-bgLight dark:bg-bgDark border-y border-borderLight dark:border-borderDark">
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550704686-9dc484a0b27e?w=1400')] opacity-[0.03] dark:opacity-[0.05] grayscale" />
-          <div className="container relative z-10 px-8 mx-auto max-w-7xl">
+          <div className="container relative z-10">
             <div className="max-w-4xl mb-16">
               <h2 className="mb-6 text-2xl font-black tracking-tight md:text-3xl text-brandDark dark:text-white">{trustedBrands.title}</h2>
               {trustedBrands.description && (
@@ -537,7 +537,7 @@ export default function IndustriesTemplate() {
       {/* ================= FAQ (TWO-COLUMN ELEGANCE) ================= */}
       {frequentlyAskedQuestions && (
         <section className="py-40 bg-bgLight dark:bg-bgDark">
-          <div className="container px-8 mx-auto max-w-7xl">
+        <div className="container">
             <div className="mb-24 text-center">
               <span className={`${themePrimary} dark:${themeAccentText} font-black text-[10px] uppercase tracking-[0.8em] mb-6 block`}>Insights & Intelligence</span>
               <h2 className="text-3xl font-black leading-none tracking-tighter md:text-5xl">Frequently Asked</h2>
@@ -561,7 +561,7 @@ export default function IndustriesTemplate() {
       {/* ================= FINAL CTA (MASTERPIECE) ================= */}
       <section className="relative px-8 py-48 overflow-hidden">
         <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120vw] h-[120vw] bg-${theme.aura}-500/5 blur-[250px] rounded-full z-0 pointer-events-none`} />
-        <div className="container max-w-7xl mx-auto rounded-[5rem] bg-brandDark text-white p-24 md:p-48 text-center relative overflow-hidden shadow-[0_100px_200px_rgba(0,0,0,0.5)] z-10 transition-transform duration-1000 hover:scale-[1.01]">
+        <div className="container rounded-[5rem] bg-brandDark text-white p-24 md:p-48 text-center relative overflow-hidden shadow-[0_100px_200px_rgba(0,0,0,0.5)] z-10 transition-transform duration-1000 hover:scale-[1.01]">
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1557683316-973673baf926?w=1400')] opacity-10 grayscale brightness-200 rotate-[4deg] scale-[1.5]" />
           <div className="relative z-10 w-full max-w-5xl mx-auto">
             <span className={`${themeAccentText} font-black text-[10px] uppercase tracking-[1em] mb-10 block animate-bounce-slow`}>Unparalleled Resilience</span>

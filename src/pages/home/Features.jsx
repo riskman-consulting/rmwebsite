@@ -279,6 +279,7 @@
 
 
 import { TrendingUp, Target, Video, Sparkles } from "lucide-react";
+import featuresTeamImg from "../../assets/images/home/features-team-collaboration.png";
 
 const Features = () => {
   const features = [
@@ -370,14 +371,14 @@ const Features = () => {
               
               {/* Light Mode Image */}
               <img 
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" 
+                src={featuresTeamImg}
                 alt="Team collaboration workspace"
                 className="absolute inset-0 object-cover w-full h-full transition-opacity duration-500 dark:opacity-0"
               />
               
               {/* Dark Mode Image */}
               <img 
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" 
+                src={featuresTeamImg} 
                 alt="Professional audit team"
                 className="absolute inset-0 object-cover w-full h-full transition-opacity duration-500 opacity-0 dark:opacity-100"
               />
