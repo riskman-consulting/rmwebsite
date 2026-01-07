@@ -194,7 +194,7 @@ export default function About() {
         "CA, CS, CMA, CAIIB with 39+ years of experience across credit rating, corporate banking, risk management and financial consulting.",
       image:
         "https://www.riskman.in/wp-content/uploads/2020/09/sukanta-nag.jpg",
-      linkedin: "https://www.linkedin.com/in/ca-sukanta-nag",
+      linkedin: "https://www.linkedin.com/in/ca-sukanta-nag-50221021/",
       fullBio: "CA, CS, CMA, CAIIB and M.Com, with over 39 years of experience spanning Credit Rating, Corporate Management, Risk Management, Financial and Management Consulting. His key strengths are in Understanding the holistic approach to the business and client's need for offering 360-degree solutions and build an effective relationship with them.",
     },
     {
@@ -214,7 +214,7 @@ export default function About() {
         "CA, CIA, CRMA, CISA with global experience in ERM, SOC, cybersecurity, fraud analytics and IT risk.",
       image:
         "https://www.riskman.in/wp-content/uploads/2020/09/arpit-garg.jpg",
-      linkedin: "https://www.linkedin.com/in/arpit-garg",
+      linkedin: "https://www.linkedin.com/in/arpit-garg-88070560/",
       fullBio: "A CA, CIA, CRMA, CISA, ex-EY, Genpact ERC and SNB with 13+ years of experience spanning Risk-based internal audits, he enhances efficiency, control, compliance, and cost savings across diverse sectors.",
     },
   ];
