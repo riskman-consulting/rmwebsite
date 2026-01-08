@@ -64,6 +64,15 @@ export default function Header() {
     document.documentElement.classList.toggle("dark", next === "dark");
   };
 
+  // 🆕 MOBILE THEME TOGGLE - CLOSES MENU AUTOMATICALLY
+  const toggleThemeMobile = () => {
+    const next = theme === "dark" ? "light" : "dark";
+    setTheme(next);
+    localStorage.setItem("theme", next);
+    document.documentElement.classList.toggle("dark", next === "dark");
+    setMobileOpen(false); // Close menu immediately
+  };
+
   /* =======================
      SCROLL
   ======================= */
@@ -138,21 +147,28 @@ export default function Header() {
               : "bg-surfaceLight dark:bg-surfaceDark"
           }
           border-b border-borderLight dark:border-borderDark`}
+        style={{ margin: 0, padding: 0 }}
       >
         <div className="container">
           <div className="flex items-center justify-between h-[70px] lg:h-[80px]">
-
             {/* LOGO */}
             <Link to="/" className="flex items-center">
               <div className="relative w-32 h-8 md:w-36 md:h-9">
+                {/* Light theme logo */}
                 <img
-                  src={
-                    theme === "dark"
-                      ? "/riskman-logo-white.svg"
-                      : "/rm.png"
-                  }
+                  src="/rm.png"
                   alt="RiskMan"
-                  className="absolute inset-0 object-contain w-full h-full transition-opacity duration-300"
+                  className={`absolute inset-0 object-contain w-full h-full transition-opacity duration-300 ${
+                    theme === "dark" ? "opacity-0" : "opacity-100"
+                  }`}
+                />
+                {/* Dark theme logo */}
+                <img
+                  src="/riskman-logo-white.svg"
+                  alt="RiskMan"
+                  className={`absolute inset-0 object-contain w-full h-full transition-opacity duration-300 ${
+                    theme === "dark" ? "opacity-100" : "opacity-0"
+                  }`}
                 />
               </div>
             </Link>
@@ -235,11 +251,12 @@ export default function Header() {
               <button
                 onClick={toggleTheme}
                 className="relative flex items-center justify-center w-10 h-10 transition border rounded-full bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark hover:scale-110"
+                aria-label="Toggle theme"
               >
-                {theme === "dark" ? (
-                  <Sun size={18} className="text-brandAccent" />
+                {theme === "light" ? (
+                  <Sun size={18} className="text-brandNavy" />
                 ) : (
-                  <Moon size={18} className="text-brandNavy" />
+                  <Moon size={18} className="text-brandAccent" />
                 )}
               </button>
 
@@ -253,9 +270,7 @@ export default function Header() {
                   }`}
                 />
                 <Phone size={16} className="relative z-10 text-white" />
-                <span className="relative z-10 text-white">
-                  Get Started
-                </span>
+                <span className="relative z-10 text-white">Get Started</span>
                 <ArrowRight size={14} className="relative z-10 text-white" />
               </Link>
             </div>
@@ -264,6 +279,7 @@ export default function Header() {
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="md:hidden text-brandDark dark:text-brandLight"
+              aria-label="Toggle mobile menu"
             >
               {mobileOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -271,7 +287,6 @@ export default function Header() {
         </div>
       </header>
 
- 
       {/* MOBILE MENU */}
       <AnimatePresence>
         {mobileOpen && (
@@ -283,6 +298,29 @@ export default function Header() {
             className="fixed inset-0 z-[99] bg-bgDark md:hidden pt-[70px] overflow-y-auto"
           >
             <div className="container py-8 space-y-6 text-white">
+              {/* 🌓 THEME TOGGLE - MOBILE (IMPROVED DESIGN) */}
+              <div className="flex justify-center pb-6 mb-6 border-b border-brandAccent/20">
+                <button
+                  onClick={toggleThemeMobile}
+                  className="relative flex items-center justify-center w-16 h-16 transition-all duration-300 rounded-full hover:scale-110 group"
+                  aria-label="Toggle theme"
+                >
+                  {/* Gradient background */}
+                  <div className={`absolute inset-0 rounded-full ${theme === "light" ? gradientBgLight : gradientBgDark} opacity-20 group-hover:opacity-30 transition-opacity`} />
+                  
+                  {/* Border ring */}
+                  <div className="absolute inset-0 transition-colors border-2 rounded-full border-brandAccent/40 group-hover:border-brandAccent/60" />
+                  
+                  {/* Icon */}
+                  {theme === "light" ? (
+                    <Sun size={28} className="relative z-10 text-brandAccent" />
+                  ) : (
+                    <Moon size={28} className="relative z-10 text-brandAccent" />
+                  )}
+                </button>
+              </div>
+
+              {/* NAVIGATION ITEMS */}
               {mainNav.map((item) => {
                 if (item.type === "link") {
                   return (
@@ -296,11 +334,11 @@ export default function Header() {
                     </NavLink>
                   );
                 }
- 
+
                 if (item.type === "mega") {
                   const open = mobileDropdownOpen[item.label];
                   const sections = getMegaData(item.key);
- 
+
                   return (
                     <div key={item.label} className="space-y-3">
                       <div className="flex items-center justify-between">
@@ -318,14 +356,16 @@ export default function Header() {
                               [item.label]: !p[item.label],
                             }))
                           }
+                          aria-label={`Toggle ${item.label} menu`}
                         >
                           <ChevronDown
-                            className={`transition-transform ${open ? "rotate-180" : ""
-                              }`}
+                            className={`transition-transform ${
+                              open ? "rotate-180" : ""
+                            }`}
                           />
                         </button>
                       </div>
- 
+
                       {open && (
                         <div className="pl-4 space-y-4">
                           {sections.map((section, idx) => (
@@ -350,9 +390,23 @@ export default function Header() {
                     </div>
                   );
                 }
- 
+
                 return null;
               })}
+
+              {/* 📞 GET STARTED BUTTON - MOBILE */}
+              <div className="pt-6 mt-6 border-t border-brandAccent/20">
+                <Link
+                  to="/contact"
+                  onClick={() => setMobileOpen(false)}
+                  className="relative flex items-center justify-center gap-2 px-6 py-3 overflow-hidden text-base font-semibold rounded-full shadow-lg"
+                >
+                  <div className={`absolute inset-0 ${gradientBgDark}`} />
+                  <Phone size={18} className="relative z-10 text-white" />
+                  <span className="relative z-10 text-white">Get Started</span>
+                  <ArrowRight size={16} className="relative z-10 text-white" />
+                </Link>
+              </div>
             </div>
           </motion.div>
         )}

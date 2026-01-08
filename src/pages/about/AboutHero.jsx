@@ -153,7 +153,7 @@ const AboutHero = () => {
               <img
                 src={slide.image}
                 alt={slide.title}
-                className="object-cover w-full h-full"
+                className="object-cover object-top w-full h-full"
               />
               {/* Reduced overlay - Image more visible */}
               <div className="absolute inset-0 bg-brandDark/50 dark:bg-brandDark/60" />
