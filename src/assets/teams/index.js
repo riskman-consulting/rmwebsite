@@ -1,67 +1,72 @@
-import ShantaPal from "../../assets/teams/Shanta Pal.png";
-import VishalSharma from "../../assets/teams/Vishal Sharma.png";
-import RohitGupta from "../../assets/teams/Rohit Gupta.png";
-import Yashvi from "../../assets/teams/Yashvi.png";
-import Yugmita from "../../assets/teams/Yugmita.png";
-import Debottam from "../../assets/teams/Debottam.png";
-import NishanAgarwal from "../../assets/teams/Nishan Agarwal.png";
-import Ayush from "../../assets/teams/Ayush.png";
-import MayukhDhar from "../../assets/teams/Mayukh Dhar.png";
-import Kaushik from "../../assets/teams/Kaushik.png";
-import RishbhaJain from "../../assets/teams/Rishbha Jain.jpg";
-import SakshamAhuja from "../../assets/teams/Saksham Ahuja.jpeg";
-import Priyanshibisht from "../../assets/teams/Priyanshibisht.jpg";
-import JaiDeep from "../../assets/teams/JaiDeep.png";
-import monika from "../../assets/teams/monika.jpeg";
-import Palak from "../../assets/teams/Palak.jpeg";
-import Pranshul from "../../assets/teams/Pranshul.jpg";
-import priyanshu from "../../assets/teams/priyanshu.jpeg";
-import sidhi from "../../assets/teams/sidhi.jpeg";
-import Sakshi from "../../assets/teams/sakshi.jpeg";
-import Tanisha from "../../assets/teams/Tanisha.jpeg";
-import Simran from "../../assets/teams/Simran.jpeg";
-import Tushar from "../../assets/teams/Tushar.jpg";
-import VanshGarg from "../../assets/teams/Vansh Garg.jpeg";
-import VinayakPoddar from "../../assets/teams/Vinayak Poddar.png";
-import Artika from "../../assets/teams/Artika.jpg";
-import Angel from "../../assets/teams/Angel.jpeg";
-import AnirbanBiswas from "../../assets/teams/Anirban Biswas.png";
-import Vanshika from "../../assets/teams/Vanshika.jpeg";
-import Kartik from "../../assets/teams/kartik.jpg";
-import Pawan from "./pawan.jpg";
+// NOTE:
+// All images are in the SAME folder as this index.js
+// Paths are relative (./filename.ext)
+// Filenames & extensions exactly match the folder
 
+import Angel from "./Angel.jpeg";
+import AnirbanBiswas from "./Anirban Biswas.png";
+import Artika from "./Artika.jpg";
+import Ayush from "./Ayush.png";
+import Debottam from "./Debottam.png";
+import JaiDeep from "./JaiDeep.png";
+import Kaushik from "./Kaushik.png";
+import Kartik from "./kartik.jpg";
+import MayukhDhar from "./Mayukh Dhar.png";
+import monika from "./monika.jpeg";
+import NishanAgarwal from "./Nishan Agarwal.png";
+import Palak from "./Palak.jpeg";
+import Pawan from "./pawan.jpg";
+import Pranshul from "./pranshul.png";
+import priyanshu from "./priyanshu.jpeg";
+import Priyanshibisht from "./priyanshibhist.png";
+import RishbhaJain from "./Rishbha Jain.jpg";
+import RohitGupta from "./Rohit Gupta.png";
+import SakshamAhuja from "./Saksham Ahuja.jpeg";
+import Sakshi from "./sakshi.jpeg";
+import ShantaPal from "./Shanta Pal.png";
+import sidhi from "./sidhi.jpeg";
+import Simran from "./Simran.jpeg";
+import Tanisha from "./Tanisha.jpeg";
+import Tushar from "./Tushar.jpg";
+import VanshGarg from "./Vansh Garg.jpeg";
+import Vanshika from "./Vanshika.jpeg";
+import VinayakPoddar from "./Vinayak Poddar.png";
+import VishalSharma from "./Vishal Sharma.png";
+import Yashvi from "./Yashvi.png";
+import Yugmita from "./Yugmita.png";
 
 export const teamsImages = {
-    ShantaPal,
-    VishalSharma,
-    RohitGupta,
-    Yashvi,
-    Yugmita,    
-    Debottam,
-    NishanAgarwal,
-    Ayush,
-    MayukhDhar,
-    Kaushik,
-    RishbhaJain,
-    SakshamAhuja,
-    Priyanshibisht,
-    JaiDeep,
-    monika,
-    Palak,
-    Pranshul,
-    priyanshu,
-    sidhi,
-    Sakshi,
-    Tanisha,
-    Simran,
-    Tushar,
-    VanshGarg,
-    VinayakPoddar,
-    Artika,
-    Angel,
-    AnirbanBiswas,
-    Vanshika,
-    Kartik,
-    Pawan
+  Angel,
+  AnirbanBiswas,
+  Artika,
+  Ayush,
+  Debottam,
+  JaiDeep,
+  Kaushik,
+  Kartik,
+  MayukhDhar,
+  monika,
+  NishanAgarwal,
+  Palak,
+  Pawan,
+  Pranshul,
+  priyanshu,
+  Priyanshibisht,
+  RishbhaJain,
+  RohitGupta,
+  SakshamAhuja,
+  Sakshi,
+  ShantaPal,
+  sidhi,
+  Simran,
+  Tanisha,
+  Tushar,
+  VanshGarg,
+  Vanshika,
+  VinayakPoddar,
+  VishalSharma,
+  Yashvi,
+  Yugmita,
+};
 
-}
+

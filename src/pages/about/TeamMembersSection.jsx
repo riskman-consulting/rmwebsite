@@ -1,38 +1,5 @@
 import React from "react";
 import { Linkedin } from "lucide-react";
-
-/* ========= TEAM IMAGES ========= */
-import ShantaPal from "../../assets/teams/Shanta Pal.png";
-import VishalSharma from "../../assets/teams/Vishal Sharma.png";
-import RohitGupta from "../../assets/teams/Rohit Gupta.png";
-import Yashvi from "../../assets/teams/Yashvi.png";
-import Yugmita from "../../assets/teams/Yugmita.png";
-import Debottam from "../../assets/teams/Debottam.png";
-import NishanAgarwal from "../../assets/teams/Nishan Agarwal.png";
-import Ayush from "../../assets/teams/Ayush.png";
-import MayukhDhar from "../../assets/teams/Mayukh Dhar.png";
-import Kaushik from "../../assets/teams/Kaushik.png";
-import RishbhaJain from "../../assets/teams/Rishbha Jain.jpg";
-import SakshamAhuja from "../../assets/teams/Saksham Ahuja.jpeg";
-import Priyanshibhist from "../../assets/teams/priyanshibhist.png";
-import JaiDeep from "../../assets/teams/JaiDeep.png";
-import monika from "../../assets/teams/monika.jpeg";
-import Palak from "../../assets/teams/Palak.jpeg";
-import pranshul from "../../assets/teams/Pranshul.png";
-import priyanshu from "../../assets/teams/priyanshu.jpeg";
-import sidhi from "../../assets/teams/sidhi.jpeg";
-import Sakshi from "../../assets/teams/sakshi.jpeg";
-import Tanisha from "../../assets/teams/Tanisha.jpeg";
-import Simran from "../../assets/teams/Simran.jpeg";
-import Tushar from "../../assets/teams/Tushar.jpg";
-import VanshGarg from "../../assets/teams/Vansh Garg.jpeg";
-import VinayakPoddar from "../../assets/teams/Vinayak Poddar.png";
-import Artika from "../../assets/teams/Artika.jpg";
-import Angel from "../../assets/teams/Angel.jpeg";
-import AnirbanBiswas from "../../assets/teams/Anirban Biswas.png";
-import Vanshika from "../../assets/teams/Vanshika.jpeg";
-import Kartik from "../../assets/teams/kartik.png";
-import Pawan from "../../assets/teams/Pawan.png";
 import { teamsImages } from "../../assets/teams";
 
 
@@ -60,39 +27,39 @@ function injectLogo(members) {
 
 const RiskManTeams = () => {
   const allMembers = [
-    { id: 1, image: ShantaPal, linkedin: "https://linkedin.com/in/example" },
-    { id: 2, image: VishalSharma },
-    { id: 3, image: RohitGupta },
-    { id: 4, image: Yashvi },
-    { id: 5, image: Yugmita },
-    { id: 6, image: Debottam },
-    { id: 7, image: NishanAgarwal },
-    { id: 8, image: Ayush },
-    { id: 9, image: MayukhDhar },
-    { id: 10, image: Kaushik },
-    { id: 11, image: monika },
-    { id: 12, image: RishbhaJain },
-    { id: 13, image: SakshamAhuja },
-    { id: 14, image: Priyanshibhist },
-    { id: 15, image: Palak },
-    { id: 16, image: VanshGarg },
-    { id: 17, image: Artika },
-    { id: 18, image: sidhi },
-    { id: 19, image: Sakshi },
-    { id: 20, image: priyanshu },
-    { id: 21, image: Tanisha },
-    { id: 22, image: pranshul, linkedin: "https://linkedin.com/in/example" },
-    { id: 23, image: Angel },
-    { id: 24, image: VinayakPoddar },
-    { id: 25, image: Tushar },
-    { id: 26, image: JaiDeep },
-    { id: 27, image: AnirbanBiswas },
-    { id: 28, image: Vanshika },
-    { id: 29, image: Kartik },
-    { id: 30, image: Pawan },
-    {id:31, image:Simran},
+    { id: 1, image: teamsImages.ShantaPal, linkedin: "https://linkedin.com/in/example" },
+    { id: 2, image: teamsImages.VishalSharma },
+    { id: 3, image: teamsImages.RohitGupta },
+    { id: 4, image: teamsImages.Yashvi },
+    { id: 5, image: teamsImages.Yugmita },
+    { id: 6, image: teamsImages.Debottam },
+    { id: 7, image: teamsImages.NishanAgarwal },
+    { id: 8, image: teamsImages.Ayush },
+    { id: 9, image: teamsImages.MayukhDhar },
+    { id: 10, image: teamsImages.Kaushik },
+    { id: 11, image: teamsImages.RishbhaJain },
+    { id: 12, image: teamsImages.SakshamAhuja },
+    { id: 13, image: teamsImages.Priyanshibisht },
+    { id: 14, image: teamsImages.JaiDeep },
+    { id: 15, image: teamsImages.Palak },
+    { id: 16, image: teamsImages.VanshGarg  },
+    { id: 17, image: teamsImages.Artika },
+    { id: 18, image: teamsImages.sidhi },
+    { id: 19, image: teamsImages.Sakshi },
+    { id: 20, image: teamsImages.priyanshu },
+    { id: 21, image: teamsImages.monika },
+    { id: 22, image: teamsImages.Pranshul, linkedin: "https://linkedin.com/in/example" },
+    { id: 23, image: teamsImages.Angel },
+    { id: 24, image: teamsImages.VinayakPoddar },
+    { id: 25, image: teamsImages.Tushar },
+    { id: 26, image: teamsImages.JaiDeep },
+    { id: 27, image: teamsImages.AnirbanBiswas },
+    { id: 28, image: teamsImages.Vanshika },
+    { id: 29, image: teamsImages.Kartik },
+    { id: 30, image: teamsImages.Pawan },
+    {id:31, image:teamsImages.Simran},
   ];
-
+ 
   const gridItems = injectLogo(allMembers);
 
   return (
