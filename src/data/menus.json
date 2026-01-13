@@ -12,9 +12,11 @@
       "title": "Leadership",
       "items": [
         { "label": "Co-founding Partners", "path": "/about#co-founders" },
+        { "label": "Alliance Partners", "path": "/about#alliance-partners" },
         { "label": "Service Leaders", "path": "/about#service-leaders" },
-        { "label": "Riskman Teams", "path": "/about#riskman-teams" },
-        { "label": "Alliance Partners", "path": "/about#alliance-partners" }
+        { "label": "RiskMan Team", "path": "/about#riskman-teams" },
+        {"label":"Events","path":"/about/#events"},
+        {"label":"Careers","path":"/about/careers"}
       ]
     }
   ],

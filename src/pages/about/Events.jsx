@@ -183,7 +183,7 @@ export default function Events() {
 
   return (
     <>
-      <section className="relative py-20 transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark">
+      <section id="events" className="relative py-20 transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark">
         <div className="container">
           {/* Header */}
           <motion.div

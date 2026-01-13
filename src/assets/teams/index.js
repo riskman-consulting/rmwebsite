@@ -6,6 +6,7 @@
 import Angel from "./Angel.jpeg";
 import AnirbanBiswas from "./Anirban Biswas.png";
 import Artika from "./Artika.jpg";
+import Pranshul from "./pranshul.png";
 import Ayush from "./Ayush.png";
 import Debottam from "./Debottam.png";
 import JaiDeep from "./JaiDeep.png";
@@ -16,7 +17,6 @@ import monika from "./monika.jpeg";
 import NishanAgarwal from "./Nishan Agarwal.png";
 import Palak from "./Palak.jpeg";
 import Pawan from "./pawan.png";
-import Pranshul from "./pranshul.png";
 import priyanshu from "./priyanshu.jpeg";
 import Priyanshibisht from "./priyanshibhist.png";
 import RishbhaJain from "./Rishbha Jain.jpg";
@@ -34,8 +34,14 @@ import VinayakPoddar from "./Vinayak Poddar.png";
 import VishalSharma from "./Vishal Sharma.png";
 import Yashvi from "./Yashvi.png";
 import Yugmita from "./Yugmita.png";
+import Jay from "./jay.png"
+import Arif from "./arif.png"
+import Harsh from "./Harsh.png"
+import Kiran from "./kiran.png"
+import Vipul from "./vipul.png"
 
 export const teamsImages = {
+  Pranshul,
   Angel,
   AnirbanBiswas,
   Artika,
@@ -49,7 +55,6 @@ export const teamsImages = {
   NishanAgarwal,
   Palak,
   Pawan,
-  Pranshul,
   priyanshu,
   Priyanshibisht,
   RishbhaJain,
@@ -67,6 +72,11 @@ export const teamsImages = {
   VishalSharma,
   Yashvi,
   Yugmita,
+  Jay,
+  Arif,
+  Harsh,
+  Kiran,
+  Vipul
 };
 
 

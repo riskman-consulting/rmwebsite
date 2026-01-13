@@ -27,7 +27,9 @@ function injectLogo(members) {
 
 const RiskManTeams = () => {
   const allMembers = [
-    { id: 1, image: teamsImages.ShantaPal, linkedin: "https://linkedin.com/in/example" },
+    { id: 1, image: teamsImages.ShantaPal, linkedin: "https://linkedin.com/in/example"},
+    { id: 22, image: teamsImages.Pranshul, linkedin: "https://linkedin.com/in/example" },
+
     { id: 2, image: teamsImages.VishalSharma },
     { id: 3, image: teamsImages.RohitGupta },
     { id: 4, image: teamsImages.Yashvi },
@@ -48,7 +50,6 @@ const RiskManTeams = () => {
     { id: 19, image: teamsImages.Sakshi },
     { id: 20, image: teamsImages.priyanshu },
     { id: 21, image: teamsImages.monika },
-    { id: 22, image: teamsImages.Pranshul, linkedin: "https://linkedin.com/in/example" },
     { id: 23, image: teamsImages.Angel },
     { id: 24, image: teamsImages.VinayakPoddar },
     { id: 25, image: teamsImages.Tushar },
@@ -58,6 +59,11 @@ const RiskManTeams = () => {
     { id: 29, image: teamsImages.Kartik },
     { id: 30, image: teamsImages.Pawan },
     {id:31, image:teamsImages.Simran},
+    {id:32,image:teamsImages.Jay},
+    {id:32,image:teamsImages.Arif},
+    {id:33,image:teamsImages.Harsh},
+    {id:34,image:teamsImages.Kiran},
+    {id:35,image:teamsImages.Vipul}
   ];
  
   const gridItems = injectLogo(allMembers);
@@ -73,9 +79,10 @@ const RiskManTeams = () => {
           <div
             className="
               grid gap-4
-              sm:[grid-template-columns:repeat(6,1fr)]
-              md:[grid-template-columns:repeat(8,1fr)]
-              lg:[grid-template-columns:repeat(10,1fr)]
+              grid-cols-6
+              sm:grid-cols-6
+              md:grid-cols-8
+              lg:grid-cols-10
             "
           >
             {gridItems.map((item, idx) =>
