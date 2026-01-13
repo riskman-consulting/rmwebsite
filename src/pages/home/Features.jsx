@@ -380,7 +380,7 @@ const Features = () => {
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30 dark:to-black/50"></div>
 
               {/* Stats Card - Floating Animation */}
-              <div
+              {/* <div
                 className="absolute p-5 border shadow-xl top-8 right-8 bg-white/95 backdrop-blur-sm rounded-2xl dark:bg-gray-900/95 border-gray-200/50 dark:border-gray-700/50 animate-float"
                 style={{
                   animation: 'float 6s ease-in-out infinite'
@@ -391,10 +391,10 @@ const Features = () => {
                   Join 8.5M+ professionals and
                   <br />teams using our platform.
                 </p>
-              </div>
+              </div> */}
 
               {/* Calendar Card - Floating Animation (Delayed) */}
-              <div
+              {/* <div
                 className="absolute p-4 shadow-xl bottom-8 left-8 bg-white/95 backdrop-blur-sm rounded-2xl dark:bg-gray-900/95 border border-gray-200/50 dark:border-gray-700/50 animate-float-delayed max-w-[280px]"
                 style={{
                   animation: 'float 6s ease-in-out infinite 3s'
@@ -424,7 +424,7 @@ const Features = () => {
                     </div>
                   ))}
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 

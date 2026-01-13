@@ -14,11 +14,11 @@ export default function LeadershipSection({ setSelectedLeader }) {
       name: "Sukanta Nag",
       title: "Founder & Managing Partner",
       bio:
-        "CA, CS, CMA, CAIIB with 39+ years of experience across credit rating, corporate banking, risk management and financial consulting.",
+        "CA, CS, CMA, CAIIB with 41+ years of experience across credit rating, corporate banking, risk management and financial consulting.",
       image:
         "https://www.riskman.in/wp-content/uploads/2020/09/sukanta-nag.jpg",
-      linkedin: "#",
-      fullBio: "CA, CS, CMA, CAIIB and M.Com, with over 39 years of experience spanning Credit Rating, Corporate Management, Risk Management, Financial and Management Consulting. His key strengths are in Understanding the holistic approach to the business and client's need for offering 360-degree solutions and build an effective relationship with them.",
+      linkedin: "https://www.linkedin.com/in/ca-sukanta-nag-50221021",
+      fullBio: "CA, CS, CMA, CAIIB and M.Com, with over 41 years of experience spanning Credit Rating, Corporate Banking, Risk Management and Financial & Management Consulting. His key strengths are in understanding the holistic approach of the business and client's need for offering 360-degree solutions and build a meaningful relationship with them.",
     },
     {
       name: "Prasen Pal",
@@ -27,8 +27,8 @@ export default function LeadershipSection({ setSelectedLeader }) {
         "Ex-Deloitte and Genpact professional with 16+ years in internal audit, ESG, taxation, AI and RPA practices.",
       image:
         "https://www.riskman.in/wp-content/uploads/2020/09/prasen-pal.jpg",
-      linkedin: "#",
-      fullBio: "A CA, ex-Deloitte ERS and Genpact ERC with 16+ years of experience spanning Internal Audits, ESG, Direct and Indirect taxation including GST, Process automation and RPA, adoption of AI. He is instrumental in managing pre-investment, post-investment, and other advisory and outsourced services.",
+      linkedin: "https://www.linkedin.com/in/prasen-pal",
+      fullBio: "A CA, Sustainability and Climate Risk (SCR) Professional (GARP), Lean Six Sigma Green Belt (Genpact), RPA Business Analyst, Diploma in RPA Implementation Methodology,  Certified in Sustainability and BRSR (ICAI), Certified in GST (ICAI), ex-Deloitte ERS, EY-GDS, and Genpact ERC with 17+ years of experience spanning Risk Management, Internal Audits, Sustainability and ESG, Process mining and engineering, Process automation and RPA, domestic Tax Laws, and adoption of AI. He is instrumental in managing various advisory and outsourced services with multiple corporate houses.",
     },
     {
       name: "Arpit Garg",
@@ -37,7 +37,7 @@ export default function LeadershipSection({ setSelectedLeader }) {
         "CA, CIA, CRMA, CISA with global experience in ERM, SOC, cybersecurity, fraud analytics and IT risk.",
       image:
         "https://www.riskman.in/wp-content/uploads/2020/09/arpit-garg.jpg",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/arpit-garg-88070560",
       fullBio: "A CA, CIA, CRMA, CISA, ex-EY, Genpact ERC and SNB with 13+ years of experience spanning Risk-based internal audits, he enhances efficiency, control, compliance, and cost savings across diverse sectors.",
     },
   ];

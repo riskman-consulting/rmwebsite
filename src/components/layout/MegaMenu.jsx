@@ -13,13 +13,6 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-/* Navy and Gold gradients from logo colors */
-// const gradientBgLight =
-//   "bg-gradient-to-r from-brandPrimary via-brandNavy to-brandDark";
-
-// const gradientBgDark =
-//   "bg-gradient-to-r from-brandAccent via-brandGold to-yellow-500";
-
 /* Animations */
 const containerVariants = {
   initial: { opacity: 0, y: -8, scale: 0.96 },
@@ -92,7 +85,7 @@ export default function MegaMenu({
   return (
     <motion.div
       key="mega"
-      className={`absolute ${alignmentClass} mt-2 max-w-[95vw] z-50`}
+      className={`fixed ${alignmentClass} mt-2 max-w-[95vw] z-50`}
       style={{
         width:
           sections.length === 1
@@ -100,6 +93,7 @@ export default function MegaMenu({
             : sections.length === 2
             ? "560px"
             : "860px",
+        top: "72px",
       }}
       variants={containerVariants}
       initial="initial"
@@ -109,7 +103,7 @@ export default function MegaMenu({
       onMouseLeave={onMouseLeave}
     >
       {/* Container */}
-      <div className="p-6 border shadow-2xl rounded-2xl -translate-x-72 bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark">
+      <div className="p-6 shadow-2xl rounded-2xl bg-surfaceLight dark:bg-surfaceDark">
         <div
           className="grid gap-6"
           style={{

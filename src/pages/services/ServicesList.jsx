@@ -450,7 +450,7 @@ const HeroSection = () => {
         <img
           src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&h=1080&fit=crop&q=80"
           alt="Professional Services"
-          className="object-cover w-full h-full"
+          className="object-cover object-top w-full h-full"
         />
       </motion.div>
 
@@ -466,7 +466,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-xs font-bold tracking-wider uppercase border rounded-full bg-brandAccent/10 border-brandAccent/30 text-brandAccent backdrop-blur-sm"
         >
-          <span className="w-2 h-2 rounded-full bg-brandAccent animate-pulse" />
+          <span className="w-2 h-2 rounded-full  bg-brandAccent animate-pulse" />
           RiskMan Services
         </motion.div>
 
