@@ -21,6 +21,7 @@ import professionalExcellenceImg from "../../assets/images/professional_excellen
 import propreneurialImg from "../../assets/images/propreneurial_mindset_presentation.png";
 import longtermRelationshipsImg from "../../assets/images/longterm_relationships_handshake.png";
 import Testimonials from "./Testimonials";
+import MainEvent from "../../temp/MainEvent";
 
 
 
@@ -91,7 +92,8 @@ export default function About() {
       <TeamMembersSection />
 
       {/* ================= EVENTS ================= */}
-      <Events />
+      {/* <Events /> */}
+      <MainEvent/>
 
       {/* ================= FAQ ================= */}
       <FAQSection />

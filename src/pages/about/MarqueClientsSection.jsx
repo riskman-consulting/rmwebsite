@@ -8,7 +8,7 @@ const fadeInUp = {
   transition: { duration: 0.6 },
 };
 
-export default function MarqueeClientsSection() {
+export default function MarqueeClientsSection({title="Our Clients",bgStyle="bg-surfaceLight dark:bg-surfaceDark"}) {
 const clients = [
     { name: "Moder", logo: "https://images.squarespace-cdn.com/content/v1/628d18ddf477d1092801dcb2/ce6bfc6d-46cf-43a4-9f45-dce56bd7b2c0/Moder_Logotype_Soft-Black_RGB.png" },
     { name: "Zomato", logo: "https://www.boardinfinity.com/blog/content/images/2024/09/1712377685818.png" },
@@ -37,7 +37,7 @@ const clients = [
  
 
   return (
-    <section className="relative overflow-hidden py-14 bg-surfaceLight dark:bg-surfaceDark md:py-20">
+    <section className={`relative overflow-hidden py-14 ${bgStyle} md:py-20`}>
         <div className="container">
           <motion.h2
             variants={fadeInUp}
@@ -46,9 +46,9 @@ const clients = [
             viewport={{ once: true }}
             className="mb-12 text-3xl font-bold text-start md:text-4xl"
           >
-            Our
+            {title.split(" ")[0]+" "}
             {/* <br /> */}
-            <span className="text-brandPrimary dark:text-brandAccent">Clients</span>
+            <span className="text-brandPrimary dark:text-brandAccent">{title.split(" ")[1]}</span>
           </motion.h2>
  
           {/* Marquee Rows */}

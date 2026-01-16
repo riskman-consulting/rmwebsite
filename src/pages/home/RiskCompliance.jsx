@@ -5,7 +5,7 @@ import {
   Settings,
 } from "lucide-react";
 import riskComplianceImage from '../../assets/images/home/risk-compliance.png';
-
+ 
 // 4. Risk & Compliance Section
 const RiskCompliance = () => {
   const services = [
@@ -38,7 +38,7 @@ const RiskCompliance = () => {
       icon: Settings,
     },
   ];
-
+ 
   return (
     <section
       className="transition-colors duration-300 section-padding bg-bgLight dark:bg-bgDark"
@@ -47,7 +47,7 @@ const RiskCompliance = () => {
       {/* <div className="w-full max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-14"> */}
       <div className="container">
         <div className="grid items-start gap-12 lg:grid-cols-2">
-
+ 
           {/* LEFT – IMAGE */}
           <div className="relative">
             <img
@@ -56,13 +56,13 @@ const RiskCompliance = () => {
               className="w-full h-full min-h-[520px] lg:min-h-[650px] rounded-3xl object-cover shadow-2xl ring-1 ring-borderLight dark:ring-borderDark"
             />
           </div>
-
+ 
           {/* RIGHT – CONTENT */}
           <div>
             <p className="mb-4 text-sm font-semibold tracking-wider uppercase text-brandNavy dark:text-brandAccent">
               Key Risk & Compliance
             </p>
-
+ 
             <h2 className="mb-6 text-3xl font-bold leading-tight md:text-4xl text-brandDark dark:text-white">
               Managing Risk,
               <br />
@@ -70,18 +70,18 @@ const RiskCompliance = () => {
               <br />
               Compliance
             </h2>
-
+ 
             <p className="mb-12 text-base leading-relaxed text-brandNavy dark:text-white/70">
               Explore tailored risk and compliance solutions that safeguard
               operations, meet regulations, and strengthen enterprise-wide
               accountability and control.
             </p>
-
+ 
             {/* SERVICES GRID */}
             <div className="grid gap-6 md:grid-cols-2">
               {services.map((service) => {
                 const Icon = service.icon;
-
+ 
                 return (
                   <div
                     key={service.id}
@@ -96,11 +96,11 @@ const RiskCompliance = () => {
                     >
                       <Icon size={28} />
                     </div>
-
+ 
                     <h3 className="mb-3 text-xl font-semibold transition-colors duration-300 text-brandDark dark:text-white">
                       {service.title}
                     </h3>
-
+ 
                     <p className="text-sm leading-relaxed transition-colors duration-300 text-brandNavy dark:text-white/70">
                       {service.description}
                     </p>
@@ -114,5 +114,5 @@ const RiskCompliance = () => {
     </section>
   );
 };
-
+ 
 export default RiskCompliance;

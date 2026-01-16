@@ -20,6 +20,7 @@ import './index.css'
 import { Toaster } from 'react-hot-toast'
 import ScrollToTop from './components/common/ScrollToTop'
 import ThemeToggle from './components/common/ThemeToggle'
+import Events from './pages/about/Events'
 
 function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
@@ -51,7 +52,8 @@ function App() {
           <Route path="/insights/:slug" element={<BlogSingle />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
-          <Route path="/about/careers" element={<Careers />} />
+          <Route path="/events" element={<Events/>}/>
+          <Route path="/careers" element={<Careers />} />
           <Route path="/blog" element={<Navigate to="/blogs" />} />
           <Route path="/blogs" element={<BlogList />} />
           <Route path="/blog/:slug" element={<BlogSingle />} />

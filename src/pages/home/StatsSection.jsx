@@ -585,7 +585,7 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden transition-colors duration-300 section-padding bg-bgLight dark:bg-bgDark">
+    <section className="relative w-full overflow-hidden transition-colors duration-300 px-3 py-10 bg-bgLight dark:bg-bgDark">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 opacity-30 dark:opacity-20">
         <div className="absolute top-0 right-0 rounded-full w-96 h-96 bg-brandGold/10 blur-3xl"></div>

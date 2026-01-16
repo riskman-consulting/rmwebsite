@@ -69,7 +69,7 @@ const RiskManTeams = () => {
   const gridItems = injectLogo(allMembers);
 
   return (
-    <section id="riskman-teams" className="py-20 bg-slate-50 dark:bg-surfaceDark">
+    <section id="riskman-teams" className="py-20 bg-surfaceLight dark:bg-surfaceDark">
       <div className="container">
         <h1 className="mb-12 text-4xl font-bold text-brandPrimary dark:text-brandAccent">
           Meet the RiskMan Team

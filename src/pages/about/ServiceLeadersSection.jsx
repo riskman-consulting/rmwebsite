@@ -49,22 +49,22 @@ function AnimatedCounter({ end, duration = 2, suffix = "" }) {
 
 export default function ServiceLeadersSection({ setSelectedLeader }) {
   const serviceLeaders = [
-    {
-      name: "Manish Agarwal",
-      title: "Service Leader",
-      credentials: "Master's in Information Application, CISA, CISM, AWS Solutions Architect, ITIL v4",
-      bio: "Professional with 20+ years of experience across the domain of Information Security. He has played notable roles at IDFC FIRST Bank and Airtel.",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop",
-      expertise: ["Information Security", "BCP", "IT Security Strategy"],
-    },
-    {
-      name: "Amitabh Jain",
-      title: "Service Leader",
-      credentials: "Seasoned Chartered Accountant with 30+ years of experience",
-      bio: "Expert in Financial Services and Business Enterprises. As COO and CFO in Ed-Tech & Vocational Training sector, he excelled in corporate governance, financial services, and risk governance.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
-      expertise: ["Corporate Governance", "Financial Services", "PE Capital"],
-    },
+    // {
+    //   name: "Manish Agarwal",
+    //   title: "Service Leader",
+    //   credentials: "Master's in Information Application, CISA, CISM, AWS Solutions Architect, ITIL v4",
+    //   bio: "Professional with 20+ years of experience across the domain of Information Security. He has played notable roles at IDFC FIRST Bank and Airtel.",
+    //   image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop",
+    //   expertise: ["Information Security", "BCP", "IT Security Strategy"],
+    // },
+    // {
+    //   name: "Amitabh Jain",
+    //   title: "Service Leader",
+    //   credentials: "Seasoned Chartered Accountant with 30+ years of experience",
+    //   bio: "Expert in Financial Services and Business Enterprises. As COO and CFO in Ed-Tech & Vocational Training sector, he excelled in corporate governance, financial services, and risk governance.",
+    //   image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
+    //   expertise: ["Corporate Governance", "Financial Services", "PE Capital"],
+    // },
     {
       name: "Jitendra Khimavat",
       title: "Service Leader",

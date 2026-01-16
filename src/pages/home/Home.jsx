@@ -18,6 +18,7 @@ import FAQSection from "./FAQSection";
 import BlogSection from "./BlogSection";
 import AuditService from "./AuditService";
 import CTASection from "./CTASections";
+import ClientSection from "./ClientsSection";
 
 export default function Home() {
   return (
@@ -61,6 +62,9 @@ export default function Home() {
         <ValueDifferentiators />
 
         <BlogSection/>
+
+        {/* Clients Section */}
+        <ClientSection/>
 
         {/* WHY RISKMAN */}
         <WhyRiskman />

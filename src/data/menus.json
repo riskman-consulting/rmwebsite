@@ -1,22 +1,21 @@
 {
   "mainNav": [
+    { "label": "About", "type": "mega", "key": "about", "path": "/about" },
      { "label": "Services", "type": "mega", "key": "services", "path": "/services" },
      { "label": "Industries", "type": "mega", "key": "industries", "path": "/industries" },
-     {"label":"Solutions","type":"link","key":"solutions","path":"/solutions"},
-    { "label": "About", "type": "mega", "key": "about", "path": "/about" },
-    { "label": "Insights", "type": "mega", "key": "insights", "path": "/insights" }
+     {"label":"Tech Solutions","type":"link","key":"solutions","path":"/solutions"},
+    { "label": "Content Hub", "type": "link", "key": "insights", "path": "/insights" },
+    {"label":"Event","type":"link","key":"events","path":"/events"},
+    {"label":"Careers","type":"link","key":"careers","path":"/careers"}
   ],
 
   "aboutMegaMenu": [
     {
-      "title": "Leadership",
       "items": [
         { "label": "Co-founding Partners", "path": "/about#co-founders" },
         { "label": "Alliance Partners", "path": "/about#alliance-partners" },
         { "label": "Service Leaders", "path": "/about#service-leaders" },
-        { "label": "RiskMan Team", "path": "/about#riskman-teams" },
-        {"label":"Events","path":"/about/#events"},
-        {"label":"Careers","path":"/about/careers"}
+        { "label": "RiskMan Team", "path": "/about#riskman-teams" }
       ]
     }
   ],
@@ -84,9 +83,7 @@
     {
       "title": "Insights & Resources",
       "items": [
-        { "label": "Blog", "path": "/blog" },
-        { "label": "Privacy Policy", "path": "/privacy-policy" },
-        { "label": "Terms & Conditions", "path": "/terms" }
+        { "label": "Blog", "path": "/blog" }
       ]
     }
   ]

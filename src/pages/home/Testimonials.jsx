@@ -294,7 +294,7 @@ const Testimonials = () => {
   const current = testimonials[currentIndex];
 
   return (
-    <section className="relative w-full section-padding bg-bgLight dark:bg-bgDark">
+    <section className="relative w-full px-3 py-8 bg-bgLight dark:bg-bgDark">
       <div className="container px-5 mx-auto sm:px-8 lg:px-12 max-w-7xl">
 
         {/* Layout Grid */}

@@ -688,202 +688,313 @@
 // }
 
 
+ 
 import { useState } from "react";
+ 
 import { Zap, ShoppingCart, HeartPulse, Factory, Monitor, Home, ArrowRight } from "lucide-react";
-
+ 
 const industriesData = [
+ 
   {
+ 
     id: "energy",
+ 
     title: "Energy & Utilities",
+ 
     description: "Specialized audit and assurance services ensuring regulatory compliance and operational resilience for global energy enterprises.",
+ 
     icon: "zap",
+ 
     image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=1000&fit=crop",
+ 
     tag: "ENERGY SECTOR",
+ 
     path: "/industries/energy-utilities"
+ 
   },
+ 
   {
+ 
     id: "retail",
+ 
     title: "Retail & Consumer",
+ 
     description: "Strengthening governance, internal controls, and financial transparency across complex retail and consumer ecosystems.",
+ 
     icon: "cart",
+ 
     image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=1000&fit=crop",
+ 
     tag: "RETAIL INDUSTRY",
+ 
     path: "/industries/retail-consumer"
+ 
   },
+ 
   {
+ 
     id: "healthcare",
+ 
     title: "Healthcare",
+ 
     description: "Supporting healthcare organizations with HIPAA compliance, clinical risk, and performance assurance.",
+ 
     icon: "heart",
+ 
     image: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&h=1000&fit=crop",
+ 
     tag: "HEALTHCARE SECTOR",
+ 
     path: "/industries/healthcare"
+ 
   },
+ 
   {
+ 
     id: "manufacturing",
+ 
     title: "Manufacturing",
+ 
     description: "Enhancing efficiency, supply chain controls, and environmental compliance across industrial manufacturing sectors.",
+ 
     icon: "factory",
+ 
     image: "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&h=1000&fit=crop",
+ 
     tag: "MANUFACTURING",
+ 
     path: "/industries/manufacturing"
+ 
   },
+ 
   {
+ 
     id: "technology",
+ 
     title: "Technology",
+ 
     description: "Helping fast-growth technology companies manage cybersecurity risk, global compliance, and digital scalability.",
+ 
     icon: "monitor",
+ 
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=1000&fit=crop",
+ 
     tag: "TECH INDUSTRY",
+ 
     path: "/industries/it-consulting"
+ 
   },
+ 
   {
+ 
     id: "banking",
+ 
     title: "Banking & Insurance",
+ 
     description: "Foundational audit and advisory solutions tailored for the high-stakes banking and financial insurance sectors.",
+ 
     icon: "home",
+ 
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=1000&fit=crop",
+ 
     tag: "FINANCIAL SERVICES",
+ 
     path: "/industries/banking-insurance"
+ 
   },
+ 
 ];
-
+ 
 const IconComponent = ({ type, className }) => {
+ 
   switch (type) {
+ 
     case 'zap': return <Zap className={className} />;
+ 
     case 'cart': return <ShoppingCart className={className} />;
+ 
     case 'heart': return <HeartPulse className={className} />;
+ 
     case 'factory': return <Factory className={className} />;
+ 
     case 'monitor': return <Monitor className={className} />;
+ 
     case 'home': return <Home className={className} />;
+ 
     default: return <Zap className={className} />;
+ 
   }
+ 
 };
-
+ 
 export default function IndustryGrid() {
+ 
   const [hoveredCard, setHoveredCard] = useState(null);
+ 
   const [activeService, setActiveService] = useState(null);
-
+ 
   return (
-    <section className="py-20 px-4 bg-bgLight dark:bg-bgDark transition-colors duration-300">
-      <div className="max-w-7xl mx-auto">
-
-        <div className="container relative z-10">
+    <section className=" bg-bgLight dark:bg-bgDark pb-5 transition-colors duration-300">
+      <div className="container">
+ 
         {/* Header */}
         <div className="mb-16 max-w-4xl">
           <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-bold tracking-widest uppercase rounded-full bg-blue-100 dark:bg-blue-900/30 text-brandDark dark:text-brandAccent">
             <span className="w-2 h-2 rounded-full bg-brandDark dark:bg-brandAccent animate-pulse" />
+ 
             Specialized Sectors
           </div>
-          
           <h2 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+ 
             Built for <span className="text-brandDark dark:text-brandAccent">Critical</span> Industries
           </h2>
-          
           <p className="text-xl leading-relaxed text-gray-600 dark:text-gray-400">
+ 
             We deliver tailored risk advisory and digital transformation solutions to the industries that power our world.
           </p>
         </div>
-
+ 
         {/* 3-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+ 
           {industriesData.map((industry, index) => (
             <div
+ 
               key={index}
+ 
               onMouseEnter={() => setHoveredCard(index)}
+ 
               onMouseLeave={() => setHoveredCard(null)}
+ 
               className="relative group"
             >
+ 
               {/* Card Container */}
-              <a 
+              <a
+ 
                 href={industry.path}
+ 
                 className="relative block h-[450px] sm:h-[480px] rounded-3xl overflow-hidden bg-surfaceLight dark:bg-surfaceDark transition-shadow duration-500 hover:shadow-2xl cursor-pointer"
               >
-                
+ 
                 {/* Image Container - Takes 58% of card height */}
                 <div className="relative h-[58%] overflow-hidden">
                   <img
+ 
                     src={industry.image}
+ 
                     alt={industry.title}
+ 
                     className="w-full h-full object-cover transition-transform duration-600"
+ 
                     style={{
+ 
                       transform: hoveredCard === index ? 'scale(1.05)' : 'scale(1)',
+ 
                     }}
+ 
                   />
-                  
+ 
                   {/* Icon Badge - Top Left */}
                   <div className="absolute top-4 left-4 w-12 h-12 rounded-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm flex items-center justify-center">
                     <IconComponent type={industry.icon} className="w-6 h-6 text-brandDark dark:text-brandAccent" />
                   </div>
                 </div>
-
+ 
                 {/* Content Area - Takes 42% of card height */}
                 <div className="relative h-[42%] flex flex-col">
-                  
+ 
                   {/* Default State - Only Title */}
                   <div
+ 
                     className="absolute inset-0 flex items-center p-6 lg:p-7 bg-surfaceLight dark:bg-surfaceDark transition-all duration-300"
+ 
                     style={{
+ 
                       opacity: hoveredCard === index ? 0 : 1,
+ 
                       transform: hoveredCard === index ? 'translateY(-10px)' : 'translateY(0)',
+ 
                     }}
                   >
                     <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white leading-tight">
+ 
                       {industry.title}
                     </h3>
                   </div>
-
+ 
                   {/* Hover State - Full Content */}
                   <div
+ 
                     className="absolute inset-0 flex flex-col justify-between p-6 lg:p-7 bg-surfaceLight dark:bg-surfaceDark transition-all duration-300"
+ 
                     style={{
+ 
                       opacity: hoveredCard === index ? 1 : 0,
+ 
                       transform: hoveredCard === index ? 'translateY(0)' : 'translateY(10px)',
+ 
                       pointerEvents: hoveredCard === index ? 'auto' : 'none',
+ 
                     }}
                   >
                     <div className="flex-1 flex flex-col">
                       <h3 className="text-lg sm:text-xl font-bold text-brandDark dark:text-white mb-2.5 leading-tight">
+ 
                         {industry.title}
                       </h3>
-                      
                       <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed flex-1 overflow-hidden">
+ 
                         {industry.description}
                       </p>
                     </div>
-
+ 
                     {/* Learn More Button */}
                     <button
-                      className={`inline-flex items-center gap-2 px-6 py-2.5 text-sm font-semibold transition-all duration-300 rounded-full w-fit ${
-                        activeService === industry.id
+ 
+                      className={`inline-flex items-center gap-2 px-6 py-2.5 text-sm font-semibold transition-all duration-300 rounded-full w-fit ${activeService === industry.id
+ 
                           ? "bg-brandGold text-white dark:bg-brandAccent dark:text-brandDark"
+ 
                           : "bg-brandDark text-white hover:bg-brandNavy dark:bg-brandAccent dark:text-brandDark dark:hover:bg-brandGold"
-                      }`}
+ 
+                        }`}
                     >
+ 
                       Learn more
                       <ArrowRight
+ 
                         size={16}
-                        className={`transition-transform duration-300 ${
-                          activeService === industry.id ? "translate-x-1" : ""
-                        }`}
+ 
+                        className={`transition-transform duration-300 ${activeService === industry.id ? "translate-x-1" : ""
+ 
+                          }`}
+ 
                       />
                     </button>
                   </div>
                 </div>
-
+ 
                 {/* Bottom Accent Bar - Slides in on hover */}
                 <div
+ 
                   className="absolute bottom-0 left-0 h-1 w-full bg-brandDark dark:bg-brandAccent z-10 transition-transform duration-500"
+ 
                   style={{
+ 
                     transform: hoveredCard === index ? 'translateX(0%)' : 'translateX(-100%)',
+ 
                   }}
+ 
                 />
               </a>
             </div>
+ 
           ))}
         </div>
       </div>
-      </div>
     </section>
+ 
   );
+ 
 }

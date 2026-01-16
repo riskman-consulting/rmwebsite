@@ -242,28 +242,28 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { ArrowRight, ChevronLeft, ChevronRight, Star } from "lucide-react";
-
+ 
 // Swiper Requirements
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay, Pagination } from "swiper/modules";
-
+ 
 // Swiper Styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
+ 
 import internalAuditImage from '../../assets/images/home/internal-audit.png'
 import professionalIntegrityExportAssuranceImage from "../../assets/images/home/professional-integrity-export-assurance.png"
-import riskAssuranceImage from "../../assets/images/home/risk-assurance.png" 
+import riskAssuranceImage from "../../assets/images/home/risk-assurance.png"
 import complainReviewImage from '../../assets/images/home/compliance-review.png'
-
+ 
 /**
  * Individual Card Component with Curtain Reveal
  */
 const RiskmanRevealCard = ({ service }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
-
+ 
   return (
     <div
       ref={ref}
@@ -279,7 +279,7 @@ const RiskmanRevealCard = ({ service }) => {
           alt={service.title}
           className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-1000"
         />
-
+ 
         {/* Top Split Curtain */}
         <motion.div
           initial={{ y: 0 }}
@@ -287,7 +287,7 @@ const RiskmanRevealCard = ({ service }) => {
           transition={{ duration: 1.2, ease: [0.45, 0, 0.55, 1], delay: 0.1 }}
           className="absolute top-0 left-0 w-full h-1/2 bg-zinc-950 z-10"
         />
-
+ 
         {/* Bottom Split Curtain */}
         <motion.div
           initial={{ y: 0 }}
@@ -295,14 +295,14 @@ const RiskmanRevealCard = ({ service }) => {
           transition={{ duration: 1.2, ease: [0.45, 0, 0.55, 1], delay: 0.1 }}
           className="absolute bottom-0 left-0 w-full h-1/2 bg-zinc-950 z-10"
         />
-
+ 
         {/* Eyebrow Label */}
         <div className="absolute top-5 left-5 z-20">
           <span className="bg-white/95 text-zinc-900 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.25em] shadow-sm">
             {service.subtitle}
           </span>
         </div>
-
+ 
         {/* Floating Stats Badge */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -317,7 +317,7 @@ const RiskmanRevealCard = ({ service }) => {
           <p className="text-xs font-semibold text-white tracking-tight">{service.stats}</p>
         </motion.div>
       </div>
-
+ 
       {/* Content Section */}
       <div className="p-8 flex flex-col flex-grow transition-transform duration-500 group-hover:-translate-y-1">
         <span className="text-[10px] font-bold text-brandDark dark:text-brandAccent uppercase tracking-[0.3em] mb-3">
@@ -341,7 +341,7 @@ const RiskmanRevealCard = ({ service }) => {
     </div>
   );
 };
-
+ 
 /**
  * Main Carousel Component - USING TAILWIND CONTAINER CONFIG
  */
@@ -384,11 +384,11 @@ const RiskmanAuditCarousel = () => {
       link: "/services/compliance",
     },
   ];
-
+ 
   return (
-    <section className="py-20 bg-bgLight dark:bg-bgDark transition-colors duration-300">
+    <section className="py-5 bg-bgLight dark:bg-bgDark transition-colors duration-300">
       <div className="container">
-        
+       
         {/* Header - NOW PROPERLY ALIGNED WITH YOUR CONTAINER */}
         <div className="mb-16 max-w-4xl">
           {/* Badge matching IndustryGrid style */}
@@ -396,19 +396,19 @@ const RiskmanAuditCarousel = () => {
             <span className="w-2 h-2 rounded-full bg-brandDark dark:bg-brandAccent animate-pulse" />
             Service Expertise
           </div>
-          
+         
           {/* Typography matching IndustryGrid scale */}
           <h2 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
             Unlocking Potential with <span className="text-brandDark dark:text-brandAccent">Riskman</span>
           </h2>
-          
+         
           <p className="text-xl leading-relaxed text-gray-600 dark:text-gray-400">
             We deliver tailored audit and assurance solutions built for the challenges your organization faces today.
           </p>
         </div>
-
+ 
         {/* Navigation Controls */}
-        <div className="flex gap-4 mb-12 justify-end">
+        <div className="flex gap-4  justify-end">
           <button className="risk-prev p-4 border border-zinc-200 dark:border-zinc-800 rounded-full hover:bg-zinc-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all group z-30 cursor-pointer">
             <ChevronLeft size={22} className="group-active:scale-90 transition-transform" />
           </button>
@@ -416,7 +416,7 @@ const RiskmanAuditCarousel = () => {
             <ChevronRight size={22} className="group-active:scale-90 transition-transform" />
           </button>
         </div>
-
+ 
         {/* Swiper Slider */}
         <Swiper
           modules={[Navigation, Autoplay, Pagination]}
@@ -440,11 +440,11 @@ const RiskmanAuditCarousel = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-
+ 
         {/* Progress Bar Pagination */}
         <div className="risk-pagination flex justify-center mt-16 gap-4" />
       </div>
-
+ 
       <style>{`
         .risk-pagination .swiper-pagination-bullet {
           width: 50px;
@@ -466,7 +466,7 @@ const RiskmanAuditCarousel = () => {
     </section>
   );
 };
-
+ 
 export default RiskmanAuditCarousel;
 
 

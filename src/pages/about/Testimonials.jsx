@@ -74,7 +74,7 @@ export default function TestimonialsSection() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#FAFAFA] to-[#F5F5F5] dark:from-[#001122] dark:to-[#001A33] py-20 px-6 transition-colors duration-300">
+    <div className={`min-h-screen bg-surfaceLight dark:bg-surfaceDark py-20 px-6 transition-colors duration-300`}>
       <div className="mx-auto max-w-7xl">
         {/* Testimonial Network Visualization */}
         <div className="relative h-[450px] mb-8">

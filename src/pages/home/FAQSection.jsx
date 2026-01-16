@@ -38,7 +38,7 @@ const FAQSection = () => {
 
   return (
     <section
-      className="relative w-full transition-colors duration-300 section-padding bg-bgLight dark:bg-bgDark"
+      className="relative w-full transition-colors duration-300 px-3 py-5 bg-bgLight dark:bg-bgDark"
     >
       {/* ✅ MATCH HEADER CONTAINER */}
       {/* <div className="w-full max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-14"> */}

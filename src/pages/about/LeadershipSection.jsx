@@ -12,7 +12,7 @@ export default function LeadershipSection({ setSelectedLeader }) {
   const teamMembers = [
     {
       name: "Sukanta Nag",
-      title: "Founder & Managing Partner",
+      title: "Partner | Financial Advisory",
       bio:
         "CA, CS, CMA, CAIIB with 41+ years of experience across credit rating, corporate banking, risk management and financial consulting.",
       image:
@@ -22,7 +22,7 @@ export default function LeadershipSection({ setSelectedLeader }) {
     },
     {
       name: "Prasen Pal",
-      title: "Partner – Corporate Compliance",
+      title: "Partner | ERS & Sustainability",
       bio:
         "Ex-Deloitte and Genpact professional with 16+ years in internal audit, ESG, taxation, AI and RPA practices.",
       image:
@@ -32,7 +32,7 @@ export default function LeadershipSection({ setSelectedLeader }) {
     },
     {
       name: "Arpit Garg",
-      title: "Partner – Risk & IT Advisory",
+      title: "Partner | ERS & ITRS",
       bio:
         "CA, CIA, CRMA, CISA with global experience in ERM, SOC, cybersecurity, fraud analytics and IT risk.",
       image:

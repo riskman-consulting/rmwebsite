@@ -14,7 +14,7 @@ const BlogSection = () => {
 
   return (
     <section
-      className="transition-colors duration-300 section-padding bg-bgLight dark:bg-bgDark"
+      className="transition-colors duration-300 pt-10 px-3 pb-5 bg-bgLight dark:bg-bgDark"
     >
       {/* ✅ MATCH HEADER CONTAINER */}
       {/* <div className="w-full max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-14"> */}
