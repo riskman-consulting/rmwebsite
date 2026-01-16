@@ -1,120 +1,91 @@
-
-// import React from 'react';
-
-
-// const EventsGrid= ({ events, onCardClick }) => {
-//   return (
-//     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-//       {events.map((event) => (
-//         <div 
-//           key={event.id}
-//           onClick={() => onCardClick(event)}
-//           className="group cursor-pointer bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-blue-400 transition-all hover:shadow-2xl flex flex-col sm:flex-row h-full"
-//         >
-//           <div className="w-full sm:w-1/3 relative h-48 sm:h-auto overflow-hidden">
-//             <img 
-//               src={event.image} 
-//               alt={event.title}
-//               className="w-full h-full  object-cover transition-transform duration-500 group-hover:scale-110"
-//             />
-//             {event.features && (
-//               <span className="absolute top-4 left-4 bg-blue-600 text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">
-//                 Featured
-//               </span>
-//             )}
-//           </div>
-//           <div className="w-full sm:w-2/3 p-6 flex flex-col justify-between">
-//             <div>
-//               <div className="flex justify-between items-start mb-2">
-//                 <span className="text-xs font-bold text-blue-600 uppercase tracking-wider">{event.date}</span>
-//                 <span className="text-xs text-slate-400 flex items-center">
-//                   <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-//                   {event.location}
-//                 </span>
-//               </div>
-//               <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-3">
-//                 {event.title}
-//               </h3>
-//               <p className="text-slate-500 text-sm line-clamp-2">
-//                 {event.shortDesc}
-//               </p>
-//             </div>
-            
-//             <div className="mt-6 flex items-center text-blue-600 font-bold text-sm">
-//               Read More
-//               <svg className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-//             </div>
-//           </div>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default EventsGrid;
-
 import React from 'react';
-
+import { motion } from 'framer-motion';
+import { FiMapPin, FiChevronRight, FiImage } from 'react-icons/fi';
+ 
 const EventsGrid = ({ events, onCardClick }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {events.map((event) => (
-        <div 
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6 py-12">
+      {events.map((event, index) => (
+        <motion.div
           key={event.id}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
           onClick={() => onCardClick(event)}
-          className="group cursor-pointer bg-white rounded-xl overflow-hidden border border-slate-200 transition-all hover:border-blue-500 hover:shadow-xl flex flex-col"
+          className="group cursor-pointer bg-white dark:bg-[#001A33] rounded-[2.5rem] overflow-hidden border border-[#003366]/5 dark:border-[#FFC000]/15 shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col relative hover:-translate-y-2"
         >
-          {/* Compact Image */}
-          <div className="h-44 relative overflow-hidden">
-            <img 
-              src={event.image} 
+          {/* Visual Container */}
+          <div className="aspect-[16/10] relative overflow-hidden">
+            <img
+              src={event.image}
               alt={event.title}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"
             />
+           
+            {/* Dark Overlay Gradient */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#001F3F]/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+ 
+            {/* Floating Branded Date Badge */}
+            <div className="absolute top-5 left-5">
+              <div className="backdrop-blur-md bg-white/90 dark:bg-[#001A33]/90 px-4 py-2 rounded-2xl shadow-xl border border-white/20">
+                <p className="text-[10px] font-black uppercase tracking-[0.15em] text-[#001F3F] dark:text-[#FFC000] leading-none">
+                  {event.date}
+                </p>
+              </div>
+            </div>
+ 
             {event.featured && (
-              <div className="absolute top-3 left-3">
-                <span className="bg-blue-600 text-white text-[9px] font-black uppercase tracking-widest px-1.5 py-0.5 rounded shadow-sm">
+              <div className="absolute top-5 right-5">
+                <span className="bg-gradient-to-r from-[#FFB800] to-[#FFC000] text-[#001F3F] text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-lg">
                   Featured
                 </span>
               </div>
             )}
           </div>
-
+ 
           {/* Content Area */}
-          <div className="p-5 flex flex-col flex-grow">
-            <div className="flex items-center justify-between mb-3">
-              <span className="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full uppercase tracking-tighter">
-                {event.date}
-              </span>
-              <div className="flex items-center text-slate-400 text-[10px] font-medium uppercase tracking-tighter">
-                <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                </svg>
+          <div className="p-8 flex flex-col flex-grow">
+            {/* Meta Info */}
+            <div className="flex items-center gap-3 mb-4">
+              <span className="flex items-center text-[#001F3F]/50 dark:text-white/50 text-[11px] font-black uppercase tracking-widest">
+                <FiMapPin className="mr-1.5 text-[#FFB800]" />
                 {event.location.split(',')[0]}
-              </div>
+              </span>
+              <span className="w-1.5 h-1.5 rounded-full bg-[#FFC000]/30" />
+              <span className="text-[11px] font-black text-[#FFB800] uppercase tracking-widest">
+                {event.type || 'Experience'}
+              </span>
             </div>
-
-            <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-2 line-clamp-1">
+ 
+            {/* Title */}
+            <h3 className="text-2xl font-bold text-[#001F3F] dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#FFB800] group-hover:to-[#FFC000] transition-all duration-300 mb-4 tracking-tight">
               {event.title}
             </h3>
-            
-            <p className="text-slate-500 text-xs leading-relaxed line-clamp-2 mb-4">
-              {event.shortDesc}
+ 
+            {/* Description */}
+            <p className="text-[#001F3F]/70 dark:text-white/70 text-sm leading-relaxed line-clamp-2 mb-8 italic">
+              "{event.shortDesc}"
             </p>
-
-            <div className="mt-auto pt-4 border-t border-slate-50 flex items-center justify-between">
-              <span className="text-xs font-bold text-slate-700 group-hover:text-blue-600 transition-colors">See details</span>
-              <div className="w-6 h-6 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all">
-                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-                </svg>
+ 
+            {/* Footer Interaction */}
+            <div className="mt-auto pt-6 border-t border-[#003366]/5 dark:border-white/5 flex items-center justify-between">
+              <div className="flex items-center gap-2 group-hover:gap-4 transition-all duration-500">
+                <FiImage className="text-[#FFC000] text-lg" />
+                <span className="text-xs font-black uppercase tracking-[0.2em] text-[#001F3F] dark:text-white">
+                  Explore Gallery
+                </span>
+              </div>
+             
+              <div className="h-10 w-10 rounded-full bg-[#001F3F]/5 dark:bg-white/5 flex items-center justify-center text-[#001F3F] dark:text-white group-hover:bg-gradient-to-r group-hover:from-[#FFB800] group-hover:to-[#FFC000] group-hover:text-[#001F3F] transition-all duration-500">
+                <FiChevronRight className="text-lg" />
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );
 };
-
+ 
 export default EventsGrid;

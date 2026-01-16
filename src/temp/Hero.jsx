@@ -1,186 +1,135 @@
-
-// import React from 'react';
-
-
-// const Hero= ({ featuredEvent, onOpenDetails }) => {
-//   return (
-//     <section className="relative h-screen min-h-[600px] flex items-center overflow-hidden">
-//       {/* Background Image with Overlay */}
-//       <div className="absolute inset-0 z-0">
-//         <img 
-//           src={featuredEvent.image} 
-//           alt={featuredEvent.title}
-//           className="w-full h-full object-cover transform scale-105 animate-pulse-slow"
-//         />
-//         <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/70 to-transparent"></div>
-//       </div>
-
-//       {/* Content */}
-//       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-//         <div className="max-w-2xl">
-//           <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30 text-sm font-medium mb-6 animate-fade-in">
-//             <span className="relative flex h-2 w-2 mr-2">
-//               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-//               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-//             </span>
-//             FEATURED EVENT
-//           </div>
-          
-//           <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6 leading-tight">
-//             {featuredEvent.title} <br />
-//             <span className="text-blue-500">2026 Edition</span>
-//           </h1>
-          
-//           <p className="text-xl text-slate-300 mb-10 leading-relaxed">
-//             {featuredEvent.shortDesc} Experience groundbreaking discussions on governance, risk, and the future of auditing.
-//           </p>
-          
-//           <div className="flex flex-col sm:flex-row gap-4">
-//             <button 
-//               onClick={() => onOpenDetails(featuredEvent)}
-//               className="px-8 py-4 bg-blue-600 text-white rounded-lg font-bold text-lg hover:bg-blue-700 transition-all shadow-xl hover:shadow-blue-500/20 transform hover:-translate-y-1"
-//             >
-//               View Event Details
-//             </button>
-//             <button className="px-8 py-4 bg-white/10 text-white backdrop-blur-md rounded-lg font-bold text-lg hover:bg-white/20 transition-all border border-white/20">
-//               Register Today
-//             </button>
-//           </div>
-          
-//           <div className="mt-12 flex items-center space-x-8 text-slate-400">
-//             <div>
-//               <p className="text-xs uppercase tracking-widest font-bold text-slate-500">Location</p>
-//               <p className="text-white font-medium">{featuredEvent.location}</p>
-//             </div>
-//             <div className="h-8 w-px bg-slate-700"></div>
-//             <div>
-//               <p className="text-xs uppercase tracking-widest font-bold text-slate-500">Date</p>
-//               <p className="text-white font-medium">{featuredEvent.date}</p>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* Scroll indicator */}
-//       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-//         <span className="text-white/50 text-xs font-bold uppercase tracking-widest mb-2">Explore More</span>
-//         <div className="w-1 h-12 bg-gradient-to-b from-blue-500 to-transparent rounded-full"></div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Hero;
-
 import React, { useEffect, useState } from 'react';
-import { Calendar, MapPin, Sparkles } from 'lucide-react';
-
+import { Calendar, MapPin, ChevronRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+ 
 const Hero = ({ featuredEvent, onOpenDetails }) => {
   const [scrollY, setScrollY] = useState(0);
-
+ 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
+ 
   return (
-    <section className="relative h-screen min-h-[700px] overflow-hidden bg-bgLight dark:bg-bgDark">
-      {/* Background Image with Parallax Effect */}
-      <div 
-        className="absolute inset-0"
-        style={{ transform: `scale(${1 + scrollY * 0.0002})` }}
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#001F3F] py-20 lg:py-0">
+      {/* Immersive Background */}
+      <div
+        className="absolute inset-0 transition-transform duration-1000 ease-out pointer-events-none"
+        style={{ transform: `scale(${1 + scrollY * 0.0003})` }}
       >
         <img
           src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&q=80"
-          alt={featuredEvent.title}
+          alt={featuredEvent?.title}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-stone-900/95 via-stone-900/75 to-stone-900/50" />
-        <div className="absolute inset-0 bg-gradient-to-t from-stone-900/90 via-transparent to-stone-900/40" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.3)_100%)]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F] via-[#001F3F]/85 md:via-[#001F3F]/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#001F3F] via-transparent to-[#001F3F]/40" />
       </div>
-
-      {/* Content */}
-      <div className="relative z-10 h-full flex flex-col justify-center px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto w-full">
-          {/* Featured Badge */}
-          <div className="flex items-center gap-4 mb-10">
-            <div className="h-px w-20 bg-gradient-to-r from-amber-400 via-amber-300 to-transparent" />
-            <div className="inline-flex items-center gap-2.5 px-4 py-2 bg-gradient-to-r from-amber-500/20 to-orange-500/20 backdrop-blur-sm text-amber-400 rounded-2xl text-xs font-black uppercase tracking-[0.2em] border border-amber-500/30">
+ 
+      {/* Hero Content */}
+      <div className="relative z-10 w-full px-6 md:px-12 lg:px-20">
+        <div className="max-w-7xl mx-auto">
+         
+          {/* Branded Featured Badge */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex items-center gap-3 md:gap-5 mb-6 md:mb-8"
+          >
+            <div className="h-px w-8 md:w-16 bg-gradient-to-r from-[#FFB800] to-transparent" />
+            <div className="inline-flex items-center gap-2 md:gap-3 px-4 md:px-5 py-2 md:py-2.5 bg-[#FFB800]/10 backdrop-blur-md text-[#FFC000] rounded-full text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.25em] border border-[#FFB800]/30 shadow-lg">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FFC000] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#FFB800]"></span>
               </span>
-              Featured Event
+              Featured Presence
             </div>
-          </div>
-
-          {/* Main Heading */}
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-light tracking-tight text-white mb-10 leading-[0.95]">
-            {featuredEvent.title}
+          </motion.div>
+ 
+          {/* Dynamic Heading - Responsive Sizing */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white mb-6 md:mb-8 leading-[0.9] md:leading-[0.85]"
+          >
+            {featuredEvent?.title}
             <br />
-            <span className="font-bold font-serif italic text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-100 to-white">
-              2026 Edition
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFB800] to-[#FFC000] italic font-serif">
+              Summit 2026
             </span>
-          </h1>
-
-          {/* Description */}
-          <p className="max-w-2xl text-stone-300 text-xl md:text-2xl leading-relaxed mb-14 font-light">
-            {featuredEvent.shortDesc} Experience groundbreaking discussions on governance, risk, and the future of auditing.
-          </p>
-
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-16">
+          </motion.h1>
+ 
+          {/* Narrative Description */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="max-w-xl md:max-w-2xl text-white/70 text-lg md:text-2xl leading-relaxed mb-10 md:mb-12 font-light italic"
+          >
+            "{featuredEvent?.shortDesc || 'Redefining the boundaries of excellence.'}"
+          </motion.p>
+ 
+          {/* Branded CTA Actions - Mobile Column, Desktop Row */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="flex flex-col sm:flex-row gap-4 md:gap-6 mb-12 md:mb-16"
+          >
             <button
               onClick={() => onOpenDetails(featuredEvent)}
-              className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-white/95 backdrop-blur-md hover:bg-white text-stone-900 rounded-2xl font-bold text-base tracking-wider uppercase shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-[0_20px_50px_rgba(255,255,255,0.3)] border border-white/20"
+              className="group relative inline-flex items-center justify-center gap-4 px-8 md:px-10 py-4 md:py-5 bg-gradient-to-r from-[#FFB800] to-[#FFC000] text-[#001F3F] rounded-2xl font-black text-[11px] md:text-xs tracking-[0.2em] uppercase shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 w-full sm:w-auto"
             >
-              <span>View Event Details</span>
-              <svg className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-              </svg>
+              <span>Explore Event</span>
+              <ChevronRight size={18} className="transition-transform group-hover:translate-x-1" />
             </button>
-            <button className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-md hover:bg-white/15 text-white rounded-2xl font-bold text-base tracking-wider uppercase border border-white/20 hover:border-white/30 transition-all duration-300 hover:scale-105">
-              <span>Register Today</span>
+           
+            <button className="inline-flex items-center justify-center gap-4 px-8 md:px-10 py-4 md:py-5 bg-white/5 backdrop-blur-md hover:bg-white/10 text-white rounded-2xl font-black text-[11px] md:text-xs tracking-[0.2em] uppercase border border-white/10 hover:border-[#FFC000]/40 transition-all duration-300 hover:scale-105 active:scale-95 w-full sm:w-auto">
+              <span>Reserve Seat</span>
             </button>
-          </div>
-
-          {/* Event Info Cards */}
-          <div className="flex flex-wrap gap-4">
-            <div className="flex items-center gap-3 px-6 py-3.5 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 shadow-xl hover:bg-white/15 hover:border-white/30 transition-all duration-300">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center">
-                <MapPin size={20} className="text-white" strokeWidth={2.5} />
+          </motion.div>
+ 
+          {/* Branded Meta Data Cards - Responsive wrapping */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.8 }}
+            className="flex flex-col sm:flex-row flex-wrap gap-4 md:gap-5"
+          >
+            {[
+              { label: 'Location', val: featuredEvent?.location, icon: <MapPin />, color: 'from-[#FFB800] to-[#FFC000]' },
+              { label: 'Timeline', val: featuredEvent?.date, icon: <Calendar />, color: 'from-white/20 to-white/5' }
+            ].map((card, i) => (
+              <div key={i} className="flex items-center gap-4 px-6 md:px-7 py-3 md:py-4 bg-[#001A33]/60 backdrop-blur-xl rounded-2xl md:rounded-[2rem] border border-white/5 shadow-2xl w-full sm:w-auto">
+                <div className={`w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-gradient-to-br ${card.color} flex items-center justify-center text-[#001F3F] shrink-0`}>
+                  {React.cloneElement(card.icon, { size: 20, strokeWidth: 2.5 })}
+                </div>
+                <div className="text-left overflow-hidden">
+                  <p className="text-[9px] md:text-[10px] text-[#FFC000] font-black uppercase tracking-[0.2em] mb-0.5">{card.label}</p>
+                  <p className="text-white font-bold text-xs md:text-sm tracking-tight truncate">{card.val}</p>
+                </div>
               </div>
-              <div className="text-left">
-                <p className="text-xs text-stone-400 font-bold uppercase tracking-widest">Location</p>
-                <p className="text-white font-semibold text-sm">{featuredEvent.location}</p>
-              </div>
-            </div>
-            
-            <div className="flex items-center gap-3 px-6 py-3.5 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 shadow-xl hover:bg-white/15 hover:border-white/30 transition-all duration-300">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center">
-                <Calendar size={20} className="text-white" strokeWidth={2.5} />
-              </div>
-              <div className="text-left">
-                <p className="text-xs text-stone-400 font-bold uppercase tracking-widest">Date</p>
-                <p className="text-white font-semibold text-sm">{featuredEvent.date}</p>
-              </div>
-            </div>
-          </div>
+            ))}
+          </motion.div>
         </div>
       </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
-        <span className="text-white/60 text-xs uppercase tracking-[0.2em] font-medium">Explore More</span>
-        <div 
-          className="w-px h-16 bg-gradient-to-b from-white/60 via-white/40 to-transparent rounded-full animate-bounce"
-          style={{ animationDuration: '1.5s' }}
-        />
+ 
+      {/* Branded Scroll Indicator - Hidden on very small screens for space */}
+      <div className="hidden sm:flex absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 flex-col items-center gap-4">
+        <span className="text-[#FFC000]/60 text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em]">Scroll</span>
+        <div className="relative w-[1px] h-12 md:h-20 bg-gradient-to-b from-[#FFC000] to-transparent">
+          <motion.div
+            animate={{ y: [0, 20, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute top-0 left-[-2px] w-1.5 h-1.5 rounded-full bg-[#FFC000] shadow-[0_0_10px_#FFC000]"
+          />
+        </div>
       </div>
     </section>
   );
 };
-
+ 
 export default Hero;
