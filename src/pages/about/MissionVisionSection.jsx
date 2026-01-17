@@ -30,7 +30,7 @@ export default function MissionVisionSection() {
           <p className="mb-4 text-sm font-medium tracking-wider text-textLightSecondary dark:text-textDarkSecondary">
             • Who we are
           </p>
-          <h2 className="text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-normal leading-[1.2] text-brandDark dark:text-brandAccent mb-16">
+          <h2 className="text-xl md:text-2xl lg:text-2xl font-bold  leading-[1.2] text-brandDark dark:text-brandAccent mb-16">
             Team reliable care<br />for your healing
           </h2>
         </motion.div>

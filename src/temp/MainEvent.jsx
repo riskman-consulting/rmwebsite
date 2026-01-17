@@ -7,29 +7,29 @@ import EventModal from './EventModal';
 import FilterBar from './FilterBar';
 import { events } from '../pages/about/Events.jsx';
 import { FiCalendar, FiArrowDown } from 'react-icons/fi';
- 
+
 const years = ["2026", "2025", "2024", "2023"];
- 
+
 const MainEvent = () => {
   const [selectedYear, setSelectedYear] = useState("2025");
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [activeFilter, setActiveFilter] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
- 
+
   // Filter events by year, location filter, and search query
   const filteredEvents = useMemo(() => {
     let filtered = events.filter((event) => event.date.includes(selectedYear));
-   
+    
     if (activeFilter !== "All") {
       if (activeFilter === "Featured") {
         filtered = filtered.filter((event) => event.featured);
       } else {
-        filtered = filtered.filter((event) =>
+        filtered = filtered.filter((event) => 
           event.location.toLowerCase().includes(activeFilter.toLowerCase())
         );
       }
     }
-   
+    
     if (searchQuery.trim() !== "") {
       filtered = filtered.filter((event) =>
         event.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -37,30 +37,30 @@ const MainEvent = () => {
         event.shortDesc.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
-   
+    
     return filtered;
   }, [selectedYear, activeFilter, searchQuery]);
- 
+
   const handleOpenModal = (event) => {
     setSelectedEvent(event);
   };
- 
+
   const handleCloseModal = () => {
     setSelectedEvent(null);
   };
- 
+
   return (
     <div className="min-h-screen bg-surfaceLight dark:bg-surfaceDark transition-colors duration-500 overflow-x-hidden">
       <main className="flex-grow">
         {/* Featured Hero Banner */}
-        <Hero
-          featuredEvent={events.find(e => e.featured) || events[0]}
-          onOpenDetails={handleOpenModal}
+        <Hero 
+          featuredEvent={events.find(e => e.featured) || events[0]} 
+          onOpenDetails={handleOpenModal} 
         />
-       
+        
         {/* Why it Matters Section */}
         <WhyItMatters />
-       
+        
         {/* Branded Year Navigation */}
         <div className="sticky top-0 z-40 bg-white/80 dark:bg-[#001F3F]/80 backdrop-blur-xl border-b border-[#003366]/5 dark:border-[#FFC000]/10 shadow-sm">
           <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -80,7 +80,7 @@ const MainEvent = () => {
                       }`}
                     >
                       {isActive && (
-                        <motion.div
+                        <motion.div 
                           layoutId="activeYear"
                           className="absolute inset-0 bg-gradient-to-r from-[#FFB800] to-[#FFC000] rounded-2xl"
                         />
@@ -90,7 +90,7 @@ const MainEvent = () => {
                   );
                 })}
               </div>
- 
+
               {/* Event Badge Counter */}
               <div className="hidden md:flex items-center gap-3 px-6 py-3 bg-[#FFB800]/10 rounded-2xl border border-[#FFB800]/20">
                 <FiCalendar className="text-[#FFB800]" />
@@ -101,11 +101,11 @@ const MainEvent = () => {
             </div>
           </div>
         </div>
-       
+        
         {/* Main Events Display Section */}
         <section id="events-section" className="py-24 relative">
           <div className="max-w-7xl mx-auto px-6 lg:px-12">
-           
+            
             {/* Master Style Heading */}
             <div className="mb-20 text-center">
               <motion.div
@@ -123,17 +123,17 @@ const MainEvent = () => {
                 <div className="w-20 h-1 bg-gradient-to-r from-[#FFB800] to-transparent mx-auto rounded-full mb-8" />
               </motion.div>
             </div>
- 
+
             {/* Filter Navigation */}
             <div className="mb-16">
-              <FilterBar
+              <FilterBar 
                 activeFilter={activeFilter}
                 setActiveFilter={setActiveFilter}
                 searchQuery={searchQuery}
                 setSearchQuery={setSearchQuery}
               />
             </div>
-           
+            
             <AnimatePresence mode="wait">
               {filteredEvents.length > 0 ? (
                 <motion.div
@@ -142,13 +142,13 @@ const MainEvent = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                 >
-                  <EventsGrid
-                    events={filteredEvents}
-                    onCardClick={handleOpenModal}
+                  <EventsGrid 
+                    events={filteredEvents} 
+                    onCardClick={handleOpenModal} 
                   />
                 </motion.div>
               ) : (
-                <motion.div
+                <motion.div 
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   className="py-32 text-center"
@@ -166,7 +166,7 @@ const MainEvent = () => {
           </div>
         </section>
       </main>
- 
+
       {/* Modal for Event Details - Integrated with Master Logic */}
       <AnimatePresence>
         {selectedEvent && (
@@ -176,6 +176,5 @@ const MainEvent = () => {
     </div>
   );
 };
- 
+
 export default MainEvent;
- 

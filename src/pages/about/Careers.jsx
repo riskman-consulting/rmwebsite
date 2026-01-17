@@ -1,217 +1,197 @@
-import React from "react";
-import PageBanner from "../../components/layout/PageBanner";
-import { ArrowRight } from "lucide-react";
+import React, { useState, useMemo, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { 
+  FaMapMarkerAlt, 
+  FaBriefcase, 
+  FaTimes, 
+  FaUpload, 
+  FaSearch, 
+  FaChevronLeft,
+  FaArrowRight
+} from "react-icons/fa";
+import jobData from "../../data/jobData.json";
 
-export default function Careers() {
+
+export default function CareersPage() {
+  const [selectedJob, setSelectedJob] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  // 1. Fix: Prevent background scrolling when modal is open
+  useEffect(() => {
+    if (selectedJob) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => { document.body.style.overflow = "unset"; };
+  }, [selectedJob]);
+
+  // 2. Search Logic
+  const filteredJobs = useMemo(() => {
+    return jobData.filter(job => 
+      job.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      job.hiringOrganization.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }, [searchQuery]);
+
   return (
-    <div className="w-full">
-
-      {/* HERO SECTION */}
-      <section className="relative bg-slate-50 py-28">
-        <div className="container">
-          <p className="mb-4 text-sm tracking-widest uppercase text-slate-500">
-            About RiskMan
-          </p>
-
-          <h1 className="max-w-3xl text-4xl font-bold leading-tight md:text-6xl text-slate-900">
-            Your Trusted Partner in <br /> Strategic Advisory & Risk Management
+    <div className="min-h-screen bg-bgLight dark:bg-bgDark text-zinc-900 dark:text-zinc-100 font-sans">
+      
+      {/* --- HERO SECTION --- */}
+      <header className="pt-24 pb-16 px-6 relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-b from-brandPrimary/5 to-transparent -z-10" />
+        <div className="max-w-6xl mx-auto text-center">
+          <motion.span 
+            initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
+            className="inline-block px-4 py-1.5 rounded-full bg-brandDark dark:bg-brandAccent text-zinc-500 text-[10px] font-bold uppercase tracking-widest mb-6"
+          >
+            Join the Team
+          </motion.span>
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8">
+            Work that <span className="text-brandDark dark:text-brandAccent">matters.</span>
           </h1>
-        </div>
-      </section>
-
-      {/* OUR STORY */}
-      <section className="container grid gap-12 py-20 md:grid-cols-2">
-        <div>
-          <h2 className="mb-6 text-4xl font-bold">
-            Build confidence, enable clarity and create impact.
-          </h2>
-
-          <p className="mb-6 leading-relaxed text-slate-700">
-            At RiskMan, we focus on creating enduring value for our clients,
-            people and communities through our “Customised Solution” based
-            services.
-          </p>
-
-          <p className="leading-relaxed text-slate-700">
-            RiskMan is a team of experienced professionals with high level of
-            knowledge and accomplishments who bring to the table a varied and
-            storied experience set, to create outstanding value for our clients
-            and other stakeholders.
-          </p>
-        </div>
-
-        <div>
-          <img
-            src="https://images.pexels.com/photos/4989181/pexels-photo-4989181.jpeg"
-            alt="Our Story"
-            className="object-cover w-full shadow-lg rounded-xl"
-          />
-        </div>
-      </section>
-
-      {/* AWARDS SECTION */}
-      <section className="relative py-20">
-        <div className="container grid items-center gap-10 md:grid-cols-2">
-
-          <img
-            src="https://images.pexels.com/photos/3182763/pexels-photo-3182763.jpeg"
-            alt="Award"
-            className="object-cover w-full shadow-xl rounded-xl"
-          />
-
-          <div className="p-10 text-white bg-black shadow-xl rounded-xl">
-            <p className="mb-2 text-xl font-semibold">
-              Awarded “Emerging Risk Assurance and Advisory Firm of the Year 2024”
-            </p>
+          
+          <div className="relative max-w-xl mx-auto">
+            <FaSearch className="absolute left-5 top-1/2 -translate-y-1/2 text-zinc-400" />
+            <input 
+              type="text" 
+              placeholder="Search by role or department..."
+              className="w-full pl-12 pr-6 py-4 bg-white dark:bg-bgSurfaceDark border border-zinc-200 dark:border-zinc-800 rounded-2xl shadow-xl shadow-zinc-200/50 dark:shadow-none outline-none focus:ring-2 ring-brandPrimary/20 transition-all"
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
           </div>
         </div>
-      </section>
+      </header>
 
-      {/* WHAT WE STAND FOR */}
-      <section className="py-20 bg-white">
-        <div className="container mb-16 text-center">
-          <p className="mb-2 tracking-wider uppercase text-slate-500">
-            RiskMan Story
-          </p>
-          <h2 className="text-4xl font-bold">What We Stand For</h2>
-        </div>
-
-        <div className="container grid gap-10 md:grid-cols-4">
-
-          <div>
-            <h3 className="mb-2 text-xl font-semibold">Our Mission</h3>
-            <p className="text-slate-700">
-              Our mission is to achieve sustainable growth and build a better
-              future by embracing innovation, focusing on clients and people,
-              building trusted relationships, and delivering high-quality
-              execution.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="mb-2 text-xl font-semibold">Our Vision</h3>
-            <p className="text-slate-700">
-              Our vision is to become a leading risk consulting firm globally by
-              delivering high-quality and value-driven services with innovation
-              and excellence.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="mb-2 text-xl font-semibold">Our Values</h3>
-            <p className="text-slate-700">
-              We uphold integrity, embrace innovation, and deliver practical,
-              forward-thinking solutions to build long-term client partnerships.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="mb-2 text-xl font-semibold">What Sets Us Apart</h3>
-            <p className="text-slate-700">
-              We deliver tailored solutions backed by deep domain expertise,
-              understanding your unique challenges and aligning strategies with
-              your goals.
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      {/* LEADERSHIP TEAM */}
-      <section className="py-20 bg-slate-100">
-        <div className="container">
-
-          <div className="mb-16">
-            <p className="mb-2 tracking-widest uppercase text-slate-500">
-              Our Team
-            </p>
-            <h2 className="mb-4 text-4xl font-bold">Meet the leadership team</h2>
-
-            <p className="max-w-3xl text-slate-700">
-              Our team brings years of experience across industries, with
-              professionals hailing from top consulting and audit firms.
-            </p>
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-4">
-
-            {/* Leader 1 */}
-            <div>
-              <img
-                src="https://via.placeholder.com/400x400"
-                className="mb-4 shadow-lg rounded-xl"
-              />
-              <p className="font-semibold">Leader Name</p>
+      {/* --- JOB LISTING GRID --- */}
+      <main className="max-w-6xl mx-auto px-6 pb-24">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredJobs.length > 0 ? (
+            filteredJobs.map((job, idx) => (
+              <motion.div
+                layout
+                key={idx}
+                onClick={() => setSelectedJob(job)}
+                className="group p-8 bg-bgLight dark:bg-bgDark border border-zinc-100 dark:border-zinc-800 rounded-3xl cursor-pointer hover:border-brandPrimary transition-all hover:shadow-2xl hover:shadow-brandPrimary/5"
+              >
+                <div className="flex justify-between items-start mb-6">
+                  <span className="text-[10px] font-bold px-2 py-1 bg-brandPrimary/10 text-brandPrimary rounded uppercase">
+                    {job.employmentType.replace('_', ' ')}
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold mb-2 group-hover:text-brandPrimary transition-colors">{job.title}</h3>
+                <p className="text-sm text-zinc-500 mb-6 font-medium">{job.hiringOrganization.name}</p>
+                
+                <div className="flex items-center justify-between pt-6 border-t border-zinc-50 dark:border-zinc-800">
+                  <div className="flex items-center gap-2 text-xs text-zinc-400">
+                    <FaMapMarkerAlt className="text-brandPrimary" />
+                    {job.jobLocation.address.addressLocality}
+                  </div>
+                  <div className="w-8 h-8 rounded-full bg-zinc-50 dark:bg-zinc-800 flex items-center justify-center group-hover:bg-brandPrimary group-hover:text-white transition-all">
+                    <FaArrowRight size={10} />
+                  </div>
+                </div>
+              </motion.div>
+            ))
+          ) : (
+            <div className="col-span-full py-20 text-center border-2 border-dashed border-zinc-100 dark:border-zinc-800 rounded-3xl text-zinc-400">
+              No matching positions found.
             </div>
-
-            <div>
-              <img src="https://via.placeholder.com/400x400" className="mb-4 shadow-lg rounded-xl" />
-              <p className="font-semibold">Leader Name</p>
-            </div>
-
-            <div>
-              <img src="https://via.placeholder.com/400x400" className="mb-4 shadow-lg rounded-xl" />
-              <p className="font-semibold">Leader Name</p>
-            </div>
-
-            <div>
-              <img src="https://via.placeholder.com/400x400" className="mb-4 shadow-lg rounded-xl" />
-              <p className="font-semibold">Leader Name</p>
-            </div>
-          </div>
+          )}
         </div>
-      </section>
+      </main>
 
-      {/* TESTIMONIALS */}
-      <section className="py-20">
-        <div className="container mb-12 text-center">
-          <p className="tracking-wide uppercase text-slate-500">Testimonials</p>
-          <h2 className="text-4xl font-bold">Clients Feedback</h2>
-        </div>
+      {/* --- APPLICATION MODAL (OVERLAPS EVERYTHING) --- */}
+      <AnimatePresence>
+        {selectedJob && (
+          <motion.div 
+            // Fixed at z-[9999] to ensure it sits on top of sticky headers
+            className="fixed inset-0 z-[9999] flex items-center justify-center p-0 md:p-6"
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+          >
+            {/* Backdrop with heavy blur */}
+            <div className="absolute inset-0 bg-zinc-950/60 backdrop-blur-xl" onClick={() => setSelectedJob(null)} />
 
-        <div className="container grid items-center gap-12 md:grid-cols-2">
+            {/* Modal Body */}
+            <motion.div 
+              className="relative w-full h-full md:h-auto md:max-h-[92vh] md:max-w-6xl bg-white dark:bg-zinc-900 md:rounded-[32px] shadow-2xl overflow-hidden flex flex-col md:flex-row"
+              initial={{ y: 50, opacity: 0, scale: 0.95 }}
+              animate={{ y: 0, opacity: 1, scale: 1 }}
+              exit={{ y: 50, opacity: 0, scale: 0.95 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close Button (Floating for mobile) */}
+              <button 
+                onClick={() => setSelectedJob(null)}
+                className="absolute top-6 right-6 z-20 w-10 h-10 flex items-center justify-center bg-white dark:bg-zinc-800 rounded-full shadow-lg md:hidden"
+              >
+                <FaTimes />
+              </button>
 
-          <img
-            src="https://via.placeholder.com/500x600"
-            className="w-full shadow-xl rounded-xl"
-          />
+              {/* LEFT: JOB DETAILS (Scrollable) */}
+              <div className="flex-[1.2] p-8 md:p-12 overflow-y-auto bg-zinc-50/50 dark:bg-zinc-800/20 border-b md:border-b-0 md:border-r border-zinc-100 dark:border-zinc-800">
+                <button 
+                  onClick={() => setSelectedJob(null)}
+                  className="hidden md:flex items-center gap-2 text-[10px] font-black tracking-widest text-zinc-400 hover:text-brandPrimary mb-10 transition-colors"
+                >
+                  <FaChevronLeft /> BACK TO OPPORTUNITIES
+                </button>
+                
+                <h2 className="text-3xl md:text-4xl font-black mb-4 tracking-tight leading-tight">{selectedJob.title}</h2>
+                <div className="flex gap-4 mb-8">
+                  <span className="text-xs font-bold text-brandPrimary">{selectedJob.hiringOrganization.name}</span>
+                  <span className="text-xs font-bold text-zinc-400">•</span>
+                  <span className="text-xs font-bold text-zinc-400">{selectedJob.jobLocation.address.addressLocality}</span>
+                </div>
 
-          <blockquote className="text-lg leading-relaxed text-slate-700">
-            “From the outset, RiskMan demonstrated unparalleled dedication to
-            understanding our organization's challenges. Their team provided
-            deep insights and tailored solutions.”
-            <br />
-            <br />
-            <span className="font-semibold">Soumen Sarkar</span>
-          </blockquote>
+                <div 
+                  className="prose prose-zinc dark:prose-invert prose-sm max-w-none 
+                  prose-h3:text-lg prose-h3:font-bold prose-p:leading-relaxed prose-li:my-1"
+                  dangerouslySetInnerHTML={{ __html: selectedJob.description }}
+                />
+              </div>
 
-        </div>
-      </section>
+              {/* RIGHT: APPLICATION FORM */}
+              <div className="flex-1 p-8 md:p-12 overflow-y-auto bg-white dark:bg-zinc-900">
+                <h3 className="text-xl font-bold mb-2">Apply Now</h3>
+                <p className="text-sm text-zinc-500 mb-8">Complete the form below to submit your interest.</p>
 
-      {/* PARTNER COMPANIES */}
-      <section className="py-20 bg-slate-50">
-        <div className="container">
+                <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+                  <div className="space-y-1.5">
+                    <label className="text-[10px] font-bold uppercase text-zinc-400 tracking-widest">Full Name</label>
+                    <input type="text" placeholder="John Doe" className="w-full px-4 py-3.5 rounded-xl bg-zinc-100 dark:bg-zinc-800 border-none outline-none focus:ring-2 ring-brandPrimary/30 transition-all text-sm" />
+                  </div>
+                  
+                  <div className="space-y-1.5">
+                    <label className="text-[10px] font-bold uppercase text-zinc-400 tracking-widest">Email Address</label>
+                    <input type="email" placeholder="john@example.com" className="w-full px-4 py-3.5 rounded-xl bg-zinc-100 dark:bg-zinc-800 border-none outline-none focus:ring-2 ring-brandPrimary/30 transition-all text-sm" />
+                  </div>
 
-          <p className="mb-2 tracking-wider uppercase text-slate-500">Trusted</p>
-          <h2 className="max-w-2xl mb-6 text-4xl font-bold">
-            Esteemed companies we’ve partnered with
-          </h2>
+                  <div className="space-y-1.5">
+                    <label className="text-[10px] font-bold uppercase text-zinc-400 tracking-widest">Resume / CV</label>
+                    <div className="group border-2 border-dashed border-zinc-200 dark:border-zinc-800 rounded-2xl p-10 flex flex-col items-center justify-center hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-all cursor-pointer">
+                      <div className="w-12 h-12 rounded-full bg-brandPrimary/5 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                        <FaUpload className="text-brandPrimary" />
+                      </div>
+                      <span className="text-xs font-bold text-zinc-500">Upload PDF</span>
+                      <span className="text-[10px] text-zinc-400 mt-1">Maximum file size 5MB</span>
+                    </div>
+                  </div>
 
-          <p className="max-w-3xl mb-10 text-slate-700">
-            We’re proud to work with a diverse range of organizations — from
-            startups to large enterprises — who trust us for excellence and
-            tailored advisory solutions.
-          </p>
-
-          <div className="flex items-center gap-10">
-            <img src="/logos/blinkit.png" className="h-12" />
-            <img src="/logos/nexval.png" className="h-12" />
-            <img src="/logos/khadim.png" className="h-12" />
-          </div>
-
-        </div>
-      </section>
-
+                  <div className="pt-4">
+                    <button className="w-full py-4 bg-brandPrimary text-white rounded-2xl font-bold shadow-xl shadow-brandPrimary/20 hover:opacity-90 active:scale-[0.98] transition-all">
+                      Submit Application
+                    </button>
+                    <p className="text-[10px] text-center text-zinc-400 mt-4 leading-relaxed">
+                      By clicking submit, you agree to our Terms of Service and Privacy Policy regarding applicant data.
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

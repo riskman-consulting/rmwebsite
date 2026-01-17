@@ -50,11 +50,9 @@ export default function LeadershipSection({ setSelectedLeader }) {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="mb-4 text-4xl font-bold text-start md:text-5xl"
+          className="mb-4 text-2xl font-bold text-start md:text-2xl"
         >
-          Co-founding
-          <br />
-          <span className="text-brandPrimary dark:text-brandAccent">Partners</span>
+          Our Leadership Team
         </motion.h2>
 
         <motion.p

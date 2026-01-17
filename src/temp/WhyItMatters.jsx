@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FiUsers, FiCpu, FiAward, FiTarget, FiArrowRight } from 'react-icons/fi';
- 
+
 const WHY_IT_MATTERS = [
   {
     title: "Networking",
@@ -24,17 +24,17 @@ const WHY_IT_MATTERS = [
     icon: <FiTarget />
   }
 ];
- 
+
 const WhyItMatters = () => {
   return (
     <section id="why-it-matters" className="py-32 bg-surfaceLight dark:bg-surfaceDark relative overflow-hidden transition-colors duration-500">
-     
+      
       {/* Feelpath Network Decor (Aesthetic Globs) */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#FFB800]/5 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#003366]/10 dark:bg-[#FFC000]/5 rounded-full blur-[120px] pointer-events-none"></div>
- 
+
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-       
+        
         {/* Master Style Heading */}
         <div className="text-center mb-20">
           <motion.div
@@ -58,7 +58,7 @@ const WhyItMatters = () => {
             </p>
           </motion.div>
         </div>
- 
+
         {/* Feature Grid */}
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {WHY_IT_MATTERS.map((item, index) => (
@@ -82,9 +82,9 @@ const WhyItMatters = () => {
             </motion.div>
           ))}
         </div>
- 
+
         {/* Branded Action Banner */}
-        <motion.div
+        <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -92,7 +92,7 @@ const WhyItMatters = () => {
         >
           {/* Subtle Glow inside banner */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#FFC000]/10 rounded-full blur-[80px]"></div>
-         
+          
           <div className="mb-10 md:mb-0 md:mr-10 text-center md:text-left relative z-10">
             <h3 className="text-3xl md:text-4xl font-bold mb-4 tracking-tighter">
               Ready to elevate your <span className="text-[#FFC000]">career?</span>
@@ -101,7 +101,7 @@ const WhyItMatters = () => {
               "Join thousands of audit professionals in our upcoming gatherings designed for self-discovery and growth."
             </p>
           </div>
- 
+
           <button className="relative z-10 group whitespace-nowrap px-10 py-5 bg-gradient-to-r from-[#FFB800] to-[#FFC000] text-[#001F3F] font-black text-xs uppercase tracking-[0.2em] rounded-2xl hover:shadow-xl hover:shadow-[#FFB800]/20 transition-all duration-300 flex items-center gap-3 active:scale-95">
             See All Dates <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
           </button>
@@ -110,6 +110,5 @@ const WhyItMatters = () => {
     </section>
   );
 };
- 
+
 export default WhyItMatters;
- 

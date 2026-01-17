@@ -45,7 +45,7 @@ export default function FAQSection() {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="mb-10 text-3xl font-bold text-start md:text-4xl text-brandDark dark:text-white"
+          className="mb-10 text-2xl font-bold text-start md:text-3xl text-brandDark dark:text-white"
         >
           Frequently Asked
           <br />

@@ -21,7 +21,9 @@ import professionalExcellenceImg from "../../assets/images/professional_excellen
 import propreneurialImg from "../../assets/images/propreneurial_mindset_presentation.png";
 import longtermRelationshipsImg from "../../assets/images/longterm_relationships_handshake.png";
 import Testimonials from "./Testimonials";
+import { JourneyTimeline } from "./JourneyTimeline";
 import MainEvent from "../../temp/MainEvent";
+
 
 
 
@@ -62,9 +64,12 @@ export default function About() {
       {/* ================= INTRODUCTION SECTION ================= */}
       <IntroSection />
 
+
       {/* ================= TRIBUTE SECTION ================= */}
       <TributeSection />
 
+      {/* ================= JOURNEY TIMELINE ================= */}
+      <JourneyTimeline/>
       {/* ================= FEATURES ================= */}
       <FeatureSection />
 
@@ -92,8 +97,7 @@ export default function About() {
       <TeamMembersSection />
 
       {/* ================= EVENTS ================= */}
-      {/* <Events /> */}
-      <MainEvent/>
+     {/* <MainEvent/> */}
 
       {/* ================= FAQ ================= */}
       <FAQSection />

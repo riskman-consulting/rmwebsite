@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FiMapPin, FiChevronRight, FiImage } from 'react-icons/fi';
- 
+
 const EventsGrid = ({ events, onCardClick }) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6 py-12">
@@ -22,10 +22,10 @@ const EventsGrid = ({ events, onCardClick }) => {
               alt={event.title}
               className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"
             />
-           
+            
             {/* Dark Overlay Gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-[#001F3F]/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
- 
+
             {/* Floating Branded Date Badge */}
             <div className="absolute top-5 left-5">
               <div className="backdrop-blur-md bg-white/90 dark:bg-[#001A33]/90 px-4 py-2 rounded-2xl shadow-xl border border-white/20">
@@ -34,7 +34,7 @@ const EventsGrid = ({ events, onCardClick }) => {
                 </p>
               </div>
             </div>
- 
+
             {event.featured && (
               <div className="absolute top-5 right-5">
                 <span className="bg-gradient-to-r from-[#FFB800] to-[#FFC000] text-[#001F3F] text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-lg">
@@ -43,7 +43,7 @@ const EventsGrid = ({ events, onCardClick }) => {
               </div>
             )}
           </div>
- 
+
           {/* Content Area */}
           <div className="p-8 flex flex-col flex-grow">
             {/* Meta Info */}
@@ -57,17 +57,17 @@ const EventsGrid = ({ events, onCardClick }) => {
                 {event.type || 'Experience'}
               </span>
             </div>
- 
+
             {/* Title */}
             <h3 className="text-2xl font-bold text-[#001F3F] dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#FFB800] group-hover:to-[#FFC000] transition-all duration-300 mb-4 tracking-tight">
               {event.title}
             </h3>
- 
+
             {/* Description */}
             <p className="text-[#001F3F]/70 dark:text-white/70 text-sm leading-relaxed line-clamp-2 mb-8 italic">
               "{event.shortDesc}"
             </p>
- 
+
             {/* Footer Interaction */}
             <div className="mt-auto pt-6 border-t border-[#003366]/5 dark:border-white/5 flex items-center justify-between">
               <div className="flex items-center gap-2 group-hover:gap-4 transition-all duration-500">
@@ -76,7 +76,7 @@ const EventsGrid = ({ events, onCardClick }) => {
                   Explore Gallery
                 </span>
               </div>
-             
+              
               <div className="h-10 w-10 rounded-full bg-[#001F3F]/5 dark:bg-white/5 flex items-center justify-center text-[#001F3F] dark:text-white group-hover:bg-gradient-to-r group-hover:from-[#FFB800] group-hover:to-[#FFC000] group-hover:text-[#001F3F] transition-all duration-500">
                 <FiChevronRight className="text-lg" />
               </div>
@@ -87,5 +87,5 @@ const EventsGrid = ({ events, onCardClick }) => {
     </div>
   );
 };
- 
+
 export default EventsGrid;

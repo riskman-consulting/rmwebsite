@@ -30,7 +30,7 @@ export default function TributeSection() {
           </h2>
 
           <h3 className="px-2 mb-2 text-xl font-semibold">
-            Prabir Sen Gupta
+            Prabirsen Gupta
           </h3>
           <blockquote className="pl-4 mb-4 text-lg italic border-l-4 border-brandAccent text-brandNavy/80 dark:text-white/70">
             "Excellence is not a destination; it is a continuous journey."

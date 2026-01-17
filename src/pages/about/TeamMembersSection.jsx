@@ -63,7 +63,7 @@ const RiskManTeams = () => {
     {id:32,image:teamsImages.Arif},
     {id:33,image:teamsImages.Harsh},
     {id:34,image:teamsImages.Kiran},
-    {id:35,image:teamsImages.Vipul}
+    // {id:35,image:teamsImages.Vipul}
   ];
  
   const gridItems = injectLogo(allMembers);

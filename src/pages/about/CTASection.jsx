@@ -16,7 +16,7 @@ export default function CTASection() {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="mb-6 text-4xl font-bold md:text-5xl text-brandDark dark:text-white"
+          className="mb-6 text-2xl font-bold md:text-3xl text-brandDark dark:text-white"
         >
           Partner With
           <br />

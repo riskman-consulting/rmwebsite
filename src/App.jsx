@@ -20,8 +20,8 @@ import './index.css'
 import { Toaster } from 'react-hot-toast'
 import ScrollToTop from './components/common/ScrollToTop'
 import ThemeToggle from './components/common/ThemeToggle'
-import Events from './pages/about/Events'
-
+// import Events from './pages/about/Events'
+import Events from './temp/MainEvent'
 function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
 

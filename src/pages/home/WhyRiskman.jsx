@@ -123,7 +123,7 @@ const WhyRiskMan = () => {
   ];
 
   return (
-    <section className="w-full py-24 bg-white dark:bg-[#06071B] overflow-hidden">
+    <section className="w-full py-24 bg-bgLight dark:bg-bgDark relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8 lg:px-12">
         
         {/* TOP SECTION: ASYMMETRIC HEADER */}
