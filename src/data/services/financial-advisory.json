@@ -1,0 +1,273 @@
+{
+  "heroSection": {
+    "title": "Insights. Decisions. Business Growth.",
+    "description": "We help organizations unlock value, manage risk, and make sound financial decisions that fuel long-term success. Our Financial Advisory services empower businesses with data-driven insights and actionable financial strategies.",
+    "bgImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80"
+  },
+  "trusteSection": {
+    "title": "Trusted by Industry Leaders Worldwide",
+    "company": [
+      {
+        "name": "Jindal Renewables",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Jindal-Renewables-1.webp"
+      },
+      {
+        "name": "Khadim",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Khadim-logo-3-150x35-1.webp"
+      },
+      {
+        "name": "Nexval",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Nexval-logo-150x40-1.webp"
+      },
+      {
+        "name": "Electrosteel",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Electrosteel-logo-3-150x35-1.webp"
+      },
+      {
+        "name": "India TV",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Indiatv-logo-1-1.webp"
+      },
+      {
+        "name": "The World Bank",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Worldbank-logo-150x40-1.webp"
+      },
+      {
+        "name": "Electrosteel",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Electrosteel-logo-3-150x35-1.webp"
+      }
+    ]
+  },
+  "weHelpSection": {
+    "title": "We Align Our Expertise with Your Business Goals",
+    "description": [
+      {
+        "content": "With market volatility, regulatory complexity, and evolving investor expectations, strategic financial guidance is no longer optional. We build transparent, long-term relationships grounded in integrity and mutual respect, transforming complexity into actionable strategies that fuel sustainable growth."
+      },
+      {
+        "title": "Secure Your Financial Future and Mitigate Risk",
+        "content": "Whether you're navigating funding, evaluating investments, or preparing for expansion, our experts deliver clarity where it matters most. Our data-driven approach combines industry expertise, customized strategy, and end-to-end advisory support to empower your financial decision-making.",
+        "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80"
+      }
+    ]
+  },
+  "solutionSection": {
+    "title": "Our Financial Advisory Solutions",
+    "description": "Whether you're navigating funding, evaluating investments, or preparing for expansion, our experts deliver clarity where it matters most.",
+    "solutions": [
+      {
+        "name": "Credit Rating Advisory",
+        "description": "We help companies prepare for and improve their credit ratings by strengthening financial reporting and optimizing debt ratios for better lending terms."
+      },
+      {
+        "name": "Business Valuation",
+        "description": "Accurate and independent valuation services for mergers, acquisitions, and investment decisions that drive strategic growth."
+      },
+      {
+        "name": "Debt Structuring",
+        "description": "Tailored debt structures aligned with your business goals, ensuring flexibility, cost efficiency, and optimal capital structure."
+      },
+      {
+        "name": "Project Feasibility Study",
+        "description": "Comprehensive feasibility studies covering financial, technical, and market viability to support informed investment decisions."
+      },
+      {
+        "name": "Investment Strategy",
+        "description": "Strategic investment advisory that aligns portfolio decisions with long-term business objectives and risk appetite."
+      },
+      {
+        "name": "Capital Restructuring",
+        "description": "Expert guidance on optimizing capital structure through equity, debt, and hybrid instruments for maximum efficiency."
+      }
+    ]
+  },
+  "partnerSection": {
+    "title": "Why Expert Financial Advisory Matters",
+    "description": "With market volatility, regulatory complexity, and evolving investor expectations, strategic financial guidance is no longer optional.",
+    "services": [
+      {
+        "name": "Trust & Integrity",
+        "description": "We build transparent, long-term relationships grounded in integrity and mutual respect with every client engagement.",
+        "path": "/about/values"
+      },
+      {
+        "name": "Data-Driven Insights",
+        "description": "Our analytical approach transforms complexity into actionable strategies that drive measurable business outcomes.",
+        "path": "/services/analytics"
+      },
+      {
+        "name": "Deep Expertise",
+        "description": "With deep industry knowledge, we guide clients through uncertainty with confidence and proven methodologies.",
+        "path": "/about/expertise"
+      },
+      {
+        "name": "End-to-End Advisory",
+        "description": "Comprehensive advisory support from initial analysis through implementation and ongoing optimization.",
+        "path": "/services/advisory"
+      }
+    ]
+  },
+  "helpUsSection": [
+    {
+      "name": "Strategic Alignment",
+      "title": "Finance Aligned with Growth Strategy",
+      "description": "60% of CFOs report that advisory support helps them better align finance with growth strategy. We help you integrate financial planning with business objectives for sustainable success.",
+      "tags": ["Strategy", "Alignment", "Growth"]
+    },
+    {
+      "name": "Expansion Support",
+      "title": "Structured Advisory for Growth",
+      "description": "49% of fast-growing firms use structured advisory for expansion and funding. Our expertise helps you navigate complex growth scenarios with confidence and clarity.",
+      "tags": ["Expansion", "Funding", "Scaling"]
+    },
+    {
+      "name": "Business Analysis",
+      "title": "Comprehensive Business Insights",
+      "description": "In-depth analysis covering financial health, market position, and operational efficiency. Transform data into decisions that drive competitive advantage and long-term value.",
+      "tags": ["Analysis", "Insights", "Value"]
+    }
+  ],
+  "proActiveSection": {
+    "title": "Make Better Financial Decisions",
+    "description": "$1.2B+ funding supported across multiple industries. We've helped clients achieve 25% average cost reduction, completed 100+ comprehensive business valuations, and enabled 90% faster credit approvals. Our track record speaks to our commitment to delivering measurable financial outcomes.",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
+  },
+  "riskAnalysisSection": [
+    "Conduct comprehensive financial health assessment and identify key risk areas",
+    "Analyze capital structure, debt ratios, and liquidity positions for optimization opportunities",
+    "Develop customized financial strategies aligned with business objectives and market conditions",
+    "Structure solutions that balance growth ambitions with risk management requirements",
+    "Implement recommendations with clear roadmaps and milestone tracking",
+    "Monitor performance through financial KPIs and adjust strategies for sustained success"
+  ],
+  "testimonialsSection": {
+    "sectionLabel": "CLIENT SUCCESS STORIES",
+    "title": "What Our Clients Say",
+    "testimonials": [
+      {
+        "id": "testimonial-1",
+        "quote": "We engaged RiskMan for a comprehensive project feasibility study and credit rating advisory. Their in-depth analysis gave us a competitive edge while launching a new product.",
+        "author": "Head of Finance",
+        "company": "National Insurance Provider",
+        "image": "https://i.pravatar.cc/150?img=56"
+      },
+      {
+        "id": "testimonial-2",
+        "quote": "RiskMan's business valuation services were instrumental in our M&A strategy. Their accurate, independent assessment helped us negotiate better terms and close the deal successfully.",
+        "author": "CEO",
+        "company": "Technology Enterprise",
+        "image": "https://i.pravatar.cc/150?img=14"
+      },
+      {
+        "id": "testimonial-3",
+        "quote": "The debt restructuring plan from RiskMan reduced our interest costs by 25% and improved our working capital position significantly. Exceptional financial advisory.",
+        "author": "CFO",
+        "company": "Manufacturing Group",
+        "image": "https://i.pravatar.cc/150?img=52"
+      }
+    ]
+  },
+  "articalSection": {
+    "title": "Read Our Insights",
+    "description": "Stay updated with expert perspectives on valuation, funding, restructuring, and financial strategy from RiskMan's advisory specialists.",
+    "articles": [
+      {
+        "id": "article-1",
+        "title": "Strategic Risk Management: A Proactive Approach to Long-Term Business Success",
+        "excerpt": "Learn how proactive risk management integrates with financial advisory to build resilient business operations and drive sustainable value creation.",
+        "category": "Risk Management",
+        "author": "RiskMan Team",
+        "publishedDate": "Jan 25, 2025",
+        "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&q=80"
+      },
+      {
+        "id": "article-2",
+        "title": "The Complete Guide to Business Valuation: Methods and Best Practices",
+        "excerpt": "Explore the key valuation methodologies used in M&A, investment decisions, and strategic planning. Understand how to maximize business value.",
+        "category": "Valuation",
+        "author": "Advisory Team",
+        "publishedDate": "Dec 15, 2024",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=80"
+      },
+      {
+        "id": "article-3",
+        "title": "Optimizing Capital Structure: Debt vs Equity Financing Strategies",
+        "excerpt": "Discover how to balance debt and equity financing for optimal capital structure. Strategic insights on funding decisions that drive growth.",
+        "category": "Capital Strategy",
+        "author": "Finance Team",
+        "publishedDate": "April 20, 2024",
+        "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80"
+      }
+    ]
+  },
+  "riskResilientSection": {
+    "title": "Ready to Make Smarter Financial Decisions?",
+    "description": "Partner with RiskMan for expert financial advisory that combines deep industry knowledge with data-driven insights. $1.2B+ funding supported, 100+ valuations completed, 90% faster approvals. Let's unlock value together.",
+    "path": "/contact"
+  },
+  "frequentlyAskedQuestions": [
+    {
+      "id": "faq-1",
+      "question": "What is Financial Advisory?",
+      "answer": "Financial Advisory provides expert guidance on financial planning, investment strategy, risk management, capital structure, and strategic decision-making. Our advisors help businesses optimize their financial position and achieve sustainable growth through data-driven insights and industry expertise."
+    },
+    {
+      "id": "faq-2",
+      "question": "How does Financial Advisory help businesses?",
+      "answer": "Financial Advisory helps businesses optimize capital structure, manage risk, make informed strategic decisions, improve credit ratings, structure debt efficiently, and secure funding. Our services enable faster credit approvals, cost reduction, and better alignment of finance with growth strategy."
+    },
+    {
+      "id": "faq-3",
+      "question": "Who needs Financial Advisory services?",
+      "answer": "Startups seeking funding, SMEs planning expansion, large enterprises managing complex transactions, companies preparing for M&A, and organizations facing financial restructuring all benefit from Financial Advisory. Any business seeking financial clarity and strategic growth advantage can benefit from our services."
+    },
+    {
+      "id": "faq-4",
+      "question": "What is Business Valuation and why is it important?",
+      "answer": "Business Valuation is the process of determining the economic value of a business or company. It's critical for M&A transactions, investment decisions, fundraising, dispute resolution, and strategic planning. Accurate valuation helps you negotiate better terms and make informed decisions about your business's future."
+    },
+    {
+      "id": "faq-5",
+      "question": "How long does Financial Advisory take?",
+      "answer": "Timelines vary based on scope and complexity. Credit rating advisory may take 4-8 weeks, business valuations 2-6 weeks, project feasibility studies 6-12 weeks, and comprehensive debt restructuring 8-16 weeks. We provide detailed timelines during initial consultation based on your specific needs."
+    },
+    {
+      "id": "faq-6",
+      "question": "Why choose RiskMan for Financial Advisory?",
+      "answer": "RiskMan combines deep industry expertise with a data-driven and client-focused approach. We've supported $1.2B+ in funding, completed 100+ valuations, and helped clients achieve 25% cost reduction and 90% faster credit approvals. Our transparent, relationship-based approach ensures long-term partnership and measurable results."
+    },
+    {
+      "id": "faq-7",
+      "question": "Can Financial Advisory help small businesses?",
+      "answer": "Absolutely! Tailored advisory solutions can significantly benefit small and growing businesses. We help small businesses with strategic financial planning, funding strategies, cost optimization, credit improvement, and growth planning. Our scalable approach ensures you get expert guidance regardless of company size."
+    },
+    {
+      "id": "faq-8",
+      "question": "What is the difference between Debt Structuring and Debt Restructuring?",
+      "answer": "Debt Structuring involves designing an optimal debt arrangement for new financing or expansion, focusing on terms, interest rates, and repayment schedules. Debt Restructuring involves modifying existing debt obligations to improve financial stability, often in response to financial distress. Both require strategic planning and expert negotiation."
+    }
+  ],
+  "pageMetadata": {
+    "pageTitle": "Financial Advisory Services | Business Valuation & Credit Rating | RiskMan",
+    "metaDescription": "Expert financial advisory services from RiskMan. Credit rating advisory, business valuation, debt structuring, and project feasibility studies. $1.2B+ funding supported, 90% faster approvals.",
+    "keywords": "financial advisory, business valuation, credit rating advisory, debt structuring, project feasibility study, investment strategy, capital restructuring, wealth management, financial planning, M&A advisory",
+    "ogTitle": "Financial Advisory Services - Strategic Financial Guidance & Business Valuation",
+    "ogDescription": "Make better financial decisions with RiskMan's expert advisory services. 25% average cost reduction, 100+ valuations completed, 90% faster credit approvals. Insights. Decisions. Growth.",
+    "ogImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80",
+    "canonicalUrl": "https://riskmanconsulting.com/financial-advisory",
+    "schemaType": "Service",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "https://riskmanconsulting.com"
+      },
+      {
+        "name": "Services",
+        "url": "https://riskmanconsulting.com/services"
+      },
+      {
+        "name": "Financial Advisory",
+        "url": "https://riskmanconsulting.com/financial-advisory"
+      }
+    ]
+  }
+}

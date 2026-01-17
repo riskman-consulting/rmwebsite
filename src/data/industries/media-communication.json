@@ -1,0 +1,144 @@
+{
+  "id": "media-communication",
+  "title": "Media & Communication",
+  "heroSection": {
+    "tag": "Services Details",
+    "title": "Media & Communication",
+    "description": "Stay ahead in the evolving media landscape with tailored risk, compliance, and advisory solutions.",
+    "primaryCTA": {
+      "text": "Talk to us",
+      "action": "/contact"
+    },
+    "heroImage": {
+      "src": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1400",
+      "alt": "Modern media production studio and digital broadcasting"
+    }
+  },
+  "challengeSection": {
+    "title": "Turning Media Challenges Into Strategic Advantage",
+    "description": "In today’s always-on, content-driven world, media and communications companies face mounting complexities—ranging from data privacy to third-party risk.",
+    "supportingText": "With the right advisory and risk management approach, these challenges become opportunities to build trust, ensure compliance, and drive innovation.",
+    "challenges": [
+      "Combat piracy, data breaches, and content theft with robust cybersecurity and privacy frameworks.",
+      "Navigate evolving media laws, content restrictions, and data localization rules confidently.",
+      "Grow your global footprint with risk-resilient operational and governance models."
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1000",
+      "alt": "Digital content security and IP protection"
+    }
+  },
+  "solutionsSection": {
+    "title": "Our Solutions for Media & Communications",
+    "items": [
+      {
+        "id": "01",
+        "title": "Cybersecurity",
+        "description": "Secure your digital content, networks, and streaming platforms against evolving threats with end-to-end security architecture.",
+        "link": "/services/cybersecurity"
+      },
+      {
+        "id": "02",
+        "title": "Data Privacy & Protection",
+        "description": "Ensure GDPR, CCPA, and regional compliance while building trust with your audience through responsible data practices.",
+        "link": "/services/data-privacy-protection"
+      },
+      {
+        "id": "03",
+        "title": "TPRM",
+        "description": "Mitigate risks from production houses, ad tech partners, and distribution vendors with robust third-party evaluation frameworks.",
+        "link": "/services/tprm"
+      },
+      {
+        "id": "04",
+        "title": "Consulting",
+        "description": "Optimize operations and manage transformation with strategic advisory, performance improvement, and process automation.",
+        "link": "/services/risk-advisory"
+      }
+    ]
+  },
+  "impactHighlight": {
+    "metric": "100+",
+    "label": "Media Sector Clients",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1522865080725-2a9ea1fcb94e?w=1400",
+      "alt": "Global media distribution and digital consumption"
+    }
+  },
+  "trustedBrands": {
+    "title": "Trusted by Global Brands",
+    "description": "We work with leading media companies across broadcast, digital, and streaming to unlock measurable value.",
+    "logos": [
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Indiatv-logo-1-1.webp",
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Indorama_Ventures_Logo.svg-2-1.webp",
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Jindal-Renewables-1.webp"
+    ]
+  },
+  "whyRiskMan": {
+    "title": "Why partner with RiskMan",
+    "description": "A trusted name in industry-aligned risk and compliance solutions.",
+    "features": [
+      {
+        "icon": "Briefcase",
+        "title": "Industry Experience",
+        "description": "Deep experience in media risk, tech, and compliance ecosystems."
+      },
+      {
+        "icon": "Global",
+        "title": "Global Delivery",
+        "description": "Global delivery model aligned to regional and international regulations."
+      },
+      {
+        "icon": "Settings",
+        "title": "Tailor Solutions",
+        "description": "Agile consulting and cyber risk strategies tailored to fast-paced environments."
+      },
+      {
+        "icon": "UserCheck",
+        "title": "Experienced Professionals",
+        "description": "Our team comprises experts with extensive experience across various industries."
+      }
+    ]
+  },
+  "ctaSection": {
+    "title": "Turn media complexity into growth, resilience, and innovation.",
+    "cta": {
+      "text": "Let’s Talk",
+      "action": "/contact"
+    }
+  },
+  "frequentlyAskedQuestions": [
+    {
+      "question": "What cybersecurity risks do media companies face today?",
+      "answer": "Threats like ransomware, phishing, and content piracy targeting digital IP and user data."
+    },
+    {
+      "question": "How does RiskMan help with GDPR or regional content compliance?",
+      "answer": "We help implement privacy frameworks, governance models, and compliance controls aligned with regional regulations."
+    },
+    {
+      "question": "What is Third-Party Risk Management in media?",
+      "answer": "It involves assessing and managing risks from vendors such as production houses, ad-tech partners, and distribution platforms."
+    },
+    {
+      "question": "Do you help with process automation in creative workflows?",
+      "answer": "Yes, we optimize creative and operational workflows through automation and performance improvement initiatives."
+    },
+    {
+      "question": "Can you help with ISO or SOC certifications for media firms?",
+      "answer": "Yes, we support ISO and SOC readiness, audits, and certification processes."
+    },
+    {
+      "question": "How fast can we deploy cybersecurity solutions?",
+      "answer": "Deployment timelines depend on scope but can begin within weeks using phased implementation models."
+    },
+    {
+      "question": "What makes RiskMan different from IT firms?",
+      "answer": "We combine deep risk, compliance, and industry expertise with practical, business-aligned solutions."
+    },
+    {
+      "question": "Do you offer support for international expansion?",
+      "answer": "Yes, we help media firms manage regulatory, data, and operational risks during global expansion."
+    }
+  ]
+}

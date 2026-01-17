@@ -1,0 +1,234 @@
+{
+  "heroSection": {
+    "title": "Build trust & safety with ISO Certifications",
+    "description": "We help organizations of all sizes achieve globally recognized ISO certifications to meet compliance, reduce risks, and build operational resilience.",
+    "badge": "ISO Certifications",
+    "primaryCTA": {
+      "text": "Contact",
+      "action": "/contact"
+    },
+    "heroImage": {
+      "src": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1400",
+      "alt": "Professionals walking together symbolizing trust and safety"
+    }
+  },
+  "trusteSection": {
+    "title": "Trusted by global brands",
+    "company": [
+      {
+        "name": "Indorama",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Indorama_Ventures_Logo.svg-2-1.webp"
+      },
+      {
+        "name": "Care Health",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Care-Health-Insurance-Walk-in-Recruitment-2-1.webp"
+      },
+      {
+        "name": "Electrosteel",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Electrosteel-logo-3-150x35-1.webp"
+      },
+      {
+        "name": "Emami",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Emami-logo-2-1.webp"
+      },
+      {
+        "name": "IndiaTV",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Indiatv-logo-1-1.webp"
+      }
+    ]
+  },
+  "valueSection": {
+    "title": "Unlock global market with ISO",
+    "description": "We work with businesses across IT, manufacturing, BFSI, retail, healthcare, logistics, and automotive sectors to build ISO-aligned systems that drive continuity, security, and stakeholder assurance.",
+    "stat": {
+      "value": "20+",
+      "label": "Industries Served"
+    },
+    "keyPoints": [
+      "Improved stakeholder confidence",
+      "Better operational efficiency",
+      "Stronger compliance posture",
+      "Global market readiness"
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=700",
+      "alt": "Digital infrastructure representing global market access"
+    }
+  },
+  "coreServices": {
+    "title": "ISO Certification Services",
+    "services": [
+      {
+        "title": "ISO 9001 - Quality Management",
+        "description": "Implement quality management systems focused on customer satisfaction and continuous improvement.",
+        "cta": "Learn More"
+      },
+      {
+        "title": "ISO 27001 - Information Security",
+        "description": "Establish comprehensive information security management systems to protect sensitive data.",
+        "cta": "Learn More"
+      },
+      {
+        "title": "ISO 22301 - Business Continuity",
+        "description": "Prepare your organization to respond effectively to disruptions and maintain business operations.",
+        "cta": "Learn More"
+      },
+      {
+        "title": "ISO 31000 - Risk Management",
+        "description": "Implement systematic risk management frameworks to identify and mitigate organizational risks.",
+        "cta": "Learn More"
+      }
+    ]
+  },
+  "processSection": {
+    "title": "Our 4-Step ISO Certification Process",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Assessment & Planning",
+        "description": "Evaluate current systems, identify gaps, and define a clear roadmap tailored to the desired ISO standard."
+      },
+      {
+        "step": 2,
+        "title": "Framework Design",
+        "description": "Build or enhance policies, controls, and processes aligned with ISO requirements."
+      },
+      {
+        "step": 3,
+        "title": "Internal Audit",
+        "description": "Conduct internal audits and training to ensure readiness and smooth audit performance."
+      },
+      {
+        "step": 4,
+        "title": "Ongoing Support",
+        "description": "Coordinate with certification bodies and provide post-certification support for continual improvement."
+      }
+    ]
+  },
+  "impactStats": [
+    {
+      "value": "100+",
+      "label": "Global Clients"
+    },
+    {
+      "value": "500+",
+      "label": "Successful Projects"
+    },
+    {
+      "value": "75%",
+      "label": "Faster Audit Clearance"
+    },
+    {
+      "value": "60%",
+      "label": "Risk Exposure Reduction"
+    }
+  ],
+  "whyRiskMan": {
+    "title": "Why Choose RiskMan for ISO Certifications",
+    "points": [
+      "Industry expertise across 20+ sectors",
+      "Structured execution and end-to-end support",
+      "75% faster audit clearance",
+      "60% risk exposure reduction",
+      "70+ team members with certification experience"
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600",
+      "alt": "ISO certified professionals"
+    }
+  },
+  "servicesOverview": {
+    "title": "Our ISO Consulting Delivers Measurable Business Value",
+    "description": "We help design and implement resilient systems that keep your business running during crises and disruptions while ensuring global market readiness.",
+    "services": [
+      {
+        "title": "ISO 22301 - Business Continuity",
+        "description": "Prepare your organization to respond effectively to disruptions. We help design and implement resilient systems that keep your business running during crises.",
+        "cta": "More Details"
+      },
+      {
+        "title": "ISO 27001 - Information Security",
+        "description": "Protect sensitive information with comprehensive security management systems aligned with international standards.",
+        "cta": "More Details"
+      },
+      {
+        "title": "ISO 9001 - Quality Management",
+        "description": "Enhance customer satisfaction and operational efficiency through systematic quality management processes.",
+        "cta": "More Details"
+      },
+      {
+        "title": "ISO 31000 - Risk Management",
+        "description": "Implement robust risk management frameworks to identify, assess, and mitigate organizational risks effectively.",
+        "cta": "More Details"
+      }
+    ]
+  },
+  "latestInsights": {
+    "title": "Latest insights",
+    "description": "Stay informed about ISO standards, compliance trends, and best practices.",
+    "posts": [
+      {
+        "title": "Strategic Risk Management: A Proactive Approach to Long-Term Business Success",
+        "author": "RiskMan Team",
+        "date": "June 25, 2025"
+      },
+      {
+        "title": "Sitting with your basic goodness stops time",
+        "author": "Consulting Team",
+        "date": "April 20, 2024"
+      },
+      {
+        "title": "ISO Certification: Your Path to Global Market Access",
+        "author": "Compliance Team",
+        "date": "March 15, 2024"
+      }
+    ]
+  },
+  "riskResilientSection": {
+    "title": "Ready to Achieve ISO Certification?",
+    "description": "Partner with RiskMan to unlock global markets, improve operational efficiency, and build stakeholder confidence through internationally recognized ISO certifications.",
+    "path": "/contact"
+  },
+  "frequentlyAskedQuestions": [
+    {
+      "id": 1,
+      "question": "What are ISO Certifications?",
+      "answer": "ISO certifications validate adherence to international standards such as ISO 9001 (Quality Management), ISO 27001 (Information Security), ISO 22301 (Business Continuity), and ISO 31000 (Risk Management)."
+    },
+    {
+      "id": 2,
+      "question": "Why are ISO Standards important?",
+      "answer": "ISO standards ensure quality, security, efficiency, and global credibility. They help organizations improve processes, reduce risks, and gain competitive advantage in international markets."
+    },
+    {
+      "id": 3,
+      "question": "Which industries need ISO Certifications?",
+      "answer": "ISO certifications are valuable across IT, manufacturing, healthcare, BFSI (Banking, Financial Services, Insurance), logistics, retail, automotive, and many other industries."
+    },
+    {
+      "id": 4,
+      "question": "How long does ISO Certification take?",
+      "answer": "Timelines depend on organization size, current readiness, and scope. Typically, certification can be achieved within 6-12 months with proper planning and implementation."
+    },
+    {
+      "id": 5,
+      "question": "What is ISO 9001?",
+      "answer": "ISO 9001 focuses on quality management systems and customer satisfaction. It helps organizations consistently deliver products and services that meet customer and regulatory requirements."
+    },
+    {
+      "id": 6,
+      "question": "Why choose RiskMan for ISO Certifications?",
+      "answer": "We offer industry expertise across 20+ sectors, structured execution, end-to-end certification support, and proven results with 75% faster audit clearance and 60% risk reduction."
+    },
+    {
+      "id": 7,
+      "question": "Can ISO Certifications improve efficiency?",
+      "answer": "Yes, ISO certifications streamline processes, reduce errors, improve performance, and enhance operational efficiency through systematic management approaches."
+    },
+    {
+      "id": 8,
+      "question": "Do you provide post-certification support?",
+      "answer": "Absolutely. We provide ongoing support for continual improvement, surveillance audits, and maintaining compliance with ISO standards."
+    }
+  ]
+}
