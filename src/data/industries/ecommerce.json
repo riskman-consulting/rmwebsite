@@ -1,0 +1,156 @@
+{
+  "id": "ecommerce",
+  "title": "E-Commerce",
+  "heroSection": {
+    "tag": "Services Details",
+    "title": "E-Commerce",
+    "description": "We enable e-commerce businesses to grow with confidence through tailored risk, security, and compliance strategies.",
+    "primaryCTA": {
+      "text": "Talk to us",
+      "action": "/contact"
+    },
+    "heroImage": {
+      "src": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1400",
+      "alt": "E-commerce digital storefront and data analytics"
+    }
+  },
+  "challengeSection": {
+    "title": "Thriving in the Face of E-Commerce Risk",
+    "description": "In today’s always-on, content-driven world, e-commerce platforms face mounting complexities—from data privacy and payment risks to third-party dependencies and fraud exposure.",
+    "supportingText": "With the right advisory and risk management approach, these challenges become opportunities to build trust, ensure compliance, and drive innovation.",
+    "challenges": [
+      "Implement security protocols to safeguard personal and financial data from breaches and cyberattacks",
+      "Ensure PCI DSS compliance and reduce fraud risk through secure payment ecosystems",
+      "Evaluate and manage risks from 3PLs, payment gateways, and service providers"
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1000",
+      "alt": "Secure online shopping and digital payments"
+    }
+  },
+  "solutionsSection": {
+    "title": "Our Solutions for E-Commerce Industry",
+    "items": [
+      {
+        "id": "01",
+        "title": "PCI DSS Compliance",
+        "description": "Secure your payment ecosystem and meet cardholder data protection standards.",
+        "link": "/services/compliance-regulatory"
+      },
+      {
+        "id": "02",
+        "title": "Cybersecurity",
+        "description": "Detect threats early, respond faster, and protect your digital storefront from breaches.",
+        "link": "/services/cybersecurity"
+      },
+      {
+        "id": "03",
+        "title": "TPRM",
+        "description": "Mitigate risks from production houses, tech partners, and distribution vendors through robust third-party evaluation frameworks.",
+        "link": "/services/tprm"
+      },
+      {
+        "id": "04",
+        "title": "Data Privacy & Protection",
+        "description": "Achieve compliance with evolving privacy laws while building customer trust.",
+        "link": "/services/data-privacy-protection"
+      }
+    ]
+  },
+  "impactHighlight": {
+    "image": "https://images.unsplash.com/photo-1557821552-17105176677c?w=1400",
+    "stats": [
+      {
+        "metric": "100+",
+        "label": "Enterprise E-commerce",
+        "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600"
+      },
+      {
+        "metric": "99.9%",
+        "label": "Platform Uptime",
+        "image": "https://images.unsplash.com/photo-1551288049-bbda38a10ad5?w=600"
+      },
+      {
+        "metric": "ZERO",
+        "label": "Compliance Breaches",
+        "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600"
+      }
+    ]
+  },
+  "trustedBrands": {
+    "title": "Trusted by Global Brands",
+    "description": "We help e-commerce platforms scale securely with deep digital risk expertise.",
+    "logos": [
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Blinkit-logo-1-1-1.webp",
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Zomato-logo-2-1.webp",
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Electrosteel-logo-3-150x35-1.webp"
+    ]
+  },
+  "whyRiskMan": {
+    "title": "Why partner with RiskMan",
+    "description": "A trusted name in industry-aligned risk and compliance solutions.",
+    "features": [
+      {
+        "icon": "Briefcase",
+        "title": "Industry Experience",
+        "description": "Deep experience in media risk, technology, and compliance ecosystems."
+      },
+      {
+        "icon": "Global",
+        "title": "Global Delivery",
+        "description": "Global delivery model aligned to regional and international regulations."
+      },
+      {
+        "icon": "Settings",
+        "title": "Tailor Solutions",
+        "description": "Agile consulting and cyber risk strategies tailored to fast-paced environments."
+      },
+      {
+        "icon": "UserCheck",
+        "title": "Experienced Professionals",
+        "description": "Our team comprises experts with extensive experience across various industries."
+      }
+    ]
+  },
+  "ctaSection": {
+    "title": "Enable secure growth, and improve compliance in fast-moving markets.",
+    "cta": {
+      "text": "Let’s Talk",
+      "action": "/contact"
+    }
+  },
+  "frequentlyAskedQuestions": [
+    {
+      "question": "Can you help with GDPR or international privacy compliance?",
+      "answer": "Yes, we implement encryption, access control, privacy frameworks, and regular VAPT to safeguard PII and payment data."
+    },
+    {
+      "question": "What does PCI DSS compliance involve?",
+      "answer": "It includes securing cardholder data, network segmentation, vulnerability management, monitoring, and regular audits."
+    },
+    {
+      "question": "How fast can services be deployed?",
+      "answer": "Initial risk and compliance frameworks can be deployed within weeks, depending on readiness."
+    },
+    {
+      "question": "Do you offer TPRM services for 3PLs?",
+      "answer": "Yes, we assess, onboard, and continuously monitor logistics and fulfillment partners."
+    },
+    {
+      "question": "Can you help with ISO or SOC certifications?",
+      "answer": "Yes, including ISO 27001, ISO 22301, SOC 1, SOC 2, and SOC 3."
+    },
+    {
+      "question": "How fast can we deploy cybersecurity solutions?",
+      "answer": "Critical security controls can be implemented in phases, starting within days."
+    },
+    {
+      "question": "What makes RiskMan different from IT firms?",
+      "answer": "We combine risk, compliance, cybersecurity, and business advisory—not just technology delivery."
+    },
+    {
+      "question": "Can small e-commerce brands benefit?",
+      "answer": "Absolutely. Our solutions scale from startups to enterprise platforms."
+    }
+  ]
+}

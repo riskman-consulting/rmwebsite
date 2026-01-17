@@ -1,0 +1,232 @@
+{
+  "heroSection": {
+    "title": "Strengthen Your Digital Assets",
+    "description": "Whether you're building a framework from scratch or upgrading existing systems, we bring strategy, speed, and security to the forefront of your digital ecosystem.",
+    "badge": "Cybersecurity Excellence",
+    "primaryCTA": {
+      "text": "Learn More",
+      "action": "/contact"
+    },
+    "heroImage": {
+      "src": "https://higherlogicdownload.s3.amazonaws.com/IMWUC/UploadedImages/0fnWgj4vSVyLBp4RklL0_image%20(9)-L.png",
+      "alt": "Cybersecurity professional working on secure systems"
+    }
+  },
+  "trusteSection": {
+    "title": "Trusted by global brands worldwide",
+    "company": [
+      {
+        "name": "IndiaTV",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Indiatv-logo-1-1.webp"
+      },
+      {
+        "name": "Indorama",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Indorama_Ventures_Logo.svg-2-1.webp"
+      },
+      {
+        "name": "Jindal Renewables",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Jindal-Renewables-1.webp"
+      },
+      {
+        "name": "Blinkit",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Blinkit-logo-1-1-1.webp"
+      }
+    ]
+  },
+  "experienceSection": {
+    "years": 25,
+    "title": "Years average partner experience",
+    "description": "In an era of increasing digital complexity, cybersecurity is no longer optional—it's a business imperative. RiskMan blends strategy, technology, and resilience planning to safeguard critical assets and ensure business continuity.",
+    "visualGraphic": {
+      "src": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600",
+      "alt": "Cybersecurity team collaboration"
+    }
+  },
+  "valueSection": {
+    "title": "Why Cybersecurity Matters for Your Business",
+    "description": "Cyberattacks aren't just IT issues—they're financial disasters. Strong defenses prevent severe operational and reputational damage while ensuring business continuity.",
+    "stat": {
+      "value": "75+",
+      "label": "Team Members Protecting Your Assets"
+    },
+    "keyPoints": [
+      "Ensure business continuity",
+      "Avoid costly breaches",
+      "Protect brand reputation",
+      "Meet compliance requirements"
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=700",
+      "alt": "Cybersecurity operations center"
+    }
+  },
+  "solutionSection": {
+    "title": "Our Cybersecurity Solutions",
+    "solutions": [
+      {
+        "name": "Framework Design & Development",
+        "description": "Build a strong cybersecurity foundation aligned with global standards like NIST, ISO 27001, and CIS."
+      },
+      {
+        "name": "Cyber Incident Response Plan",
+        "description": "Prepare for the worst with a tested, well-documented incident response plan minimizing damage and downtime."
+      },
+      {
+        "name": "Cyber Risk Assessment",
+        "description": "In-depth assessments of infrastructure, policies, and user behavior to identify and prioritize cyber risks."
+      },
+      {
+        "name": "Vulnerability Assessment & Penetration Testing",
+        "description": "Simulate real-world attacks to uncover security gaps before attackers exploit them."
+      },
+      {
+        "name": "Security Monitoring & Threat Intelligence",
+        "description": "Continuous monitoring and threat intelligence to detect and respond to emerging cyber threats."
+      },
+      {
+        "name": "Compliance & Governance",
+        "description": "Ensure compliance with industry regulations and establish robust security governance frameworks."
+      }
+    ]
+  },
+  "processSection": {
+    "title": "Our 4-Step Approach to Cybersecurity",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Assessment & Strategy",
+        "description": "Understand current security posture, risks, and compliance requirements."
+      },
+      {
+        "step": 2,
+        "title": "Framework Development",
+        "description": "Design and implement security frameworks aligned with business needs."
+      },
+      {
+        "step": 3,
+        "title": "Testing & Simulation",
+        "description": "Conduct vulnerability scans, penetration testing, and simulations to validate defenses."
+      },
+      {
+        "step": 4,
+        "title": "Monitoring & Response",
+        "description": "Continuous monitoring, training, and response planning to manage threats in real time."
+      }
+    ]
+  },
+  "impactStats": [
+    {
+      "value": "90%",
+      "label": "Vulnerability Elimination in 90 Days"
+    },
+    {
+      "value": "50%",
+      "label": "Faster Incident Resolution"
+    },
+    {
+      "value": "99%",
+      "label": "Compliance with Global Standards"
+    },
+    {
+      "value": "Zero",
+      "label": "Successful Ransomware Attacks"
+    }
+  ],
+  "whyRiskMan": {
+    "title": "Why Choose RiskMan for Cybersecurity",
+    "points": [
+      "25+ years average partner experience",
+      "75+ dedicated cybersecurity professionals",
+      "Proven track record across industries",
+      "Comprehensive security frameworks",
+      "24/7 threat monitoring and response"
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600",
+      "alt": "Cybersecurity consulting team"
+    }
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "reviews": [
+      {
+        "quote": "RiskMan's cybersecurity framework helped us prevent a major ransomware attack. Their proactive monitoring and incident response plan saved our business.",
+        "author": "CTO",
+        "organization": "Leading Media Company"
+      },
+      {
+        "quote": "The vulnerability assessment and penetration testing revealed critical gaps we didn't know existed. RiskMan's expertise strengthened our security posture significantly.",
+        "author": "Security Director",
+        "organization": "E-Commerce Platform"
+      }
+    ]
+  },
+  "latestInsights": {
+    "title": "Latest Insights",
+    "description": "Explore insights on industry risks, compliance trends, and digital transformation.",
+    "posts": [
+      {
+        "title": "Strategic Risk Management: A Proactive Approach to Long-Term Business Success",
+        "author": "RiskMan Team",
+        "date": "June 25, 2025"
+      },
+      {
+        "title": "Top Cybersecurity Threats in 2025",
+        "author": "Security Team",
+        "date": "May 15, 2025"
+      },
+      {
+        "title": "Building a Secure Network Architecture",
+        "author": "Infrastructure Team",
+        "date": "April 20, 2024"
+      }
+    ]
+  },
+  "riskResilientSection": {
+    "title": "Let's Secure Your Digital Landscape",
+    "description": "Partner with RiskMan to build a robust cybersecurity framework that protects your business from evolving threats. Our expert team is ready to help you achieve security excellence.",
+    "path": "/contact"
+  },
+  "frequentlyAskedQuestions": [
+    {
+      "id": 1,
+      "question": "Why is cybersecurity important?",
+      "answer": "Cybersecurity prevents data breaches, financial loss, and operational disruptions. It protects your business continuity, customer trust, and brand reputation in an increasingly digital world."
+    },
+    {
+      "id": 2,
+      "question": "Do you offer cybersecurity audits?",
+      "answer": "Yes, we offer complete cybersecurity audits including vulnerability assessments, penetration testing, compliance audits, and comprehensive security posture evaluations."
+    },
+    {
+      "id": 3,
+      "question": "What is a Cyber Incident Response Plan?",
+      "answer": "A Cyber Incident Response Plan is a documented strategy that outlines how your organization will detect, respond to, and recover from cybersecurity incidents to minimize damage and downtime."
+    },
+    {
+      "id": 4,
+      "question": "How often should we conduct penetration testing?",
+      "answer": "We recommend conducting penetration testing at least annually, or whenever there are significant changes to your infrastructure, applications, or security controls."
+    },
+    {
+      "id": 5,
+      "question": "What cybersecurity frameworks do you support?",
+      "answer": "We support major frameworks including NIST Cybersecurity Framework, ISO 27001, CIS Controls, COBIT, and industry-specific standards like PCI DSS and HIPAA."
+    },
+    {
+      "id": 6,
+      "question": "Can you help with compliance requirements?",
+      "answer": "Yes, we help organizations achieve and maintain compliance with various regulations including GDPR, SOC 2, ISO 27001, PCI DSS, HIPAA, and other industry-specific requirements."
+    },
+    {
+      "id": 7,
+      "question": "What is the difference between vulnerability assessment and penetration testing?",
+      "answer": "Vulnerability assessment identifies and categorizes security weaknesses, while penetration testing actively exploits those vulnerabilities to demonstrate real-world attack scenarios and potential impact."
+    },
+    {
+      "id": 8,
+      "question": "Do you provide ongoing security monitoring?",
+      "answer": "Yes, we offer 24/7 security monitoring, threat intelligence, and incident response services to continuously protect your organization from emerging cyber threats."
+    }
+  ]
+}

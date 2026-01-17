@@ -1,0 +1,129 @@
+{
+  "id": "manufacturing",
+  "title": "Manufacturing",
+  "heroSection": {
+    "tag": "Services Details",
+    "title": "Manufacturing",
+    "description": "Digitize operations, protect supply chains, and meet global compliance needs in a changing world.",
+    "primaryCTA": {
+      "text": "Talk to us",
+      "action": "/contact"
+    },
+    "heroImage": {
+      "src": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1400",
+      "alt": "Advanced robotic manufacturing line"
+    }
+  },
+  "challengeSection": {
+    "title": "Turning Industrial Challenges Into Strategic Resilience",
+    "description": "Modern manufacturing is undergoing rapid transformation with automation, global supply chains, and stricter compliance expectations.",
+    "supportingText": "Our TISAX and ISO readiness frameworks ensure global manufacturers stay audit-ready and resilient against supply chain disruptions.",
+    "challenges": [
+      "Stay audit-ready with ISO, TISAX, and key manufacturing certifications",
+      "Mitigate third-party risks across global supplier networks",
+      "Align with ESG goals through compliance roadmaps"
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1565034946487-077786996e27?w=1000",
+      "alt": "Quality control and industrial inspection"
+    }
+  },
+  "solutionsSection": {
+    "title": "Our Solutions for Manufacturing Industry",
+    "items": [
+      {
+        "id": "01",
+        "title": "BCP / DR",
+        "description": "Plan and recover from production disruptions quickly with robust business continuity strategies.",
+        "link": "/services/bcp-dr"
+      },
+      {
+        "id": "02",
+        "title": "Data Privacy & Protection",
+        "description": "Ensure GDPR, CCPA, and regional compliance for industrial data and proprietary IP.",
+        "link": "/services/data-privacy-protection"
+      },
+      {
+        "id": "03",
+        "title": "TPRM",
+        "description": "Mitigate risks from suppliers, vendors, and logistics partners across the global value chain.",
+        "link": "/services/tprm"
+      },
+      {
+        "id": "04",
+        "title": "Consulting",
+        "description": "Optimize factory floor operations and manage transformation with strategic industrial advisory.",
+        "link": "/services/risk-advisory"
+      }
+    ]
+  },
+  "impactHighlight": {
+    "metric": "100+",
+    "label": "Global Manufacturers",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1504328332780-fe2d7dee99d5?w=1400",
+      "alt": "Industrial facility and large scale production"
+    }
+  },
+  "trustedBrands": {
+    "title": "Trusted by Global Brands",
+    "description": "We support industrial leaders in building secure, resilient, and sustainable production operations.",
+    "logos": [
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Zomato-logo-2-1.webp",
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Blinkit-logo-1-1-1.webp",
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Khadim-logo-3-150x35-1.webp",
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Care-Health-Insurance-Walk-in-Recruitment-2-1.webp"
+    ]
+  },
+  "whyRiskMan": {
+    "title": "Why partner with RiskMan",
+    "description": "A trusted name in industry-aligned risk and compliance solutions.",
+    "features": [
+      {
+        "icon": "Briefcase",
+        "title": "Industrial Experience",
+        "description": "Deep experience in manufacturing risk, supply chain resilience, and TISAX compliance."
+      },
+      {
+        "icon": "Global",
+        "title": "Global Delivery",
+        "description": "Delivery models aligned with international industrial and environmental regulations."
+      },
+      {
+        "icon": "Settings",
+        "title": "Tailor Solutions",
+        "description": "Agile consulting and risk strategies tailored to the fast-paced automated manufacturing environment."
+      },
+      {
+        "icon": "UserCheck",
+        "title": "Experienced Professionals",
+        "description": "Our team comprises experts with extensive experience in OT security and industrial audits."
+      }
+    ]
+  },
+  "ctaSection": {
+    "title": "Enable safer, smarter manufacturing with expert risk solutions.",
+    "cta": {
+      "text": "Let’s Talk",
+      "action": "/contact"
+    }
+  },
+  "frequentlyAskedQuestions": [
+    {
+      "question": "What cybersecurity risks do manufacturing companies face?",
+      "answer": "Threats include ransomware aimed at production lines, OT attacks on industrial control systems, and supply-chain vulnerabilities."
+    },
+    {
+      "question": "How does RiskMan help with compliance?",
+      "answer": "We align operations with industrial standards like ISO 9001/45001, TISAX, GDPR, and regional safety regulations."
+    },
+    {
+      "question": "Can you help with ISO or SOC certifications?",
+      "answer": "Yes, we provide end-to-end readiness, gap analysis, and final audit support for all major manufacturing frameworks."
+    },
+    {
+      "question": "How fast can cybersecurity solutions be deployed?",
+      "answer": "Depending on scope, critical security controls can start being implemented within weeks to protect industrial assets."
+    }
+  ]
+}

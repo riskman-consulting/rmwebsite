@@ -1,0 +1,132 @@
+{
+  "id": "healthcare",
+  "title": "Healthcare",
+  "heroSection": {
+    "tag": "Sector Expertise",
+    "title": "Healthcare",
+    "description": "RiskMan enables healthcare providers to protect patient data, meet evolving regulations, and drive operational improvement.",
+    "primaryCTA": {
+      "text": "Talk to us",
+      "action": "/contact"
+    },
+    "heroImage": {
+      "src": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1400",
+      "alt": "Modern healthcare facility and professional medical environment"
+    }
+  },
+  "challengeSection": {
+    "title": "Tackling Critical Industry Risks",
+    "description": "With sensitive data, complex regulations, and high-stakes operations, healthcare organizations must manage risk while delivering quality care.",
+    "supportingText": "Our HIPAA compliance readiness programs enable hospitals to achieve full regulatory alignment in as little as 6 weeks.",
+    "challenges": [
+      "Safeguarding electronic health records (EHR)",
+      "Meeting HIPAA, GDPR, and healthcare data standards",
+      "Managing IT risk in telemedicine and mobile health"
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1576091160550-2173be9997a7?w=1000",
+      "alt": "Healthcare professionals managing digital health records"
+    }
+  },
+  "solutionsSection": {
+    "title": "Our Solutions for Healthcare Industry",
+    "items": [
+      {
+        "id": "01",
+        "title": "Cybersecurity",
+        "description": "Secure healthcare networks and systems with end-to-end security architecture and incident response.",
+        "link": "/services/cybersecurity"
+      },
+      {
+        "id": "02",
+        "title": "Data Privacy & Protection",
+        "description": "Ensure GDPR, HIPAA, and regional compliance while building trust through responsible data practices.",
+        "link": "/services/data-privacy-protection"
+      },
+      {
+        "id": "03",
+        "title": "ITGC & ITAC",
+        "description": "Strengthen system integrity and controls across healthcare infrastructure for reliable operations.",
+        "link": "/services/itgc-itac"
+      },
+      {
+        "id": "04",
+        "title": "SOC Reporting",
+        "description": "Demonstrate strong security controls and build patient trust with independent SOC audits.",
+        "link": "/services/itgc-itac"
+      }
+    ]
+  },
+  "impactHighlight": {
+    "metric": "100+",
+    "label": "Healthcare Institutions",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1584982324911-39684ad4ca8f?w=1400",
+      "alt": "Advanced medical technology and patient care"
+    }
+  },
+  "trustedBrands": {
+    "title": "Trusted by Healthcare Leaders",
+    "description": "We help hospitals and healthcare providers secure data, meet compliance, and enable trusted care delivery.",
+    "logos": [
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Nexval-logo-150x40-1.webp",
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/The_World_Bank_logo.svg-1.webp",
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Zomato-logo-2-1.webp"
+    ]
+  },
+  "whyRiskMan": {
+    "title": "Why partner with RiskMan",
+    "description": "A trusted name in industry-aligned risk and compliance solutions.",
+    "features": [
+      {
+        "icon": "Briefcase",
+        "title": "Healthcare Experience",
+        "description": "Deep experience in healthcare risk, medical IoT, and complex compliance ecosystems."
+      },
+      {
+        "icon": "Global",
+        "title": "Global Delivery",
+        "description": "Delivery model aligned to regional and international healthcare regulations."
+      },
+      {
+        "icon": "Settings",
+        "title": "Tailor Solutions",
+        "description": "Agile consulting and cyber risk strategies for high-stakes healthcare environments."
+      },
+      {
+        "icon": "UserCheck",
+        "title": "Experienced Professionals",
+        "description": "Experts with extensive experience across healthcare, nursing, and digital health."
+      }
+    ]
+  },
+  "ctaSection": {
+    "title": "Secure your healthcare services for a safer, compliant tomorrow.",
+    "cta": {
+      "text": "Let’s Talk",
+      "action": "/contact"
+    }
+  },
+  "frequentlyAskedQuestions": [
+    {
+      "question": "What cybersecurity risks do healthcare organizations face today?",
+      "answer": "Threats include ransomware (aimed at locking patient records), phishing, data breaches, and vulnerabilities in IoT medical devices."
+    },
+    {
+      "question": "How does RiskMan help with HIPAA or regional healthcare compliance?",
+      "answer": "We implement strong controls, internal audits, and governance frameworks specifically aligned with HIPAA and global healthcare regulations."
+    },
+    {
+      "question": "What is Third-Party Risk Management in healthcare?",
+      "answer": "It involves managing risks from vendors, specialized diagnostic labs, cloud providers, and digital health platform partners."
+    },
+    {
+      "question": "How fast can cybersecurity solutions be deployed?",
+      "answer": "Depending on institutional scope, initial security controls can be deployed within weeks."
+    },
+    {
+      "question": "What makes RiskMan different from IT firms?",
+      "answer": "We combine clinical compliance, cybersecurity, and industry-specific medical risk expertise—not just software delivery."
+    }
+  ]
+}

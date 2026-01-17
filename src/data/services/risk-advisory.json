@@ -1,0 +1,249 @@
+﻿{
+    "heroSection": {
+        "id":"risk-advisory",
+        "title": "Navigate uncertainties With RiskMan",
+        "description": "Our expert solutions protect your business from Business Risks, ensuring sustainable growth.",
+        "bgImage": "https://www.scoutnetworkblog.com/wp-content/uploads/2018/03/Business-Meeting-201801-002.jpg"
+    },
+    "trusteSection": {
+        "title": "Trusted by top global brands across industries",
+        "company": [
+            {
+                "name": "blikit",
+                "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Blinkit-logo-1-1-1.webp"
+            },
+            {
+                "name": "care health insurance",
+                "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Care-Health-Insurance-Walk-in-Recruitment-2-1.webp"
+            },
+            {
+                "name": "electrosteel castings limited",
+                "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Electrosteel-logo-3-150x35-1.webp"
+            },
+            {
+                "name": "india tv",
+                "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Indiatv-logo-1-1.webp"
+            },
+            {
+                "name": "emami",
+                "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Emami-logo-2-1.webp"
+            },
+            {
+                "name": "indorama ventures",
+                "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Indorama_Ventures_Logo.svg-2-1.webp"
+            },
+            {
+                "name": "Jindal Renewables",
+                "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Jindal-Renewables-1.webp"
+            },
+            {
+                "name": "Khadim",
+                "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Khadim-logo-3-150x35-1.webp"
+            },
+            {
+                "name": "Nexval",
+                "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Nexval-logo-150x40-1.webp"
+            },
+            {
+                "name": "the world bank",
+                "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/The_World_Bank_logo.svg-1.webp"
+            },
+            {
+                "name": "Zomato",
+                "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Zomato-logo-2-1.webp"
+            }
+        ]
+    },
+    "weHelpSection": {
+        "title": "We help you to shape your risk strategy with confidence",
+        "description": [
+            {
+                "content": "Our expert-led risk advisory services help you identify, assess, and manage enterprise risks — ensuring operational resilience and regulatory compliance in a rapidly evolving world."
+            },
+            {
+                "title": "Who we are",
+                "content": "We work closely with your leadership team to shape a [risk strategy] that aligns with your business goals. From risk governance to internal controls, our insights help create a robust, future-ready risk management framework.",
+                "image": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/who-we-are.webp"
+            }
+        ]
+    },
+    "solutionSection": {
+        "title": "our solutions",
+        "solutions": [
+            {
+                "name": "Risk-Based Internal Audit",
+                "description": "We deliver risk-focused internal audit solutions that go beyond compliance to uncover control weaknesses and operational inefficiencies."
+            },
+            {
+                "name": "enterprise risk management",
+                "description": "We help organizations design and implement ERM frameworks that identify, assess, and monitor strategic and operational risks."
+            },
+            {
+                "name": "Third-Party Risk Management",
+                "description": "Our TPRM services enable you to evaluate, monitor, and mitigate risks across your vendor ecosystem."
+            },
+            {
+                "name": "Third-Party Risk Management",
+                "description": "Our TPRM services enable you to evaluate, monitor, and mitigate risks across your vendor ecosystem."
+            },
+            {
+                "name": "CSA Design and Implementation",
+                "description": "We design and implement CSA programs that empower business units to assess their own controls and risk exposure."
+            },
+            {
+                "name": "Formulation of Business SOPs",
+                "description": "We develop clear, compliant, and process-aligned Standard Operating Procedures (SOPs) tailored to your business functions."
+            }
+        ]
+    },
+    "partnerSection": {
+        "title": "Your Partner in Risk Management",
+        "description": "With a focus on risk management and compliance solutions, we help you navigate complex challenges, ensuring your business thrives in a dynamic environment.",
+        "services": [
+            {
+                "name": "Industry Expertise",
+                "description": "Deep knowledge across sectors to deliver impactful risk solutions.",
+                "path": "/contact"
+            },
+            {
+                "name": "Innovative Approach",
+                "description": "Cutting-edge tools and strategies for effective risk mitigation.",
+                "path": "/contact"
+            },
+            {
+                "name": "Proven Success",
+                "description": "Trusted by global businesses for reliable risk consulting and governance.",
+                "path": "/contact"
+            },
+            {
+                "name": "Risk Mitigation",
+                "description": "Customized strategies to address your unique business risk challenges.",
+                "path": "/contact"
+            }
+        ]
+    },
+    "helpUsSection": [
+        {
+            "name": "Assurance",
+            "title": "Rising Risk Complexity Across Industries",
+            "description": "With digital transformation and geopolitical shifts, enterprise risk landscapes are evolving fast. Organizations must adopt agile risk strategies to stay resilient and compliant.",
+            "tags": [
+                "True",
+                "Compliance",
+                "Integrity"
+            ]
+        },
+        {
+            "name": "Clarity",
+            "title": "Regulatory Pressure Driving Controls",
+            "description": "Compliance frameworks are becoming more demanding. Regulatory bodies now expect proactive risk identification, continuous monitoring, and strong internal controls.",
+            "tags": [
+                "Compliance",
+                "Confidence",
+                "Control"
+            ],
+            "path": "/contact"
+        },
+        {
+            "name": "Control",
+            "title": "The Shift Toward Proactive Risk Management",
+            "description": "Leaders are moving from reactive to proactive risk postures, embedding risk into strategic decisions and performance metrics.",
+            "tags": [
+                "Governance",
+                "Mitigation",
+                "Oversight"
+            ]
+        }
+    ],
+    "proActiveSection": {
+        "title": "Proactive risk advisory backed by insights",
+        "description": "Our risk strategies are rooted in research, driven by data, and aligned with industry best practices. We help organizations anticipate disruptions and turn risks into strategic opportunities.",
+        "image": "https://img.freepik.com/premium-photo/shaking-hands-business-meeting-business-partners-office_160672-731.jpg"
+    },
+    "riskAnalysisSection": [
+        "Risk Analysis & Identification",
+        "Risk Assessment & Prioritization",
+        "Strategic Risk Mitigation and crisis Response Plans",
+        "Monitoring & Continuous Improvement"
+    ],
+    "articalSection": {
+        "title": "Read latest insights",
+        "description": "Insights that empower smarter decisions—explore expert perspectives on risk, compliance, and strategic control.",
+        "articles": [
+            {
+                "id": 1,
+                "title": "How to create your purpose filled career comfortable clothes",
+                "author": "Riskman_admin",
+                "category": "Business",
+                "publishedDate": "2024-04-29",
+                "excerpt": "How to create your purpose filled career comfortable clothes. Written by WealCoder. Post Date comments No Comments. Views shares Facebook Twitter Pinterest. Myriam was first trained as a sculptor...",
+                "comments": 0
+            },
+            {
+                "id": 2,
+                "title": "Strategic Risk Management: A Proactive Approach to Long-Term Business Success",
+                "author": "Riskman_admin",
+                "category": "Business",
+                "publishedDate": "2025-06-25",
+                "excerpt": "In today’s rapidly evolving business landscape, companies face an array of risks—economic fluctuations, cybersecurity threats, regulatory changes, and disruptive competition. While some risks are inevitable, how an organization anticipates and...",
+                "comments": 0
+            },
+            {
+                "id": 3,
+                "title": "Sitting with your basic goodness top signs that time.",
+                "author": "Riskman_admin",
+                "category": "Business",
+                "publishedDate": "2024-04-29",
+                "excerpt": "Sitting with your basic goodness top signs that time. Written by WealCoder. Post Date comments No Comments. Views shares Facebook Twitter Pinterest. Myriam was first trained as a sculptor...",
+                "comments": 0
+            }
+        ]
+    },
+    "riskResilientSection": {
+        "title": "Want to create your risk-resilient enterprise?",
+        "description": "Partner with us to strengthen compliance, enhance governance, and protect what matters most.",
+        "path": "/contact"
+    },
+    "frequentlyAskedQuestions": [
+        {
+            "id": 1,
+            "question": "What is Risk Advisory?",
+            "answer": "Risk Advisory involves identifying, assessing, and mitigating business risks to ensure organizational resilience."
+        },
+        {
+            "id": 2,
+            "question": "How does Risk Management benefit my business?",
+            "answer": "Risk Management helps businesses minimize losses, improve decision-making, ensure compliance, enhance operational efficiency, and build long-term resilience."
+        },
+        {
+            "id": 3,
+            "question": "What industries need Risk Advisory services?",
+            "answer": "Industries such as finance, healthcare, manufacturing, technology, energy, retail, and government benefit from Risk Advisory services."
+        },
+        {
+            "id": 4,
+            "question": "How does RiskMan ensure compliance?",
+            "answer": "RiskMan ensures compliance by aligning business processes with regulatory standards, conducting audits, monitoring risks, and implementing strong governance frameworks."
+        },
+        {
+            "id": 5,
+            "question": "What is the cost of Risk Advisory services?",
+            "answer": "The cost of Risk Advisory services varies based on business size, industry, scope of engagement, and risk complexity."
+        },
+        {
+            "id": 6,
+            "question": "How long does a Risk Advisory engagement take?",
+            "answer": "A Risk Advisory engagement typically ranges from a few weeks to several months, depending on organizational needs and project scope."
+        },
+        {
+            "id": 7,
+            "question": "Can Risk Advisory improve business efficiency?",
+            "answer": "Yes, Risk Advisory improves business efficiency by streamlining processes, reducing operational risks, and optimizing resource utilization."
+        },
+        {
+            "id": 8,
+            "question": "Why choose RiskMan for Risk Advisory?",
+            "answer": "RiskMan offers expert-driven insights, tailored risk solutions, regulatory expertise, and a proactive approach to managing enterprise risks."
+        }
+    ]
+}
