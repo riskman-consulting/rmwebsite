@@ -1,18 +1,98 @@
 [
-  { "id": "risk-advisory", "title": "Risk Advisory", "headerImage":"https://devopsstaging.riskman.in/wp-content/uploads/2025/06/risk-advisory.webp ","summary": "Identify, assess, and mitigate business risks, ensuring compliance and resilience." },
-  { "id": "consulting", "title": "Consulting", "headerImage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9-yEUd2Agi-5XSBoGIaoch--Qt77iF2kabQ&s", "summary": "Strategic consulting to drive operational efficiency and business transformation." },
-   { "id": "it-consulting", "title": " IT Consulting Solutions", "headerImage":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9-yEUd2Agi-5XSBoGIaoch--Qt77iF2kabQ&s", "summary":"We help businesses modernize IT systems, enhance cybersecurity, and improve operational efficiency." },
-  { "id": "outsourcing-training", "title": "Outsourcing and Training", "headerImage":"https://cdn.elearningindustry.com/wp-content/uploads/2016/05/4-benefits-managed-learning-services-outsourcing-training-success.jpeg","summary": "Solutions to optimize processes and enhance workforce skills with BPO expertise." },
-  { "id": "esg-advisory", "title": "ESG Advisory", "headerImage":"https://devopsstaging.riskman.in/wp-content/uploads/2025/06/green-world.webp", "summary": "Advisory services to achieve environmental compliance and corporate responsibility goals." },
-  { "id": "financial-advisory", "title": "Financial Advisory", "headerImage":"https://devopsstaging.riskman.in/wp-content/uploads/2025/06/team-work.webp", "summary": "Expert financial planning and investment strategies to secure your business’s financial future." },
-  { "id": "forensic-investigation", "title": "Forensic and Investigation", "headerImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHZFihNpIoICZIraRMAeKd_E8drNdOuAAnuA&s", "summary": "Specialized forensic investigation services for fraud detection and compliance audits." },
-  { "id": "soc-services", "title": "SOC Services", "headerImage":"https://swimlane.com/wp-content/uploads/YOURGUIDETOSOC-1.png", "summary": "Trusted SOC services to ensure cybersecurity compliance and deliver reliable SOC reporting." },
-  { "id": "iso-certifications", "title": "ISO Certifications", "headerImage":"https://devopsstaging.riskman.in/wp-content/uploads/2025/06/happy-client.webp", "summary": "Achieve quality management and compliance with international ISO standards." },
-  { "id": "pci-dss-compliance", "title": "PCI DSS","headerImage":"https://static.vecteezy.com/system/resources/previews/005/843/784/non_2x/abstract-technology-ui-futuristic-concept-hud-interface-hologram-elements-of-digital-data-chart-communication-computing-and-circle-percent-vitality-innovation-on-hi-tech-future-design-background-vector.jpg", "summary": "Solutions to secure payment processing and protect cardholder data effectively." },
-  { "id": "tprm", "title": "TPRM", "headerImage":"https://www.fortra.com/sites/default/files/2025-07/fta-corp-tprm-guide-blog-02.jpg", "summary": "Third-party risk management services to ensure vendor compliance and mitigate supply chain risks." },
-  { "id": "itgc-itac", "title": "ITGC and ITAC", "headerImage":"https://www.safepaas.com/wp-content/uploads/2025/10/image.webp" ,"summary": "Strengthen IT controls, ensuring compliance and audit readiness for your systems." },
-  { "id": "bcp-dr", "title": "BCP and DR", "headerImage":"https://belmohn.com/wp-content/uploads/2025/02/5642.jpg", "summary": "Business continuity planning (BCP) and disaster recovery (DR) services for operational resilience." },
-  { "id": "it-risk-management", "title": "IT Risk Management","headerImage":"https://media.istockphoto.com/id/698336830/photo/risk-management-concept-on.jpg?s=612x612&w=0&k=20&c=sPTavxuRXDQj5a7AvxA9Jbj8L3x1zVjGgpH0zkFisBQ=", "summary": "Solutions to mitigate cybersecurity risks and ensure IT compliance and security." },
-  { "id": "cybersecurity", "title": "Cybersecurity Services", "headerImage":"https://preemptive.in/wp-content/uploads/2025/07/cyber-security-protection-firewall-interface-concept-1024x683.webp", "summary": "Robust cybersecurity services to protect your business with advanced data security and threat mitigation." },
-  { "id": "data-privacy", "title": "Data Privacy & Protection", "headerImage":"https://www.formiti.com/shared/images/content/bus_58084/Data-Privacy33-Services.jpg", "summary": "Data privacy services to safeguard sensitive information and ensure compliance with global privacy regulations." }
+  {
+    "id": "risk-advisory",
+    "title": "Risk Advisory",
+    "headerImage": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/risk-advisory.webp ",
+    "summary": "We transform organizational risk into a strategic advantage by integrating ISO 31000 and COSO frameworks. Our experts strengthen your internal controls and digital trust through rigorous SOC 2 and TISAX assessments. This proactive oversight protects your enterprise from market volatility while ensuring financial reporting integrity remains beyond reproach."
+  },
+  {
+    "id": "consulting",
+    "title": "Consulting",
+    "headerImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9-yEUd2Agi-5XSBoGIaoch--Qt77iF2kabQ&s",
+    "summary": "Our consulting practice drives operational agility through data-backed transformation and process mining. By analyzing real-world event logs, we eliminate hidden inefficiencies and revenue leakage. We specialize in designing scalable Standard Operating Procedures and Business Intelligence tools that translate complex organizational data into clear, actionable insights for CXO-level decision-making."
+  },
+  {
+    "id": "it-consulting",
+    "title": " IT Consulting Solutions",
+    "headerImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9-yEUd2Agi-5XSBoGIaoch--Qt77iF2kabQ&s",
+    "summary": "We help businesses modernize IT systems, enhance cybersecurity, and improve operational efficiency."
+  },
+  {
+    "id": "outsourcing-training",
+    "title": "Outsourcing and Training",
+    "headerImage": "https://cdn.elearningindustry.com/wp-content/uploads/2016/05/4-benefits-managed-learning-services-outsourcing-training-success.jpeg",
+    "summary": "We streamline your back-office complexity through RPA-led accounting and specialized tax compliance services. Simultaneously, we upskill your workforce through bespoke training on emerging regulations like GDPR and PCI DSS 4.0. This dual approach ensures your operational functions are both efficient and managed by a risk-intelligent, future-ready team."
+  },
+  {
+    "id": "esg-advisory",
+    "title": "Sustainability",
+    "headerImage": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/green-world.webp",
+    "summary": "We move beyond compliance to turn ESG initiatives into measurable competitive advantages. Utilizing our i.Riskman platform, we deliver precision-led climate risk assessments and comprehensive GHG accounting. Our strategy ensures your organization meets the rigorous environmental standards required by global investors and international regulatory bodies while fostering long-term resilience."
+  },
+  {
+    "id": "financial-advisory",
+    "title": "Financial Advisory",
+    "headerImage": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/team-work.webp",
+    "summary": "We provide the technical foresight required to optimize your capital structure and fuel global expansion. Our team delivers expert Credit Rating Advisory and independent corporate valuations that stand up to regulatory scrutiny. From debt syndication to M&A support, we ensure your financial narrative is accurately reflected in global markets."
+  },
+  {
+    "id": "forensic-investigation",
+    "title": "Forensic and Investigation",
+    "headerImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHZFihNpIoICZIraRMAeKd_E8drNdOuAAnuA&s",
+    "summary": "Protecting corporate integrity requires surgical precision and deep-dive intelligence. We safeguard your reputation by uncovering hidden patterns of fraud and conducting high-level due diligence on third parties. Our forensic experts resolve complex irregularities, ensuring your organization maintains the highest standards of transparency and ethical conduct across all operations."
+  },
+  {
+    "id": "soc-services",
+    "title": "SOC Services",
+    "headerImage": "https://swimlane.com/wp-content/uploads/YOURGUIDETOSOC-1.png",
+    "summary": "We specialize in SOC 1, SOC 2, and SOC 3 reporting to provide independent assurance of your internal controls. Our team guides you through the complexities of Type I and Type II audits. This process builds essential transparency and trust with your global clients regarding your service organization’s security."
+  },
+  {
+    "id": "iso-certifications",
+    "title": "ISO Certifications",
+    "headerImage": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/happy-client.webp",
+    "summary": "We assist organizations in achieving and maintaining internationally recognized standards, including ISO 27001 for information security and ISO 22301 for business continuity. Our consultants streamline the certification process, ensuring your management systems are robust. This global benchmark demonstrates your unwavering commitment to industry-leading security and operational excellence."
+  },
+  {
+    "id": "pci-dss-compliance",
+    "title": "PCI DSS",
+    "headerImage": "https://static.vecteezy.com/system/resources/previews/005/843/784/non_2x/abstract-technology-ui-futuristic-concept-hud-interface-hologram-elements-of-digital-data-chart-communication-computing-and-circle-percent-vitality-innovation-on-hi-tech-future-design-background-vector.jpg",
+    "summary": "Our experts facilitate a seamless transition to the latest PCI DSS 4.0 standards for secure payment processing. We conduct thorough gap analyses and remediation support to protect cardholder data. By maintaining rigorous compliance, we help your organization mitigate the risk of financial fraud and avoid significant regulatory penalties."
+  },
+  {
+    "id": "tprm",
+    "title": "TPRM",
+    "headerImage": "https://www.fortra.com/sites/default/files/2025-07/fta-corp-tprm-guide-blog-02.jpg",
+    "summary": "Third-Party Risk Management (TPRM) is critical for securing your extended supply chain and partner network. We identify, assess, and monitor the risks associated with external vendors to prevent security breaches. Our structured approach ensures that your third-party relationships do not become a weak link in your organizational defense."
+  },
+  {
+    "id": "itgc-itac",
+    "title": "ITGC and ITAC",
+    "headerImage": "https://www.safepaas.com/wp-content/uploads/2025/10/image.webp",
+    "summary": "We evaluate IT General Controls (ITGC) and IT Application Controls (ITAC) to ensure the integrity of your financial data. Our team assesses everything from logical access to system development lifecycles. This rigorous testing guarantees that your automated business processes are reliable, secure, and compliant with global audit standards."
+  },
+  {
+    "id": "bcp-dr",
+    "title": "BCP and DR",
+    "headerImage": "https://belmohn.com/wp-content/uploads/2025/02/5642.jpg",
+    "summary": "Our Business Continuity Planning (BCP) and Disaster Recovery (DR) services ensure your enterprise remains resilient during unforeseen disruptions. We design and test recovery strategies that minimize downtime and protect critical data assets. This foresight guarantees that your business can maintain essential operations regardless of the challenges encountered."
+  },
+  {
+    "id": "it-risk-management",
+    "title": "IT Risk Management",
+    "headerImage": "https://media.istockphoto.com/id/698336830/photo/risk-management-concept-on.jpg?s=612x612&w=0&k=20&c=sPTavxuRXDQj5a7AvxA9Jbj8L3x1zVjGgpH0zkFisBQ=",
+    "summary": "We provide a holistic approach to identifying and mitigating technology-related threats that could impact your strategic goals. Our team aligns your IT risk appetite with corporate governance to ensure a balanced security posture. This continuous monitoring helps you navigate the evolving digital landscape with confidence and operational clarity."
+  },
+  {
+    "id": "cybersecurity",
+    "title": "Cybersecurity Services",
+    "headerImage": "https://preemptive.in/wp-content/uploads/2025/07/cyber-security-protection-firewall-interface-concept-1024x683.webp",
+    "summary": "Our cybersecurity services defend your organization against sophisticated digital threats through proactive monitoring and advanced defense mechanisms. We focus on vulnerability management, incident response, and threat intelligence to protect your intellectual property. By securing your perimeter and internal assets, we ensure the long-term continuity of your digital operations."
+  },
+  {
+    "id": "data-privacy",
+    "title": "Data Privacy & Protection",
+    "headerImage": "https://www.formiti.com/shared/images/content/bus_58084/Data-Privacy33-Services.jpg",
+    "summary": "We help CXOs navigate complex global regulations, including GDPR, HIPAA, and local data protection laws. Our experts implement robust data governance frameworks that secure sensitive information throughout its entire lifecycle. This focus on privacy not only ensures legal compliance but also strengthens your brand’s reputation for ethical data stewardship."
+  }
 ]
