@@ -21,6 +21,7 @@ import CTASection from "./CTASections";
 import ClientSection from "./ClientsSection";
 import StrategicSection from "./StrategicSection";
 import LeadershipSection from "./LeadershipSection";
+import { EventCTASection } from "./EventSection";
 
 export default function Home() {
   
@@ -71,6 +72,9 @@ export default function Home() {
 
         {/* Leader section */}
         <LeadershipSection  />
+
+        {/* Event Section */}
+        <EventCTASection />
 
         {/* TESTIMONIALS */}
         <Testimonials />
