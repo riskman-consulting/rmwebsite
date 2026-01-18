@@ -1,31 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { motion, useScroll, useTransform, useInView } from "framer-motion";
-import {
-  FaShieldAlt,
-  FaChartLine,
-  FaFileContract,
-  FaLightbulb,
-  FaGraduationCap,
-  FaSearch,
-  FaLeaf,
-  FaCog,
-  FaBalanceScale,
-  FaUserShield,
-  FaClipboardCheck,
-  FaHandshake,
-  FaArrowRight,
-  FaCheckCircle,
-  FaAward,
-  FaUsers,
-  FaRocket,
-} from "react-icons/fa";
-import allServices from "../../data/services-master-list.json";
-import { CurtainRevealImage } from "./CurtainRevealImageSection";
+import { motion } from "framer-motion";
+import { FaArrowRight, FaShieldAlt, FaChartLine, FaFileContract, FaLightbulb, FaGraduationCap, FaSearch, FaLeaf, FaCog, FaBalanceScale, FaUserShield, FaClipboardCheck, FaHandshake } from "react-icons/fa";
 
-/* =======================
-   SERVICE ICONS MAP
-======================= */
+/* --- Icons Map stays the same --- */
 const serviceIcons = {
   "risk-advisory": <FaShieldAlt />,
   consulting: <FaLightbulb />,
@@ -50,80 +28,74 @@ export const ServiceCardCompact = ({ service, index }) => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 60 }}
+      initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
-      transition={{
-        duration: 0.7,
-        delay: (index % 3) * 0.1,
-        ease: [0.25, 0.1, 0.25, 1],
-      }}
+      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: (index % 3) * 0.1 }}
+      className="h-full"
     >
       <Link
         to={`/services/${service.id}`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        className="block h-full group"
       >
-        <motion.div
-          className="relative h-full overflow-hidden transition-all duration-500 border cursor-pointer group bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-3xl"
-          whileHover={{
-            y: -8,
-            boxShadow: "0 20px 40px rgba(0, 0, 0, 0.12)",
-          }}
-          transition={{ duration: 0.4 }}
-        >
-          {/* Image with Curtain */}
-          <CurtainRevealImage
-            src={service.headerImage}
-            alt={service.title}
-            delay={(index % 3) * 0.08}
-            isCompact={true}
-          />
-
-          {/* Content */}
-          <div className="p-6 space-y-4">
-            {/* Icon */}
-            <motion.div
-              className="flex items-center justify-center text-xl transition-all duration-300 w-14 h-14 rounded-2xl"
-              animate={{
-                backgroundColor: isHovered ? "#FFC000" : "rgba(0, 64, 128, 0.1)",
-                scale: isHovered ? 1.05 : 1,
-              }}
-              transition={{ duration: 0.3 }}
-            >
-              <motion.div
-                animate={{
-                  color: isHovered ? "#001F3F" : "#004080",
-                }}
-                transition={{ duration: 0.3 }}
-              >
+        {/* Main Card: Using your brand colors (bg-surfaceLight/Dark) */}
+        <div className="relative h-full flex flex-col bg-surfaceLight dark:bg-surfaceDark border border-borderLight dark:border-borderDark rounded-[2.5rem] overflow-hidden transition-all duration-500 hover:shadow-2xl hover:border-brandAccent/40">
+          
+          {/* 1. Header: Image with your brand gradient overlay */}
+          <div className="relative h-52 overflow-hidden">
+            <img
+              src={service.headerImage}
+              alt={service.title}
+              className="object-cover w-full h-full transition-transform duration-[1.5s] group-hover:scale-110"
+            />
+            {/* Gradient that fades into your brand background */}
+            <div className="absolute inset-0 bg-gradient-to-t from-surfaceLight dark:from-surfaceDark via-transparent to-transparent" />
+            
+            {/* Icon: Using your brandAccent/brandPrimary */}
+            <div className="absolute top-6 left-6 z-20">
+              <div className="flex items-center justify-center w-12 h-12 backdrop-blur-md bg-brandPrimary/10 dark:bg-brandAccent/10 border border-brandPrimary/20 dark:border-brandAccent/20 rounded-2xl text-brandPrimary dark:text-brandAccent group-hover:bg-brandAccent group-hover:text-brandDark transition-all duration-500">
                 {icon}
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
+          </div>
 
-            {/* Title */}
-            <h3 className="text-xl font-bold text-brandDark dark:text-white font-heading">
+          {/* 2. Content Section */}
+          <div className="relative flex-1 p-8 flex flex-col">
+            {/* Index: Minimal but using brand colors */}
+            <span className="absolute top-8 right-8 font-mono text-[10px] tracking-widest text-brandNavy/20 dark:text-white/20 group-hover:text-brandAccent transition-colors">
+              // 0{index + 1}
+            </span>
+
+            <h3 className="text-2xl font-bold text-brandDark dark:text-white mb-4 tracking-tight group-hover:text-brandPrimary dark:group-hover:text-brandAccent transition-colors duration-300">
               {service.title}
             </h3>
 
-            {/* Summary */}
-            <p className="text-sm leading-relaxed text-brandNavy dark:text-gray-400 line-clamp-3">
+            <p className="text-sm leading-relaxed text-brandNavy dark:text-gray-400 group-hover:text-brandDark dark:group-hover:text-gray-200 transition-colors duration-300 line-clamp-3 mb-8">
               {service.summary}
             </p>
 
-            {/* Learn More */}
-            <div className="pt-4 border-t border-borderLight dark:border-borderDark">
-              <motion.div
-                className="flex items-center gap-2 text-sm font-semibold text-brandPrimary dark:text-brandAccent"
-                animate={{ x: isHovered ? 4 : 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                Learn More
-                <FaArrowRight size={14} />
-              </motion.div>
+            {/* 3. Footer: Modern CTA using your brand theme */}
+            <div className="mt-auto pt-6 flex items-center justify-between border-t border-borderLight dark:border-borderDark">
+              <span className="text-[10px] font-black uppercase tracking-[0.2em] text-brandNavy/40 dark:text-white/40 group-hover:text-brandDark dark:group-hover:text-white transition-colors">
+                Explore Solution
+              </span>
+              
+              {/* Loginord-style arrow button but with YOUR brandAccent */}
+              <div className="relative flex items-center justify-center w-10 h-10 rounded-full border border-borderLight dark:border-borderDark group-hover:border-brandAccent transition-all duration-500 overflow-hidden">
+                <FaArrowRight 
+                  className="text-brandPrimary dark:text-brandAccent group-hover:text-brandDark transition-all duration-500 -rotate-45 group-hover:rotate-0 z-10" 
+                  size={12} 
+                />
+                <div className="absolute inset-0 bg-brandAccent translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+              </div>
             </div>
           </div>
-        </motion.div>
+
+          {/* Optional: Your brand accent line at bottom */}
+          <div className="absolute bottom-0 left-0 w-0 h-1 bg-brandAccent group-hover:w-full transition-all duration-700" />
+        </div>
       </Link>
     </motion.div>
   );

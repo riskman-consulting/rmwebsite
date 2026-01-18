@@ -1,144 +1,125 @@
-import  { useState} from "react";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import {
-  FaArrowRight
-} from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { FaArrowRight, FaShieldAlt, FaChartLine, FaFileContract, FaLightbulb, FaGraduationCap, FaFingerprint } from "react-icons/fa";
 import allServices from "../../data/services-master-list.json";
-import { ServiceCardLarge } from "./ServiceCardLargeSection";
+
+const iconMap = [FaShieldAlt, FaChartLine, FaFileContract, FaLightbulb, FaGraduationCap, FaFingerprint];
 
 export const StickyServicesSection = () => {
-  const featuredServices = allServices.slice(0, 5);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const featuredServices = allServices.slice(0, 6);
 
   return (
-    <section className="relative py-32 bg-bgLight dark:bg-bgDark">
-      <div className="container">
-        <div className="grid gap-16 lg:grid-cols-[1fr_1.2fr] items-start">
-          {/* LEFT: Enhanced Sticky Content */}
-          <div className="lg:sticky lg:top-24 h-fit">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="space-y-8"
-            >
-              {/* Section Tag */}
-              <div className="inline-block px-4 py-2 text-xs font-bold tracking-wider uppercase rounded-full bg-brandPrimary/10 text-brandPrimary dark:bg-brandAccent/10 dark:text-brandAccent">
-                Our Services
-              </div>
+    <section className="relative py-16 md:py-24 lg:pt-32 bg-bgLight dark:bg-[#030712] transition-colors duration-500 overflow-hidden">
+      
+      {/* Background Subtle Gradient Accents */}
+      <div className="absolute top-0 right-0 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-brandPrimary/5 dark:bg-brandPrimary/10 blur-[120px] md:blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-brandAccent/5 dark:bg-brandAccent/10 blur-[100px] rounded-full pointer-events-none" />
 
-              {/* Title */}
-              <h2 className="text-4xl font-bold leading-tight md:text-5xl lg:text-6xl text-brandDark dark:text-white font-heading">
-                Enterprise{" "}
-                <span className="text-brandPrimary dark:text-brandAccent">
-                  Services
-                </span>
-              </h2>
+      {/* Main Wrapper - Responsive Edge Alignment */}
+      <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 relative z-10">
+        
+        {/* --- HEADER: Left Aligned with Modern Spacing --- */}
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 mb-16 md:mb-24 border-b border-borderLight dark:border-white/10 pb-12 md:pb-16">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex-1"
+          >
+            <div className="flex items-center gap-3 mb-5">
+              <span className="w-10 h-[1px] bg-brandAccent" />
+              <span className="text-brandAccent font-mono text-[10px] md:text-[11px] tracking-[0.3em] uppercase font-bold">
+                Strategic Resilience
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-brandDark dark:text-white leading-[1.1] tracking-tighter uppercase font-heading">
+              Enterprise <br className="hidden md:block" /> 
+              <span className="text-brandPrimary dark:text-brandAccent italic">Services.</span>
+            </h2>
+          </motion.div>
 
-              {/* Description */}
-              <p className="text-lg leading-relaxed text-brandNavy dark:text-gray-400">
-                Our Enterprise Services provide a high-impact suite of risk, financial, and operational solutions designed to bolster resilience and ensure regulatory excellence for global organizations.
-              </p>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="max-w-xl"
+          >
+            <p className="text-base md:text-xl text-brandNavy/70 dark:text-slate-400 leading-relaxed font-light">
+              Our Enterprise Services provide a high-impact suite of risk, financial, and operational solutions designed to bolster resilience and ensure regulatory excellence for global organizations.
+            </p>
+          </motion.div>
+        </div>
 
-              {/* Stats Cards - Fill the space beautifully */}
-              <div className="grid grid-cols-2 gap-4 pt-6">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2 }}
-                  className="p-6 border rounded-2xl bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark"
-                >
-                  <div className="mb-2 text-3xl font-bold text-brandPrimary dark:text-brandAccent font-heading">500+</div>
-                  <div className="text-sm font-semibold text-brandNavy dark:text-gray-400">Clients Served</div>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 }}
-                  className="p-6 border rounded-2xl bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark"
-                >
-                  <div className="mb-2 text-3xl font-bold text-brandPrimary dark:text-brandAccent font-heading">15+</div>
-                  <div className="text-sm font-semibold text-brandNavy dark:text-gray-400">Years Experience</div>
-                </motion.div>
-              </div>
-
-              {/* Service Navigation List */}
-              <div className="pt-6 space-y-3">
-                {featuredServices.map((service, i) => (
-                  <motion.div
-                    key={service.id}
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.4 + i * 0.1, duration: 0.6 }}
-                    className={`flex items-center gap-4 p-4 transition-all duration-300 border rounded-xl cursor-pointer ${
-                      activeIndex === i
-                        ? "border-brandAccent bg-brandAccent/5 dark:bg-brandAccent/10 shadow-lg"
-                        : "border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark hover:border-brandPrimary/30 dark:hover:border-brandAccent/30"
-                    }`}
-                    onMouseEnter={() => setActiveIndex(i)}
-                  >
-                    {/* Number Badge */}
-                    <div
-                      className={`flex items-center justify-center flex-shrink-0 w-10 h-10 text-sm font-bold rounded-full transition-all duration-300 ${
-                        activeIndex === i
-                          ? "bg-brandAccent text-brandDark scale-110"
-                          : "bg-brandPrimary/10 dark:bg-brandAccent/10 text-brandPrimary dark:text-brandAccent"
-                      }`}
-                    >
-                      {String(i + 1).padStart(2, "0")}
-                    </div>
-
-                    {/* Service Name */}
-                    <span className="flex-1 text-sm font-semibold text-brandDark dark:text-white">
-                      {service.title}
-                    </span>
-
-                    {/* Arrow */}
-                    <motion.div
-                      animate={{ x: activeIndex === i ? 0 : -10, opacity: activeIndex === i ? 1 : 0 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <FaArrowRight className="text-brandAccent" />
-                    </motion.div>
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* CTA Button */}
+        {/* --- GRID: Responsive 1/2/3 Columns --- */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {featuredServices.map((service, index) => {
+            const Icon = iconMap[index % iconMap.length];
+            return (
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                key={service.id}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 1 }}
-                className="pt-6"
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group"
               >
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-3 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 rounded-full bg-brandPrimary dark:bg-brandAccent dark:text-brandDark hover:bg-brandNavy dark:hover:bg-brandGold hover:scale-105 hover:shadow-lg"
-                >
-                  View All Services
-                  <FaArrowRight />
+                <Link to={`/services/${service.id}`} className="block h-full">
+                  <div className="relative h-full p-8 md:p-10 lg:p-12 bg-white dark:bg-white/[0.02] border border-borderLight dark:border-white/5 rounded-[2.5rem] md:rounded-[3rem] transition-all duration-700 hover:bg-white dark:hover:bg-white/[0.04] hover:border-brandAccent/30 group-hover:-translate-y-2 flex flex-col justify-between min-h-[400px] md:min-h-[450px]">
+                    
+                    {/* Top: Icon & Index */}
+                    <div className="flex items-start justify-between">
+                      <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-brandPrimary/5 dark:bg-brandAccent/10 border border-brandPrimary/10 dark:border-brandAccent/20 flex items-center justify-center text-brandPrimary dark:text-brandAccent group-hover:bg-brandAccent group-hover:text-brandDark transition-all duration-500">
+                        <Icon className="text-xl md:text-2xl" />
+                      </div>
+                      <span className="text-4xl md:text-5xl font-black text-brandNavy/5 dark:text-white/[0.03] group-hover:text-brandAccent/10 transition-colors duration-500 font-mono">
+                        0{index + 1}
+                      </span>
+                    </div>
+
+                    {/* Middle: Content */}
+                    <div className="space-y-4 md:space-y-6">
+                      <h3 className="text-2xl md:text-3xl font-bold text-brandDark dark:text-white tracking-tight group-hover:text-brandPrimary dark:group-hover:text-brandAccent transition-colors duration-300">
+                        {service.title}
+                      </h3>
+                      <p className="text-brandNavy/60 dark:text-slate-400 text-sm md:text-base leading-relaxed line-clamp-3">
+                        {service.summary || "Bespoke frameworks designed to convert global complexity into operational resilience and precision."}
+                      </p>
+                    </div>
+
+                    {/* Bottom: Action bar */}
+                    <div className="flex items-center justify-between pt-6 md:pt-8 border-t border-borderLight dark:border-white/5 mt-6 md:mt-8">
+                      <span className="text-[10px] font-black uppercase tracking-[0.2em] text-brandDark/40 dark:text-white/40 group-hover:text-brandDark dark:group-hover:text-white transition-colors">
+                        View Solution
+                      </span>
+                      <div className="relative flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border border-borderLight dark:border-white/10 group-hover:border-brandAccent transition-all duration-500 overflow-hidden">
+                        <FaArrowRight size={12} className="text-brandDark dark:text-white group-hover:text-brandDark -rotate-45 group-hover:rotate-0 transition-all duration-500 z-10" />
+                        <div className="absolute inset-0 bg-brandAccent translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                      </div>
+                    </div>
+
+                    {/* Hover Glow */}
+                    <div className="absolute inset-0 bg-brandAccent/5 opacity-0 group-hover:opacity-100 transition-opacity blur-[80px] -z-10 rounded-full" />
+                  </div>
                 </Link>
               </motion.div>
-            </motion.div>
-          </div>
+            );
+          })}
+        </div>
 
-          {/* RIGHT: Scrolling Service Cards */}
-          <div className="space-y-6">
-            {featuredServices.map((service, index) => (
-              <ServiceCardLarge
-                key={service.id}
-                service={service}
-                index={index}
-              />
-            ))}
-          </div>
+        {/* --- FOOTER: Responsive Full Width CTA --- */}
+        <div className="mt-16 md:mt-24 flex justify-center lg:justify-end border-t border-borderLight dark:border-white/10 pt-10 md:pt-12">
+          <Link
+            to="/services"
+            className="group relative inline-flex items-center gap-4 md:gap-6 text-brandDark dark:text-white text-xl md:text-2xl font-bold"
+          >
+            <span className="underline-offset-8 decoration-brandAccent group-hover:underline transition-all">
+               Explore Full Portfolio
+            </span>
+            <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-brandDark dark:bg-brandAccent flex items-center justify-center text-white dark:text-brandDark group-hover:scale-110 transition-all shadow-lg shadow-brandPrimary/10">
+              <FaArrowRight className="text-sm md:text-base" />
+            </div>
+          </Link>
         </div>
       </div>
     </section>

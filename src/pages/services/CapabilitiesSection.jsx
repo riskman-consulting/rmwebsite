@@ -1,27 +1,12 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
-import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import {
   FaShieldAlt,
-  FaChartLine,
-  FaFileContract,
   FaLightbulb,
-  FaGraduationCap,
-  FaSearch,
-  FaLeaf,
-  FaCog,
-  FaBalanceScale,
   FaUserShield,
-  FaClipboardCheck,
-  FaHandshake,
-  FaArrowRight,
   FaCheckCircle,
   FaAward,
-  FaUsers,
-  FaRocket,
 } from "react-icons/fa";
-
-
 
 export const CapabilitiesSection = () => {
   const capabilities = [
@@ -50,77 +35,89 @@ export const CapabilitiesSection = () => {
       title: "Quality Assurance",
       description: "Rigorous testing and validation processes",
     },
+    {
+      icon: <FaShieldAlt />,
+      title: "Global Strategy",
+      description: "Cross-border compliance and resilience frameworks",
+    },
   ];
 
   return (
-    <section className="relative py-32 overflow-hidden bg-brandDark dark:bg-brandNavy">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
-          backgroundSize: '40px 40px'
-        }} />
-      </div>
+    <section className="relative px-8 py-8 md:py-8 lg:pb-16 lg:pt-10 overflow-hidden bg-bgLight dark:bg-[#030712]">
+      {/* Background Dots Pattern - Hidden on very small screens for performance */}
+      <div className="absolute inset-0 opacity-[0.1] hidden sm:block" 
+           style={{ backgroundImage: `radial-gradient(circle at 1px 1px, #FFC000 0.5px, transparent 0)`, backgroundSize: '32px 32px' }} />
 
-      <div className="container relative z-10">
-        {/* Header */}
-        <motion.div
-          className="mb-16 text-center"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="inline-block px-4 py-2 mb-4 text-xs font-bold tracking-wider uppercase border rounded-full bg-brandAccent/10 border-brandAccent/30 text-brandAccent">
-            Our Capabilities
-          </div>
+      {/* Main Wrapper: Responsive Padding (px-4 for mobile, lg:px-12 for desktop) */}
+      <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 relative z-10">
+        
+        {/* --- HEADER: Responsive Layout (Stack on mobile, Row on md+) --- */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12 md:mb-16 border-b border-borderLight dark:border-white/5 pb-10 md:pb-12 text-left">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-xl"
+          >
+            <div className="flex items-center gap-2 mb-4">
+              <span className="w-8 h-[2px] bg-brandAccent" />
+              <span className="text-brandAccent font-bold text-[10px] md:text-[11px] tracking-widest uppercase">
+                Why Choose Us
+              </span>
+            </div>
+            {/* Responsive Heading: 3xl on mobile, 4xl on tablet, 5xl on desktop */}
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-brandDark dark:text-white leading-tight font-heading">
+              Proven <span className="text-brandPrimary dark:text-brandAccent">Capabilities</span>
+            </h2>
+          </motion.div>
 
-          <h2 className="mb-6 text-4xl font-bold text-white md:text-5xl font-heading">
-            Why Choose{" "}
-            <span className="text-brandAccent">RiskMan</span>
-          </h2>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-md"
+          >
+            <p className="text-sm md:text-base text-brandNavy/70 dark:text-slate-400 leading-relaxed">
+              Industry-leading expertise backed by proven methodologies and cutting-edge technology for the global enterprise.
+            </p>
+          </motion.div>
+        </div>
 
-          <p className="max-w-3xl mx-auto text-lg text-white/80">
-            Industry-leading expertise backed by proven methodologies and cutting-edge technology
-          </p>
-        </motion.div>
-
-        {/* Capabilities Grid */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {/* --- GRID: Fully Responsive (1 col mobile, 2 col tablet, 3 col desktop) --- */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {capabilities.map((item, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{
-                duration: 0.7,
-                delay: i * 0.12,
-                ease: [0.25, 0.1, 0.25, 1],
-              }}
-              whileHover={{
-                y: -8,
-                transition: { duration: 0.3 },
-              }}
-              className="relative p-8 overflow-hidden transition-all duration-300 border cursor-pointer group bg-white/5 backdrop-blur-sm border-white/10 rounded-3xl hover:bg-white/10 hover:border-brandAccent/50"
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="group relative h-full"
             >
-              {/* Icon */}
-              <div className="flex items-center justify-center w-16 h-16 mb-6 text-2xl transition-all duration-300 rounded-full bg-brandAccent/20 text-brandAccent group-hover:bg-brandAccent group-hover:text-brandDark group-hover:scale-110">
-                {item.icon}
+              <div className="relative h-full p-6 md:p-8 overflow-hidden bg-white dark:bg-white/[0.02] border border-borderLight dark:border-white/5 rounded-2xl md:rounded-3xl transition-all duration-500 hover:border-brandAccent/40 sm:group-hover:-translate-y-1 group-hover:shadow-xl group-hover:bg-white/[0.05]">
+                
+                {/* Icon Container: Slightly smaller on mobile */}
+                <div className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 mb-5 md:mb-6 rounded-xl bg-brandPrimary/5 dark:bg-brandAccent/10 border border-brandPrimary/10 dark:border-brandAccent/20 text-brandPrimary dark:text-brandAccent group-hover:bg-brandAccent group-hover:text-brandDark transition-all duration-500">
+                  <div className="text-xl md:text-2xl">
+                    {item.icon}
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="space-y-2 md:space-y-3">
+                  <h3 className="text-lg md:text-xl font-bold text-brandDark dark:text-white tracking-tight group-hover:text-brandPrimary dark:group-hover:text-brandAccent transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs md:text-sm text-brandNavy/60 dark:text-slate-400 leading-relaxed line-clamp-3">
+                    {item.description}
+                  </p>
+                </div>
+
+                {/* Subtle Index: Faded on mobile for cleaner look */}
+                <div className="absolute top-6 right-6 md:top-8 md:right-8 font-mono text-[9px] md:text-[10px] text-brandNavy/10 dark:text-white/5">
+                  0{i + 1}
+                </div>
               </div>
-
-              {/* Title */}
-              <h3 className="mb-3 text-xl font-bold text-white font-heading">
-                {item.title}
-              </h3>
-
-              {/* Description */}
-              <p className="text-sm leading-relaxed text-white/70">
-                {item.description}
-              </p>
-
-              {/* Decorative Element */}
-              <div className="absolute w-20 h-20 transition-all duration-500 rounded-full -top-10 -right-10 bg-brandAccent/10 blur-2xl group-hover:bg-brandAccent/20" />
             </motion.div>
           ))}
         </div>

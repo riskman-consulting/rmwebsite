@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
+import HeroServiceImage from "../../assets/images/service/hero.png";
 
 export const HeroSection = () => {
   const { scrollY } = useScroll();
@@ -22,7 +23,7 @@ export const HeroSection = () => {
         <div className="absolute inset-0 z-10 bg-black/50 dark:bg-brandDark/70" />
         
         <img
-          src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&h=1080&fit=crop&q=80"
+          src={HeroServiceImage}
           alt="Professional Services"
           className="object-cover w-full h-full"
           priority="true" // If using Next.js, otherwise standard img is fine
