@@ -1,144 +1,133 @@
 import React from "react";
-import {
-  Globe,
-  Zap,
-  Briefcase,
-  ShieldCheck,
-  CheckCircle2,
-  Award,
-  Target,
-  ZapIcon,
-} from "lucide-react";
-import { FeatureCard } from "../../components/FeatureCardProps";
-import WhyRiskManImage from "../../assets/images/home/whyChoose.png";
+import { Link } from "react-router-dom";
+import WhyChooseRiskManImage from "../../assets/images/home/whyChoose.png";
 
-const WhyRiskman = () => {
+const FeatureCard = ({ title, description, index }) => (
+  <div
+    className="group relative p-6 transition-all duration-500 border shadow-lg rounded-2xl border-borderLight bg-surfaceLight hover:-translate-y-2 hover:shadow-2xl hover:border-brandGold dark:bg-surfaceDark dark:border-borderDark dark:shadow-xl dark:hover:border-brandAccent"
+    style={{ animationDelay: `${index * 100}ms` }}
+  >
+    {/* Decorative corner accent */}
+    <div className="absolute top-0 right-0 w-16 h-16 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+      <div className="absolute top-2 right-2 w-3 h-3 rounded-full bg-brandGold dark:bg-brandAccent"></div>
+    </div>
+
+    <h3 className="mb-3 text-lg font-bold transition-colors duration-300 font-heading text-brandNavy group-hover:text-brandGold dark:text-brandAccent dark:group-hover:text-white">
+      {title}
+    </h3>
+    <p className="text-sm leading-relaxed transition-colors duration-300 text-brandNavy/80 dark:text-white/70 group-hover:text-brandNavy dark:group-hover:text-white/90">
+      {description}
+    </p>
+  </div>
+);
+
+const WhyRiskMan = () => {
+  const items = [
+    {
+      title: "Customized Solutions",
+      description: "Tailoring services to unique client needs ensuring optimal outcomes and maximum value delivery."
+    },
+    {
+      title: "Client-Centric Focus",
+      description: "Our unwavering dedication to understanding and addressing client goals with personalized attention."
+    },
+    {
+      title: "Continuous Improvement",
+      description: "Constantly evolving our processes to stay ahead of industry trends and deliver excellence."
+    },
+    {
+      title: "Proven Track Record",
+      description: "A solid history of delivering measurable results and excellence across diverse industries."
+    },
+  ];
+
+  const leftItems = items.slice(0, 2);
+  const rightItems = items.slice(2);
+
   return (
-    <section className="relative py-20 bg-bgLight dark:bg-bgDark overflow-hidden">
+    <section className="relative w-full py-20 overflow-hidden transition-colors duration-300 px-7 bg-bgLight dark:bg-bgDark">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
+        <div className="absolute w-64 h-64 rounded-full -top-32 -left-32 bg-brandGold/10 blur-3xl dark:bg-brandAccent/5"></div>
+        <div className="absolute w-96 h-96 rounded-full -bottom-48 -right-48 bg-brandNavy/10 blur-3xl dark:bg-brandAccent/5"></div>
+      </div>
 
-      {/* Subtle background wash */}
-      <div className="absolute inset-0 bg-gradient-to-b from-surfaceLight to-transparent dark:from-surfaceDark pointer-events-none" />
-
-      <div className="container relative z-10">
+      <div className="container relative z-10 mx-auto max-w-7xl">
 
         {/* HEADER */}
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 mb-4 text-xs font-bold uppercase tracking-widest
-            text-brandPrimary bg-brandAccent/10 border border-brandAccent/20 rounded-full">
-            Why Partner With Us
-          </span>
-
-          <h1 className="font-heading text-4xl md:text-5xl font-extrabold text-brandDark dark:text-white mb-4">
-            Why <span className="text-brandAccent">Choose</span> RiskMan?
-          </h1>
-
-          <p className="max-w-2xl mx-auto text-brandPrimary/80 dark:text-brandLight/70
-            text-base md:text-lg leading-relaxed">
-            Unparalleled risk management solutions driven by industry veterans
-            and operational discipline.
+        <div className="mb-20 text-center animate-fade-in">
+          <p className="mb-3 text-sm font-semibold tracking-wider uppercase text-brandNavy/70 dark:text-brandAccent">
+            Why Choose Us
           </p>
+          <h2 className="text-3xl font-bold leading-tight md:text-5xl font-heading text-brandDark dark:text-white">
+            Why Global Leaders Partner with{" "}
+            <span className="relative inline-block text-brandGold dark:text-brandAccent">
+              RiskMan
+              <svg className="absolute bottom-0 left-0 w-full" height="8" viewBox="0 0 200 8" fill="none">
+                <path d="M0 7C50 3 100 1 200 4" stroke="currentColor" strokeWidth="2" opacity="0.3" />
+              </svg>
+            </span>
+          </h2>
         </div>
 
-        {/* HUB & SPOKE */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+        {/* MAIN LAYOUT: 3 COLUMNS */}
+        <div className="grid items-center gap-8 lg:grid-cols-3 lg:gap-12">
 
-          {/* LEFT */}
-          <div className="lg:col-span-4 flex flex-col gap-6 lg:items-end">
-            <FeatureCard
-              align="right"
-              icon={<Briefcase size={20} />}
-              title="Enriched Domain Expertise"
-              description="Decades of leadership experience across Big 4 firms, banks, and rating agencies."
-            />
-            <FeatureCard
-              align="right"
-              icon={<Zap size={20} />}
-              title="Agile & Lean Approach"
-              description="Outcome-driven delivery models focused on speed, clarity, and efficiency."
-            />
+          {/* LEFT COLUMN */}
+          <div className="flex flex-col order-2 gap-6 lg:order-1">
+            {leftItems.map((item, i) => (
+              <FeatureCard key={i} title={item.title} description={item.description} index={i} />
+            ))}
           </div>
 
-          {/* CENTER */}
-          <div className="lg:col-span-4 flex justify-center">
-            <div className="relative">
-              <div className="w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden
-                bg-surfaceLight dark:bg-surfaceDark
-                border border-borderLight dark:border-borderDark
-                shadow-lg">
-                <img
-                  src={WhyRiskManImage}
-                  alt="Leadership"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+          {/* CENTER COLUMN: IMAGE & CTA */}
+          <div className="relative flex flex-col items-center order-1 lg:order-2">
+            {/* Glow effect behind image */}
+            <div className="absolute inset-0 transition-opacity duration-500 opacity-0 hover:opacity-100">
+              <div className="absolute inset-0 rounded-full bg-brandGold/20 dark:bg-brandAccent/20 blur-3xl"></div>
+            </div>
 
-              {/* BADGES */}
-              <div className="absolute -top-3 -right-6 bg-surfaceLight dark:bg-surfaceDark
-                px-3 py-1.5 rounded-md border border-borderLight dark:border-borderDark
-                shadow-sm flex items-center gap-2">
-                <CheckCircle2 size={12} className="text-brandAccent" />
-                <span className="text-[11px] font-semibold text-brandDark dark:text-white">
-                  ISO Certified
-                </span>
-              </div>
+            <div className="relative z-10 transition-transform duration-700 hover:scale-105 hover:rotate-1">
+              <img
+                src={WhyChooseRiskManImage}
+                alt="Why Choose RiskMan - Professional Excellence"
+                className="w-full max-w-[380px] h-auto drop-shadow-2xl rounded-3xl"
+                loading="lazy"
+              />
+            </div>
 
-              <div className="absolute -bottom-3 -left-6 bg-brandDark
-                px-3 py-1.5 rounded-md shadow-sm flex items-center gap-2">
-                <Award size={12} className="text-brandAccent" />
-                <span className="text-[11px] font-semibold text-white">
-                  Top Rated 2024
-                </span>
-              </div>
+            {/* CTA BUTTON */}
+            <div className="mt-12 lg:absolute lg:-bottom-16">
+              <Link
+                to="/contact"
+                className="relative inline-flex items-center gap-2 px-10 py-4 overflow-hidden text-sm font-bold text-white transition-all duration-300 rounded-full shadow-xl group bg-brandNavy hover:bg-brandDark hover:scale-105 hover:shadow-2xl dark:bg-brandAccent dark:text-brandDark dark:hover:bg-brandGold"
+              >
+                <span className="relative z-10">Connect With Us</span>
+                <svg
+                  className="relative z-10 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+                {/* Hover effect overlay */}
+                <div className="absolute inset-0 transition-transform duration-300 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:translate-x-full"></div>
+              </Link>
             </div>
           </div>
 
-          {/* RIGHT */}
-          <div className="lg:col-span-4 flex flex-col gap-6 lg:items-start">
-            <FeatureCard
-              align="left"
-              icon={<ShieldCheck size={20} />}
-              title="Predictable Engagement"
-              description="Fixed pricing, transparent scope, and a 100% on-time delivery track record."
-            />
-            <FeatureCard
-              align="left"
-              icon={<Globe size={20} />}
-              title="Global Footprint"
-              description="Headquartered in India with delivery across USA, EU, and AMEA."
-            />
+          {/* RIGHT COLUMN */}
+          <div className="flex flex-col order-3 gap-6">
+            {rightItems.map((item, i) => (
+              <FeatureCard key={i} title={item.title} description={item.description} index={i + 3} />
+            ))}
           </div>
-        </div>
 
-        {/* TRUST STRIP */}
-        <div className="mt-16 pt-10 border-t border-borderLight dark:border-borderDark">
-          <div className="flex flex-wrap justify-center gap-10">
-            <TrustItem icon={<Target size={16} />} title="100% On-Time" subtitle="Delivery" />
-            <TrustItem icon={<ZapIcon size={16} />} title="Fixed Pricing" subtitle="No Surprises" />
-            <TrustItem icon={<Globe size={16} />} title="Global Reach" subtitle="Multi-Region" />
-          </div>
         </div>
-
       </div>
     </section>
   );
 };
 
-const TrustItem = ({ icon, title, subtitle }) => (
-  <div className="flex items-center gap-2">
-    <div className="w-9 h-9 rounded-full bg-surfaceLight dark:bg-surfaceDark
-      border border-borderLight dark:border-borderDark
-      flex items-center justify-center text-brandPrimary">
-      {icon}
-    </div>
-    <div>
-      <div className="text-sm font-bold text-brandDark dark:text-white">
-        {title}
-      </div>
-      <div className="text-[10px] uppercase tracking-wide text-brandPrimary/70 dark:text-brandLight/60">
-        {subtitle}
-      </div>
-    </div>
-  </div>
-);
-
-export default WhyRiskman;
+export default WhyRiskMan;

@@ -22,6 +22,7 @@ import ClientSection from "./ClientsSection";
 import StrategicSection from "./StrategicSection";
 import LeadershipSection from "./LeadershipSection";
 import { EventCTASection } from "./EventSection";
+import ValueSection from "./ValueSection";
 
 export default function Home() {
   
@@ -50,6 +51,8 @@ export default function Home() {
 
         {/* STRATEGIC SECTION */}
         <StrategicSection />
+
+        {/* <ValueSection/> */}
 
         {/* STATS */}
         <StatsSection />

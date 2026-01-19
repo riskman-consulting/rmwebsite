@@ -101,7 +101,7 @@ const EventModal = ({ event, onClose }) => {
                 <section>
                   <h3 className="text-[10px] font-black text-[#FFB800] uppercase tracking-[0.2em] mb-6">Visual Pathways</h3>
                   <div className="grid grid-cols-3 gap-3">
-                    {event.gallery?.slice(0, 6).map((img, idx) => (
+                    {event.gallery?.slice(0, event.gallery.length).map((img, idx) => (
                       <button 
                         key={idx} 
                         onClick={() => setSelectedImage(img)}

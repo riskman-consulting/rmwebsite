@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Shield, Target, Users, ArrowRight } from "lucide-react";
 
+// Image Imports
 import professionalExcellence from "../../assets/images/professional_excellence_team.png";
 import propereneurialMindset from "../../assets/images/propreneurial_mindset_presentation.png";
 import longTermRelationships from "../../assets/images/longterm_relationships_handshake.png";
@@ -110,13 +111,14 @@ const IntroductionSection = () => {
             </motion.div>
           </motion.div>
 
-          {/* RIGHT IMAGE WITH GLASS CURTAIN */}
+          {/* RIGHT IMAGE - CLEAN VERSION */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             className="lg:col-span-5 relative"
           >
+            {/* Background Glows */}
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-brandGold/20 blur-[120px]" />
             <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-brandPrimary/10 blur-[120px]" />
 
@@ -126,12 +128,8 @@ const IntroductionSection = () => {
                 alt="About RiskMan"
                 className="w-full h-[650px] object-cover transition-transform duration-1000 group-hover:scale-105"
               />
-
-              {/* GLASS CURTAIN */}
-              <div className="absolute inset-0 bg-white/20 dark:bg-white/10 backdrop-blur-2xl border-r border-white/30 translate-x-0 group-hover:translate-x-full transition-transform duration-1000 ease-[0.77,0,0.175,1] z-10" />
-
-              {/* REFLECTION */}
-              <div className="absolute inset-0 bg-gradient-to-r from-white/40 via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-20" />
+              
+              {/* Removed Glass Curtain and Reflection Divs for clarity */}
 
               {/* STATS CARD */}
               <div className="absolute -bottom-6 -left-6 p-8 bg-surfaceLight/90 dark:bg-brandNavy/90 backdrop-blur-lg border border-brandGold/30 rounded-2xl shadow-2xl">
@@ -186,9 +184,6 @@ const IntroductionSection = () => {
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-brandDark/90 via-brandDark/40 to-transparent" />
-
-                {/* GLASS LIFT */}
-                <div className="absolute inset-0 bg-white/5 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 <div className="absolute inset-0 p-10 flex flex-col justify-end text-white">
                   <div className="w-12 h-12 rounded-2xl bg-brandGold/20 backdrop-blur-md border border-brandGold/30 flex items-center justify-center mb-6 text-brandGold group-hover:scale-110 group-hover:rotate-3 transition-transform">

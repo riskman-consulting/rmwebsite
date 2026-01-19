@@ -53,6 +53,19 @@ export const events = [
     gallery: IIA_Bombay_2026_images,
   },
   {
+    id: "bombay",
+    title: "IIA Bombay Chapter",
+    date: "5 March 2025",
+    year: 2025,
+    month: "March",
+    location: "Mumbai, India",
+    type: "Chapter",
+    image: IIA_Bombay_images[2],
+    shortDesc: "Focused conversations on strengthening audit excellence.",
+    fullDesc: "The IIA Mumbai Chapter event was a hub of ideas, collaboration, and forward-thinking audit strategies.",
+    gallery: IIA_Bombay_images,
+  },
+  {
     id: "hyderabad",
     title: "IIA Hyderabad Chapter",
     date: "24 May 2025",
@@ -79,6 +92,33 @@ export const events = [
     gallery: IIA_Bangalore_images,
   },
   {
+    id: "kolkata",
+    title: "IIA Kolkata Chapter",
+    date: "10 Feb 2025",
+    year: 2025,
+    month: "February",
+    location: "Kolkata, India",
+    type: "Chapter",
+    image: IIA_Kolkata_images[0],
+    shortDesc: "Meaningful dialogue on governance and emerging audit trends.",
+    fullDesc: "At the IIA Kolkata Chapter event, professionals explored emerging trends in governance, compliance, and internal audit practices.",
+    gallery: IIA_Kolkata_images,
+  },
+
+  {
+    id: "delhi",
+    title: "AGM IIA Delhi",
+    date: "18 July 2025",
+    year: 2025,
+    month: "July",
+    location: "Delhi, India",
+    type: "Conference",
+    image: AGM_IIA_Delhi_images[0],
+    shortDesc: "Strategic discussions shaping the future of internal auditing.",
+    fullDesc: "At the AGM IIA Delhi Chapter, audit leaders collaborated on strategies, insights, and advancements shaping the future of internal audit.",
+    gallery: AGM_IIA_Delhi_images,
+  },
+  {
     id: "wofa",
     title: "WOFA 2025",
     date: "31 Jan – 2 Feb 2025",
@@ -100,11 +140,10 @@ export const events = [
 const FilterButton = ({ label, active, onClick }) => (
   <button
     onClick={onClick}
-    className={`px-5 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
-      active
+    className={`px-5 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${active
         ? "bg-brandPrimary text-white shadow-lg shadow-brandPrimary/30"
         : "bg-white/50 dark:bg-white/5 text-gray-600 dark:text-gray-400 hover:bg-white dark:hover:bg-white/10"
-    }`}
+      }`}
   >
     {label}
   </button>
@@ -140,7 +179,7 @@ const EventCard = ({ event, onClick }) => (
           <FaMapMarkerAlt className="text-brandPrimary" /> {event.location.split(',')[0]}
         </span>
       </div>
-      
+
       <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brandPrimary transition-colors">
         {event.title}
       </h3>
@@ -180,7 +219,7 @@ const GalleryModal = ({ event, isOpen, onClose }) => {
             <FaTimes size={32} />
           </button>
 
-          <div 
+          <div
             className="relative w-full max-w-7xl grid lg:grid-cols-3 gap-0 overflow-hidden bg-white dark:bg-surfaceDark rounded-[2.5rem] shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
@@ -203,7 +242,7 @@ const GalleryModal = ({ event, isOpen, onClose }) => {
               <button onClick={next} className="absolute right-4 p-4 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all">
                 <FaChevronRight />
               </button>
-              
+
               <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-4 py-1.5 bg-black/40 backdrop-blur-md rounded-full text-white/80 text-xs tracking-widest">
                 {currentIndex + 1} / {event.gallery.length}
               </div>
@@ -214,7 +253,7 @@ const GalleryModal = ({ event, isOpen, onClose }) => {
               <span className="text-brandPrimary font-bold uppercase tracking-tighter text-sm mb-2">{event.type}</span>
               <h2 className="text-4xl font-black text-gray-900 dark:text-white mb-6 leading-tight">{event.title}</h2>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">{event.fullDesc}</p>
-              
+
               <div className="space-y-4">
                 <div className="flex items-center gap-4 p-4 rounded-2xl bg-gray-50 dark:bg-white/5">
                   <FaCalendarAlt className="text-brandPrimary" />
@@ -252,7 +291,7 @@ export default function Events() {
 
   const filteredEvents = events.filter((e) => {
     return (filter.year === "All" || e.year.toString() === filter.year.toString()) &&
-           (filter.type === "All" || e.type === filter.type);
+      (filter.type === "All" || e.type === filter.type);
   });
 
   return (
@@ -266,16 +305,16 @@ export default function Events() {
       <main className="relative z-10 container mx-auto max-w-7xl px-6 py-24">
         {/* Header Section */}
         <header className="max-w-3xl mb-16">
-          <motion.div 
-            initial={{ opacity: 0, x: -20 }} 
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center gap-3 mb-6"
           >
             <div className="h-px w-12 bg-brandPrimary" />
             <span className="text-brandPrimary font-bold uppercase tracking-widest text-xs">Our Journey</span>
           </motion.div>
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }} 
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-black text-gray-900 dark:text-white mb-8 tracking-tighter"
           >
@@ -290,24 +329,24 @@ export default function Events() {
               <FaFilter className="text-gray-400 text-sm" />
               <span className="text-xs font-bold uppercase text-gray-500">Filters</span>
             </div>
-            
+
             <div className="flex flex-1 items-center gap-8 overflow-x-auto no-scrollbar py-2">
               <div className="flex items-center gap-2">
                 {years.map(y => (
-                  <FilterButton 
-                    key={y} label={y} 
-                    active={filter.year === y} 
-                    onClick={() => setFilter(f => ({...f, year: y}))} 
+                  <FilterButton
+                    key={y} label={y}
+                    active={filter.year === y}
+                    onClick={() => setFilter(f => ({ ...f, year: y }))}
                   />
                 ))}
               </div>
               <div className="w-px h-6 bg-gray-200 dark:bg-white/10" />
               <div className="flex items-center gap-2">
                 {types.map(t => (
-                  <FilterButton 
-                    key={t} label={t} 
-                    active={filter.type === t} 
-                    onClick={() => setFilter(f => ({...f, type: t}))} 
+                  <FilterButton
+                    key={t} label={t}
+                    active={filter.type === t}
+                    onClick={() => setFilter(f => ({ ...f, type: t }))}
                   />
                 ))}
               </div>
@@ -320,7 +359,7 @@ export default function Events() {
         </section>
 
         {/* Grid Section */}
-        <motion.section 
+        <motion.section
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -328,10 +367,10 @@ export default function Events() {
         >
           <AnimatePresence>
             {filteredEvents.map((event) => (
-              <EventCard 
-                key={event.id} 
-                event={event} 
-                onClick={() => { setSelectedEvent(event); setModalOpen(true); }} 
+              <EventCard
+                key={event.id}
+                event={event}
+                onClick={() => { setSelectedEvent(event); setModalOpen(true); }}
               />
             ))}
           </AnimatePresence>
@@ -341,8 +380,8 @@ export default function Events() {
         {filteredEvents.length === 0 && (
           <div className="py-40 text-center">
             <h3 className="text-2xl font-bold text-gray-400">No events match your selection.</h3>
-            <button 
-              onClick={() => setFilter({year: "All", type: "All"})}
+            <button
+              onClick={() => setFilter({ year: "All", type: "All" })}
               className="mt-4 text-brandPrimary font-bold underline"
             >
               Reset all filters

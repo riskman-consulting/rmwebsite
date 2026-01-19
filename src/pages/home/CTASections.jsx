@@ -41,15 +41,13 @@ const CTASection = () => {
             Get Started
           </p>
           <h2 className="mb-6 text-4xl font-black leading-tight md:text-5xl lg:text-6xl text-brandDark dark:text-white">
-            Create Your <span className="text-transparent bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text">Success</span> Story
+            Create Your <span className="text-transparent bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text">Scalable Success</span>
           </h2>
         </div>
 
         {/* DESCRIPTION - Matches FAQ answer text size */}
         <p className="max-w-3xl mx-auto mb-12 text-lg leading-relaxed text-center text-brandNavy dark:text-white/70">
-          Receive personalized guidance from seasoned advisors who have not only 
-          navigated the challenges of risk and compliance but have also successfully 
-          scaled critical business operations globally.
+          Leverage the collective wisdom of partners who have successfully navigated the complexities of global markets and regulatory landscapes. At RiskMan, we don't just offer advice; we provide a blueprint for resilience. Benefit from personalized guidance rooted in decades of experience building high-growth service lines and safeguarding multi-national enterprises.
         </p>
 
         {/* CTA BUTTON - Premium Style */}
