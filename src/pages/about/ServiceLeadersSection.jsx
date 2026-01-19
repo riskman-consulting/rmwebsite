@@ -470,7 +470,7 @@ const ServiceLeadersSection = ({ setSelectedLeader }) => {
   ];
 
   return (
-    <section id="service-leaders" className="relative py-24 bg-surfaceLight dark:bg-surfaceDark overflow-hidden">
+    <section id="service-leaders" className="relative px-4 md:px-5 lg:px-8 py-8 bg-surfaceLight dark:bg-surfaceDark overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-brandAccent/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-brandGold/5 rounded-full blur-3xl -ml-48 -mb-48"></div>
@@ -485,7 +485,7 @@ const ServiceLeadersSection = ({ setSelectedLeader }) => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="text-sm font-bold tracking-widest text-brandDark dark:text-brandAccent mb-4 px-4">
+          <h2 className="text-sm  font-bold tracking-widest text-brandDark dark:text-brandAccent mb-4 px-2 ">
             Our Leadership
           </h2>
           <h1 className="text-4xl md:text-5xl font-extrabold text-brandPrimary dark:text-white mb-6 leading-tight">

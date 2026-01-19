@@ -51,9 +51,9 @@ export const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mb-6 text-5xl font-extrabold leading-[1.1] text-white md:text-7xl lg:text-8xl font-heading"
+          className=" text-transparent bg-clip-text mb-6 text-3xl sm:text-4xl font-extrabold leading-[1.1] bg-gradient-to-b from-white to-white-/40 md:text-5xl lg:text-6xl font-heading"
         >
-          Strategic Resilience for the{" "}
+          Strategic Resilience for the{" "} <br/>
           <span className="text-brandAccent">
             Global Enterprise
           </span>

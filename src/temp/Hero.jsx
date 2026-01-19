@@ -812,7 +812,7 @@ const Hero = () => {
     title: "IIA Bombay Renaissance",
     shortDesc: "Where visionary architecture meets timeless innovation",
     location: "Mumbai, India",
-    date: "November 14, 2026",
+    date: "January 08, 2026",
     image: IIA_Bombay_2026_images[16],
   };
 
@@ -868,7 +868,7 @@ const Hero = () => {
   const contentScale = Math.max(0.85, 1 - (effectiveScroll / 4000));
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#000F1F]">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-surfaceLight dark:bg-surfaceDark">
       {/* Curtain Reveal Animation */}
       {!isLoaded && (
         <div 
@@ -1006,7 +1006,7 @@ const Hero = () => {
           <img
             src={featuredEvent.image}
             alt="Mumbai Cinematic Landmark"
-            className="w-full h-full object-cover brightness-[0.4] saturate-[0.8] contrast-[1.1]"
+            className="w-full h-full object-contain object-top "
           />
         </div>
         

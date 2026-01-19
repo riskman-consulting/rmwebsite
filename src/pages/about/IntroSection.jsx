@@ -718,7 +718,7 @@ const IntroductionSection = () => {
   return (
     <div className="relative overflow-hidden bg-surfaceLight dark:bg-bgDark">
       {/* 1. About Us Section - FIRST */}
-      <section className="relative py-24 lg:py-40 bg-bgLight dark:bg-surfaceDark transition-colors duration-700 isolate">
+      <section className="relative py-4 lg:py-8 bg-surfaceLight dark:bg-surfaceDark transition-colors duration-700 isolate">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 grid items-center gap-16 lg:grid-cols-12">
           
           {/* Left Side: Content */}
@@ -805,7 +805,7 @@ const IntroductionSection = () => {
       </section>
 
       {/* 2. Introduction Philosophy Section - SECOND */}
-      <section className="relative px-6 lg:px-24 py-24 bg-surfaceLight dark:bg-surfaceDark transition-colors duration-700">
+      <section className="relative px-6 lg:px-24 py-4 bg-surfaceLight dark:bg-surfaceDark transition-colors duration-700">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <motion.div 
@@ -878,21 +878,21 @@ const IntroductionSection = () => {
       </section>
 
       {/* Decorative Branding Element - RiskMan Logo Watermark */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.015] pointer-events-none select-none">
-        {/* Light mode logo */}
+      {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.015] pointer-events-none select-none">
+        
         <img 
           src="/rm.png"
           alt="RiskMan Logo" 
           className="w-[1000px] h-auto block dark:hidden object-contain"
         />
         
-        {/* Dark mode logo - inverted and brightened */}
+       
         <img 
           src="/riskman-logo-white.svg"
           alt="RiskMan Logo" 
           className="w-[1000px] h-auto hidden dark:block brightness-0 invert object-contain"
         />
-      </div>
+      </div> */}
     </div>
   );
 };

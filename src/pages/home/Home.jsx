@@ -21,6 +21,8 @@ import CTASection from "./CTASections";
 import ClientSection from "./ClientsSection";
 import StrategicSection from "./Features";
 import LeadershipSection from "./LeadershipSection";
+import EventSection from "./EventSection";
+
 
 export default function Home() {
   return (
@@ -93,6 +95,8 @@ export default function Home() {
 
           {/* WHY RISKMAN */}
           <WhyRiskman />
+
+          <EventSection/>
 
 
 

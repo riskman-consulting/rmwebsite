@@ -232,7 +232,7 @@ export default function AlliancePartnersSection() {
   const servicesRibbon = ["Audit", "Accounting", "Tax", "Advisory", "Bookkeeping", "SOC Compliance", "Internal Controls", "Risk Management"];
 
   return (
-    <section id="alliance-partners" className="relative py-24 bg-bgLight dark:bg-bgDark transition-colors duration-300 overflow-hidden">
+    <section id="alliance-partners" className="relative py-24 bg-surfaceLight dark:bg-surfaceDark transition-colors duration-300 overflow-hidden">
       <div className="container max-w-7xl mx-auto">
         
         <div className="mb-20 text-center max-w-3xl mx-auto">
