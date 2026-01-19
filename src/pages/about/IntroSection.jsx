@@ -443,6 +443,230 @@
 // export default IntroductionSection;
 
 
+// import React from "react";
+// import { motion } from "framer-motion";
+// import { Shield, Target, Users, ArrowRight } from "lucide-react";
+// import professionalExcellence from "../../assets/images/professional_excellence_team.png";
+// import propereneurialMindset from "../../assets/images/propreneurial_mindset_presentation.png";
+// import longTermRelationships from "../../assets/images/longterm_relationships_handshake.png";
+// import introSection from "../../assets/images/introsection.png";
+
+// const IntroductionSection = () => {
+//   const fadeInUp = {
+//     initial: { opacity: 0, y: 30 },
+//     whileInView: { opacity: 1, y: 0 },
+//     viewport: { once: true, margin: "-100px" },
+//     transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
+//   };
+
+//   const containerVariants = {
+//     initial: {},
+//     whileInView: {
+//       transition: { staggerChildren: 0.15 }
+//     }
+//   };
+
+//   const introCards = [
+//     {
+//       title: "Professional Excellence",
+//       subtitle: "Expertise & Accomplishment",
+//       description: "A team of experienced professionals with high level of knowledge and accomplishments who bring varied experience.",
+//       image: professionalExcellence,
+//       icon: <Shield className="w-5 h-5" />
+//     },
+//     {
+//       title: "Propreneurial Mindset",
+//       subtitle: "Entrepreneurial Spirit",
+//       description: "Rather than being classical consultants, we take pride in being professionals with an entrepreneurial mindset.",
+//       image: propereneurialMindset,
+//       icon: <Target className="w-5 h-5" />
+//     },
+//     {
+//       title: "Long-term Relationships",
+//       subtitle: "Trust & Partnership",
+//       description: "We are passionate about making meaningful impact and believe in building enduring partnerships based on trust.",
+//       image: longTermRelationships,
+//       icon: <Users className="w-5 h-5" />
+//     },
+//   ];
+
+//   return (
+//     <div className="relative overflow-hidden bg-surfaceLight dark:bg-bgDark">
+//       {/* 1. About Us Section - FIRST */}
+//       <section className="relative py-24 lg:py-40 bg-bgLight dark:bg-surfaceDark transition-colors duration-700 isolate">
+//         <div className="max-w-7xl mx-auto px-6 lg:px-12 grid items-center gap-16 lg:grid-cols-12">
+          
+//           {/* Left Side: Content */}
+//           <motion.div 
+//             {...fadeInUp}
+//             className="lg:col-span-7"
+//           >
+//             <div className="inline-block px-4 py-1 rounded-full bg-brandAccent/10 border border-brandAccent/20 text-brandAccent text-[10px] font-black uppercase tracking-[0.3em] mb-8">
+//               About RiskMan
+//             </div>
+            
+//             <h2 className="mb-10 text-5xl md:text-7xl font-black text-brandDark dark:text-white leading-none">
+//               <span className="font-serif italic font-medium text-brandGold">Who</span> We Are
+//             </h2>
+
+//             <div className="space-y-6 text-lg md:text-xl text-brandDark/70 dark:text-white/70 font-medium leading-relaxed max-w-2xl">
+//               <p>
+//                 At RiskMan, we focus on creating <span className="text-brandDark dark:text-white font-bold">enduring value</span> for our clients, people, communities and other stakeholders through our <span className="text-brandGold font-semibold">"Customised Solution"</span> based services.
+//               </p>
+//               <p>
+//                 RiskMan is a team of experienced professionals with high level of knowledge and accomplishments who bring to the table a varied and storied experience set, to create outstanding value for its clients and other stakeholders.
+//               </p>
+//               <p>
+//                 Rather than being classical consultants, we take pride in being <span className="italic text-brandGold font-semibold">propreneurs</span> i.e., professionals with an entrepreneurial mindset.
+//               </p>
+//               <p>
+//                 We are a passionate team and feel excited in making a meaningful impact through our experience, competency and ability to deliver sustainable goal with perseverance. We endeavor to engage with people in meaningful ways and believe in building long term relationship with all our stakeholders.
+//               </p>
+//             </div>
+
+//             {/* Quote Block */}
+//             <motion.div 
+//               initial={{ opacity: 0, x: -20 }}
+//               whileInView={{ opacity: 1, x: 0 }}
+//               viewport={{ once: true }}
+//               className="mt-12 relative p-8 rounded-2xl bg-brandDark dark:bg-brandAccent border-l-4 border-brandGold shadow-xl"
+//             >
+//               <div className="absolute -top-3 -left-3 w-8 h-8 bg-brandGold/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+//                 <svg className="w-4 h-4 text-brandGold" fill="currentColor" viewBox="0 0 20 20">
+//                   <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+//                 </svg>
+//               </div>
+//               <p className="text-2xl font-serif italic text-white/70 dark:text-white leading-snug">
+//                 "RISKMAN IS THE TRUSTED PARTNER IN YOUR SUSTAINABLE GROWTH JOURNEY"
+//               </p>
+//             </motion.div>
+//           </motion.div>
+
+//           {/* Right Side: Visual Image Stack */}
+//           <motion.div
+//             initial={{ opacity: 0, scale: 0.9 }}
+//             whileInView={{ opacity: 1, scale: 1 }}
+//             viewport={{ once: true }}
+//             className="lg:col-span-5 relative"
+//           >
+//             {/* Background decorative elements */}
+//             <div className="absolute -top-10 -right-10 w-40 h-40 bg-brandGold/20 rounded-full blur-[80px]" />
+//             <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-brandPrimary/10 rounded-full blur-[100px]" />
+            
+//             {/* The Main Image */}
+//             <div className="relative rounded-3xl overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] border border-brandGold/10 dark:border-brandGold/20 group">
+//               <img
+//                 src={introSection}
+//                 alt="About RiskMan"
+//                 className="w-full h-[650px] object-cover transition-transform duration-1000 group-hover:scale-105"
+//               />
+//               <div className="absolute inset-0 bg-gradient-to-t from-brandDark/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+//               {/* Overlapping Info Card */}
+//               <motion.div 
+//                 initial={{ opacity: 0, y: 20 }}
+//                 whileInView={{ opacity: 1, y: 0 }}
+//                 transition={{ delay: 0.5 }}
+//                 className="absolute -bottom-6 -left-6 p-8 bg-surfaceLight/95 dark:bg-brandNavy/95 backdrop-blur-lg border border-brandGold/30 rounded-2xl shadow-2xl max-w-[240px]"
+//               >
+//                 <p className="text-4xl font-black text-brandGold mb-1">100+</p>
+//                 <p className="text-[10px] font-black uppercase tracking-widest text-brandDark dark:text-white opacity-70">
+//                   Success Stories
+//                 </p>
+//               </motion.div>
+//             </div>
+//           </motion.div>
+//         </div>
+//       </section>
+
+//       {/* 2. Introduction Philosophy Section - SECOND */}
+//       <section className="relative px-6 lg:px-24 py-24 bg-surfaceLight dark:bg-surfaceDark transition-colors duration-700">
+//         <div className="max-w-7xl mx-auto">
+//           {/* Section Header */}
+//           <motion.div 
+//             {...fadeInUp}
+//             className="mb-20"
+//           >
+//             <div className="flex items-center gap-4 mb-6">
+//               <span className="w-16 h-[1px] bg-brandGold"></span>
+//               <p className="text-[11px] font-black tracking-[0.4em] uppercase text-brandGold">
+//                 Our Approach
+//               </p>
+//             </div>
+//             <h2 className="text-4xl md:text-6xl font-light leading-[1.1] max-w-4xl text-brandDark dark:text-white">
+//               Creating <span className="font-serif italic text-brandGold">enduring value</span> through customized solution-based services.
+//             </h2>
+//           </motion.div>
+
+//           {/* Pillars Grid */}
+//           <motion.div 
+//             variants={containerVariants}
+//             initial="initial"
+//             whileInView="whileInView"
+//             viewport={{ once: true }}
+//             className="grid gap-10 md:grid-cols-3"
+//           >
+//             {introCards.map((card, index) => (
+//               <motion.div
+//                 key={index}
+//                 variants={fadeInUp}
+//                 className="group relative h-[500px] rounded-3xl overflow-hidden bg-bgLight dark:bg-surfaceDark border border-borderLight dark:border-borderDark shadow-2xl"
+//               >
+//                 {/* Background Image with Parallax effect */}
+//                 <div className="absolute inset-0 transition-transform duration-1000 group-hover:scale-110">
+//                   <img
+//                     src={card.image}
+//                     alt={card.title}
+//                     className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700"
+//                     onError={(e) => { e.target.style.display = 'none'; }}
+//                   />
+//                   <div className="absolute inset-0 bg-gradient-to-t from-brandDark/90 via-brandDark/40 to-transparent" />
+//                 </div>
+
+//                 {/* Card Content Overlay */}
+//                 <div className="absolute inset-0 p-10 flex flex-col justify-end text-white transition-all duration-500 group-hover:pb-12">
+//                   <div className="w-12 h-12 rounded-2xl bg-brandGold/20 backdrop-blur-md border border-brandGold/30 flex items-center justify-center mb-6 text-brandGold group-hover:scale-110 transition-transform duration-500">
+//                     {card.icon}
+//                   </div>
+                  
+//                   <p className="text-[10px] font-black tracking-[0.2em] uppercase text-brandGold/80 mb-2">
+//                     {card.subtitle}
+//                   </p>
+//                   <h3 className="text-3xl font-bold mb-4 tracking-tight leading-tight">
+//                     {card.title}
+//                   </h3>
+                  
+//                   {/* Expandable description on hover */}
+//                   <div className="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-500 overflow-hidden">
+//                     <p className="text-sm text-white/70 leading-relaxed font-medium mb-6">
+//                       {card.description}
+//                     </p>
+//                     <button className="flex items-center gap-2 text-brandGold text-xs font-black uppercase tracking-widest hover:gap-4 transition-all">
+//                       Learn More <ArrowRight size={14} />
+//                     </button>
+//                   </div>
+//                 </div>
+//               </motion.div>
+//             ))}
+//           </motion.div>
+//         </div>
+//       </section>
+
+//       {/* Decorative Branding Element */}
+//       <div className="absolute top-1/2 left-0 -translate-y-1/2 opacity-[0.02] pointer-events-none select-none">
+//       {/* <img 
+//     src="/rm.png"
+//     alt="RiskMan" 
+//     className="w-[800px] h-auto dark:invert" // Use invert for dark mode if needed
+//    /> */}
+//         <h2 className="text-[30rem] font-black text-brandDark dark:text-white leading-none -ml-20">RM</h2>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default IntroductionSection;
+
 import React from "react";
 import { motion } from "framer-motion";
 import { Shield, Target, Users, ArrowRight } from "lucide-react";
@@ -450,6 +674,7 @@ import professionalExcellence from "../../assets/images/professional_excellence_
 import propereneurialMindset from "../../assets/images/propreneurial_mindset_presentation.png";
 import longTermRelationships from "../../assets/images/longterm_relationships_handshake.png";
 import introSection from "../../assets/images/introsection.png";
+ // Import your logo
 
 const IntroductionSection = () => {
   const fadeInUp = {
@@ -652,14 +877,21 @@ const IntroductionSection = () => {
         </div>
       </section>
 
-      {/* Decorative Branding Element */}
-      <div className="absolute top-1/2 left-0 -translate-y-1/2 opacity-[0.02] pointer-events-none select-none">
-      {/* <img 
-    src="/rm.png"
-    alt="RiskMan" 
-    className="w-[800px] h-auto dark:invert" // Use invert for dark mode if needed
-   /> */}
-        <h2 className="text-[30rem] font-black text-brandDark dark:text-white leading-none -ml-20">RM</h2>
+      {/* Decorative Branding Element - RiskMan Logo Watermark */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.015] pointer-events-none select-none">
+        {/* Light mode logo */}
+        <img 
+          src="/rm.png"
+          alt="RiskMan Logo" 
+          className="w-[1000px] h-auto block dark:hidden object-contain"
+        />
+        
+        {/* Dark mode logo - inverted and brightened */}
+        <img 
+          src="/riskman-logo-white.svg"
+          alt="RiskMan Logo" 
+          className="w-[1000px] h-auto hidden dark:block brightness-0 invert object-contain"
+        />
       </div>
     </div>
   );
