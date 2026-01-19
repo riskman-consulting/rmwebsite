@@ -47,7 +47,7 @@ export default function LeadershipSection() {
  
  
   return (
-    <section id="co-founders" className="relative bg-bgLight dark:bg-bgDark py-16 sm:py-24 transition-colors duration-300">
+    <section id="co-founders" className="relative bg-bgLight dark:bg-bgDark px-2 py-8 md:py-16 sm:py-8 transition-colors duration-300">
       <div className="container mx-auto px-4 md:px-8 lg:px-12">
        
         {/* HEADER - Consistent with KeyServices & FAQ */}

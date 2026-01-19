@@ -11,8 +11,8 @@ const CTASection = () => {
   ];
  
   return (
-    <section className="relative w-full py-16 transition-colors duration-300 bg-bgLight dark:bg-bgDark md:py-28">
-      <div className="container mx-auto px-4">
+    <section className="relative w-full py-8 transition-colors duration-300 bg-bgLight dark:bg-bgDark md:pt-20">
+      <div className="container px-4 mx-auto">
        
         {/* TOP AVATARS - Social Proof */}
         <div className="flex justify-center mb-10">
@@ -20,7 +20,7 @@ const CTASection = () => {
             {topAvatars.map((avatar, i) => (
               <div
                 key={i}
-                className="relative overflow-hidden border-4 rounded-full shadow-xl w-16 h-16 border-white dark:border-surfaceDark ring-1 ring-gray-200 dark:ring-borderDark"
+                className="relative w-16 h-16 overflow-hidden border-4 border-white rounded-full shadow-xl dark:border-surfaceDark ring-1 ring-gray-200 dark:ring-borderDark"
               >
                 <img
                   src={avatar}
@@ -29,34 +29,32 @@ const CTASection = () => {
                 />
               </div>
             ))}
-            <div className="relative flex items-center justify-center border-4 rounded-full shadow-xl w-16 h-16 border-white dark:border-surfaceDark bg-brandGold dark:bg-brandAccent">
+            <div className="relative flex items-center justify-center w-16 h-16 border-4 border-white rounded-full shadow-xl dark:border-surfaceDark bg-brandGold dark:bg-brandAccent">
               <span className="text-sm font-black text-white dark:text-brandDark">12K+</span>
             </div>
           </div>
         </div>
  
         {/* HEADING - Matches KeyServices/Blog/FAQ Typography */}
-        <div className="text-center mb-8">
+        <div className="mb-8 text-center">
           <p className="mb-4 text-sm font-bold tracking-[0.2em] uppercase text-brandNavy dark:text-brandAccent">
             Get Started
           </p>
           <h2 className="mb-6 text-4xl font-black leading-tight md:text-5xl lg:text-6xl text-brandDark dark:text-white">
-            Create Your <span className="text-transparent bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text">Success</span> Story
+            Create Your <span className="text-transparent bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text">Scalable Success</span>
           </h2>
         </div>
  
         {/* DESCRIPTION - Matches FAQ answer text size */}
         <p className="max-w-3xl mx-auto mb-12 text-lg leading-relaxed text-center text-brandNavy dark:text-white/70">
-          Receive personalized guidance from seasoned advisors who have not only
-          navigated the challenges of risk and compliance but have also successfully
-          scaled critical business operations globally.
+          Leverage the collective wisdom of partners who have successfully navigated the complexities of global markets and regulatory landscapes. At RiskMan, we don't just offer advice; we provide a blueprint for resilience. Benefit from personalized guidance rooted in decades of experience building high-growth service lines and safeguarding multi-national enterprises.
         </p>
  
         {/* CTA BUTTON - Premium Style */}
         <div className="flex justify-center mb-16">
           <a
             href="/contact"
-            className="inline-block px-10 py-5 font-black uppercase tracking-widest text-sm text-white transition-all duration-300 rounded-full shadow-lg hover:scale-105 bg-brandDark hover:bg-brandPrimary hover:shadow-2xl dark:bg-brandAccent dark:text-brandDark dark:hover:bg-brandGold"
+            className="inline-block px-10 py-5 text-sm font-black tracking-widest text-white uppercase transition-all duration-300 rounded-full shadow-lg hover:scale-105 bg-brandDark hover:bg-brandPrimary hover:shadow-2xl dark:bg-brandAccent dark:text-brandDark dark:hover:bg-brandGold"
           >
             Schedule a Free Consultation
           </a>
@@ -79,15 +77,15 @@ const CTASection = () => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
+                  className="object-cover w-full h-full transition-all duration-700 grayscale hover:grayscale-0"
                 />
                
                 {member.featured && (
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent p-6 flex flex-col justify-end">
-                    <h3 className="text-white font-black text-lg mb-1">
+                  <div className="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/80 via-transparent to-transparent">
+                    <h3 className="mb-1 text-lg font-black text-white">
                       {member.name}
                     </h3>
-                    <p className="text-xs text-white/80 font-bold uppercase tracking-wider">
+                    <p className="text-xs font-bold tracking-wider uppercase text-white/80">
                       {member.role}
                     </p>
                     <div className="mt-4">
@@ -105,3 +103,4 @@ const CTASection = () => {
 };
  
 export default CTASection;
+ 

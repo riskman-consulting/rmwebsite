@@ -110,7 +110,7 @@
 //   };
  
 //   return (
-//     <section className="pb-14 bg-bgLight dark:bg-bgDark transition-colors duration-300">
+//     <section className="transition-colors duration-300 pb-14 bg-bgLight dark:bg-bgDark">
 //       <div className="container">
  
 //         {/* Header */}
@@ -345,7 +345,7 @@
 //   };
  
 //   return (
-//     <section className="py-14 bg-bgLight dark:bg-bgDark transition-colors duration-300">
+//     <section className="transition-colors duration-300 py-14 bg-bgLight dark:bg-bgDark">
 //       <div className="container">
  
 //         {/* Header */}
@@ -495,21 +495,23 @@ const KeyServices = () => {
  
     },
  
+
     {
  
       id: "02",
  
-      title: "Financial Advisory",
+      title: "IT Risk & Cybersecurity",
  
       description:
  
-        "Protecting integrity and optimizing capital structures. With leadership experience from top-tier rating agencies and global banks, we provide the technical depth required for high-stakes financial decision-making.",
+        "Securing your digital frontier in an age of volatility. Digital transformation is only as strong as its weakest link. We provide comprehensive assurance using NIST and ISO 27001 standards to safeguard your data assets and maintain stakeholder trust.",
  
-      image: operationalFinancialImage,
+      image: itCybersecurityImage,
  
       icon: (
         <svg viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7">
-          <path d="M3 3h18v18H3V3zm4 4h4v4H7V7zm6 0h4v10h-4V7z" />
+          <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
+          <path d="M11 10h2v5h-2zm0-3h2v2h-2z" />
         </svg>
  
       ),
@@ -537,29 +539,27 @@ const KeyServices = () => {
       ),
  
     },
- 
+
     {
  
-      id: "04",
+      id: "02",
  
-      title: "IT Risk & Cybersecurity",
+      title: "Financial Advisory",
  
       description:
  
-        "Securing your digital frontier in an age of volatility. Digital transformation is only as strong as its weakest link. We provide comprehensive assurance using NIST and ISO 27001 standards to safeguard your data assets and maintain stakeholder trust.",
+        "Protecting integrity and optimizing capital structures. With leadership experience from top-tier rating agencies and global banks, we provide the technical depth required for high-stakes financial decision-making.",
  
-      image: itCybersecurityImage,
+      image: operationalFinancialImage,
  
       icon: (
         <svg viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7">
-          <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
-          <path d="M11 10h2v5h-2zm0-3h2v2h-2z" />
+          <path d="M3 3h18v18H3V3zm4 4h4v4H7V7zm6 0h4v10h-4V7z" />
         </svg>
  
       ),
  
-    },
- 
+    }
   ];
  
   const scrollTop = () => {
@@ -569,7 +569,7 @@ const KeyServices = () => {
   };
  
   return (
-    <section className="py-14 bg-bgLight dark:bg-bgDark transition-colors duration-300">
+    <section className="transition-colors duration-300 py-14 bg-bgLight dark:bg-bgDark">
       <div className="container">
  
         {/* Header */}

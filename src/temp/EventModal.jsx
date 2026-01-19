@@ -22,21 +22,21 @@
 //     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
 //       {/* Backdrop */}
 //       <div 
-//         className="absolute inset-0 bg-slate-950/60 backdrop-blur-md transition-opacity"
+//         className="absolute inset-0 transition-opacity bg-slate-950/60 backdrop-blur-md"
 //         onClick={onClose}
 //       ></div>
 
 //       {/* Modal Container */}
 //       <div className="relative w-full max-w-5xl bg-white rounded-2xl overflow-hidden shadow-2xl max-h-[95vh] flex flex-col">
 //         {/* Compact Navbar for Modal */}
-//         <div className="bg-slate-900 px-6 py-4 flex items-center justify-between text-white">
+//         <div className="flex items-center justify-between px-6 py-4 text-white bg-slate-900">
 //           <div className="flex items-center space-x-4">
 //             <span className="bg-blue-600 text-[10px] font-black uppercase px-2 py-0.5 rounded tracking-widest">Chapter Event</span>
 //             <h2 className="text-lg font-bold tracking-tight">{event.title}</h2>
 //           </div>
 //           <button 
 //             onClick={onClose} 
-//             className="hover:text-slate-300 transition-colors p-1 hover:bg-white/10 rounded-lg"
+//             className="p-1 transition-colors rounded-lg hover:text-slate-300 hover:bg-white/10"
 //           >
 //             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 //               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -63,10 +63,10 @@
 //                 <img 
 //                   src={selectedImage} 
 //                   alt={event.title} 
-//                   className="w-full h-full object-cover transition-all duration-300" 
+//                   className="object-cover w-full h-full transition-all duration-300" 
 //                 />
-//                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent flex flex-col justify-end p-8">
-//                   <div className="flex items-center space-x-6 text-white text-sm font-medium">
+//                 <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-slate-950/80 to-transparent">
+//                   <div className="flex items-center space-x-6 text-sm font-medium text-white">
 //                     <div className="flex items-center">
 //                       <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 //                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
@@ -96,16 +96,16 @@
 //             </div>
 
 //             {/* Information Section - Right Side */}
-//             <div className="lg:w-1/2 p-8 lg:p-12">
+//             <div className="p-8 lg:w-1/2 lg:p-12">
 //               <div className="mb-8">
-//                 <h3 className="text-xs font-bold text-blue-600 uppercase tracking-widest mb-3">Event Overview</h3>
-//                 <p className="text-slate-700 leading-relaxed text-sm lg:text-base">
+//                 <h3 className="mb-3 text-xs font-bold tracking-widest text-blue-600 uppercase">Event Overview</h3>
+//                 <p className="text-sm leading-relaxed text-slate-700 lg:text-base">
 //                   {event.fullDesc}
 //                 </p>
 //               </div>
 
 //               <div className="mb-8">
-//                 <h3 className="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">Venue Gallery</h3>
+//                 <h3 className="mb-4 text-xs font-bold tracking-widest text-blue-600 uppercase">Venue Gallery</h3>
 //                 <div className="grid grid-cols-3 gap-2">
 //                   {event.gallery.map((img, idx) => (
 //                     <div 
@@ -119,11 +119,11 @@
 //                     >
 //                       <img 
 //                         src={img} 
-//                         className="w-full h-full object-cover transition-transform group-hover:scale-105" 
+//                         className="object-cover w-full h-full transition-transform group-hover:scale-105" 
 //                         alt={`Gallery ${idx + 1}`} 
 //                       />
 //                       {/* Hover Indicator */}
-//                       <div className="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/20 transition-all flex items-center justify-center">
+//                       <div className="absolute inset-0 flex items-center justify-center transition-all bg-blue-600/0 group-hover:bg-blue-600/20">
 //                         <div className="bg-white/90 backdrop-blur-sm p-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity shadow-lg">
 //                           <svg className="w-3 h-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 //                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -133,7 +133,7 @@
 //                       </div>
 //                       {/* Selected Indicator */}
 //                       {selectedImage === img && (
-//                         <div className="absolute top-1 right-1 bg-blue-600 rounded-full p-1">
+//                         <div className="absolute p-1 bg-blue-600 rounded-full top-1 right-1">
 //                           <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
 //                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 //                           </svg>
@@ -142,16 +142,16 @@
 //                     </div>
 //                   ))}
 //                 </div>
-//                 <p className="text-xs text-slate-500 mt-3 text-center">
+//                 <p className="mt-3 text-xs text-center text-slate-500">
 //                   Click any image to view on the left
 //                 </p>
 //               </div>
 
 //               {/* <div className="grid grid-cols-2 gap-4">
-//                 <button className="flex-1 bg-slate-900 text-white font-bold py-3 px-6 rounded-xl hover:bg-slate-800 transition-all text-sm shadow-xl shadow-slate-900/10">
+//                 <button className="flex-1 px-6 py-3 text-sm font-bold text-white transition-all shadow-xl bg-slate-900 rounded-xl hover:bg-slate-800 shadow-slate-900/10">
 //                   Register for Event
 //                 </button>
-//                 <button className="flex-1 bg-white border border-slate-200 text-slate-700 font-bold py-3 px-6 rounded-xl hover:bg-slate-50 transition-all text-sm">
+//                 <button className="flex-1 px-6 py-3 text-sm font-bold transition-all bg-white border border-slate-200 text-slate-700 rounded-xl hover:bg-slate-50">
 //                   Add to Calendar
 //                 </button>
 //               </div> */}
@@ -212,7 +212,7 @@ const EventModal = ({ event, onClose }) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="w-full h-full object-contain object-top" 
+                className="object-contain object-top w-full h-full" 
                 alt="Event perspective"
               />
             </AnimatePresence>
@@ -229,14 +229,14 @@ const EventModal = ({ event, onClose }) => {
                 <span className="bg-gradient-to-r from-[#FFB800] to-[#FFC000] text-[#001F3F] text-[10px] font-black uppercase px-4 py-1.5 rounded-full tracking-widest inline-block shadow-lg">
                   {event.type || 'Experience'}
                 </span>
-                <h2 className="text-white text-4xl md:text-6xl font-bold tracking-tighter leading-none max-w-xl">
+                <h2 className="max-w-xl text-4xl font-bold leading-none tracking-tighter text-white md:text-6xl">
                   {event.title}
                 </h2>
                 <div className="flex flex-wrap gap-6 pt-4">
                   <div className="flex items-center gap-2 text-[#FFC000] text-xs font-black uppercase tracking-widest">
                     <FaMapMarkerAlt /> {event.location}
                   </div>
-                  <div className="flex items-center gap-2 text-white/60 text-xs font-black uppercase tracking-widest">
+                  <div className="flex items-center gap-2 text-xs font-black tracking-widest uppercase text-white/60">
                     <FaCalendarAlt /> {event.date}
                   </div>
                 </div>
@@ -269,7 +269,7 @@ const EventModal = ({ event, onClose }) => {
                 <section>
                   <h3 className="text-[10px] font-black text-[#FFB800] uppercase tracking-[0.2em] mb-6">Visual Pathways</h3>
                   <div className="grid grid-cols-3 gap-3">
-                    {event.gallery?.slice(0, 6).map((img, idx) => (
+                    {event.gallery?.slice(0, event.gallery.length).map((img, idx) => (
                       <button 
                         key={idx} 
                         onClick={() => setSelectedImage(img)}
@@ -279,7 +279,7 @@ const EventModal = ({ event, onClose }) => {
                             : 'border-transparent hover:border-[#FFC000]/30'
                         }`}
                       >
-                        <img src={img} className="w-full h-full object-cover" alt="preview" />
+                        <img src={img} className="object-cover w-full h-full" alt="preview" />
                       </button>
                     ))}
                   </div>

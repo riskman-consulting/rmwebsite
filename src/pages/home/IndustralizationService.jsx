@@ -89,11 +89,11 @@ export function IndustryGrid() {
   const [hoveredCard, setHoveredCard] = useState(null);
  
   return (
-    <section className="bg-bgLight dark:bg-bgDark py-12 sm:py-20 transition-colors duration-300">
+    <section className="bg-bgLight dark:bg-bgDark py-4 sm:py-8 transition-colors duration-300">
       <div className="container mx-auto px-4 md:px-8 lg:px-12">
        
         {/* Header Section */}
-        <div className="mb-12 flex items-center justify-between">
+        <div className="mb-12">
           <div className="max-w-4xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-bold tracking-widest uppercase rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-900 dark:text-blue-400">
               <span className="w-2 h-2 rounded-full bg-blue-900 dark:bg-blue-400 animate-pulse" />
@@ -102,16 +102,6 @@ export function IndustryGrid() {
             <h2 className="text-4xl font-black text-gray-900 dark:text-white mb-6">
               Built for <span className="text-transparent bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text">Critical</span> Industries
             </h2>
-          </div>
-          
-          <div>
-            <a 
-              href="/industries" 
-              className="inline-flex items-center gap-3 px-8 py-4 text-base font-bold rounded-full transition-all duration-300 hover:gap-5 group bg-[#1a2332] dark:bg-yellow-500 text-yellow-500 dark:text-[#1a2332] hover:shadow-2xl hover:scale-105"
-            >
-              View All Industries
-              <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-            </a>
           </div>
         </div>
  
@@ -186,6 +176,17 @@ export function IndustryGrid() {
               </a>
             </div>
           ))}
+        </div>
+
+        {/* View All Industries Link - Bottom Right */}
+        <div className="mt-12 flex justify-end">
+          <a 
+            href="/industries" 
+            className="inline-flex items-center gap-3 px-8 py-4 text-base font-bold rounded-full transition-all duration-300 hover:gap-5 group bg-[#1a2332] dark:bg-yellow-500 text-yellow-500 dark:text-[#1a2332] hover:shadow-2xl hover:scale-105"
+          >
+            View All Industries
+            <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+          </a>
         </div>
       </div>
     </section>

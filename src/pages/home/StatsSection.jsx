@@ -585,7 +585,7 @@
 //   ];
 
 //   return (
-//     <section className="relative w-full overflow-hidden transition-colors duration-300 px-3 py-10 bg-bgLight dark:bg-bgDark">
+//     <section className="relative w-full px-3 py-10 overflow-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark">
 //       {/* Decorative Background Elements */}
 //       <div className="absolute inset-0 opacity-30 dark:opacity-20">
 //         <div className="absolute top-0 right-0 rounded-full w-96 h-96 bg-brandGold/10 blur-3xl"></div>
@@ -789,7 +789,7 @@ const AnimatedCounter = ({ target, suffix = "" }) => {
 const StatsSection = () => {
   const stats = [
     {
-      number: 15,
+      number: 18,
       suffix: "+",
       label: "Years Experience",
       description: "Delivering excellence",
@@ -839,28 +839,28 @@ const StatsSection = () => {
   ];
  
   return (
-    <section className="relative w-full  pt-16  bg-bgLight dark:bg-bgDark overflow-hidden">
+    <section className="relative w-full pt-16 overflow-hidden bg-bgLight dark:bg-bgDark">
       {/* Decorative blobs */}
       <div className="absolute inset-0 opacity-30 dark:opacity-20">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-brandGold/20 blur-3xl rounded-full" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-brandAccent/20 blur-3xl rounded-full" />
+        <div className="absolute top-0 right-0 rounded-full w-96 h-96 bg-brandGold/20 blur-3xl" />
+        <div className="absolute bottom-0 left-0 rounded-full w-96 h-96 bg-brandAccent/20 blur-3xl" />
       </div>
  
-      <div className="relative z-10 container mx-auto">
+      <div className="container relative z-10 mx-auto">
         {/* ================= HEADER ================= */}
         <div className="max-w-3xl mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 border rounded-full bg-brandGold/10 border-brandGold/20">
             <span className="w-2 h-2 rounded-full bg-brandGold animate-pulse" />
-            <p className="text-sm font-semibold uppercase tracking-wider text-brandNavy dark:text-brandAccent">
+            <p className="text-sm font-semibold tracking-wider uppercase text-brandNavy dark:text-brandAccent">
               Our Impact in Numbers
             </p>
           </div>
  
-          <h2 className="text-4xl md:text-3xl lg:text-4xl font-bold leading-tight text-brandDark dark:text-white">
+          <h2 className="text-4xl font-bold leading-tight md:text-3xl lg:text-4xl text-brandDark dark:text-white">
             Tracking our journey{" "}
             <span className="relative inline-block text-brandGold">
               through data
-              <span className="absolute left-0 -bottom-2 w-full h-2 bg-brandGold/30 rounded-full" />
+              <span className="absolute left-0 w-full h-2 rounded-full -bottom-2 bg-brandGold/30" />
             </span>
           </h2>
  
@@ -878,19 +878,19 @@ const StatsSection = () => {
             return (
               <div
                 key={i}
-                className="relative overflow-hidden rounded-3xl group transition-all duration-700 hover:-translate-y-2"
+                className="relative overflow-hidden transition-all duration-700 rounded-3xl group hover:-translate-y-2"
               >
                 {/* Background */}
                 <div className="absolute inset-0">
                   <img
                     src={stat.lightImage}
                     alt={stat.label}
-                    className="w-full h-full object-cover transition-transform duration-1000 dark:opacity-0 group-hover:scale-125"
+                    className="object-cover w-full h-full transition-transform duration-1000 dark:opacity-0 group-hover:scale-125"
                   />
                   <img
                     src={stat.darkImage}
                     alt={stat.label}
-                    className="absolute inset-0 w-full h-full object-cover opacity-0 dark:opacity-100 transition-transform duration-1000 group-hover:scale-125"
+                    className="absolute inset-0 object-cover w-full h-full transition-transform duration-1000 opacity-0 dark:opacity-100 group-hover:scale-125"
                   />
                   <div
                     className={`absolute inset-0 bg-gradient-to-br ${stat.gradient}`}
@@ -902,14 +902,14 @@ const StatsSection = () => {
                   {/* Icon */}
                   <div className="relative w-16 h-16 mx-auto mb-6">
                     <div className="absolute inset-0 rounded-2xl bg-brandGold/30 animate-ping" />
-                    <div className="relative flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-brandGold to-brandAccent shadow-xl transition-transform group-hover:scale-110">
+                    <div className="relative flex items-center justify-center w-16 h-16 transition-transform shadow-xl rounded-2xl bg-gradient-to-br from-brandGold to-brandAccent group-hover:scale-110">
                       <Icon size={28} className="text-brandDark" />
                     </div>
                   </div>
  
                   {/* NUMBER (FIXED VISIBILITY) */}
-                  <div className="relative overflow-visible flex-1 flex items-center justify-center">
-                    <h3 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-white to-brandGold drop-shadow-2xl transition-transform duration-500 group-hover:scale-105 will-change-transform">
+                  <div className="relative flex items-center justify-center flex-1 overflow-visible">
+                    <h3 className="font-bold text-transparent transition-transform duration-500 text-7xl bg-clip-text bg-gradient-to-br from-white to-brandGold drop-shadow-2xl group-hover:scale-105 will-change-transform">
                       <AnimatedCounter
                         target={stat.number}
                         suffix={stat.suffix}
@@ -928,13 +928,13 @@ const StatsSection = () => {
                   </div>
  
                   {/* Hover Arrow */}
-                  <div className="absolute top-6 right-6 opacity-0 translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0">
+                  <div className="absolute transition-all translate-x-2 opacity-0 top-6 right-6 group-hover:opacity-100 group-hover:translate-x-0">
                     <ArrowUpRight className="text-brandGold" />
                   </div>
                 </div>
  
                 {/* Border */}
-                <div className="absolute inset-0 rounded-3xl border border-brandGold/40 group-hover:border-brandGold/70 transition-colors" />
+                <div className="absolute inset-0 transition-colors border rounded-3xl border-brandGold/40 group-hover:border-brandGold/70" />
               </div>
             );
           })}
