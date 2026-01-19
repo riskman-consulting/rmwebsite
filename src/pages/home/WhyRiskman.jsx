@@ -1,127 +1,144 @@
 import React from "react";
-import { motion } from "framer-motion";
-import WhyChooseRiskManImage from "../../assets/images/home/whyChoose.png";
+import {
+  Globe,
+  Zap,
+  Briefcase,
+  ShieldCheck,
+  CheckCircle2,
+  Award,
+  Target,
+  ZapIcon,
+} from "lucide-react";
+import { FeatureCard } from "../../components/FeatureCardProps";
+import WhyRiskManImage from "../../assets/images/home/whyChoose.png";
 
-const WhyRiskMan = () => {
-  const items = [
-    { title: "Customized Solutions", description: "Tailoring services to unique client needs ensuring optimal outcomes." },
-    { title: "Client-Centric Focus", description: "Our unwavering dedication to understanding and addressing client goals ensures satisfaction and success." },
-    { title: "Continuous Improvement", description: "Constantly evolving and refining our processes to stay ahead of industry trends and client expectations." },
-    { title: "Proven Track Record", description: "A solid history of delivering measurable results showcases our commitment to excellence." },
-    { title: "Innovative Approach", description: "Utilizing cutting-edge technologies and methodologies to provide forward-thinking solutions." },
-    { title: "Expertise and Experience", description: "Our seasoned professionals bring years of industry experience, guaranteeing top-tier solutions." },
-    { title: "Ethical Standards", description: "Upholding the highest levels of integrity and transparency in all interactions." },
-  ];
-
-  // Logic: 3 Left, 3 Right, 1 Bottom Center (Under the image)
-  const leftSide = items.slice(0, 3);
-  const rightSide = items.slice(3, 6);
-  const coreItem = items[6];
-
+const WhyRiskman = () => {
   return (
-    <section className="relative py-20 lg:py-32 overflow-hidden bg-bgLight dark:bg-[#030712] transition-colors duration-500">
-      
-      {/* Subtle Glows */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brandAccent/5 blur-[120px] rounded-full pointer-events-none" />
+    <section className="relative py-20 bg-bgLight dark:bg-bgDark overflow-hidden">
 
-      <div className="w-full px-6 lg:px-16 xl:px-24 relative z-10">
-        
-        {/* --- HEADER --- */}
-        <div className="text-center mb-24">
-          <motion.p 
-            initial={{ opacity: 0 }} 
-            whileInView={{ opacity: 1 }}
-            className="mb-4 text-[11px] font-bold tracking-[0.4em] uppercase text-brandPrimary dark:text-brandAccent"
-          >
-            Our Core Values
-          </motion.p>
-          <h2 className="text-3xl md:text-5xl font-black text-brandDark dark:text-white uppercase tracking-tighter font-heading">
-            Why Global Leaders <br />
-            <span className="text-brandPrimary dark:text-brandAccent italic">Partner with RiskMan</span>
-          </h2>
+      {/* Subtle background wash */}
+      <div className="absolute inset-0 bg-gradient-to-b from-surfaceLight to-transparent dark:from-surfaceDark pointer-events-none" />
+
+      <div className="container relative z-10">
+
+        {/* HEADER */}
+        <div className="text-center mb-16">
+          <span className="inline-block px-4 py-1.5 mb-4 text-xs font-bold uppercase tracking-widest
+            text-brandPrimary bg-brandAccent/10 border border-brandAccent/20 rounded-full">
+            Why Partner With Us
+          </span>
+
+          <h1 className="font-heading text-4xl md:text-5xl font-extrabold text-brandDark dark:text-white mb-4">
+            Why <span className="text-brandAccent">Choose</span> RiskMan?
+          </h1>
+
+          <p className="max-w-2xl mx-auto text-brandPrimary/80 dark:text-brandLight/70
+            text-base md:text-lg leading-relaxed">
+            Unparalleled risk management solutions driven by industry veterans
+            and operational discipline.
+          </p>
         </div>
 
-        {/* --- GRID SYSTEM --- */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16 items-center">
-          
-          {/* LEFT: 3 Items */}
-          <div className="space-y-16 order-2 lg:order-1">
-            {leftSide.map((item, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="text-left lg:text-right group"
-              >
-                <h3 className="text-xl font-extrabold text-brandPrimary dark:text-brandAccent mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-sm md:text-base text-brandNavy/80 dark:text-slate-400 leading-relaxed">
-                  {item.description}
-                </p>
-              </motion.div>
-            ))}
+        {/* HUB & SPOKE */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+
+          {/* LEFT */}
+          <div className="lg:col-span-4 flex flex-col gap-6 lg:items-end">
+            <FeatureCard
+              align="right"
+              icon={<Briefcase size={20} />}
+              title="Enriched Domain Expertise"
+              description="Decades of leadership experience across Big 4 firms, banks, and rating agencies."
+            />
+            <FeatureCard
+              align="right"
+              icon={<Zap size={20} />}
+              title="Agile & Lean Approach"
+              description="Outcome-driven delivery models focused on speed, clarity, and efficiency."
+            />
           </div>
 
-          {/* CENTER: Image + 7th Item (The Core) */}
-          <div className="flex flex-col items-center gap-12 order-1 lg:order-2">
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              className="relative w-64 h-64 md:w-80 md:h-80 xl:w-[420px] xl:h-[420px]"
-            >
-              {/* Decorative Circle */}
-              <div className="absolute inset-0 rounded-full border-2 border-dashed border-brandAccent/10 animate-[spin_30s_linear_infinite]" />
-              
-              <img 
-                src={WhyChooseRiskManImage} 
-                alt="RiskMan Leadership" 
-                className="w-full h-full object-contain relative z-10 drop-shadow-[0_20px_50px_rgba(255,192,0,0.15)]"
-              />
-            </motion.div>
+          {/* CENTER */}
+          <div className="lg:col-span-4 flex justify-center">
+            <div className="relative">
+              <div className="w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden
+                bg-surfaceLight dark:bg-surfaceDark
+                border border-borderLight dark:border-borderDark
+                shadow-lg">
+                <img
+                  src={WhyRiskManImage}
+                  alt="Leadership"
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
-            {/* THE SEVENTH ITEM: Integrated here as the "Foundation" */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              className="relative p-8 text-center bg-brandPrimary/5 dark:bg-white/[0.03] border border-brandPrimary/10 dark:border-white/5 rounded-[2.5rem] backdrop-blur-sm max-w-sm lg:max-w-md group hover:border-brandAccent/40 transition-all duration-500"
-            >
-              <h3 className="text-xl font-black text-brandPrimary dark:text-brandAccent mb-3 uppercase tracking-widest">
-                {coreItem.title}
-              </h3>
-              <p className="text-sm text-brandNavy/70 dark:text-slate-400 font-medium">
-                {coreItem.description}
-              </p>
-              {/* Subtle underline decoration */}
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-1 bg-brandAccent rounded-full translate-y-2 opacity-50" />
-            </motion.div>
+              {/* BADGES */}
+              <div className="absolute -top-3 -right-6 bg-surfaceLight dark:bg-surfaceDark
+                px-3 py-1.5 rounded-md border border-borderLight dark:border-borderDark
+                shadow-sm flex items-center gap-2">
+                <CheckCircle2 size={12} className="text-brandAccent" />
+                <span className="text-[11px] font-semibold text-brandDark dark:text-white">
+                  ISO Certified
+                </span>
+              </div>
+
+              <div className="absolute -bottom-3 -left-6 bg-brandDark
+                px-3 py-1.5 rounded-md shadow-sm flex items-center gap-2">
+                <Award size={12} className="text-brandAccent" />
+                <span className="text-[11px] font-semibold text-white">
+                  Top Rated 2024
+                </span>
+              </div>
+            </div>
           </div>
 
-          {/* RIGHT: 3 Items */}
-          <div className="space-y-16 order-3">
-            {rightSide.map((item, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="group"
-              >
-                <h3 className="text-xl font-extrabold text-brandPrimary dark:text-brandAccent mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-sm md:text-base text-brandNavy/80 dark:text-slate-400 leading-relaxed">
-                  {item.description}
-                </p>
-              </motion.div>
-            ))}
+          {/* RIGHT */}
+          <div className="lg:col-span-4 flex flex-col gap-6 lg:items-start">
+            <FeatureCard
+              align="left"
+              icon={<ShieldCheck size={20} />}
+              title="Predictable Engagement"
+              description="Fixed pricing, transparent scope, and a 100% on-time delivery track record."
+            />
+            <FeatureCard
+              align="left"
+              icon={<Globe size={20} />}
+              title="Global Footprint"
+              description="Headquartered in India with delivery across USA, EU, and AMEA."
+            />
           </div>
-
         </div>
+
+        {/* TRUST STRIP */}
+        <div className="mt-16 pt-10 border-t border-borderLight dark:border-borderDark">
+          <div className="flex flex-wrap justify-center gap-10">
+            <TrustItem icon={<Target size={16} />} title="100% On-Time" subtitle="Delivery" />
+            <TrustItem icon={<ZapIcon size={16} />} title="Fixed Pricing" subtitle="No Surprises" />
+            <TrustItem icon={<Globe size={16} />} title="Global Reach" subtitle="Multi-Region" />
+          </div>
+        </div>
+
       </div>
     </section>
   );
 };
 
-export default WhyRiskMan;
+const TrustItem = ({ icon, title, subtitle }) => (
+  <div className="flex items-center gap-2">
+    <div className="w-9 h-9 rounded-full bg-surfaceLight dark:bg-surfaceDark
+      border border-borderLight dark:border-borderDark
+      flex items-center justify-center text-brandPrimary">
+      {icon}
+    </div>
+    <div>
+      <div className="text-sm font-bold text-brandDark dark:text-white">
+        {title}
+      </div>
+      <div className="text-[10px] uppercase tracking-wide text-brandPrimary/70 dark:text-brandLight/60">
+        {subtitle}
+      </div>
+    </div>
+  </div>
+);
+
+export default WhyRiskman;
