@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaLinkedin } from "react-icons/fa";
+import sukanta from "../../assets/images/sukant sir.png"
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -16,7 +17,7 @@ export default function LeadershipSection({ setSelectedLeader }) {
       bio:
         "CA, CS, CMA, CAIIB with 41+ years of experience across credit rating, corporate banking, risk management and financial consulting.",
       image:
-        "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768969880/sukant_sir_ydl1or.webp",
+        sukanta,
       linkedin: "https://www.linkedin.com/in/ca-sukanta-nag-50221021",
       fullBio: "CA, CS, CMA, CAIIB and M.Com, with over 41 years of experience spanning Credit Rating, Corporate Banking, Risk Management and Financial & Management Consulting. His key strengths are in understanding the holistic approach of the business and client's need for offering 360-degree solutions and build a meaningful relationship with them.",
     },
@@ -52,7 +53,7 @@ export default function LeadershipSection({ setSelectedLeader }) {
           viewport={{ once: true }}
           className="mb-4 text-2xl font-bold text-start md:text-2xl"
         >
-          Our Leadership Team
+          Our Co-founding Partners
         </motion.h2>
 
         <motion.p
@@ -62,7 +63,7 @@ export default function LeadershipSection({ setSelectedLeader }) {
           viewport={{ once: true }}
           className="max-w-2xl mb-12 text-gray-600 text-start dark:text-gray-400"
         >
-          Meet the visionary leaders driving RiskMan's mission forward
+          Our Co-founding Partners are industry veterans who bridge decades of institutional expertise with an entrepreneurial drive.
         </motion.p>
 
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">

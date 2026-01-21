@@ -252,10 +252,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
  
-import internalAuditImage from '../../assets/images/home/internal-audit.png'
-import professionalIntegrityExportAssuranceImage from "../../assets/images/home/professional-integrity-export-assurance.png"
-import riskAssuranceImage from "../../assets/images/home/risk-assurance.png"
-import complainReviewImage from '../../assets/images/home/compliance-review.png'
+import internalAuditImage from '../../assets/images/home/internal-audit.webp'
+import professionalIntegrityExportAssuranceImage from "../../assets/images/home/professional-integrity-export-assurance.webp"
+import riskAssuranceImage from "../../assets/images/home/risk-assurance.webp"
+import complainReviewImage from '../../assets/images/home/compliance-review.webp'
  
 /**
  * Individual Card Component with Curtain Reveal
@@ -277,7 +277,7 @@ const RiskmanRevealCard = ({ service }) => {
           transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1] }}
           src={service.image}
           alt={service.title}
-          className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-1000"
+          className="object-cover w-full h-full transition-transform duration-1000 group-hover:scale-110"
         />
  
         {/* Top Split Curtain */}
@@ -285,7 +285,7 @@ const RiskmanRevealCard = ({ service }) => {
           initial={{ y: 0 }}
           animate={isInView ? { y: "-100%" } : { y: 0 }}
           transition={{ duration: 1.2, ease: [0.45, 0, 0.55, 1], delay: 0.1 }}
-          className="absolute top-0 left-0 w-full h-1/2 bg-zinc-950 z-10"
+          className="absolute top-0 left-0 z-10 w-full h-1/2 bg-zinc-950"
         />
  
         {/* Bottom Split Curtain */}
@@ -293,11 +293,11 @@ const RiskmanRevealCard = ({ service }) => {
           initial={{ y: 0 }}
           animate={isInView ? { y: "100%" } : { y: 0 }}
           transition={{ duration: 1.2, ease: [0.45, 0, 0.55, 1], delay: 0.1 }}
-          className="absolute bottom-0 left-0 w-full h-1/2 bg-zinc-950 z-10"
+          className="absolute bottom-0 left-0 z-10 w-full h-1/2 bg-zinc-950"
         />
  
         {/* Eyebrow Label */}
-        <div className="absolute top-5 left-5 z-20">
+        <div className="absolute z-20 top-5 left-5">
           <span className="bg-white/95 text-zinc-900 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.25em] shadow-sm">
             {service.subtitle}
           </span>
@@ -308,25 +308,25 @@ const RiskmanRevealCard = ({ service }) => {
           initial={{ opacity: 0, x: -20 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
           transition={{ delay: 0.8, duration: 0.6 }}
-          className="absolute bottom-5 left-5 right-5 p-4 z-20 bg-black/40 backdrop-blur-md border border-white/10 rounded-sm"
+          className="absolute z-20 p-4 border rounded-sm bottom-5 left-5 right-5 bg-black/40 backdrop-blur-md border-white/10"
         >
           <div className="flex items-center gap-2 mb-1">
             <Star size={10} className="text-amber-400 fill-amber-400" />
             <span className="text-[9px] font-bold text-white uppercase tracking-widest opacity-90">Risk Performance</span>
           </div>
-          <p className="text-xs font-semibold text-white tracking-tight">{service.stats}</p>
+          <p className="text-xs font-semibold tracking-tight text-white">{service.stats}</p>
         </motion.div>
       </div>
  
       {/* Content Section */}
-      <div className="p-8 flex flex-col flex-grow transition-transform duration-500 group-hover:-translate-y-1">
+      <div className="flex flex-col flex-grow p-8 transition-transform duration-500 group-hover:-translate-y-1">
         <span className="text-[10px] font-bold text-brandDark dark:text-brandAccent uppercase tracking-[0.3em] mb-3">
           Riskman Insights
         </span>
         <h3 className="mb-4 text-2xl font-bold text-zinc-900 dark:text-white leading-[1.2] group-hover:text-brandDark dark:group-hover:text-brandAccent transition-colors">
           <button>{service.title}</button>
         </h3>
-        <p className="mb-8 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400 line-clamp-3 font-medium">
+        <p className="mb-8 text-sm font-medium leading-relaxed text-zinc-500 dark:text-zinc-400 line-clamp-3">
           {service.description}
         </p>
         <div className="mt-auto">
@@ -386,19 +386,19 @@ const RiskmanAuditCarousel = () => {
   ];
  
   return (
-    <section className="py-5 bg-bgLight dark:bg-bgDark transition-colors duration-300">
+    <section className="py-5 transition-colors duration-300 bg-bgLight dark:bg-bgDark">
       <div className="container">
        
         {/* Header - NOW PROPERLY ALIGNED WITH YOUR CONTAINER */}
-        <div className="mb-16 max-w-4xl">
+        <div className="max-w-4xl mb-16">
           {/* Badge matching IndustryGrid style */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-bold tracking-widest uppercase rounded-full bg-blue-100 dark:bg-blue-900/30 text-brandDark dark:text-brandAccent">
+          <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-bold tracking-widest uppercase bg-blue-100 rounded-full dark:bg-blue-900/30 text-brandDark dark:text-brandAccent">
             <span className="w-2 h-2 rounded-full bg-brandDark dark:bg-brandAccent animate-pulse" />
             Service Expertise
           </div>
          
           {/* Typography matching IndustryGrid scale */}
-          <h2 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+          <h2 className="mb-6 text-5xl font-bold leading-tight text-gray-900 md:text-7xl dark:text-white">
             Unlocking Potential with <span className="text-brandDark dark:text-brandAccent">Riskman</span>
           </h2>
          
@@ -408,12 +408,12 @@ const RiskmanAuditCarousel = () => {
         </div>
  
         {/* Navigation Controls */}
-        <div className="flex gap-4  justify-end">
-          <button className="risk-prev p-4 border border-zinc-200 dark:border-zinc-800 rounded-full hover:bg-zinc-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all group z-30 cursor-pointer">
-            <ChevronLeft size={22} className="group-active:scale-90 transition-transform" />
+        <div className="flex justify-end gap-4">
+          <button className="z-30 p-4 transition-all border rounded-full cursor-pointer risk-prev border-zinc-200 dark:border-zinc-800 hover:bg-zinc-900 hover:text-white dark:hover:bg-white dark:hover:text-black group">
+            <ChevronLeft size={22} className="transition-transform group-active:scale-90" />
           </button>
-          <button className="risk-next p-4 border border-zinc-200 dark:border-zinc-800 rounded-full hover:bg-zinc-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all group z-30 cursor-pointer">
-            <ChevronRight size={22} className="group-active:scale-90 transition-transform" />
+          <button className="z-30 p-4 transition-all border rounded-full cursor-pointer risk-next border-zinc-200 dark:border-zinc-800 hover:bg-zinc-900 hover:text-white dark:hover:bg-white dark:hover:text-black group">
+            <ChevronRight size={22} className="transition-transform group-active:scale-90" />
           </button>
         </div>
  
@@ -442,7 +442,7 @@ const RiskmanAuditCarousel = () => {
         </Swiper>
  
         {/* Progress Bar Pagination */}
-        <div className="risk-pagination flex justify-center mt-16 gap-4" />
+        <div className="flex justify-center gap-4 mt-16 risk-pagination" />
       </div>
  
       <style>{`

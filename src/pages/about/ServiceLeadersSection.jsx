@@ -401,7 +401,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import jitendra from "../../assets/images/jitendra.jpg"
+// import jitendra from "../../assets/images/jitendra.webp"
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -486,17 +486,17 @@ const ServiceLeadersSection = ({ setSelectedLeader }) => {
           className="mb-16"
         >
           <h2 className="px-2 mb-4 text-sm font-bold tracking-widest text-brandDark dark:text-brandAccent ">
-            Our Leadership
+            
           </h2>
           <h1 className="mb-6 text-4xl font-extrabold leading-tight md:text-5xl text-brandPrimary dark:text-white">
-            Our Team <br />
-            <span className="text-brandAccent">Service Leaders</span>
+            Our {" "}
+            <span className="text-brandAccent">Associate Partners</span>
           </h1>
           <p className="max-w-2xl mb-8 text-lg text-gray-600 dark:text-gray-400">
-            Industry experts leading specialized service domains with decades of combined experience in auditing, compliance, and risk management.
+           Industry experts leading specialized service domains with decades of combined experience in auditing, compliance, and risk management.
           </p>
           
-          <div className="flex flex-col gap-6 sm:flex-row">
+          {/* <div className="flex flex-col gap-6 sm:flex-row">
             <div className="flex items-center gap-4">
                 <div className="w-12 h-1 rounded-full bg-brandAccent"></div>
                 <span className="text-sm font-semibold dark:text-gray-300">Excellence in Auditing</span>
@@ -505,7 +505,7 @@ const ServiceLeadersSection = ({ setSelectedLeader }) => {
                 <div className="w-12 h-1 rounded-full bg-brandGold"></div>
                 <span className="text-sm font-semibold dark:text-gray-300">Strategic Compliance</span>
             </div>
-          </div>
+          </div> */}
         </motion.div>
 
         {/* Leader Cards */}

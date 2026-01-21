@@ -17,13 +17,13 @@ import Events from "./Events";
 import FAQSection from "./FAQSection";
 import CTASection from "./CTASection";
 import LeadershipModal from "./LeadershipModal";
-import professionalExcellenceImg from "../../assets/images/professional_excellence_team.png";
-import propreneurialImg from "../../assets/images/propreneurial_mindset_presentation.png";
-import longtermRelationshipsImg from "../../assets/images/longterm_relationships_handshake.png";
+import professionalExcellenceImg from "../../assets/images/professional_excellence_team.webp";
+import propreneurialImg from "../../assets/images/propreneurial_mindset_presentation.webp";
+import longtermRelationshipsImg from "../../assets/images/longterm_relationships_handshake.webp";
 import Testimonials from "./Testimonials";
 import { JourneyTimeline } from "./JourneyTimeline";
-import MainEvent from "../../temp/MainEvent";
-
+import SingleSlide from "./SingleSlide";
+import WhyRiskman from "./WhyRiskMan";
 
 
 
@@ -59,7 +59,8 @@ export default function About() {
   return (
     <div className="min-h-screen overflow-x-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-white">
       {/* ================= HERO ================= */}
-      <AboutHero />
+      {/* <AboutHero /> */}
+      <SingleSlide/>
 
       {/* ================= INTRODUCTION SECTION ================= */}
       <IntroSection />
@@ -69,9 +70,9 @@ export default function About() {
       <TributeSection />
 
       {/* ================= JOURNEY TIMELINE ================= */}
-      <JourneyTimeline/>
+      {/* <JourneyTimeline/> */}
       {/* ================= FEATURES ================= */}
-      <FeatureSection />
+      {/* <FeatureSection /> */}
 
       {/* ================= MISSION & VISION ================= */}
       <MissionVisionSection />
@@ -85,7 +86,7 @@ export default function About() {
       {/* ================= TESTIMONIALS ================= */}
       {/* <TestimonialsSection /> */}
 
-      <Testimonials/>
+      {/* <Testimonials/> */}
 
       {/* ================= MARQUEE CLIENTS ================= */}
       <MarqueeClientsSection />
@@ -96,11 +97,12 @@ export default function About() {
       {/* ================= TEAM MEMBERS ================= */}
       <TeamMembersSection />
 
-      {/* ================= EVENTS ================= */}
-     {/* <MainEvent/> */}
+      
 
       {/* ================= FAQ ================= */}
       <FAQSection />
+
+      <WhyRiskman/>
 
       {/* ================= CTA ================= */}
       <CTASection />
