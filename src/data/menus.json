@@ -1,50 +1,158 @@
 {
   "mainNav": [
     { "label": "About", "type": "mega", "key": "about", "path": "/about" },
-     { "label": "Services", "type": "mega", "key": "services", "path": "/services" },
-     { "label": "Industries", "type": "mega", "key": "industries", "path": "/industries" },
-     {"label":"Tech Solutions","type":"link","key":"solutions","path":"/solutions"},
-    { "label": "Content Hub", "type": "link", "key": "insights", "path": "/insights" },
-    {"label":"Event","type":"link","key":"events","path":"/events"},
-    {"label":"Careers","type":"link","key":"careers","path":"/careers"}
+    { "label": "Services", "type": "mega", "key": "services", "path": "/services" },
+    { "label": "Solutions", "type": "link", "path": "/solutions" },
+    { "label": "Industries", "type": "mega", "key": "industries", "path": "/industries" },
+    { "label": "Governance", "type": "mega", "key": "governance", "path": "/governance" },
+    { "label": "Events & Journey", "type": "mega", "key": "events", "path": "/events-journey" },
+    { "label": "Insights", "type": "link", "path": "/insights" },
+    { "label": "Careers", "type": "link", "path": "/careers" }
+  ],
+
+  "servicesMegaMenu": [
+    {
+      "title": "Enterprise Services",
+      "items": [
+        {
+          "label": "Risk Assurance and Advisory",
+          "path": "/services/risk-assurance-advisory",
+          "submenus": [
+            { "id": "rbia", "title": "RBIA", "path": "/services/risk-assurance-advisory/rbia" },
+            { "id": "erm", "title": "ERM", "path": "/services/risk-assurance-advisory/erm" },
+            { "id": "tprm", "title": "TPRM", "path": "/services/risk-assurance-advisory/tprm" },
+            { "id": "sox-icofr-ifc", "title": "SOX / ICOFR / IFC", "path": "/services/risk-assurance-advisory/sox-icofr-ifc" },
+            { "id": "csa", "title": "CSA", "path": "/services/risk-assurance-advisory/csa" },
+            { "id": "concurrent-audits", "title": "Concurrent Audits", "path": "/services/risk-assurance-advisory/concurrent-audits" },
+            {
+              "id": "formulation-of-policies-and-sops",
+              "title": "Formulation of Policies & SOPs",
+              "path": "/services/risk-assurance-advisory/formulation-of-policies-and-sops"
+            }
+          ]
+        },
+        {
+          "label": "Digital Transformation",
+          "path": "/services/digital-transformation",
+          "submenus": [
+            { "id": "strategic-pmo", "title": "Strategic PMO", "path": "/services/digital-transformation/strategic-pmo" },
+            { "id": "implementation", "title": "Implementation", "path": "/services/digital-transformation/implementation" },
+            { "id": "support-services", "title": "Support Services", "path": "/services/digital-transformation/support-services" }
+          ]
+        },
+        {
+          "label": "ESG",
+          "path": "/services/esg",
+          "submenus": [
+            { "id": "strategy-roadmap", "title": "ESG Strategy & Roadmap", "path": "/services/esg/strategy-roadmap" },
+            { "id": "reporting-disclosure", "title": "ESG Reporting & Disclosure", "path": "/services/esg/reporting-disclosure" },
+            { "id": "carbon-footprint", "title": "Carbon Footprint Assessment", "path": "/services/esg/carbon-footprint" },
+            { "id": "sustainability-assurance", "title": "Sustainability Assurance", "path": "/services/esg/sustainability-assurance" }
+          ]
+        },
+        {
+          "label": "Financial Advisory",
+          "path": "/services/financial-advisory",
+          "submenus": [
+            { "id": "credit-risk", "title": "Credit Risk Assessment", "path": "/services/financial-advisory/credit-risk" },
+            { "id": "portfolio-management", "title": "Credit Portfolio Management", "path": "/services/financial-advisory/portfolio-management" },
+            { "id": "loan-review", "title": "Loan Review & Monitoring", "path": "/services/financial-advisory/loan-review" },
+            { "id": "credit-policy", "title": "Credit Policy Framework", "path": "/services/financial-advisory/credit-policy" }
+          ]
+        },
+        {
+          "label": "AI & Technology",
+          "path": "/services/ai-technology",
+          "submenus": [
+            { "id": "ai-rmf-nist", "title": "AI RMF by NIST", "path": "/services/ai-technology/ai-rmf-nist" }
+          ]
+        },
+        {
+          "label": "Forensics and Investigation",
+          "path": "/services/forensics-investigation"
+        }
+      ]
+    },
+
+    {
+      "title": "IT Risk Management",
+      "items": [
+        {
+          "label": "SOC Compliance",
+          "path": "/services/soc-services",
+          "submenus": [
+            { "id": "soc-1", "title": "SOC 1", "path": "/services/soc-services/soc-1" },
+            { "id": "soc-2", "title": "SOC 2", "path": "/services/soc-services/soc-2" },
+            { "id": "soc-3", "title": "SOC 3", "path": "/services/soc-services/soc-3" }
+          ]
+        },
+        {
+          "label": "ISO & TISAX Readiness",
+          "path": "/services/iso-certifications",
+          "submenus": [
+            { "id": "iso-27001", "title": "ISO 27001", "path": "/services/iso-certifications/iso-27001" },
+            { "id": "iso-27701", "title": "ISO 27701", "path": "/services/iso-certifications/iso-27701" },
+            { "id": "iso-22301", "title": "ISO 22301", "path": "/services/iso-certifications/iso-22301" },
+            { "id": "iso-42001", "title": "ISO 42001", "path": "/services/iso-certifications/iso-42001" },
+            { "id": "iso-31000", "title": "ISO 31000", "path": "/services/iso-certifications/iso-31000" },
+            { "id": "tisax", "title": "TISAX", "path": "/services/iso-certifications/tisax" }
+          ]
+        },
+        { "label": "PCI DSS", "path": "/services/pci-dss-compliance" },
+        { "label": "ITGC and ITAC", "path": "/services/itgc-itac" },
+        { "label": "BCP / DR", "path": "/services/bcp-dr" },
+        { "label": "Cyber Security", "path": "/services/cybersecurity" },
+        {
+          "label": "Data Privacy",
+          "path": "/services/data-privacy",
+          "submenus": [
+            { "id": "dpdp", "title": "DPDP Compliance", "path": "/services/data-privacy/dpdp" },
+            { "id": "gdpr", "title": "GDPR Compliance", "path": "/services/data-privacy/gdpr" },
+            { "id": "regulatory", "title": "Other Regulatory Compliances", "path": "/services/data-privacy/regulatory" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "title": "CPA Services",
+      "items": [
+        {
+          "label": "US Assurance Support Services",
+          "path": "/services/cpa-us-assurance",
+          "submenus": [
+            { "id": "financial-audits", "title": "Financial Statement Audits", "path": "/services/cpa-us-assurance/financial-audits" },
+            { "id": "internal-control", "title": "Internal Control Reviews", "path": "/services/cpa-us-assurance/internal-control" },
+            { "id": "compliance-audits", "title": "Compliance Audits", "path": "/services/cpa-us-assurance/compliance-audits" },
+            { "id": "quality-assurance", "title": "Quality Assurance", "path": "/services/cpa-us-assurance/quality-assurance" }
+          ]
+        }
+      ]
+    }
   ],
 
   "aboutMegaMenu": [
     {
+      "title": "Who We Are",
       "items": [
-        { "label": "Co-founding Partners", "path": "/about#co-founders" },
-        { "label": "Alliance Partners", "path": "/about#alliance-partners" },
-        { "label": "Service Leaders", "path": "/about#service-leaders" },
-        { "label": "RiskMan Team", "path": "/about#riskman-teams" }
-      ]
-    }
-  ],
-  
-  "servicesMegaMenu": [
-    {
-      "title": "ENTERPRISE SERVICES",
-      "items": [
-       { "label": "Risk Advisory", "path": "/services/risk-advisory" },
-        { "label": "Consulting", "path": "/services/consulting" },
-        { "label": "Outsourcing and Training", "path": "/services/outsourcing-training" },
-        { "label": "Sustainability", "path": "/services/sustainability" },
-        { "label": "Financial Advisory", "path": "/services/financial-advisory" },
-        { "label": "Forensic and Investigation", "path": "/services/forensic-investigation" }
+        { "label": "Company Overview", "path": "/about" },
+        { "label": "Vision & Mission", "path": "/about#vision-mission" },
+        { "label": "Leadership Team", "path": "/about#leadership" }
       ]
     },
     {
-      "title": "IT RISK MANAGEMENT",
+      "title": "Our People",
       "items": [
-        { "label": "SOC", "path": "/services/soc-services" },
-        { "label": "ISO Certifications", "path": "/services/iso-certifications" },
-        { "label": "PCI DSS", "path": "/services/pci-dss-compliance" },
-        {"label":"ITGC and ITAC","path":"/services/itgc-itac"},
-        { "label": "IT Risk Management", "path": "/services/it-risk-management" },
-        { "label": "TPRM", "path": "/services/tprm" },
-        { "label": "BCP and DR", "path": "/services/bcp-dr" },
-        { "label": "Cyber Security", "path": "/services/cybersecurity" },
-        { "label": "Data Privacy & Protection", "path": "/services/data-privacy" }
-
+        { "label": "Co-founding Partners", "path": "/about#co-founders" },
+        { "label": "Service Leaders", "path": "/about#service-leaders" },
+        { "label": "RiskMan Team", "path": "/about#riskman-teams" }
+      ]
+    },
+    {
+      "title": "Alliances",
+      "items": [
+        { "label": "Alliance Partners", "path": "/about#alliance-partners" },
+        { "label": "Global Network", "path": "/about#global-network" }
       ]
     }
   ],
@@ -56,34 +164,60 @@
         { "label": "Banking & Insurance", "path": "/industries/banking-insurance" },
         { "label": "Healthcare", "path": "/industries/healthcare" },
         { "label": "Energy & Utilities", "path": "/industries/energy-utilities" },
-        { "label": "Manufacturing", "path": "/industries/manufacturing" },
-        { "label": "Travel & Logistics", "path": "/industries/travel-logistics" }
+        { "label": "Manufacturing", "path": "/industries/manufacturing" }
       ]
     },
     {
       "title": "Technology & Digital",
       "items": [
         { "label": "Media & Communication", "path": "/industries/media-communication" },
-        { "label": "Education & EdTech", "path": "/industries/education-edtech" },
         { "label": "E-Commerce", "path": "/industries/ecommerce" },
-        { "label": "IT Consulting", "path": "/industries/it-consulting" }
+        { "label": "FinTech", "path": "/industries/fintech" }
       ]
     },
     {
       "title": "Specialized Sectors",
       "items": [
         { "label": "Hospitality", "path": "/industries/hospitality" },
-        { "label": "Automobiles", "path": "/industries/automobiles" },
-        { "label": "Retail Consumer", "path": "/industries/retail-consumer" }
+        { "label": "Retail & Consumer", "path": "/industries/retail-consumer" },
+        { "label": "Startups & MSMEs", "path": "/industries/startups-msmes" }
       ]
     }
   ],
 
-  "insightsMegaMenu": [
+  "governanceMegaMenu": [
     {
-      "title": "Insights & Resources",
+      "title": "Governance Services",
       "items": [
-        { "label": "Blog", "path": "/blog" }
+        { "label": "Corporate Governance", "path": "/governance/corporate" },
+        { "label": "Board Advisory", "path": "/governance/board-advisory" },
+        { "label": "Compliance Management", "path": "/governance/compliance" },
+        { "label": "Risk Governance Framework", "path": "/governance/risk-framework" }
+      ]
+    },
+    {
+      "title": "Policy & Oversight",
+      "items": [
+        { "label": "Code of Conduct", "path": "/governance/code-of-conduct" },
+        { "label": "Ethics & Integrity", "path": "/governance/ethics-integrity" }
+      ]
+    }
+  ],
+
+  "eventsMegaMenu": [
+    {
+      "title": "Events",
+      "items": [
+        { "label": "Upcoming Events", "path": "/events/upcoming" },
+        { "label": "Past Events", "path": "/events/past" }
+      ]
+    },
+    {
+      "title": "Journey",
+      "items": [
+        { "label": "Company Journey", "path": "/events/journey" },
+        { "label": "Milestones", "path": "/events/milestones" },
+        { "label": "Media Coverage", "path": "/events/media" }
       ]
     }
   ]

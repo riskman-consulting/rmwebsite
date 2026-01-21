@@ -18,7 +18,7 @@ const staggerContainer = {
 
 export default function MissionVisionSection() {
   return (
-    <section className="relative py-8 lg:py-12 bg-surfaceLight dark:bg-surfaceDark">
+    <section id="mission-vision" className="relative py-8 lg:py-12 bg-surfaceLight dark:bg-surfaceDark">
       <div className="container">
         <motion.div
           variants={fadeInUp}
@@ -90,7 +90,7 @@ export default function MissionVisionSection() {
           >
             <motion.div variants={fadeInUp} className="rounded-[1.5rem] overflow-hidden h-[240px]">
               <img
-                src={teamCollaboration}
+                src="https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898667/team_collaboration_vksjog.webp"
                 alt="Team collaboration"
                 className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
               />
@@ -98,7 +98,7 @@ export default function MissionVisionSection() {
 
             <motion.div variants={fadeInUp} className="rounded-[1.5rem] overflow-hidden h-[300px] mt-12">
               <img
-                src={professionalConsultant}
+                src="https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898665/professional_consultant_g8ag1p.jpg"
                 alt="Professional consulting"
                 className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
               />
@@ -106,7 +106,7 @@ export default function MissionVisionSection() {
 
             <motion.div variants={fadeInUp} className="rounded-[1.5rem] overflow-hidden h-[200px] -mt-8">
               <img
-                src={strategicPlanning}
+                src="https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898663/strategic_planning_nnuv1y.webp"
                 alt="Strategic planning"
                 className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
               />
@@ -114,7 +114,7 @@ export default function MissionVisionSection() {
 
             <motion.div variants={fadeInUp} className="rounded-[1.5rem] overflow-hidden h-[260px]">
               <img
-                src={clientEngagement}
+                src="https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898652/client_engagement_tlunb0.webp"
                 alt="Client engagement"
                 className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
               />

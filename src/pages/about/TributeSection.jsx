@@ -10,7 +10,7 @@ export default function TributeSection() {
         <div className="relative">
           <div className="absolute -inset-4 bg-brandPrimary/10 rounded-3xl blur-2xl opacity-20" />
           <img
-            src="https://www.riskman.in/wp-content/uploads/2020/09/prabir-sengupta.png"
+            src="https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768904398/prabir-sengupta_kopgl7.webp"
             className="relative h-[420px] w-full object-cover rounded-2xl grayscale hover:grayscale-0 transition"
             alt=""
           />

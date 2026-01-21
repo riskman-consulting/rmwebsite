@@ -43,7 +43,7 @@ export default function LeadershipModal({ selectedLeader, setSelectedLeader }) {
                 <img
                   src={selectedLeader.image}
                   alt={selectedLeader.name}
-                  className="object-cover w-40 h-40 transition-all duration-500 border-4 rounded-full md:w-48 md:h-48 border-brandPrimary/30 dark:border-brandAccent/30 hover:scale-105"
+                  className="object-cover object-top w-40 h-40 transition-all duration-500 border-4 rounded-full md:w-48 md:h-48 border-brandPrimary/30 dark:border-brandAccent/30 hover:scale-105"
                 />
               </div>
 

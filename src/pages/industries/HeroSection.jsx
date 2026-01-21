@@ -1,12 +1,4 @@
-
 import { motion } from "framer-motion";
-
-// Assets
-import manufacturingImg from "../../assets/images/industry/manufacturing.png";
-import bankingImg from "../../assets/images/industry/banking.png";
-import ecommerceImg from "../../assets/images/industry/ecommerce.png";
-import healthcareImg from "../../assets/images/industry/healthcare.png";
-import technologyImg from "../../assets/images/industry/technology.png";
 import { HeroImageWithCurtain } from "./HeroImageWithCurtain";
 
 /* =======================
@@ -22,6 +14,14 @@ const staggerContainer = {
   animate: { transition: { staggerChildren: 0.1 } },
 };
 
+// Industry images from Cloudinary
+const industryImages = [
+  "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768901938/manufacturing_sjjtvd.webp",
+  "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768901938/banking_ztpqxr.webp",
+  "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768901939/ecommerce_lozlfj.webp",
+  "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768901935/healthcare_yowxpx.webp",
+  "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768901935/technology_foecgg.webp"
+];
 
 // 1. Hero Section
 export const HeroSection = ({ heroRef, y, opacity }) => (
@@ -44,8 +44,14 @@ export const HeroSection = ({ heroRef, y, opacity }) => (
         </motion.p>
       </motion.div>
 
-      <motion.div style={{ y, opacity }} className="grid grid-cols-2 gap-4 md:grid-cols-5" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.8 }}>
-        {[manufacturingImg, bankingImg, ecommerceImg, healthcareImg, technologyImg].map((img, i) => (
+      <motion.div 
+        style={{ y, opacity }} 
+        className="grid grid-cols-2 gap-4 md:grid-cols-5" 
+        initial={{ opacity: 0, y: 40 }} 
+        animate={{ opacity: 1, y: 0 }} 
+        transition={{ delay: 0.4, duration: 0.8 }}
+      >
+        {industryImages.map((img, i) => (
           <HeroImageWithCurtain key={i} img={img} index={i} />
         ))}
       </motion.div>

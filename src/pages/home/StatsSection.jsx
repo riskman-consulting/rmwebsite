@@ -801,7 +801,7 @@ const StatsSection = () => {
       gradient: "from-brandDark/85 via-brandNavy/82 to-brandPrimary/78",
     },
     {
-      number: 50,
+      number: 10,
       suffix: "+",
       label: "Industries Served",
       description: "Across the globe",
@@ -813,7 +813,7 @@ const StatsSection = () => {
       gradient: "from-brandNavy/85 via-brandPrimary/82 to-brandDark/78",
     },
     {
-      number: 150,
+      number: 50,
       suffix: "+",
       label: "Global Clients",
       description: "Trust our expertise",

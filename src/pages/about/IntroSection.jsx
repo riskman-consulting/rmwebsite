@@ -26,8 +26,8 @@
 //   ];
 
 //   return (
-//     <section className="relative px-12 py-16 lg:py-24 bg-surfaceLight dark:bg-surfaceDark transition-colors duration-300">
-//       <div className="container mx-auto px-4">
+//     <section className="relative px-12 py-16 transition-colors duration-300 lg:py-24 bg-surfaceLight dark:bg-surfaceDark">
+//       <div className="container px-4 mx-auto">
         
 //         {/* Header Section */}
 //         <div className="mb-16 text-start">
@@ -37,7 +37,7 @@
 //               Introduction
 //             </p>
 //           </div>
-//           <h2 className="text-4xl md:text-5xl font-bold leading-tight max-w-4xl text-slate-900 dark:text-white">
+//           <h2 className="max-w-4xl text-4xl font-bold leading-tight md:text-5xl text-slate-900 dark:text-white">
 //             Creating <span className="text-orange-500">enduring value</span> through customized solution-based services.
 //           </h2>
 //         </div>
@@ -58,18 +58,18 @@
 //                 <img
 //                   src={card.image}
 //                   alt={card.title}
-//                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+//                   className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
 //                   onError={(e) => { e.target.style.display = 'none'; }} // Hides broken image
 //                 />
 //               </div>
               
 //               {/* Gradient Overlay (Always Visible) */}
-//               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+//               <div className="absolute inset-0 transition-opacity bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90"></div>
               
 //               {/* Content */}
-//               <div className="absolute inset-0 flex flex-col justify-end p-8 text-white z-10">
-//                 <div className="mb-4 w-10 h-1 bg-orange-400 transition-all duration-500 group-hover:w-20"></div>
-//                 <h3 className="text-2xl font-bold mb-3 group-hover:text-orange-400 transition-colors">
+//               <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 text-white">
+//                 <div className="w-10 h-1 mb-4 transition-all duration-500 bg-orange-400 group-hover:w-20"></div>
+//                 <h3 className="mb-3 text-2xl font-bold transition-colors group-hover:text-orange-400">
 //                   {card.title}
 //                 </h3>
 //                 <p className="text-sm leading-relaxed text-gray-300">
@@ -122,8 +122,8 @@
 //   return (
 //     <>
 //       {/* Introduction Section */}
-//       <section className="relative px-12 py-16 lg:py-24 bg-surfaceLight dark:bg-surfaceDark transition-colors duration-300">
-//         <div className="container mx-auto px-4">
+//       <section className="relative px-12 py-16 transition-colors duration-300 lg:py-24 bg-surfaceLight dark:bg-surfaceDark">
+//         <div className="container px-4 mx-auto">
           
 //           {/* Header Section */}
 //           <div className="mb-16 text-start">
@@ -133,7 +133,7 @@
 //                 Introduction
 //               </p>
 //             </div>
-//             <h2 className="text-4xl md:text-5xl font-bold leading-tight max-w-4xl text-slate-900 dark:text-white">
+//             <h2 className="max-w-4xl text-4xl font-bold leading-tight md:text-5xl text-slate-900 dark:text-white">
 //               Creating <span className="text-orange-500">enduring value</span> through customized solution-based services.
 //             </h2>
 //           </div>
@@ -154,18 +154,18 @@
 //                   <img
 //                     src={card.image}
 //                     alt={card.title}
-//                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+//                     className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
 //                     onError={(e) => { e.target.style.display = 'none'; }}
 //                   />
 //                 </div>
                 
 //                 {/* Gradient Overlay (Always Visible) */}
-//                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+//                 <div className="absolute inset-0 transition-opacity bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90"></div>
                 
 //                 {/* Content */}
-//                 <div className="absolute inset-0 flex flex-col justify-end p-8 text-white z-10">
-//                   <div className="mb-4 w-10 h-1 bg-orange-400 transition-all duration-500 group-hover:w-20"></div>
-//                   <h3 className="text-2xl font-bold mb-3 group-hover:text-orange-400 transition-colors">
+//                 <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 text-white">
+//                   <div className="w-10 h-1 mb-4 transition-all duration-500 bg-orange-400 group-hover:w-20"></div>
+//                   <h3 className="mb-3 text-2xl font-bold transition-colors group-hover:text-orange-400">
 //                     {card.title}
 //                   </h3>
 //                   <p className="text-sm leading-relaxed text-gray-300">
@@ -283,8 +283,8 @@
 //   return (
 //     <div className="relative overflow-hidden">
 //       {/* 1. Philosophy Section */}
-//       <section className="relative px-6 lg:px-24 py-24 bg-white dark:bg-brand-navy transition-colors duration-700">
-//         <div className="max-w-7xl mx-auto">
+//       <section className="relative px-6 py-24 transition-colors duration-700 bg-white lg:px-24 dark:bg-brand-navy">
+//         <div className="mx-auto max-w-7xl">
 //           {/* Section Header */}
 //           <motion.div 
 //             {...fadeInUp}
@@ -326,24 +326,24 @@
 //                 </div>
 
 //                 {/* Card Content Overlay */}
-//                 <div className="absolute inset-0 p-10 flex flex-col justify-end text-white transition-all duration-500 group-hover:pb-12">
-//                   <div className="w-12 h-12 rounded-2xl bg-brand-gold/20 backdrop-blur-md border border-brand-gold/30 flex items-center justify-center mb-6 text-brand-gold group-hover:scale-110 transition-transform duration-500">
+//                 <div className="absolute inset-0 flex flex-col justify-end p-10 text-white transition-all duration-500 group-hover:pb-12">
+//                   <div className="flex items-center justify-center w-12 h-12 mb-6 transition-transform duration-500 border rounded-2xl bg-brand-gold/20 backdrop-blur-md border-brand-gold/30 text-brand-gold group-hover:scale-110">
 //                     {card.icon}
 //                   </div>
                   
 //                   <p className="text-[10px] font-black tracking-[0.2em] uppercase text-brand-gold/80 mb-2">
 //                     {card.subtitle}
 //                   </p>
-//                   <h3 className="text-3xl font-bold mb-4 tracking-tight leading-tight">
+//                   <h3 className="mb-4 text-3xl font-bold leading-tight tracking-tight">
 //                     {card.title}
 //                   </h3>
                   
 //                   {/* Expandable description on hover */}
-//                   <div className="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-500 overflow-hidden">
-//                     <p className="text-sm text-white/70 leading-relaxed font-medium mb-6">
+//                   <div className="h-0 overflow-hidden transition-all duration-500 opacity-0 group-hover:h-auto group-hover:opacity-100">
+//                     <p className="mb-6 text-sm font-medium leading-relaxed text-white/70">
 //                       {card.description}
 //                     </p>
-//                     <button className="flex items-center gap-2 text-brand-gold text-xs font-black uppercase tracking-widest hover:gap-4 transition-all">
+//                     <button className="flex items-center gap-2 text-xs font-black tracking-widest uppercase transition-all text-brand-gold hover:gap-4">
 //                       Read More <ArrowRight size={14} />
 //                     </button>
 //                   </div>
@@ -355,8 +355,8 @@
 //       </section>
 
 //       {/* 2. Narrative Section (About Us) */}
-//       <section className="relative py-24 lg:py-40 bg-slate-50 dark:bg-brand-darker transition-colors duration-700 isolate">
-//         <div className="max-w-7xl mx-auto px-6 lg:px-12 grid items-center gap-16 lg:grid-cols-12">
+//       <section className="relative py-24 transition-colors duration-700 lg:py-40 bg-slate-50 dark:bg-brand-darker isolate">
+//         <div className="grid items-center gap-16 px-6 mx-auto max-w-7xl lg:px-12 lg:grid-cols-12">
           
 //           {/* Left Side: Content */}
 //           <motion.div 
@@ -367,13 +367,13 @@
 //               Since 2012
 //             </div>
             
-//             <h2 className="mb-10 text-5xl md:text-7xl font-black text-brand-navy dark:text-white leading-none">
+//             <h2 className="mb-10 text-5xl font-black leading-none md:text-7xl text-brand-navy dark:text-white">
 //               <span className="font-serif italic font-medium">About</span> RiskMan
 //             </h2>
 
-//             <div className="space-y-6 text-lg md:text-xl text-slate-600 dark:text-white/60 font-medium leading-relaxed max-w-2xl">
+//             <div className="max-w-2xl space-y-6 text-lg font-medium leading-relaxed md:text-xl text-slate-600 dark:text-white/60">
 //               <p>
-//                 At RiskMan, we focus on creating <span className="text-brand-navy dark:text-white font-bold">enduring value</span> for our clients, people, communities and stakeholders through our "Customized Solution" based services.
+//                 At RiskMan, we focus on creating <span className="font-bold text-brand-navy dark:text-white">enduring value</span> for our clients, people, communities and stakeholders through our "Customized Solution" based services.
 //               </p>
 //               <p>
 //                 Rather than being classical consultants, we take pride in being <span className="italic text-brand-gold">propreneurs</span>—professionals with an entrepreneurial mindset who drive sustainable growth with perseverance.
@@ -388,9 +388,9 @@
 //               initial={{ opacity: 0, x: -20 }}
 //               whileInView={{ opacity: 1, x: 0 }}
 //               viewport={{ once: true }}
-//               className="mt-12 relative p-8 rounded-2xl bg-white dark:bg-brand-navy border-l-4 border-brand-gold shadow-xl"
+//               className="relative p-8 mt-12 bg-white border-l-4 shadow-xl rounded-2xl dark:bg-brand-navy border-brand-gold"
 //             >
-//               <p className="text-2xl font-serif italic text-brand-navy dark:text-white leading-snug">
+//               <p className="font-serif text-2xl italic leading-snug text-brand-navy dark:text-white">
 //                 "RiskMan is the trusted partner in your sustainable growth journey."
 //               </p>
 //             </motion.div>
@@ -401,7 +401,7 @@
 //             initial={{ opacity: 0, scale: 0.9 }}
 //             whileInView={{ opacity: 1, scale: 1 }}
 //             viewport={{ once: true }}
-//             className="lg:col-span-5 relative"
+//             className="relative lg:col-span-5"
 //           >
 //             {/* Background decorative elements */}
 //             <div className="absolute -top-10 -right-10 w-40 h-40 bg-brand-gold/20 rounded-full blur-[80px]" />
@@ -422,7 +422,7 @@
 //                 transition={{ delay: 0.5 }}
 //                 className="absolute -bottom-6 -left-6 p-8 glass-card border border-brand-gold/30 rounded-2xl shadow-2xl max-w-[240px]"
 //               >
-//                 <p className="text-4xl font-black text-brand-gold mb-1">15+</p>
+//                 <p className="mb-1 text-4xl font-black text-brand-gold">15+</p>
 //                 <p className="text-[10px] font-black uppercase tracking-widest dark:text-white text-brand-navy opacity-70">
 //                   Years of Global Experience
 //                 </p>
@@ -493,8 +493,8 @@
 //   return (
 //     <div className="relative overflow-hidden bg-surfaceLight dark:bg-bgDark">
 //       {/* 1. About Us Section - FIRST */}
-//       <section className="relative py-24 lg:py-40 bg-bgLight dark:bg-surfaceDark transition-colors duration-700 isolate">
-//         <div className="max-w-7xl mx-auto px-6 lg:px-12 grid items-center gap-16 lg:grid-cols-12">
+//       <section className="relative py-24 transition-colors duration-700 lg:py-40 bg-bgLight dark:bg-surfaceDark isolate">
+//         <div className="grid items-center gap-16 px-6 mx-auto max-w-7xl lg:px-12 lg:grid-cols-12">
           
 //           {/* Left Side: Content */}
 //           <motion.div 
@@ -505,19 +505,19 @@
 //               About RiskMan
 //             </div>
             
-//             <h2 className="mb-10 text-5xl md:text-7xl font-black text-brandDark dark:text-white leading-none">
+//             <h2 className="mb-10 text-5xl font-black leading-none md:text-7xl text-brandDark dark:text-white">
 //               <span className="font-serif italic font-medium text-brandGold">Who</span> We Are
 //             </h2>
 
-//             <div className="space-y-6 text-lg md:text-xl text-brandDark/70 dark:text-white/70 font-medium leading-relaxed max-w-2xl">
+//             <div className="max-w-2xl space-y-6 text-lg font-medium leading-relaxed md:text-xl text-brandDark/70 dark:text-white/70">
 //               <p>
-//                 At RiskMan, we focus on creating <span className="text-brandDark dark:text-white font-bold">enduring value</span> for our clients, people, communities and other stakeholders through our <span className="text-brandGold font-semibold">"Customised Solution"</span> based services.
+//                 At RiskMan, we focus on creating <span className="font-bold text-brandDark dark:text-white">enduring value</span> for our clients, people, communities and other stakeholders through our <span className="font-semibold text-brandGold">"Customised Solution"</span> based services.
 //               </p>
 //               <p>
 //                 RiskMan is a team of experienced professionals with high level of knowledge and accomplishments who bring to the table a varied and storied experience set, to create outstanding value for its clients and other stakeholders.
 //               </p>
 //               <p>
-//                 Rather than being classical consultants, we take pride in being <span className="italic text-brandGold font-semibold">propreneurs</span> i.e., professionals with an entrepreneurial mindset.
+//                 Rather than being classical consultants, we take pride in being <span className="italic font-semibold text-brandGold">propreneurs</span> i.e., professionals with an entrepreneurial mindset.
 //               </p>
 //               <p>
 //                 We are a passionate team and feel excited in making a meaningful impact through our experience, competency and ability to deliver sustainable goal with perseverance. We endeavor to engage with people in meaningful ways and believe in building long term relationship with all our stakeholders.
@@ -529,14 +529,14 @@
 //               initial={{ opacity: 0, x: -20 }}
 //               whileInView={{ opacity: 1, x: 0 }}
 //               viewport={{ once: true }}
-//               className="mt-12 relative p-8 rounded-2xl bg-brandDark dark:bg-brandAccent border-l-4 border-brandGold shadow-xl"
+//               className="relative p-8 mt-12 border-l-4 shadow-xl rounded-2xl bg-brandDark dark:bg-brandAccent border-brandGold"
 //             >
-//               <div className="absolute -top-3 -left-3 w-8 h-8 bg-brandGold/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+//               <div className="absolute flex items-center justify-center w-8 h-8 rounded-full -top-3 -left-3 bg-brandGold/20 backdrop-blur-sm">
 //                 <svg className="w-4 h-4 text-brandGold" fill="currentColor" viewBox="0 0 20 20">
 //                   <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
 //                 </svg>
 //               </div>
-//               <p className="text-2xl font-serif italic text-white/70 dark:text-white leading-snug">
+//               <p className="font-serif text-2xl italic leading-snug text-white/70 dark:text-white">
 //                 "RISKMAN IS THE TRUSTED PARTNER IN YOUR SUSTAINABLE GROWTH JOURNEY"
 //               </p>
 //             </motion.div>
@@ -547,7 +547,7 @@
 //             initial={{ opacity: 0, scale: 0.9 }}
 //             whileInView={{ opacity: 1, scale: 1 }}
 //             viewport={{ once: true }}
-//             className="lg:col-span-5 relative"
+//             className="relative lg:col-span-5"
 //           >
 //             {/* Background decorative elements */}
 //             <div className="absolute -top-10 -right-10 w-40 h-40 bg-brandGold/20 rounded-full blur-[80px]" />
@@ -560,7 +560,7 @@
 //                 alt="About RiskMan"
 //                 className="w-full h-[650px] object-cover transition-transform duration-1000 group-hover:scale-105"
 //               />
-//               <div className="absolute inset-0 bg-gradient-to-t from-brandDark/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+//               <div className="absolute inset-0 transition-opacity duration-500 opacity-0 bg-gradient-to-t from-brandDark/30 via-transparent to-transparent group-hover:opacity-100" />
               
 //               {/* Overlapping Info Card */}
 //               <motion.div 
@@ -569,7 +569,7 @@
 //                 transition={{ delay: 0.5 }}
 //                 className="absolute -bottom-6 -left-6 p-8 bg-surfaceLight/95 dark:bg-brandNavy/95 backdrop-blur-lg border border-brandGold/30 rounded-2xl shadow-2xl max-w-[240px]"
 //               >
-//                 <p className="text-4xl font-black text-brandGold mb-1">100+</p>
+//                 <p className="mb-1 text-4xl font-black text-brandGold">100+</p>
 //                 <p className="text-[10px] font-black uppercase tracking-widest text-brandDark dark:text-white opacity-70">
 //                   Success Stories
 //                 </p>
@@ -580,8 +580,8 @@
 //       </section>
 
 //       {/* 2. Introduction Philosophy Section - SECOND */}
-//       <section className="relative px-6 lg:px-24 py-24 bg-surfaceLight dark:bg-surfaceDark transition-colors duration-700">
-//         <div className="max-w-7xl mx-auto">
+//       <section className="relative px-6 py-24 transition-colors duration-700 lg:px-24 bg-surfaceLight dark:bg-surfaceDark">
+//         <div className="mx-auto max-w-7xl">
 //           {/* Section Header */}
 //           <motion.div 
 //             {...fadeInUp}
@@ -624,24 +624,24 @@
 //                 </div>
 
 //                 {/* Card Content Overlay */}
-//                 <div className="absolute inset-0 p-10 flex flex-col justify-end text-white transition-all duration-500 group-hover:pb-12">
-//                   <div className="w-12 h-12 rounded-2xl bg-brandGold/20 backdrop-blur-md border border-brandGold/30 flex items-center justify-center mb-6 text-brandGold group-hover:scale-110 transition-transform duration-500">
+//                 <div className="absolute inset-0 flex flex-col justify-end p-10 text-white transition-all duration-500 group-hover:pb-12">
+//                   <div className="flex items-center justify-center w-12 h-12 mb-6 transition-transform duration-500 border rounded-2xl bg-brandGold/20 backdrop-blur-md border-brandGold/30 text-brandGold group-hover:scale-110">
 //                     {card.icon}
 //                   </div>
                   
 //                   <p className="text-[10px] font-black tracking-[0.2em] uppercase text-brandGold/80 mb-2">
 //                     {card.subtitle}
 //                   </p>
-//                   <h3 className="text-3xl font-bold mb-4 tracking-tight leading-tight">
+//                   <h3 className="mb-4 text-3xl font-bold leading-tight tracking-tight">
 //                     {card.title}
 //                   </h3>
                   
 //                   {/* Expandable description on hover */}
-//                   <div className="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-500 overflow-hidden">
-//                     <p className="text-sm text-white/70 leading-relaxed font-medium mb-6">
+//                   <div className="h-0 overflow-hidden transition-all duration-500 opacity-0 group-hover:h-auto group-hover:opacity-100">
+//                     <p className="mb-6 text-sm font-medium leading-relaxed text-white/70">
 //                       {card.description}
 //                     </p>
-//                     <button className="flex items-center gap-2 text-brandGold text-xs font-black uppercase tracking-widest hover:gap-4 transition-all">
+//                     <button className="flex items-center gap-2 text-xs font-black tracking-widest uppercase transition-all text-brandGold hover:gap-4">
 //                       Learn More <ArrowRight size={14} />
 //                     </button>
 //                   </div>
@@ -696,30 +696,30 @@ const IntroductionSection = () => {
       title: "Professional Excellence",
       subtitle: "Expertise & Accomplishment",
       description: "A team of experienced professionals with high level of knowledge and accomplishments who bring varied experience.",
-      image: professionalExcellence,
+      image: "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898666/professional_excellence_team_d4uncu.webp",
       icon: <Shield className="w-5 h-5" />
     },
     {
       title: "Propreneurial Mindset",
       subtitle: "Entrepreneurial Spirit",
       description: "Rather than being classical consultants, we take pride in being professionals with an entrepreneurial mindset.",
-      image: propereneurialMindset,
+      image: "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898662/propreneurial_mindset_presentation_y1oudy.webp",
       icon: <Target className="w-5 h-5" />
     },
     {
       title: "Long-term Relationships",
       subtitle: "Trust & Partnership",
       description: "We are passionate about making meaningful impact and believe in building enduring partnerships based on trust.",
-      image: longTermRelationships,
+      image: "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898664/longterm_relationships_handshake_s0hubs.webp",
       icon: <Users className="w-5 h-5" />
     },
   ];
 
   return (
-    <div className="relative overflow-hidden bg-surfaceLight dark:bg-bgDark">
+    <div id="introduction" className="relative overflow-hidden bg-surfaceLight dark:bg-bgDark">
       {/* 1. About Us Section - FIRST */}
-      <section className="relative py-4 lg:py-8 bg-surfaceLight dark:bg-surfaceDark transition-colors duration-700 isolate">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid items-center gap-16 lg:grid-cols-12">
+      <section className="relative py-4 transition-colors duration-700 lg:py-8 bg-surfaceLight dark:bg-surfaceDark isolate">
+        <div className="grid items-center gap-16 px-6 mx-auto max-w-7xl lg:px-12 lg:grid-cols-12">
           
           {/* Left Side: Content */}
           <motion.div 
@@ -730,19 +730,19 @@ const IntroductionSection = () => {
               About RiskMan
             </div>
             
-            <h2 className="mb-10 text-5xl md:text-7xl font-black text-brandDark dark:text-white leading-none">
+            <h2 className="mb-10 text-5xl font-black leading-none md:text-7xl text-brandDark dark:text-white">
               <span className="font-serif italic font-medium text-brandGold">Who</span> We Are
             </h2>
 
-            <div className="space-y-6 text-lg md:text-xl text-brandDark/70 dark:text-white/70 font-medium leading-relaxed max-w-2xl">
+            <div className="max-w-2xl space-y-6 text-lg font-medium leading-relaxed md:text-xl text-brandDark/70 dark:text-white/70">
               <p>
-                At RiskMan, we focus on creating <span className="text-brandDark dark:text-white font-bold">enduring value</span> for our clients, people, communities and other stakeholders through our <span className="text-brandGold font-semibold">"Customised Solution"</span> based services.
+                At RiskMan, we focus on creating <span className="font-bold text-brandDark dark:text-white">enduring value</span> for our clients, people, communities and other stakeholders through our <span className="font-semibold text-brandGold">"Customised Solution"</span> based services.
               </p>
               <p>
                 RiskMan is a team of experienced professionals with high level of knowledge and accomplishments who bring to the table a varied and storied experience set, to create outstanding value for its clients and other stakeholders.
               </p>
               <p>
-                Rather than being classical consultants, we take pride in being <span className="italic text-brandGold font-semibold">propreneurs</span> i.e., professionals with an entrepreneurial mindset.
+                Rather than being classical consultants, we take pride in being <span className="italic font-semibold text-brandGold">propreneurs</span> i.e., professionals with an entrepreneurial mindset.
               </p>
               <p>
                 We are a passionate team and feel excited in making a meaningful impact through our experience, competency and ability to deliver sustainable goal with perseverance. We endeavor to engage with people in meaningful ways and believe in building long term relationship with all our stakeholders.
@@ -754,14 +754,14 @@ const IntroductionSection = () => {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="mt-12 relative p-8 rounded-2xl bg-brandDark dark:bg-brandAccent border-l-4 border-brandGold shadow-xl"
+              className="relative p-8 mt-12 border-l-4 shadow-xl rounded-2xl bg-brandDark dark:bg-brandAccent border-brandGold"
             >
-              <div className="absolute -top-3 -left-3 w-8 h-8 bg-brandGold/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+              <div className="absolute flex items-center justify-center w-8 h-8 rounded-full -top-3 -left-3 bg-brandGold/20 backdrop-blur-sm">
                 <svg className="w-4 h-4 text-brandGold" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                 </svg>
               </div>
-              <p className="text-2xl font-serif italic text-white/70 dark:text-white leading-snug">
+              <p className="font-serif text-2xl italic leading-snug text-white/70 dark:text-white">
                 "RISKMAN IS THE TRUSTED PARTNER IN YOUR SUSTAINABLE GROWTH JOURNEY"
               </p>
             </motion.div>
@@ -772,7 +772,7 @@ const IntroductionSection = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="lg:col-span-5 relative"
+            className="relative lg:col-span-5"
           >
             {/* Background decorative elements */}
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-brandGold/20 rounded-full blur-[80px]" />
@@ -781,11 +781,11 @@ const IntroductionSection = () => {
             {/* The Main Image */}
             <div className="relative rounded-3xl overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] border border-brandGold/10 dark:border-brandGold/20 group">
               <img
-                src={introSection}
+                src="https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898670/introsection_paa12t.webp"
                 alt="About RiskMan"
                 className="w-full h-[650px] object-cover transition-transform duration-1000 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-brandDark/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 transition-opacity duration-500 opacity-0 bg-gradient-to-t from-brandDark/30 via-transparent to-transparent group-hover:opacity-100" />
               
               {/* Overlapping Info Card */}
               <motion.div 
@@ -794,7 +794,7 @@ const IntroductionSection = () => {
                 transition={{ delay: 0.5 }}
                 className="absolute -bottom-6 -left-6 p-8 bg-surfaceLight/95 dark:bg-brandNavy/95 backdrop-blur-lg border border-brandGold/30 rounded-2xl shadow-2xl max-w-[240px]"
               >
-                <p className="text-4xl font-black text-brandGold mb-1">100+</p>
+                <p className="mb-1 text-4xl font-black text-brandGold">100+</p>
                 <p className="text-[10px] font-black uppercase tracking-widest text-brandDark dark:text-white opacity-70">
                   Success Stories
                 </p>
@@ -805,8 +805,8 @@ const IntroductionSection = () => {
       </section>
 
       {/* 2. Introduction Philosophy Section - SECOND */}
-      <section className="relative px-6 lg:px-24 py-4 bg-surfaceLight dark:bg-surfaceDark transition-colors duration-700">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative px-6 py-4 transition-colors duration-700 lg:px-24 bg-surfaceLight dark:bg-surfaceDark">
+        <div className="mx-auto max-w-7xl">
           {/* Section Header */}
           <motion.div 
             {...fadeInUp}
@@ -849,24 +849,24 @@ const IntroductionSection = () => {
                 </div>
 
                 {/* Card Content Overlay */}
-                <div className="absolute inset-0 p-10 flex flex-col justify-end text-white transition-all duration-500 group-hover:pb-12">
-                  <div className="w-12 h-12 rounded-2xl bg-brandGold/20 backdrop-blur-md border border-brandGold/30 flex items-center justify-center mb-6 text-brandGold group-hover:scale-110 transition-transform duration-500">
+                <div className="absolute inset-0 flex flex-col justify-end p-10 text-white transition-all duration-500 group-hover:pb-12">
+                  <div className="flex items-center justify-center w-12 h-12 mb-6 transition-transform duration-500 border rounded-2xl bg-brandGold/20 backdrop-blur-md border-brandGold/30 text-brandGold group-hover:scale-110">
                     {card.icon}
                   </div>
                   
                   <p className="text-[10px] font-black tracking-[0.2em] uppercase text-brandGold/80 mb-2">
                     {card.subtitle}
                   </p>
-                  <h3 className="text-3xl font-bold mb-4 tracking-tight leading-tight">
+                  <h3 className="mb-4 text-3xl font-bold leading-tight tracking-tight">
                     {card.title}
                   </h3>
                   
                   {/* Expandable description on hover */}
-                  <div className="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-500 overflow-hidden">
-                    <p className="text-sm text-white/70 leading-relaxed font-medium mb-6">
+                  <div className="h-0 overflow-hidden transition-all duration-500 opacity-0 group-hover:h-auto group-hover:opacity-100">
+                    <p className="mb-6 text-sm font-medium leading-relaxed text-white/70">
                       {card.description}
                     </p>
-                    <button className="flex items-center gap-2 text-brandGold text-xs font-black uppercase tracking-widest hover:gap-4 transition-all">
+                    <button className="flex items-center gap-2 text-xs font-black tracking-widest uppercase transition-all text-brandGold hover:gap-4">
                       Learn More <ArrowRight size={14} />
                     </button>
                   </div>

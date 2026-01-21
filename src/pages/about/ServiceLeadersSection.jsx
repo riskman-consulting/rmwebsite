@@ -248,13 +248,13 @@
 //   ];
 
 //   return (
-//     <section id="service-leaders" className="relative py-16 bg-surfaceLight dark:bg-surfaceDark md:py-24 overflow-hidden">
+//     <section id="service-leaders" className="relative py-16 overflow-hidden bg-surfaceLight dark:bg-surfaceDark md:py-24">
 //       {/* Decorative Background Elements */}
-//       <div className="absolute top-0 right-0 w-64 h-64 bg-brandAccent/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
-//       <div className="absolute bottom-0 left-0 w-96 h-96 bg-brandGold/5 rounded-full blur-3xl -ml-48 -mb-48"></div>
+//       <div className="absolute top-0 right-0 w-64 h-64 -mt-32 -mr-32 rounded-full bg-brandAccent/5 blur-3xl"></div>
+//       <div className="absolute bottom-0 left-0 -mb-48 -ml-48 rounded-full w-96 h-96 bg-brandGold/5 blur-3xl"></div>
 
-//       <div className="container mx-auto px-6 lg:px-8 max-w-7xl relative z-10">
-//         <div className="flex flex-col lg:flex-row gap-16 items-start">
+//       <div className="container relative z-10 px-6 mx-auto lg:px-8 max-w-7xl">
+//         <div className="flex flex-col items-start gap-16 lg:flex-row">
           
 //           {/* Left Side: Copy and Title */}
 //           <div className="w-full lg:w-1/3">
@@ -264,24 +264,24 @@
 //               whileInView="animate"
 //               viewport={{ once: true }}
 //             >
-//               <h2 className="text-sm font-bold tracking-widest text-brandDark dark:text-brandAccent  px-4 mb-4">
+//               <h2 className="px-4 mb-4 text-sm font-bold tracking-widest text-brandDark dark:text-brandAccent">
 //                 Our Leadership
 //               </h2>
-//               <h1 className="text-4xl md:text-5xl font-extrabold text-brandPrimary dark:text-white px-4 mb-6 leading-tight">
+//               <h1 className="px-4 mb-6 text-4xl font-extrabold leading-tight md:text-5xl text-brandPrimary dark:text-white">
 //                 Our Team <br />
 //                 <span className="text-brandAccent">Service Leaders</span>
 //               </h1>
-//               <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl">
+//               <p className="max-w-2xl mb-8 text-lg text-gray-600 dark:text-gray-400">
 //                 Industry experts leading specialized service domains with decades of combined experience in auditing, compliance, and risk management.
 //               </p>
               
-//               <div className="hidden lg:block space-y-6">
+//               <div className="hidden space-y-6 lg:block">
 //                 <div className="flex items-center gap-4">
-//                     <div className="w-12 h-1 bg-brandAccent rounded-full"></div>
+//                     <div className="w-12 h-1 rounded-full bg-brandAccent"></div>
 //                     <span className="text-sm font-semibold dark:text-gray-300">Excellence in Auditing</span>
 //                 </div>
 //                 <div className="flex items-center gap-4">
-//                     <div className="w-12 h-1 bg-brandGold rounded-full"></div>
+//                     <div className="w-12 h-1 rounded-full bg-brandGold"></div>
 //                     <span className="text-sm font-semibold dark:text-gray-300">Strategic Compliance</span>
 //                 </div>
 //               </div>
@@ -290,7 +290,7 @@
 
 //           {/* Right Side: Leader Cards (Optimized for 2 items) */}
 //           <div className="w-full lg:w-2/3">
-//             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+//             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-10">
 //               {serviceLeaders.map((leader, i) => (
 //                 <motion.div
 //                   key={i}
@@ -298,39 +298,39 @@
 //                   initial="initial"
 //                   whileInView="animate"
 //                   viewport={{ once: true }}
-//                   className="group relative"
+//                   className="relative group"
 //                   onClick={() => setSelectedLeader(leader)}
 //                 >
-//                   <div className="absolute inset-0 bg-brandAccent/10 rounded-3xl translate-x-3 translate-y-3 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform duration-300"></div>
-//                   <div className="relative p-8 h-full transition-all duration-500 border border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark rounded-3xl cursor-pointer group-hover:border-brandAccent group-hover:shadow-card-light-hover dark:group-hover:shadow-card-dark-hover">
+//                   <div className="absolute inset-0 transition-transform duration-300 translate-x-3 translate-y-3 bg-brandAccent/10 rounded-3xl group-hover:translate-x-1 group-hover:translate-y-1"></div>
+//                   <div className="relative h-full p-8 transition-all duration-500 border cursor-pointer border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark rounded-3xl group-hover:border-brandAccent group-hover:shadow-card-light-hover dark:group-hover:shadow-card-dark-hover">
 //                     <div className="flex flex-col h-full">
 //                       <div className="flex items-center gap-6 mb-6">
 //                         <div className="relative">
-//                             <div className="absolute inset-0 bg-brandDark dark:bg-brandAccent rounded-full blur-sm opacity-0 group-hover:opacity-40 transition-opacity"></div>
+//                             <div className="absolute inset-0 transition-opacity rounded-full opacity-0 bg-brandDark dark:bg-brandAccent blur-sm group-hover:opacity-40"></div>
 //                             <img
 //                             src={leader.image}
 //                             alt={leader.name}
-//                             className="relative object-cover w-24 h-24 transition-all duration-500 border-2 rounded-full border-brandAccent group-hover:scale-105 z-10"
+//                             className="relative z-10 object-cover w-24 h-24 transition-all duration-500 border-2 rounded-full border-brandAccent group-hover:scale-105"
 //                             />
 //                         </div>
 //                         <div>
-//                             <h3 className="text-xl font-bold text-brandDark dark:text-white group-hover:text-brandAccent transition-colors">{leader.name}</h3>
+//                             <h3 className="text-xl font-bold transition-colors text-brandDark dark:text-white group-hover:text-brandAccent">{leader.name}</h3>
 //                             <p className="text-sm font-semibold text-brandAccent">
 //                                 {leader.title}
 //                             </p>
 //                         </div>
 //                       </div>
                       
-//                       <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-4 bg-gray-50 dark:bg-brandDark/50 p-3 rounded-xl border border-borderLight dark:border-borderDark/20">
+//                       <p className="p-3 mb-4 text-xs font-medium text-gray-500 border dark:text-gray-400 bg-gray-50 dark:bg-brandDark/50 rounded-xl border-borderLight dark:border-borderDark/20">
 //                         {leader.credentials}
 //                       </p>
                       
-//                       <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-3 mb-6 flex-grow">
+//                       <p className="flex-grow mb-6 text-sm text-gray-600 dark:text-gray-400 line-clamp-3">
 //                         {leader.bio}
 //                       </p>
 
 //                       <div className="flex items-center justify-between pt-4 border-t border-borderLight dark:border-borderDark">
-//                         <button className="flex items-center gap-2 text-sm font-bold text-brandPrimary dark:text-brandGoldLight group-hover:text-brandAccent transition-colors">
+//                         <button className="flex items-center gap-2 text-sm font-bold transition-colors text-brandPrimary dark:text-brandGoldLight group-hover:text-brandAccent">
 //                           View Profile
 //                           <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
 //                         </button>
@@ -356,17 +356,17 @@
 //           viewport={{ once: true }}
 //           className="mt-24"
 //         >
-//           <div className="grid gap-0 md:grid-cols-3 bg-surfaceLight dark:bg-surfaceDark border border-borderLight dark:border-borderDark rounded-3xl shadow-xl overflow-hidden divide-y md:divide-y-0 md:divide-x divide-borderLight dark:divide-borderDark">
+//           <div className="grid gap-0 overflow-hidden border divide-y shadow-xl md:grid-cols-3 bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-3xl md:divide-y-0 md:divide-x divide-borderLight dark:divide-borderDark">
             
-//             <div className="p-10 text-center hover:bg-brandAccent/5 transition-colors group">
-//               <h3 className="mb-2 text-6xl font-black text-brandPrimary dark:text-brandAccent group-hover:scale-110 transition-transform">
+//             <div className="p-10 text-center transition-colors hover:bg-brandAccent/5 group">
+//               <h3 className="mb-2 text-6xl font-black transition-transform text-brandPrimary dark:text-brandAccent group-hover:scale-110">
 //                 <AnimatedCounter end={50} duration={2.5} suffix="+" />
 //               </h3>
-//               <p className="text-sm font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">Expert Team Size</p>
+//               <p className="text-sm font-bold tracking-widest text-gray-400 uppercase dark:text-gray-500">Expert Team Size</p>
 //             </div>
 
-//             <div className="p-10 text-center hover:bg-brandAccent/5 transition-colors group">
-//                 <div className="mb-4 inline-flex items-center justify-center p-3 rounded-2xl bg-brandAccent/10 text-brandAccent group-hover:rotate-12 transition-transform">
+//             <div className="p-10 text-center transition-colors hover:bg-brandAccent/5 group">
+//                 <div className="inline-flex items-center justify-center p-3 mb-4 transition-transform rounded-2xl bg-brandAccent/10 text-brandAccent group-hover:rotate-12">
 //                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 //                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
 //                     </svg>
@@ -377,8 +377,8 @@
 //               <p className="text-gray-500 dark:text-gray-400">Industry Certified</p>
 //             </div>
 
-//             <div className="p-10 text-center hover:bg-brandAccent/5 transition-colors group">
-//                 <div className="mb-4 inline-flex items-center justify-center p-3 rounded-2xl bg-brandGold/10 text-brandGold group-hover:-rotate-12 transition-transform">
+//             <div className="p-10 text-center transition-colors hover:bg-brandAccent/5 group">
+//                 <div className="inline-flex items-center justify-center p-3 mb-4 transition-transform rounded-2xl bg-brandGold/10 text-brandGold group-hover:-rotate-12">
 //                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 //                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
 //                     </svg>
@@ -456,7 +456,7 @@ const ServiceLeadersSection = ({ setSelectedLeader }) => {
       title: "Service Leader",
       credentials: "CA and Certified Internal Auditor (CIA) with 17+ years",
       bio: "Expert in risk-based internal audits, he enhances efficiency, control, compliance, and cost savings across diverse sectors including infrastructure, mining, manufacturing, and finance.",
-      image: jitendra,
+      image: "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898657/jitendra_s8wq8i.webp",
       expertise: ["Internal Audits", "Risk Management", "Compliance"],
     },
     {
@@ -464,18 +464,18 @@ const ServiceLeadersSection = ({ setSelectedLeader }) => {
       title: "Service Leader",
       credentials: "CA, CISA with 20+ years at Ex-Ford, Ex-PKF, Ex-Templar Shield",
       bio: "Expert in ERM/SOX/ICOFR, TPRM, Internal Information Security, ISO27001 and forensic assignments. He has worked with Fortune 500 companies on global roles.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
+      image: "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768904950/narayanan_er15xk.webp",
       expertise: ["ERM", "Cybersecurity", "Forensic Analysis"],
     },
   ];
 
   return (
-    <section id="service-leaders" className="relative px-4 md:px-5 lg:px-8 py-8 bg-surfaceLight dark:bg-surfaceDark overflow-hidden">
+    <section id="service-leaders" className="relative px-4 py-8 overflow-hidden md:px-5 lg:px-8 bg-surfaceLight dark:bg-surfaceDark">
       {/* Decorative Background Elements */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-brandAccent/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-brandGold/5 rounded-full blur-3xl -ml-48 -mb-48"></div>
+      <div className="absolute top-0 right-0 w-64 h-64 -mt-32 -mr-32 rounded-full bg-brandAccent/5 blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 -mb-48 -ml-48 rounded-full w-96 h-96 bg-brandGold/5 blur-3xl"></div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="relative z-10 w-full px-6 mx-auto max-w-7xl lg:px-8">
         
         {/* Header Section - Full Width, Left Aligned */}
         <motion.div
@@ -485,31 +485,31 @@ const ServiceLeadersSection = ({ setSelectedLeader }) => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="text-sm  font-bold tracking-widest text-brandDark dark:text-brandAccent mb-4 px-2 ">
+          <h2 className="px-2 mb-4 text-sm font-bold tracking-widest text-brandDark dark:text-brandAccent ">
             Our Leadership
           </h2>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-brandPrimary dark:text-white mb-6 leading-tight">
+          <h1 className="mb-6 text-4xl font-extrabold leading-tight md:text-5xl text-brandPrimary dark:text-white">
             Our Team <br />
             <span className="text-brandAccent">Service Leaders</span>
           </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl">
+          <p className="max-w-2xl mb-8 text-lg text-gray-600 dark:text-gray-400">
             Industry experts leading specialized service domains with decades of combined experience in auditing, compliance, and risk management.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6">
+          <div className="flex flex-col gap-6 sm:flex-row">
             <div className="flex items-center gap-4">
-                <div className="w-12 h-1 bg-brandAccent rounded-full"></div>
+                <div className="w-12 h-1 rounded-full bg-brandAccent"></div>
                 <span className="text-sm font-semibold dark:text-gray-300">Excellence in Auditing</span>
             </div>
             <div className="flex items-center gap-4">
-                <div className="w-12 h-1 bg-brandGold rounded-full"></div>
+                <div className="w-12 h-1 rounded-full bg-brandGold"></div>
                 <span className="text-sm font-semibold dark:text-gray-300">Strategic Compliance</span>
             </div>
           </div>
         </motion.div>
 
         {/* Leader Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mb-24">
+        <div className="grid grid-cols-1 gap-8 mb-24 md:grid-cols-2 md:gap-10">
           {serviceLeaders.map((leader, i) => (
             <motion.div
               key={i}
@@ -517,39 +517,39 @@ const ServiceLeadersSection = ({ setSelectedLeader }) => {
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
-              className="group relative"
+              className="relative group"
               onClick={() => setSelectedLeader && setSelectedLeader(leader)}
             >
-              <div className="absolute inset-0 bg-brandAccent/10 rounded-3xl translate-x-3 translate-y-3 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform duration-300"></div>
-              <div className="relative p-8 h-full transition-all duration-500 border border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark rounded-3xl cursor-pointer group-hover:border-brandAccent group-hover:shadow-card-light-hover dark:group-hover:shadow-card-dark-hover">
+              <div className="absolute inset-0 transition-transform duration-300 translate-x-3 translate-y-3 bg-brandAccent/10 rounded-3xl group-hover:translate-x-1 group-hover:translate-y-1"></div>
+              <div className="relative h-full p-8 transition-all duration-500 border cursor-pointer border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark rounded-3xl group-hover:border-brandAccent group-hover:shadow-card-light-hover dark:group-hover:shadow-card-dark-hover">
                 <div className="flex flex-col h-full">
                   <div className="flex items-center gap-6 mb-6">
                     <div className="relative">
-                        <div className="absolute inset-0 bg-brandDark dark:bg-brandAccent rounded-full blur-sm opacity-0 group-hover:opacity-40 transition-opacity"></div>
+                        <div className="absolute inset-0 transition-opacity rounded-full opacity-0 bg-brandDark dark:bg-brandAccent blur-sm group-hover:opacity-40"></div>
                         <img
                         src={leader.image}
                         alt={leader.name}
-                        className="relative object-cover w-24 h-24 transition-all duration-500 border-2 rounded-full border-brandAccent group-hover:scale-105 z-10"
+                        className="relative z-10 object-cover w-24 h-24 transition-all duration-500 border-2 rounded-full border-brandAccent group-hover:scale-105"
                         />
                     </div>
                     <div>
-                        <h3 className="text-xl font-bold text-brandDark dark:text-white group-hover:text-brandAccent transition-colors">{leader.name}</h3>
+                        <h3 className="text-xl font-bold transition-colors text-brandDark dark:text-white group-hover:text-brandAccent">{leader.name}</h3>
                         <p className="text-sm font-semibold text-brandAccent">
                             {leader.title}
                         </p>
                     </div>
                   </div>
                   
-                  <p className="text-xs font-medium text-gray-500 dark:text-gray-400 mb-4 bg-gray-50 dark:bg-brandDark/50 p-3 rounded-xl border border-borderLight dark:border-borderDark/20">
+                  <p className="p-3 mb-4 text-xs font-medium text-gray-500 border dark:text-gray-400 bg-gray-50 dark:bg-brandDark/50 rounded-xl border-borderLight dark:border-borderDark/20">
                     {leader.credentials}
                   </p>
                   
-                  <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-3 mb-6 flex-grow">
+                  <p className="flex-grow mb-6 text-sm text-gray-600 dark:text-gray-400 line-clamp-3">
                     {leader.bio}
                   </p>
 
                   <div className="flex items-center justify-between pt-4 border-t border-borderLight dark:border-borderDark">
-                    <button className="flex items-center gap-2 text-sm font-bold text-brandPrimary dark:text-brandGoldLight group-hover:text-brandAccent transition-colors">
+                    <button className="flex items-center gap-2 text-sm font-bold transition-colors text-brandPrimary dark:text-brandGoldLight group-hover:text-brandAccent">
                       View Profile
                       <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
                     </button>
@@ -572,17 +572,17 @@ const ServiceLeadersSection = ({ setSelectedLeader }) => {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          <div className="grid gap-0 md:grid-cols-3 bg-surfaceLight dark:bg-surfaceDark border border-borderLight dark:border-borderDark rounded-3xl shadow-xl overflow-hidden divide-y md:divide-y-0 md:divide-x divide-borderLight dark:divide-borderDark">
+          <div className="grid gap-0 overflow-hidden border divide-y shadow-xl md:grid-cols-3 bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-3xl md:divide-y-0 md:divide-x divide-borderLight dark:divide-borderDark">
             
-            <div className="p-10 text-center hover:bg-brandAccent/5 transition-colors group">
-              <h3 className="mb-2 text-6xl font-black text-brandPrimary dark:text-brandAccent group-hover:scale-110 transition-transform">
+            <div className="p-10 text-center transition-colors hover:bg-brandAccent/5 group">
+              <h3 className="mb-2 text-6xl font-black transition-transform text-brandPrimary dark:text-brandAccent group-hover:scale-110">
                 <AnimatedCounter end={50} duration={2.5} suffix="+" />
               </h3>
-              <p className="text-sm font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">Expert Team Size</p>
+              <p className="text-sm font-bold tracking-widest text-gray-400 uppercase dark:text-gray-500">Expert Team Size</p>
             </div>
 
-            <div className="p-10 text-center hover:bg-brandAccent/5 transition-colors group">
-                <div className="mb-4 inline-flex items-center justify-center p-3 rounded-2xl bg-brandAccent/10 text-brandAccent group-hover:rotate-12 transition-transform">
+            <div className="p-10 text-center transition-colors hover:bg-brandAccent/5 group">
+                <div className="inline-flex items-center justify-center p-3 mb-4 transition-transform rounded-2xl bg-brandAccent/10 text-brandAccent group-hover:rotate-12">
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
@@ -593,8 +593,8 @@ const ServiceLeadersSection = ({ setSelectedLeader }) => {
               <p className="text-gray-500 dark:text-gray-400">Industry Certified</p>
             </div>
 
-            <div className="p-10 text-center hover:bg-brandAccent/5 transition-colors group">
-                <div className="mb-4 inline-flex items-center justify-center p-3 rounded-2xl bg-brandGold/10 text-brandGold group-hover:-rotate-12 transition-transform">
+            <div className="p-10 text-center transition-colors hover:bg-brandAccent/5 group">
+                <div className="inline-flex items-center justify-center p-3 mb-4 transition-transform rounded-2xl bg-brandGold/10 text-brandGold group-hover:-rotate-12">
                     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>

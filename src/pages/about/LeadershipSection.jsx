@@ -16,7 +16,7 @@ export default function LeadershipSection({ setSelectedLeader }) {
       bio:
         "CA, CS, CMA, CAIIB with 41+ years of experience across credit rating, corporate banking, risk management and financial consulting.",
       image:
-        "https://www.riskman.in/wp-content/uploads/2020/09/sukanta-nag.jpg",
+        "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768969880/sukant_sir_ydl1or.webp",
       linkedin: "https://www.linkedin.com/in/ca-sukanta-nag-50221021",
       fullBio: "CA, CS, CMA, CAIIB and M.Com, with over 41 years of experience spanning Credit Rating, Corporate Banking, Risk Management and Financial & Management Consulting. His key strengths are in understanding the holistic approach of the business and client's need for offering 360-degree solutions and build a meaningful relationship with them.",
     },
@@ -26,7 +26,7 @@ export default function LeadershipSection({ setSelectedLeader }) {
       bio:
         "Ex-Deloitte and Genpact professional with 16+ years in internal audit, ESG, taxation, AI and RPA practices.",
       image:
-        "https://www.riskman.in/wp-content/uploads/2020/09/prasen-pal.jpg",
+        "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768906075/Prasen_pal_xe5jx8.webp",
       linkedin: "https://www.linkedin.com/in/prasen-pal",
       fullBio: "A CA, Sustainability and Climate Risk (SCR) Professional (GARP), Lean Six Sigma Green Belt (Genpact), RPA Business Analyst, Diploma in RPA Implementation Methodology,  Certified in Sustainability and BRSR (ICAI), Certified in GST (ICAI), ex-Deloitte ERS, EY-GDS, and Genpact ERC with 17+ years of experience spanning Risk Management, Internal Audits, Sustainability and ESG, Process mining and engineering, Process automation and RPA, domestic Tax Laws, and adoption of AI. He is instrumental in managing various advisory and outsourced services with multiple corporate houses.",
     },
@@ -36,7 +36,7 @@ export default function LeadershipSection({ setSelectedLeader }) {
       bio:
         "CA, CIA, CRMA, CISA with global experience in ERM, SOC, cybersecurity, fraud analytics and IT risk.",
       image:
-        "https://www.riskman.in/wp-content/uploads/2020/09/arpit-garg.jpg",
+        "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768906764/Arpit_Garg_Image_dlfmvh.webp",
       linkedin: "https://www.linkedin.com/in/arpit-garg-88070560",
       fullBio: "A CA, CIA, CRMA, CISA, ex-EY, Genpact ERC and SNB with 13+ years of experience spanning Risk-based internal audits, he enhances efficiency, control, compliance, and cost savings across diverse sectors.",
     },
@@ -80,7 +80,7 @@ export default function LeadershipSection({ setSelectedLeader }) {
                 <img
                   src={m.image}
                   alt={m.name}
-                  className="object-cover transition-all duration-500 border-4 rounded-full w-28 h-28 border-brandPrimary/30 dark:border-brandAccent/30 grayscale group-hover:grayscale-0 hover:scale-105"
+                  className="object-cover object-top transition-all duration-500 border-4 rounded-full w-28 h-28 border-brandPrimary/30 dark:border-brandAccent/30 grayscale group-hover:grayscale-0 hover:scale-105"
                 />
               </div>
               <h3 className="mb-2 text-2xl font-bold text-brandDark dark:text-white">{m.name}</h3>

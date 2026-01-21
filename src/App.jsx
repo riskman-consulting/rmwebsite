@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Header from './components/layout/Header'
+
 import Home from './pages/home/Home'
 // import ServicesList from './pages/services/ServicesList'
 import IndustriesList from './pages/industries/IndustriesList'
@@ -17,11 +18,13 @@ import Terms from './pages/resources/Terms'
 import BlogSingle from './pages/blogs/BlogSingle'
 import './index.css'
 
+
 import { Toaster } from 'react-hot-toast'
 import ScrollToTop from './components/common/ScrollToTop'
 import ThemeToggle from './components/common/ThemeToggle'
 import Events from './temp/MainEvent'
 import ServicePage from './pages/services/Services'
+import HeaderTemp from './temp-header/Header'
 
 function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
@@ -39,10 +42,11 @@ function App() {
     <Router>
       <ScrollToTop />
       {/* <ThemeToggle theme={theme} setTheme={setTheme} /> */}
-      <Header theme={theme} setTheme={setTheme} />
+      {/* <Header theme={theme} setTheme={setTheme} /> */}
+      <HeaderTemp />
       <Toaster position="top-right" />
       
-      <main className="pt-[20px]">
+      <main className="">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<ServicePage />} />

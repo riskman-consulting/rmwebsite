@@ -484,7 +484,7 @@ const KeyServices = () => {
  
         "Strengthening the backbone of corporate governance. We help organizations shift from reactive risk management to a proactive, risk-aware culture. By leveraging the COSO Framework, we ensure your internal controls are not just a compliance checkbox but a driver of operational efficiency.",
  
-      image: riskAssessmentImage,
+      image: "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898439/risk-assessment-audit_vtwpqf.webp",
  
       icon: (
         <svg viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7">
@@ -506,7 +506,7 @@ const KeyServices = () => {
  
         "Securing your digital frontier in an age of volatility. Digital transformation is only as strong as its weakest link. We provide comprehensive assurance using NIST and ISO 27001 standards to safeguard your data assets and maintain stakeholder trust.",
  
-      image: itCybersecurityImage,
+      image: "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898438/it-cybersecurity-audit_dpvcba.webp",
  
       icon: (
         <svg viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7">
@@ -528,7 +528,7 @@ const KeyServices = () => {
  
         `Future-proofing your business for a low-carbon economy. Sustainability is no longer optional—it is a mandate from investors and regulators alike. We translate "green" goals into measurable metrics.`,
  
-      image: riskComplianceAuditImage,
+      image: "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898439/risk-compliance-audit_iochcs.webp",
  
       icon: (
         <svg viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7">
@@ -542,7 +542,7 @@ const KeyServices = () => {
 
     {
  
-      id: "02",
+      id: "04",
  
       title: "Financial Advisory",
  
@@ -550,7 +550,7 @@ const KeyServices = () => {
  
         "Protecting integrity and optimizing capital structures. With leadership experience from top-tier rating agencies and global banks, we provide the technical depth required for high-stakes financial decision-making.",
  
-      image: operationalFinancialImage,
+      image: "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898439/operational-financial-audit_xbldpi.webp",
  
       icon: (
         <svg viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7">

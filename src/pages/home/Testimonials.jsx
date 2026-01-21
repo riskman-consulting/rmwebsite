@@ -498,8 +498,8 @@
 
 import React, { useState, useEffect } from "react";
 import { Quote, ArrowUpRight } from "lucide-react";
-import image1 from "../../assets/images/home/s-manna.png"
-import image2 from "../../assets/images/home/s-sarkar.png"
+// import image1 from "../../assets/images/home/s-manna.webp"
+// import image2 from "../../assets/images/home/s-sarkar.webp"
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
  
@@ -508,14 +508,14 @@ const Testimonials = () => {
       id: 1,
       name: "Soumen Sarkar",
       role: "Managing Director | Nexval",
-      image: image2,
+      image: "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898439/s-sarkar_tpw74c.webp",
       text: "From the outset, Riskman demonstrated unparalleled dedication to understanding our organizations unique challenges and objectives. Their team exhibited an impressive depth of knowledge and experience, offering tailored solutions.",
     },
     {
       id: 2,
       name: "Swapan Kumar Manna",
       role: "CEO,Oneskai",
-      image: image1,
+      image: "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898439/s-manna_dassro.webp",
       text: "RiskMan has been instrumental in strengthening our internal controls and regulatory compliance. Their expert guidance in risk management and audit helped us align with industry best practices while staying agile.",
     },
     // {

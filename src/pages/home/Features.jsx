@@ -545,7 +545,7 @@
 //   ];
  
 //   return (
-//     <section className="section-padding bg-bgLight dark:bg-bgDark transition-colors duration-300">
+//     <section className="transition-colors duration-300 section-padding bg-bgLight dark:bg-bgDark">
 //       <div className="container">
  
 //         {/* HEADER */}
@@ -682,11 +682,11 @@ import strategyBg from "../../assets/images/home/strategy-bg.png";
  
 const StrategicSection = () => {
   return (
-    <section className="relative py-20 overflow-hidden bg-bgLight dark:bg-bgDark transition-colors duration-300">
+    <section className="relative py-20 overflow-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-center bg-cover"
-        style={{ backgroundImage: `url(${strategyBg})` }}
+        style={{ backgroundImage: `url(${"https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898440/strategy-bg_lhzpgl.webp"})` }}
       />
  
       {/* Overlay (same surface logic as cards) */}
@@ -720,7 +720,7 @@ const StrategicSection = () => {
           <div className="w-24 h-[2px] mb-8 bg-brandGold dark:bg-brandAccent" />
  
           {/* Supporting Text */}
-          <p className="max-w-3xl text-brandNavy dark:text-white/70 leading-relaxed">
+          <p className="max-w-3xl leading-relaxed text-brandNavy dark:text-white/70">
             Our approach integrates governance, risk, compliance, financial
             discipline, and digital assurance into a cohesive framework —
             enabling leadership teams to make confident, informed decisions in a

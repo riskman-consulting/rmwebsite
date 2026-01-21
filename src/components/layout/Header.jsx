@@ -7,11 +7,12 @@ const menus = {
   mainNav: [
     { label: "About", type: "mega", key: "about", path: "/about" },
     { label: "Services", type: "mega", key: "services", path: "/services" },
-    { label: "Industries", type: "mega", key: "industries", path: "/industries" },
     { label: "Tech Solutions", type: "link", key: "solutions", path: "/solutions" },
+    { label: "Industries", type: "mega", key: "industries", path: "/industries" },
+      { label: "Event & Journey", type: "link", key: "events", path: "/events" },
     { label: "Content Hub", type: "link", key: "insights", path: "/insights" },
-    { label: "Event", type: "link", key: "events", path: "/events" },
-    { label: "Careers", type: "link", key: "careers", path: "/careers" }
+    { label: "Careers", type: "link", key: "careers", path: "/careers" },
+    { label: "Governance", type: "link", key: "governance", path: "/governance" }
   ],
   aboutMegaMenu: [{
     items: [
@@ -183,7 +184,7 @@ export default function Header() {
                   <img 
                     src="/riskman-logo-white.svg" 
                     alt="RiskMan" 
-                    className="w-full h-full object-contain"
+                    className="object-contain w-full h-full"
                     style={{ maxWidth: '180px', maxHeight: '50px' }}
                   />
                 ) : (
@@ -191,7 +192,7 @@ export default function Header() {
                   <img 
                     src="/rm.png" 
                     alt="RiskMan" 
-                    className="w-full h-full object-contain"
+                    className="object-contain w-full h-full"
                     style={{ maxWidth: '180px', maxHeight: '50px' }}
                   />
                 )}
@@ -199,7 +200,7 @@ export default function Header() {
             </a>
 
             {/* DESKTOP NAV - Centered with flex-1 */}
-            <nav className="hidden md:flex items-center justify-center flex-1 gap-6 lg:gap-8">
+            <nav className="items-center justify-center flex-1 hidden gap-6 md:flex lg:gap-8">
               {mainNav.map((item) => {
                 if (item.type === "link") {
                   return (
@@ -285,7 +286,7 @@ export default function Header() {
             </nav>
 
             {/* RIGHT SIDE - Equal spacing */}
-            <div className="flex items-center gap-3 flex-shrink-0">
+            <div className="flex items-center flex-shrink-0 gap-3">
               {/* THEME TOGGLE */}
               <div className="relative group">
                 <button
@@ -303,7 +304,7 @@ export default function Header() {
                 </button>
                 
                 {/* TOOLTIP */}
-                <div className="absolute right-0 top-full mt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 translate-y-2 transition-all duration-300 pointer-events-none z-50">
+                <div className="absolute right-0 z-50 invisible mt-3 transition-all duration-300 translate-y-2 opacity-0 pointer-events-none top-full group-hover:opacity-100 group-hover:visible group-hover:translate-y-0">
                   <div className="relative px-4 py-2.5 rounded-xl shadow-2xl backdrop-blur-sm"
                     style={{
                       backgroundColor: theme === "dark" ? "#F5F5F5" : "#001F3F",
@@ -475,3 +476,9 @@ export default function Header() {
     </>
   );
 }
+
+
+
+
+
+
