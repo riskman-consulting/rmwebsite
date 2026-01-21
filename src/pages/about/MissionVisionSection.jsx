@@ -18,7 +18,7 @@ const staggerContainer = {
 
 export default function MissionVisionSection() {
   return (
-    <section id="mission-vision" className="relative py-8 lg:py-12 bg-surfaceLight dark:bg-surfaceDark">
+    <section id="mission-vision" className="relative py-4 lg:pb-2 lg:pt-12 bg-surfaceLight dark:bg-surfaceDark">
       <div className="container">
         <motion.div
           variants={fadeInUp}
@@ -123,7 +123,7 @@ export default function MissionVisionSection() {
         </div>
 
         {/* ================= SUSTAINABILITY CIRCLE WITH PILLARS ================= */}
-        <div className="mb-12 text-center">
+        {/* <div className="mb-12 text-center">
           <div className="inline-flex items-center justify-center gap-4 mb-8">
             <div className="flex items-center justify-center w-40 h-40 border-4 rounded-full shadow-lg border-brandPrimary dark:border-brandAccent">
               <div className="flex items-center justify-center rounded-full w-36 h-36 bg-surfaceLight dark:bg-surfaceDark">
@@ -136,12 +136,12 @@ export default function MissionVisionSection() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Three Pillars */}
-        <div className="grid gap-6 md:grid-cols-3">
+        {/* <div className="grid gap-6 md:grid-cols-3"> */}
           {/* Pillar 1: Performance */}
-          <motion.div
+          {/* <motion.div
             variants={fadeInUp}
             initial="initial"
             whileInView="animate"
@@ -166,10 +166,10 @@ export default function MissionVisionSection() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </motion.div> */}
 
           {/* Pillar 2: Reliability */}
-          <motion.div
+          {/* <motion.div
             variants={fadeInUp}
             initial="initial"
             whileInView="animate"
@@ -194,10 +194,10 @@ export default function MissionVisionSection() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </motion.div> */}
 
           {/* Pillar 3: Cost */}
-          <motion.div
+          {/* <motion.div
             variants={fadeInUp}
             initial="initial"
             whileInView="animate"
@@ -222,8 +222,8 @@ export default function MissionVisionSection() {
                 </p>
               </div>
             </div>
-          </motion.div>
-        </div>
+          </motion.div> */}
+        {/* </div> */}
       </div>
     </section>
   );

@@ -44,7 +44,7 @@ export default function LeadershipSection({ setSelectedLeader }) {
   ];
 
   return (
-    <section id="co-founders" className="relative bg-surfaceLight dark:bg-surfaceDark py-14 md:py-20">
+    <section id="co-founders" className="relative py-8 bg-surfaceLight dark:bg-surfaceDark md:py-12">
       <div className="container">
         <motion.h2
           variants={fadeInUp}
