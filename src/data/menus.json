@@ -1,90 +1,302 @@
 {
   "mainNav": [
-    { "label": "About", "type": "mega", "key": "about", "path": "/about" },
-     { "label": "Services", "type": "mega", "key": "services", "path": "/services" },
-     { "label": "Industries", "type": "mega", "key": "industries", "path": "/industries" },
-     {"label":"Tech Solutions","type":"link","key":"solutions","path":"/solutions"},
-    { "label": "Content Hub", "type": "link", "key": "insights", "path": "/insights" },
-    {"label":"Event","type":"link","key":"events","path":"/events"},
-    {"label":"Careers","type":"link","key":"careers","path":"/careers"}
+    {
+      "label": "About",
+      "type": "mega",
+      "key": "about",
+      "path": "/about"
+    },
+    {
+      "label": "Services",
+      "type": "mega",
+      "key": "services",
+      "path": "/services"
+    },
+    {
+      "label": "Industries",
+      "type": "mega",
+      "key": "industries",
+      "path": "/industries"
+    },
+    {
+      "label": "Tech Solutions",
+      "type": "link",
+      "key": "solutions",
+      "path": "/solutions"
+    },
+    {
+      "label": "Content Hub",
+      "type": "link",
+      "key": "insights",
+      "path": "/insights"
+    },
+    {
+      "label": "Event",
+      "type": "link",
+      "key": "events",
+      "path": "/events"
+    },
+    {
+      "label": "Careers",
+      "type": "link",
+      "key": "careers",
+      "path": "/careers"
+    }
   ],
-
   "aboutMegaMenu": [
     {
       "items": [
-        { "label": "Co-founding Partners", "path": "/about#co-founders" },
-        { "label": "Alliance Partners", "path": "/about#alliance-partners" },
-        { "label": "Service Leaders", "path": "/about#service-leaders" },
-        { "label": "RiskMan Team", "path": "/about#riskman-teams" }
+        {
+          "label": "Co-founding Partners",
+          "path": "/about#co-founders"
+        },
+        {
+          "label": "Alliance Partners",
+          "path": "/about#alliance-partners"
+        },
+        {
+          "label": "Service Leaders",
+          "path": "/about#service-leaders"
+        },
+        {
+          "label": "RiskMan Team",
+          "path": "/about#riskman-teams"
+        }
       ]
     }
   ],
-  
   "servicesMegaMenu": [
     {
       "title": "ENTERPRISE SERVICES",
       "items": [
-       { "label": "Risk Advisory", "path": "/services/risk-advisory" },
-        { "label": "Consulting", "path": "/services/consulting" },
-        { "label": "Outsourcing and Training", "path": "/services/outsourcing-training" },
-        { "label": "Sustainability", "path": "/services/sustainability" },
-        { "label": "Financial Advisory", "path": "/services/financial-advisory" },
-        { "label": "Forensic and Investigation", "path": "/services/forensic-investigation" }
+        {
+          "label": "Risk Advisory",
+          "path": "/services/risk-advisory",
+          "submenus": [
+            {
+              "id": "rbia",
+              "title": "RBIA"
+            },
+            {
+              "id": "erm",
+              "title": "TPRM"
+            },
+            {
+              "id": "sox-icofr-ifc",
+              "title": "SOX/ ICOFR/ IFC"
+            },
+            {
+              "id": "csa",
+              "title": "CSA"
+            },
+            {
+              "id": "concurrent-audits",
+              "title": "Concurrent Audits"
+            },
+            {
+              "id": "formulation-of-policies-and-sops",
+              "title": "Formulation of Policies and SOPs"
+            },
+            {
+              "id": "risk-frameworks",
+              "title": "Risk Frameworks"
+            }
+          ]
+        },
+        {
+          "label": "Consulting",
+          "path": "/services/consulting"
+        },
+        {
+          "label": "Outsourcing and Training",
+          "path": "/services/outsourcing-training"
+        },
+        {
+          "label": "Sustainability",
+          "path": "/services/sustainability"
+        },
+        {
+          "label": "Financial Advisory",
+          "path": "/services/financial-advisory"
+        },
+        {
+          "label": "Forensic and Investigation",
+          "path": "/services/forensic-investigation"
+        }
+      ]
+    },
+    {
+      "title": "Digital Transformation",
+      "items": [
+        {
+          "lable": "Strategic PMO",
+          "path": "strategic-pmo"
+        },
+        {
+          "label": "Implementation",
+          "path": "implementation"
+        },
+        {
+          "lable": "Support Services",
+          "path":"support-services"
+        }
       ]
     },
     {
       "title": "IT RISK MANAGEMENT",
       "items": [
-        { "label": "SOC", "path": "/services/soc-services" },
-        { "label": "ISO Certifications", "path": "/services/iso-certifications" },
-        { "label": "PCI DSS", "path": "/services/pci-dss-compliance" },
-        {"label":"ITGC and ITAC","path":"/services/itgc-itac"},
-        { "label": "IT Risk Management", "path": "/services/it-risk-management" },
-        { "label": "TPRM", "path": "/services/tprm" },
-        { "label": "BCP and DR", "path": "/services/bcp-dr" },
-        { "label": "Cyber Security", "path": "/services/cybersecurity" },
-        { "label": "Data Privacy & Protection", "path": "/services/data-privacy" }
-
+        {
+          "label": "SOC",
+          "path": "/services/soc-services",
+          "submenus":[
+            {
+              "label":"SOC-1",
+              "path":"soc-1"
+             
+            },
+            {
+              "label":"SOC-2",
+              "path":"soc-2"
+            },
+            {
+              "label":"SOC-3",
+              "path":"soc-3"
+            }
+          ]
+         
+        },
+        {
+          "label": "ISO and TISAX",
+          "path": "/services/iso-certifications",
+          "submenus":[
+            {
+              "label":"ISO-27001",
+              "path":"iso-27001"
+            },
+            {
+              "lable":"ISO-22301",
+              "path":"iso-22301"
+            },
+            {
+              "label":"ISO-42001",
+              "path":"iso-42001"
+            },
+            {
+              "label":"ISO-31000",
+              "path":"iso-31000"
+            },
+            {
+              "lable":"TISAX",
+              "path":"TISAX"
+            }
+          ]
+        },
+        {
+          "label": "PCI DSS",
+          "path": "/services/pci-dss-compliance"
+        },
+        {
+          "label": "ITGC and ITAC",
+          "path": "/services/itgc-itac"
+        },
+        {
+          "label": "IT Risk Management",
+          "path": "/services/it-risk-management"
+        },
+        {
+          "label": "TPRM",
+          "path": "/services/tprm"
+        },
+        {
+          "label": "BCP and DR",
+          "path": "/services/bcp-dr"
+        },
+        {
+          "label": "Cyber Security",
+          "path": "/services/cybersecurity"
+        },
+        {
+          "label": "Data Privacy & Protection",
+          "path": "/services/data-privacy"
+        }
       ]
     }
   ],
-
   "industriesMegaMenu": [
     {
       "title": "Core Industries",
       "items": [
-        { "label": "Banking & Insurance", "path": "/industries/banking-insurance" },
-        { "label": "Healthcare", "path": "/industries/healthcare" },
-        { "label": "Energy & Utilities", "path": "/industries/energy-utilities" },
-        { "label": "Manufacturing", "path": "/industries/manufacturing" },
-        { "label": "Travel & Logistics", "path": "/industries/travel-logistics" }
+        {
+          "label": "Banking & Insurance",
+          "path": "/industries/banking-insurance"
+        },
+        {
+          "label": "Healthcare",
+          "path": "/industries/healthcare"
+        },
+        {
+          "label": "Energy & Utilities",
+          "path": "/industries/energy-utilities"
+        },
+        {
+          "label": "Manufacturing",
+          "path": "/industries/manufacturing"
+        },
+        {
+          "label": "Travel & Logistics",
+          "path": "/industries/travel-logistics"
+        }
       ]
     },
     {
       "title": "Technology & Digital",
       "items": [
-        { "label": "Media & Communication", "path": "/industries/media-communication" },
-        { "label": "Education & EdTech", "path": "/industries/education-edtech" },
-        { "label": "E-Commerce", "path": "/industries/ecommerce" },
-        { "label": "IT Consulting", "path": "/industries/it-consulting" }
+        {
+          "label": "Media & Communication",
+          "path": "/industries/media-communication"
+        },
+        {
+          "label": "Education & EdTech",
+          "path": "/industries/education-edtech"
+        },
+        {
+          "label": "E-Commerce",
+          "path": "/industries/ecommerce"
+        },
+        {
+          "label": "IT Consulting",
+          "path": "/industries/it-consulting"
+        }
       ]
     },
     {
       "title": "Specialized Sectors",
       "items": [
-        { "label": "Hospitality", "path": "/industries/hospitality" },
-        { "label": "Automobiles", "path": "/industries/automobiles" },
-        { "label": "Retail Consumer", "path": "/industries/retail-consumer" }
+        {
+          "label": "Hospitality",
+          "path": "/industries/hospitality"
+        },
+        {
+          "label": "Automobiles",
+          "path": "/industries/automobiles"
+        },
+        {
+          "label": "Retail Consumer",
+          "path": "/industries/retail-consumer"
+        }
       ]
     }
   ],
-
   "insightsMegaMenu": [
     {
       "title": "Insights & Resources",
       "items": [
-        { "label": "Blog", "path": "/blog" }
+        {
+          "label": "Blog",
+          "path": "/blog"
+        }
       ]
     }
   ]
 }
+ 
