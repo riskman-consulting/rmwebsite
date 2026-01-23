@@ -129,7 +129,7 @@ export default function LeadershipSection({ setSelectedLeader }) {
       bio:
         "CA, CS, CMA, CAIIB with 41+ years of experience across credit rating, corporate banking, risk management and financial consulting.",
       image:
-        sukanta,
+        "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1769154641/sukant_sir_nelcot.webp",
       linkedin: "https://www.linkedin.com/in/ca-sukanta-nag-50221021",
       fullBio: "CA, CS, CMA, CAIIB and M.Com, with over 41 years of experience spanning Credit Rating, Corporate Banking, Risk Management and Financial & Management Consulting. His key strengths are in understanding the holistic approach of the business and client's need for offering 360-degree solutions and build a meaningful relationship with them.",
     },
@@ -161,9 +161,9 @@ export default function LeadershipSection({ setSelectedLeader }) {
         
         {/* Header */}
         <motion.div {...fadeInUp} className="mb-12">
-          <span className="inline-block px-4 py-1 mb-6 rounded-full bg-brandAccent/10 border border-brandAccent/20 text-brandAccent text-[10px] font-black uppercase tracking-[0.3em]">
+          {/* <span className="inline-block px-4 py-1 mb-6 rounded-full bg-brandAccent/10 border border-brandAccent/20 text-brandAccent text-[10px] font-black uppercase tracking-[0.3em]">
             Leadership
-          </span>
+          </span> */}
           
           <h2 className="mb-6 text-4xl font-bold lg:text-5xl text-brandDark dark:text-white">
             Our{" "}

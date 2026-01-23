@@ -250,7 +250,7 @@ const IntroductionSection = () => {
   return (
     <div className="relative overflow-hidden bg-surfaceLight dark:bg-surfaceDark">
       {/* ================= ABOUT SECTION ================= */}
-      <section className="relative py-4 lg:pb-2 lg:pt-12 isolate">
+      <section id="introduction" className="relative py-4 lg:pb-2 lg:pt-12 isolate">
         <div className="grid items-center gap-12 px-6 mx-auto max-w-7xl lg:px-12 lg:grid-cols-12 lg:gap-16">
 
           {/* LEFT CONTENT */}
