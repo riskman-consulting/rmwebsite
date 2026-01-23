@@ -1,5 +1,5 @@
 // ============================================
-// Navbar.jsx - COMPLETE FIXED FILE
+// Navbar.jsx - FIXED MEGA MENU POSITIONING
 // ============================================
 
 import React, { useRef, useEffect, useState } from "react";
@@ -55,32 +55,32 @@ export const Navbar = ({
     };
 
     return (
-        <nav className="relative h-20 border-b bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark">
+        <nav className="fixed top-0 left-0 right-0 z-50 w-full h-20 border-b bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark">
             <div className="container flex items-center h-full">
 
                 {/* =======================
-            LEFT CLUSTER
-        ======================= */}
-                <div className="flex items-center h-full gap-4">
+                   LEFT CLUSTER
+                ======================= */}
+                <div className="flex items-center h-full">
 
                     {/* LOGO */}
-                    <Link
-                        to="/"
-                        className={`flex items-center transition-all duration-300 ${activeMegaKey ? "opacity-50 blur-[1px]" : ""
-                            }`}
-                    >
-                        <div className="flex items-center w-[190px] h-[48px] shrink-0">
+                    <a href="/" className="flex items-center flex-shrink-0 h-16 w-36">
+                        <div className="relative flex items-center justify-start w-full h-full">
                             <img
-                                src={theme === "dark" ? "/riskman-logo-white.svg" : "/rm.png"}
-                                alt="RiskMan"
-                                className="object-contain w-auto h-full"
-                                draggable={false}
+                                className="block object-contain w-auto h-12 dark:hidden"
+                                src="/rm.png"
+                                alt="Riskman"
+                            />
+                            <img
+                                className="hidden object-contain h-12 w-28 dark:block"
+                                src="/riskman-logo-white.svg"
+                                alt="Riskman"
                             />
                         </div>
-                    </Link>
+                    </a>
 
                     {/* DESKTOP NAV */}
-                    <div className="items-center hidden h-full gap-1 lg:flex">
+                    <div className="items-center hidden h-full lg:flex">
                         {NAVIGATION_DATA.mainNav.map((item) => {
                             const isMega = item.type === "mega";
                             const isActive = activeMegaKey === item.key;
@@ -94,28 +94,30 @@ export const Navbar = ({
                                         onMouseLeave: handleMouseLeave,
                                     })}
                                 >
-                                    {/* ✅ CLICK ALWAYS NAVIGATES */}
+                                    {/* CLICK ALWAYS NAVIGATES */}
                                     <Link
                                         to={item.path}
                                         className={`
-                      flex items-center gap-1.5 px-4 py-2 rounded-lg
-                      text-sm font-medium transition-colors duration-200
-                      ${isMega
-                                                ? isActive
-                                                    ? "bg-brandAccent/15 text-brandPrimary dark:text-brandGold"
-                                                    : activeMegaKey
-                                                        ? "opacity-40"
-                                                        : "text-brandDark dark:text-brandLight hover:bg-brandPrimary/10"
-                                                : "text-brandDark dark:text-brandLight hover:bg-brandPrimary/10"
+                                            flex items-center gap-1.5 px-4 py-2 rounded-lg
+                                            text-[13px] font-medium transition-all duration-200 whitespace-nowrap
+                                            ${
+                                                isMega
+                                                    ? isActive
+                                                        ? "bg-brandAccent/15 text-brandPrimary dark:text-brandGold"
+                                                        : activeMegaKey
+                                                            ? "opacity-40"
+                                                            : "text-brandDark dark:text-brandLight hover:bg-brandPrimary/10"
+                                                    : "text-brandDark dark:text-brandLight hover:bg-brandPrimary/10"
                                             }
-                    `}
+                                        `}
                                     >
                                         {item.label}
 
                                         {isMega && (
                                             <svg
-                                                className={`w-4 h-4 transition-transform duration-300 ${isActive ? "rotate-180" : ""
-                                                    }`}
+                                                className={`w-4 h-4 transition-transform duration-300 ${
+                                                    isActive ? "rotate-180" : ""
+                                                }`}
                                                 fill="none"
                                                 stroke="currentColor"
                                                 viewBox="0 0 24 24"
@@ -129,6 +131,17 @@ export const Navbar = ({
                                             </svg>
                                         )}
                                     </Link>
+
+                                    {/* MEGA MENU */}
+                                    {isMega && isActive && (
+                                        <div
+                                            className="absolute left-0 z-50 top-full"
+                                            onMouseEnter={() => handleMouseEnter(item.key)}
+                                            onMouseLeave={handleMouseLeave}
+                                        >
+                                            <MegaMenu menuKey={item.key} />
+                                        </div>
+                                    )}
                                 </div>
                             );
                         })}
@@ -136,11 +149,12 @@ export const Navbar = ({
                 </div>
 
                 {/* =======================
-            RIGHT CLUSTER
-        ======================= */}
+                   RIGHT CLUSTER
+                ======================= */}
                 <div
-                    className={`ml-auto flex items-center gap-3 transition-all duration-300 ${activeMegaKey ? "opacity-50 blur-[1px]" : ""
-                        }`}
+                    className={`ml-auto flex items-center gap-3 transition-all duration-300 ${
+                        activeMegaKey ? "opacity-50 blur-[1px]" : ""
+                    }`}
                 >
                     {/* THEME TOGGLE */}
                     <button
@@ -156,33 +170,21 @@ export const Navbar = ({
                     </button>
 
                     {/* DESKTOP CTA */}
-                    {/* <Link
-            to="/contact"
-            className="items-center hidden gap-3 px-6 py-3 text-sm font-semibold text-white rounded-full shadow-lg lg:flex bg-brandPrimary hover:bg-brandNavy shadow-brandPrimary/25 active:scale-95"
-          >
-            <Phone size={16} />
-            <span>Get Started</span>
-            <ArrowRight size={16} />
-          </Link> */}
-
                     <Link
                         to="/contact"
                         className="
-    hidden lg:flex items-center gap-2
-    h-[42px] px-5
-    text-[14px] font-semibold
-    text-white
-    rounded-full
-    bg-brandPrimary hover:bg-brandNavy
-    shadow-md
-    transition-all
-  "
+                            hidden lg:flex items-center gap-2
+                            h-[42px] px-5
+                            text-[14px] font-semibold text-white
+                            rounded-full
+                            bg-brandDark dark:bg-brandGold hover:bg-brandNavy
+                            shadow-md transition-all whitespace-nowrap
+                        "
                     >
-                        <Phone size={14} />
-                        <span>Get Started</span>
-                        <ArrowRight size={14} />
+                        <Phone size={10} />
+                        <span className="text-[12px]">Get Started</span>
+                        <ArrowRight size={10} />
                     </Link>
-
 
                     {/* MOBILE MENU */}
                     <button
@@ -203,22 +205,10 @@ export const Navbar = ({
             </div>
 
             {/* =======================
-          MEGA MENU + BACKDROP
-      ======================= */}
+               BACKDROP
+            ======================= */}
             {activeMegaKey && (
-                <>
-                    {/* BACKDROP */}
-                    <div className="fixed inset-0 top-20 z-[45] bg-black/40 backdrop-blur-lg pointer-events-none" />
-
-                    {/* MEGA MENU */}
-                    <div
-                        className="absolute top-full z-[46] left-1/2 -translate-x-1/2"
-                        onMouseEnter={() => handleMouseEnter(activeMegaKey)}
-                        onMouseLeave={handleMouseLeave}
-                    >
-                        <MegaMenu menuKey={activeMegaKey} />
-                    </div>
-                </>
+                <div className="fixed inset-0 top-20 z-[45] bg-black/40 backdrop-blur-lg pointer-events-none" />
             )}
         </nav>
     );
