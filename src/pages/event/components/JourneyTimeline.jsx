@@ -5,28 +5,40 @@ import { useState } from "react";
 import { fadeUp, stagger } from "./motionConfig";
 import { journeyData } from "../data";
 
+/* =====================================================
+   MAIN JOURNEY PAGE
+===================================================== */
 export default function JourneyTimeline() {
+  const {
+    hero,
+    timeline,
+    experience,
+    culture,
+    lifeAtRiskMan,
+    summary,
+  } = journeyData;
+
   return (
     <section className="bg-bgLight">
-      <div className="container py-24">
-        {/* Header */}
+      <div className="container py-24 space-y-32">
+
+        {/* ================= HERO ================= */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="max-w-3xl mb-20"
+          className="max-w-4xl"
         >
-          <h2 className="font-heading text-3xl md:text-4xl font-semibold text-brandNavy">
-            Our Journey Through the Years
-          </h2>
-          <p className="mt-4 text-gray-600 leading-relaxed">
-            A visual walkthrough of milestones, moments, and memories that
-            shaped our journey.
+          <h1 className="font-heading text-4xl md:text-5xl font-semibold text-brandNavy">
+            {hero.title}
+          </h1>
+          <p className="mt-5 text-gray-600 text-lg leading-relaxed">
+            {hero.subtitle}
           </p>
         </motion.div>
 
-        {/* Timeline */}
+        {/* ================= TIMELINE ================= */}
         <motion.div
           variants={stagger}
           initial="hidden"
@@ -34,93 +46,193 @@ export default function JourneyTimeline() {
           viewport={{ once: true }}
           className="space-y-24"
         >
-          {journeyData.map((item, index) => (
-            <YearBlock key={item.year} item={item} reverse={index % 2 !== 0} />
+          {timeline.map((item, index) => (
+            <TimelineBlock
+              key={`${item.year}-${index}`}
+              item={item}
+              reverse={index % 2 !== 0}
+            />
           ))}
         </motion.div>
+
+        {/* ================= EXPERIENCE ================= */}
+        {/* <Section title="Professional Experience">
+          <GridList title="Industries" items={experience.industries} />
+          <GridList title="Clients" items={experience.clients} />
+          <GridList title="Service Areas" items={experience.serviceAreas} />
+          <GridList
+            title="Digital Transformation Exposure"
+            items={experience.digitalInitiatives}
+          />
+        </Section> */}
+
+        {/* ================= CULTURE ================= */}
+        {/* <Section title={culture.title}>
+          <p className="text-gray-600 max-w-3xl">
+            {culture.description}
+          </p>
+
+          <GridList title="Core Values" items={culture.values} />
+          <GridList title="Culture Highlights" items={culture.highlights} />
+        </Section> */}
+
+        {/* ================= LIFE AT RISKMAN ================= */}
+        {/* <Section title="Life at RiskMan">
+          <motion.div
+            variants={stagger}
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            {lifeAtRiskMan.map((item, i) => (
+              <motion.div
+                key={i}
+                variants={fadeUp}
+                className="bg-surfaceLight border border-borderLight rounded-xl overflow-hidden"
+              >
+                <div className="h-48 bg-bgLight flex items-center justify-center text-xs text-gray-400">
+                  {item.image}
+                </div>
+                <div className="p-4">
+                  <h4 className="font-semibold text-brandPrimary text-sm">
+                    {item.title}
+                  </h4>
+                  <p className="mt-1 text-xs text-gray-500">
+                    {item.date || item.location || ""}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </Section> */}
+
+        {/* ================= SUMMARY ================= */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="max-w-4xl border-t border-borderLight pt-16"
+        >
+          <p className="text-lg text-gray-700 leading-relaxed">
+            {summary.text}
+          </p>
+        </motion.div>
+
       </div>
     </section>
   );
 }
 
-/* --------------------------------
-   Year Block
-----------------------------------*/
-function YearBlock({ item, reverse }) {
+/* =====================================================
+   TIMELINE BLOCK
+===================================================== */
+function TimelineBlock({ item, reverse }) {
   return (
     <motion.div
       variants={fadeUp}
-      className={`grid gap-10 items-center ${
-        reverse ? "md:grid-cols-[1fr_1.3fr]" : "md:grid-cols-[1.3fr_1fr]"
+      className={`grid gap-12 items-center ${
+        reverse
+          ? "md:grid-cols-[1fr_1.2fr]"
+          : "md:grid-cols-[1.2fr_1fr]"
       }`}
     >
-      {/* Text */}
       <div className={reverse ? "md:order-2" : ""}>
-        <span className="inline-block mb-2 text-sm font-semibold text-brandGold">
+        <span className="text-sm font-semibold text-brandGold">
           {item.year}
         </span>
-
-        <h3 className="font-heading text-2xl font-semibold text-brandPrimary">
+        <h3 className="mt-1 font-heading text-2xl font-semibold text-brandPrimary">
           {item.title}
         </h3>
-
+        <p className="mt-1 text-xs uppercase tracking-wider text-gray-500">
+          {item.role}
+        </p>
         <p className="mt-4 text-gray-600 leading-relaxed max-w-xl">
           {item.description}
         </p>
       </div>
 
-      {/* Swipe Gallery */}
       <SwipeGallery images={item.images} />
     </motion.div>
   );
 }
 
-/* --------------------------------
-   Swipe Gallery
-----------------------------------*/
+/* =====================================================
+   SWIPE GALLERY
+===================================================== */
 function SwipeGallery({ images = [] }) {
   const [index, setIndex] = useState(0);
-
-  const paginate = (dir) => {
-    setIndex((prev) => (prev + dir + images.length) % images.length);
-  };
+  if (!images.length) return null;
 
   return (
     <div className="relative w-full max-w-md mx-auto">
-      <div className="relative h-72 sm:h-80 overflow-hidden rounded-2xl bg-black">
-        <AnimatePresence initial={false}>
-          <motion.img
+      <div className="relative h-72 sm:h-80 rounded-2xl overflow-hidden bg-black">
+        <AnimatePresence mode="wait">
+          <motion.div
             key={index}
-            src={images[index]}
-            alt=""
-            drag="x"
-            dragConstraints={{ left: 0, right: 0 }}
-            dragElastic={0.8}
-            onDragEnd={(e, info) => {
-              if (info.offset.x < -100) paginate(1);
-              if (info.offset.x > 100) paginate(-1);
-            }}
-            initial={{ opacity: 0, x: 120, scale: 0.95 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            exit={{ opacity: 0, x: -120, scale: 0.95 }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-            className="absolute inset-0 h-full w-full object-cover cursor-grab active:cursor-grabbing"
-          />
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -100 }}
+            transition={{ duration: 0.4 }}
+            className="absolute inset-0 flex items-center justify-center text-xs text-gray-300"
+          >
+            <img src={images[index]} alt="Gallery" className="w-full h-full object-cover" />
+          </motion.div>
         </AnimatePresence>
       </div>
 
-      {/* Dots */}
-      <div className="mt-4 flex justify-center gap-2">
-        {images.map((_, i) => (
-          <button
+      {images.length > 1 && (
+        <div className="mt-4 flex justify-center gap-2">
+          {images.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setIndex(i)}
+              className={`h-2 w-2 rounded-full ${
+                i === index ? "bg-brandPrimary" : "bg-gray-300"
+              }`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+/* =====================================================
+   GENERIC SECTIONS
+===================================================== */
+function Section({ title, children }) {
+  return (
+    <motion.div
+      variants={stagger}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="space-y-10"
+    >
+      <motion.h2
+        variants={fadeUp}
+        className="font-heading text-3xl font-semibold text-brandNavy"
+      >
+        {title}
+      </motion.h2>
+      {children}
+    </motion.div>
+  );
+}
+
+function GridList({ title, items }) {
+  return (
+    <div>
+      <h4 className="text-sm font-semibold text-brandPrimary mb-4">
+        {title}
+      </h4>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        {items.map((item, i) => (
+          <div
             key={i}
-            onClick={() => setIndex(i)}
-            className={`h-2 w-2 rounded-full transition ${
-              i === index
-                ? "bg-brandPrimary scale-110"
-                : "bg-gray-300"
-            }`}
-          />
+            className="px-4 py-3 bg-surfaceLight border border-borderLight rounded-lg text-sm text-gray-700"
+          >
+            {item}
+          </div>
         ))}
       </div>
     </div>

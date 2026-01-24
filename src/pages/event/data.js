@@ -10,6 +10,7 @@ import { IIA_Kolkata_2025_images } from "../../assets/iia-kolkata/2025";
 import { IIA_Internal_Leadership_2025_images } from "../../assets/internal-leadership/2025";
 import { Riskman_Aniversary_5_year_images } from "../../assets/riskman-anniversary/year-5";
 import { Wofa_images } from "../../assets/wofa-2025";
+import journeyImages from "../../assets/journey";
 
 export const events = [
   {
@@ -524,37 +525,203 @@ export const events = [
   }
 ];
 
-export const journeyData = [
-  {
-    year: 2019,
-    title: "Foundation of Risk Advisory",
-    images: [
-      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
+export const journeyData = {
+  hero: {
+    title: "Journey with RiskMan",
+    subtitle: "A story of learning, ownership, and growth",
+    coverImage: "journey-hero-riskman.jpg"
+  },
+
+  timeline: [
+    {
+      year: "2020",
+      role: "Article Assistant",
+      title: "The Beginning",
+      description:
+        "My journey with RiskMan began in 2020 as an Article Assistant. At an early stage of my career, I was keen to understand how risk management and audit function in real business environments. Working closely with Arpit Sir helped me understand the vision of building RiskMan as a firm focused on practical, business-oriented risk solutions.",
+      images: [
+        ...journeyImages.teamDinnerOct2021
+      ]
+    },
+    {
+      year: "2020",
+      role: "Article Assistant",
+      title: "COVID-19 & Resilience",
+      description:
+        "Soon after my first assignment, the COVID-19 outbreak created uncertainty as work shifted remotely. Despite initial disruptions, RiskMan continued operations and I resumed work after a brief pause. This phase strengthened my adaptability and reinforced the importance of ownership and discipline.",
+      images: journeyImages.teamDinnerFeb2022
+    },
+    {
+      year: "2021–2023",
+      role: "Article Assistant",
+      title: "Mentorship & Exposure",
+      description:
+        "Throughout this phase, partners at RiskMan consistently guided me on approach, quality, and client mindset. Their mentorship played a critical role in shaping my professional thinking while working across diverse industries and client engagements.",
+      images:journeyImages.teamDinnerOct2021
+    },
+    {
+      year: "2023",
+      role: "Consultant",
+      title: "Transition to Consultant",
+      description:
+        "After completing my article-ship in 2023, I transitioned into the role of Consultant at RiskMan. This phase involved greater ownership, independent client handling, and deeper engagement responsibilities.",
+      images: journeyImages.teamLunchDecember2023
+    },
+    {
+      year: "2023–2025",
+      role: "Consultant",
+      title: "Certification Journey",
+      description:
+        "Following discussions with leadership on my long-term career path, I aligned my focus toward CIA and CISA certifications. With consistent effort alongside client responsibilities, I successfully qualified both certifications.",
+      images: [...journeyImages.iiaDelhiJuly2024, ...journeyImages.auditLeadersSummitMumbaiNov2024, ...journeyImages.iiaMumbaiMarch2025, ...journeyImages.agmDelhiJuly2025, journeyImages.ciaCelebration]
+    },
+    {
+      year: "2025-present",
+      role: "Manager",
+      title: "Leadership & Growth",
+      description:
+        "In 2025, after qualifying CIA and CISA, I was promoted to Manager. Today, I lead a team of over 10 professionals and manage multiple client engagements independently, reflecting a journey of trust, learning, and growth.",
+      images: [...journeyImages.diwaliChristmasZomato, ...journeyImages.gameSession, ...journeyImages.iiaMumbaiJan2026]
+    }
+  ],
+
+  experience: {
+    industries: [
+      "Quick Commerce",
+      "Digital & News Media",
+      "Insurance",
+      "Textile",
+      "Automobile",
+      "Pharmaceuticals",
+      "IT",
+      "Ed-tech",
+      "FMCG",
+      "Alco-Bev"
     ],
-  },
-  {
-    year: 2021,
-    title: "Expansion into Governance & Audit",
-    images: [
-      "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80"
+    clients: [
+      "Zomato",
+      "Blinkit",
+      "Feeding India",
+      "CARE Health Insurance",
+      "Schoolnet",
+      "Pernod Ricard",
+      "TG Minda",
+      "HP Maxico",
+      "Emami",
+      "Tirupati Medicare",
+      "Daido",
+      "Granules"
     ],
-  },
-  {
-    year: 2023,
-    title: "Technology & Analytics Driven Audit",
-    images: [
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
+    serviceAreas: [
+      "Internal Audit",
+      "Concurrent Audit",
+      "Distribution Audit",
+      "Transaction Audit",
+      "IFC Design & Testing",
+      "SOX Testing",
+      "Digital Transformation"
     ],
+    digitalInitiatives: [
+      "MDM Implementation",
+      "BRD Preparation",
+      "UAT Execution",
+      "Test Scenario Development",
+      "Steering Committee Discussions",
+      "Business–Technology Alignment"
+    ]
   },
-  {
-    year: 2026,
-    title: "Future-ready Governance & ESG",
-    images: Riskman_Aniversary_5_year_images,
+
+  culture: {
+    title: "Culture at RiskMan",
+    description:
+      "RiskMan has provided an environment where learning and ownership go hand in hand. From the beginning, responsibility was encouraged with consistent leadership guidance. The culture is collaborative, mentoring-driven, and focused on practical risk management.",
+    values: [
+      "Ownership",
+      "Discipline",
+      "Accountability",
+      "Adaptability",
+      "Collaboration"
+    ],
+    highlights: [
+      "Approachable leadership",
+      "Strong mentoring culture",
+      "Constructive feedback",
+      "Recognition of effort",
+      "Celebration of team achievements"
+    ],
+    images: [...journeyImages.teamDinnerDecember2023, ...journeyImages.iiaMumbaiJan2026]
   },
-];
+
+  lifeAtRiskMan: [
+    {
+      title: "Team Dinner",
+      date: "October 2021",
+      image: "life-team-dinner-oct-2021.jpg"
+    },
+    {
+      title: "Team Dinner",
+      date: "February 2022",
+      image: "life-team-dinner-feb-2022.jpg"
+    },
+    {
+      title: "Team Dinner",
+      date: "December 2023",
+      image: "life-team-dinner-dec-2023.jpg"
+    },
+    {
+      title: "Team Lunch at Zomato",
+      date: "December 2023",
+      image: "life-team-lunch-zomato.jpg"
+    },
+    {
+      title: "Team Member Birthday",
+      location: "Schoolnet",
+      image: "life-birthday-schoolnet.jpg"
+    },
+    {
+      title: "IIA Conference",
+      location: "Delhi",
+      date: "July 2024",
+      image: "life-iia-delhi-2024.jpg"
+    },
+    {
+      title: "Audit Leaders Summit",
+      location: "Mumbai",
+      date: "November 2024",
+      image: "life-audit-summit-mumbai-2024.jpg"
+    },
+    {
+      title: "IIA Conference",
+      location: "Mumbai",
+      date: "March 2025",
+      image: "life-iia-mumbai-2025.jpg"
+    },
+    {
+      title: "AGM",
+      location: "Delhi",
+      date: "July 2025",
+      image: "life-agm-delhi-2025.jpg"
+    },
+    {
+      title: "CIA Celebration with Team",
+      image: "life-cia-celebration.jpg"
+    },
+    {
+      title: "Festive Celebration",
+      description: "Diwali & Christmas with Zomato Team",
+      image: "life-diwali-christmas.jpg"
+    },
+    {
+      title: "IIA Conference",
+      location: "Mumbai",
+      date: "January 2026",
+      image: "life-iia-mumbai-2026.jpg"
+    }
+  ],
+
+  summary: {
+    text:
+      "The journey with RiskMan reflects continuous learning, trust, and professional growth. From an Article Assistant to a Manager, the experience has shaped a confident, disciplined, and business-aligned risk professional.",
+    image: "journey-summary.jpg"
+  }
+};
