@@ -22,6 +22,7 @@ import propreneurialImg from "../../assets/images/propreneurial_mindset_presenta
 import longtermRelationshipsImg from "../../assets/images/longterm_relationships_handshake.png";
 import Testimonials from "./Testimonials";
 import { JourneyTimeline } from "./JourneyTimeline";
+import SingleSlide from "./SingleSlide";
 
 
 
@@ -57,7 +58,8 @@ export default function About() {
   return (
     <div className="min-h-screen overflow-x-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-white">
       {/* ================= HERO ================= */}
-      <AboutHero />
+      {/* <AboutHero /> */}
+      <SingleSlide/>
 
       {/* ================= INTRODUCTION SECTION ================= */}
       <IntroSection />

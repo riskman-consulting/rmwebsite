@@ -52,7 +52,7 @@ const IntroductionSection = () => {
     <div className="relative overflow-hidden bg-surfaceLight dark:bg-bgDark">
 
       {/* ================= ABOUT SECTION ================= */}
-      <section className="relative py-24 lg:py-40 bg-bgLight dark:bg-surfaceDark isolate">
+      <section className="relative py-12 lg:py-20 bg-bgLight dark:bg-surfaceDark isolate">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 grid items-center gap-16 lg:grid-cols-12">
 
           {/* LEFT CONTENT */}
@@ -145,11 +145,10 @@ const IntroductionSection = () => {
         </div>
       </section>
 
-      {/* DIVIDER */}
-      <div className="my-32 h-px bg-gradient-to-r from-transparent via-brandGold/40 to-transparent" />
+     
 
       {/* ================= PHILOSOPHY SECTION ================= */}
-      <section className="px-6 lg:px-24 py-24 bg-surfaceLight dark:bg-surfaceDark">
+      <section className="px-6 lg:px-24 py-24 bg-surfaceLight  dark:bg-surfaceDark">
         <div className="max-w-7xl mx-auto">
           <motion.div {...fadeInUp} className="mb-20">
             <p className="text-[11px] font-black tracking-[0.4em] uppercase text-brandGold mb-6">

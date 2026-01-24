@@ -22,6 +22,8 @@ import ScrollToTop from './components/common/ScrollToTop'
 import ThemeToggle from './components/common/ThemeToggle'
 import Events from './temp/MainEvent'
 import ServicePage from './pages/services/Services'
+import HeaderTemp from "../src/components/layout/temp/Header"
+import HeaderNew from "./components/layout/Header"
 
 function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
@@ -39,7 +41,9 @@ function App() {
     <Router>
       <ScrollToTop />
       {/* <ThemeToggle theme={theme} setTheme={setTheme} /> */}
-      <Header theme={theme} setTheme={setTheme} />
+      {/* <Header theme={theme} setTheme={setTheme} /> */}
+      {/* <HeaderTemp/> */}
+      <HeaderNew/>
       <Toaster position="top-right" />
       
       <main className="pt-[20px]">
