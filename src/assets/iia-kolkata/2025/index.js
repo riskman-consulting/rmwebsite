@@ -5,11 +5,10 @@ import image4 from "./image-4.png"
 import image5 from "./image-5.png"
 
 
-
-export const Riskman_Aniversary_5_year_images = [
-    image5,
+export const IIA_Kolkata_2025_images  = [
     image1,
     image2,
     image3,
     image4,
+    image5,
 ]

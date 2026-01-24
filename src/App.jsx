@@ -24,6 +24,7 @@ import Events from './temp/MainEvent'
 import ServicePage from './pages/services/Services'
 import HeaderTemp from "../src/components/layout/temp/Header"
 import HeaderNew from "./components/layout/Header"
+import EventPage from './pages/event/EventPage'
 
 function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
@@ -57,7 +58,7 @@ function App() {
           <Route path="/insights/:slug" element={<BlogSingle />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
-          <Route path="/events" element={<Events/>}/>
+          <Route path="/events" element={<EventPage/>}/>
           <Route path="/careers" element={<Careers />} />
           <Route path="/blog" element={<Navigate to="/blogs" />} />
           <Route path="/blogs" element={<BlogList />} />

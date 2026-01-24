@@ -1,5 +1,5 @@
-import image1 from "./iia-bangalore-3.jpeg"
-import image2 from "./iia-bangalore-6.jpeg"
+import image1 from "./iia-bangalore-3.webp"
+import image2 from "./iia-bangalore-6.webp"
 
 
 
