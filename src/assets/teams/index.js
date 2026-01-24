@@ -3,42 +3,43 @@
 // Paths are relative (./filename.ext)
 // Filenames & extensions exactly match the folder
 
-import Angel from "./Angel.jpeg";
-import AnirbanBiswas from "./Anirban Biswas.png";
-import Artika from "./Artika.jpg";
-import Pranshul from "./pranshul.png";
+import Angel from "./Angel.webp";
+import AnirbanBiswas from "./Anirban Biswas.webp";
+import Artika from "./Artika.webp";
+import Pranshul from "./pranshul.webp";
 import Ayush from "./Ayush.png";
-import Debottam from "./Debottam.png";
-import JaiDeep from "./JaiDeep.png";
-import Kaushik from "./Kaushik.png";
-import Kartik from "./kartik.png";
-import MayukhDhar from "./Mayukh Dhar.png";
+import Debottam from "./Debottam.webp";
+import JaiDeep from "./JaiDeep.webp";
+import Kaushik from "./Kaushik.webp";
+import Kartik from "./kartik.webp";
+import MayukhDhar from "./Mayukh Dhar.webp";
 import monika from "./monika.jpeg";
-import NishanAgarwal from "./Nishan Agarwal.png";
-import Palak from "./Palak.jpeg";
-import Pawan from "./pawan.png";
-import priyanshu from "./priyanshu.jpeg";
-import Priyanshibisht from "./priyanshibhist.png";
-import RishbhaJain from "./Rishbha Jain.jpg";
-import RohitGupta from "./Rohit Gupta.png";
-import SakshamAhuja from "./Saksham Ahuja.jpeg";
-import Sakshi from "./sakshi.jpeg";
-import ShantaPal from "./Shanta Pal.png";
-import sidhi from "./sidhi.jpeg";
-import Simran from "./Simran.jpeg";
-import Tanisha from "./Tanisha.jpeg";
+import NishanAgarwal from "./Nishan Agarwal.webp";
+import Palak from "./Palak.webp";
+import Pawan from "./pawan.webp";
+import priyanshu from "./priyanshu.webp";
+import Priyanshibisht from "./priyanshibhist.webp";
+import RishbhaJain from "./Rishbha Jain.webp";
+import RohitGupta from "./Rohit Gupta.webp";
+import SakshamAhuja from "./Saksham Ahuja.webp";
+import Sakshi from "./sakshi.webp";
+import ShantaPal from "./Shanta Pal.webp";
+import sidhi from "./sidhi.webp";
+import Simran from "./Simran.webp";
+import Tanisha from "./Tanisha.webp";
 import Tushar from "./Tushar.jpg";
-import VanshGarg from "./Vansh Garg.jpeg";
-import Vanshika from "./Vanshika.jpeg";
-import VinayakPoddar from "./Vinayak Poddar.png";
-import VishalSharma from "./Vishal Sharma.png";
-import Yashvi from "./Yashvi.png";
-import Yugmita from "./Yugmita.png";
-import Jay from "./jay.png"
-import Arif from "./arif.png"
-import Harsh from "./Harsh.png"
-import Kiran from "./kiran.png"
-import Vipul from "./vipul.png"
+import VanshGarg from "./Vansh Garg.webp";
+import Vanshika from "./Vanshika.webp";
+import VinayakPoddar from "./Vinayak Poddar.webp";
+import VishalSharma from "./Vishal Sharma.webp";
+import Yashvi from "./Yashvi.webp";
+import Yugmita from "./Yugmita.webp";
+import Jay from "./jay.webp"
+import Arif from "./arif.webp"
+import Harsh from "./Harsh.webp"
+import Kiran from "./kiran.webp"
+import monica from "./monica.png"
+
 
 export const teamsImages = {
   Pranshul,
@@ -66,6 +67,7 @@ export const teamsImages = {
   Simran,
   Tanisha,
   Tushar,
+  monica,
   VanshGarg,
   Vanshika,
   VinayakPoddar,
@@ -75,8 +77,7 @@ export const teamsImages = {
   Jay,
   Arif,
   Harsh,
-  Kiran,
-  Vipul
+  Kiran
 };
 
 

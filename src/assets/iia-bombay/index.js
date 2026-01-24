@@ -1,6 +1,6 @@
-import image1 from "./iia-bombay-1.jpeg"
-import image2 from "./iia-bombay-5.jpg"
-import image3 from "./iia-bombay-9.jpg"
+import image1 from "./iia-bombay-1.webp"
+import image2 from "./iia-bombay-5.webp"
+import image3 from "./iia-bombay-9.webp"
 
 
 

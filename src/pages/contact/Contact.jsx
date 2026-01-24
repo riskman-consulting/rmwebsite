@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Mail, Phone, MapPin, Send, CheckCircle, Clock, Users, Award, Shield, Zap, TrendingUp, MessageSquare, Calendar, HeadphonesIcon } from "lucide-react";
 import contactHeroImg from "../../assets/images/contact/hero-background.png";
 import consultationImg from "../../assets/images/contact/consultation-team.png";
+import contact from "../../assets/images/contact/contact.png"
  
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -140,9 +141,9 @@ export default function Contact() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 z-10 bg-gradient-to-br from-bgLight/70 via-bgLight/60 to-bgLight/50 dark:from-bgDark/70 dark:via-bgDark/60 dark:to-bgDark/50" />
           <img
-            src={contactHeroImg}
+            src={contact}
             alt="Contact Us - Modern Office"
-            className="object-cover w-full h-full"
+            className="object-cover object-top w-full h-full"
           />
         </div>
  

@@ -76,13 +76,13 @@ export default function Footer() {
                 <Mail size={16} />
                 <span>info@riskman.in</span>
               </a>
-              <a 
+              {/* <a 
                 href="tel:+911234567890" 
                 className="flex items-center gap-2 text-sm transition-colors text-brandNavy dark:text-gray-400 hover:text-brandPrimary dark:hover:text-brandAccent"
               >
                 <Phone size={16} />
-                <span>+91 123 456 7890</span>
-              </a>
+                <span>+91</span>
+              </a> */}
             </div>
 
             {/* Social Icons */}

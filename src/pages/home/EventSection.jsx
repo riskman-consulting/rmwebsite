@@ -3,13 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 // Image Imports
-import EventImage1 from '../../assets/iia-bombay/2026/image-14.jpg';
-import EventImage2 from '../../assets/iia-bombay/2026/image-15.jpg';
-import EventImage3 from '../../assets/iia-bombay/2026/image-16.jpg';
-import EventImage4 from '../../assets/iia-bombay/2026/image-17.jpg';
-import EventImage5 from '../../assets/iia-bombay/2026/image-13.jpg';
-import EventImage6 from '../../assets/iia-bombay/2026/image-12.jpg';
-import EventImage7 from '../../assets/iia-bombay/2026/image-10.jpg';
+import EventImage1 from '../../assets/iia-bombay/2026/image-14.webp';
+import EventImage2 from '../../assets/iia-bombay/2026/image-15.webp';
+import EventImage3 from '../../assets/iia-bombay/2026/image-16.webp';
+import EventImage4 from '../../assets/iia-bombay/2026/image-17.webp';
+import EventImage5 from '../../assets/iia-bombay/2026/image-13.webp';
+import EventImage6 from '../../assets/iia-bombay/2026/image-12.webp';
+import EventImage7 from '../../assets/iia-bombay/2026/image-10.webp';
 
 const IIA_Bombay_2026_images = [
   EventImage1, EventImage2, EventImage3, EventImage4, 
@@ -54,7 +54,7 @@ export const EventCTASection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/80" />
 
       {/* CONTENT AREA: Centered perfectly */}
-      <div className="relative z-10 w-full max-w-5xl px-6 md:px-12 flex flex-col items-center justify-center text-center">
+      <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-5xl px-6 text-center md:px-12">
         
         {/* Subtitle Badge */}
         <motion.span
@@ -81,7 +81,7 @@ export const EventCTASection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="mb-10 text-base md:text-xl text-white/70 max-w-2xl leading-relaxed"
+          className="max-w-2xl mb-10 text-base leading-relaxed md:text-xl text-white/70"
         >
           Experience world-class auditing workshops and events. Connect with 
           industry pioneers and transform your professional journey.
@@ -98,7 +98,7 @@ export const EventCTASection = () => {
             className="group relative flex items-center gap-3 overflow-hidden rounded-full bg-white px-10 py-4 text-sm font-bold text-black transition-all hover:bg-gray-100 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]"
           >
             Explore Events
-            <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>
+            <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
           </button>
         </motion.div>
       </div>

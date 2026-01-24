@@ -33,14 +33,14 @@ export const HeroSection = () => {
       {/* --- Main Content Section --- */}
       <motion.div
         style={{ opacity }}
-        className="container relative z-20 px-4 mx-auto text-center"
+        className="container relative z-20 px-8 mx-auto text-center"
       >
         {/* Badge/Tag */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-4 py-2 mb-8 text-xs font-bold tracking-wider uppercase border rounded-full bg-brandAccent/10 border-brandAccent/30 text-brandAccent backdrop-blur-md"
+          className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-xs font-bold tracking-wider uppercase border rounded-full bg-brandAccent/10 border-brandAccent/30 text-brandAccent backdrop-blur-md"
         >
           <span className="w-2 h-2 rounded-full bg-brandAccent animate-pulse" />
           RiskMan Services
@@ -91,7 +91,7 @@ export const HeroSection = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
-        className="absolute z-20 bottom-10 left-1/2 -translate-x-1/2"
+        className="absolute z-20 -translate-x-1/2 bottom-10 left-1/2"
       >
         <div className="flex flex-col items-center gap-3">
           <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/60">
@@ -115,7 +115,7 @@ export const HeroSection = () => {
       </motion.div>
 
       {/* Bottom Gradient Fade (Optional: smooth transition to next section) */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-brandDark to-transparent z-10" />
+      <div className="absolute bottom-0 left-0 z-10 w-full h-32 bg-gradient-to-t from-brandDark to-transparent" />
     </section>
   );
 };

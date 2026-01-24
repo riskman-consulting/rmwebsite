@@ -1,11 +1,11 @@
-import image1 from "./wofa-1.jpeg"
-import image2 from "./wofa-2.jpeg"
-import image3 from "./wofa-3.jpeg"
-import image4 from "./wofa-4.jpeg"
-import image5 from "./wofa-5.jpeg"
-import image6 from "./wofa-6.jpeg"
-import image7 from "./wofa-7.jpeg"
-import image8 from "./wofa-8.jpeg"
+import image1 from "./wofa-1.webp"
+import image2 from "./wofa-2.webp"
+import image3 from "./wofa-3.webp"
+import image4 from "./wofa-4.webp"
+import image5 from "./wofa-5.webp"
+import image6 from "./wofa-6.webp"
+import image7 from "./wofa-7.webp"
+import image8 from "./wofa-8.webp"
 
 export const Wofa_images  = [
     image1,
