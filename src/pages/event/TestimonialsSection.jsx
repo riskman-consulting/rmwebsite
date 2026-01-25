@@ -28,25 +28,7 @@ My articleship experience at Riskman Consulting has been extremely enriching and
       tag: "Career Development",
       image:
         teamsImages.Palak,
-    },
-    {
-      name: "Vikram Patel",
-      position: "Risk Consultant",
-      quote:
-        "The five-year celebration made me realize how far we’ve come together — professionally and personally.",
-      tag: "Team Spirit",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
-    },
-    {
-      name: "Meera Iyer",
-      position: "Audit Associate",
-      quote:
-        "Mentorship here is unmatched. Presenting at IIA conferences alongside industry leaders boosted my confidence immensely.",
-      tag: "Mentorship",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80",
-    },
+    }
   ];
 
   const next = () =>

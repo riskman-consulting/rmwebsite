@@ -18,6 +18,10 @@ body{
 /* =====================
    COMPREHENSIVE RESET
 ===================== */
+:root {
+  --nav-h: 80px;
+}
+
 @layer base {
   *,
   *::before,

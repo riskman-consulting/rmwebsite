@@ -1,290 +1,381 @@
-import React, { useState } from "react";
+import React, { useState,useMemo } from "react";
 import {
   Globe,
   MapPin,
   Calendar,
-  CheckCircle2,
-  Users,
+  User,
+  ChevronLeft,
+  ChevronRight,
+  X,
+  Briefcase,
+  Layers,
+  ArrowRight,
 } from "lucide-react";
 
-export default function InternationalAssignments() {
-  const [activeCountry, setActiveCountry] = useState("indonesia");
+import { Vietman_Image } from "../../assets/chu-chi-vietnam";
+import { Philippiness_Image } from "../../assets/philippiness";
+import { Myanmar_Image } from "../../assets/myanmar";
+import { Indonesia_Image } from "../../assets/indonesia";
+/* ======================================================
+   SOURCE OF TRUTH — STORY DATA (DO NOT CHANGE STRUCTURE)
+====================================================== */
+const ENGAGEMENTS = [
+  {
+    person: "Vishal Sharma",
+    role: "Senior Consultant",
+    country: "Vietnam",
+    countryCode: "VN",
+    city: "Ho Chi Minh City",
+    date: "August 2025",
+    title: "Indorama Vietnam — Internal Audit Visit",
+    story:
+      "His photograph marks a meaningful interaction with the Indorama – Vietnam site team during the internal audit visit in August 2025. This showcases cross-functional collaboration and knowledge exchange. It underscores our global approach to auditing—working closely with site teams to enhance controls, align best practices, and support sustainable operations.",
+    images: [
+      Vietman_Image[0],
+    ],
+  },
 
-  const countries = {
-    indonesia: {
-      code: "ID",
-      name: "Indonesia",
-      city: "Jakarta",
-      period: "2022 – Present",
-      description:
-        "Leading risk assessment and internal audit engagements for large Indonesian organizations across manufacturing and financial sectors.",
-      projects: "12+",
-      consultants: "8",
-      image:
-        "https://images.unsplash.com/photo-1555899434-94d1eb5b5a4f?w=900&q=80",
-      highlights: [],
-    },
-    vietnam: {
-      code: "VN",
-      name: "Vietnam",
-      city: "Ho Chi Minh City",
-      period: "2022 – Present",
-      description:
-        "Delivering internal audit and compliance advisory services focused on operational efficiency and governance.",
-      projects: "15+",
-      consultants: "10",
-      image:
-        "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=900&q=80",
-      highlights: [
-        "Operational audits",
-        "Supply chain risk management",
-        "IT systems audits",
-        "Regulatory compliance support",
-      ],
-    },
-    myanmar: {
-      code: "MM",
-      name: "Myanmar",
-      city: "Yangon",
-      period: "2022 – 2024",
-      description:
-        "Strategic risk consulting for emerging businesses operating in complex regulatory environments.",
-      projects: "8+",
-      consultants: "6",
-      image:
-        "https://images.unsplash.com/photo-1552304664-7d2e8b9a4ec8?w=900&q=80",
-      highlights: [
-        "Risk framework development",
-        "Compliance program setup",
-        "Internal control systems",
-        "Audit methodology training",
-      ],
-    },
-    china: {
-      code: "CN",
-      name: "China",
-      city: "Shanghai",
-      period: "2023 – Present",
-      description:
-        "Advanced risk assurance services for multinational corporations navigating complex regulatory requirements.",
-      projects: "10+",
-      consultants: "12",
-      image:
-        "https://images.unsplash.com/photo-1548919973-5cef591cdbc9?w=900&q=80",
-      highlights: [
-        "Cross-border compliance",
-        "Enterprise risk management",
-        "Digital transformation audits",
-        "Strategic advisory services",
-      ],
-    },
+  {
+    person: "Rohit Gupta",
+    role: "Consultant",
+    country: "Vietnam",
+    countryCode: "VN",
+    city: "Ho Chi Minh City",
+    date: "October 2025",
+    title: "Indorama Vietnam — Risk Review",
+    story:
+      "Captured at the Indorama Vietnam site in September 2025, this image marks the completion of an internal audit engagement characterized by insightful exchanges and a solution-oriented mindset. The engagement facilitated open discussions on key risks and operational priorities, delivering value across multiple core business processes.",
+    images: [
+      Vietman_Image[1],Vietman_Image[2],Vietman_Image[3]
+    ],
+  },
+
+  {
+    person: "Rohit Gupta",
+    role: "Consultant",
+    country: "Philippines",
+    countryCode: "PH",
+    city: "Manila",
+    date: "January 2026",
+    title: "Indorama Philippines — Internal Control Assessment",
+    story:
+      "Celebrating the successful completion of a value-adding and knowledge-driven internal audit engagement. The assignment facilitated interactive discussions on key risks and related controls, leading to the identification of actionable steps to enhance business processes and improve overall operational efficiency.",
+    images: [
+      Philippiness_Image[1],Philippiness_Image[0],
+    ],
+  },
+
+  {
+    person: "Rohit Gupta",
+    role: "Consultant",
+    country: "Myanmar",
+    countryCode: "MM",
+    city: "Yangon",
+    date: "March 2026",
+    title: "Indorama Myanmar — Operational Risk Assessment",
+    story:
+      "Marking the conclusion of an insightful internal audit engagement that emphasized collaborative learning and practical outcomes. The engagement enabled meaningful exchanges on risk areas and control effectiveness, resulting in clear improvement initiatives aimed at strengthening processes.",
+    images: [
+      Myanmar_Image[1],Myanmar_Image[0],
+    ],
+  },
+
+  {
+    person: "Yashvi Ganeriwal",
+    role: "Consultant",
+    country: "Indonesia",
+    countryCode: "ID",
+    city: "Jakarta",
+    date: "December 2025",
+    title: "Indorama Indonesia — Internal Audit Completion",
+    story:
+      "This image captures a professional engagement at the Indorama Indonesia site in December 2025, marking the completion of an internal audit focused on exchange of insights and a solution-oriented approach. The audit encouraged open discussions on key risks and operational priorities, leading to clear and practical outcomes.",
+    images: [
+      Indonesia_Image[1],Indonesia_Image[0]
+    ],
+  },
+];
+
+/* ======================================================
+   COMPONENT
+====================================================== */
+export default function InternationalAssignments() {
+  const people = useMemo(
+    () => [...new Set(ENGAGEMENTS.map((e) => e.person))],
+    []
+  );
+
+  const [activePerson, setActivePerson] = useState(people[0]);
+  const [pageIndex, setPageIndex] = useState(0);
+  const [modalImages, setModalImages] = useState(null);
+
+  const personEngagements = useMemo(
+    () => ENGAGEMENTS.filter((e) => e.person === activePerson),
+    [activePerson]
+  );
+
+  const active = personEngagements[pageIndex];
+
+  const nextEngagement = () => {
+    if (pageIndex < personEngagements.length - 1) {
+      setPageIndex(pageIndex + 1);
+    }
   };
 
-  const current = countries[activeCountry];
+  const prevEngagement = () => {
+    if (pageIndex > 0) {
+      setPageIndex(pageIndex - 1);
+    }
+  };
 
   return (
-    <section className="relative py-16 bg-bgLight dark:bg-bgDark transition-colors duration-500">
-      <div className="container">
+    <>
+      <section className="min-h-screen px-4 py-16 md:py-24 bg-surfaceLight dark:bg-surfaceDark">
+        <div className="container max-w-6xl mx-auto">
 
-        {/* Header */}
-        <div className="max-w-3xl mx-auto mb-20 text-center">
-          <div
-            className="inline-flex items-center gap-3 px-6 py-3 mb-6 rounded-full
-            bg-surfaceLight/80 dark:bg-surfaceDark/40
-            border border-borderLight dark:border-borderDark
-            backdrop-blur-xl"
-          >
-            <Globe className="w-4 h-4 text-brandGold" />
-            <span className="text-xs font-black tracking-[0.3em] uppercase text-brandGold">
-              Global Presence
-            </span>
-          </div>
-
-          <h2 className="mb-5 text-4xl sm:text-5xl font-heading font-black text-brandDark dark:text-white">
-            International Assignments
-          </h2>
-
-          <p className="text-lg text-brandDark/70 dark:text-white/60 leading-relaxed">
-            Delivering risk, audit, and advisory engagements across key Asian
-            markets with on-ground expertise.
-          </p>
-        </div>
-
-        {/* Main Grid */}
-        <div className="grid gap-10 max-w-7xl mx-auto lg:grid-cols-2">
-
-          {/* Left – Details */}
-          <div
-            className="p-10 rounded-[2.5rem]
-            bg-surfaceLight/80 dark:bg-surfaceDark/40
-            border border-borderLight dark:border-borderDark
-            backdrop-blur-xl"
-          >
-            {/* Country Tabs */}
-            <div className="grid grid-cols-2 gap-3 mb-8">
-              {Object.entries(countries).map(([key, c]) => (
-                <button
-                  key={key}
-                  onClick={() => setActiveCountry(key)}
-                  className={`px-4 py-3 rounded-xl font-semibold transition-all
-                    ${
-                      activeCountry === key
-                        ? "bg-brandGold text-brandDark shadow-[0_10px_30px_rgba(255,184,0,0.35)]"
-                        : "bg-bgLight dark:bg-bgDark text-brandDark/60 dark:text-white/60 border border-borderLight dark:border-borderDark hover:border-brandGold/40"
-                    }`}
-                >
-                  {c.code} · {c.name}
-                </button>
-              ))}
+          {/* HEADER */}
+          <div className="mb-16 text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-white border rounded-full shadow-sm">
+              <div className="bg-brandAccent p-1.5 rounded-full">
+                <Globe className="w-3.5 h-3.5 text-white" />
+              </div>
+              <span className="text-sm font-semibold uppercase text-brandDark dark:text-brandDark">
+                Audit Network
+              </span>
             </div>
 
-            {/* Country Info */}
-            <h3 className="text-3xl font-heading font-black text-brandDark dark:text-white mb-4">
-              {current.name}
-            </h3>
+            <h2 className="mb-4 text-4xl font-bold md:text-5xl text-brandDark dark:text-white">
+              International Assignments
+            </h2>
 
-            <div className="flex flex-wrap gap-4 mb-5 text-brandDark/70 dark:text-white/60">
-              <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-brandGold" />
-                {current.city}
-              </div>
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4 text-brandGold" />
-                {current.period}
-              </div>
-            </div>
-
-            <p className="mb-6 text-brandDark/70 dark:text-white/60 leading-relaxed">
-              {current.description}
+            <p className="max-w-2xl mx-auto text-lg text-brandNavy dark:text-white/70">
+              A visual directory of consultant visits and strategic engagements.
             </p>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 gap-4 mb-6">
-              <div
-                className="p-6 rounded-2xl
-                bg-bgLight dark:bg-bgDark
-                border border-borderLight dark:border-borderDark"
-              >
-                <div className="text-3xl font-black text-brandGold">
-                  {current.projects}
-                </div>
-                <div className="text-sm text-brandDark/60 dark:text-white/60">
-                  Projects Completed
-                </div>
-              </div>
-
-              <div
-                className="p-6 rounded-2xl
-                bg-bgLight dark:bg-bgDark
-                border border-borderLight dark:border-borderDark"
-              >
-                <div className="text-3xl font-black text-brandGold">
-                  {current.consultants}
-                </div>
-                <div className="text-sm text-brandDark/60 dark:text-white/60">
-                  Consultants On Ground
-                </div>
-              </div>
-            </div>
-
-            {/* Highlights */}
-            {current.highlights.length > 0 && (
-              <div className="space-y-3">
-                <h4 className="text-lg font-bold text-brandDark dark:text-white">
-                  Key Highlights
-                </h4>
-                <ul className="space-y-2">
-                  {current.highlights.map((h, i) => (
-                    <li
-                      key={i}
-                      className="flex items-start gap-3 text-brandDark/70 dark:text-white/70"
-                    >
-                      <CheckCircle2 className="w-4 h-4 text-brandGold mt-0.5" />
-                      {h}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
           </div>
 
-          {/* Right – Image */}
-          <div className="relative rounded-[2.5rem] overflow-hidden
-            border border-borderLight dark:border-borderDark">
-            <img
-              src={current.image}
-              alt={current.city}
-              className="w-full h-full min-h-[520px] object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+          {/* PERSON TABS */}
+          <div className="flex flex-wrap justify-center gap-2 mb-12">
+            {people.map((p) => (
+              <button
+                key={p}
+                onClick={() => {
+                  setActivePerson(p);
+                  setPageIndex(0);
+                }}
+                className={`px-6 py-2.5 rounded-full text-sm font-medium border transition-all
+                  ${
+                    activePerson === p
+                      ? "bg-brandDark dark:bg-brandAccent text-white dark:text-brandDark border-slate-900 shadow-lg scale-105"
+                      : "bg-white text-slate-500 border-slate-200 hover:bg-slate-50"
+                  }`}
+              >
+                {p}
+              </button>
+            ))}
+          </div>
 
-            <div className="absolute bottom-8 left-8">
-              <div className="text-6xl font-black text-white/20">
-                {current.code}
+          {/* CARD */}
+          <div className="bg-surfaceLight dark:bg-surfaceDark border rounded-[2rem] shadow-xl overflow-hidden">
+            <div className="flex flex-col lg:flex-row min-h-[500px]">
+
+              {/* LEFT */}
+              <div className="flex flex-col justify-between flex-1 p-8 md:p-12">
+                <div>
+                  <div className="flex items-start justify-between gap-4 mb-8">
+                    <div className="flex gap-4">
+                      <div className="flex items-center justify-center w-12 h-12 bg-brandDark dark:bg-brandAccent rounded-2xl">
+                        <User className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-bold text-brandDark dark:text-white">
+                          {active.person}
+                        </h3>
+                        <div className="flex items-center gap-2 text-sm font-medium text-brandNavy dark:text-brandAccent">
+                          <Briefcase className="w-4 h-4" />
+                          {active.role}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="text-right">
+                      <span className="px-4 py-1.5 rounded-full bg-brandDark dark:bg-brandAccent text-white text-xs font-bold uppercase">
+                        {active.country}
+                      </span>
+                      <p className="mt-1 text-xs uppercase text-brandDark dark:text-white/70">
+                        Assignment ID: {active.countryCode}-{active.date.split(" ")[1]}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* META */}
+                  <div className="grid grid-cols-2 gap-6 p-6 mb-8 md:grid-cols-3 bg-surfaceLight dark:bg-surfaceDark rounded-2xl">
+                    <Meta icon={<MapPin />} label="City" value={active.city} />
+                    <Meta icon={<Calendar />} label="Schedule" value={active.date} />
+                    <Meta
+                      icon={<Layers />}
+                      label="Assets"
+                      value={`${active.images.length} Captures`}
+                      hiddenMobile
+                    />
+                  </div>
+
+                  <h4 className="mb-3 text-xl font-bold text-brandDark dark:text-brandAccent">
+                    {active.title}
+                  </h4>
+                  <p className="text-lg leading-relaxed text-brandNavy dark:text-white/70">
+                    {active.story}
+                  </p>
+                </div>
+
+                {/* PAGINATION */}
+                {personEngagements.length > 1 && (
+                  <div className="flex items-center gap-6 pt-8 mt-12 border-t">
+                    <div className="flex gap-2">
+                      <NavBtn onClick={prevEngagement} disabled={pageIndex === 0}>
+                        <ChevronLeft />
+                      </NavBtn>
+                      <NavBtn
+                        onClick={nextEngagement}
+                        disabled={pageIndex === personEngagements.length - 1}
+                      >
+                        <ChevronRight />
+                      </NavBtn>
+                    </div>
+
+                    <span className="text-xs font-bold uppercase text-slate-400">
+                      {pageIndex + 1} of {personEngagements.length}
+                    </span>
+                  </div>
+                )}
               </div>
-              <div className="text-3xl font-heading font-black text-white">
-                {current.city}
+
+              {/* RIGHT IMAGE */}
+              <div
+                className="lg:w-[420px] bg-slate-100 relative cursor-zoom-in"
+                onClick={() => setModalImages(active.images)}
+              >
+                <img
+                  src={active.images[0]}
+                  alt=""
+                  className="object-cover w-full h-full transition-transform duration-700 hover:scale-110"
+                />
+
+                <div className="absolute inset-0 flex items-end p-8 transition opacity-0 bg-gradient-to-t from-black/60 hover:opacity-100">
+                  <div className="flex items-center gap-3 text-white">
+                    <div className="p-2 rounded-full bg-white/20">
+                      <ArrowRight className="w-5 h-5" />
+                    </div>
+                    <span className="text-sm font-bold">View Gallery</span>
+                  </div>
+                </div>
               </div>
-              <div className="font-semibold text-brandGold">
-                {current.name}
-              </div>
+
             </div>
           </div>
+
+          {/* <p className="mt-12 text-sm text-center text-slate-400">
+            © 2025 Audit Division — Global Mobility Portfolio
+          </p> */}
         </div>
+      </section>
 
-        {/* Global Banner */}
-        <div className="max-w-7xl mx-auto mt-20">
-          <div
-            className="flex flex-col lg:flex-row items-center justify-between gap-8
-            p-10 rounded-[2.5rem]
-            bg-surfaceLight/80 dark:bg-surfaceDark/40
-            border border-borderLight dark:border-borderDark
-            backdrop-blur-xl"
-          >
-            <div className="flex items-center gap-5">
-              <div
-                className="w-16 h-16 rounded-full flex items-center justify-center
-                bg-brandGold/10 border border-brandGold/30"
-              >
-                <Users className="w-8 h-8 text-brandGold" />
-              </div>
-              <div>
-                <h3 className="text-2xl font-heading font-black text-brandDark dark:text-white">
-                  Global Team Excellence
-                </h3>
-                <p className="text-brandDark/60 dark:text-white/60">
-                  36+ consultants deployed across 4 countries
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-4">
-              <div
-                className="px-8 py-4 rounded-2xl text-center
-                bg-bgLight dark:bg-bgDark
-                border border-borderLight dark:border-borderDark"
-              >
-                <div className="text-3xl font-black text-brandGold">45+</div>
-                <div className="text-sm text-brandDark/60 dark:text-white/60">
-                  Total Projects
-                </div>
-              </div>
-
-              <div
-                className="px-8 py-4 rounded-2xl text-center
-                bg-bgLight dark:bg-bgDark
-                border border-borderLight dark:border-borderDark"
-              >
-                <div className="text-3xl font-black text-brandGold">4</div>
-                <div className="text-sm text-brandDark/60 dark:text-white/60">
-                  Countries
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
+      {/* IMAGE MODAL */}
+      <ImageGalleryModal
+        images={modalImages}
+        onClose={() => setModalImages(null)}
+      />
+    </>
   );
 }
+
+/* =========================================================
+   IMAGE GALLERY MODAL (INLINE)
+========================================================= */
+function ImageGalleryModal({ images, onClose }) {
+  if (!images) return null;
+
+  const getModalMaxWidth = () => {
+    if (images.length === 1) return "max-w-2xl";
+    if (images.length === 2) return "max-w-4xl";
+    return "max-w-6xl";
+  };
+
+  const getGridCols = () => {
+    if (images.length === 1) return "grid-cols-1";
+    if (images.length === 2) return "grid-cols-1 sm:grid-cols-2";
+    return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3";
+  };
+
+  return (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-8">
+      <div
+        className="absolute inset-0 bg-slate-950/90 backdrop-blur-md"
+        onClick={onClose}
+      />
+
+      <div
+        className={`relative w-full ${getModalMaxWidth()} bg-surfaceLight dark:bg-surfaceDark rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]`}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="sticky top-0 z-10 flex items-center justify-between px-6 py-4 border-b bg-surfaceLight dark:bg-surfaceDark">
+          <h3 className="text-lg font-bold text-brandDark dark:text-white">
+            Engagement Gallery
+          </h3>
+          <button
+            onClick={onClose}
+            className="p-2 rounded-full hover:bg-slate-100"
+          >
+            <X className="w-6 h-6 text-slate-500" />
+          </button>
+        </div>
+
+        <div className="flex-1 p-6 sm:p-8">
+          <div className={`grid gap-6 ${getGridCols()}`}>
+            {images.map((img, i) => (
+              <div
+                key={i}
+                className="relative overflow-hidden rounded-2xl bg-slate-100 aspect-square"
+              >
+                <img
+                  src={img}
+                  alt=""
+                  className="absolute inset-0 object-cover w-full h-full transition-transform duration-500 hover:scale-110"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="px-6 py-4 text-center border-t bg-surfaceLight dark:bg-surfaceDark">
+          <p className="text-sm italic text-slate-500">
+            Showing {images.length} image{images.length > 1 && "s"}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* =========================================================
+   SMALL HELPERS
+========================================================= */
+const Meta = ({ icon, label, value, hiddenMobile }) => (
+  <div className={`flex items-center gap-3 ${hiddenMobile ? "hidden md:flex" : ""}`}>
+    <div className="p-2 text-white rounded-lg shadow-sm bg-brandDark dark:bg-brandAccent dark:text-white">
+      {icon}
+    </div>
+    <div>
+      <p className="text-[10px] uppercase font-bold text-brandNavy dark:text-white/70">{label}</p>
+      <p className="text-sm font-semibold text-brandDark dark:text-white">{value}</p>
+    </div>
+  </div>
+);
+
+const NavBtn = ({ children, ...props }) => (
+  <button
+    {...props}
+    className="p-3 text-white border bg-brandDark dark:bg-brandAccent rounded-xl dark:text-brandDark hover:bg-slate-50 disabled:opacity-30"
+  >
+    {children}
+  </button>
+);

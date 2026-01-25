@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Calendar, ArrowRight, Image } from "lucide-react";
-import { IIA_Bombay_2026_images } from "../../assets/iia-bombay/2026";
+import bg1 from "../../assets/journey/ai/bg1.png"
+import bg2 from "../../assets/journey/ai/bg2.png"
 
 /* ===================== PARTICLES ===================== */
 const ParticlesBackground = ({ mouseX, mouseY }) => {
@@ -129,7 +130,7 @@ export default function HeroSection() {
         style={{ transform: `translateY(${bgY}px)` }}
       >
         <img
-          src={IIA_Bombay_2026_images[7]}
+          src={bg1}
           className="w-full h-full object-cover brightness-[0.85] dark:brightness-[0.35]"
           alt=""
         />

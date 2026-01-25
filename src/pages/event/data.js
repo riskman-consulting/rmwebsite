@@ -12,6 +12,10 @@ import { Riskman_Aniversary_5_year_images } from "../../assets/riskman-anniversa
 import { Wofa_images } from "../../assets/wofa-2025";
 import journeyImages from "../../assets/journey";
 
+
+
+
+
 export const events = [
   {
     id: "iia-bombay-ic-2026",
@@ -442,8 +446,8 @@ export const events = [
     location: "Taj The Trees, Mumbai, India",
     type: "International Conference",
 
-    image: [],
-    gallery: [],
+    image: IIA_International_Conference_2025_images[2],
+    gallery: IIA_International_Conference_2025_images,
 
     shortDesc:
       "RiskMan Consulting participated in the IIA India International Conference 2025, engaging with leaders on the future of internal audit, risk, and governance.",
@@ -522,6 +526,19 @@ export const events = [
     shortDesc: "A global platform celebrating leadership and innovation.",
     fullDesc: "WOFA 2025 brought together changemakers and leaders for global collaboration.",
     gallery: Wofa_images,
+  },
+  {
+    id:"iia-conference-delhi-2024",
+    title:"IIA Delhi Conference 2024",
+    date:"2024",
+    year:2024,
+    location:"Delhi, India",
+    type:"Conference",
+    image:journeyImages.iiaDelhiJuly2024[0],
+    shortDesc:"Engaging discussions on the evolving landscape of internal audit and risk management.",
+    fullDesc:"The IIA Delhi Conference 2024 provided a platform for professionals to exchange insights on internal audit, risk management, and governance trends.",
+    gallery:journeyImages.iiaDelhiJuly2024,
+    
   }
 ];
 
