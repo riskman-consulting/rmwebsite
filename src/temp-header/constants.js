@@ -189,10 +189,10 @@ export const NAVIGATION_DATA = {
     "eventsMegaMenu": [
         {
             "items": [
-                { "label": "Upcoming Events", "path": "/events/upcoming" },
-                { "label": "Past Events", "path": "/events/past" },
-                { "label": "Company Journey", "path": "/events/journey" },
-                { "label": "Milestones", "path": "/events/milestones" }
+                { "label": "Upcoming Events", "path": "/events/#upcoming" },
+                { "label": "Past Events", "path": "/events/#past" },
+                { "label": "Company Journey", "path": "/events/#journey" },
+                { "label": "Milestones", "path": "/events/#milestones" }
             ]
         }
     ]

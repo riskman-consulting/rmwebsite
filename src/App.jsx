@@ -18,7 +18,6 @@ import Terms from './pages/resources/Terms'
 import BlogSingle from './pages/blogs/BlogSingle'
 import './index.css'
 
-
 import { Toaster } from 'react-hot-toast'
 import ScrollToTop from './components/common/ScrollToTop'
 import ThemeToggle from './components/common/ThemeToggle'
@@ -47,7 +46,12 @@ function App() {
       <HeaderTemp />
       <Toaster position="top-right" />
       
-      <main className="">
+      {/* CRITICAL FIX: Add pt-[128px] to account for fixed header 
+          - Announcement banner: 48px (top-0)
+          - Navbar: 80px (top-[48px])
+          - Total: 128px
+      */}
+      <main className="pt-[128px]">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<ServicePage />} />

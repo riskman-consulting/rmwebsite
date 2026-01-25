@@ -1,106 +1,116 @@
-import React, { useState } from 'react';
-import { Mail, Linkedin, ArrowRight, Calendar, MapPin, Flag, Shield, Users, Network } from 'lucide-react';
+import React, { useState } from "react";
+import {
+  Mail,
+  Linkedin,
+  ArrowRight,
+  Calendar,
+  MapPin,
+  Flag,
+  Shield,
+  Users,
+  Network,
+} from "lucide-react";
 
 export default function CTASections() {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
 
-  const upcomingEvents = [
-    {
-      icon: Flag,
-      iconBg: 'bg-teal-500',
-      category: 'Conference',
-      categoryColor: 'text-teal-400',
-      title: 'IIA Global Conference 2025',
-      date: 'March 2025',
-      location: 'Mumbai, India'
-    },
-    {
-      icon: Shield,
-      iconBg: 'bg-blue-500',
-      category: 'Summit',
-      categoryColor: 'text-blue-400',
-      title: 'Risk Management Summit',
-      date: 'April 2025',
-      location: 'Singapore'
-    },
-    {
-      icon: Users,
-      iconBg: 'bg-pink-500',
-      category: 'Team Event',
-      categoryColor: 'text-pink-400',
-      title: 'Team Building Retreat',
-      date: 'May 2025',
-      location: 'Goa, India'
-    },
-    {
-      icon: Network,
-      iconBg: 'bg-orange-500',
-      category: 'Networking',
-      categoryColor: 'text-orange-400',
-      title: 'Annual Client Appreciation',
-      date: 'June 2025',
-      location: 'Mumbai, India'
-    }
-  ];
+ const upcomingEvents = [
+  {
+    icon: Flag,
+    category: "Conference",
+    title: "Bangalore Conference",
+    date: "12–13 February 2026",
+    location: "Bangalore, India",
+  },
+  {
+    icon: Shield,
+    category: "Conference",
+    title: "Chennai Conference",
+    date: "27–28 February 2026",
+    location: "Chennai, India",
+  },
+  {
+    icon: Users,
+    category: "Conference",
+    title: "Kolkata Conference",
+    date: "14 March 2026",
+    location: "Kolkata, India",
+  },
+  {
+    icon: Network,
+    category: "Conference",
+    title: "Hyderabad Conference",
+    date: "11 April 2026",
+    location: "Hyderabad, India",
+  },
+];
 
   const handleSubscribe = () => {
-    if (email) {
-      console.log('Subscribing email:', email);
-      alert('Thank you for subscribing!');
-      setEmail('');
-    }
+    if (!email) return;
+    alert("Thank you for subscribing!");
+    setEmail("");
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container px-4 py-16 mx-auto md:py-20">
-        {/* Header */}
-        <div className="mb-12 text-center md:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 border rounded-full bg-teal-500/10 border-teal-400/30">
-            <Calendar className="w-5 h-5 text-teal-400" />
-            <span className="text-sm font-semibold text-teal-400">What's Next</span>
+    <section id="upcoming" className="py-16 transition-colors duration-500 bg-bgLight dark:bg-bgDark">
+      <div className="container">
+
+        {/* ================= HEADER ================= */}
+        <div className="max-w-3xl mx-auto mb-20 text-center">
+          <div
+            className="inline-flex items-center gap-3 px-6 py-3 mb-6 border rounded-full bg-surfaceLight/80 dark:bg-surfaceDark/40 border-borderLight dark:border-borderDark backdrop-blur-xl"
+          >
+            <Calendar className="w-4 h-4 text-brandGold" />
+            <span className="text-xs font-black tracking-[0.3em] uppercase text-brandGold">
+              What’s Next
+            </span>
           </div>
-          <h1 className="mb-4 text-4xl font-bold text-white md:text-5xl lg:text-6xl">
-            Upcoming Events & Activities
-          </h1>
-          <p className="max-w-2xl mx-auto text-lg text-slate-300 md:text-xl">
-            Stay connected with us and never miss an opportunity to be part of our journey
+
+          <h2 className="mb-5 text-4xl font-black sm:text-5xl font-heading text-brandDark dark:text-white">
+            Stay Connected
+          </h2>
+
+          <p className="text-lg text-brandDark/70 dark:text-white/60">
+            Upcoming conversations, gatherings, and ways to stay engaged with
+            RiskMan.
           </p>
         </div>
 
-        {/* Upcoming Events Grid */}
-        <div className="grid grid-cols-1 gap-6 mb-16 md:grid-cols-2 lg:grid-cols-4">
-          {upcomingEvents.map((event, index) => {
+        {/* ================= UPCOMING EVENTS ================= */}
+        <div className="grid gap-6 mb-20 md:grid-cols-2 lg:grid-cols-4">
+          {upcomingEvents.map((event, i) => {
             const Icon = event.icon;
             return (
               <div
-                key={index}
-                className="p-6 transition-all duration-300 border group bg-slate-800/50 backdrop-blur-sm border-slate-700 rounded-2xl hover:border-teal-400/50 hover:-translate-y-1"
+                key={i}
+                className="p-6 rounded-[2rem]
+                bg-surfaceLight/80 dark:bg-surfaceDark/40
+                border border-borderLight dark:border-borderDark
+                transition-all duration-500
+                hover:-translate-y-1 hover:border-brandGold/40"
               >
-                {/* Icon */}
-                <div className={`inline-flex items-center justify-center w-14 h-14 ${event.iconBg} rounded-2xl mb-4 transition-transform duration-300 group-hover:scale-110`}>
-                  <Icon className="text-white w-7 h-7" />
+                <div
+                  className="flex items-center justify-center mb-4 border w-14 h-14 rounded-2xl bg-brandGold/10 border-brandGold/30"
+                >
+                  <Icon className="w-7 h-7 text-brandGold" />
                 </div>
 
-                {/* Category */}
-                <span className={`inline-block text-sm font-semibold mb-3 ${event.categoryColor}`}>
+                <span className="text-xs font-bold tracking-wide uppercase text-brandGold">
                   {event.category}
                 </span>
 
-                {/* Title */}
-                <h3 className="mb-4 text-xl font-bold text-white transition-colors group-hover:text-teal-400">
+                <h3 className="mt-2 mb-4 text-xl font-bold text-brandDark dark:text-white">
                   {event.title}
                 </h3>
 
-                {/* Meta Info */}
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-sm text-slate-400">
-                    <Calendar className="w-4 h-4 text-teal-400" />
-                    <span>{event.date}</span>
+                <div className="space-y-2 text-sm text-brandDark/60 dark:text-white/60">
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-4 h-4 text-brandGold" />
+                    {event.date}
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-slate-400">
-                    <MapPin className="w-4 h-4 text-teal-400" />
-                    <span>{event.location}</span>
+                  <div className="flex items-center gap-2">
+                    <MapPin className="w-4 h-4 text-brandGold" />
+                    {event.location}
                   </div>
                 </div>
               </div>
@@ -108,106 +118,106 @@ export default function CTASections() {
           })}
         </div>
 
-        {/* CTA Sections */}
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-          {/* Stay Updated Section */}
-          <div className="relative p-8 overflow-hidden rounded-3xl bg-gradient-to-br from-teal-500 to-cyan-600 md:p-10">
-            {/* Background Pattern */}
-            <div className="absolute top-0 right-0 w-64 h-64 rounded-full opacity-20 bg-white/10 blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full opacity-20 bg-white/10 blur-2xl"></div>
+        {/* ================= CTA GRID ================= */}
+        <div className="grid gap-10 lg:grid-cols-2">
 
-            <div className="relative">
-              {/* Icon */}
-              <div className="inline-flex items-center justify-center w-16 h-16 mb-6 rounded-2xl bg-white/20 backdrop-blur-sm">
-                <Mail className="w-8 h-8 text-white" />
-              </div>
+          {/* -------- Newsletter -------- */}
+          <div
+            className="p-10 rounded-[3rem]
+            bg-surfaceLight/80 dark:bg-surfaceDark/40
+            border border-borderLight dark:border-borderDark"
+          >
+            <div
+              className="flex items-center justify-center w-16 h-16 mb-6 border rounded-2xl bg-brandGold/10 border-brandGold/30"
+            >
+              <Mail className="w-8 h-8 text-brandGold" />
+            </div>
 
-              {/* Content */}
-              <h2 className="mb-3 text-3xl font-bold text-white md:text-4xl">
-                Stay Updated
-              </h2>
-              <p className="mb-6 text-lg text-white/90">
-                Subscribe to our newsletter and get the latest updates about our events, achievements, and opportunities.
-              </p>
+            <h3 className="mb-3 text-3xl font-black font-heading text-brandDark dark:text-white">
+              Stay Updated
+            </h3>
 
-              {/* Email Input and Button */}
-              <div className="space-y-3">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-6 py-4 text-white transition-all duration-300 border-2 border-transparent placeholder-white/60 rounded-xl bg-white/20 backdrop-blur-sm focus:outline-none focus:border-white/40 focus:bg-white/25"
-                />
-                <button
-                  onClick={handleSubscribe}
-                  className="w-full px-6 py-4 font-semibold text-teal-600 transition-all duration-300 bg-white rounded-xl hover:bg-white/90 hover:scale-105"
-                >
-                  Subscribe Now
-                </button>
-              </div>
+            <p className="mb-6 text-lg text-brandDark/60 dark:text-white/60">
+              Subscribe to receive updates on events, insights, and milestones.
+            </p>
+
+            <div className="space-y-4">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full px-6 py-4 border rounded-xl bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark text-brandDark dark:text-white placeholder:text-brandDark/40 dark:placeholder:text-white/40 focus:outline-none focus:border-brandGold/50"
+              />
+
+              <button
+                onClick={handleSubscribe}
+                className="w-full px-6 py-4 font-bold transition-transform rounded-xl bg-brandGold text-brandDark hover:scale-105"
+              >
+                Subscribe Now
+              </button>
             </div>
           </div>
 
-          {/* Follow Our Journey Section */}
-          <div className="p-8 transition-all duration-300 border bg-slate-800/50 backdrop-blur-sm border-slate-700 rounded-3xl md:p-10 hover:border-slate-600">
-            {/* Icon */}
-            <div className="inline-flex items-center justify-center w-16 h-16 mb-6 bg-blue-500 rounded-2xl">
-              <Linkedin className="w-8 h-8 text-white" />
+          {/* -------- LinkedIn -------- */}
+          <div
+            className="p-10 rounded-[3rem]
+            bg-surfaceLight/80 dark:bg-surfaceDark/40
+            border border-borderLight dark:border-borderDark"
+          >
+            <div
+              className="flex items-center justify-center w-16 h-16 mb-6 border rounded-2xl bg-brandGold/10 border-brandGold/30"
+            >
+              <Linkedin className="w-8 h-8 text-brandGold" />
             </div>
 
-            {/* Content */}
-            <h2 className="mb-3 text-3xl font-bold text-white md:text-4xl">
+            <h3 className="mb-3 text-3xl font-black font-heading text-brandDark dark:text-white">
               Follow Our Journey
-            </h2>
-            <p className="mb-6 text-lg text-slate-300">
-              Connect with us on LinkedIn for real-time updates, behind-the-scenes moments, and professional insights.
+            </h3>
+
+            <p className="mb-6 text-lg text-brandDark/60 dark:text-white/60">
+              Join us on LinkedIn for professional insights, events, and stories
+              from our journey.
             </p>
 
-            {/* LinkedIn Link */}
             <a
               href="https://www.linkedin.com/company/riskman-consulting"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between p-4 mb-6 transition-all duration-300 border group bg-slate-800/50 border-slate-700 rounded-xl hover:border-blue-500/50 hover:bg-slate-800"
+              className="flex items-center justify-between p-4 transition-all border rounded-xl bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark hover:border-brandGold/40"
             >
               <div className="flex items-center gap-3">
-                <Linkedin className="w-6 h-6 text-blue-400" />
-                <span className="text-lg font-semibold text-white">Riskman Consulting</span>
+                <Linkedin className="w-6 h-6 text-brandGold" />
+                <span className="font-bold text-brandDark dark:text-white">
+                  RiskMan Consulting
+                </span>
               </div>
-              <ArrowRight className="w-5 h-5 transition-transform duration-300 text-slate-400 group-hover:translate-x-1 group-hover:text-blue-400" />
+              <ArrowRight className="w-5 h-5 text-brandGold" />
             </a>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-4">
-              <div className="p-4 text-center transition-all duration-300 border bg-slate-800/30 border-slate-700 rounded-xl hover:border-blue-500/30">
-                <div className="mb-1 text-2xl font-bold text-teal-400 md:text-3xl">
-                  5K+
+            <div className="grid grid-cols-3 gap-4 mt-6">
+              {[
+                { value: "5K+", label: "Followers" },
+                { value: "200+", label: "Posts" },
+                { value: "50K+", label: "Impressions" },
+              ].map((stat, i) => (
+                <div
+                  key={i}
+                  className="p-4 text-center border rounded-xl bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark"
+                >
+                  <div className="text-2xl font-black text-brandGold">
+                    {stat.value}
+                  </div>
+                  <div className="text-xs text-brandDark/60 dark:text-white/60">
+                    {stat.label}
+                  </div>
                 </div>
-                <div className="text-xs font-medium md:text-sm text-slate-400">
-                  Followers
-                </div>
-              </div>
-              <div className="p-4 text-center transition-all duration-300 border bg-slate-800/30 border-slate-700 rounded-xl hover:border-blue-500/30">
-                <div className="mb-1 text-2xl font-bold md:text-3xl text-cyan-400">
-                  200+
-                </div>
-                <div className="text-xs font-medium md:text-sm text-slate-400">
-                  Posts
-                </div>
-              </div>
-              <div className="p-4 text-center transition-all duration-300 border bg-slate-800/30 border-slate-700 rounded-xl hover:border-blue-500/30">
-                <div className="mb-1 text-2xl font-bold text-blue-400 md:text-3xl">
-                  50K+
-                </div>
-                <div className="text-xs font-medium md:text-sm text-slate-400">
-                  Impressions
-                </div>
-              </div>
+              ))}
             </div>
           </div>
+
         </div>
       </div>
-    </div>
+    </section>
   );
 }

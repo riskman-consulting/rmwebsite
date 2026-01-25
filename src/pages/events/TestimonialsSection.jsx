@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import { teamsImages } from '../../assets/teams';
 
 export default function TeamTestimonials() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -7,27 +8,27 @@ export default function TeamTestimonials() {
   const testimonials = [
     {
       id: 1,
-      name: "Priya Sharma",
+      name: "Vishal Sharma",
       position: "Senior Risk Analyst",
-      quote: "Working at Riskman for the past 3 years has been transformative. The international assignments to Vietnam and Indonesia gave me exposure I never imagined. Our 5-year celebration reminded me why I love this team.",
-      tag: "International Exposure",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop"
+      quote: "RiskMan marked a strong presence at the IIA Conference 2025 – Bombay Chapter, engaging alongside leading global corporations and top consulting groups. The participation reflects RiskMan’s growing stature as a trusted partner in risk management, governance, and internal audit excellence.",
+      tag: "Conference Participation",
+      image: teamsImages.VishalSharma
     },
     {
       id: 2,
-      name: "Rajesh Kumar",
-      position: "Internal Audit Manager",
-      quote: "The growth journey from a small team to 50+ professionals has been incredible. Every conference, every client meeting, and every team lunch has strengthened our bond. Proud to be part of this family.",
-      tag: "Team Growth",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
+      name: "Yashvi Ganeriwal",
+      position: "Senior Consultant",
+      quote: "This image captures a professional engagement at the Indorama Indonesia site in December 2025, marking the completion of an internal audit focused on exchange of insights and a solution-oriented approach. The audit encouraged open discussions on key risks and operational priorities, leading to clear and practical outcomes.",
+      tag: "International Exposure",
+      image: teamsImages.Yashvi
     },
     {
       id: 3,
-      name: "Anita Desai",
+      name: "Palak Kanojia.",
       position: "Compliance Specialist",
-      quote: "From articleship to leading projects in Myanmar and China, Riskman has invested in my career. The collaborative culture and continuous learning opportunities make every day exciting.",
+      quote: "Riskman gave me hands-on experience comparable to Big Four standards and significantly strengthened my analytical, professional, and corporate skill set.My articleship experience at Riskman Consulting has been extremely enriching and insightful. I got the opportunity to work on finance transformation assignments for a listed quick-commerce giant within the Zomato–Blinkit ecosystem. During this tenure, I worked closely with the Business Finance team and was involved in budget reconciliation, expense analysis, and identifying major cost-control areas, which helped me develop a strong practical understanding of management accounting and financial analysis",
       tag: "Career Development",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop"
+      image: teamsImages.Palak
     },
     {
       id: 4,
@@ -47,121 +48,114 @@ export default function TeamTestimonials() {
     }
   ];
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
-  const goToSlide = (index) => {
-    setCurrentSlide(index);
-  };
+  const next = () =>
+    setCurrentSlide((p) => (p + 1) % testimonials.length);
+  const prev = () =>
+    setCurrentSlide((p) => (p - 1 + testimonials.length) % testimonials.length);
 
   return (
-    <div className="min-h-screen py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 md:py-20">
-      <div className="container max-w-6xl px-4 mx-auto">
+    <section className="relative py-16 transition-colors duration-500 bg-bgLight dark:bg-bgDark">
+      <div className="container max-w-6xl">
+
         {/* Header */}
-        <div className="mb-12 text-center md:mb-16">
-          <h1 className="mb-4 text-4xl font-bold text-white md:text-5xl lg:text-6xl">
+        <div className="max-w-3xl mx-auto mb-20 text-center">
+          <h2 className="mb-5 text-4xl font-black sm:text-5xl font-heading text-brandDark dark:text-white">
             Voices from Our Team
-          </h1>
-          <p className="max-w-2xl mx-auto text-lg text-slate-300 md:text-xl">
-            Hear what our team members have to say about their journey with Riskman
+          </h2>
+          <p className="text-lg text-brandDark/70 dark:text-white/60">
+            Experiences that reflect growth, trust, and shared success at
+            RiskMan.
           </p>
         </div>
 
-        {/* Testimonial Carousel */}
+        {/* Carousel */}
         <div className="relative">
-          {/* Navigation Buttons */}
+
+          {/* Navigation */}
           <button
-            onClick={prevSlide}
-            className="absolute left-0 z-10 flex items-center justify-center w-12 h-12 transition-all duration-300 -translate-x-4 -translate-y-1/2 bg-white rounded-full shadow-lg top-1/2 md:-translate-x-12 hover:bg-slate-100 group"
-            aria-label="Previous testimonial"
+            onClick={prev}
+            className="absolute left-0 z-10 flex items-center justify-center w-12 h-12 transition -translate-x-6 -translate-y-1/2 border rounded-full top-1/2 bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark hover:border-brandGold/40"
           >
-            <ChevronLeft className="w-6 h-6 transition-transform text-slate-800 group-hover:scale-110" />
+            <ChevronLeft className="w-6 h-6 text-brandGold" />
           </button>
 
           <button
-            onClick={nextSlide}
-            className="absolute right-0 z-10 flex items-center justify-center w-12 h-12 transition-all duration-300 translate-x-4 -translate-y-1/2 bg-white rounded-full shadow-lg top-1/2 md:translate-x-12 hover:bg-slate-100 group"
-            aria-label="Next testimonial"
+            onClick={next}
+            className="absolute right-0 z-10 flex items-center justify-center w-12 h-12 transition translate-x-6 -translate-y-1/2 border rounded-full top-1/2 bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark hover:border-brandGold/40"
           >
-            <ChevronRight className="w-6 h-6 transition-transform text-slate-800 group-hover:scale-110" />
+            <ChevronRight className="w-6 h-6 text-brandGold" />
           </button>
 
-          {/* Testimonial Card */}
-          <div className="relative p-8 overflow-hidden border bg-slate-800/50 backdrop-blur-sm border-slate-700 rounded-3xl md:p-12">
-            {/* Quote Icon */}
-            <div className="absolute top-8 left-8 text-teal-400/20">
-              <svg className="w-16 h-16 md:w-20 md:h-20" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
-              </svg>
+          {/* Card */}
+          <div
+            className="p-10 sm:p-14 rounded-[2.5rem]
+            bg-surfaceLight/80 dark:bg-surfaceDark/40
+            border border-borderLight dark:border-borderDark
+            backdrop-blur-xl"
+          >
+            {/* Quote mark */}
+            <div className="absolute font-black top-10 left-10 text-brandGold/10 text-8xl">
+              “
             </div>
 
-            <div className="relative">
-              <div className="flex flex-col items-start gap-8 mb-8 md:flex-row">
-                {/* Profile Image */}
-                <div className="flex-shrink-0">
-                  <div className="relative">
-                    <div className="w-24 h-24 overflow-hidden rounded-full md:w-28 md:h-28 ring-4 ring-teal-400/30">
-                      <img
-                        src={testimonials[currentSlide].image}
-                        alt={testimonials[currentSlide].name}
-                        className="object-cover w-full h-full"
-                      />
+            <div className="relative flex flex-col gap-10 md:flex-row">
+              {/* Avatar */}
+              <div className="flex-shrink-0">
+                <div className="w-24 h-24 overflow-hidden border-4 rounded-full md:w-28 md:h-28 border-brandGold/30">
+                  <img
+                    src={testimonials[currentSlide].image}
+                    alt={testimonials[currentSlide].name}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="flex-1">
+                <p className="mb-6 text-lg italic leading-relaxed sm:text-xl text-brandDark/80 dark:text-white/70">
+                  {testimonials[currentSlide].quote}
+                </p>
+
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <div className="text-xl font-bold text-brandDark dark:text-white">
+                      {testimonials[currentSlide].name}
+                    </div>
+                    <div className="font-medium text-brandGold">
+                      {testimonials[currentSlide].position}
                     </div>
                   </div>
-                </div>
 
-                {/* Quote */}
-                <div className="flex-1">
-                  <p className="mb-6 text-lg italic leading-relaxed md:text-xl text-slate-200">
-                    {testimonials[currentSlide].quote}
-                  </p>
-
-                  <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                    {/* Name and Position */}
-                    <div>
-                      <h3 className="mb-1 text-xl font-bold text-white">
-                        {testimonials[currentSlide].name}
-                      </h3>
-                      <p className="font-medium text-teal-400">
-                        {testimonials[currentSlide].position}
-                      </p>
-                    </div>
-
-                    {/* Tag */}
-                    <div className="inline-flex items-center gap-2 px-4 py-2 border rounded-full bg-teal-600/20 border-teal-400/30">
-                      <Star className="w-4 h-4 text-teal-400 fill-teal-400" />
-                      <span className="text-sm font-medium text-teal-300">
-                        {testimonials[currentSlide].tag}
-                      </span>
-                    </div>
+                  <div
+                    className="inline-flex items-center gap-2 px-4 py-2 border rounded-full bg-brandGold/10 border-brandGold/30"
+                  >
+                    <Star className="w-4 h-4 text-brandGold fill-brandGold" />
+                    <span className="text-sm font-semibold text-brandGold">
+                      {testimonials[currentSlide].tag}
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Pagination Dots */}
-          <div className="flex justify-center gap-2 mt-8">
-            {testimonials.map((_, index) => (
+          {/* Dots */}
+          <div className="flex justify-center gap-3 mt-10">
+            {testimonials.map((_, i) => (
               <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`transition-all duration-300 rounded-full ${
-                  currentSlide === index
-                    ? 'w-8 h-3 bg-teal-400'
-                    : 'w-3 h-3 bg-slate-600 hover:bg-slate-500'
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
+                key={i}
+                onClick={() => setCurrentSlide(i)}
+                className={`h-3 rounded-full transition-all
+                  ${
+                    currentSlide === i
+                      ? "w-8 bg-brandGold"
+                      : "w-3 bg-borderLight dark:bg-borderDark"
+                  }`}
               />
             ))}
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

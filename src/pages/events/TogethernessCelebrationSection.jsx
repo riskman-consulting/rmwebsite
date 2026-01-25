@@ -1,119 +1,123 @@
-import React from 'react';
-import { Cake, UtensilsCrossed, Image, Heart, Camera, Users, Calendar, Trophy } from 'lucide-react';
+import React from "react";
+import {
+  Cake,
+  UtensilsCrossed,
+  Image,
+  Heart,
+  Camera,
+  Users,
+  Calendar,
+  Trophy,
+} from "lucide-react";
+import { Riskman_Aniversary_5_year_images } from "../../assets/riskman-anniversary/year-5";
+import journeyImages from "../../assets/journey";
+
+
+
+
 
 export default function TogethernessCelebration() {
   const highlights = [
     {
-      id: 1,
       icon: Cake,
-      iconBg: 'bg-pink-500',
-      title: 'The Grand Cake Cutting',
-      description: 'Our entire team came together for an emotional cake cutting ceremony, marking 5 years of dedication, hard work, and shared success.',
-      image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop'
+      title: "The Grand Cake Cutting",
+      description:
+        "An emotional moment where the entire team came together to celebrate five years of dedication, trust, and shared success.",
+      image:
+        Riskman_Aniversary_5_year_images[0],
     },
     {
-      id: 2,
       icon: UtensilsCrossed,
-      iconBg: 'bg-orange-500',
-      title: 'Team Lunch Gatherings',
-      description: 'Multiple team lunches brought us closer, sharing stories, laughter, and memories while celebrating our collective achievements.',
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop'
-    },
+      title: "Team Lunch Gatherings",
+      description:
+        "Shared meals, laughter, and stories that strengthened bonds beyond work and turned colleagues into family.",
+      image:
+          journeyImages.teamLunchDecember2023[0],
+      },
     {
-      id: 3,
       icon: Image,
-      iconBg: 'bg-teal-500',
-      title: 'Memory Wall',
-      description: 'A beautiful collection of 91 photographs capturing every milestone, every smile, and every moment that made these 5 years unforgettable.',
-      image: 'https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&h=600&fit=crop'
+      title: "Memory Wall",
+      description:
+        "A curated wall of photographs capturing milestones, smiles, and moments that defined our journey.",
+      image: journeyImages.teamLunchDecember2023[1],
     },
     {
-      id: 4,
       icon: Heart,
-      iconBg: 'bg-purple-500',
-      title: 'Gratitude & Reflections',
-      description: 'Team members shared heartfelt messages, expressing gratitude for the journey and excitement for the future ahead.',
-      image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop'
-    }
+      title: "Gratitude & Reflections",
+      description:
+        "Heartfelt messages of appreciation, reflection, and excitement for the road ahead.",
+      image:
+        journeyImages.teamMemberBirthday[0],
+    },
   ];
 
   const stats = [
-    {
-      icon: Camera,
-      number: '91',
-      label: 'Photos Captured',
-      iconBg: 'bg-teal-500'
-    },
-    {
-      icon: Users,
-      number: '50+',
-      label: 'Team Members',
-      iconBg: 'bg-teal-500'
-    },
-    {
-      icon: Calendar,
-      number: '8',
-      label: 'Celebration Events',
-      iconBg: 'bg-teal-500'
-    },
-    {
-      icon: Trophy,
-      number: '5',
-      label: 'Years Together',
-      iconBg: 'bg-teal-500'
-    }
+    { icon: Camera, value: "91", label: "Photos Captured" },
+    { icon: Users, value: "50+", label: "Team Members" },
+    { icon: Calendar, value: "8", label: "Celebration Events" },
+    { icon: Trophy, value: "5", label: "Years Together" },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100">
-      {/* Header Section */}
-      <div className="container px-4 py-16 mx-auto md:py-20">
-        <div className="mb-12 text-center md:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-pink-100 rounded-full">
-            <svg className="w-5 h-5 text-pink-600" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-            </svg>
-            <span className="text-sm font-semibold text-pink-600">Celebrating Together</span>
+    <section className="relative py-16 transition-colors duration-500 bg-bgLight dark:bg-bgDark">
+      <div className="container">
+
+        {/* Header */}
+        <div className="max-w-3xl mx-auto mb-20 text-center">
+          <div
+            className="inline-flex items-center gap-3 px-6 py-3 mb-6 border rounded-full bg-surfaceLight/80 dark:bg-surfaceDark/40 border-borderLight dark:border-borderDark backdrop-blur-xl"
+          >
+            <Heart className="w-4 h-4 text-brandGold" />
+            <span className="text-xs font-black tracking-[0.3em] uppercase text-brandGold">
+              Celebrating Together
+            </span>
           </div>
-          <h1 className="mb-4 text-4xl font-bold text-slate-900 md:text-5xl lg:text-6xl">
+
+          <h2 className="mb-5 text-4xl font-black sm:text-5xl font-heading text-brandDark dark:text-white">
             5 Years of Togetherness
-          </h1>
-          <p className="max-w-3xl mx-auto text-lg text-slate-600 md:text-xl">
-            Celebrating milestones, creating memories, and strengthening bonds that make Riskman a family
+          </h2>
+
+          <p className="text-lg leading-relaxed text-brandDark/70 dark:text-white/60">
+            Celebrating milestones, memories, and the bonds that make RiskMan a
+            family.
           </p>
         </div>
 
-        {/* Highlights Grid */}
-        <div className="grid grid-cols-1 gap-6 mb-16 md:grid-cols-2 lg:gap-8">
-          {highlights.map((highlight) => {
-            const Icon = highlight.icon;
+        {/* Highlights */}
+        <div className="grid gap-8 mb-24 sm:grid-cols-2">
+          {highlights.map((item, i) => {
+            const Icon = item.icon;
             return (
               <div
-                key={highlight.id}
-                className="relative overflow-hidden transition-all duration-300 bg-white shadow-lg group rounded-2xl hover:shadow-xl hover:-translate-y-1"
+                key={i}
+                className="group rounded-[2.5rem] overflow-hidden
+                bg-surfaceLight/80 dark:bg-surfaceDark/40
+                border border-borderLight dark:border-borderDark
+                transition-all duration-500
+                hover:-translate-y-1
+                hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)]"
               >
-                {/* Image */}
                 <div className="relative h-64 overflow-hidden">
                   <img
-                    src={highlight.image}
-                    alt={highlight.title}
-                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+                    src={item.image}
+                    alt={item.title}
+                    className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 transition-opacity duration-300 bg-gradient-to-t from-black/60 to-transparent opacity-60 group-hover:opacity-80"></div>
-                  
-                  {/* Icon Badge */}
-                  <div className={`absolute top-4 right-4 w-14 h-14 ${highlight.iconBg} rounded-2xl flex items-center justify-center shadow-lg`}>
-                    <Icon className="text-white w-7 h-7" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+                  <div
+                    className="absolute flex items-center justify-center border top-4 right-4 w-14 h-14 rounded-2xl bg-brandGold/10 border-brandGold/30"
+                  >
+                    <Icon className="w-7 h-7 text-brandGold" />
                   </div>
                 </div>
 
-                {/* Content */}
-                <div className="p-6">
-                  <h3 className="mb-3 text-2xl font-bold text-slate-900">
-                    {highlight.title}
+                <div className="p-8">
+                  <h3 className="mb-3 text-2xl font-bold font-heading text-brandDark dark:text-white">
+                    {item.title}
                   </h3>
-                  <p className="leading-relaxed text-slate-600">
-                    {highlight.description}
+                  <p className="leading-relaxed text-brandDark/70 dark:text-white/60">
+                    {item.description}
                   </p>
                 </div>
               </div>
@@ -121,50 +125,53 @@ export default function TogethernessCelebration() {
           })}
         </div>
 
-        {/* Stats Section - Our Celebration in Numbers */}
-        <div className="relative p-8 overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl md:p-12">
-          {/* Background Pattern */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-teal-400 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-400 rounded-full blur-3xl"></div>
+        {/* Stats */}
+        <div
+          className="p-10 sm:p-14 rounded-[3rem]
+          bg-surfaceLight/80 dark:bg-surfaceDark/40
+          border border-borderLight dark:border-borderDark
+          backdrop-blur-xl"
+        >
+          <div className="mb-12 text-center">
+            <h3 className="text-3xl font-black sm:text-4xl font-heading text-brandDark dark:text-white">
+              Our Celebration in Numbers
+            </h3>
+            <p className="mt-3 text-brandDark/60 dark:text-white/60">
+              Every number tells a story of unity and shared success.
+            </p>
           </div>
 
-          {/* Content */}
-          <div className="relative">
-            <div className="mb-8 text-center md:mb-12">
-              <h2 className="mb-3 text-3xl font-bold text-white md:text-4xl lg:text-5xl">
-                Our Celebration in Numbers
-              </h2>
-              <p className="max-w-2xl mx-auto text-lg text-slate-300">
-                Every number tells a story of joy, unity, and shared success
-              </p>
-            </div>
-
-            {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-4 md:gap-6 lg:grid-cols-4">
-              {stats.map((stat, index) => {
-                const Icon = stat.icon;
-                return (
+          <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
+            {stats.map((stat, i) => {
+              const Icon = stat.icon;
+              return (
+                <div
+                  key={i}
+                  className="p-8 text-center rounded-[2rem]
+                  bg-bgLight dark:bg-bgDark
+                  border border-borderLight dark:border-borderDark
+                  transition-all duration-300
+                  hover:border-brandGold/40"
+                >
                   <div
-                    key={index}
-                    className="p-6 text-center transition-all duration-300 border bg-slate-800/50 backdrop-blur-sm border-slate-700 rounded-2xl hover:border-teal-400/50 hover:bg-slate-800/70 group"
+                    className="flex items-center justify-center w-16 h-16 mx-auto mb-4 border rounded-2xl bg-brandGold/10 border-brandGold/30"
                   >
-                    <div className={`inline-flex items-center justify-center w-16 h-16 ${stat.iconBg} rounded-2xl mb-4 transition-transform duration-300 group-hover:scale-110 shadow-lg`}>
-                      <Icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="mb-2 text-4xl font-bold text-white md:text-5xl">
-                      {stat.number}
-                    </div>
-                    <div className="text-sm font-medium text-slate-300 md:text-base">
-                      {stat.label}
-                    </div>
+                    <Icon className="w-8 h-8 text-brandGold" />
                   </div>
-                );
-              })}
-            </div>
+
+                  <div className="mb-1 text-4xl font-black text-brandGold">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm font-medium text-brandDark/60 dark:text-white/60">
+                    {stat.label}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
+
       </div>
-    </div>
+    </section>
   );
 }

@@ -33,5 +33,5 @@ export const IIA_Bombay_2026_images  = [
     // image14,
     // image15,
     // image16,
-    // image17,
+    image17,
 ]

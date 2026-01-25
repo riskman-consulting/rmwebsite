@@ -1,215 +1,151 @@
-import { useState } from "react";
-import {
-  Bell,
-  Globe,
-  Plane,
-  Lightbulb,
-  Sparkles,
-  Cake,
-  CheckCircle2,
-  Clock,
-} from "lucide-react";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Target, TrendingUp, Globe, Zap, Trophy, Award } from 'lucide-react';
 
-export default function CompanyTimeline() {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-
+const TimelineSection = () => {
   const timelineEvents = [
     {
-      year: "2020",
-      title: "The Beginning",
-      description: "Riskman Consulting was founded with a vision to redefine risk management and internal audit services in India.",
-      icon: Bell,
-      achievements: ["5 founding members", "10 initial clients", "Mumbai office established"],
-      position: "left",
+      year: '2020',
+      title: 'The Beginning',
+      description: 'Riskman Consulting was founded with a vision to revolutionize risk management consulting across industries.',
+      icon: <Target />,
+      achievements: ['Founded in Mumbai', 'First 5 clients onboarded', 'Team of 8 passionate professionals']
     },
     {
-      year: "2021",
-      title: "Expanding Horizons",
-      description: "A year of steady growth with team expansion and our first international assignments.",
-      icon: Globe,
-      achievements: ["Team grew to 15", "First international client", "Compliance services launched"],
-      position: "right",
+      year: '2021',
+      title: 'Rapid Growth',
+      description: 'Expanded operations and established ourselves as a trusted partner in the risk management space.',
+      icon: <TrendingUp />,
+      achievements: ['Expanded to 3 cities', 'Team grew to 20+', 'Launched first industry report']
     },
     {
-      year: "2022",
-      title: "Going Global",
-      description: "International exposure with projects across Southeast Asia and industry participation.",
-      icon: Plane,
-      achievements: ["Projects in 3 countries", "25 team members", "IIA conference participation"],
-      position: "left",
+      year: '2022',
+      title: 'International Presence',
+      description: 'Crossed borders and brought our expertise to international markets.',
+      icon: <Globe />,
+      achievements: ['Opened UAE office', 'Served clients in 4 countries', 'Won Industry Excellence Award']
     },
     {
-      year: "2023",
-      title: "Industry Recognition",
-      description: "Recognized as thought leaders with conference presentations and China market entry.",
-      icon: Lightbulb,
-      achievements: ["15+ conference sessions", "China operations started", "35 professionals onboard"],
-      position: "right",
+      year: '2023',
+      title: 'Innovation & Recognition',
+      description: 'Launched innovative solutions and gained industry-wide recognition for our work.',
+      icon: <Zap />,
+      achievements: ['Launched AI-powered platform', 'Featured in top industry publications', 'Team reached 40+']
     },
     {
-      year: "2024",
-      title: "Innovation & Growth",
-      description: "Strengthening delivery with advanced risk solutions and a growing global footprint.",
-      icon: Sparkles,
-      achievements: ["Advanced audit tooling", "100+ clients served", "45 team members"],
-      position: "left",
+      year: '2024',
+      title: 'Consolidation & Excellence',
+      description: 'Strengthened our position as industry leaders with cutting-edge solutions and exceptional client service.',
+      icon: <Trophy />,
+      achievements: ['Top 10 Risk Consulting Firm', 'Served 100+ enterprise clients', 'Published 5 white papers']
     },
     {
-      year: "2025",
-      title: "5 Years of Excellence",
-      description: "Celebrating five years of trust, teamwork, and milestones with our growing family.",
-      icon: Cake,
-      achievements: ["50+ professionals", "5-year celebration", "Company-wide gatherings"],
-      position: "right",
-    },
+      year: '2025',
+      title: 'Five Years Strong',
+      description: 'Celebrating five years of innovation, growth, and unwavering commitment to excellence.',
+      icon: <Award />,
+      achievements: ['50+ team members globally', '4 international offices', '200+ successful projects']
+    }
   ];
 
   return (
-    <section className="relative py-32 bg-[#000F1F] overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 opacity-30 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#FFB800]/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#FFB800]/10 rounded-full blur-[120px]" />
-      </div>
+    <section id="journey" className="py-32 bg-white dark:bg-[#001A33] transition-colors duration-500 relative overflow-hidden">
+      {/* Background Decoration */}
+      <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-[#FFB800]/5 rounded-full blur-[150px] pointer-events-none"></div>
+      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#003366]/10 dark:bg-[#FFC000]/5 rounded-full blur-[150px] pointer-events-none"></div>
 
-      <div className="container relative z-10 max-w-7xl px-6 mx-auto">
-        {/* Header */}
-        <div className="max-w-3xl mx-auto mb-24 text-center">
-          <div className="inline-flex items-center gap-3 px-6 py-2.5 mb-6 bg-white/5 backdrop-blur-2xl rounded-full border border-white/10 shadow-2xl">
-            <Clock className="w-4 h-4 text-[#FFC000]" />
-            <span className="text-[#FFC000] text-xs font-black tracking-[0.3em] uppercase">Our Journey</span>
-          </div>
-
-          <h2 className="mb-6 text-5xl md:text-6xl font-black tracking-tight text-white">
-            5 Years of Growth{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFB800] to-[#FFC000]">& Trust</span>
-          </h2>
-
-          <p className="text-xl text-white/60 font-light leading-relaxed">
-            A timeline of meaningful milestones that shaped Riskman Consulting.
-          </p>
+      <div className="relative z-10 px-6 mx-auto max-w-7xl lg:px-12">
+        {/* Section Header */}
+        <div className="mb-24 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <span className="text-[10px] font-black text-[#FFB800] uppercase tracking-[0.3em] mb-4 block">
+              Our Story
+            </span>
+            <h2 className="mb-6 text-5xl font-bold tracking-tighter md:text-6xl">
+              <span className="text-[#001F3F] dark:text-white">Journey Through</span>
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFB800] to-[#FFC000] italic font-serif">
+                Five Remarkable Years
+              </span>
+            </h2>
+            <p className="mt-6 max-w-2xl text-[#001F3F]/60 dark:text-white/60 text-lg mx-auto italic">
+              "Every milestone represents countless hours of dedication, innovation, and the collective effort of an incredible team"
+            </p>
+          </motion.div>
         </div>
 
         {/* Timeline */}
-        <div className="relative max-w-6xl mx-auto">
-          {/* Center Line - Desktop */}
-          <div className="absolute hidden lg:block left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#FFB800]/40 via-[#FFB800]/20 to-transparent -translate-x-1/2">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-[#FFB800] shadow-[0_0_20px_rgba(255,184,0,0.6)]" />
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-[#FFB800]/30" />
-          </div>
+        <div className="relative">
+          {/* Vertical Line */}
+          <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#FFB800] via-[#FFC000] to-[#FFB800] transform -translate-x-1/2 hidden lg:block"></div>
 
-          <div className="space-y-16 lg:space-y-8">
-            {timelineEvents.map((event, index) => {
-              const Icon = event.icon;
-              const isLeft = event.position === "left";
-              const isHovered = hoveredIndex === index;
-
-              return (
-                <div
-                  key={index}
-                  className="relative"
-                  onMouseEnter={() => setHoveredIndex(index)}
-                  onMouseLeave={() => setHoveredIndex(null)}
-                >
-                  {/* Desktop Layout */}
-                  <div className="items-center hidden lg:flex">
-                    {/* Content Card */}
-                    <div className={`w-[calc(50%-3rem)] ${isLeft ? "pr-0 text-right" : "pl-0 ml-auto"}`}>
-                      <div className="group relative p-8 bg-white/[0.02] dark:bg-white/[0.02] backdrop-blur-[100px] rounded-[2rem] border border-borderLight dark:border-white/10 transition-all duration-700 hover:bg-white/[0.08] hover:border-brandAccent/40 dark:hover:border-brandGold/40 hover:shadow-[0_20px_60px_rgba(255,184,0,0.15)] overflow-hidden">
-                        {/* Year Badge */}
-                        <div className={`flex items-center gap-4 mb-4 ${isLeft ? "justify-end" : ""}`}>
-                          <div className="flex items-center justify-center w-14 h-14 border-2 rounded-2xl border-brandAccent/30 dark:border-brandGold/30 bg-brandAccent/10 dark:bg-brandGold/10 backdrop-blur-xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 group-hover:border-brandAccent/60 dark:group-hover:border-brandGold/60">
-                            <Icon className="w-7 h-7 text-brandAccent dark:text-brandGold" strokeWidth={2} />
-                          </div>
-                          <span className="text-4xl font-black text-brandAccent dark:text-brandGold tracking-tight">{event.year}</span>
-                        </div>
-
-                        {/* Title */}
-                        <h3 className="mb-3 text-2xl font-bold text-brandDark dark:text-white group-hover:text-brandAccent dark:group-hover:text-brandGold transition-colors duration-300">
-                          {event.title}
-                        </h3>
-
-                        {/* Description */}
-                        <p className="mb-6 text-gray-600 dark:text-white/60 leading-relaxed">{event.description}</p>
-
-                        {/* Achievements */}
-                        <ul className={`space-y-2 ${isLeft ? "items-end" : ""}`}>
-                          {event.achievements.map((item, idx) => (
-                            <li key={idx} className={`flex items-center gap-3 text-sm text-gray-700 dark:text-white/70 ${isLeft ? "justify-end" : ""}`}>
-                              {isLeft && <span>{item}</span>}
-                              <CheckCircle2 className="w-4 h-4 text-brandAccent dark:text-brandGold shrink-0" />
-                              {!isLeft && <span>{item}</span>}
-                            </li>
-                          ))}
-                        </ul>
-
-                        {/* Hover Shimmer Effect */}
-                        <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-[1500ms] bg-gradient-to-r from-transparent via-white/5 to-transparent pointer-events-none" />
+          {/* Timeline Events */}
+          <div className="space-y-24">
+            {timelineEvents.map((event, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className={`flex flex-col lg:flex-row items-center gap-12 ${
+                  index % 2 === 0 ? 'lg:flex-row-reverse' : ''
+                }`}
+              >
+                {/* Content Card */}
+                <div className="flex-1 w-full">
+                  <div className="bg-white dark:bg-[#000d1a] p-10 rounded-[2.5rem] shadow-xl border border-[#003366]/10 dark:border-[#FFC000]/20 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-16 h-16 bg-gradient-to-br from-[#FFB800] to-[#FFC000] rounded-2xl flex items-center justify-center text-[#001F3F] shadow-lg group-hover:scale-110 transition-transform">
+                        {event.icon}
+                      </div>
+                      <div>
+                        <div className="text-3xl font-black text-[#FFB800]">{event.year}</div>
+                        <div className="text-xs font-black text-[#001F3F]/40 dark:text-white/40 uppercase tracking-widest">Year {index + 1}</div>
                       </div>
                     </div>
-
-                    {/* Center Dot */}
-                    <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center z-10">
-                      <div
-                        className={`relative flex items-center justify-center w-16 h-16 rounded-full bg-surfaceLight dark:bg-brandDark border-4 transition-all duration-500 ${
-                          isHovered ? "border-brandAccent dark:border-brandGold shadow-[0_0_30px_rgba(255,184,0,0.6)] scale-110" : "border-brandAccent/30 dark:border-brandGold/30"
-                        }`}
-                      >
-                        <Icon className={`w-6 h-6 transition-all duration-500 ${isHovered ? "text-brandAccent dark:text-brandGold scale-110" : "text-brandAccent/60 dark:text-brandGold/60"}`} />
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Mobile Layout */}
-                  <div className="relative lg:hidden">
-                    {/* Left Border Line */}
-                    <div className="absolute left-6 top-0 bottom-0 w-[2px] bg-gradient-to-b from-brandAccent/40 dark:from-brandGold/40 to-brandAccent/10 dark:to-brandGold/10" />
-
-                    {/* Content */}
-                    <div className="pl-16 pb-8">
-                      {/* Icon Dot */}
-                      <div className="absolute left-0 top-0 flex items-center justify-center w-12 h-12 rounded-full bg-surfaceLight dark:bg-brandDark border-4 border-brandAccent/40 dark:border-brandGold/40">
-                        <Icon className="w-5 h-5 text-brandAccent dark:text-brandGold" />
-                      </div>
-
-                      {/* Card */}
-                      <div className="p-6 bg-white/[0.02] dark:bg-white/[0.02] backdrop-blur-[100px] rounded-2xl border border-borderLight dark:border-white/10 hover:border-brandAccent/40 dark:hover:border-brandGold/40 transition-all duration-500">
-                        <div className="flex items-center gap-3 mb-3">
-                          <span className="text-2xl font-black text-brandAccent dark:text-brandGold">{event.year}</span>
-                          <div className="flex items-center justify-center w-10 h-10 border-2 rounded-xl border-brandAccent/30 dark:border-brandGold/30 bg-brandAccent/10 dark:bg-brandGold/10">
-                            <Icon className="w-5 h-5 text-brandAccent dark:text-brandGold" />
-                          </div>
+                    
+                    <h3 className="text-2xl font-bold text-[#001F3F] dark:text-white mb-4 tracking-tight">
+                      {event.title}
+                    </h3>
+                    
+                    <p className="text-[#001F3F]/70 dark:text-white/70 leading-relaxed mb-6 italic">
+                      "{event.description}"
+                    </p>
+                    
+                    <div className="space-y-3">
+                      {event.achievements.map((achievement, idx) => (
+                        <div key={idx} className="flex items-center gap-3">
+                          <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#FFB800] to-[#FFC000]"></div>
+                          <span className="text-sm font-medium text-[#001F3F] dark:text-white/80">{achievement}</span>
                         </div>
-
-                        <h3 className="mb-2 text-xl font-bold text-brandDark dark:text-white">{event.title}</h3>
-
-                        <p className="mb-4 text-sm text-gray-600 dark:text-white/60 leading-relaxed">{event.description}</p>
-
-                        <ul className="space-y-2">
-                          {event.achievements.map((item, idx) => (
-                            <li key={idx} className="flex items-center gap-2 text-sm text-gray-700 dark:text-white/70">
-                              <CheckCircle2 className="w-4 h-4 text-brandAccent dark:text-brandGold shrink-0" />
-                              {item}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                      ))}
                     </div>
                   </div>
                 </div>
-              );
-            })}
-          </div>
-        </div>
 
-        {/* Bottom CTA */}
-        <div className="mt-20 text-center">
-          <div className="inline-flex items-center gap-3 px-8 py-4 bg-white/5 dark:bg-white/5 backdrop-blur-2xl rounded-2xl border border-borderLight dark:border-white/10 text-gray-600 dark:text-white/60 text-sm">
-            <Sparkles className="w-5 h-5 text-brandAccent dark:text-brandGold" />
-            <span>The journey continues...</span>
+                {/* Timeline Dot */}
+                <div className="relative flex-shrink-0 hidden w-24 h-24 lg:block">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#FFB800] to-[#FFC000] rounded-full animate-pulse"></div>
+                  <div className="absolute inset-2 bg-white dark:bg-[#001A33] rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#FFB800] to-[#FFC000] rounded-full shadow-lg"></div>
+                  </div>
+                </div>
+
+                {/* Spacer */}
+                <div className="flex-1 hidden lg:block"></div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default TimelineSection;

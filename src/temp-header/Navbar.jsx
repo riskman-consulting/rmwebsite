@@ -1,5 +1,5 @@
 // ============================================
-// Navbar.jsx - WITH ANNOUNCEMENT BANNER
+// Navbar.jsx - WITH ANNOUNCEMENT BANNER (FIXED)
 // ============================================
 
 import React, { useRef, useEffect, useState } from "react";
@@ -78,7 +78,7 @@ export const Navbar = ({
             {/* =======================
                NAVBAR
             ======================= */}
-            <nav className="fixed top-[40px] left-0 right-0 z-50 w-full h-20 border-b bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark">
+            <nav className="fixed top-[48px] left-0 right-0 z-50 w-full h-20 border-b bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark">
                 <div className="container flex items-center h-full">
 
                     {/* =======================

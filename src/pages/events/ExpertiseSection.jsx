@@ -1,155 +1,163 @@
-import React from 'react';
-import { Building2, Briefcase, FileText, Building, Shield, Monitor, Settings, DollarSign } from 'lucide-react';
+import React from "react";
+import {
+  Building2,
+  Briefcase,
+  FileText,
+  Building,
+  Shield,
+  Monitor,
+  Settings,
+  DollarSign,
+} from "lucide-react";
 
 export default function ExpertiseSection() {
   const industries = [
-    'Quick Commerce',
-    'Digital & News Media',
-    'Insurance',
-    'Textile',
-    'Automobile',
-    'Pharmaceuticals',
-    'IT',
-    'Ed-tech',
-    'FMCG',
-    'Alco-Bev'
+    "Quick Commerce",
+    "Digital & News Media",
+    "Insurance",
+    "Textile",
+    "Automobile",
+    "Pharmaceuticals",
+    "IT",
+    "Ed-tech",
+    "FMCG",
+    "Alco-Bev",
   ];
 
   const clients = [
-    'Zomato',
-    'Blinkit',
-    'Feeding India',
-    'CARE Health Insurance',
-    'Schoolnet',
-    'Pernod Ricard',
-    'TG Minda',
-    'HP Maxico',
-    'Emami',
-    'Tirupati Medicare',
-    'Daido',
-    'Granules'
+    "Zomato",
+    "Blinkit",
+    "Feeding India",
+    "CARE Health Insurance",
+    "Schoolnet",
+    "Pernod Ricard",
+    "TG Minda",
+    "HP Maxico",
+    "Emami",
+    "Tirupati Medicare",
+    "Daido",
+    "Granules",
   ];
 
   const expertiseAreas = [
-    {
-      icon: FileText,
-      title: 'Internal Audit',
-      color: 'from-teal-500 to-teal-600'
-    },
-    {
-      icon: Building,
-      title: 'Concurrent Audit',
-      color: 'from-teal-500 to-teal-600'
-    },
-    {
-      icon: DollarSign,
-      title: 'Transaction Audits',
-      color: 'from-teal-500 to-teal-600'
-    },
-    {
-      icon: Shield,
-      title: 'IFC & SOX Testing',
-      color: 'from-teal-500 to-teal-600'
-    },
-    {
-      icon: Monitor,
-      title: 'Digital Transformation',
-      color: 'from-teal-500 to-teal-600'
-    },
-    {
-      icon: Settings,
-      title: 'BRD & UAT Execution',
-      color: 'from-teal-500 to-teal-600'
-    }
+    { icon: FileText, title: "Internal Audit" },
+    { icon: Building, title: "Concurrent Audit" },
+    { icon: DollarSign, title: "Transaction Audits" },
+    { icon: Shield, title: "IFC & SOX Testing" },
+    { icon: Monitor, title: "Digital Transformation" },
+    { icon: Settings, title: "BRD & UAT Execution" },
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-bgLight to-white">
-      <div className="container px-5 mx-auto sm:px-8 lg:px-12">
-        
-        {/* Industries & Clients Grid */}
-        <div className="grid gap-8 mx-auto mb-20 lg:grid-cols-2 max-w-7xl">
-          
-          {/* Industries Covered */}
-          <div className="p-8 border shadow-lg bg-gradient-to-br from-cyan-50 to-teal-50 rounded-3xl border-cyan-100">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="flex items-center justify-center shadow-lg w-14 h-14 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl">
-                <Building2 className="text-white w-7 h-7" />
+    <section className="relative py-16 pt-8 transition-colors duration-500 bg-bgLight dark:bg-bgDark">
+      <div className="container">
+
+        {/* Top Grid */}
+        <div className="grid gap-10 mx-auto mb-24 max-w-7xl lg:grid-cols-2">
+
+          {/* Industries */}
+          <div className="p-10 rounded-[2.5rem]
+            bg-surfaceLight/80 dark:bg-surfaceDark/40
+            border border-borderLight dark:border-borderDark
+            backdrop-blur-xl
+            transition-all duration-500
+            hover:border-brandGold/40
+            hover:shadow-[0_25px_60px_rgba(255,184,0,0.15)]">
+
+            <div className="flex items-center gap-4 mb-8">
+              <div className="flex items-center justify-center border w-14 h-14 rounded-2xl bg-brandGold/10 border-brandGold/30">
+                <Building2 className="w-7 h-7 text-brandGold" />
               </div>
-              <h2 className="text-3xl font-bold font-heading text-brandDark">
+              <h2 className="text-3xl font-black font-heading text-brandDark dark:text-white">
                 Industries Covered
               </h2>
             </div>
-            
+
             <div className="flex flex-wrap gap-3 mb-6">
-              {industries.map((industry, index) => (
+              {industries.map((industry, i) => (
                 <span
-                  key={index}
-                  className="px-4 py-2 text-sm font-medium text-gray-700 transition-all duration-200 bg-white border border-teal-100 rounded-full shadow-sm hover:shadow-md hover:scale-105"
+                  key={i}
+                  className="px-4 py-2 text-sm font-medium transition border rounded-full bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark text-brandDark/70 dark:text-white/70 hover:border-brandGold/40"
                 >
                   {industry}
                 </span>
               ))}
             </div>
-            
-            <div className="text-xl font-bold text-teal-600">
+
+            <div className="text-lg font-bold text-brandGold">
               10+ Industries
             </div>
           </div>
 
-          {/* Major Clients */}
-          <div className="p-8 border border-orange-100 shadow-lg bg-gradient-to-br from-orange-50 to-amber-50 rounded-3xl">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="flex items-center justify-center shadow-lg w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl">
-                <Briefcase className="text-white w-7 h-7" />
+          {/* Clients */}
+          <div className="p-10 rounded-[2.5rem]
+            bg-surfaceLight/80 dark:bg-surfaceDark/40
+            border border-borderLight dark:border-borderDark
+            backdrop-blur-xl
+            transition-all duration-500
+            hover:border-brandGold/40
+            hover:shadow-[0_25px_60px_rgba(255,184,0,0.15)]">
+
+            <div className="flex items-center gap-4 mb-8">
+              <div className="flex items-center justify-center border w-14 h-14 rounded-2xl bg-brandGold/10 border-brandGold/30">
+                <Briefcase className="w-7 h-7 text-brandGold" />
               </div>
-              <h2 className="text-3xl font-bold font-heading text-brandDark">
+              <h2 className="text-3xl font-black font-heading text-brandDark dark:text-white">
                 Major Clients
               </h2>
             </div>
-            
+
             <div className="flex flex-wrap gap-3 mb-6">
-              {clients.map((client, index) => (
+              {clients.map((client, i) => (
                 <span
-                  key={index}
-                  className="px-4 py-2 text-sm font-medium text-gray-700 transition-all duration-200 bg-white border border-orange-100 rounded-full shadow-sm hover:shadow-md hover:scale-105"
+                  key={i}
+                  className="px-4 py-2 text-sm font-medium transition border rounded-full bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark text-brandDark/70 dark:text-white/70 hover:border-brandGold/40"
                 >
                   {client}
                 </span>
               ))}
             </div>
-            
-            <div className="text-xl font-bold text-orange-600">
+
+            <div className="text-lg font-bold text-brandGold">
               15+ Major Clients
             </div>
           </div>
         </div>
 
-        {/* Areas of Expertise */}
-        <div className="p-8 mx-auto shadow-2xl bg-gradient-to-br from-brandDark to-brandNavy rounded-3xl sm:p-12 max-w-7xl">
-          <div className="mb-12 text-center">
-            <h2 className="mb-3 text-3xl font-bold text-white sm:text-4xl font-heading">
+        {/* Expertise */}
+        <div className="max-w-7xl mx-auto p-12 rounded-[3rem]
+          bg-surfaceLight/80 dark:bg-surfaceDark/40
+          border border-borderLight dark:border-borderDark
+          backdrop-blur-xl">
+
+          <div className="text-center mb-14">
+            <h2 className="mb-3 text-3xl font-black sm:text-4xl font-heading text-brandDark dark:text-white">
               Areas of Expertise
             </h2>
-            <p className="text-lg text-gray-300">
-              Comprehensive experience across multiple audit and transformation domains
+            <p className="text-lg text-brandDark/70 dark:text-white/60">
+              Experience across audit, compliance, and digital transformation
             </p>
           </div>
 
-          {/* Expertise Grid */}
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {expertiseAreas.map((area, index) => {
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {expertiseAreas.map((area, i) => {
               const Icon = area.icon;
               return (
                 <div
-                  key={index}
-                  className="p-6 transition-all duration-300 border group bg-white/5 backdrop-blur-sm border-white/10 rounded-2xl hover:bg-white/10 hover:border-teal-400/30 hover:scale-105 hover:shadow-lg hover:shadow-teal-500/20"
+                  key={i}
+                  className="group p-6 rounded-2xl
+                    bg-bgLight dark:bg-bgDark
+                    border border-borderLight dark:border-borderDark
+                    transition-all duration-300
+                    hover:-translate-y-1
+                    hover:border-brandGold/40
+                    hover:shadow-[0_20px_50px_rgba(255,184,0,0.15)]"
                 >
                   <div className="flex items-center gap-4">
-                    <div className={`w-14 h-14 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                      <Icon className="text-white w-7 h-7" strokeWidth={2} />
+                    <div className="flex items-center justify-center transition-transform duration-300 border w-14 h-14 rounded-xl bg-brandGold/10 border-brandGold/30 group-hover:scale-110">
+                      <Icon className="w-7 h-7 text-brandGold" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white transition-colors group-hover:text-teal-300">
+                    <h3 className="text-xl font-semibold text-brandDark dark:text-white">
                       {area.title}
                     </h3>
                   </div>

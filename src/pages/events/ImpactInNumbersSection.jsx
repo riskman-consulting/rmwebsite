@@ -1,5 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Trophy, Building2, Globe, Flag, Users, FileCheck } from 'lucide-react';
+import React, { useState, useEffect, useRef } from "react";
+import {
+  Trophy,
+  Building2,
+  Globe,
+  Flag,
+  Users,
+  FileCheck,
+} from "lucide-react";
 
 export default function ImpactSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -8,79 +15,68 @@ export default function ImpactSection() {
   const impactStats = [
     {
       icon: Trophy,
-      number: '5',
-      label: 'Years of Excellence',
-      color: 'bg-gradient-to-br from-orange-400 to-orange-500',
-      countUp: false
+      number: 5,
+      label: "Years of Excellence",
+      countUp: false,
     },
     {
       icon: Building2,
-      number: '150',
-      suffix: '+',
-      label: 'Clients Served',
-      color: 'bg-gradient-to-br from-emerald-400 to-emerald-500',
-      countUp: true
+      number: 150,
+      suffix: "+",
+      label: "Clients Served",
+      countUp: true,
     },
     {
       icon: Globe,
-      number: '4',
-      label: 'Countries Reached',
-      color: 'bg-gradient-to-br from-blue-400 to-blue-500',
-      countUp: false
+      number: 4,
+      label: "Countries Reached",
+      countUp: false,
     },
     {
       icon: Flag,
-      number: '25',
-      suffix: '+',
-      label: 'Conference Presentations',
-      color: 'bg-gradient-to-br from-purple-400 to-purple-500',
-      countUp: true
+      number: 25,
+      suffix: "+",
+      label: "Conference Presentations",
+      countUp: true,
     },
     {
       icon: Users,
-      number: '50',
-      suffix: '+',
-      label: 'Team Members',
-      color: 'bg-gradient-to-br from-pink-400 to-pink-500',
-      countUp: true
+      number: 50,
+      suffix: "+",
+      label: "Team Members",
+      countUp: true,
     },
     {
       icon: FileCheck,
-      number: '500',
-      suffix: '+',
-      label: 'Projects Completed',
-      color: 'bg-gradient-to-br from-indigo-400 to-indigo-500',
-      countUp: true
-    }
+      number: 500,
+      suffix: "+",
+      label: "Projects Completed",
+      countUp: true,
+    },
   ];
 
+  /* Intersection observer */
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
+      ([entry]) => entry.isIntersecting && setIsVisible(true),
       { threshold: 0.2 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
+    if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, []);
 
-  const AnimatedNumber = ({ target, suffix = '', countUp }) => {
+  /* Count-up */
+  const AnimatedNumber = ({ target, suffix = "", countUp }) => {
     const [count, setCount] = useState(0);
 
     useEffect(() => {
       if (!isVisible || !countUp) return;
 
-      const duration = 2000;
+      let current = 0;
+      const duration = 1800;
       const steps = 60;
       const increment = target / steps;
-      let current = 0;
 
       const timer = setInterval(() => {
         current += increment;
@@ -96,57 +92,72 @@ export default function ImpactSection() {
     }, [isVisible, target, countUp]);
 
     return (
-      <span>
+      <>
         {countUp ? count : target}
         {suffix}
-      </span>
+      </>
     );
   };
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gradient-to-b from-bgLight to-white">
-      <div className="container px-5 mx-auto sm:px-8 lg:px-12">
-        
-        {/* Section Header */}
-        <div className="max-w-3xl mx-auto mb-16 text-center">
-          <h2 className="mb-4 text-4xl font-bold sm:text-5xl font-heading text-brandDark">
+    <section
+      ref={sectionRef}
+      className="relative py-16 transition-colors duration-500 bg-bgLight dark:bg-bgDark"
+    >
+      <div className="container">
+
+        {/* Header */}
+        <div className="max-w-3xl mx-auto mb-20 text-center">
+          <h2 className="mb-5 text-4xl font-black sm:text-5xl font-heading text-brandDark dark:text-white">
             Our Impact in Numbers
           </h2>
-          <p className="text-lg text-gray-600">
-            Five years of dedication, growth, and excellence in risk management and consulting services
+          <p className="text-lg leading-relaxed text-brandDark/70 dark:text-white/60">
+            Five years of dedication, growth, and measurable excellence across
+            industries and geographies.
           </p>
         </div>
 
         {/* Stats Grid */}
-        <div className="grid max-w-6xl grid-cols-1 gap-6 mx-auto sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid max-w-6xl grid-cols-1 gap-8 mx-auto sm:grid-cols-2 lg:grid-cols-3">
           {impactStats.map((stat, index) => {
             const Icon = stat.icon;
             return (
               <div
                 key={index}
-                className="p-8 transition-all duration-300 bg-white border border-gray-100 shadow-lg group rounded-2xl hover:shadow-2xl hover:-translate-y-2"
+                className="group p-10 rounded-[2rem]
+                  bg-surfaceLight/80 dark:bg-surfaceDark/40
+                  border border-borderLight dark:border-borderDark
+                  backdrop-blur-xl
+                  transition-all duration-500
+                  hover:-translate-y-2
+                  hover:border-brandGold/40
+                  hover:shadow-[0_25px_60px_rgba(255,184,0,0.15)]"
                 style={{
-                  animation: isVisible ? `fadeInUp 0.6s ease-out ${index * 0.1}s both` : 'none'
+                  animation: isVisible
+                    ? `fadeUp 0.6s ease-out ${index * 0.1}s both`
+                    : "none",
                 }}
               >
                 {/* Icon */}
-                <div className="inline-flex mb-6">
-                  <div className={`${stat.color} p-4 rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                    <Icon className="w-8 h-8 text-white" strokeWidth={2.5} />
+                <div className="mb-6">
+                  <div
+                    className="flex items-center justify-center w-16 h-16 transition-transform duration-300 border rounded-2xl bg-brandGold/10 border-brandGold/30 group-hover:scale-110"
+                  >
+                    <Icon className="w-8 h-8 text-brandGold" />
                   </div>
                 </div>
 
                 {/* Number */}
-                <div className="mb-3 text-5xl font-bold sm:text-6xl text-brandDark font-heading">
-                  <AnimatedNumber 
-                    target={parseInt(stat.number)} 
-                    suffix={stat.suffix || ''} 
+                <div className="mb-2 text-5xl font-black sm:text-6xl font-heading text-brandDark dark:text-white">
+                  <AnimatedNumber
+                    target={stat.number}
+                    suffix={stat.suffix || ""}
                     countUp={stat.countUp}
                   />
                 </div>
 
                 {/* Label */}
-                <div className="text-lg font-semibold text-gray-600">
+                <div className="text-base font-medium text-brandDark/60 dark:text-white/60">
                   {stat.label}
                 </div>
               </div>
@@ -155,8 +166,9 @@ export default function ImpactSection() {
         </div>
       </div>
 
+      {/* Animation */}
       <style jsx>{`
-        @keyframes fadeInUp {
+        @keyframes fadeUp {
           from {
             opacity: 0;
             transform: translateY(30px);
