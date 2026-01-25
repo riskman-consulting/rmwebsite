@@ -6,14 +6,14 @@
 import Angel from "./Angel.webp";
 import AnirbanBiswas from "./Anirban Biswas.webp";
 import Artika from "./Artika.webp";
-import Pranshul from "./pranshul.webp";
-import Ayush from "./Ayush.png";
+import Pranshul from "./Pranshul.webp";
+import Ayush from "./Ayush.webp";
 import Debottam from "./Debottam.webp";
 import JaiDeep from "./JaiDeep.webp";
 import Kaushik from "./Kaushik.webp";
 import Kartik from "./kartik.webp";
 import MayukhDhar from "./Mayukh Dhar.webp";
-import monika from "./monika.jpeg";
+import monika from "./monika.webp";
 import NishanAgarwal from "./Nishan Agarwal.webp";
 import Palak from "./Palak.webp";
 import Pawan from "./pawan.webp";
