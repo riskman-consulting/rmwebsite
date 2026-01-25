@@ -17,16 +17,17 @@ export default function TeamTestimonials() {
       position: "Senior Risk Consultant",
       quote:
         "This image captures a professional engagement at the Indorama Indonesia site in December 2025, marking the completion of an internal audit focused on exchange of insights and a solution-oriented approach. The audit encouraged open discussions on key risks and operational priorities, leading to clear and practical outcomes.",
-      image:teamsImages.YashviGeneriwal,
+      image:teamsImages.Yashvi,
     },
     {
-      name: "Anita Desai",
-      position: "Compliance Specialist",
-      quote:
-        "From articleship to leading projects in Myanmar and China, RiskMan has invested deeply in my professional journey.",
+      name: "Palak kanojia",
+      position: "Senior Risk Consultant",
+      quote:`Riskman gave me hands-on experience comparable to Big Four standards and significantly strengthened my analytical, professional, and corporate skill set.
+ 
+My articleship experience at Riskman Consulting has been extremely enriching and insightful. I got the opportunity to work on finance transformation assignments for a listed quick-commerce giant within the Zomato–Blinkit ecosystem. During this tenure, I worked closely with the Business Finance team and was involved in budget reconciliation, expense analysis, and identifying major cost-control areas, which helped me develop a strong practical understanding of management accounting and financial analysis`,
       tag: "Career Development",
       image:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
+        teamsImages.Palak,
     },
     {
       name: "Vikram Patel",

@@ -19,75 +19,78 @@ export default function MomentsThatMatter() {
     "Office Culture",
   ];
 
-  const photos = [
-    {
-      id: 1,
-      category: "5 Year Celebration",
-      title: "5 Year Celebration",
-      date: "December 2024",
-      image:
-        Riskman_Aniversary_5_year_images[0],    },
-    {
-      id: 2,
-      category: "5 Year Celebration",
-      image: Riskman_Aniversary_5_year_images[1],
-    },
-    {
-      id: 3,
-      category: "Team Lunches",
-      image: journeyImages.teamLunchDecember2023[1],
-    },
-    {
-      id: 4,
-      category: "5 Year Celebration",
-      image:
-        journeyImages.teamLunchDecember2023[0],
-    },
-    {
-      id: 5,
-      category: "Office Culture",
-      image: journeyImages.teamMemberBirthday[0],
-    },
-    {
-      id: 6,
-      category: "5 Year Celebration",
-      image:
-        Riskman_Aniversary_5_year_images[4],
-    },
-    {
-      id: 7,
-      category: "Meetings & Discussions",
-      image: journeyImages.iiaMumbaiMarch2025[2],
-    },
-    {
-      id: 8,
-      category: "International Assignments",
-      image: journeyImages.iiaDelhiJuly2024[1],
-    },
-    {
-      id: 9,
-      category: "Office Culture",
-      image:journeyImages.teamDinnerDecember2023[0],
-    },
-    {
-      id: 10,
-      category: "Team Lunches",
-      image:
-        Riskman_Aniversary_5_year_images[2],
-    },
-    {
-      id: 11,
-      category: "Office Culture",
-      image:
-        journeyImages.teamMemberBirthday[0],
-    },
-    {
-      id: 12,
-      category: "5 Year Celebration",
-      image:
-        Riskman_Aniversary_5_year_images[4],
-    },
-  ];
+const photos = [
+  // ===== 5 Year Celebration (5) =====
+  { id: 1, category: "5 Year Celebration", title: "RiskMan 5 Year Anniversary", image: Riskman_Aniversary_5_year_images[0] },
+  { id: 2, category: "5 Year Celebration", title: "Anniversary Celebration Moments", image: Riskman_Aniversary_5_year_images[1] },
+  { id: 3, category: "5 Year Celebration", title: "Team Celebrating 5 Years", image: Riskman_Aniversary_5_year_images[2] },
+  { id: 4, category: "5 Year Celebration", title: "Milestone Celebration Highlights", image: Riskman_Aniversary_5_year_images[3] },
+  { id: 5, category: "5 Year Celebration", title: "RiskMan Growth Journey", image: Riskman_Aniversary_5_year_images[4] },
+
+  // ===== Team Lunches (2) =====
+  { id: 6, category: "Team Lunches", title: "Team Lunch at Zomato", image: journeyImages.teamLunchDecember2023[0] },
+  { id: 7, category: "Team Lunches", title: "Team Bonding Lunch", image: journeyImages.teamLunchDecember2023[1] },
+
+  // ===== Office Culture (7) =====
+  { id: 8, category: "Office Culture", title: "Team Member Birthday Celebration", image: journeyImages.teamMemberBirthday[0] },
+  { id: 9, category: "Office Culture", title: "Diwali & Christmas Celebration", image: journeyImages.diwaliChristmasZomato[0] },
+  { id:10, category: "Office Culture", title: "Festive Office Moments", image: journeyImages.diwaliChristmasZomato[1] },
+  { id:11, category: "Office Culture", title: "Celebrating Together", image: journeyImages.diwaliChristmasZomato[2] },
+  { id:12, category: "Office Culture", title: "Holiday Team Celebration", image: journeyImages.diwaliChristmasZomato[3] },
+  { id:13, category: "Office Culture", title: "Festive Workplace Vibes", image: journeyImages.diwaliChristmasZomato[4] },
+  { id:14, category: "Office Culture", title: "Year-End Celebrations", image: journeyImages.diwaliChristmasZomato[5] },
+
+  // ===== Meetings & Discussions (1) =====
+  { id:15, category: "Meetings & Discussions", title: "Professional Discussions & Knowledge Sharing", image: journeyImages.iiaMumbaiMarch2025[2] },
+
+  // ===== International Assignments – Delhi (4) =====
+  { id:16, category: "International Assignments", title: "IIA Conference Delhi – July 2024", image: journeyImages.iiaDelhiJuly2024[0] },
+  { id:17, category: "International Assignments", title: "IIA Delhi Conference Session", image: journeyImages.iiaDelhiJuly2024[1] },
+  { id:18, category: "International Assignments", title: "Knowledge Exchange at IIA Delhi", image: journeyImages.iiaDelhiJuly2024[2] },
+  { id:19, category: "International Assignments", title: "Networking at IIA Delhi", image: journeyImages.iiaDelhiJuly2024[3] },
+
+  // ===== International Assignments – Mumbai March 2025 (9) =====
+  { id:20, category: "International Assignments", title: "IIA Mumbai Conference – March 2025", image: journeyImages.iiaMumbaiMarch2025[0] },
+  { id:21, category: "International Assignments", title: "IIA Mumbai Session Highlights", image: journeyImages.iiaMumbaiMarch2025[1] },
+  { id:22, category: "International Assignments", title: "Professional Interaction – IIA Mumbai", image: journeyImages.iiaMumbaiMarch2025[3] },
+  { id:23, category: "International Assignments", title: "Learning at IIA Mumbai", image: journeyImages.iiaMumbaiMarch2025[4] },
+  { id:24, category: "International Assignments", title: "Conference Moments – IIA Mumbai", image: journeyImages.iiaMumbaiMarch2025[5] },
+  { id:25, category: "International Assignments", title: "Networking at IIA Mumbai", image: journeyImages.iiaMumbaiMarch2025[6] },
+  { id:26, category: "International Assignments", title: "Industry Engagement – IIA Mumbai", image: journeyImages.iiaMumbaiMarch2025[7] },
+  { id:27, category: "International Assignments", title: "IIA Mumbai Closing Moments", image: journeyImages.iiaMumbaiMarch2025[8] },
+  { id:28, category: "International Assignments", title: "Conference Environment – IIA Mumbai", image: journeyImages.iiaMumbaiMarch2025[2] },
+
+  // ===== International Assignments – Mumbai Jan 2026 (7) =====
+  { id:29, category: "International Assignments", title: "IIA Mumbai Conference – January 2026", image: journeyImages.iiaMumbaiJan2026[0] },
+  { id:30, category: "International Assignments", title: "IIA Mumbai 2026 Sessions", image: journeyImages.iiaMumbaiJan2026[1] },
+  { id:31, category: "International Assignments", title: "Knowledge Sharing – IIA Mumbai 2026", image: journeyImages.iiaMumbaiJan2026[2] },
+  { id:32, category: "International Assignments", title: "Professional Networking – IIA Mumbai", image: journeyImages.iiaMumbaiJan2026[3] },
+  { id:33, category: "International Assignments", title: "IIA Mumbai Conference Floor", image: journeyImages.iiaMumbaiJan2026[4] },
+  { id:34, category: "International Assignments", title: "Insights from IIA Mumbai 2026", image: journeyImages.iiaMumbaiJan2026[5] },
+  { id:35, category: "International Assignments", title: "Closing Session – IIA Mumbai 2026", image: journeyImages.iiaMumbaiJan2026[6] },
+
+  // ===== Team Dinners (7) =====
+  { id:36, category: "Office Culture", title: "Team Dinner – December 2023", image: journeyImages.teamDinnerDecember2023[0] },
+  { id:37, category: "Office Culture", title: "Team Dinner Moments", image: journeyImages.teamDinnerDecember2023[1] },
+  { id:38, category: "Office Culture", title: "Year-End Team Dinner", image: journeyImages.teamDinnerDecember2023[2] },
+  { id:39, category: "Office Culture", title: "Team Dinner Celebration", image: journeyImages.teamDinnerDecember2023[3] },
+  { id:40, category: "Office Culture", title: "Team Dinner – Feb 2022", image: journeyImages.teamDinnerFeb2022[0] },
+  { id:41, category: "Office Culture", title: "Team Dinner – Oct 2021", image: journeyImages.teamDinnerOct2021[0] },
+  { id:42, category: "Office Culture", title: "Early Team Bonding Dinner", image: journeyImages.teamDinnerOct2021[1] },
+
+  // ===== AGM & Summit (8) =====
+  { id:43, category: "Meetings & Discussions", title: "AGM Delhi – July 2025", image: journeyImages.agmDelhiJuly2025[0] },
+  { id:44, category: "Meetings & Discussions", title: "AGM Delhi Session", image: journeyImages.agmDelhiJuly2025[1] },
+  { id:45, category: "Meetings & Discussions", title: "AGM Delhi Interaction", image: journeyImages.agmDelhiJuly2025[2] },
+  { id:46, category: "Meetings & Discussions", title: "AGM Delhi Highlights", image: journeyImages.agmDelhiJuly2025[3] },
+
+  { id:47, category: "Meetings & Discussions", title: "Audit Leaders Summit – Mumbai 2024", image: journeyImages.auditLeadersSummitMumbaiNov2024[0] },
+  { id:48, category: "Meetings & Discussions", title: "Audit Leaders Panel Discussion", image: journeyImages.auditLeadersSummitMumbaiNov2024[1] },
+  { id:49, category: "Meetings & Discussions", title: "Leadership Exchange Session", image: journeyImages.auditLeadersSummitMumbaiNov2024[2] },
+  { id:50, category: "Meetings & Discussions", title: "Audit Leaders Networking", image: journeyImages.auditLeadersSummitMumbaiNov2024[3] },
+];
+
+
 
   const filteredPhotos =
     activeFilter === "All"
