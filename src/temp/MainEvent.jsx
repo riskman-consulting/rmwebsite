@@ -8,6 +8,7 @@ import FilterBar from './FilterBar';
 import { events } from '../pages/about/Events.jsx';
 import { FiCalendar, FiArrowDown } from 'react-icons/fi';
 import EventFAQ from './FaqSection.jsx';
+import JourneyTimeline from './JourneyTimeline.jsx';
 
 const years = ["2026", "2025", "2024", "2023"];
 
@@ -173,6 +174,7 @@ const MainEvent = () => {
         {selectedEvent && (
           <EventModal event={selectedEvent} onClose={handleCloseModal} />
         )}
+        <JourneyTimeline/>
       </AnimatePresence>
       <EventFAQ/>
     </div>

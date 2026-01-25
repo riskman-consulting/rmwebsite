@@ -78,8 +78,8 @@ export const events = [
     location: "Kolkata Office, India",
     type: "Internal Leadership Meet",
 
-    image:IIA_Internal_Leadership_2025_images[0], 
-    gallery:IIA_Internal_Leadership_2025_images ,
+    image: IIA_Internal_Leadership_2025_images[0], 
+    gallery: IIA_Internal_Leadership_2025_images.slice(0, IIA_Internal_Leadership_2025_images.length >= 5 ? 5 : IIA_Internal_Leadership_2025_images.length), 
 
     shortDesc:
       "A leadership-driven team meet focused on collaboration, mentorship, and aligning people with purpose as 2025 draws to a close.",
@@ -656,72 +656,72 @@ export const journeyData = {
     {
       title: "Team Dinner",
       date: "October 2021",
-      image: "life-team-dinner-oct-2021.jpg"
+      image: journeyImages.teamDinnerOct2021[0]
     },
     {
       title: "Team Dinner",
       date: "February 2022",
-      image: "life-team-dinner-feb-2022.jpg"
+      image: journeyImages.teamDinnerFeb2022[0]
     },
     {
       title: "Team Dinner",
       date: "December 2023",
-      image: "life-team-dinner-dec-2023.jpg"
+      image: journeyImages.teamDinnerDecember2023[0]
     },
     {
       title: "Team Lunch at Zomato",
       date: "December 2023",
-      image: "life-team-lunch-zomato.jpg"
+      image: journeyImages.teamLunchDecember2023[0]
     },
     {
       title: "Team Member Birthday",
       location: "Schoolnet",
-      image: "life-birthday-schoolnet.jpg"
+      image:journeyImages.teamDinnerOct2021[1]
     },
     {
       title: "IIA Conference",
       location: "Delhi",
       date: "July 2024",
-      image: "life-iia-delhi-2024.jpg"
+      image: journeyImages.iiaDelhiJuly2024[0]
     },
     {
       title: "Audit Leaders Summit",
       location: "Mumbai",
       date: "November 2024",
-      image: "life-audit-summit-mumbai-2024.jpg"
+      image: journeyImages.auditLeadersSummitMumbaiNov2024[0]
     },
     {
       title: "IIA Conference",
       location: "Mumbai",
       date: "March 2025",
-      image: "life-iia-mumbai-2025.jpg"
+      image: journeyImages.iiaMumbaiMarch2025[0]
     },
     {
       title: "AGM",
       location: "Delhi",
       date: "July 2025",
-      image: "life-agm-delhi-2025.jpg"
+      image: journeyImages.agmDelhiJuly2025[0]
     },
     {
       title: "CIA Celebration with Team",
-      image: "life-cia-celebration.jpg"
+      image: journeyImages.ciaCelebration[0]
     },
     {
       title: "Festive Celebration",
       description: "Diwali & Christmas with Zomato Team",
-      image: "life-diwali-christmas.jpg"
+      image: journeyImages.diwaliChristmasZomato[0]
     },
     {
       title: "IIA Conference",
       location: "Mumbai",
       date: "January 2026",
-      image: "life-iia-mumbai-2026.jpg"
+      image: journeyImages.iiaMumbaiJan2026[0]
     }
   ],
 
   summary: {
     text:
       "The journey with RiskMan reflects continuous learning, trust, and professional growth. From an Article Assistant to a Manager, the experience has shaped a confident, disciplined, and business-aligned risk professional.",
-    image: "journey-summary.jpg"
+    image: Riskman_Aniversary_5_year_images[0]
   }
 };
