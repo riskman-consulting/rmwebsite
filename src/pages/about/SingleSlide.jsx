@@ -180,7 +180,7 @@ export default function SingleSlide() {
   ];
 
   return (
-    <section className="relative w-full h-screen min-h-[650px] flex items-center overflow-hidden bg-[#001122] mt-20 md:mt-26 lg:mt-32">
+    <section className="relative w-full h-screen min-h-[650px] flex items-center overflow-hidden bg-[#001122]">
       {/* 1. BACKGROUND IMAGE LAYER */}
       <div className="absolute inset-0 z-0">
         <img
