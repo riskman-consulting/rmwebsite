@@ -1,154 +1,11 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Bell, Shield, Building2, Lightbulb, Users, CheckCircle2, ChevronLeft, ChevronRight, Sparkles, Award, Target, TrendingUp, Briefcase } from 'lucide-react';
-import image_2020 from "../../assets/journey/ai/2020.jpg";
-import image_2021 from "../../assets/journey/ai/2021.webp";
-import image_2022 from "../../assets/journey/ai/2022.png";
-import image_2023 from "../../assets/journey/ai/2023.png";
-import image_2025 from "../../assets/journey/ai/2025.png";
-import image_2020t from "../../assets/journey/ai/2020t.png";
-import image_2021t from "../../assets/journey/ai/2021t.png";
-import image_2023t from "../../assets/journey/ai/2023t.png";
-import image_2024t from "../../assets/journey/ai/2024t.png";
-import image_2025t from "../../assets/journey/ai/2025t.png";
-const TIMELINE_DATA = {
-  first: [
-    {
-      year: "2020",
-      title: "The Foundation",
-      description: "My journey with RiskMan began in 2020 as an Article Assistant. I was eager to bridge the gap between academic theory and real-world risk management. Working closely with Arpit Sir, I quickly aligned with his vision: transforming traditional audits into strategic, business-oriented risk solutions.",
-      icon: Bell,
-      image: image_2020,
-      impact: "Core Skills Acquisition",
-      achievements: [
-        "Onboarded as Article Assistant",
-        "Mastered foundational risk frameworks",
-        "Direct mentorship from founding partners",
-      ],
-    },
-    {
-      year: "2020-2021",
-      title: "Resilience in Crisis",
-      description: "The pandemic brought unprecedented uncertainty. While many paused, RiskMan pivoted. Transitioning to remote work taught me that ownership isn't about where you sit, but the discipline you bring to your deliverables. This phase forged my professional character and adaptability.",
-      icon: Shield,
-      image: image_2021,
-      impact: "Adaptive Agility",
-      achievements: [
-        "Pioneered remote audit workflows",
-        "Zero-gap in client service during lockdowns",
-        "Strengthened personal accountability",
-      ],
-    },
-    {
-      year: "2021-2023",
-      title: "Vertical Expansion",
-      description: "Exposure defines expertise. I dove into diverse industries—from the lightning-fast world of Quick Commerce to the precision of Pharmaceuticals and the complexity of Manufacturing. I learned that every industry has its own heartbeat, and risk management must be tailored to match it.",
-      icon: Building2,
-      image: image_2022,
-      impact: "10+ Industry Expertise",
-      achievements: [
-        "Managed audits for Zomato & Blinkit",
-        "Executed high-stakes SOX & IFC audits",
-        "Cross-functional collaboration across FMCG & Alco-Bev",
-      ],
-    },
-    {
-      year: "2023-2024",
-      title: "The Transition",
-      description: "Completing my article-ship marked a new chapter. Transitioning to a Consultant meant moving from executing tasks to owning client relationships. With strategic guidance from Arpit Sir, I focused on global certifications (CIA & CISA) to bring world-class standards to our firm.",
-      icon: Lightbulb,
-      image: image_2023,
-      impact: "Strategic Consulting",
-      achievements: [
-        "Promoted to Consultant",
-        "Led end-to-end client engagements",
-        "Launched professional specialization in CIA/CISA",
-      ],
-    },
-    {
-      year: "2025-Present",
-      title: "Leadership & Vision",
-      description: "Qualifying both CIA and CISA was more than a certification; it was a promise of quality to our clients. Now as a Manager, I lead a team of 10+, focusing on mentoring the next generation of risk professionals while scaling our operational excellence.",
-      icon: Users,
-      image: image_2025,
-      impact: "Team Leadership & Scale",
-      achievements: [
-        "Dual Certification: CIA & CISA",
-        "Promoted to Manager",
-        "Leading 10+ member high-performance team",
-        "Strategic portfolio management",
-      ],
-    },
-  ],
-  third: [
-    {
-      year: "2020",
-      title: "Strategic Onboarding",
-      description: "He entered RiskMan in 2020 as an Article Assistant, immediately showing a penchant for identifying systemic risks. Under the direct mentorship of Arpit Sir, he began crafting a professional identity rooted in business-aligned risk management.",
-      icon: Bell,
-      image: image_2020t,
-      impact: "Foundational Excellence",
-      achievements: [
-        "Started as Article Assistant",
-        "Learned business-oriented risk solutions",
-        "Mentorship from founding partners",
-      ],
-    },
-    {
-      year: "2020-2021",
-      title: "The Resilience Phase",
-      description: "The COVID-19 pandemic served as a crucible for his professional development. He demonstrated exceptional adaptability, ensuring that RiskMan's commitment to client delivery remained unshaken during the shift to remote operations.",
-      icon: Shield,
-      image: image_2021t,
-      impact: "Operational Continuity",
-      achievements: [
-        "Seamless transition to remote work",
-        "Developed ownership mindset",
-        "Strengthened discipline and resilience",
-      ],
-    },
-    {
-      year: "2021-2023",
-      title: "Industry Mastery",
-      description: "He expanded his reach across a wide spectrum of sectors, becoming a versatile asset for the firm. His ability to navigate the nuances of diverse industries—from IT to Manufacturing—allowed him to deliver high-impact internal audit solutions.",
-      icon: Building2,
-      image: image_2023t,
-      impact: "Multi-Sector Dominance",
-      achievements: [
-        "Managed 15+ major clients including Zomato",
-        "Led SOX & IFC compliance engagements",
-        "Spearheaded digital transformation audits",
-      ],
-    },
-    {
-      year: "2023-2024",
-      title: "Consultative Elevation",
-      description: "Following his article-ship, he transitioned into a Consultant role. This period was marked by increased independence and a strategic focus on global standards, as he pursued CIA and CISA certifications to align his growth with the firm's long-term goals.",
-      icon: Lightbulb,
-      image: image_2024t,
-      impact: "Engagement Ownership",
-      achievements: [
-        "Promoted to Consultant",
-        "Independent client management",
-        "Commenced CIA & CISA journey",
-      ],
-    },
-    {
-      year: "2025-Present",
-      title: "Managerial Leadership",
-      description: "Now a dual-certified professional (CIA & CISA), he serves as a Manager at RiskMan. He is responsible for leading a team of over 10 professionals, ensuring quality delivery across a diverse portfolio of clients while contributing to the firm's leadership vision.",
-      icon: Users,
-      image: image_2025t,
-      impact: "Strategic Leadership",
-      achievements: [
-        "Certified CIA & CISA",
-        "Promoted to Manager",
-        "Team lead (10+ professionals)",
-        "Enterprise-level audit management",
-      ],
-    },
-  ],
-};
+
+import { TIMELINE_DATA } from './data';
+import Timeline from './TimeLine';
+
+
 
 export default function JourneyTimeline() {
   const [perspective, setPerspective] = useState('third');
@@ -540,3 +397,149 @@ const Stat = ({ icon: Icon, value, label, delay }) => (
     </p>
   </motion.div>
 );
+
+
+
+// import React, { useState } from 'react';
+// import { motion } from 'framer-motion';
+// import { Sparkles, Award, Target, TrendingUp, Building2 } from 'lucide-react';
+// import { TIMELINE_DATA } from './data';
+
+// export default function JourneyTimeline() {
+//   const [perspective, setPerspective] = useState('third');
+//   const data = TIMELINE_DATA[perspective];
+
+//   return (
+//     <section className="relative py-24 bg-white dark:bg-zinc-950 overflow-hidden">
+//       <div className="container max-w-7xl mx-auto px-4">
+        
+//         {/* Header Section */}
+//         <div className="flex flex-col items-center mb-24 text-center">
+//           <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 text-[10px] font-bold tracking-[0.2em] uppercase border rounded-full bg-zinc-100 dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800">
+//             <Sparkles className="w-3 h-3" />
+//             Our History
+//           </div>
+//           <h1 className="text-6xl md:text-7xl font-black tracking-tighter text-zinc-900 dark:text-zinc-100 mb-6">
+//             How it <span className="text-blue-600 italic">Began</span>
+//           </h1>
+//           <p className="text-zinc-500 max-w-xl font-medium">A history of progress and strategic risk management solutions.</p>
+          
+//           {/* Perspective Toggle (Matches your original logic) */}
+//           <div className="flex p-1 mt-10 rounded-full bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
+//             {['third', 'first'].map((p) => (
+//               <button
+//                 key={p}
+//                 onClick={() => setPerspective(p)}
+//                 className={`px-8 py-2 text-xs font-bold uppercase tracking-widest rounded-full transition-all ${
+//                   perspective === p ? 'bg-white dark:bg-zinc-800 shadow-sm text-blue-600' : 'text-zinc-400'
+//                 }`}
+//               >
+//                 {p === 'third' ? 'Corporate' : 'Personal'}
+//               </button>
+//             ))}
+//           </div>
+//         </div>
+
+//         {/* The Timeline Path Layout */}
+//         <div className="relative">
+          
+//           {/* Diagonal Connector Line (SVG) */}
+//           <div className="absolute inset-0 z-0 hidden lg:block pointer-events-none">
+//             <svg width="100%" height="100%" viewBox="0 0 1200 800" fill="none" preserveAspectRatio="none">
+//               <motion.path
+//                 d="M 50 700 L 1150 100"
+//                 stroke="currentColor"
+//                 strokeWidth="2"
+//                 strokeDasharray="8 8"
+//                 className="text-zinc-300 dark:text-zinc-800"
+//                 initial={{ pathLength: 0 }}
+//                 whileInView={{ pathLength: 1 }}
+//                 transition={{ duration: 1.5 }}
+//               />
+//             </svg>
+//           </div>
+
+//           {/* Grid Layout for Timeline Items */}
+//           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-4">
+//             {data.map((item, idx) => (
+//               <TimelineItem 
+//                 key={idx} 
+//                 item={item} 
+//                 index={idx} 
+//                 // This logic offsets items vertically to mimic the "upward path"
+//                 isEven={idx % 2 === 0} 
+//               />
+//             ))}
+//           </div>
+//         </div>
+
+//         {/* Bottom Stats (Matching the clean reference) */}
+//         <div className="mt-32 grid grid-cols-2 lg:grid-cols-4 gap-8 border-t border-zinc-100 dark:border-zinc-900 pt-12">
+//           <Stat value="15+" label="Global Clients" />
+//           <Stat value="10+" label="Industries" />
+//           <Stat value="5+" label="Years Growth" />
+//           <div className="flex flex-col justify-center">
+//              <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-400">For more information</p>
+//              <p className="text-sm font-bold text-blue-600">visit RiskMan.com</p>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+// function TimelineItem({ item, index, isEven }) {
+//   return (
+//     <motion.div 
+//       initial={{ opacity: 0, y: 20 }}
+//       whileInView={{ opacity: 1, y: 0 }}
+//       viewport={{ once: true }}
+//       transition={{ delay: index * 0.1 }}
+//       className={`flex flex-col ${isEven ? 'lg:mt-64' : 'lg:mt-0'}`}
+//     >
+//       {/* Label/Title */}
+//       <div className="mb-4">
+//         <span className="text-[10px] font-black uppercase tracking-tighter text-blue-600">{item.title}</span>
+//         <h2 className="text-4xl font-black text-zinc-900 dark:text-zinc-100 leading-none">{item.year}</h2>
+//       </div>
+
+//       {/* Narrative */}
+//       <p className="text-[13px] leading-relaxed text-zinc-500 dark:text-zinc-400 mb-6 font-medium line-clamp-4">
+//         {item.description}
+//       </p>
+
+//       {/* Image Block (Styled to match the reference) */}
+//       <div className="relative group grayscale hover:grayscale-0 transition-all duration-500">
+//         <div className="aspect-[3/4] overflow-hidden bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
+//           <img 
+//             src={item.image} 
+//             alt={item.title}
+//             className="w-full h-full object-fill opacity-80 group-hover:scale-105 transition-transform duration-700" 
+//           />
+//         </div>
+        
+//         {/* Path Dot Connector */}
+//         <div className="absolute -left-2 -bottom-2 w-4 h-4 rounded-full bg-white border-2 border-blue-600 z-20 hidden lg:block" />
+//       </div>
+
+//       {/* Impact/Achievements List */}
+//       <div className="mt-6 space-y-2">
+//         {item.achievements.slice(0, 2).map((ach, i) => (
+//           <div key={i} className="flex items-start gap-2">
+//             <div className="w-1 h-1 rounded-full bg-blue-600 mt-1.5" />
+//             <p className="text-[11px] font-bold text-zinc-700 dark:text-zinc-300 uppercase leading-tight">{ach}</p>
+//           </div>
+//         ))}
+//       </div>
+//     </motion.div>
+//   );
+// }
+
+// function Stat({ value, label }) {
+//   return (
+//     <div className="text-left">
+//       <h4 className="text-3xl font-black text-zinc-900 dark:text-zinc-100 leading-none mb-2">{value}</h4>
+//       <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-400">{label}</p>
+//     </div>
+//   );
+// }

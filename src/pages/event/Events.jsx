@@ -16,6 +16,7 @@ import VideoHighlightSection from './VideoHighlightSection';
 import EventsGrid from './EventsGrid.jsx';
 import EventModal from './EventModal.jsx';
 import { events } from "./data"; // Your events data
+import RiskManTimeline from './JourneyCard.jsx';
  
 function Events() {
   const [selectedEvent, setSelectedEvent] = useState(null);
@@ -35,7 +36,8 @@ function Events() {
       <CompanyTimelineSection />
       <CultureSection />
       <ExpertiseSection />
-      <JourneyTimeLineSection />
+      {/* <JourneyTimeLineSection /> */}
+      <RiskManTimeline />
       <MomentThatMattersSection />
       <AwardSection />
       <InternationalAssignmentSection />
