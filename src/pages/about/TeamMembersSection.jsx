@@ -1,13 +1,14 @@
+
 import React from "react";
 import { Linkedin } from "lucide-react";
 import { teamsImages } from "../../assets/teams";
 
-
-
-
 /* ========= CONFIG ========= */
 const COLUMNS_DESKTOP = 10;
-const TILE_CLASS = "w-[96px] h-[96px]";
+
+/* Tile size (matches screenshot density) */
+const TILE_CLASS =
+  "w-[96px] h-[96px] rounded-lg";
 
 /* ========= AUTO LOGO POSITION ========= */
 function injectLogo(members) {
@@ -26,6 +27,7 @@ function injectLogo(members) {
 }
 
 const RiskManTeams = () => {
+  /* allMembers remains unchanged */
   const allMembers = [
     { id: 1, image: teamsImages.ShantaPal, linkedin: "https://linkedin.com/in/example"},
     { id: 22, image: teamsImages.Pranshul, linkedin: "https://linkedin.com/in/example" },
@@ -65,11 +67,13 @@ const RiskManTeams = () => {
     {id:34,image:teamsImages.Kiran},
     {id:35, image:teamsImages.monica}
   ];
- 
   const gridItems = injectLogo(allMembers);
 
   return (
-    <section id="riskman-teams" className="py-20 bg-surfaceLight dark:bg-surfaceDark">
+    <section
+      id="riskman-teams"
+      className="py-20 bg-surfaceLight dark:bg-surfaceDark"
+    >
       <div className="container">
         <h1 className="mb-12 text-4xl font-bold text-brandPrimary dark:text-brandAccent">
           Meet the RiskMan Team
@@ -78,12 +82,18 @@ const RiskManTeams = () => {
         <div className="flex justify-center">
           <div
             className="
-              grid gap-4
-              grid-cols-6
+              grid
+              grid-cols-4
               sm:grid-cols-6
               md:grid-cols-8
               lg:grid-cols-10
+
+              gap-4
+              sm:gap-5
+              lg:gap-6
+              
             "
+            
           >
             {gridItems.map((item, idx) =>
               item.type === "logo" ? (
@@ -92,19 +102,15 @@ const RiskManTeams = () => {
                   key={`logo-${idx}`}
                   className={`${TILE_CLASS}
                     flex flex-col items-center justify-center
-                    rounded-md
                     bg-white dark:bg-brandNavy
                     border-2 border-brandAccent
-                    shadow-md`}
+                    shadow-sm`}
                 >
-                  <img src="/rm.png" className="mb-1 w-14 dark:hidden" />
+                  <img src="/rm.png" className="w-14 mb-1 dark:hidden" />
                   <img
                     src="/riskman-logo-white.svg"
-                    className="hidden mb-1 w-14 dark:block"
+                    className="hidden w-14 mb-1 dark:block"
                   />
-                  {/* <span className="text-[10px] font-semibold text-brandPrimary dark:text-brandAccent text-center leading-tight">
-                    Certified <br /> Internal Auditor
-                  </span> */}
                 </div>
               ) : (
                 /* MEMBER TILE */
@@ -112,9 +118,9 @@ const RiskManTeams = () => {
                   key={item.id}
                   className={`${TILE_CLASS}
                     relative group overflow-hidden
-                    rounded-md
                     bg-slate-100 dark:bg-brandDark
-                    border border-slate-200 dark:border-white/10`}
+                    border border-slate-200 dark:border-white/10
+                    shadow-sm hover:shadow-md transition`}
                 >
                   <img
                     src={item.image}
@@ -122,14 +128,13 @@ const RiskManTeams = () => {
                     className="object-cover object-top w-full h-full"
                   />
 
-                  {/* LINKEDIN OVERLAY (ONLY IF EXISTS) */}
                   {item.linkedin && (
                     <div className="absolute inset-0 flex items-center justify-center transition-opacity opacity-0 bg-black/60 group-hover:opacity-100">
                       <a
                         href={item.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 transition bg-white rounded-full hover:scale-110"
+                        className="p-2 bg-white rounded-full transition hover:scale-110"
                       >
                         <Linkedin size={18} className="text-brandPrimary" />
                       </a>
@@ -147,5 +152,3 @@ const RiskManTeams = () => {
 
 export default RiskManTeams;
 
-
-// // import React from "react";

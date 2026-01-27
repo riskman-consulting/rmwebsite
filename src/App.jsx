@@ -22,10 +22,11 @@ import ScrollToTop from './components/common/ScrollToTop'
 import ThemeToggle from './components/common/ThemeToggle'
 import Events from './temp/MainEvent'
 import ServicePage from './pages/services/Services'
-import HeaderTemp from "../src/components/layout/temp/Header"
+import HeaderTemp from "../src/temp-header/Header"
 import HeaderNew from "./components/layout/Header"
 import EventPage from './pages/event/EventPage'
 import EventHome from './pages/event/Events'
+import IntegritatSolutionPage from './pages/solution/Solution'
 
 
 function App() {
@@ -45,11 +46,11 @@ function App() {
       <ScrollToTop />
       {/* <ThemeToggle theme={theme} setTheme={setTheme} /> */}
       {/* <Header theme={theme} setTheme={setTheme} /> */}
-      {/* <HeaderTemp/> */}
-      <HeaderNew/>
+      <HeaderTemp/>
+      {/* <HeaderNew/> */}
       <Toaster position="top-right" />
       
-      <main className="pt-[20px]">
+      <main className="pt-[128px]">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<ServicePage />} />
@@ -67,6 +68,7 @@ function App() {
           <Route path="/blog/:slug" element={<BlogSingle />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/solutions" element={<IntegritatSolutionPage/>}/>
         </Routes>
       </main>
       

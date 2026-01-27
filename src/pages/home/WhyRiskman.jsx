@@ -42,7 +42,7 @@ export default function WhyChooseRiskMan() {
  
         {/* Center Image – OVERLAPS BOTH SIDES */}
 <div className="relative flex justify-center z-20">
-<div className="border-[5px] border-[#C9A24D] rounded-[28px] rotate-[-45deg] shadow-2xl 
+<div className="border-[5px] border-[#C9A24D] rounded-[28px] rotate-[-15deg] shadow-2xl 
                           -mx-24 overflow-hidden bg-transparent">
 <img
               src={whyRiskMan}

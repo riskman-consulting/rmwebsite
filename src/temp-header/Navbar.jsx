@@ -1,112 +1,231 @@
- 
-import React, { useRef, useEffect } from 'react';
-import { NAVIGATION_DATA } from './constants';
-import { MegaMenu } from './MegaMenu';
+// ============================================
+// Navbar.jsx - EDGE SAFE (NO LEFT PADDING BUG)
+// ============================================
 
- 
+import React, { useRef, useEffect, useState } from "react";
+import { NAVIGATION_DATA } from "./constants";
+import { MegaMenu } from "./MegaMenu";
+import { Moon, Sun, Phone, ArrowRight } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
+
 export const Navbar = ({
   onToggleMobileMenu,
   activeMegaKey,
-  setActiveMegaKey
+  setActiveMegaKey,
 }) => {
   const timeoutRef = useRef(null);
- 
+  const [theme, setTheme] = useState("light");
+  const location = useLocation();
+
+  /* =======================
+     THEME INIT
+  ======================= */
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("theme") || "light";
+    setTheme(storedTheme);
+    document.documentElement.classList.toggle(
+      "dark",
+      storedTheme === "dark"
+    );
+  }, []);
+
+  const toggleTheme = () => {
+    const nextTheme = theme === "dark" ? "light" : "dark";
+    setTheme(nextTheme);
+    localStorage.setItem("theme", nextTheme);
+    document.documentElement.classList.toggle(
+      "dark",
+      nextTheme === "dark"
+    );
+  };
+
+  /* =======================
+     CLOSE MEGA ON ROUTE CHANGE
+  ======================= */
+  useEffect(() => {
+    setActiveMegaKey(null);
+  }, [location.pathname, setActiveMegaKey]);
+
+  /* =======================
+     MEGA MENU HANDLERS
+  ======================= */
   const handleMouseEnter = (key) => {
-    if (timeoutRef.current) window.clearTimeout(timeoutRef.current);
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
     if (key) setActiveMegaKey(key);
   };
- 
+
   const handleMouseLeave = () => {
-    timeoutRef.current = window.setTimeout(() => {
+    timeoutRef.current = setTimeout(() => {
       setActiveMegaKey(null);
-    }, 300);
+    }, 250);
   };
- 
+
   return (
-    <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative">
-      {/* Brand Logo */}
-      <div className={`flex items-center gap-2 group cursor-pointer transition-all duration-300 ${activeMegaKey ? 'opacity-50 blur-[1px]' : ''}`}>
-        <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-black text-xl group-hover:bg-blue-700 transition-colors">
-          R
-        </div>
-        <span className="font-extrabold text-xl tracking-tight text-slate-900">
-          Risk<span className="text-blue-600">Man</span>
-        </span>
-      </div>
- 
-      {/* Desktop Navigation Links */}
-      <div className="hidden lg:flex items-center space-x-2 h-full">
-        {NAVIGATION_DATA.mainNav.map((item) => (
-          <div
-            key={item.label}
-            className="h-full flex items-center"
-            onMouseEnter={() => handleMouseEnter(item.key)}
-            onMouseLeave={handleMouseLeave}
-          >
-            <a
-              href={item.path}
-              className={`
-                px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300
-                flex items-center gap-1.5
-                ${activeMegaKey === item.key
-                  ? 'text-blue-600 bg-blue-50'
-                  : activeMegaKey
-                    ? 'text-slate-400 blur-[1px] grayscale opacity-50'
-                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'}
-              `}
-              onClick={(e) => {
-                if (item.type === 'mega') e.preventDefault();
-              }}
+    <>
+      {/* =======================
+         ANNOUNCEMENT BANNER
+      ======================= */}
+      <div className="fixed top-0 left-0 right-0 z-[60] h-[48px] bg-bgDark flex items-center">
+        <div className="max-w-[1400px] mx-auto px-6 w-full">
+          <p className="text-center text-[14px] text-white font-medium leading-tight">
+            💡 Not sure how to start your RiskMan journey? Watch our{" "}
+            <Link
+              to="/orientation"
+              className="inline-block px-2 py-1 font-bold border-2 rounded-full border-brandDark hover:text-white/70 transition-colors"
             >
-              {item.label}
-              {item.type === 'mega' && (
-                <svg
-                  className={`w-4 h-4 transition-transform duration-300 ${activeMegaKey === item.key ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              )}
-            </a>
-          </div>
-        ))}
-      </div>
- 
-      {/* Action Buttons */}
-      <div className={`flex items-center gap-4 transition-all duration-300 ${activeMegaKey ? 'opacity-50 blur-[1px]' : ''}`}>
-        <button className="hidden md:flex items-center gap-2 text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors">
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-          Search
-        </button>
-        <button className="hidden sm:block px-5 py-2.5 bg-slate-900 text-white text-sm font-bold rounded-lg hover:bg-slate-800 transition-all shadow-md shadow-slate-200">
-          Request Demo
-        </button>
-       
-        {/* Mobile Toggle */}
-        <button
-          onClick={onToggleMobileMenu}
-          className="lg:hidden p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
-          </svg>
-        </button>
-      </div>
- 
-      {/* Render Active Mega Menu */}
-      {activeMegaKey && (
-        <div
-          className="absolute top-full left-0 w-full"
-          onMouseEnter={() => handleMouseEnter(activeMegaKey)}
-          onMouseLeave={handleMouseLeave}
-        >
-          <MegaMenu menuKey={activeMegaKey} />
+              Orientation Program
+            </Link>{" "}
+            or{" "}
+            <Link
+              to="/contact"
+              className="inline-block px-2 py-1 font-bold border-2 rounded-full border-brandDark hover:text-white/70 transition-colors"
+            >
+              Contact Us
+            </Link>{" "}
+            to get started! 💡
+          </p>
         </div>
-      )}
-    </nav>
+      </div>
+
+      {/* =======================
+         NAVBAR
+      ======================= */}
+      <nav className="fixed top-[48px] left-0 right-0 z-50 h-20 border-b bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark">
+        <div className="max-w-screen mx-auto px-6 w-full h-full flex items-center">
+
+          {/* =======================
+             LEFT CLUSTER
+          ======================= */}
+          <div className="flex items-center h-full">
+
+            {/* LOGO */}
+            <Link to="/" className="flex items-center h-16 w-36 flex-shrink-0">
+              <img
+                className="h-12 object-contain dark:hidden"
+                src="/rm.png"
+                alt="Riskman"
+              />
+              <img
+                className="h-12 w-28 object-contain hidden dark:block"
+                src="/riskman-logo-white.svg"
+                alt="Riskman"
+              />
+            </Link>
+
+            {/* DESKTOP NAV */}
+            <div className="hidden lg:flex items-center h-full">
+              {NAVIGATION_DATA.mainNav.map((item) => {
+                const isMega = item.type === "mega";
+                const isActive = activeMegaKey === item.key;
+
+                return (
+                  <div
+                    key={item.label}
+                    className="relative flex items-center h-full"
+                    {...(isMega && {
+                      onMouseEnter: () => handleMouseEnter(item.key),
+                      onMouseLeave: handleMouseLeave,
+                    })}
+                  >
+                    <Link
+                      to={item.path}
+                      className={`
+                        flex items-center gap-1.5 px-5 py-2 rounded-lg
+                        text-[13px] font-medium transition-all whitespace-nowrap
+                        ${
+                          isMega
+                            ? isActive
+                              ? "bg-brandAccent/15 text-brandPrimary dark:text-brandGold"
+                              : "text-brandDark dark:text-brandLight hover:bg-brandPrimary/10"
+                            : "text-brandDark dark:text-brandLight hover:bg-brandPrimary/10"
+                        }
+                      `}
+                    >
+                      {item.label}
+                      {isMega && (
+                        <svg
+                          className={`w-4 h-4 transition-transform ${
+                            isActive ? "rotate-180" : ""
+                          }`}
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      )}
+                    </Link>
+
+                    {isMega && isActive && (
+                      <div
+                        className="absolute left-0 top-full z-50"
+                        onMouseEnter={() => handleMouseEnter(item.key)}
+                        onMouseLeave={handleMouseLeave}
+                      >
+                        <MegaMenu menuKey={item.key} />
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* =======================
+             RIGHT CLUSTER
+          ======================= */}
+          <div className="ml-auto flex items-center gap-3 transition-all">
+            {/* THEME TOGGLE */}
+            <button
+              onClick={toggleTheme}
+              className="w-10 h-10 rounded-full flex items-center justify-center bg-brandPrimary/10 dark:bg-brandAccent/10 hover:scale-110 active:scale-95 transition"
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? (
+                <Moon className="text-brandGold" size={18} />
+              ) : (
+                <Sun className="text-brandPrimary" size={18} />
+              )}
+            </button>
+
+            {/* DESKTOP CTA */}
+            <Link
+              to="/contact"
+              className="hidden lg:flex items-center gap-2 h-[42px] px-5 text-[14px] font-semibold text-white rounded-full bg-brandDark dark:bg-brandGold hover:bg-brandNavy shadow-md transition"
+            >
+              <Phone size={12} />
+              <span className="text-[12px]">Get Started</span>
+              <ArrowRight size={12} />
+            </Link>
+
+            {/* MOBILE MENU */}
+            <button
+              onClick={onToggleMobileMenu}
+              className="lg:hidden p-2 rounded-lg text-brandDark dark:text-brandLight hover:bg-brandPrimary/10"
+              aria-label="Open menu"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* BACKDROP */}
+        {activeMegaKey && (
+          <div className="fixed inset-0 top-[128px] z-[45] bg-black/40 backdrop-blur-lg pointer-events-none" />
+        )}
+      </nav>
+    </>
   );
 };
- 
- 

@@ -3,17 +3,15 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 // Image Imports
-import EventImage1 from '../../assets/iia-bombay/2026/image-14.jpg';
-import EventImage2 from '../../assets/iia-bombay/2026/image-15.jpg';
-import EventImage3 from '../../assets/iia-bombay/2026/image-16.jpg';
-import EventImage4 from '../../assets/iia-bombay/2026/image-17.jpg';
-import EventImage5 from '../../assets/iia-bombay/2026/image-13.jpg';
-import EventImage6 from '../../assets/iia-bombay/2026/image-12.jpg';
-import EventImage7 from '../../assets/iia-bombay/2026/image-10.jpg';
+import EventImage1 from '../../assets/images/home/event/image-1.webp';
+import EventImage3 from '../../assets/images/home/event/image-3.webp';
+import EventImage4 from '../../assets/images/home/event/image-4.webp';
+import EventImage5 from '../../assets/images/home/event/image-5.webp';
+import EventImage6 from '../../assets/images/home/event/image-6.webp';
 
 const IIA_Bombay_2026_images = [
-  EventImage1, EventImage2, EventImage3, EventImage4, 
-  EventImage5, EventImage6, EventImage7,
+  EventImage1, EventImage3, EventImage4, 
+  EventImage5, EventImage6,
 ];
 
 export const EventCTASection = () => {
@@ -45,6 +43,9 @@ export const EventCTASection = () => {
             backgroundSize: "cover",
             backgroundPosition: "top center", // Top se alignment fix hai
             backgroundRepeat: "no-repeat",
+            alignItems:"top",
+            justifyContent:"top",
+            
           }}
         />
       </AnimatePresence>
