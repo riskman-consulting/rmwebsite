@@ -1,19 +1,31 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { ArrowRight, Calendar, MapPin } from "lucide-react";
 
 // Image Imports
-import EventImage1 from '../../assets/iia-bombay/2026/image-14.webp';
-import EventImage2 from '../../assets/iia-bombay/2026/image-15.webp';
-import EventImage3 from '../../assets/iia-bombay/2026/image-16.webp';
-import EventImage4 from '../../assets/iia-bombay/2026/image-17.webp';
-import EventImage5 from '../../assets/iia-bombay/2026/image-13.webp';
-import EventImage6 from '../../assets/iia-bombay/2026/image-12.webp';
-import EventImage7 from '../../assets/iia-bombay/2026/image-10.webp';
+// import EventImage1 from '../../assets/iia-bombay/2026/image-14.webp';
+// import EventImage2 from '../../assets/iia-bombay/2026/image-15.webp';
+// import EventImage3 from '../../assets/iia-bombay/2026/image-16.webp';
+// import EventImage4 from '../../assets/iia-bombay/2026/image-17.webp';
+// import EventImage5 from '../../assets/iia-bombay/2026/image-13.webp';
+// import EventImage6 from '../../assets/iia-bombay/2026/image-12.webp';
+// import EventImage7 from '../../assets/iia-bombay/2026/image-10.webp';
 
-const IIA_Bombay_2026_images = [
-  EventImage1, EventImage2, EventImage3, EventImage4, 
-  EventImage5, EventImage6, EventImage7,
+import {Emerging_risk_advisory_and_assurance_2025} from '../../assets/emerging-risk-advisory-and-assurance/2024/index'
+import {IIA_Bangalore_2025_images} from '../../assets/iia-bangalore/2025/index'
+import  {IIA_International_Conference_2025_images} from '../../assets/iia-international-conference/2025/index'
+import {IIA_Bombay_2026_images} from '../../assets/iia-bombay/2026/index'
+import { IIA_Hyderabad_2025_images } from "../../assets/iia-hyderabad/2025";
+import { IIA_Kolkata_2025_images } from "../../assets/iia-kolkata/2025";
+
+
+
+const IIA_Bombay_2026_images_slide = [
+  Emerging_risk_advisory_and_assurance_2025[0], IIA_Bangalore_2025_images[1], 
+  IIA_International_Conference_2025_images[1], IIA_International_Conference_2025_images[3], 
+  IIA_Kolkata_2025_images[1], IIA_Bombay_2026_images[5],IIA_Hyderabad_2025_images[0],
+
 ];
 
 export const EventCTASection = () => {
@@ -22,100 +34,145 @@ export const EventCTASection = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % IIA_Bombay_2026_images.length);
-    }, 5000);
+      setIndex((prev) => (prev + 1) % IIA_Bombay_2026_images_slide.length);
+    }, 6000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    // Section height and centering
-    <section className="relative h-[600px] pt-10 w-full overflow-hidden bg-bgLight dark:bg-bgDark flex items-center justify-center">
+    <section className="relative h-[85vh] min-h-[600px] w-full overflow-hidden bg-bgLight dark:bg-bgDark flex items-center justify-center font-sans transition-colors duration-300">
       
-      {/* BACKGROUND IMAGE CAROUSEL */}
-      <AnimatePresence mode="wait">
+      {/* BACKGROUND IMAGE CAROUSEL - Better Positioning */}
+      <AnimatePresence mode="popLayout">
         <motion.div
           key={index}
-          initial={{ opacity: 0, scale: 1.15 }}
+          initial={{ opacity: 0, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.95 }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url(${IIA_Bombay_2026_images[index]})`,
-            backgroundSize: "cover",
-            backgroundPosition: "top center", // Top se alignment fix hai
-            backgroundRepeat: "no-repeat",
-          }}
-        />
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          className="absolute inset-0 z-0"
+        >
+          <div 
+            className="absolute inset-0 bg-no-repeat bg-cover"
+            style={{ 
+              backgroundImage: `url(${IIA_Bombay_2026_images_slide[index]})`,
+              backgroundPosition: 'center 40%', // Better vertical centering - slightly above center
+              backgroundSize: 'cover'
+            }}
+          />
+        </motion.div>
       </AnimatePresence>
 
-      {/* OVERLAY: Radial gradient for focus alignment */}
-      <div className="absolute inset-0 bg-black/50" />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/80" />
+      {/* OVERLAY - Using Your Color Palette */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-brandDark/85 via-brandNavy/40 to-brandDark/90" />
+      
+      {/* Radial Vignette with Brand Colors */}
+      <div className="absolute inset-0 z-10" 
+        style={{
+          background: 'radial-gradient(ellipse at center, transparent 0%, rgba(0, 31, 63, 0.6) 100%)'
+        }}
+      />
 
-      {/* CONTENT AREA: Centered perfectly */}
-      <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-5xl px-6 text-center md:px-12">
+      {/* CONTENT AREA */}
+      <div className="container relative z-20 flex flex-col items-center justify-center h-full px-5 text-center sm:px-8 lg:px-12">
         
         {/* Subtitle Badge */}
-        <motion.span
-          initial={{ opacity: 0, y: 15 }}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="inline-block mb-6 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-white"
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="mb-8"
         >
-          Exclusive Learning
-        </motion.span>
+          <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-brandPrimary/20 backdrop-blur-md border border-brandAccent/30 text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-brandLight shadow-lg shadow-brandDark/30 font-heading">
+            <span className="w-1.5 h-1.5 rounded-full bg-brandAccent animate-pulse" />
+             EVENT GALLERY
+          </span>
+        </motion.div>
         
         {/* Main Heading */}
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="mb-6 text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] tracking-tight"
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          className="mb-6 text-3xl md:text-5xl lg:text-6xl font-black text-brandLight leading-[1.1] tracking-tight drop-shadow-2xl font-heading"
         >
-          Elevate Your <span className="text-white/80">Expertise</span>
+          Elevate Your <br className="hidden md:block" />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandLight via-brandAccent to-brandGold">
+            Expertise
+          </span>
         </motion.h2>
 
         {/* Description Text */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
-          className="max-w-2xl mb-10 text-base leading-relaxed md:text-xl text-white/70"
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+          className="max-w-2xl mb-12 text-lg font-light leading-relaxed md:text-xl text-brandLight/90 drop-shadow-md"
         >
           Experience world-class auditing workshops and events. Connect with 
-          industry pioneers and transform your professional journey.
+          industry pioneers and transform your professional journey in the heart of Mumbai.
         </motion.p>
 
-        {/* Action Button */}
+        {/* Action Buttons */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="flex flex-col items-center gap-4 sm:flex-row"
         >
           <button
             onClick={() => navigate("/events")}
-            className="group relative flex items-center gap-3 overflow-hidden rounded-full bg-white px-10 py-4 text-sm font-bold text-black transition-all hover:bg-gray-100 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]"
+            className="group relative flex items-center gap-3 overflow-hidden rounded-full bg-brandAccent px-8 py-4 text-base font-bold text-brandDark transition-all duration-300 hover:bg-brandGold hover:scale-105 hover:shadow-[0_0_40px_rgba(255,192,0,0.4)] active:scale-95 font-heading"
           >
-            Explore Events
-            <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+            <span className="relative z-10">Explore Events</span>
+            <ArrowRight className="relative z-10 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+            <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent group-hover:animate-shimmer" />
           </button>
+          
+          <button
+            onClick={() => navigate("/schedule")}
+            className="flex items-center gap-2 px-8 py-4 font-semibold transition-all duration-300 border rounded-full group bg-brandLight/10 backdrop-blur-sm border-brandLight/20 text-brandLight hover:bg-brandLight/20 hover:border-brandAccent/50 active:scale-95 font-heading"
+          >
+            <Calendar className="w-5 h-5 transition-colors text-brandLight/70 group-hover:text-brandAccent" />
+            <span>View Schedule</span>
+          </button>
+        </motion.div>
+
+        {/* Event Info Strip */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1 }}
+          className="flex items-center gap-8 mt-16 text-sm font-medium tracking-wider uppercase text-brandLight/70 font-heading"
+        >
+          {/* <div className="flex items-center gap-2">
+            <MapPin className="w-4 h-4 text-brandAccent" />
+            Mumbai, India
+          </div> */}
+          {/* <div className="w-1 h-1 rounded-full bg-brandLight/30" />
+          <div>Oct 15-17, 2026</div> */}
         </motion.div>
       </div>
 
-      {/* PAGINATION INDICATORS: Properly Aligned at bottom */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-2.5 z-20">
+      {/* PAGINATION INDICATORS */}
+      <div className="absolute z-30 flex items-center gap-3 -translate-x-1/2 bottom-12 left-1/2">
         {IIA_Bombay_2026_images.map((_, i) => (
           <button
             key={i}
             onClick={() => setIndex(i)}
             aria-label={`Go to slide ${i + 1}`}
-            className={`transition-all duration-500 rounded-full ${
+            className="relative py-2 group"
+          >
+            <span className={`block h-1 rounded-full transition-all duration-500 ${
               index === i 
-                ? "w-10 h-1.5 bg-white" 
-                : "w-2 h-1.5 bg-white/30 hover:bg-white/60"
-            }`}
-          />
+                ? "w-12 bg-brandAccent shadow-[0_0_10px_rgba(255,192,0,0.5)]" 
+                : "w-2 bg-brandLight/30 group-hover:bg-brandLight/60 group-hover:w-4"
+            }`} />
+          </button>
         ))}
       </div>
     </section>

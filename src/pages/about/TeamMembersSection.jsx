@@ -58,6 +58,7 @@ const RiskManTeams = () => {
     { id: 24, image: teamsImages.VinayakPoddar },
     { id: 25, image: teamsImages.Tushar },
     { id: 26, image: teamsImages.JaiDeep },
+   {    id:37,image:teamsImages.Tanisha},
     { id: 27, image: teamsImages.AnirbanBiswas },
     { id: 28, image: teamsImages.Vanshika },
     { id: 29, image: teamsImages.Kartik },

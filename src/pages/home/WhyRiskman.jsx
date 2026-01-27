@@ -1,118 +1,21 @@
-// import React from "react";
-// import {Link} from "react-router-dom";
-// import whyRiskMan from "../../assets/images/home/whyChoose.png";
- 
-// const FeatureCard = ({ icon, title, description }) => (
-// <div className="bg-bgLight dark:bg-bgDark text-brandPrimary dark:text-white border border-borderLight dark:border-borderDark hover:border-brandDark dark:hover:border-brandAccent rounded-2xl p-6 h-[180px] flex flex-col justify-center shadow-lg">
-// <div className="text-[#E6C87A] text-2xl mb-3">{icon}</div>
-// <h3 className="font-semibold text-lg mb-2">{title}</h3>
-// <p className="text-sm text-brandNavy dark:text-white/70 leading-relaxed">{description}</p>
-// </div>
-// );
- 
-// export default function WhyChooseRiskMan() {
-//   return (
-// <section className="bg-bgLight dark:bg-bgDark py-16 px-6 overflow-hidden">
-//       {/* Header */}
-// <div className="text-center max-w-3xl mx-auto mb-20">
-// <h1 className="text-4xl font-bold text-brandDark dark:text-white mb-4">
-//           Why <span className="text-brandAccent">Choose</span> RiskMan?
-// </h1>
-// <p className="text-brandNavy dark:text-white/70">
-//           Strategic risk management led by industry veterans to ensure your
-//           business remains resilient, compliant, and ahead of the curve.
-// </p>
-// </div>
- 
-//       {/* Main Grid */}
-// <div className="max-w-6xl mx-auto grid grid-cols-3 items-center">
-//         {/* Left Cards */}
-// <div className="flex flex-col gap-4 z-10">
-// <FeatureCard
-//             icon="🌐"
-//             title="Global Footprint"
-//             description="Proven delivery across multiple geographies with consistent execution."
-//           />
-// <FeatureCard
-//             icon="💼"
-//             title="Enriched Domain Expertise"
-//             description="Deep experience across audit, risk, compliance, and governance."
-//           />
-// </div>
- 
-//         {/* Center Image – OVERLAPS BOTH SIDES */}
-// <div className="relative flex justify-center z-20">
-// <div className="border-5px] border-[#C9A24D] rounded-[28px] rotate-[-16deg] shadow-2xl 
-//                           -mx-24 overflow-hidden bg-transparent">
-// <img
-//               src={whyRiskMan}
-//               alt="Why RiskMan"
-//               className="w-[340px] h-auto block rounded-[20px]"
-//             />
-// </div>
- 
-//           {/* <div className="absolute -bottom-10 bg-[#0F1E2E] text-white px-8 py-3 rounded-full text-sm font-medium shadow-lg">
-//             Trusted by 500+ Corporations
-// </div> */}
-
-
-//         <Link
-//             to="/contact"
-//             className="
-//               absolute -bottom-20 left-28
-//               bg-brandNavy dark:bg-brandAccent text-white dark:text-brandDark
-//               px-8 py-3 rounded-full
-//               text-sm font-medium
-//               shadow-lg
-//               hover:bg-[#1a2e44]
-//               hover:scale-105
-//               transition-all duration-300
-//             "
-//           >
-//             Contact Our Experts →
-//           </Link>
-
-           
-// </div>
- 
-//         {/* Right Cards */}
-// <div className="flex flex-col gap-4 z-10">
-// <FeatureCard
-//             icon="⚡"
-//             title="Agile & Lean Approach"
-//             description="Rapid execution with minimal overhead and measurable outcomes."
-//           />
-// <FeatureCard
-//             icon="🛡️"
-//             title="Predictable Engagement"
-//             description="Transparent delivery models with fixed scope and accountability."
-//           />
-// </div>
-// </div>
-// </section>
-//   );
-// }
-
-
-
 import React from "react";
 import {Link} from "react-router-dom";
-import whyRiskMan from "../../assets/images/home/whyChoose.png";
+import whyRiskMan from "../../assets/images/home/whyChooseRiskMan.webp";
  
 const FeatureCard = ({ icon, title, description }) => (
 <div className="bg-bgLight dark:bg-bgDark text-brandPrimary dark:text-white border border-borderLight dark:border-borderDark hover:border-brandDark dark:hover:border-brandAccent rounded-2xl p-6 h-[180px] flex flex-col justify-center shadow-lg">
 <div className="text-[#E6C87A] text-2xl mb-3">{icon}</div>
-<h3 className="font-semibold text-lg mb-2">{title}</h3>
-<p className="text-sm text-brandNavy dark:text-white/70 leading-relaxed">{description}</p>
+<h3 className="mb-2 text-lg font-semibold">{title}</h3>
+<p className="text-sm leading-relaxed text-brandNavy dark:text-white/70">{description}</p>
 </div>
 );
  
 export default function WhyChooseRiskMan() {
   return (
-<section className="bg-bgLight dark:bg-bgDark py-16 px-6 overflow-hidden">
+<section className="px-6 py-16 overflow-hidden bg-bgLight dark:bg-bgDark">
       {/* Header */}
-<div className="text-center max-w-3xl mx-auto mb-20">
-<h1 className="text-4xl font-bold text-brandDark dark:text-white mb-4">
+<div className="max-w-3xl mx-auto mb-20 text-center">
+<h1 className="mb-4 text-4xl font-bold text-brandDark dark:text-white">
           Why <span className="text-brandAccent">Choose</span> RiskMan?
 </h1>
 <p className="text-brandNavy dark:text-white/70">
@@ -122,9 +25,9 @@ export default function WhyChooseRiskMan() {
 </div>
  
       {/* Main Grid */}
-<div className="max-w-6xl mx-auto grid grid-cols-3 items-center mb-16">
+<div className="grid items-center max-w-6xl grid-cols-3 mx-auto mb-16">
         {/* Left Cards */}
-<div className="flex flex-col gap-4 z-10">
+<div className="z-10 flex flex-col gap-4">
 <FeatureCard
             icon="🌐"
             title="Global Footprint"
@@ -138,7 +41,7 @@ export default function WhyChooseRiskMan() {
 </div>
  
         {/* Center Image – OVERLAPS BOTH SIDES */}
-<div className="relative flex justify-center z-20">
+<div className="relative z-20 flex justify-center">
 <div className="border-[5px] border-[#C9A24D] rounded-[28px] rotate-[-16deg] shadow-2xl 
                           -mx-24 overflow-hidden bg-transparent">
 <img
@@ -150,7 +53,7 @@ export default function WhyChooseRiskMan() {
 </div>
  
         {/* Right Cards */}
-<div className="flex flex-col gap-4 z-10">
+<div className="z-10 flex flex-col gap-4">
 <FeatureCard
             icon="⚡"
             title="Agile & Lean Approach"

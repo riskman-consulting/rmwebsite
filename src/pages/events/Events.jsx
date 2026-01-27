@@ -17,6 +17,7 @@ import EventsGrid from './EventsGrid.jsx';
 import EventModal from './EventModal.jsx';
 import { events } from "./eventData"; // Your events data
 import WhyItMatters from './WhyItMatters.jsx';
+// import MomentThatMatters from "../../moment/MomentThatMattersSection"
 
 function Events() {
   const [selectedEvent, setSelectedEvent] = useState(null);
@@ -38,7 +39,9 @@ function Events() {
       <CultureSection />
       <ExpertiseSection />
       <JourneyTimeLineSection />
-      <MomentThatMattersSection />
+      {/* <MomentThatMatters /> */}
+
+      <MomentThatMattersSection/>
       <AwardSection />
       <InternationalAssignmentSection />
       <TestimonialsSection />

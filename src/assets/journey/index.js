@@ -160,6 +160,7 @@ const journeyImages = {
     teamDinnerDec2023_1,
     teamDinnerDec2023_2,
     teamDinnerDec2023_3,
+    teamDinnerDec2023_4
   ],
 
   teamDinnerFeb2022: [teamDinnerFeb2022],

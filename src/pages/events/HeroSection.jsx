@@ -1,6 +1,15 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Calendar, ArrowRight, Image } from "lucide-react";
-import { IIA_Bombay_2026_images } from "../../assets/iia-bombay/2026";
+import { Calendar, ArrowRight, Image, Globe, Users, Award, TrendingUp } from "lucide-react";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import bg1 from "../../assets/journey/ai/bg1.png"
+import bg2 from "../../assets/journey/ai/bg2.png"
+import bg3 from "../../assets/journey/ai/bg3.png"
+import bg4 from "../../assets/journey/ai/bg4.png"
+import bg5 from "../../assets/journey/ai/bg5.png"
+
+
+
+const backgrounds = [bg1, bg2, bg3, bg4, bg5];
 
 /* ===================== PARTICLES ===================== */
 const ParticlesBackground = ({ mouseX, mouseY }) => {
@@ -26,7 +35,7 @@ const ParticlesBackground = ({ mouseX, mouseY }) => {
         this.size = Math.random() * 1.6 + 0.6;
         this.speedX = (Math.random() - 0.5) * 0.25;
         this.speedY = (Math.random() - 0.5) * 0.25;
-        this.opacity = Math.random() * 0.4 + 0.15;
+        this.opacity = Math.random() * 0.35 + 0.15;
       }
       update(mx, my) {
         this.x += this.speedX + mx * 0.002;
@@ -44,7 +53,7 @@ const ParticlesBackground = ({ mouseX, mouseY }) => {
 
     const init = () => {
       particles = [];
-      const count = Math.floor((canvas.width * canvas.height) / 18000);
+      const count = Math.floor((canvas.width * canvas.height) / 20000);
       for (let i = 0; i < count; i++) particles.push(new Particle());
     };
 
@@ -71,7 +80,7 @@ const ParticlesBackground = ({ mouseX, mouseY }) => {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 pointer-events-none opacity-20 dark:opacity-40 mix-blend-screen"
+      className="absolute inset-0 z-10 pointer-events-none opacity-30 dark:opacity-50 mix-blend-screen"
     />
   );
 };
@@ -79,17 +88,26 @@ const ParticlesBackground = ({ mouseX, mouseY }) => {
 /* ===================== HERO ===================== */
 export default function HeroSection() {
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
-  const [loaded, setLoaded] = useState(false);
-  const [scroll, setScroll] = useState(0);
+  const [currentBg, setCurrentBg] = useState(0);
+  const { scrollY } = useScroll();
+  const bgY = useTransform(scrollY, [0, 1000], [0, 300]);
 
   const milestones = [
-    { value: "2020", label: "Founded" },
-    { value: "2025", label: "5 Years Strong" },
-    { value: "4", label: "Countries" },
-    { value: "50+", label: "Team Members" },
+    { value: "2020", label: "Founded", icon: Award },
+    { value: "2025", label: "5 Years Strong", icon: Calendar },
+    { value: "4", label: "Countries", icon: Globe },
+    { value: "50+", label: "Team Members", icon: Users },
   ];
 
-  /* mouse throttle */
+  /* Background Slideshow */
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentBg((prev) => (prev + 1) % backgrounds.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  /* Mouse movement (throttled) */
   useEffect(() => {
     let raf;
     const move = (e) => {
@@ -106,116 +124,118 @@ export default function HeroSection() {
     return () => window.removeEventListener("mousemove", move);
   }, []);
 
-  /* scroll */
-  useEffect(() => {
-    const onScroll = () => {
-      setScroll(window.scrollY);
-      if (window.scrollY > 80) setLoaded(true);
-    };
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  const bgY = Math.max(-200, -scroll * 0.25);
-
   return (
-    <section className="relative flex items-center min-h-screen overflow-hidden transition-colors duration-500 bg-bgLight dark:bg-bgDark">
-
-      {/* Background Image */}
-      <div
-        className="absolute inset-0"
-        style={{ transform: `translateY(${bgY}px)` }}
+    <section className="relative flex items-center justify-center min-h-screen overflow-hidden transition-colors duration-500 bg-bgLight dark:bg-bgDark">
+      {/* Background Slideshow with Parallax */}
+      <motion.div 
+        className="absolute inset-0 z-0"
+        style={{ y: bgY }}
       >
-        <img
-          src={IIA_Bombay_2026_images[6]}
-          className="object-cover w-full h-full"
-          alt=""
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-bgLight via-bgLight/60 to-transparent dark:from-bgDark dark:via-bgDark/60" />
-      </div>
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={currentBg}
+            src={backgrounds[currentBg]}
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 1, scale: 1.05 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.5 }}
+            className="absolute inset-0 w-full h-full object-cover brightness-[0.9] dark:brightness-[0.4]"
+            alt="Background"
+          />
+        </AnimatePresence>
+        <div className="absolute inset-0 bg-gradient-to-r from-bgLight/90 via-bgLight/50 to-transparent dark:from-bgDark/95 dark:via-bgDark/60 dark:to-bgDark/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-bgLight via-transparent to-transparent dark:from-bgDark dark:via-transparent" />
+      </motion.div>
 
       <ParticlesBackground mouseX={mouse.x} mouseY={mouse.y} />
 
-      {/* Content */}
-      <div className="container relative z-10 mt-4 text-center">
-
+      {/* Content Container */}
+      <div className="container relative z-20 flex flex-col items-center justify-center min-h-screen px-6 pt-20 mx-auto text-center lg:px-12">
+        
         {/* Badge */}
-        <div
-          className={`inline-flex items-center gap-3 px-6 py-3 mb-8 rounded-full
-          bg-surfaceLight/80 dark:bg-surfaceDark/40
-          border border-borderLight dark:border-borderDark
-          backdrop-blur-xl transition-all duration-700
-          ${loaded ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-6"}`}
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mb-8"
         >
-          <Calendar className="w-5 h-5 text-brandGold" />
-          <span className="text-sm tracking-[0.3em] font-black uppercase text-brandGold">
-            Celebrating 5 Years
-          </span>
-        </div>
+          <div className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-brandGold to-[#D4AF37] shadow-[0_4px_20px_rgba(255,184,0,0.3)] border border-white/20">
+            <span className="text-sm font-bold tracking-widest text-white uppercase drop-shadow-sm">
+              Celebrating 5 Years
+            </span>
+          </div>
+        </motion.div>
 
         {/* Heading */}
-        <h1
-          className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl
-          font-heading font-black leading-[0.95]
-          transition-all duration-1000
-          ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}`}
+        <motion.h1 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-6xl sm:text-7xl md:text-8xl font-heading font-black leading-[0.95] tracking-tight mb-4"
         >
-          <span className="text-brandDark dark:text-white">
-            Our Journey,
+          <span className="text-brandDark dark:text-white drop-shadow-lg">
+            Our Journey
           </span>
-        </h1>
+        </motion.h1>
 
-        <h2 className="mt-4 font-serif text-4xl italic sm:text-5xl md:text-6xl lg:text-7xl text-brandGold">
+        {/* Subtitle */}
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mb-12 font-serif text-4xl italic sm:text-5xl md:text-6xl text-brandGold drop-shadow-md"
+        >
           Our Milestones
-        </h2>
+        </motion.h2>
 
-        {/* Sub */}
-        <p className="max-w-3xl mx-auto mt-8 text-lg leading-relaxed sm:text-xl text-brandDark/70 dark:text-white/60">
-          From humble beginnings to global recognition — a story built on trust,
-          growth, and people.
-        </p>
-
-        {/* CTA */}
-        <div className="flex flex-col justify-center gap-6 sm:flex-row mt-14">
-          <button className="px-12 py-5 rounded-2xl
-            bg-brandGold text-brandDark
-            font-black tracking-[0.2em] uppercase
-            hover:scale-[1.03] active:scale-[0.97]
-            transition-all duration-300
-            shadow-[0_15px_50px_rgba(255,184,0,0.45)]">
-            Explore Journey <ArrowRight className="inline ml-2" />
+        {/* CTAs */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="flex flex-wrap justify-center gap-6 mb-20"
+        >
+          <button className="px-10 py-4 rounded-xl bg-gradient-to-r from-brandGold to-[#D4AF37] text-brandDark font-black tracking-widest uppercase shadow-[0_10px_30px_rgba(255,184,0,0.3)] hover:scale-105 transition-transform duration-300 border border-white/20">
+            Explore Journey
           </button>
 
-          <button className="px-12 py-5 rounded-2xl
-            bg-surfaceLight/70 dark:bg-surfaceDark/40
-            border border-borderLight dark:border-borderDark
-            text-brandDark dark:text-white
-            font-black tracking-[0.2em] uppercase
-            hover:bg-surfaceLight dark:hover:bg-surfaceDark transition">
-            <Image className="inline mr-2" /> View Gallery
+          <button className="px-10 py-4 font-bold tracking-widest uppercase transition-colors duration-300 border shadow-lg rounded-xl bg-brandDark/90 dark:bg-surfaceDark/80 border-brandGold text-brandGold hover:bg-brandDark">
+            View Gallery
           </button>
-        </div>
+        </motion.div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-2 gap-8 mt-20 lg:grid-cols-4">
+        {/* Stats Grid */}
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
+          className="grid w-full max-w-5xl grid-cols-2 gap-6 md:grid-cols-4"
+        >
           {milestones.map((m, i) => (
             <div
               key={i}
-              className="p-10 rounded-[2.5rem]
-              bg-surfaceLight/70 dark:bg-surfaceDark/40
-              border border-borderLight dark:border-borderDark
-              backdrop-blur-xl
-              hover:border-brandGold/40
-              hover:shadow-[inset_0_0_30px_rgba(255,184,0,0.15)]
-              transition-all duration-500"
+              className="flex flex-col items-center justify-center p-6 transition-colors duration-300 border rounded-2xl border-brandGold/30 bg-brandDark/80 dark:bg-surfaceDark/60 backdrop-blur-md group hover:border-brandGold/60"
             >
-              <div className="mb-2 text-5xl font-bold text-brandGold">
+              <div className="mb-1 text-3xl font-bold text-white transition-transform duration-300 group-hover:scale-110">
                 {m.value}
               </div>
-              <div className="text-sm tracking-wider uppercase text-brandDark/60 dark:text-white/60">
+              <div className="text-sm font-medium tracking-wider uppercase text-white/80">
                 {m.label}
               </div>
             </div>
+          ))}
+        </motion.div>
+
+        {/* Background Controls (Optional Visual Indicator) */}
+        <div className="absolute z-30 flex gap-2 bottom-8">
+          {backgrounds.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrentBg(i)}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                currentBg === i ? "bg-brandGold w-6" : "bg-white/30 hover:bg-white/50"
+              }`}
+            />
           ))}
         </div>
       </div>

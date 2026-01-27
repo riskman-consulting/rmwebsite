@@ -16,20 +16,22 @@ const Header = () => {
   }, [activeMegaKey]);
 
   return (
-    <>
-      {/* Navbar with banner - both are fixed positioned */}
-      <Navbar 
-        onToggleMobileMenu={() => setIsMobileMenuOpen(true)} 
-        activeMegaKey={activeMegaKey}
-        setActiveMegaKey={setActiveMegaKey}
-      />
+    <div className="flex flex-col font-sans z-[99999] selection:bg-blue-100 selection:text-blue-900">
+      {/* Sticky Header */}
+      <header className="sticky top-0 z-50">
+        <Navbar 
+          onToggleMobileMenu={() => setIsMobileMenuOpen(true)} 
+          activeMegaKey={activeMegaKey}
+          setActiveMegaKey={setActiveMegaKey}
+        />
+      </header>
 
       {/* Mobile Menu Overlay */}
       <MobileMenu 
         isOpen={isMobileMenuOpen} 
         onClose={() => setIsMobileMenuOpen(false)} 
       />
-    </>
+    </div>
   );
 };
 
