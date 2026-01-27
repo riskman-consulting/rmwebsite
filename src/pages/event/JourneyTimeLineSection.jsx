@@ -374,29 +374,29 @@ const StatCompact = ({ icon: Icon, value, label, delay }) => (
   </motion.div>
 );
 
-const Stat = ({ icon: Icon, value, label, delay }) => (
-  <motion.div 
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ delay, duration: 0.5 }}
-    whileHover={{ scale: 1.05, y: -4 }}
-    className="p-6 text-center border rounded-xl bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark"
-  >
-    <motion.div
-      initial={{ scale: 0 }}
-      animate={{ scale: 1 }}
-      transition={{ delay: delay + 0.2, type: "spring", stiffness: 200 }}
-    >
-      <Icon className="w-8 h-8 mx-auto mb-4 text-brandPrimary dark:text-brandAccent" />
-    </motion.div>
-    <h5 className="mb-2 text-4xl font-black font-heading text-brandDark dark:text-brandLight">
-      {value}
-    </h5>
-    <p className="text-xs tracking-widest uppercase text-brandDark/60 dark:text-brandLight/60">
-      {label}
-    </p>
-  </motion.div>
-);
+// const Stat = ({ icon: Icon, value, label, delay }) => (
+//   <motion.div 
+//     initial={{ opacity: 0, y: 20 }}
+//     animate={{ opacity: 1, y: 0 }}
+//     transition={{ delay, duration: 0.5 }}
+//     whileHover={{ scale: 1.05, y: -4 }}
+//     className="p-6 text-center border rounded-xl bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark"
+//   >
+//     <motion.div
+//       initial={{ scale: 0 }}
+//       animate={{ scale: 1 }}
+//       transition={{ delay: delay + 0.2, type: "spring", stiffness: 200 }}
+//     >
+//       <Icon className="w-8 h-8 mx-auto mb-4 text-brandPrimary dark:text-brandAccent" />
+//     </motion.div>
+//     <h5 className="mb-2 text-4xl font-black font-heading text-brandDark dark:text-brandLight">
+//       {value}
+//     </h5>
+//     <p className="text-xs tracking-widest uppercase text-brandDark/60 dark:text-brandLight/60">
+//       {label}
+//     </p>
+//   </motion.div>
+// );
 
 
 

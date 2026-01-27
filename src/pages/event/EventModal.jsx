@@ -25,7 +25,7 @@ const EventModal = ({ event, onClose }) => {
  
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[#001F3F]/95 backdrop-blur-2xl overflow-hidden">
+      <div className="fixed px-4 md:px-10 lg:px-12 inset-0 z-[100] flex items-center justify-center bg-[#001F3F]/95 backdrop-blur-2xl overflow-hidden">
         {/* Modal Container - Fixed height to prevent any page scroll */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
