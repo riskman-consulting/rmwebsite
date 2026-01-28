@@ -25,6 +25,9 @@ import ThemeToggle from './components/common/ThemeToggle'
 import Events from './pages/events/Events'
 import ServicePage from './pages/services/Services'
 import HeaderTemp from './temp-header/Header'
+import TechSolutions from "./pages/tech-solutions/TechSolutions"
+
+
 
 function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
@@ -69,6 +72,7 @@ function App() {
           <Route path="/blog/:slug" element={<BlogSingle />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/solutions" element={<TechSolutions />} />
         </Routes>
       </main>
       

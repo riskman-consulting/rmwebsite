@@ -591,7 +591,8 @@ export const events = [
       "Fostered meaningful knowledge sharing",
       "Reinforced RiskMan's commitment to driving risk intelligence and governance excellence"
     ],
-    gallery: [],
+    image:IIA_International_Conference_2025_images[2],
+    gallery: IIA_International_Conference_2025_images,
   },
   {
     id: "delhi",
@@ -687,6 +688,19 @@ export const events = [
       "Focus on evolving audit methodologies"
     ],
     gallery: IIA_Kolkata_images,
+  },
+   {
+    id:"iia-conference-delhi-2024",
+    title:"IIA Delhi Conference 2024",
+    date:"2024",
+    year:2024,
+    location:"Delhi, India",
+    type:"Conference",
+    image:journeyImages.iiaDelhiJuly2024[0],
+    shortDesc:"Engaging discussions on the evolving landscape of internal audit and risk management.",
+    fullDesc:"The IIA Delhi Conference 2024 provided a platform for professionals to exchange insights on internal audit, risk management, and governance trends.",
+    gallery:journeyImages.iiaDelhiJuly2024,
+   
   },
   {
     id: "wofa",

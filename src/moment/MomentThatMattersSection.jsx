@@ -12,7 +12,7 @@ import {
   History,
   TrendingUp,
   Moon,
-  Sun,
+  Sun,Video
 } from "lucide-react";
 
 import { PHOTOS } from "./index";
@@ -24,8 +24,9 @@ const FILTERS = [
   { name: "5 Year Celebration", icon: Star },
   { name: "Team Lunches", icon: Users },
   { name: "Meetings & Discussions", icon: Briefcase },
-  { name: "International Assignments", icon: Globe },
+  // { name: "Conference Sessions", icon: Globe },
   { name: "Office Culture", icon: Heart },
+  
 ];
 
 const App = () => {

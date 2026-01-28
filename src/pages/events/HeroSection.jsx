@@ -125,7 +125,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative flex items-center justify-center min-h-screen overflow-hidden transition-colors duration-500 bg-bgLight dark:bg-bgDark">
+    <section className="relative flex items-center justify-center min-h-screen overflow-hidden transition-colors duration-500 bg-surfaceLight dark:bg-surfaceDark">
       {/* Background Slideshow with Parallax */}
       <motion.div 
         className="absolute inset-0 z-0"
@@ -209,17 +209,17 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
-          className="grid w-full max-w-5xl grid-cols-2 gap-6 md:grid-cols-4"
+          className="grid w-full max-w-5xl grid-cols-2 gap-6 mb-14 md:grid-cols-4"
         >
           {milestones.map((m, i) => (
             <div
               key={i}
-              className="flex flex-col items-center justify-center p-6 transition-colors duration-300 border rounded-2xl border-brandGold/30 bg-brandDark/80 dark:bg-surfaceDark/60 backdrop-blur-md group hover:border-brandGold/60"
+              className="flex flex-col items-center justify-center p-6 transition-colors duration-300 border rounded-2xl border-brandGold/30 bg-surfaceLight dark:bg-surfaceDark/60 backdrop-blur-md group hover:border-brandGold/60"
             >
-              <div className="mb-1 text-3xl font-bold text-white transition-transform duration-300 group-hover:scale-110">
+              <div className="mb-1 text-3xl font-bold transition-transform duration-300 text-brandDark dark:text-white group-hover:scale-110">
                 {m.value}
               </div>
-              <div className="text-sm font-medium tracking-wider uppercase text-white/80">
+              <div className="text-sm font-medium tracking-wider uppercase text-brandNavy dark:text-white/70">
                 {m.label}
               </div>
             </div>

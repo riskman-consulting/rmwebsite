@@ -346,7 +346,7 @@ const Timeline = () => {
   const activeEvent = timelineEvents[activeIndex];
  
   return (
-    <div className="relative flex flex-col justify-center min-h-screen overflow-hidden font-sans transition-colors duration-500 bg-bgLight dark:bg-bgDark text-brandNavy dark:text-surfaceLight">
+    <div id="journey" className="relative flex flex-col justify-center min-h-screen overflow-hidden font-sans transition-colors duration-500 bg-surfaceLight dark:bg-surfaceDark text-brandNavy dark:text-surfaceLight">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-brandPrimary/10 dark:bg-brandPrimary/20 rounded-full blur-[100px]" />
@@ -511,7 +511,7 @@ const Timeline = () => {
                   />
                  
                   {/* Hover Label */}
-                  <div className={`absolute bottom-12 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs tracking-wider uppercase whitespace-nowrap pointer-events-none ${
+                  <div className={`absolute -top-5 bottom-12 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs tracking-wider uppercase whitespace-nowrap pointer-events-none ${
                     index === activeIndex ? 'text-brandPrimary dark:text-brandAccent' : 'text-gray-500 dark:text-gray-400'
                   }`}>
                     {event.title}

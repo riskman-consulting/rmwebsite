@@ -192,7 +192,8 @@ export const NAVIGATION_DATA = {
                 { "label": "Upcoming Events", "path": "/events/#upcoming" },
                 { "label": "Past Events", "path": "/events/#past" },
                 { "label": "Company Journey", "path": "/events/#journey" },
-                { "label": "Milestones", "path": "/events/#milestones" }
+                { "label": "Milestones", "path": "/events/#milestones" },
+                 { "label": "Media Coverage", "path": "/events/#moment-that-matters" }
             ]
         }
     ]

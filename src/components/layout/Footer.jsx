@@ -49,18 +49,31 @@ export default function Footer() {
           
           {/* Left: Logo + Description */}
           <div className="max-w-sm">
-            <Link to="/" className="inline-block">
+            {/* <Link to="/" className="inline-block">
               <img
-                src="./rm.png"
+                src="/rm.png"
                 alt="RiskMan"
                 className="h-10 mb-6 transition-transform hover:scale-105 dark:hidden"
               />
               <img
-                src="./riskman-logo-white.svg"
+                src="/riskman-logo-white.svg"
                 alt="RiskMan"
                 className="hidden h-10 mb-6 transition-transform hover:scale-105 dark:block"
               />
-            </Link>
+            </Link> */}
+
+             <Link to="/" className="flex items-center flex-shrink-0 h-16 w-36">
+                          <img
+                            className="object-contain h-12 dark:hidden"
+                            src="/rm.png"
+                            alt="Riskman"
+                          />
+                          <img
+                            className="hidden object-contain h-12 w-28 dark:block"
+                            src="/riskman-logo-white.svg"
+                            alt="Riskman"
+                          />
+                        </Link>
             
             <p className="text-sm leading-relaxed text-brandNavy dark:text-gray-400">
               RiskMan Consulting provides expert advisory in audit, risk, compliance, 

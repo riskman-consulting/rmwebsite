@@ -130,7 +130,7 @@ export default function InternationalAssignments() {
 
   return (
     <>
-      <section className="min-h-screen px-4 py-16 md:py-24 bg-surfaceLight dark:bg-surfaceDark">
+      <section id="milestones" className="min-h-screen px-4 py-16 md:py-24 bg-surfaceLight dark:bg-surfaceDark">
         <div className="container max-w-6xl mx-auto">
 
           {/* HEADER */}

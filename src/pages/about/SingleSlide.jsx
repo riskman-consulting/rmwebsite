@@ -196,7 +196,7 @@ export default function SingleSlide() {
       <div className="container relative z-10 px-6 mx-auto lg:px-12">
         <div className="max-w-3xl">
           {/* Headline - Styled like the image */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-[1.1] tracking-tight">
             RiskMan Consulting: <br />
             <span className="font-medium opacity-90 text-[#FFC000] dark:text-[#FFC000]">
               Your Partner in Sustainable Growth

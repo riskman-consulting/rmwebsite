@@ -67,22 +67,22 @@ export const Navbar = ({
       ======================= */}
       <div className="fixed top-0 left-0 right-0 z-[60] h-[48px] bg-bgDark flex items-center">
         <div className="max-w-[1400px] mx-auto px-6 w-full">
-          <p className="text-center text-[14px] text-white font-medium leading-tight">
-            💡 Not sure how to start your RiskMan journey? Watch our{" "}
-            <Link
+          <p className="text-center text-[17px] text-white font-medium leading-tight">
+            {/* 💡 Not sure how to start your RiskMan journey? Watch our{" "} */}
+            {/* <Link
               to="/orientation"
               className="inline-block px-2 py-1 font-bold transition-colors border-2 rounded-full border-brandDark hover:text-white/70"
-            >
-              Orientation Program
-            </Link>{" "}
-            or{" "}
-            <Link
+            > */}
+              {/* Orientation Program */}
+            {/* </Link>{" "} */}
+            {/* or{" "} */}
+            {/* <Link
               to="/contact"
               className="inline-block px-2 py-1 font-bold transition-colors border-2 rounded-full border-brandDark hover:text-white/70"
             >
               Contact Us
-            </Link>{" "}
-            to get started! 💡
+            </Link>{" "} */}
+            {/* to get started! 💡 */}
           </p>
         </div>
       </div>

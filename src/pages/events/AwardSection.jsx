@@ -45,7 +45,7 @@ export default function AwardsSection() {
   ];
 
   return (
-    <section className="relative py-16 transition-colors duration-500 bg-bgLight dark:bg-bgDark">
+    <section className="relative py-16 transition-colors duration-500 bg-surfaceLight dark:bg-surfaceDark">
       <div className="container">
 
         {/* Header */}
@@ -110,7 +110,7 @@ export default function AwardsSection() {
         </div>
 
         {/* Stats Banner */}
-        <div className="max-w-6xl mx-auto mb-24">
+        {/* <div className="max-w-6xl mx-auto mb-24">
           <div
             className="p-10 sm:p-12 rounded-[3rem]
             bg-surfaceLight/80 dark:bg-surfaceDark/40
@@ -146,10 +146,10 @@ export default function AwardsSection() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Recent Recognitions */}
-        <div
+        {/* <div
           className="max-w-4xl mx-auto p-10 sm:p-12 rounded-[2.5rem]
           bg-surfaceLight/80 dark:bg-surfaceDark/40
           border border-borderLight dark:border-borderDark
@@ -208,7 +208,7 @@ export default function AwardsSection() {
               );
             })}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

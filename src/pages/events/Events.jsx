@@ -17,6 +17,8 @@ import EventsGrid from './EventsGrid.jsx';
 import EventModal from './EventModal.jsx';
 import { events } from "./eventData"; // Your events data
 import WhyItMatters from './WhyItMatters.jsx';
+import UpcomingEventsSection from './UpcomingEventSection.jsx';
+import EventsStorySection from './EventsStorySection.jsx';
 // import MomentThatMatters from "../../moment/MomentThatMattersSection"
 
 function Events() {
@@ -33,27 +35,44 @@ function Events() {
   return (
     <div>
       <HeroSection />
-      <WhyItMatters/>
-      <ImpactInNumbersSection />
-      <CompanyTimelineSection />
-      <CultureSection />
-      <ExpertiseSection />
-      <JourneyTimeLineSection />
-      {/* <MomentThatMatters /> */}
+
+      <UpcomingEventsSection/>
+
+      
 
       <MomentThatMattersSection/>
-      <AwardSection />
-      <InternationalAssignmentSection />
-      <TestimonialsSection />
-      <TogethernessCelebrationSection />
-      
-      {/* Events Grid with Modal */}
-      <EventsGrid 
+        <EventsGrid 
         events={events} 
         onCardClick={handleOpenModal} 
       />
+      {/* <JourneyTimeLineSection /> */}
+      <CompanyTimelineSection />
+      <AwardSection />
+      <TestimonialsSection />
+      <WhyItMatters/>
+
+
+
+
+      {/* <ImpactInNumbersSection /> */}
+
+       {/* <InternationalAssignmentSection /> */}
+      {/* <CultureSection /> */}
+      {/* <ExpertiseSection /> */}
+      {/* <MomentThatMatters /> */}
+{/* 
+      <MomentThatMattersSection/> */}
+      {/* <InternationalAssignmentSection /> */}
+      {/* <TogethernessCelebrationSection /> */}
+
       
-      <VideoHighlightSection />
+      {/* Events Grid with Modal */}
+      {/* <EventsGrid 
+        events={events} 
+        onCardClick={handleOpenModal} 
+      /> */}
+      
+      {/* <VideoHighlightSection /> */}
       <CTASection />
 
       {/* Event Modal - renders when an event is selected */}

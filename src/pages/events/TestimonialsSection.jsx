@@ -22,30 +22,30 @@ export default function TeamTestimonials() {
       tag: "International Exposure",
       image: teamsImages.Yashvi
     },
-    {
-      id: 3,
-      name: "Palak Kanojia.",
-      position: "Compliance Specialist",
-      quote: "Riskman gave me hands-on experience comparable to Big Four standards and significantly strengthened my analytical, professional, and corporate skill set.My articleship experience at Riskman Consulting has been extremely enriching and insightful. I got the opportunity to work on finance transformation assignments for a listed quick-commerce giant within the Zomato–Blinkit ecosystem. During this tenure, I worked closely with the Business Finance team and was involved in budget reconciliation, expense analysis, and identifying major cost-control areas, which helped me develop a strong practical understanding of management accounting and financial analysis",
-      tag: "Career Development",
-      image: teamsImages.Palak
-    },
-    {
-      id: 4,
-      name: "Vikram Patel",
-      position: "Risk Consultant",
-      quote: "The 5-year milestone celebration was emotional. Cutting the cake together, sharing memories, and looking at our journey photos made me realize how far we have come as a team.",
-      tag: "Team Spirit",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop"
-    },
-    {
-      id: 5,
-      name: "Meera Iyer",
-      position: "Audit Associate",
-      quote: "The mentorship and guidance I received here is unparalleled. Attending IIA conferences and presenting alongside industry leaders has boosted my confidence tremendously.",
-      tag: "Mentorship",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop"
-    }
+    // {
+    //   id: 3,
+    //   name: "Palak Kanojia.",
+    //   position: "Compliance Specialist",
+    //   quote: "Riskman gave me hands-on experience comparable to Big Four standards and significantly strengthened my analytical, professional, and corporate skill set.My articleship experience at Riskman Consulting has been extremely enriching and insightful. I got the opportunity to work on finance transformation assignments for a listed quick-commerce giant within the Zomato–Blinkit ecosystem. During this tenure, I worked closely with the Business Finance team and was involved in budget reconciliation, expense analysis, and identifying major cost-control areas, which helped me develop a strong practical understanding of management accounting and financial analysis",
+    //   tag: "Career Development",
+    //   image: teamsImages.Palak
+    // },
+    // {
+    //   id: 4,
+    //   name: "Vikram Patel",
+    //   position: "Risk Consultant",
+    //   quote: "The 5-year milestone celebration was emotional. Cutting the cake together, sharing memories, and looking at our journey photos made me realize how far we have come as a team.",
+    //   tag: "Team Spirit",
+    //   image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop"
+    // },
+    // {
+    //   id: 5,
+    //   name: "Meera Iyer",
+    //   position: "Audit Associate",
+    //   quote: "The mentorship and guidance I received here is unparalleled. Attending IIA conferences and presenting alongside industry leaders has boosted my confidence tremendously.",
+    //   tag: "Mentorship",
+    //   image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop"
+    // }
   ];
 
   const next = () =>
@@ -54,7 +54,7 @@ export default function TeamTestimonials() {
     setCurrentSlide((p) => (p - 1 + testimonials.length) % testimonials.length);
 
   return (
-    <section className="relative py-16 transition-colors duration-500 bg-bgLight dark:bg-bgDark">
+    <section className="relative py-16 transition-colors duration-500 bg-surfaceLight dark:bg-surfaceDark">
       <div className="container max-w-6xl">
 
         {/* Header */}
