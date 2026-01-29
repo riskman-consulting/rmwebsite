@@ -69,13 +69,7 @@ export const Navbar = ({
         <div className="max-w-[1400px] mx-auto px-6 w-full">
           <p className="text-center text-[14px] text-white font-medium leading-tight">
             💡 Not sure how to start your RiskMan journey? Watch our{" "}
-            <Link
-              to="/orientation"
-              className="inline-block px-2 py-1 font-bold border-2 rounded-full border-brandDark hover:text-white/70 transition-colors"
-            >
-              Orientation Program
-            </Link>{" "}
-            or{" "}
+            
             <Link
               to="/contact"
               className="inline-block px-2 py-1 font-bold border-2 rounded-full border-brandDark hover:text-white/70 transition-colors"
