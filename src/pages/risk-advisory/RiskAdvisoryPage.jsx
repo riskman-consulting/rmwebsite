@@ -52,7 +52,7 @@ export default function RiskAdvisoryPage() {
       {
         title: "Formulation of Policies and SOPs",
         description: "The formulation of Policies and Standard Operating Procedures (SOPs) is a fundamental service that helps organizations establish clear, consistent, and governance-aligned directives for their global operations. RiskMan Consulting works with leadership to translate high-level board strategies into actionable operating procedures.",
-        path: ""
+        path: "/services/risk-advisory/policies-sops"
       }
     ],
     whyRiskmanSection: {

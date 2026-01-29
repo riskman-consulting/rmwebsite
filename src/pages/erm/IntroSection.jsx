@@ -52,8 +52,7 @@ const IntroSection = ({ data }) => {
               className="w-full rounded-3xl object-cover shadow-xl"
             />
 
-            {/* Soft overlay */}
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-brandDark/10 to-transparent" />
+            
           </motion.div>
 
         </div>
