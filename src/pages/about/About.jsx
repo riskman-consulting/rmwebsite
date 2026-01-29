@@ -27,6 +27,7 @@ import WhyRiskman from "./WhyRiskMan";
 
 
 
+
 /* =======================
    ANIMATIONS
 ======================= */
@@ -108,7 +109,11 @@ export default function About() {
       <CTASection />
 
       {/* ================= LEADER MODAL ================= */}
-      <LeadershipModal selectedLeader={selectedLeader} setSelectedLeader={setSelectedLeader} />
+      {/* <LeadershipModal leader={selectedLeader} setSelectedLeader={setSelectedLeader} /> */}
+       <LeadershipModal
+        leader={selectedLeader}
+        onClose={() => setSelectedLeader(null)}
+      />
     </div>
   );
 }

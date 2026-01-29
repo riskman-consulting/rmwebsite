@@ -1,104 +1,120 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaLinkedin, FaTimes } from "react-icons/fa";
+import { X, Linkedin } from "lucide-react";
 
-const scaleIn = {
-  initial: { opacity: 0, scale: 0.9 },
-  animate: { opacity: 1, scale: 1 },
-  exit: { opacity: 0, scale: 0.9 },
-  transition: { duration: 0.3 },
+/* =========================
+   Framer Motion Variants
+========================= */
+const backdrop = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
 };
 
-export default function LeadershipModal({ selectedLeader, setSelectedLeader }) {
+const modal = {
+  hidden: { opacity: 0, y: 40, scale: 0.96 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] },
+  },
+  exit: {
+    opacity: 0,
+    y: 40,
+    scale: 0.96,
+    transition: { duration: 0.25 },
+  },
+};
+
+/* =========================
+   Leadership Modal
+========================= */
+export default function LeadershipModal({ leader, onClose }) {
+  useEffect(() => {
+    if (!leader) return;
+
+    const onEsc = (e) => e.key === "Escape" && onClose();
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onEsc);
+
+    return () => {
+      document.body.style.overflow = "auto";
+      window.removeEventListener("keydown", onEsc);
+    };
+  }, [leader, onClose]);
+
   return (
     <AnimatePresence>
-      {selectedLeader && (
+      {leader && (
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-md"
-          onClick={() => setSelectedLeader(null)}
+          variants={backdrop}
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+          className="fixed inset-0 z-[100] flex items-center justify-center px-4 bg-surfaceLight dark:bg-surfaceDark backdrop-blur-sm"
+          onClick={onClose}
         >
           <motion.div
-            variants={scaleIn}
-            initial="initial"
-            animate="animate"
+            variants={modal}
+            initial="hidden"
+            animate="visible"
             exit="exit"
-            className="relative w-full max-w-2xl border shadow-2xl border-borderLight dark:border-borderDark rounded-3xl bg-surfaceLight dark:bg-surfaceDark"
             onClick={(e) => e.stopPropagation()}
+            className="relative w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-3xl bg-surfaceLight dark:bg-surfaceDark border border-borderLight dark:border-borderDark shadow-2xl"
           >
-            {/* CLOSE BUTTON */}
-            <button
-              onClick={() => setSelectedLeader(null)}
-              className="absolute z-10 flex items-center justify-center transition-all rounded-full top-5 right-5 w-9 h-9 bg-brandDark/5 dark:bg-white/5 hover:bg-brandDark/10 dark:hover:bg-white/10 hover:scale-110"
-            >
-              <FaTimes className="text-brandDark dark:text-white/70 hover:text-brandPrimary dark:hover:text-white" />
-            </button>
+            {/* =========================
+               HEADER (STICKY)
+            ========================= */}
+            <div className="sticky top-0 z-10 border-b bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark">
+              <button
+                onClick={onClose}
+                className="absolute p-2 rounded-full top-5 right-5 hover:bg-black/5 dark:hover:bg-white/10"
+              >
+                <X className="w-5 h-5 text-brandDark dark:text-brandAccent" />
+              </button>
 
-            {/* CONTENT */}
-            <div className="grid md:grid-cols-[220px_1fr] gap-6 items-start p-6">
-              {/* LEFT – IMAGE */}
-              <div className="flex justify-center md:justify-start">
-                <img
-                  src={selectedLeader.image}
-                  alt={selectedLeader.name}
-                  className="object-cover object-top w-40 h-40 transition-all duration-500 border-4 rounded-full md:w-48 md:h-48 border-brandPrimary/30 dark:border-brandAccent/30 hover:scale-105"
-                />
-              </div>
+              <div className="flex p-8">
+                <div className="flex flex-col gap-6 md:flex-row md:items-center">
+                  <img
+                    src={leader.image}
+                    alt={leader.name}
+                    className="object-cover object-top w-32 h-32 border-4 rounded-full border-brandPrimary/30"
+                  />
+                  <div>
+                    <h2 className="text-3xl font-bold text-brandDark dark:text-white">
+                      {leader.name}
+                    </h2>
+                    <p className="font-semibold text-brandPrimary dark:text-brandAccent">
+                      {leader.title}
+                    </p>
 
-              {/* RIGHT – TEXT */}
-              <div>
-                <h2 className="mb-1 text-2xl font-bold text-brandDark dark:text-white">
-                  {selectedLeader.name}
-                </h2>
-
-                <p className="mb-2 font-semibold text-brandPrimary dark:text-brandAccent">
-                  {selectedLeader.title}
-                </p>
-
-                {selectedLeader.credentials && (
-                  <p className="mb-3 text-sm text-gray-600 dark:text-gray-400">
-                    {selectedLeader.credentials}
-                  </p>
-                )}
-
-                <div className="h-px my-4 bg-borderLight dark:bg-borderDark" />
-
-                <p className="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-                  {selectedLeader.fullBio || selectedLeader.bio}
-                </p>
-
-                {selectedLeader.expertise && (
-                  <div className="mb-4">
-                    <h3 className="mb-2 text-sm font-semibold text-brandDark dark:text-white">
-                      Areas of Expertise
-                    </h3>
-                    <div className="flex flex-wrap gap-2">
-                      {selectedLeader.expertise.map((exp, i) => (
-                        <span
-                          key={i}
-                          className="px-3 py-1 text-xs border rounded-full bg-brandPrimary/10 border-brandPrimary/20 text-brandPrimary dark:bg-brandAccent/10 dark:border-brandAccent/30 dark:text-brandAccent"
-                        >
-                          {exp}
-                        </span>
-                      ))}
-                    </div>
+                    {leader.linkedin && (
+                      <a
+                        href={leader.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 mt-3 text-sm text-brandPrimary dark:text-white/70 hover:underline"
+                      >
+                        <Linkedin className="w-4 h-4" />
+                        View LinkedIn
+                      </a>
+                    )}
                   </div>
-                )}
-
-                {selectedLeader.linkedin && (
-                  <a
-                    href={selectedLeader.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-brandPrimary dark:text-brandAccent hover:text-brandNavy dark:hover:text-brandGold"
-                  >
-                    <FaLinkedin className="text-xl" />
-                    Connect on LinkedIn
-                  </a>
-                )}
+                </div>
               </div>
+            </div>
+
+            {/* =========================
+               BODY (SCROLLABLE)
+            ========================= */}
+            <div className="p-8 space-y-6 overflow-y-auto scrollbar-hide max-h-[calc(90vh-180px)]">
+              {leader.richBio ? (
+                leader.richBio
+              ) : (
+                <p className="text-base leading-relaxed text-brandDark/80 dark:text-white/80">
+                  {leader.fullBio || leader.bio}
+                </p>
+              )}
             </div>
           </motion.div>
         </motion.div>

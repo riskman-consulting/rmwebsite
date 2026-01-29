@@ -73,7 +73,7 @@ const ENGAGEMENTS = [
     city: "Ho Chi Minh City",
     date: "August 2025",
     title: "Indorama Vietnam — Internal Audit Visit",
-    story: "His photograph marks a meaningful interaction with the Indorama – Vietnam site team during the internal audit visit in August 2025.",
+    story: "This photograph marks a meaningful interaction with the Indorama - Vietnam site team during the internal audit visit in August 2025. This showcases cross-functional collaboration and knowledge exchange. It underscores our global approach to auditing—working closely with site teams to enhance controls, align best practices, and support sustainable operations",
     images: [Vietman_Image[0]],
   },
   {
@@ -83,7 +83,7 @@ const ENGAGEMENTS = [
     city: "Ho Chi Minh City",
     date: "October 2025",
     title: "Indorama Vietnam — Risk Review",
-    story: "Completion of an internal audit engagement characterized by insightful exchanges and a solution-oriented mindset.",
+    story: "Captured at the Indorama Vietnam site in September 2025, this image marks the completion of an internal audit engagement characterized by insightful exchanges and a solution-oriented mindset. The engagement facilitated open discussions on key risks and operational priorities, delivering value across multiple core business processes.",
     images: [Vietman_Image[1], Vietman_Image[2], Vietman_Image[3]],
   },
   {
@@ -93,7 +93,7 @@ const ENGAGEMENTS = [
     city: "Manila",
     date: "January 2026",
     title: "Indorama Philippines — Internal Control Assessment",
-    story: "Successful completion of a value-adding internal audit engagement.",
+    story: "Celebrating the successful completion of a value-adding and knowledge-driven internal audit engagement. The assignment facilitated interactive discussions on key risks and related controls, leading to the identification of actionable steps to enhance business processes and improve overall operational efficiency.",
     images: [Philippiness_Image[1], Philippiness_Image[0]],
   },
   {
@@ -103,7 +103,7 @@ const ENGAGEMENTS = [
     city: "Yangon",
     date: "March 2026",
     title: "Indorama Myanmar — Operational Risk Assessment",
-    story: "Collaborative learning and practical outcomes from operational risk assessment.",
+    story: "Marking the conclusion of an insightful internal audit engagement that emphasized collaborative learning and practical outcomes. The engagement enabled meaningful exchanges on risk areas and control effectiveness, resulting in clear improvement initiatives aimed at strengthening processes.",
     images: [Myanmar_Image[1], Myanmar_Image[0]],
   },
   {
@@ -113,7 +113,7 @@ const ENGAGEMENTS = [
     city: "Jakarta",
     date: "December 2025",
     title: "Indorama Indonesia — Internal Audit Completion",
-    story: "Professional engagement marking completion of internal audit.",
+    story: "This image captures a professional engagement at the Indorama Indonesia site in December 2025, marking the completion of an internal audit focused on exchange of insights and a solution-oriented approach. The audit encouraged open discussions on key risks and operational priorities, leading to clear and practical outcomes.",
     images: [Indonesia_Image[1], Indonesia_Image[0]],
   },
 ];

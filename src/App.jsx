@@ -26,6 +26,8 @@ import Events from './pages/events/Events'
 import ServicePage from './pages/services/Services'
 import HeaderTemp from './temp-header/Header'
 import TechSolutions from "./pages/tech-solutions/TechSolutions"
+import RiskAdvisoryPage from './pages/risk-advisory/RiskAdvisoryPage'
+import ERMPage from './pages/erm/ERMPage'
 
 
 
@@ -58,7 +60,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<ServicePage />} />
-          <Route path="/services/:id" element={<ServicesTemplate />} />
+          <Route path="/services/risk-advisory" element={<RiskAdvisoryPage />} />
+          <Route path="/services/risk-advisory/erm" element={<ERMPage />} />
+          {/* <Route path="/services/:id" element={<ServicesTemplate />} /> */}
           <Route path="/industries" element={<IndustriesList />} />
           <Route path="/industries/:id" element={<IndustriesTemplate />} />
           <Route path="/insights" element={<BlogList />} />

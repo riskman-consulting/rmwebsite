@@ -278,7 +278,7 @@ const SLIDES = [
     desc: "Expert ESG reporting, GHG accounting, and credit rating advisory to optimize your capital structure and protect organizational integrity.",
     img: "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898662/hero-consulting_t6jnkn.webp",
     btn1: "Drive Growth",
-    btn1Link: "/services/business-consulting",
+    btn1Link: "/services/consulting",
     btn2: "Book Call",
     btn2Link: "/contact",
     category: "consulting"
@@ -329,10 +329,10 @@ export default function HeroSection() {
         }
       `}</style>
       
-      <section className="relative flex flex-col w-full h-screen overflow-hidden bg-zinc-950 md:flex-row">
+      <section className="relative flex flex-col w-full h-screen overflow-hidden -top-20 bg-zinc-950 md:flex-row">
         
         {/* Left Content Area */}
-        <div className="relative w-full md:w-[65%] h-full flex items-center z-20 px-6 md:px-12 lg:px-16 bg-zinc-950 overflow-hidden">
+        <div className="relative w-full b md:w-[65%] h-full flex items-center z-20 px-6 md:px-12 lg:px-16 bg-zinc-950 overflow-hidden">
           {/* Geometric pattern background */}
           <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -345,7 +345,7 @@ export default function HeroSection() {
             </svg>
           </div>
 
-          <div className="relative w-full max-w-2xl py-20">
+          <div className="relative w-full max-w-2xl ">
             {SLIDES.map((slide, index) => (
               <div
                 key={`text-${index}`}

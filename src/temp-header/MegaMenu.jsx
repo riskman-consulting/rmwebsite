@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NAVIGATION_DATA } from "./constants";
+import { Link } from "react-router-dom";
 
 export const MegaMenu = ({ menuKey }) => {
   const [hoveredPath, setHoveredPath] = useState(null);
@@ -126,14 +127,14 @@ export const MegaMenu = ({ menuKey }) => {
                       <ul className="pl-4 mt-3 space-y-2 border-l-2 border-brandPrimary/30 dark:border-brandGold/30">
                         {item.submenus.map((sub) => (
                           <li key={sub.id}>
-                            <a
-                              href={`#${sub.id}`}
+                            <Link
+                              to={`${sub.path}`}
                               className="block text-[13px] font-medium
                                 text-brandDark/70 dark:text-brandLight/70
                                 hover:text-brandPrimary dark:hover:text-brandGold"
                             >
                               {sub.title}
-                            </a>
+                            </Link>
                           </li>
                         ))}
                       </ul>

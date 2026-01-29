@@ -1,9 +1,10 @@
 // src/pages/home/Home.jsx
-import React from "react";
+import React,{useState} from "react";
 import { Helmet } from "react-helmet-async";
 
 // layout / common
 import HeroSection from "./HeroSections";
+
 
 // sections
 import Features from "./Features";
@@ -20,11 +21,14 @@ import AuditService from "./AuditService";
 import CTASection from "./CTASections";
 import ClientSection from "./ClientsSection";
 import StrategicSection from "./Features";
-import LeadershipSection from "./LeadershipSection";
+// import LeadershipSection from "./LeadershipSection";
+import LeadershipSection from "../about/LeadershipSection";
+import LeadershipModal from "../about/LeadershipModal";
 import EventSection from "./EventSection";
 
 
 export default function Home() {
+  const [selectedLeader, setSelectedLeader] =useState(null);
   return (
     <>
       {/* <Helmet>
@@ -69,7 +73,9 @@ export default function Home() {
 
           {/* FEATURES */}
           {/* <Features /> */}
-          <StrategicSection/>
+          
+            <StrategicSection/>
+            
 
           <StatsSection />
 
@@ -91,7 +97,12 @@ export default function Home() {
           {/* Clients Section */}
           <ClientSection/>
 
-          <LeadershipSection/>
+          <LeadershipSection setSelectedLeader={setSelectedLeader}/>
+
+         <LeadershipModal
+                 leader={selectedLeader}
+                 onClose={() => setSelectedLeader(null)}
+               />
 
           {/* WHY RISKMAN */}
           <WhyRiskman />
