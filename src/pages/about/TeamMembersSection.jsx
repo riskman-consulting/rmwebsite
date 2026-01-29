@@ -72,10 +72,10 @@ const RiskManTeams = () => {
   return (
     <section
       id="riskman-teams"
-      className="py-20 bg-surfaceLight dark:bg-surfaceDark"
+      className="py-20 w-screen flex justify-center items-center bg-surfaceLight dark:bg-surfaceDark"
     >
       <div className="container">
-        <h1 className="mb-12 text-4xl font-bold text-brandPrimary dark:text-brandAccent">
+        <h1 className="mb-12 text-4xl font-bold text-center text-brandPrimary dark:text-brandAccent">
           Meet the RiskMan Team
         </h1>
 
@@ -90,8 +90,7 @@ const RiskManTeams = () => {
 
               gap-4
               sm:gap-5
-              lg:gap-6
-              
+              lg:gap-y-4  
             "
             
           >

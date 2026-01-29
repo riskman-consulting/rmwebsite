@@ -17,6 +17,7 @@ export default function MomentsThatMatter() {
     "Meetings & Discussions",
     "International Assignments",
     "Office Culture",
+    "Conference Sessions"
   ];
 
   const photos = [
@@ -44,30 +45,30 @@ export default function MomentsThatMatter() {
     { id: 15, category: "Meetings & Discussions", title: "Professional Discussions & Knowledge Sharing", image: journeyImages.iiaMumbaiMarch2025[2] },
 
     // ===== International Assignments – Delhi (4) =====
-    { id: 16, category: "International Assignments", title: "IIA Conference Delhi – July 2024", image: journeyImages.iiaDelhiJuly2024[0] },
-    { id: 17, category: "International Assignments", title: "IIA Delhi Conference Session", image: journeyImages.iiaDelhiJuly2024[1] },
-    { id: 18, category: "International Assignments", title: "Knowledge Exchange at IIA Delhi", image: journeyImages.iiaDelhiJuly2024[2] },
-    { id: 19, category: "International Assignments", title: "Networking at IIA Delhi", image: journeyImages.iiaDelhiJuly2024[3] },
+    { id: 16, category: "Conference Sessions", title: "IIA Conference Delhi – July 2024", image: journeyImages.iiaDelhiJuly2024[0] },
+    { id: 17, category: "Conference Sessions", title: "IIA Delhi Conference Session", image: journeyImages.iiaDelhiJuly2024[1] },
+    { id: 18, category: "Conference Sessions", title: "Knowledge Exchange at IIA Delhi", image: journeyImages.iiaDelhiJuly2024[2] },
+    { id: 19, category: "Conference Sessions", title: "Networking at IIA Delhi", image: journeyImages.iiaDelhiJuly2024[3] },
 
     // ===== International Assignments – Mumbai March 2025 (9) =====
-    { id: 20, category: "International Assignments", title: "IIA Mumbai Conference – March 2025", image: journeyImages.iiaMumbaiMarch2025[0] },
-    { id: 21, category: "International Assignments", title: "IIA Mumbai Session Highlights", image: journeyImages.iiaMumbaiMarch2025[1] },
-    { id: 22, category: "International Assignments", title: "Professional Interaction – IIA Mumbai", image: journeyImages.iiaMumbaiMarch2025[3] },
-    { id: 23, category: "International Assignments", title: "Learning at IIA Mumbai", image: journeyImages.iiaMumbaiMarch2025[4] },
-    { id: 24, category: "International Assignments", title: "Conference Moments – IIA Mumbai", image: journeyImages.iiaMumbaiMarch2025[5] },
-    { id: 25, category: "International Assignments", title: "Networking at IIA Mumbai", image: journeyImages.iiaMumbaiMarch2025[6] },
-    { id: 26, category: "International Assignments", title: "Industry Engagement – IIA Mumbai", image: journeyImages.iiaMumbaiMarch2025[7] },
-    { id: 27, category: "International Assignments", title: "IIA Mumbai Closing Moments", image: journeyImages.iiaMumbaiMarch2025[8] },
-    { id: 28, category: "International Assignments", title: "Conference Environment – IIA Mumbai", image: journeyImages.iiaMumbaiMarch2025[2] },
+    { id: 20, category: "Conference Sessions", title: "IIA Mumbai Conference – March 2025", image: journeyImages.iiaMumbaiMarch2025[0] },
+    { id: 21, category: "Conference Sessions", title: "IIA Mumbai Session Highlights", image: journeyImages.iiaMumbaiMarch2025[1] },
+    { id: 22, category: "Conference Sessions", title: "Professional Interaction – IIA Mumbai", image: journeyImages.iiaMumbaiMarch2025[3] },
+    { id: 23, category: "Conference Sessions", title: "Learning at IIA Mumbai", image: journeyImages.iiaMumbaiMarch2025[4] },
+    { id: 24, category: "Conference Sessions", title: "Conference Moments – IIA Mumbai", image: journeyImages.iiaMumbaiMarch2025[5] },
+    { id: 25, category: "Conference Sessions", title: "Networking at IIA Mumbai", image: journeyImages.iiaMumbaiMarch2025[6] },
+    { id: 26, category: "Conference Sessions", title: "Industry Engagement – IIA Mumbai", image: journeyImages.iiaMumbaiMarch2025[7] },
+    { id: 27, category: "Conference Sessions", title: "IIA Mumbai Closing Moments", image: journeyImages.iiaMumbaiMarch2025[8] },
+    { id: 28, category: "Conference Sessions", title: "Conference Environment – IIA Mumbai", image: journeyImages.iiaMumbaiMarch2025[2] },
 
     // ===== International Assignments – Mumbai Jan 2026 (7) =====
-    { id: 29, category: "International Assignments", title: "IIA Mumbai Conference – January 2026", image: journeyImages.iiaMumbaiJan2026[0] },
-    { id: 30, category: "International Assignments", title: "IIA Mumbai 2026 Sessions", image: journeyImages.iiaMumbaiJan2026[1] },
-    { id: 31, category: "International Assignments", title: "Knowledge Sharing – IIA Mumbai 2026", image: journeyImages.iiaMumbaiJan2026[2] },
-    { id: 32, category: "International Assignments", title: "Professional Networking – IIA Mumbai", image: journeyImages.iiaMumbaiJan2026[3] },
-    { id: 33, category: "International Assignments", title: "IIA Mumbai Conference Floor", image: journeyImages.iiaMumbaiJan2026[4] },
-    { id: 34, category: "International Assignments", title: "Insights from IIA Mumbai 2026", image: journeyImages.iiaMumbaiJan2026[5] },
-    { id: 35, category: "International Assignments", title: "Closing Session – IIA Mumbai 2026", image: journeyImages.iiaMumbaiJan2026[6] },
+    { id: 29, category: "Conference Sessions", title: "IIA Mumbai Conference – January 2026", image: journeyImages.iiaMumbaiJan2026[0] },
+    { id: 30, category: "Conference Sessions", title: "IIA Mumbai 2026 Sessions", image: journeyImages.iiaMumbaiJan2026[1] },
+    { id: 31, category: "Conference Sessions", title: "Knowledge Sharing – IIA Mumbai 2026", image: journeyImages.iiaMumbaiJan2026[2] },
+    { id: 32, category: "Conference Sessions", title: "Professional Networking – IIA Mumbai", image: journeyImages.iiaMumbaiJan2026[3] },
+    { id: 33, category: "Conference Sessions", title: "IIA Mumbai Conference Floor", image: journeyImages.iiaMumbaiJan2026[4] },
+    { id: 34, category: "Conference Sessions", title: "Insights from IIA Mumbai 2026", image: journeyImages.iiaMumbaiJan2026[5] },
+    { id: 35, category: "Conference Sessions", title: "Closing Session – IIA Mumbai 2026", image: journeyImages.iiaMumbaiJan2026[6] },
 
     // ===== Team Dinners (7) =====
     { id: 36, category: "Office Culture", title: "Team Dinner – December 2023", image: journeyImages.teamDinnerDecember2023[0] },

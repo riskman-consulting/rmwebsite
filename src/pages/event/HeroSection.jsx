@@ -207,7 +207,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-5xl"
+          className="grid mb-10 grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-5xl"
         >
           {milestones.map((m, i) => (
             <div
@@ -225,7 +225,7 @@ export default function HeroSection() {
         </motion.div>
  
         {/* Background Controls (Optional Visual Indicator) */}
-        <div className="absolute bottom-8 flex gap-2 z-30">
+        <div className="absolute -top-5  bottom-8 flex gap-2 z-30">
           {backgrounds.map((_, i) => (
             <button
               key={i}

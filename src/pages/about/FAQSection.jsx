@@ -45,10 +45,10 @@ export default function FAQSection() {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="mb-10 text-2xl font-bold text-start md:text-3xl text-brandDark dark:text-white"
+          className="mb-10 text-center text-2xl font-bold  md:text-3xl text-brandDark dark:text-white"
         >
-          Frequently Asked
-          <br />
+          Frequently Asked{" "} 
+          
           <span className="text-brandPrimary dark:text-brandAccent">Questions</span>
         </motion.h2>
 

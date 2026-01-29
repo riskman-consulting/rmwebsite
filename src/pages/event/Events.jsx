@@ -16,7 +16,9 @@ import VideoHighlightSection from './VideoHighlightSection';
 import EventsGrid from './EventsGrid.jsx';
 import EventModal from './EventModal.jsx';
 import { events } from "./data"; // Your events data
-import RiskManTimeline from './JourneyCard.jsx';
+// import RiskManTimeline from './JourneyCard.jsx';
+import  UpcomingEvent from "./UpcomingEventSection.jsx"
+
  
 function Events() {
   const [selectedEvent, setSelectedEvent] = useState(null);
@@ -32,25 +34,26 @@ function Events() {
   return (
     <div>
       <HeroSection />
-      <ImpactInNumbersSection />
-      <CompanyTimelineSection />
-      <CultureSection />
-      <ExpertiseSection />
-      {/* <JourneyTimeLineSection /> */}
-      <RiskManTimeline />
-      <MomentThatMattersSection />
-      <AwardSection />
-      <InternationalAssignmentSection />
-      <TestimonialsSection />
-      <TogethernessCelebrationSection />
-     
-      {/* Events Grid with Modal */}
+      <UpcomingEvent/>
       <EventsGrid
         events={events}
         onCardClick={handleOpenModal}
       />
+      {/* <ImpactInNumbersSection /> */}
+      <CompanyTimelineSection />
+      {/* <CultureSection /> */}
+      {/* <ExpertiseSection /> */}
+      {/* <JourneyTimeLineSection /> */}
+      {/* <RiskManTimeline /> */}
+      <MomentThatMattersSection />
+      {/* <InternationalAssignmentSection /> */}
+      <AwardSection />
+      <TestimonialsSection />
+      {/* <TogethernessCelebrationSection /> */}
      
-      <VideoHighlightSection />
+      {/* Events Grid with Modal */}
+     
+      {/* <VideoHighlightSection /> */}
       <CTASection />
  
       {/* Event Modal - renders when an event is selected */}

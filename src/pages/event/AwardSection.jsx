@@ -113,45 +113,6 @@ export default function AwardsSection() {
           })}
         </div>
 
-        {/* Stats Banner */}
-        <div className="max-w-6xl mx-auto mb-24">
-          <div
-            className="p-10 sm:p-12 rounded-[3rem]
-            bg-surfaceLight/80 dark:bg-surfaceDark/40
-            border border-borderLight dark:border-borderDark
-            backdrop-blur-xl"
-          >
-            <div className="grid gap-10 text-center sm:grid-cols-3">
-              <div>
-                <div className="text-5xl font-black text-brandGold mb-2">
-                  98%
-                </div>
-                <div className="text-brandDark/60 dark:text-white/60">
-                  Client Satisfaction
-                </div>
-              </div>
-
-              <div>
-                <div className="text-5xl font-black text-brandGold mb-2">
-                  25+
-                </div>
-                <div className="text-brandDark/60 dark:text-white/60">
-                  Industry Awards
-                </div>
-              </div>
-
-              <div>
-                <div className="text-5xl font-black text-brandGold mb-2">
-                  150+
-                </div>
-                <div className="text-brandDark/60 dark:text-white/60">
-                  Success Stories
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Recent Recognitions */}
         <div
           className="max-w-4xl mx-auto p-10 sm:p-12 rounded-[2.5rem]
@@ -159,64 +120,6 @@ export default function AwardsSection() {
           border border-borderLight dark:border-borderDark
           backdrop-blur-xl"
         >
-          <h3 className="mb-10 text-3xl font-heading font-black text-center text-brandDark dark:text-white">
-            Recent Recognitions
-          </h3>
-
-          <div className="space-y-6">
-            {[
-              {
-                icon: Trophy,
-                title: "Excellence in Risk Management",
-                subtitle: "Institute of Internal Auditors",
-                year: "2024",
-              },
-              {
-                icon: Users,
-                title: "Best Place to Work",
-                subtitle: "Workplace Culture Recognition",
-                year: "2023",
-              },
-              {
-                icon: Lightbulb,
-                title: "Innovation in Audit Technology",
-                subtitle: "AI-driven methodologies",
-                year: "2023",
-              },
-            ].map((item, i) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={i}
-                  className="flex items-start gap-4 p-6 rounded-2xl
-                    bg-bgLight dark:bg-bgDark
-                    border border-borderLight dark:border-borderDark
-                    transition-all duration-300
-                    hover:border-brandGold/40"
-                >
-                  <div
-                    className="w-12 h-12 rounded-xl flex items-center justify-center
-                    bg-brandGold/10 border border-brandGold/30"
-                  >
-                    <Icon className="w-6 h-6 text-brandGold" />
-                  </div>
-
-                  <div className="flex-1">
-                    <div className="font-bold text-brandDark dark:text-white">
-                      {item.title}
-                    </div>
-                    <div className="text-sm text-brandDark/60 dark:text-white/60">
-                      {item.subtitle}
-                    </div>
-                  </div>
-
-                  <div className="text-sm font-semibold text-brandGold">
-                    {item.year}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
         </div>
       </div>
     </section>
