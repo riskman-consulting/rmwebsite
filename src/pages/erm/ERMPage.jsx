@@ -1,5 +1,11 @@
+// ===============================
 // ERMPage.jsx
+// Enterprise Risk Management Page
+// ===============================
 
+import React from "react";
+
+// Sections
 import HeroSection from "./HeroSection";
 import IntroSection from "./IntroSection";
 import ERMAdvantagesSection from "./ERMAdvantagesSection";
@@ -12,23 +18,13 @@ import CTASection from "./CTASection";
 
 const ERMPage = () => {
   return (
-    <main className="min-h-screen bg-bgLight dark:bg-bgDark">
+    <main className="w-full overflow-hidden">
 
-      {/* 1. Hero */}
-      <HeroSection
-        data={{
-          image:
-            "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop",
-        }}
-      />
+      {/* 1. Hero Section */}
+      <HeroSection />
 
-      {/* 2. Intro / Journey */}
-      <IntroSection
-        data={{
-          image:
-            "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1600&auto=format&fit=crop",
-        }}
-      />
+      {/* 2. Introduction / Journey */}
+      <IntroSection />
 
       {/* 3. ERM Advantages */}
       <ERMAdvantagesSection />
@@ -36,20 +32,21 @@ const ERMPage = () => {
       {/* 4. Strategic ERM Framework */}
       <StrategicERMFrameworkSection />
 
-      {/* 5. Methodology / Process Flow */}
+      {/* 5. Methodology */}
       <ERMMethodologySection />
 
       {/* 6. Organization-wide Implementation */}
       <OrganizationWideImplementationSection />
 
-      {/* 7. Risk Maturity / Path Ahead */}
+      {/* 7. Risk Maturity & Path Ahead */}
       <RiskMaturitySection />
 
-      {/* 8. FAQ */}
+      {/* 8. Final CTA */}
+      <CTASection />
+
+      {/* 9. FAQs */}
       <FAQSection />
 
-      {/* 9. Final CTA */}
-      <CTASection />
 
     </main>
   );

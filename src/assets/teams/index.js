@@ -34,7 +34,7 @@ import VinayakPoddar from "./Vinayak Poddar.webp";
 import VishalSharma from "./Vishal Sharma.webp";
 import Yashvi from "./Yashvi.webp";
 import Yugmita from "./Yugmita.webp";
-import Jay from "./jay.webp"
+import Jay from "./jay.jpg"
 import Arif from "./arif.webp"
 import Harsh from "./Harsh.webp"
 import Kiran from "./kiran.webp"

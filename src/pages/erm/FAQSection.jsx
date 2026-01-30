@@ -4,7 +4,7 @@ import FAQItem from "../risk-advisory/FAQItem";
 
 const FAQSection = () => {
   return (
-    <section className="relative bg-bgLight py-20 dark:bg-bgDark md:py-28">
+    <section className="relative bg-bgLight py-12 dark:bg-bgDark md:py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
 
@@ -21,7 +21,7 @@ const FAQSection = () => {
               FAQs
             </div>
 
-            <h2 className="font-heading text-3xl font-black text-brandDark dark:text-brandLight sm:text-4xl md:text-5xl">
+            <h2 className="font-heading text-3xl font-black text-brandDark dark:text-brandLight sm:text-3xl md:text-3xl">
               Frequently Asked{" "}
               <span className="text-brandPrimary dark:text-brandAccent">
                 Questions

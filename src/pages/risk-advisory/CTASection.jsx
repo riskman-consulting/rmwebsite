@@ -24,7 +24,7 @@ const CTASection = ({ data }) => {
           className="mx-auto max-w-4xl text-center"
         >
           {/* Title */}
-          <h2 className="mb-6 font-heading text-3xl font-black leading-tight text-white sm:text-4xl md:text-5xl">
+          <h2 className="mb-6 font-heading text-3xl font-black leading-tight text-white sm:text-3xl md:text-4xl">
             {data.title}
           </h2>
 
@@ -36,7 +36,7 @@ const CTASection = ({ data }) => {
           {/* CTA Button */}
           <Link
             to={data.path}
-            className="group inline-flex items-center gap-3 rounded-full bg-brandAccent px-10 py-4 text-lg font-bold text-brandDark shadow-xl transition-all duration-300 hover:bg-brandAccent/90 hover:shadow-2xl"
+            className="group  inline-flex items-center gap-3 rounded-full bg-brandAccent px-10 py-4 text-lg font-bold text-brandDark shadow-xl transition-all duration-300 hover:bg-brandAccent/90 hover:shadow-2xl"
           >
             {data.btnText}
             <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />

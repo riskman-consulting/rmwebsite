@@ -1,112 +1,103 @@
-import { motion } from "framer-motion";
-import {
-  Users,
-  UserCheck,
-  Eye,
-  Activity,
-  BarChart2,
-  ShieldCheck,
-} from "lucide-react";
+// ===============================================
+// OrganizationWideImplementationSection.jsx
+// Our Organization-wide Implementation Approach
+// ===============================================
 
-const APPROACH_ITEMS = [
-  {
-    title: "Collaborative Governance & Support",
-    description:
-      "We provide structured guidance and hands-on support to process owners, ensuring consistent risk identification and assessment across the organization.",
-    icon: Users,
-  },
-  {
-    title: "Clarified Risk Ownership",
-    description:
-      "Our approach empowers process owners to take direct responsibility for updating risk statuses and executing mitigation actions.",
-    icon: UserCheck,
-  },
-  {
-    title: "Continuous Oversight",
-    description:
-      "We facilitate regular risk discussions and review risk registers to ensure mitigation actions are closed promptly and effectively.",
-    icon: Eye,
-  },
-  {
-    title: "Dynamic Variance Analysis",
-    description:
-      "Periodic reviews are conducted to analyze fluctuations in risk ratings and align them with management-defined benchmarks.",
-    icon: Activity,
-  },
-  {
-    title: "Strategic Reporting & Strengthening",
-    description:
-      "We strengthen the quality of Board and senior management reporting by tracking progress of mitigation initiatives.",
-    icon: BarChart2,
-  },
-  {
-    title: "Independent Effectiveness Monitoring",
-    description:
-      "We establish mechanisms for periodic independent reviews to ensure long-term sustainability of implemented controls.",
-    icon: ShieldCheck,
-  },
-];
+import React from "react";
+import { motion } from "framer-motion";
 
 const OrganizationWideImplementationSection = () => {
   return (
-    <section className="relative bg-bgLight py-20 dark:bg-bgDark md:py-28">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-6xl">
+    <section className="bg-white py-16 dark:bg-bgDark">
+      <div className="mx-auto max-w-7xl px-6">
 
-          {/* Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="mb-16 text-center"
-          >
-            <h2 className="font-heading text-3xl font-black text-brandDark dark:text-brandLight sm:text-4xl md:text-5xl">
-              Our{" "}
-              <span className="text-brandPrimary dark:text-brandAccent">
-                Organization-wide Implementation
-              </span>{" "}
-              Approach
-            </h2>
+        {/* Section Heading */}
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-4 text-center text-3xl font-semibold text-slate-900 dark:text-brandLight md:text-4xl"
+        >
+          Our Organization-wide Implementation Approach
+        </motion.h2>
 
-            <p className="mx-auto mt-6 max-w-3xl text-lg text-brandDark/70 dark:text-brandLight/70">
-              RiskMan ensures that Enterprise Risk Management is not a siloed
-              exercise but a deeply embedded governance culture empowering every
-              level of the organization to manage risks proactively.
-            </p>
-          </motion.div>
+        {/* Accent line */}
+        <motion.div
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="mx-auto mb-8 h-1 w-24 origin-center rounded-full bg-brandPrimary dark:bg-brandAccent"
+        />
 
-          {/* Cards Grid */}
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {APPROACH_ITEMS.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.08 }}
-                  className="rounded-3xl border border-borderLight bg-surfaceLight p-8 shadow-lg transition-all duration-300 hover:shadow-xl dark:border-borderDark dark:bg-surfaceDark"
-                >
-                  {/* Icon */}
-                  <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-brandPrimary/10 dark:bg-brandPrimary/20">
-                    <Icon className="h-7 w-7 text-brandPrimary dark:text-brandAccent" />
-                  </div>
+        {/* Section Description */}
+        <motion.p
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="mx-auto mb-16 max-w-4xl text-center text-lg text-slate-600 dark:text-brandLight/70"
+        >
+          RiskMan ensures that ERM is not a siloed exercise but a deeply embedded culture that
+          empowers every level of your organization to manage risks proactively.
+        </motion.p>
 
-                  {/* Title */}
-                  <h3 className="mb-4 text-lg font-bold text-brandDark dark:text-brandLight">
-                    {item.title}
-                  </h3>
+        {/* Cards */}
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
 
-                  {/* Description */}
-                  <p className="text-sm leading-relaxed text-brandDark/70 dark:text-brandLight/70">
-                    {item.description}
-                  </p>
-                </motion.div>
-              );
-            })}
-          </div>
+          {[
+            {
+              title: "Collaborative Governance & Support",
+              text:
+                "We provide structured guidance and hands-on support to process owners to ensure consistent risk identification and assessment across all departments.",
+            },
+            {
+              title: "Clarified Risk Ownership",
+              text:
+                "Our approach empowers your team to take direct responsibility for updating risk statuses and implementing specific mitigation actions.",
+            },
+            {
+              title: "Continuous Oversight",
+              text:
+                "We facilitate regular risk discussions and review risk registers to ensure that all identified mitigation actions are closed promptly and effectively.",
+            },
+            {
+              title: "Dynamic Variance Analysis",
+              text:
+                "We perform periodic reviews to analyze the reasons behind risk fluctuations and align them with your management’s specific benchmarks.",
+            },
+            {
+              title: "Strategic Reporting & Strengthening",
+              text:
+                "By tracking the progress of mitigation initiatives, we strengthen the quality of risk reporting provided to the Board and senior leadership.",
+            },
+            {
+              title: "Independent Effectiveness Monitoring",
+              text:
+                "We ensure long-term sustainability by establishing a process where internal audit teams periodically monitor the effectiveness of all implemented controls.",
+            },
+          ].map((card, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
+              className="group relative overflow-hidden rounded-xl border border-borderLight bg-slate-50 p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:border-borderDark dark:bg-surfaceDark"
+            >
+              {/* Hover accent */}
+              <div className="absolute inset-x-0 top-0 h-1 bg-brandPrimary opacity-0 transition group-hover:opacity-100 dark:bg-brandAccent" />
+
+              <h3 className="mb-3 text-lg font-semibold text-slate-900 dark:text-brandLight">
+                {card.title}
+              </h3>
+
+              <p className="text-sm leading-relaxed text-slate-600 dark:text-brandLight/70">
+                {card.text}
+              </p>
+            </motion.div>
+          ))}
 
         </div>
       </div>

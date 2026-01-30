@@ -116,3 +116,15 @@ body{
   white-space: nowrap;
   animation: marquee 14s linear infinite;
 }
+
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE & Edge */
+    scrollbar-width: none;    /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;            /* Chrome, Safari */
+  }
+}

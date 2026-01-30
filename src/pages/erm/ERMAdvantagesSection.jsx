@@ -1,141 +1,141 @@
-import { motion } from "framer-motion";
-import image from "../../assets/images/erm/erm-1.png";
-import {
-  ShieldCheck,
-  BarChart3,
-  Target,
-  TrendingUp,
-  RefreshCcw,
-  LifeBuoy,
-  Sparkles,
-  Lock,
-} from "lucide-react";
+// ===================================
+// ERMAdvantagesSection.jsx
+// Enterprise Risk Assessment Advantages
+// ===================================
 
-const ADVANTAGES = [
+import React from "react";
+import { motion } from "framer-motion";
+import ermImage from "../../assets/images/erm/erm-1.png";
+
+const advantages = [
   {
     title: "Holistic Risk View",
     description:
-      "Provides a comprehensive, organization-wide perspective on all potential risks and their interconnections.",
-    icon: ShieldCheck,
+      "Provides a comprehensive, organization-wide perspective on all potential threats and interconnections.",
   },
   {
     title: "Improved Decision-Making",
     description:
-      "Enables leadership to take informed strategic decisions backed by structured risk intelligence.",
-    icon: BarChart3,
+      "Empowers leadership to make better-informed strategic choices based on detailed risk data.",
   },
   {
     title: "Improved Resource Allocation",
     description:
-      "Ensures capital, time, and manpower are directed toward managing the most critical business risks.",
-    icon: Target,
+      "Ensures that time, capital, and manpower are directed toward managing the most critical areas of the business.",
   },
   {
     title: "Convert Risks into Opportunities",
     description:
-      "Transforms uncertainty into competitive advantage by identifying opportunities for innovation.",
-    icon: TrendingUp,
+      "Transforms potential threats into a competitive advantage by identifying ways to innovate through uncertainty.",
   },
   {
     title: "Long-Term Sustainability",
     description:
-      "Builds a resilient operating model capable of withstanding evolving industry complexities.",
-    icon: RefreshCcw,
+      "Focuses on building a business model that can withstand evolving industry complexities over time.",
   },
   {
     title: "Resilience & Business Continuity",
     description:
-      "Strengthens the organization’s ability to recover quickly from disruptions and maintain operations.",
-    icon: LifeBuoy,
+      "Strengthens the organization’s ability to recover quickly from disruptions and maintain essential operations.",
   },
   {
     title: "Facilitates Innovation & Growth",
     description:
-      "Creates a secure framework to pursue growth initiatives with calculated confidence.",
-    icon: Sparkles,
+      "Creates a secure framework that allows the company to pursue new growth initiatives with calculated confidence.",
   },
   {
     title: "Protection of Reputation",
     description:
-      "Safeguards brand value and stakeholder trust through proactive risk management.",
-    icon: Lock,
+      "Safeguards the brand’s value and stakeholder trust by proactively managing risks that could lead to public fallout.",
   },
 ];
 
 const ERMAdvantagesSection = () => {
   return (
-    <section className="relative bg-surfaceLight py-20 dark:bg-surfaceDark md:py-28">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-6xl">
+    <section className="relative overflow-hidden bg-bgLight py-24 dark:bg-bgDark">
+      <div className="container relative z-10">
 
-          {/* Header */}
+        {/* Top Row */}
+        <div className="mb-20 grid grid-cols-1 items-center gap-16 md:grid-cols-2">
+
+          {/* Left: Heading + Description */}
+          <div>
+            <motion.h2
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="mb-4 font-heading text-3xl font-semibold leading-tight text-brandDark dark:text-brandLight md:text-4xl"
+            >
+              Enterprise Risk Assessment <span className="text-brandPrimary dark:text-brandAccent">Advantages</span>
+            </motion.h2>
+
+            {/* Accent line */}
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="mb-6 h-1 w-20 origin-left rounded-full bg-brandAccent dark:bg-white"
+            />
+
+            <motion.p
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.15 }}
+              className="max-w-xl text-lg leading-relaxed text-brandNavy/80 dark:text-brandLight/70"
+            >
+              A robust Enterprise Risk Assessment serves as a cornerstone for organizational
+              resilience, transforming potential threats into structured pathways for sustainable growth.
+            </motion.p>
+          </div>
+
+          {/* Right: Image */}
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="mb-14 text-center"
-          >
-            <h2 className="font-heading text-3xl font-black text-brandDark dark:text-brandLight sm:text-4xl md:text-5xl">
-              Enterprise Risk Assessment{" "}
-              <span className="text-brandPrimary dark:text-brandAccent">
-                Advantages
-              </span>
-            </h2>
-
-            <p className="mx-auto mt-6 max-w-3xl text-lg text-brandDark/70 dark:text-brandLight/70">
-              A robust Enterprise Risk Assessment serves as the cornerstone of
-              organizational resilience, transforming potential threats into
-              structured pathways for sustainable growth.
-            </p>
-          </motion.div>
-
-          {/* Advantages Visual */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-20 text-center"
+            className="relative flex justify-center"
           >
+            {/* Subtle frame */}
+            <div className="absolute -inset-4 rounded-2xl bg-brandPrimary/5 dark:bg-white/70" />
+
             <img
-              src={image}
-              alt="Enterprise Risk Assessment advantages overview"
-              className="mx-auto w-full max-w-6xl rounded-2xl shadow-xl"
-              loading="lazy"
+              src={ermImage}
+              alt="Enterprise Risk Assessment Advantages"
+              className="relative z-10 rounded-2xl border border-borderLight shadow-xl dark:border-borderDark"
             />
           </motion.div>
 
-          {/* Advantage Cards */}
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {ADVANTAGES.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="rounded-2xl border border-borderLight bg-bgLight p-6 shadow-md transition-all duration-300 hover:shadow-lg dark:border-borderDark dark:bg-bgDark"
-                >
-                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brandPrimary/10 dark:bg-brandPrimary/20">
-                    <Icon className="h-6 w-6 text-brandPrimary dark:text-brandAccent" />
-                  </div>
-
-                  <h3 className="mb-2 text-lg font-bold text-brandDark dark:text-brandLight">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-sm leading-relaxed text-brandDark/70 dark:text-brandLight/70">
-                    {item.description}
-                  </p>
-                </motion.div>
-              );
-            })}
-          </div>
-
         </div>
+
+        {/* Advantage Cards */}
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {advantages.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 32 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.06 }}
+              className="group relative overflow-hidden rounded-xl border border-borderLight bg-surfaceLight p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:border-borderDark dark:bg-surfaceDark"
+            >
+              {/* Hover accent */}
+              <div className="absolute inset-x-0 top-0 h-1 bg-brandAccent opacity-0 transition group-hover:opacity-100 dark:bg-brandAccent" />
+
+              <h3 className="mb-3 font-heading text-lg font-semibold text-brandDark dark:text-brandLight">
+                {item.title}
+              </h3>
+
+              <p className="text-sm leading-relaxed text-brandNavy/80 dark:text-brandLight/70">
+                {item.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+
       </div>
     </section>
   );

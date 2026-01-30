@@ -19,7 +19,7 @@ const FAQSection = ({ data }) => {
               FAQ
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-brandDark dark:text-brandLight font-heading">
+            <h2 className="text-3xl sm:text-4xl md:text-4xl font-black text-brandDark dark:text-brandLight font-heading">
               {data.title}
             </h2>
           </motion.div>

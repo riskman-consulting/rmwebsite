@@ -1,111 +1,112 @@
+// =======================================
+// StrategicERMFrameworkSection.jsx
+// Strategic ERM Framework: Scope & Deliverables
+// =======================================
+
+import React from "react";
 import { motion } from "framer-motion";
-import { Layers, CheckCircle } from "lucide-react";
-
-const SCOPE_ITEMS = [
-  "Develop Enterprise Risk Management (ERM) policy",
-  "Advise on risk assessment criteria and methodology",
-  "Assess enterprise-level risks and existing controls through process walkthroughs",
-  "Interview key stakeholders and review supporting documentation",
-  "Document key risks for management reporting",
-  "Recommend mitigation and control measures where required",
-];
-
-const DELIVERABLES = [
-  "Proposed ERM framework and policy manual",
-  "Prioritized list of enterprise-level key risks (Risks That Matter)",
-  "Current-state assessment and mitigation plans",
-  "Actionable recommendations for risk strengthening",
-  "Representation in quarterly Risk Committee meetings",
-];
 
 const StrategicERMFrameworkSection = () => {
   return (
-    <section className="relative bg-bgLight py-20 dark:bg-bgDark md:py-28">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-6xl">
+    <section className="bg-white py-24 dark:bg-bgDark">
+      <div className="mx-auto max-w-7xl px-6">
 
-          {/* Header */}
+        {/* Section Heading */}
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-4 text-center text-3xl font-semibold text-slate-900 dark:text-brandLight md:text-4xl"
+        >
+        Our Scope and Deliverables
+        </motion.h2>
+
+        {/* Accent line */}
+        <motion.div
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="mx-auto mb-8 h-1 w-24 origin-center rounded-full bg-brandPrimary dark:bg-brandAccent"
+        />
+
+        {/* Section Description */}
+        <motion.p
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="mx-auto mb-16 max-w-4xl text-center text-lg text-slate-600 dark:text-brandLight/70"
+        >
+          RiskMan partners with your organization to build a resilient future by implementing a
+          comprehensive Enterprise Risk Management framework that identifies, assesses, and
+          mitigates critical business threats.
+        </motion.p>
+
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+
+          {/* Scope of Services */}
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="mb-16 text-center"
+            transition={{ duration: 0.6 }}
+            className="rounded-xl border border-borderLight bg-slate-50 p-8 shadow-sm dark:border-borderDark dark:bg-surfaceDark"
           >
-            <h2 className="font-heading text-3xl font-black text-brandDark dark:text-brandLight sm:text-4xl md:text-5xl">
-              Strategic ERM Framework{" "}
-              <span className="text-brandPrimary dark:text-brandAccent">
-                Our Scope & Deliverables
-              </span>
-            </h2>
+            <h3 className="mb-4 text-xl font-semibold text-slate-900 dark:text-brandLight">
+              Scope of Services
+            </h3>
 
-            <p className="mx-auto mt-6 max-w-3xl text-lg text-brandDark/70 dark:text-brandLight/70">
-              RiskMan partners with your organization to design and implement a
-              comprehensive Enterprise Risk Management framework that identifies,
-              assesses, and mitigates risks that could impede strategic objectives.
+            <p className="mb-4 text-slate-600 dark:text-brandLight/70">
+              RiskMan to be engaged for the following:
             </p>
+
+            <ul className="list-disc space-y-2 pl-5 text-slate-600 dark:text-brandLight/70">
+              <li>Develop ERM policy</li>
+              <li>Advise to develop risk assessment criteria</li>
+              <li>
+                Assessment of various risks & controls in place based on process walkthroughs
+                across the entity including Corporate Strategy and Entity level controls
+              </li>
+              <li>
+                Interviewing key stakeholders and review documentation around key enterprise
+                level risks
+              </li>
+              <li>
+                Documenting key risks for management reporting and recommending control
+                measures (if needed)
+              </li>
+            </ul>
           </motion.div>
 
-          {/* Two Column Layout */}
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
+          {/* Key Deliverables */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="rounded-xl border border-borderLight bg-slate-50 p-8 shadow-sm dark:border-borderDark dark:bg-surfaceDark"
+          >
+            <h3 className="mb-4 text-xl font-semibold text-slate-900 dark:text-brandLight">
+              Key Deliverables
+            </h3>
 
-            {/* Scope of Services */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="rounded-3xl border border-borderLight bg-surfaceLight p-8 shadow-lg dark:border-borderDark dark:bg-surfaceDark"
-            >
-              <div className="mb-6 flex items-center gap-3">
-                <Layers className="h-6 w-6 text-brandPrimary dark:text-brandAccent" />
-                <h3 className="text-xl font-bold text-brandDark dark:text-brandLight">
-                  Scope of Services
-                </h3>
-              </div>
+            <p className="mb-4 text-slate-600 dark:text-brandLight/70">
+              We provide the following deliverables for your services:
+            </p>
 
-              <ul className="space-y-4">
-                {SCOPE_ITEMS.map((item, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start gap-3 text-brandDark/80 dark:text-brandLight/80"
-                  >
-                    <CheckCircle className="mt-1 h-5 w-5 text-brandPrimary dark:text-brandAccent" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+            <ul className="list-disc space-y-2 pl-5 text-slate-600 dark:text-brandLight/70">
+              <li>Proposed ERM framework and manual</li>
+              <li>
+                List of enterprise level key risks (i.e., Risks that Matter)
+              </li>
+              <li>Current state and Mitigation plans (if any)</li>
+              <li>Recommendations</li>
+              <li>Representing quarterly risk committee meetings</li>
+            </ul>
+          </motion.div>
 
-            {/* Key Deliverables */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="rounded-3xl border border-borderLight bg-surfaceLight p-8 shadow-lg dark:border-borderDark dark:bg-surfaceDark"
-            >
-              <div className="mb-6 flex items-center gap-3">
-                <Layers className="h-6 w-6 text-brandPrimary dark:text-brandAccent" />
-                <h3 className="text-xl font-bold text-brandDark dark:text-brandLight">
-                  Key Deliverables
-                </h3>
-              </div>
-
-              <ul className="space-y-4">
-                {DELIVERABLES.map((item, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start gap-3 text-brandDark/80 dark:text-brandLight/80"
-                  >
-                    <CheckCircle className="mt-1 h-5 w-5 text-brandPrimary dark:text-brandAccent" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-
-          </div>
         </div>
       </div>
     </section>

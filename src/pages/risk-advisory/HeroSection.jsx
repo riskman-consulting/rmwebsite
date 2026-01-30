@@ -30,7 +30,7 @@ const HeroSection = ({ data }) => {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="mb-6 font-heading text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl"
+              className="mb-6 font-heading text-4xl font-black leading-tight text-white sm:text-5xl md:text-5xl"
             >
               {data.title}
             </motion.h1>

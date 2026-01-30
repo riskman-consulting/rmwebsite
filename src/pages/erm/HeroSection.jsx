@@ -1,101 +1,78 @@
+
+
+import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Shield, ArrowRight } from "lucide-react";
+import heroImage from "../../assets/images/erm/hero-image.png";
 
-const HeroSection = ({ data }) => {
+const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden bg-brandDark py-20 md:py-28">
+    <section className="relative overflow-hidden bg-slate-950">
       
-      {/* Subtle Accent Glow */}
-      <div className="pointer-events-none absolute -top-40 right-0 h-96 w-96 rounded-full bg-brandAccent/15 blur-[140px]" />
+      {/* Main Container */}
+      <div className="relative z-10 mx-auto grid min-h-screen grid-cols-1 items-center gap-12 px-6 md:grid-cols-2 lg:px-10 xl:px-10">
 
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid items-center gap-16 lg:grid-cols-2">
-
-          {/* LEFT — Content */}
-          <div>
-            {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="mb-6 inline-flex items-center gap-2 rounded-full border border-brandAccent/30 bg-brandAccent/10 px-5 py-2 text-xs font-bold uppercase tracking-widest text-brandAccent"
-            >
-              <Shield className="h-4 w-4" />
-              Enterprise Risk Management
-            </motion.div>
-
-            {/* Heading */}
-            <motion.h1
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="mb-6 font-heading text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl"
-            >
-              Your Trusted Advisors for <br />
-              <span className="text-brandAccent">
-                Enterprise Risk Management
-              </span>
-            </motion.h1>
-
-            {/* Description */}
-            <motion.p
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="mb-10 max-w-xl text-lg leading-relaxed text-white/85 md:text-xl"
-            >
-              We partner with you to identify the “Risks That Matter,” building a
-              resilient, customized ERM framework that protects your reputation
-              and fuels sustainable long-term growth.
-            </motion.p>
-
-            {/* CTAs */}
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex flex-wrap gap-4"
-            >
-              <Link
-                to="/contact"
-                className="group inline-flex items-center gap-3 rounded-full bg-brandAccent px-8 py-4 text-base font-bold text-brandDark transition-all duration-300 hover:bg-brandAccent/90"
-              >
-                Book a Consultation
-                <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
-
-              <Link
-                to="/services"
-                className="inline-flex items-center gap-3 rounded-full border border-white/30 px-8 py-4 text-base font-bold text-white transition-all duration-300 hover:bg-white/10"
-              >
-                Know More About Our Services
-              </Link>
-            </motion.div>
-          </div>
-
-          {/* RIGHT — Image (Zig-Zag) */}
-          <motion.div
-            initial={{ opacity: 0, x: 40, y: -30 }}
-            animate={{ opacity: 1, x: 0, y: -30 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className="relative lg:-mt-12"
+        {/* Left Content */}
+        <div className="text-center md:text-left">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: -40 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl font-semibold text-white md:text-4xl lg:text-5xl"
           >
-            <img
-              src={data.image}
-              alt="Enterprise Risk Management"
-              className="w-full rounded-3xl object-cover shadow-2xl"
-            />
+            Your Trusted Advisors for <span className="text-brandAccent">Enterprise Risk Management</span>
+          </motion.h1>
 
-            {/* Image Overlay */}
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-brandDark/25 to-transparent" />
+          <motion.p
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="mt-6 max-w-2xl text-lg text-white/80"
+          >
+            We partner with you to identify the &apos;Risks That Matter,&apos; building a resilient,
+            customized ERM framework that protects your reputation and fuels sustainable long-term growth.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 28 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mt-10 flex flex-col gap-4 sm:flex-row"
+          >
+            <Link
+              to="/contact-us"
+              className="rounded-lg bg-brandAccent px-6 py-3 text-sm font-medium text-slate-900 hover:bg-brandGold"
+            >
+              Book a Consultation
+            </Link>
+
+            <Link
+              to="/services"
+              className="rounded-lg border border-white/40 px-6 py-3 text-sm font-medium text-white hover:bg-white/10"
+            >
+              Know More About Our Services
+            </Link>
           </motion.div>
-
         </div>
+
+        {/* Right Image */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7 }}
+          className="flex justify-center md:justify-end"
+        >
+          <img
+            src={heroImage}
+            alt="hero image"
+            className="w-full max-w-xl rounded-2xl shadow-2xl"
+          />
+        </motion.div>
+
       </div>
 
-      {/* Bottom fade */}
-      <div className="pointer-events-none absolute bottom-0 left-0 h-28 w-full bg-gradient-to-t from-bgLight to-transparent dark:from-bgDark" />
+      {/* Background Glow */}
+      <div className="pointer-events-none absolute -top-32 right-0 h-[28rem] w-[28rem] rounded-full bg-blue-500/10 blur-3xl" />
     </section>
   );
 };
