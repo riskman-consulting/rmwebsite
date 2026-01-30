@@ -23,75 +23,174 @@ const animations = {
 /* =========================
    Prasen Pal – EXACT BIO
 ========================= */
+// function PrasenPalRichBio() {
+//   return (
+//     <div className="space-y-6 text-brandDark/80 dark:text-white/80 [&_strong]:text-brandDark  dark:[&_strong]:text-brandAccent  [&_strong]:font-semibold">
+//       <div className="space-y-3">
+//         <h3 className="text-xl font-bold text-brandDark dark:text-brandAccent">
+//           Co-Founder & Partner
+//         </h3>
+
+//         <p>
+//           A seasoned professional with over{" "}
+//           <strong>17 years of distinguished experience</strong> across Big Four
+//           and global consulting powerhouses—including{" "}
+//           <strong>Deloitte, EY, and Genpact</strong>—he brings a rare blend of
+//           strategic vision and technical mastery to the firm's leadership.
+//         </p>
+
+//         <p>
+//           His expertise spans the critical intersections of modern business
+//           transformation:{" "}
+//           <strong>
+//             Risk Management & Internal Audit, Sustainability & ESG Advisory,
+//             Process Excellence & Intelligent Automation, and Regulatory
+//             Compliance.
+//           </strong>
+//         </p>
+
+//         <p>
+//           A Chartered Accountant by qualification, he holds an impressive
+//           portfolio of global certifications, including:
+//         </p>
+//       </div>
+
+//       <ul className="pl-5 space-y-2 list-disc">
+//         <li>
+//           <strong>Sustainability & Climate Risk (SCR) Professional</strong> —
+//           Global Association of Risk Professionals (GARP)
+//         </li>
+//         <li>
+//           <strong>Lean Six Sigma Green Belt</strong> — Process Excellence
+//         </li>
+//         <li>
+//           <strong>RPA Business Analyst & Implementation Specialist</strong>
+//         </li>
+//         <li>
+//           <strong>BRSR & Sustainability Certification</strong> — ICAI
+//         </li>
+//         <li>
+//           <strong>GST Certification</strong> — ICAI
+//         </li>
+//         <li>
+//           <strong>AICA (L-1)</strong> — ICAI
+//         </li>
+//       </ul>
+
+//       <div className="space-y-3">
+//         <p>
+//           He is widely recognized for architecting end-to-end advisory solutions
+//           that help organizations navigate complexity—whether it's embedding ESG
+//           into corporate strategy, engineering leaner processes, deploying
+//           robotic automation at scale, or harnessing the power of AI for
+//           competitive advantage.
+//         </p>
+
+//         <p>
+//           A trusted advisor to leading corporate houses, he continues to shape
+//           how businesses think about risk, resilience, and responsible growth in
+//           an evolving global landscape.
+//         </p>
+//       </div>
+//     </div>
+//   );
+// }
+
 function PrasenPalRichBio() {
   return (
-    <div className="space-y-6 text-brandDark/80 dark:text-white/80">
-      <div className="space-y-3">
-        <h3 className="text-xl font-bold text-brandDark dark:text-brandAccent">
-          Co-Founder & Partner
-        </h3>
+    <div
+      className="relative grid gap-8 md:grid-cols-2 items-start
+      text-brandDark/80 dark:text-white/80
+      [&_strong]:text-brandDark dark:[&_strong]:text-brandAccent
+      [&_strong]:font-semibold"
+    >
+      {/* Vertical divider */}
+      <div className="absolute inset-y-0 hidden w-px md:block left-1/2 bg-borderLight dark:bg-borderDark" />
 
-        <p>
-          A seasoned professional with over{" "}
-          <strong>17 years of distinguished experience</strong> across Big Four
-          and global consulting powerhouses—including{" "}
-          <strong>Deloitte, EY, and Genpact</strong>—he brings a rare blend of
-          strategic vision and technical mastery to the firm's leadership.
-        </p>
+      {/* =========================
+         LEFT COLUMN
+      ========================= */}
+      <div className="pr-0 space-y-6 md:pr-8">
+        <div className="space-y-3">
+          <h3 className="text-xl font-bold text-brandDark dark:text-brandAccent">
+            Co-Founder & Partner
+          </h3>
 
-        <p>
-          His expertise spans the critical intersections of modern business
-          transformation:{" "}
-          <strong>
-            Risk Management & Internal Audit, Sustainability & ESG Advisory,
-            Process Excellence & Intelligent Automation, and Regulatory
-            Compliance.
-          </strong>
-        </p>
+          <p>
+            A seasoned professional with over{" "}
+            <strong>17 years of distinguished experience</strong> across Big Four
+            and global consulting powerhouses—including{" "}
+            <strong>Deloitte, EY, and Genpact</strong>—he brings a rare blend of
+            strategic vision and technical mastery to the firm's leadership.
+          </p>
+        </div>
 
-        <p>
-          A Chartered Accountant by qualification, he holds an impressive
-          portfolio of global certifications, including:
-        </p>
+        {/* Expertise Pills */}
+        <div className="space-y-3">
+          <h4 className="text-lg font-semibold text-brandDark dark:text-brandAccent">
+            Core Expertise
+          </h4>
+
+          <div className="flex flex-wrap gap-3 max-w-[95%]">
+            {[
+              "Enterprise Risk Management & Internal Audit",
+              "Sustainability & ESG Strategy, Reporting & BRSR",
+              "Process Excellence & Intelligent Automation",
+              // "Robotic Process Automation (RPA) & AI Enablement",
+              "Tax, Regulatory & Compliance Advisory",
+            ].map((item) => (
+              <span
+                key={item}
+                className="px-4 py-2 text-sm font-semibold border rounded-full bg-brandPrimary/5 text-brandPrimary dark:bg-brandAccent/10 dark:text-white border-brandPrimary/20 dark:border-brandAccent/20"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
 
-      <ul className="pl-5 space-y-2 list-disc">
-        <li>
-          <strong>Sustainability & Climate Risk (SCR) Professional</strong> —
-          Global Association of Risk Professionals (GARP)
-        </li>
-        <li>
-          <strong>Lean Six Sigma Green Belt</strong> — Process Excellence
-        </li>
-        <li>
-          <strong>RPA Business Analyst & Implementation Specialist</strong>
-        </li>
-        <li>
-          <strong>BRSR & Sustainability Certification</strong> — ICAI
-        </li>
-        <li>
-          <strong>GST Certification</strong> — ICAI
-        </li>
-      </ul>
+      {/* =========================
+         RIGHT COLUMN
+      ========================= */}
+      <div className="pl-0 space-y-6 md:pl-8">
+        {/* Certifications */}
+        <div className="space-y-3">
+          <h4 className="text-lg font-semibold text-brandDark dark:text-brandAccent">
+            Professional Certifications
+          </h4>
 
-      <div className="space-y-3">
-        <p>
-          He is widely recognized for architecting end-to-end advisory solutions
-          that help organizations navigate complexity—whether it's embedding ESG
-          into corporate strategy, engineering leaner processes, deploying
-          robotic automation at scale, or harnessing the power of AI for
-          competitive advantage.
-        </p>
+          <ul className="pl-5 space-y-2 list-disc">
+            <li><strong>Sustainability & Climate Risk (SCR)</strong> — GARP</li>
+            <li><strong>Lean Six Sigma Green Belt</strong></li>
+            <li><strong>RPA Business Analyst & Implementation Specialist</strong></li>
+            <li><strong>BRSR & Sustainability Certification</strong> — ICAI</li>
+            <li><strong>GST Certification</strong> — ICAI</li>
+            <li><strong>AICA (L-1)</strong> — ICAI</li>
+          </ul>
+        </div>
 
-        <p>
-          A trusted advisor to leading corporate houses, he continues to shape
-          how businesses think about risk, resilience, and responsible growth in
-          an evolving global landscape.
-        </p>
+        {/* Narrative */}
+        <div className="space-y-3">
+          <p>
+            He is widely recognized for architecting end-to-end advisory
+            solutions that help organizations navigate complexity—whether
+            embedding ESG into corporate strategy, engineering leaner
+            processes, deploying automation at scale, or harnessing AI for
+            competitive advantage.
+          </p>
+
+          <p>
+            A trusted advisor to leading corporate houses, he continues to
+            shape how businesses think about risk, resilience, and
+            responsible growth in an evolving global landscape.
+          </p>
+        </div>
       </div>
     </div>
   );
 }
+
 
 /* =========================
    Team Data
@@ -110,7 +209,7 @@ const TEAM_MEMBERS = [
   {
     name: "Prasen Pal",
     title: "Co-Founder & Partner | ERS & Sustainability",
-    bio: "A Chartered Accountant and globally certified professional—SCR (GARP), Six Sigma Green Belt, RPA Business Analyst, BRSR & Sustainability—with 18+ years of international experience. Formerly with Deloitte and Genpact ERC, he brings deep expertise in Enterprise Risk Management, Internal Audit, ESG Strategy & Reporting, AI-Powered Automation, and Tax & Regulatory Advisory.",
+    bio: "A Chartered Accountant with 18+ years of global experience, formerly Deloitte and Genpact ERC. Certified in SCR (GARP), Six Sigma, RPA, and BRSR. Expert in ERM, Internal Audit, ESG, AI Automation, and Tax Advisory.",
     image:
       "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768906075/Prasen_pal_xe5jx8.webp",
     linkedin: "https://www.linkedin.com/in/prasen-pal",

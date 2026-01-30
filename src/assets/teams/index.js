@@ -35,6 +35,8 @@ import VishalSharma from "./Vishal Sharma.webp";
 import Yashvi from "./Yashvi.webp";
 import Yugmita from "./Yugmita.webp";
 import Jay from "./jay.webp"
+import Debolina from "./debolina.png";
+import Shreya from "./Shreya.png";
 import Arif from "./arif.webp"
 import Harsh from "./Harsh.webp"
 import Kiran from "./kiran.webp"
@@ -75,6 +77,8 @@ export const teamsImages = {
   Yashvi,
   Yugmita,
   Jay,
+  Debolina,
+  Shreya,
   Arif,
   Harsh,
   Kiran

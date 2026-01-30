@@ -31,7 +31,7 @@ const StatsSection = () => {
 
   return (
     <section
-      className="relative w-full py-20 transition-colors duration-300 bg-bgLight dark:bg-bgDark md:py-28"
+      className="relative w-full transition-colors duration-300 py-14 bg-bgLight dark:bg-bgDark md:py-20"
     >
       {/* ✅ MATCH HEADER CONTAINER */}
       {/* <div className="w-full max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-14"> */}

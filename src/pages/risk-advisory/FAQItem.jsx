@@ -11,14 +11,14 @@ const FAQItem = ({ question, answer, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.08 }}
-      className="overflow-hidden transition-all duration-300 border shadow-md rounded-2xl border-borderLight bg-surfaceLight hover:shadow-lg dark:border-borderDark dark:bg-surfaceDark"
+      className="overflow-hidden rounded-2xl border border-borderLight bg-surfaceLight shadow-md transition-all duration-300 hover:shadow-lg dark:border-borderDark dark:bg-surfaceDark"
     >
       {/* Header */}
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
         aria-expanded={isOpen}
-        className="flex items-center justify-between w-full gap-4 p-6 text-left transition-colors duration-300 hover:bg-brandPrimary/5 dark:hover:bg-brandPrimary/10"
+        className="flex w-full items-center justify-between gap-4 p-6 text-left transition-colors duration-300 hover:bg-brandPrimary/5 dark:hover:bg-brandPrimary/10"
       >
         <span className="text-lg font-bold text-brandDark dark:text-brandLight">
           {question}
@@ -29,7 +29,7 @@ const FAQItem = ({ question, answer, index }) => {
           transition={{ duration: 0.25 }}
           className="flex-shrink-0 text-brandPrimary dark:text-brandAccent"
         >
-          <ChevronDown className="w-6 h-6" />
+          <ChevronDown className="h-6 w-6" />
         </motion.span>
       </button>
 

@@ -19,9 +19,12 @@ import { Philippiness_Image } from "../../assets/philippiness";
 import { Myanmar_Image } from "../../assets/myanmar";
 import { Indonesia_Image } from "../../assets/indonesia";
 
-/* ======================================================
-   PHOTOS DATA (UNCHANGED)
-====================================================== */
+import { Prasen_Pal_Germany_Image } from "../../assets/international-assignment/germany";
+import { Prasen_Pal_Indonesia_Image } from "../../assets/international-assignment/indonesia";
+
+
+const GLOBAL_LEADERSHIP_FILTER = "Global Leadership Journey";
+
 export const PHOTOS = [
   { id: 1, category: "5 Year Celebration", title: "RiskMan 5 Year Anniversary", image: Riskman_Aniversary_5_year_images[0], description: "Celebrating 5 years of excellence and growth" },
   { id: 2, category: "5 Year Celebration", title: "Anniversary Celebration Moments", image: Riskman_Aniversary_5_year_images[1], description: "Team celebrating milestone achievement" },
@@ -118,6 +121,8 @@ const ENGAGEMENTS = [
   },
 ];
 
+
+
 /* ======================================================
    FILTERS
 ====================================================== */
@@ -128,6 +133,7 @@ const FILTERS = [
   { name: "Meetings & Discussions", icon: Briefcase },
   { name: "Office Culture", icon: Heart },
   { name: "International Assignments", icon: Globe },
+  { name: "Global Leadership Journey", icon: Globe }
 ];
 
 /* ======================================================
@@ -149,56 +155,37 @@ const Lightbox = ({ image, onClose }) => {
       <button onClick={onClose} className="absolute text-white top-6 right-6">
         <X />
       </button>
-      <img src={image} className="max-h-[85vh] rounded-xl" />
+      <img src={image} className="max-h-[85vh] max-w-[90vh] object-contain rounded-xl" />
     </div>
   );
 };
 
-/* ======================================================
-   MAIN COMPONENT
-====================================================== */
 export default function MomentsThatMatter() {
-  const PHOTOS_PER_LOAD = 6;
-
   const [activeFilter, setActiveFilter] = useState("All");
-  const [visibleCount, setVisibleCount] = useState(PHOTOS_PER_LOAD);
   const [lightboxImage, setLightboxImage] = useState(null);
 
-  useEffect(() => {
-    setVisibleCount(PHOTOS_PER_LOAD);
-  }, [activeFilter]);
-
-  const internationalByCountry = useMemo(() => {
-    return ENGAGEMENTS.reduce((acc, e) => {
-      if (!acc[e.country]) acc[e.country] = [];
-      acc[e.country].push(e);
-      return acc;
-    }, {});
-  }, []);
-
-  const normalPhotos = useMemo(() => {
+  const filteredPhotos = useMemo(() => {
     if (activeFilter === "All") return PHOTOS;
     return PHOTOS.filter((p) => p.category === activeFilter);
   }, [activeFilter]);
 
-  const visiblePhotos = useMemo(() => {
-    return normalPhotos.slice(0, visibleCount);
-  }, [normalPhotos, visibleCount]);
-
   return (
-    <section className="min-h-screen px-6 py-24 bg-surfaceLight dark:bg-surfaceDark">
+    <section className="px-6 py-24 bg-surfaceLight dark:bg-surfaceDark">
       <div className="mx-auto max-w-7xl">
 
         {/* FILTER BAR */}
-        <div className="flex flex-wrap justify-center gap-2 mb-16">
+        <div className="flex flex-wrap justify-center gap-3 mb-16">
           {FILTERS.map((f) => {
             const Icon = f.icon;
             return (
               <button
                 key={f.name}
                 onClick={() => setActiveFilter(f.name)}
-                className={`px-5 py-2 rounded-full text-xs font-black uppercase flex items-center gap-2
-                ${activeFilter === f.name ? "bg-brandDark text-brandAccent" : "bg-surfaceDark text-white/70"}`}
+                className={`px-5 py-2 rounded-full text-xs font-bold uppercase flex items-center gap-2
+                ${activeFilter === f.name
+                    ? "bg-brandDark text-brandAccent"
+                    : "bg-surfaceDark text-white/70"
+                  }`}
               >
                 <Icon className="w-4 h-4" />
                 {f.name}
@@ -207,96 +194,181 @@ export default function MomentsThatMatter() {
           })}
         </div>
 
-        {/* NORMAL GRID WITH MOTION */}
-        {activeFilter !== "International Assignments" && (
-          <>
+        {/* NORMAL PHOTO GRID */}
+        {activeFilter !== "International Assignments" &&
+          activeFilter !== GLOBAL_LEADERSHIP_FILTER && (
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              <AnimatePresence>
-                {visiblePhotos.map((p) => (
-                  <motion.div
-                    key={p.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.45, ease: "easeOut" }}
-                    onClick={() => setLightboxImage(p.image)}
-                    className="overflow-hidden shadow cursor-pointer bg-surfaceLight dark:bg-surfaceDark rounded-3xl hover:shadow-xl"
-                  >
-                    <img src={p.image} className="object-cover w-full h-64" />
-                    <div className="p-6 space-y-2">
-                      <span className="font-bold text-brandDark dark:text-brandAccent">
-                        {p.category}
-                      </span>
-                      <h3 className="text-brandDark dark:text-white">{p.title}</h3>
-                      <p className="text-sm text-brandNavy dark:text-white/70">{p.description}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </AnimatePresence>
-            </div>
-
-            {visibleCount < normalPhotos.length && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="flex justify-center mt-16"
-              >
-                <motion.button
-                  whileHover={{ scale: 1.06 }}
-                  whileTap={{ scale: 0.96 }}
-                  onClick={() => setVisibleCount((v) => v + PHOTOS_PER_LOAD)}
-                  className="px-10 py-3 text-sm font-black uppercase rounded-full bg-brandDark dark:bg-brandAccent text-brandAccent dark:text-brandDark"
+              {filteredPhotos.map((p) => (
+                <motion.div
+                  key={p.id}
+                  whileHover={{ y: -6 }}
+                  onClick={() => setLightboxImage(p.image)}
+                  className="overflow-hidden bg-white shadow cursor-pointer rounded-3xl dark:bg-surfaceDark"
                 >
-                  Load More
-                </motion.button>
-              </motion.div>
-            )}
-          </>
-        )}
+                  <img src={p.image} className="object-cover w-full h-64" />
+                  <div className="p-6">
+                    <h3 className="font-semibold">{p.title}</h3>
+                    <p className="text-sm opacity-70">{p.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          )}
 
-        {/* INTERNATIONAL ASSIGNMENTS (UNCHANGED) */}
+        {/* INTERNATIONAL ASSIGNMENTS */}
         {activeFilter === "International Assignments" && (
           <div className="space-y-24">
-            {Object.entries(internationalByCountry).map(([country, engagements]) => (
-              <section key={country}>
-                <h2 className="flex items-center gap-3 mb-10 text-3xl font-semibold text-brandDark dark:text-white">
-                  <Globe className="w-6 h-6 text-brandAccent" />
-                  {country}
-                </h2>
+            {ENGAGEMENTS.map((e, i) => (
+              <section key={i} className="space-y-6">
+                <h2 className="text-3xl font-semibold">{e.country}</h2>
+                <h3 className="text-xl font-semibold">{e.title}</h3>
+                <p className="text-sm opacity-70">
+                  {e.person} · {e.role} · {e.city} · {e.date}
+                </p>
+                <p className="max-w-3xl">{e.story}</p>
 
-                {engagements.map((eng, idx) => (
-                  <div key={idx} className="mb-20">
-                    <h3 className="text-brandDark dark:text-brandAccent">{eng.title}</h3>
-                    <p className="mt-2 text-sm font-semibold text-brandNavy dark:text-white">
-                      {eng.person} · {eng.role} · {eng.city} · {eng.date}
-                    </p>
-                    <p className="max-w-3xl mt-4 text-base text-brandNavy dark:text-white/70">
-                      {eng.story}
-                    </p>
-
-                    <div className="grid gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3">
-                      {eng.images.map((img, i) => (
-                        <motion.div
-                          key={i}
-                          whileHover={{ scale: 1.02 }}
-                          onClick={() => setLightboxImage(img)}
-                          className="overflow-hidden shadow cursor-pointer dark:bg-surfaceDark bg-surfaceLight rounded-3xl hover:shadow-xl"
-                        >
-                          <img src={img} className="object-cover w-full h-64" />
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                  {e.images.map((img, idx) => (
+                    <motion.div
+                      key={idx}
+                      whileHover={{ y: -6 }}
+                      onClick={() => setLightboxImage(img)}
+                      className="overflow-hidden shadow cursor-pointer rounded-3xl"
+                    >
+                      <img src={img} className="object-cover w-full h-64" />
+                    </motion.div>
+                  ))}
+                </div>
               </section>
             ))}
           </div>
         )}
-      </div>
 
-      {lightboxImage && (
-        <Lightbox image={lightboxImage} onClose={() => setLightboxImage(null)} />
-      )}
+
+        {activeFilter === GLOBAL_LEADERSHIP_FILTER && (
+          <section className="grid lg:grid-cols-2">
+
+            {/* LEFT — FULL STORY CONTENT */}
+            <div className="space-y-6">
+              <h2 className="text-4xl font-semibold tracking-tight text-brandDark dark:text-white">
+                Connecting Continents: Our Global Client Engagement Journey
+              </h2>
+
+              <p className="text-sm text-brandNavy/70 dark:text-brandAccent/80">
+                Prasen Pal · Co-Founder & Partner
+              </p>
+
+              <div className="mt-6 space-y-5 text-base leading-relaxed text-brandPrimary dark:text-white/70">
+                <p>
+                  Our recent journey across Germany, France, and Vietnam strengthened partnerships with Indorama Ventures and reinforced relationships built on trust, collaboration, and shared purpose.
+                </p>
+
+                <p>
+                  From experiencing manufacturing excellence and innovation in Europe to celebrating teamwork and success with the RiskMan team in Vietnam, the journey highlighted the power of meaningful, human connections beyond the boardroom.
+                </p>
+
+                <p>
+                  We return with stronger relationships, lasting memories, and renewed enthusiasm for building bridges across borders.
+                </p>
+
+                {/* <p>
+      Our journey culminated in Vietnam’s vibrant Ho Chi Minh City. We explored iconic
+      landmarks like the Central Post Office, experienced the legendary culinary
+      scene, and celebrated our successful trip at lively venues with the RiskMan
+      team.
+    </p> */}
+              </div>
+
+              <blockquote className="pl-6 mt-10 text-lg italic border-l-4 border-brandGold/60 text-brandPrimary/80 dark:text-brandGold/90">
+                Global business is fundamentally human. The handshakes, shared meals, and genuine
+                conversations are what transform transactions into lasting partnerships. We
+                return with strengthened relationships, cherished memories, and excitement for
+                future collaborations. Here’s to building bridges across borders together.
+              </blockquote>
+            </div>
+
+            {/* RIGHT — SQUARE EDITORIAL GRID (CORRECT SOLUTION) */}
+            {/* <div className="grid gap-4 sm:grid-cols-2">
+              {[
+                Prasen_Pal_Germany_Image[0],
+                Prasen_Pal_Germany_Image[2],
+                Prasen_Pal_Indonesia_Image[0],
+                Prasen_Pal_Indonesia_Image[1],
+              ].map((img, idx) => (
+                <motion.div
+                  key={idx}
+                  whileHover={{ y: -6 }}
+                  onClick={() => setLightboxImage(img)}
+                  className="
+        rounded-3xl
+        shadow-lg
+        cursor-pointer
+        bg-[#F7F8FA]
+        dark:bg-[#111827]
+        p-4
+        flex
+        items-center
+        justify-center
+      "
+                >
+                  <img
+                    src={img}
+                    alt="Global Leadership Journey"
+                    className="
+          max-w-full
+          max-h-[320px]
+          object-contain
+          rounded-2xl
+        "
+                  />
+                </motion.div>
+              ))}
+            </div> */}
+
+            {/* RIGHT — UNIFORM CROPPED GRID (FIXED) */}
+<div className="grid gap-4 sm:grid-cols-2">
+  {[
+    Prasen_Pal_Germany_Image[0],
+    Prasen_Pal_Germany_Image[2],
+    Prasen_Pal_Indonesia_Image[0],
+    Prasen_Pal_Indonesia_Image[1],
+  ].map((img, idx) => (
+    <motion.div
+      key={idx}
+      whileHover={{ y: -6 }}
+      onClick={() => setLightboxImage(img)}
+      className="
+        cursor-pointer
+        rounded-3xl
+        overflow-hidden
+        bg-[#F7F8FA]
+        dark:bg-[#111827]
+        shadow-lg
+        aspect-square   /* 🔒 SAME WIDTH + HEIGHT */
+      "
+    >
+      <img
+        src={img}
+        alt="Global Leadership Journey"
+        className="
+          w-full
+          h-full
+          object-cover      /* 🔥 CROPS, NO DISTORTION */
+          object-center
+        "
+      />
+    </motion.div>
+  ))}
+</div>
+
+
+          </section>
+        )}
+
+        {lightboxImage && (
+          <Lightbox image={lightboxImage} onClose={() => setLightboxImage(null)} />
+        )}
+      </div>
     </section>
   );
 }

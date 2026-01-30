@@ -31,15 +31,15 @@ const ServiceCard = ({ service, index }) => {
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.08 }}
       whileHover={{ y: -6 }}
-      className="relative p-8 transition-all duration-300 border shadow-lg group rounded-3xl border-borderLight bg-surfaceLight hover:border-brandPrimary hover:shadow-2xl dark:border-borderDark dark:bg-surfaceDark dark:hover:border-brandAccent"
+      className="group relative rounded-3xl border border-borderLight bg-surfaceLight p-8 shadow-lg transition-all duration-300 hover:border-brandPrimary hover:shadow-2xl dark:border-borderDark dark:bg-surfaceDark dark:hover:border-brandAccent"
     >
       {/* Icon */}
-      <div className="inline-flex items-center justify-center w-16 h-16 mb-6 transition-colors duration-300 rounded-2xl bg-brandPrimary/10 group-hover:bg-brandPrimary/20 dark:bg-brandPrimary/20 dark:group-hover:bg-brandPrimary/30">
-        <Icon className="w-8 h-8 text-brandPrimary dark:text-brandAccent" />
+      <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-brandPrimary/10 transition-colors duration-300 group-hover:bg-brandPrimary/20 dark:bg-brandPrimary/20 dark:group-hover:bg-brandPrimary/30">
+        <Icon className="h-8 w-8 text-brandPrimary dark:text-brandAccent" />
       </div>
 
       {/* Title */}
-      <h3 className="mb-4 text-xl font-bold transition-colors duration-300 text-brandDark group-hover:text-brandPrimary dark:text-brandLight dark:group-hover:text-brandAccent">
+      <h3 className="mb-4 text-xl font-bold text-brandDark transition-colors duration-300 group-hover:text-brandPrimary dark:text-brandLight dark:group-hover:text-brandAccent">
         {service.title}
       </h3>
 
@@ -52,10 +52,10 @@ const ServiceCard = ({ service, index }) => {
       {service.path && (
         <Link
           to={service.path}
-          className="inline-flex items-center gap-2 text-sm font-bold transition-all duration-300 text-brandPrimary hover:gap-3 dark:text-brandAccent"
+          className="inline-flex items-center gap-2 text-sm font-bold text-brandPrimary transition-all duration-300 hover:gap-3 dark:text-brandAccent"
         >
           Learn More
-          <ArrowRight className="w-4 h-4" />
+          <ArrowRight className="h-4 w-4" />
         </Link>
       )}
     </motion.div>

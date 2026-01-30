@@ -1,62 +1,52 @@
+import React from "react";
 import { motion } from "framer-motion";
-import { Compass } from "lucide-react";
+import ermImage from "../../assets/images/erm/erm-2.jpg";
 
-const IntroSection = ({ data }) => {
+const IntroSection = () => {
   return (
-    <section className="relative py-20 bg-bgLight dark:bg-bgDark md:py-28">
-      <div className="container px-4 mx-auto sm:px-6 lg:px-8">
-        <div className="grid items-center gap-16 lg:grid-cols-2">
+    <section className="relative overflow-hidden bg-bgLight py-28 dark:bg-surfaceDark">
+      <div className="grid items-center max-w-6xl grid-cols-1 gap-16 px-6 mx-auto md:grid-cols-2">
 
-          {/* LEFT — Text */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-          >
-            {/* Label */}
-            <div className="inline-flex items-center gap-2 mb-4 text-sm font-bold tracking-widest uppercase text-brandPrimary">
-              <Compass className="w-4 h-4" />
-              Our ERM Journey
-            </div>
+        {/* IMAGE — LEFT */}
+        <motion.div
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="relative flex justify-center"
+        >
+          {/* Subtle background frame */}
+          <div className="absolute -inset-6 rounded-2xl bg-brandPrimary/5 dark:bg-brandAccent/10" />
 
-            {/* Heading */}
-            <h2 className="mb-6 text-3xl font-black leading-tight font-heading text-brandDark dark:text-brandLight sm:text-4xl md:text-5xl">
-              Turning Uncertainty <br />
-              into <span className="text-brandPrimary dark:text-brandAccent">
-                Opportunity
-              </span>
-            </h2>
+          <img
+            src={ermImage}
+            alt="Enterprise Risk Management Journey"
+            className="relative z-10 max-w-full shadow-xl rounded-2xl"
+          />
+        </motion.div>
 
-            {/* Description */}
-            <p className="max-w-xl text-lg leading-relaxed text-brandDark/80 dark:text-brandLight/80">
-              In an ever-evolving business landscape where uncertainty is the only
-              constant, RiskMan serves as the guardian of your corporate success
-              story. We don’t just consult — we partner with you to navigate
-              complex risks, strengthen governance, and unlock strategic
-              opportunities with confidence.
-            </p>
-          </motion.div>
+        {/* CONTENT — RIGHT */}
+        <motion.div
+          initial={{ opacity: 0, x: 60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center md:text-left"
+        >
+          <h2 className="text-3xl font-semibold leading-tight font-heading text-slate-900 dark:text-brandLight md:text-4xl">
+            Turning Uncertainty into <span className="text-brandPrimary dark:text-brandAccent">Opportunity</span>
+          </h2>
 
-          {/* RIGHT — Visual (Zig-Zag Down) */}
-          <motion.div
-            initial={{ opacity: 0, x: 30, y: 30 }}
-            whileInView={{ opacity: 1, x: 0, y: 30 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="relative lg:mt-10"
-          >
-            <img
-              src={data.image}
-              alt="ERM Journey"
-              className="object-cover w-full shadow-xl rounded-3xl"
-            />
+          {/* Accent line */}
+          <div className="w-20 h-1 mx-auto mt-4 rounded-full bg-brandGold dark:bg-white/70 md:mx-0" />
 
-            {/* Soft overlay */}
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-brandDark/10 to-transparent" />
-          </motion.div>
+          <p className="mt-8 text-lg leading-relaxed text-slate-600 dark:text-brandLight/70">
+            In an ever-evolving business landscape where uncertainty is the only constant, RiskMan
+            serves as the guardian of your corporate success story. We don't just consult; we partner
+            with you to navigate complex risks and unlock unprecedented strategic opportunities.
+          </p>
+        </motion.div>
 
-        </div>
       </div>
     </section>
   );

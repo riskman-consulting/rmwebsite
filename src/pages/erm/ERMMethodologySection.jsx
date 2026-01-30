@@ -1,131 +1,124 @@
 import { motion } from "framer-motion";
-import image from "../../assets/images/erm/erm-2.jpg";
-import {
-  Search,
-  AlertTriangle,
-  Sliders,
-  CheckCircle2,
-} from "lucide-react";
+import clsx from "clsx";
 
 const STEPS = [
   {
-    step: "Step 1",
+    step: "01",
     title: "Understanding As-Is Business Processes",
     description:
-      "We gain a deep understanding of your business processes, operating environment, and organizational context through structured discussions with key departments.",
-    icon: Search,
+      "We gain a deep understanding of your business processes, operating environment, and organizational context.",
+    gradient: "from-[#001F3F] to-[#FFC000]", // Dark Blue
+    shadowColor: "#000f1f",
   },
   {
-    step: "Step 2",
+    step: "02",
     title: "Risk Identification",
     description:
       "Internal and external risk factors impacting core business processes are systematically identified and documented.",
-    icon: AlertTriangle,
+    gradient: "from-[#003366] to-[#FFC000]", // Navy Blue
+    shadowColor: "#001a33",
   },
   {
-    step: "Step 3",
-    title: "Risk Scoring & Mitigation Planning",
+    step: "03",
+    title: "Risk Scoring & Mitigation",
     description:
-      "We formulate risk scoring matrices, assess residual risks, recommend mitigation controls, and design strategic action plans where controls are not feasible.",
-    icon: Sliders,
+      "We formulate risk scoring matrices, assess residual risks, recommend mitigation controls, and design strategic action plans.",
+    gradient: "from-[#004080] to-[#FFC000]", // Primary Blue
+    shadowColor: "#002040",
   },
   {
-    step: "Step 4",
+    step: "04",
     title: "Implementation & Review",
     description:
-      "RiskMan provides hands-on support to implement controls, evaluate design & implementation effectiveness, and perform milestone-based reviews.",
-    icon: CheckCircle2,
+      "RiskMan provides hands-on support to implement controls, evaluate design effectiveness, and perform reviews.",
+    gradient: "from-[#00509d] to-[#FFC000]", // Lighter Blue
+    shadowColor: "#002850",
   },
 ];
 
 const ERMMethodologySection = () => {
   return (
-    <section className="relative py-20 bg-surfaceLight dark:bg-surfaceDark md:py-28">
-      <div className="container px-4 mx-auto sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
+    <section className="pt-10 pb-24 overflow-hidden bg-bgLight dark:bg-bgDark">
+      <div className="container px-6 mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-8 text-center"
+        >
+          <h2 className="text-3xl font-bold font-heading text-brandDark dark:text-brandLight md:text-4xl">
+            Our <span className="text-brandPrimary dark:text-brandAccent">ERM Methodology</span>
+          </h2>
+          <p className="max-w-3xl mx-auto mt-6 text-brandNavy/70 dark:text-brandLight/70">
+            We follow a structured four-step methodology designed to enable
+            effective ERM adoption through expert guidance and continuous
+            oversight.
+          </p>
+        </motion.div>
 
-          {/* Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="mb-20 text-center"
-          >
-            <h2 className="text-3xl font-black font-heading text-brandDark dark:text-brandLight sm:text-4xl md:text-5xl">
-              Our{" "}
-              <span className="text-brandPrimary dark:text-brandAccent">
-                ERM Methodology
-              </span>
-            </h2>
+        {/* Staircase Layout - Descending Order (1->4) */}
+        <div className="relative flex flex-col gap-8 mx-auto max-w-7xl lg:flex-row lg:gap-6">
+          {STEPS.map((item, index) => {
+            // Step 1 (Index 0): Top (mt-0)
+            // Step 4 (Index 3): Bottom (mt-300)
+            const desktopMargin = [
+              "lg:mt-0",       
+              "lg:mt-[60px]",  
+              "lg:mt-[120px]", 
+              "lg:mt-[180px]", 
+            ][index];
 
-            <p className="max-w-3xl mx-auto mt-6 text-lg text-brandDark/70 dark:text-brandLight/70">
-              We follow a structured four-step methodology designed to enable
-              effective ERM adoption through expert guidance and continuous
-              oversight.
-            </p>
-          </motion.div>
-
-          {/* Process Flow Cards */}
-          <div className="relative grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
-            <div className="pointer-events-none absolute left-0 right-0 top-10 hidden h-0.5 bg-borderLight dark:bg-borderDark lg:block" />
-
-            {STEPS.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="relative p-8 border shadow-lg rounded-3xl border-borderLight bg-bgLight dark:border-borderDark dark:bg-bgDark"
-                >
-                  <div className="inline-block px-4 py-1 mb-4 text-xs font-bold tracking-widest uppercase rounded-full bg-brandPrimary/10 text-brandPrimary dark:bg-brandPrimary/20 dark:text-brandAccent">
-                    {item.step}
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.15, duration: 0.5 }}
+                className={clsx(
+                  "relative flex-1 min-w-[260px] transition-all duration-300 hover:z-30",
+                  desktopMargin
+                )}
+              >
+                <div className="relative flex items-start transition-transform duration-300 filter drop-shadow-xl group hover:-translate-y-2">
+                  
+                  {/* White Content Card */}
+                  <div className="relative z-10 flex-1 rounded-lg bg-surfaceLight p-6 pr-14 shadow-sm dark:bg-surfaceDark h-[180px] flex flex-col justify-center border border-white/50 dark:border-white/5">
+                    <h3 className="mb-2 font-heading text-[10px] font-bold uppercase tracking-widest text-brandNavy/40 dark:text-brandLight/40">
+                      Phase {index + 1}
+                    </h3>
+                    <h4 className="mb-3 text-base font-bold leading-tight font-heading text-brandDark dark:text-brandLight line-clamp-2">
+                      {item.title}
+                    </h4>
+                    <p className="text-xs leading-relaxed text-brandNavy/60 dark:text-brandLight/50 line-clamp-3">
+                      {item.description}
+                    </p>
                   </div>
 
-                  <div className="inline-flex items-center justify-center mb-6 h-14 w-14 rounded-2xl bg-brandPrimary/10 dark:bg-brandPrimary/20">
-                    <Icon className="h-7 w-7 text-brandPrimary dark:text-brandAccent" />
+                  {/* Colored Arrow Ribbon */}
+                  <div 
+                    className={clsx(
+                      "relative -ml-8 flex w-28 h-[140px] flex-col items-center justify-center text-white bg-gradient-to-br z-20 shadow-lg shrink-0",
+                      item.gradient
+                    )}
+                    style={{
+                      clipPath: "polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%)",
+                    }}
+                  >
+                    {/* Fold/Shadow Effect */}
+                    <div 
+                      className="absolute top-0 bottom-0 left-0 w-6 pointer-events-none bg-gradient-to-r from-black/20 to-transparent"
+                    />
+                    
+                    <div className="flex flex-col items-center justify-center pr-4">
+                      <span className="text-[10px] font-bold uppercase tracking-widest opacity-80 mb-1">Step</span>
+                      <span className="text-4xl font-bold tracking-tighter">{item.step}</span>
+                    </div>
                   </div>
-
-                  <h3 className="mb-4 text-lg font-bold text-brandDark dark:text-brandLight">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-sm leading-relaxed text-brandDark/70 dark:text-brandLight/70">
-                    {item.description}
-                  </p>
-                </motion.div>
-              );
-            })}
-          </div>
-
-          {/* ERM Maturity Image */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mt-24 text-center"
-          >
-            <h3 className="mb-6 text-2xl font-bold text-brandDark dark:text-brandLight">
-              How ERM Matures Across the Organization
-            </h3>
-
-            <p className="max-w-4xl mx-auto mb-10 text-brandDark/70 dark:text-brandLight/70">
-              This model illustrates how Enterprise Risk Management evolves from
-              foundational governance to advanced risk monitoring and reporting,
-              enabling risk-informed decision-making at every level.
-            </p>
-
-            <img
-              src={image}
-              alt="ERM maturity and risk management evolution"
-              className="w-full max-w-6xl mx-auto shadow-xl rounded-2xl"
-            />
-          </motion.div>
-
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
