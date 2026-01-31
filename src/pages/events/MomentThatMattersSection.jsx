@@ -8,6 +8,8 @@ import {
   Star,
   LayoutGrid,
   X,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 
 import { Riskman_Aniversary_5_year_images } from "../../assets/riskman-anniversary/year-5";
@@ -21,7 +23,6 @@ import { Indonesia_Image } from "../../assets/indonesia";
 
 import { Prasen_Pal_Germany_Image } from "../../assets/international-assignment/germany";
 import { Prasen_Pal_Indonesia_Image } from "../../assets/international-assignment/indonesia";
-
 
 const GLOBAL_LEADERSHIP_FILTER = "Global Leadership Journey";
 
@@ -65,9 +66,6 @@ export const PHOTOS = [
   { id: 34, category: "Meetings & Discussions", title: "Audit Networking", image: journeyImages.auditLeadersSummitMumbaiNov2024[3], description: "Networking with professionals" },
 ];
 
-/* ======================================================
-   INTERNATIONAL ASSIGNMENTS (UNCHANGED)
-====================================================== */
 const ENGAGEMENTS = [
   {
     person: "Vishal Sharma",
@@ -121,11 +119,6 @@ const ENGAGEMENTS = [
   },
 ];
 
-
-
-/* ======================================================
-   FILTERS
-====================================================== */
 const FILTERS = [
   { name: "All", icon: LayoutGrid },
   { name: "5 Year Celebration", icon: Star },
@@ -137,128 +130,307 @@ const FILTERS = [
 ];
 
 /* ======================================================
-   LIGHTBOX
+   ENHANCED LIGHTBOX WITH NAVIGATION
 ====================================================== */
-const Lightbox = ({ image, onClose }) => {
+const Lightbox = ({ images, currentIndex, onClose, onNavigate }) => {
   useEffect(() => {
-    const esc = (e) => e.key === "Escape" && onClose();
-    window.addEventListener("keydown", esc);
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft" && currentIndex > 0) onNavigate(currentIndex - 1);
+      if (e.key === "ArrowRight" && currentIndex < images.length - 1) onNavigate(currentIndex + 1);
+    };
+    window.addEventListener("keydown", handleKeyDown);
     document.body.style.overflow = "hidden";
     return () => {
-      window.removeEventListener("keydown", esc);
+      window.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = "auto";
     };
-  }, [onClose]);
+  }, [onClose, onNavigate, currentIndex, images.length]);
 
   return (
-    <div className="fixed inset-0 z-[100] bg-surfaceLight dark:bg-surfaceDark flex items-center justify-center p-6">
-      <button onClick={onClose} className="absolute text-white top-6 right-6">
-        <X />
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 z-[100] bg-surfaceLight dark:bg-surfaceDark backdrop-blur-sm flex items-center justify-center p-4"
+    >
+      {/* Close Button */}
+      <button
+        onClick={onClose}
+        className="absolute z-10 p-3 transition-colors rounded-full top-4 right-4 md:top-8 md:right-8 text-white/80 hover:text-white bg-brandNavy/50 hover:bg-brandNavy/70"
+      >
+        <X className="w-6 h-6" />
       </button>
-      <img src={image} className="max-h-[85vh] max-w-[90vh] object-contain rounded-xl" />
-    </div>
+
+      {/* Navigation Buttons */}
+      {images.length > 1 && (
+        <>
+          <button
+            onClick={() => onNavigate(currentIndex - 1)}
+            disabled={currentIndex === 0}
+            className={`absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-10 bg-brandNavy/50 hover:bg-brandNavy/70 p-3 rounded-full transition-all ${
+              currentIndex === 0 ? "opacity-30 cursor-not-allowed" : "text-white/80 hover:text-white"
+            }`}
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          <button
+            onClick={() => onNavigate(currentIndex + 1)}
+            disabled={currentIndex === images.length - 1}
+            className={`absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-10 bg-brandNavy/50 hover:bg-brandNavy/70 p-3 rounded-full transition-all ${
+              currentIndex === images.length - 1 ? "opacity-30 cursor-not-allowed" : "text-white/80 hover:text-white"
+            }`}
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+        </>
+      )}
+
+      {/* Image Counter */}
+      {images.length > 1 && (
+        <div className="absolute px-4 py-2 text-sm font-medium text-white -translate-x-1/2 rounded-full bottom-8 left-1/2 bg-brandNavy/70">
+          {currentIndex + 1} / {images.length}
+        </div>
+      )}
+
+      {/* Image */}
+      <motion.img
+        key={currentIndex}
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.3 }}
+        src={images[currentIndex]}
+        className="max-h-[85vh] max-w-[90vw] object-contain rounded-2xl shadow-2xl"
+        alt="Lightbox"
+      />
+    </motion.div>
   );
 };
 
 export default function MomentsThatMatter() {
   const [activeFilter, setActiveFilter] = useState("All");
-  const [lightboxImage, setLightboxImage] = useState(null);
+  const [lightboxImages, setLightboxImages] = useState([]);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
 
   const filteredPhotos = useMemo(() => {
     if (activeFilter === "All") return PHOTOS;
     return PHOTOS.filter((p) => p.category === activeFilter);
   }, [activeFilter]);
 
-  return (
-    <section className="px-6 py-24 bg-surfaceLight dark:bg-surfaceDark">
-      <div className="mx-auto max-w-7xl">
+  const openLightbox = (image) => {
+    setLightboxImages([image]);
+    setLightboxIndex(0);
+  };
 
-        {/* FILTER BAR */}
-        <div className="flex flex-wrap justify-center gap-3 mb-16">
-          {FILTERS.map((f) => {
+  const closeLightbox = () => {
+    setLightboxImages([]);
+    setLightboxIndex(0);
+  };
+
+  return (
+    <section className="relative px-4 py-16 md:py-24 lg:py-32 bg-surfaceLight dark:bg-surfaceDark">
+      <div className="mx-auto max-w-7xl">
+        
+        {/* HEADER */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mb-12 text-center md:mb-16"
+        >
+          <h1 className="mb-4 text-4xl font-bold text-transparent md:text-5xl lg:text-6xl bg-gradient-to-r from-brandNavy via-brandDark to-brandNavy dark:from-brandAccent dark:via-brandGold dark:to-brandAccent bg-clip-text">
+            Moments That Matter
+          </h1>
+          <p className="max-w-2xl mx-auto text-lg md:text-xl text-brandPrimary/70 dark:text-white/70">
+            Capturing our journey of excellence, collaboration, and growth
+          </p>
+        </motion.div>
+
+        {/* ENHANCED FILTER BAR */}
+        <div className="flex flex-wrap justify-center gap-3 mb-12 md:mb-16">
+          {FILTERS.map((f, index) => {
             const Icon = f.icon;
+            const isActive = activeFilter === f.name;
             return (
-              <button
+              <motion.button
                 key={f.name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.05 }}
                 onClick={() => setActiveFilter(f.name)}
-                className={`px-5 py-2 rounded-full text-xs font-bold uppercase flex items-center gap-2
-                ${activeFilter === f.name
-                    ? "bg-brandDark text-brandAccent"
-                    : "bg-surfaceDark text-white/70"
-                  }`}
+                className={`
+                  relative px-5 py-2.5 rounded-full text-xs md:text-sm font-bold uppercase 
+                  flex items-center gap-2 transition-all duration-300 overflow-hidden
+                  ${isActive
+                    ? "bg-gradient-to-r from-brandNavy to-brandDark dark:from-brandAccent dark:to-brandGold text-white shadow-lg scale-105"
+                    : "bg-white dark:bg-surfaceDark text-brandPrimary/70 dark:text-white/70 hover:bg-brandAccent/10 dark:hover:bg-brandNavy/50 border border-brandAccent/20 dark:border-brandGold/20"
+                  }
+                `}
               >
-                <Icon className="w-4 h-4" />
-                {f.name}
-              </button>
+                {isActive && (
+                  <motion.div
+                    layoutId="activeFilter"
+                    className="absolute inset-0 bg-gradient-to-r from-brandNavy to-brandDark dark:from-brandAccent dark:to-brandGold"
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  />
+                )}
+                <Icon className={`w-4 h-4 relative z-10 ${isActive ? 'animate-pulse' : ''}`} />
+                <span className="relative z-10">{f.name}</span>
+              </motion.button>
             );
           })}
         </div>
 
-        {/* NORMAL PHOTO GRID */}
-        {activeFilter !== "International Assignments" &&
-          activeFilter !== GLOBAL_LEADERSHIP_FILTER && (
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {filteredPhotos.map((p) => (
-                <motion.div
-                  key={p.id}
-                  whileHover={{ y: -6 }}
-                  onClick={() => setLightboxImage(p.image)}
-                  className="overflow-hidden bg-white shadow cursor-pointer rounded-3xl dark:bg-surfaceDark"
-                >
-                  <img src={p.image} className="object-cover w-full h-64" />
-                  <div className="p-6">
-                    <h3 className="font-semibold">{p.title}</h3>
-                    <p className="text-sm opacity-70">{p.description}</p>
+        {/* PHOTO GRID */}
+        {activeFilter !== "International Assignments" && activeFilter !== GLOBAL_LEADERSHIP_FILTER && (
+          <motion.div
+            key={activeFilter}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3"
+          >
+            {filteredPhotos.map((p, index) => (
+              <motion.div
+                key={p.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.05 }}
+                whileHover={{ y: -8, scale: 1.02 }}
+                onClick={() => openLightbox(p.image)}
+                className="overflow-hidden transition-all duration-300 border shadow-lg cursor-pointer bg-surfaceLight group dark:bg-surfaceDark rounded-3xl hover:shadow-2xl border-brandAccent/10 dark:border-brandGold/10"
+              >
+                <div className="relative overflow-hidden aspect-video">
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-brandNavy/80 via-brandNavy/20 to-transparent group-hover:opacity-100" />
+                </div>
+                <div className="p-6">
+                  <div className="inline-block px-3 py-1 mb-3 text-xs font-semibold rounded-full bg-brandAccent/10 dark:bg-brandGold/10 text-brandNavy dark:text-brandAccent">
+                    {p.category}
                   </div>
-                </motion.div>
-              ))}
-            </div>
-          )}
+                  <h3 className="mb-2 text-lg font-bold transition-colors text-brandNavy dark:text-white group-hover:text-brandDark dark:group-hover:text-brandAccent">
+                    {p.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-brandPrimary/70 dark:text-white/60">
+                    {p.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        )}
 
         {/* INTERNATIONAL ASSIGNMENTS */}
         {activeFilter === "International Assignments" && (
-          <div className="space-y-24">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="space-y-16 md:space-y-24"
+          >
             {ENGAGEMENTS.map((e, i) => (
-              <section key={i} className="space-y-6">
-                <h2 className="text-3xl font-semibold">{e.country}</h2>
-                <h3 className="text-xl font-semibold">{e.title}</h3>
-                <p className="text-sm opacity-70">
-                  {e.person} · {e.role} · {e.city} · {e.date}
-                </p>
-                <p className="max-w-3xl">{e.story}</p>
-
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                  {e.images.map((img, idx) => (
-                    <motion.div
-                      key={idx}
-                      whileHover={{ y: -6 }}
-                      onClick={() => setLightboxImage(img)}
-                      className="overflow-hidden shadow cursor-pointer rounded-3xl"
-                    >
-                      <img src={img} className="object-cover w-full h-64" />
-                    </motion.div>
-                  ))}
+              <motion.section
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 }}
+                className="relative"
+              >
+                {/* Country Header with Gradient */}
+                <div className="mb-8">
+                  <div className="flex items-center gap-4 mb-4">
+                    <Globe className="w-8 h-8 text-brandAccent dark:text-brandGold" />
+                    <h2 className="text-3xl font-bold text-transparent md:text-4xl bg-gradient-to-r from-brandNavy to-brandDark dark:from-brandAccent dark:to-brandGold bg-clip-text">
+                      {e.country}
+                    </h2>
+                  </div>
+                  <div className="w-24 h-1 rounded-full bg-gradient-to-r from-brandAccent to-brandGold" />
                 </div>
-              </section>
+
+                {/* Engagement Card */}
+                <div className="overflow-hidden bg-white border shadow-xl dark:bg-surfaceDark rounded-3xl border-brandAccent/10 dark:border-brandGold/10">
+                  <div className="p-6 md:p-8 lg:p-10 bg-gradient-to-br from-brandAccent/5 to-transparent dark:from-brandGold/5">
+                    <h3 className="mb-4 text-2xl font-bold md:text-3xl text-brandNavy dark:text-white">
+                      {e.title}
+                    </h3>
+                    
+                    <div className="flex flex-wrap gap-4 mb-6 text-sm">
+                      <span className="px-4 py-2 font-semibold rounded-full bg-brandNavy/10 dark:bg-brandAccent/10 text-brandNavy dark:text-brandAccent">
+                        {e.person}
+                      </span>
+                      <span className="px-4 py-2 font-semibold rounded-full bg-brandDark/10 dark:bg-brandGold/10 text-brandDark dark:text-brandGold">
+                        {e.role}
+                      </span>
+                      <span className="px-4 py-2 font-semibold rounded-full bg-brandAccent/10 dark:bg-brandNavy/30 text-brandPrimary dark:text-white/80">
+                        {e.city} · {e.date}
+                      </span>
+                    </div>
+
+                    <p className="max-w-4xl text-base leading-relaxed md:text-lg text-brandPrimary/80 dark:text-white/70">
+                      {e.story}
+                    </p>
+                  </div>
+
+                  {/* Image Grid */}
+                  <div className="grid gap-4 p-6 md:p-8 sm:grid-cols-2 lg:grid-cols-3">
+                    {e.images.map((img, idx) => (
+                      <motion.div
+                        key={idx}
+                        whileHover={{ y: -6, scale: 1.03 }}
+                        onClick={() => {
+                          setLightboxImages(e.images);
+                          setLightboxIndex(idx);
+                        }}
+                        className="relative overflow-hidden shadow-lg cursor-pointer rounded-2xl group aspect-video"
+                      >
+                        <img
+                          src={img}
+                          alt={`${e.country} - Image ${idx + 1}`}
+                          className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 flex items-end justify-center pb-4 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-brandNavy/60 to-transparent group-hover:opacity-100">
+                          <span className="text-sm font-semibold text-white">View Image</span>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </motion.section>
             ))}
-          </div>
+          </motion.div>
         )}
 
-
+        {/* GLOBAL LEADERSHIP JOURNEY */}
         {activeFilter === GLOBAL_LEADERSHIP_FILTER && (
-          <section className="grid lg:grid-cols-2">
+          <motion.section
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16"
+          >
+            {/* LEFT — STORY CONTENT */}
+            <div className="space-y-8">
+              <div>
+                <div className="inline-block px-4 py-2 mb-6 text-sm font-bold rounded-full bg-gradient-to-r from-brandAccent/20 to-brandGold/20 dark:from-brandAccent/30 dark:to-brandGold/30 text-brandNavy dark:text-brandAccent">
+                  Featured Story
+                </div>
+                <h2 className="mb-6 text-xl font-bold leading-tight text-transparent md:text-2xl lg:text-3xl bg-gradient-to-r from-brandNavy via-brandDark to-brandNavy dark:from-white dark:via-brandAccent dark:to-white bg-clip-text">
+                  Connecting Continents: Our Global Client Engagement Journey
+                </h2>
+              </div>
 
-            {/* LEFT — FULL STORY CONTENT */}
-            <div className="space-y-6">
-              <h2 className="text-4xl font-semibold tracking-tight text-brandDark dark:text-white">
-                Connecting Continents: Our Global Client Engagement Journey
-              </h2>
+              <div className="flex items-center gap-4 p-2 border bg-brandAccent/10 dark:bg-brandGold/10 rounded-2xl border-brandAccent/20 dark:border-brandGold/20">
+                <div className="flex items-center justify-center w-12 h-12 text-lg font-bold text-white rounded-full bg-gradient-to-br from-brandNavy to-brandDark dark:from-brandAccent dark:to-brandGold">
+                  PP
+                </div>
+                <div>
+                  <p className="font-bold text-brandNavy dark:text-white">Prasen Pal</p>
+                  <p className="text-sm text-brandPrimary/70 dark:text-white/60">Co-Founder & Partner</p>
+                </div>
+              </div>
 
-              <p className="text-sm text-brandNavy/70 dark:text-brandAccent/80">
-                Prasen Pal · Co-Founder & Partner
-              </p>
-
-              <div className="mt-6 space-y-5 text-base leading-relaxed text-brandPrimary dark:text-white/70">
+              <div className="space-y-6 text-base leading-relaxed md:text-lg text-brandPrimary/80 dark:text-white/70">
                 <p>
                   Our recent journey across Germany, France, and Vietnam strengthened partnerships with Indorama Ventures and reinforced relationships built on trust, collaboration, and shared purpose.
                 </p>
@@ -270,25 +442,18 @@ export default function MomentsThatMatter() {
                 <p>
                   We return with stronger relationships, lasting memories, and renewed enthusiasm for building bridges across borders.
                 </p>
-
-                {/* <p>
-      Our journey culminated in Vietnam’s vibrant Ho Chi Minh City. We explored iconic
-      landmarks like the Central Post Office, experienced the legendary culinary
-      scene, and celebrated our successful trip at lively venues with the RiskMan
-      team.
-    </p> */}
               </div>
 
-              <blockquote className="pl-6 mt-10 text-lg italic border-l-4 border-brandGold/60 text-brandPrimary/80 dark:text-brandGold/90">
-                Global business is fundamentally human. The handshakes, shared meals, and genuine
-                conversations are what transform transactions into lasting partnerships. We
-                return with strengthened relationships, cherished memories, and excitement for
-                future collaborations. Here’s to building bridges across borders together.
+              <blockquote className="relative py-6 pl-8 border-l-4 border-brandGold/60 dark:border-brandAccent/60 bg-gradient-to-r from-brandAccent/5 to-transparent dark:from-brandGold/5 rounded-r-2xl">
+                <div className="absolute w-6 h-6 rounded-full -left-3 top-6 bg-brandGold dark:bg-brandAccent" />
+                <p className="text-lg italic leading-relaxed md:text-xl text-brandPrimary/90 dark:text-brandAccent/90">
+                  Global business is fundamentally human. The handshakes, shared meals, and genuine conversations are what transform transactions into lasting partnerships. We return with strengthened relationships, cherished memories, and excitement for future collaborations. Here's to building bridges across borders together.
+                </p>
               </blockquote>
             </div>
 
-            {/* RIGHT — SQUARE EDITORIAL GRID (CORRECT SOLUTION) */}
-            {/* <div className="grid gap-4 sm:grid-cols-2">
+            {/* RIGHT — IMAGE GRID */}
+            <div className="grid gap-6 sm:grid-cols-2">
               {[
                 Prasen_Pal_Germany_Image[0],
                 Prasen_Pal_Germany_Image[2],
@@ -297,77 +462,44 @@ export default function MomentsThatMatter() {
               ].map((img, idx) => (
                 <motion.div
                   key={idx}
-                  whileHover={{ y: -6 }}
-                  onClick={() => setLightboxImage(img)}
-                  className="
-        rounded-3xl
-        shadow-lg
-        cursor-pointer
-        bg-[#F7F8FA]
-        dark:bg-[#111827]
-        p-4
-        flex
-        items-center
-        justify-center
-      "
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: idx * 0.1 }}
+                  whileHover={{ y: -8, scale: 1.05 }}
+                  onClick={() => {
+                    setLightboxImages([
+                      Prasen_Pal_Germany_Image[0],
+                      Prasen_Pal_Germany_Image[2],
+                      Prasen_Pal_Indonesia_Image[0],
+                      Prasen_Pal_Indonesia_Image[1],
+                    ]);
+                    setLightboxIndex(idx);
+                  }}
+                  className="overflow-hidden transition-all duration-300 border-2 shadow-xl cursor-pointer rounded-3xl hover:shadow-2xl aspect-square group border-brandAccent/20 dark:border-brandGold/20"
                 >
                   <img
                     src={img}
                     alt="Global Leadership Journey"
-                    className="
-          max-w-full
-          max-h-[320px]
-          object-contain
-          rounded-2xl
-        "
+                    className="object-cover object-center w-full h-full transition-transform duration-500 group-hover:scale-110"
                   />
+                  <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-brandNavy/60 via-transparent to-transparent group-hover:opacity-100" />
                 </motion.div>
               ))}
-            </div> */}
-
-            {/* RIGHT — UNIFORM CROPPED GRID (FIXED) */}
-<div className="grid gap-4 sm:grid-cols-2">
-  {[
-    Prasen_Pal_Germany_Image[0],
-    Prasen_Pal_Germany_Image[2],
-    Prasen_Pal_Indonesia_Image[0],
-    Prasen_Pal_Indonesia_Image[1],
-  ].map((img, idx) => (
-    <motion.div
-      key={idx}
-      whileHover={{ y: -6 }}
-      onClick={() => setLightboxImage(img)}
-      className="
-        cursor-pointer
-        rounded-3xl
-        overflow-hidden
-        bg-[#F7F8FA]
-        dark:bg-[#111827]
-        shadow-lg
-        aspect-square   /* 🔒 SAME WIDTH + HEIGHT */
-      "
-    >
-      <img
-        src={img}
-        alt="Global Leadership Journey"
-        className="
-          w-full
-          h-full
-          object-cover      /* 🔥 CROPS, NO DISTORTION */
-          object-center
-        "
-      />
-    </motion.div>
-  ))}
-</div>
-
-
-          </section>
+            </div>
+          </motion.section>
         )}
 
-        {lightboxImage && (
-          <Lightbox image={lightboxImage} onClose={() => setLightboxImage(null)} />
-        )}
+        {/* LIGHTBOX */}
+        <AnimatePresence>
+          {lightboxImages.length > 0 && (
+            <Lightbox
+              images={lightboxImages}
+              currentIndex={lightboxIndex}
+              onClose={closeLightbox}
+              onNavigate={setLightboxIndex}
+            />
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );

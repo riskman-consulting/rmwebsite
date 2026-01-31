@@ -44,7 +44,7 @@
 //         <div className="relative h-full flex flex-col bg-surfaceLight dark:bg-surfaceDark border border-borderLight dark:border-borderDark rounded-[2.5rem] overflow-hidden transition-all duration-500 hover:shadow-2xl hover:border-brandAccent/40">
           
 //           {/* 1. Header: Image with your brand gradient overlay */}
-//           <div className="relative h-52 overflow-hidden">
+//           <div className="relative overflow-hidden h-52">
 //             <img
 //               src={service.headerImage}
 //               alt={service.title}
@@ -54,47 +54,47 @@
 //             <div className="absolute inset-0 bg-gradient-to-t from-surfaceLight dark:from-surfaceDark via-transparent to-transparent" />
             
 //             {/* Icon: Using your brandAccent/brandPrimary */}
-//             <div className="absolute top-6 left-6 z-20">
-//               <div className="flex items-center justify-center w-12 h-12 backdrop-blur-md bg-brandPrimary/10 dark:bg-brandAccent/10 border border-brandPrimary/20 dark:border-brandAccent/20 rounded-2xl text-brandPrimary dark:text-brandAccent group-hover:bg-brandAccent group-hover:text-brandDark transition-all duration-500">
+//             <div className="absolute z-20 top-6 left-6">
+//               <div className="flex items-center justify-center w-12 h-12 transition-all duration-500 border backdrop-blur-md bg-brandPrimary/10 dark:bg-brandAccent/10 border-brandPrimary/20 dark:border-brandAccent/20 rounded-2xl text-brandPrimary dark:text-brandAccent group-hover:bg-brandAccent group-hover:text-brandDark">
 //                 {icon}
 //               </div>
 //             </div>
 //           </div>
 
 //           {/* 2. Content Section */}
-//           <div className="relative flex-1 p-8 flex flex-col">
+//           <div className="relative flex flex-col flex-1 p-8">
 //             {/* Index: Minimal but using brand colors */}
 //             <span className="absolute top-8 right-8 font-mono text-[10px] tracking-widest text-brandNavy/20 dark:text-white/20 group-hover:text-brandAccent transition-colors">
 //               // 0{index + 1}
 //             </span>
 
-//             <h3 className="text-2xl font-bold text-brandDark dark:text-white mb-4 tracking-tight group-hover:text-brandPrimary dark:group-hover:text-brandAccent transition-colors duration-300">
+//             <h3 className="mb-4 text-2xl font-bold tracking-tight transition-colors duration-300 text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
 //               {service.title}
 //             </h3>
 
-//             <p className="text-sm leading-relaxed text-brandNavy dark:text-gray-400 group-hover:text-brandDark dark:group-hover:text-gray-200 transition-colors duration-300 line-clamp-3 mb-8">
+//             <p className="mb-8 text-sm leading-relaxed transition-colors duration-300 text-brandNavy dark:text-gray-400 group-hover:text-brandDark dark:group-hover:text-gray-200 line-clamp-3">
 //               {service.summary}
 //             </p>
 
 //             {/* 3. Footer: Modern CTA using your brand theme */}
-//             <div className="mt-auto pt-6 flex items-center justify-between border-t border-borderLight dark:border-borderDark">
+//             <div className="flex items-center justify-between pt-6 mt-auto border-t border-borderLight dark:border-borderDark">
 //               <span className="text-[10px] font-black uppercase tracking-[0.2em] text-brandNavy/40 dark:text-white/40 group-hover:text-brandDark dark:group-hover:text-white transition-colors">
 //                 Explore Solution
 //               </span>
               
 //               {/* Loginord-style arrow button but with YOUR brandAccent */}
-//               <div className="relative flex items-center justify-center w-10 h-10 rounded-full border border-borderLight dark:border-borderDark group-hover:border-brandAccent transition-all duration-500 overflow-hidden">
+//               <div className="relative flex items-center justify-center w-10 h-10 overflow-hidden transition-all duration-500 border rounded-full border-borderLight dark:border-borderDark group-hover:border-brandAccent">
 //                 <FaArrowRight 
-//                   className="text-brandPrimary dark:text-brandAccent group-hover:text-brandDark transition-all duration-500 -rotate-45 group-hover:rotate-0 z-10" 
+//                   className="z-10 transition-all duration-500 -rotate-45 text-brandPrimary dark:text-brandAccent group-hover:text-brandDark group-hover:rotate-0" 
 //                   size={12} 
 //                 />
-//                 <div className="absolute inset-0 bg-brandAccent translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+//                 <div className="absolute inset-0 transition-transform duration-500 translate-y-full bg-brandAccent group-hover:translate-y-0" />
 //               </div>
 //             </div>
 //           </div>
 
 //           {/* Optional: Your brand accent line at bottom */}
-//           <div className="absolute bottom-0 left-0 w-0 h-1 bg-brandAccent group-hover:w-full transition-all duration-700" />
+//           <div className="absolute bottom-0 left-0 w-0 h-1 transition-all duration-700 bg-brandAccent group-hover:w-full" />
 //         </div>
 //       </Link>
 //     </motion.div>
@@ -149,7 +149,7 @@ export const ServiceCardCompact = ({ service, index }) => {
           
           {/* CURTAIN EFFECT - Covers ENTIRE card, not just image */}
           <motion.div
-            className="absolute inset-0 bg-brandDark dark:bg-brandNavy z-50"
+            className="absolute inset-0 z-20 bg-brandDark dark:bg-brandNavy"
             initial={{ x: "0%" }}
             whileInView={{ x: "100%" }}
             viewport={{ once: true, amount: 0.3 }}
@@ -161,7 +161,7 @@ export const ServiceCardCompact = ({ service, index }) => {
           />
 
           {/* 1. Header: Image section */}
-          <div className="relative h-52 overflow-hidden">
+          <div className="relative overflow-hidden h-52">
             <img
               src={service.headerImage}
               alt={service.title}
@@ -178,7 +178,7 @@ export const ServiceCardCompact = ({ service, index }) => {
             
             {/* Icon - Appears after curtain */}
             <motion.div 
-              className="absolute top-6 left-6 z-20"
+              className="absolute z-20 top-6 left-6"
               initial={{ opacity: 0, scale: 0.5, rotate: -180 }}
               whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
               viewport={{ once: true }}
@@ -188,14 +188,14 @@ export const ServiceCardCompact = ({ service, index }) => {
                 ease: [0.34, 1.56, 0.64, 1]
               }}
             >
-              <div className="flex items-center justify-center w-12 h-12 backdrop-blur-md bg-brandPrimary/10 dark:bg-brandAccent/10 border border-brandPrimary/20 dark:border-brandAccent/20 rounded-2xl text-brandPrimary dark:text-brandAccent group-hover:bg-brandAccent group-hover:text-brandDark transition-all duration-500">
+              <div className="flex items-center justify-center w-12 h-12 transition-all duration-500 border backdrop-blur-md bg-brandPrimary/10 dark:bg-brandAccent/10 border-brandPrimary/20 dark:border-brandAccent/20 rounded-2xl text-brandPrimary dark:text-brandAccent group-hover:bg-brandAccent group-hover:text-brandDark">
                 {icon}
               </div>
             </motion.div>
           </div>
 
           {/* 2. Content Section */}
-          <div className="relative flex-1 p-8 flex flex-col">
+          <div className="relative flex flex-col flex-1 p-8">
             {/* Index */}
             <motion.span 
               className="absolute top-8 right-8 font-mono text-[10px] tracking-widest text-brandNavy/20 dark:text-white/20 group-hover:text-brandAccent transition-colors"
@@ -208,7 +208,7 @@ export const ServiceCardCompact = ({ service, index }) => {
             </motion.span>
 
             <motion.h3 
-              className="text-2xl font-bold text-brandDark dark:text-white mb-4 tracking-tight group-hover:text-brandPrimary dark:group-hover:text-brandAccent transition-colors duration-300"
+              className="mb-4 text-2xl font-bold tracking-tight transition-colors duration-300 text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -218,7 +218,7 @@ export const ServiceCardCompact = ({ service, index }) => {
             </motion.h3>
 
             <motion.p 
-              className="text-sm leading-relaxed text-brandNavy dark:text-gray-400 group-hover:text-brandDark dark:group-hover:text-gray-200 transition-colors duration-300 line-clamp-3 mb-8"
+              className="mb-8 text-sm leading-relaxed transition-colors duration-300 text-brandNavy dark:text-gray-400 group-hover:text-brandDark dark:group-hover:text-gray-200 line-clamp-3"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -229,7 +229,7 @@ export const ServiceCardCompact = ({ service, index }) => {
 
             {/* 3. Footer CTA */}
             <motion.div 
-              className="mt-auto pt-6 flex items-center justify-between border-t border-borderLight dark:border-borderDark"
+              className="flex items-center justify-between pt-6 mt-auto border-t border-borderLight dark:border-borderDark"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -239,18 +239,18 @@ export const ServiceCardCompact = ({ service, index }) => {
                 Explore Solution
               </span>
               
-              <div className="relative flex items-center justify-center w-10 h-10 rounded-full border border-borderLight dark:border-borderDark group-hover:border-brandAccent transition-all duration-500 overflow-hidden">
+              <div className="relative flex items-center justify-center w-10 h-10 overflow-hidden transition-all duration-500 border rounded-full border-borderLight dark:border-borderDark group-hover:border-brandAccent">
                 <FaArrowRight 
-                  className="text-brandPrimary dark:text-brandAccent group-hover:text-brandDark transition-all duration-500 -rotate-45 group-hover:rotate-0 z-10" 
+                  className="z-10 transition-all duration-500 -rotate-45 text-brandPrimary dark:text-brandAccent group-hover:text-brandDark group-hover:rotate-0" 
                   size={12} 
                 />
-                <div className="absolute inset-0 bg-brandAccent translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                <div className="absolute inset-0 transition-transform duration-500 translate-y-full bg-brandAccent group-hover:translate-y-0" />
               </div>
             </motion.div>
           </div>
 
           {/* Bottom accent line */}
-          <div className="absolute bottom-0 left-0 w-0 h-1 bg-brandAccent group-hover:w-full transition-all duration-700" />
+          <div className="absolute bottom-0 left-0 w-0 h-1 transition-all duration-700 bg-brandAccent group-hover:w-full" />
         </div>
       </Link>
     </motion.div>
