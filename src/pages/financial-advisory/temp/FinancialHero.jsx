@@ -23,7 +23,7 @@ const FinancialHero = () => {
               RiskMan Consulting
             </span>
             
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
+            <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-6">
               Secure your <span className="text-brandGold">financial future</span> and mitigate risk
             </h1>
             
