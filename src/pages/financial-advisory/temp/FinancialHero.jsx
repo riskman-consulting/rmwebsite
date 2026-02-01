@@ -14,7 +14,7 @@ const FinancialHero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-brandDark via-brandDark/80 to-transparent" />
       </div>
 
-      <div className="container relative z-10 px-5 py-16 mx-auto md:py-24 lg:py-32 sm:px-8">
+      <div className="container relative z-10 px-5 mx-auto py-14 md:py-20 lg:py-24 sm:px-8">
         <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-12">
           
           {/* Text Content */}
@@ -30,6 +30,8 @@ const FinancialHero = () => {
             <p className="max-w-2xl mb-8 font-sans text-lg leading-relaxed text-gray-300 md:text-xl">
               {/* Our Financial Advisory Services provide guidance to corporates and business entities to navigate funding sources, 
               optimise borrowings, and adopt actionable financial strategies including capex management. */}
+
+              At RiskMan Consulting, our Financial Advisory Services are designed to provide guidances and advisories to corporates and other business entities to navigate funding sources, optimise borrowings and adopt actionable financial strategies including capex management.
               
             </p>
             
