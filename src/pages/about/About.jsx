@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { useLocation } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+
 import AboutHero from "./AboutHero";
 import IntroSection from "./IntroSection";
 import TributeSection from "./TributeSection";
@@ -17,16 +19,10 @@ import Events from "./Events";
 import FAQSection from "./FAQSection";
 import CTASection from "./CTASection";
 import LeadershipModal from "./LeadershipModal";
-import professionalExcellenceImg from "../../assets/images/professional_excellence_team.webp";
-import propreneurialImg from "../../assets/images/propreneurial_mindset_presentation.webp";
-import longtermRelationshipsImg from "../../assets/images/longterm_relationships_handshake.webp";
 import Testimonials from "./Testimonials";
 import { JourneyTimeline } from "./JourneyTimeline";
 import SingleSlide from "./SingleSlide";
 import WhyRiskman from "./WhyRiskMan";
-
-
-
 
 /* =======================
    ANIMATIONS
@@ -58,62 +54,63 @@ export default function About() {
   }, [location]);
 
   return (
-    <div className="min-h-screen overflow-x-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-white">
-      {/* ================= HERO ================= */}
-      {/* <AboutHero /> */}
-      <SingleSlide/>
+    <>
+      {/* =========================
+          SEO META TAGS
+      ========================== */}
+      <Helmet>
+        <title>About RiskMan Consulting | Meet the Team</title>
+        <meta
+          name="description"
+          content="Partner with RiskMan Consulting’s propreneurs. We provide customized Risk Assurance and Advisory, Digital Transformation, ESG, Financial Advisory, AI and Technology, Forensics and Investigation and IT Risk Management services for global enterprises."
+        />
 
-      {/* ================= INTRODUCTION SECTION ================= */}
-      <IntroSection />
+         <link rel="canonical" href="https://www.riskman.in/about" />
+      </Helmet>
 
+      <div className="min-h-screen overflow-x-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-white">
+        {/* ================= HERO ================= */}
+        {/* <AboutHero /> */}
+        <SingleSlide />
 
-      {/* ================= TRIBUTE SECTION ================= */}
-      <TributeSection />
+        {/* ================= INTRODUCTION ================= */}
+        <IntroSection />
 
-      {/* ================= JOURNEY TIMELINE ================= */}
-      {/* <JourneyTimeline/> */}
-      {/* ================= FEATURES ================= */}
-      {/* <FeatureSection /> */}
+        {/* ================= TRIBUTE ================= */}
+        <TributeSection />
 
-      {/* ================= MISSION & VISION ================= */}
-      <MissionVisionSection />
+        {/* ================= MISSION & VISION ================= */}
+        <MissionVisionSection />
 
-      {/* ================= LEADERSHIP ================= */}
-      <LeadershipSection setSelectedLeader={setSelectedLeader} />
+        {/* ================= LEADERSHIP ================= */}
+        <LeadershipSection setSelectedLeader={setSelectedLeader} />
 
-      {/* ================= SERVICE LEADERS ================= */}
-      <ServiceLeadersSection setSelectedLeader={setSelectedLeader} />
+        {/* ================= SERVICE LEADERS ================= */}
+        <ServiceLeadersSection setSelectedLeader={setSelectedLeader} />
 
-      {/* ================= TESTIMONIALS ================= */}
-      {/* <TestimonialsSection /> */}
+        {/* ================= MARQUEE CLIENTS ================= */}
+        <MarqueeClientsSection />
 
-      {/* <Testimonials/> */}
+        {/* ================= ALLIANCE PARTNERS ================= */}
+        <AlliancePartnersSection />
 
-      {/* ================= MARQUEE CLIENTS ================= */}
-      <MarqueeClientsSection />
+        {/* ================= TEAM MEMBERS ================= */}
+        <TeamMembersSection />
 
-      {/* ================= ALLIANCE PARTNERS ================= */}
-      <AlliancePartnersSection />
+        {/* ================= FAQ ================= */}
+        <FAQSection />
 
-      {/* ================= TEAM MEMBERS ================= */}
-      <TeamMembersSection />
+        <WhyRiskman />
 
-      
+        {/* ================= CTA ================= */}
+        <CTASection />
 
-      {/* ================= FAQ ================= */}
-      <FAQSection />
-
-      <WhyRiskman/>
-
-      {/* ================= CTA ================= */}
-      <CTASection />
-
-      {/* ================= LEADER MODAL ================= */}
-      {/* <LeadershipModal leader={selectedLeader} setSelectedLeader={setSelectedLeader} /> */}
-       <LeadershipModal
-        leader={selectedLeader}
-        onClose={() => setSelectedLeader(null)}
-      />
-    </div>
+        {/* ================= LEADER MODAL ================= */}
+        <LeadershipModal
+          leader={selectedLeader}
+          onClose={() => setSelectedLeader(null)}
+        />
+      </div>
+    </>
   );
 }
