@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
-import HeroServiceImage from "../../assets/images/service/hero.png";
+import HeroServiceImage from "../../assets/images/hero-section/services/hero.webp";
 
 export const HeroSection = () => {
   const { scrollY } = useScroll();

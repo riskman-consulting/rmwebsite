@@ -11,7 +11,7 @@ import InternationalAssignmentSection from './InternationalAssignmentSection';
 import JourneyTimeLineSection from './JourneyTimeLineSection';
 import MomentThatMattersSection from './MomentThatMattersSection';
 import TestimonialsSection from './TestimonialsSection';
-import TogethernessCelebrationSection from './TogethernessCelebrationSection';
+// import TogethernessCelebrationSection from './TogethernessCelebrationSection';
 import VideoHighlightSection from './VideoHighlightSection';
 import EventsGrid from './EventsGrid.jsx';
 import EventModal from './EventModal.jsx';

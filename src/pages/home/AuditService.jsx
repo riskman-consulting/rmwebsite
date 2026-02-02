@@ -10,10 +10,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 /* ================= Images ================= */
-import riskAssessmentImage from "../../assets/images/home/risk-assessment-audit.webp";
-import operationalFinancialImage from "../../assets/images/home/operational-financial-audit.webp";
-import riskComplianceAuditImage from "../../assets/images/home/risk-compliance-audit.webp";
-import itCybersecurityImage from "../../assets/images/home/it-cybersecurity-audit.webp";
+import riskAssessmentImage from "../../assets/images/home/key-services/risk-assessment-audit.webp";
+import operationalFinancialImage from "../../assets/images/home/key-services/operational-financial-audit.webp";
+import riskComplianceAuditImage from "../../assets/images/home/key-services/risk-compliance-audit.webp";
+import itCybersecurityImage from "../../assets/images/home/key-services/it-cybersecurity-audit.webp";
 
 /* ================= Services Data ================= */
 const services = [

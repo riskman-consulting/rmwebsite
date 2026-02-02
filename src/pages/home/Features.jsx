@@ -1,5 +1,5 @@
 import React from "react";
-import Strategic from "../../assets/images/home/strategy-bg.webp"
+import Strategic from "../../assets/images/home/features/strategy-bg.webp"
 
 const StrategicSection = () => {
   return (

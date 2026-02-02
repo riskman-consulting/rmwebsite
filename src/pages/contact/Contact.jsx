@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Mail, Phone, MapPin, Send, CheckCircle, Clock, Users, Award, Shield, Zap, TrendingUp, MessageSquare, Calendar, HeadphonesIcon } from "lucide-react";
-import contactHeroImg from "../../assets/images/contact/hero-background.png";
-import consultationImg from "../../assets/images/contact/consultation-team.png";
-import contact from "../../assets/images/contact/contact.png"
+import consultationImg from "../../assets/images/hero-section/contact/consultation-team.webp";
+import contact from "../../assets/images/hero-section/contact/contact.png"
  
 export default function Contact() {
   const [formData, setFormData] = useState({

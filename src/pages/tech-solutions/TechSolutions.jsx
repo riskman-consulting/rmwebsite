@@ -563,7 +563,7 @@ export default function IntegritatSolutionPage() {
       </section>
 
       {/* ==================== TESTIMONIALS ==================== */}
-      <section className="py-24 bg-white">
+      {/* <section className="py-24 bg-white">
         <div className="container px-6 mx-auto lg:px-12">
           <div className="mb-16 text-center">
             <span className="inline-block px-4 py-2 mb-6 text-sm font-medium border rounded-full border-borderLight text-brandDark">
@@ -584,7 +584,7 @@ export default function IntegritatSolutionPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ==================== FAQ ==================== */}
       <section className="py-24 bg-brandLight">

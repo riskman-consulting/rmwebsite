@@ -1,5 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import teamCollaboration from "../../assets/images/hero-section/about/team_collaboration.webp"
+import professionalConsulting from "../../assets/images/hero-section/about/professional_consultant.webp";
+import strategicPlanning from "../../assets/images/hero-section/about/strategic_planning.webp";
+import clientEngagement from "../../assets/images/hero-section/about/client_engagement.webp";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -48,7 +52,7 @@ export default function MissionVisionSection() {
                 className="rounded-3xl overflow-hidden h-[220px] shadow-lg hover:shadow-2xl transition-shadow duration-300"
               >
                 <img
-                  src="https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898667/team_collaboration_vksjog.webp"
+                  src={teamCollaboration}
                   alt="Team collaboration"
                   className="object-cover w-full h-full transition-transform duration-700 hover:scale-110"
                 />
@@ -59,7 +63,7 @@ export default function MissionVisionSection() {
                 className="rounded-3xl overflow-hidden h-[220px] shadow-lg hover:shadow-2xl transition-shadow duration-300"
               >
                 <img
-                  src="https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898665/professional_consultant_g8ag1p.jpg"
+                  src={professionalConsulting}
                   alt="Professional consulting"
                   className="object-cover w-full h-full transition-transform duration-700 hover:scale-110"
                 />
@@ -70,7 +74,7 @@ export default function MissionVisionSection() {
                 className="rounded-3xl overflow-hidden h-[220px] shadow-lg hover:shadow-2xl transition-shadow duration-300"
               >
                 <img
-                  src="https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898663/strategic_planning_nnuv1y.webp"
+                  src={strategicPlanning}
                   alt="Strategic planning"
                   className="object-cover w-full h-full transition-transform duration-700 hover:scale-110"
                 />
@@ -81,7 +85,7 @@ export default function MissionVisionSection() {
                 className="rounded-3xl overflow-hidden h-[220px] shadow-lg hover:shadow-2xl transition-shadow duration-300"
               >
                 <img
-                  src="https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898652/client_engagement_tlunb0.webp"
+                  src={clientEngagement}
                   alt="Client engagement"
                   className="object-cover w-full h-full transition-transform duration-700 hover:scale-110"
                 />

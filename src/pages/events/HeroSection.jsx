@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Calendar, ArrowRight, Image, Globe, Users, Award, TrendingUp } from "lucide-react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
-import bg1 from "../../assets/journey/ai/bg1.png"
-import bg2 from "../../assets/journey/ai/bg2.png"
-import bg3 from "../../assets/journey/ai/bg3.png"
-import bg4 from "../../assets/journey/ai/bg4.png"
-import bg5 from "../../assets/journey/ai/bg5.png"
+import bg1 from "../../assets/images/hero-section/events/bg1.png"
+import bg2 from "../../assets/images/hero-section/events/bg2.png"
+import bg3 from "../../assets/images/hero-section/events/bg3.png"
+import bg4 from "../../assets/images/hero-section/events/bg4.png"
+import bg5 from "../../assets/images/hero-section/events/bg5.png"
 
 
 

@@ -5,6 +5,9 @@ import WhyRiskManSection from "./WhyRiskManSection";
 import CTASection from "./CTASection";
 import FAQSection from "./FAQSection";
 
+import { Helmet } from "react-helmet-async";
+
+
 
 export default function RiskAdvisoryPage() {
   const pageData = {
@@ -112,6 +115,19 @@ export default function RiskAdvisoryPage() {
 
   return (
     <div className="min-h-screen bg-bgLight dark:bg-bgDark">
+
+      <Helmet>
+  <title>Risk Assurance and Advisory Services | RiskMan Consulting</title>
+  <meta
+    name="description"
+    content="Enhance organizational resilience with RiskMan Consulting’s Risk Assurance and Advisory services. We provide expert internal audit, ERM, TPRM, and governance solutions for global enterprises."
+  />
+  <link
+    rel="canonical"
+    href="https://www.riskman.in/risk-assurance-and-advisory"
+  />
+</Helmet>
+
       <HeroSection data={pageData.heroSection} />
       <OverviewSection data={pageData.OverviewSection} />
       <ServicesSection data={pageData.ServicesSection} />

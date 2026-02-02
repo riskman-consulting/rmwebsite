@@ -15,10 +15,20 @@ import OrganizationWideImplementationSection from "./OrganizationWideImplementat
 import RiskMaturitySection from "./RiskMaturitySection";
 import FAQSection from "./FAQSection";
 import CTASection from "./CTASection";
+import { Helmet } from "react-helmet-async";
 
 const ERMPage = () => {
   return (
     <main className="w-full overflow-hidden">
+<Helmet>
+  <title>Enterprise Risk Management (ERM) Services | RiskMan Consulting</title>
+  <meta
+    name="description"
+    content='Transform uncertainty into opportunity with RiskMan Consulting’s ERM services. We identify "Risks That Matter" to build organizational resilience, drive growth, and ensure long-term sustainability.'
+  />
+  <link rel="canonical" href="https://www.riskman.in/erm" />
+</Helmet>
+
 
       {/* 1. Hero Section */}
       <HeroSection />

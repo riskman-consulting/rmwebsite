@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Globe, Briefcase, Zap, Shield } from "lucide-react";
-import whyRiskMan from "../../assets/images/home/WhyChooseRiskMan.png";
+import whyRiskMan from "../../assets/images/home/whyRiskMan/WhyChooseRiskMan.png";
 
 const Feature = ({ icon: Icon, title, description, align = "left", delay }) => (
   <motion.div

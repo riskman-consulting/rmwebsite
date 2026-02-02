@@ -13,8 +13,16 @@ import {
 } from "lucide-react";
 
 import { Riskman_Aniversary_5_year_images } from "../../assets/riskman-anniversary/year-5";
-import journeyImages from "../../assets/journey";
+// import journeyImages from "../../assets/journey";
 import { IIA_Internal_Leadership_2025_images } from "../../assets/internal-leadership/2025";
+
+
+import {Audit_Leaders_Summit_Mumbai} from "../../assets/journey/audit_leaders_summit_mumbai_november_2024";
+
+// import {TEAM_LUNCH_DECEMBER_2023_Images} from "../../assets/journey/team_lunch_december"
+import {GAME_SESSION_WITH_TEAM} from "../../assets/journey/game_session/"
+import {CIA_CELEBRATION_WITH_TEAM_Images} from "../../assets/journey/cia_celebration"
+import {Diwali_Christmas_Zomato_Team_Images} from "../../assets/journey/diwali_and_christmas_celebration"
 
 import { Vietman_Image } from "../../assets/chu-chi-vietnam";
 import { Philippiness_Image } from "../../assets/philippiness";
@@ -23,6 +31,10 @@ import { Indonesia_Image } from "../../assets/indonesia";
 
 import { Prasen_Pal_Germany_Image } from "../../assets/international-assignment/germany";
 import { Prasen_Pal_Indonesia_Image } from "../../assets/international-assignment/indonesia";
+import { TEAM_LUNCH_DECEMBER_2023_Images } from './../../assets/journey/team_lunch_dinner';
+import { AGM_DELHI_2025_Images } from './../../assets/journey/agm_delhi_2025';
+import { IIA_MUMBAI_MARCH_2025_Images } from "../../assets/journey/iia_conference_mumbai/2025";
+
 
 const GLOBAL_LEADERSHIP_FILTER = "Global Leadership Journey";
 
@@ -33,37 +45,39 @@ export const PHOTOS = [
   { id: 4, category: "5 Year Celebration", title: "Milestone Celebration Highlights", image: Riskman_Aniversary_5_year_images[3], description: "Celebrating company milestone" },
   { id: 5, category: "5 Year Celebration", title: "RiskMan Growth Journey", image: Riskman_Aniversary_5_year_images[4], description: "Journey of growth and success" },
 
-  { id: 6, category: "Team Lunches", title: "Team Lunch at Zomato", image: journeyImages.teamLunchDecember2023[0], description: "Team lunch gathering at Zomato office" },
-  { id: 7, category: "Team Lunches", title: "Team Bonding Lunch", image: journeyImages.teamLunchDecember2023[1], description: "Casual team lunch gathering" },
-  { id: 8, category: "Team Lunches", title: "Team Lunch at Vedic Village", image: journeyImages.teamLunchJan2026[2], description: "Team lunch gathering at Vedic Village" },
-  { id: 9, category: "Team Lunches", title: "Team Dinner", image: journeyImages.teamDinnerOct2021[0], description: "Team bonding under vibrant lights" },
-  { id: 10, category: "Team Lunches", title: "Early Team Bonding Dinner", image: journeyImages.teamDinnerOct2021[1], description: "Festive team dinner with colorful decorations" },
-  { id: 11, category: "Team Lunches", title: "Team Dinner", image: journeyImages.teamDinnerFeb2022[0], description: "Cozy team gathering in purple ambiance" },
-  { id: 12, category: "Team Lunches", title: "Team Dinner", image: journeyImages.teamDinnerDecember2023[0], description: "Year-end celebration dinner" },
-  { id: 13, category: "Team Lunches", title: "Team Dinner Moments", image: journeyImages.teamDinnerDecember2023[1], description: "Large team gathering at outdoor venue" },
-  { id: 14, category: "Team Lunches", title: "Year-End Team Dinner", image: journeyImages.teamDinnerDecember2023[2], description: "Team dinner celebration moments" },
-  { id: 15, category: "Team Lunches", title: "Team Dinner Celebration", image: journeyImages.teamDinnerDecember2023[3], description: "Team bonding over dinner" },
+  { id: 6, category: "Team Lunches", title: "Team Lunch at Zomato", image:TEAM_LUNCH_DECEMBER_2023_Images[0], description: "Team lunch gathering at Zomato office" },
+  { id: 7, category: "Team Lunches", title: "Team Bonding Lunch", image: TEAM_LUNCH_DECEMBER_2023_Images[1], description: "Casual team lunch gathering" },
+  { id: 8, category: "Team Lunches", title: "Team Lunch at Vedic Village", image:TEAM_LUNCH_DECEMBER_2023_Images[12], description: "Team lunch gathering at Vedic Village" },
+  { id: 9, category: "Team Lunches", title: "Team Dinner", image: TEAM_LUNCH_DECEMBER_2023_Images[8], description: "Team bonding under vibrant lights" },
+  { id: 10, category: "Team Lunches", title: "Early Team Bonding Dinner", image: TEAM_LUNCH_DECEMBER_2023_Images[9], description: "Festive team dinner with colorful decorations" },
+  { id: 11, category: "Team Lunches", title: "Team Dinner", image: TEAM_LUNCH_DECEMBER_2023_Images[7], description: "Cozy team gathering in purple ambiance" },
+  { id: 12, category: "Team Lunches", title: "Team Dinner", image: TEAM_LUNCH_DECEMBER_2023_Images[3], description: "Year-end celebration dinner" },
+  { id: 13, category: "Team Lunches", title: "Team Dinner Moments", image: TEAM_LUNCH_DECEMBER_2023_Images[4], description: "Large team gathering at outdoor venue" },
+  { id: 14, category: "Team Lunches", title: "Year-End Team Dinner", image: TEAM_LUNCH_DECEMBER_2023_Images[5], description: "Team dinner celebration moments" },
+  { id: 15, category: "Team Lunches", title: "Team Dinner Celebration", image: TEAM_LUNCH_DECEMBER_2023_Images[6], description: "Team bonding over dinner" },
 
-  { id: 16, category: "Office Culture", title: "Team Member Birthday", image: journeyImages.teamMemberBirthday, description: "Celebrating team member's special day" },
-  { id: 17, category: "Office Culture", title: "Diwali Celebration", image: journeyImages.diwaliChristmasZomato[0], description: "Team in traditional attire for Diwali" },
-  { id: 18, category: "Office Culture", title: "Festive Office Moments", image: journeyImages.diwaliChristmasZomato[1], description: "Celebrating festivals together" },
-  { id: 19, category: "Office Culture", title: "Celebrating Together", image: journeyImages.diwaliChristmasZomato[2], description: "Team in Santa hats celebrating Christmas" },
-  { id: 20, category: "Office Culture", title: "Holiday Team Celebration", image: journeyImages.diwaliChristmasZomato[3], description: "Holiday season celebrations" },
-  { id: 21, category: "Office Culture", title: "Festive Workplace Vibes", image: journeyImages.diwaliChristmasZomato[4], description: "Year-end office celebration" },
-  { id: 22, category: "Office Culture", title: "Year-End Celebrations", image: journeyImages.diwaliChristmasZomato[5], description: "Festive workplace atmosphere" },
-  { id: 23, category: "Office Culture", title: "Game Session", image: journeyImages.gameSession[0], description: "Badminton game session with colleagues" },
-  { id: 24, category: "Office Culture", title: "CIA Celebration", image: journeyImages.ciaCelebration[0], description: "Team celebrating CIA promotion" },
+  { id: 16, category: "Office Culture", title: "Team Member Birthday", image: TEAM_LUNCH_DECEMBER_2023_Images[2], description: "Celebrating team member's special day" },
+  { id: 17, category: "Office Culture", title: "Diwali Celebration", image: Diwali_Christmas_Zomato_Team_Images[0], description: "Team in traditional attire for Diwali" },
+  { id: 18, category: "Office Culture", title: "Festive Office Moments", image: Diwali_Christmas_Zomato_Team_Images[1], description: "Celebrating festivals together" },
+  { id: 19, category: "Office Culture", title: "Celebrating Together", image: Diwali_Christmas_Zomato_Team_Images[2], description: "Team in Santa hats celebrating Christmas" },
+  { id: 20, category: "Office Culture", title: "Holiday Team Celebration", image: Diwali_Christmas_Zomato_Team_Images[3], description: "Holiday season celebrations" },
+  { id: 21, category: "Office Culture", title: "Festive Workplace Vibes", image: Diwali_Christmas_Zomato_Team_Images[4], description: "Year-end office celebration" },
+  { id: 22, category: "Office Culture", title: "Year-End Celebrations", image: Diwali_Christmas_Zomato_Team_Images[5], description: "Festive workplace atmosphere" },
+  { id: 23, category: "Office Culture", title: "Game Session", image: GAME_SESSION_WITH_TEAM[0], description: "Badminton game session with colleagues" },
+  { id: 24, category: "Office Culture", title: "CIA Celebration", image: CIA_CELEBRATION_WITH_TEAM_Images[0], description: "Team celebrating CIA promotion" },
+  {id:35,category:"Office Culture",title:"CIA Celebration",image:CIA_CELEBRATION_WITH_TEAM_Images[1],description:"Team celebrating CIA promotion"},
 
-  { id: 25, category: "Meetings & Discussions", title: "Professional Discussions", image: journeyImages.iiaMumbaiMarch2025[2], description: "Knowledge sharing session" },
+
+  { id: 25, category: "Meetings & Discussions", title: "Professional Discussions", image: IIA_MUMBAI_MARCH_2025_Images[2], description: "Knowledge sharing session" },
   { id: 26, category: "Meetings & Discussions", title: "Strategy Meeting", image: IIA_Internal_Leadership_2025_images[0], description: "Important strategy discussion" },
-  { id: 27, category: "Meetings & Discussions", title: "AGM Delhi", image: journeyImages.agmDelhiJuly2025[0], description: "Annual General Meeting in Delhi" },
-  { id: 28, category: "Meetings & Discussions", title: "AGM Delhi Session", image: journeyImages.agmDelhiJuly2025[1], description: "Strategic AGM discussions" },
-  { id: 29, category: "Meetings & Discussions", title: "AGM Delhi Interaction", image: journeyImages.agmDelhiJuly2025[2], description: "Interactive AGM session" },
-  { id: 30, category: "Meetings & Discussions", title: "AGM Delhi Highlights", image: journeyImages.agmDelhiJuly2025[3], description: "Key highlights from AGM" },
-  { id: 31, category: "Meetings & Discussions", title: "Audit Leaders Summit", image: journeyImages.auditLeadersSummitMumbaiNov2024[0], description: "Summit in Mumbai" },
-  { id: 32, category: "Meetings & Discussions", title: "Panel Discussion", image: journeyImages.auditLeadersSummitMumbaiNov2024[1], description: "Panel with industry leaders" },
-  { id: 33, category: "Meetings & Discussions", title: "Leadership Exchange", image: journeyImages.auditLeadersSummitMumbaiNov2024[2], description: "Networking session" },
-  { id: 34, category: "Meetings & Discussions", title: "Audit Networking", image: journeyImages.auditLeadersSummitMumbaiNov2024[3], description: "Networking with professionals" },
+  { id: 27, category: "Meetings & Discussions", title: "AGM Delhi", image: AGM_DELHI_2025_Images[0], description: "Annual General Meeting in Delhi" },
+  { id: 28, category: "Meetings & Discussions", title: "AGM Delhi Session", image: AGM_DELHI_2025_Images[1], description: "Strategic AGM discussions" },
+  { id: 29, category: "Meetings & Discussions", title: "AGM Delhi Interaction", image: AGM_DELHI_2025_Images[2], description: "Interactive AGM session" },
+  { id: 30, category: "Meetings & Discussions", title: "AGM Delhi Highlights", image: AGM_DELHI_2025_Images[3], description: "Key highlights from AGM" },
+  { id: 31, category: "Meetings & Discussions", title: "Audit Leaders Summit", image: Audit_Leaders_Summit_Mumbai[0], description: "Summit in Mumbai" },
+  { id: 32, category: "Meetings & Discussions", title: "Panel Discussion", image: Audit_Leaders_Summit_Mumbai[1], description: "Panel with industry leaders" },
+  { id: 33, category: "Meetings & Discussions", title: "Leadership Exchange", image: Audit_Leaders_Summit_Mumbai[2], description: "Networking session" },
+  { id: 34, category: "Meetings & Discussions", title: "Audit Networking", image: Audit_Leaders_Summit_Mumbai[3], description: "Networking with professionals" },
 ];
 
 const ENGAGEMENTS = [

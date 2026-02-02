@@ -4,7 +4,7 @@ import {
   Users,
   Settings,
 } from "lucide-react";
-import riskComplianceImage from '../../assets/images/home/risk-compliance.png';
+// import riskComplianceImage from '../../assets/images/home/risk-compliance.webp';
  
 // 4. Risk & Compliance Section
 const RiskCompliance = () => {

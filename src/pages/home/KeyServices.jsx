@@ -2,10 +2,10 @@ import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-import riskAssessmentImage from "../../assets/images/home/risk-assessment-audit.webp";
-import operationalFinancialImage from "../../assets/images/home/operational-financial-audit.webp";
-import riskComplianceAuditImage from "../../assets/images/home/risk-compliance-audit.webp";
-import itCybersecurityImage from "../../assets/images/home/it-cybersecurity-audit.webp";
+import riskAssessmentImage from "../../assets/images/home/key-services/risk-assessment-audit.webp";
+import operationalFinancialImage from "../../assets/images/home/key-services/operational-financial-audit.webp";
+import riskComplianceAuditImage from "../../assets/images/home/key-services/risk-compliance-audit.webp";
+import itCybersecurityImage from "../../assets/images/home/key-services/it-cybersecurity-audit.webp";
 
 /* ================= DATA ================= */
 const services = [

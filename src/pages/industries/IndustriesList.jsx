@@ -17,11 +17,11 @@ import {
 import industries from "../../data/industries-master-list.json";
  
 // Import local industry images
-import manufacturingImg from "../../assets/images/industry/manufacturing.png";
-import bankingImg from "../../assets/images/industry/banking.png";
-import ecommerceImg from "../../assets/images/industry/ecommerce.png";
-import healthcareImg from "../../assets/images/industry/healthcare.png";
-import technologyImg from "../../assets/images/industry/technology.png";
+import manufacturingImg from "../../assets/images/hero-section/industry/manufacturing.png";
+import bankingImg from "../../assets/images/hero-section/industry/banking.png";
+import ecommerceImg from "../../assets/images/hero-section/industry/ecommerce.png";
+import healthcareImg from "../../assets/images/hero-section/industry/healthcare.png";
+import technologyImg from "../../assets/images/hero-section/industry/technology.png";
  
 /* =======================
    ANIMATIONS

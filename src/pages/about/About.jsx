@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
-import AboutHero from "./AboutHero";
+// import AboutHero from "./AboutHero";
 import IntroSection from "./IntroSection";
 import TributeSection from "./TributeSection";
 import FeatureSection from "./FeaturesSection";

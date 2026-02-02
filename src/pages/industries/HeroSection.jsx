@@ -1,6 +1,13 @@
 import { motion } from "framer-motion";
 import { HeroImageWithCurtain } from "./HeroImageWithCurtain";
 
+import manufacturingImages from "../../assets/images/hero-section/industry/manufacturing.png";
+import bankingImages from "../../assets/images/hero-section/industry/banking.png";
+import ecommerceImages from "../../assets/images/hero-section/industry/ecommerce.png";
+import healthCareImages from "../../assets/images/hero-section/industry/health-care.png";
+import technologyImages from "../../assets/images/hero-section/industry/technology.png";
+
+
 /* =======================
    ANIMATION VARIANTS
 ======================= */
@@ -16,11 +23,11 @@ const staggerContainer = {
 
 // Industry images from Cloudinary
 const industryImages = [
-  "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768901938/manufacturing_sjjtvd.webp",
-  "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768901938/banking_ztpqxr.webp",
-  "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768901939/ecommerce_lozlfj.webp",
-  "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768901935/healthcare_yowxpx.webp",
-  "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768901935/technology_foecgg.webp"
+  manufacturingImages,
+  bankingImages,
+  ecommerceImages,
+  healthCareImages,
+  technologyImages,
 ];
 
 // 1. Hero Section
