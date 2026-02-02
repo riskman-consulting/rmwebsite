@@ -31,6 +31,8 @@ import RiskAdvisoryPage from './pages/risk-advisory/RiskAdvisoryPage'
 import ERMPage from './pages/erm/ERMPage'
 import Financial_Advisory from './pages/financial-advisory/financial-advisory'
 import FinancialAdvisoryPage from './pages/financial-advisory/temp/FinancialAdvisoryPage'
+import BCPPage from './pages/bcp/BCPPage'
+import RBIAServicePage from './pages/rbia/RBIAServicePage'
 
 
 function App() {
@@ -61,6 +63,8 @@ function App() {
           <Route path='/services/risk-advisory' element={<RiskAdvisoryPage/>}/>
           <Route path='/services/risk-advisory/erm' element={<ERMPage/>}/>
           <Route path='/services/financial-advisory' element={<FinancialAdvisoryPage/>}/>
+          <Route path='/services/bcp-dr' element={<BCPPage/>}/>
+          <Route path='/services/risk-advisory/rbia' element={<RBIAServicePage/>} />
           {/* <Route path="/services/:id" element={<ServicesTemplate />} /> */}
           <Route path="/industries" element={<IndustriesList />} />
           <Route path="/industries/:id" element={<IndustriesTemplate />} />

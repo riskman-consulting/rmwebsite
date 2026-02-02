@@ -25,7 +25,7 @@ import { EventCTASection } from "./EventSection";
 import ValueSection from "./ValueSection";
 
 export default function Home() {
-  
+
   return (
     <main
       className="
@@ -74,7 +74,7 @@ export default function Home() {
         <ClientSection />
 
         {/* Leader section */}
-        <LeadershipSection  />
+        <LeadershipSection />
 
         {/* Event Section */}
         <EventCTASection />
@@ -93,7 +93,7 @@ export default function Home() {
 
         <BlogSection />
 
-        
+
         {/* FAQ */}
         <FAQSection />
 

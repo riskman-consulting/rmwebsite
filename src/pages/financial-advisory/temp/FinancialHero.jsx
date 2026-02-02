@@ -5,7 +5,7 @@ const FinancialHero = () => {
     <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-brandDark transition-colors duration-300">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
+        <img  loading="lazy"
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2070" 
           alt="Modern Corporate Building" 
           className="w-full h-full object-cover opacity-40 dark:opacity-30"
