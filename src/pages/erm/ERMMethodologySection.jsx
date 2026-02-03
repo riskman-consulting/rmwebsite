@@ -79,7 +79,7 @@ const ERMMethodologySection = () => {
           </div>
 
           {/* ASCENDING STEPS */}
-          <div className="relative flex flex-col gap-8 mx-auto max-w-5xl lg:flex-row lg:gap-4 lg:items-end lg:justify-center">
+          <div className="relative flex flex-col max-w-5xl gap-8 mx-auto lg:flex-row lg:gap-4 lg:items-end lg:justify-center">
             {STEPS.map((item, index) => {
               // Step 1 (Index 0): Lowest (Bottom)
               // Step 4 (Index 3): Highest (Top)
@@ -116,7 +116,7 @@ const ERMMethodologySection = () => {
                     </div>
 
                     {/* WHITE CONTENT CARD */}
-                    <div className="rounded-xl bg-surfaceLight dark:bg-surfaceDark p-6 shadow-md hover:shadow-2xl transition-all duration-300 group-hover:-translate-y-2 border border-white/50 dark:border-white/5">
+                    <div className="p-6 transition-all duration-300 border shadow-md rounded-xl bg-surfaceLight dark:bg-surfaceDark hover:shadow-2xl group-hover:-translate-y-2 border-white/50 dark:border-white/5">
                       <h3 className="mb-2 font-heading text-[11px] font-bold uppercase tracking-widest text-brandAccent/70 dark:text-brandAccent/80">
                         Step {index + 1} of 4
                       </h3>
@@ -130,7 +130,7 @@ const ERMMethodologySection = () => {
 
                     {/* CONNECTOR LINE - BETWEEN STEPS */}
                     {index < STEPS.length - 1 && (
-                      <div className="hidden lg:block absolute -bottom-20 left-1/2 -translate-x-1/2 w-1 h-20 bg-gradient-to-b from-brandAccent to-brandAccent/20" />
+                      <div className="absolute hidden w-1 h-20 -translate-x-1/2 lg:block -bottom-20 left-1/2 bg-gradient-to-b from-brandAccent to-brandAccent/20" />
                     )}
                   </div>
                 </motion.div>
@@ -148,8 +148,8 @@ const ERMMethodologySection = () => {
           >
             <div className="text-center">
               <div className="inline-flex flex-col items-center">
-                <div className="w-1 h-12 bg-gradient-to-t from-brandAccent/30 to-brandAccent mb-2" />
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-brandAccent to-brandGold shadow-lg flex items-center justify-center">
+                <div className="w-1 h-12 mb-2 bg-gradient-to-t from-brandAccent/30 to-brandAccent" />
+                <div className="flex items-center justify-center w-8 h-8 rounded-full shadow-lg bg-gradient-to-br from-brandAccent to-brandGold">
                   <span className="text-xl">🎯</span>
                 </div>
               </div>

@@ -70,7 +70,7 @@ export const Navbar = ({
       {/* =======================
          ANNOUNCEMENT BANNER
       ======================= */}
-      <div className="fixed top-0 left-0 right-0 z-[60] h-[48px] bg-bgDark flex items-center">
+      <div className="fixed top-0 left-0 right-0 z-[60] h-[48px] bg-bgDark dark:bg-surfaceLight flex items-center">
         <div className="max-w-[1400px] mx-auto px-6 w-full" />
       </div>
 

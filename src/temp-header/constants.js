@@ -5,7 +5,7 @@ export const NAVIGATION_DATA = {
         { "label": "About", "type": "mega", "key": "about", "path": "/about" },
         { "label": "Services", "type": "mega", "key": "services", "path": "/services" },
         { "label": " Tech Solutions", "type": "link", "path": "/solutions" },
-        { "label": "Events & Journey", "type": "link", "key": "events", "path": "/events" },
+        { "label": "Events & Journey", "type": "mega", "key": "events", "path": "/events" },
         { "label": "Knowledge Hub", "type": "link", "path": "/insights" },
         { "label": "Careers", "type": "link", "path": "/careers" },
 //    { "label": "Industries", "type": "mega", "key": "industries", "path": "/industries" },     
