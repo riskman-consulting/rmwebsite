@@ -156,6 +156,41 @@
 
 // export default RiskManApproachSection;
 
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+
+const phases = [
+  {
+    title: "Initiation",
+    desc: "We establish the project scope, secure management support, and identify stakeholders and required resources.",
+  },
+  {
+    title: "Analysis",
+    desc: "Impact questionnaires and structured analysis rank systems using Maximum Tolerable Downtime (MTD).",
+  },
+  {
+    title: "Recovery",
+    desc: "Business Recovery Plans restore facilities, supply chains, users, and supporting technologies.",
+  },
+  {
+    title: "Strategy",
+    desc: "Multiple outage scenarios are modeled to design service recovery strategies and fallback centers.",
+  },
+  {
+    title: "Documentation",
+    desc: "Formal Business Resumption, IT Contingency, Cyber Response, and Emergency plans are created.",
+  },
+  {
+    title: "Validation",
+    desc: "Walk-throughs, checklist testing, and simulations validate recovery effectiveness.",
+  },
+  {
+    title: "Maintenance",
+    desc: "Ongoing monitoring, reviews, and awareness training keep teams prepared.",
+  },
+];
+
+const BCPMethodology = () => {
   return (
     <section className="py-24 bg-surfaceLight dark:bg-surfaceDark">
       <div className="container max-w-6xl">
@@ -165,8 +200,44 @@
           <div className="h-1.5 w-20 bg-brandAccent mb-6 rounded-full" />
  
           <h2 className="text-3xl font-extrabold md:text-4xl text-brandDark dark:text-white">
-            RiskMan’s 7-Phase BCP/DR Delivery Lifecycle
+            RiskMan's 7-Phase BCP/DR Delivery Lifecycle
           </h2>
+ 
+          <p className="mt-4 text-gray-600 dark:text-gray-300">
+            Our structured methodology ensures operational resilience through a
+            comprehensive lifecycle designed for measurable recovery readiness.
+          </p>
+        </div>
+ 
+        {/* Timeline */}
+        <div className="grid gap-8 mt-16 md:grid-cols-2">
+          {phases.map((p, i) => (
+            <div
+              key={p.title}
+              className="relative p-8 transition bg-white border shadow-sm dark:bg-brandNavy/30 border-borderLight dark:border-borderDark rounded-2xl hover:shadow-lg"
+            >
+              {/* Phase Number Badge */}
+              <div className="absolute flex items-center justify-center w-10 h-10 font-bold text-white shadow -top-5 left-8 rounded-xl bg-brandPrimary">
+                {i + 1}
+              </div>
+ 
+              <h3 className="mt-4 text-xl font-bold text-brandDark dark:text-white">
+                Phase {i + 1}: {p.title}
+              </h3>
+ 
+              <p className="mt-3 leading-relaxed text-gray-600 dark:text-gray-300">
+                {p.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+ 
+      </div>
+    </section>
+  );
+};
+ 
+export default BCPMethodology;
  
           <p className="mt-4 text-gray-600 dark:text-gray-300">
             Our structured methodology ensures operational resilience through a
