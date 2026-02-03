@@ -1,7 +1,7 @@
 import React from "react";
 
 import HeroSection from "./HeroSection";
-import StrategicFoundation from "./Strategicfoundation";
+import StrategicFoundation from "./StrategicFoundation";
 import ThreeLinesModel from "./ThreeLinesModel";
 import GlobalOperatingModel from "./GlobalOperatingModel";
 import ValueCreation from "./ValueCreation";
