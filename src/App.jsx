@@ -32,6 +32,7 @@ import ERMPage from './pages/erm/ERMPage'
 // import RBIAPage from './pages/rbia/RBIAPage'
 import RBIAPage from './pages/rbia/RBIAPage'
 import BCPPage from "./pages/bcp-dr/BCPPage"
+import CSAPage from "./pages/csa/CSAPage"
 
 
 
@@ -65,10 +66,12 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<ServicePage />} />
            <Route path="/services/bcp-dr" element={<BCPPage/>} />
+           <Route path="/services/risk-advisory/csa" element={<CSAPage/>} />
           <Route path="/services/risk-advisory" element={<RiskAdvisoryPage />} />
           <Route path="/services/risk-advisory/erm" element={<ERMPage />} />
           <Route path="/services/financial-advisory" element={<FinancialAdvisoryPage />} />
           <Route path="/services/risk-advisory/rbia" element={<RBIAPage/>} />
+          
           {/* <Route path="/services/:id" element={<ServicesTemplate />} /> */}
           <Route path="/industries" element={<IndustriesList />} />
           <Route path="/industries/:id" element={<IndustriesTemplate />} />

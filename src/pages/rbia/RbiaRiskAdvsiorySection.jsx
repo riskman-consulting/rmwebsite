@@ -45,7 +45,7 @@ export default function RbiaRiskAdvisorySection() {
             <div className="w-16 h-1 rounded-full bg-gradient-to-r from-brandPrimary to-brandAccent" />
 
             <p className="max-w-xl text-base leading-relaxed md:text-lg text-brandDark/85 dark:text-brandLight/85">
-              Our Internal Audit services are supported by a consistent, substantially field tested 'risk-based' methodology derived from our experiences on multiple Internal audits and is consistent with the International Standards for the Professional Practice of Internal Auditing. Our methodology is linked to a number of supporting knowledge tools and databases. This methodology is aligned to our overarching methodology.
+              Our Internal Audit services are supported by a consistent, substantially field tested ‘risk-based’ methodology derived from our experiences on multiple Internal audits and is consistent with the International Standards for the Professional Practice of Internal Auditing. Our methodology is linked to a number of supporting knowledge tools and databases. This methodology is aligned to our overarching methodology.
             </p>
           </div>
 

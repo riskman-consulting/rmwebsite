@@ -16,20 +16,15 @@ const RBIALandscape = () => {
               </div>
 
               <h2 className="text-3xl font-extrabold leading-tight font-heading md:text-4xl lg:text-5xl text-brandDark dark:text-white">
-                Strategic Assessment of the{" "}
+                Strategic Assessment of {" "}
                 <span className="text-brandPrimary dark:text-brandGold">
-                  Media Industry
+                  Organizational
                 </span>{" "}
                 Risk Landscape
               </h2>
 
               <p className="mt-8 text-lg leading-relaxed text-gray-700 md:text-xl dark:text-gray-300">
-                PTI’s mission relies on trust and speed, facing risks like
-                cybersecurity and editorial integrity. Risk-Based Internal Audit
-                (RBIA) provides proactive, independent assurance across financial
-                and operational areas. This focus protects revenue and strengthens
-                governance, aligning audit efforts with PTI’s unique risk landscape
-                and strategic objectives.
+                Every Organization’s mission relies on trust and speed, facing risks like cybersecurity and editorial integrity. Risk-Based Internal Audit (RBIA) provides proactive, independent assurance across financial and operational areas. This focus protects revenue and strengthens governance, aligning audit efforts with every organization’s unique risk landscape and strategic objectives.
               </p>
 
               <div className="grid grid-cols-1 gap-6 mt-12 sm:grid-cols-2">
@@ -100,14 +95,14 @@ const RBIALandscape = () => {
               <div className="absolute inset-0 bg-gradient-to-r lg:bg-gradient-to-l from-transparent via-transparent to-white dark:to-surfaceDark lg:to-transparent" />
               <div className="absolute inset-0 bg-brandPrimary/20 mix-blend-multiply" />
 
-              <div className="absolute p-6 shadow-xl left-6 right-6 bottom-6 lg:left-auto lg:right-8 lg:w-64 bg-brandAccent rounded-2xl lg:rotate-3">
+              {/* <div className="absolute p-6 shadow-xl left-6 right-6 bottom-6 lg:left-auto lg:right-8 lg:w-64 bg-brandAccent rounded-2xl lg:rotate-3">
                 <p className="text-2xl font-black tracking-tighter text-brandDark">
                   TRUST & SPEED
                 </p>
                 <p className="mt-1 text-xs font-bold tracking-widest uppercase text-brandDark/80">
                   Core Media Pillars
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

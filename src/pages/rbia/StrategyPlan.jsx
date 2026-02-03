@@ -48,7 +48,7 @@ export default function StrategyPlanSection() {
             {
               title: "Key Drivers for Change",
               text:
-                "PTI faces increasing complexity from global operations and diverse revenues. Rising governance demands and technological shifts, including AI and cybersecurity risks, necessitate a transition to RBIA. This shift ensures proactive management of modern threats while meeting transparency expectations and securing PTI's digital infrastructure.",
+                "Organizations face increasing complexity from global operations and diverse revenues. Rising governance demands and technological shifts, including AI and cybersecurity risks, necessitate a transition to RBIA. This shift ensures proactive management of modern threats while meeting transparency expectations and securing organizational digital infrastructure.",
             },
             {
               title: "Value vs. Cost Dynamics",
