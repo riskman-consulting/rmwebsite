@@ -3,6 +3,7 @@
 
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import { teamsImages } from "../../assets/teams";
  
 export default function SingleSlide() {
   const teamAvatars = [
@@ -10,9 +11,9 @@ export default function SingleSlide() {
     // "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768895926/pranshul_jxkf7z.webp",
     // "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768895921/Vishal_Sharma_qfwz3c.webp"
 
-    "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1769154641/sukant_sir_nelcot.webp",
+    teamsImages.sukantaSir,
     "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768906075/Prasen_pal_xe5jx8.webp",
-    "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768906764/Arpit_Garg_Image_dlfmvh.webp"
+    teamsImages.arpitSir,
   ];
 
   return (
@@ -33,7 +34,7 @@ export default function SingleSlide() {
         <div className="max-w-3xl">
           {/* Headline - Styled like the image */}
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-[1.1] tracking-tight">
-            RiskMan Consulting: <br />
+            RiskMan Assurance and Advisory <br />
             <span className="font-medium opacity-90 text-[#FFC000] dark:text-[#FFC000]">
               Your Partner in Sustainable Growth
             </span>

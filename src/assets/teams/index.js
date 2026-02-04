@@ -42,6 +42,11 @@ import Harsh from "./Harsh.webp"
 import Kiran from "./kiran.webp"
 import monica from "./monica.png"
 
+import pranshu from "./pranshu.jpg";
+import arpitSir from "./arpitSir.png"
+import sukantaSir from "./sukantSir.png"
+import vishalSharma from "./Vishal Sharma.jpg";
+
 
 export const teamsImages = {
   Pranshul,
@@ -81,7 +86,11 @@ export const teamsImages = {
   Shreya,
   Arif,
   Harsh,
-  Kiran
+  Kiran,
+  pranshu,
+  arpitSir,
+  sukantaSir,
+  vishalSharma,
 };
 
 

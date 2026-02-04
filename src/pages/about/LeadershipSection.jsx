@@ -1,6 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Linkedin, ArrowRight } from "lucide-react";
+import { Linkedin, ArrowRight, MapPin } from "lucide-react";
+import { FaHeart } from "react-icons/fa";
+import TributeMarquee from "./TributeMarquee";
+import { teamsImages } from "../../assets/teams";
 
 /* =========================
    Animations
@@ -195,13 +198,14 @@ function PrasenPalRichBio() {
 /* =========================
    Team Data
 ========================= */
+
 const TEAM_MEMBERS = [
   {
     name: "Sukanta Nag",
     title: "Co-Founder & Partner | Financial Advisory",
     bio: "CA, CS, CMA, CAIIB with 41+ years of experience across credit rating, corporate banking, risk management and financial consulting.",
-    image:
-      "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1769154641/sukant_sir_nelcot.webp",
+    image:teamsImages.sukantaSir,
+    location:"Kolkata, India",
     linkedin: "https://www.linkedin.com/in/ca-sukanta-nag-50221021",
     fullBio:
       "CA, CS, CMA, CAIIB and M.Com, with over 41 years of experience spanning Credit Rating, Corporate Banking, Risk Management and Financial & Management Consulting. His key strengths are in understanding the holistic approach of the business and client's need for offering 360-degree solutions and build a meaningful relationship with them.",
@@ -209,6 +213,7 @@ const TEAM_MEMBERS = [
   {
     name: "Prasen Pal",
     title: "Co-Founder & Partner | ERS & Sustainability",
+    location:"Kolkata, India",
     bio: "A Chartered Accountant with 18+ years of global experience, formerly Deloitte and Genpact ERC. Certified in SCR (GARP), Six Sigma, RPA, and BRSR. Expert in ERM, Internal Audit, ESG, AI Automation, and Tax Advisory.",
     image:
       "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768906075/Prasen_pal_xe5jx8.webp",
@@ -218,9 +223,9 @@ const TEAM_MEMBERS = [
   {
     name: "Arpit Garg",
     title: "Co-Founder & Partner | ERS & ITRS",
-    bio: "CA, CIA, CRMA, CISA with global experience in ERM, SOC, cybersecurity, fraud analytics and IT risk.",
-    image:
-      "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768906764/Arpit_Garg_Image_dlfmvh.webp",
+    location:"Gurgaon,India",
+    bio: "Chartered Accountant and Certified Internal Auditor (CIA, CRMA, CISA) with 14+ years in risk assurance and advisory. Partner at RiskMan Consulting, ex-EY and Genpact. Expert in internal audit, IT risk, SOX/IFC, and fraud analytics.",
+    image:teamsImages.arpitSir,
     linkedin: "https://www.linkedin.com/in/arpit-garg-88070560",
     fullBio:
       "A CA, CIA, CRMA, CISA, ex-EY, Genpact ERC and SNB with 13+ years of experience spanning Risk-based internal audits, he enhances efficiency, control, compliance, and cost savings across diverse sectors.",
@@ -230,7 +235,7 @@ const TEAM_MEMBERS = [
 /* =========================
    Card
 ========================= */
-function MemberCard({ member, index, onSelect }) {
+export function MemberCard({ member, index, onSelect }) {
   return (
     <motion.div
       {...animations.card(index)}
@@ -251,6 +256,16 @@ function MemberCard({ member, index, onSelect }) {
       <p className="text-sm font-semibold text-center text-brandPrimary dark:text-brandAccent">
         {member.title}
       </p>
+      <div className="flex items-center justify-center gap-3 mt-3 text-sm text-gray-600">
+
+        {member.location && (
+          <div className="flex items-center gap-1">
+            <MapPin size={16} />
+            <span>{member.location}</span>
+          </div>
+        )}
+
+      </div>
       <p className="mt-4 text-sm text-center text-brandDark/70 dark:text-white/70">
         {member.bio}
       </p>
@@ -300,6 +315,9 @@ export default function LeadershipSection({ setSelectedLeader }) {
               onSelect={setSelectedLeader}
             />
           ))}
+        </div>
+        <div className="w-screen mt-10 ">
+          <TributeMarquee/>
         </div>
       </div>
     </section>

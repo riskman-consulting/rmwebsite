@@ -181,7 +181,7 @@ export default function MissionVisionSection() {
       Our Vision:
     </h3>
     <p className="text-base leading-relaxed text-brandNavy dark:text-white/70">
-      Our vision is to become a leading Risk Consulting firm in India and globally by
+      Our vision is to become a leading Risk Assurance and Advisory firm in India and globally by
       rendering sustainable, high-quality services fully aligned with our mission.
     </p>
   </div>
@@ -195,16 +195,6 @@ export default function MissionVisionSection() {
       We focus on maximizing performance, ensuring reliability through customized
       agreements, and enhancing service productivity while minimizing operational costs.
     </p>
-  </div>
-
-  {/* Signature */}
-  <div className="pt-6">
-    <div
-      className="text-4xl text-gray-800 dark:text-gray-200"
-      style={{ fontFamily: "Brush Script MT, cursive" }}
-    >
-      RiskMan Team
-    </div>
   </div>
 </motion.div>
 

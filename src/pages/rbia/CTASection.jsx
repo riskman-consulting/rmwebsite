@@ -1,3 +1,5 @@
+import React from "react";
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 export default function CTASection() {
@@ -29,13 +31,13 @@ export default function CTASection() {
             Partner with us to protect value, ensure compliance, and gain confidence through a robust RBIA framework.
           </p>
 
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="inline-flex items-center gap-3 px-8 py-4 text-base font-semibold transition-all bg-white shadow-lg rounded-xl text-brandDark hover:bg-brandAccent hover:text-brandDark hover:shadow-xl"
           >
             Schedule a Consultation
             <ArrowRight className="w-5 h-5" />
-          </a>
+          </Link>
 
         </div>
       </div>

@@ -7,136 +7,18 @@ import {
   Heart,
   Star,
   LayoutGrid,
-  X,
-  ChevronLeft,
-  ChevronRight,
 } from "lucide-react";
-
-import { Riskman_Aniversary_5_year_images } from "../../assets/riskman-anniversary/year-5";
-// import journeyImages from "../../assets/journey";
-import { IIA_Internal_Leadership_2025_images } from "../../assets/internal-leadership/2025";
-
-
-import {Audit_Leaders_Summit_Mumbai} from "../../assets/journey/audit_leaders_summit_mumbai_november_2024";
-
-// import {TEAM_LUNCH_DECEMBER_2023_Images} from "../../assets/journey/team_lunch_december"
-import {GAME_SESSION_WITH_TEAM} from "../../assets/journey/game_session/"
-import {CIA_CELEBRATION_WITH_TEAM_Images} from "../../assets/journey/cia_celebration"
-import {Diwali_Christmas_Zomato_Team_Images} from "../../assets/journey/diwali_and_christmas_celebration"
-
-import { Vietman_Image } from "../../assets/chu-chi-vietnam";
-import { Philippiness_Image } from "../../assets/philippiness";
-import { Myanmar_Image } from "../../assets/myanmar";
-import { Indonesia_Image } from "../../assets/indonesia";
 
 import { Prasen_Pal_Germany_Image } from "../../assets/international-assignment/germany";
 import { Prasen_Pal_Indonesia_Image } from "../../assets/international-assignment/indonesia";
-import { TEAM_LUNCH_DECEMBER_2023_Images } from './../../assets/journey/team_lunch_dinner';
-import { AGM_DELHI_2025_Images } from './../../assets/journey/agm_delhi_2025';
-import { IIA_MUMBAI_MARCH_2025_Images } from "../../assets/journey/iia_conference_mumbai/2025";
+import { Lightbox } from "./Lightbox";
+import { ENGAGEMENTS, GLOBAL_LEADERSHIP_FILTER, PHOTOS } from "./data";
 
-
-const GLOBAL_LEADERSHIP_FILTER = "Global Leadership Journey";
-
-export const PHOTOS = [
-  { id: 1, category: "5 Year Celebration", title: "RiskMan 5 Year Anniversary", image: Riskman_Aniversary_5_year_images[0], description: "Celebrating 5 years of excellence and growth" },
-  { id: 2, category: "5 Year Celebration", title: "Anniversary Celebration Moments", image: Riskman_Aniversary_5_year_images[1], description: "Team celebrating milestone achievement" },
-  { id: 3, category: "5 Year Celebration", title: "Team Celebrating 5 Years", image: Riskman_Aniversary_5_year_images[2], description: "Milestone celebration highlights" },
-  { id: 4, category: "5 Year Celebration", title: "Milestone Celebration Highlights", image: Riskman_Aniversary_5_year_images[3], description: "Celebrating company milestone" },
-  { id: 5, category: "5 Year Celebration", title: "RiskMan Growth Journey", image: Riskman_Aniversary_5_year_images[4], description: "Journey of growth and success" },
-
-  { id: 6, category: "Team Lunches", title: "Team Lunch at Zomato", image:TEAM_LUNCH_DECEMBER_2023_Images[0], description: "Team lunch gathering at Zomato office" },
-  { id: 7, category: "Team Lunches", title: "Team Bonding Lunch", image: TEAM_LUNCH_DECEMBER_2023_Images[1], description: "Casual team lunch gathering" },
-  { id: 8, category: "Team Lunches", title: "Team Lunch at Vedic Village", image:TEAM_LUNCH_DECEMBER_2023_Images[12], description: "Team lunch gathering at Vedic Village" },
-  { id: 9, category: "Team Lunches", title: "Team Dinner", image: TEAM_LUNCH_DECEMBER_2023_Images[8], description: "Team bonding under vibrant lights" },
-  { id: 10, category: "Team Lunches", title: "Early Team Bonding Dinner", image: TEAM_LUNCH_DECEMBER_2023_Images[9], description: "Festive team dinner with colorful decorations" },
-  { id: 11, category: "Team Lunches", title: "Team Dinner", image: TEAM_LUNCH_DECEMBER_2023_Images[7], description: "Cozy team gathering in purple ambiance" },
-  { id: 12, category: "Team Lunches", title: "Team Dinner", image: TEAM_LUNCH_DECEMBER_2023_Images[3], description: "Year-end celebration dinner" },
-  { id: 13, category: "Team Lunches", title: "Team Dinner Moments", image: TEAM_LUNCH_DECEMBER_2023_Images[4], description: "Large team gathering at outdoor venue" },
-  { id: 14, category: "Team Lunches", title: "Year-End Team Dinner", image: TEAM_LUNCH_DECEMBER_2023_Images[5], description: "Team dinner celebration moments" },
-  { id: 15, category: "Team Lunches", title: "Team Dinner Celebration", image: TEAM_LUNCH_DECEMBER_2023_Images[6], description: "Team bonding over dinner" },
-
-  { id: 16, category: "Office Culture", title: "Team Member Birthday", image: TEAM_LUNCH_DECEMBER_2023_Images[2], description: "Celebrating team member's special day" },
-  { id: 17, category: "Office Culture", title: "Diwali Celebration", image: Diwali_Christmas_Zomato_Team_Images[0], description: "Team in traditional attire for Diwali" },
-  { id: 18, category: "Office Culture", title: "Festive Office Moments", image: Diwali_Christmas_Zomato_Team_Images[1], description: "Celebrating festivals together" },
-  { id: 19, category: "Office Culture", title: "Celebrating Together", image: Diwali_Christmas_Zomato_Team_Images[2], description: "Team in Santa hats celebrating Christmas" },
-  { id: 20, category: "Office Culture", title: "Holiday Team Celebration", image: Diwali_Christmas_Zomato_Team_Images[3], description: "Holiday season celebrations" },
-  { id: 21, category: "Office Culture", title: "Festive Workplace Vibes", image: Diwali_Christmas_Zomato_Team_Images[4], description: "Year-end office celebration" },
-  { id: 22, category: "Office Culture", title: "Year-End Celebrations", image: Diwali_Christmas_Zomato_Team_Images[5], description: "Festive workplace atmosphere" },
-  { id: 23, category: "Office Culture", title: "Game Session", image: GAME_SESSION_WITH_TEAM[0], description: "Badminton game session with colleagues" },
-  { id: 24, category: "Office Culture", title: "CIA Celebration", image: CIA_CELEBRATION_WITH_TEAM_Images[0], description: "Team celebrating CIA promotion" },
-  {id:35,category:"Office Culture",title:"CIA Celebration",image:CIA_CELEBRATION_WITH_TEAM_Images[1],description:"Team celebrating CIA promotion"},
-
-
-  { id: 25, category: "Meetings & Discussions", title: "Professional Discussions", image: IIA_MUMBAI_MARCH_2025_Images[2], description: "Knowledge sharing session" },
-  { id: 26, category: "Meetings & Discussions", title: "Strategy Meeting", image: IIA_Internal_Leadership_2025_images[0], description: "Important strategy discussion" },
-  { id: 27, category: "Meetings & Discussions", title: "AGM Delhi", image: AGM_DELHI_2025_Images[0], description: "Annual General Meeting in Delhi" },
-  { id: 28, category: "Meetings & Discussions", title: "AGM Delhi Session", image: AGM_DELHI_2025_Images[1], description: "Strategic AGM discussions" },
-  { id: 29, category: "Meetings & Discussions", title: "AGM Delhi Interaction", image: AGM_DELHI_2025_Images[2], description: "Interactive AGM session" },
-  { id: 30, category: "Meetings & Discussions", title: "AGM Delhi Highlights", image: AGM_DELHI_2025_Images[3], description: "Key highlights from AGM" },
-  { id: 31, category: "Meetings & Discussions", title: "Audit Leaders Summit", image: Audit_Leaders_Summit_Mumbai[0], description: "Summit in Mumbai" },
-  { id: 32, category: "Meetings & Discussions", title: "Panel Discussion", image: Audit_Leaders_Summit_Mumbai[1], description: "Panel with industry leaders" },
-  { id: 33, category: "Meetings & Discussions", title: "Leadership Exchange", image: Audit_Leaders_Summit_Mumbai[2], description: "Networking session" },
-  { id: 34, category: "Meetings & Discussions", title: "Audit Networking", image: Audit_Leaders_Summit_Mumbai[3], description: "Networking with professionals" },
-];
-
-const ENGAGEMENTS = [
-  {
-    person: "Vishal Sharma",
-    role: "Senior Consultant",
-    country: "Vietnam",
-    city: "Ho Chi Minh City",
-    date: "August 2025",
-    title: "Indorama Vietnam — Internal Audit Visit",
-    story: "This photograph marks a meaningful interaction with the Indorama - Vietnam site team during the internal audit visit in August 2025. This showcases cross-functional collaboration and knowledge exchange. It underscores our global approach to auditing—working closely with site teams to enhance controls, align best practices, and support sustainable operations",
-    images: [Vietman_Image[0]],
-  },
-  {
-    person: "Rohit Gupta",
-    role: "Consultant",
-    country: "Vietnam",
-    city: "Ho Chi Minh City",
-    date: "October 2025",
-    title: "Indorama Vietnam — Risk Review",
-    story: "Captured at the Indorama Vietnam site in September 2025, this image marks the completion of an internal audit engagement characterized by insightful exchanges and a solution-oriented mindset. The engagement facilitated open discussions on key risks and operational priorities, delivering value across multiple core business processes.",
-    images: [Vietman_Image[1], Vietman_Image[2], Vietman_Image[3]],
-  },
-  {
-    person: "Rohit Gupta",
-    role: "Consultant",
-    country: "Philippines",
-    city: "Manila",
-    date: "January 2026",
-    title: "Indorama Philippines — Internal Control Assessment",
-    story: "Celebrating the successful completion of a value-adding and knowledge-driven internal audit engagement. The assignment facilitated interactive discussions on key risks and related controls, leading to the identification of actionable steps to enhance business processes and improve overall operational efficiency.",
-    images: [Philippiness_Image[1], Philippiness_Image[0]],
-  },
-  {
-    person: "Rohit Gupta",
-    role: "Consultant",
-    country: "Myanmar",
-    city: "Yangon",
-    date: "March 2026",
-    title: "Indorama Myanmar — Operational Risk Assessment",
-    story: "Marking the conclusion of an insightful internal audit engagement that emphasized collaborative learning and practical outcomes. The engagement enabled meaningful exchanges on risk areas and control effectiveness, resulting in clear improvement initiatives aimed at strengthening processes.",
-    images: [Myanmar_Image[1], Myanmar_Image[0]],
-  },
-  {
-    person: "Yashvi Ganeriwal",
-    role: "Consultant",
-    country: "Indonesia",
-    city: "Jakarta",
-    date: "December 2025",
-    title: "Indorama Indonesia — Internal Audit Completion",
-    story: "This image captures a professional engagement at the Indorama Indonesia site in December 2025, marking the completion of an internal audit focused on exchange of insights and a solution-oriented approach. The audit encouraged open discussions on key risks and operational priorities, leading to clear and practical outcomes.",
-    images: [Indonesia_Image[1], Indonesia_Image[0]],
-  },
-];
 
 const FILTERS = [
   { name: "All", icon: LayoutGrid },
   { name: "5 Year Celebration", icon: Star },
-  { name: "Team Lunches", icon: Users },
+  { name: "Team Lunches & Dinner", icon: Users },
   { name: "Meetings & Discussions", icon: Briefcase },
   { name: "Office Culture", icon: Heart },
   { name: "International Assignments", icon: Globe },
@@ -144,91 +26,143 @@ const FILTERS = [
 ];
 
 /* ======================================================
-   ENHANCED LIGHTBOX WITH NAVIGATION
+   BM25 ALGORITHM FOR ADVANCED FILTERING
 ====================================================== */
-const Lightbox = ({ images, currentIndex, onClose, onNavigate }) => {
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === "Escape") onClose();
-      if (e.key === "ArrowLeft" && currentIndex > 0) onNavigate(currentIndex - 1);
-      if (e.key === "ArrowRight" && currentIndex < images.length - 1) onNavigate(currentIndex + 1);
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    document.body.style.overflow = "hidden";
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = "auto";
-    };
-  }, [onClose, onNavigate, currentIndex, images.length]);
+class BM25Filter {
+  constructor(k1 = 1.5, b = 0.75) {
+    this.k1 = k1; // Term frequency saturation parameter
+    this.b = b;   // Length normalization parameter
+  }
 
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 z-[100] bg-surfaceLight dark:bg-surfaceDark backdrop-blur-sm flex items-center justify-center p-4"
-    >
-      {/* Close Button */}
-      <button
-        onClick={onClose}
-        className="absolute z-10 p-3 transition-colors rounded-full top-4 right-4 md:top-8 md:right-8 text-white/80 hover:text-white bg-brandNavy/50 hover:bg-brandNavy/70"
-      >
-        <X className="w-6 h-6" />
-      </button>
+  // Tokenize text into words
+  tokenize(text) {
+    return text.toLowerCase()
+      .replace(/[^\w\s]/g, ' ')
+      .split(/\s+/)
+      .filter(token => token.length > 0);
+  }
 
-      {/* Navigation Buttons */}
-      {images.length > 1 && (
-        <>
-          <button
-            onClick={() => onNavigate(currentIndex - 1)}
-            disabled={currentIndex === 0}
-            className={`absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-10 bg-brandNavy/50 hover:bg-brandNavy/70 p-3 rounded-full transition-all ${
-              currentIndex === 0 ? "opacity-30 cursor-not-allowed" : "text-white/80 hover:text-white"
-            }`}
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-          <button
-            onClick={() => onNavigate(currentIndex + 1)}
-            disabled={currentIndex === images.length - 1}
-            className={`absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-10 bg-brandNavy/50 hover:bg-brandNavy/70 p-3 rounded-full transition-all ${
-              currentIndex === images.length - 1 ? "opacity-30 cursor-not-allowed" : "text-white/80 hover:text-white"
-            }`}
-          >
-            <ChevronRight className="w-6 h-6" />
-          </button>
-        </>
-      )}
+  // Calculate term frequency
+  termFrequency(term, document) {
+    return document.filter(word => word === term).length;
+  }
 
-      {/* Image Counter */}
-      {images.length > 1 && (
-        <div className="absolute px-4 py-2 text-sm font-medium text-white -translate-x-1/2 rounded-full bottom-8 left-1/2 bg-brandNavy/70">
-          {currentIndex + 1} / {images.length}
-        </div>
-      )}
+  // Calculate inverse document frequency
+  inverseDocFrequency(term, documents) {
+    const docsWithTerm = documents.filter(doc => doc.includes(term)).length;
+    return Math.log((documents.length - docsWithTerm + 0.5) / (docsWithTerm + 0.5) + 1);
+  }
 
-      {/* Image */}
-      <motion.img
-        key={currentIndex}
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.3 }}
-        src={images[currentIndex]}
-        className="max-h-[85vh] max-w-[90vw] object-contain rounded-2xl shadow-2xl"
-        alt="Lightbox"
-      />
-    </motion.div>
-  );
-};
+  // Calculate BM25 score for a document
+  calculateScore(query, document, documents, avgDocLength) {
+    const queryTerms = this.tokenize(query);
+    const docLength = document.length;
+    
+    let score = 0;
+    
+    for (const term of queryTerms) {
+      const tf = this.termFrequency(term, document);
+      const idf = this.inverseDocFrequency(term, documents);
+      
+      const numerator = tf * (this.k1 + 1);
+      const denominator = tf + this.k1 * (1 - this.b + this.b * (docLength / avgDocLength));
+      
+      score += idf * (numerator / denominator);
+    }
+    
+    return score;
+  }
 
+  // Rank documents based on query
+  rank(query, items, fields = ['title', 'category', 'description', 'tags']) {
+    // Prepare documents
+    const documents = items.map(item => {
+      const text = fields
+        .map(field => item[field] || '')
+        .join(' ');
+      return this.tokenize(text);
+    });
+
+    // Calculate average document length
+    const avgDocLength = documents.reduce((sum, doc) => sum + doc.length, 0) / documents.length;
+
+    // Calculate scores
+    const scores = items.map((item, index) => ({
+      item,
+      score: this.calculateScore(query, documents[index], documents, avgDocLength)
+    }));
+
+    // Sort by score (highest first)
+    return scores
+      .filter(s => s.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .map(s => s.item);
+  }
+}
+
+/* ======================================================
+   MAIN COMPONENT
+====================================================== */
 export default function MomentsThatMatter() {
   const [activeFilter, setActiveFilter] = useState("All");
   const [lightboxImages, setLightboxImages] = useState([]);
   const [lightboxIndex, setLightboxIndex] = useState(0);
+  const [activeYear, setActiveYear] = useState(null);
+  const [activeOfficeSection, setActiveOfficeSection] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
 
+  const bm25 = useMemo(() => new BM25Filter(), []);
+
+  // Get unique years from Team Lunches
+  const availableYears = useMemo(() => {
+    const years = PHOTOS
+      .filter(p => p.category === "Team Lunches & Dinner")
+      .map(p => p.year)
+      .filter(Boolean);
+    return [...new Set(years)].sort((a, b) => b - a);
+  }, []);
+
+  // Get unique office sections
+  const availableOfficeSections = useMemo(() => {
+    const sections = PHOTOS
+      .filter(p => p.category === "Office Culture")
+      .map(p => p.subCategory)
+      .filter(Boolean);
+    return [...new Set(sections)];
+  }, []);
+
+  // Advanced filtering with BM25 algorithm
   const filteredPhotos = useMemo(() => {
-    if (activeFilter === "All") return PHOTOS;
-    return PHOTOS.filter((p) => p.category === activeFilter);
+    let data = [...PHOTOS];
+
+    // Step 1: Apply category filter
+    if (activeFilter !== "All") {
+      data = data.filter(p => p.category === activeFilter);
+    }
+
+    // Step 2: Apply year filter for Team Lunches
+    if (activeFilter === "Team Lunches & Dinner" && activeYear) {
+      data = data.filter(p => p.year === activeYear);
+    }
+
+    // Step 3: Apply office section filter
+    if (activeFilter === "Office Culture" && activeOfficeSection) {
+      data = data.filter(p => p.subCategory === activeOfficeSection);
+    }
+
+    // Step 4: Apply BM25 search if query exists
+    if (searchQuery.trim()) {
+      data = bm25.rank(searchQuery, data, ['title', 'category', 'description', 'tags', 'subCategory']);
+    }
+
+    return data;
+  }, [activeFilter, activeYear, activeOfficeSection, searchQuery, bm25]);
+
+  // Reset sub-filters when main filter changes
+  useEffect(() => {
+    setActiveYear(null);
+    setActiveOfficeSection(null);
+    setSearchQuery("");
   }, [activeFilter]);
 
   const openLightbox = (image) => {
@@ -241,8 +175,15 @@ export default function MomentsThatMatter() {
     setLightboxIndex(0);
   };
 
+  const handleFilterChange = (filterName) => {
+    setActiveFilter(filterName);
+  };
+
   return (
-    <section className="relative px-4 py-16 md:py-24 lg:py-32 bg-surfaceLight dark:bg-surfaceDark">
+    <section 
+      id="moments-that-matters" 
+      className="relative px-4 py-16 md:py-24 lg:py-32 bg-surfaceLight dark:bg-surfaceDark"
+    >
       <div className="mx-auto max-w-7xl">
         
         {/* HEADER */}
@@ -259,8 +200,8 @@ export default function MomentsThatMatter() {
           </p>
         </motion.div>
 
-        {/* ENHANCED FILTER BAR */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12 md:mb-16">
+        {/* MAIN FILTER BAR */}
+        <div className="flex flex-wrap justify-center gap-3 mb-8 md:mb-12">
           {FILTERS.map((f, index) => {
             const Icon = f.icon;
             const isActive = activeFilter === f.name;
@@ -270,7 +211,7 @@ export default function MomentsThatMatter() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.05 }}
-                onClick={() => setActiveFilter(f.name)}
+                onClick={() => handleFilterChange(f.name)}
                 className={`
                   relative px-5 py-2.5 rounded-full text-xs md:text-sm font-bold uppercase 
                   flex items-center gap-2 transition-all duration-300 overflow-hidden
@@ -294,47 +235,153 @@ export default function MomentsThatMatter() {
           })}
         </div>
 
-        {/* PHOTO GRID */}
-        {activeFilter !== "International Assignments" && activeFilter !== GLOBAL_LEADERSHIP_FILTER && (
+        {/* YEAR FILTER — TEAM LUNCHES & DINNER */}
+        {activeFilter === "Team Lunches & Dinner" && availableYears.length > 0 && (
           <motion.div
-            key={activeFilter}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="flex flex-wrap justify-center gap-3 mb-10"
+          >
+            <button
+              onClick={() => setActiveYear(null)}
+              className={`
+                px-4 py-2 rounded-full text-xs md:text-sm font-bold transition-all
+                ${!activeYear
+                  ? "bg-brandNavy text-white shadow-md scale-105"
+                  : "bg-white dark:bg-surfaceDark border border-brandAccent/30 text-brandPrimary/70 hover:bg-brandAccent/10"
+                }
+              `}
+            >
+              All Years
+            </button>
+            {availableYears.map((year) => {
+              const isActive = activeYear === year;
+              return (
+                <button
+                  key={year}
+                  onClick={() => setActiveYear(year)}
+                  className={`
+                    px-4 py-2 rounded-full text-xs md:text-sm font-bold transition-all
+                    ${isActive
+                      ? "bg-brandNavy text-white shadow-md scale-105"
+                      : "bg-white dark:bg-surfaceDark border border-brandAccent/30 text-brandPrimary/70 hover:bg-brandAccent/10"
+                    }
+                  `}
+                >
+                  {year}
+                </button>
+              );
+            })}
+          </motion.div>
+        )}
+
+        {/* OFFICE SECTION FILTER — OFFICE CULTURE */}
+        {activeFilter === "Office Culture" && availableOfficeSections.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="flex flex-wrap justify-center gap-3 mb-10"
+          >
+            <button
+              onClick={() => setActiveOfficeSection(null)}
+              className={`
+                px-4 py-2 rounded-full text-xs md:text-sm font-bold transition-all
+                ${!activeOfficeSection
+                  ? "bg-brandNavy text-white shadow-md scale-105"
+                  : "bg-white dark:bg-surfaceDark border border-brandAccent/30 text-brandPrimary/70 hover:bg-brandAccent/10"
+                }
+              `}
+            >
+              All Sections
+            </button>
+            {availableOfficeSections.map((section) => {
+              const isActive = activeOfficeSection === section;
+              return (
+                <button
+                  key={section}
+                  onClick={() => setActiveOfficeSection(section)}
+                  className={`
+                    px-4 py-2 rounded-full text-xs md:text-sm font-bold transition-all
+                    ${isActive
+                      ? "bg-brandNavy text-white shadow-md scale-105"
+                      : "bg-white dark:bg-surfaceDark border border-brandAccent/30 text-brandPrimary/70 hover:bg-brandAccent/10"
+                    }
+                  `}
+                >
+                  {section}
+                </button>
+              );
+            })}
+          </motion.div>
+        )}
+
+        {/* SEARCH BAR (Optional - for advanced filtering) */}
+        {activeFilter !== "International Assignments" && 
+         activeFilter !== GLOBAL_LEADERSHIP_FILTER && 
+         filteredPhotos.length > 0 && (
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            className="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3"
+            className="max-w-md mx-auto mb-10"
           >
-            {filteredPhotos.map((p, index) => (
-              <motion.div
-                key={p.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.05 }}
-                whileHover={{ y: -8, scale: 1.02 }}
-                onClick={() => openLightbox(p.image)}
-                className="overflow-hidden transition-all duration-300 border shadow-lg cursor-pointer bg-surfaceLight group dark:bg-surfaceDark rounded-3xl hover:shadow-2xl border-brandAccent/10 dark:border-brandGold/10"
-              >
-                <div className="relative overflow-hidden aspect-video">
-                  <img
-                    src={p.image}
-                    alt={p.title}
-                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-brandNavy/80 via-brandNavy/20 to-transparent group-hover:opacity-100" />
-                </div>
-                <div className="p-6">
-                  <div className="inline-block px-3 py-1 mb-3 text-xs font-semibold rounded-full bg-brandAccent/10 dark:bg-brandGold/10 text-brandNavy dark:text-brandAccent">
-                    {p.category}
-                  </div>
-                  <h3 className="mb-2 text-lg font-bold transition-colors text-brandNavy dark:text-white group-hover:text-brandDark dark:group-hover:text-brandAccent">
-                    {p.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-brandPrimary/70 dark:text-white/60">
-                    {p.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+            <input
+              type="text"
+              placeholder="Search photos..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full px-6 py-3 text-sm transition-all border rounded-full outline-none bg-white/50 dark:bg-surfaceDark/50 border-brandAccent/20 dark:border-brandGold/20 focus:border-brandNavy dark:focus:border-brandAccent focus:ring-2 focus:ring-brandNavy/20 dark:focus:ring-brandAccent/20 text-brandPrimary dark:text-white placeholder:text-brandPrimary/50 dark:placeholder:text-white/50"
+            />
           </motion.div>
+        )}
+
+        {/* PHOTO GRID - MASONRY LAYOUT */}
+        {activeFilter !== "International Assignments" && 
+         activeFilter !== GLOBAL_LEADERSHIP_FILTER && (
+          <>
+            {filteredPhotos.length > 0 ? (
+              <motion.div
+                key={`${activeFilter}-${activeYear}-${activeOfficeSection}-${searchQuery}`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                layout
+                className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+              >
+                {filteredPhotos.map((p, index) => (
+                  <motion.div
+                    key={p.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.05 }}
+                    whileHover={{ scale: 1.05 }}
+                    onClick={() => openLightbox(p.image)}
+                    className="overflow-hidden transition-all duration-300 shadow-lg cursor-pointer group rounded-2xl hover:shadow-xl h-72"
+                  >
+                    <img
+                      src={p.image}
+                      alt={p.title}
+                      className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+                    />
+                    {p.title && (
+                      <div className="absolute inset-0 flex items-end p-4 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-brandNavy/90 to-transparent group-hover:opacity-100">
+                        <p className="text-sm font-semibold text-white">{p.title}</p>
+                      </div>
+                    )}
+                  </motion.div>
+                ))}
+              </motion.div>
+            ) : (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="py-20 text-center"
+              >
+                <p className="text-lg text-brandPrimary/60 dark:text-white/60">
+                  No photos found for the selected filters.
+                </p>
+              </motion.div>
+            )}
+          </>
         )}
 
         {/* INTERNATIONAL ASSIGNMENTS */}
@@ -342,76 +389,54 @@ export default function MomentsThatMatter() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="space-y-16 md:space-y-24"
+            className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4"
           >
             {ENGAGEMENTS.map((e, i) => (
-              <motion.section
+              <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className="relative"
+                className="relative overflow-hidden shadow-lg cursor-pointer rounded-2xl group"
               >
-                {/* Country Header with Gradient */}
-                <div className="mb-8">
-                  <div className="flex items-center gap-4 mb-4">
-                    <Globe className="w-8 h-8 text-brandAccent dark:text-brandGold" />
-                    <h2 className="text-3xl font-bold text-transparent md:text-4xl bg-gradient-to-r from-brandNavy to-brandDark dark:from-brandAccent dark:to-brandGold bg-clip-text">
-                      {e.country}
-                    </h2>
+                {/* Main Image Card */}
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="relative overflow-hidden bg-black h-96"
+                >
+                  <img
+                    src={e.images[0]}
+                    alt={e.country}
+                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+                  />
+                  
+                  {/* Country Name Overlay */}
+                  <div className="absolute inset-0 flex items-end justify-start p-6 bg-gradient-to-t from-brandNavy/80 via-brandNavy/20 to-transparent">
+                    <h3 className="text-3xl font-bold text-white">{e.country}</h3>
                   </div>
-                  <div className="w-24 h-1 rounded-full bg-gradient-to-r from-brandAccent to-brandGold" />
-                </div>
 
-                {/* Engagement Card */}
-                <div className="overflow-hidden bg-white border shadow-xl dark:bg-surfaceDark rounded-3xl border-brandAccent/10 dark:border-brandGold/10">
-                  <div className="p-6 md:p-8 lg:p-10 bg-gradient-to-br from-brandAccent/5 to-transparent dark:from-brandGold/5">
-                    <h3 className="mb-4 text-2xl font-bold md:text-3xl text-brandNavy dark:text-white">
-                      {e.title}
-                    </h3>
-                    
-                    <div className="flex flex-wrap gap-4 mb-6 text-sm">
-                      <span className="px-4 py-2 font-semibold rounded-full bg-brandNavy/10 dark:bg-brandAccent/10 text-brandNavy dark:text-brandAccent">
-                        {e.person}
-                      </span>
-                      <span className="px-4 py-2 font-semibold rounded-full bg-brandDark/10 dark:bg-brandGold/10 text-brandDark dark:text-brandGold">
-                        {e.role}
-                      </span>
-                      <span className="px-4 py-2 font-semibold rounded-full bg-brandAccent/10 dark:bg-brandNavy/30 text-brandPrimary dark:text-white/80">
-                        {e.city} · {e.date}
-                      </span>
-                    </div>
-
-                    <p className="max-w-4xl text-base leading-relaxed md:text-lg text-brandPrimary/80 dark:text-white/70">
-                      {e.story}
+                  {/* Hover - Show all images count */}
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 1 }}
+                    className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-brandNavy/70"
+                  >
+                    <p className="text-sm font-semibold text-white">
+                      {e.images.length} Images
                     </p>
-                  </div>
-
-                  {/* Image Grid */}
-                  <div className="grid gap-4 p-6 md:p-8 sm:grid-cols-2 lg:grid-cols-3">
-                    {e.images.map((img, idx) => (
-                      <motion.div
-                        key={idx}
-                        whileHover={{ y: -6, scale: 1.03 }}
-                        onClick={() => {
-                          setLightboxImages(e.images);
-                          setLightboxIndex(idx);
-                        }}
-                        className="relative overflow-hidden shadow-lg cursor-pointer rounded-2xl group aspect-video"
-                      >
-                        <img
-                          src={img}
-                          alt={`${e.country} - Image ${idx + 1}`}
-                          className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
-                        />
-                        <div className="absolute inset-0 flex items-end justify-center pb-4 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-brandNavy/60 to-transparent group-hover:opacity-100">
-                          <span className="text-sm font-semibold text-white">View Image</span>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-              </motion.section>
+                    <button
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        setLightboxImages(e.images);
+                        setLightboxIndex(0);
+                      }}
+                      className="px-6 py-2 font-semibold transition-all rounded-full bg-gradient-to-r from-brandAccent to-brandGold text-brandDark hover:shadow-lg"
+                    >
+                      View All
+                    </button>
+                  </motion.div>
+                </motion.div>
+              </motion.div>
             ))}
           </motion.div>
         )}

@@ -189,11 +189,13 @@ export const NAVIGATION_DATA = {
     "eventsMegaMenu": [
         {
             "items": [
-                { "label": "Upcoming Events", "path": "/events/#upcoming" },
+                { "label": "Upcoming Events", "path": "/events/#upcoming-events" },
                 { "label": "Past Events", "path": "/events/#past" },
+                {"label":"Accomplishments","path":"/events/#accomplishments"},
+                {"label":"Emerging Awards & Recognitions", "path":"/events/#emerging-recognitions"},
                 { "label": "Company Journey", "path": "/events/#journey" },
-                { "label": "Milestones", "path": "/events/#milestones" },
-                 { "label": "Media Coverage", "path": "/events/#moment-that-matters" }
+                // { "label": "Milestones", "path": "/events/#milestones" },
+                 { "label": "Media Coverage", "path": "/events/#moments-that-matters" }
             ]
         }
     ]

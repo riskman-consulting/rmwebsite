@@ -34,6 +34,11 @@ import RBIAPage from './pages/rbia/RBIAPage'
 import BCPPage from "./pages/bcp-dr/BCPPage"
 import CSAPage from "./pages/csa/CSAPage"
 
+import DigitalTransformation from './pages/digital/DigitalTransformationPage'
+import StrategicPMO from './pages/digital/StrategicPMO'
+import ImplementationExcellence from './pages/digital/ImplementationExcellence'
+import SupportServices from './pages/digital/SupportServices'
+
 
 
 function App() {
@@ -71,6 +76,12 @@ function App() {
           <Route path="/services/risk-advisory/erm" element={<ERMPage />} />
           <Route path="/services/financial-advisory" element={<FinancialAdvisoryPage />} />
           <Route path="/services/risk-advisory/rbia" element={<RBIAPage/>} />
+
+
+          <Route path='/services/digital-transformation' element={<DigitalTransformation/>} />
+          <Route path='/services/digital-transformation/strategic-pmo' element={<StrategicPMO/>} />
+          <Route path='/services/digital-transformation/implementation' element={<ImplementationExcellence/>} />
+          <Route path='/services/digital-transformation/support-services' element={<SupportServices/>} />
           
           {/* <Route path="/services/:id" element={<ServicesTemplate />} /> */}
           <Route path="/industries" element={<IndustriesList />} />

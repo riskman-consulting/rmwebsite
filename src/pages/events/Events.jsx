@@ -15,10 +15,13 @@ import TestimonialsSection from './TestimonialsSection';
 import VideoHighlightSection from './VideoHighlightSection';
 import EventsGrid from './EventsGrid.jsx';
 import EventModal from './EventModal.jsx';
+import EventCard from './EventCard.jsx';
 import { events } from "./eventData"; // Your events data
 import WhyItMatters from './WhyItMatters.jsx';
 import UpcomingEventsSection from './UpcomingEventSection.jsx';
 import EventsStorySection from './EventsStorySection.jsx';
+
+import EventRecognition from './EventsRecognition.jsx';
 // import MomentThatMatters from "../../moment/MomentThatMattersSection"
 
 function Events() {
@@ -38,6 +41,8 @@ function Events() {
 
       <UpcomingEventsSection/>
 
+      <EventRecognition/>
+
       
 
       <MomentThatMattersSection/>
@@ -48,7 +53,7 @@ function Events() {
       {/* <JourneyTimeLineSection /> */}
       <CompanyTimelineSection />
       <AwardSection />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       <WhyItMatters/>
 
 
@@ -78,7 +83,7 @@ function Events() {
       {/* Event Modal - renders when an event is selected */}
       <AnimatePresence>
         {selectedEvent && (
-          <EventModal 
+          <EventCard 
             event={selectedEvent} 
             onClose={handleCloseModal} 
           />

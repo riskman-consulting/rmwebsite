@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 // ============================================================
 // INTEGRITAT SCREENSHOTS - Your actual images
@@ -6,30 +7,32 @@ import React, { useState, useRef, useEffect } from 'react';
 
 import authPage from "../../assets/tech-solutions/auth-page.webp";
 import adminDashboard from "../../assets/tech-solutions/my-dashboard.webp";
-import projectView from "../../assets/tech-solutions/admin-project-view.webp";
-import projectManagement from "../../assets/tech-solutions/project-management.webp";
-import projectCreation from "../../assets/tech-solutions/create-project.webp";
-import projectDetails from "../../assets/tech-solutions/project-review-page.webp";
-import clientManagement from "../../assets/tech-solutions/add-client-page.webp"; // Using add-client as management
-import userManagement from "../../assets/tech-solutions/user-management.webp";
-import yourPortal from "../../assets/tech-solutions/your-portal.webp";
-import projectStatus from "../../assets/tech-solutions/project-status.webp";
-import requestDoc from "../../assets/tech-solutions/request-document-client.webp";
-import projectReview from "../../assets/tech-solutions/project-review-page.webp";
+
+// Workflow sequence images
+import clientOnboarding1 from "../../assets/tech-solutions/Client Onboarding 1.png";
+import clientOnboarding2 from "../../assets/tech-solutions/Client Onboarding 2.png";
+import projectCodeCreation from "../../assets/tech-solutions/Project Code Creation.png";
+import projectCreation from "../../assets/tech-solutions/Project Creation.png";
+import prebuiltWorkflow1 from "../../assets/tech-solutions/Pre-built workflow for Audit 1.png";
+import prebuiltWorkflow2 from "../../assets/tech-solutions/Pre-built workflow for Audit 2.png";
+import clientPortal from "../../assets/tech-solutions/Client Portal.png";
+import projectTracking from "../../assets/tech-solutions/Project Tracking.png";
+import qualityAssessment from "../../assets/tech-solutions/Quality Assessment.png";
+import governanceDashboard from "../../assets/tech-solutions/Governance Dashboard.png";
+
 const SCREENSHOTS = {
   hero: authPage,
   mainDash: adminDashboard,
-  clientPortal: yourPortal,
-  userMgmt: userManagement,
-  projectMgmt: projectManagement,
-  statusView: projectStatus,
-  creationModal: projectCreation,
-  docRequest: requestDoc,
-  reviewerAssign: projectReview,
-  details: projectDetails,
-  projectView: projectView,
-  clientAdd: clientManagement
-
+  clientOnboarding1: clientOnboarding1,
+  clientOnboarding2: clientOnboarding2,
+  projectCodeCreation: projectCodeCreation,
+  projectCreation: projectCreation,
+  prebuiltWorkflow1: prebuiltWorkflow1,
+  prebuiltWorkflow2: prebuiltWorkflow2,
+  clientPortal: clientPortal,
+  projectTracking: projectTracking,
+  qualityAssessment: qualityAssessment,
+  governanceDashboard: governanceDashboard,
 };
 
 // Animation hook
@@ -311,15 +314,15 @@ export default function IntegritatSolutionPage() {
               </p>
               
               <div className="flex flex-wrap gap-4 mb-12">
-                <button className="px-8 py-4 font-semibold transition-all duration-300 rounded-full shadow-lg text-brandDark bg-brandAccent hover:bg-brandGold shadow-brandAccent/30 hover:shadow-xl">
+                <Link to ="/contact" className="px-8 py-4 font-semibold transition-all duration-300 rounded-full shadow-lg text-brandDark bg-brandAccent hover:bg-brandGold shadow-brandAccent/30 hover:shadow-xl">
                   Start your free trial
-                </button>
-                <button className="px-8 py-4 font-semibold transition-all duration-300 border-2 rounded-full text-brandPrimary border-brandPrimary/30 hover:bg-brandPrimary/5">
+                </Link>
+                {/* <button className="px-8 py-4 font-semibold transition-all duration-300 border-2 rounded-full text-brandPrimary border-brandPrimary/30 hover:bg-brandPrimary/5">
                   Watch demo
-                </button>
+                </button> */}
               </div>
 
-              <div className="flex items-center gap-2 text-sm text-brandDark/60">
+              {/* <div className="flex items-center gap-2 text-sm text-brandDark/60">
                 <span className="font-semibold text-brandPrimary">Excellent</span>
                 <div className="flex gap-0.5">
                   {[...Array(5)].map((_, i) => (
@@ -329,7 +332,7 @@ export default function IntegritatSolutionPage() {
                   ))}
                 </div>
                 <span>500+ reviews from CPA firms</span>
-              </div>
+              </div> */}
             </div>
 
             {/* Hero Screenshot */}
@@ -348,8 +351,178 @@ export default function IntegritatSolutionPage() {
         </div>
       </section>
 
+      {/* ==================== WORKFLOW STEPS SECTION ==================== */}
+      <section className="py-24 bg-white">
+        <div className="container px-6 mx-auto lg:px-12">
+          <div className="max-w-3xl mx-auto mb-16 text-center">
+            <h2 className="mb-6 text-4xl font-bold lg:text-5xl font-heading text-brandDark">
+              Complete Audit Workflow in{' '}
+              <span className="text-brandPrimary">8 Simple Steps</span>
+            </h2>
+            <p className="text-lg text-brandDark/70">
+              From client onboarding to governance dashboard — manage your entire audit lifecycle seamlessly
+            </p>
+          </div>
+
+          {/* Step 1: Client Onboarding */}
+          <div className="mb-24">
+            <ScreenshotShowcase
+              image={SCREENSHOTS.clientOnboarding1}
+              title="Step 1: Client Onboarding"
+              description="Quickly onboard new clients with our intuitive client management system. Capture all essential information in one place."
+              features={[
+                'Auto-generated Client IDs for easy tracking',
+                'Comprehensive client information capture',
+                'Entity type classification (Public/Non-Public)',
+                'Billing address management'
+              ]}
+            />
+          </div>
+
+          {/* Step 2: Client Management */}
+          <div className="mb-24">
+            <ScreenshotShowcase
+              image={SCREENSHOTS.clientOnboarding2}
+              title="Step 2: Client Management Dashboard"
+              description="View and manage all your clients from a centralized dashboard with advanced search and filtering capabilities."
+              features={[
+                'Complete client directory with status tracking',
+                'Quick access to client details and documents',
+                'Filter by entity type, city, or status',
+                'One-click access to associated projects'
+              ]}
+              reverse
+            />
+          </div>
+
+          {/* Step 3: Project Code Creation */}
+          <div className="mb-24">
+            <ScreenshotShowcase
+              image={SCREENSHOTS.projectCodeCreation}
+              title="Step 3: Project Code Creation"
+              description="Generate standardized project codes automatically based on your firm's naming conventions."
+              features={[
+                'Automatic project code generation',
+                'Standardized naming conventions',
+                'Client-linked code structure',
+                'Easy project identification'
+              ]}
+            />
+          </div>
+
+          {/* Step 4: Project Creation & Team Assignment */}
+          <div className="mb-24">
+            <ScreenshotShowcase
+              image={SCREENSHOTS.projectCreation}
+              title="Step 4: Project Creation & Team Assignment"
+              description="Create new audit projects and assign team members in a single streamlined workflow."
+              features={[
+                'Select project type (US GAAP, Non-Public, etc.)',
+                'Define financial periods and deadlines',
+                'Assign Team Lead, Senior Staff, EQR, and Partner',
+                'Set project value and completion targets'
+              ]}
+              reverse
+            />
+          </div>
+
+          {/* Step 5: Pre-built Workflow for Audit (Part 1) */}
+          <div className="mb-24">
+            <ScreenshotShowcase
+              image={SCREENSHOTS.prebuiltWorkflow1}
+              title="Step 5: Pre-built Audit Workflow - Document Tracking"
+              description="Access pre-configured audit workflows with comprehensive document checklists organized by audit phase."
+              features={[
+                'Pre-built Partner Checklists with PCA codes',
+                'Multi-tier review process (AI Check, Senior, EQR, Partner)',
+                'Document status tracking (Open, Uploaded, Verified)',
+                'Engagement letters and acceptance documentation'
+              ]}
+            />
+          </div>
+
+          {/* Step 6: Pre-built Workflow for Audit (Part 2) */}
+          <div className="mb-24">
+            <ScreenshotShowcase
+              image={SCREENSHOTS.prebuiltWorkflow2}
+              title="Step 6: Financial Statements & Completion Workflow"
+              description="Manage financial statement requirements and audit completion documentation with built-in checklists."
+              features={[
+                'Financial Statements & Completion checklist',
+                'Final Analytics and audited statements tracking',
+                'Disclosure checklists (PCA-CX-13.1)',
+                'Going concern and subsequent events documentation'
+              ]}
+              reverse
+            />
+          </div>
+
+          {/* Step 7: Client Portal and Data Request */}
+          <div className="mb-24">
+            <ScreenshotShowcase
+              image={SCREENSHOTS.clientPortal}
+              title="Step 7: Client Portal & Document Requests"
+              description="Clients access their dedicated portal to view project status and upload requested documents securely."
+              features={[
+                'Dedicated client dashboard with project overview',
+                'Real-time project status tracking',
+                'Secure document upload functionality',
+                'Email notifications for document requests'
+              ]}
+            />
+          </div>
+
+          {/* Step 8: Project Tracking */}
+          <div className="mb-24">
+            <ScreenshotShowcase
+              image={SCREENSHOTS.projectTracking}
+              title="Step 8: Real-time Project Tracking"
+              description="Monitor project progress with detailed upload and verification metrics across all document categories."
+              features={[
+                'Visual progress indicators for upload and verification',
+                'Document-level status tracking',
+                'Expandable sections for detailed review',
+                'One-click document request functionality'
+              ]}
+              reverse
+            />
+          </div>
+
+          {/* Step 9: Quality Assessment (Additional) */}
+          <div className="mb-24">
+            <ScreenshotShowcase
+              image={SCREENSHOTS.qualityAssessment}
+              title="Quality Assessment & Review Assignment"
+              description="Assign reviewers at each level of your quality control process for comprehensive audit oversight."
+              features={[
+                'Three-tier review assignment (Senior Staff, EQR, Partner)',
+                'Role-based review workflows',
+                'Track assigned reviewers per project',
+                'Ensure compliance with quality standards'
+              ]}
+            />
+          </div>
+
+          {/* Step 10: Governance Dashboard */}
+          <div>
+            <ScreenshotShowcase
+              image={SCREENSHOTS.governanceDashboard}
+              title="Governance Dashboard & Oversight"
+              description="Get a bird's-eye view of your entire audit practice with comprehensive management dashboards."
+              features={[
+                'Client and project overview statistics',
+                'Active vs inactive client monitoring',
+                'Project activity and status tracking',
+                'Internal audit team and reviewer management'
+              ]}
+              reverse
+            />
+          </div>
+        </div>
+      </section>
+
       {/* ==================== FEATURE CARDS (Lexend Style with Screenshots) ==================== */}
-      <section className="py-24 bg-brandLight">
+      {/* <section className="py-24 bg-brandLight">
         <div className="container px-6 mx-auto lg:px-12">
           <div className="max-w-3xl mx-auto mb-16 text-center">
             <h2 className="mb-6 text-4xl font-bold lg:text-5xl font-heading text-brandDark">
@@ -362,32 +535,31 @@ export default function IntegritatSolutionPage() {
             </p>
           </div>
 
-          {/* 3 Column Feature Cards with YOUR Screenshots */}
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <FeatureScreenshotCard
-              label="Project Management"
-              title="Active Projects"
-              image={SCREENSHOTS.projectMgmt}
-              description="Seamless project tracking with status updates"
+              label="Client Management"
+              title="Streamlined Onboarding"
+              image={SCREENSHOTS.clientOnboarding2}
+              description="Efficient client management with status tracking"
               delay={0}
             />
             <FeatureScreenshotCard
-              label="Document Status"
-              title="Completion Rate"
-              image={SCREENSHOTS.statusView}
-              description="Intuitive dashboard for at-a-glance insights"
+              label="Project Overview"
+              title="Dashboard Insights"
+              image={SCREENSHOTS.governanceDashboard}
+              description="Real-time visibility into all projects and metrics"
               delay={150}
             />
             <FeatureScreenshotCard
-              label="Data Requirements"
-              title="Document Tracking"
-              image={SCREENSHOTS.projectView}
-              description="Automated data analysis and reporting"
+              label="Document Management"
+              title="Workflow Automation"
+              image={SCREENSHOTS.prebuiltWorkflow1}
+              description="Pre-built checklists for efficient audit execution"
               delay={300}
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ==================== BENTO GRID SECTION ==================== */}
       <section className="py-24 bg-white">
@@ -397,14 +569,14 @@ export default function IntegritatSolutionPage() {
               variant="light"
               title="Scalable plans to fit any firm size"
               description="Maximize your productivity by connecting our platform to your existing workflow, creating a frictionless audit process."
-              image={SCREENSHOTS.clientAdd}
+              image={SCREENSHOTS.projectCreation}
               buttonText="Learn more"
             />
             <BentoCard
               variant="dark"
               title="Dedicated customer support"
               description="Rely on our knowledgeable support team to help you get the most out of our platform. We're available to answer questions and provide guidance."
-              image={SCREENSHOTS.userMgmt}
+              image={SCREENSHOTS.clientPortal}
               buttonText="Contact us"
             />
           </div>
@@ -451,7 +623,7 @@ export default function IntegritatSolutionPage() {
             <SolutionIconCard
               icon={<svg className="w-7 h-7 text-brandPrimary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>}
               title="Enterprise Security"
-              description="Bank-grade encryption and role-based access control for complete compliance."
+              description="Role-based access control for complete compliance."
               delay={200}
             />
             <SolutionIconCard
@@ -482,50 +654,8 @@ export default function IntegritatSolutionPage() {
         </div>
       </section>
 
-      {/* ==================== SCREENSHOT SHOWCASES ==================== */}
-      <section className="py-24 bg-white">
-        <div className="container px-6 mx-auto space-y-24 lg:px-12">
-          <ScreenshotShowcase
-            image={SCREENSHOTS.reviewerAssign}
-            title="Assign Project Reviewers"
-            description="Streamline your review process by assigning EQR and Partner reviewers directly within projects."
-            features={[
-              'Multi-tier review workflow (Senior Staff, EQR, Partner)',
-              'Role-based assignments with clear responsibilities',
-              'Track reviewer status in real-time',
-              'Automatic notifications for pending reviews'
-            ]}
-          />
-          
-          <ScreenshotShowcase
-            image={SCREENSHOTS.docRequest}
-            title="Request Documents from Clients"
-            description="Send document requests directly to clients with preset templates and custom requirements."
-            features={[
-              'Preset document templates for common audits',
-              'Custom document requirements',
-              'Email notifications to clients',
-              'Track upload status automatically'
-            ]}
-            reverse
-          />
-          
-          <ScreenshotShowcase
-            image={SCREENSHOTS.clientPortal}
-            title="Client Self-Service Portal"
-            description="Clients get their own portal to manage their projects and upload documents securely."
-            features={[
-              'Dedicated client dashboard',
-              'Secure document upload',
-              'Track project progress',
-              'Complete onboarding workflow'
-            ]}
-          />
-        </div>
-      </section>
-
       {/* ==================== WHAT EVERY PLAN GETS YOU ==================== */}
-      <section className="py-24 bg-brandLight">
+      {/* <section className="py-24 bg-brandLight">
         <div className="container px-6 mx-auto lg:px-12">
           <div className="mb-8 text-center">
             <button className="px-6 py-3 font-medium text-white transition-colors rounded-full bg-brandPrimary hover:bg-brandNavy">
@@ -558,30 +688,6 @@ export default function IntegritatSolutionPage() {
               icon={<svg className="w-8 h-8 text-brandPrimary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0" /></svg>}
               title="Multi-tier Review & AI Tools"
             />
-          </div>
-        </div>
-      </section>
-
-      {/* ==================== TESTIMONIALS ==================== */}
-      {/* <section className="py-24 bg-white">
-        <div className="container px-6 mx-auto lg:px-12">
-          <div className="mb-16 text-center">
-            <span className="inline-block px-4 py-2 mb-6 text-sm font-medium border rounded-full border-borderLight text-brandDark">
-              Testimonials
-            </span>
-            <h2 className="text-4xl font-bold lg:text-5xl font-heading text-brandDark">
-              See what our{' '}
-              <span className="text-brandPrimary">happy users</span>{' '}
-              are sharing about us!
-            </h2>
-          </div>
-
-          <div className="flex gap-6 px-6 pb-4 -mx-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide">
-            {testimonials.map((t, i) => (
-              <div key={i} className="snap-start">
-                <TestimonialCard {...t} />
-              </div>
-            ))}
           </div>
         </div>
       </section> */}
@@ -653,23 +759,6 @@ export default function IntegritatSolutionPage() {
           </div>
         </div>
       </section>
-
-      {/* ==================== FOOTER ==================== */}
-      {/* <footer className="py-12 bg-white border-t border-borderLight">
-        <div className="container px-6 mx-auto lg:px-12">
-          <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-            <div className="flex items-center gap-3">
-              <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-brandPrimary to-brandNavy">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <span className="text-xl font-bold font-heading text-brandDark">Integritat</span>
-            </div>
-            <p className="text-sm text-brandDark/60">© 2026 Integritat. All rights reserved.</p>
-          </div>
-        </div>
-      </footer> */}
 
       {/* Animations */}
       <style>{`

@@ -388,7 +388,7 @@ const alliancePartners = [
   {
     name: "Integrität Audit, Accounting & Advisory",
     shortName: "Integrität CPA",
-    title: "Integrated Audit Services",
+    title: "US based Public Accounting firm providing Assurance services ",
     description: "Public accounting firm providing integrated audit services in alliance with RiskMan Consulting.",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop",
     website: "https://www.integritatcpa.com",
@@ -399,7 +399,7 @@ const alliancePartners = [
   {
     name: "Supriyo Mullick CPA PLLC",
     shortName: "SM CPA",
-    title: "Comprehensive Accounting & Advisory Services",
+    title: "US based CPA firm delivering reliable services on SOC 1, SOC 2 engagements",
     description: "Delivering insightful, reliable, and globally informed accounting and advisory services.",
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
     website: "https://www.smcpallc.com",
@@ -411,7 +411,7 @@ const alliancePartners = [
 
 export default function AlliancePartnersSection() {
   const [selectedPartner, setSelectedPartner] = useState(null);
-  const servicesRibbon = ["Audit", "Accounting", "Tax", "Advisory", "Bookkeeping", "SOC Compliance", "Internal Controls", "Risk Management"];
+  const servicesRibbon = ["Risk", "Assurance",  "Advisory","Audit", "SOC Compliance", "Internal Controls", "Risk Management"];
 
   return (
     <section id="alliance-partners" className="relative py-4 overflow-hidden lg:pb-2 lg:pt-12 bg-surfaceLight dark:bg-surfaceDark">
@@ -436,7 +436,7 @@ export default function AlliancePartnersSection() {
           </h2>
           
           <p className="text-lg leading-relaxed text-brandDark/70 dark:text-white/70">
-            Collaborating with leading global firms to deliver comprehensive solutions. We combine our internal control expertise with our partners' specialized audit capabilities to bridge the gap between compliance and operational excellence.
+            Collaborating with leading global CPA firms to deliver comprehensive Assurance engagements as per US GAAP, and AICPA standards. 
           </p>
         </motion.div>
 

@@ -77,7 +77,7 @@ export default function About() {
         <IntroSection />
 
         {/* ================= TRIBUTE ================= */}
-        <TributeSection />
+        {/* <TributeSection /> */}
 
         {/* ================= MISSION & VISION ================= */}
         <MissionVisionSection />

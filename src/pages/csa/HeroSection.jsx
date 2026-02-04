@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 export default function HeroSection() {
@@ -117,7 +118,7 @@ export default function HeroSection() {
 
               {/* CTA Buttons */}
               <div className="flex flex-col justify-center gap-4 pt-6 sm:flex-row lg:justify-start">
-                <button className="relative px-8 py-4 overflow-hidden text-lg font-bold transition-all duration-300 group rounded-xl">
+                <Link to="/contact" className="relative px-8 py-4 overflow-hidden text-lg font-bold transition-all duration-300 group rounded-xl">
                   <div className="absolute inset-0 transition-transform bg-gradient-to-r from-yellow-500 to-yellow-600 group-hover:scale-105"></div>
                   <span className="relative flex items-center justify-center gap-2 text-slate-900">
                     Get Started
@@ -125,17 +126,17 @@ export default function HeroSection() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
                   </span>
-                </button>
+                </Link>
                 
-                <button className="relative px-8 py-4 overflow-hidden text-lg font-bold transition-all duration-300 border-2 group rounded-xl border-white/30 hover:border-white/60 backdrop-blur-sm">
+                <Link to="/services" className="relative px-8 py-4 overflow-hidden text-lg font-bold transition-all duration-300 border-2 group rounded-xl border-white/30 hover:border-white/60 backdrop-blur-sm">
                   <div className="absolute inset-0 transition-colors bg-white/0 group-hover:bg-white/10"></div>
                   <span className="relative flex items-center justify-center gap-2 text-white">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                     </svg>
-                    Watch Demo
+                    Our Other Services
                   </span>
-                </button>
+                </Link>
               </div>
             </motion.div>
 

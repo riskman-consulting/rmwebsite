@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function StrategicFoundation() {
+function StrategicFoundation() {
   return (
     <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
       <div className="container max-w-6xl px-6 mx-auto">
@@ -99,3 +99,6 @@ export default function StrategicFoundation() {
     </section>
   );
 }
+
+
+export default StrategicFoundation;

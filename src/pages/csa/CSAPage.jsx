@@ -18,7 +18,7 @@ import CTASection from "./CTASection";
 
 // import Footer from "./Footer";
 
-export default function App() {
+export default function CSAPage() {
   return (
     <div className="min-h-screen transition-colors bg-white dark:bg-slate-950">
       <HeroSection />

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import heroImg from "../../assets/images/rbia/rbia-heroImg.png";
 
 const RBIAHero = () => {
@@ -30,7 +31,7 @@ const RBIAHero = () => {
               internal audit services.
             </p>
 
-            <div className="flex flex-col gap-4 mt-10 sm:flex-row">
+            {/* <div className="flex flex-col gap-4 mt-10 sm:flex-row">
               <button className="relative px-8 py-4 overflow-hidden font-bold text-white transition-all shadow-xl rounded-xl bg-brandPrimary hover:bg-brandNavy hover:scale-[1.02] active:scale-95 shadow-brandPrimary/30 group">
                 <div className="absolute inset-0 transition-transform duration-500 ease-in-out bg-white/10 translate-x-[-100%] group-hover:translate-x-[100%]" />
                 <span className="relative">Book a Consultation</span>
@@ -39,7 +40,23 @@ const RBIAHero = () => {
               <button className="px-8 py-4 font-bold transition-all border-2 shadow-lg rounded-xl border-brandPrimary text-brandPrimary dark:border-brandAccent dark:text-brandAccent hover:bg-brandPrimary hover:text-white dark:hover:bg-brandAccent dark:hover:text-brandDark active:scale-95 shadow-black/5">
                 Our Other Services
               </button>
-            </div>
+            </div> */}
+
+
+            <div className="flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
+            <Link
+              to="/contact"
+              className="px-8 py-4 text-lg font-bold text-white transition-all rounded-lg shadow-xl bg-brandPrimary dark:bg-brandAccent dark:text-brandDark hover:-translate-y-1 active:scale-95"
+            >
+              Book a Consultation
+            </Link>
+            <Link
+              to="/services"
+              className="px-8 py-4 text-lg font-bold transition-all border-2 rounded-lg border-brandPrimary/20 dark:border-brandAccent/40 text-brandPrimary dark:text-brandAccent hover:bg-brandPrimary/5 dark:hover:bg-brandAccent/5"
+            >
+              Our Other Services
+            </Link>
+          </div>
 
             <div className="flex items-center gap-6 p-5 border mt-14 rounded-2xl bg-white/50 dark:bg-surfaceDark/30 backdrop-blur-sm border-borderLight dark:border-borderDark">
               <div className="flex -space-x-3">

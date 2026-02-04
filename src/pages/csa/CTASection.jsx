@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -15,13 +16,28 @@ export default function Footer() {
             and sustainable competitive advantage.
           </p>
           
-          <div className="flex flex-wrap justify-center gap-4">
+          {/* <div className="flex flex-wrap justify-center gap-4">
             <button className="px-8 py-3 font-semibold transition-all bg-yellow-500 rounded-lg shadow-lg hover:bg-yellow-600 text-slate-900 hover:shadow-xl">
               Schedule a Consultation
             </button>
             <button className="px-8 py-3 font-semibold text-white transition-all border-2 border-white rounded-lg hover:bg-white hover:text-slate-900">
               Download Our Brochure
             </button>
+          </div> */}
+
+          <div className="flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
+            <Link
+              to="/contact"
+              className="px-8 py-4 text-lg font-bold text-white transition-all rounded-lg shadow-xl bg-brandPrimary dark:bg-brandAccent dark:text-brandDark hover:-translate-y-1 active:scale-95"
+            >
+              Book a Consultation
+            </Link>
+            <Link
+              to="/services"
+              className="px-8 py-4 text-lg font-bold transition-all border-2 rounded-lg border-brandPrimary/20 dark:border-brandAccent/40 text-brandPrimary dark:text-brandAccent hover:bg-brandPrimary/5 dark:hover:bg-brandAccent/5"
+            >
+              Our Other Services
+            </Link>
           </div>
         </div>
       </section>
