@@ -5,7 +5,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import ermImage from "../../assets/images/erm/erm-1.png";
+import ermImage from "../../assets/images/erm/erm-1.jpg";
 
 const advantages = [
   {
@@ -52,11 +52,11 @@ const advantages = [
 
 const ERMAdvantagesSection = () => {
   return (
-    <section className="relative overflow-hidden bg-bgLight py-24 dark:bg-bgDark">
+    <section className="relative py-24 overflow-hidden bg-bgLight dark:bg-bgDark">
       <div className="container relative z-10">
 
         {/* Top Row */}
-        <div className="mb-20 grid grid-cols-1 items-center gap-16 md:grid-cols-2">
+        <div className="grid items-center grid-cols-1 gap-16 mb-20 md:grid-cols-2">
 
           {/* Left: Heading + Description */}
           <div>
@@ -65,7 +65,7 @@ const ERMAdvantagesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="mb-4 font-heading text-3xl font-semibold leading-tight text-brandDark dark:text-brandLight md:text-4xl"
+              className="mb-4 text-3xl font-semibold leading-tight font-heading text-brandDark dark:text-brandLight md:text-4xl"
             >
               Enterprise Risk Assessment <span className="text-brandPrimary dark:text-brandAccent">Advantages</span>
             </motion.h2>
@@ -76,7 +76,7 @@ const ERMAdvantagesSection = () => {
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="mb-6 h-1 w-20 origin-left rounded-full bg-brandAccent dark:bg-white"
+              className="w-20 h-1 mb-6 origin-left rounded-full bg-brandAccent dark:bg-white"
             />
 
             <motion.p
@@ -105,7 +105,7 @@ const ERMAdvantagesSection = () => {
             <img
               src={ermImage}
               alt="Enterprise Risk Assessment Advantages"
-              className="relative z-10 rounded-2xl border border-borderLight shadow-xl dark:border-borderDark"
+              className="relative z-10 border shadow-xl rounded-2xl border-borderLight dark:border-borderDark"
             />
           </motion.div>
 
@@ -120,12 +120,12 @@ const ERMAdvantagesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.06 }}
-              className="group relative overflow-hidden rounded-xl border border-borderLight bg-surfaceLight p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:border-borderDark dark:bg-surfaceDark"
+              className="relative p-6 overflow-hidden transition-all border shadow-sm group rounded-xl border-borderLight bg-surfaceLight hover:-translate-y-1 hover:shadow-lg dark:border-borderDark dark:bg-surfaceDark"
             >
               {/* Hover accent */}
-              <div className="absolute inset-x-0 top-0 h-1 bg-brandAccent opacity-0 transition group-hover:opacity-100 dark:bg-brandAccent" />
+              <div className="absolute inset-x-0 top-0 h-1 transition opacity-0 bg-brandAccent group-hover:opacity-100 dark:bg-brandAccent" />
 
-              <h3 className="mb-3 font-heading text-lg font-semibold text-brandDark dark:text-brandLight">
+              <h3 className="mb-3 text-lg font-semibold font-heading text-brandDark dark:text-brandLight">
                 {item.title}
               </h3>
 

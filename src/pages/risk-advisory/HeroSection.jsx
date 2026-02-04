@@ -4,12 +4,12 @@ import { Shield, ArrowRight } from "lucide-react";
 
 const HeroSection = ({ data }) => {
   return (
-    <section className="relative overflow-hidden bg-brandDark py-20 md:py-28">
+    <section className="relative py-20 overflow-hidden bg-brandDark md:py-28">
       
       {/* Subtle background glow */}
       <div className="pointer-events-none absolute -top-40 right-0 h-96 w-96 rounded-full bg-brandAccent/15 blur-[140px]" />
 
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container relative z-10 px-4 mx-auto sm:px-6 lg:px-8 lg:-top-10">
         <div className="grid items-center gap-16 lg:grid-cols-2">
 
           {/* LEFT: Content */}
@@ -19,9 +19,9 @@ const HeroSection = ({ data }) => {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="mb-6 inline-flex items-center gap-2 rounded-full border border-brandAccent/30 bg-brandAccent/10 px-5 py-2 text-xs font-bold uppercase tracking-widest text-brandAccent"
+              className="inline-flex items-center gap-2 px-5 py-2 mb-6 text-xs font-bold tracking-widest uppercase border rounded-full border-brandAccent/30 bg-brandAccent/10 text-brandAccent"
             >
-              <Shield className="h-4 w-4" />
+              <Shield className="w-4 h-4" />
               {data.id}
             </motion.div>
 
@@ -30,7 +30,7 @@ const HeroSection = ({ data }) => {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="mb-6 font-heading text-4xl font-black leading-tight text-white sm:text-5xl md:text-5xl"
+              className="mb-6 text-4xl font-black leading-tight text-white font-heading sm:text-5xl md:text-5xl"
             >
               {data.title}
             </motion.h1>
@@ -40,7 +40,7 @@ const HeroSection = ({ data }) => {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="mb-10 max-w-xl text-lg leading-relaxed text-white/85 md:text-xl"
+              className="max-w-xl mb-10 text-lg leading-relaxed text-white/85 md:text-xl"
             >
               {data.description}
             </motion.p>
@@ -53,10 +53,10 @@ const HeroSection = ({ data }) => {
             >
               <Link
                 to="/contact"
-                className="group inline-flex items-center gap-3 rounded-full bg-brandAccent px-8 py-4 text-base font-bold text-brandDark transition-all duration-300 hover:bg-brandAccent/90"
+                className="inline-flex items-center gap-3 px-8 py-4 text-base font-bold transition-all duration-300 rounded-full group bg-brandAccent text-brandDark hover:bg-brandAccent/90"
               >
                 Get Started
-                <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </motion.div>
           </div>
@@ -71,7 +71,7 @@ const HeroSection = ({ data }) => {
             <img
               src={data.bgImage}
               alt={data.title}
-              className="w-full rounded-3xl object-cover shadow-2xl"
+              className="object-cover w-full shadow-2xl rounded-3xl"
             />
 
             {/* Image overlay */}
@@ -82,7 +82,7 @@ const HeroSection = ({ data }) => {
       </div>
 
       {/* Bottom fade into next section */}
-      {/* <div className="pointer-events-none absolute bottom-0 left-0 h-28 w-full bg-gradient-to-t from-bgLight to-transparent dark:from-bgDark" /> */}
+      {/* <div className="absolute bottom-0 left-0 w-full pointer-events-none h-28 bg-gradient-to-t from-bgLight to-transparent dark:from-bgDark" /> */}
     </section>
   );
 };

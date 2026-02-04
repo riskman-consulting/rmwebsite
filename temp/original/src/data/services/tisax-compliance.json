@@ -1,0 +1,167 @@
+{
+    "heroSection": {
+        "title": "Trusted Automotive Security with TISAX Compliance",
+        "description": "Achieve TISAX assessment readiness to meet automotive-specific data security requirements demanded by OEMs and global suppliers.",
+        "badge": "Automotive Standard",
+        "primaryCTA": {
+            "text": "Get TISAX Ready",
+            "action": "/contact"
+        },
+        "heroImage": {
+            "src": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=1400",
+            "alt": "TISAX Compliance and Automotive Security"
+        }
+    },
+    "coreServices": {
+        "title": "Our TISAX Compliance Services",
+        "services": [
+            {
+                "title": "Assessment Readiness",
+                "description": "Prepare for TISAX assessments with comprehensive gap analysis and implementation support for the VDA ISA catalog.",
+                "cta": "Explore Readiness"
+            },
+            {
+                "title": "ISA Catalog Implementation",
+                "description": "Align your information security management system (ISMS) with the VDA's Information Security Assessment requirements.",
+                "cta": "Learn More"
+            },
+            {
+                "title": "Supply Chain Security",
+                "description": "Ensure your subcontractors and partners meet TISAX requirements for secure data exchange.",
+                "cta": "Secure Supply Chain"
+            },
+            {
+                "title": "Remediation & Governance",
+                "description": "Address assessment findings and establish ongoing security governance to maintain your TISAX label.",
+                "cta": "Build Governance"
+            }
+        ]
+    },
+    "valueSection": {
+        "title": "Why TISAX Compliance is Essential",
+        "description": "TISAX (Trusted Information Security Assessment Exchange) is the cross-company assessment and exchange mechanism for information security in the automotive industry. It is a mandatory requirement for many European and global OEMs.",
+        "stat": {
+            "value": "VDA ISA",
+            "label": "based on international standards"
+        },
+        "keyPoints": [
+            "Mandatory for many OEM partnerships",
+            "Automotive-specific security focus",
+            "Standardized assessment process",
+            "Unified exchange mechanism for security"
+        ],
+        "image": {
+            "src": "https://images.unsplash.com/photo-1517520445502-094199c08d51?w=700",
+            "alt": "Automotive manufacturing and data security"
+        }
+    },
+    "processSection": {
+        "title": "Our TISAX Readiness Process",
+        "steps": [
+            {
+                "step": 1,
+                "title": "Initial Gap Analysis",
+                "description": "Assess your current security posture against the VDA ISA (Information Security Assessment) requirements."
+            },
+            {
+                "step": 2,
+                "title": "Strategy & Planning",
+                "description": "Develop a detailed roadmap and remediation plan to address identified security gaps."
+            },
+            {
+                "step": 3,
+                "title": "Control Implementation",
+                "description": "Deploy technical and organizational controls to align with automotive security standards."
+            },
+            {
+                "step": 4,
+                "title": "Assessment Support",
+                "description": "Guided support during the actual TISAX assessment conducted by accredited audit providers."
+            }
+        ]
+    },
+    "whyRiskMan": {
+        "title": "Your Partner in Automotive Security",
+        "points": [
+            "Deep expertise in VDA ISA and ISO 27001",
+            "Experienced consultants with automotive backgrounds",
+            "End-to-end readiness and remediation support",
+            "Proven track record with Tier 1 and Tier 2 suppliers",
+            "Practical, business-aligned security models"
+        ],
+        "image": {
+            "src": "https://images.unsplash.com/photo-1593313637190-297cd946637c?w=600",
+            "alt": "TISAX consulting for automotive suppliers"
+        }
+    },
+    "impactStats": [
+        {
+            "value": "100%",
+            "label": "Readiness Success Rate"
+        },
+        {
+            "value": "40+",
+            "label": "Suppliers Assisted"
+        },
+        {
+            "value": "4-6 Months",
+            "label": "Average Readiness Timeline"
+        },
+        {
+            "value": "VDA ISA",
+            "label": "Aligned Methodology"
+        }
+    ],
+    "testimonials": {
+        "title": "Automotive Success Stories",
+        "reviews": [
+            {
+                "quote": "RiskMan's expertise in TISAX and VDA ISA was instrumental in our successful assessment. They simplified the complex requirements and helped us build a robust ISMS.",
+                "author": "Quality Head",
+                "organization": "Global Tier 1 Automotive Supplier"
+            },
+            {
+                "quote": "Thanks to RiskMan, we achieved our TISAX label ahead of schedule, allowing us to secure key contracts with major European OEMs.",
+                "author": "IT Security Manager",
+                "organization": "Component Manufacturer"
+            }
+        ]
+    },
+    "riskResilientSection": {
+        "title": "Prepare for Your TISAX Assessment Today",
+        "description": "Partner with RiskMan to achieve TISAX readiness and secure your place in the global automotive supply chain. Our experts are ready to guide you.",
+        "path": "/contact"
+    },
+    "frequentlyAskedQuestions": [
+        {
+            "id": 1,
+            "question": "What is TISAX?",
+            "answer": "TISAX (Trusted Information Security Assessment Exchange) is a standard for information security assessments in the automotive industry, established by the VDA (German Association of the Automotive Industry)."
+        },
+        {
+            "id": 2,
+            "question": "Who needs TISAX compliance?",
+            "answer": "Any organization in the automotive supply chain that handles sensitive information from OEMs or partners, including component manufacturers, logistics providers, and IT services."
+        },
+        {
+            "id": 3,
+            "question": "What is the VDA ISA?",
+            "answer": "The VDA ISA (Information Security Assessment) is the set of requirements (questionnaire) based on ISO 27001 that form the basis for the TISAX assessment."
+        },
+        {
+            "id": 4,
+            "question": "What are the TISAX Label levels?",
+            "answer": "There are different levels based on the sensitivity of the data (High, Very High) and whether specialized assessments like Prototype Protection or Data Privacy are required."
+        },
+        {
+            "id": 5,
+            "question": "How long is a TISAX label valid?",
+            "answer": "A TISAX assessment result is usually valid for three years, after which a new assessment is required to maintain the label."
+        },
+        {
+            "id": 6,
+            "question": "Can RiskMan conduct the final TISAX assessment?",
+            "answer": "No, the final assessment must be conducted by an ENX-accredited audit provider. RiskMan provides the expert readiness and implementation support needed to pass that assessment."
+        }
+    ]
+}

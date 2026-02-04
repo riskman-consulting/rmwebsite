@@ -1,0 +1,99 @@
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import Header from './components/layout/Header'
+import Home from './pages/home/Home'
+// import ServicesList from './pages/services/ServicesList'
+import IndustriesList from './pages/industries/IndustriesList'
+import IndustriesTemplate from './templates/IndustriesTemplate'
+import ServicesTemplate from './templates/ServiceTemplate'
+import Contact from './pages/contact/Contact'
+import About from './pages/about/About'
+import Careers from './pages/about/Careers'
+import Footer from './components/layout/Footer'
+import BlogList from './pages/blogs/BlogList'
+import BlogTemplate from './templates/BlogTemplate'
+import PrivacyPolicy from './pages/resources/Privacy'
+import Terms from './pages/resources/Terms'
+import BlogSingle from './pages/blogs/BlogSingle'
+import './index.css'
+
+import { Toaster } from 'react-hot-toast'
+import ScrollToTop from './components/common/ScrollToTop'
+import ThemeToggle from './components/common/ThemeToggle'
+import Events from './temp/MainEvent'
+import ServicePage from './pages/services/Services'
+import HeaderTemp from "../src/temp-header/Header"
+import HeaderNew from "./components/layout/Header"
+import EventPage from './pages/event/EventPage'
+import EventHome from './pages/event/Events'
+import IntegritatSolutionPage from './pages/solution/Solution'
+import RiskAdvisoryPage from './pages/risk-advisory/RiskAdvisoryPage'
+import ERMPage from './pages/erm/ERMPage'
+import Financial_Advisory from './pages/financial-advisory/financial-advisory'
+import FinancialAdvisoryPage from './pages/financial-advisory/temp/FinancialAdvisoryPage'
+import BCPPage from './pages/bcp/BCPPage'
+import RBIAServicePage from './pages/rbia/RBIAServicePage'
+import DigitalTransformationHub from './pages/digital/DigitalTransformation'
+import StrategicPMO from './pages/digital/StrategicPMO'
+import ImplementationExcellence from './pages/digital/ImplementationExcellence'
+import SupportServices from './pages/digital/SupportServices'
+
+
+function App() {
+  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
+
+  console.log('App rendered, theme:', theme); // Debug log
+
+  // Apply theme to document
+  useEffect(() => {
+    console.log('Theme changed to:', theme); // Debug log
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  return (
+    <Router>
+      <ScrollToTop />
+      {/* <ThemeToggle theme={theme} setTheme={setTheme} /> */}
+      {/* <Header theme={theme} setTheme={setTheme} /> */}
+      <HeaderTemp/>
+      {/* <HeaderNew/> */}
+      <Toaster position="top-right" />
+      
+      <main className="pt-[128px]">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<ServicePage />} />
+          <Route path='/services/risk-advisory' element={<RiskAdvisoryPage/>}/>
+          <Route path='/services/risk-advisory/erm' element={<ERMPage/>}/>
+          <Route path='/services/financial-advisory' element={<FinancialAdvisoryPage/>}/>
+          <Route path='/services/bcp-dr' element={<BCPPage/>}/>
+          <Route path='/services/risk-advisory/rbia' element={<RBIAServicePage/>} />
+          <Route path='/services/digital-transformation' element={<DigitalTransformationHub/>} />
+          <Route path='/services/digital-transformation/strategic-pmo' element={<StrategicPMO/>} />
+          <Route path='/services/digital-transformation/implementation' element={<ImplementationExcellence/>} />
+          <Route path='/services/digital-transformation/support-services' element={<SupportServices/>} />
+          {/* <Route path="/services/:id" element={<ServicesTemplate />} /> */}
+          <Route path="/industries" element={<IndustriesList />} />
+          <Route path="/industries/:id" element={<IndustriesTemplate />} />
+          <Route path="/insights" element={<BlogList />} />
+          <Route path="/insights/:slug" element={<BlogSingle />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/events" element={<EventHome/>}/>
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/blog" element={<Navigate to="/blogs" />} />
+          <Route path="/blogs" element={<BlogList />} />
+          <Route path="/blog/:slug" element={<BlogSingle />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/solutions" element={<IntegritatSolutionPage/>}/>
+        </Routes>
+      </main>
+      
+      <Footer />
+    </Router>
+  )
+}
+
+export default App

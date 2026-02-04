@@ -9,7 +9,7 @@ import FinancialFAQ from './FinancialFAQ';
 
 const FinancialAdvisoryPage = () => {
   return (
-    <main className="bg-bgLight dark:bg-bgDark min-h-screen font-sans selection:bg-brandAccent selection:text-brandDark">
+    <main className="min-h-screen font-sans bg-bgLight dark:bg-bgDark selection:bg-brandAccent selection:text-brandDark">
       {/* 1. Hero Section: Direct value prop [cite: 2, 4] */}
       <section id="hero">
         <FinancialHero />

@@ -1,6 +1,5 @@
 
 
- 
 export const NAVIGATION_DATA = {
     "mainNav": [
         { "label": "About", "type": "mega", "key": "about", "path": "/about" },
@@ -9,7 +8,7 @@ export const NAVIGATION_DATA = {
         { "label": "Events & Journey", "type": "mega", "key": "events", "path": "/events" },
         { "label": "Knowledge Hub", "type": "link", "path": "/insights" },
         { "label": "Careers", "type": "link", "path": "/careers" },
-//    { "label": "Industries", "type": "mega", "key": "industries", "path": "/industries" },    
+//    { "label": "Industries", "type": "mega", "key": "industries", "path": "/industries" },     
         { "label": "Governance", "type": "link", "path": "/governance" }
     ],
     "servicesMegaMenu": [
@@ -127,7 +126,7 @@ export const NAVIGATION_DATA = {
         }
     ],
     "aboutMegaMenu": [
- 
+
         {
             "title": "Who We Are",
             "items": [
@@ -190,14 +189,14 @@ export const NAVIGATION_DATA = {
     "eventsMegaMenu": [
         {
             "items": [
-                { "label": "Upcoming Events", "path": "/events/#upcoming" },
+                { "label": "Upcoming Events", "path": "/events/#upcoming-events" },
                 { "label": "Past Events", "path": "/events/#past" },
+                {"label":"Accomplishments","path":"/events/#accomplishments"},
+                {"label":"Emerging Awards & Recognitions", "path":"/events/#emerging-recognitions"},
                 { "label": "Company Journey", "path": "/events/#journey" },
-                { "label": "Milestones", "path": "/events/#milestones" },
-                 { "label": "Media Coverage", "path": "/events/#moment-that-matters" }
+                // { "label": "Milestones", "path": "/events/#milestones" },
+                 { "label": "Media Coverage", "path": "/events/#moments-that-matters" }
             ]
         }
     ]
 };
- 
- 

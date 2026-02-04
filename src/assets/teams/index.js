@@ -6,14 +6,14 @@
 import Angel from "./Angel.webp";
 import AnirbanBiswas from "./Anirban Biswas.webp";
 import Artika from "./Artika.webp";
-import Pranshul from "./pranshul.webp";
-import Ayush from "./Ayush.png";
+import Pranshul from "./Pranshul.jpg";
+import Ayush from "./Ayush.webp";
 import Debottam from "./Debottam.webp";
 import JaiDeep from "./JaiDeep.webp";
 import Kaushik from "./Kaushik.webp";
 import Kartik from "./kartik.webp";
 import MayukhDhar from "./Mayukh Dhar.webp";
-import monika from "./monika.jpeg";
+import monika from "./monika.webp";
 import NishanAgarwal from "./Nishan Agarwal.webp";
 import Palak from "./Palak.webp";
 import Pawan from "./pawan.webp";
@@ -31,14 +31,18 @@ import Tushar from "./Tushar.jpg";
 import VanshGarg from "./Vansh Garg.webp";
 import Vanshika from "./Vanshika.webp";
 import VinayakPoddar from "./Vinayak Poddar.webp";
-import VishalSharma from "./Vishal Sharma.webp";
+import VishalSharma from "./Vishal Sharma.jpg";
 import Yashvi from "./Yashvi.webp";
 import Yugmita from "./Yugmita.webp";
-import Jay from "./jay.jpg"
+import Jay from "./jay.webp"
+import Debolina from "./debolina.png";
+import Shreya from "./Shreya.png";
 import Arif from "./arif.webp"
 import Harsh from "./Harsh.webp"
 import Kiran from "./kiran.webp"
 import monica from "./monica.png"
+import arpitSir from "./arpitSir.png"
+import sukantaSir from "./sukantSir.png"
 
 
 export const teamsImages = {
@@ -75,9 +79,13 @@ export const teamsImages = {
   Yashvi,
   Yugmita,
   Jay,
+  Debolina,
+  Shreya,
   Arif,
   Harsh,
-  Kiran
+  Kiran,
+  sukantaSir,
+  arpitSir
 };
 
 

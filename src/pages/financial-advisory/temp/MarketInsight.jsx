@@ -29,27 +29,27 @@ const MarketInsight = () => {
   ];
 
   return (
-    <section className="py-24 bg-bgLight dark:bg-bgDark text-brandDark dark:text-white transition-colors duration-300">
-      <div className="container mx-auto px-5 sm:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className="py-24 transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-white">
+      <div className="container px-5 mx-auto sm:px-8">
+        <div className="grid items-center grid-cols-1 gap-16 lg:grid-cols-2">
           
           {/* Left Side: Problem Statement */}
           <div>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-8 leading-tight">
+            <h2 className="mb-8 text-3xl font-bold leading-tight font-heading md:text-4xl">
               Why Expert Financial Advisory is <br />
               <span className="text-brandPrimary dark:text-brandGold">More Critical Than Ever [cite: 28]</span>
             </h2>
             
-            <p className="font-sans text-gray-600 dark:text-gray-300 text-lg mb-8 leading-relaxed">
+            <p className="mb-8 font-sans text-lg leading-relaxed text-gray-600 dark:text-gray-300">
               Expert corporate financial advisory has become increasingly important due to the complex and rapidly 
               changing business environment, both in the domestic & global fronts. 
             </p>
 
             <div className="space-y-4">
-              <p className="font-heading text-brandPrimary dark:text-brandAccent font-semibold uppercase tracking-wider text-sm">
+              <p className="text-sm font-semibold tracking-wider uppercase font-heading text-brandPrimary dark:text-brandAccent">
                 Major Challenges Today[cite: 30]:
               </p>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 {issues.map((issue, index) => (
                   <li key={index} className="flex items-start gap-3 text-sm text-gray-600 dark:text-gray-400">
                     <div className="mt-1.5 w-1.5 h-1.5 bg-brandGold rounded-full flex-shrink-0"></div>
@@ -61,21 +61,21 @@ const MarketInsight = () => {
           </div>
 
           {/* Right Side: Our Recommended Strategies */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             {strategies.map((item, index) => (
               <div 
                 key={index} 
-                className="p-6 bg-surfaceLight dark:bg-surfaceDark border border-borderLight dark:border-borderDark rounded-xl hover:shadow-lg dark:hover:border-brandGold/40 transition-all"
+                className="p-6 transition-all border bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-xl hover:shadow-lg dark:hover:border-brandGold/40"
               >
-                <h4 className="font-heading text-brandPrimary dark:text-brandGold font-bold mb-2">{item.title}</h4>
-                <p className="font-sans text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                <h4 className="mb-2 font-bold font-heading text-brandPrimary dark:text-brandGold">{item.title}</h4>
+                <p className="font-sans text-sm leading-relaxed text-gray-600 dark:text-gray-400">
                   {item.desc}
                 </p>
               </div>
             ))}
             
-            <div className="sm:col-span-2 mt-4 p-6 bg-brandPrimary/5 dark:bg-brandPrimary/20 border border-brandPrimary/20 dark:border-brandPrimary/30 rounded-xl">
-              <p className="font-sans text-brandPrimary dark:text-brandAccent italic text-center font-medium">
+            <div className="p-6 mt-4 border sm:col-span-2 bg-brandPrimary/5 dark:bg-brandPrimary/20 border-brandPrimary/20 dark:border-brandPrimary/30 rounded-xl">
+              <p className="font-sans italic font-medium text-center text-brandPrimary dark:text-brandAccent">
                 "Business enterprises that leverage expert advisories effectively are better positioned to thrive in a rapidly evolving landscape. [cite: 32]"
               </p>
             </div>

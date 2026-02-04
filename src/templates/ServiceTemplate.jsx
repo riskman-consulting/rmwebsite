@@ -39,15 +39,11 @@ export default function NewServiceTemplate() {
     async function loadJSON() {
       try {
         setLoading(true);
-        const response = await fetch(`/src/data/services/${id}.json`);
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        setService(data);
+        const data = await import(`../data/services/${id}.json`);
+        setService(data.default);
         setLoading(false);
       } catch (e) {
-        console.error("JSON not found for service:", id, e);
+        console.error("JSON not found for service:", id);
         setError(true);
         setLoading(false);
       }

@@ -31,11 +31,11 @@ const lifecycleStages = [
 
 const StrategyLifecycleSection = () => {
   return (
-    <section className="bg-slate-50 py-10 md:py-12 dark:bg-bgDark">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="py-10 bg-slate-50 md:py-12 dark:bg-bgDark">
+      <div className="px-6 mx-auto max-w-7xl">
 
         {/* Header */}
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="max-w-3xl mx-auto text-center">
 
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -51,7 +51,7 @@ const StrategyLifecycleSection = () => {
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="mx-auto mt-6 h-1 w-24 rounded-full bg-brandPrimary dark:bg-brandAccent"
+            className="w-24 h-1 mx-auto mt-6 rounded-full bg-brandPrimary dark:bg-brandAccent"
           />
 
           <motion.p
@@ -71,7 +71,7 @@ const StrategyLifecycleSection = () => {
         </div>
 
         {/* Timeline / Steps */}
-        <div className="mt-20 grid gap-10 md:grid-cols-2">
+        <div className="grid gap-10 mt-20 md:grid-cols-2">
 
           {lifecycleStages.map((item, index) => (
             <motion.div
@@ -80,7 +80,7 @@ const StrategyLifecycleSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="relative rounded-2xl border border-borderLight bg-white p-8 shadow-sm dark:border-borderDark dark:bg-surfaceDark"
+              className="relative p-8 bg-white border shadow-sm rounded-2xl border-borderLight dark:border-borderDark dark:bg-surfaceDark"
             >
 
               {/* Phase Number */}

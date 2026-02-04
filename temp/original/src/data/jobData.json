@@ -1,0 +1,202 @@
+[
+  {
+    "@context": "https://schema.org/",
+    "@type": "JobPosting",
+    "title": "Senior Risk Consultant",
+    "description": "Lead enterprise risk assessments and provide strategic advisory for Tier-1 financial institutions in India. Focus on Basel IV compliance and credit risk modeling.",
+    "datePosted": "2026-01-10",
+    "employmentType": "FULL_TIME",
+    "hiringOrganization": { "@type": "Organization", "name": "Riskman Advisory Services" },
+    "jobLocation": { "@type": "Place", "address": { "addressLocality": "Kolkata", "addressRegion": "WB", "addressCountry": "IN" } }
+  },
+  {
+    "@context": "https://schema.org/",
+    "@type": "JobPosting",
+    "title": "Associate Internal Auditor",
+    "description": "Conduct comprehensive internal audits for Riskman's manufacturing clients. Ensure adherence to ISO standards and internal control frameworks.",
+    "datePosted": "2026-01-05",
+    "employmentType": "FULL_TIME",
+    "hiringOrganization": { "@type": "Organization", "name": "Riskman Audit & Compliance" },
+    "jobLocation": { "@type": "Place", "address": { "addressLocality": "Mumbai", "addressRegion": "MH", "addressCountry": "IN" } }
+  },
+  {
+    "@context": "https://schema.org/",
+    "@type": "JobPosting",
+    "title": "Information Security Analyst",
+    "description": "Join Riskman's Cyber Risk division to monitor security landscapes and perform vulnerability assessments for global enterprise partners.",
+    "datePosted": "2026-01-15",
+    "employmentType": "CONTRACT",
+    "hiringOrganization": { "@type": "Organization", "name": "Riskman Cyber Risk" },
+    "jobLocation": { "@type": "Place", "address": { "addressLocality": "Bengaluru", "addressRegion": "KA", "addressCountry": "IN" } }
+  },
+  {
+    "@context": "https://schema.org/",
+    "@type": "JobPosting",
+    "title": "Strategic Advisory Lead",
+    "description": "Direct complex business transformation projects and provide C-suite level consulting on market entry and operational risk.",
+    "datePosted": "2026-01-14",
+    "employmentType": "FULL_TIME",
+    "hiringOrganization": { "@type": "Organization", "name": "Riskman Strategy Group" },
+    "jobLocation": { "@type": "Place", "address": { "addressLocality": "New Delhi", "addressRegion": "DL", "addressCountry": "IN" } }
+  },
+  {
+    "@context": "https://schema.org/",
+    "@type": "JobPosting",
+    "title": "ESG Risk Consultant",
+    "description": "Help Riskman clients navigate Environmental, Social, and Governance reporting and risk mitigation strategies in line with SEBI guidelines.",
+    "datePosted": "2026-01-12",
+    "employmentType": "FULL_TIME",
+    "hiringOrganization": { "@type": "Organization", "name": "Riskman Sustainability" },
+    "jobLocation": { "@type": "Place", "address": { "addressLocality": "Hyderabad", "addressRegion": "TS", "addressCountry": "IN" } }
+  },
+  {
+    "@context": "https://schema.org/",
+    "@type": "JobPosting",
+    "title": "Forensic Accountant",
+    "description": "Investigate financial fraud and conduct high-stakes forensic audits for Riskman’s corporate legal advisory cases.",
+    "datePosted": "2026-01-08",
+    "employmentType": "FULL_TIME",
+    "hiringOrganization": { "@type": "Organization", "name": "Riskman Forensic Services" },
+    "jobLocation": { "@type": "Place", "address": { "addressLocality": "Pune", "addressRegion": "MH", "addressCountry": "IN" } }
+  },
+  {
+    "@context": "https://schema.org/",
+    "@type": "JobPosting",
+    "title": "Financial Risk Modeler",
+    "description": "Develop and validate quantitative models for market and liquidity risk management using Python and R.",
+    "datePosted": "2026-01-16",
+    "employmentType": "FULL_TIME",
+    "hiringOrganization": { "@type": "Organization", "name": "Riskman Quantitative" },
+    "jobLocation": { "@type": "Place", "address": { "addressLocality": "Gurugram", "addressRegion": "HR", "addressCountry": "IN" } }
+  },
+  {
+    "@context": "https://schema.org/",
+    "@type": "JobPosting",
+    "title": "Supply Chain Risk Analyst",
+    "description": "Analyze global logistics dependencies and consult on supply chain resilience for FMCG clients.",
+    "datePosted": "2026-01-02",
+    "employmentType": "FULL_TIME",
+    "hiringOrganization": { "@type": "Organization", "name": "Riskman Operations" },
+    "jobLocation": { "@type": "Place", "address": { "addressLocality": "Chennai", "addressRegion": "TN", "addressCountry": "IN" } }
+  },
+  {
+    "@context": "https://schema.org/",
+    "@type": "JobPosting",
+    "title": "HR Advisory Consultant",
+    "description": "Provide strategic consulting on human capital risk, culture transformation, and talent retention strategies.",
+    "datePosted": "2026-01-11",
+    "employmentType": "FULL_TIME",
+    "hiringOrganization": { "@type": "Organization", "name": "Riskman People & Culture" },
+    "jobLocation": { "@type": "Place", "address": { "addressLocality": "Noida", "addressRegion": "UP", "addressCountry": "IN" } }
+  },
+  {
+    "@context": "https://schema.org/",
+    "@type": "JobPosting",
+    "title": "Cloud Security Advisor",
+    "description": "Consult on secure cloud migration strategies and multi-cloud security architecture for Riskman's tech-focused clients.",
+    "datePosted": "2026-01-17",
+    "employmentType": "CONTRACT",
+    "hiringOrganization": { "@type": "Organization", "name": "Riskman Cyber Risk" },
+    "jobLocation": { "@type": "Place", "address": { "addressLocality": "Bengaluru", "addressRegion": "KA", "addressCountry": "IN" } }
+  },
+  {
+    "@context": "https://schema.org/",
+    "@type": "JobPosting",
+    "title": "Tax Risk & Advisory",
+    "description": "Strategic GST and corporate tax advisory services for multinational entities operating in India.",
+    "datePosted": "2026-01-09",
+    "employmentType": "FULL_TIME",
+    "hiringOrganization": { "@type": "Organization", "name": "Riskman Tax Advisory" },
+    "jobLocation": { "@type": "Place", "address": { "addressLocality": "Mumbai", "addressRegion": "MH", "addressCountry": "IN" } }
+  },
+  {
+    "@context": "https://schema.org/",
+    "@type": "JobPosting",
+    "title": "Data Science Consultant",
+    "description": "Apply machine learning to fraud detection and risk prediction for Riskman’s e-commerce and fintech partners.",
+    "datePosted": "2026-01-07",
+    "employmentType": "FULL_TIME",
+    "hiringOrganization": { "@type": "Organization", "name": "Riskman Analytics" },
+    "jobLocation": { "@type": "Place", "address": { "addressLocality": "Hyderabad", "addressRegion": "TS", "addressCountry": "IN" } }
+  },
+  {
+    "@context": "https://schema.org/",
+    "@type": "JobPosting",
+    "title": "Regulatory Compliance Lead",
+    "description": "Interpret and implement complex regulatory updates from RBI, SEBI, and IRDAI for Riskman clients.",
+    "datePosted": "2026-01-03",
+    "employmentType": "FULL_TIME",
+    "hiringOrganization": { "@type": "Organization", "name": "Riskman Compliance" },
+    "jobLocation": { "@type": "Place", "address": { "addressLocality": "New Delhi", "addressRegion": "DL", "addressCountry": "IN" } }
+  },
+  {
+    "@context": "https://schema.org/",
+    "@type": "JobPosting",
+    "title": "IT Audit Specialist",
+    "description": "Conduct General IT Controls (GITC) and application control reviews for high-growth tech firms.",
+    "datePosted": "2026-01-06",
+    "employmentType": "FULL_TIME",
+    "hiringOrganization": { "@type": "Organization", "name": "Riskman Audit" },
+    "jobLocation": { "@type": "Place", "address": { "addressLocality": "Kolkata", "addressRegion": "WB", "addressCountry": "IN" } }
+  },
+  {
+    "@context": "https://schema.org/",
+    "@type": "JobPosting",
+    "title": "Mergers & Acquisitions Advisor",
+    "description": "Provide risk-focused due diligence and post-merger integration strategy for domestic M&A deals.",
+    "datePosted": "2026-01-13",
+    "employmentType": "FULL_TIME",
+    "hiringOrganization": { "@type": "Organization", "name": "Riskman M&A" },
+    "jobLocation": { "@type": "Place", "address": { "addressLocality": "Mumbai", "addressRegion": "MH", "addressCountry": "IN" } }
+  },
+  {
+    "@context": "https://schema.org/",
+    "@type": "JobPosting",
+    "title": "Blockchain Risk Advisor",
+    "description": "Consulting on the risk frameworks of smart contracts and decentralized finance for emerging crypto platforms.",
+    "datePosted": "2026-01-14",
+    "employmentType": "CONTRACT",
+    "hiringOrganization": { "@type": "Organization", "name": "Riskman Digital Assets" },
+    "jobLocation": { "@type": "Place", "address": { "addressLocality": "Ahmedabad", "addressRegion": "GJ", "addressCountry": "IN" } }
+  },
+  {
+    "@context": "https://schema.org/",
+    "@type": "JobPosting",
+    "title": "Operational Resilience Lead",
+    "description": "Design business continuity plans and stress-test organizational resilience for critical infrastructure sectors.",
+    "datePosted": "2026-01-15",
+    "employmentType": "FULL_TIME",
+    "hiringOrganization": { "@type": "Organization", "name": "Riskman Strategy" },
+    "jobLocation": { "@type": "Place", "address": { "addressLocality": "Pune", "addressRegion": "MH", "addressCountry": "IN" } }
+  },
+  {
+    "@context": "https://schema.org/",
+    "@type": "JobPosting",
+    "title": "Risk Analyst Intern",
+    "description": "An entry-level role supporting senior consultants in data gathering and industry risk benchmarking.",
+    "datePosted": "2026-01-10",
+    "employmentType": "INTERN",
+    "hiringOrganization": { "@type": "Organization", "name": "Riskman Academy" },
+    "jobLocation": { "@type": "Place", "address": { "addressLocality": "Kolkata", "addressRegion": "WB", "addressCountry": "IN" } }
+  },
+  {
+    "@context": "https://schema.org/",
+    "@type": "JobPosting",
+    "title": "Change Management Consultant",
+    "description": "Support Riskman clients in navigating large-scale organizational change and risk culture adoption.",
+    "datePosted": "2026-01-12",
+    "employmentType": "FULL_TIME",
+    "hiringOrganization": { "@type": "Organization", "name": "Riskman Advisory" },
+    "jobLocation": { "@type": "Place", "address": { "addressLocality": "Gurugram", "addressRegion": "HR", "addressCountry": "IN" } }
+  },
+  {
+    "@context": "https://schema.org/",
+    "@type": "JobPosting",
+    "title": "Client Success Manager",
+    "description": "Manage key client relationships for Riskman and ensure the high-quality delivery of advisory services.",
+    "datePosted": "2026-01-16",
+    "employmentType": "FULL_TIME",
+    "hiringOrganization": { "@type": "Organization", "name": "Riskman Corporate" },
+    "jobLocation": { "@type": "Place", "address": { "addressLocality": "Bengaluru", "addressRegion": "KA", "addressCountry": "IN" } }
+  }
+]

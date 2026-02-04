@@ -1,0 +1,219 @@
+{
+  "heroSection": {
+    "title": "Build trust with SOC compliance",
+    "description": "RiskMan offers end-to-end SOC audit and reporting services — SOC 1, SOC 2, SOC 3, ISAE, and CSAE-aligned — with global assurance standards to help you demonstrate compliance, manage risk, and strengthen business reputation.",
+    "badge": "SOC Services",
+    "primaryCTA": {
+      "text": "Contact us",
+      "action": "/contact"
+    },
+    "heroImage": {
+      "src": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1400",
+      "alt": "Professionals walking together in a modern office environment"
+    }
+  },
+  "weHelpSection": {
+    "title": "Scale securely with SOC confidence",
+    "description": [
+      {
+        "content": "SOC compliance is more than a checklist — it's a business enabler that demonstrates your commitment to security and operational transparency, increasing customer and partner confidence."
+      },
+      {
+        "title": "Real-Time Security & Compliance",
+        "content": "Our SOC services provide real-time threat detection, incident response efficiency, regulatory compliance support, and improved risk posture to help you scale securely.",
+        "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800"
+      }
+    ]
+  },
+  "coreServices": {
+    "title": "Our SOC Services",
+    "services": [
+      {
+        "title": "SOC 1 Compliance",
+        "description": "Financial controls and reporting for service organizations that impact user entities' financial statements.",
+        "cta": "Learn More"
+      },
+      {
+        "title": "SOC 2 Compliance",
+        "description": "Trust Services Criteria compliance covering security, availability, processing integrity, confidentiality, and privacy.",
+        "cta": "Learn More"
+      },
+      {
+        "title": "SOC 3 Reporting",
+        "description": "General-use reports for public distribution demonstrating your security and compliance posture.",
+        "cta": "Learn More"
+      },
+      {
+        "title": "ISAE 3402 Assurance",
+        "description": "International standard for assurance reports on controls at service organizations.",
+        "cta": "Learn More"
+      }
+    ]
+  },
+  "valueSection": {
+    "title": "SOC: More than a checklist — A business enabler",
+    "description": "SOC compliance opens doors to international markets, speeds up vendor due diligence, and strengthens your internal controls.",
+    "stat": {
+      "value": "3x",
+      "label": "Faster vendor due diligence"
+    },
+    "keyPoints": [
+      "Enhanced client trust",
+      "Faster sales & procurement",
+      "Stronger internal controls",
+      "Global market access"
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=700",
+      "alt": "Team discussing SOC audit and compliance reports"
+    }
+  },
+  "solutionSection": {
+    "title": "Comprehensive SOC Solutions",
+    "solutions": [
+      {
+        "name": "Enhanced Client Trust",
+        "description": "Demonstrate your commitment to security and operational transparency, increasing customer and partner confidence."
+      },
+      {
+        "name": "Faster Sales & Procurement",
+        "description": "Speed up vendor due diligence, helping enterprises close deals faster with pre-validated controls."
+      },
+      {
+        "name": "Stronger Internal Controls",
+        "description": "Improve your organization's risk posture by establishing and maintaining effective security and process controls."
+      },
+      {
+        "name": "Global Market Access",
+        "description": "Open doors to international markets by meeting compliance expectations of global clients and regulators."
+      },
+      {
+        "name": "Real-Time Threat Detection",
+        "description": "Continuous monitoring and threat detection to identify and respond to security incidents quickly."
+      },
+      {
+        "name": "Regulatory Compliance Support",
+        "description": "Comprehensive support for meeting regulatory requirements and industry standards."
+      }
+    ]
+  },
+  "processSection": {
+    "title": "Our SOC Compliance Process",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Readiness Assessment",
+        "description": "Evaluate current controls and identify gaps against SOC requirements."
+      },
+      {
+        "step": 2,
+        "title": "Control Design & Implementation",
+        "description": "Design and implement necessary controls to meet SOC criteria."
+      },
+      {
+        "step": 3,
+        "title": "Testing & Validation",
+        "description": "Test controls for effectiveness and prepare for the formal audit."
+      },
+      {
+        "step": 4,
+        "title": "Audit & Reporting",
+        "description": "Support the SOC audit and deliver comprehensive compliance reports."
+      }
+    ]
+  },
+  "impactStats": [
+    {
+      "value": "100%",
+      "label": "Audit Success Rate"
+    },
+    {
+      "value": "3x",
+      "label": "Faster Due Diligence"
+    },
+    {
+      "value": "50+",
+      "label": "Organizations Certified"
+    },
+    {
+      "value": "24/7",
+      "label": "Compliance Support"
+    }
+  ],
+  "whyRiskMan": {
+    "title": "Why Choose RiskMan for SOC Services",
+    "points": [
+      "Experienced SOC auditors and consultants",
+      "End-to-end compliance support",
+      "Global assurance standards expertise",
+      "Proven track record across industries",
+      "Continuous monitoring and improvement"
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600",
+      "alt": "SOC compliance consulting team"
+    }
+  },
+  "testimonials": {
+    "title": "Client Success Stories",
+    "reviews": [
+      {
+        "quote": "RiskMan's SOC 2 compliance support helped us achieve certification in record time. Their expertise and guidance were invaluable throughout the process.",
+        "author": "CTO",
+        "organization": "SaaS Technology Company"
+      },
+      {
+        "quote": "The SOC 1 audit went smoothly thanks to RiskMan's thorough preparation and control implementation support. We now have the trust of our enterprise clients.",
+        "author": "Compliance Director",
+        "organization": "Financial Services Provider"
+      }
+    ]
+  },
+  "riskResilientSection": {
+    "title": "Ready to Build Trust with SOC Compliance?",
+    "description": "Partner with RiskMan to achieve SOC certification and demonstrate your commitment to security and operational excellence. Our expert team will guide you through every step of the compliance journey.",
+    "path": "/contact"
+  },
+  "frequentlyAskedQuestions": [
+    {
+      "id": 1,
+      "question": "What is the difference between SOC 1, SOC 2, and SOC 3?",
+      "answer": "SOC 1 focuses on financial controls, SOC 2 covers Trust Services Criteria (security, availability, etc.), and SOC 3 is a general-use report for public distribution. Each serves different compliance and assurance needs."
+    },
+    {
+      "id": 2,
+      "question": "How long does it take to achieve SOC 2 compliance?",
+      "answer": "The timeline varies based on your current controls and readiness, but typically ranges from 3-6 months for initial certification with proper planning and implementation."
+    },
+    {
+      "id": 3,
+      "question": "Do we need SOC 1 or SOC 2?",
+      "answer": "SOC 1 is for organizations that impact financial reporting of user entities. SOC 2 is for service providers handling customer data. Your choice depends on your business model and client requirements."
+    },
+    {
+      "id": 4,
+      "question": "What are the Trust Services Criteria?",
+      "answer": "The Trust Services Criteria include Security, Availability, Processing Integrity, Confidentiality, and Privacy. SOC 2 reports can cover one or more of these criteria based on your services."
+    },
+    {
+      "id": 5,
+      "question": "Is SOC compliance required annually?",
+      "answer": "Yes, SOC reports are typically valid for one year. Organizations must undergo annual audits to maintain their SOC compliance status and provide updated reports to clients."
+    },
+    {
+      "id": 6,
+      "question": "Can you help with both Type 1 and Type 2 reports?",
+      "answer": "Yes, we support both SOC Type 1 (design of controls at a point in time) and Type 2 (operating effectiveness over a period) reports."
+    },
+    {
+      "id": 7,
+      "question": "What is ISAE 3402?",
+      "answer": "ISAE 3402 is the international equivalent of SOC 1, used for assurance reports on controls at service organizations, particularly for international clients."
+    },
+    {
+      "id": 8,
+      "question": "How does SOC compliance help with sales?",
+      "answer": "SOC reports speed up vendor due diligence by providing pre-validated evidence of your security and operational controls, helping you close enterprise deals faster."
+    }
+  ]
+}

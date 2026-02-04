@@ -1,0 +1,268 @@
+{
+  "heroSection": {
+    "title": "Transform Your Business with Strategic Consulting",
+    "description": "We help balance transformation, risk, and performance with your business goals—guiding you through complexity, innovation, and change.",
+    "bgImage": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80"
+  },
+  "trusteSection": {
+    "title": "Trusted by 100+ Global Brands",
+    "company": [
+       {
+                "name": "blikit",
+                "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Blinkit-logo-1-1-1.webp"
+            },
+            {
+                "name": "care health insurance",
+                "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Care-Health-Insurance-Walk-in-Recruitment-2-1.webp"
+            },
+            {
+                "name": "electrosteel castings limited",
+                "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Electrosteel-logo-3-150x35-1.webp"
+            },
+            {
+                "name": "india tv",
+                "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Indiatv-logo-1-1.webp"
+            },
+            {
+                "name": "emami",
+                "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Emami-logo-2-1.webp"
+            },
+            {
+                "name": "indorama ventures",
+                "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Indorama_Ventures_Logo.svg-2-1.webp"
+            },
+     {
+                "name": "Jindal Renewables",
+                "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Jindal-Renewables-1.webp"
+            }
+    ]
+  },
+  "weHelpSection": {
+    "title": "How We Help Transform Your Business",
+    "description": [
+      {
+        "content": "Our expertise in Strategic Planning and Operational Efficiency drives Process Optimization for sustainable success. We understand the importance of balancing transformation, risk, and performance with your overall business objectives."
+      },
+      {
+        "title": "Transform Your Business with Business Consulting",
+        "content": "RiskMan's Consulting Services deliver actionable insights and measurable results, tailored to your industry's needs. We guide organizations through complex transition and transformation programs, from strategy to execution, helping you achieve sustainable competitive advantage.",
+        "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80"
+      }
+    ]
+  },
+  "solutionSection": {
+    "title": "Our Offerings & Solutions",
+    "description": "We understand the importance of balancing transformation, risk, and performance with your overall business objectives.",
+    "solutions": [
+      {
+        "name": "Project Management",
+        "description": "We guide organizations through complex transition and transformation programs, from strategy to execution."
+      },
+      {
+        "name": "BI & Analytics — Finance",
+        "description": "Our BI & analytics consulting enables finance leaders to automate reporting, monitor KPIs, and forecast accurately."
+      },
+      {
+        "name": "Performance Improvement",
+        "description": "We help to optimize operational performance through diagnostic reviews, process redesign, and cost-efficiency programs."
+      },
+      {
+        "name": "Robotic Process Automation",
+        "description": "Our RPA consulting identifies automation opportunities and monitors ROI, helping you scale operations and reduce errors."
+      },
+      {
+        "name": "Process Mining",
+        "description": "We help to implement AI to map how processes actually function—and then optimize them for speed, compliance, and value."
+      },
+      {
+        "name": "Change Management",
+        "description": "Strategic change management programs that ensure smooth organizational transitions and employee adoption."
+      }
+    ]
+  },
+  "partnerSection": {
+    "title": "Aligning Operations with Business Strategy",
+    "description": "RiskMan's Consulting Services deliver actionable insights and measurable results, tailored to your industry's needs.",
+    "services": [
+      {
+        "name": "Management Consulting",
+        "description": "Strategic advisory to align your operations with long-term business goals and market dynamics.",
+        "path": "/services/management-consulting"
+      },
+      {
+        "name": "Performance Improvement",
+        "description": "Data-driven approaches to enhance efficiency, reduce costs, and improve operational outcomes.",
+        "path": "/services/performance-improvement"
+      },
+      {
+        "name": "Change Management",
+        "description": "Expert guidance through organizational transformations and cultural shifts.",
+        "path": "/services/change-management"
+      },
+      {
+        "name": "Strategic Planning",
+        "description": "Comprehensive planning frameworks that drive measurable business results.",
+        "path": "/services/strategic-planning"
+      }
+    ]
+  },
+  "helpUsSection": [
+    {
+      "name": "Approach",
+      "title": "Framework-Driven Transformation",
+      "description": "We build frameworks that simplify transitions and drive transformation. Our structured approach ensures seamless implementation across all organizational levels.",
+      "tags": ["Strategy", "Implementation", "Frameworks"]
+    },
+    {
+      "name": "Analytics",
+      "title": "Data-Driven Insights",
+      "description": "We use analytics to reveal performance gaps and improvement areas. Advanced BI tools help monitor KPIs and forecast business outcomes accurately.",
+      "tags": ["BI", "Analytics", "KPIs"]
+    },
+    {
+      "name": "Results",
+      "title": "Measurable Business Impact",
+      "description": "Our strategy delivers measurable gains in efficiency and value. Every engagement is designed to produce tangible ROI and sustainable competitive advantage.",
+      "tags": ["ROI", "Efficiency", "Growth"]
+    }
+  ],
+  "proActiveSection": {
+    "title": "Proactive Advisory & Strategic Guidance",
+    "description": "Our team of 75+ consultants brings over 15 years of average partner experience across industries. We've completed 500+ successful projects with a 98% client satisfaction rate, helping organizations navigate complexity and achieve transformational results.",
+    "image": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80"
+  },
+  "riskAnalysisSection": [
+    "Conduct comprehensive diagnostic assessment of current operations and performance metrics",
+    "Identify key pain points, bottlenecks, and opportunities for optimization",
+    "Design customized solutions aligned with your business objectives and industry best practices",
+    "Implement frameworks with minimal disruption using agile methodologies",
+    "Monitor progress through data-driven KPIs and adjust strategies as needed",
+    "Ensure sustainable change through knowledge transfer and capability building"
+  ],
+  "testimonialsSection": {
+    "sectionLabel": "CLIENT SUCCESS STORIES",
+    "title": "What Our Clients Say About Us",
+    "testimonials": [
+      {
+        "id": "testimonial-1",
+        "quote": "The automation roadmap from RiskMan saved us 400+ hours annually. Their consultants are thorough and proactive.",
+        "author": "Chief Executive Officer",
+        "company": "Fintech Startup",
+        "image": "https://i.pravatar.cc/150?img=12"
+      },
+      {
+        "id": "testimonial-2",
+        "quote": "From BI dashboards to strategy alignment, their insights helped improve our finance team's performance dramatically.",
+        "author": "VP Finance",
+        "company": "Healthcare Group",
+        "image": "https://i.pravatar.cc/150?img=47"
+      },
+      {
+        "id": "testimonial-3",
+        "quote": "RiskMan helped us complete a system-wide transformation on time. Their approach to project leadership is unmatched.",
+        "author": "Head of Operations",
+        "company": "Global Retail Chain",
+        "image": "https://i.pravatar.cc/150?img=33"
+      }
+    ]
+  },
+  "articalSection": {
+    "title": "Our Latest Insights",
+    "description": "Stay informed with the latest business consulting insights, strategic risk management articles, and industry trends from RiskMan's expert consultants.",
+    "articles": [
+      {
+        "id": "article-1",
+        "title": "Strategic Risk Management: A Proactive Approach to Long-Term Business Success",
+        "excerpt": "Learn how proactive risk management strategies can drive sustainable business growth and competitive advantage in today's dynamic market.",
+        "category": "Risk Management",
+        "author": "RiskMan Team",
+        "publishedDate": "June 24, 2025",
+        "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&q=80"
+      },
+      {
+        "id": "article-2",
+        "title": "Digital Transformation: Keys to Successful Implementation",
+        "excerpt": "Discover the essential strategies and best practices for leading successful digital transformation initiatives in your organization.",
+        "category": "Digital Transformation",
+        "author": "Strategy Team",
+        "publishedDate": "April 02, 2024",
+        "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80"
+      },
+      {
+        "id": "article-3",
+        "title": "Process Optimization Through AI and Analytics",
+        "excerpt": "Explore how artificial intelligence and advanced analytics are revolutionizing business process optimization and operational efficiency.",
+        "category": "Technology",
+        "author": "Analytics Team",
+        "publishedDate": "March 15, 2024",
+        "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80"
+      }
+    ]
+  },
+  "riskResilientSection": {
+    "title": "Ready to Transform Your Business?",
+    "description": "Partner with RiskMan for strategic business consulting that balances transformation, risk, and performance. With 15+ years experience, 500+ successful projects, and 98% client satisfaction, we're ready to help you achieve your business goals.",
+    "path": "/contact"
+  },
+  "pageMetadata": {
+    "pageTitle": "Business Consulting Services | Strategic Transformation & Performance | RiskMan",
+    "metaDescription": "Transform your business with RiskMan's comprehensive consulting services. Expert solutions in strategic planning, operational efficiency, performance improvement, RPA, and process optimization.",
+    "keywords": "business consulting, strategic consulting, operational efficiency, performance improvement, business transformation, management consulting, process optimization, RPA consulting, change management, business strategy",
+    "ogTitle": "Business Consulting Services - Drive Growth & Operational Excellence",
+    "ogDescription": "Partner with RiskMan for strategic business consulting that balances transformation, risk, and performance. 15+ years experience, 500+ successful projects, 98% client satisfaction.",
+    "ogImage": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80",
+    "canonicalUrl": "https://riskmanconsulting.com/business-consulting",
+    "schemaType": "Service",
+    "breadcrumbs": [
+      {
+        "name": "Home",
+        "url": "https://riskmanconsulting.com"
+      },
+      {
+        "name": "Services",
+        "url": "https://riskmanconsulting.com/services"
+      },
+      {
+        "name": "Business Consulting",
+        "url": "https://riskmanconsulting.com/business-consulting"
+      }
+    ]
+  },
+  "frequentlyAskedQuestions": [
+    {
+      "id": "1",
+      "question": "What is Business Consulting?",
+      "answer": "Business Consulting helps organizations improve performance through Strategic Planning and Process Optimization. Our consultants work closely with your team to identify opportunities, develop actionable strategies, and implement solutions that drive measurable results."
+    },
+    {
+      "id": "faq-2",
+      "question": "How can consulting improve Operational Efficiency?",
+      "answer": "Consulting improves operational efficiency through diagnostic reviews, process redesign, automation identification, and implementation of best practices. We use data analytics to identify bottlenecks and design solutions that reduce costs while improving quality and speed."
+    },
+    {
+      "id": "faq-3",
+      "question": "Who needs Business Consulting services?",
+      "answer": "Organizations of all sizes benefit from business consulting—from startups seeking growth strategies to enterprises managing complex transformations. If you're facing operational challenges, planning strategic changes, or looking to optimize performance, consulting can help."
+    },
+    {
+      "id": "faq-4",
+      "question": "What is the process of Business Consulting?",
+      "answer": "Our process includes: 1) Discovery and assessment, 2) Strategy development, 3) Solution design, 4) Implementation support, and 5) Performance monitoring. We work collaboratively with your team throughout the engagement to ensure sustainable results."
+    },
+    {
+      "id": "faq-5",
+      "question": "How long does a consulting project take?",
+      "answer": "Project duration varies based on scope and complexity. Quick assessments may take 4-6 weeks, while comprehensive transformation programs can span 6-18 months. We provide clear timelines and milestones during the planning phase."
+    },
+    {
+      "id": "faq-6",
+      "question": "What makes RiskMan's Consulting Services unique?",
+      "answer": "Our consultants bring 15+ years average experience, deep industry expertise, and a proven track record of 500+ successful projects. We combine strategic thinking with hands-on implementation support, ensuring not just recommendations but real business impact."
+    },
+    {
+      "id": "faq-7",
+      "question": "Can consulting help small businesses?",
+      "answer": "Absolutely! We tailor our services to fit organizations of all sizes. Small businesses benefit from our expertise in strategic planning, process optimization, and growth strategies—often achieving faster ROI due to their agility and focus."
+    }
+  ]
+}

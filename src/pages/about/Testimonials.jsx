@@ -149,7 +149,7 @@ export default function TestimonialsSection() {
 
         {/* Heading */}
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-2xl font-bold md:text-3xl font-heading">
+          <h2 className="mb-4 text-5xl font-bold md:text-6xl font-heading">
             <span className="text-[#001F3F] dark:text-white">
               What people are saying
             </span>

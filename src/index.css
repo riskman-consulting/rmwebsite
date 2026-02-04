@@ -18,10 +18,6 @@ body{
 /* =====================
    COMPREHENSIVE RESET
 ===================== */
-:root {
-  --nav-h: 80px;
-}
-
 @layer base {
   *,
   *::before,
@@ -101,20 +97,6 @@ body{
   border-radius: 50%;
   filter: blur(40px);
   pointer-events: none;
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-.marquee {
-  white-space: nowrap;
-  animation: marquee 14s linear infinite;
 }
 
 

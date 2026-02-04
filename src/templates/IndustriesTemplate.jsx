@@ -32,7 +32,7 @@ import {
   FaChevronRight,
   FaCheck
 } from "react-icons/fa";
- 
+
 /* =======================
    ANIMATIONS
 ======================= */
@@ -41,23 +41,23 @@ const fadeInUp = {
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6 },
 };
- 
+
 const staggerContainer = {
   animate: { transition: { staggerChildren: 0.1 } },
 };
- 
+
 const fadeInLeft = {
   initial: { opacity: 0, x: -50 },
   animate: { opacity: 1, x: 0 },
   transition: { duration: 0.6 },
 };
- 
+
 const fadeInRight = {
   initial: { opacity: 0, x: 50 },
   animate: { opacity: 1, x: 0 },
   transition: { duration: 0.6 },
 };
- 
+
 /* =======================
    THEME CONFIGURATION
 ======================= */
@@ -128,7 +128,7 @@ const industryThemes = {
     aura: 'brandPrimary',
   }
 };
- 
+
 const iconMap = {
   Briefcase: FaBriefcase,
   Globe: FaGlobe,
@@ -156,36 +156,30 @@ const iconMap = {
   ShieldOff: FaBan,
   Activity: FaChartLine,
 };
- 
+
 export default function IndustriesTemplate() {
   const { id } = useParams();
   const [industry, setIndustry] = useState(null);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  console.log(id);
-  
- 
   useEffect(() => {
     async function loadJSON() {
       try {
         setLoading(true);
-        const response = await fetch(`/src/data/industries/${id}.json`);
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        setIndustry(data);
+        // Using a more robust import approach for dynamic IDs
+        const data = await import(`../data/industries/${id}.json`);
+        setIndustry(data.default);
         setLoading(false);
       } catch (e) {
-        console.error("JSON not found for industry:", id, e);
+        console.error("JSON not found for industry:", id);
         setError(true);
         setLoading(false);
       }
     }
     loadJSON();
   }, [id]);
- 
+
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-bgLight dark:bg-bgDark">
@@ -197,7 +191,7 @@ export default function IndustriesTemplate() {
       </div>
     );
   }
- 
+
   if (error || !industry) {
     return (
       <div className="flex items-center justify-center min-h-screen px-6 text-center bg-bgLight dark:bg-bgDark">
@@ -212,7 +206,7 @@ export default function IndustriesTemplate() {
       </div>
     );
   }
- 
+
   const {
     heroSection,
     challengeSection,
@@ -224,9 +218,9 @@ export default function IndustriesTemplate() {
     ctaSection,
     frequentlyAskedQuestions
   } = industry;
- 
+
   const impactData = impactHighlight || experienceHighlight;
- 
+
   const theme = industryThemes[id] || industryThemes['default'];
   const themePrimary = theme.primary.startsWith('brand') ? `text-${theme.primary}` : `text-${theme.primary}`;
   const themeBg = theme.primary.startsWith('brand') ? `bg-${theme.primary}` : `bg-${theme.primary}`;
@@ -234,16 +228,16 @@ export default function IndustriesTemplate() {
   const themeAccentText = theme.accent.startsWith('brand') ? `text-${theme.accent}` : `text-${theme.accent}`;
   const themeAccentBg = theme.accent.startsWith('brand') ? `bg-${theme.accent}` : `bg-${theme.accent}`;
   const themeAccentBorder = theme.accent.startsWith('brand') ? `border-${theme.accent}` : `border-${theme.accent}`;
- 
+
   return (
     <div className="relative min-h-screen overflow-hidden transition-colors duration-500 bg-bgLight dark:bg-bgDark text-brandDark dark:text-white selection:bg-brandPrimary/30 selection:text-brandPrimary">
- 
+
       {/* Dynamic Background Aura */}
       <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
         <div className={`absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-${theme.aura}-500/10 dark:bg-${theme.aura}-500/5 blur-[150px] rounded-full animate-pulse-slow`} />
         <div className={`absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] bg-${theme.accent.split('-')[0]}-400/10 dark:bg-${theme.accent.split('-')[0]}-400/5 blur-[150px] rounded-full animate-pulse-slow delay-1000`} />
       </div>
- 
+
       {/* ================= HERO (MASTERPIECE) ================= */}
       {heroSection ? (
         <section className="relative flex items-center justify-center min-h-screen pt-32 pb-24 overflow-hidden">
@@ -260,7 +254,7 @@ export default function IndustriesTemplate() {
             <div className="absolute inset-0 bg-gradient-to-r from-bgLight/60 via-bgLight/10 to-transparent dark:from-bgDark/70 dark:via-bgDark/20 dark:to-transparent" />
             <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-bgLight dark:from-bgDark to-transparent opacity-80" />
           </div>
- 
+
           <div className="container relative z-10">
             <div className="max-w-4xl">
               <motion.div variants={staggerContainer} initial="initial" animate="animate">
@@ -289,7 +283,7 @@ export default function IndustriesTemplate() {
               </motion.div>
             </div>
           </div>
- 
+
           {/* Scroll Call to Action */}
           <motion.div
             animate={{ y: [0, 15, 0] }}
@@ -319,7 +313,7 @@ export default function IndustriesTemplate() {
           </div>
         </section>
       )}
- 
+
       {/* ================= CHALLENGES (NARRATIVE) ================= */}
       <section className="relative z-10 py-40 bg-white/20 dark:bg-black/10 backdrop-blur-md border-y border-borderLight dark:border-white/5">
         <div className="container">
@@ -366,7 +360,7 @@ export default function IndustriesTemplate() {
           ) : null}
         </div>
       </section>
- 
+
       {/* ================= SOLUTIONS (GRID RE-IMAGINED) ================= */}
       <section className="relative py-40 overflow-hidden bg-bgLight dark:bg-bgDark">
         <div className="container">
@@ -406,7 +400,7 @@ export default function IndustriesTemplate() {
           </div>
         </div>
       </section>
- 
+
       {/* ================= IMPACT HIGHLIGHT (MULTI-STAT REDESIGN) ================= */}
       {impactData && (
         <section className="relative z-10 py-40 overflow-hidden text-white bg-bgDark">
@@ -420,7 +414,7 @@ export default function IndustriesTemplate() {
             />
             <div className="absolute inset-0 bg-gradient-to-b from-bgDark/80 via-transparent to-bgDark/80" />
           </div>
- 
+
           <div className="container relative z-10">
             {impactData.stats && Array.isArray(impactData.stats) ? (
               <div className="grid gap-12 md:grid-cols-3">
@@ -461,7 +455,7 @@ export default function IndustriesTemplate() {
           </div>
         </section>
       )}
- 
+
       {/* ================= WHY RISKMAN (ULTRA PREMIUM) ================= */}
       <section className="relative py-40 overflow-hidden bg-surfaceLight dark:bg-surfaceDark/30">
         <div className="container">
@@ -500,7 +494,7 @@ export default function IndustriesTemplate() {
           </div>
         </div>
       </section>
- 
+
       {/* ================= TRUSTED BRANDS (WITH DESCRIPTION) ================= */}
       {trustedBrands && (
         <section className="relative py-32 overflow-hidden bg-bgLight dark:bg-bgDark border-y border-borderLight dark:border-borderDark">
@@ -539,7 +533,7 @@ export default function IndustriesTemplate() {
           </div>
         </section>
       )}
- 
+
       {/* ================= FAQ (TWO-COLUMN ELEGANCE) ================= */}
       {frequentlyAskedQuestions && (
         <section className="py-40 bg-bgLight dark:bg-bgDark">
@@ -563,7 +557,7 @@ export default function IndustriesTemplate() {
           </div>
         </section>
       )}
- 
+
       {/* ================= FINAL CTA (MASTERPIECE) ================= */}
       <section className="relative px-8 py-48 overflow-hidden">
         <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120vw] h-[120vw] bg-${theme.aura}-500/5 blur-[250px] rounded-full z-0 pointer-events-none`} />
@@ -584,10 +578,10 @@ export default function IndustriesTemplate() {
     </div>
   );
 }
- 
+
 function FAQItem({ faq, index, theme }) {
   const [isOpen, setIsOpen] = useState(false);
- 
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -624,5 +618,3 @@ function FAQItem({ faq, index, theme }) {
     </motion.div>
   );
 }
- 
- 

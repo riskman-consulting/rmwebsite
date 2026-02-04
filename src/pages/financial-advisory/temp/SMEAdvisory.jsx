@@ -10,24 +10,24 @@ const SMEAdvisory = () => {
   ];
 
   return (
-    <section className="py-20 bg-bgLight dark:bg-bgDark transition-colors duration-300">
+    <section className="py-20 transition-colors duration-300 bg-bgLight dark:bg-bgDark">
       <div className="container">
-        <div className="bg-surfaceLight dark:bg-surfaceDark rounded-3xl border border-borderLight dark:border-borderDark overflow-hidden shadow-xl">
+        <div className="overflow-hidden border shadow-xl bg-surfaceLight dark:bg-surfaceDark rounded-3xl border-borderLight dark:border-borderDark">
           <div className="flex flex-col lg:flex-row">
             
             {/* Left Column: Visual/Heading Area */}
-            <div className="lg:w-1/3 bg-brandNavy dark:bg-brandPrimary p-10 lg:p-16 flex flex-col justify-center">
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-6">
+            <div className="flex flex-col justify-center p-10 lg:w-1/3 bg-brandNavy dark:bg-brandPrimary lg:p-16">
+              <h2 className="mb-6 text-3xl font-bold text-white font-heading md:text-4xl">
                 Support for <span className="text-brandAccent">Small Businesses</span>
               </h2>
-              <p className="font-sans text-brandLight/80 text-lg leading-relaxed">
+              <p className="font-sans text-lg leading-relaxed text-brandLight/80">
                 Financial advisory services are highly beneficial for small businesses as well[cite: 57]. We provide the expertise needed to navigate both challenges and opportunities[cite: 59].
               </p>
             </div>
 
             {/* Right Column: Benefits Grid */}
-            <div className="lg:w-2/3 p-10 lg:p-16">
-              <h3 className="font-heading text-2xl font-bold text-brandDark dark:text-white mb-8">
+            <div className="p-10 lg:w-2/3 lg:p-16">
+              <h3 className="mb-8 text-2xl font-bold font-heading text-brandDark dark:text-white">
                 How We Empower Smaller Entities
               </h3>
               
@@ -39,15 +39,15 @@ const SMEAdvisory = () => {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
-                    <p className="font-sans text-gray-600 dark:text-gray-300 leading-snug">
+                    <p className="font-sans leading-snug text-gray-600 dark:text-gray-300">
                       {benefit}
                     </p>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-12 p-6 bg-brandAccent/5 border-l-4 border-brandAccent rounded-r-xl">
-                <p className="font-sans text-brandDark dark:text-brandAccent font-medium italic">
+              <div className="p-6 mt-12 border-l-4 bg-brandAccent/5 border-brandAccent rounded-r-xl">
+                <p className="font-sans italic font-medium text-brandDark dark:text-brandAccent">
                   Financial advisors can be a valuable partner for small businesses, providing the guidance needed to run a successful enterprise[cite: 59].
                 </p>
               </div>

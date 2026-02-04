@@ -1,0 +1,118 @@
+import {
+  ShieldCheck,
+  FileText,
+  Users,
+  Settings,
+} from "lucide-react";
+import riskComplianceImage from '../../assets/images/home/risk-compliance.png';
+ 
+// 4. Risk & Compliance Section
+const RiskCompliance = () => {
+  const services = [
+    {
+      id: 1,
+      title: "Enterprise Risk Management",
+      description:
+        "A structured framework to identify, assess, and manage risks across your organization, aligning with strategic objectives.",
+      icon: ShieldCheck,
+    },
+    {
+      id: 2,
+      title: "Regulatory Risk Compliance",
+      description:
+        "Helping organizations meet regulatory requirements while maintaining operational efficiency.",
+      icon: FileText,
+    },
+    {
+      id: 3,
+      title: "Third-Party Risk Assessments",
+      description:
+        "Assessing and managing risks arising from vendors, partners, and external stakeholders.",
+      icon: Users,
+    },
+    {
+      id: 4,
+      title: "Compliance Risk Program",
+      description:
+        "Designing and implementing compliance programs that strengthen governance and accountability.",
+      icon: Settings,
+    },
+  ];
+ 
+  return (
+    <section
+      className="transition-colors duration-300 section-padding bg-bgLight dark:bg-bgDark"
+    >
+      {/* ✅ MATCH HEADER CONTAINER */}
+      {/* <div className="w-full max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-14"> */}
+      <div className="container">
+        <div className="grid items-start gap-12 lg:grid-cols-2">
+ 
+          {/* LEFT – IMAGE */}
+          <div className="relative">
+            <img
+              src={riskComplianceImage}
+              alt="Risk & Compliance"
+              className="w-full h-full min-h-[520px] lg:min-h-[650px] rounded-3xl object-cover shadow-2xl ring-1 ring-borderLight dark:ring-borderDark"
+            />
+          </div>
+ 
+          {/* RIGHT – CONTENT */}
+          <div>
+            <p className="mb-4 text-sm font-semibold tracking-wider uppercase text-brandNavy dark:text-brandAccent">
+              Key Risk & Compliance
+            </p>
+ 
+            <h2 className="mb-6 text-3xl font-bold leading-tight md:text-4xl text-brandDark dark:text-white">
+              Managing Risk,
+              <br />
+              Ensuring Total
+              <br />
+              Compliance
+            </h2>
+ 
+            <p className="mb-12 text-base leading-relaxed text-brandNavy dark:text-white/70">
+              Explore tailored risk and compliance solutions that safeguard
+              operations, meet regulations, and strengthen enterprise-wide
+              accountability and control.
+            </p>
+ 
+            {/* SERVICES GRID */}
+            <div className="grid gap-6 md:grid-cols-2">
+              {services.map((service) => {
+                const Icon = service.icon;
+ 
+                return (
+                  <div
+                    key={service.id}
+                    className="
+                      group cursor-pointer
+                      transition-all duration-300
+                      hover:translate-y-[-4px]
+                    "
+                  >
+                    <div
+                      className="flex items-center justify-center w-16 h-16 mb-4 text-white transition-all duration-300 shadow-lg rounded-2xl bg-brandDark dark:bg-brandAccent dark:text-brandDark group-hover:bg-brandGold group-hover:text-white group-hover:shadow-xl dark:group-hover:bg-brandDark dark:group-hover:text-white"
+                    >
+                      <Icon size={28} />
+                    </div>
+ 
+                    <h3 className="mb-3 text-xl font-semibold transition-colors duration-300 text-brandDark dark:text-white">
+                      {service.title}
+                    </h3>
+ 
+                    <p className="text-sm leading-relaxed transition-colors duration-300 text-brandNavy dark:text-white/70">
+                      {service.description}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+ 
+export default RiskCompliance;

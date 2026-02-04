@@ -4,9 +4,9 @@ import FAQItem from "../risk-advisory/FAQItem";
 
 const FAQSection = () => {
   return (
-    <section className="relative bg-bgLight py-12 dark:bg-bgDark md:py-16">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl">
+    <section className="relative py-12 bg-bgLight dark:bg-bgDark md:py-16">
+      <div className="container px-4 mx-auto sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
 
           {/* Header */}
           <motion.div
@@ -16,12 +16,12 @@ const FAQSection = () => {
             transition={{ duration: 0.5 }}
             className="mb-16 text-center"
           >
-            <div className="mb-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brandPrimary">
-              <HelpCircle className="h-4 w-4" />
+            <div className="inline-flex items-center gap-2 mb-4 text-xs font-bold tracking-widest uppercase text-brandPrimary">
+              <HelpCircle className="w-4 h-4" />
               FAQs
             </div>
 
-            <h2 className="font-heading text-3xl font-black text-brandDark dark:text-brandLight sm:text-3xl md:text-3xl">
+            <h2 className="text-3xl font-black font-heading text-brandDark dark:text-brandLight sm:text-3xl md:text-3xl">
               Frequently Asked{" "}
               <span className="text-brandPrimary dark:text-brandAccent">
                 Questions

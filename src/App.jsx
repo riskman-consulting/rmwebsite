@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Header from './components/layout/Header'
+
 import Home from './pages/home/Home'
 // import ServicesList from './pages/services/ServicesList'
 import IndustriesList from './pages/industries/IndustriesList'
@@ -20,19 +21,24 @@ import './index.css'
 import { Toaster } from 'react-hot-toast'
 import ScrollToTop from './components/common/ScrollToTop'
 import ThemeToggle from './components/common/ThemeToggle'
-import Events from './temp/MainEvent'
+// import Events from './temp/MainEvent'
+import Events from './pages/events/Events'
 import ServicePage from './pages/services/Services'
-import HeaderTemp from "../src/temp-header/Header"
-import HeaderNew from "./components/layout/Header"
-import EventPage from './pages/event/EventPage'
-import EventHome from './pages/event/Events'
-import IntegritatSolutionPage from './pages/solution/Solution'
+import HeaderTemp from './temp-header/Header'
+import TechSolutions from "./pages/tech-solutions/TechSolutions"
 import RiskAdvisoryPage from './pages/risk-advisory/RiskAdvisoryPage'
-import ERMPage from './pages/erm/ERMPage'
-import Financial_Advisory from './pages/financial-advisory/financial-advisory'
 import FinancialAdvisoryPage from './pages/financial-advisory/temp/FinancialAdvisoryPage'
-import BCPPage from './pages/bcp/BCPPage'
-import RBIAServicePage from './pages/rbia/RBIAServicePage'
+import ERMPage from './pages/erm/ERMPage'
+// import RBIAPage from './pages/rbia/RBIAPage'
+import RBIAPage from './pages/rbia/RBIAPage'
+import BCPPage from "./pages/bcp-dr/BCPPage"
+import CSAPage from "./pages/csa/CSAPage"
+
+import DigitalTransformationHub from './pages/digital/DigitalTransformation'
+import StrategicPMO from './pages/digital/StrategicPMO'
+import ImplementationExcellence from './pages/digital/ImplementationExcellence'
+import SupportServices from './pages/digital/SupportServices'
+
 
 
 function App() {
@@ -52,19 +58,31 @@ function App() {
       <ScrollToTop />
       {/* <ThemeToggle theme={theme} setTheme={setTheme} /> */}
       {/* <Header theme={theme} setTheme={setTheme} /> */}
-      <HeaderTemp/>
-      {/* <HeaderNew/> */}
+      <HeaderTemp />
       <Toaster position="top-right" />
       
+      {/* CRITICAL FIX: Add pt-[128px] to account for fixed header 
+          - Announcement banner: 48px (top-0)
+          - Navbar: 80px (top-[48px])
+          - Total: 128px
+      */}
       <main className="pt-[128px]">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<ServicePage />} />
-          <Route path='/services/risk-advisory' element={<RiskAdvisoryPage/>}/>
-          <Route path='/services/risk-advisory/erm' element={<ERMPage/>}/>
-          <Route path='/services/financial-advisory' element={<FinancialAdvisoryPage/>}/>
-          <Route path='/services/bcp-dr' element={<BCPPage/>}/>
-          <Route path='/services/risk-advisory/rbia' element={<RBIAServicePage/>} />
+           <Route path="/services/bcp-dr" element={<BCPPage/>} />
+           <Route path="/services/risk-advisory/csa" element={<CSAPage/>} />
+          <Route path="/services/risk-advisory" element={<RiskAdvisoryPage />} />
+          <Route path="/services/risk-advisory/erm" element={<ERMPage />} />
+          <Route path="/services/financial-advisory" element={<FinancialAdvisoryPage />} />
+          <Route path="/services/risk-advisory/rbia" element={<RBIAPage/>} />
+
+
+          <Route path='/services/digital-transformation' element={<DigitalTransformationHub/>} />
+          <Route path='/services/digital-transformation/strategic-pmo' element={<StrategicPMO/>} />
+          <Route path='/services/digital-transformation/implementation' element={<ImplementationExcellence/>} />
+          <Route path='/services/digital-transformation/support-services' element={<SupportServices/>} />
+          
           {/* <Route path="/services/:id" element={<ServicesTemplate />} /> */}
           <Route path="/industries" element={<IndustriesList />} />
           <Route path="/industries/:id" element={<IndustriesTemplate />} />
@@ -72,14 +90,14 @@ function App() {
           <Route path="/insights/:slug" element={<BlogSingle />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
-          <Route path="/events" element={<EventHome/>}/>
+          <Route path="/events" element={<Events/>}/>
           <Route path="/careers" element={<Careers />} />
           <Route path="/blog" element={<Navigate to="/blogs" />} />
           <Route path="/blogs" element={<BlogList />} />
           <Route path="/blog/:slug" element={<BlogSingle />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
-          <Route path="/solutions" element={<IntegritatSolutionPage/>}/>
+          <Route path="/solutions" element={<TechSolutions />} />
         </Routes>
       </main>
       

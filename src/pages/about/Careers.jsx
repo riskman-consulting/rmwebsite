@@ -35,7 +35,7 @@ export default function CareersPage() {
   }, [searchQuery]);
 
   return (
-    <div className="min-h-screen bg-[#fafafa] dark:bg-[#050505] text-zinc-900 dark:text-zinc-100 font-sans">
+    <div className="min-h-screen bg-bgLight dark:bg-bgDark text-zinc-900 dark:text-zinc-100 font-sans">
       
       {/* --- HERO SECTION --- */}
       <header className="pt-24 pb-16 px-6 relative overflow-hidden">
@@ -43,12 +43,12 @@ export default function CareersPage() {
         <div className="max-w-6xl mx-auto text-center">
           <motion.span 
             initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
-            className="inline-block px-4 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-900 text-zinc-500 text-[10px] font-bold uppercase tracking-widest mb-6"
+            className="inline-block px-4 py-1.5 rounded-full bg-brandDark dark:bg-brandAccent text-zinc-500 text-[10px] font-bold uppercase tracking-widest mb-6"
           >
             Join the Team
           </motion.span>
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8">
-            Work that <span className="text-zinc-400">matters.</span>
+            Work that <span className="text-brandDark dark:text-brandAccent">matters.</span>
           </h1>
           
           <div className="relative max-w-xl mx-auto">
@@ -56,7 +56,7 @@ export default function CareersPage() {
             <input 
               type="text" 
               placeholder="Search by role or department..."
-              className="w-full pl-12 pr-6 py-4 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl shadow-xl shadow-zinc-200/50 dark:shadow-none outline-none focus:ring-2 ring-brandPrimary/20 transition-all"
+              className="w-full pl-12 pr-6 py-4 bg-white dark:bg-bgSurfaceDark border border-zinc-200 dark:border-zinc-800 rounded-2xl shadow-xl shadow-zinc-200/50 dark:shadow-none outline-none focus:ring-2 ring-brandPrimary/20 transition-all"
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
@@ -72,7 +72,7 @@ export default function CareersPage() {
                 layout
                 key={idx}
                 onClick={() => setSelectedJob(job)}
-                className="group p-8 bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 rounded-3xl cursor-pointer hover:border-brandPrimary transition-all hover:shadow-2xl hover:shadow-brandPrimary/5"
+                className="group p-8 bg-bgLight dark:bg-bgDark border border-zinc-100 dark:border-zinc-800 rounded-3xl cursor-pointer hover:border-brandPrimary transition-all hover:shadow-2xl hover:shadow-brandPrimary/5"
               >
                 <div className="flex justify-between items-start mb-6">
                   <span className="text-[10px] font-bold px-2 py-1 bg-brandPrimary/10 text-brandPrimary rounded uppercase">

@@ -2,14 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaLinkedin } from "react-icons/fa";
 import { ArrowUpRight } from "lucide-react";
-import LeadershipModal from "./LeadershipModal";
-
+import LeadershipModal from "../about/LeadershipModal";
+ 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6, ease: "easeOut" },
 };
-
+ 
 export default function LeadershipSection() {
     const [selectedLeader, setSelectedLeader] = React.useState(null);
   const teamMembers = [
@@ -27,7 +27,7 @@ export default function LeadershipSection() {
       name: "Prasen Pal",
       title: "Partner | ERS & Sustainability",
       bio:
-        "Ex-Deloitte and Genpact professional with 16+ years in internal audit, ESG, taxation, AI and RPA practices.",
+        "A Chartered Accountant and globally certified professional—SCR (GARP), Six Sigma Green Belt, RPA Business Analyst, BRSR & Sustainability—with 18+ years of international experience. Formerly with Deloitte and Genpact ERC, he brings deep expertise in Enterprise Risk Management, Internal Audit, ESG Strategy & Reporting, AI-Powered Automation, and Tax & Regulatory Advisory.",
       image:
         "https://www.riskman.in/wp-content/uploads/2020/09/prasen-pal.jpg",
       linkedin: "https://www.linkedin.com/in/prasen-pal",
@@ -45,14 +45,14 @@ export default function LeadershipSection() {
     },
   ];
  
-
+ 
   return (
-    <section id="co-founders" className="relative bg-bgLight dark:bg-bgDark py-16 sm:py-24 transition-colors duration-300">
-      <div className="container mx-auto px-4 md:px-8 lg:px-12">
-        
+    <section id="co-founders" className="relative px-2 py-8 transition-colors duration-300 bg-bgLight dark:bg-bgDark md:py-16 sm:py-8">
+      <div className="container px-4 mx-auto md:px-8 lg:px-12">
+       
         {/* HEADER - Consistent with KeyServices & FAQ */}
-        <div className="text-left mb-16 max-w-4xl">
-          <motion.p 
+        <div className="max-w-4xl mb-16 text-left">
+          <motion.p
             variants={fadeInUp}
             initial="initial"
             whileInView="animate"
@@ -61,18 +61,18 @@ export default function LeadershipSection() {
           >
             Visionary Mindset
           </motion.p>
-
-          <motion.h2 
+ 
+          <motion.h2
             variants={fadeInUp}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="mb-6 text-3xl font-black md:text-5xl leading-tight text-brandDark dark:text-white"
+            className="mb-6 text-3xl font-black leading-tight md:text-5xl text-brandDark dark:text-white"
           >
             Our <span className="text-transparent bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text">Leadership</span> Team
           </motion.h2>
-
-          <motion.p 
+ 
+          <motion.p
             variants={fadeInUp}
             initial="initial"
             whileInView="animate"
@@ -82,7 +82,7 @@ export default function LeadershipSection() {
             Meet the visionary leaders driving RiskMan's mission to transform industry complexities into strategic opportunities.
           </motion.p>
         </div>
-
+ 
         {/* TEAM GRID */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {teamMembers.map((m, i) => (
@@ -97,44 +97,44 @@ export default function LeadershipSection() {
             >
               {/* Image Section with Refined Border */}
               <div className="relative flex justify-center mb-8">
-                <div className="relative p-1 rounded-full border-2 border-dashed border-brandGold/20 dark:border-brandAccent/20 group-hover:border-solid group-hover:border-brandGold transition-all duration-500">
+                <div className="relative p-1 transition-all duration-500 border-2 border-dashed rounded-full border-brandGold/20 dark:border-brandAccent/20 group-hover:border-solid group-hover:border-brandGold">
                   <img
                     src={m.image}
                     alt={m.name}
-                    className="object-cover transition-all duration-700 rounded-full w-32 h-32 grayscale group-hover:grayscale-0 group-hover:scale-105"
+                    className="object-cover w-32 h-32 transition-all duration-700 rounded-full grayscale group-hover:grayscale-0 group-hover:scale-105"
                   />
                 </div>
-                
+               
                 {/* LinkedIn Floating Icon */}
                 <a
                   href={m.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => e.stopPropagation()}
-                  className="absolute bottom-0 right-1/3 translate-x-10 w-10 h-10 bg-brandDark dark:bg-brandAccent text-white dark:text-brandDark rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110"
+                  className="absolute bottom-0 flex items-center justify-center w-10 h-10 text-white transition-transform translate-x-10 rounded-full shadow-lg right-1/3 bg-brandDark dark:bg-brandAccent dark:text-brandDark hover:scale-110"
                 >
                   <FaLinkedin size={18} />
                 </a>
               </div>
-
+ 
               {/* Text Content - Aligned with FAQ spacing */}
               <div className="text-center">
-                <h3 className="mb-2 text-2xl font-black text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent transition-colors">
+                <h3 className="mb-2 text-2xl font-black transition-colors text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
                   {m.name}
                 </h3>
-                <p className="mb-4 text-xs font-black uppercase tracking-widest text-brandGold dark:text-brandAccent">
+                <p className="mb-4 text-xs font-black tracking-widest uppercase text-brandGold dark:text-brandAccent">
                   {m.title}
                 </p>
                 <p className="mb-8 text-sm leading-relaxed text-gray-600 dark:text-white/60 line-clamp-3">
                   {m.bio}
                 </p>
-
+ 
                 {/* Bottom Action - Style from KeyServices */}
-                <div className="flex items-center justify-center gap-2 text-xs font-black uppercase tracking-widest text-brandNavy/40 dark:text-white/30 group-hover:text-brandDark dark:group-hover:text-white transition-all">
+                <div className="flex items-center justify-center gap-2 text-xs font-black tracking-widest uppercase transition-all text-brandNavy/40 dark:text-white/30 group-hover:text-brandDark dark:group-hover:text-white">
                   View Full Bio <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </div>
               </div>
-
+ 
               {/* Bottom Accent Line */}
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-1.5 w-0 bg-brandGold dark:bg-brandAccent transition-all duration-500 group-hover:w-1/2 rounded-t-full" />
             </motion.div>

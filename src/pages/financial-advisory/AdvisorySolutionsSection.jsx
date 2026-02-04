@@ -35,11 +35,11 @@ const solutions = [
 
 const AdvisorySolutionsSection = () => {
   return (
-    <section className="bg-white py-10 md:py-12 dark:bg-bgDark">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="py-10 bg-white md:py-12 dark:bg-bgDark">
+      <div className="px-6 mx-auto max-w-7xl">
 
         {/* Header */}
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="max-w-3xl mx-auto text-center">
 
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -55,7 +55,7 @@ const AdvisorySolutionsSection = () => {
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="mx-auto mt-6 h-1 w-24 rounded-full bg-brandPrimary dark:bg-brandAccent"
+            className="w-24 h-1 mx-auto mt-6 rounded-full bg-brandPrimary dark:bg-brandAccent"
           />
 
           <motion.p
@@ -75,7 +75,7 @@ const AdvisorySolutionsSection = () => {
         </div>
 
         {/* Solutions Grid */}
-        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 mt-16 md:grid-cols-2 lg:grid-cols-3">
 
           {solutions.map((item, index) => (
             <motion.div
@@ -84,7 +84,7 @@ const AdvisorySolutionsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.07 }}
-              className="rounded-2xl border border-borderLight bg-surfaceLight p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-borderDark dark:bg-surfaceDark"
+              className="p-8 transition border shadow-sm rounded-2xl border-borderLight bg-surfaceLight hover:-translate-y-1 hover:shadow-lg dark:border-borderDark dark:bg-surfaceDark"
             >
               <h3 className="mb-4 text-lg font-semibold text-slate-900 dark:text-brandLight">
                 {item.title}

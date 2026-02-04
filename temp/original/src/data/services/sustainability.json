@@ -1,0 +1,223 @@
+{
+  "heroSection": {
+    "title": "Drive sustainable impact",
+    "description": "We help you unlock long-term value by embedding sustainability into your strategy, operations, and risk frameworks — enabling responsible growth.",
+    "primaryCTA": {
+      "text": "Talk to us",
+      "action": "/contact"
+    },
+    "bgImage": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80",
+    "heroImage": {
+      "src": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80",
+      "alt": "Hands holding a growing tree symbolizing sustainability"
+    }
+  },
+ 
+  "howWeHelp": {
+    "sectionLabel": "Our Services",
+    "title": "How we can help you at RiskMan",
+    "description": "Our experts bring deep industry knowledge, data-led insights, and actionable strategies to support your sustainability journey.",
+    "services": [
+      {
+        "title": "Sustainability Reporting",
+        "description": "We help organizations craft transparent, credible sustainability reports aligned with global standards like GRI, SASB, and BRSR.",
+        "image": "https://images.unsplash.com/photo-1516534775068-bb57a39bdf60?w=600&q=80"
+      },
+      {
+        "title": "Risk Assessments",
+        "description": "Our assessments identify and prioritize ESG risks and opportunities critical to your business and stakeholders.",
+        "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80"
+      },
+      {
+        "title": "GHG Accounting",
+        "description": "We calculate Scope 1, 2, and 3 emissions using internationally accepted protocols to support net-zero planning.",
+        "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&q=80"
+      },
+      {
+        "title": "ESG Advisory",
+        "description": "From strategy design to implementation, we embed ESG into operations, governance, and compliance.",
+        "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80"
+      }
+    ]
+  },
+ 
+  "valueSection": {
+    "title": "Sustainability transforms business, drives value and shapes the future",
+    "description": "Sustainability is no longer optional. Organizations that embrace it outperform peers in growth, reputation, and investor trust.",
+    "stat": {
+      "value": "67%",
+      "label": "of consumers prefer sustainable brands"
+    },
+    "keyPoints": [
+      "ESG builds trust",
+      "ESG enhances resilience",
+      "ESG delivers business value"
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=700&q=80",
+      "alt": "Team working on ESG strategy"
+    }
+  },
+ 
+  "processSection": {
+    "title": "We work for better growing result step-by-step",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Assess Risks & Opportunities",
+        "description": "Identify key ESG factors through stakeholder engagement and materiality assessments."
+      },
+      {
+        "step": 2,
+        "title": "Define Strategy & Goals",
+        "description": "Set measurable ESG objectives aligned with business priorities and frameworks like GRI, SASB, and BRSR."
+      },
+      {
+        "step": 3,
+        "title": "Implement & Integrate",
+        "description": "Embed ESG into governance, operations, and supply chains ensuring accountability and impact."
+      },
+      {
+        "step": 4,
+        "title": "Monitor, Report & Improve",
+        "description": "Track ESG performance, publish transparent reports, and refine strategies through data and feedback."
+      }
+    ]
+  },
+ 
+  "trustedBy": {
+    "title": "Backed by experience. Trusted by top enterprises",
+    "description": "From global enterprises to fast-growing innovators, organizations across industries trust us to deliver measurable impact.",
+    "logos": [
+      {
+        "name": "CARE Health",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Care-Health-Insurance-Walk-in-Recruitment-2-1.webp"
+      },
+      {
+        "name": "Electrosteel",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Electrosteel-logo-3-150x35-1.webp"
+
+      },
+      {
+        "name": "IndiaTV",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Indiatv-logo-1-1.webp"
+      },
+      {
+        "name": "Indorama",
+        "logo": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Indorama_Ventures_Logo.svg-2.webp"
+      }
+    ]
+  },
+ 
+  "whyRiskMan": {
+    "title": "Why RiskMan for sustainability",
+    "points": [
+      "ESG strategy development aligned with business objectives",
+      "Industry experience across sectors",
+      "Data-driven insights",
+      "End-to-end consulting",
+      "Continuous improvement"
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80",
+      "alt": "Team working on ESG strategy"
+    }
+  },
+ 
+  "impactStats": [
+    {
+      "value": "67%",
+      "label": "Consumers prefer sustainable brands"
+    },
+    {
+      "value": "88%",
+      "label": "Investors consider ESG performance"
+    },
+    {
+      "value": "4.7x",
+      "label": "Returns for strong ESG companies"
+    },
+    {
+      "value": "20%",
+      "label": "Faster risk mitigation"
+    }
+  ],
+ 
+  "testimonials": {
+    "title": "What our clients say about us",
+    "reviews": [
+      {
+        "quote": "RiskMan’s consulting expertise helped us streamline operations and improve compliance across regions. Their insights were actionable and results-driven.",
+        "author": "Head of Compliance",
+        "organization": "Global Manufacturing Firm"
+      },
+      {
+        "quote": "The ESG advisory team brought clarity and structure to our sustainability journey and aligned our goals with global reporting standards.",
+        "author": "Sustainability Lead",
+        "organization": "Leading Retail Chain"
+      }
+    ]
+  },
+ 
+  "latestInsights": {
+    "title": "Latest insights",
+    "description": "Discover how embracing sustainability can drive long-term business growth and resilience.",
+    "cta": {
+      "text": "Read All Posts",
+      "action": "/insights"
+    },
+    "posts": [
+      {
+        "title": "Strategic Risk Management: A Proactive Approach to Long-Term Business Success",
+        "date": "June 25, 2025"
+      },
+      {
+        "title": "Sitting with your basic goodness stops time",
+        "date": "April 20, 2024"
+      }
+    ]
+  },
+ 
+  "frequentlyAskedQuestions": [
+      {
+        "id":1,
+        "question": "What is ESG Advisory?",
+        "answer": "ESG Advisory helps businesses integrate environmental, social, and governance factors into strategy and operations."
+      },
+      {
+        "id":2,
+        "question": "How does ESG Advisory benefit businesses?",
+        "answer": "It improves compliance, risk management, investor confidence, and long-term value creation."
+      },
+      {
+        "id":3,
+        "question": "Which industries need ESG Advisory?",
+        "answer": "Any industry facing regulatory, environmental, or stakeholder scrutiny can benefit."
+      },
+      {
+        "id":4,
+        "question": "What is an ESG Strategy?",
+        "answer": "An ESG strategy defines goals, metrics, and initiatives to manage sustainability risks and opportunities."
+      },
+      {
+        "id":5,
+        "question": "How long does an ESG Advisory project take?",
+        "answer": "Timelines vary based on scope, complexity, and regulatory requirements."
+      },
+      {
+        "id":6,
+        "question": "Why choose RiskMan for ESG Advisory?",
+        "answer": "RiskMan combines industry expertise, global frameworks, and data-driven execution."
+      },
+      {
+        "id":7,
+        "question": "Can ESG Advisory improve brand reputation?",
+        "answer": "Yes, strong ESG practices enhance trust with customers, investors, and regulators."
+      },
+      {
+        "id":8,
+        "question": "Is my business size suitable for your consultancy services?",
+        "answer": "Yes, we work with startups, SMEs, and large enterprises."
+      }
+    ]
+  }

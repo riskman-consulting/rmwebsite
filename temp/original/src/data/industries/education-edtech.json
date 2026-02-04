@@ -1,0 +1,144 @@
+{
+  "id": "education-edtech",
+  "title": "Education & EdTech",
+  "heroSection": {
+    "tag": "Sector Expertise",
+    "title": "Education & EdTech",
+    "description": "Drive educational impact and growth through risk-informed solutions, compliance, and digital transformations.",
+    "primaryCTA": {
+      "text": "Talk to us",
+      "action": "/contact"
+    },
+    "heroImage": {
+      "src": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1400",
+      "alt": "Modern university campus and digital learning environment"
+    }
+  },
+  "challengeSection": {
+    "title": "Turning Challenges into Opportunity",
+    "description": "The education sector faces complexities like data protection, digital transformation, regulatory compliance, and remote learning management. RiskMan helps institutions scale learning experiences securely while meeting local and global compliance standards.",
+    "supportingText": "Our digital frameworks reduced cybersecurity incidents by 98% for university networks, boosting institutional trust.",
+    "challenges": [
+      "Securing student and institutional data across platforms",
+      "Ensuring compliance with FERPA, GDPR, and education-specific policies",
+      "Managing EdTech vendor and partner risk"
+    ],
+    "image": {
+      "src": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1000",
+      "alt": "Students collaborating in a tech-enabled classroom"
+    }
+  },
+  "solutionsSection": {
+    "title": "Our Solutions for Education Sector",
+    "items": [
+      {
+        "id": "01",
+        "title": "Cybersecurity",
+        "description": "Secure your digital content, networks, and streaming platforms against evolving threats with end-to-end security architecture.",
+        "link": "/services/cybersecurity"
+      },
+      {
+        "id": "02",
+        "title": "Data Privacy & Protection",
+        "description": "Ensure GDPR, FERPA, and regional compliance while building trust with responsible data practices.",
+        "link": "/services/data-privacy-protection"
+      },
+      {
+        "id": "03",
+        "title": "Training & Outsourcing",
+        "description": "Upskill educators and streamline education process delivery with specialized training modules.",
+        "link": "/services/compliance-regulatory"
+      },
+      {
+        "id": "04",
+        "title": "Consulting",
+        "description": "Optimize operations and manage transformation with strategic advisory and process automation.",
+        "link": "/services/risk-advisory"
+      }
+    ]
+  },
+  "impactHighlight": {
+    "metric": "100+",
+    "label": "Education & Tech Clients",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1610484826967-09c5720778c7?w=1400",
+      "alt": "Student using VR for immersive learning"
+    }
+  },
+  "trustedBrands": {
+    "title": "Trusted by Learning Leaders",
+    "description": "We partner with institutions and EdTech firms to protect data, ensure compliance, and scale digital learning.",
+    "logos": [
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Jindal-Renewables-1.webp",
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/Nexval-logo-150x40-1.webp",
+      "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/The_World_Bank_logo.svg-1.webp"
+    ]
+  },
+  "whyRiskMan": {
+    "title": "Why partner with RiskMan",
+    "description": "A trusted name in industry-aligned risk and compliance solutions.",
+    "features": [
+      {
+        "icon": "Briefcase",
+        "title": "Industry Experience",
+        "description": "Deep experience in education risk, digital transformation, and compliance ecosystems."
+      },
+      {
+        "icon": "Global",
+        "title": "Global Delivery",
+        "description": "Global delivery model aligned to regional and international regulations."
+      },
+      {
+        "icon": "Settings",
+        "title": "Tailor Solutions",
+        "description": "Agile consulting and cyber risk strategies tailored to the fast-paced EdTech environment."
+      },
+      {
+        "icon": "UserCheck",
+        "title": "Experienced Professionals",
+        "description": "Experts with extensive experience across education and digital sectors."
+      }
+    ]
+  },
+  "ctaSection": {
+    "title": "Scale learning, and lead in digital education.",
+    "cta": {
+      "text": "Let’s Talk",
+      "action": "/contact"
+    }
+  },
+  "frequentlyAskedQuestions": [
+    {
+      "question": "What cybersecurity risks do education institutions face today?",
+      "answer": "Threats like ransomware, phishing, and data breaches targeting student PII and institutional IP."
+    },
+    {
+      "question": "How does RiskMan help with GDPR or FERPA compliance?",
+      "answer": "We implement governance frameworks, privacy controls, and audits aligned with global and educational regulations."
+    },
+    {
+      "question": "What is Third-Party Risk Management in EdTech?",
+      "answer": "TPRM ensures that platform vendors and partners meet strict security and data protection requirements."
+    },
+    {
+      "question": "Do you help with process automation in learning workflows?",
+      "answer": "Yes, we streamline administrative and learning workflows using risk-aware automation."
+    },
+    {
+      "question": "Can you help with ISO or SOC certifications for EdTech firms?",
+      "answer": "Yes, including ISO 27001, SOC 1, and SOC 2 to prove security posture to stakeholders."
+    },
+    {
+      "question": "How fast can we deploy cybersecurity solutions?",
+      "answer": "Initial security controls can be implemented within weeks, tailored to the academic calendar."
+    },
+    {
+      "question": "What makes RiskMan different from IT firms?",
+      "answer": "We combine risk, compliance, cybersecurity, and educational strategy into a single approach."
+    },
+    {
+      "question": "Do you offer support for international expansion?",
+      "answer": "Yes, we help institutions align with international data protection standards as they scale globally."
+    }
+  ]
+}

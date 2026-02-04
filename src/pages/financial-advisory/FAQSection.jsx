@@ -41,8 +41,8 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="bg-white py-10 md:py-12 dark:bg-bgDark">
-      <div className="mx-auto max-w-4xl px-6">
+    <section className="py-10 bg-white md:py-12 dark:bg-bgDark">
+      <div className="max-w-4xl px-6 mx-auto">
 
         {/* Header */}
         <div className="text-center">
@@ -60,7 +60,7 @@ const FAQSection = () => {
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true }}
-            className="mx-auto mt-6 h-1 w-24 rounded-full bg-brandPrimary dark:bg-brandAccent"
+            className="w-24 h-1 mx-auto mt-6 rounded-full bg-brandPrimary dark:bg-brandAccent"
           />
 
         </div>
@@ -71,12 +71,12 @@ const FAQSection = () => {
           {faqs.map((item, index) => (
             <div
               key={index}
-              className="overflow-hidden rounded-2xl border border-borderLight bg-surfaceLight shadow-sm dark:border-borderDark dark:bg-surfaceDark"
+              className="overflow-hidden border shadow-sm rounded-2xl border-borderLight bg-surfaceLight dark:border-borderDark dark:bg-surfaceDark"
             >
               {/* Question */}
               <button
                 onClick={() => toggle(index)}
-                className="flex w-full items-center justify-between px-6 py-5 text-left"
+                className="flex items-center justify-between w-full px-6 py-5 text-left"
               >
                 <span className="font-semibold text-slate-900 dark:text-brandLight">
                   {item.q}

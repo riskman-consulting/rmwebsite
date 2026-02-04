@@ -1,0 +1,455 @@
+import React, { useState, useMemo, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Users,
+  Briefcase,
+  Globe,
+  Heart,
+  Star,
+  LayoutGrid,
+  X,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
+
+import { Riskman_Aniversary_5_year_images } from "../../assets/riskman-anniversary/year-5";
+// import journeyImages from "../../assets/journey";
+import { IIA_Internal_Leadership_2025_images } from "../../assets/internal-leadership/2025";
+
+
+import {Audit_Leaders_Summit_Mumbai} from "../../assets/journey/audit_leaders_summit_mumbai_november_2024";
+
+// import {TEAM_LUNCH_DECEMBER_2023_Images} from "../../assets/journey/team_lunch_december"
+import {GAME_SESSION_WITH_TEAM} from "../../assets/journey/game_session/"
+import {CIA_CELEBRATION_WITH_TEAM_Images} from "../../assets/journey/cia_celebration"
+import {Diwali_Christmas_Zomato_Team_Images} from "../../assets/journey/diwali_and_christmas_celebration"
+
+import { Vietman_Image } from "../../assets/chu-chi-vietnam";
+import { Philippiness_Image } from "../../assets/philippiness";
+import { Myanmar_Image } from "../../assets/myanmar";
+import { Indonesia_Image } from "../../assets/indonesia";
+
+import { Prasen_Pal_Germany_Image } from "../../assets/international-assignment/germany";
+import { Prasen_Pal_Indonesia_Image } from "../../assets/international-assignment/indonesia";
+import { TEAM_LUNCH_DECEMBER_2023_Images } from './../../assets/journey/team_lunch_dinner';
+import { IIA_MUMBAI_MARCH_2025_Images } from "../../assets/journey/iia_conference_mumbai/2025";
+import { China_Images } from "../../assets/china";
+
+
+const GLOBAL_LEADERSHIP_FILTER = "Global Leadership Journey";
+
+export const PHOTOS = [
+  { id: 1, category: "5 Year Celebration", title: "RiskMan 5 Year Anniversary", image: Riskman_Aniversary_5_year_images[0], description: "Celebrating 5 years of excellence and growth" },
+  { id: 2, category: "5 Year Celebration", title: "Anniversary Celebration Moments", image: Riskman_Aniversary_5_year_images[1], description: "Team celebrating milestone achievement" },
+  { id: 3, category: "5 Year Celebration", title: "Team Celebrating 5 Years", image: Riskman_Aniversary_5_year_images[2], description: "Milestone celebration highlights" },
+  { id: 4, category: "5 Year Celebration", title: "Milestone Celebration Highlights", image: Riskman_Aniversary_5_year_images[3], description: "Celebrating company milestone" },
+  { id: 5, category: "5 Year Celebration", title: "RiskMan Growth Journey", image: Riskman_Aniversary_5_year_images[4], description: "Journey of growth and success" },
+
+  { id: 6, category: "Team Lunches & Dinner", title: "Team Lunch at Zomato", image:TEAM_LUNCH_DECEMBER_2023_Images[12], description: "Team lunch gathering at Zomato office" },
+  { id: 7, category: "Team Lunches & Dinner", title: "Team Bonding Lunch", image: TEAM_LUNCH_DECEMBER_2023_Images[1], description: "Casual team lunch gathering" },
+  { id: 8, category: "Team Lunches & Dinner", title: "Team Lunch at Vedic Village", image:TEAM_LUNCH_DECEMBER_2023_Images[0], description: "Team lunch gathering at Vedic Village" },
+  { id: 9, category: "Team Lunches & Dinner", title: "Team Dinner", image: TEAM_LUNCH_DECEMBER_2023_Images[8], description: "Team bonding under vibrant lights" },
+  { id: 10, category: "Team Lunches & Dinner", title: "Early Team Bonding Dinner", image: TEAM_LUNCH_DECEMBER_2023_Images[9], description: "Festive team dinner with colorful decorations" },
+  { id: 11, category: "Team Lunches & Dinner", title: "Team Dinner", image: TEAM_LUNCH_DECEMBER_2023_Images[7], description: "Cozy team gathering in purple ambiance" },
+  { id: 12, category: "Team Lunches & Dinner", title: "Team Dinner", image: TEAM_LUNCH_DECEMBER_2023_Images[3], description: "Year-end celebration dinner" },
+  { id: 13, category: "Team Lunches & Dinner", title: "Team Dinner Moments", image: TEAM_LUNCH_DECEMBER_2023_Images[4], description: "Large team gathering at outdoor venue" },
+  { id: 14, category: "Team Lunches & Dinner", title: "Year-End Team Dinner", image: TEAM_LUNCH_DECEMBER_2023_Images[5], description: "Team dinner celebration moments" },
+  { id: 15, category: "Team Lunches & Dinner", title: "Team Dinner Celebration", image: TEAM_LUNCH_DECEMBER_2023_Images[6], description: "Team bonding over dinner" },
+  {id:36,category:"Team Lunches & Dinner",title:"Team Dinner Celebration",image:TEAM_LUNCH_DECEMBER_2023_Images[13],description:"Team bonding over dinner"},
+  {id:37,category:"Team Lunches & Dinner",title:"Team Dinner Celebration",image:TEAM_LUNCH_DECEMBER_2023_Images[14],description:"Team bonding over dinner"},
+  {id:38,category:"Team Lunches & Dinner",title:"Team Dinner Celebration",image:TEAM_LUNCH_DECEMBER_2023_Images[15],description:"Team bonding over dinner"},
+
+
+  { id: 16, category: "Office Culture", title: "Team Member Birthday", image: TEAM_LUNCH_DECEMBER_2023_Images[2], description: "Celebrating team member's special day" },
+  { id: 17, category: "Office Culture", title: "Diwali Celebration", image: Diwali_Christmas_Zomato_Team_Images[0], description: "Team in traditional attire for Diwali" },
+  { id: 18, category: "Office Culture", title: "Festive Office Moments", image: Diwali_Christmas_Zomato_Team_Images[1], description: "Celebrating festivals together" },
+  { id: 19, category: "Office Culture", title: "Celebrating Together", image: Diwali_Christmas_Zomato_Team_Images[2], description: "Team in Santa hats celebrating Christmas" },
+  { id: 20, category: "Office Culture", title: "Holiday Team Celebration", image: Diwali_Christmas_Zomato_Team_Images[3], description: "Holiday season celebrations" },
+  { id: 21, category: "Office Culture", title: "Festive Workplace Vibes", image: Diwali_Christmas_Zomato_Team_Images[4], description: "Year-end office celebration" },
+  { id: 22, category: "Office Culture", title: "Year-End Celebrations", image: Diwali_Christmas_Zomato_Team_Images[5], description: "Festive workplace atmosphere" },
+  { id: 23, category: "Office Culture", title: "Game Session", image: GAME_SESSION_WITH_TEAM[0], description: "Badminton game session with colleagues" },
+  { id: 24, category: "Office Culture", title: "CIA Celebration", image: CIA_CELEBRATION_WITH_TEAM_Images[0], description: "Team celebrating CIA promotion" },
+  {id:35,category:"Office Culture",title:"CIA Celebration",image:CIA_CELEBRATION_WITH_TEAM_Images[1],description:"Team celebrating CIA promotion"},
+
+
+  // { id: 25, category: "Meetings & Discussions", title: "Professional Discussions", image: IIA_MUMBAI_MARCH_2025_Images[2], description: "Knowledge sharing session" },
+  { id: 26, category: "Meetings & Discussions", title: "Strategy Meeting", image: IIA_Internal_Leadership_2025_images[0], description: "Important strategy discussion" },
+  // { id: 31, category: "Meetings & Discussions", title: "Audit Leaders Summit", image: Audit_Leaders_Summit_Mumbai[0], description: "Summit in Mumbai" },
+  // { id: 32, category: "Meetings & Discussions", title: "Panel Discussion", image: Audit_Leaders_Summit_Mumbai[1], description: "Panel with industry leaders" },
+  // { id: 33, category: "Meetings & Discussions", title: "Leadership Exchange", image: Audit_Leaders_Summit_Mumbai[2], description: "Networking session" },
+  // { id: 34, category: "Meetings & Discussions", title: "Audit Networking", image: Audit_Leaders_Summit_Mumbai[3], description: "Networking with professionals" },
+];
+
+const ENGAGEMENTS = [
+  {
+    country: "Vietnam",
+    images: [Vietman_Image[0], Vietman_Image[1], Vietman_Image[2], Vietman_Image[3]],
+  },
+  {
+    country: "Indonesia",
+    images: [Indonesia_Image[0], Indonesia_Image[1]],
+  },
+  {
+    country: "Philippines",
+    images: [Philippiness_Image[0], Philippiness_Image[1]],
+  },
+  {
+    country: "Myanmar",
+    images: [Myanmar_Image[0], Myanmar_Image[1]],
+  },
+  {
+    country:"China",
+    images:[China_Images[4],China_Images[5],China_Images[0],China_Images[1],China_Images[3],China_Images[2]]
+  }
+];
+
+const FILTERS = [
+  { name: "All", icon: LayoutGrid },
+  { name: "5 Year Celebration", icon: Star },
+  { name: "Team Lunches & Dinner", icon: Users },
+  { name: "Meetings & Discussions", icon: Briefcase },
+  { name: "Office Culture", icon: Heart },
+  { name: "International Assignments", icon: Globe },
+  { name: "Global Leadership Journey", icon: Globe }
+];
+
+/* ======================================================
+   ENHANCED LIGHTBOX WITH NAVIGATION
+====================================================== */
+const Lightbox = ({ images, currentIndex, onClose, onNavigate }) => {
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft" && currentIndex > 0) onNavigate(currentIndex - 1);
+      if (e.key === "ArrowRight" && currentIndex < images.length - 1) onNavigate(currentIndex + 1);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "auto";
+    };
+  }, [onClose, onNavigate, currentIndex, images.length]);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 z-[100] bg-surfaceLight dark:bg-surfaceDark backdrop-blur-sm flex items-center justify-center p-4"
+    >
+      {/* Close Button */}
+      <button
+        onClick={onClose}
+        className="absolute z-10 p-3 transition-colors rounded-full top-4 right-4 md:top-8 md:right-8 text-white/80 hover:text-white bg-brandNavy/50 hover:bg-brandNavy/70"
+      >
+        <X className="w-6 h-6" />
+      </button>
+
+      {/* Navigation Buttons */}
+      {images.length > 1 && (
+        <>
+          <button
+            onClick={() => onNavigate(currentIndex - 1)}
+            disabled={currentIndex === 0}
+            className={`absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-10 bg-brandNavy/50 hover:bg-brandNavy/70 p-3 rounded-full transition-all ${
+              currentIndex === 0 ? "opacity-30 cursor-not-allowed" : "text-white/80 hover:text-white"
+            }`}
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          <button
+            onClick={() => onNavigate(currentIndex + 1)}
+            disabled={currentIndex === images.length - 1}
+            className={`absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-10 bg-brandNavy/50 hover:bg-brandNavy/70 p-3 rounded-full transition-all ${
+              currentIndex === images.length - 1 ? "opacity-30 cursor-not-allowed" : "text-white/80 hover:text-white"
+            }`}
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+        </>
+      )}
+
+      {/* Image Counter */}
+      {images.length > 1 && (
+        <div className="absolute px-4 py-2 text-sm font-medium text-white -translate-x-1/2 rounded-full bottom-8 left-1/2 bg-brandNavy/70">
+          {currentIndex + 1} / {images.length}
+        </div>
+      )}
+
+      {/* Image */}
+      <motion.img
+        key={currentIndex}
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.3 }}
+        src={images[currentIndex]}
+        className="max-h-[85vh] max-w-[90vw] object-contain rounded-2xl shadow-2xl"
+        alt="Lightbox"
+      />
+    </motion.div>
+  );
+};
+
+export default function MomentsThatMatter() {
+  const [activeFilter, setActiveFilter] = useState("All");
+  const [lightboxImages, setLightboxImages] = useState([]);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  const filteredPhotos = useMemo(() => {
+    if (activeFilter === "All") return PHOTOS;
+    return PHOTOS.filter((p) => p.category === activeFilter);
+  }, [activeFilter]);
+
+  const openLightbox = (image) => {
+    setLightboxImages([image]);
+    setLightboxIndex(0);
+  };
+
+  const closeLightbox = () => {
+    setLightboxImages([]);
+    setLightboxIndex(0);
+  };
+
+  return (
+    <section id="moments-that-matters" className="relative px-4 py-16 md:py-24 lg:py-32 bg-surfaceLight dark:bg-surfaceDark">
+      <div className="mx-auto max-w-7xl">
+        
+        {/* HEADER */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mb-12 text-center md:mb-16"
+        >
+          <h1 className="mb-4 text-4xl font-bold text-transparent md:text-5xl lg:text-6xl bg-gradient-to-r from-brandNavy via-brandDark to-brandNavy dark:from-brandAccent dark:via-brandGold dark:to-brandAccent bg-clip-text">
+            Moments That Matter
+          </h1>
+          <p className="max-w-2xl mx-auto text-lg md:text-xl text-brandPrimary/70 dark:text-white/70">
+            Capturing our journey of excellence, collaboration, and growth
+          </p>
+        </motion.div>
+
+        {/* ENHANCED FILTER BAR */}
+        <div className="flex flex-wrap justify-center gap-3 mb-12 md:mb-16">
+          {FILTERS.map((f, index) => {
+            const Icon = f.icon;
+            const isActive = activeFilter === f.name;
+            return (
+              <motion.button
+                key={f.name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.05 }}
+                onClick={() => setActiveFilter(f.name)}
+                className={`
+                  relative px-5 py-2.5 rounded-full text-xs md:text-sm font-bold uppercase 
+                  flex items-center gap-2 transition-all duration-300 overflow-hidden
+                  ${isActive
+                    ? "bg-gradient-to-r from-brandNavy to-brandDark dark:from-brandAccent dark:to-brandGold text-white shadow-lg scale-105"
+                    : "bg-white dark:bg-surfaceDark text-brandPrimary/70 dark:text-white/70 hover:bg-brandAccent/10 dark:hover:bg-brandNavy/50 border border-brandAccent/20 dark:border-brandGold/20"
+                  }
+                `}
+              >
+                {isActive && (
+                  <motion.div
+                    layoutId="activeFilter"
+                    className="absolute inset-0 bg-gradient-to-r from-brandNavy to-brandDark dark:from-brandAccent dark:to-brandGold"
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  />
+                )}
+                <Icon className={`w-4 h-4 relative z-10 ${isActive ? 'animate-pulse' : ''}`} />
+                <span className="relative z-10">{f.name}</span>
+              </motion.button>
+            );
+          })}
+        </div>
+
+        {/* PHOTO GRID - MASONRY LAYOUT */}
+        {activeFilter !== "International Assignments" && activeFilter !== GLOBAL_LEADERSHIP_FILTER && (
+          <motion.div
+            key={activeFilter}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            layout
+            className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+          >
+            {filteredPhotos.map((p, index) => (
+              <motion.div
+                key={p.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.05 }}
+                whileHover={{ scale: 1.05 }}
+                onClick={() => openLightbox(p.image)}
+                className="overflow-hidden transition-all duration-300 shadow-lg cursor-pointer group rounded-2xl hover:shadow-xl h-72"
+              >
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+                />
+              </motion.div>
+            ))}
+          </motion.div>
+        )}
+
+        {/* INTERNATIONAL ASSIGNMENTS */}
+        {activeFilter === "International Assignments" && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4"
+          >
+            {ENGAGEMENTS.map((e, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 }}
+                className="relative overflow-hidden shadow-lg cursor-pointer rounded-2xl group"
+              >
+                {/* Main Image Card */}
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="relative overflow-hidden bg-black h-96"
+                >
+                  <img
+                    src={e.images[0]}
+                    alt={e.country}
+                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+                  />
+                  
+                  {/* Country Name Overlay */}
+                  <div className="absolute inset-0 flex items-end justify-start p-6 bg-gradient-to-t from-brandNavy/80 via-brandNavy/20 to-transparent">
+                    <h3 className="text-3xl font-bold text-white">{e.country}</h3>
+                  </div>
+
+                  {/* Hover - Show all images count */}
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 1 }}
+                    className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-brandNavy/70"
+                  >
+                    <p className="text-sm font-semibold text-white">
+                      {e.images.length} Images
+                    </p>
+                    <button
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        setLightboxImages(e.images);
+                        setLightboxIndex(0);
+                      }}
+                      className="px-6 py-2 font-semibold transition-all rounded-full bg-gradient-to-r from-brandAccent to-brandGold text-brandDark hover:shadow-lg"
+                    >
+                      View All
+                    </button>
+                  </motion.div>
+                </motion.div>
+              </motion.div>
+            ))}
+          </motion.div>
+        )}
+
+        {/* GLOBAL LEADERSHIP JOURNEY */}
+        {activeFilter === GLOBAL_LEADERSHIP_FILTER && (
+          <motion.section
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16"
+          >
+            {/* LEFT — STORY CONTENT */}
+            <div className="space-y-8">
+              <div>
+                <div className="inline-block px-4 py-2 mb-6 text-sm font-bold rounded-full bg-gradient-to-r from-brandAccent/20 to-brandGold/20 dark:from-brandAccent/30 dark:to-brandGold/30 text-brandNavy dark:text-brandAccent">
+                  Featured Story
+                </div>
+                <h2 className="mb-6 text-xl font-bold leading-tight text-transparent md:text-2xl lg:text-3xl bg-gradient-to-r from-brandNavy via-brandDark to-brandNavy dark:from-white dark:via-brandAccent dark:to-white bg-clip-text">
+                  Connecting Continents: Our Global Client Engagement Journey
+                </h2>
+              </div>
+
+              <div className="flex items-center gap-4 p-2 border bg-brandAccent/10 dark:bg-brandGold/10 rounded-2xl border-brandAccent/20 dark:border-brandGold/20">
+                <div className="flex items-center justify-center w-12 h-12 text-lg font-bold text-white rounded-full bg-gradient-to-br from-brandNavy to-brandDark dark:from-brandAccent dark:to-brandGold">
+                  PP
+                </div>
+                <div>
+                  <p className="font-bold text-brandNavy dark:text-white">Prasen Pal</p>
+                  <p className="text-sm text-brandPrimary/70 dark:text-white/60">Co-Founder & Partner</p>
+                </div>
+              </div>
+
+              <div className="space-y-6 text-base leading-relaxed md:text-lg text-brandPrimary/80 dark:text-white/70">
+                <p>
+                  Our recent journey across Germany, France, and Vietnam strengthened partnerships with Indorama Ventures and reinforced relationships built on trust, collaboration, and shared purpose.
+                </p>
+
+                <p>
+                  From experiencing manufacturing excellence and innovation in Europe to celebrating teamwork and success with the RiskMan team in Vietnam, the journey highlighted the power of meaningful, human connections beyond the boardroom.
+                </p>
+
+                <p>
+                  We return with stronger relationships, lasting memories, and renewed enthusiasm for building bridges across borders.
+                </p>
+              </div>
+
+              <blockquote className="relative py-6 pl-8 border-l-4 border-brandGold/60 dark:border-brandAccent/60 bg-gradient-to-r from-brandAccent/5 to-transparent dark:from-brandGold/5 rounded-r-2xl">
+                <div className="absolute w-6 h-6 rounded-full -left-3 top-6 bg-brandGold dark:bg-brandAccent" />
+                <p className="text-lg italic leading-relaxed md:text-xl text-brandPrimary/90 dark:text-brandAccent/90">
+                  Global business is fundamentally human. The handshakes, shared meals, and genuine conversations are what transform transactions into lasting partnerships. We return with strengthened relationships, cherished memories, and excitement for future collaborations. Here's to building bridges across borders together.
+                </p>
+              </blockquote>
+            </div>
+
+            {/* RIGHT — IMAGE GRID */}
+            <div className="grid gap-6 sm:grid-cols-2">
+              {[
+                Prasen_Pal_Germany_Image[0],
+                Prasen_Pal_Germany_Image[2],
+                Prasen_Pal_Indonesia_Image[0],
+                Prasen_Pal_Indonesia_Image[1],
+              ].map((img, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: idx * 0.1 }}
+                  whileHover={{ y: -8, scale: 1.05 }}
+                  onClick={() => {
+                    setLightboxImages([
+                      Prasen_Pal_Germany_Image[0],
+                      Prasen_Pal_Germany_Image[2],
+                      Prasen_Pal_Indonesia_Image[0],
+                      Prasen_Pal_Indonesia_Image[1],
+                    ]);
+                    setLightboxIndex(idx);
+                  }}
+                  className="overflow-hidden transition-all duration-300 border-2 shadow-xl cursor-pointer rounded-3xl hover:shadow-2xl aspect-square group border-brandAccent/20 dark:border-brandGold/20"
+                >
+                  <img
+                    src={img}
+                    alt="Global Leadership Journey"
+                    className="object-cover object-center w-full h-full transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-brandNavy/60 via-transparent to-transparent group-hover:opacity-100" />
+                </motion.div>
+              ))}
+            </div>
+          </motion.section>
+        )}
+
+        {/* LIGHTBOX */}
+        <AnimatePresence>
+          {lightboxImages.length > 0 && (
+            <Lightbox
+              images={lightboxImages}
+              currentIndex={lightboxIndex}
+              onClose={closeLightbox}
+              onNavigate={setLightboxIndex}
+            />
+          )}
+        </AnimatePresence>
+      </div>
+    </section>
+  );
+}

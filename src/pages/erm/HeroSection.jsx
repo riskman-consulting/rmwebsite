@@ -10,7 +10,7 @@ const HeroSection = () => {
     <section className="relative overflow-hidden bg-slate-950">
       
       {/* Main Container */}
-      <div className="relative z-10 mx-auto grid min-h-screen grid-cols-1 items-center gap-12 px-6 md:grid-cols-2 lg:px-10 xl:px-10">
+      <div className="relative z-10 grid items-center min-h-screen grid-cols-1 gap-12 px-6 mx-auto md:grid-cols-2 lg:px-10 xl:px-10">
 
         {/* Left Content */}
         <div className="text-center md:text-left">
@@ -27,7 +27,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="mt-6 max-w-2xl text-lg text-white/80"
+            className="max-w-2xl mt-6 text-lg text-white/80"
           >
             We partner with you to identify the &apos;Risks That Matter,&apos; building a resilient,
             customized ERM framework that protects your reputation and fuels sustainable long-term growth.
@@ -37,18 +37,18 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mt-10 flex flex-col gap-4 sm:flex-row"
+            className="flex flex-col gap-4 mt-10 sm:flex-row"
           >
             <Link
               to="/contact-us"
-              className="rounded-lg bg-brandAccent px-6 py-3 text-sm font-medium text-slate-900 hover:bg-brandGold"
+              className="px-6 py-3 text-sm font-medium rounded-lg bg-brandAccent text-slate-900 hover:bg-brandGold"
             >
               Book a Consultation
             </Link>
 
             <Link
               to="/services"
-              className="rounded-lg border border-white/40 px-6 py-3 text-sm font-medium text-white hover:bg-white/10"
+              className="px-6 py-3 text-sm font-medium text-white border rounded-lg border-white/40 hover:bg-white/10"
             >
               Know More About Our Services
             </Link>
@@ -65,7 +65,7 @@ const HeroSection = () => {
           <img
             src={heroImage}
             alt="hero image"
-            className="w-full max-w-xl rounded-2xl shadow-2xl"
+            className="w-full max-w-xl shadow-2xl rounded-2xl"
           />
         </motion.div>
 

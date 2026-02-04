@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Star } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
- 
- 
- 
+
+
+
 const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);
- 
+
   const testimonials = [
     {
       id: 1,
@@ -49,7 +49,7 @@ const Testimonials = () => {
       zIndex:4,
     },
   ];
- 
+
   // Auto-rotate
   // Cycle through testimonials every 5 seconds
   useEffect(() => {
@@ -58,32 +58,32 @@ const Testimonials = () => {
     }, 5000);
     return () => clearInterval(interval);
   }, [testimonials.length]);
- 
+
   const handleCardClick = (index) => {
     setActiveIndex(index);
   };
- 
+
   return (
     <section className="relative z-10 flex items-center w-full min-h-screen py-20 overflow-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark">
       <div className="container px-4 mx-auto md:px-8 lg:px-12">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-         
+          
           {/* LEFT SIDE - Typography */}
           <div className="max-w-xl mx-auto text-center lg:text-left lg:mx-0">
             <p className="mb-4 text-sm tracking-[0.2em] uppercase font-bold text-brandNavy dark:text-brandAccent">
               Testimonials
             </p>
-           
+            
             <h2 className="mb-8 text-4xl font-black leading-tight md:text-5xl lg:text-6xl text-brandDark dark:text-white">
               What Our <span className="text-transparent bg-gradient-to-r from-brandGold to-brandAccent bg-clip-text">Clients</span> Say
             </h2>
- 
+
             <p className="mb-10 text-lg leading-relaxed text-brandNavy dark:text-white/70">
               We don't just identify gaps; we build the bridges to fill them.
               Our clients' feedback reflects our commitment to excellence and
               strategic transformation.
             </p>
- 
+
             {/* Navigation Dots */}
             <div className="flex justify-center p-3  lg:justify-start">
               {testimonials.map((_, idx) => (
@@ -91,8 +91,8 @@ const Testimonials = () => {
                   key={idx}
                   onClick={() => setActiveIndex(idx)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    idx === activeIndex
-                      ? "bg-brandAccent w-8"
+                    idx === activeIndex 
+                      ? "bg-brandAccent w-8" 
                       : "bg-brandNavy/20 dark:bg-white/20 hover:bg-brandNavy/40"
                   }`}
                   aria-label={`Go to testimonial ${idx + 1}`}
@@ -100,7 +100,7 @@ const Testimonials = () => {
               ))}
             </div>
           </div>
- 
+
           {/* RIGHT SIDE - Stacked Carousel */}
           <div className="relative w-full h-[500px] flex items-center justify-center perspective-1000">
             <AnimatePresence mode="popLayout">
@@ -110,22 +110,22 @@ const Testimonials = () => {
                 const isActive = offset === 0;
                 const isNext = offset === 1;
                 const isPrev = offset === testimonials.length - 1;
-               
+                
                 // Only render active, next, and prev (or all if needed, but keeping DOM light)
                 // Actually, for the stack effect, we render all but position them.
-               
+                
                 // Stack logic:
                 // Active: z-50, scale 1, rotate 0
                 // Next: z-40, scale 0.9, rotate 5deg, x + 20
                 // Others: hidden or stacked behind
-               
+                
                 let zIndex = 0;
                 let scale = 0.8;
                 let rotate = 0;
                 let x = 0;
                 let y = 0;
                 let opacity = 0;
- 
+
                 if (isActive) {
                   zIndex = 50;
                   scale = 1;
@@ -153,7 +153,7 @@ const Testimonials = () => {
                   y = -30;
                   opacity = 0.3;
                 }
- 
+
                 return (
                   <motion.div
                     key={item.id}
@@ -182,12 +182,12 @@ const Testimonials = () => {
                         />
                       ))}
                     </div>
- 
+
                     {/* Text */}
                     <p className={`mb-6 md:mb-8 text-base md:text-lg font-medium leading-relaxed ${item.textColor} opacity-90`}>
                       "{item.text}"
                     </p>
- 
+
                     {/* Author */}
                     <div className="flex items-center gap-4">
                       <div className="w-10 h-10 overflow-hidden rounded-full md:w-12 md:h-12 ring-2 ring-white/20">
@@ -211,12 +211,11 @@ const Testimonials = () => {
               })}
             </AnimatePresence>
           </div>
- 
+
         </div>
       </div>
     </section>
   );
 };
- 
+
 export default Testimonials;
- 

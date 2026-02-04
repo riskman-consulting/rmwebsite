@@ -149,3 +149,5 @@ export const MegaMenu = ({ menuKey }) => {
     </div>
   );
 };
+
+export default MegaMenu;

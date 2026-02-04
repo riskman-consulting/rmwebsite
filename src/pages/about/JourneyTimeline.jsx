@@ -40,7 +40,7 @@ const milestones = [
 
 export const JourneyTimeline = () => {
     return (
-        <section className="py-16 px-4 md:px-12 bg-white dark:bg-bgDark">
+        <section className="py-16 px-4 md:px-12 bg-surfaceLight dark:bg-surfaceDark">
             <div className="max-w-5xl mx-auto">
                 {/* Header - More Compact */}
                 <motion.div

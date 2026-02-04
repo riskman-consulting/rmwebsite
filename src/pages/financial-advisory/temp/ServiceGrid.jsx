@@ -43,28 +43,28 @@ const ServiceCatalog = () => {
   return (
     <section className="py-24 bg-bgLight dark:bg-bgDark">
       <div className="container">
-        <div className="text-center mb-16">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white mb-4">
+        <div className="mb-16 text-center">
+          <h2 className="mb-4 text-3xl font-bold font-heading md:text-4xl text-brandDark dark:text-white">
             Our Financial <span className="text-brandPrimary dark:text-brandGold">Advisory Solutions</span>
           </h2>
-          <div className="w-24 h-1 bg-brandAccent mx-auto"></div>
+          <div className="w-24 h-1 mx-auto bg-brandAccent"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12">
           {services.map((service, index) => (
             <div 
               key={index}
-              className="group p-8 bg-surfaceLight dark:bg-surfaceDark rounded-2xl border border-borderLight dark:border-borderDark hover:shadow-xl transition-all duration-300"
+              className="p-8 transition-all duration-300 border group bg-surfaceLight dark:bg-surfaceDark rounded-2xl border-borderLight dark:border-borderDark hover:shadow-xl"
             >
               <div className="flex items-start gap-6">
-                <div className="flex-shrink-0 w-16 h-16 bg-brandPrimary/5 dark:bg-brandGold/5 text-brandPrimary dark:text-brandGold rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="flex items-center justify-center flex-shrink-0 w-16 h-16 transition-transform duration-300 bg-brandPrimary/5 dark:bg-brandGold/5 text-brandPrimary dark:text-brandGold rounded-xl group-hover:scale-110">
                   {service.icon}
                 </div>
                 <div>
-                  <h3 className="font-heading text-2xl font-bold text-brandDark dark:text-white mb-4">
+                  <h3 className="mb-4 text-2xl font-bold font-heading text-brandDark dark:text-white">
                     {service.title}
                   </h3>
-                  <p className="font-sans text-gray-600 dark:text-gray-400 leading-relaxed">
+                  <p className="font-sans leading-relaxed text-gray-600 dark:text-gray-400">
                     {service.description}
                   </p>
                 </div>

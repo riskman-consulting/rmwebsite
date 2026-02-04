@@ -27,10 +27,10 @@ const FinancialFAQ = () => {
   ];
 
   return (
-    <section className="py-24 bg-bgLight dark:bg-bgDark transition-colors duration-300">
-      <div className="container mx-auto max-w-4xl px-5 sm:px-8">
-        <div className="text-center mb-16">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white mb-4">
+    <section className="py-24 transition-colors duration-300 bg-bgLight dark:bg-bgDark">
+      <div className="container max-w-4xl px-5 mx-auto sm:px-8">
+        <div className="mb-16 text-center">
+          <h2 className="mb-4 text-3xl font-bold font-heading md:text-4xl text-brandDark dark:text-white">
             Financial Advisory <span className="text-brandPrimary dark:text-brandGold">FAQ</span>
           </h2>
           <p className="font-sans text-gray-600 dark:text-gray-400">
@@ -42,13 +42,13 @@ const FinancialFAQ = () => {
           {faqs.map((faq, index) => (
             <div 
               key={index} 
-              className="border border-borderLight dark:border-borderDark rounded-xl overflow-hidden bg-surfaceLight dark:bg-surfaceDark"
+              className="overflow-hidden border border-borderLight dark:border-borderDark rounded-xl bg-surfaceLight dark:bg-surfaceDark"
             >
               <button 
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-center justify-between p-6 text-left transition-colors hover:bg-brandPrimary/5 dark:hover:bg-brandGold/5 focus:outline-none"
+                className="flex items-center justify-between w-full p-6 text-left transition-colors hover:bg-brandPrimary/5 dark:hover:bg-brandGold/5 focus:outline-none"
               >
-                <span className="font-heading font-bold text-brandDark dark:text-white md:text-lg">
+                <span className="font-bold font-heading text-brandDark dark:text-white md:text-lg">
                   {faq.question}
                 </span>
                 <span className={`transform transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}>
@@ -63,7 +63,7 @@ const FinancialFAQ = () => {
                   openIndex === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
-                <div className="p-6 pt-0 font-sans text-gray-600 dark:text-gray-400 leading-relaxed border-t border-borderLight dark:border-borderDark mt-4">
+                <div className="p-6 pt-0 mt-4 font-sans leading-relaxed text-gray-600 border-t dark:text-gray-400 border-borderLight dark:border-borderDark">
                   {faq.answer}
                 </div>
               </div>
@@ -71,12 +71,12 @@ const FinancialFAQ = () => {
           ))}
         </div>
 
-        <div className="mt-16 p-8 bg-brandPrimary dark:bg-brandNavy rounded-2xl text-center text-white shadow-lg">
-          <h3 className="font-heading text-xl font-bold mb-2">Still have questions?</h3>
-          <p className="font-sans text-white/80 mb-6">
+        <div className="p-8 mt-16 text-center text-white shadow-lg bg-brandPrimary dark:bg-brandNavy rounded-2xl">
+          <h3 className="mb-2 text-xl font-bold font-heading">Still have questions?</h3>
+          <p className="mb-6 font-sans text-white/80">
             Our team of experts is ready to help you navigate your financial journey.
           </p>
-          <button className="px-8 py-3 bg-brandAccent hover:bg-brandGold text-brandDark font-bold rounded-lg transition-all duration-300 transform hover:scale-105">
+          <button className="px-8 py-3 font-bold transition-all duration-300 transform rounded-lg bg-brandAccent hover:bg-brandGold text-brandDark hover:scale-105">
             Contact RiskMan
           </button>
         </div>

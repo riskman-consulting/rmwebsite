@@ -1,13 +1,12 @@
-
 import { motion } from "framer-motion";
+import { HeroImageWithCurtain } from "./HeroImageWithCurtain";
 
-// Assets
-import manufacturingImg from "../../assets/images/industry/manufacturing.png";
-import bankingImg from "../../assets/images/industry/banking.png";
-import ecommerceImg from "../../assets/images/industry/ecommerce.png";
-import healthcareImg from "../../assets/images/industry/healthcare.png";
-import technologyImg from "../../assets/images/industry/technology.png";
-import { HeroImageWithCurtain } from "./HeroIMageWithCurtain";
+import manufacturingImages from "../../assets/images/hero-section/industry/manufacturing.png";
+import bankingImages from "../../assets/images/hero-section/industry/banking.png";
+import ecommerceImages from "../../assets/images/hero-section/industry/ecommerce.png";
+import healthCareImages from "../../assets/images/hero-section/industry/health-care.png";
+import technologyImages from "../../assets/images/hero-section/industry/technology.png";
+
 
 /* =======================
    ANIMATION VARIANTS
@@ -22,6 +21,14 @@ const staggerContainer = {
   animate: { transition: { staggerChildren: 0.1 } },
 };
 
+// Industry images from Cloudinary
+const industryImages = [
+  manufacturingImages,
+  bankingImages,
+  ecommerceImages,
+  healthCareImages,
+  technologyImages,
+];
 
 // 1. Hero Section
 export const HeroSection = ({ heroRef, y, opacity }) => (
@@ -44,8 +51,14 @@ export const HeroSection = ({ heroRef, y, opacity }) => (
         </motion.p>
       </motion.div>
 
-      <motion.div style={{ y, opacity }} className="grid grid-cols-2 gap-4 md:grid-cols-5" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.8 }}>
-        {[manufacturingImg, bankingImg, ecommerceImg, healthcareImg, technologyImg].map((img, i) => (
+      <motion.div 
+        style={{ y, opacity }} 
+        className="grid grid-cols-2 gap-4 md:grid-cols-5" 
+        initial={{ opacity: 0, y: 40 }} 
+        animate={{ opacity: 1, y: 0 }} 
+        transition={{ delay: 0.4, duration: 0.8 }}
+      >
+        {industryImages.map((img, i) => (
           <HeroImageWithCurtain key={i} img={img} index={i} />
         ))}
       </motion.div>

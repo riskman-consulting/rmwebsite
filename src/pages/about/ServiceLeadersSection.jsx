@@ -1,12 +1,30 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { Linkedin, ArrowRight, MapPin } from "lucide-react";
+import { teamsImages } from "../../assets/teams";
+import { LinkedinIcon } from "lucide-react"
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
+/* =========================
+   Animations (FIRST FILE STYLE)
+========================= */
+const animations = {
+  fadeInUp: {
+    initial: { opacity: 0, y: 30 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, margin: "-100px" },
+    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
+  },
+  card: (i) => ({
+    initial: { opacity: 0, y: 30 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true },
+    transition: { duration: 0.6, delay: i * 0.1 },
+  }),
 };
 
+/* =========================
+   Counter (UNCHANGED)
+========================= */
 function AnimatedCounter({ end, duration = 2, suffix = "" }) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
@@ -14,161 +32,202 @@ function AnimatedCounter({ end, duration = 2, suffix = "" }) {
 
   useEffect(() => {
     if (!isInView) return;
-
-    let startTime;
-    let animationFrame;
-
-    const animate = (timestamp) => {
-      if (!startTime) startTime = timestamp;
-      const progress = (timestamp - startTime) / (duration * 1000);
-
-      if (progress < 1) {
-        setCount(Math.floor(end * progress));
-        animationFrame = requestAnimationFrame(animate);
-      } else {
-        setCount(end);
-      }
+    let start;
+    const step = (t) => {
+      if (!start) start = t;
+      const progress = Math.min((t - start) / (duration * 1000), 1);
+      setCount(Math.floor(progress * end));
+      if (progress < 1) requestAnimationFrame(step);
     };
+    requestAnimationFrame(step);
+  }, [isInView, end, duration]);
 
-    animationFrame = requestAnimationFrame(animate);
+  return <span ref={ref}>{count}{suffix}</span>;
+}
 
-    return () => {
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
-      }
-    };
-  }, [end, duration, isInView]);
+/* =========================
+   DATA — NOT CHANGED
+========================= */
+const SERVICE_LEADERS = [
+  {
+    name: "Jitendra Khimavat",
+    location: "Mumbai, India",
+    title: "Service Leader",
+    credentials: "CA and Certified Internal Auditor (CIA) with 17+ years",
+    bio: "Expert in risk-based internal audits, enhancing efficiency, control, compliance, and cost savings across infrastructure, mining, manufacturing, and finance.",
+    image: "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898657/jitendra_s8wq8i.webp",
+    expertise: ["Internal Audits", "Risk Management", "Compliance"],
+    linkedin: "linkedin.com/in/jitendra-khimavat"
+  },
+  {
+    name: "Narayanan Rajendran",
+    location: "Chennai, India",
+    title: "Service Leader",
+    credentials: "CA, CISA with 20+ years | Ex-Ford, Ex-PKF, Ex-Templar Shield",
+    bio: "Specialist in ERM, SOX, ICOFR, TPRM, InfoSec, ISO27001 and forensic engagements with Fortune 500 organizations.",
+    image: "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768904950/narayanan_er15xk.webp",
+    expertise: ["ERM", "Cybersecurity", "Forensic"],
+    linkedin: "linkedin.com/in/narayanan-rajendran-34706521"
+  },
+  {
+    name: "Pranshul Agarwal",
+    location: "",
+    title: "Manager",
+    location: "Delhi, India",
+    credentials: "CIA, CISA Qualied with 6+ Years of Experience",
+    bio: "Risk Advisory professional with 6+ years of experience in IFC design, internal audits, SOX testing, and risk assurance. Delivers practical, value-driven risk and control solutions across industries.",
+    image: teamsImages.Pranshul,
+    expertise: [
+      "Risk Advisory & Assurance",
+      "Internal Audit",
+      "IFC Framework Design & Testing",
+      "SOX Testing",
+      "Digital Transformation Initiatives",
+      "Limited & Concurrent Audit"
+    ]
+    ,
+    linkedin: "linkedin.com/in/pranshul-agarwal-3b707a148"
+  },
+  {
+    name: "Vishal Sharma",
+    title: "Senior Consultant",
+    location: "Kolkata, India",
+    credentials: "",
+    bio: "",
+    image: teamsImages.VishalSharma,
+    expertise: [],
+    linkedin: ""
+  },
+];
 
+/* =========================
+   Leadership UI Style Card
+========================= */
+function LeaderCard({ leader, index, onSelect }) {
   return (
-    <span ref={ref}>
-      {count}
-      {suffix}
-    </span>
+    <motion.div
+      {...animations.card(index)}
+      onClick={() => onSelect?.(leader)}
+      className="p-6 border cursor-pointer rounded-2xl bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark group hover:border-brandGold hover:-translate-y-1 hover:shadow-2xl"
+    >
+      <div className="flex justify-center mb-6">
+        <img
+          src={leader.image}
+          alt={leader.name}
+          className="object-cover object-top w-32 h-32 border-4 rounded-full border-brandPrimary/30 grayscale group-hover:grayscale-0"
+        />
+      </div>
+
+      <h3 className="text-xl font-bold text-center text-brandDark dark:text-white">
+        {leader.name}
+      </h3>
+
+
+      <p className="text-sm font-semibold text-center text-brandPrimary dark:text-brandAccent">
+        {leader.title}
+      </p>
+
+      <div className="flex  items-center justify-center gap-3 mt-3 text-sm text-gray-600">
+
+        {leader.location && (
+          <div className="flex items-center gap-1">
+            <MapPin size={16} />
+            <span>{leader.location}</span>
+          </div>
+        )}
+
+      </div>
+      {leader.credentials && (
+        <p className="mt-3 text-xs text-center text-brandDark/60 dark:text-white/60">
+          {leader.credentials}
+        </p>
+      )}
+
+      {leader.bio && (
+        <p className="mt-4 text-sm text-center text-brandDark/70 dark:text-white/70">
+          {leader.bio}
+        </p>
+      )}
+
+      <div className="flex justify-center gap-3 mt-6">
+        <a
+          href={leader.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => e.stopPropagation()}
+          className="flex items-center gap-2 px-4 py-2 text-sm border rounded-full text-brandPrimary border-brandPrimary/30 dark:text-brandAccent hover:bg-brandPrimary/10 dark:hover:bg-brandAccent/10"
+        >
+          <Linkedin className="w-4 h-4" />
+          LinkedIn
+        </a>
+        <span className="flex items-center gap-2 text-sm text-brandAccent">
+          View Profile <ArrowRight className="w-4 h-4" />
+        </span>
+      </div>
+    </motion.div>
   );
 }
 
+/* =========================
+   Main Section — Leadership Layout
+========================= */
 export default function ServiceLeadersSection({ setSelectedLeader }) {
-  const serviceLeaders = [
-    // {
-    //   name: "Manish Agarwal",
-    //   title: "Service Leader",
-    //   credentials: "Master's in Information Application, CISA, CISM, AWS Solutions Architect, ITIL v4",
-    //   bio: "Professional with 20+ years of experience across the domain of Information Security. He has played notable roles at IDFC FIRST Bank and Airtel.",
-    //   image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop",
-    //   expertise: ["Information Security", "BCP", "IT Security Strategy"],
-    // },
-    // {
-    //   name: "Amitabh Jain",
-    //   title: "Service Leader",
-    //   credentials: "Seasoned Chartered Accountant with 30+ years of experience",
-    //   bio: "Expert in Financial Services and Business Enterprises. As COO and CFO in Ed-Tech & Vocational Training sector, he excelled in corporate governance, financial services, and risk governance.",
-    //   image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
-    //   expertise: ["Corporate Governance", "Financial Services", "PE Capital"],
-    // },
-    {
-      name: "Jitendra Khimavat",
-      title: "Service Leader",
-      credentials: "CA and Certified Internal Auditor (CIA) with 17+ years",
-      bio: "Expert in risk-based internal audits, he enhances efficiency, control, compliance, and cost savings across diverse sectors including infrastructure, mining, manufacturing, and finance.",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop",
-      expertise: ["Internal Audits", "Risk Management", "Compliance"],
-    },
-    {
-      name: "Narayanan Rajendran",
-      title: "Service Leader",
-      credentials: "CA, CISA with 20+ years at Ex-Ford, Ex-PKF, Ex-Templar Shield",
-      bio: "Expert in ERM/SOX/ICOFR, TPRM, Internal Information Security, ISO27001 and forensic assignments. He has worked with Fortune 500 companies on global roles.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-      expertise: ["ERM", "Cybersecurity", "Forensic Analysis"],
-    },
-  ];
-
   return (
-    <section id="service-leaders" className="relative py-8 bg-surfaceLight dark:bg-surfaceDark md:py-12">
-      <div className="container">
-        <motion.h2
-          variants={fadeInUp}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-          className="mb-4 text-2xl font-bold text-start md:text-2xl"
-        >
-          Our Team
-          <br />
-          <span className="text-brandPrimary dark:text-brandAccent">Service Leaders</span>
-        </motion.h2>
+    <section className="py-4 lg:py-12 bg-surfaceLight dark:bg-surfaceDark">
+      <div className="px-6 mx-auto max-w-7xl lg:px-12">
 
-        <motion.p
-          variants={fadeInUp}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-          className="max-w-2xl mb-12 text-gray-600 text-start dark:text-gray-400"
-        >
-          Industry experts leading specialized service domains
-        </motion.p>
+        <motion.div {...animations.fadeInUp} className="mb-12">
+          <h2 className="text-4xl font-bold lg:text-5xl text-brandDark dark:text-white">
+            Our <span className="font-serif italic text-brandGold">Associate</span> Partners
+          </h2>
+        </motion.div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {serviceLeaders.map((leader, i) => (
-            <motion.div
-              key={i}
-              variants={fadeInUp}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              className="p-6 transition-all duration-500 border cursor-pointer bg-cardLight border-borderLight dark:bg-cardDark dark:border-borderDark rounded-2xl group hover:border-brandPrimary dark:hover:border-brandAccent hover:shadow-card-light-hover dark:hover:shadow-card-dark-hover"
-              onClick={() => setSelectedLeader(leader)}
-            >
-              <div className="flex justify-center mb-4">
-                <img
-                  src={leader.image}
-                  alt={leader.name}
-                  className="object-cover w-24 h-24 transition-all duration-500 border-2 rounded-full border-brandPrimary dark:border-brandAccent group-hover:border-brandNavy dark:group-hover:border-brandGold group-hover:scale-110"
-                />
-              </div>
-              <h3 className="mb-1 text-xl font-bold text-brandDark dark:text-white">{leader.name}</h3>
-              <p className="mb-2 text-sm font-semibold text-brandPrimary dark:text-brandAccent">
-                {leader.title}
-              </p>
-              <p className="mb-3 text-xs text-gray-500 dark:text-gray-400">
-                {leader.credentials}
-              </p>
-              <button className="w-full text-sm text-left transition-colors text-brandAccent dark:text-brandGoldLight hover:text-brandGold dark:hover:text-brandAccent">
-                View Profile →
-              </button>
-            </motion.div>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-16">
+          {SERVICE_LEADERS.map((leader, i) => (
+            <LeaderCard
+              key={leader.name}
+              leader={leader}
+              index={i}
+              onSelect={setSelectedLeader}
+            />
           ))}
         </div>
 
-        {/* Team Stats */}
-        <motion.div
-          variants={fadeInUp}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-          className="grid gap-6 mt-12 md:grid-cols-3"
-        >
-          <div className="p-8 text-center border shadow-lg rounded-2xl bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark">
-            <h3 className="mb-2 text-5xl font-bold md:text-6xl text-brandPrimary dark:text-brandAccent">
-              <AnimatedCounter end={50} duration={2.5} suffix="+" />
-            </h3>
-            <p className="text-lg text-gray-600 dark:text-gray-400">Team Size</p>
-          </div>
+        {/* Stats — kept from second file */}
+        <motion.div {...animations.fadeInUp}>
+          <div className="grid overflow-hidden border shadow-xl md:grid-cols-3 rounded-3xl border-borderLight dark:border-borderDark">
 
-          <div className="p-8 text-center border shadow-lg rounded-2xl bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark">
-            <h3 className="mb-2 text-3xl font-bold md:text-4xl text-brandPrimary dark:text-brandAccent">
-              Qualified & Experienced
-            </h3>
-            <p className="text-lg text-gray-600 dark:text-gray-400">Professionals</p>
-          </div>
+            <div className="p-10 flex flex-col items-center justify-center text-center">
+              <h3 className="text-6xl font-black text-brandPrimary dark:text-brandAccent">
+                <AnimatedCounter end={50} suffix="+" />
+              </h3>
+              <p className="text-sm font-bold tracking-widest text-gray-400 uppercase">
+                Expert Team Size
+              </p>
+            </div>
 
-          <div className="p-8 text-center border shadow-lg rounded-2xl bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark">
-            <h3 className="mb-2 text-3xl font-bold md:text-4xl text-brandPrimary dark:text-brandAccent">
-              Industry / Sector
-            </h3>
-            <p className="text-lg text-gray-600 dark:text-gray-400">SMEs</p>
+            <div className="p-10 flex flex-col items-center justify-center text-center">
+              <h3 className="text-2xl font-bold text-brandPrimary dark:text-white">
+                Qualified Professionals
+              </h3>
+              <p className="text-gray-500 dark:text-gray-400">
+                Industry Certified(CA, CIA, CISA, CRMA, SCR)
+              </p>
+            </div>
+
+            <div className="p-10 flex flex-col items-center justify-center text-center">
+              <h3 className="text-2xl font-bold text-brandPrimary dark:text-white">
+                Industry SMEs
+              </h3>
+              <p className="text-gray-500 dark:text-gray-400">
+                Multi-Sector Experience
+              </p>
+            </div>
+
           </div>
         </motion.div>
+
+
       </div>
     </section>
   );

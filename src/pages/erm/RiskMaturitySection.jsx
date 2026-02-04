@@ -8,8 +8,8 @@ import { motion } from "framer-motion";
 
 const RiskMaturitySection = () => {
   return (
-    <section className="bg-slate-50 py-12 dark:bg-bgDark">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="py-12 bg-slate-50 dark:bg-bgDark">
+      <div className="px-6 mx-auto max-w-7xl">
 
         {/* Section Heading */}
         <motion.h2
@@ -17,7 +17,7 @@ const RiskMaturitySection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-4 text-center text-3xl font-semibold text-slate-900 dark:text-brandLight md:text-4xl"
+          className="mb-4 text-3xl font-semibold text-center text-slate-900 dark:text-brandLight md:text-4xl"
         >
           Strengthening Your Risk Maturity
         </motion.h2>
@@ -28,7 +28,7 @@ const RiskMaturitySection = () => {
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mx-auto mb-8 h-1 w-24 origin-center rounded-full bg-brandPrimary dark:bg-brandAccent"
+          className="w-24 h-1 mx-auto mb-8 origin-center rounded-full bg-brandPrimary dark:bg-brandAccent"
         />
 
         {/* Section Description */}
@@ -37,7 +37,7 @@ const RiskMaturitySection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="mx-auto mb-16 max-w-4xl text-center text-lg text-slate-600 dark:text-brandLight/70"
+          className="max-w-4xl mx-auto mb-16 text-lg text-center text-slate-600 dark:text-brandLight/70"
         >
           Our commitment extends beyond initial implementation to ensure your ERM framework
           evolves alongside your business and the changing global landscape.
@@ -79,10 +79,10 @@ const RiskMaturitySection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
-              className="group relative overflow-hidden rounded-xl border border-borderLight bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:border-borderDark dark:bg-surfaceDark"
+              className="relative p-6 overflow-hidden transition-all bg-white border shadow-sm group rounded-xl border-borderLight hover:-translate-y-1 hover:shadow-lg dark:border-borderDark dark:bg-surfaceDark"
             >
               {/* Hover accent */}
-              <div className="absolute inset-x-0 top-0 h-1 bg-brandPrimary opacity-0 transition group-hover:opacity-100 dark:bg-brandAccent" />
+              <div className="absolute inset-x-0 top-0 h-1 transition opacity-0 bg-brandPrimary group-hover:opacity-100 dark:bg-brandAccent" />
 
               <h3 className="mb-3 text-lg font-semibold text-slate-900 dark:text-brandLight">
                 {card.title}

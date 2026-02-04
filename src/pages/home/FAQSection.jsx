@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-
+ 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState(0);
-
+ 
   const faqs = [
     {
       question: "What specific expertise does RiskMan bring to ESG and Finance?",
@@ -31,39 +31,39 @@ const FAQSection = () => {
         "Modern sustainability goes beyond a single lens. We employ Double Materiality, which assesses both Financial Materiality (how ESG issues impact your company's bottom line) and Impact Materiality (how your operations affect the environment and society). This approach helps CXOs build a robust business case for ESG initiatives, ensuring they are not just compliance costs but drivers of long-term resilience and competitive advantage.",
     },
   ];
-
+ 
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
-
+ 
   return (
-    <section className="relative w-full transition-colors duration-300 px-3 py-12 sm:py-20 bg-bgLight dark:bg-bgDark">
+    <section className="relative w-full px-3 py-12 transition-colors duration-300 sm:py-20 bg-bgLight dark:bg-bgDark">
       <div className="container mx-auto">
         <div className="grid items-start gap-12 lg:grid-cols-2">
-          
+         
           {/* LEFT – HEADER */}
           <div className="lg:sticky lg:top-24">
-            
-
+           
+ 
             <h2 className="mb-6 text-xl font-black leading-tight md:text-2xl text-brandDark dark:text-white">
-              Clarity for
+              Frequently
               <br />
-              Your Critical
+              Asked
               <br />
               Questions
             </h2>
-
-            <p className="text-lg leading-relaxed text-brandNavy dark:text-white/70 max-w-md">
-              Discover how RiskMan's "Propreneurial" approach transforms regulatory 
+ 
+            <p className="max-w-md text-lg leading-relaxed text-brandNavy dark:text-white/70">
+              Discover how RiskMan's "Propreneurial" approach transforms regulatory
               complexities into strategic opportunities for your organization.
             </p>
           </div>
-
+ 
           {/* RIGHT – FAQ ACCORDION */}
           <div className="space-y-4">
             {faqs.map((faq, index) => {
               const isOpen = openIndex === index;
-
+ 
               return (
                 <div
                   key={index}
@@ -91,7 +91,7 @@ const FAQSection = () => {
                     >
                       {faq.question}
                     </h3>
-
+ 
                     {/* ICON */}
                     <div
                       className={`
@@ -105,7 +105,7 @@ const FAQSection = () => {
                       <ChevronDown size={20} />
                     </div>
                   </button>
-
+ 
                   {/* ANSWER */}
                   <div
                     className={`
@@ -115,7 +115,7 @@ const FAQSection = () => {
                   >
                     <div className="px-5 pb-6 md:px-6">
                       <div className="pt-4 border-t border-gray-100 dark:border-borderDark">
-                        <p className="text-sm md:text-base leading-relaxed text-gray-600 dark:text-white/70">
+                        <p className="text-sm leading-relaxed text-gray-600 md:text-base dark:text-white/70">
                           {faq.answer}
                         </p>
                       </div>
@@ -130,5 +130,5 @@ const FAQSection = () => {
     </section>
   );
 };
-
+ 
 export default FAQSection;
