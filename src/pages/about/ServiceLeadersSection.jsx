@@ -177,8 +177,8 @@ export default function ServiceLeadersSection({ setSelectedLeader }) {
       <div className="px-6 mx-auto max-w-7xl lg:px-12">
 
         <motion.div {...animations.fadeInUp} className="mb-12">
-          <h2 className="text-4xl font-bold lg:text-5xl text-brandDark dark:text-white">
-            Our <span className="font-serif italic text-brandGold">Associate</span> Partners
+          <h2 className="text-3xl font-bold lg:text-4xl text-brandDark dark:text-white">
+            Our <span className="font-serif italic text-brandGold">Associate</span> Partners and Experience <span className="text-brandAccent">Team Members</span>
           </h2>
         </motion.div>
 

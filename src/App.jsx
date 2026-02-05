@@ -33,11 +33,21 @@ import ERMPage from './pages/erm/ERMPage'
 import RBIAPage from './pages/rbia/RBIAPage'
 import BCPPage from "./pages/bcp-dr/BCPPage"
 import CSAPage from "./pages/csa/CSAPage"
+import TPRMPage from "./pages/tprm/TPRMPage"
+import CybersecurityPage from "./pages/cybersecurity/CybersecurityPage"
+import ITGCITACPage from "./pages/itgc-itac/ITGCITACPage"
+import SocPage from "./pages/soc/soc/SocPage"
+import Soc1Page from "./pages/soc/soc1/Soc1Page"
+import Soc2Page from "./pages/soc/soc2/Soc2Page"
+import Soc3Page from "./pages/soc/soc3/Soc3Page"
 
 import DigitalTransformation from './pages/digital/DigitalTransformationPage'
 import StrategicPMO from './pages/digital/StrategicPMO'
 import ImplementationExcellence from './pages/digital/ImplementationExcellence'
 import SupportServices from './pages/digital/SupportServices'
+
+import ESGPage from "./pages/esg/ESGPage"
+import ISO27001 from './pages/iso/iso-27001/ISO27001'
 
 
 
@@ -76,6 +86,15 @@ function App() {
           <Route path="/services/risk-advisory/erm" element={<ERMPage />} />
           <Route path="/services/financial-advisory" element={<FinancialAdvisoryPage />} />
           <Route path="/services/risk-advisory/rbia" element={<RBIAPage/>} />
+          <Route path="/services/risk-advisory/tprm" element={<TPRMPage/>} />
+          <Route path="/services/cybersecurity" element={<CybersecurityPage/>} />
+          <Route path="/services/itgc-itac" element={<ITGCITACPage/>} />
+          <Route path="/services/soc-services" element={<SocPage/>} />
+          <Route path="/services/soc-services/soc-1" element={<Soc1Page/>} />
+          <Route path="/services/soc-services/soc-2" element={<Soc2Page/>} />
+          <Route path="/services/soc-services/soc-3" element={<Soc3Page/>} />
+          <Route path="/services/esg" element={<ESGPage/>} />
+          <Route path="/services/iso-certifications/iso-27001" element={<ISO27001 />} />
 
 
           <Route path='/services/digital-transformation' element={<DigitalTransformation/>} />

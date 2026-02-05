@@ -40,7 +40,7 @@ import Shreya from "./Shreya.png";
 import Arif from "./arif.webp"
 import Harsh from "./Harsh.webp"
 import Kiran from "./kiran.webp"
-import monica from "./monica.png"
+import monica from "./Monika.jpg"
 
 import pranshu from "./pranshu.jpg";
 import arpitSir from "./arpitSir.png"

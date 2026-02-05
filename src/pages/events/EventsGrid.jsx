@@ -1,97 +1,5 @@
-// import React from 'react';
-// import { motion } from 'framer-motion';
-// import { FiMapPin, FiChevronRight, FiImage } from 'react-icons/fi';
- 
-// const EventsGrid = ({ events, onCardClick }) => {
-//   return (
-//     <div id="past" className="grid grid-cols-1 gap-10 px-6 py-12 lg:px-24 md:px-16 sm:grid-cols-2 lg:grid-cols-3 bg-surfaceLight dark:bg-surfaceDark">
-//       {events.map((event, index) => (
-//         <motion.div
-//           key={event.id}
-//           initial={{ opacity: 0, y: 30 }}
-//           whileInView={{ opacity: 1, y: 0 }}
-//           viewport={{ once: true }}
-//           transition={{ duration: 0.5, delay: index * 0.1 }}
-//           onClick={() => onCardClick(event)}
-//           className="group cursor-pointer bg-white dark:bg-[#001A33] rounded-[2.5rem] overflow-hidden border border-[#003366]/5 dark:border-[#FFC000]/15 shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col relative hover:-translate-y-2"
-//         >
-//           {/* Visual Container */}
-//           <div className="aspect-[16/10] relative overflow-hidden">
-//             <img
-//               src={event.image}
-//               alt={event.title}
-//               className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"
-//             />
-           
-//             {/* Dark Overlay Gradient */}
-//             <div className="absolute inset-0 bg-gradient-to-t from-[#001F3F]/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
- 
-//             {/* Floating Branded Date Badge */}
-//             <div className="absolute top-5 left-5">
-//               <div className="backdrop-blur-md bg-white/90 dark:bg-[#001A33]/90 px-4 py-2 rounded-2xl shadow-xl border border-white/20">
-//                 <p className="text-[10px] font-black uppercase tracking-[0.15em] text-[#001F3F] dark:text-[#FFC000] leading-none">
-//                   {event.date}
-//                 </p>
-//               </div>
-//             </div>
- 
-//             {event.featured && (
-//               <div className="absolute top-5 right-5">
-//                 <span className="bg-gradient-to-r from-[#FFB800] to-[#FFC000] text-[#001F3F] text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-lg">
-//                   Featured
-//                 </span>
-//               </div>
-//             )}
-//           </div>
- 
-//           {/* Content Area */}
-//           <div className="flex flex-col flex-grow p-8">
-//             {/* Meta Info */}
-//             <div className="flex items-center gap-3 mb-4">
-//               <span className="flex items-center text-[#001F3F]/50 dark:text-white/50 text-[11px] font-black uppercase tracking-widest">
-//                 <FiMapPin className="mr-1.5 text-[#FFB800]" />
-//                 {event.location.split(',')[0]}
-//               </span>
-//               <span className="w-1.5 h-1.5 rounded-full bg-[#FFC000]/30" />
-//               <span className="text-[11px] font-black text-[#FFB800] uppercase tracking-widest">
-//                 {event.type || 'Experience'}
-//               </span>
-//             </div>
- 
-//             {/* Title */}
-//             <h3 className="text-2xl font-bold text-[#001F3F] dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#FFB800] group-hover:to-[#FFC000] transition-all duration-300 mb-4 tracking-tight">
-//               {event.title}
-//             </h3>
- 
-//             {/* Description */}
-//             <p className="text-[#001F3F]/70 dark:text-white/70 text-sm leading-relaxed line-clamp-2 mb-8 italic">
-//               "{event.shortDesc}"
-//             </p>
- 
-//             {/* Footer Interaction */}
-//             <div className="mt-auto pt-6 border-t border-[#003366]/5 dark:border-white/5 flex items-center justify-between">
-//               <div className="flex items-center gap-2 transition-all duration-500 group-hover:gap-4">
-//                 <FiImage className="text-[#FFC000] text-lg" />
-//                 <span className="text-xs font-black uppercase tracking-[0.2em] text-[#001F3F] dark:text-white">
-//                   Explore Gallery
-//                 </span>
-//               </div>
-             
-//               <div className="h-10 w-10 rounded-full bg-[#001F3F]/5 dark:bg-white/5 flex items-center justify-center text-[#001F3F] dark:text-white group-hover:bg-gradient-to-r group-hover:from-[#FFB800] group-hover:to-[#FFC000] group-hover:text-[#001F3F] transition-all duration-500">
-//                 <FiChevronRight className="text-lg" />
-//               </div>
-//             </div>
-//           </div>
-//         </motion.div>
-//       ))}
-//     </div>
-//   );
-// };
- 
-// export default EventsGrid;
- 
-
 // src/components/events/EventGrid.jsx
+import { useMemo, useState } from "react";
 import EventCard from "./EventCard";
 import { IIA_Bombay_2026_images } from "../../assets/iia-bombay/2026";
 import { IIA_Internal_Leadership_2025_images } from "../../assets/internal-leadership/2025";
@@ -322,25 +230,231 @@ const events = [
   },
 ];
 
+/* ======================================================
+   BM25 ALGORITHM FOR ADVANCED FILTERING
+====================================================== */
+class BM25Filter {
+  constructor(k1 = 1.5, b = 0.75) {
+    this.k1 = k1; // Term frequency saturation parameter
+    this.b = b; // Length normalization parameter
+  }
+
+  // Tokenize text into words
+  tokenize(text) {
+    return String(text || "")
+      .toLowerCase()
+      .replace(/[^\w\s]/g, " ")
+      .split(/\s+/)
+      .filter((token) => token.length > 0);
+  }
+
+  // Calculate term frequency
+  termFrequency(term, document) {
+    return document.filter((word) => word === term).length;
+  }
+
+  // Calculate inverse document frequency
+  inverseDocFrequency(term, documents) {
+    const docsWithTerm = documents.filter((doc) => doc.includes(term)).length;
+    return Math.log(
+      (documents.length - docsWithTerm + 0.5) / (docsWithTerm + 0.5) + 1
+    );
+  }
+
+  // Calculate BM25 score for a document
+  calculateScore(query, document, documents, avgDocLength) {
+    const queryTerms = this.tokenize(query);
+    const docLength = document.length;
+
+    let score = 0;
+
+    for (const term of queryTerms) {
+      const tf = this.termFrequency(term, document);
+      const idf = this.inverseDocFrequency(term, documents);
+
+      const numerator = tf * (this.k1 + 1);
+      const denominator =
+        tf + this.k1 * (1 - this.b + this.b * (docLength / avgDocLength));
+
+      score += idf * (numerator / denominator);
+    }
+
+    return score;
+  }
+
+  // Rank documents based on query
+  rank(query, items, fields = ["title", "description"]) {
+    if (!items.length) return [];
+
+    // Prepare documents
+    const documents = items.map((item) => {
+      const text = fields.map((field) => item[field] || "").join(" ");
+      return this.tokenize(text);
+    });
+
+    // Calculate average document length
+    const avgDocLength =
+      documents.reduce((sum, doc) => sum + doc.length, 0) / documents.length;
+
+    // Calculate scores
+    const scores = items.map((item, index) => ({
+      item,
+      score: this.calculateScore(query, documents[index], documents, avgDocLength),
+    }));
+
+    // Sort by score (highest first)
+    return scores
+      .filter((s) => s.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .map((s) => s.item);
+  }
+}
+
+const extractYear = (dateStr) => {
+  const match = String(dateStr || "").match(/(19|20)\d{2}/);
+  return match ? match[0] : null;
+};
 
 
 // =======================
 // COMPONENT
 // =======================
 export default function EventsGrid() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [yearFilter, setYearFilter] = useState("All");
+  const [locationFilter, setLocationFilter] = useState("All");
+
+  const bm25 = useMemo(() => new BM25Filter(), []);
+
+  const normalizedEvents = useMemo(
+    () =>
+      events.map((event) => ({
+        ...event,
+        _year: extractYear(event?.meta?.date),
+        _location: event?.meta?.location || "",
+        _type: event?.meta?.type || "",
+        _date: event?.meta?.date || "",
+      })),
+    []
+  );
+
+  const yearOptions = useMemo(() => {
+    const years = normalizedEvents.map((e) => e._year).filter(Boolean);
+    const unique = Array.from(new Set(years));
+    unique.sort((a, b) => Number(b) - Number(a));
+    return ["All", ...unique];
+  }, [normalizedEvents]);
+
+  const locationOptions = useMemo(() => {
+    const locations = normalizedEvents.map((e) => e._location).filter(Boolean);
+    const unique = Array.from(new Set(locations));
+    unique.sort((a, b) => a.localeCompare(b));
+    return ["All", ...unique];
+  }, [normalizedEvents]);
+
+  const filteredEvents = useMemo(() => {
+    let data = normalizedEvents;
+
+    if (yearFilter !== "All") {
+      data = data.filter((e) => e._year === yearFilter);
+    }
+
+    if (locationFilter !== "All") {
+      data = data.filter((e) => e._location === locationFilter);
+    }
+
+    if (searchQuery.trim()) {
+      data = bm25.rank(searchQuery, data, [
+        "title",
+        "description",
+        "_location",
+        "_year",
+        "_date",
+        "_type",
+      ]);
+    }
+
+    return data;
+  }, [normalizedEvents, yearFilter, locationFilter, searchQuery, bm25]);
+
+  const handleReset = () => {
+    setSearchQuery("");
+    setYearFilter("All");
+    setLocationFilter("All");
+  };
+
   return (
-    <section className="py-20 bg-surfaceLight dark:bg-surfaceDark">
+    <section id="past-events" className="py-20 bg-surfaceLight dark:bg-surfaceDark">
       <div className="container">
         <h2 className="mb-12 text-3xl font-heading text-brandDark dark:text-brandAccent">
           Events & Conferences
         </h2>
 
         {/* 🔹 GRID */}
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {events.map((event) => (
+        {/* Filter Bar */}
+        <div className="flex flex-col gap-4 p-4 mb-12 border rounded-2xl border-borderLight dark:border-borderDark bg-white/70 dark:bg-surfaceDark/70 md:p-5 backdrop-blur">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <div className="relative w-full md:max-w-sm">
+              <input
+                type="search"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search by title, location, or year"
+                className="w-full px-4 py-3 text-sm font-medium transition bg-white border outline-none rounded-xl border-borderLight dark:border-borderDark dark:bg-bgDark text-brandDark dark:text-brandLight focus:ring-2 focus:ring-brandAccent/40"
+              />
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3">
+              <select
+                value={yearFilter}
+                onChange={(e) => setYearFilter(e.target.value)}
+                className="px-3 py-2 text-sm font-medium bg-white border rounded-xl border-borderLight dark:border-borderDark dark:bg-bgDark text-brandDark dark:text-brandLight"
+              >
+                {yearOptions.map((year) => (
+                  <option key={year} value={year}>
+                    {year === "All" ? "All Years" : year}
+                  </option>
+                ))}
+              </select>
+
+              <select
+                value={locationFilter}
+                onChange={(e) => setLocationFilter(e.target.value)}
+                className="px-3 py-2 text-sm font-medium bg-white border rounded-xl border-borderLight dark:border-borderDark dark:bg-bgDark text-brandDark dark:text-brandLight"
+              >
+                {locationOptions.map((loc) => (
+                  <option key={loc} value={loc}>
+                    {loc === "All" ? "All Locations" : loc}
+                  </option>
+                ))}
+              </select>
+
+              <button
+                onClick={handleReset}
+                className="px-4 py-2 text-xs font-bold tracking-widest uppercase transition border rounded-xl border-brandAccent/30 bg-brandAccent/10 text-brandDark dark:text-white/70 hover:bg-brandAccent/20"
+              >
+                Reset
+              </button>
+            </div>
+          </div>
+
+          <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brandDark/50 dark:text-brandLight/50">
+            Showing {filteredEvents.length} event{filteredEvents.length === 1 ? "" : "s"}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {filteredEvents.map((event) => (
             <EventCard key={event.id} event={event} />
           ))}
         </div>
+        {filteredEvents.length === 0 && (
+          <div className="p-10 mt-10 text-center border rounded-2xl border-borderLight dark:border-borderDark bg-white/80 dark:bg-surfaceDark/80">
+            <p className="text-sm font-semibold text-brandDark/70 dark:text-brandLight/70">
+              No events match your filters. Try a different year, location, or search term.
+            </p>
+          </div>
+        )}
       </div>
     </section>
   );

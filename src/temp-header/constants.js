@@ -4,7 +4,7 @@ export const NAVIGATION_DATA = {
     "mainNav": [
         { "label": "About", "type": "mega", "key": "about", "path": "/about" },
         { "label": "Services", "type": "mega", "key": "services", "path": "/services" },
-        { "label": " Tech Solutions", "type": "link", "path": "/solutions" },
+        { "label": "Tech Solutions", "type": "mega", "key": "solutions", "path": "/solutions" },
         { "label": "Events & Journey", "type": "mega", "key": "events", "path": "/events" },
         { "label": "Knowledge Hub", "type": "link", "path": "/insights" },
         { "label": "Careers", "type": "link", "path": "/careers" },
@@ -110,7 +110,7 @@ export const NAVIGATION_DATA = {
             ]
         },
         {
-            "title": "CPA Services",
+            "title": "CPA Firm - Support Services",
             "items": [
                 {
                     "label": "US Assurance Support Services",
@@ -189,13 +189,20 @@ export const NAVIGATION_DATA = {
     "eventsMegaMenu": [
         {
             "items": [
+                { "label": "Accomplishment", "path": "/events/#accomplishment" },
+                {"label":"Emerging Risk Assurance","path":"/events/#emerging-risk-assurance"},
                 { "label": "Upcoming Events", "path": "/events/#upcoming-events" },
-                { "label": "Past Events", "path": "/events/#past" },
-                {"label":"Accomplishments","path":"/events/#accomplishments"},
-                {"label":"Emerging Awards & Recognitions", "path":"/events/#emerging-recognitions"},
-                { "label": "Company Journey", "path": "/events/#journey" },
-                // { "label": "Milestones", "path": "/events/#milestones" },
-                 { "label": "Media Coverage", "path": "/events/#moments-that-matters" }
+                {"label":"Past Events","path":"/events/#past-events"},
+                { "label": "Media Coverage", "path": "/events/#moment-that-matters" }
+            ]
+        }
+    ],
+
+    "solutionsMegaMenu": [
+        {
+            "title": "Tech Solutions",
+            "items": [
+                { "label": "US Assurance - Audit Management", "path": "/solutions" },
             ]
         }
     ]

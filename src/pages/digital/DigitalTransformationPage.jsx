@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet-async";
 import CTASection from "./CTASection";
 import FAQ from "./FAQ.";
 import HeroSection from "./HeroSection";
+import ServicesSection from "./ServicesSection";
 import Offerings from "./Offerings";
 
 const DigitalTransformationPage = () => {
@@ -25,6 +26,8 @@ const DigitalTransformationPage = () => {
 
       {/* 2. Introduction / Journey */}
       <Offerings />
+
+      {/* <ServicesSection /> */}
 
       {/* 3. ERM Advantages */}
       <CTASection />

@@ -11,6 +11,9 @@ import { Riskman_Aniversary_5_year_images } from "../../../assets/riskman-annive
 import {TEAM_LUNCH_DECEMBER_2023_Images} from "../../../assets/journey/team_lunch_dinner/index2023"
 import { TEAM_LUNCH_DECEMBER_2021_Images } from "../../../assets/journey/team_lunch_dinner/index_2021";
 import {TEAM_LUNCH_FEB_2022_Images} from "../../../assets/journey/team_lunch_dinner/index2022";
+import { TEAM_BIRTH_DAY_Images } from "../../../assets/journey/team_lunch_dinner/team_birth_day";
+import { Ganesh_Chaturthi_Images } from "../../../assets/journey/team_lunch_dinner/ganesh_chaturthi";
+import { IIA_Internal_Leadership_2025_images } from "../../../assets/internal-leadership/2025";
 
 // 2021 - 2 images, 2026 - 3 images, 2022 - 1 image, 2023 - 6 images
 
@@ -24,25 +27,25 @@ export const PHOTOS = [
   { id: 5, category: "5 Year Celebration", title: "RiskMan Growth Journey", image: Riskman_Aniversary_5_year_images[4], description: "Journey of growth and success" },
   {id:6,category:"5 Year Celebration", title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[5],description:"Journey of growth and success"},
   {id:7,category:"5 Year Celebration", title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[6],description:"Journey of growth and success"},
-  {id:36,category:"5 Year Celebration", title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[7],description:"Journey of growth and success"},
-  {id:37,category:"5 Year Celebration", title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[8],description:"Journey of growth and success"},
-  {id:38,category:"5 Year Celebration", title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[9],description:"Journey of growth and success"},
+  {id:8,category:"5 Year Celebration", title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[7],description:"Journey of growth and success"},
+  {id:9,category:"5 Year Celebration", title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[8],description:"Journey of growth and success"},
+  {id:10, category:"5 Year Celebration", title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[9],description:"Journey of growth and success"},
     
   
 
-  { id: 6, category: "Team Lunches & Dinner", year: 2023, image: TEAM_LUNCH_DECEMBER_2023_Images[0] },
-  { id: 7, category: "Team Lunches & Dinner", year: 2023, image: TEAM_LUNCH_DECEMBER_2023_Images[1] },
-  { id: 8, category: "Team Lunches & Dinner", year: 2023, image: TEAM_LUNCH_DECEMBER_2023_Images[2] },
-  { id: 9, category: "Team Lunches & Dinner", year: 2023, image: TEAM_LUNCH_DECEMBER_2023_Images[3] },
-  { id: 10, category: "Team Lunches & Dinner", year: 2023, image: TEAM_LUNCH_DECEMBER_2023_Images[4] },
-  { id: 11, category: "Team Lunches & Dinner", year: 2023, image: TEAM_LUNCH_DECEMBER_2023_Images[5] },
-  { id: 22, category: "Team Lunches & Dinner", year: 2026, image: TEAM_LUNCH_JANUARY_2026_Images[0] },
-  { id: 23, category: "Team Lunches & Dinner", year: 2026, image: TEAM_LUNCH_JANUARY_2026_Images[1] },
-  { id: 24, category: "Team Lunches & Dinner", year: 2026, image: TEAM_LUNCH_JANUARY_2026_Images[2] },
-  {id:25, category:"Team Lunches & Dinner", year:2021, image:TEAM_LUNCH_DECEMBER_2021_Images[0]},
-  {id:26, category:"Team Lunches & Dinner", year:2021, image:TEAM_LUNCH_DECEMBER_2021_Images[1]},
-  {id:27, category:"Team Lunches & Dinner", year:2022, image:TEAM_LUNCH_FEB_2022_Images[0]},
-  {id:28, category:"Team Lunches & Dinner", year:2023, image:TEAM_LUNCH_DECEMBER_2023_Images[6]},
+  { id: 11, category: "Team Lunches & Dinner", year: 2023, image: TEAM_LUNCH_DECEMBER_2023_Images[0] },
+  { id: 12, category: "Team Lunches & Dinner", year: 2023, image: TEAM_LUNCH_DECEMBER_2023_Images[1] },
+  { id: 13, category: "Team Lunches & Dinner", year: 2023, image: TEAM_LUNCH_DECEMBER_2023_Images[2] },
+  { id: 14, category: "Team Lunches & Dinner", year: 2023, image: TEAM_LUNCH_DECEMBER_2023_Images[3] },
+  { id: 15, category: "Team Lunches & Dinner", year: 2023, image: TEAM_LUNCH_DECEMBER_2023_Images[4] },
+  { id: 16, category: "Team Lunches & Dinner", year: 2023, image: TEAM_LUNCH_DECEMBER_2023_Images[5] },
+  { id: 17, category: "Team Lunches & Dinner", year: 2026, image: TEAM_LUNCH_JANUARY_2026_Images[0] },
+  { id: 18, category: "Team Lunches & Dinner", year: 2026, image: TEAM_LUNCH_JANUARY_2026_Images[1] },
+  { id: 19, category: "Team Lunches & Dinner", year: 2026, image: TEAM_LUNCH_JANUARY_2026_Images[2] },
+  {id:20, category:"Team Lunches & Dinner", year:2021, image:TEAM_LUNCH_DECEMBER_2021_Images[0]},
+  {id:21, category:"Team Lunches & Dinner", year:2021, image:TEAM_LUNCH_DECEMBER_2021_Images[1]},
+  {id:22, category:"Team Lunches & Dinner", year:2022, image:TEAM_LUNCH_FEB_2022_Images[0]},
+ 
 
   
 
@@ -51,84 +54,93 @@ export const PHOTOS = [
      OFFICE CULTURE — SECTION WISE
   ============================ */
   {
-    id: 22,
+    id: 24,
     category: "Office Culture",
     subCategory: "Birthday Celebration",
-    image: TEAM_LUNCH_DECEMBER_2023_Images[2],
+    image: TEAM_BIRTH_DAY_Images[0],
   },
 
   
 
   {
-    id:32,
+    id:25,
     category:"Office Culture",
     subCategory:"Birthday Celebration",
-    image:TEAM_LUNCH_DECEMBER_2023_Images[17],
+    image:TEAM_BIRTH_DAY_Images[1],
   },
 
    {
-    id:33,
+    id:26,
     category:"Office Culture",
     subCategory:"Birthday Celebration",
-    image:TEAM_LUNCH_DECEMBER_2023_Images[18],
+    image:TEAM_BIRTH_DAY_Images[2],
   },
 
    {
-    id:34,
+    id:27,
     category:"Office Culture",
     subCategory:"Birthday Celebration",
-    image:TEAM_LUNCH_DECEMBER_2023_Images[19],
+    image:TEAM_BIRTH_DAY_Images[3],
   },
 
    {
-    id:35,
+    id:28,
     category:"Office Culture",
     subCategory:"Birthday Celebration",
-    image:TEAM_LUNCH_DECEMBER_2023_Images[16],
+    image:TEAM_BIRTH_DAY_Images[4],
   },
-  
+
+ 
+ 
   {
-    id: 23,
+    id: 29,
     category: "Office Culture",
     subCategory: "Zomato Client Celebration",
     image: Diwali_Christmas_Zomato_Team_Images[0],
   },
   {
-    id: 24,
+    id: 30,
     category: "Office Culture",
     subCategory: "Zomato Client Celebration",
     image: Diwali_Christmas_Zomato_Team_Images[1],
   },
   {
-    id: 25,
+    id: 31,
     category: "Office Culture",
     subCategory: "Zomato Client Celebration",
     image: Diwali_Christmas_Zomato_Team_Images[2],
   },
   {
-    id: 26,
+    id: 32,
     category: "Office Culture",
     subCategory: "Zomato Client Celebration",
     image: Diwali_Christmas_Zomato_Team_Images[3],
   },
   {
-    id: 27,
+    id: 33,
     category: "Office Culture",
     subCategory: "Zomato Client Celebration",
     image: Diwali_Christmas_Zomato_Team_Images[4],
   },
   {
-    id: 28,
+    id: 34,
     category: "Office Culture",
     subCategory: "Zomato Client Celebration",
     image: Diwali_Christmas_Zomato_Team_Images[5],
   },
-  {
-    id: 29,
-    category: "Office Culture",
-    subCategory: "CIA Promotion",
-    image: CIA_CELEBRATION_WITH_TEAM_Images[0],
+
+   {
+    id:35,
+    category:"Office Culture",
+    subCategory:"Zomato Client Celebration",
+    image: Ganesh_Chaturthi_Images[0],
   },
+//   {
+//     id: 35,
+//     category: "Office Culture",
+//     subCategory: "CIA Promotion",
+//     image: CIA_CELEBRATION_WITH_TEAM_Images[0],
+//   },
 //   {
 //     id: 30,
 //     category: "Office Culture",
@@ -142,12 +154,34 @@ export const PHOTOS = [
   //   image: GAME_SESSION_WITH_TEAM[0],
   // },
 
+  
   {
-    id:31,
+    id:37,
+    category:"Meetings & Discussions",
+    image:IIA_Internal_Leadership_2025_images[0]
+  },
+  {
+    id:38,
+    category:"Meetings & Discussions",
+    image:IIA_Internal_Leadership_2025_images[1]
+  },
+  {
+    id:39,
+    category:"Meetings & Discussions",
+    image:IIA_Internal_Leadership_2025_images[2]
+  },
+  {
+    id:40,
+    category:"Meetings & Discussions",
+    image:IIA_Internal_Leadership_2025_images[3]
+  },
+  {
+    id:41,
     category:"Office Culture",
-    subCategory:"Ganesh Chaturthi",
-    image:TEAM_LUNCH_DECEMBER_2023_Images[20]
-  }
+    subCategory:"Birthday Celebration",
+    image:TEAM_BIRTH_DAY_Images[5],
+  },
+  
 
   
 ];
