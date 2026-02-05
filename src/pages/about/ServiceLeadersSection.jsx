@@ -90,10 +90,10 @@ const SERVICE_LEADERS = [
   },
   {
     name: "Vishal Sharma",
-    title: "Senior Consultant",
+    title: "Risk Advisory and Assurance | Senior Consultant",
     location: "Kolkata, India",
-    credentials: "",
-    bio: "",
+    credentials: "CA Inter with 7+ years",
+    bio: "Specialized in core internal audit, ERM, ICoFR, SOP & policy development, and MIS Automation through VBA",
     image: teamsImages.VishalSharma,
     expertise: [],
     linkedin: ""
@@ -107,7 +107,7 @@ function LeaderCard({ leader, index, onSelect }) {
   return (
     <motion.div
       {...animations.card(index)}
-      onClick={() => onSelect?.(leader)}
+      // onClick={() => onSelect?.(leader)}
       className="p-6 border cursor-pointer rounded-2xl bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark group hover:border-brandGold hover:-translate-y-1 hover:shadow-2xl"
     >
       <div className="flex justify-center mb-6">
@@ -173,7 +173,7 @@ function LeaderCard({ leader, index, onSelect }) {
 ========================= */
 export default function ServiceLeadersSection({ setSelectedLeader }) {
   return (
-    <section className="py-4 lg:py-12 bg-surfaceLight dark:bg-surfaceDark">
+    <section id="service-leaders" className="py-4 lg:py-12 bg-surfaceLight dark:bg-surfaceDark">
       <div className="px-6 mx-auto max-w-7xl lg:px-12">
 
         <motion.div {...animations.fadeInUp} className="mb-12">
@@ -182,7 +182,7 @@ export default function ServiceLeadersSection({ setSelectedLeader }) {
           </h2>
         </motion.div>
 
-        <div className="grid gap-6 mb-16 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 mb-16 md:grid-cols-2 lg:grid-cols-4">
           {SERVICE_LEADERS.map((leader, i) => (
             <LeaderCard
               key={leader.name}
