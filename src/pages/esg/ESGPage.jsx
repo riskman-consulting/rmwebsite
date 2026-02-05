@@ -49,7 +49,7 @@ import ESGEvolutionTimeline from './ESGEvolutionSections';
 import MultiStakeholderImperative from './MultiStakeHolderImperative';
 import ESGStakeholderEcosystem from './Esgstakeholderecosystem';
 import FoundationalFrameworks from './FoundationFramework';
-import Scope123ValueChain from './Scope123valuechain';
+import Scope123ValueChain from './Scope123ValueChain';
 import ESGProgramLifecycle from './Esgprogramlifecycle';
 import ESGMaturityModel from './ESGMaturityModel';
 import ESGValueCreation from './ESGValueCreation';
