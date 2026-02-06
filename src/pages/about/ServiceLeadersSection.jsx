@@ -88,12 +88,12 @@ const SERVICE_LEADERS = [
     ,
     linkedin: "linkedin.com/in/pranshul-agarwal-3b707a148"
   },
-  {
+   {
     name: "Vishal Sharma",
-    title: "Senior Consultant",
+    title: "Risk Advisory and Assurance | Senior Consultant",
     location: "Kolkata, India",
-    credentials: "",
-    bio: "",
+    credentials: "CA Inter with 7+ years",
+    bio: "Specialized in core internal audit, ERM, ICoFR, SOP & policy development, and MIS Automation through VBA",
     image: teamsImages.VishalSharma,
     expertise: [],
     linkedin: ""
@@ -182,13 +182,13 @@ export default function ServiceLeadersSection({ setSelectedLeader }) {
           </h2>
         </motion.div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-16">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-16">
           {SERVICE_LEADERS.map((leader, i) => (
             <LeaderCard
               key={leader.name}
               leader={leader}
               index={i}
-              onSelect={setSelectedLeader}
+              // onSelect={setSelectedLeader}
             />
           ))}
         </div>
