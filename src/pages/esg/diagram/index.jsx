@@ -49,10 +49,10 @@ const CompleteDiagram = () => {
         </section>
  
         {/* Footer */}
-        <footer className="mt-10 pt-4 border-t border-slate-50 flex flex-col md:flex-row justify-between items-center text-[10px] text-slate-400 font-medium tracking-wide gap-2">
+        {/* <footer className="mt-10 pt-4 border-t border-slate-50 flex flex-col md:flex-row justify-between items-center text-[10px] text-slate-400 font-medium tracking-wide gap-2">
           <span>RISKMAN CONSULTING LLP | SUSTAINABILITY PRACTICE</span>
           <a href="#" className="transition-colors hover:text-blue-500">www.riskmanconsulting.com</a>
-        </footer>
+        </footer> */}
  
         {/* Background Decorative Element */}
         <div className="absolute top-0 right-0 w-64 h-64 -mt-20 -mr-20 rounded-full opacity-50 pointer-events-none bg-blue-50 blur-3xl" />

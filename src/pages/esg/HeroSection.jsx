@@ -79,12 +79,12 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 animate-[fadeIn_1s_ease-out_1.2s_both]">
+      {/* <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 animate-[fadeIn_1s_ease-out_1.2s_both]">
         <span className="text-white/70 text-xs tracking-[1.5px] uppercase">Scroll</span>
         <div className="w-[30px] h-[50px] border-2 border-white/50 rounded-[25px] relative">
           <div className="absolute top-2 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-white/80 rounded-full animate-[scrollDown_2s_ease-in-out_infinite]" />
         </div>
-      </div>
+      </div> */}
 
       <style jsx>{`
         @keyframes fadeSlideDown {

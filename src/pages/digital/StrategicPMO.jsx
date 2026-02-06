@@ -5,7 +5,7 @@ const StrategicPMO = () => {
     <div className="min-h-screen font-sans transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-brandLight">
       
       {/* SECTION 1: HERO SECTION */}
-      <section className="relative py-20 lg:py-32">
+      <section  className="relative py-20 lg:py-32">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="max-w-4xl">
             <h1 className="mb-6 text-4xl font-bold leading-tight font-heading md:text-5xl lg:text-6xl">

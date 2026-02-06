@@ -1,20 +1,48 @@
 
-import React, { useRef } from 'react';
+import React, { useMemo, useRef } from "react";
 import { STAKEHOLDERS } from './STAKEHOLDERS';
 
 
 
 const Diagram = ({ setTooltip }) => {
     const containerRef = useRef(null);
-    
-    const handleMouseEnter = (e, d) => {
+
+    const center = useMemo(() => ({ x: 350, y: 350 }), []);
+    const centerRadius = 80;
+    const nodeRadius = 52;
+    const connectorGap = 6;
+
+    const getConnector = (pos) => {
+        const dx = pos.x - center.x;
+        const dy = pos.y - center.y;
+        const len = Math.hypot(dx, dy) || 1;
+        const ux = dx / len;
+        const uy = dy / len;
+        const px = -uy;
+        const py = ux;
+
+        const start = {
+            x: center.x + ux * (centerRadius + 6),
+            y: center.y + uy * (centerRadius + 6)
+        };
+        const end = {
+            x: pos.x - ux * (nodeRadius + 8),
+            y: pos.y - uy * (nodeRadius + 8)
+        };
+
+        return { start, end, px, py };
+    };
+
+    const handleMouseEnter = (e, stakeholderId) => {
         if (!containerRef.current) return;
         const rect = containerRef.current.getBoundingClientRect();
         setTooltip({
             visible: true,
-            stakeholderId: id,
+            stakeholderId,
             x: e.clientX - rect.left,
-            y: e.clientY - rect.top
+            y: e.clientY - rect.top,
+            width: rect.width,
+            height: rect.height
         });
     };
 
@@ -71,25 +99,48 @@ const Diagram = ({ setTooltip }) => {
                 </defs>
 
                 {/* Influence Rings */}
-                <circle cx="350" cy="350" r="280" className="stroke-2 fill-none stroke-slate-200" strokeDasharray="4,4" />
-                <circle cx="350" cy="350" r="200" className="stroke-2 fill-none stroke-slate-200" />
+                <circle cx="350" cy="350" r="260" className="stroke-2 fill-none stroke-slate-200" strokeDasharray="4,4" />
+                <circle cx="350" cy="350" r="190" className="stroke-2 fill-none stroke-slate-200" />
                 <circle cx="350" cy="350" r="120" className="stroke-2 fill-none stroke-slate-200" strokeDasharray="2,2" />
 
                 {/* Connection Lines */}
-                {STAKEHOLDERS.map((s) => (
-                    <g key={`connection-${s.id}`}>
-                        <line
-                            x1={s.connection.out.x1} y1={s.connection.out.y1}
-                            x2={s.connection.out.x2} y2={s.connection.out.y2}
-                            stroke={s.color} strokeWidth="2" className="animate-dash" markerEnd="url(#arrowOut)"
-                        />
-                        <line
-                            x1={s.connection.in.x1} y1={s.connection.in.y1}
-                            x2={s.connection.in.x2} y2={s.connection.in.y2}
-                            stroke={s.color} strokeWidth="2" className="animate-dash" markerEnd="url(#arrowIn)" strokeDashoffset="12"
-                        />
-                    </g>
-                ))}
+                {STAKEHOLDERS.map((s) => {
+                    const { start, end, px, py } = getConnector(s.position);
+                    const out = {
+                        x1: start.x + px * connectorGap,
+                        y1: start.y + py * connectorGap,
+                        x2: end.x + px * connectorGap,
+                        y2: end.y + py * connectorGap
+                    };
+                    const incoming = {
+                        x1: end.x - px * connectorGap,
+                        y1: end.y - py * connectorGap,
+                        x2: start.x - px * connectorGap,
+                        y2: start.y - py * connectorGap
+                    };
+
+                    return (
+                        <g key={`connection-${s.id}`}>
+                            <line
+                                x1={out.x1} y1={out.y1}
+                                x2={out.x2} y2={out.y2}
+                                stroke={s.color}
+                                strokeWidth="2"
+                                className="animate-dash"
+                                markerEnd="url(#arrowOut)"
+                            />
+                            <line
+                                x1={incoming.x1} y1={incoming.y1}
+                                x2={incoming.x2} y2={incoming.y2}
+                                stroke={s.color}
+                                strokeWidth="2"
+                                className="animate-dash"
+                                markerEnd="url(#arrowIn)"
+                                strokeDashoffset="12"
+                            />
+                        </g>
+                    );
+                })}
 
                 {/* Central Organization */}
                 {/* Central Organization */}
@@ -98,7 +149,7 @@ const Diagram = ({ setTooltip }) => {
                     <circle
                         cx="350"
                         cy="350"
-                        r="85"
+                        r={centerRadius}
                         fill="url(#centerGrad)"
                         filter="url(#glow)"
                     />
@@ -135,27 +186,41 @@ const Diagram = ({ setTooltip }) => {
                         onMouseMove={(e) => handleMouseEnter(e, s.id)}
                         onMouseLeave={handleMouseLeave}
                     >
-                        <circle cx={s.position.x} cy={s.position.y} r="55" fill={`url(#${s.gradient})`} filter="url(#shadow)" />
-                        <text x={s.position.x} y={s.position.y + 8} textAnchor="middle" fill="white" className="text-[12px] font-bold">{s.name}</text>
-                        <text x={s.position.x} y={s.position.y + 25} textAnchor="middle" fill="white" className="text-[9px] opacity-80">{s.subtitle}</text>
+                        <circle cx={s.position.x} cy={s.position.y} r={nodeRadius} fill={`url(#${s.gradient})`} filter="url(#shadow)" />
+                        <text x={s.position.x} y={s.position.y + 6} textAnchor="middle" fill="white" className="text-[12px] font-bold">{s.name}</text>
+                        <text x={s.position.x} y={s.position.y + 22} textAnchor="middle" fill="white" className="text-[9px] opacity-80">{s.subtitle}</text>
                     </g>
                 ))}
 
                 {/* Influence Labels */}
-                <g className="text-[10px] fill-slate-500 italic pointer-events-none">
-                    {STAKEHOLDERS.map((s, idx) => {
-                        // Calculated label positions relative to connectors
-                        const labelPos = [
-                            { x: 370, y: 165, x2: 290, y2: 145 }, // Investors
-                            { x: 160, y: 220, x2: 180, y2: 250 }, // Regulators
-                            { x: 495, y: 220, x2: 495, y2: 235 }, // Customers
-                            { x: 170, y: 470, x2: 170, y2: 485 }, // Employees
-                            { x: 485, y: 470, x2: 485, y2: 485 }, // Society
-                        ][idx];
+                <g className="text-[9px] fill-slate-500 italic pointer-events-none hidden md:block">
+                    {STAKEHOLDERS.map((s) => {
+                        const { start, end, px, py } = getConnector(s.position);
+                        const dx = s.position.x - center.x;
+                        const dy = s.position.y - center.y;
+                        const t = 0.62;
+                        const midX = start.x + (end.x - start.x) * t;
+                        const midY = start.y + (end.y - start.y) * t;
+                        const offset = 22;
+                        const anchorPrimary = Math.abs(dx) < 10 ? (px >= 0 ? "start" : "end") : (dx > 0 ? "start" : "end");
+                        const anchorSecondary = Math.abs(dx) < 10 ? (px >= 0 ? "end" : "start") : (dx > 0 ? "end" : "start");
+
                         return (
                             <React.Fragment key={`labels-${s.id}`}>
-                                <text x={labelPos.x} y={labelPos.y}>{s.labels[0]}</text>
-                                <text x={labelPos.x2} y={labelPos.y2}>{s.labels[1]}</text>
+                                <text
+                                    x={midX + px * offset}
+                                    y={midY + py * offset}
+                                    textAnchor={anchorPrimary}
+                                >
+                                    {s.labels[0]}
+                                </text>
+                                <text
+                                    x={midX - px * offset}
+                                    y={midY - py * offset}
+                                    textAnchor={anchorSecondary}
+                                >
+                                    {s.labels[1]}
+                                </text>
                             </React.Fragment>
                         );
                     })}

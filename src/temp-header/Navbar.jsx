@@ -2,7 +2,7 @@
 // Navbar.jsx - EDGE SAFE (ROUTE AWARE ACTIVE)
 // ============================================
 
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NAVIGATION_DATA } from "./constants";
 import { MegaMenu } from "./MegaMenu";
 import { Moon, Sun, Phone, ArrowRight } from "lucide-react";
@@ -13,7 +13,6 @@ export const Navbar = ({
   activeMegaKey,
   setActiveMegaKey,
 }) => {
-  const timeoutRef = useRef(null);
   const [theme, setTheme] = useState("light");
   const location = useLocation();
 
@@ -49,20 +48,13 @@ export const Navbar = ({
   ======================= */
   useEffect(() => {
     setActiveMegaKey(null);
-  }, [location.pathname, setActiveMegaKey]);
+  }, [location.pathname, location.hash, setActiveMegaKey]);
 
   /* =======================
      MEGA MENU HANDLERS
   ======================= */
-  const handleMouseEnter = (key) => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    setActiveMegaKey(key);
-  };
-
-  const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => {
-      setActiveMegaKey(null);
-    }, 250);
+  const handleMegaToggle = (key) => {
+    setActiveMegaKey((prev) => (prev === key ? null : key));
   };
 
   return (
@@ -111,29 +103,28 @@ export const Navbar = ({
                   <div
                     key={item.label}
                     className="relative flex items-center h-full"
-                    {...(isMega && {
-                      onMouseEnter: () => handleMouseEnter(item.key),
-                      onMouseLeave: handleMouseLeave,
-                    })}
                   >
-                    <Link
-                      to={item.path}
-                      className={`
-                        flex items-center gap-1.5 px-5 py-2 rounded-lg
-                        text-[13px] font-medium transition-all whitespace-nowrap
-                        ${
-                          isActive
-                            ? "bg-brandAccent/15 text-brandPrimary dark:text-brandGold"
-                            : "text-brandDark dark:text-brandLight hover:bg-brandPrimary/10"
-                        }
-                      `}
-                    >
-                      {item.label}
+                    {isMega ? (
+                      <button
+                        type="button"
+                        onClick={() => handleMegaToggle(item.key)}
+                        aria-expanded={activeMegaKey === item.key}
+                        aria-controls={`mega-${item.key}`}
+                        className={`
+                          flex items-center gap-1.5 px-5 py-2 rounded-lg
+                          text-[13px] font-medium transition-all whitespace-nowrap
+                          ${
+                            isActive
+                              ? "bg-brandAccent/15 text-brandPrimary dark:text-brandGold font-bold"
+                              : "text-brandDark dark:text-brandLight hover:bg-brandPrimary/10"
+                          }
+                        `}
+                      >
+                        {item.label}
 
-                      {isMega && (
                         <svg
                           className={`w-4 h-4 transition-transform ${
-                            isActive ? "rotate-180" : ""
+                            activeMegaKey === item.key ? "rotate-180" : ""
                           }`}
                           fill="none"
                           stroke="currentColor"
@@ -146,14 +137,24 @@ export const Navbar = ({
                             d="M19 9l-7 7-7-7"
                           />
                         </svg>
-                      )}
-                    </Link>
+                      </button>
+                    ) : (
+                      <Link
+                        to={item.path}
+                        className="
+                          flex items-center gap-1.5 px-5 py-2 rounded-lg
+                          text-[13px] font-medium transition-all whitespace-nowrap
+                          text-brandDark dark:text-brandLight hover:bg-brandPrimary/10
+                        "
+                      >
+                        {item.label}
+                      </Link>
+                    )}
 
                     {isMega && activeMegaKey === item.key && (
                       <div
                         className="absolute left-0 z-50 top-full"
-                        onMouseEnter={() => handleMouseEnter(item.key)}
-                        onMouseLeave={handleMouseLeave}
+                        id={`mega-${item.key}`}
                       >
                         <MegaMenu menuKey={item.key} />
                       </div>
@@ -203,7 +204,10 @@ export const Navbar = ({
 
         {/* BACKDROP */}
         {activeMegaKey && (
-          <div className="fixed inset-0 top-[128px] z-[45] bg-black/40 backdrop-blur-lg pointer-events-none" />
+          <div
+            className="fixed inset-0 top-[128px] z-[45] bg-black/40 backdrop-blur-lg"
+            onClick={() => setActiveMegaKey(null)}
+          />
         )}
       </nav>
     </>
