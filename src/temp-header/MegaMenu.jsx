@@ -54,6 +54,7 @@ export const MegaMenu = ({ menuKey }) => {
         p-6
         w-max
         max-w-[90vw]
+        z-[9999]
       "
     >
       <div className={`grid ${gridCols} gap-x-12 gap-y-8`}>

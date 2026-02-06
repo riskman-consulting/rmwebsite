@@ -110,3 +110,52 @@ body{
     display: none;            /* Chrome, Safari */
   }
 }
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+
+.animate-dash {
+  stroke-dasharray: 10; 
+  animation: dash 1s linear infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 15px rgba(13, 79, 107, 0.4));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 25px rgba(21, 101, 192, 0.6));
+    transform: scale(1.02);
+  }
+}
+
+@keyframes float-text {
+  0%, 100% { transform: translateY(0px); opacity: 0.9; }
+  50% { transform: translateY(-3px); opacity: 1; }
+}
+
+.animate-evaporate {
+  transform-origin: center;
+  transform-box: fill-box; /* Critical for SVG scaling */
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+.animate-float {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: float-text 3s ease-in-out infinite;
+}
+
+/* Tooltip Fade-in */
+.tooltip-enter {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -100%); }
+  to { opacity: 1; transform: translate(-50%, -110%); }
+}

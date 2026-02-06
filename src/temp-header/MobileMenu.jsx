@@ -30,7 +30,7 @@ export const MobileMenu = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex justify-end">
+    <div className="fixed  inset-0 z-[9999] flex justify-end">
       {/* =======================
           BACKDROP
       ======================= */}

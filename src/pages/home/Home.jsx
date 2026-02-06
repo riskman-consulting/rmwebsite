@@ -1,5 +1,5 @@
 // src/pages/home/Home.jsx
-import React,{useState} from "react";
+import React,{useEffect, useState} from "react";
 import { Helmet } from "react-helmet-async";
 
 // layout / common
@@ -29,6 +29,7 @@ import EventSection from "./EventSection";
 
 export default function Home() {
   const [selectedLeader, setSelectedLeader] =useState(null);
+ 
   return (
     <>
       {/* <Helmet>
