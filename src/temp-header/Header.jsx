@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <div className="flex flex-col font-sans z-[99999] selection:bg-blue-100 selection:text-blue-900">
       {/* Sticky Header */}
-      <header className="sticky top-0 z-50">
+      <header className="sticky top-0 z-[9999]">
         <Navbar 
           onToggleMobileMenu={() => setIsMobileMenuOpen(true)} 
           activeMegaKey={activeMegaKey}

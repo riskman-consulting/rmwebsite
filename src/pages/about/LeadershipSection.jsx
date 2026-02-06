@@ -121,7 +121,7 @@ function PrasenPalRichBio() {
 
           <p>
             A seasoned professional with over{" "}
-            <strong>17 years of distinguished experience</strong> across Big Four
+            <strong>18 years of distinguished experience</strong> across Big Four
             and global consulting powerhouses—including{" "}
             <strong>Deloitte, EY, and Genpact</strong>—he brings a rare blend of
             strategic vision and technical mastery to the firm's leadership.

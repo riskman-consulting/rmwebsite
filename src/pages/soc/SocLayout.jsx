@@ -5,20 +5,20 @@ import { ShieldCheck, FileText, Globe } from "lucide-react";
 function Layout() {
   const navigate = useNavigate()
   return (
-    <div className="min-h-screen z-40 bg-bgLight dark:bg-bgDark transition-colors duration-300">
+    <div className="z-40 min-h-screen transition-colors duration-300 bg-bgLight dark:bg-bgDark">
       {/* Navigation Bar */}
-      <nav className="fixed  w-screen z-50 bg-surfaceLight/80 dark:bg-surfaceDark/80 backdrop-blur-md border-b border-borderLight dark:border-borderDark">
-        <div className="container py-4 flex items-center justify-between">
+      <nav className="fixed z-50 w-screen border-b bg-surfaceLight/80 dark:bg-surfaceDark/80 backdrop-blur-md border-borderLight dark:border-borderDark">
+        <div className="container flex items-center justify-between py-4">
           {/* Brand Logo Placeholder */}
-          <div onClick={()=>navigate("")} className="font-heading font-black text-2xl text-brandPrimary dark:text-brandGold tracking-tighter">
+          <div onClick={()=>navigate("")} className="text-2xl font-black tracking-tighter font-heading text-brandPrimary dark:text-brandGold">
             SOC's
           </div>
 
           {/* Links */}
           <div className="flex items-center gap-1 sm:gap-4">
-            <NavItem to="soc-1" icon={<FileText size={18} />} label="SOC 1" />
-            <NavItem to="soc-2" icon={<ShieldCheck size={18} />} label="SOC 2" />
-            <NavItem to="soc-3" icon={<Globe size={18} />} label="SOC 3" />
+            <NavItem to="soc-1"  label="SOC 1" />
+            <NavItem to="soc-2"  label="SOC 2" />
+            <NavItem to="soc-3" label="SOC 3" />
           </div>
         </div>
       </nav>
@@ -32,7 +32,7 @@ function Layout() {
 }
 
 // Helper component for cleaner link logic
-const NavItem = ({ to, icon, label }) => (
+const NavItem = ({ to, icon="", label }) => (
   <NavLink
     to={to}
     className={({ isActive }) => `

@@ -755,6 +755,11 @@ export default function MomentsThatMatter() {
     return data;
   }, [activeFilter, activeYear, activeOfficeSection, searchQuery, bm25]);
 
+  const lightboxAllImages = useMemo(
+    () => filteredPhotos.map((photo) => photo.image),
+    [filteredPhotos]
+  );
+
   // Reset sub-filters when main filter changes
   useEffect(() => {
     setActiveYear(null);
@@ -764,9 +769,11 @@ export default function MomentsThatMatter() {
     setShowMoreEmerging(false);
   }, [activeFilter]);
 
-  const openLightbox = (image) => {
-    setLightboxImages([image]);
-    setLightboxIndex(0);
+  const openLightbox = (images, index = 0) => {
+    const list = Array.isArray(images) ? images : [images];
+    const safeIndex = Math.max(0, Math.min(index, list.length - 1));
+    setLightboxImages(list);
+    setLightboxIndex(safeIndex);
   };
 
   const closeLightbox = () => {
@@ -801,35 +808,25 @@ export default function MomentsThatMatter() {
 
         {/* MAIN FILTER BAR */}
         <div className="flex flex-wrap justify-center gap-3 mb-8 md:mb-12">
-          {FILTERS.map((f, index) => {
+          {FILTERS.map((f) => {
             const Icon = f.icon;
             const isActive = activeFilter === f.name;
             return (
-              <motion.button
+              <button
                 key={f.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.05 }}
                 onClick={() => handleFilterChange(f.name)}
                 className={`
-                  relative px-5 py-2.5 rounded-full text-xs md:text-sm font-bold uppercase 
-                  flex items-center gap-2 transition-all duration-300 overflow-hidden
+                  px-5 py-2.5 rounded-full text-xs md:text-sm font-bold uppercase 
+                  flex items-center gap-2
                   ${isActive
-                    ? "bg-gradient-to-r from-brandNavy to-brandDark dark:from-brandAccent dark:to-brandGold text-white shadow-lg scale-105"
-                    : "bg-white dark:bg-surfaceDark text-brandPrimary/70 dark:text-white/70 hover:bg-brandAccent/10 dark:hover:bg-brandNavy/50 border border-brandAccent/20 dark:border-brandGold/20"
+                    ? "bg-brandNavy dark:bg-brandAccent text-white"
+                    : "bg-white dark:bg-surfaceDark text-brandPrimary/70 dark:text-white/70 border border-brandAccent/20 dark:border-brandGold/20"
                   }
                 `}
               >
-                {isActive && (
-                  <motion.div
-                    layoutId="activeFilter"
-                    className="absolute inset-0 bg-gradient-to-r from-brandNavy to-brandDark dark:from-brandAccent dark:to-brandGold"
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                  />
-                )}
-                <Icon className={`w-4 h-4 relative z-10 ${isActive ? 'animate-pulse' : ''}`} />
+                <Icon className="relative z-10 w-4 h-4" />
                 <span className="relative z-10">{f.name}</span>
-              </motion.button>
+              </button>
             );
           })}
         </div>
@@ -851,17 +848,19 @@ export default function MomentsThatMatter() {
               </p>
             </div>
 
-            <motion.div 
-              layout
-              className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-            >
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {(showMoreAccomplishments ? allAccomplishments : accomplishmentsInitial).map((item, index) => (
                 <motion.div
-                  key={index}
+                  key={`acc-${index}`}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  onClick={() => openLightbox(item.image)}
+                  onClick={() =>
+                    openLightbox(
+                      (showMoreAccomplishments ? allAccomplishments : accomplishmentsInitial).map((img) => img.image),
+                      index
+                    )
+                  }
                   className="overflow-hidden transition-all duration-300 shadow-lg cursor-pointer group rounded-2xl hover:shadow-xl h-72"
                 >
                   <img
@@ -871,9 +870,9 @@ export default function MomentsThatMatter() {
                   />
                 </motion.div>
               ))}
-            </motion.div>
+            </div>
 
-            <div className="mt-12 text-center">
+            <div  className="mt-12 text-center">
               <motion.button
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -903,17 +902,19 @@ export default function MomentsThatMatter() {
               </p>
             </div>
 
-            <motion.div 
-              layout
-              className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-            >
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {(showMoreEmerging ? allEmerging : emergingInitial).map((item, index) => (
                 <motion.div
-                  key={index}
+                  key={`em-${index}`}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  onClick={() => openLightbox(item.image)}
+                  onClick={() =>
+                    openLightbox(
+                      (showMoreEmerging ? allEmerging : emergingInitial).map((img) => img.image),
+                      index
+                    )
+                  }
                   className="overflow-hidden transition-all duration-300 shadow-lg cursor-pointer group rounded-2xl hover:shadow-xl h-72"
                 >
                   <img
@@ -923,7 +924,7 @@ export default function MomentsThatMatter() {
                   />
                 </motion.div>
               ))}
-            </motion.div>
+            </div>
 
             <div className="mt-12 text-center">
               <motion.button
@@ -948,10 +949,10 @@ export default function MomentsThatMatter() {
             <button
               onClick={() => setActiveYear(null)}
               className={`
-                px-4 py-2 rounded-full text-xs md:text-sm font-bold transition-all
+                px-4 py-2 rounded-full text-xs md:text-sm font-bold
                 ${!activeYear
-                  ? "bg-brandNavy text-white shadow-md scale-105"
-                  : "bg-white dark:bg-surfaceDark border border-brandAccent/30 text-brandPrimary/70 hover:bg-brandAccent/10"
+                  ? "bg-brandNavy text-white"
+                  : "bg-white dark:bg-surfaceDark border border-brandAccent/30 text-brandPrimary/70"
                 }
               `}
             >
@@ -964,10 +965,10 @@ export default function MomentsThatMatter() {
                   key={year}
                   onClick={() => setActiveYear(year)}
                   className={`
-                    px-4 py-2 rounded-full text-xs md:text-sm font-bold transition-all
+                    px-4 py-2 rounded-full text-xs md:text-sm font-bold
                     ${isActive
-                      ? "bg-brandNavy text-white shadow-md scale-105"
-                      : "bg-white dark:bg-surfaceDark border border-brandAccent/30 text-brandPrimary/70 hover:bg-brandAccent/10"
+                      ? "bg-brandNavy text-white"
+                      : "bg-white dark:bg-surfaceDark border border-brandAccent/30 text-brandPrimary/70"
                     }
                   `}
                 >
@@ -988,10 +989,10 @@ export default function MomentsThatMatter() {
             <button
               onClick={() => setActiveOfficeSection(null)}
               className={`
-                px-4 py-2 rounded-full text-xs md:text-sm font-bold transition-all
+                px-4 py-2 rounded-full text-xs md:text-sm font-bold
                 ${!activeOfficeSection
-                  ? "bg-brandNavy text-white shadow-md scale-105"
-                  : "bg-white dark:bg-surfaceDark border border-brandAccent/30 text-brandPrimary/70 hover:bg-brandAccent/10"
+                  ? "bg-brandNavy text-white"
+                  : "bg-white dark:bg-surfaceDark border border-brandAccent/30 text-brandPrimary/70"
                 }
               `}
             >
@@ -1004,10 +1005,10 @@ export default function MomentsThatMatter() {
                   key={section}
                   onClick={() => setActiveOfficeSection(section)}
                   className={`
-                    px-4 py-2 rounded-full text-xs md:text-sm font-bold transition-all
+                    px-4 py-2 rounded-full text-xs md:text-sm font-bold
                     ${isActive
-                      ? "bg-brandNavy text-white shadow-md scale-105"
-                      : "bg-white dark:bg-surfaceDark border border-brandAccent/30 text-brandPrimary/70 hover:bg-brandAccent/10"
+                      ? "bg-brandNavy text-white"
+                      : "bg-white dark:bg-surfaceDark border border-brandAccent/30 text-brandPrimary/70"
                     }
                   `}
                 >
@@ -1030,18 +1031,18 @@ export default function MomentsThatMatter() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                layout
                 className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
               >
                 {filteredPhotos.map((p, index) => (
                   <motion.div
-                    key={p.id}
+                    key={`${p.id}-${index}`}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.05 }}
-                    whileHover={{ scale: 1.05 }}
-                    onClick={() => openLightbox(p.image)}
-                    className="overflow-hidden transition-all duration-300 shadow-lg cursor-pointer group rounded-2xl hover:shadow-xl h-72"
+                    onClick={() =>
+                      openLightbox(lightboxAllImages, index)
+                    }
+                    className="relative overflow-hidden transition-all duration-300 shadow-lg cursor-pointer group rounded-2xl hover:shadow-xl h-72"
                   >
                     <img
                       src={p.image}
@@ -1086,10 +1087,7 @@ export default function MomentsThatMatter() {
                 className="relative overflow-hidden shadow-lg cursor-pointer rounded-2xl group"
               >
                 {/* Main Image Card */}
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="relative overflow-hidden bg-black h-96"
-                >
+                <div className="relative overflow-hidden bg-black h-96">
                   <img
                     src={e.images[0]}
                     alt={e.country}
@@ -1102,26 +1100,21 @@ export default function MomentsThatMatter() {
                   </div>
 
                   {/* Hover - Show all images count */}
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    whileHover={{ opacity: 1 }}
-                    className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-brandNavy/70"
-                  >
+                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 transition-opacity duration-300 opacity-0 bg-brandNavy/70 group-hover:opacity-100">
                     <p className="text-sm font-semibold text-white">
                       {e.images.length} Images
                     </p>
                     <button
                       onClick={(event) => {
                         event.stopPropagation();
-                        setLightboxImages(e.images);
-                        setLightboxIndex(0);
+                        openLightbox(e.images, 0);
                       }}
                       className="px-6 py-2 font-semibold transition-all rounded-full bg-gradient-to-r from-brandAccent to-brandGold text-brandDark hover:shadow-lg"
                     >
                       View All
                     </button>
-                  </motion.div>
-                </motion.div>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -1137,25 +1130,25 @@ export default function MomentsThatMatter() {
             {/* LEFT — STORY CONTENT */}
             <div className="space-y-8">
               <div>
-                <div className="inline-block px-4 py-2 mb-6 text-sm font-bold rounded-full bg-gradient-to-r from-brandAccent/20 to-brandGold/20 dark:from-brandAccent/30 dark:to-brandGold/30 text-brandNavy dark:text-brandAccent">
+                <div className="inline-block px-4 py-2 mb-6 text-sm font-bold rounded-full bg-gradient-to-r from-brandAccent/20 to-brandGold/20 dark:from-brandAccent/30 dark:to-brandGold/30 dark:text-brandAccent">
                   Featured Story
                 </div>
-                <h2 className="mb-6 text-xl font-bold leading-tight text-transparent md:text-2xl lg:text-3xl bg-gradient-to-r from-brandNavy via-brandDark to-brandNavy dark:from-white dark:via-brandAccent dark:to-white bg-clip-text">
+                <h2 className="mb-6 text-xl font-bold leading-tight text-transparent md:text-2xl lg:text-3xl bg-gradient-to-r dark:from-white dark:via-brandAccent dark:to-white bg-clip-text">
                   Connecting Continents: Our Global Client Engagement Journey
                 </h2>
               </div>
 
               <div className="flex items-center gap-4 p-2 border bg-brandAccent/10 dark:bg-brandGold/10 rounded-2xl border-brandAccent/20 dark:border-brandGold/20">
-                <div className="flex items-center justify-center w-12 h-12 text-lg font-bold text-white rounded-full bg-gradient-to-br from-brandNavy to-brandDark dark:from-brandAccent dark:to-brandGold">
+                <div className="flex items-center justify-center w-12 h-12 text-lg font-bold text-white rounded-full bg-gradient-to-br dark:from-brandAccent dark:to-brandGold">
                   PP
                 </div>
                 <div>
-                  <p className="font-bold text-brandNavy dark:text-white">Prasen Pal</p>
+                  <p className="font-bold dark:text-white">Prasen Pal</p>
                   <p className="text-sm text-brandPrimary/70 dark:text-white/60">Co-Founder & Partner</p>
                 </div>
               </div>
 
-              <div className="space-y-6 text-base leading-relaxed md:text-lg text-brandPrimary/80 dark:text-white/70">
+              <div className="space-y-6 text-base leading-relaxed md:text-lg dark:text-white/70">
                 <p>
                   Our recent journey across Germany, France, and Vietnam strengthened partnerships with Indorama Ventures and reinforced relationships built on trust, collaboration, and shared purpose.
                 </p>
@@ -1171,7 +1164,7 @@ export default function MomentsThatMatter() {
 
               <blockquote className="relative py-6 pl-8 border-l-4 border-brandGold/60 dark:border-brandAccent/60 bg-gradient-to-r from-brandAccent/5 to-transparent dark:from-brandGold/5 rounded-r-2xl">
                 <div className="absolute w-6 h-6 rounded-full -left-3 top-6 bg-brandGold dark:bg-brandAccent" />
-                <p className="text-lg italic leading-relaxed md:text-xl text-brandPrimary/90 dark:text-brandAccent/90">
+                <p className="text-lg italic leading-relaxed md:text-xl dark:text-brandAccent/90">
                   Global business is fundamentally human. The handshakes, shared meals, and genuine conversations are what transform transactions into lasting partnerships. We return with strengthened relationships, cherished memories, and excitement for future collaborations. Here's to building bridges across borders together.
                 </p>
               </blockquote>
@@ -1185,20 +1178,18 @@ export default function MomentsThatMatter() {
                 Prasen_Pal_Indonesia_Image[0],
                 Prasen_Pal_Indonesia_Image[1],
               ].map((img, idx) => (
-                <motion.div
+                <div
                   key={idx}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: idx * 0.1 }}
-                  whileHover={{ y: -8, scale: 1.05 }}
                   onClick={() => {
-                    setLightboxImages([
-                      Prasen_Pal_Germany_Image[0],
-                      Prasen_Pal_Germany_Image[2],
-                      Prasen_Pal_Indonesia_Image[0],
-                      Prasen_Pal_Indonesia_Image[1],
-                    ]);
-                    setLightboxIndex(idx);
+                    openLightbox(
+                      [
+                        Prasen_Pal_Germany_Image[0],
+                        Prasen_Pal_Germany_Image[2],
+                        Prasen_Pal_Indonesia_Image[0],
+                        Prasen_Pal_Indonesia_Image[1],
+                      ],
+                      idx
+                    );
                   }}
                   className="overflow-hidden transition-all duration-300 border-2 shadow-xl cursor-pointer rounded-3xl hover:shadow-2xl aspect-square group border-brandAccent/20 dark:border-brandGold/20"
                 >
@@ -1207,8 +1198,8 @@ export default function MomentsThatMatter() {
                     alt="Global Leadership Journey"
                     className="object-cover object-center w-full h-full transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-brandNavy/60 via-transparent to-transparent group-hover:opacity-100" />
-                </motion.div>
+                  <div className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t via-transparent to-transparent group-hover:opacity-100" />
+                </div>
               ))}
             </div>
           </motion.section>

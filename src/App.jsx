@@ -33,21 +33,61 @@ import ERMPage from './pages/erm/ERMPage'
 import RBIAPage from './pages/rbia/RBIAPage'
 import BCPPage from "./pages/bcp-dr/BCPPage"
 import CSAPage from "./pages/csa/CSAPage"
-import TPRMPage from "./pages/tprm/TPRMPage"
-import CybersecurityPage from "./pages/cybersecurity/CybersecurityPage"
-import ITGCITACPage from "./pages/itgc-itac/ITGCITACPage"
-import SocPage from "./pages/soc/soc/SocPage"
-import Soc1Page from "./pages/soc/soc1/Soc1Page"
-import Soc2Page from "./pages/soc/soc2/Soc2Page"
-import Soc3Page from "./pages/soc/soc3/Soc3Page"
 
 import DigitalTransformation from './pages/digital/DigitalTransformationPage'
 import StrategicPMO from './pages/digital/StrategicPMO'
 import ImplementationExcellence from './pages/digital/ImplementationExcellence'
 import SupportServices from './pages/digital/SupportServices'
 
+// import ESGPage from "./pages/esg/ESGPage"
+
+import ESGTempPage from "./pages/temp-esg";
+import ISO27001 from './pages/iso/iso-27001'
+import IsoLayout from './pages/iso/IsoLayout'
+import TPRM from './pages/tprm/TPRMPage'
+import CybersecurityPage from './pages/cybersecurity/CybersecurityPage'
+import ITGCITACPage from './pages/itgc-itac/ITGCITACPage'
+
+// soc
+import SOCPage from "./pages/soc/soc/SocPage"
+import SOC1Page from "./pages/soc/soc1/Soc1Page"
+import SOC2Page from "./pages/soc/soc2/Soc2Page"
+import SOC3Page from "./pages/soc/soc3/Soc3Page"
+
+/// ISO Pages
+import ISOPage from "./pages/iso/iso"
+import ISO27701Page from "./pages/iso/iso-27701"
+import ISO22301Page from "./pages/iso/iso-22301"
+import ISO31000Page from "./pages/iso/iso-31000"
+import ISO42001Page from "./pages/iso/iso-42001"
+
+// Layout 
+import SocLayout from "./pages/soc/SocLayout"
+import DigitalLayout from "./pages/digital/Layout"
+import RiskAdvisoryLayout from "./pages/risk-advisory/Layout"
+import ESGLayout from "./pages/esg/Layout"
+import FinancialAdvisoryLayout from "./pages/financial-advisory/Layout"
+import DataPrivacyLayout from "./pages/data-privacy/Layout"
+
+// ESG Pages
 import ESGPage from "./pages/esg/ESGPage"
-import ISO27001 from './pages/iso/iso-27001/ISO27001'
+import ESGStrategyRoadmapPage from "./pages/esg/strategy-roadmap"
+import ESGReportingDisclosurePage from "./pages/esg/reporting-disclosure"
+import ESGCarbonFootprintPage from "./pages/esg/carbon-footprint"
+import ESGSustainabilityAssurancePage from "./pages/esg/sustainability-assurance"
+
+// Financial Pages
+import FinancialPage from "./pages/financial-advisory/temp/FinancialAdvisoryPage"
+import FinancialCreditRisk from "./pages/financial-advisory/credit-policy-framework"
+import FinancialCreditPortfolio from "./pages/financial-advisory/credit-portfolio-management"
+import FinancialLoanReview from "./pages/financial-advisory/loan-review-monitoring"
+import FinancialCreditPolicy from "./pages/financial-advisory/credit-policy-framework"
+
+// Data Privacy
+import DataPrivacyPage from "./pages/data-privacy/data-privary"
+import DPPDCompliancePage from "./pages/data-privacy/dpdp-compliance"
+import GDPRCompliancePage from "./pages/data-privacy/gdpr-complaince"
+import OtherRegulatoryCompliance from './pages/data-privacy/other-regulatory-compliance'
 
 
 
@@ -70,7 +110,7 @@ function App() {
       {/* <Header theme={theme} setTheme={setTheme} /> */}
       <HeaderTemp />
       <Toaster position="top-right" />
-      
+
       {/* CRITICAL FIX: Add pt-[128px] to account for fixed header 
           - Announcement banner: 48px (top-0)
           - Navbar: 80px (top-[48px])
@@ -80,28 +120,87 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<ServicePage />} />
-           <Route path="/services/bcp-dr" element={<BCPPage/>} />
-           <Route path="/services/risk-advisory/csa" element={<CSAPage/>} />
-          <Route path="/services/risk-advisory" element={<RiskAdvisoryPage />} />
-          <Route path="/services/risk-advisory/erm" element={<ERMPage />} />
-          <Route path="/services/financial-advisory" element={<FinancialAdvisoryPage />} />
-          <Route path="/services/risk-advisory/rbia" element={<RBIAPage/>} />
-          <Route path="/services/risk-advisory/tprm" element={<TPRMPage/>} />
-          <Route path="/services/cybersecurity" element={<CybersecurityPage/>} />
-          <Route path="/services/itgc-itac" element={<ITGCITACPage/>} />
-          <Route path="/services/soc-services" element={<SocPage/>} />
-          <Route path="/services/soc-services/soc-1" element={<Soc1Page/>} />
-          <Route path="/services/soc-services/soc-2" element={<Soc2Page/>} />
-          <Route path="/services/soc-services/soc-3" element={<Soc3Page/>} />
-          <Route path="/services/esg" element={<ESGPage/>} />
-          <Route path="/services/iso-certifications/iso-27001" element={<ISO27001 />} />
 
-
-          <Route path='/services/digital-transformation' element={<DigitalTransformation/>} />
-          <Route path='/services/digital-transformation/strategic-pmo' element={<StrategicPMO/>} />
-          <Route path='/services/digital-transformation/implementation' element={<ImplementationExcellence/>} />
-          <Route path='/services/digital-transformation/support-services' element={<SupportServices/>} />
+          <Route path="/services/bcp-dr" element={<BCPPage />} />
           
+          <Route path="/services/esg" element={<ESGTempPage />} />
+
+
+          <Route path="/services/cybersecurity" element={<CybersecurityPage />} />
+
+          <Route path='/services/iso-certifications' element={<IsoLayout />}>
+            <Route path='iso-27001' element={<ISO27001 />} />
+          </Route>
+
+          // soc routes
+          <Route path='/services/soc-services' element={<SocLayout />}>
+            <Route path='' element={<SOCPage />} />
+            <Route path='soc-1' element={<SOC1Page />} />
+            <Route path='soc-2' element={<SOC2Page />} />
+            <Route path='soc-3' element={<SOC3Page />} />
+          </Route>
+
+          // iso routes
+          <Route path="/services/iso-certifications" element={<IsoLayout />}>
+            <Route path='' element={<ISOPage />} />
+            <Route path='iso-27001' element={<ISO27001 />} />
+            <Route path='iso-27701' element={<ISO27701Page />} />
+            <Route path='iso-22301' element={<ISO22301Page />} />
+            <Route path='iso-31000' element={<ISO31000Page />} />
+            <Route path='iso-42001' element={<ISO42001Page />} />
+          </Route>
+
+          // Digital Transformation Nested Routes
+
+          <Route path='/services/digital-transformation' element={<DigitalLayout />}>
+            <Route path='' element={<DigitalTransformation />} />
+            <Route path='strategic-pmo' element={<StrategicPMO />} />
+            <Route path='implementation' element={<ImplementationExcellence />} />
+            <Route path='support-services' element={<SupportServices />} />
+          </Route>
+
+          // Risk Advisory Nested Routes
+          <Route path='/services/risk-advisory' element={<RiskAdvisoryLayout />}>
+            <Route path='' element={<RiskAdvisoryPage />} />
+            <Route path='csa' element={<CSAPage />} />
+            <Route path='erm' element={<ERMPage />} />
+            <Route path='rbia' element={<RBIAPage />} />
+            <Route path='tprm' element={<TPRM />} />
+            <Route path='sox-icofr-ifc' element={<h1>SOX/ICOFR/IFC</h1>} />
+            <Route path='concurrent-audits' element={<h1>Concurrent Audits</h1>} />
+            <Route path='formulation-of-policies-and-sops' element={<h1>Formulation of Policies and SOPs</h1>} />
+
+          </Route>
+
+          // ESG Nested Routes
+          <Route path='/services/esg' element={<ESGLayout />}>
+            <Route path='' element={<ESGPage />} />
+            <Route path='strategy-roadmap' element={<ESGStrategyRoadmapPage />} />
+            <Route path='reporting-disclosure' element={<ESGReportingDisclosurePage />} />
+            <Route path='carbon-footprint' element={<ESGCarbonFootprintPage />} />
+            <Route path='sustainability-assurance' element={<ESGSustainabilityAssurancePage />} />
+          </Route>
+
+          // Financial Advisory Nested Routes
+          <Route  path="/services/financial-advisory" element={<FinancialAdvisoryLayout />}>
+            <Route path="" element={<FinancialPage />} />
+            <Route path='credit-risk-assessment' element={<FinancialCreditRisk />} />
+            <Route path='credit-portfolio-management' element={<FinancialCreditPortfolio />} />
+            <Route path='loan-review-monitoring' element={<FinancialLoanReview />} />
+            <Route path='credit-policy-framework' element={<FinancialCreditPolicy />} />
+          </Route>
+
+          // Data Privacy Nested Routes
+          <Route path="/services/data-privacy" element={<DataPrivacyLayout />}>
+            <Route path="" element={<DataPrivacyPage />} />
+            <Route path='dpdp' element={<DPPDCompliancePage />} />
+            <Route path='gdpr' element={<GDPRCompliancePage />} />
+            <Route path='regulatory' element={<OtherRegulatoryCompliance />} />
+          </Route>
+
+
+          <Route path="/services/itgc-itac" element={<ITGCITACPage />} />
+
           {/* <Route path="/services/:id" element={<ServicesTemplate />} /> */}
           <Route path="/industries" element={<IndustriesList />} />
           <Route path="/industries/:id" element={<IndustriesTemplate />} />
@@ -109,7 +208,7 @@ function App() {
           <Route path="/insights/:slug" element={<BlogSingle />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
-          <Route path="/events" element={<Events/>}/>
+          <Route path="/events" element={<Events />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/blog" element={<Navigate to="/blogs" />} />
           <Route path="/blogs" element={<BlogList />} />
@@ -119,7 +218,7 @@ function App() {
           <Route path="/solutions" element={<TechSolutions />} />
         </Routes>
       </main>
-      
+
       <Footer />
     </Router>
   )

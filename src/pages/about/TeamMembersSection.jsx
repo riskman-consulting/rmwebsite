@@ -35,8 +35,8 @@ const fadeInUp = {
 
 const RiskManTeams = () => {
   const allMembers = [
-    { id: 1, image: teamsImages.ShantaPal, linkedin: "https://linkedin.com/in/example" },
-    { id: 22, image: teamsImages.Pranshul, linkedin: "https://linkedin.com/in/example" },
+    { id: 1, image: teamsImages.ShantaPal, linkedin: "https://linkedin.com/in/shanta-paul-1b0483272" },
+    { id: 22, image: teamsImages.Pranshul, linkedin: "https://linkedin.com/in/pranshul-agarwal-3b707a148" },
     { id: 2, image: teamsImages.VishalSharma },
     { id: 3, image: teamsImages.RohitGupta },
     { id: 4, image: teamsImages.Yashvi },
@@ -56,13 +56,13 @@ const RiskManTeams = () => {
     { id: 18, image: teamsImages.sidhi },
     { id: 19, image: teamsImages.Sakshi },
     { id: 20, image: teamsImages.priyanshu },
-    { id: 21, image: teamsImages.monika },
+    { id: 21, image: teamsImages.Vipul },
     { id: 23, image: teamsImages.Angel },
     { id: 24, image: teamsImages.VinayakPoddar },
     { id: 25, image: teamsImages.Tushar },
-    { id: 26, image: teamsImages.JaiDeep },
+    // { id: 26, image: teamsImages.JaiDeep },
    { id:37,image:teamsImages.Tanisha},
-    { id: 27, image: teamsImages.AnirbanBiswas },
+    { id: 27, image: teamsImages.Anirban },
     { id: 28, image: teamsImages.Vanshika },
     { id: 29, image: teamsImages.Kartik },
     { id: 31, image: teamsImages.Simran },

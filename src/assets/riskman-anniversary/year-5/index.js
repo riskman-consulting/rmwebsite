@@ -7,7 +7,10 @@ import image6 from "./5yrs_delhi_1.jpeg";
 import image7 from "./5yrs_delhi_2.jpeg";
 import image8 from "./5yrs_delhi.jpeg";
 import image9 from "./5yrs_delhi_4.jpeg";
-import iamge10 from "./5yrs_delhi_5.jpeg";
+import image10 from "./5yrs_delhi_5.jpeg";
+import image11 from "./5yrs_riskman_celebration_1.jpeg";
+import image12 from "./5yrs_riskman_celebration.jpeg";
+
 
 
 
@@ -21,6 +24,8 @@ export const Riskman_Aniversary_5_year_images = [
     image7,
     image8,
     image9,
-    iamge10,
+    image10,
+    image11,
+    image12,
 
 ]

@@ -6,7 +6,7 @@ import { STAKEHOLDERS } from './STAKEHOLDERS';
 
 const Diagram = ({ setTooltip }) => {
     const containerRef = useRef(null);
-
+    
     const handleMouseEnter = (e, d) => {
         if (!containerRef.current) return;
         const rect = containerRef.current.getBoundingClientRect();
@@ -104,7 +104,7 @@ const Diagram = ({ setTooltip }) => {
                     />
 
                     {/* Wrapping text in a group to apply floating movement */}
-                    <g className="animate-float">
+                    <g className="animate">
                         <text
                             x="350"
                             y="358"

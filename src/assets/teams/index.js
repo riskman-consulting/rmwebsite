@@ -4,7 +4,7 @@
 // Filenames & extensions exactly match the folder
 
 import Angel from "./Angel.webp";
-import AnirbanBiswas from "./Anirban Biswas.webp";
+import Anirban from "./Anirban.png";
 import Artika from "./Artika.webp";
 import Pranshul from "./Pranshul.webp";
 import Ayush from "./Ayush.webp";
@@ -13,7 +13,7 @@ import JaiDeep from "./JaiDeep.webp";
 import Kaushik from "./Kaushik.webp";
 import Kartik from "./kartik.webp";
 import MayukhDhar from "./Mayukh Dhar.webp";
-import monika from "./monika.webp";
+import Vipul from "./Vipul.jpg";
 import NishanAgarwal from "./Nishan Agarwal.webp";
 import Palak from "./Palak.webp";
 import Pawan from "./pawan.webp";
@@ -51,7 +51,7 @@ import vishalSharma from "./Vishal Sharma.jpg";
 export const teamsImages = {
   Pranshul,
   Angel,
-  AnirbanBiswas,
+  Anirban,
   Artika,
   Ayush,
   Debottam,
@@ -59,7 +59,7 @@ export const teamsImages = {
   Kaushik,
   Kartik,
   MayukhDhar,
-  monika,
+  Vipul,
   NishanAgarwal,
   Palak,
   Pawan,

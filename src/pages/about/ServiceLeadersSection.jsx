@@ -92,7 +92,7 @@ const SERVICE_LEADERS = [
     name: "Vishal Sharma",
     title: "Risk Advisory and Assurance | Senior Consultant",
     location: "Kolkata, India",
-    credentials: "CA Inter with 7+ years",
+    credentials: "7+ years",
     bio: "Specialized in core internal audit, ERM, ICoFR, SOP & policy development, and MIS Automation through VBA",
     image: teamsImages.VishalSharma,
     expertise: [],
@@ -178,7 +178,7 @@ export default function ServiceLeadersSection({ setSelectedLeader }) {
 
         <motion.div {...animations.fadeInUp} className="mb-12">
           <h2 className="text-3xl font-bold lg:text-4xl text-brandDark dark:text-white">
-            Our <span className="font-serif italic text-brandGold">Associate</span> Partners and Experience <span className="text-brandAccent">Team Members</span>
+            Our <span className="font-serif italic text-brandGold">Associate</span> Partners and  <span className="text-brandAccent">Client Leads</span>
           </h2>
         </motion.div>
 

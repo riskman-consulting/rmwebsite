@@ -76,7 +76,7 @@ export default function SingleSlide() {
             </div>
             <div className="text-white/90">
               <p className="text-sm font-bold leading-tight tracking-tight uppercase">
-                Enabling digital evolution
+                Accelerating Business Achievements
               </p>
               <p className="text-xs opacity-70">Securing global enterprises</p>
             </div>

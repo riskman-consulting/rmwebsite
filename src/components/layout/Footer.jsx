@@ -76,7 +76,7 @@ export default function Footer() {
                         </Link>
             
             <p className="text-sm leading-relaxed text-brandNavy dark:text-gray-400">
-              RiskMan Consulting provides expert advisory in audit, risk, compliance, 
+              RiskMan Assurance and Advisory provides expert advisory in audit, risk, compliance, 
               cybersecurity, and digital transformation — helping businesses grow with confidence.
             </p>
             

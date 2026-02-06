@@ -754,7 +754,7 @@ export default function IntegritatSolutionPage() {
                   </svg>
                 ))}
               </div>
-              <span>4,000+ reviews</span>
+              {/* <span>4,000+ reviews</span> */}
             </div>
           </div>
         </div>

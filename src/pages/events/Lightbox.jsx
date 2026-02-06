@@ -23,7 +23,7 @@ export const Lightbox = ({ images, currentIndex, onClose, onNavigate }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-[100] bg-surfaceLight dark:bg-surfaceDark backdrop-blur-sm flex items-center justify-center p-4"
+      className="fixed inset-0 z-[999999] bg-surfaceLight dark:bg-surfaceDark backdrop-blur-sm flex items-center justify-center p-4"
     >
       {/* Close Button */}
       <button
@@ -61,8 +61,10 @@ export const Lightbox = ({ images, currentIndex, onClose, onNavigate }) => {
       {images.length > 1 && (
         <div className="absolute px-4 py-2 text-sm font-medium text-white -translate-x-1/2 rounded-full bottom-8 left-1/2 bg-brandNavy/70">
           {currentIndex + 1} / {images.length}
+         
         </div>
       )}
+
 
       {/* Image */}
       <motion.img

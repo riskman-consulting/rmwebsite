@@ -50,6 +50,32 @@ export default {
         sans: ["Inter", "sans-serif"],
         heading: ["Montserrat", "sans-serif"],
       },
+
+      /* ANIMATIONS ADDED BELOW */
+      keyframes: {
+        dash: {
+          'from': { strokeDashoffset: '24' },
+          'to': { strokeDashoffset: '0' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        evaporate: {
+          '0%': { opacity: '0.7', transform: 'scale(1)' },
+          '100%': { opacity: '1', transform: 'scale(1.05)' },
+        },
+        pulseCustom: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.8' },
+        }
+      },
+      animation: {
+        dash: 'dash 2s linear infinite',
+        float: 'float 3s ease-in-out infinite',
+        evaporate: 'evaporate 4s ease-in-out infinite alternate',
+        'pulse-custom': 'pulseCustom 3s ease-in-out infinite',
+      },
     },
   },
 
