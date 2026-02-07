@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const ESGServicePortfolio = () => {
   const [activeService, setActiveService] = useState(null);
@@ -6,283 +7,170 @@ const ESGServicePortfolio = () => {
   const services = {
     strategy: {
       number: 1,
-      title: "ESG Strategy & Materiality",
+      title: "Strategy & Materiality",
       icon: "📊",
-      color: "#1565C0",
-      gradient: "from-blue-600 to-blue-700",
-      description: "Develop comprehensive ESG strategy through rigorous double materiality assessment, stakeholder engagement, and strategic target setting aligned with global frameworks.",
-      offerings: [
-        "Double Materiality",
-        "Stakeholder Mapping",
-        "Peer Benchmarking",
-        "SDG Alignment",
-        "Target Setting",
-        "Roadmap Development"
-      ]
+      gradient: "from-brandPrimary to-brandNavy",
+      description: "Develop a comprehensive ESG strategy through rigorous double materiality assessment and strategic target setting.",
+      offerings: ["Double Materiality", "Stakeholder Mapping", "SDG Alignment", "Roadmap Development"]
     },
     climate: {
       number: 2,
-      title: "Climate Risk & GHG Management",
+      title: "Climate & GHG Management",
       icon: "🌡️",
-      color: "#2E7D32",
-      gradient: "from-green-600 to-green-700",
-      description: "Comprehensive climate risk assessment and GHG emissions management supporting your net-zero journey through science-based approaches.",
-      offerings: [
-        "Scope 1-2-3 Inventory",
-        "TCFD Implementation",
-        "SBTi Alignment",
-        "Net-Zero Roadmap",
-        "Climate Scenarios",
-        "Carbon Strategy"
-      ]
+      gradient: "from-brandNavy to-brandDark",
+      description: "Comprehensive climate risk assessment and GHG emissions management supporting your net-zero journey.",
+      offerings: ["Scope 1-2-3 Inventory", "TCFD Implementation", "SBTi Alignment", "Net-Zero Roadmap"]
     },
     reporting: {
       number: 3,
-      title: "ESG Reporting & Disclosure",
+      title: "Reporting & Disclosure",
       icon: "📋",
-      color: "#00838F",
-      gradient: "from-teal-600 to-teal-700",
-      description: "Navigate complex global disclosure requirements with expert guidance ensuring compliance and stakeholder confidence.",
-      offerings: [
-        "CSRD/ESRS",
-        "BRSR Reporting",
-        "GRI Standards",
-        "ISSB (IFRS S1/S2)",
-        "CDP Response",
-        "Integrated Reporting"
-      ]
+      gradient: "from-brandAccent to-brandGold",
+      description: "Navigate complex global disclosure requirements (CSRD, BRSR, ISSB) with expert guidance and precision.",
+      offerings: ["CSRD/ESRS", "BRSR Reporting", "GRI Standards", "ISSB Implementation"]
     },
     governance: {
       number: 4,
-      title: "ESG Governance & Operating Model",
+      title: "Governance & Operating Model",
       icon: "⚖️",
-      color: "#37474F",
-      gradient: "from-gray-700 to-gray-800",
-      description: "Design and implement robust governance structures with clear accountability, decision-making frameworks, and performance management.",
-      offerings: [
-        "Board Oversight",
-        "Committee Design",
-        "Policy Frameworks",
-        "RACI Development",
-        "Performance Mgmt",
-        "Incentive Alignment"
-      ]
+      gradient: "from-brandDark to-brandNavy",
+      description: "Design and implement robust governance structures with clear accountability and performance management.",
+      offerings: ["Board Oversight", "Committee Design", "Policy Frameworks", "Incentive Alignment"]
     },
     controls: {
       number: 5,
-      title: "Internal Controls & Assurance",
+      title: "Controls & Assurance",
       icon: "🔒",
-      color: "#7B1FA2",
-      gradient: "from-purple-600 to-purple-700",
-      description: "Build assurance-ready ESG programs with robust COSO-aligned internal controls, data governance, and verification processes.",
-      offerings: [
-        "COSO Controls",
-        "Data Governance",
-        "Control Testing",
-        "Gap Remediation",
-        "Assurance Prep",
-        "SOC Readiness"
-      ]
+      gradient: "from-brandGold to-brandAccent",
+      description: "Build assurance-ready ESG programs with robust internal controls, data governance, and verification processes.",
+      offerings: ["COSO Controls", "Data Governance", "Control Testing", "Assurance Readiness"]
     },
     capability: {
       number: 6,
-      title: "ESG Capability Building",
+      title: "Capability Building",
       icon: "🎓",
-      color: "#E65100",
-      gradient: "from-orange-600 to-orange-700",
-      description: "Build lasting internal capabilities through comprehensive training programs tailored to executives, practitioners, and operational teams.",
-      offerings: [
-        "Executive Immersion",
-        "Board Education",
-        "Practitioner Cert",
-        "Framework Training",
-        "Role-Based Programs",
-        "Train-the-Trainer"
-      ]
+      gradient: "from-brandPrimary to-brandDark",
+      description: "Build lasting internal capabilities through tailored training programs for executives and operational teams.",
+      offerings: ["Executive Immersion", "Board Education", "Practitioner Certs", "Framework Training"]
     }
   };
 
   const capabilities = [
     { icon: "🌍", text: "Global Delivery" },
     { icon: "🏭", text: "Industry Expertise" },
-    { icon: "💻", text: "Technology Enabled" },
-    { icon: "🤝", text: "Partnership Approach" }
+    { icon: "💻", text: "Tech Enabled" },
+    { icon: "🤝", text: "Partnership" }
   ];
 
-  // Hexagonal positioning (approximate circular layout)
-  const positions = {
-    strategy: "top-4 left-1/2 -translate-x-1/2",
-    climate: "top-1/4 right-4",
-    reporting: "bottom-1/4 right-4",
-    governance: "bottom-4 left-1/2 -translate-x-1/2",
-    controls: "bottom-1/4 left-4",
-    capability: "top-1/4 left-4"
-  };
-
   return (
-    <section className="py-20 bg-gradient-to-br from-brandPrimary via-brandNavy to-brandDark">
-      <div className="container">
-        <div className="mb-12 text-center">
-          <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl font-heading">
-            Sustainability & ESG Service Portfolio
+    <section className="py-12 lg:py-20 bg-bgLight dark:bg-bgDark overflow-hidden relative transition-colors duration-500 min-h-screen flex flex-col justify-center">
+      {/* Background Orbs */}
+      <div className="absolute inset-0 pointer-events-none opacity-10">
+        <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-brandPrimary rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-brandGold rounded-full blur-[120px]" />
+      </div>
+
+      <div className="container relative z-10 px-4 mx-auto">
+        {/* Compact Header */}
+        <div className="text-center mb-10">
+          <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="text-[10px] font-black tracking-[4px] uppercase text-brandPrimary dark:text-brandGold mb-2 block">
+            Service Architecture
+          </motion.span>
+          <h2 className="font-heading font-black text-brandDark dark:text-white text-3xl lg:text-5xl leading-tight">
+            Sustainability & ESG Portfolio
           </h2>
-          <p className="max-w-3xl mx-auto text-gray-200">
-            RiskMan offers a comprehensive, modular service portfolio that can be deployed individually or as 
-            integrated solutions. Our services are designed to be scalable and globally deployable.
-          </p>
         </div>
 
-        <div className="max-w-6xl mx-auto">
-          <div className="p-8 shadow-2xl bg-white/95 dark:bg-gray-900/95 rounded-3xl md:p-12">
-            <h3 className="mb-8 text-2xl font-bold text-center font-heading text-brandDark dark:text-white">
-              ESG Service Portfolio Architecture
-            </h3>
-            <p className="mb-12 text-center text-gray-600 dark:text-gray-400">
-              Integrated, modular solutions driving sustainable enterprise transformation
-            </p>
+        <div className="max-w-5xl mx-auto">
+          {/* Reduced Height Hexagonal Grid */}
+          <div className="hidden lg:block relative h-[450px] mb-12">
+            {/* Center Hub */}
+            <div className="absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 rounded-full bg-brandDark border-4 border-brandGold/40 flex flex-col items-center justify-center shadow-xl">
+              <span className="text-3xl mb-1">🎯</span>
+              <span className="text-[8px] font-black text-brandGold uppercase">Integrated</span>
+              <span className="text-sm font-black text-white uppercase">Excellence</span>
+            </div>
 
-            {/* Service Modules - Desktop Circular Layout */}
-            <div className="hidden md:block relative h-[600px] mb-12">
-              {/* Center Hub */}
-              <div className="absolute z-20 flex flex-col items-center justify-center w-40 h-40 transform -translate-x-1/2 -translate-y-1/2 border-4 border-white rounded-full shadow-2xl top-1/2 left-1/2 bg-gradient-to-br from-brandPrimary to-brandNavy animate-pulse">
-                <span className="mb-2 text-3xl">🎯</span>
-                <span className="text-xs font-semibold text-white">Integrated</span>
-                <span className="text-sm font-bold text-white">ESG Excellence</span>
-              </div>
-
-              {/* Connection Lines (SVG) */}
-              <svg className="absolute inset-0 w-full h-full" style={{ pointerEvents: 'none' }}>
-                <defs>
-                  <filter id="glow">
-                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                    <feMerge>
-                      <feMergeNode in="coloredBlur"/>
-                      <feMergeNode in="SourceGraphic"/>
-                    </feMerge>
-                  </filter>
-                </defs>
-                {Object.keys(services).map((key) => (
-                  <line
-                    key={key}
-                    x1="50%"
-                    y1="50%"
-                    x2={key === 'strategy' ? '50%' : key === 'climate' ? '80%' : key === 'reporting' ? '80%' : key === 'governance' ? '50%' : key === 'controls' ? '20%' : '20%'}
-                    y2={key === 'strategy' ? '15%' : key === 'climate' ? '30%' : key === 'reporting' ? '70%' : key === 'governance' ? '85%' : key === 'controls' ? '70%' : '30%'}
-                    stroke={services[key].color}
-                    strokeWidth="2"
-                    strokeDasharray="8,4"
-                    opacity={activeService && activeService !== key ? "0.2" : "0.5"}
-                    className="transition-opacity duration-300"
-                  />
-                ))}
-              </svg>
-
-              {/* Service Modules */}
-              {Object.entries(services).map(([key, service]) => (
-                <div
-                  key={key}
-                  className={`absolute ${positions[key]} transform transition-all duration-300 cursor-pointer ${
-                    activeService === key ? 'scale-110 z-30' : 'z-10'
-                  }`}
-                  onMouseEnter={() => setActiveService(key)}
-                  onMouseLeave={() => setActiveService(null)}
-                >
-                  <div
-                    className={`w-44 h-44 rounded-2xl p-4 shadow-xl flex flex-col items-center justify-center bg-gradient-to-br ${service.gradient} relative`}
-                  >
-                    <div className="absolute flex items-center justify-center w-6 h-6 text-xs font-bold text-white rounded-full top-2 right-2 bg-white/25">
-                      {service.number}
-                    </div>
-                    <div className="flex items-center justify-center w-16 h-16 mb-3 text-3xl border bg-white/20 rounded-xl backdrop-blur-sm border-white/30">
-                      {service.icon}
-                    </div>
-                    <h4 className="text-sm font-bold leading-tight text-center text-white">
-                      {service.title}
-                    </h4>
-                  </div>
-                </div>
+            {/* Pulsing Connector Lines */}
+            <svg className="absolute inset-0 w-full h-full opacity-20">
+              {Object.keys(services).map((_, i) => (
+                <line 
+                  key={i} x1="50%" y1="50%" 
+                  x2={`${50 + 30 * Math.cos((i * 60 * Math.PI) / 180)}%`} 
+                  y2={`${50 + 30 * Math.sin((i * 60 * Math.PI) / 180)}%`} 
+                  stroke="currentColor" className="text-brandDark dark:text-brandLight" strokeWidth="1" strokeDasharray="5,5" 
+                />
               ))}
-            </div>
+            </svg>
 
-            {/* Mobile Grid Layout */}
-            <div className="grid grid-cols-2 gap-4 mb-8 md:hidden">
-              {Object.entries(services).map(([key, service]) => (
-                <div
-                  key={key}
-                  className={`rounded-xl p-4 shadow-lg cursor-pointer transition-all duration-300 bg-gradient-to-br ${service.gradient}`}
-                  onClick={() => setActiveService(activeService === key ? null : key)}
-                >
-                  <div className="mb-2 text-2xl text-center">{service.icon}</div>
-                  <h4 className="text-xs font-bold leading-tight text-center text-white">
-                    {service.title}
-                  </h4>
+            {/* Scaled Nodes */}
+            {Object.entries(services).map(([key, service], i) => (
+              <motion.div 
+                key={key}
+                onMouseEnter={() => setActiveService(key)}
+                onMouseLeave={() => setActiveService(null)}
+                className="absolute w-36 h-36 cursor-pointer group"
+                style={{
+                  top: `${50 + 30 * Math.sin((i * 60 * Math.PI) / 180)}%`,
+                  left: `${50 + 30 * Math.cos((i * 60 * Math.PI) / 180)}%`,
+                  transform: 'translate(-50%, -50%)'
+                }}
+              >
+                <div className={`w-full h-full rounded-[2rem] p-4 bg-gradient-to-br ${service.gradient} border border-white/10 flex flex-col items-center justify-center text-center shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:border-brandGold/60`}>
+                   <div className="text-3xl mb-2">{service.icon}</div>
+                   <h4 className="text-[9px] font-black text-white uppercase tracking-tighter leading-tight">{service.title}</h4>
                 </div>
-              ))}
-            </div>
-
-            {/* Detail Panel */}
-            <div className={`transition-all duration-300 ${activeService ? 'opacity-100' : 'opacity-70'}`}>
-              <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-xl p-6 min-h-[200px]">
-                {activeService ? (
-                  <div>
-                    <div className="flex items-center gap-4 mb-4">
-                      <div
-                        className="flex items-center justify-center text-3xl shadow-lg w-14 h-14 rounded-xl"
-                        style={{ backgroundColor: services[activeService].color }}
-                      >
-                        {services[activeService].icon}
-                      </div>
-                      <div>
-                        <h4 className="text-xl font-bold font-heading text-brandDark dark:text-white">
-                          {services[activeService].title}
-                        </h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">
-                          Service Module {services[activeService].number}
-                        </p>
-                      </div>
-                    </div>
-                    <p className="mb-4 text-gray-700 dark:text-gray-300">
-                      {services[activeService].description}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {services[activeService].offerings.map((offering, i) => (
-                        <span
-                          key={i}
-                          className="px-3 py-1 text-xs font-medium text-white rounded-full"
-                          style={{ backgroundColor: services[activeService].color }}
-                        >
-                          {offering}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                ) : (
-                  <div className="flex items-center justify-center h-full">
-                    <p className="text-center text-gray-400">
-                      Hover over (or tap) a service module to see details
-                    </p>
-                  </div>
-                )}
-              </div>
-            </div>
-
-            {/* Capabilities Bar */}
-            <div className="flex flex-wrap justify-center gap-8 pt-8 mt-12 border-t border-gray-200 dark:border-gray-700">
-              {capabilities.map((cap, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <div className="flex items-center justify-center w-12 h-12 text-2xl shadow-md bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800 rounded-xl">
-                    {cap.icon}
-                  </div>
-                  <span className="text-sm font-semibold text-brandDark dark:text-white">
-                    {cap.text}
-                  </span>
-                </div>
-              ))}
-            </div>
+              </motion.div>
+            ))}
           </div>
 
-          <div className="mt-6 text-xs text-center text-gray-300">
-            RiskMan Consulting LLP | Sustainability & ESG Practice
+          {/* Details Panel - Slim Design */}
+          <div className="relative min-h-[220px]">
+            <AnimatePresence mode="wait">
+              {activeService ? (
+                <motion.div 
+                  key={activeService}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className="p-8 rounded-[2.5rem] bg-brandDark border border-white/10 shadow-2xl flex flex-col lg:flex-row items-center gap-8 text-white"
+                >
+                  <div className="lg:w-1/2">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-14 h-14 rounded-2xl bg-brandGold/10 flex items-center justify-center text-3xl">
+                        {services[activeService].icon}
+                      </div>
+                      <h3 className="text-xl font-black uppercase tracking-tight">{services[activeService].title}</h3>
+                    </div>
+                    <p className="text-brandLight/60 text-sm italic leading-relaxed">
+                      "{services[activeService].description}"
+                    </p>
+                  </div>
+                  <div className="lg:w-1/2 grid grid-cols-2 gap-3 w-full">
+                    {services[activeService].offerings.map((offering, i) => (
+                      <div key={i} className="p-3 bg-white/5 rounded-xl border border-white/10 flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-brandGold shrink-0" />
+                        <span className="text-[10px] font-bold text-white uppercase truncate">{offering}</span>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              ) : (
+                <div className="flex items-center justify-center h-full text-brandDark/20 dark:text-white/10 font-black text-sm uppercase tracking-[8px]">
+                  Hover to view modules
+                </div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          {/* Bottom Mini-Capabilities */}
+          <div className="mt-12 flex flex-wrap justify-center gap-6 lg:gap-12 pt-8 border-t border-brandDark/5">
+            {capabilities.map((cap, i) => (
+              <div key={i} className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity">
+                <div className="text-xl">{cap.icon}</div>
+                <span className="text-[9px] font-black text-brandDark dark:text-brandLight uppercase tracking-widest">{cap.text}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

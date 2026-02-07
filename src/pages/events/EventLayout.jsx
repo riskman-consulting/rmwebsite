@@ -16,12 +16,12 @@ function Layout() {
 
           {/* Links */}
           <div className="flex items-center gap-1 sm:gap-4">
-            <NavItem to="upcoming-events" icon={<Globe size={18} />} label="Upcoming Events" />
-            <NavItem to="past-events" icon={<Globe size={18} />} label="Past Events" />
-            <NavItem to="accomplishments" icon={<Globe size={18} />} label="Accomplishments" />
-            <NavItem to="emerging-awards" icon={<Globe size={18} />} label="Emerging Awards " />
-            <NavItem to="company-journey" icon={<Globe size={18} />} label="Company Journey" />
-            <NavItem to="media-coverage" icon={<Globe size={18} />} label="Media Coverage" />
+            <NavItem to="upcoming-events"  label="Upcoming Events" />
+            <NavItem to="past-events"  label="Past Events" />
+            <NavItem to="accomplishments"  label="Awards" />
+            {/* <NavItem to="emerging-awards"  label="Emerging Awards " /> */}
+            <NavItem to="company-journey"  label="Company Journey" />
+            <NavItem to="media-coverage"  label="Gallary" />
           </div>
         </div>
       </nav>
@@ -35,7 +35,7 @@ function Layout() {
 }
 
 // Helper component for cleaner link logic
-const NavItem = ({ to, icon, label }) => (
+const NavItem = ({ to, icon="", label }) => (
   <NavLink
     to={to}
     className={({ isActive }) => `

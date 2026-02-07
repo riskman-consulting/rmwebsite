@@ -95,7 +95,7 @@ export default function HeroSection() {
   const milestones = [
     { value: "2020", label: "Founded", icon: Award },
     { value: "2025", label: "5 Years Strong", icon: Calendar },
-    { value: "4", label: "Countries", icon: Globe },
+    { value: "4", label: "States", icon: Globe },
     { value: "50+", label: "Team Members", icon: Users },
   ];
 

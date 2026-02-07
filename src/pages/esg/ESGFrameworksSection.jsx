@@ -7,261 +7,194 @@ const ESGFrameworksSection = () => {
     scope1: {
       title: 'SCOPE 1',
       subtitle: 'Direct Emissions',
-      color: '#4CAF50',
+      color: '#004080', // brandPrimary
       percentage: '~10%',
-      description: 'GHG emissions from sources owned or controlled by the organization',
+      description: 'GHG emissions from sources owned or controlled by the organization.',
       sources: [
-        { icon: '🚗', label: 'Company Fleet', desc: 'Vehicles owned or operated by the company' },
-        { icon: '🏭', label: 'Stationary', desc: 'Boilers, furnaces, turbines on-site' },
-        { icon: '🔥', label: 'On-site Fuel', desc: 'Natural gas, diesel, propane combustion' },
-        { icon: '💨', label: 'Fugitive', desc: 'Leaks from equipment, pipelines' },
-        { icon: '⚙️', label: 'Process', desc: 'Chemical/physical processing emissions' },
-        { icon: '❄️', label: 'Refrigerants', desc: 'HVAC and cooling system leaks' }
+        { icon: '🚗', label: 'Company Fleet', desc: 'Vehicles owned or operated by the company.' },
+        { icon: '🏭', label: 'Stationary', desc: 'Boilers, furnaces, turbines on-site.' },
+        { icon: '🔥', label: 'On-site Fuel', desc: 'Natural gas, diesel, propane combustion.' },
+        { icon: '💨', label: 'Fugitive', desc: 'Leaks from equipment, pipelines.' },
+        { icon: '⚙️', label: 'Process', desc: 'Chemical/physical processing emissions.' },
+        { icon: '❄️', label: 'Refrigerants', desc: 'HVAC and cooling system leaks.' }
       ]
     },
     scope2: {
       title: 'SCOPE 2',
       subtitle: 'Indirect Energy',
-      color: '#26A69A',
+      color: '#003366', // brandNavy
       percentage: '~8%',
-      description: 'GHG emissions from purchased electricity, steam, heating and cooling',
+      description: 'GHG emissions from purchased electricity, steam, heating and cooling.',
       sources: [
-        { icon: '⚡', label: 'Electricity', desc: 'Grid electricity consumption' },
-        { icon: '♨️', label: 'Steam', desc: 'Purchased steam for operations' },
-        { icon: '🌡️', label: 'Heating/Cooling', desc: 'District heating and cooling' },
-        { icon: '🖥️', label: 'Data Centers', desc: 'IT infrastructure energy' }
+        { icon: '⚡', label: 'Electricity', desc: 'Grid electricity consumption.' },
+        { icon: '♨️', label: 'Steam', desc: 'Purchased steam for operations.' },
+        { icon: '🌡️', label: 'Heating/Cooling', desc: 'District heating and cooling.' },
+        { icon: '🖥️', label: 'Data Centers', desc: 'IT infrastructure energy.' }
       ]
     },
     scope3: {
       title: 'SCOPE 3',
       subtitle: 'Value Chain',
-      color: '#FF9800',
+      color: '#FFC000', // brandAccent
       percentage: '~82%',
-      description: 'All other indirect emissions in the value chain (upstream & downstream)',
+      description: 'All other indirect emissions in the value chain (upstream & downstream).',
       sources: [
-        { icon: '📦', label: 'Purchased Goods', desc: 'Raw materials and services' },
-        { icon: '🚚', label: 'Transport', desc: 'Upstream transportation' },
-        { icon: '🏗️', label: 'Capital Goods', desc: 'Equipment and buildings' },
-        { icon: '✈️', label: 'Business Travel', desc: 'Employee air/rail travel' },
-        { icon: '🚶', label: 'Commuting', desc: 'Employee commutes' },
-        { icon: '🗑️', label: 'Waste', desc: 'Waste disposal operations' },
-        { icon: '📤', label: 'Distribution', desc: 'Downstream transport' },
-        { icon: '👤', label: 'Product Use', desc: 'End-user consumption' },
-        { icon: '♻️', label: 'End of Life', desc: 'Product disposal/recycling' }
+        { icon: '📦', label: 'Purchased Goods', desc: 'Raw materials and services.' },
+        { icon: '🚚', label: 'Transport', desc: 'Upstream transportation.' },
+        { icon: '🏗️', label: 'Capital Goods', desc: 'Equipment and buildings.' },
+        { icon: '✈️', label: 'Business Travel', desc: 'Employee air/rail travel.' },
+        { icon: '🚶', label: 'Commuting', desc: 'Employee commutes.' },
+        { icon: '🗑️', label: 'Waste', desc: 'Waste disposal operations.' },
+        { icon: '📤', label: 'Distribution', desc: 'Downstream transport.' },
+        { icon: '👤', label: 'Product Use', desc: 'End-user consumption.' },
+        { icon: '♻️', label: 'End of Life', desc: 'Product disposal/recycling.' }
       ]
     }
   };
 
   const sdgPrinciples = [
-    'Materiality-Driven Prioritization: Identifying which SDGs are most relevant to your industry and value chain',
-    'Value Chain Integration: Mapping SDG contributions across your entire value chain',
-    'Impact Measurement: Establishing quantifiable metrics connecting business performance to SDG outcomes',
-    'Strategic Integration: Embedding SDG considerations into corporate strategy and capital allocation'
-  ];
-
-  const ghgProtocolPrinciples = [
-    'Corporate Standard: Requirements for companies preparing GHG emissions inventories at the corporate level',
-    'Scope 3 Standard: Comprehensive guidance for measuring value chain emissions across 15 categories',
-    'Boundary Setting: Principles for establishing organizational and operational boundaries',
-    'Quality Principles: Relevance, completeness, consistency, transparency, and accuracy'
+    'Materiality-Driven Prioritization: Identifying which SDGs are most relevant to your industry and value chain.',
+    'Value Chain Integration: Mapping SDG contributions across your entire value chain.',
+    'Impact Measurement: Establishing quantifiable metrics connecting business performance to SDG outcomes.',
+    'Strategic Integration: Embedding SDG considerations into corporate strategy and capital allocation.'
   ];
 
   return (
-    <section className="py-20 bg-white lg:py-28 dark:bg-bgDark">
+    <section className="py-20 lg:py-32 bg-bgLight dark:bg-bgDark">
       <div className="container">
         {/* Section Header */}
-        <div className="mb-16 text-center lg:mb-20">
-          <div className="relative inline-block mb-5">
-            <span className="text-xs sm:text-sm font-bold text-brandPrimary dark:text-brandAccent tracking-[2px] uppercase">
+        <div className="mb-20 text-center">
+          <div className="inline-block px-4 py-1 mb-6 border rounded-full bg-brandPrimary/5 border-brandPrimary/10 dark:border-brandGold/20">
+            <span className="text-xs font-bold tracking-[3px] uppercase text-brandPrimary dark:text-brandGold">
               Global Standards
             </span>
-            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-16 h-0.5 bg-brandAccent" />
           </div>
-          
-          <h2 className="font-heading font-extrabold text-brandDark dark:text-white text-3xl sm:text-4xl md:text-5xl lg:text-[52px] leading-tight tracking-tight mb-6">
-            Foundational ESG & Sustainability Frameworks
+          <h2 className="font-heading font-black text-brandDark dark:text-surfaceLight text-4xl lg:text-6xl leading-tight mb-8">
+            Foundational ESG <br /> & Sustainability Frameworks
           </h2>
-          
-          <p className="max-w-4xl mx-auto font-serif text-lg leading-relaxed text-gray-600 sm:text-xl md:text-2xl dark:text-gray-300">
+          <p className="max-w-4xl mx-auto text-xl text-brandDark/70 dark:text-surfaceLight/70 font-sans leading-relaxed">
             Effective ESG programs are built upon globally recognized frameworks that provide structure, comparability, and credibility.
           </p>
         </div>
 
         {/* UN SDGs Section */}
-        <div className="mb-20">
-          <div className="p-10 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-surfaceDark dark:to-brandDark rounded-2xl lg:p-14">
-            <div className="flex items-center gap-4 mb-6">
-              <span className="text-5xl">🎯</span>
-              <div>
-                <h3 className="text-2xl font-bold font-heading sm:text-3xl text-brandDark dark:text-white">
+        <div className="mb-24">
+          <div className="p-8 lg:p-14 bg-surfaceLight dark:bg-surfaceDark border border-borderLight dark:border-borderDark rounded-[32px] shadow-2xl overflow-hidden relative">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-brandGold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+            
+            <div className="flex flex-col lg:flex-row gap-12 items-start relative z-10">
+              <div className="lg:w-1/3">
+                <div className="text-6xl mb-6 animate-bounce">🎯</div>
+                <h3 className="font-heading font-bold text-3xl text-brandDark dark:text-surfaceLight mb-4">
                   United Nations Sustainable Development Goals (SDGs)
                 </h3>
-                <p className="mt-2 text-gray-600 dark:text-gray-300">
+                <p className="text-brandDark/60 dark:text-surfaceLight/60 leading-relaxed">
                   The 17 UN Sustainable Development Goals represent a universal framework for addressing humanity's most pressing challenges.
                 </p>
               </div>
-            </div>
 
-            <h4 className="mt-10 mb-6 text-xl font-bold text-brandPrimary dark:text-brandAccent">
-              Enterprise SDG Alignment
-            </h4>
-
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-              {sdgPrinciples.map((principle, index) => (
-                <div
-                  key={index}
-                  className="p-6 transition-all duration-300 bg-white border-l-4 shadow-md dark:bg-surfaceDark rounded-xl hover:shadow-xl hover:-translate-y-1 border-l-brandAccent"
-                >
-                  <p className="leading-relaxed text-gray-700 dark:text-gray-300">
-                    <span className="font-bold text-brandPrimary dark:text-brandAccent">
-                      {principle.split(':')[0]}:
-                    </span>
-                    {principle.split(':')[1]}
-                  </p>
-                </div>
-              ))}
+              <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
+                {sdgPrinciples.map((principle, index) => (
+                  <div key={index} className="p-6 bg-bgLight dark:bg-bgDark rounded-2xl border border-transparent hover:border-brandGold transition-all duration-300 group">
+                    <p className="text-sm text-brandDark/80 dark:text-surfaceLight/80 leading-relaxed">
+                      <span className="font-bold text-brandPrimary dark:text-brandGold group-hover:underline">
+                        {principle.split(':')[0]}:
+                      </span>
+                      {principle.split(':')[1]}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
 
-        {/* GHG Accounting Section */}
+        {/* GHG Scopes Section */}
         <div className="mb-20">
-          <h3 className="relative pl-6 mb-4 text-2xl font-bold font-heading sm:text-3xl md:text-4xl text-brandDark dark:text-white">
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-[70%] bg-gradient-to-b from-brandAccent to-brandPrimary rounded-full" />
-            GHG Accounting & Climate Measurement
-          </h3>
-          
-          <p className="max-w-4xl mb-12 text-gray-600 dark:text-gray-400">
-            Greenhouse gas emissions measurement is fundamental to climate action. Understanding your organization's carbon footprint is essential for setting meaningful targets, identifying reduction opportunities, and meeting disclosure requirements.
-          </p>
+          <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+            <div className="max-w-2xl">
+              <h3 className="font-heading font-black text-brandDark dark:text-surfaceLight text-3xl lg:text-4xl mb-4">
+                GHG Accounting & Climate Measurement
+              </h3>
+              <p className="text-brandDark/60 dark:text-surfaceLight/60">
+                Understanding your carbon footprint across the entire value chain is essential for credible climate action.
+              </p>
+            </div>
+            <div className="flex gap-4 p-2 bg-surfaceLight dark:bg-surfaceDark rounded-xl border border-borderLight dark:border-borderDark">
+              {['scope1', 'scope2', 'scope3'].map((s) => (
+                <button 
+                  key={s}
+                  onClick={() => setActiveScope(s)}
+                  className={`px-6 py-2 rounded-lg font-bold text-xs tracking-widest uppercase transition-all ${
+                    activeScope === s ? 'bg-brandPrimary text-white shadow-lg' : 'text-brandDark/40 dark:text-surfaceLight/40 hover:bg-bgLight dark:hover:bg-bgDark'
+                  }`}
+                >
+                  {s}
+                </button>
+              ))}
+            </div>
+          </div>
 
-          {/* Scopes Explanation */}
-          <div className="grid grid-cols-1 gap-6 mb-12 lg:grid-cols-3">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {Object.entries(scopeData).map(([key, data]) => (
               <div
                 key={key}
-                onMouseEnter={() => setActiveScope(key)}
-                onMouseLeave={() => setActiveScope(null)}
-                className={`rounded-2xl overflow-hidden shadow-lg transition-all duration-300 cursor-pointer ${
-                  activeScope === key ? 'scale-105 shadow-2xl ring-2' : 'hover:scale-102'
+                className={`relative p-8 rounded-3xl border-2 transition-all duration-500 overflow-hidden group ${
+                  activeScope === key || !activeScope ? 'opacity-100 scale-100 shadow-xl' : 'opacity-40 scale-95 grayscale'
                 }`}
                 style={{ 
-                  borderTop: `4px solid ${data.color}`,
-                  ringColor: activeScope === key ? data.color : 'transparent'
+                  backgroundColor: 'var(--bg-card)', 
+                  borderColor: activeScope === key ? data.color : 'transparent'
                 }}
               >
-                <div className="p-6 bg-white dark:bg-surfaceDark">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div
-                      className="flex items-center justify-center w-12 h-12 text-lg font-bold text-white rounded-full shadow-lg"
-                      style={{ background: `linear-gradient(135deg, ${data.color}, ${data.color}dd)` }}
-                    >
-                      {key.replace('scope', '')}
-                    </div>
+                <div className="relative z-10">
+                  <div className="flex justify-between items-start mb-6">
                     <div>
-                      <h4 className="text-sm font-bold" style={{ color: data.color }}>
-                        {data.title}
-                      </h4>
-                      <p className="text-xs text-gray-500 dark:text-gray-400">{data.subtitle}</p>
+                      <h4 className="font-black text-2xl mb-1" style={{ color: data.color }}>{data.title}</h4>
+                      <p className="text-xs font-bold text-brandDark/40 dark:text-surfaceLight/40 uppercase tracking-widest">{data.subtitle}</p>
                     </div>
+                    <span className="text-2xl font-black opacity-20" style={{ color: data.color }}>{data.percentage}</span>
                   </div>
 
-                  <div className={`grid gap-2 ${key === 'scope3' ? 'grid-cols-3' : 'grid-cols-2'}`}>
+                  <p className="text-sm mb-8 text-brandDark/70 dark:text-surfaceLight/70 italic leading-relaxed">
+                    {data.description}
+                  </p>
+
+                  <div className="grid grid-cols-2 gap-3">
                     {data.sources.map((source, i) => (
-                      <div
-                        key={i}
-                        className="p-2 text-center transition-all duration-300 rounded-lg bg-gray-50 dark:bg-brandDark hover:shadow-md hover:scale-105"
-                      >
-                        <span className="block mb-1 text-2xl">{source.icon}</span>
-                        <span className="text-[10px] text-gray-600 dark:text-gray-300 leading-tight block">
-                          {source.label}
-                        </span>
+                      <div key={i} className="p-3 bg-bgLight dark:bg-bgDark rounded-xl hover:scale-105 transition-transform cursor-help group/item">
+                        <span className="text-2xl block mb-2">{source.icon}</span>
+                        <span className="text-[10px] font-bold text-brandDark/80 dark:text-surfaceLight/80 leading-tight block">{source.label}</span>
                       </div>
                     ))}
                   </div>
                 </div>
-
-                <div className="p-4" style={{ backgroundColor: `${data.color}15` }}>
-                  <p className="mb-1 text-xs text-gray-600 dark:text-gray-300">
-                    {data.description}
-                  </p>
-                  <span className="text-sm font-bold" style={{ color: data.color }}>
-                    {data.percentage} of footprint
-                  </span>
-                </div>
+                {/* Visual Background Decoration */}
+                <div className="absolute bottom-0 right-0 w-32 h-32 opacity-[0.03] transition-transform group-hover:scale-150" style={{ backgroundColor: data.color, borderRadius: '100% 0 0 0' }} />
               </div>
             ))}
-          </div>
-
-          {/* Distribution Bar */}
-          <div className="p-6 bg-white shadow-lg dark:bg-surfaceDark rounded-xl">
-            <h4 className="mb-4 text-sm font-semibold text-center text-gray-700 dark:text-gray-300">
-              Typical Corporate Emissions Distribution
-            </h4>
-            <div className="flex h-12 overflow-hidden rounded-lg shadow-inner">
-              <div
-                className="flex items-center justify-center text-sm font-semibold text-white"
-                style={{ width: '10%', background: 'linear-gradient(135deg, #4CAF50, #2E7D32)' }}
-              >
-                10%
-              </div>
-              <div
-                className="flex items-center justify-center text-sm font-semibold text-white"
-                style={{ width: '8%', background: 'linear-gradient(135deg, #26A69A, #00796B)' }}
-              >
-                8%
-              </div>
-              <div
-                className="flex items-center justify-center text-sm font-semibold text-white"
-                style={{ width: '82%', background: 'linear-gradient(135deg, #FF9800, #E65100)' }}
-              >
-                82%
-              </div>
-            </div>
-            <div className="flex flex-wrap justify-between gap-2 mt-4 text-xs text-gray-500 dark:text-gray-400">
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 bg-green-500 rounded-full" />
-                <span>Scope 1 - Direct Control</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 bg-teal-500 rounded-full" />
-                <span>Scope 2 - Energy Procurement</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 bg-orange-500 rounded-full" />
-                <span>Scope 3 - Value Chain Engagement</span>
-              </div>
-            </div>
           </div>
         </div>
 
-        {/* GHG Protocol */}
-        <div className="p-10 text-white bg-gradient-to-br from-brandDark to-brandNavy dark:from-surfaceDark dark:to-brandDark rounded-2xl lg:p-14">
-          <div className="flex items-center gap-4 mb-8">
-            <span className="text-5xl">📊</span>
-            <h3 className="text-2xl font-bold font-heading sm:text-3xl">
-              The GHG Protocol
-            </h3>
-          </div>
-
-          <p className="mb-8 leading-relaxed text-white/90">
-            The GHG Protocol provides the globally accepted standard for measuring and managing greenhouse gas emissions. It serves as the foundation for nearly all corporate climate reporting frameworks and regulatory requirements worldwide.
-          </p>
-
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            {ghgProtocolPrinciples.map((principle, index) => (
-              <div
-                key={index}
-                className="p-6 transition-all duration-300 border bg-white/10 backdrop-blur-md border-white/20 rounded-xl hover:bg-white/15"
-              >
-                <p className="leading-relaxed text-white/95">
-                  <span className="font-bold text-brandAccent">
-                    {principle.split(':')[0]}:
-                  </span>
-                  {principle.split(':')[1]}
-                </p>
+        {/* Global Distribution Bar */}
+        <div className="p-8 bg-brandDark rounded-3xl border border-white/10 shadow-inner">
+          <div className="flex flex-col lg:flex-row items-center gap-8">
+            <div className="lg:w-1/4 text-center lg:text-left">
+              <h4 className="text-white font-bold text-lg mb-1">Corporate Emissions</h4>
+              <p className="text-white/40 text-xs tracking-widest uppercase font-bold">Typical Distribution</p>
+            </div>
+            <div className="flex-1 w-full">
+              <div className="flex h-14 w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white/5">
+                <div className="flex items-center justify-center text-[10px] font-black text-white bg-brandPrimary w-[10%] border-r border-white/10">10%</div>
+                <div className="flex items-center justify-center text-[10px] font-black text-white bg-brandNavy w-[8%] border-r border-white/10">8%</div>
+                <div className="flex items-center justify-center text-[10px] font-black text-brandDark bg-brandGold w-[82%]">82%</div>
               </div>
-            ))}
+              <div className="flex justify-between mt-4">
+                <span className="text-[10px] font-bold text-white/60 flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-brandPrimary"/> Scope 1</span>
+                <span className="text-[10px] font-bold text-white/60 flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-brandNavy"/> Scope 2</span>
+                <span className="text-[10px] font-bold text-white/60 flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-brandGold"/> Scope 3</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

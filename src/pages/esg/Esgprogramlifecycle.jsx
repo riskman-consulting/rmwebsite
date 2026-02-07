@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const ESGProgramLifecycle = () => {
   const [activePhase, setActivePhase] = useState(null);
@@ -6,223 +6,228 @@ const ESGProgramLifecycle = () => {
   const phaseData = {
     1: {
       title: "ASSESS",
-      subtitle: "Maturity Assessment & Gap Analysis",
-      color: "#1565C0",
-      description: "Comprehensive evaluation of your organization's current ESG position across governance, strategy, data, reporting, and culture dimensions. Establishes baseline metrics and identifies improvement opportunities.",
-      activities: ["ESG Maturity Assessment", "Gap Analysis", "Stakeholder Mapping", "Peer Benchmarking", "Risk Identification"]
+      subtitle: "Maturity & Gap Analysis",
+      color: "#004080", // brandPrimary
+      description:
+        "Comprehensive evaluation of your organization's current ESG position across governance, strategy, data, and reporting dimensions. Establishes baseline metrics and identifies improvement opportunities.",
+      activities: [
+        "Maturity Assessment",
+        "Gap Analysis",
+        "Stakeholder Mapping",
+        "Risk Identification",
+      ],
     },
     2: {
       title: "DESIGN",
-      subtitle: "Strategy & Roadmap Development",
-      color: "#00897B",
-      description: "Development of tailored ESG strategy aligned with business objectives. Creates prioritized roadmap with clear milestones, resource requirements, and success metrics.",
-      activities: ["Materiality Analysis", "Target Setting", "Roadmap Creation", "Business Case Development", "Framework Selection"]
+      subtitle: "Strategy & Roadmap",
+      color: "#003366", // brandNavy
+      description:
+        "Development of tailored ESG strategy aligned with business objectives. Creates a prioritized roadmap with clear milestones, resource requirements, and success metrics.",
+      activities: [
+        "Materiality Analysis",
+        "Target Setting",
+        "Roadmap Creation",
+        "Business Case",
+      ],
     },
     3: {
       title: "BUILD",
       subtitle: "Governance & Infrastructure",
-      color: "#7B1FA2",
-      description: "Establishment of robust governance structures, data collection systems, and process frameworks. Builds the foundation for sustainable ESG program execution.",
-      activities: ["Governance Framework", "Data Architecture", "Policy Development", "Control Design", "Technology Selection"]
+      color: "#001F3F", // brandDark
+      description:
+        "Establishment of robust governance structures, data collection systems, and process frameworks to build a foundation for sustainable execution.",
+      activities: [
+        "Governance Framework",
+        "Data Architecture",
+        "Policy Development",
+        "Control Design",
+      ],
     },
     4: {
       title: "IMPLEMENT",
-      subtitle: "Rollout & Change Management",
-      color: "#F57C00",
-      description: "Systematic deployment of ESG initiatives across the organization. Focuses on change management, capability building, and stakeholder engagement.",
-      activities: ["Phased Rollout", "Training Programs", "Change Management", "Pilot Programs", "Stakeholder Engagement"]
+      subtitle: "Rollout & Training",
+      color: "#FFC000", // brandAccent
+      description:
+        "Systematic deployment of ESG initiatives across the organization. Focuses on change management, capability building, and stakeholder engagement.",
+      activities: [
+        "Phased Rollout",
+        "Training Programs",
+        "Change Management",
+        "Pilot Programs",
+      ],
     },
     5: {
       title: "OPERATE",
-      subtitle: "Manage, Report & Engage",
-      color: "#C62828",
-      description: "Ongoing management of ESG programs, regular reporting to stakeholders, and continuous engagement with internal and external parties.",
-      activities: ["Performance Monitoring", "Disclosure & Reporting", "Ratings Management", "Stakeholder Communication", "Assurance Preparation"]
+      subtitle: "Manage & Report",
+      color: "#FFB800", // brandGold
+      description:
+        "Ongoing management of ESG programs, regular reporting to stakeholders, and continuous engagement with internal and external parties.",
+      activities: [
+        "Performance Monitoring",
+        "Disclosure & Reporting",
+        "Ratings Management",
+        "Assurance Prep",
+      ],
     },
     6: {
       title: "OPTIMIZE",
-      subtitle: "Review, Improve & Innovate",
-      color: "#0D4F6B",
-      description: "Continuous improvement through performance review, emerging trend analysis, and innovation. Drives the cycle back to assessment for sustained excellence.",
-      activities: ["Performance Review", "Trend Analysis", "Best Practice Updates", "Innovation Initiatives", "Continuous Improvement"]
-    }
+      subtitle: "Review & Innovate",
+      color: "#F5F5F5", // brandLight (used as text/accent)
+      description:
+        "Continuous improvement through performance review, emerging trend analysis, and innovation to drive sustained excellence.",
+      activities: [
+        "Performance Review",
+        "Trend Analysis",
+        "Best Practice Updates",
+        "Innovation",
+      ],
+    },
   };
 
   const handlePhaseClick = (phaseNum) => {
-    setActivePhase(phaseNum);
+    setActivePhase((prev) => (prev === phaseNum ? null : phaseNum));
   };
 
   return (
-    <section className="py-20 bg-white dark:bg-surfaceDark">
+    <section className="py-24 bg-surfaceLight dark:bg-bgDark overflow-hidden">
       <div className="container">
-        <div className="mb-12 text-center">
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
-            RiskMan's Global ESG Program Methodology
+        {/* Section Header */}
+        <div className="mb-16 text-center">
+          <span className="text-xs font-bold tracking-[4px] uppercase text-brandPrimary dark:text-brandGold mb-4 block">
+            Integrated Excellence
+          </span>
+          <h2 className="font-heading font-black text-brandDark dark:text-surfaceLight text-4xl lg:text-5xl leading-tight mb-6">
+            Global ESG Program Methodology
           </h2>
-          <p className="max-w-3xl mx-auto text-gray-600 dark:text-gray-400">
-            RiskMan delivers enterprise-grade ESG programs that combine strategic vision with practical execution excellence
+          <p className="max-w-3xl mx-auto text-lg text-brandDark/70 dark:text-surfaceLight/70">
+            A proprietary end-to-end lifecycle designed to transform 
+            sustainability into a core driver of enterprise value.
           </p>
         </div>
 
-        <div className="mb-8 text-center">
-          <h3 className="mb-2 text-2xl font-bold font-heading text-brandDark dark:text-white">
-            ESG Program Lifecycle
-          </h3>
-          <p className="text-gray-600 dark:text-gray-400">
-            End-to-End Methodology for Sustainable Transformation
-          </p>
-        </div>
+        {/* Diagram + Details Layout */}
+        <div className="grid items-center gap-12 lg:grid-cols-2">
+          {/* Circular SVG Diagram */}
+          <div className="relative flex justify-center">
+            <div className="w-full max-w-[500px] animate-fade-in">
+              <svg viewBox="0 0 500 500" className="w-full h-auto drop-shadow-2xl">
+                <defs>
+                  <filter id="glow">
+                    <feGaussianBlur stdDeviation="4" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                  </filter>
+                </defs>
 
-        {/* Lifecycle Diagram */}
-        <div className="max-w-4xl mx-auto mb-8">
-          <svg viewBox="0 0 500 500" className="w-full h-auto">
-            <defs>
-              {/* Gradients */}
-              <linearGradient id="assessGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#1565C0"/>
-                <stop offset="100%" stopColor="#0D47A1"/>
-              </linearGradient>
-              <linearGradient id="designGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#00897B"/>
-                <stop offset="100%" stopColor="#00695C"/>
-              </linearGradient>
-              <linearGradient id="buildGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#7B1FA2"/>
-                <stop offset="100%" stopColor="#6A1B9A"/>
-              </linearGradient>
-              <linearGradient id="implementGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#F57C00"/>
-                <stop offset="100%" stopColor="#E65100"/>
-              </linearGradient>
-              <linearGradient id="operateGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#C62828"/>
-                <stop offset="100%" stopColor="#B71C1C"/>
-              </linearGradient>
-              <linearGradient id="optimizeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#0D4F6B"/>
-                <stop offset="100%" stopColor="#1B2B3A"/>
-              </linearGradient>
-              <linearGradient id="centerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#0D4F6B"/>
-                <stop offset="100%" stopColor="#1A7A8C"/>
-              </linearGradient>
+                {/* Outer Dashed Ring */}
+                <circle
+                  cx="250"
+                  cy="250"
+                  r="235"
+                  fill="none"
+                  stroke="#004080"
+                  strokeWidth="1"
+                  strokeDasharray="10,5"
+                  className="opacity-20 animate-spin-slow"
+                  style={{ animationDuration: "120s" }}
+                />
 
-              <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-                <feDropShadow dx="0" dy="4" stdDeviation="8" floodOpacity="0.15"/>
-              </filter>
-              <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                <feMerge>
-                  <feMergeNode in="coloredBlur"/>
-                  <feMergeNode in="SourceGraphic"/>
-                </feMerge>
-              </filter>
-            </defs>
-
-            {/* Outer ring */}
-            <circle cx="250" cy="250" r="230" fill="none" stroke="#E8EDF0" strokeWidth="2" strokeDasharray="8,4" className="animate-spin-slow" style={{ animationDuration: '60s' }}/>
-
-            {/* Phase arcs */}
-            <g className="cursor-pointer" onClick={() => handlePhaseClick(1)} opacity={activePhase && activePhase !== 1 ? "0.6" : "1"}>
-              <path d="M 250 55 A 195 195 0 0 1 419 152" fill="none" stroke="url(#assessGrad)" strokeWidth="65" strokeLinecap="round"/>
-              <text x="355" y="95" className="text-sm font-semibold fill-white" textAnchor="middle" transform="rotate(30, 355, 95)">ASSESS</text>
-            </g>
-
-            <g className="cursor-pointer" onClick={() => handlePhaseClick(2)} opacity={activePhase && activePhase !== 2 ? "0.6" : "1"}>
-              <path d="M 419 152 A 195 195 0 0 1 419 348" fill="none" stroke="url(#designGrad)" strokeWidth="65" strokeLinecap="round"/>
-              <text x="435" y="250" className="text-sm font-semibold fill-white" textAnchor="middle" transform="rotate(90, 435, 250)">DESIGN</text>
-            </g>
-
-            <g className="cursor-pointer" onClick={() => handlePhaseClick(3)} opacity={activePhase && activePhase !== 3 ? "0.6" : "1"}>
-              <path d="M 419 348 A 195 195 0 0 1 250 445" fill="none" stroke="url(#buildGrad)" strokeWidth="65" strokeLinecap="round"/>
-              <text x="355" y="410" className="text-sm font-semibold fill-white" textAnchor="middle" transform="rotate(-30, 355, 410)">BUILD</text>
-            </g>
-
-            <g className="cursor-pointer" onClick={() => handlePhaseClick(4)} opacity={activePhase && activePhase !== 4 ? "0.6" : "1"}>
-              <path d="M 250 445 A 195 195 0 0 1 81 348" fill="none" stroke="url(#implementGrad)" strokeWidth="65" strokeLinecap="round"/>
-              <text x="145" y="410" className="text-xs font-semibold fill-white" textAnchor="middle" transform="rotate(30, 145, 410)">IMPLEMENT</text>
-            </g>
-
-            <g className="cursor-pointer" onClick={() => handlePhaseClick(5)} opacity={activePhase && activePhase !== 5 ? "0.6" : "1"}>
-              <path d="M 81 348 A 195 195 0 0 1 81 152" fill="none" stroke="url(#operateGrad)" strokeWidth="65" strokeLinecap="round"/>
-              <text x="65" y="250" className="text-sm font-semibold fill-white" textAnchor="middle" transform="rotate(-90, 65, 250)">OPERATE</text>
-            </g>
-
-            <g className="cursor-pointer" onClick={() => handlePhaseClick(6)} opacity={activePhase && activePhase !== 6 ? "0.6" : "1"}>
-              <path d="M 81 152 A 195 195 0 0 1 250 55" fill="none" stroke="url(#optimizeGrad)" strokeWidth="65" strokeLinecap="round"/>
-              <text x="145" y="95" className="text-xs font-semibold fill-white" textAnchor="middle" transform="rotate(-30, 145, 95)">OPTIMIZE</text>
-            </g>
-
-            {/* Center hub */}
-            <g filter="url(#shadow)">
-              <circle cx="250" cy="250" r="90" fill="url(#centerGrad)" filter="url(#glow)"/>
-              <circle cx="250" cy="250" r="75" fill="none" stroke="white" strokeWidth="2" opacity="0.3"/>
-              <text x="250" y="235" textAnchor="middle" className="text-xs font-semibold fill-white">INTEGRATED</text>
-              <text x="250" y="255" textAnchor="middle" className="text-lg font-bold fill-white">ESG</text>
-              <text x="250" y="275" textAnchor="middle" className="text-xs font-semibold fill-white">EXCELLENCE</text>
-            </g>
-
-            {/* Phase numbers */}
-            <g filter="url(#shadow)">
-              <circle cx="330" cy="70" r="18" fill="#1565C0"/>
-              <text x="330" y="76" textAnchor="middle" className="text-sm font-bold fill-white">1</text>
-
-              <circle cx="450" cy="250" r="18" fill="#00897B"/>
-              <text x="450" y="256" textAnchor="middle" className="text-sm font-bold fill-white">2</text>
-
-              <circle cx="330" cy="430" r="18" fill="#7B1FA2"/>
-              <text x="330" y="436" textAnchor="middle" className="text-sm font-bold fill-white">3</text>
-
-              <circle cx="170" cy="430" r="18" fill="#F57C00"/>
-              <text x="170" y="436" textAnchor="middle" className="text-sm font-bold fill-white">4</text>
-
-              <circle cx="50" cy="250" r="18" fill="#C62828"/>
-              <text x="50" y="256" textAnchor="middle" className="text-sm font-bold fill-white">5</text>
-
-              <circle cx="170" cy="70" r="18" fill="#0D4F6B"/>
-              <text x="170" y="76" textAnchor="middle" className="text-sm font-bold fill-white">6</text>
-            </g>
-          </svg>
-        </div>
-
-        {/* Info Panel */}
-        <div className={`max-w-4xl mx-auto transition-all duration-300 ${activePhase ? 'opacity-100' : 'opacity-70'}`}>
-          <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
-            {activePhase ? (
-              <div>
-                <div className="flex items-center gap-4 mb-4">
-                  <div 
-                    className="flex items-center justify-center w-12 h-12 text-xl font-bold text-white rounded-full shadow-lg"
-                    style={{ backgroundColor: phaseData[activePhase].color }}
+                {/* Phase Arcs */}
+                {[
+                  { d: "M 250 60 A 190 190 0 0 1 415 155", id: 1, label: "ASSESS", color: "#004080" },
+                  { d: "M 415 155 A 190 190 0 0 1 415 345", id: 2, label: "DESIGN", color: "#003366" },
+                  { d: "M 415 345 A 190 190 0 0 1 250 440", id: 3, label: "BUILD", color: "#001F3F" },
+                  { d: "M 250 440 A 190 190 0 0 1 85 345", id: 4, label: "IMPLEMENT", color: "#FFC000" },
+                  { d: "M 85 345 A 190 190 0 0 1 85 155", id: 5, label: "OPERATE", color: "#FFB800" },
+                  { d: "M 85 155 A 190 190 0 0 1 250 60", id: 6, label: "OPTIMIZE", color: "#004080" },
+                ].map((phase) => (
+                  <g
+                    key={phase.id}
+                    className="cursor-pointer transition-all duration-300"
+                    onClick={() => handlePhaseClick(phase.id)}
+                    opacity={activePhase && activePhase !== phase.id ? "0.3" : "1"}
                   >
-                    {activePhase}
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold font-heading text-brandDark dark:text-white">{phaseData[activePhase].title}</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">{phaseData[activePhase].subtitle}</p>
-                  </div>
-                </div>
-                <p className="mb-4 text-gray-700 dark:text-gray-300">{phaseData[activePhase].description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {phaseData[activePhase].activities.map((activity, i) => (
-                    <span 
-                      key={i}
-                      className="px-3 py-1 text-xs font-medium text-white rounded-full"
+                    <path
+                      d={phase.d}
+                      fill="none"
+                      stroke={phase.color}
+                      strokeWidth="60"
+                      strokeLinecap="round"
+                      className="hover:stroke-brandAccent transition-colors"
+                    />
+                    <text
+                      x="250"
+                      y="250"
+                      textAnchor="middle"
+                      className="fill-white text-[10px] font-black tracking-widest pointer-events-none"
+                      transform={`rotate(${60 * (phase.id - 1) + 30 - 90}, 250, 250) translate(0, -185)`}
+                    >
+                      {phase.label}
+                    </text>
+                  </g>
+                ))}
+
+                {/* Center Core */}
+                <circle cx="250" cy="250" r="85" fill="#001F3F" filter="url(#glow)" />
+                <circle cx="250" cy="250" r="75" fill="none" stroke="#FFC000" strokeWidth="2" strokeDasharray="5,3" opacity="0.4" />
+                <text x="250" y="240" textAnchor="middle" className="fill-brandGold text-[10px] font-bold tracking-widest uppercase">Integrated</text>
+                <text x="250" y="265" textAnchor="middle" className="fill-white text-3xl font-black">ESG</text>
+                <text x="250" y="285" textAnchor="middle" className="fill-white/70 text-[10px] font-medium tracking-[4px]">EXCELLENCE</text>
+              </svg>
+            </div>
+          </div>
+
+          {/* Details Panel */}
+          <div className="flex flex-col justify-center h-full">
+            <div className={`p-10 rounded-[32px] border-2 transition-all duration-500 min-h-[400px] flex flex-col justify-center ${
+              activePhase 
+              ? 'bg-white dark:bg-surfaceDark border-brandGold shadow-2xl' 
+              : 'bg-bgLight dark:bg-surfaceDark/50 border-borderLight dark:border-borderDark'
+            }`}>
+              {activePhase ? (
+                <div className="animate-fade-in-up">
+                  <div className="flex items-center gap-5 mb-8">
+                    <div 
+                      className="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl font-black text-white shadow-xl"
                       style={{ backgroundColor: phaseData[activePhase].color }}
                     >
-                      {activity}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ) : (
-              <p className="text-center text-gray-400">Click on any phase to explore the ESG Program Lifecycle</p>
-            )}
-          </div>
-        </div>
+                      {activePhase}
+                    </div>
+                    <div>
+                      <h4 className="font-heading text-2xl font-black text-brandDark dark:text-white uppercase">
+                        {phaseData[activePhase].title}
+                      </h4>
+                      <p className="text-sm font-bold tracking-wider text-brandPrimary dark:text-brandGold">
+                        {phaseData[activePhase].subtitle}
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <p className="text-lg text-brandDark/70 dark:text-surfaceLight/70 mb-10 leading-relaxed italic">
+                    {phaseData[activePhase].description}
+                  </p>
 
-        <div className="mt-6 text-xs text-center text-gray-400">
-          RiskMan Consulting LLP | Sustainability & ESG Practice
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {phaseData[activePhase].activities.map((activity, i) => (
+                      <div key={i} className="flex items-center gap-3 p-4 bg-bgLight dark:bg-bgDark rounded-xl border border-borderLight dark:border-borderDark">
+                        <span className="w-2 h-2 rounded-full bg-brandGold" />
+                        <span className="text-sm font-bold text-brandDark dark:text-surfaceLight">{activity}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <div className="text-center">
+                  <div className="text-6xl mb-6 opacity-20">🖱️</div>
+                  <h4 className="text-xl font-bold text-brandDark/40 dark:text-surfaceLight/40 uppercase tracking-[4px]">
+                    Select a Phase
+                  </h4>
+                  <p className="mt-4 text-sm text-brandDark/30 dark:text-surfaceLight/30">
+                    Interact with the diagram to explore our methodology.
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </section>

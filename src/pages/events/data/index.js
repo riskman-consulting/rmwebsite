@@ -30,6 +30,8 @@ export const PHOTOS = [
   {id:8,category:"5 Year Celebration", title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[7],description:"Journey of growth and success"},
   {id:9,category:"5 Year Celebration", title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[8],description:"Journey of growth and success"},
   {id:10, category:"5 Year Celebration", title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[9],description:"Journey of growth and success"},
+  {id:42,category:"5 Year Celebration",title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[10],description:"Journey of growth and success"},
+  {id:43,category:"5 Year Celebration",title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[11],description:"Journey of growth and success"},
     
   
 
@@ -89,6 +91,8 @@ export const PHOTOS = [
     subCategory:"Birthday Celebration",
     image:TEAM_BIRTH_DAY_Images[4],
   },
+
+
 
  
  
@@ -181,6 +185,20 @@ export const PHOTOS = [
     subCategory:"Birthday Celebration",
     image:TEAM_BIRTH_DAY_Images[5],
   },
+
+  {
+    id:44,
+    category:"Office Culture",
+    subCategory:"Birthday Celebration",
+    image:TEAM_BIRTH_DAY_Images[6],
+  },
+
+  {
+    id:45,
+    category:"Office Culture",
+    subCategory:"Birthday Celebration",
+    image:TEAM_BIRTH_DAY_Images[7],
+  }
   
 
   

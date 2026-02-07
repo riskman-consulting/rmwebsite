@@ -1,196 +1,143 @@
 import React from 'react';
 
 const ServiceDetails = () => {
-  const serviceDetails = [
+  const serviceBenefits = [
     {
       icon: "📊",
-      title: "ESG Strategy & Materiality Assessment",
+      title: "ESG Strategy & Materiality",
       description: "Establish the strategic foundation for your ESG program through rigorous materiality analysis and stakeholder-informed prioritization.",
       offerings: [
-        "Double materiality assessment (impact and financial perspectives)",
+        "Double materiality assessment (impact and financial)",
         "Stakeholder mapping and engagement design",
         "Peer benchmarking and best practice analysis",
         "SDG alignment and impact prioritization"
-      ]
+      ],
+      color: "brandPrimary"
     },
     {
       icon: "🌡️",
       title: "Climate Risk & GHG Management",
       description: "Comprehensive climate program development from emissions measurement through decarbonization implementation.",
       offerings: [
-        "GHG inventorization (Scope 1, 2, and 3) per GHG Protocol",
-        "Climate risk assessment and scenario modeling (TCFD-aligned)",
+        "GHG inventorization (Scope 1, 2, and 3)",
+        "Climate risk assessment (TCFD-aligned)",
         "Science-Based Targets initiative (SBTi) support",
         "Net-zero strategy and decarbonization roadmaps"
-      ]
+      ],
+      color: "brandNavy"
     },
     {
       icon: "📋",
       title: "ESG Reporting & Disclosure",
       description: "Navigate the complex reporting landscape with confidence through multi-framework disclosure support.",
       offerings: [
-        "CSRD/ESRS compliance and reporting",
+        "CSRD / ESRS compliance and reporting",
         "ISSB (IFRS S1/S2) implementation",
-        "BRSR and regulatory compliance (India, US SEC)"
-      ]
+        "BRSR and regulatory compliance (India, US SEC)",
+        "GRI and SASB standards alignment"
+      ],
+      color: "brandAccent"
     },
     {
       icon: "⚖️",
-      title: "ESG Governance & Operating Model",
-      description: "Design and implement robust governance structures that embed ESG accountability throughout the organization.",
+      title: "Governance & Internal Controls",
+      description: "Build an institutional-grade ESG operating model with robust oversight and data integrity.",
       offerings: [
-        "Board ESG oversight framework design",
-        "ESG committee structure and charter development",
-        "Policy framework development"
-      ]
-    },
-    {
-      icon: "🔒",
-      title: "Internal Controls & Assurance Readiness",
-      description: "Prepare for the era of mandatory ESG assurance with controls designed for sustainability reporting.",
-      offerings: [
-        "COSO-aligned internal control framework for sustainability",
-        "ESG data governance and quality management",
-        "Assurance readiness assessment and remediation",
-        "Limited and reasonable assurance preparation"
-      ]
+        "Board oversight and committee design",
+        "ESG internal control framework development",
+        "Data governance and assurance readiness",
+        "Policy architecture and SOP development"
+      ],
+      color: "brandDark"
     }
   ];
 
   return (
-    <section className="py-20 bg-white dark:bg-surfaceDark">
+    <section className="py-24 bg-bgLight dark:bg-bgDark">
       <div className="container">
-        <div className="max-w-6xl mx-auto">
-          {/* Service Details */}
-          <div className="mb-20 space-y-12">
-            {serviceDetails.map((service, index) => (
-              <div key={index} className="p-8 border shadow-lg bg-bgLight dark:bg-bgDark rounded-2xl border-borderLight dark:border-borderDark">
-                <div className="flex items-start gap-6">
-                  <div className="flex items-center justify-center flex-shrink-0 w-16 h-16 text-3xl shadow-md bg-gradient-to-br from-brandPrimary to-brandNavy rounded-xl">
-                    {service.icon}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="mb-3 text-2xl font-bold font-heading text-brandDark dark:text-white">
-                      {service.title}
-                    </h3>
-                    <p className="mb-4 leading-relaxed text-gray-700 dark:text-gray-300">
-                      {service.description}
-                    </p>
-                    <ul className="space-y-2">
-                      {service.offerings.map((offering, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-gray-700 dark:text-gray-300">
-                          <svg className="w-5 h-5 text-brandPrimary flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                          </svg>
-                          <span>{offering}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+        {/* Section Header */}
+        <div className="max-w-4xl mb-16">
+          <span className="text-xs font-bold tracking-[4px] uppercase text-brandPrimary dark:text-brandGold mb-4 block">
+            Core Capabilities
+          </span>
+          <h2 className="font-heading font-black text-brandDark dark:text-white text-4xl lg:text-5xl leading-tight mb-6 uppercase">
+            Detailed Service <br /> <span className="text-brandPrimary underline decoration-brandAccent">Offerings</span>
+          </h2>
+          <p className="text-lg text-brandDark/70 dark:text-surfaceLight/70 font-sans leading-relaxed">
+            We provide specialized technical expertise across the four pillars of modern 
+            enterprise sustainability to ensure your organization meets global excellence standards.
+          </p>
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+          {serviceBenefits.map((service, index) => (
+            <div 
+              key={index}
+              className="group p-8 lg:p-10 bg-surfaceLight dark:bg-surfaceDark border border-borderLight dark:border-borderDark rounded-[32px] hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+            >
+              <div className="flex items-start justify-between mb-8">
+                <div className="w-16 h-16 rounded-2xl bg-bgLight dark:bg-bgDark flex items-center justify-center text-4xl shadow-inner group-hover:scale-110 transition-transform">
+                  {service.icon}
+                </div>
+                <div className="text-[10px] font-black tracking-widest text-brandPrimary/30 dark:text-brandGold/30 uppercase border-b border-current pb-1">
+                  Capability {index + 1}
                 </div>
               </div>
-            ))}
-          </div>
 
-          {/* Multi-Country Execution */}
-          <div className="p-8 text-white shadow-2xl bg-gradient-to-br from-brandPrimary to-brandNavy rounded-2xl md:p-12">
-            <div className="flex items-start gap-6 mb-8">
-              <div className="flex items-center justify-center flex-shrink-0 w-16 h-16 text-3xl bg-white/20 rounded-xl backdrop-blur-sm">
-                🌍
-              </div>
-              <div>
-                <h3 className="mb-4 text-2xl font-bold md:text-3xl font-heading">
-                  Multi-Country, Multi-Regulation Execution
-                </h3>
-                <p className="leading-relaxed text-gray-100">
-                  For multinational organizations, ESG implementation presents unique challenges. Regulatory requirements 
-                  vary significantly across jurisdictions—from the EU's comprehensive CSRD to India's BRSR, from Singapore's 
-                  sustainability reporting requirements to emerging frameworks across the Middle East.
-                </p>
-              </div>
-            </div>
+              <h3 className="font-heading font-bold text-2xl text-brandDark dark:text-white mb-4 uppercase tracking-tight">
+                {service.title}
+              </h3>
+              
+              <p className="text-sm text-brandDark/60 dark:text-surfaceLight/60 mb-8 leading-relaxed">
+                {service.description}
+              </p>
 
-            <div className="grid gap-6 md:grid-cols-2">
-              <div className="p-6 border bg-white/10 backdrop-blur-sm rounded-xl border-white/20">
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-2xl">🎯</span>
-                  <h4 className="text-lg font-bold">Centralized Governance, Localized Execution</h4>
-                </div>
-                <p className="text-sm text-gray-100">
-                  Global policies with region-specific adaptations
-                </p>
-              </div>
-
-              <div className="p-6 border bg-white/10 backdrop-blur-sm rounded-xl border-white/20">
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-2xl">📡</span>
-                  <h4 className="text-lg font-bold">Regulatory Intelligence</h4>
-                </div>
-                <p className="text-sm text-gray-100">
-                  Continuous monitoring of evolving ESG regulations across jurisdictions
-                </p>
-              </div>
-
-              <div className="p-6 border bg-white/10 backdrop-blur-sm rounded-xl border-white/20">
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-2xl">📄</span>
-                  <h4 className="text-lg font-bold">Harmonized Reporting</h4>
-                </div>
-                <p className="text-sm text-gray-100">
-                  Collect once, report many approaches for multiple disclosure requirements
-                </p>
-              </div>
-
-              <div className="p-6 border bg-white/10 backdrop-blur-sm rounded-xl border-white/20">
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-2xl">🔗</span>
-                  <h4 className="text-lg font-bold">Cross-Border Coordination</h4>
-                </div>
-                <p className="text-sm text-gray-100">
-                  Managing value chain emissions across international operations
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Regulatory & Disclosure Excellence */}
-          <div className="grid gap-6 mt-16 md:grid-cols-3">
-            <div className="p-6 border-2 border-blue-200 bg-blue-50 dark:bg-blue-900/20 rounded-xl dark:border-blue-800">
-              <div className="mb-4 text-3xl">📋</div>
-              <h4 className="mb-2 text-lg font-bold font-heading text-brandDark dark:text-white">
-                Regulatory & Disclosure Excellence
-              </h4>
-              <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                <li>• Multi-framework compliance readiness</li>
-                <li>• Assurance-ready data and processes</li>
-                <li>• Internal controls aligned with standards</li>
+              <ul className="space-y-4">
+                {service.offerings.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-brandAccent shrink-0" />
+                    <span className="text-xs font-bold text-brandDark/80 dark:text-surfaceLight/80 leading-tight">
+                      {item}
+                    </span>
+                  </li>
+                ))}
               </ul>
             </div>
+          ))}
+        </div>
 
-            <div className="p-6 border-2 border-purple-200 bg-purple-50 dark:bg-purple-900/20 rounded-xl dark:border-purple-800">
-              <div className="mb-4 text-3xl">🤝</div>
-              <h4 className="mb-2 text-lg font-bold font-heading text-brandDark dark:text-white">
-                Enhanced Stakeholder Confidence
-              </h4>
-              <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                <li>• Improved ESG ratings</li>
-                <li>• Enhanced investor confidence</li>
-                <li>• Improved employer brand</li>
-              </ul>
+        {/* Impact Highlights */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            {
+              icon: "🛡️",
+              title: "Assurance Readiness",
+              benefit: "Internal controls aligned with global standards.",
+              color: "border-brandPrimary"
+            },
+            {
+              icon: "🤝",
+              title: "Stakeholder Trust",
+              benefit: "Enhanced investor confidence & employer brand.",
+              color: "border-brandAccent"
+            },
+            {
+              icon: "🌡️",
+              title: "Climate Mitigation",
+              benefit: "Science-aligned targets & scenario analysis.",
+              color: "border-brandGold"
+            }
+          ].map((item, i) => (
+            <div 
+              key={i} 
+              className={`p-6 border-l-4 bg-white dark:bg-surfaceDark shadow-lg rounded-r-2xl transition-all hover:translate-x-2 ${item.color}`}
+            >
+              <div className="text-2xl mb-3">{item.icon}</div>
+              <h4 className="text-sm font-black text-brandDark dark:text-white uppercase mb-1">{item.title}</h4>
+              <p className="text-[11px] text-brandDark/60 dark:text-surfaceLight/60 font-medium">{item.benefit}</p>
             </div>
-
-            <div className="p-6 border-2 border-green-200 bg-green-50 dark:bg-green-900/20 rounded-xl dark:border-green-800">
-              <div className="mb-4 text-3xl">🌡️</div>
-              <h4 className="mb-2 text-lg font-bold font-heading text-brandDark dark:text-white">
-                Climate Risk Mitigation
-              </h4>
-              <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                <li>• Comprehensive risk assessment</li>
-                <li>• Scenario analysis</li>
-                <li>• Science-aligned targets</li>
-              </ul>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

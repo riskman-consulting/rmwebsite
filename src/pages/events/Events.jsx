@@ -41,7 +41,7 @@ function Events() {
 
       <UpcomingEventsSection/>
 
-      <EventRecognition/>
+      {/* <EventRecognition/> */}
 
       
 
@@ -51,8 +51,8 @@ function Events() {
         onCardClick={handleOpenModal} 
       />
       {/* <JourneyTimeLineSection /> */}
-      <CompanyTimelineSection />
-      <AwardSection />
+      {/* <CompanyTimelineSection /> */}
+      {/* <AwardSection /> */}
       {/* <TestimonialsSection /> */}
       <WhyItMatters/>
 

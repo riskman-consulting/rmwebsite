@@ -50,6 +50,7 @@ import SocLayout from "./pages/soc/SocLayout"
 import RiskAdvisoryLayout from "./pages/risk-advisory/Layout"
 import DigitalLayout from "./pages/digital/Layout"
 import EventLayout from "./pages/events/EventLayout"
+import ESGLayout from "./pages/esg/Layout"
 
 //   Soc Pages imports
 import SocPage from './pages/soc/soc/SocPage'
@@ -70,6 +71,13 @@ import EventCompanyJourney from "./pages/events/CompanyTimelineSection"
 import EventMedia from './pages/events/media-coverage'
 import EventPastEvent from "./pages/events/past-events"
 import EventUpcomingEvent from "./pages/events/upcoming-events"
+
+// ESG Pages
+import ESGPage from "./pages/esg"
+import ESGStrategyRoadmapPage from "./pages/esg/strategy-roadmap"
+import ESGReportingDisclosurePage from "./pages/esg/reporting-disclosure"
+import ESGCarbonFootprintPage from "./pages/esg/carbon-footprint"
+import ESGSustainabilityAssurancePage from "./pages/esg/sustainability-assurance"
 
 
 
@@ -103,12 +111,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<ServicePage />} />
           <Route path="/services/bcp-dr" element={<BCPPage />} />
-          {/* <Route path="/services/risk-advisory/csa" element={<CSAPage />} /> */}
-          {/* <Route path="/services/risk-advisory" element={<RiskAdvisoryPage />} /> */}
-          {/* <Route path="/services/risk-advisory/erm" element={<ERMPage />} /> */}
+
           <Route path="/services/financial-advisory" element={<FinancialAdvisoryPage />} />
-          {/* <Route path="/services/risk-advisory/rbia" element={<RBIAPage />} /> */}
-          <Route path="/services/esg" element={<EGSPage />} />
+
 
           // Digital routes
           <Route path='/services/digital-transformation' element={<DigitalLayout />} >
@@ -152,14 +157,23 @@ function App() {
 
           // Event Routes
           <Route path='/events' element={<EventLayout />}>
-            <Route path='' element={<Events/>} />
-            <Route path='upcoming-events'  element={<EventUpcomingEvent/>} /> 
-            <Route path='past-events' element={<EventPastEvent/>} /> 
-            <Route path='accomplishments' element={<EventAccomplshments/>} /> 
-            <Route path='emerging-awards' element={<h1>Emerging Awards</h1>} /> 
-            <Route path='company-journey' element={<EventCompanyJourney/>} /> 
-            <Route path='media-coverage' element={<EventMedia/>} /> 
+            <Route path='' element={<Events />} />
+            <Route path='upcoming-events' element={<EventUpcomingEvent />} />
+            <Route path='past-events' element={<EventPastEvent />} />
+            <Route path='accomplishments' element={<EventAccomplshments />} />
+            <Route path='emerging-awards' element={<h1>Emerging Awards</h1>} />
+            <Route path='company-journey' element={<EventCompanyJourney />} />
+            <Route path='media-coverage' element={<EventMedia />} />
 
+          </Route>
+
+          // ESG Pages
+          <Route path='/services/esg' element={<ESGLayout />}  >
+            <Route path='' element={<ESGPage />} />
+            <Route path='strategy-roadmap' element={<ESGStrategyRoadmapPage/>}  />
+            <Route path='reporting-disclosure' element={<ESGReportingDisclosurePage/>}  />
+            <Route path='carbon-footprint'  element={<ESGCarbonFootprintPage/>}  />
+            <Route path='sustainability-assurance' element={<ESGSustainabilityAssurancePage/>}  />
           </Route>
 
 

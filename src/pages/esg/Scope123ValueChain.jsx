@@ -1,225 +1,191 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Scope123ValueChain = () => {
   const [hoveredScope, setHoveredScope] = useState(null);
   const [hoveredSource, setHoveredSource] = useState(null);
-
-  const ghgGases = ['CO₂', 'CH₄', 'N₂O', 'HFCs', 'PFCs', 'SF₆', 'NF₃'];
+  const [selectedSource, setSelectedSource] = useState(null);
 
   const scopeData = {
     scope1: {
-      title: 'SCOPE 1',
-      subtitle: 'Direct Emissions',
-      color: '#4CAF50',
-      colorLight: '#E8F5E9',
-      percentage: '~10%',
-      description: 'GHG emissions from sources owned or controlled by the organization',
+      title: "SCOPE 1",
+      subtitle: "Direct Emissions",
+      color: "#004080", // brandPrimary
+      percentage: "10%",
+      description: "Direct GHG emissions from sources owned or controlled by the organization.",
       sources: [
-        { icon: '🚗', label: 'Company Fleet', desc: 'Vehicles owned or operated by the company' },
-        { icon: '🏭', label: 'Stationary', desc: 'Boilers, furnaces, turbines on-site' },
-        { icon: '🔥', label: 'On-site Fuel', desc: 'Natural gas, diesel, propane combustion' },
-        { icon: '💨', label: 'Fugitive', desc: 'Leaks from equipment, pipelines' },
-        { icon: '⚙️', label: 'Process', desc: 'Chemical/physical processing emissions' },
-        { icon: '❄️', label: 'Refrigerants', desc: 'HVAC and cooling system leaks' }
-      ]
+        { icon: "🚗", label: "Company Fleet", desc: "Vehicles owned or operated by the company" },
+        { icon: "🏭", label: "Stationary", desc: "Boilers, furnaces, turbines on-site" },
+        { icon: "🔥", label: "On-site Fuel", desc: "Natural gas, diesel, propane combustion" },
+        { icon: "💨", label: "Fugitive", desc: "Leaks from equipment, pipelines" },
+        { icon: "⚙️", label: "Process", desc: "Chemical processing emissions" },
+        { icon: "❄️", label: "Refrigerants", desc: "HVAC and cooling system leaks" },
+      ],
     },
     scope2: {
-      title: 'SCOPE 2',
-      subtitle: 'Indirect Energy',
-      color: '#26A69A',
-      colorLight: '#E0F2F1',
-      percentage: '~8%',
-      description: 'GHG emissions from purchased electricity, steam, heating and cooling',
+      title: "SCOPE 2",
+      subtitle: "Indirect Energy",
+      color: "#003366", // brandNavy
+      percentage: "8%",
+      description: "Indirect GHG emissions from purchased electricity, steam, heating, and cooling.",
       sources: [
-        { icon: '⚡', label: 'Electricity', desc: 'Grid electricity consumption' },
-        { icon: '♨️', label: 'Steam', desc: 'Purchased steam for operations' },
-        { icon: '🌡️', label: 'Heating/Cooling', desc: 'District heating and cooling' },
-        { icon: '🖥️', label: 'Data Centers', desc: 'IT infrastructure energy' }
-      ]
+        { icon: "⚡", label: "Electricity", desc: "Grid electricity consumption" },
+        { icon: "♨️", label: "Steam", desc: "Purchased steam for operations" },
+        { icon: "🌡️", label: "Heating/Cooling", desc: "District heating and cooling" },
+        { icon: "🖥️", label: "Data Centers", desc: "IT infrastructure energy" },
+      ],
     },
     scope3: {
-      title: 'SCOPE 3',
-      subtitle: 'Value Chain',
-      color: '#FF9800',
-      colorLight: '#FFF3E0',
-      percentage: '~82%',
-      description: 'All other indirect emissions in the value chain (upstream & downstream)',
+      title: "SCOPE 3",
+      subtitle: "Value Chain",
+      color: "#FFB800", // brandGold
+      percentage: "82%",
+      description: "Indirect emissions in the value chain (upstream and downstream).",
       sources: [
-        { icon: '📦', label: 'Purchased Goods', desc: 'Raw materials and services', type: 'upstream' },
-        { icon: '🚚', label: 'Transport', desc: 'Upstream transportation', type: 'upstream' },
-        { icon: '🏗️', label: 'Capital Goods', desc: 'Equipment and buildings', type: 'upstream' },
-        { icon: '✈️', label: 'Business Travel', desc: 'Employee air/rail travel', type: 'other' },
-        { icon: '🚶', label: 'Commuting', desc: 'Employee commutes', type: 'other' },
-        { icon: '🗑️', label: 'Waste', desc: 'Waste disposal operations', type: 'other' },
-        { icon: '📤', label: 'Distribution', desc: 'Downstream transport', type: 'downstream' },
-        { icon: '👤', label: 'Product Use', desc: 'End-user consumption', type: 'downstream' },
-        { icon: '♻️', label: 'End of Life', desc: 'Product disposal/recycling', type: 'downstream' }
-      ]
-    }
+        { icon: "📦", label: "Purchased Goods", desc: "Raw materials and services" },
+        { icon: "🚚", label: "Transport", desc: "Upstream transportation" },
+        { icon: "🏗️", label: "Capital Goods", desc: "Equipment and buildings" },
+        { icon: "✈️", label: "Business Travel", desc: "Employee air and rail travel" },
+        { icon: "🚶", label: "Commuting", desc: "Employee commutes" },
+        { icon: "🗑️", label: "Waste", desc: "Waste disposal operations" },
+      ],
+    },
   };
 
-  const Cloud = ({ label }) => (
-    <div className="relative">
-      <div className="relative w-16 h-10 rounded-full shadow-lg bg-gradient-to-b from-slate-500 to-slate-600">
-        <div className="absolute w-6 h-6 rounded-full -top-2 left-2 bg-gradient-to-b from-slate-500 to-slate-600"></div>
-        <div className="absolute w-5 h-5 rounded-full -top-1 right-3 bg-gradient-to-b from-slate-500 to-slate-600"></div>
-      </div>
-      <span className="absolute inset-0 flex items-center justify-center text-xs font-semibold text-white drop-shadow">
-        {label}
-      </span>
-    </div>
-  );
+  const SourceCard = ({ source, scopeKey, color }) => {
+    const isSelected =
+      selectedSource?.scopeKey === scopeKey &&
+      selectedSource?.source?.label === source.label;
 
-  const SourceCard = ({ source, scopeColor }) => (
-    <div
-      className="flex flex-col items-center p-2 transition-all duration-300 bg-white rounded-lg shadow-sm cursor-pointer dark:bg-gray-800 hover:shadow-md hover:scale-105"
-      onMouseEnter={() => setHoveredSource(source)}
-      onMouseLeave={() => setHoveredSource(null)}
-    >
-      <span className="mb-1 text-2xl">{source.icon}</span>
-      <span className="text-[10px] text-center text-gray-600 dark:text-gray-300 leading-tight">{source.label}</span>
-    </div>
-  );
-
-  const ScopeSection = ({ scopeKey, data }) => (
-    <div
-      className={`relative rounded-xl overflow-hidden transition-all duration-300 ${hoveredScope === scopeKey ? 'ring-2 shadow-xl scale-[1.02]' : 'shadow-lg'}`}
-      style={{ borderTop: `4px solid ${data.color}`, ...(hoveredScope === scopeKey ? { '--tw-ring-color': data.color } : {}) }}
-      onMouseEnter={() => setHoveredScope(scopeKey)}
-      onMouseLeave={() => setHoveredScope(null)}
-    >
-      {/* Header */}
-      <div className="p-3 bg-white/90 dark:bg-gray-800/90">
-        <div className="flex items-center gap-3 mb-2">
-          <div
-            className="flex items-center justify-center w-10 h-10 text-lg font-bold text-white rounded-full shadow"
-            style={{ background: `linear-gradient(135deg, ${data.color}, ${data.color}dd)` }}
-          >
-            {scopeKey.replace('scope', '')}
-          </div>
-          <div>
-            <h3 className="text-sm font-bold" style={{ color: data.color }}>{data.title}</h3>
-            <p className="text-xs text-gray-500 dark:text-gray-400">{data.subtitle}</p>
-          </div>
+    return (
+      <button
+        onMouseEnter={() => setHoveredSource({ scopeKey, source })}
+        onMouseLeave={() => setHoveredSource(null)}
+        onClick={() => setSelectedSource(isSelected ? null : { scopeKey, source })}
+        className={`p-4 border-2 rounded-xl transition-all duration-300 flex flex-col items-center bg-white dark:bg-surfaceDark hover:-translate-y-1 ${
+          isSelected ? "border-brandGold shadow-lg" : "border-transparent hover:shadow-md"
+        }`}
+      >
+        <div className="text-3xl mb-2">{source.icon}</div>
+        <div className="text-[10px] font-black uppercase tracking-tighter text-brandDark dark:text-surfaceLight text-center leading-tight">
+          {source.label}
         </div>
-        {/* Sources grid */}
-        <div className={`grid gap-2 ${scopeKey === 'scope3' ? 'grid-cols-3' : 'grid-cols-2'}`}>
-          {data.sources.map((source, i) => (
-            <SourceCard key={i} source={source} scopeColor={data.color} />
-          ))}
-        </div>
-      </div>
-      {/* Footer */}
-      <div className="p-3" style={{ backgroundColor: data.colorLight }}>
-        <p className="mb-1 text-xs text-gray-600 dark:text-gray-300">{data.description}</p>
-        <span className="text-sm font-bold" style={{ color: data.color }}>{data.percentage} of footprint</span>
-      </div>
-    </div>
-  );
+      </button>
+    );
+  };
 
-  return (
-    <section className="py-20 bg-gradient-to-b from-slate-800 via-slate-600 to-slate-200">
-      <div className="container">
-        {/* Header */}
-        <div className="py-6 text-center">
-          <h1 className="mb-1 text-2xl font-semibold text-white md:text-3xl">GHG Emissions Across the Value Chain</h1>
-          <p className="text-sm text-slate-300">Scope 1, 2 & 3 Greenhouse Gas Protocol Framework</p>
-        </div>
+  const ScopeSection = ({ scopeKey, data }) => {
+    const isScopeActive = hoveredScope === scopeKey;
+    
+    // logic to determine what text to show in the "Score Card" info panel
+    const displaySource =
+      selectedSource?.scopeKey === scopeKey
+        ? selectedSource.source
+        : hoveredSource?.scopeKey === scopeKey
+        ? hoveredSource.source
+        : null;
 
-        {/* GHG Clouds */}
-        <div className="flex flex-wrap justify-center gap-4 px-4 mb-4">
-          {ghgGases.map((gas, i) => (
-            <Cloud key={i} label={gas} />
-          ))}
-        </div>
-
-        {/* Emission arrows */}
-        <div className="flex justify-around px-20 py-2">
-          {['#4CAF50', '#26A69A', '#FF9800'].map((color, i) => (
-            <div key={i} className="flex flex-col items-center">
-              <div className="w-0 h-0 border-l-8 border-r-8 border-b-[12px] border-l-transparent border-r-transparent" style={{ borderBottomColor: '#4a5a6a' }}></div>
-              <div className="w-1 h-8" style={{ background: `linear-gradient(to bottom, ${color}, #4a5a6a)` }}></div>
-            </div>
-          ))}
-        </div>
-
-        {/* Scope badges */}
-        <div className="flex justify-around px-20 pb-4">
-          {Object.entries(scopeData).map(([key, data]) => (
-            <div
-              key={key}
-              className="flex items-center justify-center w-12 h-12 text-xl font-bold text-white rounded-full shadow-lg"
-              style={{ background: `linear-gradient(135deg, ${data.color}, ${data.color}cc)` }}
+    return (
+      <div
+        onMouseEnter={() => setHoveredScope(scopeKey)}
+        onMouseLeave={() => setHoveredScope(null)}
+        className={`relative p-6 rounded-[32px] border-2 transition-all duration-500 bg-surfaceLight dark:bg-surfaceDark ${
+          isScopeActive ? "shadow-2xl scale-[1.02]" : "border-transparent shadow-md"
+        }`}
+        style={{ borderColor: isScopeActive ? data.color : "transparent" }}
+      >
+        <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center gap-3">
+            <div 
+              className="w-12 h-12 rounded-2xl flex items-center justify-center text-white font-black text-xl"
+              style={{ backgroundColor: data.color }}
             >
-              {key.replace('scope', '')}
+              {scopeKey.replace("scope", "")}
             </div>
-          ))}
+            <div>
+              <h3 className="font-heading font-black text-brandDark dark:text-white uppercase leading-none">{data.title}</h3>
+              <p className="text-[10px] font-bold text-brandDark/40 dark:text-surfaceLight/40 uppercase tracking-widest">{data.subtitle}</p>
+            </div>
+          </div>
+          <span className="text-sm font-black text-brandDark/20 dark:text-white/20">{data.percentage}</span>
         </div>
 
-        {/* Main diagram area */}
-        <div className="p-6 bg-gradient-to-b from-slate-200 to-slate-300 rounded-t-3xl">
-          {/* Tooltip */}
-          {hoveredSource && (
-            <div className="fixed z-50 max-w-xs p-3 text-white rounded-lg shadow-xl top-4 right-4 bg-slate-800 animate-fadeIn">
-              <div className="flex items-center gap-2 mb-1">
-                <span className="text-2xl">{hoveredSource.icon}</span>
-                <span className="font-semibold">{hoveredSource.label}</span>
+        {/* Dynamic Info Panel (The Score Card) */}
+        <div className="min-h-[90px] mb-6 p-4 rounded-2xl bg-bgLight dark:bg-bgDark border border-borderLight dark:border-borderDark transition-all duration-300">
+          {displaySource ? (
+            <div className="animate-in fade-in zoom-in-95">
+              <div className="text-xs font-black text-brandPrimary dark:text-brandGold uppercase mb-1">
+                {displaySource.label}
               </div>
-              <p className="text-sm text-slate-300">{hoveredSource.desc}</p>
+              <p className="text-[11px] text-brandDark/70 dark:text-surfaceLight/70 leading-relaxed italic">
+                {displaySource.desc}
+              </p>
+            </div>
+          ) : (
+            <div className="h-full flex flex-col justify-center text-center opacity-40">
+              <p className="text-[10px] font-bold uppercase tracking-widest leading-tight">
+                Hover or Click a source <br /> to see details
+              </p>
             </div>
           )}
+        </div>
 
-          {/* Scopes grid */}
-          <div className="grid grid-cols-1 gap-4 mb-6 md:grid-cols-3">
-            <ScopeSection scopeKey="scope1" data={scopeData.scope1} />
-            <ScopeSection scopeKey="scope2" data={scopeData.scope2} />
-            <ScopeSection scopeKey="scope3" data={scopeData.scope3} />
-          </div>
-
-          {/* Distribution bar */}
-          <div className="p-4 bg-white shadow-lg dark:bg-gray-800 rounded-xl">
-            <h4 className="mb-3 text-sm font-semibold text-center text-gray-700 dark:text-gray-300">Typical Corporate Emissions Distribution</h4>
-            <div className="flex h-10 overflow-hidden rounded-lg shadow-inner">
-              <div className="flex items-center justify-center text-sm font-semibold text-white" style={{ width: '10%', background: 'linear-gradient(135deg, #4CAF50, #2E7D32)' }}>
-                10%
-              </div>
-              <div className="flex items-center justify-center text-sm font-semibold text-white" style={{ width: '8%', background: 'linear-gradient(135deg, #26A69A, #00796B)' }}>
-                8%
-              </div>
-              <div className="flex items-center justify-center text-sm font-semibold text-white" style={{ width: '82%', background: 'linear-gradient(135deg, #FF9800, #E65100)' }}>
-                82%
-              </div>
-            </div>
-            <div className="flex justify-between mt-3 text-xs text-gray-500 dark:text-gray-400">
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                <span>Scope 1 - Direct Control</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 bg-teal-500 rounded-full"></div>
-                <span>Scope 2 - Energy Procurement</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
-                <span>Scope 3 - Value Chain Engagement</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Footer */}
-          <p className="mt-6 text-xs text-center text-gray-500">
-            RiskMan Consulting LLP | Based on GHG Protocol Corporate Standard
-          </p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          {data.sources.map((s) => (
+            <SourceCard key={s.label} source={s} scopeKey={scopeKey} color={data.color} />
+          ))}
         </div>
       </div>
+    );
+  };
 
-      <style>{`
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(-5px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fadeIn { animation: fadeIn 0.2s ease-out; }
-      `}</style>
+  return (
+    <section className="py-20 bg-bgLight dark:bg-bgDark">
+      <div className="container">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <span className="text-xs font-bold tracking-[4px] uppercase text-brandPrimary dark:text-brandGold mb-4 block">
+            GHG Protocol Framework
+          </span>
+          <h2 className="font-heading font-black text-brandDark dark:text-white text-4xl lg:text-5xl uppercase leading-tight mb-6">
+            Emissions Across The Value Chain
+          </h2>
+        </div>
+
+        {/* Value Chain Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+          {Object.entries(scopeData).map(([key, data]) => (
+            <ScopeSection key={key} scopeKey={key} data={data} />
+          ))}
+        </div>
+
+        {/* Global Distribution Bar */}
+        <div className="p-8 lg:p-12 bg-brandDark rounded-[40px] shadow-2xl border border-white/10 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-brandPrimary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+          
+          <h4 className="text-center text-white/40 text-[10px] font-black uppercase tracking-[5px] mb-8">
+            Typical Corporate Emissions Distribution
+          </h4>
+          
+          <div className="flex h-12 w-full rounded-2xl overflow-hidden border-4 border-white/5 shadow-2xl">
+            <div className="flex items-center justify-center text-[10px] font-black text-white bg-brandPrimary w-[10%] border-r border-white/10">10%</div>
+            <div className="flex items-center justify-center text-[10px] font-black text-white bg-brandNavy w-[8%] border-r border-white/10">8%</div>
+            <div className="flex items-center justify-center text-[10px] font-black text-brandDark bg-brandGold w-[82%]">82%</div>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-8 mt-6">
+            {[
+              { color: "#004080", label: "Scope 1" },
+              { color: "#003366", label: "Scope 2" },
+              { color: "#FFB800", label: "Scope 3" }
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-2">
+                <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: item.color }} />
+                <span className="text-[10px] font-bold text-white/60 uppercase tracking-widest">{item.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

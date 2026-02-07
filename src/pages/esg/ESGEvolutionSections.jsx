@@ -6,9 +6,8 @@ const ESGEvolutionTimeline = () => {
       period: "2000 - 2010",
       phase: "COMPLIANCE",
       icon: "📋",
-      color: "from-red-500 to-red-600",
-      bgColor: "bg-red-50 dark:bg-red-900/20",
-      borderColor: "border-red-200 dark:border-red-800",
+      color: "from-brandNavy to-brandPrimary",
+      glowColor: "shadow-brandNavy/20",
       features: [
         "Regulatory focus",
         "Risk mitigation",
@@ -19,9 +18,8 @@ const ESGEvolutionTimeline = () => {
       period: "2010 - 2020",
       phase: "STRATEGY",
       icon: "📈",
-      color: "from-blue-500 to-blue-600",
-      bgColor: "bg-blue-50 dark:bg-blue-900/20",
-      borderColor: "border-blue-200 dark:border-blue-800",
+      color: "from-brandPrimary to-brandNavy",
+      glowColor: "shadow-brandPrimary/20",
       features: [
         "Business integration",
         "Stakeholder value",
@@ -32,9 +30,8 @@ const ESGEvolutionTimeline = () => {
       period: "2020+",
       phase: "VALUE CREATION",
       icon: "🚀",
-      color: "from-green-500 to-green-600",
-      bgColor: "bg-green-50 dark:bg-green-900/20",
-      borderColor: "border-green-200 dark:border-green-800",
+      color: "from-brandAccent to-brandGold",
+      glowColor: "shadow-brandAccent/20",
       features: [
         "Competitive advantage",
         "Innovation driver",
@@ -44,51 +41,55 @@ const ESGEvolutionTimeline = () => {
   ];
 
   return (
-    <section className="py-20 bg-white dark:bg-surfaceDark">
+    <section className="py-20 bg-bgLight dark:bg-bgDark">
       <div className="container">
-        <div className="mb-12 text-center">
-          <h3 className="mb-4 text-3xl font-bold font-heading text-brandDark dark:text-white">
+        {/* Section Header */}
+        <div className="mb-16 text-center">
+          <h3 className="mb-4 text-4xl font-black font-heading text-brandDark dark:text-surfaceLight">
             ESG Evolution Timeline
           </h3>
-          <p className="text-gray-600 dark:text-gray-400">
-            Three Phases of ESG Evolution from Compliance to Value Creation
+          <p className="max-w-2xl mx-auto text-lg font-sans text-brandDark/70 dark:text-surfaceLight/70">
+            The three distinct phases of ESG evolution, moving from a necessity of compliance to a powerful driver of enterprise value.
           </p>
         </div>
 
         {/* Timeline Container */}
         <div className="mx-auto max-w-7xl">
           {/* Desktop Timeline */}
-          <div className="relative hidden gap-8 md:grid md:grid-cols-3">
-            {/* Connecting Line */}
-            <div className="absolute left-0 right-0 z-0 h-1 top-24 bg-gradient-to-r from-red-500 via-blue-500 to-green-500"></div>
-
+          <div className="relative hidden gap-6 md:grid md:grid-cols-3">
             {timelineData.map((item, index) => (
-              <div key={index} className="relative z-10">
-                {/* Timeline Node */}
-                <div className={`w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300`}>
-                  <span className="text-3xl">{item.icon}</span>
-                </div>
+              <div key={index} className="relative group">
+                {/* Connecting Line to next card */}
+                {index < timelineData.length - 1 && (
+                  <div className={`absolute top-8 -right-4 w-8 h-0.5 bg-gradient-to-r ${item.color} opacity-30 dark:opacity-50 hidden lg:block z-0`} />
+                )}
 
-                {/* Card */}
-                <div className={`${item.bgColor} ${item.borderColor} border-2 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 h-full`}>
-                  {/* Period */}
-                  <div className="mb-2 text-sm font-semibold text-gray-500 dark:text-gray-400">
+                {/* Card Container */}
+                <div className="relative z-10 h-full p-6 transition-all duration-500 border-2 shadow-lg bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-2xl hover:shadow-2xl hover:-translate-y-2 group-hover:border-brandAccent/50">
+                  
+                  {/* Icon Node */}
+                  <div className={`absolute -top-4 -right-4 w-16 h-16 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center shadow-xl ${item.glowColor} border-4 border-white dark:border-surfaceDark transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6`}>
+                    <span className="text-3xl">{item.icon}</span>
+                  </div>
+
+                  {/* Period Label */}
+                  <div className="mb-2 text-xs font-bold tracking-[2px] uppercase text-brandPrimary dark:text-brandAccent">
                     {item.period}
                   </div>
 
-                  {/* Phase */}
-                  <h4 className="mb-6 text-2xl font-bold font-heading text-brandDark dark:text-white">
+                  {/* Phase Title */}
+                  <h4 className="pr-12 mb-6 font-heading text-2xl font-black text-brandDark dark:text-surfaceLight">
                     {item.phase}
                   </h4>
 
-                  {/* Features */}
+                  {/* Features List */}
                   <ul className="space-y-3">
                     {item.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                        <svg className="flex-shrink-0 w-5 h-5 text-brandPrimary" fill="currentColor" viewBox="0 0 20 20">
+                      <li key={idx} className="flex items-start gap-3 text-sm font-medium text-brandDark/80 dark:text-surfaceLight/80">
+                        <svg className="flex-shrink-0 w-5 h-5 mt-0.5 text-brandAccent" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
-                        <span>{feature}</span>
+                        <span className="leading-relaxed">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -98,39 +99,33 @@ const ESGEvolutionTimeline = () => {
           </div>
 
           {/* Mobile Timeline */}
-          <div className="space-y-8 md:hidden">
+          <div className="space-y-8 md:hidden px-4">
             {timelineData.map((item, index) => (
               <div key={index} className="relative">
-                {/* Connecting Line */}
-                {index !== timelineData.length - 1 && (
-                  <div className={`absolute left-8 top-20 bottom-0 w-1 bg-gradient-to-b ${item.color} z-0`}></div>
+                {/* Vertical Connecting Line */}
+                {index < timelineData.length - 1 && (
+                  <div className={`absolute left-1/2 -bottom-8 transform -translate-x-1/2 w-0.5 h-8 bg-gradient-to-b ${item.color} opacity-40`} />
                 )}
 
-                <div className="relative z-10 flex gap-4">
-                  {/* Timeline Node */}
-                  <div className={`flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg`}>
+                <div className="relative p-6 border-2 shadow-lg bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-2xl">
+                  <div className={`absolute -top-3 -right-3 w-14 h-14 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg border-4 border-white dark:border-surfaceDark`}>
                     <span className="text-2xl">{item.icon}</span>
                   </div>
 
-                  {/* Card */}
-                  <div className={`flex-1 ${item.bgColor} ${item.borderColor} border-2 rounded-2xl p-6 shadow-lg`}>
-                    <div className="mb-2 text-sm font-semibold text-gray-500 dark:text-gray-400">
-                      {item.period}
-                    </div>
-                    <h4 className="mb-4 text-xl font-bold font-heading text-brandDark dark:text-white">
-                      {item.phase}
-                    </h4>
-                    <ul className="space-y-2">
-                      {item.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
-                          <svg className="flex-shrink-0 w-4 h-4 text-brandPrimary" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                          </svg>
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="mb-1 text-xs font-bold tracking-widest text-brandPrimary dark:text-brandAccent">
+                    {item.period}
                   </div>
+                  <h4 className="mb-4 font-heading text-xl font-black text-brandDark dark:text-surfaceLight uppercase">
+                    {item.phase}
+                  </h4>
+                  <ul className="space-y-2">
+                    {item.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center gap-3 text-sm text-brandDark/70 dark:text-surfaceLight/70">
+                        <div className="w-1.5 h-1.5 rounded-full bg-brandAccent" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}

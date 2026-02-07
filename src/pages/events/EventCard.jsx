@@ -150,15 +150,16 @@
 // }
 
 
+
 import React, { useState, useRef } from "react";
 import { Calendar, MapPin, ChevronLeft, ChevronRight } from "lucide-react";
-
+ 
 export default function EventCard({ event }) {
   const gallery = event.images.gallery || [];
   const [activeImg, setActiveImg] = useState(gallery[0]);
   const [showAll, setShowAll] = useState(false);
   const scrollRef = useRef(null);
-
+ 
   // Function to handle thumbnail scrolling
   const scroll = (direction) => {
     if (scrollRef.current) {
@@ -167,34 +168,32 @@ export default function EventCard({ event }) {
       scrollRef.current.scrollTo({ left: scrollTo, behavior: 'smooth' });
     }
   };
-
+ 
   return (
-    <div className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-xl transition-all group">
+    <div className="overflow-hidden transition-all bg-white border dark:bg-slate-900 rounded-2xl border-slate-200 dark:border-slate-800 hover:shadow-xl group">
       {/* Visual Header */}
-      <div className="relative h-52 bg-slate-200 dark:bg-slate-800 overflow-hidden">
-        <img 
-          src={activeImg} 
-          alt={event.title} 
-          className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
+      <div className="relative overflow-hidden h-52 bg-slate-200 dark:bg-slate-800">
+        <img
+          src={activeImg}
+          alt={event.title}
+          className="object-cover object-top w-full h-full transition-transform duration-700 group-hover:scale-110"
         />
-        <div className="absolute top-3 left-3 px-3 py-1 bg-white/90 dark:bg-slate-900/90 backdrop-blur rounded-full text-[10px] font-bold uppercase tracking-widest">
-          {event.meta.type}
-        </div>
+        
       </div>
-
+ 
       {/* Thumbnails Bar with Navigation */}
       {gallery.length > 1 && (
-        <div className="relative flex items-center bg-slate-50 dark:bg-slate-900/50 border-b border-slate-100 dark:border-slate-800 group/thumbnails">
-          
+        <div className="relative flex items-center border-b bg-slate-50 dark:bg-slate-900/50 border-slate-100 dark:border-slate-800 group/thumbnails">
+         
           {/* Scroll Left Button */}
-          <button 
+          <button
             onClick={() => scroll('left')}
-            className="absolute left-0 z-10 p-1 bg-white/80 dark:bg-slate-800/80 opacity-0 group-hover/thumbnails:opacity-100 transition-opacity"
+            className="absolute left-0 z-10 p-1 transition-opacity opacity-0 bg-white/80 dark:bg-slate-800/80 group-hover/thumbnails:opacity-100"
           >
             <ChevronLeft size={16} />
           </button>
-
-          <div 
+ 
+          <div
             ref={scrollRef}
             className="flex gap-1.5 p-2 overflow-x-auto scrollbar-hide scroll-smooth no-scrollbar"
           >
@@ -207,13 +206,13 @@ export default function EventCard({ event }) {
                   activeImg === img ? "border-slate-900 dark:border-white scale-105" : "border-transparent opacity-60"
                 }`}
               >
-                <img src={img} className="w-full h-full object-cover" alt={`thumb-${i}`} />
+                <img src={img} className="object-cover w-full h-full" alt={`thumb-${i}`} />
               </button>
             ))}
-
+ 
             {/* +More Button */}
             {!showAll && gallery.length > 5 && (
-              <button 
+              <button
                 onClick={() => setShowAll(true)}
                 className="w-12 h-9 flex-shrink-0 rounded-md bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-[10px] font-bold text-slate-500 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors"
               >
@@ -221,32 +220,33 @@ export default function EventCard({ event }) {
               </button>
             )}
           </div>
-
+ 
           {/* Scroll Right Button */}
-          <button 
+          <button
             onClick={() => scroll('right')}
-            className="absolute right-0 z-10 p-1 bg-white/80 dark:bg-slate-800/80 opacity-0 group-hover/thumbnails:opacity-100 transition-opacity"
+            className="absolute right-0 z-10 p-1 transition-opacity opacity-0 bg-white/80 dark:bg-slate-800/80 group-hover/thumbnails:opacity-100"
           >
             <ChevronRight size={16} />
           </button>
         </div>
       )}
-
+ 
       {/* Details */}
       <div className="p-5">
         <div className="flex items-center gap-4 text-[11px] font-medium text-slate-500 dark:text-slate-400 mb-3">
           <span className="flex items-center gap-1.5"><Calendar size={14}/> {event.meta.date}</span>
           <span className="flex items-center gap-1.5"><MapPin size={14}/> {event.meta.location}</span>
         </div>
-        
-        <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 leading-tight">
+       
+        <h3 className="mb-2 text-lg font-bold leading-tight text-slate-900 dark:text-white">
           {event.title}
         </h3>
-        
-        <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-2 mb-2">
+       
+        <p className="mb-2 text-sm text-slate-600 dark:text-slate-400 line-clamp-2">
           {event.description}
         </p>
       </div>
     </div>
   );
 }
+ 
