@@ -51,7 +51,7 @@ const Diagram = ({ setTooltip }) => {
     };
 
     return (
-        <div ref={containerRef} className="relative w-full max-w-2xl mx-auto aspect-square">
+        <div ref={containerRef} className="relative max-w-2xl mx-auto w-screen">
             <svg viewBox="0 0 700 700" className="w-full h-full drop-shadow-sm" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <linearGradient id="investorGrad" x1="0%" y1="0%" x2="100%" y2="100%">

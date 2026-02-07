@@ -2,8 +2,7 @@
 
 
 import React from "react";
-import { ArrowRight, HeartOff } from "lucide-react";
-import Hero1 from "../../assets/images/hero-section/about/Hero1.jpg"
+import { ArrowRight } from "lucide-react";
 import { teamsImages } from "../../assets/teams";
  
 export default function SingleSlide() {
@@ -14,7 +13,7 @@ export default function SingleSlide() {
 
     teamsImages.sukantaSir,
     "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768906075/Prasen_pal_xe5jx8.webp",
-    teamsImages.arpitSir
+    teamsImages.arpitSir,
   ];
 
   return (
@@ -22,7 +21,7 @@ export default function SingleSlide() {
       {/* 1. BACKGROUND IMAGE LAYER */}
       <div className="absolute inset-0 z-0">
         <img
-          src={Hero1}
+          src="/images/Hero1.webp"
           alt="Strategic consulting"
           className="object-cover w-full h-full object-[70%_center]" // Focus shifted right to make space for text
         />
@@ -77,7 +76,7 @@ export default function SingleSlide() {
             </div>
             <div className="text-white/90">
               <p className="text-sm font-bold leading-tight tracking-tight uppercase">
-                Enabling digital evolution
+                Accelerating Business Achievements
               </p>
               <p className="text-xs opacity-70">Securing global enterprises</p>
             </div>

@@ -1,181 +1,213 @@
+const capabilities = [
+  { icon: "🌍", text: "Global Delivery" },
+  { icon: "🏭", text: "Industry Expertise" },
+  { icon: "💻", text: "Tech Enabled" }
+];
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const ESGServicePortfolio = () => {
-  const [activeService, setActiveService] = useState(null);
+const ESGStakeholderEcosystem = () => {
+  const [activeStakeholder, setActiveStakeholder] = useState('investors');
 
-  const services = {
-    strategy: {
-      number: 1,
-      title: "Strategy & Materiality",
-      icon: "📊",
-      gradient: "from-brandPrimary to-brandNavy",
-      description: "Develop a comprehensive ESG strategy through rigorous double materiality assessment and strategic target setting.",
-      offerings: ["Double Materiality", "Stakeholder Mapping", "SDG Alignment", "Roadmap Development"]
+  const stakeholders = {
+    investors: {
+      title: "INVESTORS",
+      icon: "🏦",
+      color: "#004080",
+      position: { cx: 300, cy: 80 },
+      subtitle: "Capital Access",
+      description: "ESG performance directly influences investment decisions, access to capital, and long-term enterprise valuation.",
+      impact: ["ESG Ratings", "Capital Flow", "Cost of Capital"]
     },
-    climate: {
-      number: 2,
-      title: "Climate & GHG Management",
-      icon: "🌡️",
-      gradient: "from-brandNavy to-brandDark",
-      description: "Comprehensive climate risk assessment and GHG emissions management supporting your net-zero journey.",
-      offerings: ["Scope 1-2-3 Inventory", "TCFD Implementation", "SBTi Alignment", "Net-Zero Roadmap"]
+    regulators: {
+      title: "REGULATORS",
+      icon: "📜",
+      color: "#FFC000",
+      position: { cx: 95, cy: 145 },
+      subtitle: "Compliance",
+      description: "Mandatory disclosures through global frameworks like CSRD and BRSR carry significant financial and legal consequences.",
+      impact: ["Reporting Standards", "Legal Compliance", "Audit Ready"]
     },
-    reporting: {
-      number: 3,
-      title: "Reporting & Disclosure",
-      icon: "📋",
-      gradient: "from-brandAccent to-brandGold",
-      description: "Navigate complex global disclosure requirements (CSRD, BRSR, ISSB) with expert guidance and precision.",
-      offerings: ["CSRD/ESRS", "BRSR Reporting", "GRI Standards", "ISSB Implementation"]
+    customers: {
+      title: "CUSTOMERS",
+      icon: "🛒",
+      color: "#003366",
+      position: { cx: 505, cy: 145 },
+      subtitle: "Procurement",
+      description: "B2B and B2C customers prioritize sustainable suppliers, cascading ESG requirements throughout global supply chains.",
+      impact: ["Vendor Selection", "Brand Loyalty", "Sustainable Sourcing"]
     },
-    governance: {
-      number: 4,
-      title: "Governance & Operating Model",
-      icon: "⚖️",
-      gradient: "from-brandDark to-brandNavy",
-      description: "Design and implement robust governance structures with clear accountability and performance management.",
-      offerings: ["Board Oversight", "Committee Design", "Policy Frameworks", "Incentive Alignment"]
+    employees: {
+      title: "EMPLOYEES",
+      icon: "👥",
+      color: "#001F3F",
+      position: { cx: 120, cy: 470 },
+      subtitle: "Talent & Culture",
+      description: "Strong ESG profiles enhance talent attraction, employee engagement, and long-term organizational productivity.",
+      impact: ["Retention Rates", "Purpose-Driven Culture", "Engagement"]
     },
-    controls: {
-      number: 5,
-      title: "Controls & Assurance",
-      icon: "🔒",
-      gradient: "from-brandGold to-brandAccent",
-      description: "Build assurance-ready ESG programs with robust internal controls, data governance, and verification processes.",
-      offerings: ["COSO Controls", "Data Governance", "Control Testing", "Assurance Readiness"]
-    },
-    capability: {
-      number: 6,
-      title: "Capability Building",
-      icon: "🎓",
-      gradient: "from-brandPrimary to-brandDark",
-      description: "Build lasting internal capabilities through tailored training programs for executives and operational teams.",
-      offerings: ["Executive Immersion", "Board Education", "Practitioner Certs", "Framework Training"]
+    society: {
+      title: "SOCIETY",
+      icon: "🌍",
+      color: "#FFB800",
+      position: { cx: 480, cy: 470 },
+      subtitle: "License to Operate",
+      description: "Communities and civil society grant the social license to operate based on transparency and environmental impact.",
+      impact: ["Social License", "Community Trust", "Brand Reputation"]
     }
   };
 
-  const capabilities = [
-    { icon: "🌍", text: "Global Delivery" },
-    { icon: "🏭", text: "Industry Expertise" },
-    { icon: "💻", text: "Tech Enabled" },
-    { icon: "🤝", text: "Partnership" }
-  ];
+  const getConnectionPath = (pos) => {
+    const center = { x: 300, y: 290 };
+    return `M${center.x},${center.y} Q${(center.x + pos.cx) / 2},${(center.y + pos.cy) / 2 - 20} ${pos.cx},${pos.cy}`;
+  };
 
   return (
-    <section className="py-12 lg:py-20 bg-bgLight dark:bg-bgDark overflow-hidden relative transition-colors duration-500 min-h-screen flex flex-col justify-center">
-      {/* Background Orbs */}
-      <div className="absolute inset-0 pointer-events-none opacity-10">
-        <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-brandPrimary rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-brandGold rounded-full blur-[120px]" />
-      </div>
-
-      <div className="container relative z-10 px-4 mx-auto">
-        {/* Compact Header */}
-        <div className="text-center mb-10">
-          <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="text-[10px] font-black tracking-[4px] uppercase text-brandPrimary dark:text-brandGold mb-2 block">
-            Service Architecture
+    <section className="py-20 bg-white dark:bg-slate-950 overflow-hidden flex items-center min-h-screen">
+      <div className="container mx-auto px-6">
+        
+        {/* Header Section */}
+        <div className="mb-16">
+          <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="text-xs font-black tracking-[4px] text-blue-700 dark:text-amber-500 uppercase mb-4 block">
+            Integrated Excellence
           </motion.span>
-          <h2 className="font-heading font-black text-brandDark dark:text-white text-3xl lg:text-5xl leading-tight">
-            Sustainability & ESG Portfolio
+          <h2 className="text-slate-900 dark:text-white font-black text-4xl lg:text-6xl uppercase tracking-tighter">
+            STAKEHOLDER ECOSYSTEM
           </h2>
         </div>
 
-        <div className="max-w-5xl mx-auto">
-          {/* Reduced Height Hexagonal Grid */}
-          <div className="hidden lg:block relative h-[450px] mb-12">
-            {/* Center Hub */}
-            <div className="absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 rounded-full bg-brandDark border-4 border-brandGold/40 flex flex-col items-center justify-center shadow-xl">
-              <span className="text-3xl mb-1">🎯</span>
-              <span className="text-[8px] font-black text-brandGold uppercase">Integrated</span>
-              <span className="text-sm font-black text-white uppercase">Excellence</span>
-            </div>
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+          
+          {/* LEFT SIDE: INTERACTIVE DIAGRAM */}
+          <div className="lg:w-1/2 relative h-[500px] w-full max-w-[500px] flex items-center justify-center">
+            <svg viewBox="0 0 600 560" className="w-full h-auto overflow-visible relative z-10">
+              <defs>
+                <filter id="nodeGlow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="4" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
 
-            {/* Pulsing Connector Lines */}
-            <svg className="absolute inset-0 w-full h-full opacity-20">
-              {Object.keys(services).map((_, i) => (
-                <line 
-                  key={i} x1="50%" y1="50%" 
-                  x2={`${50 + 30 * Math.cos((i * 60 * Math.PI) / 180)}%`} 
-                  y2={`${50 + 30 * Math.sin((i * 60 * Math.PI) / 180)}%`} 
-                  stroke="currentColor" className="text-brandDark dark:text-brandLight" strokeWidth="1" strokeDasharray="5,5" 
-                />
+              {/* Bidirectional Flow Paths */}
+              {Object.keys(stakeholders).map(key => (
+                <g key={`flow-${key}`}>
+                  <path
+                    d={getConnectionPath(stakeholders[key].position)}
+                    fill="none"
+                    stroke={stakeholders[key].color}
+                    strokeWidth={activeStakeholder === key ? "3" : "1.5"}
+                    strokeDasharray="10, 15"
+                    className="transition-all duration-500 animate-flow-out opacity-20"
+                    style={{ opacity: activeStakeholder === key ? 0.8 : 0.1 }}
+                  />
+                  <path
+                    d={getConnectionPath(stakeholders[key].position)}
+                    fill="none"
+                    stroke={stakeholders[key].color}
+                    strokeWidth={activeStakeholder === key ? "3" : "1.5"}
+                    strokeDasharray="5, 12"
+                    className="transition-all duration-500 animate-flow-in opacity-20"
+                    style={{ opacity: activeStakeholder === key ? 0.8 : 0.1 }}
+                  />
+                </g>
+              ))}
+
+              {/* Anchored Organization Hub */}
+              <g className="pointer-events-none">
+                <circle cx="300" cy="290" r="75" fill="#001F3F" className="shadow-2xl" />
+                <text x="300" y="278" textAnchor="middle" dominantBaseline="middle" className="fill-[#FFB800] text-[9px] font-black tracking-widest">RISKMAN</text>
+                <text x="300" y="302" textAnchor="middle" dominantBaseline="middle" className="fill-white text-sm font-black uppercase tracking-tight">ORGANIZATION</text>
+                <text x="300" y="320" textAnchor="middle" dominantBaseline="middle" className="fill-white/30 text-[7px] font-bold tracking-[3px]">ESG INTEGRATION</text>
+              </g>
+
+              {/* Interactive Stakeholder Nodes */}
+              {Object.entries(stakeholders).map(([key, data]) => (
+                <g 
+                  key={key}
+                  onMouseEnter={() => setActiveStakeholder(key)}
+                  className="cursor-pointer group"
+                >
+                  <motion.circle 
+                    cx={data.position.cx} cy={data.position.cy} r="48" 
+                    fill={data.color}
+                    animate={{ scale: activeStakeholder === key ? 1.12 : 1 }}
+                    style={{ filter: activeStakeholder === key ? 'url(#nodeGlow)' : 'none' }}
+                    className="transition-all duration-300"
+                  />
+                  <text x={data.position.cx} y={data.position.cy - 12} textAnchor="middle" dominantBaseline="middle" className="text-3xl pointer-events-none">{data.icon}</text>
+                  <text x={data.position.cx} y={data.position.cy + 15} textAnchor="middle" dominantBaseline="middle" className="fill-white text-[9px] font-black uppercase tracking-tighter pointer-events-none">{data.title}</text>
+                  <text x={data.position.cx} y={data.position.cy + 28} textAnchor="middle" dominantBaseline="middle" className="fill-white/70 text-[6px] font-bold uppercase tracking-widest pointer-events-none">{data.subtitle}</text>
+                </g>
               ))}
             </svg>
-
-            {/* Scaled Nodes */}
-            {Object.entries(services).map(([key, service], i) => (
-              <motion.div 
-                key={key}
-                onMouseEnter={() => setActiveService(key)}
-                onMouseLeave={() => setActiveService(null)}
-                className="absolute w-36 h-36 cursor-pointer group"
-                style={{
-                  top: `${50 + 30 * Math.sin((i * 60 * Math.PI) / 180)}%`,
-                  left: `${50 + 30 * Math.cos((i * 60 * Math.PI) / 180)}%`,
-                  transform: 'translate(-50%, -50%)'
-                }}
-              >
-                <div className={`w-full h-full rounded-[2rem] p-4 bg-gradient-to-br ${service.gradient} border border-white/10 flex flex-col items-center justify-center text-center shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:border-brandGold/60`}>
-                   <div className="text-3xl mb-2">{service.icon}</div>
-                   <h4 className="text-[9px] font-black text-white uppercase tracking-tighter leading-tight">{service.title}</h4>
-                </div>
-              </motion.div>
-            ))}
           </div>
 
-          {/* Details Panel - Slim Design */}
-          <div className="relative min-h-[220px]">
+          {/* RIGHT SIDE: DYNAMIC COMMAND PANEL */}
+          <div className="lg:w-1/2 w-full">
             <AnimatePresence mode="wait">
-              {activeService ? (
-                <motion.div 
-                  key={activeService}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  className="p-8 rounded-[2.5rem] bg-brandDark border border-white/10 shadow-2xl flex flex-col lg:flex-row items-center gap-8 text-white"
-                >
-                  <div className="lg:w-1/2">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-14 h-14 rounded-2xl bg-brandGold/10 flex items-center justify-center text-3xl">
-                        {services[activeService].icon}
-                      </div>
-                      <h3 className="text-xl font-black uppercase tracking-tight">{services[activeService].title}</h3>
-                    </div>
-                    <p className="text-brandLight/60 text-sm italic leading-relaxed">
-                      "{services[activeService].description}"
-                    </p>
+              <motion.div 
+                key={activeStakeholder}
+                initial={{ opacity: 0, x: 40 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -40 }}
+                transition={{ duration: 0.4 }}
+                className="bg-slate-50 dark:bg-slate-900 rounded-[50px] p-10 lg:p-14 border border-slate-200 dark:border-slate-800 shadow-2xl min-h-[500px] flex flex-col justify-center relative overflow-hidden"
+              >
+                {/* Accent Highlight */}
+                <div className="absolute top-0 left-0 w-full h-2" style={{ backgroundColor: stakeholders[activeStakeholder].color }} />
+                
+                <div className="flex items-center gap-8 mb-10">
+                  <div className="text-7xl p-4 bg-white dark:bg-slate-800 rounded-3xl shadow-inner">
+                    {stakeholders[activeStakeholder].icon}
                   </div>
-                  <div className="lg:w-1/2 grid grid-cols-2 gap-3 w-full">
-                    {services[activeService].offerings.map((offering, i) => (
-                      <div key={i} className="p-3 bg-white/5 rounded-xl border border-white/10 flex items-center gap-3">
-                        <div className="w-1.5 h-1.5 rounded-full bg-brandGold shrink-0" />
-                        <span className="text-[10px] font-bold text-white uppercase truncate">{offering}</span>
-                      </div>
-                    ))}
+                  <div>
+                    <span className="text-blue-700 dark:text-amber-500 font-black text-sm uppercase tracking-[4px]">
+                      {stakeholders[activeStakeholder].subtitle}
+                    </span>
+                    <h3 className="text-3xl lg:text-5xl font-black text-[#001F3F] dark:text-white uppercase leading-none mt-2">
+                      {stakeholders[activeStakeholder].title}
+                    </h3>
                   </div>
-                </motion.div>
-              ) : (
-                <div className="flex items-center justify-center h-full text-brandDark/20 dark:text-white/10 font-black text-sm uppercase tracking-[8px]">
-                  Hover to view modules
                 </div>
-              )}
+
+                <p className="text-xl lg:text-2xl text-slate-700 dark:text-slate-300 italic mb-12 border-l-8 border-amber-400 pl-8 leading-relaxed font-sans">
+                  "{stakeholders[activeStakeholder].description}"
+                </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {stakeholders[activeStakeholder].impact.map((point, i) => (
+                    <motion.div 
+                      key={i}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: i * 0.1 }}
+                      className="flex items-center gap-4 p-4 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm"
+                    >
+                      <div className="w-2.5 h-2.5 rounded-full bg-amber-400" />
+                      <span className="text-[11px] font-black text-[#001F3F] dark:text-white uppercase tracking-tight">
+                        {point}
+                      </span>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
             </AnimatePresence>
           </div>
 
-          {/* Bottom Mini-Capabilities */}
-          <div className="mt-12 flex flex-wrap justify-center gap-6 lg:gap-12 pt-8 border-t border-brandDark/5">
-            {capabilities.map((cap, i) => (
-              <div key={i} className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity">
-                <div className="text-xl">{cap.icon}</div>
-                <span className="text-[9px] font-black text-brandDark dark:text-brandLight uppercase tracking-widest">{cap.text}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes flowOut { from { stroke-dashoffset: 50; } to { stroke-dashoffset: 0; } }
+        @keyframes flowIn { from { stroke-dashoffset: 0; } to { stroke-dashoffset: 50; } }
+        .animate-flow-out { animation: flowOut 3s linear infinite; }
+        .animate-flow-in { animation: flowIn 5s linear infinite; }
+      `}</style>
     </section>
   );
 };
 
-export default ESGServicePortfolio;
+export default ESGStakeholderEcosystem;

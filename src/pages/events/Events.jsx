@@ -53,7 +53,7 @@ function Events() {
       {/* <JourneyTimeLineSection /> */}
       {/* <CompanyTimelineSection /> */}
       {/* <AwardSection /> */}
-      {/* <TestimonialsSection /> */}
+      <TestimonialsSection />
       <WhyItMatters/>
 
 

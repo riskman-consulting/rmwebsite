@@ -1,135 +1,122 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const ESGEvolutionTimeline = () => {
   const timelineData = [
     {
       period: "2000 - 2010",
       phase: "COMPLIANCE",
-      icon: "📋",
-      color: "from-brandNavy to-brandPrimary",
-      glowColor: "shadow-brandNavy/20",
-      features: [
-        "Regulatory focus",
-        "Risk mitigation",
-        "Reporting burden"
-      ]
+      icon: "🌱",
+      gradient: "from-brandNavy via-brandPrimary to-brandPrimary",
+      glow: "shadow-brandPrimary/20",
+      features: ["Regulatory focus", "Risk mitigation", "Reporting burden"]
     },
     {
       period: "2010 - 2020",
       phase: "STRATEGY",
-      icon: "📈",
-      color: "from-brandPrimary to-brandNavy",
-      glowColor: "shadow-brandPrimary/20",
-      features: [
-        "Business integration",
-        "Stakeholder value",
-        "Efficiency gains"
-      ]
+      icon: "🌊",
+      gradient: "from-brandPrimary via-brandNavy to-brandDark",
+      glow: "shadow-brandPrimary/20",
+      features: ["Business integration", "Stakeholder value", "Efficiency gains"]
     },
     {
       period: "2020+",
       phase: "VALUE CREATION",
-      icon: "🚀",
-      color: "from-brandAccent to-brandGold",
-      glowColor: "shadow-brandAccent/20",
-      features: [
-        "Competitive advantage",
-        "Innovation driver",
-        "Enterprise value"
-      ]
+      icon: "☀️",
+      gradient: "from-brandAccent via-brandGold to-brandAccent",
+      glow: "shadow-brandAccent/30",
+      features: ["Competitive advantage", "Innovation driver", "Enterprise value"]
     }
   ];
 
   return (
-    <section className="py-20 bg-bgLight dark:bg-bgDark">
-      <div className="container">
-        {/* Section Header */}
-        <div className="mb-16 text-center">
-          <h3 className="mb-4 text-4xl font-black font-heading text-brandDark dark:text-surfaceLight">
-            ESG Evolution Timeline
-          </h3>
-          <p className="max-w-2xl mx-auto text-lg font-sans text-brandDark/70 dark:text-surfaceLight/70">
-            The three distinct phases of ESG evolution, moving from a necessity of compliance to a powerful driver of enterprise value.
-          </p>
+    <section className="relative py-16 bg-bgLight dark:bg-bgDark overflow-hidden transition-colors duration-500">
+      {/* Background Brand Shapes */}
+      <div className="absolute top-0 -left-20 w-[500px] h-[500px] bg-brandPrimary/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 -right-20 w-[500px] h-[500px] bg-brandAccent/5 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="container relative z-10">
+        {/* Header Section */}
+        <div className="mb-24 text-left border-l-4 border-brandAccent pl-6">
+          <motion.span 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            className="text-brandAccent font-black tracking-widest uppercase text-sm"
+          >
+            Our Journey
+          </motion.span>
+          <motion.h3 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="mt-2 text-4xl md:text-6xl font-black font-heading text-brandDark dark:text-brandLight uppercase tracking-tighter"
+          >
+            ESG <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandPrimary to-brandAccent">Evolution</span> Timeline
+          </motion.h3>
         </div>
 
-        {/* Timeline Container */}
-        <div className="mx-auto max-w-7xl">
-          {/* Desktop Timeline */}
-          <div className="relative hidden gap-6 md:grid md:grid-cols-3">
-            {timelineData.map((item, index) => (
-              <div key={index} className="relative group">
-                {/* Connecting Line to next card */}
-                {index < timelineData.length - 1 && (
-                  <div className={`absolute top-8 -right-4 w-8 h-0.5 bg-gradient-to-r ${item.color} opacity-30 dark:opacity-50 hidden lg:block z-0`} />
-                )}
+        {/* Timeline Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-4 relative">
+          
+         
 
-                {/* Card Container */}
-                <div className="relative z-10 h-full p-6 transition-all duration-500 border-2 shadow-lg bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-2xl hover:shadow-2xl hover:-translate-y-2 group-hover:border-brandAccent/50">
+          {timelineData.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.15, duration: 0.6 }}
+              className="relative group pt-20 md:pt-0"
+            >
+              {/* Timeline Node (The Circle) */}
+              {/* <div className="relative z-20 mb-12 hidden md:block">
+                <motion.div 
+                   whileHover={{ scale: 1.2 }}
+                   className={`w-6 h-6 rounded-full bg-surfaceLight dark:bg-surfaceDark border-4 border-brandAccent shadow-[0_0_15px_rgba(255,192,0,0.5)] mx-auto`}
+                />
+              </div> */}
+
+              {/* Unique Glass Card */}
+              <div className={`
+                relative mx-auto md:mx-0 p-[1px] rounded-[2rem] overflow-hidden transition-all duration-500
+                bg-gradient-to-b from-borderLight to-transparent dark:from-borderDark dark:to-transparent
+                hover:from-brandAccent/50 group-hover:shadow-2xl ${item.glow}
+              `}>
+                <div className="bg-surfaceLight dark:bg-surfaceDark rounded-[2rem] p-8 h-full relative overflow-hidden">
                   
-                  {/* Icon Node */}
-                  <div className={`absolute -top-4 -right-4 w-16 h-16 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center shadow-xl ${item.glowColor} border-4 border-white dark:border-surfaceDark transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6`}>
-                    <span className="text-3xl">{item.icon}</span>
+                  {/* Decorative Phase Number */}
+                  <span className="absolute -right-4 -top-4 text-8xl font-black text-brandDark/[0.03] dark:text-brandLight/[0.03] select-none">
+                    0{index + 1}
+                  </span>
+
+                  <div className="relative z-10">
+                    <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${item.gradient} text-2xl mb-6 shadow-lg`}>
+                      {item.icon}
+                    </div>
+
+                    <div className="mb-6">
+                      <p className="text-xs font-black tracking-widest text-brandPrimary dark:text-brandAccent mb-1 uppercase">
+                        {item.period}
+                      </p>
+                      <h4 className="text-2xl font-black font-heading text-brandDark dark:text-brandLight tracking-tight">
+                        {item.phase}
+                      </h4>
+                    </div>
+
+                    <ul className="space-y-3">
+                      {item.features.map((feature, fIdx) => (
+                        <li key={fIdx} className="flex items-center gap-3 group/item">
+                          <div className="h-1.5 w-1.5 rounded-full bg-brandAccent transition-all group-hover/item:w-4" />
+                          <span className="text-sm font-semibold text-brandDark/70 dark:text-brandLight/70">
+                            {feature}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-
-                  {/* Period Label */}
-                  <div className="mb-2 text-xs font-bold tracking-[2px] uppercase text-brandPrimary dark:text-brandAccent">
-                    {item.period}
-                  </div>
-
-                  {/* Phase Title */}
-                  <h4 className="pr-12 mb-6 font-heading text-2xl font-black text-brandDark dark:text-surfaceLight">
-                    {item.phase}
-                  </h4>
-
-                  {/* Features List */}
-                  <ul className="space-y-3">
-                    {item.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-sm font-medium text-brandDark/80 dark:text-surfaceLight/80">
-                        <svg className="flex-shrink-0 w-5 h-5 mt-0.5 text-brandAccent" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                        </svg>
-                        <span className="leading-relaxed">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               </div>
-            ))}
-          </div>
-
-          {/* Mobile Timeline */}
-          <div className="space-y-8 md:hidden px-4">
-            {timelineData.map((item, index) => (
-              <div key={index} className="relative">
-                {/* Vertical Connecting Line */}
-                {index < timelineData.length - 1 && (
-                  <div className={`absolute left-1/2 -bottom-8 transform -translate-x-1/2 w-0.5 h-8 bg-gradient-to-b ${item.color} opacity-40`} />
-                )}
-
-                <div className="relative p-6 border-2 shadow-lg bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-2xl">
-                  <div className={`absolute -top-3 -right-3 w-14 h-14 rounded-full bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg border-4 border-white dark:border-surfaceDark`}>
-                    <span className="text-2xl">{item.icon}</span>
-                  </div>
-
-                  <div className="mb-1 text-xs font-bold tracking-widest text-brandPrimary dark:text-brandAccent">
-                    {item.period}
-                  </div>
-                  <h4 className="mb-4 font-heading text-xl font-black text-brandDark dark:text-surfaceLight uppercase">
-                    {item.phase}
-                  </h4>
-                  <ul className="space-y-2">
-                    {item.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-3 text-sm text-brandDark/70 dark:text-surfaceLight/70">
-                        <div className="w-1.5 h-1.5 rounded-full bg-brandAccent" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

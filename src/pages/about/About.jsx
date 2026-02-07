@@ -98,7 +98,7 @@ export default function About() {
         <TeamMembersSection />
 
         {/* ================= FAQ ================= */}
-        <FAQSection />
+        {/* <FAQSection /> */}
 
         <WhyRiskman />
 

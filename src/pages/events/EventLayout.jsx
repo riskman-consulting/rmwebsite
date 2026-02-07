@@ -21,7 +21,7 @@ function Layout() {
             <NavItem to="accomplishments"  label="Awards" />
             {/* <NavItem to="emerging-awards"  label="Emerging Awards " /> */}
             <NavItem to="company-journey"  label="Company Journey" />
-            <NavItem to="media-coverage"  label="Gallary" />
+            <NavItem to="media-coverage"  label="Gallery" />
           </div>
         </div>
       </nav>
