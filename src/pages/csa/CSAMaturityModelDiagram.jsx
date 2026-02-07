@@ -326,7 +326,8 @@ export default function CSAMaturityModel() {
           x={calloutX}
           y={index === 4 ? calloutY + 13 : calloutY - boxHeight + 13}
           textAnchor="middle"
-          fill="#FFFFFF"
+          fill={index === 0 ? "#000000" : "#FFFFFF"}
+          // fill="#FFFFFF"
           fontSize="8"
           fontWeight="600"
         >

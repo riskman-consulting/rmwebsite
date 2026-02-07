@@ -8,8 +8,7 @@ const ESGValueCreation = () => {
       title: "Risk Mitigation",
       subtitle: "Protect & Defend",
       icon: "🛡️",
-      color: "#C62828",
-      colorLight: "#FFEBEE",
+      color: "#004080", // brandPrimary
       description: "Identify, assess, and mitigate ESG-related risks to protect enterprise value and ensure business continuity.",
       values: [
         { icon: "📋", text: "Regulatory Compliance Assurance" },
@@ -22,8 +21,7 @@ const ESGValueCreation = () => {
       title: "Operational Excellence",
       subtitle: "Optimize & Improve",
       icon: "⚙️",
-      color: "#2E7D32",
-      colorLight: "#E8F5E9",
+      color: "#003366", // brandNavy
       description: "Drive efficiency, reduce costs, and improve operational performance through sustainable practices.",
       values: [
         { icon: "⚡", text: "Energy Efficiency & Cost Reduction" },
@@ -36,22 +34,20 @@ const ESGValueCreation = () => {
       title: "Stakeholder Value",
       subtitle: "Engage & Trust",
       icon: "👥",
-      color: "#1565C0",
-      colorLight: "#E3F2FD",
+      color: "#FFC000", // brandAccent
       description: "Build trust and strengthen relationships with investors, employees, customers, and communities.",
       values: [
         { icon: "💰", text: "Investor Confidence & ESG Ratings" },
         { icon: "🏆", text: "Talent Attraction & Retention" },
         { icon: "⭐", text: "Customer Loyalty & Brand Trust" },
-        { icon: "🤝", text: "Community Relations & License to Operate" }
+        { icon: "🤝", text: "Community Relations" }
       ]
     },
     growth: {
       title: "Strategic Growth",
       subtitle: "Innovate & Expand",
       icon: "🚀",
-      color: "#E65100",
-      colorLight: "#FFF3E0",
+      color: "#FFB800", // brandGold
       description: "Unlock new market opportunities, drive innovation, and create competitive advantage through sustainability.",
       values: [
         { icon: "🌱", text: "Sustainable Product Innovation" },
@@ -63,227 +59,114 @@ const ESGValueCreation = () => {
   };
 
   const kpis = [
-    { type: "risk", value: "↓40%", label: "Compliance Incidents", color: "#C62828" },
-    { type: "operational", value: "↓25%", label: "Operating Costs", color: "#2E7D32" },
-    { type: "stakeholder", value: "↑35%", label: "ESG Rating Score", color: "#1565C0" },
-    { type: "growth", value: "↑20%", label: "Green Revenue", color: "#E65100" }
+    { label: "Compliance Incidents", value: "↓40%", color: "#004080" },
+    { label: "Operating Costs", value: "↓25%", color: "#003366" },
+    { label: "ESG Rating Score", value: "↑35%", color: "#FFC000" },
+    { label: "Green Revenue", value: "↑20%", color: "#FFB800" }
   ];
 
   return (
-    <section className="py-20 bg-bgLight dark:bg-bgDark">
+    <section className="py-20 overflow-hidden lg:py-32 bg-bgLight dark:bg-bgDark">
       <div className="container">
-        <div className="mb-12 text-center">
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
-            The RiskMan Value Proposition
+        {/* Section Header */}
+        <div className="mb-20 text-center">
+          <span className="text-xs font-bold tracking-[4px] uppercase text-brandPrimary dark:text-brandGold mb-4 block">
+            Value Creation Framework
+          </span>
+          <h2 className="mb-8 text-4xl font-black leading-tight font-heading text-brandDark dark:text-surfaceLight lg:text-6xl">
+            The RiskMan <br /> Value Proposition
           </h2>
-          <p className="max-w-3xl mx-auto text-gray-700 dark:text-gray-300">
-            RiskMan delivers measurable, sustainable value to global organizations through our integrated ESG 
-            advisory, implementation, and capabilities.
+          <p className="max-w-3xl mx-auto font-sans text-xl leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
+            RiskMan delivers measurable, sustainable value through an integrated approach 
+            to ESG advisory, implementation, and reporting.
           </p>
         </div>
 
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-8 text-center">
-            <h3 className="mb-2 text-2xl font-bold font-heading text-brandDark dark:text-white">
-              ESG Value Creation Framework
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400">
-              Integrated approach to sustainable enterprise value through Environmental, Social & Governance excellence
-            </p>
-          </div>
-
-          {/* Axis Labels */}
-          <div className="relative max-w-5xl mx-auto mb-8">
-            <div className="absolute top-0 transform -translate-x-1/2 -translate-y-8 left-1/2">
-              <span className="text-xs font-semibold tracking-wider text-gray-500 uppercase dark:text-gray-400">
-                Defensive ← → Offensive
-              </span>
+        {/* Interactive Matrix Container */}
+        <div className="relative max-w-6xl mx-auto">
+          {/* Axis Labels - Desktop */}
+          <div className="hidden lg:block">
+            <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] font-black tracking-[4px] text-brandPrimary/30 dark:text-brandGold/30 uppercase">
+              ← Defensive | Offensive →
             </div>
-            <div className="absolute left-0 transform rotate-90 -translate-x-20 -translate-y-1/2 top-1/2">
-              <span className="text-xs font-semibold tracking-wider text-gray-500 uppercase dark:text-gray-400">
-                Internal Focus
-              </span>
+            <div className="absolute top-1/2 -left-12 -translate-y-1/2 -rotate-90 text-[10px] font-black tracking-[4px] text-brandPrimary/30 dark:text-brandGold/30 uppercase">
+              Internal Focus
             </div>
-            <div className="absolute right-0 transform -rotate-90 translate-x-20 -translate-y-1/2 top-1/2">
-              <span className="text-xs font-semibold tracking-wider text-gray-500 uppercase dark:text-gray-400">
-                External Focus
-              </span>
+            <div className="absolute top-1/2 -right-12 -translate-y-1/2 rotate-90 text-[10px] font-black tracking-[4px] text-brandPrimary/30 dark:text-brandGold/30 uppercase">
+              External Focus
             </div>
           </div>
 
           {/* Matrix Grid */}
-          <div className="relative max-w-5xl mx-auto">
-            <div className="relative grid grid-cols-1 gap-4 md:grid-cols-2">
-              {/* Risk Mitigation (Top Left) */}
+          <div className="relative z-10 grid grid-cols-1 gap-4 md:grid-cols-2">
+            {Object.entries(quadrants).map(([key, data]) => (
               <div
-                className={`rounded-xl p-6 shadow-lg cursor-pointer transition-all duration-300 ${
-                  activeQuadrant === 'risk' ? 'scale-105 shadow-2xl' : ''
-                }`}
-                style={{
-                  backgroundColor: quadrants.risk.colorLight,
-                  borderTop: `4px solid ${quadrants.risk.color}`
-                }}
-                onMouseEnter={() => setActiveQuadrant('risk')}
+                key={key}
+                onMouseEnter={() => setActiveQuadrant(key)}
                 onMouseLeave={() => setActiveQuadrant(null)}
+                className={`p-8 rounded-[32px] border-2 transition-all duration-500 cursor-pointer min-h-[380px] flex flex-col justify-between ${
+                  activeQuadrant === key 
+                  ? 'bg-surfaceLight dark:bg-surfaceDark shadow-2xl scale-[1.02]' 
+                  : 'bg-bgLight dark:bg-bgDark border-transparent opacity-80'
+                }`}
+                style={{ borderColor: activeQuadrant === key ? data.color : 'transparent' }}
               >
-                <div className="flex items-center gap-4 mb-4">
-                  <div
-                    className="flex items-center justify-center w-12 h-12 text-2xl shadow-lg rounded-xl"
-                    style={{ background: `linear-gradient(135deg, ${quadrants.risk.color}, ${quadrants.risk.color}dd)` }}
-                  >
-                    {quadrants.risk.icon}
+                <div>
+                  <div className="flex items-center justify-between mb-6">
+                    <div 
+                      className="flex items-center justify-center w-16 h-16 text-3xl shadow-lg rounded-2xl"
+                      style={{ backgroundColor: data.color }}
+                    >
+                      {data.icon}
+                    </div>
+                    <div className="text-right">
+                      <h4 className="text-xl font-black uppercase font-heading text-brandDark dark:text-white">{data.title}</h4>
+                      <p className="text-[10px] font-bold tracking-widest text-brandPrimary dark:text-brandGold uppercase">{data.subtitle}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="text-lg font-bold" style={{ color: quadrants.risk.color }}>
-                      {quadrants.risk.title}
-                    </h4>
-                    <p className="text-xs text-gray-600">{quadrants.risk.subtitle}</p>
-                  </div>
+                  <p className="mb-8 text-sm italic leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
+                    {data.description}
+                  </p>
                 </div>
-                <p className="mb-4 text-sm text-gray-700">{quadrants.risk.description}</p>
-                <div className="space-y-2">
-                  {quadrants.risk.values.map((value, i) => (
-                    <div key={i} className="flex items-center gap-2 p-2 transition-colors rounded-lg bg-white/70 hover:bg-white">
-                      <span className="text-lg">{value.icon}</span>
-                      <span className="text-xs font-medium text-gray-700">{value.text}</span>
+
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  {data.values.map((v, i) => (
+                    <div key={i} className="flex items-center gap-3 p-3 transition-all border bg-white/50 dark:bg-white/5 rounded-xl border-borderLight dark:border-borderDark group hover:bg-white">
+                      <span className="text-lg">{v.icon}</span>
+                      <span className="text-[10px] font-bold text-brandDark dark:text-surfaceLight uppercase leading-tight">{v.text}</span>
                     </div>
                   ))}
                 </div>
               </div>
+            ))}
 
-              {/* Operational Excellence (Top Right) */}
-              <div
-                className={`rounded-xl p-6 shadow-lg cursor-pointer transition-all duration-300 ${
-                  activeQuadrant === 'operational' ? 'scale-105 shadow-2xl' : ''
-                }`}
-                style={{
-                  backgroundColor: quadrants.operational.colorLight,
-                  borderTop: `4px solid ${quadrants.operational.color}`
-                }}
-                onMouseEnter={() => setActiveQuadrant('operational')}
-                onMouseLeave={() => setActiveQuadrant(null)}
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div
-                    className="flex items-center justify-center w-12 h-12 text-2xl shadow-lg rounded-xl"
-                    style={{ background: `linear-gradient(135deg, ${quadrants.operational.color}, ${quadrants.operational.color}dd)` }}
-                  >
-                    {quadrants.operational.icon}
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-bold" style={{ color: quadrants.operational.color }}>
-                      {quadrants.operational.title}
-                    </h4>
-                    <p className="text-xs text-gray-600">{quadrants.operational.subtitle}</p>
-                  </div>
-                </div>
-                <p className="mb-4 text-sm text-gray-700">{quadrants.operational.description}</p>
-                <div className="space-y-2">
-                  {quadrants.operational.values.map((value, i) => (
-                    <div key={i} className="flex items-center gap-2 p-2 transition-colors rounded-lg bg-white/70 hover:bg-white">
-                      <span className="text-lg">{value.icon}</span>
-                      <span className="text-xs font-medium text-gray-700">{value.text}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Stakeholder Value (Bottom Left) */}
-              <div
-                className={`rounded-xl p-6 shadow-lg cursor-pointer transition-all duration-300 ${
-                  activeQuadrant === 'stakeholder' ? 'scale-105 shadow-2xl' : ''
-                }`}
-                style={{
-                  backgroundColor: quadrants.stakeholder.colorLight,
-                  borderTop: `4px solid ${quadrants.stakeholder.color}`
-                }}
-                onMouseEnter={() => setActiveQuadrant('stakeholder')}
-                onMouseLeave={() => setActiveQuadrant(null)}
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div
-                    className="flex items-center justify-center w-12 h-12 text-2xl shadow-lg rounded-xl"
-                    style={{ background: `linear-gradient(135deg, ${quadrants.stakeholder.color}, ${quadrants.stakeholder.color}dd)` }}
-                  >
-                    {quadrants.stakeholder.icon}
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-bold" style={{ color: quadrants.stakeholder.color }}>
-                      {quadrants.stakeholder.title}
-                    </h4>
-                    <p className="text-xs text-gray-600">{quadrants.stakeholder.subtitle}</p>
-                  </div>
-                </div>
-                <p className="mb-4 text-sm text-gray-700">{quadrants.stakeholder.description}</p>
-                <div className="space-y-2">
-                  {quadrants.stakeholder.values.map((value, i) => (
-                    <div key={i} className="flex items-center gap-2 p-2 transition-colors rounded-lg bg-white/70 hover:bg-white">
-                      <span className="text-lg">{value.icon}</span>
-                      <span className="text-xs font-medium text-gray-700">{value.text}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Strategic Growth (Bottom Right) */}
-              <div
-                className={`rounded-xl p-6 shadow-lg cursor-pointer transition-all duration-300 ${
-                  activeQuadrant === 'growth' ? 'scale-105 shadow-2xl' : ''
-                }`}
-                style={{
-                  backgroundColor: quadrants.growth.colorLight,
-                  borderTop: `4px solid ${quadrants.growth.color}`
-                }}
-                onMouseEnter={() => setActiveQuadrant('growth')}
-                onMouseLeave={() => setActiveQuadrant(null)}
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div
-                    className="flex items-center justify-center w-12 h-12 text-2xl shadow-lg rounded-xl"
-                    style={{ background: `linear-gradient(135deg, ${quadrants.growth.color}, ${quadrants.growth.color}dd)` }}
-                  >
-                    {quadrants.growth.icon}
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-bold" style={{ color: quadrants.growth.color }}>
-                      {quadrants.growth.title}
-                    </h4>
-                    <p className="text-xs text-gray-600">{quadrants.growth.subtitle}</p>
-                  </div>
-                </div>
-                <p className="mb-4 text-sm text-gray-700">{quadrants.growth.description}</p>
-                <div className="space-y-2">
-                  {quadrants.growth.values.map((value, i) => (
-                    <div key={i} className="flex items-center gap-2 p-2 transition-colors rounded-lg bg-white/70 hover:bg-white">
-                      <span className="text-lg">{value.icon}</span>
-                      <span className="text-xs font-medium text-gray-700">{value.text}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Center Hub */}
-              <div className="absolute z-10 flex flex-col items-center justify-center w-40 h-40 transform -translate-x-1/2 -translate-y-1/2 border-4 border-white rounded-full shadow-2xl top-1/2 left-1/2 bg-gradient-to-br from-brandPrimary to-brandNavy">
-                <span className="mb-1 text-xs font-semibold text-white">SUSTAINABLE</span>
-                <span className="text-lg font-bold text-white">ENTERPRISE</span>
-                <span className="text-lg font-bold text-white">VALUE</span>
-                <span className="mt-1 text-xs text-white opacity-90">ESG Integration</span>
-              </div>
+            {/* Central Hub - Desktop Only */}
+            <div className="absolute z-20 hidden -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 md:block">
+               <div className="flex flex-col items-center justify-center w-40 h-40 p-4 text-center border-4 rounded-full shadow-2xl bg-brandDark border-surfaceLight dark:border-bgDark">
+                  <span className="text-[8px] font-black text-brandGold tracking-widest uppercase mb-1">Sustainable</span>
+                  <span className="text-sm font-black leading-tight text-white">ENTERPRISE VALUE</span>
+                  <div className="w-10 h-0.5 bg-brandGold/30 my-2" />
+                  <span className="text-[8px] font-bold text-white/50 uppercase">ESG Integrated</span>
+               </div>
             </div>
           </div>
+        </div>
 
-          {/* KPIs */}
-          <div className="grid max-w-5xl grid-cols-2 gap-4 mx-auto mt-12 md:grid-cols-4">
+        {/* KPI Performance Section */}
+        <div className="mt-20">
+          <div className="grid max-w-5xl grid-cols-2 gap-6 mx-auto lg:grid-cols-4">
             {kpis.map((kpi, index) => (
-              <div
+              <div 
                 key={index}
-                className="p-6 text-center transition-shadow bg-white shadow-lg dark:bg-surfaceDark rounded-xl hover:shadow-xl"
-                style={{ borderTop: `4px solid ${kpi.color}` }}
+                className="p-8 text-center transition-all border shadow-lg bg-surfaceLight dark:bg-surfaceDark rounded-3xl border-borderLight dark:border-borderDark group hover:scale-105"
               >
-                <div className="mb-2 text-3xl font-bold" style={{ color: kpi.color }}>
+                <div 
+                  className="mb-2 text-4xl font-black transition-transform lg:text-5xl group-hover:scale-110"
+                  style={{ color: kpi.color }}
+                >
                   {kpi.value}
                 </div>
-                <div className="text-xs tracking-wide text-gray-600 uppercase dark:text-gray-400">
+                <div className="text-[10px] font-bold tracking-[3px] text-brandDark/40 dark:text-surfaceLight/40 uppercase">
                   {kpi.label}
                 </div>
               </div>
@@ -291,9 +174,12 @@ const ESGValueCreation = () => {
           </div>
         </div>
 
-        <div className="mt-8 text-xs text-center text-gray-400">
-          RiskMan Consulting LLP | Sustainability & ESG Practice
-        </div>
+        {/* Professional Footer Attribution */}
+        {/* <div className="pt-8 mt-16 text-center border-t border-borderLight dark:border-borderDark">
+          <p className="text-[10px] font-bold text-brandDark/30 dark:text-surfaceLight/30 uppercase tracking-[4px]">
+            RiskMan Consulting LLP | Integrated Sustainability Value Framework
+          </p>
+        </div> */}
       </div>
     </section>
   );

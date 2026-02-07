@@ -90,7 +90,7 @@ export default function GlobalOperatingModel() {
         </div>
 
         {/* End-to-End CSA Lifecycle */}
-        <div className="mb-12">
+        {/* <div className="mb-12">
           <h3 className="mb-4 text-2xl font-bold text-brandDark dark:text-brandAccent">
             End-to-End CSA Lifecycle
           </h3>
@@ -123,10 +123,10 @@ export default function GlobalOperatingModel() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Technology & GRC Integration */}
-        <div className="p-8 shadow-md bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-900 rounded-xl">
+        {/* <div className="p-8 shadow-md bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-900 rounded-xl">
           <h3 className="mb-4 text-2xl font-bold text-brandDark dark:text-brandAccent">
             Technology & GRC Integration
           </h3>
@@ -181,7 +181,7 @@ export default function GlobalOperatingModel() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

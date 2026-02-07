@@ -62,9 +62,9 @@ const ServiceDetails = () => {
       <div className="container">
         <div className="max-w-6xl mx-auto">
           {/* Service Details */}
-          <div className="mb-20 space-y-12">
+          {/* <div className="mb-20 space-y-12">
             {serviceDetails.map((service, index) => (
-              <div key={index} className="p-8 border shadow-lg bg-bgLight dark:bg-bgDark rounded-2xl border-borderLight dark:border-borderDark">
+              <div key={index} className="p-8 border shadow-lg bg-surfaceLight dark:bg-surfaceDark rounded-2xl border-borderLight dark:border-borderDark">
                 <div className="flex items-start gap-6">
                   <div className="flex items-center justify-center flex-shrink-0 w-16 h-16 text-3xl shadow-md bg-gradient-to-br from-brandPrimary to-brandNavy rounded-xl">
                     {service.icon}
@@ -90,10 +90,10 @@ const ServiceDetails = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
 
           {/* Multi-Country Execution */}
-          <div className="p-8 text-white shadow-2xl bg-gradient-to-br from-brandPrimary to-brandNavy rounded-2xl md:p-12">
+          <div className="p-8 shadow-2xl text-brandDark dark:text-white bg-surfaceLight dark:bg-surfaceDark rounded-2xl md:p-12">
             <div className="flex items-start gap-6 mb-8">
               <div className="flex items-center justify-center flex-shrink-0 w-16 h-16 text-3xl bg-white/20 rounded-xl backdrop-blur-sm">
                 🌍
@@ -102,7 +102,7 @@ const ServiceDetails = () => {
                 <h3 className="mb-4 text-2xl font-bold md:text-3xl font-heading">
                   Multi-Country, Multi-Regulation Execution
                 </h3>
-                <p className="leading-relaxed text-gray-100">
+                <p className="leading-relaxed text-brandNavy dark:text-white/70">
                   For multinational organizations, ESG implementation presents unique challenges. Regulatory requirements 
                   vary significantly across jurisdictions—from the EU's comprehensive CSRD to India's BRSR, from Singapore's 
                   sustainability reporting requirements to emerging frameworks across the Middle East.
@@ -111,42 +111,42 @@ const ServiceDetails = () => {
             </div>
 
             <div className="grid gap-6 md:grid-cols-2">
-              <div className="p-6 border bg-white/10 backdrop-blur-sm rounded-xl border-white/20">
+              <div className="p-6 border bg-surfaceLight dark:bg-surfaceDark backdrop-blur-sm rounded-xl border-brandDark/10 dark:border-white/20">
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-2xl">🎯</span>
                   <h4 className="text-lg font-bold">Centralized Governance, Localized Execution</h4>
                 </div>
-                <p className="text-sm text-gray-100">
+                <p className="text-sm text-brandPrimary dark:text-white/70">
                   Global policies with region-specific adaptations
                 </p>
               </div>
 
-              <div className="p-6 border bg-white/10 backdrop-blur-sm rounded-xl border-white/20">
+              <div className="p-6 border bg-surfaceLight dark:bg-surfaceDark backdrop-blur-sm rounded-xl border-brandDark/10 dark:border-white/20">
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-2xl">📡</span>
                   <h4 className="text-lg font-bold">Regulatory Intelligence</h4>
                 </div>
-                <p className="text-sm text-gray-100">
+                <p className="text-sm text-brandPrimary dark:text-white/70">
                   Continuous monitoring of evolving ESG regulations across jurisdictions
                 </p>
               </div>
 
-              <div className="p-6 border bg-white/10 backdrop-blur-sm rounded-xl border-white/20">
+              <div className="p-6 border bg-surfaceLight dark:bg-surfaceDark backdrop-blur-sm rounded-xl border-brandDark/10 dark:border-white/20">
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-2xl">📄</span>
                   <h4 className="text-lg font-bold">Harmonized Reporting</h4>
                 </div>
-                <p className="text-sm text-gray-100">
+                <p className="text-sm text-brandPrimary dark:text-white/70">
                   Collect once, report many approaches for multiple disclosure requirements
                 </p>
               </div>
 
-              <div className="p-6 border bg-white/10 backdrop-blur-sm rounded-xl border-white/20">
+              <div className="p-6 border bg-surfaceLight dark:bg-surfaceDark backdrop-blur-sm rounded-xl border-brandDark/10 dark:border-white/20">
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-2xl">🔗</span>
                   <h4 className="text-lg font-bold">Cross-Border Coordination</h4>
                 </div>
-                <p className="text-sm text-gray-100">
+                <p className="text-sm text-brandPrimary dark:text-white/70">
                   Managing value chain emissions across international operations
                 </p>
               </div>

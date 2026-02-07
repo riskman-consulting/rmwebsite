@@ -20,7 +20,7 @@ const Tooltip = ({ state }) => {
 
   return (
     <div
-      className="absolute z-50 max-w-xs p-4 text-white transition-opacity duration-300 border rounded-lg shadow-2xl pointer-events-none bg-slate-900 border-slate-700"
+      className="absolute z-50 max-w-xs p-4 text-white duration-300 border rounded-lg shadow-2xl pointer-events-none transitio-white/70 n-opacity dark:text bg-slate-900 border-slate-700"
       style={{
         left,
         top,

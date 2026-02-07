@@ -68,6 +68,7 @@ import RiskAdvisoryLayout from "./pages/risk-advisory/Layout"
 import ESGLayout from "./pages/esg/Layout"
 import FinancialAdvisoryLayout from "./pages/financial-advisory/Layout"
 import DataPrivacyLayout from "./pages/data-privacy/Layout"
+import EventLayout from "./pages/events/EventLayout";
 
 // ESG Pages
 import ESGPage from "./pages/esg/ESGPage"
@@ -78,16 +79,27 @@ import ESGSustainabilityAssurancePage from "./pages/esg/sustainability-assurance
 
 // Financial Pages
 import FinancialPage from "./pages/financial-advisory/temp/FinancialAdvisoryPage"
-import FinancialCreditRisk from "./pages/financial-advisory/credit-policy-framework"
+import FinancialCreditRisk from "./pages/financial-advisory/credit-risk-assessment/CreditRiskAssessmentPage"
 import FinancialCreditPortfolio from "./pages/financial-advisory/credit-portfolio-management"
 import FinancialLoanReview from "./pages/financial-advisory/loan-review-monitoring"
-import FinancialCreditPolicy from "./pages/financial-advisory/credit-policy-framework"
+import FinancialCreditPolicy from "./pages/financial-advisory/credit-policy-framework/CreditPolicyFrameworkPage"
 
 // Data Privacy
 import DataPrivacyPage from "./pages/data-privacy/data-privary"
 import DPPDCompliancePage from "./pages/data-privacy/dpdp-compliance"
 import GDPRCompliancePage from "./pages/data-privacy/gdpr-complaince"
 import OtherRegulatoryCompliance from './pages/data-privacy/other-regulatory-compliance'
+
+import SOXICOFRPage from "./pages/sox-itcofr"
+import AiTechnology from './pages/AITechnology/AiTechnology'
+
+
+
+import EventAccomplshments from "./pages/events/accomplishment"
+import EventCompanyJourney from "./pages/events/CompanyTimelineSection"
+import EventMedia from './pages/events/media-coverage'
+import EventPastEvent from "./pages/events/past-events"
+import EventUpcomingEvent from "./pages/events/upcoming-events"
 
 
 
@@ -166,11 +178,13 @@ function App() {
             <Route path='erm' element={<ERMPage />} />
             <Route path='rbia' element={<RBIAPage />} />
             <Route path='tprm' element={<TPRM />} />
-            <Route path='sox-icofr-ifc' element={<h1>SOX/ICOFR/IFC</h1>} />
+            <Route path='sox-icofr-ifc' element={<SOXICOFRPage />} />
             <Route path='concurrent-audits' element={<h1>Concurrent Audits</h1>} />
-            <Route path='formulation-of-policies-and-sops' element={<h1>Formulation of Policies and SOPs</h1>} />
+            <Route path='formulation-of-policies-and-sops' element={<h1>Policies and SOPs</h1>} />
 
           </Route>
+
+          <Route path ="/services/ai-technology" element={<AiTechnology/>} />
 
           // ESG Nested Routes
           <Route path='/services/esg' element={<ESGLayout />}>
@@ -181,8 +195,8 @@ function App() {
             <Route path='sustainability-assurance' element={<ESGSustainabilityAssurancePage />} />
           </Route>
 
-          // Financial Advisory Nested Routes
-          <Route  path="/services/financial-advisory" element={<FinancialAdvisoryLayout />}>
+          {/* Financial Advisory Nested Routes */}
+          <Route  path="/services/financial-advisory" element={<FinancialAdvisoryLayout />} >
             <Route path="" element={<FinancialPage />} />
             <Route path='credit-risk-assessment' element={<FinancialCreditRisk />} />
             <Route path='credit-portfolio-management' element={<FinancialCreditPortfolio />} />
@@ -196,6 +210,18 @@ function App() {
             <Route path='dpdp' element={<DPPDCompliancePage />} />
             <Route path='gdpr' element={<GDPRCompliancePage />} />
             <Route path='regulatory' element={<OtherRegulatoryCompliance />} />
+          </Route>
+
+
+          <Route path='/events' element={<EventLayout />}>
+            <Route path='' element={<Events />} />
+            <Route path='upcoming-events' element={<EventUpcomingEvent />} />
+            <Route path='past-events' element={<EventPastEvent />} />
+            <Route path='accomplishments' element={<EventAccomplshments />} />
+            <Route path='emerging-awards' element={<h1>Emerging Awards</h1>} />
+            <Route path='company-journey' element={<EventCompanyJourney />} />
+            <Route path='media-coverage' element={<EventMedia />} />
+
           </Route>
 
 

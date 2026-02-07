@@ -72,9 +72,9 @@ const SERVICE_LEADERS = [
   {
     name: "Pranshul Agarwal",
     location: "",
-    title: "Manager",
+    title: "Client Leads",
     location: "Delhi, India",
-    credentials: "CIA, CISA Qualied with 6+ Years of Experience",
+    credentials: "CIA, CISA Qualified with 6+ Years of Experience",
     bio: "Risk Advisory professional with 6+ years of experience in IFC design, internal audits, SOX testing, and risk assurance. Delivers practical, value-driven risk and control solutions across industries.",
     image: teamsImages.Pranshul,
     expertise: [
@@ -90,7 +90,7 @@ const SERVICE_LEADERS = [
   },
   {
     name: "Vishal Sharma",
-    title: "Risk Advisory and Assurance | Senior Consultant",
+    title: "Client Leads",
     location: "Kolkata, India",
     credentials: "7+ years",
     bio: "Specialized in core internal audit, ERM, ICoFR, SOP & policy development, and MIS Automation through VBA",
@@ -211,8 +211,13 @@ export default function ServiceLeadersSection({ setSelectedLeader }) {
                 Qualified Professionals
               </h3>
               <p className="text-gray-500 dark:text-gray-400">
-                Industry Certified(CA, CIA, CISA, CRMA, SCR)
+                Industry Certified
               </p>
+              
+              <p className="text-gray-500 dark:text-gray-400">
+                (CA, CIA, CISA, CRMA, SCR)
+                </p>
+              
             </div>
 
             <div className="flex flex-col items-center justify-center p-10 text-center">

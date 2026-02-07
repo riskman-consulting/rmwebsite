@@ -6,15 +6,15 @@ function Layout() {
   const navigate = useNavigate()
   return (
     <div className="min-h-screen z-[100]  bg-bgLight dark:bg-bgDark transition-colors duration-300">
-      {/* Navigation Bar */}
-      <nav className="fixed z-50 w-screen border-b bg-surfaceLight/80 dark:bg-surfaceDark/80 backdrop-blur-md border-borderLight dark:border-borderDark">
+     
+      {/* <nav className="fixed z-50 w-screen border-b bg-surfaceLight/80 dark:bg-surfaceDark/80 backdrop-blur-md border-borderLight dark:border-borderDark">
         <div className="container flex items-center justify-between py-4">
-          {/* Brand Logo Placeholder */}
+       
           <div onClick={()=>navigate("")} className="text-2xl font-black tracking-tighter font-heading text-brandPrimary dark:text-brandGold">
             ESG's
           </div>
 
-          {/* Links */}
+       
           <div className="flex items-center gap-1 sm:gap-4">
             <NavItem to="strategy-roadmap"  label="ESG Strategy Roadmap" />
             <NavItem to="reporting-disclosure"  label="ESG Reporting Disclosure" />
@@ -23,7 +23,7 @@ function Layout() {
             
           </div>
         </div>
-      </nav>
+      </nav> */}
 
       {/* Page Content */}
       <main className="animate-fadeIn">

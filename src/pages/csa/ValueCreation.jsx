@@ -133,7 +133,7 @@ export default function ValueCreation() {
 
         {/* RiskMan Difference Callout */}
         <div className="p-8 mt-12 border-l-4 border-yellow-500 rounded-r-lg shadow-md bg-gradient-to-r from-yellow-50 to-yellow-100 dark:from-brandDark/10 dark:to-brandDark/20">
-          <h3 className="mb-3 text-xl font-bold text-brandDark dark:text-brandAccent">The RiskMan Difference</h3>
+          <h3 className="mb-3 text-xl font-bold text-brandDark dark:text-brandAccent">The RiskMan Differentiator</h3>
           <p className="italic leading-relaxed text-brandNavy dark:text-white/70">
             We don't simply implement CSA programs—we transform them into strategic governance 
             capabilities that drive sustainable competitive advantage.

@@ -38,20 +38,20 @@ export const NAVIGATION_DATA = {
                     ]
                 },
                 {
-                    "label": "ESG",
+                    "label": "Sustainability & ESG",
                     "path": "/services/esg",
-                    "submenus": [
-                        { "id": "strategy-roadmap", "title": "ESG Strategy & Roadmap", "path":"/services/esg/strategy-roadmap"},
-                        { "id": "reporting-disclosure", "title": "ESG Reporting & Disclosure","path":"/services/esg/reporting-disclosure" },
-                        { "id": "carbon-footprint", "title": "Carbon Footprint Assessment" ,"path":"/services/esg/carbon-footprint" },
-                        { "id": "sustainability-assurance", "title": "Sustainability Assurance","path":"/services/esg/sustainability-assurance" }
-                    ]
+                    // "submenus": [
+                    //     { "id": "strategy-roadmap", "title": "ESG Strategy & Roadmap", "path":"/services/esg/strategy-roadmap"},
+                    //     { "id": "reporting-disclosure", "title": "ESG Reporting & Disclosure","path":"/services/esg/reporting-disclosure" },
+                    //     { "id": "carbon-footprint", "title": "Carbon Footprint Assessment" ,"path":"/services/esg/carbon-footprint" },
+                    //     { "id": "sustainability-assurance", "title": "Sustainability Assurance","path":"/services/esg/sustainability-assurance" }
+                    // ]
                 },
                 {
                     "label": "Financial Advisory",
                     "path": "/services/financial-advisory",
                     "submenus": [
-                        { "id": "credit-risk", "title": "Credit Risk Assessment" ,"path":"/services/financial-advisory/credit-risk"},
+                        { "id": "credit-risk", "title": "Credit Risk Assessment" ,"path":"/services/financial-advisory/credit-risk-assessment"},
                         { "id": "portfolio-management", "title": "Credit Portfolio Management" ,"path":"/services/financial-advisory/portfolio-management"},
                         { "id": "loan-review", "title": "Loan Review & Monitoring","path":"/services/financial-advisory/loan-review" },
                         { "id": "credit-policy", "title": "Credit Policy Framework", "path":"/services/financial-advisory/credit-policy" }

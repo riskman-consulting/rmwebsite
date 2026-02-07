@@ -2,10 +2,10 @@ import React from 'react';
 
 const MarketInsight = () => {
   const issues = [
-    "Geopolitical tensions, economic downturns & financial developments overseas [cite: 30]",
-    "Evolving regulatory prescriptions [cite: 30, 31]",
-    "Changing competitive landscape [cite: 30]",
-    "Market volatility [cite: 30]",
+    "Geopolitical tensions, economic downturns & financial developments overseas",
+    "Evolving regulatory prescriptions",
+    "Changing competitive landscape",
+    "Market volatility",
     "Domestic and global business environmental complexity "
   ];
 
@@ -37,7 +37,7 @@ const MarketInsight = () => {
           <div>
             <h2 className="mb-8 text-3xl font-bold leading-tight font-heading md:text-4xl">
               Why Expert Financial Advisory is <br />
-              <span className="text-brandPrimary dark:text-brandGold">More Critical Than Ever [cite: 28]</span>
+              <span className="text-brandPrimary dark:text-brandGold">More Critical Than Ever</span>
             </h2>
             
             <p className="mb-8 font-sans text-lg leading-relaxed text-gray-600 dark:text-gray-300">
@@ -47,7 +47,7 @@ const MarketInsight = () => {
 
             <div className="space-y-4">
               <p className="text-sm font-semibold tracking-wider uppercase font-heading text-brandPrimary dark:text-brandAccent">
-                Major Challenges Today[cite: 30]:
+                Major Challenges Today
               </p>
               <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 {issues.map((issue, index) => (
@@ -76,7 +76,7 @@ const MarketInsight = () => {
             
             <div className="p-6 mt-4 border sm:col-span-2 bg-brandPrimary/5 dark:bg-brandPrimary/20 border-brandPrimary/20 dark:border-brandPrimary/30 rounded-xl">
               <p className="font-sans italic font-medium text-center text-brandPrimary dark:text-brandAccent">
-                "Business enterprises that leverage expert advisories effectively are better positioned to thrive in a rapidly evolving landscape. [cite: 32]"
+                "Business enterprises that leverage expert advisories effectively are better positioned to thrive in a rapidly evolving landscape."
               </p>
             </div>
           </div>

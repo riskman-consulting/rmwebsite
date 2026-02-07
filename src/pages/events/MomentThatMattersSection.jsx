@@ -567,8 +567,8 @@ import image18 from "../../assets/team-accomplishment/iia_conference_mumbai_jan_
 
 const FILTERS = [
   { name: "All", icon: LayoutGrid },
-  { name: "Team Accomplishment", icon: Award },
-  { name: "Emerging Risk Assurance & Advisory Firm of the Year 2024", icon: Star },
+  // { name: "Team Accomplishment", icon: Award },
+  // { name: "Emerging Risk Assurance & Advisory Firm of the Year 2024", icon: Star },
   { name: "5 Year Celebration", icon: Star },
   { name: "Team Lunches & Dinner", icon: Users },
   { name: "Meetings & Discussions", icon: Briefcase },

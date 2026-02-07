@@ -1,447 +1,3 @@
-// import React from 'react';
-
-// const ESGMaturityModel = () => {
-//   const maturityStages = [
-//     {
-//       stage: 1,
-//       title: "INITIAL",
-//       color: "red",
-//       characteristics: "Ad hoc ESG activities; reactive compliance; minimal data",
-//       icon: "🌱"
-//     },
-//     {
-//       stage: 2,
-//       title: "DEVELOPING",
-//       color: "orange",
-//       characteristics: "Formalized policies; basic metrics; initial engagement",
-//       icon: "📋"
-//     },
-//     {
-//       stage: 3,
-//       title: "DEFINED",
-//       color: "yellow",
-//       characteristics: "Integrated into operations; standardized governance",
-//       icon: "📊"
-//     },
-//     {
-//       stage: 4,
-//       title: "ADVANCED",
-//       color: "blue",
-//       characteristics: "Mature practices; proactive management; framework alignment",
-//       icon: "🚀"
-//     },
-//     {
-//       stage: 5,
-//       title: "TRANSFORMATIVE",
-//       color: "green",
-//       characteristics: "Industry-leading; embedded in culture; driving innovation",
-//       icon: "🏆"
-//     }
-//   ];
-
-//   const dimensions = [
-//     {
-//       icon: "⚖️",
-//       title: "Governance & Leadership",
-//       description: "Board oversight, executive accountability, organizational structure, policy frameworks"
-//     },
-//     {
-//       icon: "🎯",
-//       title: "Strategy & Integration",
-//       description: "Materiality analysis, target setting, business strategy alignment"
-//     },
-//     {
-//       icon: "💾",
-//       title: "Data & Technology",
-//       description: "Data collection infrastructure, quality controls, systems integration"
-//     },
-//     {
-//       icon: "📄",
-//       title: "Reporting & Disclosure",
-//       description: "Framework alignment, disclosure quality, assurance readiness"
-//     },
-//     {
-//       icon: "👥",
-//       title: "Culture & Capability",
-//       description: "Organizational awareness, skill development, change management"
-//     }
-//   ];
-
-//   const getColorClasses = (color) => {
-//     const colors = {
-//       red: "from-red-400 to-red-600",
-//       orange: "from-orange-400 to-orange-600",
-//       yellow: "from-yellow-400 to-yellow-600",
-//       blue: "from-blue-400 to-blue-600",
-//       green: "from-green-400 to-green-600"
-//     };
-//     return colors[color];
-//   };
-
-//   return (
-//     <section className="py-20 bg-bgLight dark:bg-bgDark">
-//       <div className="container">
-//         <div className="max-w-6xl mx-auto">
-//           <div className="mb-12 text-center">
-//             <h3 className="mb-4 text-2xl font-bold md:text-3xl font-heading text-brandDark dark:text-white">
-//               Phase 1: ESG Maturity Assessment
-//             </h3>
-//             <p className="max-w-3xl mx-auto text-gray-700 dark:text-gray-300">
-//               Every engagement begins with a comprehensive assessment of your organization's current ESG position. 
-//               Our proprietary maturity model evaluates capabilities across five dimensions:
-//             </p>
-//           </div>
-
-//           {/* Five Dimensions */}
-//           <div className="grid gap-6 mb-16 md:grid-cols-2 lg:grid-cols-3">
-//             {dimensions.map((dimension, index) => (
-//               <div 
-//                 key={index} 
-//                 className="p-6 transition-all duration-300 bg-white border shadow-lg dark:bg-surfaceDark rounded-xl border-borderLight dark:border-borderDark hover:shadow-xl"
-//               >
-//                 <div className="mb-4 text-4xl">{dimension.icon}</div>
-//                 <h4 className="mb-2 text-lg font-bold font-heading text-brandDark dark:text-white">
-//                   {dimension.title}
-//                 </h4>
-//                 <p className="text-sm text-gray-600 dark:text-gray-400">
-//                   {dimension.description}
-//                 </p>
-//               </div>
-//             ))}
-//           </div>
-
-//           {/* Maturity Progression */}
-//           <div className="p-8 bg-white border shadow-xl dark:bg-surfaceDark rounded-2xl border-borderLight dark:border-borderDark">
-//             <h4 className="mb-8 text-xl font-bold text-center font-heading text-brandDark dark:text-white">
-//               ESG Maturity Progression
-//             </h4>
-
-//             {/* Desktop View - Horizontal */}
-//             <div className="hidden md:block">
-//               <div className="relative">
-//                 {/* Progress Bar */}
-//                 <div className="absolute left-0 right-0 h-2 rounded-full top-12 bg-gradient-to-r from-red-400 via-yellow-400 to-green-400"></div>
-
-//                 <div className="flex justify-between">
-//                   {maturityStages.map((stage, index) => (
-//                     <div key={index} className="relative z-10 flex flex-col items-center" style={{ width: '20%' }}>
-//                       {/* Icon & Stage Number */}
-//                       <div className={`w-24 h-24 rounded-full bg-gradient-to-br ${getColorClasses(stage.color)} flex flex-col items-center justify-center shadow-lg mb-4`}>
-//                         <span className="mb-1 text-3xl">{stage.icon}</span>
-//                         <span className="text-sm font-bold text-white">{stage.stage}</span>
-//                       </div>
-
-//                       {/* Title */}
-//                       <div className="px-4 py-2 mb-3 rounded-lg shadow-md bg-gray-50 dark:bg-gray-800">
-//                         <h5 className="text-sm font-bold text-center text-brandDark dark:text-white">
-//                           {stage.title}
-//                         </h5>
-//                       </div>
-
-//                       {/* Characteristics */}
-//                       <p className="text-xs leading-relaxed text-center text-gray-600 dark:text-gray-400">
-//                         {stage.characteristics}
-//                       </p>
-//                     </div>
-//                   ))}
-//                 </div>
-//               </div>
-//             </div>
-
-//             {/* Mobile View - Vertical */}
-//             <div className="space-y-4 md:hidden">
-//               {maturityStages.map((stage, index) => (
-//                 <div key={index} className="flex items-start gap-4">
-//                   <div className={`flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br ${getColorClasses(stage.color)} flex flex-col items-center justify-center shadow-lg`}>
-//                     <span className="text-2xl">{stage.icon}</span>
-//                     <span className="text-xs font-bold text-white">{stage.stage}</span>
-//                   </div>
-//                   <div className="flex-1">
-//                     <h5 className="mb-1 text-sm font-bold text-brandDark dark:text-white">
-//                       {stage.title}
-//                     </h5>
-//                     <p className="text-xs text-gray-600 dark:text-gray-400">
-//                       {stage.characteristics}
-//                     </p>
-//                   </div>
-//                 </div>
-//               ))}
-//             </div>
-//           </div>
-
-//           {/* Phase 2: Roadmap Development */}
-//           <div className="p-8 mt-16 text-white shadow-xl bg-gradient-to-br from-brandPrimary to-brandNavy rounded-2xl">
-//             <h3 className="mb-4 text-2xl font-bold font-heading">
-//               Phase 2: Customized ESG Roadmap Development
-//             </h3>
-//             <p className="mb-6 leading-relaxed">
-//               Based on assessment findings, we develop a tailored ESG roadmap that balances ambition with practicality. 
-//               This roadmap addresses priority initiatives, phased implementation timelines, resource requirements, and 
-//               success metrics.
-//             </p>
-//             <div className="grid gap-4 md:grid-cols-2">
-//               <div className="flex items-start gap-3">
-//                 <span className="text-2xl">✓</span>
-//                 <div>
-//                   <h5 className="mb-1 font-semibold">Priority Initiatives</h5>
-//                   <p className="text-sm opacity-90">Focus on high-impact, achievable quick wins</p>
-//                 </div>
-//               </div>
-//               <div className="flex items-start gap-3">
-//                 <span className="text-2xl">✓</span>
-//                 <div>
-//                   <h5 className="mb-1 font-semibold">Phased Timeline</h5>
-//                   <p className="text-sm opacity-90">Clear milestones and implementation phases</p>
-//                 </div>
-//               </div>
-//               <div className="flex items-start gap-3">
-//                 <span className="text-2xl">✓</span>
-//                 <div>
-//                   <h5 className="mb-1 font-semibold">Resource Planning</h5>
-//                   <p className="text-sm opacity-90">Budget, staffing, and technology requirements</p>
-//                 </div>
-//               </div>
-//               <div className="flex items-start gap-3">
-//                 <span className="text-2xl">✓</span>
-//                 <div>
-//                   <h5 className="mb-1 font-semibold">Success Metrics</h5>
-//                   <p className="text-sm opacity-90">Quantifiable KPIs and performance tracking</p>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default ESGMaturityModel;
-
-
-// import React from 'react';
-
-// const ESGMaturityModel = () => {
-//   const maturityStages = [
-//     {
-//       stage: 1,
-//       title: "INITIAL",
-//       color: "red",
-//       characteristics: "Ad hoc ESG activities; reactive compliance; minimal data",
-//       icon: "🌱"
-//     },
-//     {
-//       stage: 2,
-//       title: "DEVELOPING",
-//       color: "orange",
-//       characteristics: "Formalized policies; basic metrics; initial engagement",
-//       icon: "📋"
-//     },
-//     {
-//       stage: 3,
-//       title: "DEFINED",
-//       color: "yellow",
-//       characteristics: "Integrated into operations; standardized governance",
-//       icon: "📊"
-//     },
-//     {
-//       stage: 4,
-//       title: "ADVANCED",
-//       color: "blue",
-//       characteristics: "Mature practices; proactive management; framework alignment",
-//       icon: "🚀"
-//     },
-//     {
-//       stage: 5,
-//       title: "TRANSFORMATIVE",
-//       color: "green",
-//       characteristics: "Industry-leading; embedded in culture; driving innovation",
-//       icon: "🏆"
-//     }
-//   ];
-
-//   const dimensions = [
-//     {
-//       icon: "⚖️",
-//       title: "Governance & Leadership",
-//       description: "Board oversight, executive accountability, organizational structure, policy frameworks"
-//     },
-//     {
-//       icon: "🎯",
-//       title: "Strategy & Integration",
-//       description: "Materiality analysis, target setting, business strategy alignment"
-//     },
-//     {
-//       icon: "💾",
-//       title: "Data & Technology",
-//       description: "Data collection infrastructure, quality controls, systems integration"
-//     },
-//     {
-//       icon: "📄",
-//       title: "Reporting & Disclosure",
-//       description: "Framework alignment, disclosure quality, assurance readiness"
-//     },
-//     {
-//       icon: "👥",
-//       title: "Culture & Capability",
-//       description: "Organizational awareness, skill development, change management"
-//     }
-//   ];
-
-//   const getColorClasses = (color) => {
-//     const colors = {
-//       red: "from-red-400 to-red-600",
-//       orange: "from-orange-400 to-orange-600",
-//       yellow: "from-yellow-400 to-yellow-600",
-//       blue: "from-blue-400 to-blue-600",
-//       green: "from-green-400 to-green-600"
-//     };
-//     return colors[color];
-//   };
-
-//   return (
-//     <section className="py-20 bg-bgLight dark:bg-bgDark">
-//       <div className="container">
-//         <div className="max-w-6xl mx-auto">
-//           <div className="mb-12 text-center">
-//             <h3 className="mb-4 text-2xl font-bold md:text-3xl font-heading text-brandDark dark:text-white">
-//               Phase 1: ESG Maturity Assessment
-//             </h3>
-//             <p className="max-w-3xl mx-auto text-gray-700 dark:text-gray-300">
-//               Every engagement begins with a comprehensive assessment of your organization's current ESG position. 
-//               Our proprietary maturity model evaluates capabilities across five dimensions:
-//             </p>
-//           </div>
-
-//           {/* Five Dimensions */}
-//           <div className="grid gap-6 mb-16 md:grid-cols-2 lg:grid-cols-3">
-//             {dimensions.map((dimension, index) => (
-//               <div 
-//                 key={index} 
-//                 className="p-6 transition-all duration-300 bg-white border shadow-lg dark:bg-surfaceDark rounded-xl border-borderLight dark:border-borderDark hover:shadow-xl"
-//               >
-//                 <div className="mb-4 text-4xl">{dimension.icon}</div>
-//                 <h4 className="mb-2 text-lg font-bold font-heading text-brandDark dark:text-white">
-//                   {dimension.title}
-//                 </h4>
-//                 <p className="text-sm text-gray-600 dark:text-gray-400">
-//                   {dimension.description}
-//                 </p>
-//               </div>
-//             ))}
-//           </div>
-
-//           {/* Maturity Progression */}
-//           <div className="p-8 bg-white border shadow-xl dark:bg-surfaceDark rounded-2xl border-borderLight dark:border-borderDark">
-//             <h4 className="mb-8 text-xl font-bold text-center font-heading text-brandDark dark:text-white">
-//               ESG Maturity Progression
-//             </h4>
-
-//             {/* Desktop View - Horizontal */}
-//             <div className="hidden md:block">
-//               <div className="relative">
-//                 {/* Progress Bar */}
-//                 <div className="absolute left-0 right-0 h-2 rounded-full top-12 bg-gradient-to-r from-red-400 via-yellow-400 to-green-400"></div>
-
-//                 <div className="flex justify-between">
-//                   {maturityStages.map((stage, index) => (
-//                     <div key={index} className="relative z-10 flex flex-col items-center" style={{ width: '20%' }}>
-//                       {/* Icon & Stage Number */}
-//                       <div className={`w-24 h-24 rounded-full bg-gradient-to-br ${getColorClasses(stage.color)} flex flex-col items-center justify-center shadow-lg mb-4`}>
-//                         <span className="mb-1 text-3xl">{stage.icon}</span>
-//                         <span className="text-sm font-bold text-white">{stage.stage}</span>
-//                       </div>
-
-//                       {/* Title */}
-//                       <div className="px-4 py-2 mb-3 rounded-lg shadow-md bg-gray-50 dark:bg-gray-800">
-//                         <h5 className="text-sm font-bold text-center text-brandDark dark:text-white">
-//                           {stage.title}
-//                         </h5>
-//                       </div>
-
-//                       {/* Characteristics */}
-//                       <p className="text-xs leading-relaxed text-center text-gray-600 dark:text-gray-400">
-//                         {stage.characteristics}
-//                       </p>
-//                     </div>
-//                   ))}
-//                 </div>
-//               </div>
-//             </div>
-
-//             {/* Mobile View - Vertical */}
-//             <div className="space-y-4 md:hidden">
-//               {maturityStages.map((stage, index) => (
-//                 <div key={index} className="flex items-start gap-4">
-//                   <div className={`flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br ${getColorClasses(stage.color)} flex flex-col items-center justify-center shadow-lg`}>
-//                     <span className="text-2xl">{stage.icon}</span>
-//                     <span className="text-xs font-bold text-white">{stage.stage}</span>
-//                   </div>
-//                   <div className="flex-1">
-//                     <h5 className="mb-1 text-sm font-bold text-brandDark dark:text-white">
-//                       {stage.title}
-//                     </h5>
-//                     <p className="text-xs text-gray-600 dark:text-gray-400">
-//                       {stage.characteristics}
-//                     </p>
-//                   </div>
-//                 </div>
-//               ))}
-//             </div>
-//           </div>
-
-//           {/* Phase 2: Roadmap Development */}
-//           <div className="p-8 mt-16 text-white shadow-xl bg-gradient-to-br from-brandPrimary to-brandNavy rounded-2xl">
-//             <h3 className="mb-4 text-2xl font-bold font-heading">
-//               Phase 2: Customized ESG Roadmap Development
-//             </h3>
-//             <p className="mb-6 leading-relaxed">
-//               Based on assessment findings, we develop a tailored ESG roadmap that balances ambition with practicality. 
-//               This roadmap addresses priority initiatives, phased implementation timelines, resource requirements, and 
-//               success metrics.
-//             </p>
-//             <div className="grid gap-4 md:grid-cols-2">
-//               <div className="flex items-start gap-3">
-//                 <span className="text-2xl">✓</span>
-//                 <div>
-//                   <h5 className="mb-1 font-semibold">Priority Initiatives</h5>
-//                   <p className="text-sm opacity-90">Focus on high-impact, achievable quick wins</p>
-//                 </div>
-//               </div>
-//               <div className="flex items-start gap-3">
-//                 <span className="text-2xl">✓</span>
-//                 <div>
-//                   <h5 className="mb-1 font-semibold">Phased Timeline</h5>
-//                   <p className="text-sm opacity-90">Clear milestones and implementation phases</p>
-//                 </div>
-//               </div>
-//               <div className="flex items-start gap-3">
-//                 <span className="text-2xl">✓</span>
-//                 <div>
-//                   <h5 className="mb-1 font-semibold">Resource Planning</h5>
-//                   <p className="text-sm opacity-90">Budget, staffing, and technology requirements</p>
-//                 </div>
-//               </div>
-//               <div className="flex items-start gap-3">
-//                 <span className="text-2xl">✓</span>
-//                 <div>
-//                   <h5 className="mb-1 font-semibold">Success Metrics</h5>
-//                   <p className="text-sm opacity-90">Quantifiable KPIs and performance tracking</p>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-
-// export default ESGMaturityModel
-
-
-
 import React from "react";
 
 const ESGMaturityModel = () => {
@@ -449,38 +5,41 @@ const ESGMaturityModel = () => {
     {
       stage: 1,
       title: "INITIAL",
-      color: "red",
-      characteristics: "Ad hoc ESG activities; reactive compliance; minimal data",
+      color: "from-slate-400 to-slate-600",
+      accent: "border-slate-400",
+      characteristics: "Ad hoc ESG activities; reactive compliance; minimal data and reporting.",
       icon: "🌱",
     },
     {
       stage: 2,
       title: "DEVELOPING",
-      color: "orange",
-      characteristics: "Formalized policies; basic metrics; initial engagement",
+      color: "from-brandNavy to-brandPrimary",
+      accent: "border-brandPrimary",
+      characteristics: "Formalized policies; basic metrics; initial stakeholder engagement and awareness.",
       icon: "📋",
     },
     {
       stage: 3,
       title: "DEFINED",
-      color: "yellow",
-      characteristics: "Integrated into operations; standardized governance",
+      color: "from-brandPrimary to-brandNavy",
+      accent: "border-brandPrimary",
+      characteristics: "Integrated into business operations; standardized governance and tracking systems.",
       icon: "📊",
     },
     {
       stage: 4,
       title: "ADVANCED",
-      color: "blue",
-      characteristics:
-        "Mature practices; proactive management; framework alignment",
+      color: "from-brandPrimary to-brandAccent",
+      accent: "border-brandAccent",
+      characteristics: "Mature practices; proactive management; full alignment with global frameworks.",
       icon: "🚀",
     },
     {
       stage: 5,
       title: "TRANSFORMATIVE",
-      color: "green",
-      characteristics:
-        "Industry-leading; embedded in culture; driving innovation",
+      color: "from-brandAccent to-brandGold",
+      accent: "border-brandGold",
+      characteristics: "Industry-leading; ESG embedded in culture; driving innovation and enterprise value.",
       icon: "🏆",
     },
   ];
@@ -489,150 +48,117 @@ const ESGMaturityModel = () => {
     {
       icon: "⚖️",
       title: "Governance & Leadership",
-      description:
-        "Board oversight, executive accountability, organizational structure, policy frameworks",
+      description: "Board oversight, executive accountability, organizational structure, and policy frameworks.",
     },
     {
       icon: "🎯",
       title: "Strategy & Integration",
-      description:
-        "Materiality analysis, target setting, business strategy alignment",
+      description: "Materiality analysis, target setting, and business strategy alignment.",
     },
     {
       icon: "💾",
       title: "Data & Technology",
-      description:
-        "Data collection infrastructure, quality controls, systems integration",
+      description: "Data collection infrastructure, quality controls, and systems integration.",
     },
     {
       icon: "📄",
       title: "Reporting & Disclosure",
-      description:
-        "Framework alignment, disclosure quality, assurance readiness",
+      description: "Framework alignment, disclosure quality, and assurance readiness.",
     },
     {
       icon: "👥",
       title: "Culture & Capability",
-      description:
-        "Organizational awareness, skill development, change management",
+      description: "Organizational awareness, skill development, and change management.",
     },
   ];
 
-  const getColorClasses = (color) => {
-    const colors = {
-      red: "from-red-500 to-red-700",
-      orange: "from-orange-500 to-orange-700",
-      yellow: "from-yellow-500 to-yellow-600",
-      blue: "from-blue-500 to-blue-700",
-      green: "from-green-500 to-green-700",
-    };
-    return colors[color];
-  };
-
   return (
-    <section className="relative py-24 bg-bgLight dark:bg-bgDark">
-      <div className="container">
-        <div className="max-w-6xl mx-auto space-y-20">
-          {/* HEADER */}
-          <div className="text-center">
-            <h3 className="mb-4 text-3xl font-bold font-heading text-brandDark dark:text-white">
+    <section className="relative py-24 overflow-hidden bg-bgLight dark:bg-bgDark">
+      {/* Decorative Background */}
+      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-brandPrimary/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
+
+      <div className="container relative z-10">
+        <div className="max-w-6xl mx-auto">
+          {/* Header */}
+          <div className="mb-20 text-center">
+            <span className="text-xs font-bold tracking-[4px] uppercase text-brandPrimary dark:text-brandGold mb-4 block">
               Phase 1: ESG Maturity Assessment
-            </h3>
-            <p className="max-w-3xl mx-auto text-gray-700 dark:text-gray-300">
-              Every engagement begins with a comprehensive assessment of your
-              organization's current ESG position. Our proprietary maturity
-              model evaluates capabilities across five dimensions:
+            </span>
+            <h2 className="mb-6 text-4xl font-black leading-tight font-heading text-brandDark dark:text-surfaceLight lg:text-5xl">
+              Assessing Your Organization's <br /> Sustainability Journey
+            </h2>
+            <p className="max-w-3xl mx-auto font-sans text-lg text-brandDark/70 dark:text-surfaceLight/70">
+              Every engagement begins with a comprehensive assessment of your current ESG position across five critical dimensions to establish a clear baseline.
             </p>
           </div>
 
-          {/* DIMENSIONS */}
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {dimensions.map((dimension, index) => (
+          {/* Dimensions Grid */}
+          <div className="grid gap-6 mb-24 md:grid-cols-2 lg:grid-cols-5">
+            {dimensions.map((dim, index) => (
               <div
                 key={index}
-                className="relative p-8 transition-all duration-300 border shadow-lg bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-2xl hover:shadow-2xl hover:-translate-y-1"
+                className="p-8 transition-all duration-300 border bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-2xl hover:shadow-2xl hover:-translate-y-2 group"
               >
-                <div className="mb-4 text-4xl animate-float">
-                  {dimension.icon}
+                <div className="mb-4 text-4xl transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                  {dim.icon}
                 </div>
-                <h4 className="mb-3 text-lg font-bold font-heading text-brandDark dark:text-white">
-                  {dimension.title}
+                <h4 className="mb-3 text-sm font-bold tracking-wider uppercase font-heading text-brandDark dark:text-white">
+                  {dim.title}
                 </h4>
-                <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-                  {dimension.description}
+                <p className="text-xs leading-relaxed text-brandDark/60 dark:text-surfaceLight/60">
+                  {dim.description}
                 </p>
               </div>
             ))}
           </div>
 
-          {/* MATURITY MODEL */}
-          <div className="p-10 border shadow-2xl bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-3xl">
-            <h4 className="mb-12 text-xl font-bold text-center font-heading text-brandDark dark:text-white">
+          {/* Maturity Model Visualization */}
+          <div className="p-10 border shadow-2xl bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-[40px] relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-slate-400 via-brandPrimary to-brandGold" />
+            
+            <h3 className="mb-16 text-xl font-bold text-center font-heading text-brandDark dark:text-white uppercase tracking-[3px]">
               ESG Maturity Progression
-            </h4>
+            </h3>
 
-            {/* DESKTOP */}
-            <div className="hidden md:block">
-              <div className="relative">
-                <div className="absolute left-0 right-0 h-1 rounded-full top-[4.75rem] bg-gradient-to-r from-red-500 via-brandAccent to-green-500 opacity-80" />
+            {/* Desktop View */}
+            <div className="hidden lg:block">
+              <div className="relative flex justify-between">
+                {/* Connecting Progress Line */}
+                <div className="absolute left-0 right-0 h-0.5 top-12 bg-borderLight dark:bg-borderDark z-0" />
 
-                <div className="flex justify-between">
-                  {maturityStages.map((stage, index) => (
-                    <div
-                      key={index}
-                      className="relative z-10 flex flex-col items-center w-1/5 text-center"
-                    >
-                      <div
-                        className={`w-24 h-24 rounded-full bg-gradient-to-br ${getColorClasses(
-                          stage.color
-                        )} flex flex-col items-center justify-center shadow-xl mb-5 animate-evaporate`}
-                      >
-                        <span className="mb-1 text-3xl">
-                          {stage.icon}
-                        </span>
-                        <span className="text-xs font-bold text-white">
-                          {stage.stage}
-                        </span>
-                      </div>
-
-                      <div className="px-4 py-2 mb-3 bg-white rounded-lg shadow-md dark:bg-bgDark">
-                        <h5 className="text-sm font-bold text-brandDark dark:text-white">
-                          {stage.title}
-                        </h5>
-                      </div>
-
-                      <p className="text-xs leading-relaxed text-gray-600 dark:text-gray-400">
-                        {stage.characteristics}
-                      </p>
+                {maturityStages.map((stage, index) => (
+                  <div key={index} className="relative z-10 flex flex-col items-center w-1/5 px-4 text-center group">
+                    <div className={`w-24 h-24 rounded-full bg-gradient-to-br ${stage.color} flex flex-col items-center justify-center shadow-xl mb-6 border-4 border-surfaceLight dark:border-surfaceDark transition-transform duration-500 group-hover:scale-110`}>
+                      <span className="mb-1 text-3xl">{stage.icon}</span>
+                      <span className="text-[10px] font-black text-white/90">STAGE {stage.stage}</span>
                     </div>
-                  ))}
-                </div>
+
+                    <div className={`inline-block px-4 py-1 mb-4 rounded-full border ${stage.accent} bg-white dark:bg-bgDark shadow-sm`}>
+                      <h5 className="text-xs font-black tracking-widest uppercase text-brandDark dark:text-white">
+                        {stage.title}
+                      </h5>
+                    </div>
+
+                    <p className="text-[11px] font-medium leading-relaxed text-brandDark/60 dark:text-surfaceLight/60">
+                      {stage.characteristics}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
 
-            {/* MOBILE */}
-            <div className="space-y-6 md:hidden">
+            {/* Mobile View */}
+            <div className="space-y-6 lg:hidden">
               {maturityStages.map((stage, index) => (
-                <div
-                  key={index}
-                  className="flex gap-4 p-4 border shadow bg-bgLight dark:bg-bgDark rounded-xl border-borderLight dark:border-borderDark"
-                >
-                  <div
-                    className={`flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br ${getColorClasses(
-                      stage.color
-                    )} flex flex-col items-center justify-center shadow-lg`}
-                  >
+                <div key={index} className="flex gap-6 p-6 border bg-bgLight dark:bg-bgDark rounded-2xl border-borderLight dark:border-borderDark">
+                  <div className={`flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br ${stage.color} flex flex-col items-center justify-center text-white shadow-lg`}>
                     <span className="text-2xl">{stage.icon}</span>
-                    <span className="text-xs font-bold text-white">
-                      {stage.stage}
-                    </span>
                   </div>
-
                   <div>
-                    <h5 className="mb-1 text-sm font-bold text-brandDark dark:text-white">
-                      {stage.title}
+                    <h5 className="mb-2 text-sm font-black tracking-widest uppercase text-brandDark dark:text-white">
+                      {stage.stage}. {stage.title}
                     </h5>
-                    <p className="text-xs text-gray-600 dark:text-gray-400">
+                    <p className="text-xs text-brandDark/60 dark:text-surfaceLight/60">
                       {stage.characteristics}
                     </p>
                   </div>
@@ -641,33 +167,34 @@ const ESGMaturityModel = () => {
             </div>
           </div>
 
-          {/* PHASE 2 */}
-          <div className="p-12 text-white shadow-2xl rounded-3xl bg-gradient-to-br from-brandPrimary via-brandNavy to-brandDark">
-            <h3 className="mb-4 text-2xl font-bold font-heading">
-              Phase 2: Customized ESG Roadmap Development
-            </h3>
-            <p className="mb-8 leading-relaxed opacity-95">
-              Based on assessment findings, we develop a tailored ESG roadmap
-              that balances ambition with practicality. This roadmap addresses
-              priority initiatives, phased implementation timelines, resource
-              requirements, and success metrics.
-            </p>
+          {/* Phase 2 CTA/Note */}
+          <div className="mt-16 p-12 text-white shadow-2xl rounded-[32px] bg-gradient-to-br from-brandDark via-brandNavy to-brandPrimary relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-64 h-64 transition-transform duration-700 translate-x-1/2 -translate-y-1/2 rounded-full bg-brandGold/10 blur-3xl group-hover:scale-125" />
+            
+            <div className="relative z-10">
+              <h3 className="mb-4 text-2xl font-black tracking-widest uppercase font-heading">
+                Phase 2: Customized ESG Roadmap
+              </h3>
+              <p className="max-w-4xl mb-10 leading-relaxed text-white/80">
+                Based on assessment findings, we develop a tailored ESG roadmap that balances ambition with practicality, addressing priority initiatives, phased timelines, and resource requirements.
+              </p>
 
-            <div className="grid gap-6 md:grid-cols-2">
-              {[
-                ["Priority Initiatives", "Focus on high-impact, achievable quick wins"],
-                ["Phased Timeline", "Clear milestones and implementation phases"],
-                ["Resource Planning", "Budget, staffing, and technology requirements"],
-                ["Success Metrics", "Quantifiable KPIs and performance tracking"],
-              ].map(([title, desc], i) => (
-                <div key={i} className="flex gap-4">
-                  <span className="text-2xl text-brandGold">✓</span>
-                  <div>
-                    <h5 className="mb-1 font-semibold">{title}</h5>
-                    <p className="text-sm opacity-90">{desc}</p>
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+                {[
+                  ["Priority Initiatives", "Focus on high-impact quick wins"],
+                  ["Phased Timeline", "Clear implementation milestones"],
+                  ["Resource Planning", "Budget and technology needs"],
+                  ["Success Metrics", "Quantifiable KPIs and tracking"],
+                ].map(([title, desc], i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <span className="font-bold text-brandGold">✓</span>
+                    <div>
+                      <h5 className="mb-1 text-xs font-black tracking-widest uppercase">{title}</h5>
+                      <p className="text-[11px] text-white/60">{desc}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>

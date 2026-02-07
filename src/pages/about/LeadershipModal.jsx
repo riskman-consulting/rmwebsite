@@ -207,19 +207,19 @@ export function LeadershipModal({ leader, onClose }) {
           </div>
 
           {/* Scrollable Content Area */}
-          <div className="flex-1 p-6 overflow-y-auto md:p-8 scrollbar-thin scrollbar-thumb-brandGold/20 scrollbar-track-transparent">
+          <div className="flex-1 p-6 md:p-8 scrollbar-thin scrollbar-thumb-brandGold/20 overflow-y-auto scrollbar-hide max-h-[calc(90vh-180px)] scrollbar-track-transparent">
             {leader.richBio}
           </div>
 
           {/* Footer - Optional */}
-          <div className="flex-shrink-0 p-4 border-t bg-surfaceLight/50 dark:bg-surfaceDark/50 border-borderLight dark:border-borderDark">
+          {/* <div className="flex-shrink-0 p-4 border-t bg-surfaceLight/50 dark:bg-surfaceDark/50 border-borderLight dark:border-borderDark">
             <button
               onClick={onClose}
               className="w-full px-6 py-2.5 text-sm font-medium transition-colors rounded-full bg-brandGold/10 text-brandDark dark:text-white hover:bg-brandGold/20"
             >
               Close
             </button>
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </AnimatePresence>

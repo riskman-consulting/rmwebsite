@@ -41,7 +41,7 @@ function Events() {
 
       <UpcomingEventsSection/>
 
-      {/* <EventRecognition/> */}
+      <EventRecognition/>
 
       
 
