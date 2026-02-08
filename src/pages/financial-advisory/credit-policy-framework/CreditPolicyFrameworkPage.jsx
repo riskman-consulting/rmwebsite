@@ -5,6 +5,7 @@ import CreditPolicyHero from './HeroSection';
 import CoreObjectives from './Coreobjectives';
 import ValueChainManagement from './Valuechainmanagement';
 import PolicyGovernanceCTAandFAQ from './Policygovernancectaandfaq';
+import PolicyFAQ from './PolicyFAQ';
 
 /**
  * Credit Policy Framework - Complete Service Page
@@ -29,6 +30,8 @@ function CreditPolicyFrameworkApp() {
 
       {/* Policy Governance & Evolution + Call-to-Action & FAQ Section */}
       <PolicyGovernanceCTAandFAQ />
+
+      <PolicyFAQ/>
 
       {/* Optional: Add Footer here */}
       {/* <YourFooter /> */}

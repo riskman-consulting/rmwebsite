@@ -18,10 +18,10 @@ function Layout() {
           <div className="flex items-center gap-1 text-sm sm:gap-3">
             <NavItem to="credit-risk-assessment"
               label="Credit Risk Assessment" />
-            <NavItem to="credit-portfolio-management"
+            {/* <NavItem to="credit-portfolio-management"
               label="Credit Portfolio Management" />
             <NavItem to="loan-review-monitoring"
-              label="Loan Review & Monitoring" />
+              label="Loan Review & Monitoring" /> */}
             <NavItem to="credit-policy-framework"
               label="Credit Policy Framework" />
           </div>

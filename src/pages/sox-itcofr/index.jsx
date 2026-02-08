@@ -92,14 +92,14 @@ const SoxIcofrIfc = () => {
     <div className="min-h-screen bg-bgLight dark:bg-bgDark">
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-gradient-to-br from-brandDark via-brandNavy to-brandPrimary">
-        {/* Animated Background Elements */}
+       
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute rounded-full top-1/4 left-1/4 w-96 h-96 bg-brandAccent/10 blur-3xl animate-float"></div>
           <div className="absolute rounded-full bottom-1/4 right-1/4 w-96 h-96 bg-brandGold/10 blur-3xl animate-evaporate"></div>
           <div className="absolute w-64 h-64 rounded-full top-1/2 right-1/3 bg-white/5 blur-2xl animate-pulse-custom"></div>
         </div>
 
-        {/* Geometric Patterns */}
+       
         <div className="absolute inset-0 opacity-10">
           <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <defs>

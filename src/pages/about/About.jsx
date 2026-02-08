@@ -23,6 +23,7 @@ import Testimonials from "./Testimonials";
 import { JourneyTimeline } from "./JourneyTimeline";
 import SingleSlide from "./SingleSlide";
 import WhyRiskman from "./WhyRiskMan";
+import TributeMarquee from "./TributeMarquee";
 
 /* =======================
    ANIMATIONS
@@ -84,6 +85,8 @@ export default function About() {
 
         {/* ================= LEADERSHIP ================= */}
         <LeadershipSection setSelectedLeader={setSelectedLeader} />
+
+        <TributeMarquee/>
 
         {/* ================= SERVICE LEADERS ================= */}
         <ServiceLeadersSection setSelectedLeader={setSelectedLeader} />

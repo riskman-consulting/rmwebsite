@@ -115,7 +115,7 @@ export default function WhyChooseRiskMan() {
     whileInView={{ opacity: 1, scale: 1 }}
     viewport={{ once: true }}
     transition={{ duration: 0.8 }}
-    className="w-[320px] h-[380px] rounded-[32px] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.12)] dark:shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
+    className="w-[340px] h-[460px] rounded-[32px] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.12)] dark:shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
   >
     <img
       src={whyRiskMan}

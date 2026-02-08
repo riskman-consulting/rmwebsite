@@ -29,7 +29,7 @@ export default function MarqueeClientsSection({ title = "Our Marquee Clients", b
     { name: "India Power", logo: "https://media.licdn.com/dms/image/v2/C4D0BAQFwvCiZN3K5qw/company-logo_200_200/company-logo_200_200/0/1631340755897?e=2147483647&v=beta&t=h0kmW4zhFqFukc8m4-RLaK4BPrLjg6li0sFBPl-dEiM" },
     { name: "Pernod Ricard", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Pernod_Ricard_logo_2019.svg/1280px-Pernod_Ricard_logo_2019.svg.png?20191029154406%22" },
     { name: "MG", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdAh4d5LGfL36LCYs-6q8b5Co7C-wc7Wu84aFZ3C-p42E9ZhlLTahPZ_FvQrY&s&ec=121507538%22" },
-    { name: "Feeding India", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuP0hq62APhBHQvN0qiB4ay9p-5RZD85HmcA&s" },
+    { name: "Feeding India", logo: "https://b.zmtcdn.com/data/o2_assets/ef079f5794e4cfb3c659e9d1cfe70d8e1726569304.png" },
     { name: "Schoolnet", logo: "https://images.financialexpressdigital.com/2022/05/schoolnet.png" },
     { name: "Danieli", logo: "https://download.logo.wine/logo/Danieli/Danieli-Logo.wine.png" },
     { name: "Care Health Insurance", logo: "https://pnghdpro.com/wp-content/themes/pnghdpro/download/social-media-and-brands/care-insurance-logo-hd.png%22" },

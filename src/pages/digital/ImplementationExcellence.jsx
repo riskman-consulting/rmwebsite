@@ -1,23 +1,49 @@
-import React from 'react';
+import React,{useState} from 'react';
+import { 
+  CheckCircle, 
+  BarChart3, 
+  Settings, 
+  Database, 
+  FileText, 
+  ArrowRight, 
+  ChevronDown, 
+  ChevronUp,
+  Users,
+  Layers,
+  Search,
+  Zap,
+  ClipboardCheck,
+  RefreshCw
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import {motion,AnimatePresence} from 'framer-motion';
+
+import bg from "../../assets/images/digital/implementation.png";
+
+
+
+
 
 const ImplementationExcellence = () => {
+
+  const [openIndex, setOpenIndex] = useState(null);
   return (
     <div className="min-h-screen font-sans transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-brandLight">
       
       {/* SECTION 1: HERO SECTION - Modern Split Design */}
-      <section className="relative py-20 overflow-hidden lg:py-32 bg-gradient-to-br from-bgLight via-surfaceLight to-bgLight dark:from-bgDark dark:via-surfaceDark dark:to-bgDark">
-        {/* Decorative Background Elements */}
+      {/* <section className="relative py-20 overflow-hidden lg:py-32 bg-gradient-to-br from-bgLight via-surfaceLight to-bgLight dark:from-bgDark dark:via-surfaceDark dark:to-bgDark">
+        
         <div className="absolute top-0 right-0 rounded-full w-96 h-96 bg-brandGold/5 blur-3xl"></div>
         <div className="absolute bottom-0 left-0 rounded-full w-80 h-80 bg-brandPrimary/5 dark:bg-brandGold/5 blur-3xl"></div>
         
         <div className="container relative z-10 px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="grid items-center gap-16 lg:grid-cols-2">
-            {/* Left Column - Text Content */}
+            
             <div className="max-w-2xl">
               <div className="inline-block px-4 py-2 mb-6 text-sm font-bold tracking-wider uppercase rounded-full bg-brandGold/10 dark:bg-brandGold/20 text-brandPrimary dark:text-brandGold">
                 Implementation Excellence
               </div>
-              <h1 className="mb-6 text-5xl font-black leading-tight font-heading md:text-6xl lg:text-7xl">
+              <h1 className="mb-6 text-3xl font-black leading-tight font-heading md:text-4xl lg:text-5xl">
                 Accelerating <span className="relative inline-block">
                   <span className="relative z-10 text-brandPrimary dark:text-brandGold">Value</span>
                   <span className="absolute left-0 w-full h-3 bottom-2 bg-brandGold/20 -z-0"></span>
@@ -36,32 +62,93 @@ const ImplementationExcellence = () => {
               </div>
             </div>
 
-            {/* Right Column - Hero Image with Modern Frame */}
+            
             <div className="relative">
               <div className="relative overflow-hidden shadow-2xl rounded-3xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-brandPrimary/10 to-brandGold/10"></div>
                 <img 
-                  src="https://placehold.co/700x600/1a1a2e/ffd700?text=Implementation+Excellence" 
+                  src="https://www.ekaivadigital.com/images/service.jpg" 
                   alt="Implementation Excellence - Digital Transformation" 
                   className="relative z-10 object-cover w-full h-auto"
                 />
-                {/* Floating Badge */}
-                <div className="absolute z-20 p-4 rounded-lg shadow-xl bottom-8 left-8 bg-white/95 dark:bg-brandDark/95 backdrop-blur-sm">
-                  <div className="text-3xl font-black text-brandPrimary dark:text-brandGold">99%</div>
-                  <div className="text-sm font-semibold opacity-70">Success Rate</div>
-                </div>
               </div>
               
-              {/* Decorative Corner Elements */}
               <div className="absolute w-24 h-24 border-4 -top-6 -left-6 rounded-tl-3xl border-brandGold/30"></div>
               <div className="absolute w-24 h-24 border-4 -bottom-6 -right-6 rounded-br-3xl border-brandPrimary/30 dark:border-brandGold/30"></div>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      {/* <section className="relative overflow-hidden text-white bg-surfaceLight dark:bg-surfaceDark">
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-brandDark to-brandDark opacity-40"></div>
+        <div className="absolute inset-0 z-0 opacity-20" style={{ backgroundImage: "url('https://www.ekaivadigital.com/images/service.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+        
+        <div className="container relative z-10 py-24 lg:py-32">
+          <div className="max-w-3xl animate-float">
+            <h1 className="mb-6 text-2xl font-bold leading-tight text-white md:text-3xl lg:text-4xl">
+              Accelerating Value Realization with <span className="text-brandAccent">Implementation Excellence</span>
+            </h1>
+            <p className="mb-10 text-lg leading-relaxed text-gray-200 md:text-xl">
+              RiskMan delivers implementation excellence through rigorous tool optimization, process re-engineering, and structured data migration frameworks to ensure your digital transformation succeeds.
+            </p>
+             <div className="flex flex-wrap gap-4">
+                <button className="px-10 py-5 text-lg font-bold transition-all duration-300 transform rounded-lg shadow-lg bg-brandGold hover:bg-brandAccent text-brandDark hover:scale-105 hover:shadow-xl">
+                  Book a Consultation
+                </button>
+                <button className="px-10 py-5 text-lg font-bold text-white transition-all duration-300 transform border-2 rounded-lg bg-brandPrimary dark:border-brandGold dark:text-brandGold hover:bg-brandPrimary hover:text-white dark:hover:bg-brandGold dark:hover:text-brandDark hover:scale-105">
+                  Our Other Services
+                </button>
+              </div>
+          </div>
+        </div>
+        
+       
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-bgLight" style={{ clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 100%)" }}></div>
+      </section> */}
+
+      <section
+      className="relative py-24 bg-center bg-cover lg:py-36"
+      style={{ backgroundImage: `url(${bg})` }}
+    >
+      {/* layered gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/40"></div>
+
+      {/* subtle bottom fade */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+
+      <div className="container relative px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
+        <div className="max-w-3xl p-8 border shadow-2xl rounded-xl bg-white/10 backdrop-blur-md border-white/20">
+          
+          <h1 className="mb-6 text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
+            Accelerating Value Realization with{" "}
+            <span className="text-brandGold">
+              Implementation Excellence
+            </span>
+          </h1>
+
+          <p className="mb-10 text-lg leading-relaxed text-white/90 md:text-xl">
+            RiskMan delivers implementation excellence through rigorous tool
+            optimization, process re-engineering, and structured data migration
+            frameworks to ensure your digital transformation succeeds.
+          </p>
+
+          <div className="flex flex-wrap gap-5">
+            <Link to="/contact" className="px-8 py-4 font-semibold transition-all rounded-md shadow-lg bg-brandGold hover:bg-brandAccent text-brandDark hover:-translate-y-1">
+              Book a Consultation
+            </Link>
+
+            <Link to="/services" className="px-8 py-4 font-semibold text-white transition-all border-2 rounded-md border-white/70 hover:bg-white hover:text-black">
+              Our Other Services
+            </Link>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
       {/* SECTION 2: TOOL EVALUATION & OPTIMIZATION - Modern Card Grid */}
-      <section className="py-24 bg-white dark:bg-brandNavy">
+      <section className="bg-white py-14 md:py-20 dark:bg-surfaceDark">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-4xl font-black font-heading md:text-5xl">
@@ -101,7 +188,7 @@ const ImplementationExcellence = () => {
             ].map((item, index) => (
               <div 
                 key={index} 
-                className="relative p-8 overflow-hidden transition-all duration-300 border group bg-bgLight dark:bg-bgDark rounded-2xl border-borderLight dark:border-borderDark hover:shadow-2xl hover:-translate-y-2"
+                className="relative p-8 overflow-hidden transition-all duration-300 border group bg-surfaceLight dark:bg-surfaceDark rounded-2xl border-borderLight dark:border-borderDark hover:shadow-2xl hover:-translate-y-2"
               >
                 {/* Gradient Accent on Hover */}
                 <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${item.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
@@ -122,12 +209,18 @@ const ImplementationExcellence = () => {
       </section>
 
       {/* SECTION 3: BUSINESS PROCESS RE-ENGINEERING - Timeline Design */}
-      <section className="py-24 bg-gradient-to-b from-surfaceLight to-bgLight dark:from-surfaceDark dark:to-bgDark">
+      {/* <section className="py-14 md:py-20 bg-surfaceLight dark:bg-surfaceDark">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="grid items-start gap-16 lg:grid-cols-5">
-            {/* Left Side - Sticky Header */}
+
+          <img 
+                src="https://pixabay.com/get/g1762ef4b6190a0a214a8dcdcb0157719a9aba6c4edb38a52c368fe27e98bf19ffe46c18bad6e57f785a07fc30a6e2bb95950822344ef794cef1db2e1159ce062_1280.jpg" 
+                alt="Business Process Re-engineering" 
+                className="rounded-2xl shadow-2xl w-full object-cover h-[500px]"
+              />
+           
             <div className="lg:col-span-2 lg:sticky lg:top-24">
-              <h2 className="mb-6 text-4xl font-black font-heading md:text-5xl">
+              <h2 className="mb-6 text-3xl font-black font-heading md:text-4xl">
                 Business Process <span className="text-brandPrimary dark:text-brandGold">Re-engineering</span>
               </h2>
               <p className="mb-8 text-lg leading-relaxed opacity-70">
@@ -142,9 +235,9 @@ const ImplementationExcellence = () => {
               </div>
             </div>
 
-            {/* Right Side - Process Cards with Timeline */}
+          
             <div className="relative space-y-8 lg:col-span-3">
-              {/* Timeline Line */}
+             
               <div className="absolute left-0 w-1 h-full bg-gradient-to-b from-brandGold via-brandPrimary to-brandGold dark:from-brandGold dark:via-brandGold dark:to-brandGold"></div>
               
               {[
@@ -170,28 +263,71 @@ const ImplementationExcellence = () => {
                 }
               ].map((item, index) => (
                 <div key={index} className="relative pl-12 group">
-                  {/* Timeline Dot */}
+                 
                   <div className="absolute left-0 flex items-center justify-center w-8 h-8 transition-transform duration-300 transform -translate-x-3.5 bg-brandGold rounded-full group-hover:scale-125">
                     <div className="w-3 h-3 bg-white rounded-full dark:bg-brandDark"></div>
                   </div>
                   
-                  {/* Card Content */}
-                  <div className="p-6 transition-all duration-300 border bg-bgLight dark:bg-bgDark rounded-xl border-borderLight dark:border-borderDark group-hover:shadow-xl group-hover:border-brandGold">
+                
+                  <div className="p-6 transition-all duration-300 border bg-surfaceLight dark:bg-surfaceDark rounded-xl border-borderLight dark:border-borderDark group-hover:shadow-xl group-hover:border-brandGold">
                     <div className="flex items-start justify-between mb-3">
                       <h4 className="text-xl font-bold text-brandPrimary dark:text-brandGold">{item.title}</h4>
                       <span className="text-4xl font-black opacity-10">{item.number}</span>
                     </div>
-                    <p className="leading-relaxed opacity-70">{item.desc}</p>
+                    <p className="leading-relaxed opacity-70 text-brandNavy dark:text-white/70">{item.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
+      </section> */}
+
+
+       <section className="relative overflow-hidden bg-surfaceLight dark:bg-surfaceDark py-14 md:py-20">
+        <div className="container">
+          <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-20">
+            <div className="order-2 lg:w-1/2 lg:order-1">
+              <img 
+                src="https://pixabay.com/get/g1762ef4b6190a0a214a8dcdcb0157719a9aba6c4edb38a52c368fe27e98bf19ffe46c18bad6e57f785a07fc30a6e2bb95950822344ef794cef1db2e1159ce062_1280.jpg" 
+                alt="Business Process Re-engineering" 
+                className="rounded-2xl shadow-2xl w-full object-cover h-[500px]"
+              />
+            </div>
+            <div className="order-1 lg:w-1/2 lg:order-2">
+              <div className="inline-block px-4 py-1 mb-4 text-sm font-semibold rounded-full bg-brandLight text-brandPrimary">
+                Efficiency First
+              </div>
+              <h2 className="mb-6 text-2xl md:text-3xl text-brandDark dark:text-brandAccent">Business Process Re-engineering</h2>
+              <p className="mb-8 text-lg text-brandNavy dark:text-white/70">
+                Redesign core workflows to eliminate bottlenecks and maximize the efficiency of your digital operations.
+              </p>
+
+              <div className="space-y-6">
+                {[
+                  { title: "AS-IS/TO-BE Workflows", desc: "Map current state processes and design optimized future-state models to drive significant operational improvements." },
+                  { title: "Simplification & Automation", desc: "Develop targeted plans for process digitization and automation to reduce manual effort and enhance overall output." },
+                  { title: "Root Cause Analysis", desc: "Identify and resolve structural bottlenecks through deep-dive analysis to ensure streamlined and frictionless business operations." },
+                  { title: "Process Documentation", desc: "Create detailed SOPs and swim lane diagrams to provide clear, standardized guidance for every stakeholder involved." }
+                ].map((item, idx) => (
+                  <div key={idx} className="flex gap-4">
+                    <div className="mt-1">
+                      <CheckCircle className="w-6 h-6 text-brandAccent" />
+                    </div>
+                    <div>
+                      <h3 className="mb-1 text-lg font-bold">{item.title}</h3>
+                      <p className="text-sm text-brandNavy dark:text-white/70">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* SECTION 4: BRD & SOLUTION DESIGN - Bento Box Layout */}
-      <section className="py-24 bg-white dark:bg-brandNavy">
+      {/* <section className="py-24 bg-white dark:bg-brandNavy">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-4xl font-black font-heading md:text-5xl">
@@ -203,7 +339,6 @@ const ImplementationExcellence = () => {
           </div>
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {/* Large Featured Card */}
             <div className="relative p-10 overflow-hidden border md:col-span-2 lg:row-span-2 bg-gradient-to-br from-brandPrimary/10 to-brandGold/10 dark:from-brandGold/10 dark:to-brandPrimary/5 rounded-3xl border-borderLight dark:border-borderDark">
               <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-brandGold/10 blur-3xl"></div>
               <div className="relative">
@@ -236,7 +371,7 @@ const ImplementationExcellence = () => {
               </div>
             </div>
 
-            {/* Stakeholder Walkthroughs Card */}
+          
             <div className="relative p-8 overflow-hidden transition-all duration-300 border group bg-bgLight dark:bg-bgDark rounded-3xl border-borderLight dark:border-borderDark hover:border-brandGold">
               <div className="mb-4 text-5xl">👥</div>
               <h3 className="mb-4 text-2xl font-bold text-brandPrimary dark:text-brandGold">
@@ -248,7 +383,7 @@ const ImplementationExcellence = () => {
               <div className="absolute bottom-0 right-0 w-24 h-24 transition-transform duration-300 transform rounded-tl-full bg-brandGold/5 group-hover:scale-110"></div>
             </div>
 
-            {/* Stats Card */}
+           
             <div className="relative p-8 overflow-hidden text-white border bg-gradient-to-br from-brandPrimary to-brandNavy dark:from-brandGold dark:to-brandAccent rounded-3xl border-brandPrimary dark:border-brandGold">
               <div className="mb-6">
                 <div className="text-5xl font-black">150+</div>
@@ -262,11 +397,11 @@ const ImplementationExcellence = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* SECTION 5: BRD FINALIZATION APPROACH - Horizontal Flow */}
-      <section className="relative py-24 overflow-hidden text-white bg-gradient-to-br from-brandNavy via-brandPrimary to-brandNavy dark:from-brandDark dark:via-brandNavy dark:to-brandDark">
-        {/* Decorative Grid Background */}
+      {/* <section className="relative py-24 overflow-hidden text-white bg-gradient-to-br from-brandNavy via-brandPrimary to-brandNavy dark:from-brandDark dark:via-brandNavy dark:to-brandDark">
+      
         <div className="absolute inset-0 opacity-10" style={{backgroundImage: 'linear-gradient(rgba(255,215,0,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,215,0,0.1) 1px, transparent 1px)', backgroundSize: '50px 50px'}}></div>
         
         <div className="container relative z-10 px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
@@ -282,9 +417,9 @@ const ImplementationExcellence = () => {
             </p>
           </div>
           
-          {/* Horizontal Step Flow */}
+         
           <div className="relative">
-            {/* Connection Line */}
+          
             <div className="absolute left-0 right-0 hidden h-1 top-12 bg-gradient-to-r from-transparent via-brandGold to-transparent lg:block"></div>
             
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
@@ -316,14 +451,14 @@ const ImplementationExcellence = () => {
                 }
               ].map((item, index) => (
                 <div key={index} className="relative group">
-                  {/* Step Number Badge */}
+                 
                   <div className="relative z-10 flex items-center justify-center w-24 h-24 mx-auto mb-6 transition-all duration-300 transform rounded-full bg-gradient-to-br from-brandGold to-brandAccent group-hover:scale-110 group-hover:shadow-2xl">
                     <div className="flex flex-col items-center">
                       <span className="text-3xl">{item.icon}</span>
                     </div>
                   </div>
                   
-                  {/* Step Content */}
+                 
                   <div className="p-6 text-center transition-all duration-300 border rounded-2xl bg-white/5 backdrop-blur-sm border-brandGold/20 group-hover:bg-white/10 group-hover:border-brandGold">
                     <div className="mb-2 text-sm font-bold tracking-wider uppercase opacity-60">
                       Step {index + 1}
@@ -340,13 +475,49 @@ const ImplementationExcellence = () => {
             </div>
           </div>
         </div>
+      </section> */}
+
+
+       <section className="py-14 md:py-20 bg-surfaceLight dark:bg-surfaceDark">
+        <div className="container">
+          <div className="flex flex-col items-center gap-12 lg:flex-row-reverse lg:gap-20">
+            <div className="lg:w-1/2">
+              <img 
+                src="https://pixabay.com/get/g88a3f8ebc519c253c7a478e83cc061252fcf99780691be9059cc8e31faa3907fafd2e5eb1fcd10108bb969ed64b84bfb983f49ded1d8c12220b6757b1e9bede8_1280.jpg" 
+                alt="BRD & Solution Design" 
+                className="rounded-2xl shadow-2xl w-full object-cover h-[500px]"
+              />
+            </div>
+            <div className="lg:w-1/2">
+              <h2 className="mb-6 text-3xl md:text-4xl">BRD & Solution Design</h2>
+              <p className="mb-8 text-lg text-brandNavy dark:text-white/70">
+                Bridge the gap between business needs and technical execution through structured requirements and validation.
+              </p>
+
+              <div className="grid gap-6 sm:grid-cols-2">
+                {[
+                  { title: "Functional Documentation", desc: "Draft structured requirements covering both functional and non-functional needs." },
+                  { title: "Readiness Checkpoints", desc: "Execute business readiness checkpoints to confirm organization preparedness." },
+                  { title: "Stakeholder Walkthroughs", desc: "Conduct validation walkthroughs with key stakeholders to ensure alignment." },
+                  { title: "Traceability & Change Logs", desc: "Maintain comprehensive traceability matrices and change logs." }
+                ].map((item, idx) => (
+                  <div key={idx} className="p-6 border shadow-sm rounded-lig border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark">
+                    <FileText className="w-6 h-6 mb-3 text-brandPrimary dark:text-brandAccent" />
+                    <h3 className="mb-2 text-lg font-bold">{item.title}</h3>
+                    <p className="text-sm text-brandPrimary dark:text-white/70">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* SECTION 6: DATA MANAGEMENT & MIGRATION - Phase Cards */}
-      <section className="py-24 bg-gradient-to-b from-bgLight to-surfaceLight dark:from-bgDark dark:to-surfaceDark">
+      <section className="py-24 bg-surfaceLight dark:bg-surfaceDark">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
-          <div className="mb-16">
-            <h2 className="mb-4 text-4xl font-black font-heading md:text-5xl">
+          <div className="mx-auto mb-16 text-center ">
+            <h2 className="mb-4 text-3xl font-black font-heading md:text-4xl">
               Data Management & <span className="text-brandPrimary dark:text-brandGold">Migration</span>
             </h2>
             <p className="max-w-2xl text-lg opacity-70">
@@ -387,7 +558,7 @@ const ImplementationExcellence = () => {
             ].map((item, index) => (
               <div 
                 key={index} 
-                className="relative overflow-hidden transition-all duration-300 border group bg-bgLight dark:bg-bgDark rounded-2xl border-borderLight dark:border-borderDark hover:shadow-2xl hover:-translate-y-2"
+                className="relative overflow-hidden transition-all duration-300 border group bg-surfaceLight dark:bg-surfaceDark rounded-2xl border-borderLight dark:border-borderDark hover:shadow-2xl hover:-translate-y-2"
               >
                 {/* Gradient Top Bar */}
                 <div className={`h-2 bg-gradient-to-r ${item.color}`}></div>
@@ -420,7 +591,7 @@ const ImplementationExcellence = () => {
       </section>
 
       {/* SECTION 7: MASTER DATA MIGRATION APPROACH - Accordion Steps */}
-      <section className="py-24 bg-white dark:bg-brandNavy">
+      {/* <section className="py-24 bg-white dark:bg-brandNavy">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="mb-16 text-center">
             <div className="inline-block px-6 py-2 mb-4 text-sm font-bold tracking-wider uppercase border-2 rounded-full border-brandPrimary dark:border-brandGold text-brandPrimary dark:text-brandGold">
@@ -484,12 +655,12 @@ const ImplementationExcellence = () => {
                 className="relative overflow-hidden transition-all duration-300 border group bg-bgLight dark:bg-bgDark rounded-2xl border-borderLight dark:border-borderDark hover:border-brandGold hover:shadow-xl"
               >
                 <div className="flex flex-col gap-4 p-6 md:flex-row md:items-center">
-                  {/* Step Number */}
+                 
                   <div className="flex items-center justify-center flex-shrink-0 w-16 h-16 text-2xl font-black text-white transition-all duration-300 rounded-full bg-gradient-to-br from-brandPrimary to-brandGold dark:from-brandGold dark:to-brandAccent group-hover:scale-110">
                     {item.step}
                   </div>
                   
-                  {/* Content */}
+                 
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
                       <span className="text-2xl">{item.icon}</span>
@@ -505,7 +676,7 @@ const ImplementationExcellence = () => {
                     </div>
                   </div>
 
-                  {/* Arrow Indicator */}
+                
                   <div className="flex-shrink-0 hidden transition-transform duration-300 md:block group-hover:translate-x-2">
                     <svg className="w-8 h-8 text-brandGold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -513,13 +684,13 @@ const ImplementationExcellence = () => {
                   </div>
                 </div>
                 
-                {/* Progress Line */}
+             
                 <div className="absolute bottom-0 left-0 w-0 h-1 transition-all duration-500 bg-gradient-to-r from-brandPrimary to-brandGold dark:from-brandGold dark:to-brandAccent group-hover:w-full"></div>
               </div>
             ))}
           </div>
 
-          {/* Bottom CTA */}
+        
           <div className="mt-16 text-center">
             <div className="inline-flex items-center gap-4 p-6 border bg-gradient-to-r from-brandGold/5 to-brandPrimary/5 dark:from-brandGold/10 dark:to-brandPrimary/5 rounded-2xl border-brandGold/20">
               <div className="text-4xl">📊</div>
@@ -530,13 +701,67 @@ const ImplementationExcellence = () => {
             </div>
           </div>
         </div>
+      </section> */}
+
+      <section className="bg-surfaceLight dark:bg-surfaceDark py-14 md:py-20">
+        <div className="container">
+          <div className="grid gap-16 lg:grid-cols-2">
+            {/* BRD Finalization Approach */}
+            <div>
+              <h3 className="inline-block pb-2 mb-6 text-2xl font-bold border-b-2 text-brandPrimary dark:text-brandAccent border-brandAccent">BRD Finalization Approach</h3>
+              <p className="mb-8 text-brandNavy dark:text-white/70">We ensure every RiskMan implementation starts with a well‑defined and fully approved Business Requirements Document (BRD) that aligns all stakeholders.</p>
+              
+              <div className="relative pl-8 space-y-6 border-l-2 border-gray-200">
+                {[
+                  { title: "Objective", desc: "Defines the project purpose, highlights key business problems, stakeholders, and measurable benefits." },
+                  { title: "Scope Finalization", desc: "Clarifies what functionality is included or excluded in the project, minimizing ambiguity." },
+                  { title: "As‑Is and To‑Be Process Flow", desc: "Documents current workflows and visualizes improved future‑state processes." },
+                  { title: "Functional / Non‑Functional Requirements", desc: "Lists detailed system features and business rules, along with performance expectations." },
+                  { title: "Committee Discussion and Sign‑Off", desc: "Facilitates review with governance bodies and captures formal approval." }
+                ].map((item, idx) => (
+                  <div key={idx} className="relative">
+                    <div className="absolute -left-[41px] top-0 w-6 h-6 rounded-full bg-brandAccent flex items-center justify-center text-brandDark font-bold text-xs">
+                      {idx + 1}
+                    </div>
+                    <h4 className="mb-1 text-lg font-bold">{item.title}</h4>
+                    <p className="text-sm text-brandNavy dark:text-white/70">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Master Data Migration Approach */}
+            <div>
+              <h3 className="inline-block pb-2 mb-6 text-2xl font-bold border-b-2 text-brandPrimary dark:text-brandAccent border-brandAccent">Master Data Migration Approach</h3>
+              <p className="mb-8 text-brandPrimary dark:text-white/70">We follow a structured, governed methodology to migrate legacy data into RiskMan with accuracy, integrity, and traceability.</p>
+              
+              <div className="relative pl-8 space-y-6 border-l-2 border-gray-200">
+                {[
+                  { title: "Data Profiling and Cleansing", desc: "Involves analyzing raw data to correct inconsistencies, duplicates, and formatting issues." },
+                  { title: "Mapping Legacy Fields to New Structure", desc: "Converts old data fields to the new model using robust transformation logic." },
+                  { title: "Master Data Approval and Sign‑Off", desc: "Includes final validation by designated owners and formal approval of data readiness." },
+                  { title: "Data Upload to New System", desc: "Shares the approved database with the technical team for secure upload." },
+                  { title: "Validation and Reconciliation", desc: "Compares migrated data with source records to confirm completeness and accuracy." },
+                  { title: "Post‑Migration Support", desc: "Provides a window to handle exceptions, refine rules, and stabilize data in the live system." }
+                ].map((item, idx) => (
+                  <div key={idx} className="relative">
+                    <div className="absolute -left-[41px] top-0 w-6 h-6 rounded-full bg-brandAccent flex items-center justify-center text-white font-bold text-xs">
+                      {idx + 1}
+                    </div>
+                    <h4 className="mb-1 text-lg font-bold">{item.title}</h4>
+                    <p className="text-sm text-brandNavy dark:text-white/70">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
-      {/* CTA SECTION - Modern Design */}
-      <section className="py-24 bg-gradient-to-br from-surfaceLight via-bgLight to-surfaceLight dark:from-surfaceDark dark:via-bgDark dark:to-surfaceDark">
+      {/* <section className="py-24 bg-gradient-to-br from-surfaceLight via-bgLight to-surfaceLight dark:from-surfaceDark dark:via-bgDark dark:to-surfaceDark">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="relative overflow-hidden border shadow-2xl bg-gradient-to-br from-brandPrimary to-brandNavy dark:from-brandGold dark:to-brandAccent rounded-3xl border-brandPrimary dark:border-brandGold">
-            {/* Decorative Elements */}
+            
             <div className="absolute top-0 right-0 rounded-full w-96 h-96 bg-white/5 blur-3xl"></div>
             <div className="absolute bottom-0 left-0 rounded-full w-80 h-80 bg-white/5 blur-3xl"></div>
             
@@ -563,7 +788,7 @@ const ImplementationExcellence = () => {
                 </button>
               </div>
 
-              {/* Trust Badges */}
+           
               <div className="grid grid-cols-3 gap-8 pt-12 mt-12 border-t border-white/20">
                 <div>
                   <div className="mb-2 text-4xl font-black">500+</div>
@@ -581,10 +806,10 @@ const ImplementationExcellence = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* SECTION 8: FAQ SECTION - Modern Accordion Style */}
-      <section className="py-24 bg-white dark:bg-brandNavy">
+      <section className="py-24 bg-white dark:bg-brandDark">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-4xl font-black font-heading md:text-5xl">
@@ -595,7 +820,7 @@ const ImplementationExcellence = () => {
             </p>
           </div>
           
-          <div className="max-w-4xl mx-auto space-y-4">
+          {/* <div className="max-w-4xl mx-auto space-y-4">
             {[
               { 
                 q: "What does process re-engineering include?", 
@@ -639,7 +864,82 @@ const ImplementationExcellence = () => {
                 </div>
               </div>
             ))}
+          </div> */}
+
+          <div className="max-w-4xl mx-auto space-y-4">
+  {[
+    { 
+      q: "What does process re-engineering include?", 
+      a: "It covers digitization, automation plans, and bottleneck identification via root cause analysis.",
+      icon: "🔄"
+    },
+    { 
+      q: "How is data migration secured?", 
+      a: "Through end-to-end lifecycle planning and rigorous cleansing and validation frameworks.",
+      icon: "🔒"
+    },
+    { 
+      q: "What is field-level mapping?", 
+      a: "It is the transformation logic that ensures data fields align correctly between old and new systems.",
+      icon: "🗺️"
+    },
+    { 
+      q: "How do we handle scope changes?", 
+      a: "We maintain a traceability matrix and detailed change logs to monitor all modifications.",
+      icon: "📋"
+    }
+  ].map((faq, index) => {
+    const isOpen = openIndex === index;
+
+    return (
+      <div
+        key={index}
+        className="transition-all duration-300 border bg-bgLight dark:bg-surfaceDark rounded-2xl border-borderLight dark:border-borderDark hover:border-brandGold"
+      >
+        {/* QUESTION */}
+        <button
+          onClick={() => setOpenIndex(isOpen ? null : index)}
+          className="flex items-start w-full gap-4 p-6 text-left"
+        >
+          <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-full bg-brandGold/10">
+            <span className="text-2xl">{faq.icon}</span>
           </div>
+
+          <div className="flex-1">
+            <h4 className="text-lg font-bold text-brandPrimary dark:text-brandGold">
+              {faq.q}
+            </h4>
+          </div>
+
+          {/* ARROW */}
+          <ChevronDown
+            className={`mt-1 transition-transform duration-300 ${
+              isOpen ? "rotate-180 text-brandGold" : "text-gray-400"
+            }`}
+          />
+        </button>
+
+        {/* ANSWER */}
+        <AnimatePresence initial={false}>
+          {isOpen && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="overflow-hidden"
+            >
+              <p className="px-6 pb-6 leading-relaxed opacity-70">
+                {faq.a}
+              </p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    );
+  })}
+</div>
+
 
           {/* Additional Help CTA */}
           <div className="max-w-4xl p-8 mx-auto mt-12 text-center border bg-gradient-to-r from-brandGold/5 to-brandPrimary/5 dark:from-brandGold/10 dark:to-brandPrimary/5 rounded-2xl border-brandGold/20">
@@ -649,9 +949,9 @@ const ImplementationExcellence = () => {
             <p className="mb-6 opacity-70">
               Our team is here to help you with any queries about implementation excellence
             </p>
-            <button className="px-8 py-3 font-bold transition-all duration-300 transform border-2 rounded-full border-brandPrimary dark:border-brandGold text-brandPrimary dark:text-brandGold hover:bg-brandPrimary hover:text-white dark:hover:bg-brandGold dark:hover:text-brandDark hover:scale-105">
+            <Link to="/contact" className="px-8 py-3 font-bold transition-all duration-300 transform border-2 rounded-full border-brandPrimary dark:border-brandGold text-brandPrimary dark:text-brandGold hover:bg-brandPrimary hover:text-white dark:hover:bg-brandGold dark:hover:text-brandDark hover:scale-105">
               Contact Support Team
-            </button>
+            </Link>
           </div>
         </div>
       </section>

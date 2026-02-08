@@ -496,12 +496,12 @@ export default function AlliancePartnersSection() {
 
         {/* Services Ribbon */}
         <div className="relative mt-20 h-28">
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[120vw] h-20 bg-gradient-to-r from-brandAccent to-brandGold rotate-[-2deg] flex items-center overflow-hidden shadow-2xl">
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[120vw] h-20 bg-brandDark/10 dark:bg-brandAccent/60 rotate-[-2deg] flex items-center overflow-hidden shadow-2xl">
             <div className="flex whitespace-nowrap animate-scroll">
               {[...Array(4)].map((_, i) => (
                 <div key={i} className="flex gap-12 px-8">
                   {servicesRibbon.map((s, idx) => (
-                    <span key={idx} className="text-xl font-black uppercase text-brandDark">
+                    <span key={idx} className="text-xl font-black uppercase text-brandDark dark:text-white/70">
                       {s} •
                     </span>
                   ))}

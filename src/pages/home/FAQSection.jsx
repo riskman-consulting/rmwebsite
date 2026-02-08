@@ -46,16 +46,11 @@ const FAQSection = () => {
            
  
             <h2 className="mb-6 text-xl font-black leading-tight md:text-2xl text-brandDark dark:text-white">
-              Frequently
-              <br />
-              Asked
-              <br />
-              Questions
+              Frequently Asked Questions
             </h2>
  
             <p className="max-w-md text-lg leading-relaxed text-brandNavy dark:text-white/70">
-              Discover how RiskMan's "Propreneurial" approach transforms regulatory
-              complexities into strategic opportunities for your organization.
+              Discover how RiskMan's "Propreneurial" (Professionals with an entrepreneurial) approach transforms regulatory complexities into strategic opportunities for your organization.
             </p>
           </div>
  

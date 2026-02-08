@@ -9,7 +9,7 @@ import IndustriesTemplate from './templates/IndustriesTemplate'
 import ServicesTemplate from './templates/ServiceTemplate'
 import Contact from './pages/contact/Contact'
 import About from './pages/about/About'
-import Careers from './pages/about/Careers'
+import Careers from './pages/careers';
 import Footer from './components/layout/Footer'
 import BlogList from './pages/blogs/BlogList'
 import BlogTemplate from './templates/BlogTemplate'
@@ -100,6 +100,8 @@ import EventCompanyJourney from "./pages/events/CompanyTimelineSection"
 import EventMedia from './pages/events/media-coverage'
 import EventPastEvent from "./pages/events/past-events"
 import EventUpcomingEvent from "./pages/events/upcoming-events"
+
+import GovernancePage from "./pages/governance/Governance";
 
 
 
@@ -242,6 +244,8 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/solutions" element={<TechSolutions />} />
+
+          <Route path="/governance" element={<GovernancePage/>} />
         </Routes>
       </main>
 

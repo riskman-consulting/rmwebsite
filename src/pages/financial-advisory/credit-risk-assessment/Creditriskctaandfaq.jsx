@@ -28,9 +28,9 @@ const CreditRiskCTAandFAQ = () => {
 
   return (
     <>
-      {/* CTA Section */}
-      <section className="relative py-20 overflow-hidden text-white bg-gradient-to-br from-brandDark via-brandPrimary to-brandNavy">
-        {/* Animated Background */}
+   
+      {/* <section className="relative py-20 overflow-hidden text-white bg-gradient-to-br from-brandDark via-brandPrimary to-brandNavy">
+        
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 rounded-full left-1/4 w-96 h-96 bg-brandAccent blur-3xl animate-pulse-custom"></div>
           <div className="absolute bottom-0 rounded-full right-1/4 w-96 h-96 bg-brandGold blur-3xl animate-float"></div>
@@ -38,7 +38,7 @@ const CreditRiskCTAandFAQ = () => {
 
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Icon */}
+            
             <div className="inline-flex items-center justify-center w-20 h-20 mb-6 border rounded-full bg-brandAccent/20 backdrop-blur-sm border-brandAccent/30">
               <svg className="w-10 h-10 text-brandAccent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -53,7 +53,7 @@ const CreditRiskCTAandFAQ = () => {
               Expert credit assessment protects your bottom line from unforeseen financial defaults.
             </p>
 
-            {/* CTA Button */}
+           
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <button className="px-10 py-5 text-lg font-bold transition-all duration-300 transform rounded-lg shadow-2xl group bg-brandAccent hover:bg-brandGold text-brandDark hover:scale-105">
                 Consult Our Experts
@@ -64,7 +64,7 @@ const CreditRiskCTAandFAQ = () => {
               </button>
             </div>
 
-            {/* Trust Indicators */}
+        
             <div className="flex flex-wrap justify-center gap-8 mt-12 text-sm">
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-brandAccent" fill="currentColor" viewBox="0 0 20 20">
@@ -87,7 +87,7 @@ const CreditRiskCTAandFAQ = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
       <section className="py-20 bg-bgLight dark:bg-bgDark">
