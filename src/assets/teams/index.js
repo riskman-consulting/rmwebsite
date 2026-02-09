@@ -16,7 +16,7 @@ import MayukhDhar from "./Mayukh Dhar.webp";
 import Vipul from "./Vipul.jpg";
 import NishanAgarwal from "./Nishan Agarwal.webp";
 import Palak from "./Palak.webp";
-import Pawan from "./pawann.png";
+import Pawan from "./Pawan.png";
 import priyanshu from "./priyanshu.webp";
 import Priyanshibisht from "./priyanshibhist.webp";
 import RishbhaJain from "./Rishbha Jain.webp";
