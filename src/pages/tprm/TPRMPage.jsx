@@ -31,8 +31,8 @@ const TPRM = () => {
       <VendorOnboarding />
       <SecurityControls />
       <ContinuousMonitoring />
-      <CTASection />
       <FAQ />
+      <CTASection />
     </main>
   );
 };

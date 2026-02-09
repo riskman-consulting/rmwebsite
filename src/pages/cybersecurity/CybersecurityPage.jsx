@@ -31,8 +31,8 @@ const Cybersecurity = () => {
       <TechnicalTesting />
       <EmergingTechnology />
       <OperationalIntegrity />
+       <FAQ />
       <CTASection />
-      <FAQ />
     </main>
   );
 };

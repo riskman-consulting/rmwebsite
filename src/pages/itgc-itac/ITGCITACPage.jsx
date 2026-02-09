@@ -17,8 +17,8 @@ const ITGCITACPage = () => {
       <DataIntegritySection />
       <ChangeManagementSection />
       <BusinessContinuitySection />
+       <FAQSection />
       <CTASection />
-      <FAQSection />
     </div>
   );
 };

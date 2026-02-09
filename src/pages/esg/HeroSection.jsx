@@ -163,89 +163,198 @@
 
 // export default Hero
 
-import { Leaf, Users, Scale } from "lucide-react"
-import esgHeroImage from "../../assets/esg/esg_herosection_images.png"
+// import { Leaf, Users, Scale } from "lucide-react"
+// import esgHeroImage from "../../assets/esg/esg_herosection_images.png"
 
-const pillars = [
-  {
-    icon: Leaf,
-    title: "Environmental",
-    tags: "Climate | Resources | Biodiversity",
-    colorClass: "bg-green-600 text-white"
-  },
-  {
-    icon: Users,
-    title: "Social",
-    tags: "People | Community | Rights",
-    colorClass: "bg-blue-600 text-white"
-  },
-  {
-    icon: Scale,
-    title: "Governance",
-    tags: "Ethics | Oversight | Transparency",
-    colorClass: "bg-purple-600 text-white"
-  }
-]
+// const pillars = [
+//   {
+//     icon: Leaf,
+//     title: "Environmental",
+//     tags: "Climate | Resources | Biodiversity",
+//     colorClass: "bg-green-600 text-white"
+//   },
+//   {
+//     icon: Users,
+//     title: "Social",
+//     tags: "People | Community | Rights",
+//     colorClass: "bg-blue-600 text-white"
+//   },
+//   {
+//     icon: Scale,
+//     title: "Governance",
+//     tags: "Ethics | Oversight | Transparency",
+//     colorClass: "bg-purple-600 text-white"
+//   }
+// ]
+
+// const HeroSection = () => {
+//   return (
+//     <section className="relative w-full">
+//       {/* Hero Banner */}
+//       <div className="relative w-full min-h-[70vh] flex items-center overflow-hidden">
+//         {/* Background Image */}
+//         <img
+//           src={esgHeroImage}
+//           alt="Business professional nurturing a young plant, symbolizing sustainable growth"
+//           className="absolute inset-0 object-cover w-full h-full"
+//         />
+
+//         {/* Overlay */}
+//         <div className="absolute inset-0 bg-black/40" />
+
+//         {/* Content */}
+//         <div className="container relative z-10 max-w-4xl px-6 py-20 mx-auto md:px-12">
+//           <p className="font-body text-sm md:text-base tracking-[0.3em] uppercase mb-6 text-white/90">
+//             Advisory · Implementation · Training
+//           </p>
+
+//           <h1 className="mb-6 text-4xl font-bold leading-tight text-white font-display sm:text-5xl md:text-6xl lg:text-7xl">
+//             Sustainability
+//             <br />
+//             <span className="text-transparent bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text">
+//               &amp; ESG
+//             </span>
+//           </h1>
+
+//           <p className="max-w-xl text-lg leading-relaxed font-body md:text-xl text-white/80">
+//             Transforming Organizations for a Sustainable Future
+//           </p>
+
+//           {/* Decorative accent line */}
+//           <div className="w-24 h-1 mt-8 rounded-full bg-gradient-to-r from-green-400 to-blue-500" />
+//         </div>
+//       </div>
+
+//       {/* ESG Pillars */}
+//       <div className="container px-6 mx-auto -mt-16 md:px-12">
+//         <div className="grid max-w-5xl grid-cols-1 gap-0 mx-auto overflow-hidden shadow-lg md:grid-cols-3 rounded-xl">
+//           {pillars.map((pillar) => (
+//             <div
+//               key={pillar.title}
+//               className={`${pillar.colorClass} flex flex-col items-center justify-center py-10 px-6 text-center transition-transform duration-300 hover:scale-105 hover:z-10 cursor-pointer`}
+//             >
+//               <pillar.icon className="w-10 h-10 mb-4 opacity-90" strokeWidth={1.5} />
+//               <h3 className="mb-2 text-xl font-bold tracking-wide uppercase font-display">
+//                 {pillar.title}
+//               </h3>
+//               <p className="text-sm tracking-wide opacity-80 font-body">
+//                 {pillar.tags}
+//               </p>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   )
+// }
+
+// export default HeroSection
+
+
+
+import React from 'react';
+import bg from "../../assets/esg/esg-herosection-image.png";
+
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full">
-      {/* Hero Banner */}
-      <div className="relative w-full min-h-[70vh] flex items-center overflow-hidden">
-        {/* Background Image */}
-        <img
-          src={esgHeroImage}
-          alt="Business professional nurturing a young plant, symbolizing sustainable growth"
-          className="absolute inset-0 object-cover w-full h-full"
+    <section className="relative flex items-center justify-center min-h-screen overflow-hidden bg-[#001F3F]">
+      
+      {/* Background Image Layer */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={bg} 
+          alt="ESG Hero" 
+          className="object-cover w-full h-full"
         />
-
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40" />
-
-        {/* Content */}
-        <div className="container relative z-10 max-w-4xl px-6 py-20 mx-auto md:px-12">
-          <p className="font-body text-sm md:text-base tracking-[0.3em] uppercase mb-6 text-white/90">
-            Advisory · Implementation · Training
-          </p>
-
-          <h1 className="mb-6 text-4xl font-bold leading-tight text-white font-display sm:text-5xl md:text-6xl lg:text-7xl">
-            Sustainability
-            <br />
-            <span className="text-transparent bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text">
-              &amp; ESG
-            </span>
-          </h1>
-
-          <p className="max-w-xl text-lg leading-relaxed font-body md:text-xl text-white/80">
-            Transforming Organizations for a Sustainable Future
-          </p>
-
-          {/* Decorative accent line */}
-          <div className="w-24 h-1 mt-8 rounded-full bg-gradient-to-r from-green-400 to-blue-500" />
-        </div>
+        {/* Overlay to ensure original content is readable */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#001F3F]/90 via-[#001F3F]/70 to-[#001F3F]/95" />
       </div>
 
-      {/* ESG Pillars */}
-      <div className="container px-6 mx-auto -mt-16 md:px-12">
-        <div className="grid max-w-5xl grid-cols-1 gap-0 mx-auto overflow-hidden shadow-lg md:grid-cols-3 rounded-xl">
-          {pillars.map((pillar) => (
+      {/* Animated Background Pattern (From your original code) */}
+      <div className="absolute inset-0 opacity-[0.08] z-10">
+        <div 
+          className="w-full h-full animate-[patternMove_60s_linear_infinite]"
+          style={{
+            backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.05) 35px, rgba(255,255,255,.05) 70px)'
+          }}
+        />
+      </div>
+
+      {/* Hero Content */}
+      <div className="container relative z-20 px-5 py-20 mx-auto text-center sm:px-8 lg:px-12">
+        
+        {/* Badge (Original Content) */}
+        <div className="inline-flex items-center gap-3 bg-white/15 backdrop-blur-md border border-white/20 rounded-full px-7 py-3 mb-8 animate-[fadeSlideDown_1s_ease-out]">
+          <span className="text-xs font-semibold tracking-wider uppercase text-white/95 sm:text-sm">
+            Sustainability & ESG Excellence
+          </span>
+        </div>
+
+        {/* Primary Heading (Original Content) */}
+        <h1 className="font-heading font-extrabold text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[78px] leading-tight tracking-tight mb-6 animate-[fadeSlideUp_1s_ease-out_0.2s_both]">
+          SUSTAINABILITY & ESG
+        </h1>
+
+        {/* Subtitle (Original Content) */}
+        <p className="font-serif text-white/90 text-xl sm:text-2xl md:text-3xl lg:text-[34px] font-light italic leading-relaxed max-w-4xl mx-auto mb-5 animate-[fadeSlideUp_1s_ease-out_0.4s_both]">
+          Advisory, Implementation & Training Excellence
+        </p>
+
+        {/* Tagline (Original Content) */}
+        <p className="text-white/85 text-base sm:text-lg md:text-xl font-light leading-relaxed max-w-3xl mx-auto mb-12 animate-[fadeSlideUp_1s_ease-out_0.6s_both]">
+          Transforming Organizations for a Sustainable Future
+        </p>
+
+        {/* ESG Pillars Grid (Original Content & Icons) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto my-16 animate-[fadeSlideUp_1s_ease-out_0.8s_both]">
+          {[
+            { icon: '🌱', title: 'ENVIRONMENTAL', subtitle: 'Climate | Resources | Biodiversity' },
+            { icon: '👥', title: 'SOCIAL', subtitle: 'People | Community | Rights' },
+            { icon: '⚖️', title: 'GOVERNANCE', subtitle: 'Ethics | Oversight | Transparency' }
+          ].map((pillar, index) => (
             <div
-              key={pillar.title}
-              className={`${pillar.colorClass} flex flex-col items-center justify-center py-10 px-6 text-center transition-transform duration-300 hover:scale-105 hover:z-10 cursor-pointer`}
+              key={index}
+              className="px-6 text-center transition-all duration-500 border-2 cursor-pointer bg-white/12 backdrop-blur-md border-white/20 rounded-2xl py-9 hover:bg-white/20 hover:-translate-y-2 hover:shadow-2xl group"
             >
-              <pillar.icon className="w-10 h-10 mb-4 opacity-90" strokeWidth={1.5} />
-              <h3 className="mb-2 text-xl font-bold tracking-wide uppercase font-display">
+              <span className="block mb-4 text-5xl transition-transform group-hover:scale-110">{pillar.icon}</span>
+              <div className="mb-2 text-xl font-bold tracking-wide text-white uppercase">
                 {pillar.title}
-              </h3>
-              <p className="text-sm tracking-wide opacity-80 font-body">
-                {pillar.tags}
-              </p>
+              </div>
+              <div className="text-sm leading-relaxed text-white/80">
+                {pillar.subtitle}
+              </div>
             </div>
           ))}
         </div>
-      </div>
-    </section>
-  )
-}
 
-export default HeroSection
+        {/* Call to Action Buttons (Original Content) */}
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-5 mt-12 animate-[fadeSlideUp_1s_ease-out_1s_both]">
+          <button className="w-full sm:w-auto px-11 py-4 sm:py-[18px] bg-[#FFB800] hover:bg-[#FFC000] text-[#001F3F] font-bold text-base rounded-full transition-all duration-300 hover:-translate-y-1 shadow-lg shadow-orange-500/20">
+            Start Your ESG Journey
+          </button>
+          <button className="w-full sm:w-auto px-11 py-4 sm:py-[18px] bg-transparent hover:bg-white/15 text-white border-2 border-white/60 hover:border-white font-bold text-base rounded-full transition-all duration-300 hover:-translate-y-1">
+            Explore Our Services
+          </button>
+        </div>
+      </div>
+
+      <style jsx>{`
+        @keyframes fadeSlideDown {
+          from { opacity: 0; transform: translateY(-30px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeSlideUp {
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes patternMove {
+          0% { transform: translateX(0) translateY(0); }
+          100% { transform: translateX(70px) translateY(70px); }
+        }
+      `}</style>
+    </section>
+  );
+};
+
+export default HeroSection;

@@ -34,10 +34,11 @@ import RBIAPage from './pages/rbia/RBIAPage'
 import BCPPage from "./pages/bcp-dr/BCPPage"
 import CSAPage from "./pages/csa/CSAPage"
 
+// Digital Transformation
 import DigitalTransformation from './pages/digital/DigitalTransformationPage'
 import StrategicPMO from './pages/digital/StrategicPMO'
-import ImplementationExcellence from './pages/digital/ImplementationExcellence'
-import SupportServices from './pages/digital/SupportServices'
+import ImplementationExcellence from './pages/digital/implementation-excellence'
+import SupportServices from './pages/digital/support-services'
 
 // import ESGPage from "./pages/esg/ESGPage"
 
@@ -102,6 +103,9 @@ import EventPastEvent from "./pages/events/past-events"
 import EventUpcomingEvent from "./pages/events/upcoming-events"
 
 import GovernancePage from "./pages/governance/Governance";
+
+
+// Datatal transformation
 
 
 

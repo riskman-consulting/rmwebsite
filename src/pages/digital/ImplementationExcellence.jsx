@@ -1,111 +1,128 @@
 import React,{useState} from 'react';
-import { 
-  CheckCircle, 
-  BarChart3, 
-  Settings, 
-  Database, 
-  FileText, 
-  ArrowRight, 
-  ChevronDown, 
-  ChevronUp,
-  Users,
-  Layers,
-  Search,
-  Zap,
-  ClipboardCheck,
-  RefreshCw
+// import { 
+//   CheckCircle, 
+//   BarChart3, 
+//   Settings, 
+//   Database, 
+//   FileText, 
+//   ArrowRight, 
+//   ChevronDown, 
+//   ChevronUp,
+//   Users,
+//   Layers,
+//   Search,
+//   Zap,
+//   ClipboardCheck,
+//   RefreshCw
+// } from 'lucide-react';
+
+import {
+    FileText,
+    CheckCircle,
+    GitBranch,
+    ListChecks,
+    Users,
+    Database,
+    Filter,
+    ArrowRightLeft,
+    ShieldCheck,
+    UploadCloud,
+    SearchCheck,
+    LifeBuoy,
+    ChevronDown
 } from 'lucide-react';
+import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 import {motion,AnimatePresence} from 'framer-motion';
 
 import bg from "../../assets/images/digital/implementation.png";
+import businessImg from "../../assets/images/digital/business-process-re-engineering.jpg"
+import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
 
 
 
 
 
-const ImplementationExcellence = () => {
+    const tabs = [
+        { id: 'brd', label: 'BRD Finalization Approach', icon: FileText },
+        { id: 'migration', label: 'Master Data Migration Approach', icon: Database },
+    ];
 
-  const [openIndex, setOpenIndex] = useState(null);
+    const brdSteps = [
+        {
+            title: "Objective",
+            desc: "Defines the project purpose, highlights key business problems, stakeholders, and measurable benefits.",
+            icon: FileText
+        },
+        {
+            title: "Scope Finalization",
+            desc: "Clarifies what functionality is included or excluded in the project, minimizing ambiguity.",
+            icon: list => <Filter size={24} />
+        },
+        {
+            title: "As‑Is and To‑Be Process Flow",
+            desc: "Documents current workflows and visualizes improved future‑state processes.",
+            icon: GitBranch
+        },
+        {
+            title: "Functional / Non‑Functional Requirements",
+            desc: "Lists detailed system features and business rules, along with performance expectations.",
+            icon: ListChecks
+        },
+        {
+            title: "Committee Discussion and Sign‑Off",
+            desc: "Facilitates review with governance bodies and captures formal approval.",
+            icon: Users
+        }
+    ];
+
+    const migrationSteps = [
+        {
+            title: "Data Profiling and Cleansing",
+            desc: "Involves analyzing raw data to correct inconsistencies, duplicates, and formatting issues.",
+            icon: Filter
+        },
+        {
+            title: "Mapping Legacy Fields to New Structure",
+            desc: "Converts old data fields to the new model using robust transformation logic.",
+            icon: ArrowRightLeft
+        },
+        {
+            title: "Master Data Approval and Sign‑Off",
+            desc: "Includes final validation by designated owners and formal approval of data readiness.",
+            icon: ShieldCheck
+        },
+        {
+            title: "Data Upload to New System",
+            desc: "Shares the approved database with the technical team for secure upload.",
+            icon: UploadCloud
+        },
+        {
+            title: "Validation and Reconciliation",
+            desc: "Compares migrated data with source records to confirm completeness and accuracy.",
+            icon: SearchCheck
+        },
+        {
+            title: "Post‑Migration Support",
+            desc: "Provides a window to handle exceptions, refine rules, and stabilize data in the live system.",
+            icon: LifeBuoy
+        }
+    ];
+
+
+    
+    
+    const ImplementationExcellence = () => {
+      
+      const [openIndex, setOpenIndex] = useState(null);
+      const [activeTab, setActiveTab] = useState('brd');
+      
+      const activeSteps = activeTab === 'brd' ? brdSteps : migrationSteps;
+
   return (
     <div className="min-h-screen font-sans transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-brandLight">
       
-      {/* SECTION 1: HERO SECTION - Modern Split Design */}
-      {/* <section className="relative py-20 overflow-hidden lg:py-32 bg-gradient-to-br from-bgLight via-surfaceLight to-bgLight dark:from-bgDark dark:via-surfaceDark dark:to-bgDark">
-        
-        <div className="absolute top-0 right-0 rounded-full w-96 h-96 bg-brandGold/5 blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 rounded-full w-80 h-80 bg-brandPrimary/5 dark:bg-brandGold/5 blur-3xl"></div>
-        
-        <div className="container relative z-10 px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
-          <div className="grid items-center gap-16 lg:grid-cols-2">
-            
-            <div className="max-w-2xl">
-              <div className="inline-block px-4 py-2 mb-6 text-sm font-bold tracking-wider uppercase rounded-full bg-brandGold/10 dark:bg-brandGold/20 text-brandPrimary dark:text-brandGold">
-                Implementation Excellence
-              </div>
-              <h1 className="mb-6 text-3xl font-black leading-tight font-heading md:text-4xl lg:text-5xl">
-                Accelerating <span className="relative inline-block">
-                  <span className="relative z-10 text-brandPrimary dark:text-brandGold">Value</span>
-                  <span className="absolute left-0 w-full h-3 bottom-2 bg-brandGold/20 -z-0"></span>
-                </span> Realization
-              </h1>
-              <p className="mb-10 text-xl leading-relaxed opacity-80">
-                RiskMan delivers implementation excellence through rigorous tool optimization, process re-engineering, and structured data migration frameworks to ensure your digital transformation succeeds.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <button className="px-10 py-5 text-lg font-bold transition-all duration-300 transform rounded-lg shadow-lg bg-brandGold hover:bg-brandAccent text-brandDark hover:scale-105 hover:shadow-xl">
-                  Book a Consultation
-                </button>
-                <button className="px-10 py-5 text-lg font-bold transition-all duration-300 transform border-2 rounded-lg border-brandPrimary dark:border-brandGold text-brandPrimary dark:text-brandGold hover:bg-brandPrimary hover:text-white dark:hover:bg-brandGold dark:hover:text-brandDark hover:scale-105">
-                  Our Other Services
-                </button>
-              </div>
-            </div>
-
-            
-            <div className="relative">
-              <div className="relative overflow-hidden shadow-2xl rounded-3xl">
-                <div className="absolute inset-0 bg-gradient-to-br from-brandPrimary/10 to-brandGold/10"></div>
-                <img 
-                  src="https://www.ekaivadigital.com/images/service.jpg" 
-                  alt="Implementation Excellence - Digital Transformation" 
-                  className="relative z-10 object-cover w-full h-auto"
-                />
-              </div>
-              
-              <div className="absolute w-24 h-24 border-4 -top-6 -left-6 rounded-tl-3xl border-brandGold/30"></div>
-              <div className="absolute w-24 h-24 border-4 -bottom-6 -right-6 rounded-br-3xl border-brandPrimary/30 dark:border-brandGold/30"></div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-      {/* <section className="relative overflow-hidden text-white bg-surfaceLight dark:bg-surfaceDark">
-        <div className="absolute inset-0 z-0 bg-gradient-to-r from-brandDark to-brandDark opacity-40"></div>
-        <div className="absolute inset-0 z-0 opacity-20" style={{ backgroundImage: "url('https://www.ekaivadigital.com/images/service.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-        
-        <div className="container relative z-10 py-24 lg:py-32">
-          <div className="max-w-3xl animate-float">
-            <h1 className="mb-6 text-2xl font-bold leading-tight text-white md:text-3xl lg:text-4xl">
-              Accelerating Value Realization with <span className="text-brandAccent">Implementation Excellence</span>
-            </h1>
-            <p className="mb-10 text-lg leading-relaxed text-gray-200 md:text-xl">
-              RiskMan delivers implementation excellence through rigorous tool optimization, process re-engineering, and structured data migration frameworks to ensure your digital transformation succeeds.
-            </p>
-             <div className="flex flex-wrap gap-4">
-                <button className="px-10 py-5 text-lg font-bold transition-all duration-300 transform rounded-lg shadow-lg bg-brandGold hover:bg-brandAccent text-brandDark hover:scale-105 hover:shadow-xl">
-                  Book a Consultation
-                </button>
-                <button className="px-10 py-5 text-lg font-bold text-white transition-all duration-300 transform border-2 rounded-lg bg-brandPrimary dark:border-brandGold dark:text-brandGold hover:bg-brandPrimary hover:text-white dark:hover:bg-brandGold dark:hover:text-brandDark hover:scale-105">
-                  Our Other Services
-                </button>
-              </div>
-          </div>
-        </div>
-        
-       
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-bgLight" style={{ clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 100%)" }}></div>
-      </section> */}
+    
 
       <section
       className="relative py-24 bg-center bg-cover lg:py-36"
@@ -208,88 +225,14 @@ const ImplementationExcellence = () => {
         </div>
       </section>
 
-      {/* SECTION 3: BUSINESS PROCESS RE-ENGINEERING - Timeline Design */}
-      {/* <section className="py-14 md:py-20 bg-surfaceLight dark:bg-surfaceDark">
-        <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
-          <div className="grid items-start gap-16 lg:grid-cols-5">
-
-          <img 
-                src="https://pixabay.com/get/g1762ef4b6190a0a214a8dcdcb0157719a9aba6c4edb38a52c368fe27e98bf19ffe46c18bad6e57f785a07fc30a6e2bb95950822344ef794cef1db2e1159ce062_1280.jpg" 
-                alt="Business Process Re-engineering" 
-                className="rounded-2xl shadow-2xl w-full object-cover h-[500px]"
-              />
-           
-            <div className="lg:col-span-2 lg:sticky lg:top-24">
-              <h2 className="mb-6 text-3xl font-black font-heading md:text-4xl">
-                Business Process <span className="text-brandPrimary dark:text-brandGold">Re-engineering</span>
-              </h2>
-              <p className="mb-8 text-lg leading-relaxed opacity-70">
-                Redesign core workflows to eliminate bottlenecks and maximize the efficiency of your digital operations.
-              </p>
-              <div className="flex items-center gap-3 p-4 border-l-4 border-brandGold bg-brandGold/5">
-                <span className="text-3xl">⚡</span>
-                <div>
-                  <div className="font-bold text-brandPrimary dark:text-brandGold">Fast Implementation</div>
-                  <div className="text-sm opacity-70">Average 30% time reduction</div>
-                </div>
-              </div>
-            </div>
-
-          
-            <div className="relative space-y-8 lg:col-span-3">
-             
-              <div className="absolute left-0 w-1 h-full bg-gradient-to-b from-brandGold via-brandPrimary to-brandGold dark:from-brandGold dark:via-brandGold dark:to-brandGold"></div>
-              
-              {[
-                { 
-                  title: "AS-IS/TO-BE Workflows", 
-                  desc: "Map current state processes and design optimized future-state models to drive significant operational improvements.",
-                  number: "01"
-                },
-                { 
-                  title: "Simplification & Automation", 
-                  desc: "Develop targeted plans for process digitization and automation to reduce manual effort and enhance overall output.",
-                  number: "02"
-                },
-                { 
-                  title: "Root Cause Analysis", 
-                  desc: "Identify and resolve structural bottlenecks through deep-dive analysis to ensure streamlined and frictionless business operations.",
-                  number: "03"
-                },
-                { 
-                  title: "Process Documentation", 
-                  desc: "Create detailed SOPs and swim lane diagrams to provide clear, standardized guidance for every stakeholder involved.",
-                  number: "04"
-                }
-              ].map((item, index) => (
-                <div key={index} className="relative pl-12 group">
-                 
-                  <div className="absolute left-0 flex items-center justify-center w-8 h-8 transition-transform duration-300 transform -translate-x-3.5 bg-brandGold rounded-full group-hover:scale-125">
-                    <div className="w-3 h-3 bg-white rounded-full dark:bg-brandDark"></div>
-                  </div>
-                  
-                
-                  <div className="p-6 transition-all duration-300 border bg-surfaceLight dark:bg-surfaceDark rounded-xl border-borderLight dark:border-borderDark group-hover:shadow-xl group-hover:border-brandGold">
-                    <div className="flex items-start justify-between mb-3">
-                      <h4 className="text-xl font-bold text-brandPrimary dark:text-brandGold">{item.title}</h4>
-                      <span className="text-4xl font-black opacity-10">{item.number}</span>
-                    </div>
-                    <p className="leading-relaxed opacity-70 text-brandNavy dark:text-white/70">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section> */}
-
+     
 
        <section className="relative overflow-hidden bg-surfaceLight dark:bg-surfaceDark py-14 md:py-20">
         <div className="container">
           <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-20">
             <div className="order-2 lg:w-1/2 lg:order-1">
               <img 
-                src="https://pixabay.com/get/g1762ef4b6190a0a214a8dcdcb0157719a9aba6c4edb38a52c368fe27e98bf19ffe46c18bad6e57f785a07fc30a6e2bb95950822344ef794cef1db2e1159ce062_1280.jpg" 
+                src={businessImg}
                 alt="Business Process Re-engineering" 
                 className="rounded-2xl shadow-2xl w-full object-cover h-[500px]"
               />
@@ -483,7 +426,7 @@ const ImplementationExcellence = () => {
           <div className="flex flex-col items-center gap-12 lg:flex-row-reverse lg:gap-20">
             <div className="lg:w-1/2">
               <img 
-                src="https://pixabay.com/get/g88a3f8ebc519c253c7a478e83cc061252fcf99780691be9059cc8e31faa3907fafd2e5eb1fcd10108bb969ed64b84bfb983f49ded1d8c12220b6757b1e9bede8_1280.jpg" 
+                src={brdImg}
                 alt="BRD & Solution Design" 
                 className="rounded-2xl shadow-2xl w-full object-cover h-[500px]"
               />
@@ -703,10 +646,10 @@ const ImplementationExcellence = () => {
         </div>
       </section> */}
 
-      <section className="bg-surfaceLight dark:bg-surfaceDark py-14 md:py-20">
+      {/* <section className="bg-surfaceLight dark:bg-surfaceDark py-14 md:py-20">
         <div className="container">
           <div className="grid gap-16 lg:grid-cols-2">
-            {/* BRD Finalization Approach */}
+           
             <div>
               <h3 className="inline-block pb-2 mb-6 text-2xl font-bold border-b-2 text-brandPrimary dark:text-brandAccent border-brandAccent">BRD Finalization Approach</h3>
               <p className="mb-8 text-brandNavy dark:text-white/70">We ensure every RiskMan implementation starts with a well‑defined and fully approved Business Requirements Document (BRD) that aligns all stakeholders.</p>
@@ -730,7 +673,6 @@ const ImplementationExcellence = () => {
               </div>
             </div>
 
-            {/* Master Data Migration Approach */}
             <div>
               <h3 className="inline-block pb-2 mb-6 text-2xl font-bold border-b-2 text-brandPrimary dark:text-brandAccent border-brandAccent">Master Data Migration Approach</h3>
               <p className="mb-8 text-brandPrimary dark:text-white/70">We follow a structured, governed methodology to migrate legacy data into RiskMan with accuracy, integrity, and traceability.</p>
@@ -756,7 +698,114 @@ const ImplementationExcellence = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+ <section className="relative py-20 overflow-hidden bg-surfaceLight dark:bg-bgDark">
+            {/* Background Elements */}
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+                <div className="absolute top-[-10%] left-[-5%] w-96 h-96 bg-brandPrimary/5 rounded-full blur-3xl" />
+                <div className="absolute bottom-[-10%] right-[-5%] w-96 h-96 bg-brandAccent/5 rounded-full blur-3xl" />
+            </div>
+
+            <div className="container relative z-10 px-4 mx-auto">
+                <div className="max-w-3xl mx-auto mb-16 text-center">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white"
+                    >
+                        Implementation Methodology
+                    </motion.h2>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                        className="text-lg text-slate-600 dark:text-slate-300"
+                    >
+                        We ensure every RiskMan implementation starts with a structured, governed approach to requirements and data.
+                    </motion.p>
+                </div>
+
+                {/* Tabs */}
+                <div className="flex flex-wrap justify-center gap-4 mb-16">
+                    {tabs.map((tab) => {
+                        const Icon = tab.icon;
+                        const isActive = activeTab === tab.id;
+                        return (
+                            <button
+                                key={tab.id}
+                                onClick={() => setActiveTab(tab.id)}
+                                className={clsx(
+                                    "relative px-8 py-4 rounded-xl flex items-center gap-3 transition-all duration-300 font-semibold text-lg border-2",
+                                    isActive
+                                        ? "bg-brandPrimary border-brandPrimary text-white shadow-lg shadow-brandPrimary/25 scale-105"
+                                        : "bg-white dark:bg-surfaceDark border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:border-brandPrimary/50 hover:text-brandPrimary dark:hover:text-brandPrimary"
+                                )}
+                            >
+                                <Icon size={20} />
+                                {tab.label}
+                                {isActive && (
+                                    <motion.div
+                                        layoutId="activeTabIndicator"
+                                        className="absolute w-3 h-3 rotate-45 -translate-x-1/2 -bottom-3 left-1/2 bg-brandPrimary"
+                                    />
+                                )}
+                            </button>
+                        );
+                    })}
+                </div>
+
+                {/* Content Area */}
+                <div className="max-w-5xl mx-auto">
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={activeTab}
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: -20 }}
+                            transition={{ duration: 0.3 }}
+                            className="p-8 bg-white border shadow-xl dark:bg-surfaceDark/50 rounded-3xl md:p-12 border-slate-100 dark:border-white/5"
+                        >
+                            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                                {activeSteps.map((step, idx) => {
+                                    const Icon = step.icon;
+                                    return (
+                                        <motion.div
+                                            key={idx}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ delay: idx * 0.1 }}
+                                            className="relative group"
+                                        >
+                                            <div className="absolute inset-0 transition-transform duration-300 transform bg-slate-50 dark:bg-white/5 rounded-2xl group-hover:scale-105 group-hover:-rotate-1" />
+
+                                            <div className="relative flex flex-col h-full p-6 transition-colors bg-white border border-slate-100 dark:border-white/5 rounded-2xl dark:bg-surfaceDark hover:border-brandPrimary/30 dark:hover:border-brandAccent/30">
+                                                <div className="flex items-center justify-center w-12 h-12 mb-4 transition-transform duration-300 rounded-xl bg-brandPrimary/10 dark:bg-brandAccent/10 text-brandPrimary dark:text-brandAccent group-hover:scale-110">
+                                                    {/* Handle both component and functional icons if necessary, but here reusing standard lucide icons */}
+                                                    {typeof Icon === 'function' ? (React.isValidElement(Icon({})) ? Icon({}) : <Icon size={24} />) : <Icon size={24} />}
+                                                </div>
+
+                                                <div className="absolute text-6xl font-bold pointer-events-none select-none top-6 right-6 text-slate-100 dark:text-white/5">
+                                                    {idx + 1}
+                                                </div>
+
+                                                <h4 className="relative z-10 mb-3 text-xl font-bold text-brandDark dark:text-white">
+                                                    {step.title}
+                                                </h4>
+                                                <p className="relative z-10 flex-grow text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                                                    {step.desc}
+                                                </p>
+                                            </div>
+                                        </motion.div>
+                                    );
+                                })}
+                            </div>
+                        </motion.div>
+                    </AnimatePresence>
+                </div>
+            </div>
+        </section>
 
       {/* <section className="py-24 bg-gradient-to-br from-surfaceLight via-bgLight to-surfaceLight dark:from-surfaceDark dark:via-bgDark dark:to-surfaceDark">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
