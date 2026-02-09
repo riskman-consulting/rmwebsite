@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import bg from "../../assets/images/csa/hero.png"
 
 export default function HeroSection() {
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative min-h-screen px-4 overflow-hidden">
       {/* Background with Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800">
         <div className="absolute top-0 right-0 rounded-full w-96 h-96 bg-yellow-500/10 blur-3xl animate-pulse"></div>
@@ -62,12 +63,7 @@ export default function HeroSection() {
                 <h1 className="mb-3 text-3xl font-bold tracking-tight text-transparent md:text-4xl lg:text-5xl bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text">
                   Control Self-Assessment
                 </h1>
-                <div className="flex items-center justify-center gap-4 mb-6 lg:justify-start">
-                  <div className="w-12 h-px bg-gradient-to-r from-yellow-500 to-transparent"></div>
-                  <h2 className="text-3xl font-bold text-yellow-500 md:text-4xl">
-                    (CSA)
-                  </h2>
-                </div>
+                
               </div>
 
               {/* Subtitle */}
@@ -149,7 +145,7 @@ export default function HeroSection() {
               <div className="relative h-96 lg:h-full min-h-[500px] rounded-3xl overflow-hidden shadow-2xl group">
                 {/* Professional Image */}
                 <img 
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=800&fit=crop" 
+                  src={bg}
                   alt="Control Self-Assessment - Risk Management"
                   className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                 />

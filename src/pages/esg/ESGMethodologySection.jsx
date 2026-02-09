@@ -56,7 +56,7 @@ const ESGStakeholderEcosystem = () => {
     <section className="py-20 lg:py-32 bg-[#F5F5F5] dark:bg-[#001F3F] overflow-hidden">
       <div className="container px-4 mx-auto">
         <div className="mb-16 text-center">
-          <h3 className="mb-6 text-4xl lg:text-5xl font-black text-[#001F3F] dark:text-white uppercase tracking-tight">
+          <h3 className="mb-6 text-4xl lg:text-5xl  font-black text-[#001F3F] dark:text-white uppercase tracking-tight">
             Stakeholder Ecosystem
           </h3>
           <div className="h-1.5 w-24 bg-[#FFB800] mx-auto rounded-full" />

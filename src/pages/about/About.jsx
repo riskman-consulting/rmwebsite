@@ -3,40 +3,24 @@ import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
-// import AboutHero from "./AboutHero";
+// Section Imports
 import IntroSection from "./IntroSection";
-import TributeSection from "./TributeSection";
-import FeatureSection from "./FeaturesSection";
 import MissionVisionSection from "./MissionVisionSection";
 import LeadershipSection from "./LeadershipSection";
 import ServiceLeadersSection from "./ServiceLeadersSection";
-import TestimonialSimple from "./TestimonialSimple";
-import TestimonialsSection from "./TestimonialsSection";
 import MarqueeClientsSection from "./MarqueClientsSection";
 import AlliancePartnersSection from "./AlllianceSections";
 import TeamMembersSection from "./TeamMembersSection";
-import Events from "./Events";
-import FAQSection from "./FAQSection";
+import WhyRiskman from "./WhyRiskMan";
 import CTASection from "./CTASection";
 import LeadershipModal from "./LeadershipModal";
-import Testimonials from "./Testimonials";
-import { JourneyTimeline } from "./JourneyTimeline";
 import SingleSlide from "./SingleSlide";
-import WhyRiskman from "./WhyRiskMan";
-
-/* =======================
-   ANIMATIONS
-======================= */
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
-};
 
 export default function About() {
   const [selectedLeader, setSelectedLeader] = useState(null);
   const location = useLocation();
 
+  // Handle Smooth Scrolling with Offset
   useEffect(() => {
     if (location.hash) {
       const id = location.hash.replace("#", "");
@@ -44,68 +28,56 @@ export default function About() {
 
       if (element) {
         setTimeout(() => {
-          element.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }, 200);
+          const yOffset = -20; // Extra breathing room
+          const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }, 100);
       }
     }
   }, [location]);
 
+  // REUSABLE ANCHOR: Invisible div used for tracking IDs
+  const ScrollAnchor = ({ id }) => (
+    <div id={id} className="relative scroll-mb-40" aria-hidden="true" />
+  );
+
   return (
     <>
-      {/* =========================
-          SEO META TAGS
-      ========================== */}
       <Helmet>
         <title>About RiskMan Consulting | Meet the Team</title>
-        <meta
-          name="description"
-          content="Partner with RiskMan Consulting’s propreneurs. We provide customized Risk Assurance and Advisory, Digital Transformation, ESG, Financial Advisory, AI and Technology, Forensics and Investigation and IT Risk Management services for global enterprises."
-        />
-
-         <link rel="canonical" href="https://www.riskman.in/about" />
+        <meta name="description" content="Partner with RiskMan Consulting’s propreneurs..." />
+        <link rel="canonical" href="https://www.riskman.in/about" />
       </Helmet>
 
       <div className="min-h-screen overflow-x-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-white">
-        {/* ================= HERO ================= */}
-        {/* <AboutHero /> */}
+        
+        {/* HERO SECTION */}
         <SingleSlide />
 
-        {/* ================= INTRODUCTION ================= */}
+        {/* 1. INTRODUCTION */}
+        <ScrollAnchor id="introduction" />
         <IntroSection />
 
-        {/* ================= TRIBUTE ================= */}
-        {/* <TributeSection /> */}
-
-        {/* ================= MISSION & VISION ================= */}
+        {/* 2. VISION & MISSION */}
+        <ScrollAnchor id="mission-vision" />
         <MissionVisionSection />
 
-        {/* ================= LEADERSHIP ================= */}
+        {/* 3. CO-FOUNDERS (Leadership) */}
+        <ScrollAnchor id="co-founders" />
         <LeadershipSection setSelectedLeader={setSelectedLeader} />
 
-        {/* ================= SERVICE LEADERS ================= */}
+        {/* 4. RISKMAN TEAMS (Service Leaders) */}
         <ServiceLeadersSection setSelectedLeader={setSelectedLeader} />
 
-        {/* ================= MARQUEE CLIENTS ================= */}
+        {/* OTHER SECTIONS */}
         <MarqueeClientsSection />
-
-        {/* ================= ALLIANCE PARTNERS ================= */}
         <AlliancePartnersSection />
-
-        {/* ================= TEAM MEMBERS ================= */}
+        <ScrollAnchor id="riskman-teams" />
         <TeamMembersSection />
-
-        {/* ================= FAQ ================= */}
-        {/* <FAQSection /> */}
-
         <WhyRiskman />
-
-        {/* ================= CTA ================= */}
         <CTASection />
 
-        {/* ================= LEADER MODAL ================= */}
+        {/* LEADERSHIP MODAL */}
         <LeadershipModal
           leader={selectedLeader}
           onClose={() => setSelectedLeader(null)}

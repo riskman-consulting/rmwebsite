@@ -67,16 +67,17 @@ function ESGPage() {
       <StrategicImperative />
 
       {/* ESG Evolution Timeline */}
-      <ESGEvolutionTimeline />
+      {/* <ESGEvolutionTimeline /> */}
 
       {/* Multi-Stakeholder Imperative */}
       <MultiStakeholderImperative />
 
       {/* Interactive ESG Stakeholder Ecosystem Diagram */}
-      <ESGStakeholderEcosystem />
+      {/* <ESGStakeholderEcosystem /> */}
+      <ESGServicePortfolio />
 
       {/* Foundational ESG Frameworks (SDGs, GHG) */}
-      <FoundationalFrameworks />
+      {/* <FoundationalFrameworks /> */}
 
       {/* GHG Scope 1-2-3 Value Chain Interactive Diagram */}
       <Scope123ValueChain />
@@ -91,7 +92,7 @@ function ESGPage() {
       <ESGValueCreation />
 
       {/* Service Portfolio Architecture */}
-      <ESGServicePortfolio />
+      
 
       {/* Detailed Service Offerings */}
       <ServiceDetails />
@@ -103,3 +104,4 @@ function ESGPage() {
 }
 
 export default ESGPage;
+

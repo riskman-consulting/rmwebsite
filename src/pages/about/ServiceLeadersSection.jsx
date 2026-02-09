@@ -72,9 +72,9 @@ const SERVICE_LEADERS = [
   {
     name: "Pranshul Agarwal",
     location: "",
-    title: "Manager",
+    title: "Client Leads",
     location: "Delhi, India",
-    credentials: "CIA, CISA Qualied with 6+ Years of Experience",
+    credentials: "CIA, CISA Qualified with 6+ Years of Experience",
     bio: "Risk Advisory professional with 6+ years of experience in IFC design, internal audits, SOX testing, and risk assurance. Delivers practical, value-driven risk and control solutions across industries.",
     image: teamsImages.Pranshul,
     expertise: [
@@ -88,11 +88,11 @@ const SERVICE_LEADERS = [
     ,
     linkedin: "linkedin.com/in/pranshul-agarwal-3b707a148"
   },
-   {
+  {
     name: "Vishal Sharma",
-    title: "Risk Advisory and Assurance | Senior Consultant",
+    title: "Client Leads",
     location: "Kolkata, India",
-    credentials: "CA Inter with 7+ years",
+    credentials: "7+ years",
     bio: "Specialized in core internal audit, ERM, ICoFR, SOP & policy development, and MIS Automation through VBA",
     image: teamsImages.VishalSharma,
     expertise: [],
@@ -107,7 +107,7 @@ function LeaderCard({ leader, index, onSelect }) {
   return (
     <motion.div
       {...animations.card(index)}
-      onClick={() => onSelect?.(leader)}
+      // onClick={() => onSelect?.(leader)}
       className="p-6 border cursor-pointer rounded-2xl bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark group hover:border-brandGold hover:-translate-y-1 hover:shadow-2xl"
     >
       <div className="flex justify-center mb-6">
@@ -127,7 +127,7 @@ function LeaderCard({ leader, index, onSelect }) {
         {leader.title}
       </p>
 
-      <div className="flex  items-center justify-center gap-3 mt-3 text-sm text-gray-600">
+      <div className="flex items-center justify-center gap-3 mt-3 text-sm text-gray-600">
 
         {leader.location && (
           <div className="flex items-center gap-1">
@@ -173,22 +173,22 @@ function LeaderCard({ leader, index, onSelect }) {
 ========================= */
 export default function ServiceLeadersSection({ setSelectedLeader }) {
   return (
-    <section className="py-4 lg:py-12 bg-surfaceLight dark:bg-surfaceDark">
+    <section id="service-leaders" className="py-4 lg:py-12 bg-surfaceLight dark:bg-surfaceDark">
       <div className="px-6 mx-auto max-w-7xl lg:px-12">
 
         <motion.div {...animations.fadeInUp} className="mb-12">
-          <h2 className="text-4xl font-bold lg:text-5xl text-brandDark dark:text-white">
-            Our <span className="font-serif italic text-brandGold">Associate</span> Partners
+          <h2 className="text-3xl font-bold lg:text-4xl text-brandDark dark:text-white">
+            Our <span className="font-serif italic text-brandGold">Associate</span> Partners and  <span className="text-brandAccent">Client Leads</span>
           </h2>
         </motion.div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-16">
+        <div className="grid gap-6 mb-16 md:grid-cols-2 lg:grid-cols-4">
           {SERVICE_LEADERS.map((leader, i) => (
             <LeaderCard
               key={leader.name}
               leader={leader}
               index={i}
-              // onSelect={setSelectedLeader}
+              onSelect={setSelectedLeader}
             />
           ))}
         </div>
@@ -197,7 +197,7 @@ export default function ServiceLeadersSection({ setSelectedLeader }) {
         <motion.div {...animations.fadeInUp}>
           <div className="grid overflow-hidden border shadow-xl md:grid-cols-3 rounded-3xl border-borderLight dark:border-borderDark">
 
-            <div className="p-10 flex flex-col items-center justify-center text-center">
+            <div className="flex flex-col items-center justify-center p-10 text-center">
               <h3 className="text-6xl font-black text-brandPrimary dark:text-brandAccent">
                 <AnimatedCounter end={50} suffix="+" />
               </h3>
@@ -206,16 +206,21 @@ export default function ServiceLeadersSection({ setSelectedLeader }) {
               </p>
             </div>
 
-            <div className="p-10 flex flex-col items-center justify-center text-center">
+            <div className="flex flex-col items-center justify-center p-10 text-center">
               <h3 className="text-2xl font-bold text-brandPrimary dark:text-white">
                 Qualified Professionals
               </h3>
               <p className="text-gray-500 dark:text-gray-400">
-                Industry Certified(CA, CIA, CISA, CRMA, SCR)
+                Industry Certified
               </p>
+              
+              <p className="text-gray-500 dark:text-gray-400">
+                (CA, CIA, CISA, CRMA, SCR)
+                </p>
+              
             </div>
 
-            <div className="p-10 flex flex-col items-center justify-center text-center">
+            <div className="flex flex-col items-center justify-center p-10 text-center">
               <h3 className="text-2xl font-bold text-brandPrimary dark:text-white">
                 Industry SMEs
               </h3>

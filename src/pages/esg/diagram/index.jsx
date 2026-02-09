@@ -15,10 +15,10 @@ const CompleteDiagram = () => {
  
   return (
     <div className="flex flex-col  items-center justify-center min-h-screen p-4 md:p-8">
-      <main className="bg-white  rounded-[2rem] shadow-2xl p-6 md:p-12 w-screen max-w-4xl border border-slate-100 relative overflow-hidden">
+      <main className="bg-white dark:bg-bgDark  rounded-[2rem]  p-6 md:p-12 w-screen max-w-4xl  relative overflow-hidden">
         {/* Header Section */}
         <header className="relative z-10 mb-8 text-center">
-          <h1 className="text-3xl font-bold tracking-tight md:text-4xl text-slate-800">
+          <h1 className="text-3xl font-bold tracking-tight md:text-4xl dark:text-white text-slate-800">
             ESG Stakeholder Ecosystem
           </h1>
           <p className="mt-2 text-sm font-medium text-slate-500 md:text-base">
@@ -33,7 +33,7 @@ const CompleteDiagram = () => {
         </div>
  
         {/* Legend Section */}
-        <section className="grid grid-cols-1 gap-4 pt-8 mt-12 border-t border-slate-100 md:grid-cols-2 lg:grid-cols-3">
+        <section className="grid grid-cols-1  border-t border-slate-100 md:grid-cols-2 lg:grid-cols-3">
           {STAKEHOLDERS.map((s) => (
             <div key={`legend-${s.id}`} className="flex items-start gap-3 p-2 transition-colors rounded-lg cursor-default hover:bg-slate-50 group">
               <div

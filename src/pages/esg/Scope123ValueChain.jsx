@@ -1,193 +1,174 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 
 const Scope123ValueChain = () => {
-  const [hoveredScope, setHoveredScope] = useState(null);
-  const [hoveredSource, setHoveredSource] = useState(null);
-  const [selectedSource, setSelectedSource] = useState(null);
+  const [activeItem, setActiveItem] = useState(null);
+
+  const ghgGases = ["CO₂", "CH₄", "N₂O", "HFCs", "PFCs", "SF₆", "NF₃"];
 
   const scopeData = {
     scope1: {
-      title: "SCOPE 1",
-      subtitle: "Direct Emissions",
-      color: "#004080", // brandPrimary
-      percentage: "10%",
-      description: "Direct GHG emissions from sources owned or controlled by the organization.",
+      title: "Scope 1",
+      subtitle: "Direct Operations",
+      color: "#10b981", // Emerald-500
+      accent: "bg-emerald-500",
+      light: "bg-emerald-50",
+      border: "border-emerald-200",
+      description: "Emissions from sources you physically own or control.",
       sources: [
-        { icon: "🚗", label: "Company Fleet", desc: "Vehicles owned or operated by the company" },
-        { icon: "🏭", label: "Stationary", desc: "Boilers, furnaces, turbines on-site" },
-        { icon: "🔥", label: "On-site Fuel", desc: "Natural gas, diesel, propane combustion" },
-        { icon: "💨", label: "Fugitive", desc: "Leaks from equipment, pipelines" },
-        { icon: "⚙️", label: "Process", desc: "Chemical processing emissions" },
-        { icon: "❄️", label: "Refrigerants", desc: "HVAC and cooling system leaks" },
+        { icon: "🚗", label: "Company Fleet", desc: "Owned vehicles" },
+        { icon: "🏭", label: "On-site Facilities", desc: "Manufacturing plants" },
+        { icon: "🔥", label: "Boilers/Furnaces", desc: "Direct combustion" },
+        { icon: "💨", label: "Fugitive Leaks", desc: "AC/Refrigerant leaks" },
       ],
     },
     scope2: {
-      title: "SCOPE 2",
+      title: "Scope 2",
       subtitle: "Indirect Energy",
-      color: "#003366", // brandNavy
-      percentage: "8%",
-      description: "Indirect GHG emissions from purchased electricity, steam, heating, and cooling.",
+      color: "#06b6d4", // Cyan-500
+      accent: "bg-cyan-500",
+      light: "bg-cyan-50",
+      border: "border-cyan-200",
+      description: "Emissions from the generation of purchased energy.",
       sources: [
-        { icon: "⚡", label: "Electricity", desc: "Grid electricity consumption" },
-        { icon: "♨️", label: "Steam", desc: "Purchased steam for operations" },
-        { icon: "🌡️", label: "Heating/Cooling", desc: "District heating and cooling" },
-        { icon: "🖥️", label: "Data Centers", desc: "IT infrastructure energy" },
+        { icon: "⚡", label: "Electricity", desc: "Purchased grid power" },
+        { icon: "♨️", label: "Steam/Heat", desc: "Purchased heating" },
+        { icon: "❄️", label: "Cooling", desc: "Purchased chilled water" },
       ],
     },
     scope3: {
-      title: "SCOPE 3",
+      title: "Scope 3",
       subtitle: "Value Chain",
-      color: "#FFB800", // brandGold
-      percentage: "82%",
-      description: "Indirect emissions in the value chain (upstream and downstream).",
+      color: "#f59e0b", // Amber-500
+      accent: "bg-amber-500",
+      light: "bg-amber-50",
+      border: "border-amber-200",
+      description: "Indirect emissions from upstream and downstream activities.",
       sources: [
-        { icon: "📦", label: "Purchased Goods", desc: "Raw materials and services" },
-        { icon: "🚚", label: "Transport", desc: "Upstream transportation" },
-        { icon: "🏗️", label: "Capital Goods", desc: "Equipment and buildings" },
-        { icon: "✈️", label: "Business Travel", desc: "Employee air and rail travel" },
-        { icon: "🚶", label: "Commuting", desc: "Employee commutes" },
-        { icon: "🗑️", label: "Waste", desc: "Waste disposal operations" },
+        { icon: "📦", label: "Purchased Goods", desc: "Supply chain" },
+        { icon: "✈️", label: "Business Travel", desc: "Employee flights" },
+        { icon: "🚚", label: "Logistics", desc: "Third-party transport" },
+        { icon: "♻️", label: "End of Life", desc: "Product disposal" },
       ],
     },
   };
 
-  const SourceCard = ({ source, scopeKey, color }) => {
-    const isSelected =
-      selectedSource?.scopeKey === scopeKey &&
-      selectedSource?.source?.label === source.label;
-
-    return (
-      <button
-        onMouseEnter={() => setHoveredSource({ scopeKey, source })}
-        onMouseLeave={() => setHoveredSource(null)}
-        onClick={() => setSelectedSource(isSelected ? null : { scopeKey, source })}
-        className={`p-4 border-2 rounded-xl transition-all duration-300 flex flex-col items-center bg-white dark:bg-surfaceDark hover:-translate-y-1 ${
-          isSelected ? "border-brandGold shadow-lg" : "border-transparent hover:shadow-md"
-        }`}
-      >
-        <div className="text-3xl mb-2">{source.icon}</div>
-        <div className="text-[10px] font-black uppercase tracking-tighter text-brandDark dark:text-surfaceLight text-center leading-tight">
-          {source.label}
-        </div>
-      </button>
-    );
-  };
-
-  const ScopeSection = ({ scopeKey, data }) => {
-    const isScopeActive = hoveredScope === scopeKey;
-    
-    // logic to determine what text to show in the "Score Card" info panel
-    const displaySource =
-      selectedSource?.scopeKey === scopeKey
-        ? selectedSource.source
-        : hoveredSource?.scopeKey === scopeKey
-        ? hoveredSource.source
-        : null;
-
-    return (
-      <div
-        onMouseEnter={() => setHoveredScope(scopeKey)}
-        onMouseLeave={() => setHoveredScope(null)}
-        className={`relative p-6 rounded-[32px] border-2 transition-all duration-500 bg-surfaceLight dark:bg-surfaceDark ${
-          isScopeActive ? "shadow-2xl scale-[1.02]" : "border-transparent shadow-md"
-        }`}
-        style={{ borderColor: isScopeActive ? data.color : "transparent" }}
-      >
-        <div className="flex items-center justify-between mb-6">
-          <div className="flex items-center gap-3">
-            <div 
-              className="w-12 h-12 rounded-2xl flex items-center justify-center text-white font-black text-xl"
-              style={{ backgroundColor: data.color }}
-            >
-              {scopeKey.replace("scope", "")}
-            </div>
-            <div>
-              <h3 className="font-heading font-black text-brandDark dark:text-white uppercase leading-none">{data.title}</h3>
-              <p className="text-[10px] font-bold text-brandDark/40 dark:text-surfaceLight/40 uppercase tracking-widest">{data.subtitle}</p>
-            </div>
-          </div>
-          <span className="text-sm font-black text-brandDark/20 dark:text-white/20">{data.percentage}</span>
-        </div>
-
-        {/* Dynamic Info Panel (The Score Card) */}
-        <div className="min-h-[90px] mb-6 p-4 rounded-2xl bg-bgLight dark:bg-bgDark border border-borderLight dark:border-borderDark transition-all duration-300">
-          {displaySource ? (
-            <div className="animate-in fade-in zoom-in-95">
-              <div className="text-xs font-black text-brandPrimary dark:text-brandGold uppercase mb-1">
-                {displaySource.label}
-              </div>
-              <p className="text-[11px] text-brandDark/70 dark:text-surfaceLight/70 leading-relaxed italic">
-                {displaySource.desc}
-              </p>
-            </div>
-          ) : (
-            <div className="h-full flex flex-col justify-center text-center opacity-40">
-              <p className="text-[10px] font-bold uppercase tracking-widest leading-tight">
-                Hover or Click a source <br /> to see details
-              </p>
-            </div>
-          )}
-        </div>
-
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-          {data.sources.map((s) => (
-            <SourceCard key={s.label} source={s} scopeKey={scopeKey} color={data.color} />
-          ))}
-        </div>
-      </div>
-    );
-  };
-
   return (
-    <section className="py-20 bg-bgLight dark:bg-bgDark">
-      <div className="container">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <span className="text-xs font-bold tracking-[4px] uppercase text-brandPrimary dark:text-brandGold mb-4 block">
-            GHG Protocol Framework
+    <section className="min-h-screen py-16 text-slate-900 bg-slate-50 font-sans">
+      <div className="container max-w-6xl px-4 mx-auto">
+        {/* Header Section */}
+        <div className="mb-12 text-center">
+          <span className="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-widest uppercase rounded-full bg-slate-200 text-slate-600">
+            ESG Reporting Framework
           </span>
-          <h2 className="font-heading font-black text-brandDark dark:text-white text-4xl lg:text-5xl uppercase leading-tight mb-6">
-            Emissions Across The Value Chain
-          </h2>
+          <h1 className="mb-4 text-4xl font-extrabold tracking-tight md:text-5xl text-slate-800">
+            Emissions <span className="text-emerald-600">Value Chain</span>
+          </h1>
+          <p className="max-w-2xl mx-auto text-lg text-slate-500">
+            Mapping Greenhouse Gas Protocol Scopes across your organization's entire lifecycle.
+          </p>
         </div>
 
-        {/* Value Chain Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          {Object.entries(scopeData).map(([key, data]) => (
-            <ScopeSection key={key} scopeKey={key} data={data} />
-          ))}
-        </div>
-
-        {/* Global Distribution Bar */}
-        <div className="p-8 lg:p-12 bg-brandDark rounded-[40px] shadow-2xl border border-white/10 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-brandPrimary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+        {/* The Main Visualization Card */}
+        <div className="overflow-hidden bg-white shadow-2xl rounded-3xl ring-1 ring-slate-200">
           
-          <h4 className="text-center text-white/40 text-[10px] font-black uppercase tracking-[5px] mb-8">
-            Typical Corporate Emissions Distribution
-          </h4>
-          
-          <div className="flex h-12 w-full rounded-2xl overflow-hidden border-4 border-white/5 shadow-2xl">
-            <div className="flex items-center justify-center text-[10px] font-black text-white bg-brandPrimary w-[10%] border-r border-white/10">10%</div>
-            <div className="flex items-center justify-center text-[10px] font-black text-white bg-brandNavy w-[8%] border-r border-white/10">8%</div>
-            <div className="flex items-center justify-center text-[10px] font-black text-brandDark bg-brandGold w-[82%]">82%</div>
+          {/* Top Atmospheric Layer (Gases) */}
+          <div className="relative p-8 overflow-hidden bg-slate-900">
+            <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_50%_120%,#334155,transparent)]" />
+            <div className="relative z-10 flex flex-wrap justify-center gap-4">
+              {ghgGases.map((gas, i) => (
+                <div 
+                  key={gas} 
+                  className="px-4 py-2 text-sm font-bold text-white transition-all border rounded-full bg-white/10 border-white/20 backdrop-blur-md animate-pulse"
+                  style={{ animationDelay: `${i * 0.2}s` }}
+                >
+                  {gas}
+                </div>
+              ))}
+            </div>
+            
+            {/* Connection Arrows */}
+            <div className="grid grid-cols-3 gap-8 mt-12 mb-2 justify-items-center">
+                {[scopeData.scope1, scopeData.scope2, scopeData.scope3].map((s, i) => (
+                    <div key={i} className={`w-1 h-12 rounded-full ${s.accent} opacity-50 animate-bounce`} />
+                ))}
+            </div>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-8 mt-6">
-            {[
-              { color: "#004080", label: "Scope 1" },
-              { color: "#003366", label: "Scope 2" },
-              { color: "#FFB800", label: "Scope 3" }
-            ].map((item, i) => (
-              <div key={i} className="flex items-center gap-2">
-                <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: item.color }} />
-                <span className="text-[10px] font-bold text-white/60 uppercase tracking-widest">{item.label}</span>
+          {/* Scopes Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 bg-slate-100">
+            {Object.entries(scopeData).map(([key, data]) => (
+              <div 
+                key={key}
+                onMouseEnter={() => setActiveItem(key)}
+                className={`group p-6 transition-all duration-500 border-r border-slate-200 last:border-r-0 hover:bg-white`}
+              >
+                <div className="flex items-center gap-4 mb-6">
+                  <div className={`flex items-center justify-center w-12 h-12 rounded-2xl shadow-lg text-white font-black text-xl ${data.accent} transform group-hover:rotate-12 transition-transform`}>
+                    {key.slice(-1)}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-slate-800">{data.title}</h3>
+                    <span className="text-xs font-medium text-slate-400 uppercase tracking-tighter">{data.subtitle}</span>
+                  </div>
+                </div>
+
+                <p className="mb-6 text-sm leading-relaxed text-slate-600">
+                  {data.description}
+                </p>
+
+                <div className="grid grid-cols-2 gap-3">
+                  {data.sources.map((src) => (
+                    <div 
+                      key={src.label}
+                      className={`p-3 rounded-xl border transition-all cursor-default ${data.light} ${data.border} hover:shadow-md hover:scale-105`}
+                    >
+                      <div className="mb-1 text-xl">{src.icon}</div>
+                      <div className="text-[11px] font-bold text-slate-700 leading-tight">{src.label}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
+
+          {/* Bottom Distribution Legend */}
+          <div className="p-8 bg-white border-t border-slate-200">
+            <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
+              <div className="w-full md:w-2/3">
+                <div className="flex justify-between mb-2 text-xs font-bold text-slate-500 uppercase">
+                  <span>Impact Distribution</span>
+                  <span>Total Footprint 100%</span>
+                </div>
+                <div className="flex h-4 overflow-hidden rounded-full bg-slate-100 outline outline-4 outline-slate-50">
+                  <div className="h-full bg-emerald-500 transition-all duration-1000" style={{ width: '10%' }} />
+                  <div className="h-full bg-cyan-500 transition-all duration-1000" style={{ width: '8%' }} />
+                  <div className="h-full bg-amber-500 transition-all duration-1000" style={{ width: '82%' }} />
+                </div>
+              </div>
+              
+              <div className="flex gap-6">
+                <LegendItem color="bg-emerald-500" label="S1" val="10%" />
+                <LegendItem color="bg-cyan-500" label="S2" val="8%" />
+                <LegendItem color="bg-amber-500" label="S3" val="82%" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-8 text-center text-slate-400 text-xs">
+          *Percentages represent average industrial corporate distributions. Actual data may vary by sector.
         </div>
       </div>
     </section>
   );
 };
+
+const LegendItem = ({ color, label, val }) => (
+  <div className="flex items-center gap-2">
+    <div className={`w-3 h-3 rounded-full ${color}`} />
+    <span className="text-sm font-bold text-slate-700">{label}</span>
+    <span className="text-sm text-slate-400">{val}</span>
+  </div>
+);
 
 export default Scope123ValueChain;

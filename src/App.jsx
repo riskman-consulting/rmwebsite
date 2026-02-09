@@ -20,28 +20,20 @@ import './index.css'
 
 import { Toaster } from 'react-hot-toast'
 import ScrollToTop from './components/common/ScrollToTop'
-import ThemeToggle from './components/common/ThemeToggle'
-// import Events from './temp/MainEvent'
 import Events from './pages/events/Events'
 import ServicePage from './pages/services/Services'
 import HeaderTemp from './temp-header/Header'
 import TechSolutions from "./pages/tech-solutions/TechSolutions"
-import RiskAdvisoryPage from './pages/risk-advisory/RiskAdvisoryPage'
-import FinancialAdvisoryPage from './pages/financial-advisory/temp/FinancialAdvisoryPage'
-import ERMPage from './pages/erm/ERMPage'
-// import RBIAPage from './pages/rbia/RBIAPage'
-import RBIAPage from './pages/rbia/RBIAPage'
-import BCPPage from "./pages/bcp-dr/BCPPage"
-import CSAPage from "./pages/csa/CSAPage"
+// import FinancialAdvisoryPage from './pages/financial-advisory/temp/FinancialAdvisoryPage'
+import AITechnologyPage from "./pages/ai-technology"
+import ITACPage from "./pages/itgc-itac/ITGCITACPage"
+import GovernancePage from './pages/governance'
 
 
-import TPRMPage from "./pages/tprm"
 
-import DigitalTransformationHub from './pages/digital/DigitalTransformation'
-import StrategicPMO from './pages/digital/StrategicPMO'
-import ImplementationExcellence from './pages/digital/ImplementationExcellence'
-import SupportServices from './pages/digital/SupportServices'
-import EGSPage from "./pages/esg"
+
+
+
 
 
 // Layout
@@ -51,6 +43,8 @@ import RiskAdvisoryLayout from "./pages/risk-advisory/Layout"
 import DigitalLayout from "./pages/digital/Layout"
 import EventLayout from "./pages/events/EventLayout"
 import ESGLayout from "./pages/esg/Layout"
+import AboutLayout from "./pages/about/Layout"
+import FinancialLayout from "./pages/financial-advisory/Layout"
 
 //   Soc Pages imports
 import SocPage from './pages/soc/soc/SocPage'
@@ -79,7 +73,32 @@ import ESGReportingDisclosurePage from "./pages/esg/reporting-disclosure"
 import ESGCarbonFootprintPage from "./pages/esg/carbon-footprint"
 import ESGSustainabilityAssurancePage from "./pages/esg/sustainability-assurance"
 
+// Digital Transformation Pages
+import DigitalTransformationHub from './pages/digital/digital'
+import StrategicPMO from './pages/digital/strategies-pmo'
+import ImplementationExcellence from './pages/digital/implement'
+import SupportServices from './pages/digital/support'
 
+// risk advisory Pages
+import RiskAdvisoryPage from './pages/risk-advisory/RiskAdvisoryPage'
+import RBIAPage from './pages/rbia/RBIAPage'
+import BCPPage from "./pages/bcp-dr/BCPPage"
+import CSAPage from "./pages/csa/CSAPage"
+import TPRMPage from "./pages/tprm"
+import ERMPage from './pages/erm/ERMPage'
+import Sox_ItCofrPage from "./pages/sox-itcofr"
+
+// financial Pages
+import FinancialPage from "./pages/financial-advisory/temp/FinancialAdvisoryPage"
+import FinancialCreditRisk from "./pages/financial-advisory/credit-risk-assessment"
+import FinancialCreditPortfolio from "./pages/financial-advisory/credit-portfolio-management"
+import FinancialLoanReview from "./pages/financial-advisory/loan-review-monitoring"
+import FinancialCreditPolicy from "./pages/financial-advisory/credit-policy-framework"
+
+
+
+// cybersecurity
+import CyberSecurityPage from "./pages/cybersecurity"
 
 function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
@@ -96,23 +115,17 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      {/* <ThemeToggle theme={theme} setTheme={setTheme} /> */}
-      {/* <Header theme={theme} setTheme={setTheme} /> */}
+      
       <HeaderTemp />
       <Toaster position="top-right" />
 
-      {/* CRITICAL FIX: Add pt-[128px] to account for fixed header 
-          - Announcement banner: 48px (top-0)
-          - Navbar: 80px (top-[48px])
-          - Total: 128px
-      */}
+      
       <main className="pt-[128px]">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<ServicePage />} />
           <Route path="/services/bcp-dr" element={<BCPPage />} />
-
-          <Route path="/services/financial-advisory" element={<FinancialAdvisoryPage />} />
+          <Route path="/services/cybersecurity"  element={<CyberSecurityPage/>} />
 
 
           // Digital routes
@@ -123,8 +136,17 @@ function App() {
             <Route path='support-services' element={<SupportServices />} />
           </Route>
 
+          <Route path='/services/itgc-itac' element={<ITACPage/>} />
+          <Route path="/services/ai-technology" element={<AITechnologyPage />} />
+          <Route path='/governance' element={<GovernancePage/>} />
 
 
+          // financial Pages
+          <Route path="/services/financial-advisory" element={<FinancialLayout />} >
+             <Route path=''  element={<FinancialPage/>} />
+             <Route path='credit-risk-assessment' element={<FinancialCreditRisk/>} />
+             <Route path='credit-policy-framework' element={<FinancialCreditPolicy/>} />
+          </Route>
            // ISO Routes define
           <Route path="/services/iso-certifications" element={<IsoLayout />}>
             <Route path="iso-27001" element={<ISO27001Page />} />
@@ -149,8 +171,8 @@ function App() {
             <Route path='erm' element={<ERMPage />} />
             <Route path='csa' element={<CSAPage />} />
             <Route path='tprm' element={<TPRMPage />} />
-            <Route path='sox-icofr-ifc' element={<h2>SOX/ICOFR/IFC</h2>} />
-            <Route path='csa' element={<h2>CSA</h2>} />
+            <Route path='sox-icofr-ifc' element={<Sox_ItCofrPage/>} />
+            <Route path='csa' element={<CSAPage/>} />
             <Route path='concurrent-audits' element={<h2>Concurrent Audits</h2>} />
             <Route path='formulation-of-policies-and-sops' element={<h1>Formulation of Policies and SOPS</h1>} />
           </Route>
@@ -176,6 +198,12 @@ function App() {
             <Route path='sustainability-assurance' element={<ESGSustainabilityAssurancePage/>}  />
           </Route>
 
+          <Route path="/about" element={<AboutLayout />} >
+          <Route path=''  element={<div className='flex flex-col justify-center items-center'>
+           
+            <About/>
+            </div>} />
+          </Route>
 
           {/* <Route path="/services/:id" element={<ServicesTemplate />} /> */}
           <Route path="/industries" element={<IndustriesList />} />
@@ -183,7 +211,6 @@ function App() {
           <Route path="/insights" element={<BlogList />} />
           <Route path="/insights/:slug" element={<BlogSingle />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/blog" element={<Navigate to="/blogs" />} />

@@ -79,7 +79,7 @@ const RiskManTeams = () => {
   const desktopGrid =allMembers;
 
   return (
-    <section id="riskman-teams" className="py-20 bg-surfaceLight dark:bg-surfaceDark">
+    <section className="py-20 bg-surfaceLight dark:bg-surfaceDark">
       <div className="container">
 
         {/* Header */}

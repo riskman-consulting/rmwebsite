@@ -10,8 +10,8 @@ function Layout() {
       <nav className="fixed  w-screen z-50 bg-surfaceLight/80 dark:bg-surfaceDark/80 backdrop-blur-md border-b border-borderLight dark:border-borderDark">
         <div className="container py-4 flex items-center justify-between">
           {/* Brand Logo Placeholder */}
-          <div onClick={()=>navigate("")} className="font-heading font-black text-2xl text-brandPrimary dark:text-brandGold tracking-tighter">
-            Risk Advisory's
+          <div onClick={()=>navigate("")} className="font-heading cursor-pointer font-black text-2xl text-brandPrimary dark:text-brandGold tracking-tighter">
+            Digital Transformation
           </div>
 
           {/* Links */}

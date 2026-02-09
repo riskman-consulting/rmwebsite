@@ -294,7 +294,7 @@ export function MemberCard({ member, index, onSelect }) {
 ========================= */
 export default function LeadershipSection({ setSelectedLeader }) {
   return (
-    <section className="py-4 lg:py-12 bg-surfaceLight dark:bg-surfaceDark">
+    <section   className="py-4  lg:py-12 bg-surfaceLight dark:bg-surfaceDark">
       <div className="px-6 mx-auto max-w-7xl lg:px-12">
         <motion.div {...animations.fadeInUp} className="mb-12">
           <h2 className="text-4xl font-bold lg:text-5xl text-brandDark dark:text-white">
@@ -306,7 +306,7 @@ export default function LeadershipSection({ setSelectedLeader }) {
           </h2>
         </motion.div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid pt-10  gap-6 md:grid-cols-2 lg:grid-cols-3">
           {TEAM_MEMBERS.map((m, i) => (
             <MemberCard
               key={m.name}

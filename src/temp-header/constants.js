@@ -38,7 +38,7 @@ export const NAVIGATION_DATA = {
                     ]
                 },
                 {
-                    "label": "ESG",
+                    "label": "Sustainability & ESG",
                     "path": "/services/esg",
                     // "submenus": [
                     //     { "id": "strategy-roadmap", "title": "ESG Strategy & Roadmap", "path":"/services/esg/strategy-roadmap"},

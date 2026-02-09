@@ -1,79 +1,107 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+
+const strategyPoints = [
+  {
+    title: "Conventional vs. Modern",
+    subtitle: "Strategic Evolution",
+    text: "Modern RBIA transcends narrow financial compliance. It proactively addresses emerging complexities like cybersecurity and ESG, ensuring audit value increases while operational costs stabilize.",
+  },
+  {
+    title: "Key Drivers for Change",
+    subtitle: "Market Adaptation",
+    text: "Rising governance demands and AI-driven risks necessitate a transition to RBIA. This shift ensures proactive management of modern threats while securing organizational digital infrastructure.",
+  },
+  {
+    title: "Value vs. Cost Dynamics",
+    subtitle: "ROI Optimization",
+    text: "As audit services mature, integrating frameworks with business objectives scales coverage. This evolution transforms internal audits from a cost center into a high-return strategic asset.",
+  },
+];
+
 export default function StrategyPlanSection() {
   return (
-    <section className="relative px-3 overflow-hidden py-14 md:py-20 bg-bgLight dark:bg-bgDark">
-      {/* BACKGROUND IMAGE */}
-      <div
-        className="absolute inset-0 bg-center bg-cover opacity-30 dark:opacity-20"
-        style={{ backgroundImage: "url('/images/rbia-strategy-bg.png')" }}
-      />
+    <section className="relative px-4 overflow-hidden py-20 bg-bgLight dark:bg-bgDark">
+      {/* Background Decor */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div 
+          className="absolute inset-0 opacity-20 dark:opacity-10 bg-center bg-cover"
+          style={{ backgroundImage: "url('/images/rbia-strategy-bg.png')" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-bgLight via-bgLight/80 to-bgLight dark:from-bgDark dark:via-bgDark/80 dark:to-bgDark" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,#brandPrimary_0%,transparent_70%)] opacity-[0.03]" />
+      </div>
 
-      {/* OVERLAYS */}
-      <div className="absolute inset-0 bg-bgLight/95 dark:bg-bgDark/95" />
-      <div className="absolute inset-0 bg-gradient-to-br from-brandPrimary/8 via-transparent to-brandAccent/6 dark:from-brandPrimary/15 dark:to-brandAccent/8" />
-
-      {/* GRID TEXTURE */}
-      <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle_at_1px_1px,#001F3F_1px,transparent_0)] [background-size:32px_32px] dark:opacity-[0.05] dark:bg-[radial-gradient(circle_at_1px_1px,#ffffff_1px,transparent_0)]" />
-
-      {/* DECORATIVE GLOWS */}
-      <div className="absolute rounded-full top-24 right-16 w-72 h-72 bg-brandAccent/8 blur-3xl dark:bg-brandAccent/12" />
-      <div className="absolute rounded-full bottom-24 left-16 w-96 h-96 bg-brandPrimary/8 blur-3xl dark:bg-brandPrimary/12" />
-
-      {/* CONTENT */}
-      <div className="container relative z-10 px-4 mx-auto">
-        {/* HEADER */}
-        <div className="max-w-4xl mx-auto mb-20 text-center">
-          <div className="inline-flex items-center justify-center px-4 py-1.5 mb-6 text-xs font-semibold tracking-wide uppercase rounded-full bg-brandPrimary/15 text-brandPrimary border border-brandPrimary/25 dark:bg-brandPrimary/25 dark:text-brandAccent dark:border-brandPrimary/30">
+      <div className="container relative z-10 mx-auto max-w-7xl">
+        {/* Header Section */}
+        <div className="flex flex-col items-center mb-16 text-center">
+          <motion.span 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="px-4 py-1 mb-4 text-xs font-bold tracking-widest uppercase rounded-full bg-brandPrimary/10 text-brandPrimary dark:bg-brandPrimary/20 dark:text-brandAccent border border-brandPrimary/20"
+          >
             Strategic Framework
-          </div>
-
-          <h2 className="mb-6 text-3xl font-bold leading-tight md:text-4xl lg:text-5xl font-heading text-brandDark dark:text-white">
-            Our Risk-based Internal Auditing Plan
-          </h2>
-
-          <div className="w-20 h-1 mx-auto mb-6 rounded-full bg-gradient-to-r from-brandAccent to-brandGold" />
-
-          <p className="max-w-3xl mx-auto text-base leading-relaxed md:text-lg text-brandDark/90 dark:text-brandLight/90">
-            The transition from traditional methods to a Risk-Based Internal Audit (RBIA) framework is driven by the need for deeper organizational value and proactive risk management.
+          </motion.span>
+          
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-4xl md:text-5xl font-bold font-heading text-brandDark dark:text-white mb-6"
+          >
+            Risk-Based <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandPrimary to-brandAccent">Internal Audit</span> Plan
+          </motion.h2>
+          
+          <div className="w-24 h-1 rounded-full bg-gradient-to-r from-brandAccent to-brandGold mb-6" />
+          
+          <p className="max-w-2xl text-lg text-brandDark/70 dark:text-brandLight/70 leading-relaxed">
+            Transitioning to RBIA drives deeper organizational value through proactive risk management and strategic alignment.
           </p>
         </div>
 
-        {/* CARDS */}
-        <div className="grid grid-cols-1 gap-10 mx-auto max-w-7xl md:grid-cols-3">
-          {[
-            {
-              title: "Conventional vs. Modern Auditing",
-              text:
-                "Modern Risk-Based Internal Audit (RBIA) transcends traditional, narrow financial compliance. It proactively addresses emerging complexities like cybersecurity, ethical conduct (ESG), and digital integrity. This integrated approach provides strategic management insights, ensuring audit value increases while operational costs are reduced as the organization matures.",
-            },
-            {
-              title: "Key Drivers for Change",
-              text:
-                "Organizations face increasing complexity from global operations and diverse revenues. Rising governance demands and technological shifts, including AI and cybersecurity risks, necessitate a transition to RBIA. This shift ensures proactive management of modern threats while meeting transparency expectations and securing organizational digital infrastructure.",
-            },
-            {
-              title: "Value vs. Cost Dynamics",
-              text:
-                "As audit services mature, integrating frameworks with business objectives scales out value and coverage. Growth optimizes controls and prevents losses, reducing audit costs as a percentage of operations. This evolution ensures a higher return on investment, transforming internal audits from a cost center into a strategic asset for the organization.",
-            },
-          ].map((item, index) => (
-            <div
-              key={item.title}
-              className="relative h-full p-8 transition-all bg-white border shadow-lg rounded-2xl border-borderLight dark:border-borderDark dark:bg-surfaceDark backdrop-blur-xl hover:-translate-y-1 hover:shadow-2xl hover:border-brandAccent/40"
+        {/* Strategy Cards */}
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          {strategyPoints.map((point, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2 }}
+              whileHover={{ y: -5 }}
+              className="group relative p-8 bg-white/50 dark:bg-surfaceDark/50 backdrop-blur-md border border-borderLight dark:border-borderDark rounded-3xl overflow-hidden shadow-xl"
             >
-              <div className="absolute top-0 left-0 w-full h-1 rounded-t-2xl bg-gradient-to-r from-brandAccent via-brandGold to-brandAccent" />
-
-              <div className="absolute flex items-center justify-center w-12 h-12 text-lg font-bold rounded-full shadow-lg -top-4 -right-4 bg-brandAccent text-brandDark">
-                {index + 1}
+              {/* Animated Accent Line */}
+              <div className="absolute top-0 left-0 w-0 h-1.5 bg-gradient-to-r from-brandAccent to-brandGold group-hover:w-full transition-all duration-500 ease-in-out" />
+              
+              <div className="flex justify-between items-start mb-8">
+                <div className="space-y-1">
+                  <span className="text-[10px] uppercase tracking-tighter font-bold text-brandAccent/80">
+                    {point.subtitle}
+                  </span>
+                  <h3 className="text-2xl font-bold text-brandDark dark:text-white leading-tight">
+                    {point.title}
+                  </h3>
+                </div>
+                <span className="text-5xl font-black opacity-10 group-hover:opacity-30 transition-opacity duration-300 italic">
+                  0{index + 1}
+                </span>
               </div>
 
-              <h3 className="mb-4 text-xl font-bold font-heading text-brandDark dark:text-white">
-                {item.title}
-              </h3>
-
-              <p className="leading-relaxed text-brandDark/85 dark:text-brandLight/85">
-                {item.text}
+              <p className="text-brandDark/80 dark:text-brandLight/80 leading-relaxed mb-6">
+                {point.text}
               </p>
-            </div>
+
+              {/* Minimalistic footer icon/element */}
+              <div className="pt-6 border-t border-borderLight/50 dark:border-borderDark/50 flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-brandAccent" />
+                <span className="text-xs font-medium text-brandDark/50 dark:text-brandLight/50 uppercase tracking-widest">
+                  Efficiency Phase
+                </span>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>

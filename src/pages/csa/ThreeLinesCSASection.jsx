@@ -35,6 +35,14 @@ export default function ThreeLinesCSASection() {
             />
           </div>
         )}
+         <div className="p-8 border-l-4 border-yellow-500 rounded-r-lg shadow-md bg-gradient-to-r from-yellow-50 to-yellow-100 dark:from-brandDark/10 dark:to-brandDark/20">
+          <h3 className="mb-3 text-xl font-bold text-brandDark dark:text-brandAccent">Governance Alignment</h3>
+          <p className="italic leading-relaxed text-brandPrimary dark:text-white/70">
+            RiskMan's CSA methodology ensures seamless integration across all three lines, creating 
+            a unified control assurance ecosystem that satisfies regulatory expectations and Board 
+            governance requirements.
+          </p>
+        </div>
       </div>
     </section>
   );

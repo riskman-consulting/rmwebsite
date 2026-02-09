@@ -22,7 +22,7 @@ function Layout() {
             <NavItem to="sox-icofr-ifc" icon="" label="SOX/ICOFR/IFC" />
             <NavItem to="csa" icon="" label="CSA" />
             <NavItem to="concurrent-audits" icon="" label="Concurrent Audits" />
-            <NavItem to="formulation-of-policies-and-sops" icon="" label="Formulation of Policies and SOPs" />
+            <NavItem to="formulation-of-policies-and-sops" icon="" label="Policies and SOPs" />
           </div>
         </div>
       </nav>
