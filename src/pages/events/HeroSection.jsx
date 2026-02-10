@@ -95,7 +95,6 @@ export default function HeroSection() {
   const milestones = [
     { value: "2020", label: "Founded", icon: Award },
     { value: "2025", label: "5 Years Strong", icon: Calendar },
-    { value: "4", label: "States", icon: Globe },
     { value: "50+", label: "Team Members", icon: Users },
   ];
 
@@ -125,7 +124,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative flex items-center justify-center min-h-screen overflow-hidden transition-colors duration-500 bg-surfaceLight dark:bg-surfaceDark">
+    <section className="relative  flex items-center justify-center min-h-screen overflow-hidden transition-colors duration-500 bg-surfaceLight dark:bg-surfaceDark">
       {/* Background Slideshow with Parallax */}
       <motion.div 
         className="absolute inset-0 z-0"
@@ -209,12 +208,12 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
-          className="grid w-full max-w-5xl grid-cols-2 gap-6 mb-14 md:grid-cols-4"
+          className="flex flex-row flex-wrap gap-10 mb-12"
         >
           {milestones.map((m, i) => (
             <div
               key={i}
-              className="flex flex-col items-center justify-center p-6 transition-colors duration-300 border rounded-2xl border-brandGold/30 bg-surfaceLight dark:bg-surfaceDark/60 backdrop-blur-md group hover:border-brandGold/60"
+              className="flex w-48 flex-col items-center justify-center p-6 transition-colors duration-300 border rounded-2xl border-brandGold/30 bg-surfaceLight dark:bg-surfaceDark/60 backdrop-blur-md group hover:border-brandGold/60"
             >
               <div className="mb-1 text-3xl font-bold transition-transform duration-300 text-brandDark dark:text-white group-hover:scale-110">
                 {m.value}
@@ -227,7 +226,7 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Background Controls (Optional Visual Indicator) */}
-        <div className="absolute z-30 flex gap-2 bottom-8">
+        <div className="absolute z-30  flex gap-2 bottom-8">
           {backgrounds.map((_, i) => (
             <button
               key={i}

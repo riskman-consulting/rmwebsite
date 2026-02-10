@@ -39,53 +39,23 @@ function Events() {
     <div>
       <HeroSection />
 
-      <UpcomingEventsSection/>
+      <UpcomingEventsSection />
+      <EventRecognition />
 
-      {/* <EventRecognition/> */}
 
-      
 
-      <MomentThatMattersSection/>
-        <EventsGrid 
-        events={events} 
-        onCardClick={handleOpenModal} 
-      />
-      {/* <JourneyTimeLineSection /> */}
-      {/* <CompanyTimelineSection /> */}
-      {/* <AwardSection /> */}
+      <MomentThatMattersSection />
+      <EventsGrid events={events} onCardClick={handleOpenModal} />
       <TestimonialsSection />
-      <WhyItMatters/>
-
-
-
-
-      {/* <ImpactInNumbersSection /> */}
-
-       {/* <InternationalAssignmentSection /> */}
-      {/* <CultureSection /> */}
-      {/* <ExpertiseSection /> */}
-      {/* <MomentThatMatters /> */}
-{/* 
-      <MomentThatMattersSection/> */}
-      {/* <InternationalAssignmentSection /> */}
-      {/* <TogethernessCelebrationSection /> */}
-
-      
-      {/* Events Grid with Modal */}
-      {/* <EventsGrid 
-        events={events} 
-        onCardClick={handleOpenModal} 
-      /> */}
-      
-      {/* <VideoHighlightSection /> */}
+      <WhyItMatters />
       <CTASection />
 
-      {/* Event Modal - renders when an event is selected */}
+
       <AnimatePresence>
         {selectedEvent && (
-          <EventCard 
-            event={selectedEvent} 
-            onClose={handleCloseModal} 
+          <EventCard
+            event={selectedEvent}
+            onClose={handleCloseModal}
           />
         )}
       </AnimatePresence>

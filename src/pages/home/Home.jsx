@@ -78,7 +78,7 @@ export default function Home() {
             <StrategicSection/>
             
 
-          <StatsSection />
+          {/* <StatsSection /> */}
 
           {/* <AuditService/> */}
 

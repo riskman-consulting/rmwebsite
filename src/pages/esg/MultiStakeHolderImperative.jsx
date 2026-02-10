@@ -12,7 +12,7 @@ const MultiStakeholderImperative = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50 dark:bg-[#0f172a] transition-colors duration-300">
+    <section className="py-4 bg-gray-50 dark:bg-[#0f172a] transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Minimalist Header */}

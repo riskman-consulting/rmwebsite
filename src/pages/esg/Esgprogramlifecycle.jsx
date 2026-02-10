@@ -334,7 +334,7 @@ const ESGProgramLifecycle = () => {
   };
 
   return (
-    <section className="py-20 bg-white dark:bg-surfaceDark">
+    <section className="py-12 bg-white dark:bg-surfaceDark">
       <div className="container">
         <div className="mb-10 text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">

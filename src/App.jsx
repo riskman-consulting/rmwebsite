@@ -17,6 +17,7 @@ import PrivacyPolicy from './pages/resources/Privacy'
 import Terms from './pages/resources/Terms'
 import BlogSingle from './pages/blogs/BlogSingle'
 import './index.css'
+import PCI_DSSPage from "./pages/pci-dss"
 
 import { Toaster } from 'react-hot-toast'
 import ScrollToTop from './components/common/ScrollToTop'
@@ -45,6 +46,8 @@ import EventLayout from "./pages/events/EventLayout"
 import ESGLayout from "./pages/esg/Layout"
 import AboutLayout from "./pages/about/Layout"
 import FinancialLayout from "./pages/financial-advisory/Layout"
+import DataPrivacyLayout from "./pages/data-privacy/Layout"
+import CPALayout from "./pages/cpa/Layout"
 
 //   Soc Pages imports
 import SocPage from './pages/soc/soc/SocPage'
@@ -58,6 +61,8 @@ import ISO27701Page from './pages/iso/iso-27701'
 import ISO22301Page from './pages/iso/iso-22301/Index'
 import ISO31000Page from './pages/iso/iso-31000'
 import ISO42001Page from "./pages/iso/iso-42001"
+import TisaxPage from "./pages/iso/tisax"
+import ISO_AND_TISAX_Page from "./pages/iso/iso-tisax"
 
 // Evvents Page
 import EventAccomplshments from "./pages/events/accomplishments"
@@ -95,10 +100,26 @@ import FinancialCreditPortfolio from "./pages/financial-advisory/credit-portfoli
 import FinancialLoanReview from "./pages/financial-advisory/loan-review-monitoring"
 import FinancialCreditPolicy from "./pages/financial-advisory/credit-policy-framework"
 
+// data privecy Pages
+import DataPrivacyPage from "./pages/data-privacy/data-privacy"
+import DPDPPage from "./pages/data-privacy/dpdp"
+import GDPRPage from "./pages/data-privacy/gdpr"
+import OtherPage from "./pages/data-privacy/others"
+
+// CPA Pages
+import CPAPage from "./pages/cpa/cpa"
+import FinancialStatementPage from "./pages/cpa/financial-audits"
+import InternalControlReview from "./pages/cpa/internal-control"
+import ComplianceAudit from "./pages/cpa/compliance-audits"
+import QualityAssurancePage from './pages/cpa/quality-assurance'
+
 
 
 // cybersecurity
 import CyberSecurityPage from "./pages/cybersecurity"
+
+// ForensicsInvestigationPage
+import ForensicsInvestigationPage from './pages/forensics-investigation'
 
 function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
@@ -115,18 +136,18 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      
+
       <HeaderTemp />
       <Toaster position="top-right" />
 
-      
+
       <main className="pt-[128px]">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<ServicePage />} />
           <Route path="/services/bcp-dr" element={<BCPPage />} />
-          <Route path="/services/cybersecurity"  element={<CyberSecurityPage/>} />
-
+          <Route path="/services/cybersecurity" element={<CyberSecurityPage />} />
+          <Route path='/services/pci-dss-compliance' element={<PCI_DSSPage />} />
 
           // Digital routes
           <Route path='/services/digital-transformation' element={<DigitalLayout />} >
@@ -136,24 +157,37 @@ function App() {
             <Route path='support-services' element={<SupportServices />} />
           </Route>
 
-          <Route path='/services/itgc-itac' element={<ITACPage/>} />
+          <Route path='/services/itgc-itac' element={<ITACPage />} />
           <Route path="/services/ai-technology" element={<AITechnologyPage />} />
-          <Route path='/governance' element={<GovernancePage/>} />
+          <Route path='/governance' element={<GovernancePage />} />
+
 
 
           // financial Pages
           <Route path="/services/financial-advisory" element={<FinancialLayout />} >
-             <Route path=''  element={<FinancialPage/>} />
-             <Route path='credit-risk-assessment' element={<FinancialCreditRisk/>} />
-             <Route path='credit-policy-framework' element={<FinancialCreditPolicy/>} />
+            <Route path='' element={<FinancialPage />} />
+            <Route path='credit-risk-assessment' element={<FinancialCreditRisk />} />
+            <Route path='credit-policy-framework' element={<FinancialCreditPolicy />} />
           </Route>
            // ISO Routes define
           <Route path="/services/iso-certifications" element={<IsoLayout />}>
+            <Route />
+            <Route path='' element={<ISO_AND_TISAX_Page />} />
             <Route path="iso-27001" element={<ISO27001Page />} />
             <Route path="iso-27701" element={<ISO27701Page />} />
             <Route path="iso-22301" element={<ISO22301Page />} />
             <Route path="iso-31000" element={<ISO31000Page />} />
             <Route path="iso-42001" element={<ISO42001Page />} />
+            <Route path='tisax' element={<TisaxPage />} />
+          </Route>
+
+          // CPA Routes
+          <Route path='/services/cpa-us-assurance' element={<CPALayout/>}  >
+            <Route path=''  element={<CPAPage/>} />
+            <Route path='financial-statement-audits'  element={<FinancialStatementPage/>} />
+            <Route path='internal-control-reviews' element={<InternalControlReview/>} />
+            <Route path='compliance-audits' element={<ComplianceAudit/>} />
+            <Route path='quality-assurance'  element={<QualityAssurancePage/>}  />
           </Route>
 
           // SOC Routes define
@@ -171,8 +205,8 @@ function App() {
             <Route path='erm' element={<ERMPage />} />
             <Route path='csa' element={<CSAPage />} />
             <Route path='tprm' element={<TPRMPage />} />
-            <Route path='sox-icofr-ifc' element={<Sox_ItCofrPage/>} />
-            <Route path='csa' element={<CSAPage/>} />
+            <Route path='sox-icofr-ifc' element={<Sox_ItCofrPage />} />
+            <Route path='csa' element={<CSAPage />} />
             <Route path='concurrent-audits' element={<h2>Concurrent Audits</h2>} />
             <Route path='formulation-of-policies-and-sops' element={<h1>Formulation of Policies and SOPS</h1>} />
           </Route>
@@ -192,20 +226,28 @@ function App() {
           // ESG Pages
           <Route path='/services/esg' element={<ESGLayout />}  >
             <Route path='' element={<ESGPage />} />
-            <Route path='strategy-roadmap' element={<ESGStrategyRoadmapPage/>}  />
-            <Route path='reporting-disclosure' element={<ESGReportingDisclosurePage/>}  />
-            <Route path='carbon-footprint'  element={<ESGCarbonFootprintPage/>}  />
-            <Route path='sustainability-assurance' element={<ESGSustainabilityAssurancePage/>}  />
+            <Route path='strategy-roadmap' element={<ESGStrategyRoadmapPage />} />
+            <Route path='reporting-disclosure' element={<ESGReportingDisclosurePage />} />
+            <Route path='carbon-footprint' element={<ESGCarbonFootprintPage />} />
+            <Route path='sustainability-assurance' element={<ESGSustainabilityAssurancePage />} />
+          </Route>
+
+
+          // Data Privary
+          <Route path='/services/data-privacy' element={<DataPrivacyLayout />} >
+            <Route path='' element={<DataPrivacyPage />} />
+            <Route path='dpdp'  element={<DPDPPage/>} />
+            <Route path='gdpr'  element={<GDPRPage/>} />
+            <Route path='other' element={<OtherPage/>} />
           </Route>
 
           <Route path="/about" element={<AboutLayout />} >
-          <Route path=''  element={<div className='flex flex-col justify-center items-center'>
-           
-            <About/>
+            <Route path='' element={<div className='flex flex-col justify-center items-center'>
+
+              <About />
             </div>} />
           </Route>
-
-          {/* <Route path="/services/:id" element={<ServicesTemplate />} /> */}
+          <Route path='/services/forensics-investigation'  element={<ForensicsInvestigationPage/>} />
           <Route path="/industries" element={<IndustriesList />} />
           <Route path="/industries/:id" element={<IndustriesTemplate />} />
           <Route path="/insights" element={<BlogList />} />

@@ -53,7 +53,7 @@ const ServiceDetails = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   return (
-    <section className="relative py-20 md:py-32 bg-bgLight dark:bg-bgDark overflow-hidden">
+    <section className="relative pt-10  bg-bgLight dark:bg-bgDark overflow-hidden">
       
       {/* Background Decorations */}
       <div className="absolute inset-0 pointer-events-none">
@@ -89,7 +89,7 @@ const ServiceDetails = () => {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 px-8 md:grid-cols-2 gap-6 md:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             const isActive = activeIndex === index;

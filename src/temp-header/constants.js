@@ -116,10 +116,10 @@ export const NAVIGATION_DATA = {
                     "label": "US Assurance Support Services",
                     "path": "/services/cpa-us-assurance",
                     "submenus": [
-                        { "id": "financial-audits", "title": "Financial Statement Audits" },
-                        { "id": "internal-control", "title": "Internal Control Reviews" },
-                        { "id": "compliance-audits", "title": "Compliance Audits" },
-                        { "id": "quality-assurance", "title": "Quality Assurance" }
+                        { "id": "financial-audits", "title": "Financial Statement Audits",path:"/services/cpa-us-assurance/financial-statement-audits" },
+                        { "id": "internal-control", "title": "Internal Control Reviews",path:"/services/cpa-us-assurance/internal-control-reviews" },
+                        { "id": "compliance-audits", "title": "Compliance Audits",path:"/services/cpa-us-assurance/compliance-audits" },
+                        { "id": "quality-assurance", "title": "Quality Assurance",path:"/services/cpa-us-assurance/quality-assurance" }
                     ]
                 }
             ]
@@ -189,13 +189,10 @@ export const NAVIGATION_DATA = {
     "eventsMegaMenu": [
         {
             "items": [
-                { "label": "Upcoming Events", "path": "/events/#upcoming-events" },
-                { "label": "Past Events", "path": "/events/#past" },
-                {"label":"Accomplishments","path":"/events/#accomplishments"},
-                {"label":"Emerging Awards & Recognitions", "path":"/events/#emerging-recognitions"},
-                { "label": "Company Journey", "path": "/events/#journey" },
-                // { "label": "Milestones", "path": "/events/#milestones" },
-                 { "label": "Media Coverage", "path": "/events/#moments-that-matters" }
+                { "label": "Accomplishments", "path": "/events#accomplishments" },
+                { "label": "Upcoming Events", "path": "/events#upcoming-events" },
+                {"label":"Past Events","path":"/events#past-events"},
+                 { "label": "Culture at RiskMan", "path": "events#moments-that-matters" }
             ]
         }
     ]

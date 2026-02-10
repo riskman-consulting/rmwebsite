@@ -159,3 +159,8 @@ body{
   from { opacity: 0; transform: translate(-50%, -100%); }
   to { opacity: 1; transform: translate(-50%, -110%); }
 }
+
+@keyframes cloudFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
