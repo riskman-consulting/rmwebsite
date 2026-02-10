@@ -83,6 +83,7 @@
 
 import React from 'react';
 import { ArrowRight, ShieldCheck, TrendingUp, BarChart3 } from 'lucide-react';
+import buildingImg from "../../../assets/images/financial-advisory/building.png"
 
 const Hero = () => {
   return (
@@ -90,7 +91,7 @@ const Hero = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://pixabay.com/get/g03efe8b3056dc9e0890d8b0b6c6035238f7fc152b25f8150f5084dfdcb690c1b7ea0f012e78102e680b56a5e92c32fc8_1280.jpg" 
+          src={buildingImg}
           alt="Corporate Finance" 
           className="object-cover w-full h-full"
         />

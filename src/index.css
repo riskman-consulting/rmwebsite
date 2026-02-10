@@ -140,3 +140,95 @@ body{
   filter: brightness(1.1);
   transform: scale(1.05);
 }
+
+
+
+
+@import "tailwindcss";
+
+@theme {
+  /* Core Brand Colors - Supporting both camelCase and kebab-case */
+  --color-brandGold: #FFB800;
+  --color-brand-gold: #FFB800;
+  --color-brandAccent: #FFC000;
+  --color-brand-accent: #FFC000;
+  --color-brandLight: #F5F5F5;
+  --color-brand-light: #F5F5F5;
+  --color-brandDark: #001F3F;
+  --color-brand-dark: #001F3F;
+  --color-brandNavy: #003366;
+  --color-brand-navy: #003366;
+  --color-brandPrimary: #004080;
+  --color-brand-primary: #004080;
+
+  /* Theme Backgrounds */
+  --color-bgLight: #FAFAFA;
+  --color-bg-light: #FAFAFA;
+  --color-bgDark: #001122;
+  --color-bg-dark: #001122;
+  --color-surfaceLight: #FFFFFF;
+  --color-surface-light: #FFFFFF;
+  --color-surfaceDark: #001A33;
+  --color-surface-dark: #001A33;
+
+  /* Borders */
+  --color-borderLight: rgba(0, 31, 63, 0.1);
+  --color-border-light: rgba(0, 31, 63, 0.1);
+  --color-borderDark: rgba(255, 192, 0, 0.15);
+  --color-border-dark: rgba(255, 192, 0, 0.15);
+
+  /* Utilities */
+  --color-brand-bg-soft: #f8fafc;
+  --color-brand-text: #020617;
+  --color-brand-text-dark: #f8fafc;
+}
+
+@layer base {
+  :root {
+    --bg-color: var(--color-bg-light);
+    --text-color: var(--color-brand-text);
+    --primary-color: var(--color-brand-primary);
+    --accent-color: var(--color-brand-accent);
+    --gold-color: var(--color-brand-gold);
+    --light-color: var(--color-brand-light);
+    --dark-color: var(--color-brand-dark);
+    --navy-color: var(--color-brand-navy);
+    --border-color: var(--color-border-light);
+  }
+
+  .dark {
+    --bg-color: var(--color-bg-dark);
+    --text-color: var(--color-brand-light);
+    --primary-color: var(--color-brand-primary);
+    --accent-color: var(--color-brand-accent);
+    --gold-color: var(--color-brand-gold);
+    --light-color: var(--color-brand-light);
+    --dark-color: var(--color-brand-dark);
+    --navy-color: var(--color-brand-navy);
+    --border-color: var(--color-border-dark);
+  }
+
+
+  body {
+    @apply bg-[var(--bg-color)] text-[var(--text-color)] transition-colors duration-300 overflow-x-hidden;
+  }
+}
+
+/* Glassmorphism setup */
+@layer components {
+  .glass {
+    @apply border backdrop-blur-md border-white/20 bg-white/70;
+  }
+
+  .dark .glass {
+    @apply bg-slate-900/80 border-white/5;
+  }
+
+  /* Grid Overlay for Hero */
+  .hero-grid {
+    background-image: linear-gradient(to right, var(--border-color) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--border-color) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(ellipse at center, black, transparent 80%);
+  }
+}

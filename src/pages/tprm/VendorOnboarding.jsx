@@ -102,6 +102,7 @@
 
 import React from 'react';
 import { ClipboardCheck, Award, GitPullRequest, AlertTriangle } from 'lucide-react';
+import onboardingImg from "../../assets/images/tprm/onboarding.jpg"
 
 const Onboarding = () => {
   const steps = [
@@ -163,7 +164,7 @@ const Onboarding = () => {
             <div className="relative">
               <div className="absolute rounded-lg -inset-4 bg-brandAccent opacity-30 blur-lg animate-pulse-custom"></div>
               <img 
-                src="https://pixabay.com/get/gf597e44587669eec797b4e286250959f80c222d9e4486d77400d4992819dcf89c5f58a9c24aad94fd28932f3fe4e7bc80cb5617814c8992bc5fb9f50da92d75a_1280.jpg" 
+                src={onboardingImg}
                 alt="Strategic Partnership Handshake" 
                 className="relative w-full border-2 rounded-lg shadow-2xl border-brandNavy"
               />

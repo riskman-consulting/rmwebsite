@@ -138,6 +138,7 @@
 
 import React from 'react';
 import { ArrowRight, Shield } from 'lucide-react';
+import heroImg from "../../assets/images/tprm/hero-bg.jpg";
 
 const Hero = () => {
   return (
@@ -145,7 +146,7 @@ const Hero = () => {
       {/* Background Overlay with Image */}
       <div className="absolute inset-0 z-0 opacity-20">
         <img 
-          src="https://pixabay.com/get/g5accf17e485315973e40b9c104e919da8105adc42ddbbf25fbc3cca1987b3b8830461aae8d9604e6d6e5a1ccc5060102c2000a674deae0a57b2517845de9b93a_1280.jpg" 
+          src={heroImg}
           alt="Cyber Security Background" 
           className="object-cover w-full h-full"
         />

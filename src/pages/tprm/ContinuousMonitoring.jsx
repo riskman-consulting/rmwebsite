@@ -80,6 +80,7 @@
 
 import React from 'react';
 import { RefreshCw, FileSearch, TrendingUp, AlertOctagon } from 'lucide-react';
+import monitoringImg from "../../assets/images/tprm/monitoring.jpg"
 
 const Monitoring = () => {
   return (
@@ -88,7 +89,7 @@ const Monitoring = () => {
         <div className="flex flex-col items-center gap-12 md:flex-row">
           <div className="order-2 md:w-1/2 md:order-1">
             <img 
-              src="https://pixabay.com/get/g117af6ed9278d09e1d5b1bd6b9d6812682502bba30c14fb5ea6859f4b341d984888e30aa3a0cd430e8c0d7c13d170e657bb7f43effe21e2a038e3582ed5d5b6c_1280.jpg" 
+              src={monitoringImg} 
               alt="Continuous Monitoring Audit" 
               className="w-full rounded-lg shadow-2xl"
             />

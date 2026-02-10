@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Cloud, Database, Wifi, Share2, Lock, Server, ArrowRight, Circle } from 'lucide-react';
 
+import tech1Img from "../../assets/images/ai-technology/tech-1.jpg";
+import tech2Img from "../../assets/images/ai-technology/tech-2.jpg";
+import tech3Img from "../../assets/images/ai-technology/tech-3.png";
+import tech4Img from "../../assets/images/ai-technology/tech-4.jpg";
+import tech5Img from "../../assets/images/ai-technology/tech-5.jpg";
+import tech6Img from "../../assets/images/ai-technology/tech-6.jpg";
+
 const TechIntegration = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [progress, setProgress] = useState(0);
@@ -12,7 +19,7 @@ const TechIntegration = () => {
       title: "Cloud-Native",
       fullTitle: "Cloud-Native Platforms",
       description: "Leverage scalable, secure cloud infrastructure for worldwide deployment, ensuring high availability and rapid elasticity on demand.",
-      image: "https://public.youware.com/users-website-assets/prod/0080e600-c480-4fa5-a126-d63c7c3e8eda/7dbec627600a409689ebfa800c4f3772.jpg"
+      image: tech1Img
     },
     {
       id: "02",
@@ -20,7 +27,7 @@ const TechIntegration = () => {
       title: "Blockchain",
       fullTitle: "Blockchain Audit Trails",
       description: "Secure immutable records of all risk events and decisions, providing tamper-proof evidence for audits and stakeholders.",
-      image: "https://pixabay.com/get/g69afa8b005d3bcf0954479523325ab3f96a4d70b1dbb28648181e09d9bd7445813436eef9d4de1a847218889d21f66f05e627479daf1ed0552b6b405f9d03a5a_1280.jpg"
+      image: tech2Img
     },
     {
       id: "03",
@@ -28,7 +35,7 @@ const TechIntegration = () => {
       title: "IoT Monitor",
       fullTitle: "IoT Risk Monitoring",
       description: "Integrate IoT sensors for real-time operational insights, detecting physical and supply chain risks instantly across assets.",
-      image: "https://pixabay.com/get/gc953696ce314e56470381c46324527a8631f7a31e09cff9538b0e3afac4a6e3e9179b0af0120fd30bb19309cd937c5edcd45599e9a7f3fda6a19f235d7a8d76d_1280.png"
+      image: tech3Img
     },
     {
       id: "04",
@@ -36,7 +43,7 @@ const TechIntegration = () => {
       title: "API Ecosystem",
       fullTitle: "API-Driven Ecosystems",
       description: "Enable frictionless third-party integrations, creating a unified risk ecosystem that adapts to evolving business partnerships.",
-      image: "https://pixabay.com/get/g030a605b44d81cee86084bc6991af0caabe6ab6cd071751603fb74a19220ca6d950220a0e0908b6ce79eda8f266cabb3a46148ad034a4e02c10f1c7c61aea5cc_1280.jpg"
+      image: tech4Img
     },
     {
       id: "05",
@@ -44,7 +51,7 @@ const TechIntegration = () => {
       title: "Cyber AI",
       fullTitle: "Cybersecurity AI Layers",
       description: "Fortify defenses with AI-enhanced firewalls and anomaly detection, neutralizing advanced persistent threats proactively.",
-      image: "https://public.youware.com/users-website-assets/prod/0080e600-c480-4fa5-a126-d63c7c3e8eda/acb89fbcdb02437aa02e26e0acbb90ff.jpg"
+      image: tech5Img
     },
     {
       id: "06",
@@ -52,7 +59,7 @@ const TechIntegration = () => {
       title: "Data Lakes",
       fullTitle: "Data Lake Optimization",
       description: "Centralize disparate data sources into performant lakes, fueling AI analytics with clean, governed enterprise intelligence.",
-      image: "https://pixabay.com/get/gbe2bc24eef035588594ab6958bbc03492b1b12440ba40e991339a4bd578147c4666f355893cabe5f493302b38b66f0d6db516e207d5122884613b98eb62c9948_1280.jpg"
+      image: tech6Img
     }
   ];
 

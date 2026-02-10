@@ -30,24 +30,24 @@ const Testimonials = () => {
     },
     {
       id: 3,
-      name: "Michael Rodriguez",
+      name: "Electrosteel Castings Limited",
       role: "CEO, Global Manufacturing",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&h=600&fit=crop",
-      text: "More than auditors — strategic advisors. Their risk and compliance expertise helped us navigate complex regulations with confidence.",
+      image: "https://companieslogo.com/img/orig/ELECTCAST.NS_BIG-aca1b4fb.png?t=1720244491",
+      text: "RiskMan delivered a well-structured and comprehensive risk management engagement, covering multiple business processes. The work was completed on time and met our expectations fully",
       color: "bg-white dark:bg-surfaceDark",
       textColor: "text-brandDark dark:text-white",
       zIndex:3,
     },
-    {
-      id: 4,
-      name: "Emily Thompson",
-      role: "VP Operations, RetailMax",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&h=600&fit=crop",
-      text: "Their insights were actionable and impactful, driving measurable improvements in efficiency and compliance across our organization.",
-      color: "bg-brandPrimary",
-      textColor: "text-white",
-      zIndex:4,
-    },
+    // {
+    //   id: 4,
+    //   name: "Emily Thompson",
+    //   role: "VP Operations, RetailMax",
+    //   image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&h=600&fit=crop",
+    //   text: "Their insights were actionable and impactful, driving measurable improvements in efficiency and compliance across our organization.",
+    //   color: "bg-brandPrimary",
+    //   textColor: "text-white",
+    //   zIndex:4,
+    // },
   ];
 
   // Auto-rotate
@@ -85,7 +85,7 @@ const Testimonials = () => {
             </p>
 
             {/* Navigation Dots */}
-            <div className="flex justify-center p-3  lg:justify-start">
+            <div className="flex justify-center p-3 lg:justify-start">
               {testimonials.map((_, idx) => (
                 <button
                   key={idx}

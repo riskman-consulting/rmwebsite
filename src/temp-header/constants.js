@@ -190,10 +190,10 @@ export const NAVIGATION_DATA = {
         {
             "items": [
                 { "label": "Accomplishment", "path": "/events/#accomplishment" },
-                {"label":"Emerging Risk Assurance","path":"/events/#emerging-risk-assurance"},
+                // {"label":"","path":"/events/#emerging-risk-assurance"},
                 { "label": "Upcoming Events", "path": "/events/#upcoming-events" },
                 {"label":"Past Events","path":"/events/#past-events"},
-                { "label": "Media Coverage", "path": "/events/#moment-that-matters" }
+                { "label": "Culture at RiskMan", "path": "/events/#moment-that-matters" }
             ]
         }
     ],

@@ -50,7 +50,7 @@ export default function TributeMarquee() {
           
           {/* Name */}
           <span className="text-xl font-bold text-brandPrimary dark:text-brandAccent shrink-0">
-            Prabirsen Gupta:
+            Prabir Sen Gupta:
           </span>
           
           {/* Quote */}

@@ -17,6 +17,7 @@ import PrivacyPolicy from './pages/resources/Privacy'
 import Terms from './pages/resources/Terms'
 import BlogSingle from './pages/blogs/BlogSingle'
 import './index.css'
+import ConcurrentAuditPage from './pages/concurrent-audit'
 
 import { Toaster } from 'react-hot-toast'
 import ScrollToTop from './components/common/ScrollToTop'
@@ -57,7 +58,7 @@ import SOC3Page from "./pages/soc/soc3/Soc3Page"
 
 /// ISO Pages
 import ISOPage from "./pages/iso/iso"
-import ISO27701Page from "./pages/iso/iso-27701"
+import ISO27701Page from "./pages/iso/iso-27701/"
 import ISO22301Page from "./pages/iso/iso-22301"
 import ISO31000Page from "./pages/iso/iso-31000"
 import ISO42001Page from "./pages/iso/iso-42001"
@@ -185,7 +186,7 @@ function App() {
             <Route path='rbia' element={<RBIAPage />} />
             <Route path='tprm' element={<TPRM />} />
             <Route path='sox-icofr-ifc' element={<SOXICOFRPage />} />
-            <Route path='concurrent-audits' element={<h1>Concurrent Audits</h1>} />
+            <Route path='concurrent-audits' element={<ConcurrentAuditPage/>} />
             <Route path='formulation-of-policies-and-sops' element={<h1>Policies and SOPs</h1>} />
 
           </Route>

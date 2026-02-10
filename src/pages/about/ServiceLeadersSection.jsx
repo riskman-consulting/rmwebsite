@@ -314,7 +314,7 @@ const SERVICE_LEADERS = [
   {
     name: "Pranshul Agarwal",
     location: "Delhi, India",
-    title: "Client Leads",
+    title: "Client Lead",
     credentials: "CIA, CISA Qualified with 6+ Years of Experience",
     bio: "Risk Advisory professional with 6+ years of experience in IFC design, internal audits, SOX testing, and risk assurance. Delivers practical, value-driven risk and control solutions across industries.",
     image: teamsImages.Pranshul,
@@ -330,7 +330,7 @@ const SERVICE_LEADERS = [
   },
   {
     name: "Vishal Sharma",
-    title: "Client Leads",
+    title: "Client Lead",
     location: "Kolkata, India",
     credentials: "7+ years",
     bio: "Specialized in core internal audit, ERM, ICoFR, SOP & policy development, and MIS Automation through VBA",

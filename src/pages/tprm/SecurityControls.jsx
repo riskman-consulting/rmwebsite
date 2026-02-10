@@ -100,6 +100,8 @@
 import React from 'react';
 import { Lock, Shield, Server, Activity } from 'lucide-react';
 
+import securityImg from "../../assets/images/tprm/security.png"
+
 const Security = () => {
   return (
     <section className="py-20 bg-bgLight">
@@ -149,7 +151,7 @@ const Security = () => {
             </div>
             <div className="relative h-64 md:h-auto">
               <img 
-                src="https://pixabay.com/get/g73aed47b6fdc475ecf244401af004ddc20da5f544e7466d1700835fc151f786185de9c3e3c3d82ba385a53e5f042d291f66905d37ad9ad202693f5c27b1eadcd_1280.jpg" 
+                src={securityImg} 
                 alt="Cyber Security Lock" 
                 className="absolute inset-0 object-cover w-full h-full"
               />

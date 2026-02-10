@@ -77,13 +77,14 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import ctaImg from "../../assets/images/tprm/supply-chain.png"
 
 const SupplyChain = () => {
   return (
     <section className="relative py-24 overflow-hidden bg-brandNavy">
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://pixabay.com/get/g3d3456138c05cdd8ea841cb21abd29eeb0d8a4fd2171dfb1a89d7fbfe029a556a8f0e04109e6a948852788a63fa40676f48f7295584e554001d495b3f81640d7_1280.jpg" 
+          src={ctaImg}
           alt="Supply Chain Network" 
           className="object-cover w-full h-full opacity-20 mix-blend-overlay"
         />

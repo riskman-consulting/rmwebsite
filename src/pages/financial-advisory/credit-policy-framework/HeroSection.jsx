@@ -139,6 +139,7 @@
 
 import React from 'react';
 import { ArrowRight, Compass, Target, Shield } from 'lucide-react';
+import compassImg from "../../../assets/images/financial-advisory/strategic-compass.jpg"
 
 const PolicyHero = () => {
   return (
@@ -146,7 +147,7 @@ const PolicyHero = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://pixabay.com/get/g0750f1cdf4b6853f2b59a7a55589620aa4d7b79cb058b2ae7f9b047462400f4d505e3c3ccb24a2e06bf9fadbbf3c536344e2c2719e59a697e3d02215c70d333e_1280.jpg" 
+          src={compassImg}
           alt="Strategic Compass" 
           className="object-cover w-full h-full"
         />

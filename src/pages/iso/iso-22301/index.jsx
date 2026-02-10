@@ -1,11 +1,27 @@
-import React from 'react'
+import React from 'react';
 
-function ISO22301() {
+import HeroSection from './Herosection';
+import PillarsSection from './PillarsSection';
+import StepsSection from './StepsSection';
+import ValueSection from './ValueSection';
+import CTASection from './CTASection';
+import FAQSection from './FAQSection';
+
+const LandingPage = () => {
   return (
-    <div>
-      ISO22301 Page
+    <div className="min-h-screen font-sans bg-white text-brandDark selection:bg-brandAccent selection:text-brandDark">
+    
+      <main>
+        <HeroSection />
+        <PillarsSection />
+        <StepsSection />
+        <ValueSection />
+        <CTASection />
+        <FAQSection />
+      </main>
+      {/* <Footer /> */}
     </div>
-  )
-}
+  );
+};
 
-export default ISO22301
+export default LandingPage;

@@ -47,6 +47,7 @@
 
 import React from 'react';
 import { FileText, Users, Eye, Gavel } from 'lucide-react';
+import governanceImg from "../../assets/images/tprm/governance.jpg";
 
 const Governance = () => {
   return (
@@ -56,7 +57,7 @@ const Governance = () => {
           <div className="lg:w-1/2">
             <div className="relative overflow-hidden border-4 border-white shadow-2xl rounded-2xl">
               <img 
-                src="https://pixabay.com/get/gaba628d6f7685cd5048c67b2c10abc2f17695b3c2e8bec4d0b04bf14e5452b6e68fe04200f83241e09ebd92c6f8cfb26722ef72df4c5b4b0819c095c96e4d589_1280.jpg" 
+                src={governanceImg}
                 alt="Team Governance Meeting" 
                 className="w-full h-auto transition-transform duration-700 transform hover:scale-105"
               />

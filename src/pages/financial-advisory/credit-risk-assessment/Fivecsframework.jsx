@@ -204,6 +204,8 @@
 import React from 'react';
 import { Users, Landmark, Globe, CheckCircle2 } from 'lucide-react';
 
+import meetingImg from "../../../assets/images/financial-advisory/strategic-meeting.png";
+
 const Framework = () => {
   const pillars = [
     {
@@ -230,7 +232,7 @@ const Framework = () => {
           <div className="relative order-2 lg:order-1">
             <div className="relative overflow-hidden border-4 border-white shadow-2xl rounded-2xl dark:border-brandNavy/30">
               <img 
-                src="https://pixabay.com/get/g9958748f93bbcb571ec88a44b6906066f3b8a6838d0f431166fcf75ae887bc66b73edabb748a85ea761e0d2d0f2e718577f1cbdcb6ab5e7841601f76064b1127_1280.jpg" 
+                src={meetingImg}
                 alt="Business Meeting" 
                 className="object-cover w-full h-full transition-transform duration-700 transform hover:scale-105"
               />
