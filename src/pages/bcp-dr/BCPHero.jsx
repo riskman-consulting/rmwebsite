@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import bg from "../../assets/images/bcp/bcp-overview.png"
 
 const BCPHero = () => {
+  const navigator=useNavigate()
   return (
     <section className="bg-bgLight dark:bg-bgDark">
       <div className="container px-12 py-20 mx-auto">
@@ -18,14 +20,14 @@ const BCPHero = () => {
             </p>
 
             <div className="flex flex-wrap gap-4 mt-8">
-              <button
+              <button onClick={()=>navigator("/contact")}
                 type="button"
                 className="px-6 py-3 font-semibold text-white transition rounded-lg bg-brandPrimary hover:bg-brandNavy focus:outline-none focus:ring-2 focus:ring-brandPrimary focus:ring-offset-2"
               >
                 Book a Consultation
               </button>
 
-              <button
+              <button onClick={()=>navigator("/services")}
                 type="button"
                 className="px-6 py-3 font-semibold transition border rounded-lg border-brandPrimary text-brandPrimary hover:bg-brandPrimary hover:text-white focus:outline-none focus:ring-2 focus:ring-brandPrimary focus:ring-offset-2 dark:border-brandAccent dark:text-brandAccent"
               >

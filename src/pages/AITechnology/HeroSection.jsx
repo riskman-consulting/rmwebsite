@@ -22,6 +22,8 @@ import {
   ShieldCheck,
 } from 'lucide-react';
 
+import {Link} from "react-router-dom";
+
 
 const AiTechnology = () => {
  return (
@@ -60,19 +62,19 @@ const AiTechnology = () => {
           </p>
           
           <div className="flex flex-col gap-4 pt-4 sm:flex-row">
-            <a 
-              href="#services" 
+            <Link 
+              to="/services" 
               className="group bg-brandAccent hover:bg-brandGold text-brandDark font-bold py-4 px-8 rounded-sm transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(255,192,0,0.3)]"
             >
               Explore Our Services
               <ArrowRight className="transition-transform group-hover:translate-x-1" size={20} />
-            </a>
-            <a 
-              href="#contact" 
+            </Link>
+            <Link 
+              to="/contact" 
               className="flex items-center justify-center gap-2 px-8 py-4 font-bold text-white transition-all bg-transparent border rounded-sm group border-white/30 hover:border-brandAccent hover:text-brandAccent backdrop-blur-sm"
             >
               Contact Us Today
-            </a>
+            </Link>
           </div>
 
           <div className="grid grid-cols-3 gap-6 pt-8 border-t border-white/10">

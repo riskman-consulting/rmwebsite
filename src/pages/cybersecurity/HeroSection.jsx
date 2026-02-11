@@ -21,6 +21,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 
+
 import heroImage from "../../assets/images/cybersecurity/herosection-image.png";
 
 const HeroSection = () => {
@@ -151,13 +152,13 @@ const HeroSection = () => {
               RiskMan delivers standardized, rigorous cybersecurity audits to detect vulnerabilities, ensure regulatory compliance, and strengthen your organization's overall security posture.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
-              <a href="#" className="flex items-center justify-center gap-2 px-8 py-4 font-bold transition-all rounded-lg bg-brandAccent text-brandDark hover:bg-white group">
+              <Link to="/services" className="flex items-center justify-center gap-2 px-8 py-4 font-bold transition-all rounded-lg bg-brandAccent text-brandDark hover:bg-white group">
                 Service Inquiry
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-              </a>
-              <a href="#" className="flex items-center justify-center px-8 py-4 font-bold text-white transition-all border rounded-lg border-white/30 hover:bg-white/10">
+              </Link>
+              <Link to="/contact" className="flex items-center justify-center px-8 py-4 font-bold text-white transition-all border rounded-lg border-white/30 hover:bg-white/10">
                 Contact RiskMan
-              </a>
+              </Link>
             </div>
           </motion.div>
 

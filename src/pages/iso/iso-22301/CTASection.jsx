@@ -1,8 +1,10 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import ctaImage from "../../../assets/images/iso/CTA.png";
+import { useNavigate } from 'react-router-dom';
 
 const CTASection = () => {
+  const navigator = useNavigate()
   return (
     <section className="relative py-24 bg-bgLight">
       <div className="container px-4 mx-auto md:px-6">
@@ -16,7 +18,7 @@ const CTASection = () => {
                 Build a resilient organization that thrives under pressure with RiskMan’s expert continuity and recovery consulting.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">
-                <button className="flex items-center justify-center gap-2 px-8 py-4 font-bold transition-all transform rounded-lg shadow-lg bg-brandAccent hover:bg-brandGold text-brandDark hover:-translate-y-1">
+                <button onClick={()=>navigator("/contact")} className="flex items-center justify-center gap-2 px-8 py-4 font-bold transition-all transform rounded-lg shadow-lg bg-brandAccent hover:bg-brandGold text-brandDark hover:-translate-y-1">
                   Start Your Journey
                   <ArrowRight className="w-5 h-5" />
                 </button>

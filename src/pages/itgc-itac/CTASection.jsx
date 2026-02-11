@@ -35,9 +35,11 @@
 
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const CTASection = () => {
+
   return (
     <section className="relative py-20 overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -56,9 +58,9 @@ const CTASection = () => {
         <p className="max-w-2xl mx-auto mb-10 text-xl text-slate-200">
           Partner with RiskMan to transform technical audits into strategic business advantages.
         </p>
-        <a href="#" className="inline-block px-10 py-4 text-lg font-bold transition-all transform rounded-full shadow-2xl bg-brandGold text-brandNavy hover:bg-amber-500 hover:-translate-y-1 shadow-brandGold/30">
+        <Link to="/contact" className="inline-block px-10 py-4 text-lg font-bold transition-all transform rounded-full shadow-2xl bg-brandGold text-brandNavy hover:bg-amber-500 hover:-translate-y-1 shadow-brandGold/30">
           Connect With Us
-        </a>
+        </Link>
       </div>
     </section>
   );

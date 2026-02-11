@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 /**
  * WhyRiskManCTA Component
@@ -6,6 +7,7 @@ import React from 'react';
  * Focuses on trust signals, clear differentiators, and professional conversion.
  */
 const WhyRiskManCTA = () => {
+  const navigator = useNavigate()
   const differentiators = [
     {
       icon: "🎯",
@@ -95,7 +97,7 @@ const WhyRiskManCTA = () => {
               </div>
 
               <div className="flex flex-col w-full gap-4 lg:w-2/5">
-                <button className="w-full py-5 bg-brandGold hover:bg-brandAccent text-brandDark font-black text-sm uppercase tracking-[3px] rounded-2xl transition-all duration-300 transform hover:scale-[1.02] shadow-xl shadow-brandGold/20">
+                <button onClick={()=>navigator("/contact")} className="w-full py-5 bg-brandGold hover:bg-brandAccent text-brandDark font-black text-sm uppercase tracking-[3px] rounded-2xl transition-all duration-300 transform hover:scale-[1.02] shadow-xl shadow-brandGold/20">
                   Schedule a Consultation
                 </button>
                 <div className="grid grid-cols-2 gap-4">

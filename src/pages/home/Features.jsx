@@ -172,7 +172,7 @@ const StrategicSection = () => {
   ];
  
   return (
-    <section className="relative px-10 py-16 overflow-hidden transition-colors duration-500 md:py-20 bg-surfaceLight dark:bg-bgDark">
+    <section className="relative px-10 py-16 overflow-hidden transition-colors duration-500 md:py-20 bg-surfaceLight dark:bg-surfaceDark">
  
       {/* Accent line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brandGold/50 to-transparent" />

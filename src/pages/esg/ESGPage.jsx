@@ -44,7 +44,7 @@
 
 import React from 'react';
 import HeroSection from './HeroSection';
-import StrategicImperative from './StrategicImperativeSection';
+// import StrategicImperative from './StrategicImperativeSection';
 import ESGEvolutionTimeline from './ESGEvolutionSections';
 import MultiStakeholderImperative from './MultiStakeHolderImperative';
 import ESGStakeholderEcosystem from './Esgstakeholderecosystem';
@@ -64,7 +64,7 @@ function App() {
       <HeroSection/>
 
       {/* Strategic Imperative - Introduction */}
-      <StrategicImperative />
+      {/* <StrategicImperative /> */}
 
       {/* ESG Evolution Timeline */}
       <ESGEvolutionTimeline />
@@ -76,7 +76,7 @@ function App() {
       <ESGStakeholderEcosystem />
 
       {/* Foundational ESG Frameworks (SDGs, GHG) */}
-      <FoundationalFrameworks />
+      {/* <FoundationalFrameworks /> */}
 
       {/* GHG Scope 1-2-3 Value Chain Interactive Diagram */}
       <Scope123ValueChain />

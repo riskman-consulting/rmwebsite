@@ -23,9 +23,11 @@ import {
   Moon,
   Sun
 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 
 const HeroSection = () => {
+  const navigator=useNavigate()
   return (
     // <section className="relative py-20 overflow-hidden text-white bg-gradient-to-br from-brandDark via-brandNavy to-brandPrimary md:py-28">
     //   {/* Background decorative elements */}
@@ -78,10 +80,10 @@ const HeroSection = () => {
       </p>
 
       <div className="flex justify-center gap-4">
-        <button className="flex items-center gap-2 px-8 py-4 font-bold rounded-lg bg-brandGold text-brandNavy">
+        <button onClick={()=>navigator("/services")} className="flex items-center gap-2 px-8 py-4 font-bold rounded-lg bg-brandGold text-brandNavy">
           Explore <ArrowRight />
         </button>
-        <button className="px-8 py-4 border-2 rounded-lg">Contact</button>
+        <button onClick={()=>navigator("/contact")} className="px-8 py-4 border-2 rounded-lg">Contact</button>
       </div>
     </div>
 

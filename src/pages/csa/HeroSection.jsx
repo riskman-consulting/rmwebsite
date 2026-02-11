@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
+import image from "../../assets/images/csa/image.png"
+
 export default function HeroSection() {
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -150,7 +152,7 @@ export default function HeroSection() {
               <div className="relative h-96 lg:h-full min-h-[500px] rounded-3xl overflow-hidden shadow-2xl group">
                 {/* Professional Image */}
                 <img 
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=800&fit=crop" 
+                  src={image}
                   alt="Control Self-Assessment - Risk Management"
                   className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                 />
@@ -179,7 +181,7 @@ export default function HeroSection() {
               {/* Floating Card Behind */}
               <div className="absolute w-48 h-48 p-6 border shadow-xl -bottom-6 -right-6 bg-gradient-to-br from-teal-500/20 to-blue-500/20 rounded-2xl backdrop-blur-sm border-white/10">
                 <div className="space-y-4">
-                  <div className="text-xs tracking-wider uppercase text-slate-400">Key Benefits</div>
+                  <div className="text-xs font-bold tracking-wider text-center uppercase text-brandDark dark:text-brandAccent">Key Benefits</div>
                   <div className="space-y-3">
                     <div className="flex items-center gap-2 text-sm text-white">
                       <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>

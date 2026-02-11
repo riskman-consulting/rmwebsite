@@ -1,9 +1,11 @@
 import React from 'react';
 import { ArrowRight, Shield, CheckCircle } from 'lucide-react';
 import heroImage from "../../../assets/images/iso/ISO22301.png";
+import { useNavigate } from 'react-router-dom';
 
 
 const HeroSection = () => {
+  const navigator = useNavigate()
   return (
     <section className="relative flex items-center min-h-screen pt-20 overflow-hidden bg-brandDark">
       {/* Background Overlay */}
@@ -32,11 +34,11 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-col gap-4 pt-4 sm:flex-row">
-            <button className="group bg-brandAccent hover:bg-brandGold text-brandDark font-bold px-8 py-4 rounded-lg transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(255,192,0,0.3)] flex items-center justify-center gap-2">
+            <button onClick={()=>navigator("/contact")} className="group bg-brandAccent hover:bg-brandGold text-brandDark font-bold px-8 py-4 rounded-lg transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(255,192,0,0.3)] flex items-center justify-center gap-2">
               Talk To Experts
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </button>
-            <button className="px-8 py-4 font-semibold text-white transition-colors border rounded-lg border-white/30 hover:bg-white/10 backdrop-blur-sm">
+            <button onClick={()=>navigator("/services")} className="px-8 py-4 font-semibold text-white transition-colors border rounded-lg border-white/30 hover:bg-white/10 backdrop-blur-sm">
               Back To Main Page
             </button>
           </div>

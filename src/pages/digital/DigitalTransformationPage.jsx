@@ -65,7 +65,7 @@ const services = [
   {
     id: 1,
     title: 'Strategic PMO',
-    slug: 'strategic-pmo',
+    slug: '/services/digital-transformation/strategic-pmo',
     description: 'Establish robust project management frameworks that align with your business objectives. Our Strategic PMO services ensure governance, standardization, and continuous improvement across your project portfolio.',
     icon: Shield,
     color: brandColors.brandPrimary
@@ -73,7 +73,7 @@ const services = [
   {
     id: 2,
     title: 'Implementation Excellence',
-    slug: 'implementation-excellence',
+    slug: '/services/digital-transformation/implementation',
     description: 'Execute digital initiatives with precision and agility. We deliver end-to-end implementation services that minimize disruption while maximizing value realization and stakeholder adoption.',
     icon: Zap,
     color: brandColors.brandAccent
@@ -81,7 +81,7 @@ const services = [
   {
     id: 3,
     title: 'Support Services',
-    slug: 'support-services',
+    slug: '/services/digital-transformation/support-services',
     description: 'Maintain operational excellence post-implementation. Our comprehensive support services ensure your digital solutions continue to deliver value through proactive monitoring, optimization, and enhancement.',
     icon: Users,
     color: brandColors.brandGold
@@ -320,7 +320,7 @@ function DigitalTransformationPage() {
                     <p className="mb-6 leading-relaxed text-gray-600">
                       {service.description}
                     </p>
-                    <Link to={`/digital-transformation/${service.slug}`}>
+                    <Link to={service.slug}>
                       <motion.button
                         whileHover={{ x: 5 }}
                         className="flex items-center gap-2 font-semibold transition-colors duration-300"

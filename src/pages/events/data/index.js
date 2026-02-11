@@ -29,9 +29,9 @@ export const PHOTOS = [
   {id:7,category:"5 Year Celebration", title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[6],description:"Journey of growth and success"},
   {id:8,category:"5 Year Celebration", title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[7],description:"Journey of growth and success"},
   {id:9,category:"5 Year Celebration", title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[8],description:"Journey of growth and success"},
-  {id:10, category:"5 Year Celebration", title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[9],description:"Journey of growth and success"},
-  {id:42,category:"5 Year Celebration",title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[10],description:"Journey of growth and success"},
-  {id:43,category:"5 Year Celebration",title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[11],description:"Journey of growth and success"},
+  // {id:10, category:"5 Year Celebration", title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[9],description:"Journey of growth and success"},
+  // {id:42,category:"5 Year Celebration",title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[10],description:"Journey of growth and success"},
+  // {id:43,category:"5 Year Celebration",title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[11],description:"Journey of growth and success"},
     
   
 
@@ -99,44 +99,44 @@ export const PHOTOS = [
   {
     id: 29,
     category: "Office Culture",
-    subCategory: "Zomato Client Celebration",
+    subCategory: "Celebration",
     image: Diwali_Christmas_Zomato_Team_Images[0],
   },
   {
     id: 30,
     category: "Office Culture",
-    subCategory: "Zomato Client Celebration",
+    subCategory: "Celebration",
     image: Diwali_Christmas_Zomato_Team_Images[1],
   },
   {
     id: 31,
     category: "Office Culture",
-    subCategory: "Zomato Client Celebration",
+    subCategory: "Celebration",
     image: Diwali_Christmas_Zomato_Team_Images[2],
   },
   {
     id: 32,
     category: "Office Culture",
-    subCategory: "Zomato Client Celebration",
+    subCategory: "Celebration",
     image: Diwali_Christmas_Zomato_Team_Images[3],
   },
   {
     id: 33,
     category: "Office Culture",
-    subCategory: "Zomato Client Celebration",
+    subCategory: "Celebration",
     image: Diwali_Christmas_Zomato_Team_Images[4],
   },
   {
     id: 34,
     category: "Office Culture",
-    subCategory: "Zomato Client Celebration",
+    subCategory: "Celebration",
     image: Diwali_Christmas_Zomato_Team_Images[5],
   },
 
    {
     id:35,
     category:"Office Culture",
-    subCategory:"Zomato Client Celebration",
+    subCategory:"Celebration",
     image: Ganesh_Chaturthi_Images[0],
   },
 //   {

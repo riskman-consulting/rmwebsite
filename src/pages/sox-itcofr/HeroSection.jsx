@@ -1,5 +1,6 @@
 import React from 'react';
 import bg from "../../assets/images/sox/hero.png";
+import { Link } from 'react-router-dom';
 
 function HeroSection() {
   return (
@@ -50,19 +51,19 @@ function HeroSection() {
 
             {/* BUTTONS */}
             <div className="flex flex-wrap gap-5 pt-4 animate-[fadeInUp_0.8s_ease-out_0.4s_both]">
-              <a 
-                href="#services" 
+              <Link 
+                to="/services" 
                 className="px-10 py-4 font-bold transition-all duration-300 rounded-sm shadow-lg text-brandDark bg-brandAccent hover:bg-brandGold shadow-brandAccent/20 hover:shadow-brandGold/40 hover:-translate-y-1"
               >
                 View Our Services
-              </a>
+              </Link>
               
-              <a 
-                href="#contact" 
+              <Link 
+                href="/contact" 
                 className="px-10 py-4 font-bold text-white transition-all duration-300 border-2 rounded-sm border-white/20 hover:border-brandAccent hover:bg-white/5"
               >
                 Speak to Our Team
-              </a>
+              </Link>
             </div>
 
             {/* TAGS BAR */}

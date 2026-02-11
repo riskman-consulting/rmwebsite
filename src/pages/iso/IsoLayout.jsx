@@ -26,6 +26,8 @@ function Layout() {
               label="ISO-31000" />
             <NavItem to="iso-42001"
               label="ISO-42001" />
+            <NavItem to="tisax"
+              label="TISAX" />
           </div>
         </div>
       </nav>

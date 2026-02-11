@@ -35,7 +35,7 @@ export default function CareersPage() {
   }, [searchQuery]);
 
   return (
-    <div className="min-h-screen font-sans bg-bgLight dark:bg-bgDark text-zinc-900 dark:text-zinc-100">
+    <div className="min-h-screen font-sans bg-surfaceLight dark:bg-surfaceDark text-zinc-900 dark:text-zinc-100">
       
       {/* --- HERO SECTION --- */}
       <header className="relative px-6 pt-24 pb-16 overflow-hidden">
@@ -72,7 +72,7 @@ export default function CareersPage() {
                 layout
                 key={idx}
                 onClick={() => setSelectedJob(job)}
-                className="p-8 transition-all border cursor-pointer group bg-bgLight dark:bg-bgDark border-zinc-100 dark:border-zinc-800 rounded-3xl hover:border-brandPrimary hover:shadow-2xl hover:shadow-brandPrimary/5"
+                className="p-8 transition-all border cursor-pointer group bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-3xl hover:border-brandPrimary hover:shadow-2xl hover:shadow-brandPrimary/5"
               >
                 <div className="flex items-start justify-between mb-6">
                   <span className="text-[10px] font-bold px-2 py-1 bg-brandPrimary/10 text-brandPrimary rounded uppercase">
@@ -87,7 +87,7 @@ export default function CareersPage() {
                     <FaMapMarkerAlt className="text-brandPrimary" />
                     {job.jobLocation.address.addressLocality}
                   </div>
-                  <div className="flex items-center justify-center w-8 h-8 transition-all rounded-full bg-zinc-50 dark:bg-zinc-800 group-hover:bg-brandPrimary group-hover:text-white">
+                  <div className="flex items-center justify-center w-8 h-8 transition-all rounded-full bg-zinc-50 dark:bg-brandAccent group-hover:bg-brandDark group-hover:text-white">
                     <FaArrowRight size={10} />
                   </div>
                 </div>

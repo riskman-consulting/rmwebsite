@@ -14,4 +14,5 @@ export default defineConfig({
     port: 3200,
     host: true,
   },
+  assetsInclude:['**/*.docx']
 })

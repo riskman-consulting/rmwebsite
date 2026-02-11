@@ -6,7 +6,7 @@ const HeroSection = () => {
   const navigator = useNavigate();
   
   return (
-    <section className="relative pt-20 pb-20 lg:pt-36 lg:pb-28 overflow-hidden bg-bgLight dark:bg-bgDark transition-colors duration-300 border-b border-borderLight dark:border-borderDark">
+    <section className="relative pt-20 pb-20 overflow-hidden transition-colors duration-300 border-b lg:pt-36 lg:pb-28 bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark">
       
       {/* 1. ADVANCED BACKGROUND DECORATION */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
@@ -16,15 +16,15 @@ const HeroSection = () => {
       </div>
 
       <div className="container relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid items-center gap-16 lg:grid-cols-2">
           
           {/* 2. LEFT SIDE: CONTENT */}
           <div className="text-left animate-fadeIn">
             {/* Branded Tag */}
-            <div className="inline-flex items-center gap-2 py-2 px-4 mb-8 text-xs font-bold tracking-widest uppercase rounded-full bg-surfaceLight dark:bg-surfaceDark border border-borderLight dark:border-borderDark shadow-sm animate-bounce-slow">
-              <span className="flex h-2 w-2 rounded-full bg-brandGold animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 text-xs font-bold tracking-widest uppercase border rounded-full shadow-sm bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark animate-bounce-slow">
+              <span className="flex w-2 h-2 rounded-full bg-brandGold animate-pulse"></span>
               <span className="text-gray-600 dark:text-gray-400">Compliance Excellence</span>
-              <span className="text-slate-300 mx-1">|</span>
+              <span className="mx-1 text-slate-300">|</span>
               <span className="text-brandPrimary dark:text-brandGold">Trust Principles</span>
             </div>
             
@@ -35,12 +35,12 @@ const HeroSection = () => {
                 <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-brandPrimary to-brandNavy dark:from-brandGold dark:to-brandAccent">
                   Security & Resilience
                 </span>
-                <span className="absolute bottom-2 left-0 w-full h-3 bg-brandPrimary/10 dark:bg-brandGold/20 -z-0"></span>
+                <span className="absolute left-0 w-full h-3 bottom-2 bg-brandPrimary/10 dark:bg-brandGold/20 -z-0"></span>
               </span> <br />
               to Enterprise Buyers.
             </h1>
             
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-10 leading-relaxed max-w-xl font-medium">
+            <p className="max-w-xl mb-10 text-xl font-medium leading-relaxed text-gray-600 dark:text-gray-300">
               Show that your cloud and SaaS platforms operate with strong, tested controls across security, availability, confidentiality, and related trust principles.
             </p>
             
@@ -48,15 +48,15 @@ const HeroSection = () => {
             <div className="flex flex-wrap items-center gap-6 mb-12">
               <button 
                 onClick={() => navigator("/contact")}
-                className="group bg-brandPrimary hover:bg-brandNavy text-white px-10 py-5 rounded-2xl font-bold transition-all shadow-2xl flex items-center gap-3 hover:-translate-y-1 active:translate-y-0"
+                className="flex items-center gap-3 px-10 py-5 font-bold text-white transition-all shadow-2xl group bg-brandPrimary hover:bg-brandNavy rounded-2xl hover:-translate-y-1 active:translate-y-0"
               >
                 Engage With SOC 2 Experts 
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </button>
               
               <button 
-                onClick={() => navigator("/soc")} 
-                className="bg-surfaceLight dark:bg-surfaceDark text-brandPrimary dark:text-brandGold border border-borderLight dark:border-borderDark px-10 py-5 rounded-2xl font-bold hover:bg-bgLight dark:hover:bg-brandDark transition-all shadow-lg hover:-translate-y-1 active:translate-y-0 flex items-center gap-3"
+                onClick={() => navigator("/services/soc-services")} 
+                className="flex items-center gap-3 px-10 py-5 font-bold transition-all border shadow-lg bg-surfaceLight dark:bg-surfaceDark text-brandPrimary dark:text-brandGold border-borderLight dark:border-borderDark rounded-2xl hover:bg-bgLight dark:hover:bg-brandDark hover:-translate-y-1 active:translate-y-0"
               >
                 <Play className="w-5 h-5 fill-current" />
                 Back To SOC Main Page
@@ -64,7 +64,7 @@ const HeroSection = () => {
             </div>
 
             {/* Social Proof / Security Trust Bar */}
-            <div className="flex flex-col sm:flex-row sm:items-center gap-6 pt-6 border-t border-borderLight dark:border-borderDark">
+            <div className="flex flex-col gap-6 pt-6 border-t sm:flex-row sm:items-center border-borderLight dark:border-borderDark">
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-brandPrimary/10 dark:bg-brandGold/10 rounded-xl">
                   <Lock className="w-6 h-6 text-brandPrimary dark:text-brandGold" />
@@ -86,27 +86,27 @@ const HeroSection = () => {
               />
               
               {/* Floating TSC Status Overlay */}
-              <div className="absolute top-10 right-10 bg-white/90 dark:bg-surfaceDark/90 backdrop-blur-md p-6 rounded-3xl shadow-2xl border border-white/20 animate-float">
+              <div className="absolute p-6 border shadow-2xl top-10 right-10 bg-white/90 dark:bg-surfaceDark/90 backdrop-blur-md rounded-3xl border-white/20 animate-float">
                 <div className="flex items-center gap-4 mb-2">
-                  <div className="w-12 h-12 rounded-full bg-brandGold/20 flex items-center justify-center text-brandGold">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-brandGold/20 text-brandGold">
                     <CheckCircle2 className="w-7 h-7" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-gray-400 uppercase tracking-widest">Trust Principles</div>
+                    <div className="text-xs font-bold tracking-widest text-gray-400 uppercase">Trust Principles</div>
                     <div className="text-2xl font-black text-brandPrimary dark:text-brandGold">Validated</div>
                   </div>
                 </div>
               </div>
 
               {/* Floating Audit Status Overlay */}
-              <div className="absolute bottom-10 left-10 bg-brandPrimary/90 dark:bg-brandNavy/90 backdrop-blur-md p-6 rounded-3xl shadow-2xl border border-white/10 animate-float" style={{ animationDelay: '1s' }}>
+              <div className="absolute p-6 border shadow-2xl bottom-10 left-10 bg-brandPrimary/90 dark:bg-brandNavy/90 backdrop-blur-md rounded-3xl border-white/10 animate-float" style={{ animationDelay: '1s' }}>
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-white/10 rounded-xl">
                     <Shield className="w-6 h-6 text-brandGold" />
                   </div>
                   <div>
-                    <div className="text-white font-bold">SOC 2 Type II</div>
-                    <div className="text-slate-300 text-xs font-medium">Audit-Ready Status: 2026</div>
+                    <div className="font-bold text-white">SOC 2 Type II</div>
+                    <div className="text-xs font-medium text-slate-300">Audit-Ready Status: 2026</div>
                   </div>
                 </div>
               </div>

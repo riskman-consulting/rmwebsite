@@ -1,7 +1,7 @@
 // ISO27001.jsx
 import React, { useEffect } from 'react';
 import HeroSection from './HeroSection';
-import StrategicSolutions from './StrategicSolutionsSection';
+import StrategicSolutions from './StrategicSolutionSection';
 import CTASection from './CTASection';
 import FAQ from './FAQSection';
 

@@ -99,12 +99,12 @@ export const MegaMenu = ({ menuKey }) => {
                 return (
                   <li key={item.path}>
                     {hasSubmenus ? (
-                      <div className="flex items-center justify-between gap-3 min-w-0">
+                      <div className="flex items-center justify-between min-w-0 gap-3">
                         <Link
                           to={item.path}
                           className={`
                             flex-1 min-w-0 whitespace-normal leading-snug
-                            text-[15px] font-semibold transition-colors
+                            text-[13px] font-semibold transition-colors
                             ${
                               isActive
                                 ? "text-brandPrimary dark:text-brandGold"
@@ -158,7 +158,7 @@ export const MegaMenu = ({ menuKey }) => {
                         to={item.path}
                         className={`
                           flex items-center justify-between min-w-0 whitespace-normal leading-snug
-                          text-[15px] font-semibold transition-colors
+                          text-[13px] font-semibold transition-colors
                           ${
                             isActive
                               ? "text-brandPrimary dark:text-brandGold"

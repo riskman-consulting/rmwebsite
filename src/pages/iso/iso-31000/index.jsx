@@ -1,11 +1,26 @@
-import React from 'react'
+import Hero from './Herosection';
+import Framework from './Framework';
+import Process from './Process';
+import Governance from './Governance';
+import CTA from './CTA';
+import FAQ from './FAQ';
 
-function ISO31000() {
+
+function App() {
   return (
-    <div>
-      ISO31000 Page
+    <div className="min-h-screen font-sans transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-brandLight">
+      {/* <Navbar /> */}
+      <main>
+        <Hero />
+        <Framework />
+        <Process />
+        <Governance />
+        <FAQ />
+        <CTA />
+      </main>
+      {/* <Footer /> */}
     </div>
-  )
+  );
 }
 
-export default ISO31000
+export default App;

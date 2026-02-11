@@ -18,6 +18,7 @@ import Terms from './pages/resources/Terms'
 import BlogSingle from './pages/blogs/BlogSingle'
 import './index.css'
 import ConcurrentAuditPage from './pages/concurrent-audit'
+import PoliciesPage from "./pages/policies";
 
 import { Toaster } from 'react-hot-toast'
 import ScrollToTop from './components/common/ScrollToTop'
@@ -71,6 +72,7 @@ import ESGLayout from "./pages/esg/Layout"
 import FinancialAdvisoryLayout from "./pages/financial-advisory/Layout"
 import DataPrivacyLayout from "./pages/data-privacy/Layout"
 import EventLayout from "./pages/events/EventLayout";
+import CPALayout from "./pages/cpa/Layout"
 
 // ESG Pages
 import ESGPage from "./pages/esg/ESGPage"
@@ -87,10 +89,10 @@ import FinancialLoanReview from "./pages/financial-advisory/loan-review-monitori
 import FinancialCreditPolicy from "./pages/financial-advisory/credit-policy-framework/CreditPolicyFrameworkPage"
 
 // Data Privacy
-import DataPrivacyPage from "./pages/data-privacy/data-privary"
-import DPPDCompliancePage from "./pages/data-privacy/dpdp-compliance"
-import GDPRCompliancePage from "./pages/data-privacy/gdpr-complaince"
-import OtherRegulatoryCompliance from './pages/data-privacy/other-regulatory-compliance'
+import DataPrivacyPage from "./pages/data-privacy/data-privacy"
+import DPPDCompliancePage from "./pages/data-privacy/dpdp"
+import GDPRCompliancePage from "./pages/data-privacy/gdpr"
+import OtherRegulatoryCompliance from './pages/data-privacy/others'
 
 import SOXICOFRPage from "./pages/sox-itcofr"
 import AiTechnology from './pages/AITechnology/AiTechnology'
@@ -104,6 +106,22 @@ import EventPastEvent from "./pages/events/past-events"
 import EventUpcomingEvent from "./pages/events/upcoming-events"
 
 import GovernancePage from "./pages/governance/Governance";
+import TisaxPage from './pages/iso/tisax'
+
+import PCIDSSPage from './pages/pci-dss'
+
+
+// forensics-investigation
+import ForensicsInvestigationPage from "./pages/forensics-investigation"
+
+//CPA
+import CPAPage from "./pages/cpa/cpa"
+import FinancialStatementPage from "./pages/cpa/financial-audits"
+import InternalControlReview from "./pages/cpa/internal-control"
+import ComplianceAudit from "./pages/cpa/compliance-audits"
+import QualityAssurancePage from './pages/cpa/quality-assurance'
+ 
+
 
 
 // Datatal transformation
@@ -167,7 +185,10 @@ function App() {
             <Route path='iso-22301' element={<ISO22301Page />} />
             <Route path='iso-31000' element={<ISO31000Page />} />
             <Route path='iso-42001' element={<ISO42001Page />} />
+            <Route path='tisax' element={<TisaxPage/>} />
           </Route>
+
+          <Route path="/services/forensics-investigation" element={<ForensicsInvestigationPage/>}  />
 
           // Digital Transformation Nested Routes
 
@@ -187,7 +208,7 @@ function App() {
             <Route path='tprm' element={<TPRM />} />
             <Route path='sox-icofr-ifc' element={<SOXICOFRPage />} />
             <Route path='concurrent-audits' element={<ConcurrentAuditPage/>} />
-            <Route path='formulation-of-policies-and-sops' element={<h1>Policies and SOPs</h1>} />
+            <Route path='formulation-of-policies-and-sops' element={<PoliciesPage/>} />
 
           </Route>
 
@@ -216,7 +237,7 @@ function App() {
             <Route path="" element={<DataPrivacyPage />} />
             <Route path='dpdp' element={<DPPDCompliancePage />} />
             <Route path='gdpr' element={<GDPRCompliancePage />} />
-            <Route path='regulatory' element={<OtherRegulatoryCompliance />} />
+            <Route path='other' element={<OtherRegulatoryCompliance />} />
           </Route>
 
 
@@ -232,7 +253,19 @@ function App() {
           </Route>
 
 
+          // CPA Routes
+          <Route path='/services/cpa-us-assurance' element={<CPALayout/>}  >
+            <Route path=''  element={<CPAPage/>} />
+            <Route path='financial-statement-audits'  element={<FinancialStatementPage/>} />
+            <Route path='internal-control-reviews' element={<InternalControlReview/>} />
+            <Route path='compliance-audits' element={<ComplianceAudit/>} />
+            <Route path='quality-assurance'  element={<QualityAssurancePage/>}  />
+          </Route>
+
+
           <Route path="/services/itgc-itac" element={<ITGCITACPage />} />
+
+          <Route path="/services/pci-dss-compliance" element={<PCIDSSPage/>} />
 
           {/* <Route path="/services/:id" element={<ServicesTemplate />} /> */}
           <Route path="/industries" element={<IndustriesList />} />

@@ -25,7 +25,7 @@ export const NAVIGATION_DATA = {
                         { "id": "sox-icofr-ifc", "title": "SOX/ICOFR/IFC","path":"/services/risk-advisory/sox-icofr-ifc" },
                         { "id": "csa", "title": "CSA","path":"/services/risk-advisory/csa" },
                         { "id": "concurrent-audits", "title": "Concurrent Audits","path":"/services/risk-advisory/concurrent-audits" },
-                        { "id": "formulation-of-policies-and-sops", "title": "Formulation of Policies and SOPs","path":"/services/risk-advisory/formulation-of-policies-and-sops" }
+                        { "id": "formulation-of-policies-and-sops", "title": "Policies and SOPs","path":"/services/risk-advisory/formulation-of-policies-and-sops" }
                     ]
                 },
                 {

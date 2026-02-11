@@ -106,15 +106,7 @@ const ISOTISAXCTA = () => {
 
                             {/* Contact options */}
                             <div className="mb-8 space-y-4">
-                                <div className="flex items-center gap-4 p-4 border rounded-xl bg-slate-50 dark:bg-white/5 border-slate-100 dark:border-white/10">
-                                    <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-blue-500/10">
-                                        <Phone className="w-5 h-5 text-blue-500" />
-                                    </div>
-                                    <div>
-                                        <p className="text-sm text-slate-500 dark:text-slate-400">Call us</p>
-                                        <p className="font-bold text-brandDark dark:text-white">+1 (800) RISKMAN</p>
-                                    </div>
-                                </div>
+                                
 
                                 <div className="flex items-center gap-4 p-4 border rounded-xl bg-slate-50 dark:bg-white/5 border-slate-100 dark:border-white/10">
                                     <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-green-500/10">
@@ -122,7 +114,7 @@ const ISOTISAXCTA = () => {
                                     </div>
                                     <div>
                                         <p className="text-sm text-slate-500 dark:text-slate-400">Email us</p>
-                                        <p className="font-bold text-brandDark dark:text-white">hello@riskman.in</p>
+                                        <p className="font-bold text-brandDark dark:text-white">contact@riskman.in</p>
                                     </div>
                                 </div>
 
@@ -140,7 +132,7 @@ const ISOTISAXCTA = () => {
                             {/* Trust badges */}
                             <div className="flex items-center justify-center gap-4 pt-6 border-t border-slate-100 dark:border-white/10">
                                 {["ISO 27001", "ISO 27701", "TISAX"].map((badge, idx) => (
-                                    <span key={idx} className="px-3 py-1 text-xs font-bold rounded-full bg-brandPrimary/10 dark:bg-brandAccent/10 text-brandPrimary dark:text-brandAccent">
+                                    <span key={idx}  className="px-3 py-1 text-xs font-bold rounded-full bg-brandPrimary/10 dark:bg-brandAccent/10 text-brandPrimary dark:text-brandAccent">
                                         {badge}
                                     </span>
                                 ))}

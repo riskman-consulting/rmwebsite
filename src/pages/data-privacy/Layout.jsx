@@ -5,24 +5,20 @@ import { ShieldCheck, FileText, Globe } from "lucide-react";
 function Layout() {
   const navigate = useNavigate()
   return (
-    <div className="min-h-screen transition-colors duration-300 bg-bgLight dark:bg-bgDark">
+    <div className="min-h-screen  bg-bgLight dark:bg-bgDark transition-colors duration-300">
       {/* Navigation Bar */}
-      <nav className="fixed z-50 w-screen border-b bg-surfaceLight/80 dark:bg-surfaceDark/80 backdrop-blur-md border-borderLight dark:border-borderDark">
-        <div className="container flex items-center justify-between py-4">
+      <nav className="fixed  w-screen z-50 bg-surfaceLight/80 dark:bg-surfaceDark/80 backdrop-blur-md border-b border-borderLight dark:border-borderDark">
+        <div className="container py-4 flex items-center justify-between">
           {/* Brand Logo Placeholder */}
-          <div onClick={() => navigate("")} className="text-2xl font-black tracking-tighter font-heading text-brandPrimary dark:text-brandGold">
+          <div onClick={()=>navigate("")} className="font-heading font-black text-2xl text-brandPrimary dark:text-brandGold tracking-tighter">
             Data Privacy
           </div>
 
           {/* Links */}
-          <div className="flex items-center gap-1 text-sm sm:gap-3">
-            <NavItem to="dpdp"
-              label="DPDP Compliance" />
-            <NavItem to="gdpr"
-              label="GDPR Compliance" />
-            <NavItem to="regulatory"
-              label="Other Regulatory Compliance" />
-            
+          <div className="flex items-center gap-1 sm:gap-4">
+            <NavItem to="dpdp"  label="DPDP Compliance" />
+            <NavItem to="gdpr"  label="GDPR Compliance" />
+            <NavItem to="other"  label="Other Regulatory Compliances" />
           </div>
         </div>
       </nav>
@@ -36,13 +32,13 @@ function Layout() {
 }
 
 // Helper component for cleaner link logic
-const NavItem = ({ to, icon = "", label }) => (
+const NavItem = ({ to, icon="", label }) => (
   <NavLink
     to={to}
     className={({ isActive }) => `
-      flex items-center text-sm gap-2 px-4 py-2  rounded-lg font-bold transition-all duration-200
-      ${isActive
-        ? "bg-brandPrimary text-white shadow-md dark:bg-brandGold dark:text-brandDark"
+      flex items-center text-[12px] gap-2 px-4 py-2 rounded-lg font-bold transition-all duration-200
+      ${isActive 
+        ? "bg-brandPrimary text-white shadow-md dark:bg-brandGold dark:text-brandDark" 
         : "text-gray-600 dark:text-gray-400 hover:bg-brandPrimary/10 dark:hover:bg-brandGold/10 hover:text-brandPrimary dark:hover:text-brandGold"
       }
     `}

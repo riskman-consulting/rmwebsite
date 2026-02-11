@@ -166,7 +166,7 @@ const Scope123ValueChain = () => {
                   {displaySource.label}
                 </p>
                 <p className="text-[10px] text-gray-600 dark:text-gray-300">
-                  {displaySource.desc}
+                  {displaySource.desc} 
                 </p>
               </div>
             </div>
@@ -184,9 +184,9 @@ const Scope123ValueChain = () => {
         </div>
       </div>
       <div className="p-3" style={{ backgroundColor: data.colorLight }}>
-        <p className="mb-1 text-xs text-gray-600 dark:text-gray-300">{data.description}</p>
+        <p className="mb-1 text-xs text-gray-900 dark:text-gray-300">{data.description}</p>
         <span className="text-sm font-bold" style={{ color: data.color }}>
-          {data.percentage} of footprint
+          {data.percentage}
         </span>
       </div>
     </div>

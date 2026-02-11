@@ -10,7 +10,7 @@ const ComplianceSolutions = () => {
             title: "ISO 27001",
             subtitle: "Information Security",
             desc: "Deploy a risk-based approach to protect your most sensitive corporate data assets and operational information systems.",
-            link: "/services/iso-27001",
+            link: "iso-27001",
             image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=250&fit=crop",
             color: "from-blue-500 to-indigo-600"
         },
@@ -19,7 +19,7 @@ const ComplianceSolutions = () => {
             title: "ISO 27701",
             subtitle: "Privacy Management",
             desc: "Establish a Privacy Information Management System to handle personal identifiable information with global regulatory compliance.",
-            link: "/iso-27701",
+            link: "iso-27701",
             image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop",
             color: "from-purple-500 to-violet-600"
         },
@@ -28,7 +28,7 @@ const ComplianceSolutions = () => {
             title: "ISO 22301",
             subtitle: "Business Continuity",
             desc: "Ensure operational resilience and rapid recovery during unforeseen disruptions to maintain service availability.",
-            link: "/services/iso-22301",
+            link: "iso-22301",
             image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=250&fit=crop",
             color: "from-emerald-500 to-teal-600"
         },
@@ -37,7 +37,7 @@ const ComplianceSolutions = () => {
             title: "ISO 42001",
             subtitle: "AI Management",
             desc: "Implement the world's first AI management standard to ensure ethical, transparent, and secure AI development.",
-            link: "/services/iso-42001",
+            link: "iso-42001",
             image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop",
             color: "from-pink-500 to-rose-600"
         },
@@ -46,7 +46,7 @@ const ComplianceSolutions = () => {
             title: "ISO 31000",
             subtitle: "Risk Management",
             desc: "Proactively identify and mitigate enterprise-wide vulnerabilities before they impact your bottom line.",
-            link: "/services/iso-31000",
+            link: "iso-31000",
             image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop",
             color: "from-orange-500 to-amber-600"
         },
@@ -55,7 +55,7 @@ const ComplianceSolutions = () => {
             title: "TISAX",
             subtitle: "Automotive Security",
             desc: "Secure your position in the automotive supply chain with industry-mandated security assessment exchanges.",
-            link: "/services/tisax",
+            link: "tisax",
             image: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=400&h=250&fit=crop",
             color: "from-brandPrimary to-brandNavy"
         }

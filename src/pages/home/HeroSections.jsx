@@ -13,10 +13,11 @@ const SLIDES = [
     desc: "SOC 1/2/3 assurance and NIST-aligned security frameworks to protect your enterprise and turn IT risk into a driver of digital trust.",
     img: heroItRisk,
     btn1: "Explore Solutions",
-    btn1Link: "/services/it-risk-management",
+    btn1Link: "/solutions",
     btn2: "Get Assessment",
     btn2Link: "/contact",
-    category: "security"
+    category: "security",
+    path:"/solutions"
   },
   {
     badge: "Risk Advisory",
@@ -29,6 +30,7 @@ const SLIDES = [
     btn2: "Consult Expert",
     btn2Link: "/contact",
     category: "advisory"
+    
   },
   {
     badge: "Business Consulting",
@@ -37,10 +39,10 @@ const SLIDES = [
     desc: "Expert ESG reporting, GHG accounting, and credit rating advisory to optimize your capital structure and protect organizational integrity.",
     img: HeroConsulting,
     btn1: "Drive Growth",
-    btn1Link: "/services/consulting",
+    btn1Link: "/services",
     btn2: "Book Call",
     btn2Link: "/contact",
-    category: "consulting"
+    category: "services"
   }
 ];
 

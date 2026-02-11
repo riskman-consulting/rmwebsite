@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FiUsers, FiCpu, FiAward, FiTarget, FiArrowRight } from 'react-icons/fi';
+import { useNavigate } from 'react-router-dom';
 
 const WHY_IT_MATTERS = [
   {
@@ -26,6 +27,7 @@ const WHY_IT_MATTERS = [
 ];
 
 const WhyItMatters = () => {
+  const navigator = useNavigate()
   return (
     <section id="why-it-matters" className="relative py-32 overflow-hidden transition-colors duration-500 bg-surfaceLight dark:bg-surfaceDark">
       
@@ -102,8 +104,8 @@ const WhyItMatters = () => {
             </p>
           </div>
 
-          <button className="relative z-10 group whitespace-nowrap px-10 py-5 bg-gradient-to-r from-[#FFB800] to-[#FFC000] text-[#001F3F] font-black text-xs uppercase tracking-[0.2em] rounded-2xl hover:shadow-xl hover:shadow-[#FFB800]/20 transition-all duration-300 flex items-center gap-3 active:scale-95">
-            See All Dates <FiArrowRight className="transition-transform group-hover:translate-x-1" />
+          <button onClick={()=>navigator("/contact")} className="relative z-10 group whitespace-nowrap px-10 py-5 bg-gradient-to-r from-[#FFB800] to-[#FFC000] text-[#001F3F] font-black text-xs uppercase tracking-[0.2em] rounded-2xl hover:shadow-xl hover:shadow-[#FFB800]/20 transition-all duration-300 flex items-center gap-3 active:scale-95">
+            Let's Connect <FiArrowRight className="transition-transform group-hover:translate-x-1" />
           </button>
         </motion.div>
       </div>

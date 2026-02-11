@@ -642,36 +642,6 @@ const ESGEvolutionTimeline = () => {
                     </div>
                 </motion.div>
 
-                {/* Directional CTA Section */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.8, duration: 0.6 }}
-                    className="relative p-10 mt-24 overflow-hidden text-center border bg-slate-50 dark:bg-surfaceDark/30 rounded-3xl md:p-14 border-slate-100 dark:border-white/5"
-                >
-                    {/* Decorative blob */}
-                    <div className="absolute top-0 right-0 w-64 h-64 -mt-20 -mr-20 rounded-full bg-brandAccent/10 blur-3xl" />
-                    <div className="absolute bottom-0 left-0 w-64 h-64 -mb-20 -ml-20 rounded-full bg-brandPrimary/5 blur-3xl" />
-
-                    <div className="relative z-10">
-                        <h3 className="mb-8 text-2xl font-bold md:text-3xl font-heading text-brandDark dark:text-white">
-                            Where is your organization today?
-                        </h3>
-
-                        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row md:gap-6">
-                            <button className="flex items-center px-8 py-4 text-lg font-semibold text-white transition-all duration-300 shadow-lg bg-brandPrimary hover:bg-brandNavy rounded-xl shadow-brandPrimary/30 hover:scale-105 group">
-                                Assess My ESG Maturity
-                                <BarChart3 size={20} className="ml-2 transition-transform group-hover:translate-x-1" />
-                            </button>
-
-                            <button className="flex items-center px-8 py-4 text-lg font-semibold transition-all duration-300 bg-white border-2 dark:bg-transparent border-slate-200 dark:border-slate-700 text-brandDark dark:text-surfaceLight hover:border-brandPrimary hover:text-brandPrimary dark:hover:text-brandPrimary dark:hover:border-brandPrimary rounded-xl">
-                                Explore ESG Solutions
-                                <ArrowRight size={20} className="ml-2" />
-                            </button>
-                        </div>
-                    </div>
-                </motion.div>
 
             </div>
         </section>

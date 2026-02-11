@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 // ============================================================
 // INTEGRITAT SCREENSHOTS - Your actual images
@@ -106,14 +106,14 @@ const FeatureScreenshotCard = ({ label, title, description, image, delay = 0 }) 
 // ============================================================
 // BENTO CARD (Two-column feature section)
 // ============================================================
-const BentoCard = ({ variant = 'light', title, description, image, buttonText }) => {
+const BentoCard = ({ variant = 'light', title, description, image, buttonText,...other }) => {
   const bgClass = variant === 'light' 
     ? 'bg-brandLight' 
     : 'bg-gradient-to-br from-brandDark to-brandNavy';
   const textClass = variant === 'light' ? 'text-brandDark' : 'text-white';
   
   return (
-    <div className={`${bgClass} rounded-3xl p-8 lg:p-10 h-full flex flex-col`}>
+    <div {...other} className={`${bgClass} rounded-3xl p-8 lg:p-10 h-full flex flex-col`}>
       <h3 className={`text-2xl lg:text-3xl font-heading font-bold ${textClass} mb-4`}>
         {title}
       </h3>
@@ -269,6 +269,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => (
 // ============================================================
 export default function IntegritatSolutionPage() {
   const [openFAQ, setOpenFAQ] = useState(0);
+  const navigator = useNavigate()
 
   const faqs = [
     { question: "How does Integritat integrate with existing workflows?", answer: "Integritat seamlessly integrates with your existing audit processes. Simply onboard your clients, create projects, and start requesting documents." },
@@ -567,6 +568,7 @@ export default function IntegritatSolutionPage() {
           <div className="grid gap-8 lg:grid-cols-2">
             <BentoCard
               variant="light"
+              onClick={()=>navigator("/services")}
               title="Scalable plans to fit any firm size"
               description="Maximize your productivity by connecting our platform to your existing workflow, creating a frictionless audit process."
               image={SCREENSHOTS.projectCreation}
@@ -574,6 +576,7 @@ export default function IntegritatSolutionPage() {
             />
             <BentoCard
               variant="dark"
+              onClick={()=>navigator("/contact")}
               title="Dedicated customer support"
               description="Rely on our knowledgeable support team to help you get the most out of our platform. We're available to answer questions and provide guidance."
               image={SCREENSHOTS.clientPortal}
@@ -646,11 +649,11 @@ export default function IntegritatSolutionPage() {
             />
           </div>
 
-          <div className="text-center">
+          {/* <div className="text-center">
             <button className="px-8 py-4 font-semibold transition-all duration-300 rounded-full shadow-lg text-brandDark bg-brandAccent hover:bg-brandGold shadow-brandAccent/30">
               Start your free trial
             </button>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -742,17 +745,17 @@ export default function IntegritatSolutionPage() {
             <p className="mb-8 text-lg text-brandDark/70">
               See how we help your team solve today's biggest audit challenges.
             </p>
-            <button className="px-10 py-5 text-lg font-semibold transition-all duration-300 rounded-full shadow-xl text-brandDark bg-brandAccent hover:bg-brandGold shadow-brandAccent/30">
+            <button onClick={()=>navigator("/contact")} className="px-10 py-5 text-lg font-semibold transition-all duration-300 rounded-full shadow-xl text-brandDark bg-brandAccent hover:bg-brandGold shadow-brandAccent/30">
               Start your free trial
             </button>
             <div className="flex items-center justify-center gap-2 mt-6 text-sm text-brandDark/60">
-              <span className="font-semibold text-brandPrimary">Excellent</span>
+              {/* <span className="font-semibold text-brandPrimary">Excellent</span> */}
               <div className="flex gap-0.5">
-                {[...Array(5)].map((_, i) => (
+                {/* {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-4 h-4 text-brandAccent" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
-                ))}
+                ))} */}
               </div>
               {/* <span>4,000+ reviews</span> */}
             </div>

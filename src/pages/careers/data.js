@@ -16,14 +16,14 @@ export const testimonials = [
     id: 3,
     name: "Vishal Sharma",
     quote: `Over 6+ years at RiskMan, I gained strong exposure across internal audit, ERM, SOPs, IFC design, and automation using Microsoft tools and VBA. Diverse client engagements across India and overseas strengthened my technical skills, domain knowledge, and professional confidence, supported by a culture of trust and collaboration.`,
-    position: "",
-    tag: "Senior Consultant",
+    position: "Senior Analyst",
+    tag: "",
     image: teamsImages.VishalSharma
   },
   {
     id: 1,
     name: "Saksham Ahuja",
-    position: "",
+    position: "Senior Analyst",
     image: teamsImages.SakshamAhuja,
     quote: `Started as a CA Article Analyst and built a solid foundation in audits, IFC, and ITGC testing. Worked with fintech and automation tools like SAP Business Central, Odoo, and Kissflow, gaining practical exposure to tech-driven risk and control environments while growing with the firm.`,
     tag: ""
@@ -46,7 +46,33 @@ export const testimonials = [
     image:teamsImages.RohitGupta,
     position:"Consultant"
   },
+  {
+    id:6,
+    name:"Vipul Garg",
+    quote:"“I joined RiskMan in 2022 to build practical exposure in risk management and auditing. Through strong mentorship, diverse industry engagements, and early responsibility—even during remote assignments—I developed resilience, accountability, and a client-focused mindset. This journey enabled me to grow into a Consultant role, leading teams and managing engagements independently while continuing to learn and grow professionally.”",
+    tag:"",
+    image:teamsImages.Vipul,
+    position:"Consultant"
+  },
 
-  
+  {
+    id:7,
+    name:"Harsh Gupta",
+    quote:"Over 2.5+ years at RiskMan, I have worked across Internal Audit, IFC Design & Testing, SOP Consulting, and Finance Automation, leading P2P/O2C audits and supporting ERP implementations through UAT and BRD finalization across diverse sectors. With hands-on experience in tools like Kissflow, BlackLine, and ERP systems, I focus on strengthening controls and driving automation building strong technical expertise and professional confidence within a culture of trust and collaboration.",
+    tag:"",
+    image:teamsImages.Harsh,
+    position:"Senior Analyst"
+  },
+
+  {
+    id:8,
+    name:"Rishbha Jain",
+    quote:"The journey with RiskMan has been an amazing learning experience. From starting out as an analyst and understanding the basics, to gradually taking on greater responsibilities and handling the team, the growth has been both challenging and fulfilling. This progress would not have been possible without the constant support and guidance of the partners, who have been the real catalyst in my progress. There has been so much to learn, and the learning continues every day. Deeply grateful for the progress made so far and looking forward to taking on new challenges ahead.",
+    tag:"",
+    image:teamsImages.RishbhaJain,
+    position:"Senior Analyst"
+  }
+
+
 
 ];
