@@ -7,7 +7,7 @@ export const testimonials = [
 
   id:1,
   name:"Pranshul Agarwal.",
-  quote:`My journey at RiskMan has been one of continuous learning and growth. Starting as an Analyst Assistant, I gained hands-on exposure across diverse industries, supported by strong mentorship and a practical, business-focused approach to risk management. Over time, the trust, responsibility, and client exposure helped me grow into a leadership role, making the journey both meaningful and professionally fulfilling.`,
+  quote:`My journey at RiskMan has been one of continuous learning and growth. Starting as an Analyst, I gained hands-on exposure across diverse industries, supported by strong mentorship and a practical, business-focused approach to risk management. Over time, the trust, responsibility, and client exposure helped me grow into a leadership role, making the journey both meaningful and professionally fulfilling.`,
   tag:"",
   image:teamsImages.Pranshul,
   position:"Manager"

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Star } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
+import electrosteelImg from "../../assets/iia-logo/electrosteel.png"
+
 
 
 const Testimonials = () => {
@@ -32,7 +34,7 @@ const Testimonials = () => {
       id: 3,
       name: "Electrosteel Castings Limited",
       role: "CEO, Global Manufacturing",
-      image: "https://companieslogo.com/img/orig/ELECTCAST.NS_BIG-aca1b4fb.png?t=1720244491",
+      image: electrosteelImg,
       text: "RiskMan delivered a well-structured and comprehensive risk management engagement, covering multiple business processes. The work was completed on time and met our expectations fully",
       color: "bg-white dark:bg-surfaceDark",
       textColor: "text-brandDark dark:text-white",
