@@ -19,7 +19,7 @@ const SLIDES = [
     category: "security"
   },
   {
-    badge: "Risk Advisory",
+    badge: "Risk Assurance & Advisory",
     titleLine1: "Master the Landscape of",
     titleLine2: "Enterprise Uncertainty",
     desc: "Risk-based internal audits and robust ERM frameworks based on COSO standards to identify blind spots and ensure sustainable growth.",
