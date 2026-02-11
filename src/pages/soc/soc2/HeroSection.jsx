@@ -2,6 +2,8 @@ import { ArrowRight, CheckCircle2, Star, Play, Shield, Lock } from 'lucide-react
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import soc2Img from "../../../assets/images/soc/soc2/soc2.png"
+
 const HeroSection = () => {
   const navigator = useNavigate();
   
@@ -80,7 +82,7 @@ const HeroSection = () => {
           <div className="relative group">
             <div className="relative z-10 rounded-[2.5rem] overflow-hidden border-[8px] border-surfaceLight dark:border-surfaceDark shadow-[0_32px_64px_-12px_rgba(0,0,0,0.14)] transform transition-all duration-700 hover:scale-[1.02]">
               <img 
-                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200" 
+                src={soc2Img}
                 alt="Cybersecurity and Cloud Infrastructure" 
                 className="w-full h-[600px] object-cover"
               />

@@ -64,7 +64,7 @@ export default function KeyServices() {
   }
   
   return (
-    <section className="transition-colors py:14 md:py-20 bg-bgLight dark:bg-bgDark">
+    <section className="transition-colors py:14 md:py-12 bg-bgLight dark:bg-bgDark">
       <div className="container max-w-7xl">
 
         {/* Header */}
@@ -129,7 +129,7 @@ export default function KeyServices() {
           <Link
             to="/services"
            
-            className="px-12 py-4 font-semibold border-2 rounded-full border-brandDark text-brandDark hover:bg-brandDark hover:text-white dark:border-brandAccent dark:text-brandAccent dark:hover:bg-brandAccent dark:hover:text-brandDark"
+            className="px-12 py-4 font-semibold text-white border-2 rounded-full border-brandDark bg-brandDark dark:border-brandAccent dark:text-brandAccent dark:hover:bg-brandAccent dark:hover:text-brandDark"
           >
             Explore All Services
           </Link>

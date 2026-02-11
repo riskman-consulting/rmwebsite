@@ -56,7 +56,7 @@ export default function RiskManPoliciesPage() {
       <SOPSection/>
 
 
-      <SOPDeliverables/>
+      {/* <SOPDeliverables/> */}
       {/* <SOPSection /> */}
       <Divider />
       {/* <DeliverySection /> */}

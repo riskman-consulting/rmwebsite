@@ -13,12 +13,13 @@ import { IIA_Bombay_images } from "../../assets/iia-bombay";
 import { IIA_Kolkata_images } from "../../assets/iia-kolkata";
 import { IIA_DELHI_JULY_2024_Images } from "../../assets/journey/iia_conference_delhi_july_2024";
 import { Wofa_images } from "../../assets/wofa-2025";
+import { Wofa_2024_Image } from '../../assets/wofa-2025/wofa-2024';
  
 const myEvents = [
   {
     id: "iia-bombay-ic-2026",
     title: "IIA Bombay Chapter International Conference 2026",
-    meta: { date: "15 March 2026", location: "Mumbai, India", type: "International Conference" },
+    meta: { date: "15 March 2026", location: "Mumbai, India", type: "IIA Bombay Chapter 2026" },
     description: "A prestigious international conference focused on the future of governance, internal audit, and risk management.",
     images: { banner: IIA_Bombay_2026_images[0], gallery: IIA_Bombay_2026_images }
   },
@@ -32,35 +33,35 @@ const myEvents = [
   {
     id: "iia-hyderabad-annual-conference-2025",
     title: "IIA Hyderabad Annual Conference 2025",
-    meta: { date: "2025", location: "ITC Kakatiya, Hyderabad, India", type: "Annual Conference" },
+    meta: { date: "2025", location: "ITC Kakatiya, Hyderabad, India", type: "IIA Hyderabad Chapter 2025" },
     description: "RiskMan Consulting participated as Silver Sponsors, engaging with audit and risk professionals.",
     images: { banner: IIA_Hyderabad_2025_images[0], gallery: IIA_Hyderabad_2025_images }
   },
   {
     id: "iia-kolkata-annual-meet-2025",
     title: "Thought Leadership Address – IIA Kolkata Chapter Annual Meet 2025",
-    meta: { date: "2025", location: "Bhubaneswar Club, India", type: "Annual Meet" },
+    meta: { date: "2025", location: "Bhubaneswar Club, India", type: "IIA Kolkata Chapter 2025" },
     description: "A thought-leadership address focused on repositioning internal audit as a strategic enabler.",
     images: { banner: IIA_Kolkata_2025_images[0], gallery: IIA_Kolkata_2025_images }
   },
+  // {
+  //   id: "iia-india-international-conference-2025-cybersecurity",
+  //   title: "Cybersecurity Risks & Internal Audit – IIA India International Conference 2025",
+  //   meta: { date: "2025", location: "India", type: "International Conference" },
+  //   description: "A session highlighting critical cybersecurity risks for 2025 and the evolving role of internal auditors.",
+  //   images: { banner: IIA_International_Conference_2025_images[0], gallery: IIA_International_Conference_2025_images }
+  // },
   {
-    id: "iia-india-international-conference-2025-cybersecurity",
-    title: "Cybersecurity Risks & Internal Audit – IIA India International Conference 2025",
-    meta: { date: "2025", location: "India", type: "International Conference" },
-    description: "A session highlighting critical cybersecurity risks for 2025 and the evolving role of internal auditors.",
-    images: { banner: IIA_International_Conference_2025_images[0], gallery: IIA_International_Conference_2025_images }
-  },
-  {
-    id: "iia-bangalore-annual-conference-2025",
-    title: "IIA India Bangalore Chapter Annual Conference 2025",
-    meta: { date: "2025", location: "Bangalore, India", type: "Annual Conference" },
+    id: "iia-banglore-annual-conference-2025",
+    title: "IIA India Banglore Chapter Annual Conference 2025",
+    meta: { date: "2025", location: "Banglore, India", type: "IIA Banglore Chapter 2025" },
     description: "RiskMan Consulting participated as a proud sponsor, engaging with leaders on audit transformation.",
-    images: { banner: IIA_Bangalore_images[1], gallery: IIA_Bangalore_images }
+    images: { banner: IIA_International_Conference_2025_images[0], gallery: [...IIA_Bangalore_images , ...IIA_International_Conference_2025_images] }
   },
   {
     id: "iia-bombay-chapter-2025",
     title: "IIA Bombay Chapter Meet",
-    meta: { date: "5 March 2025", location: "Mumbai, India", type: "Chapter Meet" },
+    meta: { date: "5 March 2025", location: "Mumbai, India", type: "IIA Bombay Chapter 2025" },
     description: "Focused conversations on strengthening audit excellence and forward-thinking audit strategies.",
     images: { banner: IIA_Bombay_images[2], gallery: IIA_Bombay_images }
   },
@@ -71,17 +72,29 @@ const myEvents = [
   //   description: "Meaningful dialogue on governance frameworks and emerging audit trends.",
   //   images: { banner: IIA_Kolkata_images[0], gallery: IIA_Kolkata_images }
   // },
+
+{
+  id:"Wofa-2024",
+  title:"WOFA 2024",
+  meta:{date: "2024", location:"New Delhi,India",type:"Wofa Chapter 2024"},
+  description: "A global platform celebrating leadership, innovation, and collaboration among changemakers.",
+  images:{banner:Wofa_2024_Image[0],gallery:Wofa_2024_Image}
+},
+  
   {
     id: "iia-delhi-conference-2024",
     title: "IIA Delhi Conference 2024",
-    meta: { date: "2024", location: "Delhi, India", type: "Conference" },
+    meta: { date: "2024", location: "Delhi, India", type: "IIA Delhi Chapter 2024" },
     description: "Engaging discussions on the evolving landscape of internal audit and risk management.",
     images: { banner: IIA_DELHI_JULY_2024_Images[0], gallery: IIA_DELHI_JULY_2024_Images }
   },
+
+
+  
   {
     id: "wofa-2025",
     title: "WOFA 2025",
-    meta: { date: "31 Jan – 2 Feb 2025", location: "New Delhi, India", type: "Conference" },
+    meta: { date: "31 Jan – 2 Feb 2025", location: "New Delhi, India", type: "Wofa Chapter 2025" },
     description: "A global platform celebrating leadership, innovation, and collaboration among changemakers.",
     images: { banner: Wofa_images[0], gallery: Wofa_images }
   }

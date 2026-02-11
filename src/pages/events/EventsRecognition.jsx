@@ -56,7 +56,7 @@ const rankByBM25 = (data, query) => {
  
 
 export default function EventRecognition() {
-  const [activeTab, setActiveTab] = useState("accomplishments");
+  const [activeTab, setActiveTab] = useState("emerging");
   const [showMoreAccomplishments, setShowMoreAccomplishments] = useState(false);
   const [searchQuery, setSearchQuery]=useState("")
   const[displayLimit,setDisplayLimit]=useState(4);
@@ -163,6 +163,26 @@ export default function EventRecognition() {
         {/* TABS & SEARCH */}
         <div className="flex flex-col items-center gap-8 mb-16 text-center">
           <div className="flex flex-wrap justify-center gap-6">
+
+          
+            <motion.button
+              onClick={() => { setActiveTab("emerging"); setDisplayLimit(4); }}
+              className={`px-8 py-4 text-lg font-bold transition-all rounded-full ${
+                activeTab === "emerging"
+                  ? "bg-gradient-to-r from-brandAccent to-brandGold text-brandDark shadow-lg scale-105"
+                  : "text-brandDark dark:text-white bg-slate-100 dark:bg-white/5 hover:bg-brandGold/10"
+              }`}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Emerging Risk Assurance & Advisory Firm
+            </motion.button>
+
+
+
+
+
+            
             <motion.button
               onClick={() => { setActiveTab("accomplishments"); setDisplayLimit(4); }}
               className={`px-8 py-4 text-lg font-bold transition-all rounded-full ${
@@ -176,7 +196,7 @@ export default function EventRecognition() {
               Team Accomplishment
             </motion.button>
  
-            <motion.button
+            {/* <motion.button
               onClick={() => { setActiveTab("emerging"); setDisplayLimit(4); }}
               className={`px-8 py-4 text-lg font-bold transition-all rounded-full ${
                 activeTab === "emerging"
@@ -187,7 +207,7 @@ export default function EventRecognition() {
               whileTap={{ scale: 0.95 }}
             >
               Emerging Firm of the Year 2024
-            </motion.button>
+            </motion.button> */}
           </div>
  
           <div className="relative w-full max-w-lg">

@@ -72,7 +72,7 @@ function Layout() {
             onClick={() => navigate("")} 
             className="text-xl font-black tracking-tighter cursor-pointer sm:text-2xl font-heading text-brandPrimary dark:text-brandGold"
           >
-            SOC's
+            SOC Assurance
           </div>
 
           {/* Desktop Navigation */}

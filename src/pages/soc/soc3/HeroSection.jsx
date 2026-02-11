@@ -2,11 +2,13 @@ import { ArrowRight, CheckCircle2, Star, Play, Shield, Globe } from 'lucide-reac
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import soc3Img from "../../../assets/images/soc/soc3/soc3.png";
+
 const HeroSection = () => {
   const navigator = useNavigate();
   
   return (
-    <section className="relative pb-20 overflow-hidden transition-colors duration-300 border-b pt-28 lg:pt-36 lg:pb-28 bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark">
+    <section className="relative pb-20 overflow-hidden transition-colors duration-300 border-b pt-18 lg:pt-28 lg:pb-24 bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark">
       
       {/* 1. ADVANCED BACKGROUND DECORATION */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
@@ -80,7 +82,7 @@ const HeroSection = () => {
           <div className="relative group">
             <div className="relative z-10 rounded-[2.5rem] overflow-hidden border-[8px] border-surfaceLight dark:border-surfaceDark shadow-[0_32px_64px_-12px_rgba(0,0,0,0.14)] transform transition-all duration-700 hover:scale-[1.02]">
               <img 
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" 
+                src={soc3Img}
                 alt="Global Market Trust and Analytics" 
                 className="w-full h-[600px] object-cover"
               />

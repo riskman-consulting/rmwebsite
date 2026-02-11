@@ -93,7 +93,7 @@ const PolicyModal = ({ policy, onClose, contentRef, toc, scrollToSection }) => {
                                             <FileText size={20} />
                                         </div>
                                         <div className="text-left">
-                                            <span className="block text-sm font-bold text-gray-900 transition-colors dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">Full Policy PDF</span>
+                                            <span className="block text-sm font-bold text-gray-900 transition-colors dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">Full Policy Docx</span>
                                             <span className="block text-xs text-gray-500">1.2 MB • PDF</span>
                                         </div>
                                     </div>

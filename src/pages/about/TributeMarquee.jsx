@@ -50,7 +50,7 @@ export default function TributeMarquee() {
           
           {/* Name */}
           <span className="text-xl font-bold text-brandPrimary dark:text-brandAccent shrink-0">
-            Prabir Sen Gupta:
+            Prabir SenGupta:
           </span>
           
           {/* Quote */}
@@ -63,7 +63,7 @@ export default function TributeMarquee() {
           
           {/* Description */}
           <p className="max-w-2xl text-base font-medium md:text-lg text-brandNavy/80 dark:text-white/80">
-            We honor the legacy of Prabir Sen Gupta whose vision and mentorship laid the foundation for RiskMan.
+            We honor the legacy of Prabir SenGupta whose vision and mentorship laid the foundation for RiskMan.
           </p>
         </div>
       </div>

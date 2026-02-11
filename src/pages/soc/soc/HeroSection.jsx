@@ -2,11 +2,13 @@ import { ArrowRight, CheckCircle2, Star, Play, Shield } from 'lucide-react';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import image from "../../../assets/images/soc/image.png";
+
 const HeroSection = () => {
   const navigator = useNavigate();
   
   return (
-    <section className="relative py-16 lg:pt-36 lg:pb-32 overflow-hidden bg-bgLight dark:bg-bgDark transition-colors duration-300 border-b border-borderLight dark:border-borderDark">
+    <section className="relative overflow-hidden transition-colors duration-300 border-b py-14 md:py-20 lg:pt-16 lg:pb-22 bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark">
       
       {/* 1. ADVANCED BACKGROUND DECORATION */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
@@ -16,15 +18,15 @@ const HeroSection = () => {
       </div>
 
       <div className="container relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid items-center gap-16 lg:grid-cols-2">
           
           {/* 2. LEFT SIDE: BRANDED CONTENT */}
           <div className="text-left animate-fadeIn">
             {/* Enterprise Tag */}
-            <div className="inline-flex items-center gap-2 py-2 px-4 mb-8 text-xs font-bold tracking-widest uppercase rounded-full bg-surfaceLight dark:bg-surfaceDark border border-borderLight dark:border-borderDark shadow-sm animate-bounce-slow">
-              <span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 text-xs font-bold tracking-widest uppercase border rounded-full shadow-sm bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark animate-bounce-slow">
+              <span className="flex w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
               <span className="text-gray-600 dark:text-gray-400">Compliance Excellence</span>
-              <span className="text-slate-300 mx-1">|</span>
+              <span className="mx-1 text-slate-300">|</span>
               <span className="text-brandGold">2026 AICPA Verified</span>
             </div>
             
@@ -35,12 +37,12 @@ const HeroSection = () => {
                 <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-brandPrimary to-brandGold">
                   SOC Assurance
                 </span>
-                <span className="absolute bottom-2 left-0 w-full h-3 bg-brandGold/10 dark:bg-brandGold/20 -z-0"></span>
+                <span className="absolute left-0 w-full h-3 bottom-2 bg-brandGold/10 dark:bg-brandGold/20 -z-0"></span>
               </span> <br />
               for Your Customers
             </h1>
             
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-10 leading-relaxed max-w-xl font-medium">
+            <p className="max-w-xl mb-10 text-xl font-medium leading-relaxed text-gray-600 dark:text-gray-300">
               Show customers and regulators your controls are independently tested, with SOC reports that reduce risk, support growth, and unlock enterprise opportunities.
             </p>
             
@@ -48,15 +50,15 @@ const HeroSection = () => {
             <div className="flex flex-wrap items-center gap-6 mb-12">
               <button 
                 onClick={() => navigator("/services")}
-                className="group bg-brandPrimary hover:bg-brandNavy text-white px-10 py-5 rounded-2xl font-bold transition-all shadow-2xl flex items-center gap-3 hover:-translate-y-1 active:translate-y-0"
+                className="flex items-center gap-3 px-10 py-5 font-bold text-white transition-all shadow-2xl group bg-brandPrimary hover:bg-brandNavy rounded-2xl hover:-translate-y-1 active:translate-y-0"
               >
                 Explore Services 
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </button>
               
               <button 
                 onClick={() => navigator("/contact")} 
-                className="bg-surfaceLight dark:bg-surfaceDark text-brandPrimary dark:text-brandGold border border-borderLight dark:border-borderDark px-10 py-5 rounded-2xl font-bold hover:bg-bgLight dark:hover:bg-brandDark transition-all shadow-lg hover:-translate-y-1 active:translate-y-0 flex items-center gap-3"
+                className="flex items-center gap-3 px-10 py-5 font-bold transition-all border shadow-lg bg-surfaceLight dark:bg-surfaceDark text-brandPrimary dark:text-brandGold border-borderLight dark:border-borderDark rounded-2xl hover:bg-bgLight dark:hover:bg-brandDark hover:-translate-y-1 active:translate-y-0"
               >
                 <Play className="w-5 h-5 fill-current" />
                 Connect With Us
@@ -64,14 +66,14 @@ const HeroSection = () => {
             </div>
 
             {/* Social Proof / Trust Bar */}
-            <div className="flex flex-col sm:flex-row sm:items-center gap-6 pt-6 border-t border-borderLight dark:border-borderDark">
+            {/* <div className="flex flex-col gap-6 pt-6 border-t sm:flex-row sm:items-center border-borderLight dark:border-borderDark">
               <div className="flex -space-x-3">
                 {[1, 2, 3, 4].map((i) => (
                   <img 
                     key={i}
                     src={`https://picsum.photos/seed/${i + 20}/100/100`} 
                     alt="User" 
-                    className="w-10 h-10 rounded-full border-2 border-white dark:border-surfaceDark shadow-sm"
+                    className="w-10 h-10 border-2 border-white rounded-full shadow-sm dark:border-surfaceDark"
                   />
                 ))}
                 <div className="w-10 h-10 rounded-full bg-brandGold flex items-center justify-center text-[10px] font-bold text-brandDark border-2 border-white dark:border-surfaceDark shadow-sm">
@@ -79,51 +81,51 @@ const HeroSection = () => {
                 </div>
               </div>
               <div>
-                <div className="flex items-center gap-1 text-brandGold mb-1">
+                <div className="flex items-center gap-1 mb-1 text-brandGold">
                   {[1, 2, 3, 4, 5].map((s) => <Star key={s} className="w-4 h-4 fill-current" />)}
                 </div>
                 <p className="text-sm font-bold text-gray-500 dark:text-gray-400">Trusted by 2,000+ security teams worldwide</p>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* 3. RIGHT SIDE: INTERACTIVE IMAGE WITH OVERLAYS */}
           <div className="relative group">
             <div className="relative z-10 rounded-[2.5rem] overflow-hidden border-[8px] border-surfaceLight dark:border-surfaceDark shadow-[0_32px_64px_-12px_rgba(0,0,0,0.14)] transform transition-all duration-700 hover:scale-[1.02]">
               <img 
-                src="https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&q=80&w=1200" 
+                src={image} 
                 alt="SOC Compliance Interface" 
-                className="w-full h-[600px] object-cover"
+                className="w-full h-[600px] object-cover object-top"
               />
               
-              {/* Floating Readiness Score Overlay */}
-              <div className="absolute top-10 right-10 bg-white/90 dark:bg-surfaceDark/90 backdrop-blur-md p-6 rounded-3xl shadow-2xl border border-white/20 animate-float">
+             
+              {/* <div className="absolute p-6 border shadow-2xl top-10 right-10 bg-white/90 dark:bg-surfaceDark/90 backdrop-blur-md rounded-3xl border-white/20 animate-float">
                 <div className="flex items-center gap-4 mb-2">
-                  <div className="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
-                    <CheckCircle2 className="w-7 h-7 text-green-600 dark:text-green-400" />
+                  <div className="flex items-center justify-center w-12 h-12 bg-green-100 rounded-full dark:bg-green-900/30">
+                    <CheckCircle2 className="text-green-600 w-7 h-7 dark:text-green-400" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-gray-400 uppercase tracking-widest">Readiness Score</div>
+                    <div className="text-xs font-bold tracking-widest text-gray-400 uppercase">Readiness Score</div>
                     <div className="text-2xl font-black text-brandPrimary dark:text-brandGold">98.4%</div>
                   </div>
                 </div>
                 <div className="w-full h-1.5 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden mt-2">
                   <div className="w-[98.4%] h-full bg-green-500 rounded-full"></div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Floating Audit Status Overlay */}
-              <div className="absolute bottom-10 left-10 bg-brandPrimary/90 dark:bg-brandNavy/90 backdrop-blur-md p-6 rounded-3xl shadow-2xl border border-white/10 animate-float" style={{ animationDelay: '1s' }}>
+              {/* <div className="absolute p-6 border shadow-2xl bottom-10 left-10 bg-brandPrimary/90 dark:bg-brandNavy/90 backdrop-blur-md rounded-3xl border-white/10 animate-float" style={{ animationDelay: '1s' }}>
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-white/10 rounded-xl">
                     <Shield className="w-6 h-6 text-brandGold" />
                   </div>
                   <div>
-                    <div className="text-white font-bold">SOC 2 Type II</div>
-                    <div className="text-slate-300 text-xs font-medium">Audit complete: May 2026</div>
+                    <div className="font-bold text-white">SOC 2 Type II</div>
+                    <div className="text-xs font-medium text-slate-300">Audit complete: May 2026</div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
             
             {/* Background Aesthetic Blobs */}

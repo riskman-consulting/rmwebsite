@@ -1,20 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap%22");
+ 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+ 
 /* *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
+ 
 body{
-  font-family: 'Inter', sans-serif; 
+  font-family: 'Inter', sans-serif;
 } */
-
-
+ 
+ 
 /* =====================
    COMPREHENSIVE RESET
 ===================== */
@@ -26,8 +26,8 @@ body{
     margin: 0;
     padding: 0;
   }
-
-
+ 
+ 
   html {
     margin: 0;
     padding: 0;
@@ -35,7 +35,7 @@ body{
     height: 100%;
     -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
   }
-
+ 
    body {
     margin: 0;
     padding: 0;
@@ -46,7 +46,7 @@ body{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-
+ 
   #root {
     width: 100%;
     min-height: 100vh;
@@ -62,14 +62,14 @@ body{
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
-
+ 
 @media (min-width: 768px) {
   .section-padding {
     padding-top: 6rem;
     padding-bottom: 6rem;
   }
 }
-
+ 
 /* =====================
    BACKGROUND GLOWS
 ===================== */
@@ -85,7 +85,7 @@ body{
   filter: blur(40px);
   pointer-events: none;
 }
-
+ 
 .bg-glow-purple {
   width: 400px;
   height: 400px;
@@ -98,137 +98,70 @@ body{
   filter: blur(40px);
   pointer-events: none;
 }
-
-
+ 
+ 
 @layer utilities {
   .scrollbar-hide {
     -ms-overflow-style: none; /* IE & Edge */
     scrollbar-width: none;    /* Firefox */
   }
-
+ 
   .scrollbar-hide::-webkit-scrollbar {
     display: none;            /* Chrome, Safari */
   }
 }
-
- @keyframes dash {
-  from { stroke-dashoffset: 24; }
-  to { stroke-dashoffset: 0; }
+ 
+@keyframes dash {
+  to {
+    stroke-dashoffset: -20;
+  }
 }
-
-@keyframes float {
+ 
+.animate-dash {
+  stroke-dasharray: 10;
+  animation: dash 1s linear infinite;
+}
+ 
+@keyframes pulse-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 15px rgba(13, 79, 107, 0.4));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 25px rgba(21, 101, 192, 0.6));
+    transform: scale(1.02);
+  }
+}
+ 
+@keyframes float-text {
+  0%, 100% { transform: translateY(0px); opacity: 0.9; }
+  50% { transform: translateY(-3px); opacity: 1; }
+}
+ 
+.animate-evaporate {
+  transform-origin: center;
+  transform-box: fill-box; /* Critical for SVG scaling */
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+ 
+.animate-float {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: float-text 3s ease-in-out infinite;
+}
+ 
+/* Tooltip Fade-in */
+.tooltip-enter {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+ 
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -100%); }
+  to { opacity: 1; transform: translate(-50%, -110%); }
+}
+ 
+@keyframes cloudFloat {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
 }
-
-.animate-dash {
-  stroke-dasharray: 8, 4; /* Gives the line a pattern to move */
-  animation: dash 2s linear infinite;
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-  transform-box: fill-box;
-  transform-origin: center;
-}
-
-.stakeholder-transition {
-  transition: all 0.3s ease;
-}
-
-.stakeholder-transition:hover {
-  filter: brightness(1.1);
-  transform: scale(1.05);
-}
-
-
-
-
-@import "tailwindcss";
-
-@theme {
-  /* Core Brand Colors - Supporting both camelCase and kebab-case */
-  --color-brandGold: #FFB800;
-  --color-brand-gold: #FFB800;
-  --color-brandAccent: #FFC000;
-  --color-brand-accent: #FFC000;
-  --color-brandLight: #F5F5F5;
-  --color-brand-light: #F5F5F5;
-  --color-brandDark: #001F3F;
-  --color-brand-dark: #001F3F;
-  --color-brandNavy: #003366;
-  --color-brand-navy: #003366;
-  --color-brandPrimary: #004080;
-  --color-brand-primary: #004080;
-
-  /* Theme Backgrounds */
-  --color-bgLight: #FAFAFA;
-  --color-bg-light: #FAFAFA;
-  --color-bgDark: #001122;
-  --color-bg-dark: #001122;
-  --color-surfaceLight: #FFFFFF;
-  --color-surface-light: #FFFFFF;
-  --color-surfaceDark: #001A33;
-  --color-surface-dark: #001A33;
-
-  /* Borders */
-  --color-borderLight: rgba(0, 31, 63, 0.1);
-  --color-border-light: rgba(0, 31, 63, 0.1);
-  --color-borderDark: rgba(255, 192, 0, 0.15);
-  --color-border-dark: rgba(255, 192, 0, 0.15);
-
-  /* Utilities */
-  --color-brand-bg-soft: #f8fafc;
-  --color-brand-text: #020617;
-  --color-brand-text-dark: #f8fafc;
-}
-
-@layer base {
-  :root {
-    --bg-color: var(--color-bg-light);
-    --text-color: var(--color-brand-text);
-    --primary-color: var(--color-brand-primary);
-    --accent-color: var(--color-brand-accent);
-    --gold-color: var(--color-brand-gold);
-    --light-color: var(--color-brand-light);
-    --dark-color: var(--color-brand-dark);
-    --navy-color: var(--color-brand-navy);
-    --border-color: var(--color-border-light);
-  }
-
-  .dark {
-    --bg-color: var(--color-bg-dark);
-    --text-color: var(--color-brand-light);
-    --primary-color: var(--color-brand-primary);
-    --accent-color: var(--color-brand-accent);
-    --gold-color: var(--color-brand-gold);
-    --light-color: var(--color-brand-light);
-    --dark-color: var(--color-brand-dark);
-    --navy-color: var(--color-brand-navy);
-    --border-color: var(--color-border-dark);
-  }
-
-
-  body {
-    @apply bg-[var(--bg-color)] text-[var(--text-color)] transition-colors duration-300 overflow-x-hidden;
-  }
-}
-
-/* Glassmorphism setup */
-@layer components {
-  .glass {
-    @apply border backdrop-blur-md border-white/20 bg-white/70;
-  }
-
-  .dark .glass {
-    @apply bg-slate-900/80 border-white/5;
-  }
-
-  /* Grid Overlay for Hero */
-  .hero-grid {
-    background-image: linear-gradient(to right, var(--border-color) 1px, transparent 1px),
-      linear-gradient(to bottom, var(--border-color) 1px, transparent 1px);
-    background-size: 40px 40px;
-    mask-image: radial-gradient(ellipse at center, black, transparent 80%);
-  }
-}
+ 

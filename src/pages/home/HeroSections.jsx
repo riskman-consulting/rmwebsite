@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
 import { ArrowRight, ChevronRight, ChevronLeft } from "lucide-react";
-import heroItRisk from "../../assets/images/hero-section/home/hero-it-risk.jpg";
+import heroItRisk from "../../assets/images/hero-section/home/hero-it-risk.png";
 import HeroRiskAdvisory from "../../assets/images/hero-section/home/hero-risk-advisory.webp";
 import HeroConsulting from "../../assets/images/hero-section/home/hero-consulting.webp";
-
-
+ 
+ 
 const SLIDES = [
   {
     badge: "IT Risk Management",
@@ -13,11 +13,10 @@ const SLIDES = [
     desc: "SOC 1/2/3 assurance and NIST-aligned security frameworks to protect your enterprise and turn IT risk into a driver of digital trust.",
     img: heroItRisk,
     btn1: "Explore Solutions",
-    btn1Link: "/solutions",
+    btn1Link: "/services",
     btn2: "Get Assessment",
     btn2Link: "/contact",
-    category: "security",
-    path:"/solutions"
+    category: "security"
   },
   {
     badge: "Risk Advisory",
@@ -30,7 +29,6 @@ const SLIDES = [
     btn2: "Consult Expert",
     btn2Link: "/contact",
     category: "advisory"
-    
   },
   {
     badge: "Business Consulting",
@@ -39,45 +37,45 @@ const SLIDES = [
     desc: "Expert ESG reporting, GHG accounting, and credit rating advisory to optimize your capital structure and protect organizational integrity.",
     img: HeroConsulting,
     btn1: "Drive Growth",
-    btn1Link: "/services",
+    btn1Link: "/services/esg",
     btn2: "Book Call",
     btn2Link: "/contact",
-    category: "services"
+    category: "consulting"
   }
 ];
-
+ 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isMounted, setIsMounted] = useState(false);
   const timerRef = useRef(null);
-
+ 
   useEffect(() => {
     setIsMounted(true);
     startAutoSlide();
     return () => stopAutoSlide();
   }, []);
-
+ 
   const startAutoSlide = () => {
     stopAutoSlide();
     timerRef.current = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % SLIDES.length);
     }, 8000);
   };
-
+ 
   const stopAutoSlide = () => {
     if (timerRef.current) clearInterval(timerRef.current);
   };
-
+ 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % SLIDES.length);
     startAutoSlide();
   };
-
+ 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + SLIDES.length) % SLIDES.length);
     startAutoSlide();
   };
-
+ 
   return (
     <>
       <style>{`
@@ -89,9 +87,9 @@ export default function HeroSection() {
           animation: kenBurns 8s ease-out forwards;
         }
       `}</style>
-      
+     
       <section className="relative flex flex-col w-full h-screen overflow-hidden md:-top-10 lg:-top-20 bg-zinc-950 md:flex-row">
-        
+       
         {/* Left Content Area */}
         <div className="relative w-full b md:w-[65%] h-full flex items-center z-20 px-6 md:px-12 lg:px-16 bg-zinc-950 overflow-hidden">
           {/* Geometric pattern background */}
@@ -105,14 +103,14 @@ export default function HeroSection() {
               <rect width="100%" height="100%" fill="url(#grid)" />
             </svg>
           </div>
-
+ 
           <div className="relative w-full max-w-2xl ">
             {SLIDES.map((slide, index) => (
               <div
                 key={`text-${index}`}
                 className={`transition-all duration-1000 absolute top-1/2 -translate-y-1/2 w-full ${
-                  index === currentSlide 
-                  ? "opacity-100 translate-x-0 pointer-events-auto" 
+                  index === currentSlide
+                  ? "opacity-100 translate-x-0 pointer-events-auto"
                   : "opacity-0 -translate-x-12 pointer-events-none"
                 }`}
               >
@@ -122,28 +120,28 @@ export default function HeroSection() {
                     {slide.badge}
                   </span>
                 </div>
-
+ 
                 {/* Two-Line Heading */}
                 <h1 className="mb-5">
                   {/* Line 1 - White */}
                   <span className="block text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-[1.15] text-white tracking-tight mb-2">
                     {slide.titleLine1}
                   </span>
-                  
+                 
                   {/* Line 2 - Yellow Gradient Highlight */}
                   <span className="block text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-[1.15] text-transparent bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-500 bg-clip-text tracking-tight">
                     {slide.titleLine2}
                   </span>
                 </h1>
-
+ 
                 {/* Description */}
                 <p className="max-w-xl mb-8 text-sm leading-relaxed text-zinc-400 md:text-base">
                   {slide.desc}
                 </p>
-
+ 
                 {/* Action Buttons */}
-                <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
-                  <button 
+                <div className="flex items-start justify-center gap-3 w-fit">
+                  <button
                     onClick={() => window.location.href = slide.btn1Link}
                     className="relative flex items-center justify-center px-7 py-3.5 overflow-hidden text-sm font-bold text-black transition-all duration-300 bg-yellow-500 rounded-full shadow-lg group hover:bg-yellow-400 shadow-yellow-500/20"
                   >
@@ -151,7 +149,7 @@ export default function HeroSection() {
                     <ArrowRight className="relative z-10 w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                     <div className="absolute inset-0 transition-transform duration-300 translate-y-full bg-white/20 group-hover:translate-y-0"></div>
                   </button>
-                  <button 
+                  <button
                     onClick={() => window.location.href = slide.btn2Link}
                     className="flex items-center justify-center px-7 py-3.5 text-sm font-bold transition-all duration-300 border rounded-full border-zinc-700 hover:border-zinc-500 text-zinc-300 backdrop-blur-sm bg-white/5"
                   >
@@ -161,13 +159,13 @@ export default function HeroSection() {
               </div>
             ))}
           </div>
-
+ 
           {/* Slide Indicators */}
           <div className="absolute flex items-center gap-6 bottom-8 left-6 md:left-12">
             <div className="flex gap-2">
               {SLIDES.map((_, i) => (
-                <button 
-                  key={i} 
+                <button
+                  key={i}
                   onClick={() => {
                     setCurrentSlide(i);
                     startAutoSlide();
@@ -182,7 +180,7 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
-
+ 
         {/* Right Visual Area (Split Layout Dynamic Image) */}
         <div className="relative w-full md:w-[35%] h-full overflow-hidden group">
           {SLIDES.map((slide, index) => (
@@ -200,11 +198,11 @@ export default function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/20 to-transparent" />
             </div>
           ))}
-
+ 
           {/* Navigation Arrows */}
           <div className="absolute inset-y-0 left-0 z-30 flex items-center justify-center w-32 transition-opacity opacity-0 group-hover:opacity-100">
-            <button 
-              onClick={prevSlide} 
+            <button
+              onClick={prevSlide}
               className="p-4 text-white transition-all rounded-full bg-black/40 backdrop-blur-xl hover:bg-yellow-500 hover:text-black"
               aria-label="Previous slide"
             >
@@ -212,8 +210,8 @@ export default function HeroSection() {
             </button>
           </div>
           <div className="absolute inset-y-0 right-0 z-30 flex items-center justify-center w-32 transition-opacity opacity-0 group-hover:opacity-100">
-            <button 
-              onClick={nextSlide} 
+            <button
+              onClick={nextSlide}
               className="p-4 text-white transition-all rounded-full bg-black/40 backdrop-blur-xl hover:bg-yellow-500 hover:text-black"
               aria-label="Next slide"
             >
@@ -225,3 +223,4 @@ export default function HeroSection() {
     </>
   );
 }
+ 

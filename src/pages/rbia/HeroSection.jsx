@@ -61,7 +61,7 @@ const RBIAHero = () => {
             </div>
 
             {/* TRUST BADGE */}
-            <div className="flex items-center gap-6 p-5 border shadow-sm mt-14 rounded-2xl bg-surfaceLight/80 dark:bg-surfaceDark/80 border-borderLight dark:border-borderDark w-fit">
+            {/* <div className="flex items-center gap-6 p-5 border shadow-sm mt-14 rounded-2xl bg-surfaceLight/80 dark:bg-surfaceDark/80 border-borderLight dark:border-borderDark w-fit">
               <div className="flex -space-x-3">
                 {[
                   "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=100&auto=format&fit=crop",
@@ -87,7 +87,7 @@ const RBIAHero = () => {
                 </span>{" "}
                 Businesses Trust Us
               </div>
-            </div>
+            </div> */}
           </div>
           
           {/* RIGHT SIDE SPACER */}

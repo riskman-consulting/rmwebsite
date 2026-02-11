@@ -282,7 +282,7 @@ const scrollToSection = (id) => {
       </section>
 
       {/* Footer CTA */}
-      <section className="relative py-24 overflow-hidden text-center text-white transition-colors duration-300 bg-brandNavy dark:bg-black">
+      {/* <section className="relative py-24 overflow-hidden text-center text-white transition-colors duration-300 bg-brandNavy dark:bg-black">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
         <div className="container relative z-10 px-5 mx-auto">
           <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading">Commitment to Excellence</h2>
@@ -293,7 +293,7 @@ const scrollToSection = (id) => {
             Contact Compliance Team
           </Link>
         </div>
-      </section>
+      </section> */}
 
       {/* Full Screen Modal */}
       {selectedPolicy && (
@@ -381,12 +381,12 @@ const scrollToSection = (id) => {
                       className="flex items-center justify-between p-4 transition-all duration-200 bg-white border border-gray-200 group dark:bg-surfaceDark dark:border-gray-700 rounded-xl hover:border-brandPrimary dark:hover:border-brandAccent hover:shadow-md"
                     >
                       <div className="flex items-center space-x-3">
-                        <div className="p-2 text-red-500 rounded-lg bg-red-50 dark:bg-red-900/20">
+                        <div className="p-2 text-blue-500 rounded-lg bg-slate-50 dark:bg-red-900/20">
                           <FileText size={20} />
                         </div>
                         <div className="text-left">
-                          <span className="block text-sm font-bold text-gray-900 transition-colors dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">Full Policy PDF</span>
-                          <span className="block text-xs text-gray-500">1.2 MB • PDF</span>
+                          <span className="block text-sm font-bold text-gray-900 transition-colors dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">Full Policy Docx</span>
+                          {/* <span className="block text-xs text-gray-500">1.2 MB • PDF</span> */}
                         </div>
                       </div>
                       <Download size={18} className="text-gray-400 group-hover:text-brandPrimary dark:group-hover:text-brandAccent" />

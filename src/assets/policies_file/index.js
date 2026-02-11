@@ -2,14 +2,14 @@
    EXISTING POLICIES
 ================================ */
 
-import AntiBriberyAndAntiCorruptionPolicy from "./existing_policies/Anti-Bribery and Anti-Corruption Policy.docx";
-import AntiMoneyLaunderingPolicy from "./existing_policies/Anti-Money Laundering Policy.docx";
-import CodeOfConduct from "./existing_policies/Code of Conduct.docx";
-import HealthAndSafety from "./existing_policies/Health and Safety.docx";
-import HumanRightPolicy from "./existing_policies/Human Right Policy.docx";
-import InformationSecurityPolicy from "./existing_policies/Information Security Policy.docx";
-import POSH from "./existing_policies/POSH.docx";
-import WhistleblowerPolicy from "./existing_policies/Whistleblower Policy.docx";
+import AntiBriberyAndAntiCorruptionPolicy from "./new-policies/Anti-Bribery and Anti-Corruption Policy.pdf";
+import AntiMoneyLaunderingPolicy from "./new-policies/Anti-Money Laundering Policy.pdf";
+import CodeOfConduct from "./new-policies/Code of Conduct.pdf";
+import HealthAndSafety from "./new-policies/Health and Safety.pdf";
+import HumanRightPolicy from "./new-policies/Human Right Policy.pdf";
+import InformationSecurityPolicy from "./new-policies/Information Security Policy.pdf";
+import POSH from "./new-policies/POSH.pdf";
+import WhistleblowerPolicy from "./new-policies/Whistleblower Policy.pdf";
 
 export const existingPolicies = {
   antiBriberyAndAntiCorruption: AntiBriberyAndAntiCorruptionPolicy,
@@ -26,22 +26,20 @@ export const existingPolicies = {
    NEW POLICIES
 ================================ */
 
-import ClientAcceptancePolicy from "./new_policies/Client Acceptance Policy.docx";
-import CodeOfEthics from "./new_policies/Code of Ethics.docx";
-import ComplianceManagementPolicy from "./new_policies/Compliance Management Policy.docx";
-import CorporateGovernancePolicy from "./new_policies/Corporate Governance Policy.docx";
-import DataPrivacyPolicy from "./new_policies/Data Privacy Policy.docx";
-import QualityAssurancePolicy from "./new_policies/Quality Assurance Policy.docx";
-import RiskManagementPolicy from "./new_policies/Risk Management Policy.docx";
+// import ClientAcceptancePolicy from "./exisiting-policies/Client Acceptance Policy.pdf";
+import CodeOfEthics from "./exisiting-policies/Code of Ethics.pdf";
+// import ComplianceManagementPolicy from "./new_policies/Compliance Management Policy.docx";
+import CorporateGovernancePolicy from "./exisiting-policies/Corporate Governance Policy.pdf";
+import DataPrivacyPolicy from "./exisiting-policies/Data Privacy Policy.pdf";
+// import QualityAssurancePolicy from "./new_policies/Quality Assurance Policy.docx";
+// import RiskManagementPolicy from "./new_policies/Risk Management Policy.docx";
+// import { policies } from './../../pages/governance/governanceData';
 
 export const newPolicies = {
-  clientAcceptancePolicy: ClientAcceptancePolicy,
+  // clientAcceptancePolicy: ClientAcceptancePolicy,
   codeOfEthics: CodeOfEthics,
-  complianceManagementPolicy: ComplianceManagementPolicy,
   corporateGovernancePolicy: CorporateGovernancePolicy,
   dataPrivacyPolicy: DataPrivacyPolicy,
-  qualityAssurancePolicy: QualityAssurancePolicy,
-  riskManagementPolicy: RiskManagementPolicy,
 };
 
 /* ================================

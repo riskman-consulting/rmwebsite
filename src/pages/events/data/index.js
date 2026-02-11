@@ -58,7 +58,7 @@ export const PHOTOS = [
   {
     id: 24,
     category: "Office Culture",
-    subCategory: "Birthday Celebration",
+    subCategory: "Birthday Celebration's",
     image: TEAM_BIRTH_DAY_Images[0],
   },
 
@@ -67,28 +67,28 @@ export const PHOTOS = [
   {
     id:25,
     category:"Office Culture",
-    subCategory:"Birthday Celebration",
+    subCategory:"Birthday Celebration's",
     image:TEAM_BIRTH_DAY_Images[1],
   },
 
    {
     id:26,
     category:"Office Culture",
-    subCategory:"Birthday Celebration",
+    subCategory:"Birthday Celebration's",
     image:TEAM_BIRTH_DAY_Images[2],
   },
 
    {
     id:27,
     category:"Office Culture",
-    subCategory:"Birthday Celebration",
+    subCategory:"Birthday Celebration's",
     image:TEAM_BIRTH_DAY_Images[3],
   },
 
    {
     id:28,
     category:"Office Culture",
-    subCategory:"Birthday Celebration",
+    subCategory:"Birthday Celebration's",
     image:TEAM_BIRTH_DAY_Images[4],
   },
 
@@ -99,44 +99,44 @@ export const PHOTOS = [
   {
     id: 29,
     category: "Office Culture",
-    subCategory: "Celebration",
+    subCategory: "Festive Celebration's",
     image: Diwali_Christmas_Zomato_Team_Images[0],
   },
   {
     id: 30,
     category: "Office Culture",
-    subCategory: "Celebration",
+    subCategory: "Festive Celebration's",
     image: Diwali_Christmas_Zomato_Team_Images[1],
   },
   {
     id: 31,
     category: "Office Culture",
-    subCategory: "Celebration",
+    subCategory: "Festive Celebration's",
     image: Diwali_Christmas_Zomato_Team_Images[2],
   },
   {
     id: 32,
     category: "Office Culture",
-    subCategory: "Celebration",
+    subCategory: "Festive Celebration's",
     image: Diwali_Christmas_Zomato_Team_Images[3],
   },
   {
     id: 33,
     category: "Office Culture",
-    subCategory: "Celebration",
+    subCategory: "Festive Celebration's",
     image: Diwali_Christmas_Zomato_Team_Images[4],
   },
   {
     id: 34,
     category: "Office Culture",
-    subCategory: "Celebration",
+    subCategory: "Festive Celebration's",
     image: Diwali_Christmas_Zomato_Team_Images[5],
   },
 
    {
     id:35,
     category:"Office Culture",
-    subCategory:"Celebration",
+    subCategory:"Festive Celebration's",
     image: Ganesh_Chaturthi_Images[0],
   },
 //   {
@@ -182,21 +182,21 @@ export const PHOTOS = [
   {
     id:41,
     category:"Office Culture",
-    subCategory:"Birthday Celebration",
+    subCategory:"Birthday Celebration's",
     image:TEAM_BIRTH_DAY_Images[5],
   },
 
   {
     id:44,
     category:"Office Culture",
-    subCategory:"Birthday Celebration",
+    subCategory:"Birthday Celebration's",
     image:TEAM_BIRTH_DAY_Images[6],
   },
 
   {
     id:45,
     category:"Office Culture",
-    subCategory:"Birthday Celebration",
+    subCategory:"Birthday Celebration's",
     image:TEAM_BIRTH_DAY_Images[7],
   }
   

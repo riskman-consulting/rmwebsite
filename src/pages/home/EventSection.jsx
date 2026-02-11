@@ -152,7 +152,7 @@ export const EventCTASection = () => {
       </div>
 
       {/* PAGINATION INDICATORS */}
-      <div className="absolute z-30 flex items-center gap-3 -translate-x-1/2 bottom-12 left-1/2">
+      <div className="absolute z-30 flex items-center gap-3 -translate-x-1/2 border bottom-12 left-1/2">
         {IIA_Bombay_2026_images_slide.map((_, i) => (
           <button
             key={i}

@@ -2,6 +2,8 @@ import { ArrowRight, CheckCircle2, Star, Play, Shield, Landmark } from 'lucide-r
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import soc1 from "../../../assets/images/soc/soc1/soc1.png"
+
 const HeroSection = () => {
   const navigator = useNavigate();
   
@@ -64,7 +66,7 @@ const HeroSection = () => {
             </div>
 
             {/* Social Proof / Audit Trust Bar */}
-            <div className="flex flex-col gap-6 pt-6 border-t sm:flex-row sm:items-center border-borderLight dark:border-borderDark">
+            {/* <div className="flex flex-col gap-6 pt-6 border-t sm:flex-row sm:items-center border-borderLight dark:border-borderDark">
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-brandPrimary/10 dark:bg-brandGold/10 rounded-xl">
                   <Landmark className="w-6 h-6 text-brandPrimary dark:text-brandGold" />
@@ -73,20 +75,20 @@ const HeroSection = () => {
                   Trusted by Global Finance & <br /> Banking Leaders
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* 3. RIGHT SIDE: INTERACTIVE IMAGE WITH FINANCIAL OVERLAYS */}
           <div className="relative group">
             <div className="relative z-10 rounded-[2.5rem] overflow-hidden border-[8px] border-surfaceLight dark:border-surfaceDark shadow-[0_32px_64px_-12px_rgba(0,0,0,0.14)] transform transition-all duration-700 hover:scale-[1.02]">
               <img 
-                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200" 
+                src={soc1}
                 alt="Financial Auditing Interface" 
                 className="w-full h-[600px] object-cover"
               />
               
               {/* Floating Audit Status Overlay */}
-              <div className="absolute p-6 border shadow-2xl top-10 right-10 bg-white/90 dark:bg-surfaceDark/90 backdrop-blur-md rounded-3xl border-white/20 animate-float">
+              {/* <div className="absolute p-6 border shadow-2xl top-10 right-10 bg-white/90 dark:bg-surfaceDark/90 backdrop-blur-md rounded-3xl border-white/20 animate-float">
                 <div className="flex items-center gap-4 mb-2">
                   <div className="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full dark:bg-blue-900/30">
                     <CheckCircle2 className="text-blue-600 w-7 h-7 dark:text-blue-400" />
@@ -96,10 +98,10 @@ const HeroSection = () => {
                     <div className="text-2xl font-black text-brandPrimary dark:text-brandGold">Verified</div>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Floating Period Overlay */}
-              <div className="absolute p-6 border shadow-2xl bottom-10 left-10 bg-brandPrimary/90 dark:bg-brandNavy/90 backdrop-blur-md rounded-3xl border-white/10 animate-float" style={{ animationDelay: '1s' }}>
+              {/* <div className="absolute p-6 border shadow-2xl bottom-10 left-10 bg-brandPrimary/90 dark:bg-brandNavy/90 backdrop-blur-md rounded-3xl border-white/10 animate-float" style={{ animationDelay: '1s' }}>
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-white/10 rounded-xl">
                     <Shield className="w-6 h-6 text-brandGold" />
@@ -109,7 +111,7 @@ const HeroSection = () => {
                     <div className="text-xs font-medium text-slate-300">Reporting Period: 2026</div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
             
             {/* Background Aesthetic Blobs */}

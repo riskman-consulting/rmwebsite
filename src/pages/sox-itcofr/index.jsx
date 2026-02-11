@@ -18,7 +18,7 @@ const SoxIcofrIfc = () => {
       <Framework />
 
       {/* Note */}
-      <NoteSection />
+      {/* <NoteSection /> */}
 
       {/* Control Testing */}
       <TestingSection />
