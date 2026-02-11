@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import TisaxHero from './TisaxHero';
-import TisaxProcess from './TISAXProcess';
-import TisaxBenefits from './TISAXBenefits';
-import TisaxChallenges from './TISAXChallenges';
-import TisaxFAQ from './TISAXFAQ';
-import TisaxCTA from './TISAXCTA';
+import TisaxProcess from './TisaxProcess';
+import TisaxBenefits from './TisaxBenefits';
+import TisaxChallenges from './TisaxChallenges';
+import TisaxFAQ from './TisaxFAQ';
+import TisaxCTA from './TisaxCTA';
 
 const TisaxPage = () => {
     // Scroll to top on mount
