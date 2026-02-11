@@ -3,9 +3,9 @@ import { motion,AnimatePresence } from "framer-motion";
 
 import image1 from "../../assets/team-accomplishment/iia_conference_mumbai_march_2025​_3.webp";
 
-import image2 from "../../assets/team-accomplishment/iia_conference_mumbai_jan_2026​_4.webp";
+// import image2 from "../../assets/team-accomplishment/iia_conference_mumbai_jan_2026​_4.webp";
 
-import image3 from "../../assets/team-accomplishment/iia_conference_mumbai_march_2025​_1.webp";
+// import image3 from "../../assets/team-accomplishment/iia_conference_mumbai_march_2025​_1.webp";
 
 import image4 from "../../assets/team-accomplishment/vishal_award_achievement.jpeg";
 
@@ -67,8 +67,8 @@ export default function EventRecognition() {
   const allMedia = useMemo(() => [
     { image: image1, type: "accomplishments", terms: ["iia", "conference", "mumbai", "march", "2025"] },
     { image: image17, type: "accomplishments", terms: ["western", "leadership", "award", "nine"] },
-    { image: image2, type: "accomplishments", terms: ["iia", "conference", "mumbai", "january", "2026"] },
-    { image: image3, type: "accomplishments", terms: ["iia", "conference", "mumbai", "march", "2025"] },
+    { image: image4, type: "accomplishments", terms: ["iia", "conference", "mumbai", "january", "2026"] },
+    { image: image18, type: "accomplishments", terms: ["iia", "conference", "mumbai", "march", "2025"] },
     { image: image5, type: "emerging", terms: ["audit", "leaders", "summit", "mumbai", "november", "2024"] },
     { image: image6, type: "emerging", terms: ["audit", "leaders", "summit", "mumbai", "november", "2024"] },
     { image: image7, type: "emerging", terms: ["audit", "leaders", "summit", "mumbai", "november", "2024"] },
@@ -93,9 +93,9 @@ export default function EventRecognition() {
 
   const allAccomplishments = [
     { image: image1 },
+    { image: image4 },
     { image: image17 },
-    { image: image2 },
-    { image: image3 },
+    { image: image18 },
   ];
 
   /* ================= EMERGING AWARDS ================= */

@@ -105,7 +105,7 @@ const ISOTISAXCTA = () => {
                             </div>
 
                             {/* Contact options */}
-                            <div className="mb-8 space-y-4">
+                            {/* <div className="mb-8 space-y-4">
                                 
 
                                 <div className="flex items-center gap-4 p-4 border rounded-xl bg-slate-50 dark:bg-white/5 border-slate-100 dark:border-white/10">
@@ -127,7 +127,7 @@ const ISOTISAXCTA = () => {
                                         <p className="font-bold text-brandDark dark:text-white">Mon-Fri, 9AM-6PM IST</p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
 
                             {/* Trust badges */}
                             <div className="flex items-center justify-center gap-4 pt-6 border-t border-slate-100 dark:border-white/10">

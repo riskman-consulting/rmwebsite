@@ -144,7 +144,6 @@ const scrollToSection = (id) => {
                 "Transparency",
                 "Risk Management",
                 "Compliance",
-                "Stewardship"
               ].map((item, index) => (
                 <div key={index} className="flex items-center p-4 space-x-3 transition-all duration-300 bg-white border shadow-sm cursor-default dark:bg-surfaceDark rounded-xl border-borderLight dark:border-borderDark hover:shadow-lg hover:border-brandGold/30 group">
                   <div className="p-2 transition-colors rounded-full bg-brandGold/10 group-hover:bg-brandGold/20">
@@ -381,12 +380,12 @@ const scrollToSection = (id) => {
                       className="flex items-center justify-between p-4 transition-all duration-200 bg-white border border-gray-200 group dark:bg-surfaceDark dark:border-gray-700 rounded-xl hover:border-brandPrimary dark:hover:border-brandAccent hover:shadow-md"
                     >
                       <div className="flex items-center space-x-3">
-                        <div className="p-2 text-blue-500 rounded-lg bg-slate-50 dark:bg-red-900/20">
+                        <div className="p-2 text-red-500 rounded-lg bg-slate-50 dark:bg-red-900/20">
                           <FileText size={20} />
                         </div>
                         <div className="text-left">
-                          <span className="block text-sm font-bold text-gray-900 transition-colors dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">Full Policy Docx</span>
-                          {/* <span className="block text-xs text-gray-500">1.2 MB • PDF</span> */}
+                          <span className="block text-sm font-bold text-gray-900 transition-colors dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">Full Policy PDF</span>
+                          <span className="block text-xs text-gray-500">1.2 MB • PDF</span>
                         </div>
                       </div>
                       <Download size={18} className="text-gray-400 group-hover:text-brandPrimary dark:group-hover:text-brandAccent" />

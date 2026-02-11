@@ -11,7 +11,7 @@ function Layout() {
         <div className="container flex items-center justify-between py-4">
           {/* Brand Logo Placeholder */}
           <div onClick={()=>navigate("")} className="text-2xl font-black tracking-tighter font-heading text-brandPrimary dark:text-brandGold">
-            Event's
+            Events
           </div>
 
           {/* Links */}

@@ -147,7 +147,7 @@ export const NAVIGATION_DATA = {
             "title": "Alliances",
             "items": [
                 { "label": "Alliance Partners", "path": "/about#alliance-partners" },
-                { "label": "Global Network", "path": "/about#global-network" }
+                // { "label": "Global Network", "path": "/about#global-network" }
             ]
         }
     ],

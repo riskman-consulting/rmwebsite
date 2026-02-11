@@ -7,18 +7,6 @@ import HeroConsulting from "../../assets/images/hero-section/home/hero-consultin
  
 const SLIDES = [
   {
-    badge: "IT Risk Management",
-    titleLine1: "Securing the Digital Frontier",
-    titleLine2: "with Strategic Assurance",
-    desc: "SOC 1/2/3 assurance and NIST-aligned security frameworks to protect your enterprise and turn IT risk into a driver of digital trust.",
-    img: heroItRisk,
-    btn1: "Explore Solutions",
-    btn1Link: "/services",
-    btn2: "Get Assessment",
-    btn2Link: "/contact",
-    category: "security"
-  },
-  {
     badge: "Risk Assurance & Advisory",
     titleLine1: "Master the Landscape of",
     titleLine2: "Enterprise Uncertainty",
@@ -29,6 +17,18 @@ const SLIDES = [
     btn2: "Consult Expert",
     btn2Link: "/contact",
     category: "advisory"
+  },
+  {
+    badge: "IT Risk Management",
+    titleLine1: "Securing the Digital Frontier",
+    titleLine2: "with Strategic Assurance",
+    desc: "SOC 1/2/3 assurance and NIST-aligned security frameworks to protect your enterprise and turn IT risk into a driver of digital trust.",
+    img: heroItRisk,
+    btn1: "Explore Solutions",
+    btn1Link: "/services",
+    btn2: "Get Assessment",
+    btn2Link: "/contact",
+    category: "security"
   },
   {
     badge: "Business Consulting",
