@@ -1,38 +1,66 @@
-// import React from "react";
+// import React, { useState } from "react";
 // import { Outlet, NavLink, useNavigate } from "react-router-dom";
-// import { ShieldCheck, FileText, Globe } from "lucide-react";
+// import { Menu, X } from "lucide-react";
 
 // function Layout() {
-//   const navigate = useNavigate()
+//   const navigate = useNavigate();
+//   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+//   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
+//   const closeMobileMenu = () => setMobileMenuOpen(false);
+
 //   return (
 //     <div className="z-40 min-h-screen transition-colors duration-300 bg-bgLight dark:bg-bgDark">
 //       {/* Navigation Bar */}
 //       <nav className="fixed z-50 w-screen border-b bg-surfaceLight/80 dark:bg-surfaceDark/80 backdrop-blur-md border-borderLight dark:border-borderDark">
-//         <div className="container flex items-center justify-between py-4">
-//           {/* Brand Logo Placeholder */}
-//           <div onClick={()=>navigate("")} className="text-2xl font-black tracking-tighter font-heading text-brandPrimary dark:text-brandGold">
-//             SOC's
+//         <div className="container flex items-center justify-between px-4 py-4 mx-auto">
+//           {/* Brand Logo */}
+//           <div 
+//             onClick={() => navigate("")} 
+//             className="text-xl font-black tracking-tighter cursor-pointer sm:text-2xl font-heading text-brandPrimary dark:text-brandGold"
+//           >
+//             SOC Assurance
 //           </div>
 
-//           {/* Links */}
-//           <div className="flex items-center gap-1 sm:gap-4">
-//             <NavItem to="soc-1"  label="SOC 1" />
-//             <NavItem to="soc-2"  label="SOC 2" />
+//           {/* Desktop Navigation */}
+//           <div className="items-center hidden gap-4 md:flex">
+//             <NavItem to="soc-1" label="SOC 1" />
+//             <NavItem to="soc-2" label="SOC 2" />
 //             <NavItem to="soc-3" label="SOC 3" />
 //           </div>
+
+//           {/* Mobile Menu Button */}
+//           <button
+//             onClick={toggleMobileMenu}
+//             className="p-2 text-gray-700 transition-colors rounded-lg md:hidden dark:text-gray-300 hover:bg-brandPrimary/10 dark:hover:bg-brandGold/10"
+//             aria-label="Toggle menu"
+//           >
+//             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+//           </button>
 //         </div>
+
+//         {/* Mobile Navigation Dropdown */}
+//         {mobileMenuOpen && (
+//           <div className="border-t md:hidden border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark">
+//             <div className="container flex flex-col gap-2 px-4 py-4 mx-auto">
+//               <MobileNavItem to="soc-1" label="SOC 1" onClick={closeMobileMenu} />
+//               <MobileNavItem to="soc-2" label="SOC 2" onClick={closeMobileMenu} />
+//               <MobileNavItem to="soc-3" label="SOC 3" onClick={closeMobileMenu} />
+//             </div>
+//           </div>
+//         )}
 //       </nav>
 
-//       {/* Page Content */}
-//       <main className="animate-fadeIn">
+//       {/* Page Content - Add top padding to account for fixed nav */}
+//       <main className="pt-16 animate-fadeIn sm:pt-20">
 //         <Outlet />
 //       </main>
 //     </div>
 //   );
 // }
 
-// // Helper component for cleaner link logic
-// const NavItem = ({ to, icon="", label }) => (
+// // Desktop Navigation Item
+// const NavItem = ({ to, label }) => (
 //   <NavLink
 //     to={to}
 //     className={({ isActive }) => `
@@ -43,101 +71,82 @@
 //       }
 //     `}
 //   >
-//     {icon}
-//     <span className="hidden sm:inline">{label}</span>
+//     {label}
+//   </NavLink>
+// );
+
+// // Mobile Navigation Item
+// const MobileNavItem = ({ to, label, onClick }) => (
+//   <NavLink
+//     to={to}
+//     onClick={onClick}
+//     className={({ isActive }) => `
+//       flex items-center gap-2 px-4 py-3 rounded-lg font-bold transition-all duration-200
+//       ${isActive 
+//         ? "bg-brandPrimary text-white shadow-md dark:bg-brandGold dark:text-brandDark" 
+//         : "text-gray-600 dark:text-gray-400 hover:bg-brandPrimary/10 dark:hover:bg-brandGold/10 hover:text-brandPrimary dark:hover:text-brandGold"
+//       }
+//     `}
+//   >
+//     {label}
 //   </NavLink>
 // );
 
 // export default Layout;
 
 
-import React, { useState } from "react";
+
+import React from "react";
 import { Outlet, NavLink, useNavigate } from "react-router-dom";
-import { Menu, X } from "lucide-react";
 
 function Layout() {
   const navigate = useNavigate();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
-  const closeMobileMenu = () => setMobileMenuOpen(false);
 
   return (
-    <div className="z-40 min-h-screen transition-colors duration-300 bg-bgLight dark:bg-bgDark">
+    <div className="min-h-screen transition-colors duration-300 bg-bgLight dark:bg-bgDark">
       {/* Navigation Bar */}
-      <nav className="fixed z-50 w-screen border-b bg-surfaceLight/80 dark:bg-surfaceDark/80 backdrop-blur-md border-borderLight dark:border-borderDark">
-        <div className="container flex items-center justify-between px-4 py-4 mx-auto">
+      <nav className="fixed z-50 w-screen border-b shadow-sm bg-surfaceLight/95 dark:bg-surfaceDark/95 backdrop-blur-md border-borderLight dark:border-borderDark">
+        <div className="container flex items-center justify-between px-4 py-4 mx-auto sm:px-6">
           {/* Brand Logo */}
-          <div 
-            onClick={() => navigate("")} 
-            className="text-xl font-black tracking-tighter cursor-pointer sm:text-2xl font-heading text-brandPrimary dark:text-brandGold"
+          <div
+            onClick={() => navigate("")}
+            className="flex-shrink-0 mr-4 text-lg font-black tracking-tighter transition-opacity cursor-pointer sm:text-xl lg:text-2xl font-heading text-brandPrimary dark:text-brandGold hover:opacity-80"
           >
             SOC Assurance
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="items-center hidden gap-4 md:flex">
+          {/* Links - Horizontally Scrollable on Mobile */}
+          <div className="flex items-center gap-3 sm:gap-4 overflow-x-auto scrollbar-hide max-w-[calc(100vw-200px)] sm:max-w-none">
             <NavItem to="soc-1" label="SOC 1" />
             <NavItem to="soc-2" label="SOC 2" />
             <NavItem to="soc-3" label="SOC 3" />
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMobileMenu}
-            className="p-2 text-gray-700 transition-colors rounded-lg md:hidden dark:text-gray-300 hover:bg-brandPrimary/10 dark:hover:bg-brandGold/10"
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
-
-        {/* Mobile Navigation Dropdown */}
-        {mobileMenuOpen && (
-          <div className="border-t md:hidden border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark">
-            <div className="container flex flex-col gap-2 px-4 py-4 mx-auto">
-              <MobileNavItem to="soc-1" label="SOC 1" onClick={closeMobileMenu} />
-              <MobileNavItem to="soc-2" label="SOC 2" onClick={closeMobileMenu} />
-              <MobileNavItem to="soc-3" label="SOC 3" onClick={closeMobileMenu} />
-            </div>
-          </div>
-        )}
       </nav>
 
-      {/* Page Content - Add top padding to account for fixed nav */}
-      <main className="pt-16 animate-fadeIn sm:pt-20">
+      {/* Page Content */}
+      <main className="pt-20 animate-fadeIn">
         <Outlet />
       </main>
     </div>
   );
 }
 
-// Desktop Navigation Item
+// Navigation Item Component
 const NavItem = ({ to, label }) => (
   <NavLink
     to={to}
     className={({ isActive }) => `
-      flex items-center gap-2 px-4 py-2 rounded-lg font-bold transition-all duration-200
-      ${isActive 
-        ? "bg-brandPrimary text-white shadow-md dark:bg-brandGold dark:text-brandDark" 
-        : "text-gray-600 dark:text-gray-400 hover:bg-brandPrimary/10 dark:hover:bg-brandGold/10 hover:text-brandPrimary dark:hover:text-brandGold"
-      }
-    `}
-  >
-    {label}
-  </NavLink>
-);
-
-// Mobile Navigation Item
-const MobileNavItem = ({ to, label, onClick }) => (
-  <NavLink
-    to={to}
-    onClick={onClick}
-    className={({ isActive }) => `
-      flex items-center gap-2 px-4 py-3 rounded-lg font-bold transition-all duration-200
-      ${isActive 
-        ? "bg-brandPrimary text-white shadow-md dark:bg-brandGold dark:text-brandDark" 
-        : "text-gray-600 dark:text-gray-400 hover:bg-brandPrimary/10 dark:hover:bg-brandGold/10 hover:text-brandPrimary dark:hover:text-brandGold"
+      flex items-center gap-2 px-4 sm:px-5 lg:px-6 py-2 sm:py-2.5 rounded-lg
+      text-sm sm:text-base font-bold
+      transition-all duration-200
+      border border-brandPrimary dark:border-brandGold
+      whitespace-nowrap
+      flex-shrink-0
+      ${
+        isActive
+          ? "bg-brandPrimary text-white shadow-md dark:bg-brandGold dark:text-brandDark"
+          : "text-brandPrimary dark:text-brandGold bg-white dark:bg-slate-900 hover:bg-brandPrimary/10 dark:hover:bg-brandGold/10"
       }
     `}
   >

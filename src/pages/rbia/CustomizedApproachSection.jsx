@@ -77,13 +77,13 @@ export default function CustomizedApproachSection() {
   };
 
   return (
-    <section className="relative px-6 py-24 overflow-hidden bg-bgLight dark:bg-bgDark lg:py-40">
+    <section className="relative px-6 overflow-hidden py-14 bg-bgLight dark:bg-bgDark md:py-20 lg:py-24">
       {/* BACKGROUND TEXTURE */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03] dark:opacity-[0.05]">
         <div className="absolute inset-0 bg-[radial-gradient(#004080_1.5px,transparent_1.5px)] [background-size:60px_60px]" />
       </div>
 
-      <div className="container relative z-10 mx-auto max-w-7xl">
+      <div className="container relative z-10 px-6 mx-auto lg:px-20 max-w-7xl">
         {/* HEADER */}
         <div className="max-w-3xl mx-auto mb-20 text-center lg:mb-32">
           <motion.span 
@@ -94,9 +94,9 @@ export default function CustomizedApproachSection() {
             Operational Cycle
           </motion.span>
           <h2 className="mb-6 text-4xl font-bold tracking-tight lg:text-6xl text-brandDark dark:text-white font-heading">
-            Our <span className="text-brandPrimary italic">Customized</span> Approach
+            Our <span className="italic text-brandPrimary">Customized</span> Approach
           </h2>
-          <p className="text-lg text-slate-500 dark:text-slate-400 font-light leading-relaxed">
+          <p className="text-lg font-light leading-relaxed text-slate-500 dark:text-slate-400">
             A tailored methodology to evaluate risks and enhance operational effectiveness across your organization's unique landscape.
           </p>
         </div>
@@ -163,7 +163,7 @@ export default function CustomizedApproachSection() {
 
             {/* CENTER HUB */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="w-44 h-44 rounded-full bg-white dark:bg-surfaceDark border border-slate-100 dark:border-slate-800 shadow-2xl flex flex-col items-center justify-center backdrop-blur-sm">
+              <div className="flex flex-col items-center justify-center bg-white border rounded-full shadow-2xl w-44 h-44 dark:bg-surfaceDark border-slate-100 dark:border-slate-800 backdrop-blur-sm">
                 <span className="text-5xl font-black text-brandPrimary dark:text-brandAccent">0{PHASES[activeIndex].step}</span>
                 <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-400">Phase</span>
               </div>
@@ -189,20 +189,20 @@ export default function CustomizedApproachSection() {
                   <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r ${PHASES[activeIndex].color} text-white mb-8 text-[10px] font-bold uppercase tracking-widest`}>
                     Step 0{PHASES[activeIndex].step}
                   </div>
-                  <h3 className="text-3xl lg:text-4xl font-bold text-brandDark dark:text-white mb-6 leading-tight">
+                  <h3 className="mb-6 text-3xl font-bold leading-tight lg:text-4xl text-brandDark dark:text-white">
                     {PHASES[activeIndex].title}
                   </h3>
-                  <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-10">
+                  <p className="mb-10 text-lg leading-relaxed text-slate-600 dark:text-slate-400">
                     {PHASES[activeIndex].description}
                   </p>
                   
                   <div className="flex flex-wrap items-center gap-6">
-                    <button className="px-8 py-4 bg-brandDark dark:bg-brandAccent dark:text-brandDark text-white font-bold rounded-xl transition-transform hover:-translate-y-1">
+                    <button className="px-8 py-4 font-bold text-white transition-transform bg-brandDark dark:bg-brandAccent dark:text-brandDark rounded-xl hover:-translate-y-1">
                       Detailed Analysis
                     </button>
                     <button 
                       onClick={() => setActiveIndex((activeIndex + 1) % PHASES.length)}
-                      className="group flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brandPrimary dark:text-brandAccent"
+                      className="flex items-center gap-2 text-xs font-bold tracking-widest uppercase group text-brandPrimary dark:text-brandAccent"
                     >
                       Next Phase <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                     </button>
@@ -214,7 +214,7 @@ export default function CustomizedApproachSection() {
         </div>
 
         {/* METRICS */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-20">
+        <div className="grid grid-cols-2 gap-6 mt-20 lg:grid-cols-4">
           {[
             { label: "Efficiency", value: "+42%" },
             { label: "Gaps Found", value: "100%" },
@@ -226,9 +226,9 @@ export default function CustomizedApproachSection() {
               initial={{ opacity: 0 }} 
               whileInView={{ opacity: 1 }} 
               transition={{ delay: i * 0.1 }}
-              className="p-8 rounded-3xl bg-white dark:bg-surfaceDark border border-slate-100 dark:border-slate-800 text-center"
+              className="p-8 text-center bg-white border rounded-3xl dark:bg-surfaceDark border-slate-100 dark:border-slate-800"
             >
-              <div className="text-3xl font-bold text-brandPrimary dark:text-brandAccent mb-1">{m.value}</div>
+              <div className="mb-1 text-3xl font-bold text-brandPrimary dark:text-brandAccent">{m.value}</div>
               <div className="text-[9px] font-black uppercase tracking-widest text-slate-400">{m.label}</div>
             </motion.div>
           ))}

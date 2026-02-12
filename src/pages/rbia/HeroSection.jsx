@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const RBIAHero = () => {
   const navigator = useNavigate()
   return (
-    <section className="relative lg:top-10 w-full min-h-[85vh] flex items-center overflow-hidden transition-colors duration-300">
+    <section className="relative flex items-center w-full overflow-hidden transition-colors duration-300">
       
       {/* 1. THE BACKGROUND IMAGE - Always sharp in the base layer */}
       <div 

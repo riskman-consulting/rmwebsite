@@ -22,6 +22,8 @@ export const MobileMenu = ({ isOpen, onClose }) => {
         return NAVIGATION_DATA.governanceMegaMenu;
       case "events":
         return NAVIGATION_DATA.eventsMegaMenu;
+      case "solutions":
+        return NAVIGATION_DATA.solutionsMegaMenu;
       default:
         return [];
     }

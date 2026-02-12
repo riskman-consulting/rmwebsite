@@ -111,7 +111,7 @@ export default function EventsGrid() {
     : myEvents.filter(e => e.meta.type === selectedCategory);
  
   return (
-    <div id="past-events" className="min-h-screen px-4 py-16 bg-slate-50 dark:bg-surfaceDark">
+    <div id="past-events" className="min-h-screen px-4 lg:px-20 bg-surfaceLight dark:bg-surfaceDark">
       <div className="mx-auto max-w-7xl">
         <header className="mb-12">
           <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Past Events & Conferences</h2>

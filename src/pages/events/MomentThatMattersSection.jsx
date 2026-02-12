@@ -261,7 +261,7 @@ export default function MomentsThatMatter() {
   return (
     <section 
       id="moment-that-matters" 
-      className="relative px-4 py-16 md:py-24 lg:py-32 bg-surfaceLight dark:bg-surfaceDark"
+      className="relative px-4 py-14 lg:px-20 md:py-20 lg:py-24 bg-surfaceLight dark:bg-surfaceDark"
     >
       <div  className="mx-auto max-w-7xl">
         

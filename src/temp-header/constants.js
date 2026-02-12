@@ -52,8 +52,8 @@ export const NAVIGATION_DATA = {
                     "path": "/services/financial-advisory",
                     "submenus": [
                         { "id": "credit-risk", "title": "Credit Risk Assessment" ,"path":"/services/financial-advisory/credit-risk-assessment"},
-                        { "id": "portfolio-management", "title": "Credit Portfolio Management" ,"path":"/services/financial-advisory/portfolio-management"},
-                        { "id": "loan-review", "title": "Loan Review & Monitoring","path":"/services/financial-advisory/loan-review" },
+                        // { "id": "portfolio-management", "title": "Credit Portfolio Management" ,"path":"/services/financial-advisory/portfolio-management"},
+                        // { "id": "loan-review", "title": "Loan Review & Monitoring","path":"/services/financial-advisory/loan-review" },
                         { "id": "credit-policy", "title": "Credit Policy Framework", "path":"/services/financial-advisory/credit-policy" }
                     ]
                 },
@@ -61,7 +61,7 @@ export const NAVIGATION_DATA = {
                     "label": "AI & Technology",
                     "path": "/services/ai-technology",
                     "submenus": [
-                        { "id": "ai-rmf-nist", "title": "AI RMF by NIST", "path":"/services/ai-technology/ai-rmf-nist"}
+                        // { "id": "ai-rmf-nist", "title": "AI RMF by NIST", "path":"/services/ai-technology/ai-rmf-nist"}
                     ]
                 },
                 {

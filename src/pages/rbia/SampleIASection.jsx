@@ -13,7 +13,7 @@ export default function SampleIASection() {
       <div className="absolute right-0 rounded-full top-24 w-96 h-96 bg-brandAccent/10 blur-3xl dark:bg-brandAccent/15" />
 
       {/* CONTENT */}
-      <div className="container relative z-10 px-4 mx-auto">
+      <div className="container relative z-10 px-4 mx-auto lg:px-20">
         {/* HEADER */}
         <div className="max-w-4xl mx-auto mb-20 text-center">
           <div className="inline-flex items-center justify-center px-4 py-1.5 mb-6 text-xs font-semibold tracking-wide uppercase rounded-full bg-brandPrimary/15 text-brandPrimary border border-brandPrimary/25 dark:bg-brandPrimary/25 dark:text-brandAccent dark:border-brandPrimary/30">

@@ -14,7 +14,7 @@ export default function CTASection() {
       {/* GLOW */}
       <div className="absolute -top-32 -right-32 w-[520px] h-[520px] rounded-full bg-brandAccent/40 blur-3xl" />
 
-      <div className="container relative z-10 px-6">
+      <div className="container relative z-10 px-6 lg:px-20">
 
         <div className="max-w-4xl mx-auto text-center">
 

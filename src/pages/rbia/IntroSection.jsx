@@ -4,11 +4,11 @@ import bg from "../../assets/images/rbia/strategies.png";
 
 const RBIALandscape = () => {
   return (
-    <section className="relative overflow-hidden transition-colors duration-300 bg-white dark:bg-bgDark py-24 lg:py-32">
+    <section className="relative py-24 overflow-hidden transition-colors duration-300 bg-white dark:bg-bgDark lg:py-32">
       {/* Decorative Background Element for "Section" feel */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-borderLight dark:via-borderDark to-transparent" />
 
-      <div className="container mx-auto px-6">
+      <div className="container px-6 mx-auto lg:px-20">
         <div className="grid items-center gap-12 lg:grid-cols-12">
           
           {/* LEFT CONTENT AREA */}
@@ -22,24 +22,24 @@ const RBIALandscape = () => {
             </div>
 
             {/* Heading */}
-            <h2 className="text-4xl md:text-4xl lg:text-5xl font-heading font-extrabold leading-tight text-brandDark dark:text-white">
-              Strategic Assessment of{" "}
-              <span className="text-brandPrimary dark:text-brandGold block">
-                Organizational
-              </span>{" "}
-              Risk Landscape
+            <h2 className="text-3xl font-extrabold leading-tight md:text-4xl lg:text-5xl font-heading text-brandDark dark:text-white">
+              Strategic Assessment of Organizational{" "}
+              <span className="block text-brandPrimary dark:text-brandGold">
+                 Risk Landscape
+              </span>
+            
             </h2>
 
             {/* Body Text */}
-            <p className="mt-6 text-lg md:text-xl leading-relaxed text-brandNavy/70 dark:text-white/60 max-w-2xl">
-              Every Organization’s mission relies on <span className="text-brandDark dark:text-white font-bold underline decoration-brandAccent decoration-2 underline-offset-4">trust and speed</span>. 
+            <p className="max-w-2xl mt-6 text-lg leading-relaxed md:text-xl text-brandNavy/70 dark:text-white/60">
+              Every Organization’s mission relies on <span className="font-bold underline text-brandDark dark:text-white decoration-brandAccent decoration-2 underline-offset-4">trust and speed</span>. 
               We provide proactive assurance across financial and operational areas to mitigate emerging threats.
             </p>
 
             {/* Feature List (Cleaner than cards) */}
             <div className="mt-10 space-y-8">
               <div className="flex gap-5">
-                <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-brandAccent/10 flex items-center justify-center text-brandAccent">
+                <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-2xl bg-brandAccent/10 text-brandAccent">
                   <ShieldCheck size={28} />
                 </div>
                 <div>
@@ -49,7 +49,7 @@ const RBIALandscape = () => {
               </div>
 
               <div className="flex gap-5">
-                <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-brandPrimary/10 flex items-center justify-center text-brandPrimary">
+                <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-2xl bg-brandPrimary/10 text-brandPrimary">
                   <Cpu size={28} />
                 </div>
                 <div>
@@ -75,8 +75,8 @@ const RBIALandscape = () => {
 
             {/* Floating Trust Badge - Simplified */}
             <div className="absolute -bottom-6 -left-6 md:bottom-12 md:-left-12 p-8 bg-white dark:bg-surfaceDark rounded-3xl shadow-xl border border-borderLight dark:border-borderDark max-w-[200px]">
-                <p className="text-3xl font-black text-brandPrimary dark:text-brandGold italic">99%</p>
-                <p className="text-xs font-bold uppercase tracking-tighter text-brandNavy/50 dark:text-white/40">Reliability & Audit Precision</p>
+                <p className="text-3xl italic font-black text-brandPrimary dark:text-brandGold">99%</p>
+                <p className="text-xs font-bold tracking-tighter uppercase text-brandNavy/50 dark:text-white/40">Reliability & Audit Precision</p>
             </div>
           </div>
 

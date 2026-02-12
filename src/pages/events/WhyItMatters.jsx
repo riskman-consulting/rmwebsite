@@ -29,13 +29,13 @@ const WHY_IT_MATTERS = [
 const WhyItMatters = () => {
   const navigator = useNavigate()
   return (
-    <section id="why-it-matters" className="relative py-32 overflow-hidden transition-colors duration-500 bg-surfaceLight dark:bg-surfaceDark">
+    <section id="why-it-matters" className="relative py-16 overflow-hidden transition-colors duration-500 bg-surfaceLight dark:bg-surfaceDark">
       
       {/* Feelpath Network Decor (Aesthetic Globs) */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#FFB800]/5 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#003366]/10 dark:bg-[#FFC000]/5 rounded-full blur-[120px] pointer-events-none"></div>
 
-      <div className="relative z-10 px-6 mx-auto max-w-7xl lg:px-12">
+      <div className="relative z-10 px-6 mx-auto max-w-7xl lg:px-20">
         
         {/* Master Style Heading */}
         <div className="mb-20 text-center">

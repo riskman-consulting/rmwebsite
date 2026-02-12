@@ -28,7 +28,7 @@ export default function FAQSection() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   return (
-    <section className="relative py-16 overflow-hidden md:py-20 bg-bgLight dark:bg-bgDark">
+    <section className="relative overflow-hidden py-14 md:py-20 bg-bgLight dark:bg-bgDark">
 
       {/* BACKGROUND */}
       <div className="absolute inset-0 bg-gradient-to-b from-brandPrimary/6 via-transparent to-brandAccent/6 dark:from-brandPrimary/12 dark:to-brandAccent/8" />
@@ -39,7 +39,7 @@ export default function FAQSection() {
       {/* DECORATIVE GLOW */}
       <div className="absolute rounded-full top-40 left-10 w-96 h-96 bg-brandPrimary/8 blur-3xl dark:bg-brandPrimary/12" />
 
-      <div className="container relative z-10 px-6">
+      <div className="container relative z-10 px-6 lg:px-20">
 
         {/* HEADER */}
         <div className="max-w-4xl mx-auto mb-16 text-center md:text-left">
