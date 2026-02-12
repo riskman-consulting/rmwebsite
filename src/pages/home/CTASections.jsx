@@ -1,13 +1,14 @@
 import { Linkedin } from "lucide-react";
+import { teamsImages } from "../../assets/teams";
  
 const CTASection = () => {
   // Team members data update if needed in future
   const teamMembers = [];
  
   const topAvatars = [
-    "https://www.riskman.in/wp-content/uploads/2020/09/sukanta-nag.jpg",
-    "https://www.riskman.in/wp-content/uploads/2020/09/prasen-pal.jpg",
-    "https://www.riskman.in/wp-content/uploads/2020/09/arpit-garg.jpg",
+    teamsImages.sukantaSir,
+    "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768906075/Prasen_pal_xe5jx8.webp",
+    teamsImages.arpitSir,
   ];
  
   return (
@@ -25,7 +26,7 @@ const CTASection = () => {
                 <img
                   src={avatar}
                   alt={`Team member ${i + 1}`}
-                  className="object-cover w-full h-full"
+                  className="object-cover object-top w-full h-full"
                 />
               </div>
             ))}

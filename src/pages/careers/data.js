@@ -49,8 +49,38 @@ export const testimonials = [
     image:teamsImages.Vipul,
     position:"Consultant"
   },
+
+   {
+    id:6,
+    name:"Harsh Gupta",
+    quote:"Over 2.5+ years at RiskMan, I have worked across Internal Audit, IFC Design & Testing, SOP Consulting, and Finance Automation, leading P2P/O2C audits and supporting ERP implementations through UAT and BRD finalization across diverse sectors. With hands-on experience in tools like Kissflow, BlackLine, and ERP systems, I focus on strengthening controls and driving automation building strong technical expertise and professional confidence within a culture of trust and collaboration.",
+    tag:"",
+    image:teamsImages.Harsh,
+    position:"Senior Analyst"
+  },
+
   {
-    id: 6,
+    id:7,
+    name:"Rishbha Jain",
+    quote:"The journey with RiskMan has been an amazing learning experience. From starting out as an trainee and understanding the basics, to gradually taking on greater responsibilities and handling the team, the growth has been both challenging and fulfilling. This progress would not have been possible without the constant support and guidance of the partners, who have been the real catalyst in my progress. There has been so much to learn, and the learning continues every day. Deeply grateful for the progress made so far and looking forward to taking on new challenges ahead.",
+    tag:"",
+    image:teamsImages.RishbhaJain,
+    position:"Senior Analyst"
+  },
+  {
+    id:8,
+    name:"Kartik Bhatia",
+    quote:"Over 2.5+ years at RiskMan with extensive exposure to Internal Audit, IFC design and testing, SOP consulting, and compliance engagements, leading Procurement, Order-to-Cash, and ITGC process audits with a focus on strengthening control environments and enhancing governance standards. Hands-on experience with ERP systems and Microsoft-based automation tools, driving process efficiency through a structured and risk-focused approach.",
+    tag:"",
+    image:teamsImages.Kartik,
+    position:"Senior Analyst"
+  }
+
+
+
+
+  {
+    id: 9,
     name: "Palak Kanojia.",
     quote: `My Trainee at Riskman provided Big Four–level exposure through finance transformation projects in the Zomato–Blinkit ecosystem. I worked on budgeting, expense analysis, and cost control, strengthening my analytical and corporate finance skills.`,
     tag: "",
@@ -67,26 +97,5 @@ export const testimonials = [
   //   image:teamsImages.RohitGupta,
   //   position:"Consultant"
   // },
-
-
-  {
-    id:7,
-    name:"Harsh Gupta",
-    quote:"Over 2.5+ years at RiskMan, I have worked across Internal Audit, IFC Design & Testing, SOP Consulting, and Finance Automation, leading P2P/O2C audits and supporting ERP implementations through UAT and BRD finalization across diverse sectors. With hands-on experience in tools like Kissflow, BlackLine, and ERP systems, I focus on strengthening controls and driving automation building strong technical expertise and professional confidence within a culture of trust and collaboration.",
-    tag:"",
-    image:teamsImages.Harsh,
-    position:"Senior Analyst"
-  },
-
-  {
-    id:8,
-    name:"Rishbha Jain",
-    quote:"The journey with RiskMan has been an amazing learning experience. From starting out as an trainee and understanding the basics, to gradually taking on greater responsibilities and handling the team, the growth has been both challenging and fulfilling. This progress would not have been possible without the constant support and guidance of the partners, who have been the real catalyst in my progress. There has been so much to learn, and the learning continues every day. Deeply grateful for the progress made so far and looking forward to taking on new challenges ahead.",
-    tag:"",
-    image:teamsImages.RishbhaJain,
-    position:"Senior Analyst"
-  }
-
-
-
+  
 ];
