@@ -272,7 +272,7 @@ export default function MarqueeClientsSection({ title = "Our Marquee Clients", b
     { name: "Feeding India", logo: "https://b.zmtcdn.com/data/o2_assets/ef079f5794e4cfb3c659e9d1cfe70d8e1726569304.png" },
     { name: "Schoolnet", logo: "https://images.financialexpressdigital.com/2022/05/schoolnet.png" },
     { name: "Danieli", logo: "https://download.logo.wine/logo/Danieli/Danieli-Logo.wine.png" },
-    { name: "Care Health Insurance", logo: "https://pnghdpro.com/wp-content/themes/pnghdpro/download/social-media-and-brands/care-insurance-logo-hd.png%22" },
+    { name: "Care Health Insurance", logo: "https://pnghdpro.com/wp-content/themes/pnghdpro/download/social-media-and-brands/care-insurance-logo-hd.png" },
     {
       name: "Dhunseri", logo: "https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/824ef001f4a7bb492d3a?ik-sanitizeSvg=true%22"
     },
