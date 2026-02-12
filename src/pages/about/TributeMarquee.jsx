@@ -35,41 +35,94 @@
 
 
 
+// import React from "react";
+// import { FaHeart } from "react-icons/fa";
+
+// export default function TributeMarquee() {
+//   return (
+//     <div className="w-full py-6 bg-surfaceLight dark:bg-surfaceDark border-y border-brandAccent/20">
+//       <div className="container px-4 mx-auto">
+//         <div className="flex flex-col items-center justify-center gap-4 text-center md:flex-row md:gap-6 md:text-left">
+//           {/* Badge */}
+//           <div className="inline-flex items-center gap-2 px-4 py-1.5 text-sm font-bold tracking-wider uppercase rounded-full bg-brandAccent/10 text-brandAccent shrink-0">
+//             <FaHeart className="text-xs" /> In Loving Memory
+//           </div>
+          
+//           {/* Name */}
+//           <span className="text-xl font-bold text-brandPrimary dark:text-brandAccent shrink-0">
+//             Prabir Sengupta:
+//           </span>
+          
+//           {/* Quote */}
+//           <span className="text-lg italic text-brandNavy/70 dark:text-white/70">
+//             "Excellence is not a destination; it is a continuous journey."
+//           </span>
+          
+//           {/* Separator - hidden on mobile */}
+//           <span className="hidden mx-4 md:inline text-brandAccent/30">•</span>
+          
+//           {/* Description */}
+//           <p className="max-w-2xl text-base font-medium md:text-lg text-brandNavy/80 dark:text-white/80">
+//             We honor the legacy of Prabir Sengupta whose vision and mentorship laid the foundation for RiskMan.
+//           </p>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+
 import React from "react";
 import { FaHeart } from "react-icons/fa";
 
 export default function TributeMarquee() {
   return (
-    <div className="w-full py-6 bg-surfaceLight dark:bg-surfaceDark border-y border-brandAccent/20">
-      <div className="container px-4 mx-auto">
-        <div className="flex flex-col items-center justify-center gap-4 text-center md:flex-row md:gap-6 md:text-left">
+    <div className="w-full py-5 bg-surfaceLight dark:bg-surfaceDark border-y border-brandAccent/20">
+      <div className="max-w-[1200px] mx-auto px-6">
+        <div className="flex items-center justify-center gap-6 text-center">
+
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 text-sm font-bold tracking-wider uppercase rounded-full bg-brandAccent/10 text-brandAccent shrink-0">
-            <FaHeart className="text-xs" /> In Loving Memory
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 text-xs font-semibold tracking-[0.08em] uppercase rounded-full bg-brandAccent/10 text-brandAccent">
+            <FaHeart className="text-xs" />
+            In Loving Memory
           </div>
-          
+
+          {/* Divider */}
+          <span className="text-lg text-brandAccent/40">•</span>
+
           {/* Name */}
-          <span className="text-xl font-bold text-brandPrimary dark:text-brandAccent shrink-0">
-            Prabir Sengupta:
-          </span>
-          
+          {/* <span className="text-lg font-semibold text-brandPrimary dark:text-brandAccent">
+            Prabir Sengupta
+          </span> */}
+
+          {/* Name */}
+<span className="text-lg font-semibold text-brandPrimary dark:text-brandAccent whitespace-nowrap shrink-0">
+  Prabir Sengupta
+</span>
+
+
+          {/* Divider */}
+          <span className="text-lg text-brandAccent/40">•</span>
+
           {/* Quote */}
-          <span className="text-lg italic text-brandNavy/70 dark:text-white/70">
-            "Excellence is not a destination; it is a continuous journey."
-          </span>
-          
-          {/* Separator - hidden on mobile */}
-          <span className="hidden mx-4 md:inline text-brandAccent/30">•</span>
-          
-          {/* Description */}
-          <p className="max-w-2xl text-base font-medium md:text-lg text-brandNavy/80 dark:text-white/80">
-            We honor the legacy of Prabir Sengupta whose vision and mentorship laid the foundation for RiskMan.
+          <p className="max-w-xl text-lg italic text-brandNavy/80 dark:text-white/80">
+            “Excellence is not a destination; it is a continuous journey.”
           </p>
+
+          {/* Divider */}
+          <span className="text-lg text-brandAccent/40">•</span>
+
+          {/* Tribute */}
+          <p className="max-w-xs text-base text-brandNavy/80 dark:text-white/80">
+            Honoring his vision and mentorship that shaped the foundation of RiskMan.
+          </p>
+
         </div>
       </div>
     </div>
   );
 }
+
 
 /* =========================
    Tribute Section
