@@ -296,7 +296,7 @@ const Testimonials = () => {
 
   return (
     <section className="relative z-10 flex items-center w-full min-h-screen py-12 overflow-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark">
-      <div className="container px-4 mx-auto md:px-8 lg:px-12">
+      <div className="w-full px-6 mx-auto lg:px-20">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
 
           {/* LEFT SIDE - Typography */}
