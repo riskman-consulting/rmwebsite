@@ -82,7 +82,7 @@ export default function TributeMarquee() {
         <div className="flex items-center justify-center gap-6 text-center">
 
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 text-xs font-semibold tracking-[0.08em] uppercase rounded-full bg-brandAccent/10 text-brandAccent">
+          <div className="inline-flex items-center gap-2 px-6  py-1.5 text-xs font-semibold tracking-[0.08em] uppercase rounded-full bg-brandAccent/10 text-brandAccent">
             <FaHeart className="text-xs" />
             In Loving Memory
           </div>
@@ -105,7 +105,7 @@ export default function TributeMarquee() {
           <span className="text-lg text-brandAccent/40">•</span>
 
           {/* Quote */}
-          <p className="max-w-xl text-lg italic text-brandNavy/80 dark:text-white/80">
+          <p className="max-w-xl text-lg font-bold text-brandNavy/80 dark:text-white/80">
             “Excellence is not a destination; it is a continuous journey.”
           </p>
 

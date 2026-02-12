@@ -1,6 +1,7 @@
+
 // import React, { useState } from "react";
 // import { motion } from "framer-motion";
-// import { Linkedin, ArrowRight, MapPin } from "lucide-react";
+// import { Linkedin, ArrowRight, MapPin, Heart } from "lucide-react";
 // import { teamsImages } from "../../assets/teams";
 // import {
 //   PrasenPalRichBio,
@@ -62,6 +63,45 @@
 // ];
 
 // /* =========================
+//    Tribute Section
+// ========================= */
+// // function TributeSection() {
+// //   return (
+// //     <motion.div
+// //       {...animations.fadeInUp}
+// //       className="w-full py-6 my-12 border-y bg-gradient-to-r from-brandPrimary/5 via-brandGold/5 to-brandPrimary/5 border-brandAccent/20 dark:border-brandGold/30"
+// //     >
+// //       <div className="container px-4 mx-auto">
+// //         <div className="flex flex-col items-center justify-center gap-4 text-center md:flex-row md:gap-6 md:text-left">
+// //           {/* Badge */}
+// //           <div className="inline-flex items-center gap-2 px-4 py-1.5 text-sm font-bold tracking-wider uppercase rounded-full bg-brandAccent/10 text-brandAccent shrink-0">
+// //             <Heart className="w-3 h-3 fill-current" /> In Loving Memory
+// //           </div>
+          
+// //           {/* Name */}
+// //           <span className="text-xl font-bold shrink-0 text-brandPrimary dark:text-brandAccent">
+// //             Prabirsen Gupta:
+// //           </span>
+          
+// //           {/* Quote */}
+// //           <span className="text-lg italic text-brandNavy/70 dark:text-white/70">
+// //             "Excellence is not a destination; it is a continuous journey."
+// //           </span>
+          
+// //           {/* Separator - hidden on mobile */}
+// //           <span className="hidden mx-4 md:inline text-brandAccent/30">•</span>
+          
+// //           {/* Description */}
+// //           <p className="max-w-2xl text-base font-medium md:text-lg text-brandNavy/80 dark:text-white/80">
+// //             We honor the legacy of Prabir Sen Gupta whose vision and mentorship laid the foundation for RiskMan.
+// //           </p>
+// //         </div>
+// //       </div>
+// //     </motion.div>
+// //   );
+// // }
+
+// /* =========================
 //    Card
 // ========================= */
 // export function MemberCard({ member, index, onSelect }) {
@@ -99,8 +139,8 @@
 //       </p>
 
 //       <div className="flex items-center justify-center gap-3">
-//         <a
-//           href={member.linkedin}
+        
+//           <a href={member.linkedin}
 //           target="_blank"
 //           rel="noopener noreferrer"
 //           onClick={(e) => e.stopPropagation()}
@@ -150,6 +190,9 @@
 //               />
 //             ))}
 //           </div>
+
+//           {/* Tribute Section - appears after the 3 co-founders */}
+//           {/* <TributeSection /> */}
 //         </div>
 //       </section>
 
@@ -165,11 +208,9 @@
 // }
 
 
-
-
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Linkedin, ArrowRight, MapPin, Heart } from "lucide-react";
+import { Linkedin, ArrowRight, MapPin } from "lucide-react";
 import { teamsImages } from "../../assets/teams";
 import {
   PrasenPalRichBio,
@@ -231,45 +272,6 @@ const TEAM_MEMBERS = [
 ];
 
 /* =========================
-   Tribute Section
-========================= */
-// function TributeSection() {
-//   return (
-//     <motion.div
-//       {...animations.fadeInUp}
-//       className="w-full py-6 my-12 border-y bg-gradient-to-r from-brandPrimary/5 via-brandGold/5 to-brandPrimary/5 border-brandAccent/20 dark:border-brandGold/30"
-//     >
-//       <div className="container px-4 mx-auto">
-//         <div className="flex flex-col items-center justify-center gap-4 text-center md:flex-row md:gap-6 md:text-left">
-//           {/* Badge */}
-//           <div className="inline-flex items-center gap-2 px-4 py-1.5 text-sm font-bold tracking-wider uppercase rounded-full bg-brandAccent/10 text-brandAccent shrink-0">
-//             <Heart className="w-3 h-3 fill-current" /> In Loving Memory
-//           </div>
-          
-//           {/* Name */}
-//           <span className="text-xl font-bold shrink-0 text-brandPrimary dark:text-brandAccent">
-//             Prabirsen Gupta:
-//           </span>
-          
-//           {/* Quote */}
-//           <span className="text-lg italic text-brandNavy/70 dark:text-white/70">
-//             "Excellence is not a destination; it is a continuous journey."
-//           </span>
-          
-//           {/* Separator - hidden on mobile */}
-//           <span className="hidden mx-4 md:inline text-brandAccent/30">•</span>
-          
-//           {/* Description */}
-//           <p className="max-w-2xl text-base font-medium md:text-lg text-brandNavy/80 dark:text-white/80">
-//             We honor the legacy of Prabir Sen Gupta whose vision and mentorship laid the foundation for RiskMan.
-//           </p>
-//         </div>
-//       </div>
-//     </motion.div>
-//   );
-// }
-
-/* =========================
    Card
 ========================= */
 export function MemberCard({ member, index, onSelect }) {
@@ -287,7 +289,8 @@ export function MemberCard({ member, index, onSelect }) {
         />
       </div>
 
-      <h3 className="mb-1 text-xl font-bold text-center text-brandDark dark:text-white">
+      {/* H3 - 22px (text-[22px]) for member names */}
+      <h3 className="mb-1 text-[22px] font-bold text-center text-brandDark dark:text-white">
         {member.name}
       </h3>
 
@@ -307,8 +310,8 @@ export function MemberCard({ member, index, onSelect }) {
       </p>
 
       <div className="flex items-center justify-center gap-3">
-        
-          <a href={member.linkedin}
+        <a
+          href={member.linkedin}
           target="_blank"
           rel="noopener noreferrer"
           onClick={(e) => e.stopPropagation()}
@@ -335,11 +338,12 @@ export default function LeadershipSection() {
 
   return (
     <>
-      <section className="px-6 py-20 bg-surfaceLight dark:bg-surfaceDark">
+      <section className="px-6 py-20 lg:px-20 bg-surfaceLight dark:bg-surfaceDark">
         <div className="mx-auto max-w-7xl">
+          {/* H1 - 32px (text-[32px]) */}
           <motion.h2
             {...animations.fadeInUp}
-            className="mb-16 text-4xl font-bold text-center md:text-5xl text-brandDark dark:text-white"
+            className="mb-16 text-[32px] font-bold text-center text-brandDark dark:text-white"
           >
             Our{" "}
             <span className="text-transparent bg-gradient-to-r from-brandPrimary to-brandGold bg-clip-text">
@@ -358,9 +362,6 @@ export default function LeadershipSection() {
               />
             ))}
           </div>
-
-          {/* Tribute Section - appears after the 3 co-founders */}
-          {/* <TributeSection /> */}
         </div>
       </section>
 

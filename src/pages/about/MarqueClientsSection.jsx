@@ -295,7 +295,7 @@ export default function MarqueeClientsSection({ title = "Our Marquee Clients", b
   return (
     <section className={`relative overflow-hidden py-14 md:py-20 ${bgStyle}`}>
 
-      <div className="container relative">
+      <div className="relative px-6 lg:px-20">
         <motion.h2
           variants={fadeInUp}
           initial="initial"

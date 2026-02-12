@@ -25,7 +25,7 @@
     "title": "Information Security Analyst",
     "description": "Join Riskman's Cyber Risk division to monitor security landscapes and perform vulnerability assessments for global enterprise partners.",
     "datePosted": "2026-01-15",
-    "employmentType": "Full_TIME",
+    "employmentType": "FULL_TIME",
     "hiringOrganization": { "@type": "Organization" },
     "jobLocation": { "@type": "Place", "address": { "addressLocality": "Gurugram", "addressRegion": "ND", "addressCountry": "IN" } }
   }
