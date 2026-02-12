@@ -198,7 +198,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="flex flex-col items-center justify-between gap-4 pt-8 mt-12 text-sm border-t text-brandNavy dark:text-gray-400 border-borderLight dark:border-borderDark md:flex-row">
-          <p>RiskMan Consulting © {new Date().getFullYear()}</p>
+          <p>RiskMan © {new Date().getFullYear()}</p>
           <div className="flex gap-6">
             <Link to="/privacy-policy" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">Privacy Policy</Link>
             <Link to="/terms" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">Terms of Use</Link>
