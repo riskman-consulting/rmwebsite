@@ -14,7 +14,7 @@ createRoot(document.getElementById('root')).render(
     <HelmetProvider>
     <ThemeProvider>
       <GoogleAnalytics/>
-    <App />
+     <App />
     </ThemeProvider>
     </HelmetProvider>
   </StrictMode>
