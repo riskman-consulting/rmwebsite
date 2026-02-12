@@ -74,11 +74,7 @@ export const testimonials = [
     tag:"",
     image:teamsImages.Kartik,
     position:"Senior Analyst"
-  }
-
-
-
-
+  },
   {
     id: 9,
     name: "Palak Kanojia.",
@@ -97,5 +93,5 @@ export const testimonials = [
   //   image:teamsImages.RohitGupta,
   //   position:"Consultant"
   // },
-  
+
 ];
