@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const BCPCallToAction = () => {
   return (
     <section className="relative py-20 overflow-hidden bg-brandPrimary">
@@ -17,12 +19,12 @@ const BCPCallToAction = () => {
             Contact us today to build a culture of resilience within your organization
           </p>
 
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="inline-flex items-center px-10 py-4 font-semibold transition-all shadow-lg rounded-xl bg-brandAccent text-brandDark hover:bg-brandGold hover:shadow-xl"
           >
             Book a Consultation
-          </a>
+          </Link>
 
         </div>
       </div>

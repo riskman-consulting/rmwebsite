@@ -95,7 +95,7 @@ const FoundationalFrameworks = () => {
           <p className="mb-3 text-sm font-semibold tracking-wider uppercase text-brandPrimary dark:text-brandGold">
             Foundational Frameworks
           </p>
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white uppercase tracking-tight">
+          <h2 className="mb-4 text-3xl font-bold tracking-tight uppercase md:text-4xl font-heading text-brandDark dark:text-white">
             Foundational ESG & Sustainability Frameworks
           </h2>
           <p className="max-w-4xl mx-auto leading-relaxed text-gray-600 dark:text-gray-400">
@@ -107,15 +107,15 @@ const FoundationalFrameworks = () => {
 
         {/* UN SDGs Section */}
         <div className="max-w-6xl mx-auto mb-20">
-          <div className="overflow-hidden border bg-surfaceLight dark:bg-surfaceDark rounded-3xl border-borderLight dark:border-borderDark shadow-xl">
+          <div className="overflow-hidden border shadow-xl bg-surfaceLight dark:bg-surfaceDark rounded-3xl border-borderLight dark:border-borderDark">
             {/* Header */}
             <div className="p-8 bg-brandPrimary dark:bg-brandNavy">
-              <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
-                <div className="flex items-center justify-center flex-shrink-0 w-20 h-20 bg-white/10 rounded-2xl shadow-inner">
+              <div className="flex flex-col items-center gap-6 text-center md:flex-row md:text-left">
+                <div className="flex items-center justify-center flex-shrink-0 w-20 h-20 shadow-inner bg-white/10 rounded-2xl">
                   <span className="text-4xl">🎯</span>
                 </div>
                 <div>
-                  <h3 className="mb-3 text-2xl font-bold text-white font-heading uppercase tracking-wide">
+                  <h3 className="mb-3 text-2xl font-bold tracking-wide text-white uppercase font-heading">
                     United Nations Sustainable Development Goals (SDGs)
                   </h3>
                   <p className="leading-relaxed text-white/90">
@@ -128,18 +128,18 @@ const FoundationalFrameworks = () => {
 
             {/* Content */}
             <div className="p-8 lg:p-12">
-              <h4 className="mb-8 text-xl font-bold font-heading text-brandDark dark:text-white uppercase tracking-widest text-center">
+              <h4 className="mb-8 text-xl font-bold tracking-widest text-center uppercase font-heading text-brandDark dark:text-white">
                 Enterprise SDG Alignment
               </h4>
               <div className="grid gap-6 md:grid-cols-2">
                 {sdgBenefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start gap-4 p-6 border bg-bgLight dark:bg-bgDark rounded-2xl border-borderLight dark:border-borderDark hover:shadow-md transition-shadow">
+                  <div key={index} className="flex items-start gap-4 p-6 transition-shadow border bg-bgLight dark:bg-bgDark rounded-2xl border-borderLight dark:border-borderDark hover:shadow-md">
                     <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 rounded-full bg-brandAccent/20 dark:bg-brandGold/20">
                       <span className="text-lg text-brandPrimary dark:text-brandGold">✓</span>
                     </div>
                     <div>
                       <h5 className="mb-2 font-bold text-brandDark dark:text-white">{benefit.title}</h5>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{benefit.description}</p>
+                      <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">{benefit.description}</p>
                     </div>
                   </div>
                 ))}
@@ -151,7 +151,7 @@ const FoundationalFrameworks = () => {
         {/* GHG Accounting Section */}
         <div className="max-w-6xl mx-auto mb-20">
           <div className="mb-12 text-center">
-            <h3 className="mb-4 text-3xl font-bold font-heading text-brandDark dark:text-white uppercase tracking-tight">
+            <h3 className="mb-4 text-3xl font-bold tracking-tight uppercase font-heading text-brandDark dark:text-white">
               GHG Accounting & Climate Measurement
             </h3>
             <p className="max-w-3xl mx-auto text-gray-600 dark:text-gray-400">
@@ -174,11 +174,11 @@ const FoundationalFrameworks = () => {
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center flex-1 gap-5">
-                        <div className="flex items-center justify-center flex-shrink-0 w-14 h-14 rounded-xl bg-brandPrimary/10 dark:bg-brandAccent/10 text-3xl">
+                        <div className="flex items-center justify-center flex-shrink-0 text-3xl w-14 h-14 rounded-xl bg-brandPrimary/10 dark:bg-brandAccent/10">
                           {scope.icon}
                         </div>
                         <div className="flex-1">
-                          <h5 className="mb-1 text-lg font-bold font-heading text-brandDark dark:text-white uppercase">
+                          <h5 className="mb-1 text-lg font-bold uppercase font-heading text-brandDark dark:text-white">
                             {scope.title}
                           </h5>
                           <p className="text-sm italic text-gray-500 dark:text-gray-400">
@@ -187,7 +187,7 @@ const FoundationalFrameworks = () => {
                         </div>
                       </div>
                       <div className="flex items-center gap-4">
-                        <span className="px-4 py-1 text-xs font-bold rounded-full bg-brandAccent/20 text-brandPrimary dark:text-brandGold border border-brandAccent/30">
+                        <span className="px-4 py-1 text-xs font-bold border rounded-full bg-brandAccent/20 text-brandPrimary dark:text-brandGold border-brandAccent/30">
                           {scope.percentage}
                         </span>
                         <svg 
@@ -203,11 +203,11 @@ const FoundationalFrameworks = () => {
                   {isActive && (
                     <div className="px-8 pb-8 border-t border-borderLight dark:border-borderDark bg-bgLight/30 dark:bg-bgDark/30">
                       <div className="pt-8">
-                        <h6 className="mb-4 text-sm font-bold text-brandDark dark:text-white uppercase tracking-widest">Examples & Activities</h6>
-                        <div className="grid md:grid-cols-2 gap-4 mb-8">
+                        <h6 className="mb-4 text-sm font-bold tracking-widest uppercase text-brandDark dark:text-white">Examples & Activities</h6>
+                        <div className="grid gap-4 mb-8 md:grid-cols-2">
                           {scope.examples.map((example, idx) => (
                             <div key={idx} className="flex items-start gap-3 text-sm text-gray-700 dark:text-gray-300">
-                              <span className="mt-1 w-2 h-2 rounded-full bg-brandPrimary dark:bg-brandAccent flex-shrink-0" />
+                              <span className="flex-shrink-0 w-2 h-2 mt-1 rounded-full bg-brandPrimary dark:bg-brandAccent" />
                               <span>{example}</span>
                             </div>
                           ))}
@@ -215,8 +215,8 @@ const FoundationalFrameworks = () => {
                         <div className="flex items-start gap-3 p-5 border rounded-2xl bg-brandGold/10 dark:bg-brandGold/5 border-brandGold/30">
                           <span className="flex-shrink-0 text-xl">💡</span>
                           <div>
-                            <h6 className="mb-1 text-sm font-bold text-brandDark dark:text-white uppercase tracking-tighter">Strategic Insight</h6>
-                            <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">{scope.note}</p>
+                            <h6 className="mb-1 text-sm font-bold tracking-tighter uppercase text-brandDark dark:text-white">Strategic Insight</h6>
+                            <p className="text-sm leading-relaxed text-gray-700 dark:text-gray-300">{scope.note}</p>
                           </div>
                         </div>
                       </div>
@@ -230,35 +230,35 @@ const FoundationalFrameworks = () => {
 
         {/* GHG Protocol Section */}
         <div className="max-w-6xl mx-auto">
-          <div className="overflow-hidden border bg-surfaceLight dark:bg-surfaceDark rounded-3xl border-borderLight dark:border-borderDark shadow-2xl">
+          <div className="overflow-hidden border shadow-2xl bg-surfaceLight dark:bg-surfaceDark rounded-3xl border-borderLight dark:border-borderDark">
             <div className="p-8 bg-brandDark dark:bg-brandDark/80">
-              <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
+              <div className="flex flex-col items-center gap-6 text-center md:flex-row md:text-left">
                 <div className="flex items-center justify-center w-16 h-16 bg-white/10 rounded-2xl">
                   <span className="text-4xl">🌍</span>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white font-heading uppercase tracking-widest">
+                  <h3 className="text-2xl font-bold tracking-widest text-white uppercase font-heading">
                     The GHG Protocol
                   </h3>
-                  <p className="text-sm text-brandGold font-medium mt-1">Global Standard for Climate Accounting</p>
+                  <p className="mt-1 text-sm font-medium text-brandGold">Global Standard for Climate Accounting</p>
                 </div>
               </div>
             </div>
 
             <div className="p-8 lg:p-12">
-              <p className="mb-10 text-center leading-relaxed text-gray-700 dark:text-gray-300 max-w-4xl mx-auto">
+              <p className="max-w-4xl mx-auto mb-10 leading-relaxed text-center text-gray-700 dark:text-gray-300">
                 The GHG Protocol provides the globally accepted standard for measuring and managing emissions, 
                 serving as the foundation for nearly all corporate climate reporting.
               </p>
               <div className="grid gap-6 md:grid-cols-2">
                 {ghgProtocol.map((item, index) => (
-                  <div key={index} className="flex items-start gap-5 p-6 border bg-bgLight dark:bg-bgDark rounded-2xl border-borderLight dark:border-borderDark hover:border-brandPrimary/40 transition-colors">
-                    <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-xl bg-brandPrimary/10 text-2xl">
+                  <div key={index} className="flex items-start gap-5 p-6 transition-colors border bg-bgLight dark:bg-bgDark rounded-2xl border-borderLight dark:border-borderDark hover:border-brandPrimary/40">
+                    <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 text-2xl rounded-xl bg-brandPrimary/10">
                       {item.icon}
                     </div>
                     <div>
-                      <h5 className="mb-2 font-bold text-brandDark dark:text-white uppercase text-sm tracking-wide">{item.title}</h5>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{item.description}</p>
+                      <h5 className="mb-2 text-sm font-bold tracking-wide uppercase text-brandDark dark:text-white">{item.title}</h5>
+                      <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">{item.description}</p>
                     </div>
                   </div>
                 ))}

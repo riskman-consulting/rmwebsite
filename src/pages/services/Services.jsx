@@ -29,7 +29,7 @@ export default function ServicePage() {
 
       <div className="min-h-screen overflow-x-hidden bg-bgLight dark:bg-bgDark">
         <HeroSection />
-        <StatsSection />
+        {/* <StatsSection /> */}
         <StickyServicesSection />
         <AllServicesGridSection />
         <CapabilitiesSection />

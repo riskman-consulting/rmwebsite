@@ -4,23 +4,23 @@ const ValuePillars = () => {
   const pillars = [
     {
       title: "Industry Expertise",
-      desc: "Deep knowledge across food & beverage, power, steel forging, and other key sectors[cite: 5, 35].",
+      desc: "Deep knowledge across food & beverage, power, steel forging, and other key sectors.",
     },
     {
       title: "Independent Assessment",
-      desc: "Unbiased credit and business evaluations to identify positives and mitigate negatives[cite: 6, 14, 18].",
+      desc: "Unbiased credit and business evaluations to identify positives and mitigate negatives.",
     },
     {
       title: "Customised Strategy",
-      desc: "Tailored financial roadmaps designed for specific corporate goals and capex requirements[cite: 7, 26].",
+      desc: "Tailored financial roadmaps designed for specific corporate goals and capex requirements.",
     },
     {
       title: "End-to-End Advisory",
-      desc: "Full-lifecycle support from initial feasibility studies to final implementation[cite: 8, 26, 43].",
+      desc: "Full-lifecycle support from initial feasibility studies to final implementation.",
     },
     {
       title: "Strong Ring Fencing",
-      desc: "Innovative debt management structures that protect assets and optimize security[cite: 9, 21, 22].",
+      desc: "Innovative debt management structures that protect assets and optimize security.",
     }
   ];
 
@@ -59,10 +59,10 @@ const ValuePillars = () => {
           {/* Summary Box */}
           <div className="flex flex-col justify-center p-8 border border-transparent bg-brandNavy dark:bg-brandPrimary rounded-xl">
              <h3 className="mb-4 text-xl italic font-bold text-white font-heading">
-               "Expert corporate financial advisory is more critical than ever"[cite: 28].
+               "Expert corporate financial advisory is more critical than ever".
              </h3>
              <p className="font-sans text-sm text-white/80">
-               Leveraging expert advisories effectively allows business enterprises to thrive in a rapidly evolving domestic and global landscape[cite: 29, 32].
+               Leveraging expert advisories effectively allows business enterprises to thrive in a rapidly evolving domestic and global landscape.
              </p>
           </div>
         </div>

@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Award, TrendingUp, Users } from "lucide-react";
-import image from "../../assets/images/hero-section/about/about-us.webp"
 
 const IntroductionSection = () => {
   const fadeInUp = {
@@ -18,9 +17,9 @@ const IntroductionSection = () => {
   ];
 
   return (
-    <div className="relative overflow-hidden pt-20 bg-surfaceLight dark:bg-surfaceDark">
+    <div className="relative overflow-hidden bg-surfaceLight dark:bg-surfaceDark">
       {/* ================= ABOUT SECTION ================= */}
-      <section  className="relative py-4 lg:pb-2 lg:pt-12 isolate">
+      <section id="introduction" className="relative py-4 lg:pb-2 lg:pt-12 isolate">
         <div className="grid items-center gap-12 px-6 mx-auto max-w-7xl lg:px-12 lg:grid-cols-12 lg:gap-16">
 
           {/* LEFT CONTENT */}
@@ -103,7 +102,7 @@ const IntroductionSection = () => {
             {/* Image Container */}
             <div className="relative overflow-hidden border shadow-2xl rounded-3xl border-brandGold/20 dark:border-brandAccent/20 group aspect-[16/10]">
               <img
-                src={image}
+                src="/images/Hero3.webp"
                 alt="About RiskMan"
                 className="object-cover w-full h-full transition-transform duration-1000 group-hover:scale-105"
               />

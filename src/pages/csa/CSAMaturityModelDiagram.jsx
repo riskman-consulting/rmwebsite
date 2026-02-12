@@ -580,7 +580,7 @@ export default function CSAMaturityModel() {
   return (
     <div className="flex flex-col w-full h-screen p-4 overflow-hidden font-sans bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-blue-900">
       {/* Title */}
-      <div className="flex-shrink-0 mb-2 text-center">
+      <div className="flex-shrink-0  mb-2 text-center">
         <h1 className="text-2xl font-bold tracking-tight text-brandDark dark:text-white">
           CSA Maturity Model
         </h1>
@@ -590,12 +590,12 @@ export default function CSAMaturityModel() {
       </div>
 
       {/* SVG Container - fills remaining space */}
-      <div className="flex items-center justify-center flex-1 overflow-hidden">
+      <div className="flex   items-center justify-center md:flex-1 overflow-hidden">
         <svg viewBox="0 0 920 570" className="w-full h-full" preserveAspectRatio="xMidYMid meet">
           <Definitions />
 
           {/* Background */}
-          <rect x="0" y="0" width="920" height="570" fill={colors.lightGray} />
+          <rect x="0" y="0"  width="920" height="570" fill={colors.lightGray} />
 
           {/* Grid lines (subtle) */}
           {[1, 2, 3, 4, 5].map(i => (

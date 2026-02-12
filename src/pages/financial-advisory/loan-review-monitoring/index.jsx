@@ -1,9 +1,11 @@
 import React from 'react'
 
-function LoanReviewMonotoring() {
+function LoanReviewPage() {
   return (
-    <div>LoanReviewMonotoring</div>
+    <div>
+      
+    </div>
   )
 }
 
-export default LoanReviewMonotoring
+export default LoanReviewPage

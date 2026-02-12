@@ -4,9 +4,9 @@ export const NAVIGATION_DATA = {
     "mainNav": [
         { "label": "About", "type": "mega", "key": "about", "path": "/about" },
         { "label": "Services", "type": "mega", "key": "services", "path": "/services" },
-        { "label": " Tech Solutions", "type": "link", "path": "/solutions" },
+        { "label": "Tech Solutions", "type": "mega", "key": "solutions", "path": "/solutions" },
         { "label": "Events & Journey", "type": "mega", "key": "events", "path": "/events" },
-        { "label": "Knowledge Hub", "type": "link", "path": "/insights" },
+        // { "label": "Knowledge Hub", "type": "link", "path": "/insights" },
         { "label": "Careers", "type": "link", "path": "/careers" },
 //    { "label": "Industries", "type": "mega", "key": "industries", "path": "/industries" },     
         { "label": "Governance", "type": "link", "path": "/governance" }
@@ -25,7 +25,7 @@ export const NAVIGATION_DATA = {
                         { "id": "sox-icofr-ifc", "title": "SOX/ICOFR/IFC","path":"/services/risk-advisory/sox-icofr-ifc" },
                         { "id": "csa", "title": "CSA","path":"/services/risk-advisory/csa" },
                         { "id": "concurrent-audits", "title": "Concurrent Audits","path":"/services/risk-advisory/concurrent-audits" },
-                        { "id": "formulation-of-policies-and-sops", "title": "Formulation of Policies and SOPs","path":"/services/risk-advisory/formulation-of-policies-and-sops" }
+                        { "id": "formulation-of-policies-and-sops", "title": "Policies and SOPs","path":"/services/risk-advisory/formulation-of-policies-and-sops" }
                     ]
                 },
                 {
@@ -51,7 +51,7 @@ export const NAVIGATION_DATA = {
                     "label": "Financial Advisory",
                     "path": "/services/financial-advisory",
                     "submenus": [
-                        { "id": "credit-risk", "title": "Credit Risk Assessment" ,"path":"/services/financial-advisory/credit-risk-assesment"},
+                        { "id": "credit-risk", "title": "Credit Risk Assessment" ,"path":"/services/financial-advisory/credit-risk-assessment"},
                         { "id": "portfolio-management", "title": "Credit Portfolio Management" ,"path":"/services/financial-advisory/portfolio-management"},
                         { "id": "loan-review", "title": "Loan Review & Monitoring","path":"/services/financial-advisory/loan-review" },
                         { "id": "credit-policy", "title": "Credit Policy Framework", "path":"/services/financial-advisory/credit-policy" }
@@ -110,7 +110,7 @@ export const NAVIGATION_DATA = {
             ]
         },
         {
-            "title": "CPA Services",
+            "title": "CPA Firm - Support Services",
             "items": [
                 {
                     "label": "US Assurance Support Services",
@@ -118,8 +118,8 @@ export const NAVIGATION_DATA = {
                     "submenus": [
                         { "id": "financial-audits", "title": "Financial Statement Audits",path:"/services/cpa-us-assurance/financial-statement-audits" },
                         { "id": "internal-control", "title": "Internal Control Reviews",path:"/services/cpa-us-assurance/internal-control-reviews" },
-                        { "id": "compliance-audits", "title": "Compliance Audits",path:"/services/cpa-us-assurance/compliance-audits" },
-                        { "id": "quality-assurance", "title": "Quality Assurance",path:"/services/cpa-us-assurance/quality-assurance" }
+                        // { "id": "compliance-audits", "title": "Compliance Audits",path:"/services/cpa-us-assurance/compliance-audits" },
+                        // { "id": "quality-assurance", "title": "Quality Assurance",path:"/services/cpa-us-assurance/quality-assurance" }
                     ]
                 }
             ]
@@ -147,7 +147,7 @@ export const NAVIGATION_DATA = {
             "title": "Alliances",
             "items": [
                 { "label": "Alliance Partners", "path": "/about#alliance-partners" },
-                { "label": "Global Network", "path": "/about#global-network" }
+                // { "label": "Global Network", "path": "/about#global-network" }
             ]
         }
     ],
@@ -189,10 +189,20 @@ export const NAVIGATION_DATA = {
     "eventsMegaMenu": [
         {
             "items": [
-                { "label": "Accomplishments", "path": "/events#accomplishments" },
-                { "label": "Upcoming Events", "path": "/events#upcoming-events" },
-                {"label":"Past Events","path":"/events#past-events"},
-                 { "label": "Culture at RiskMan", "path": "events#moments-that-matters" }
+                { "label": "Accomplishment", "path": "/events/#accomplishment" },
+                // {"label":"","path":"/events/#emerging-risk-assurance"},
+                { "label": "Upcoming Events", "path": "/events/#upcoming-events" },
+                {"label":"Past Events","path":"/events/#past-events"},
+                { "label": "Culture at RiskMan", "path": "/events/#moment-that-matters" }
+            ]
+        }
+    ],
+
+    "solutionsMegaMenu": [
+        {
+            "title": "Tech Solutions",
+            "items": [
+                { "label": "US Assurance - Audit Management", "path": "/solutions" },
             ]
         }
     ]

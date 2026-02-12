@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const CreditRiskCTAandFAQ = () => {
   const [openFaq, setOpenFaq] = useState(null);
@@ -26,6 +27,7 @@ const CreditRiskCTAandFAQ = () => {
     }
   ];
 
+   const navigator=useNavigate();
   return (
     <>
    
@@ -163,7 +165,7 @@ const CreditRiskCTAandFAQ = () => {
               <p className="mb-4 text-gray-600 dark:text-gray-400">
                 Our team is here to help you understand our services better
               </p>
-              <button className="px-6 py-3 font-semibold text-white transition-all duration-300 rounded-lg bg-brandPrimary hover:bg-brandNavy dark:bg-brandAccent dark:hover:bg-brandGold dark:text-brandDark">
+              <button onClick={()=>navigator("/contact")} className="px-6 py-3 font-semibold text-white transition-all duration-300 rounded-lg bg-brandPrimary hover:bg-brandNavy dark:bg-brandAccent dark:hover:bg-brandGold dark:text-brandDark">
                 Contact Support
               </button>
             </div>

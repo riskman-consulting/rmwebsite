@@ -1,8 +1,13 @@
+
+
+
 import React from 'react';
-import bg from "../../assets/images/esg/esg-hero-section.png";
+import bg from "../../assets/esg/esg-herosection-image.png";
+import { useNavigate } from 'react-router-dom';
 
 
 const HeroSection = () => {
+  const navigator = useNavigate()
   return (
     <section className="relative flex items-center justify-center min-h-screen overflow-hidden bg-[#001F3F]">
       
@@ -44,7 +49,7 @@ const HeroSection = () => {
 
         {/* Subtitle (Original Content) */}
         <p className="font-serif text-white/90 text-xl sm:text-2xl md:text-3xl lg:text-[34px] font-light italic leading-relaxed max-w-4xl mx-auto mb-5 animate-[fadeSlideUp_1s_ease-out_0.4s_both]">
-          Advisory, Implementation & Training Excellence
+          Advisory, Implementation
         </p>
 
         {/* Tagline (Original Content) */}
@@ -61,9 +66,9 @@ const HeroSection = () => {
           ].map((pillar, index) => (
             <div
               key={index}
-              className="bg-white/12 backdrop-blur-md border-2 border-white/20 rounded-2xl px-6 py-9 text-center transition-all duration-500 hover:bg-white/20 hover:-translate-y-2 hover:shadow-2xl cursor-pointer group"
+              className="px-6 text-center transition-all duration-500 border-2 cursor-pointer bg-white/12 backdrop-blur-md border-white/20 rounded-2xl py-9 hover:bg-white/20 hover:-translate-y-2 hover:shadow-2xl group"
             >
-              <span className="block mb-4 text-5xl group-hover:scale-110 transition-transform">{pillar.icon}</span>
+              <span className="block mb-4 text-5xl transition-transform group-hover:scale-110">{pillar.icon}</span>
               <div className="mb-2 text-xl font-bold tracking-wide text-white uppercase">
                 {pillar.title}
               </div>
@@ -76,10 +81,10 @@ const HeroSection = () => {
 
         {/* Call to Action Buttons (Original Content) */}
         <div className="flex flex-col sm:flex-row justify-center items-center gap-5 mt-12 animate-[fadeSlideUp_1s_ease-out_1s_both]">
-          <button className="w-full sm:w-auto px-11 py-4 sm:py-[18px] bg-[#FFB800] hover:bg-[#FFC000] text-[#001F3F] font-bold text-base rounded-full transition-all duration-300 hover:-translate-y-1 shadow-lg shadow-orange-500/20">
+          <button onClick={()=>navigator("/contact")} className="w-full sm:w-auto px-11 py-4 sm:py-[18px] bg-[#FFB800] hover:bg-[#FFC000] text-[#001F3F] font-bold text-base rounded-full transition-all duration-300 hover:-translate-y-1 shadow-lg shadow-orange-500/20">
             Start Your ESG Journey
           </button>
-          <button className="w-full sm:w-auto px-11 py-4 sm:py-[18px] bg-transparent hover:bg-white/15 text-white border-2 border-white/60 hover:border-white font-bold text-base rounded-full transition-all duration-300 hover:-translate-y-1">
+          <button onClick={()=>navigator("/services")} className="w-full sm:w-auto px-11 py-4 sm:py-[18px] bg-transparent hover:bg-white/15 text-white border-2 border-white/60 hover:border-white font-bold text-base rounded-full transition-all duration-300 hover:-translate-y-1">
             Explore Our Services
           </button>
         </div>

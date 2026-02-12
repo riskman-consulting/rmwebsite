@@ -79,13 +79,13 @@ export const Navbar = ({
          NAVBAR
       ======================= */}
       <nav className="fixed top-[48px] left-0 right-0 z-50 h-20 border-b bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark">
-        <div className="flex items-center w-full h-full px-6 mx-auto max-w-screen">
+        <div className="flex items-center w-full h-full px-6 mx-auto lg:px-20 max-w-screen">
 
           {/* LEFT CLUSTER */}
           <div className="flex items-center h-full">
 
             {/* LOGO */}
-            <Link to="/" className="flex items-center flex-shrink-0 h-16 w-36">
+                        {/* <Link to="/" className="flex items-center flex-shrink-0 h-16 w-36">
               <img
                 className="object-contain h-12 dark:hidden"
                 src="/rm.png"
@@ -96,7 +96,24 @@ export const Navbar = ({
                 src="/riskman-logo-white.svg"
                 alt="Riskman"
               />
-            </Link>
+            </Link> */}
+
+
+            {/* LOGO */}
+<Link to="/" className="flex items-center flex-shrink-0 w-[140px] h-[48px]">
+  <img
+    className="object-contain w-full h-full dark:hidden"
+    src="/rm.png"
+    alt="Riskman"
+  />
+  <img
+    className="hidden object-contain w-full h-full dark:block"
+    src="/riskman-logo-white.svg"
+    alt="Riskman"
+  />
+</Link>
+
+
 
             {/* DESKTOP NAV */}
             <div className="items-center hidden h-full lg:flex">
@@ -122,10 +139,9 @@ export const Navbar = ({
                       className={`
                         flex items-center gap-1.5 px-5 py-2 rounded-lg
                         text-[13px] font-medium transition-all whitespace-nowrap
-                        ${
-                          isActive
-                            ? "bg-brandAccent/15 text-brandPrimary dark:text-brandGold"
-                            : "text-brandDark dark:text-brandLight hover:bg-brandPrimary/10"
+                        ${isActive
+                          ? "bg-brandAccent/15 text-brandPrimary dark:text-brandGold"
+                          : "text-brandDark dark:text-brandLight hover:bg-brandPrimary/10"
                         }
                       `}
                     >
@@ -133,9 +149,8 @@ export const Navbar = ({
 
                       {isMega && (
                         <svg
-                          className={`w-4 h-4 transition-transform ${
-                            isActive ? "rotate-180" : ""
-                          }`}
+                          className={`w-4 h-4 transition-transform ${isActive ? "rotate-180" : ""
+                            }`}
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -181,10 +196,15 @@ export const Navbar = ({
             </button>
 
             {/* DESKTOP CTA */}
-            <Link
+            {/* <Link
               to="/contact"
-              className="hidden lg:flex items-center gap-2 h-[42px] px-5 text-[14px] font-semibold text-white rounded-full bg-brandDark dark:bg-brandGold hover:bg-brandNavy shadow-md transition"
-            >
+              className="hidden mr-10  lg:flex items-center gap-2 h-[42px] px-5 text-[14px] font-semibold text-white rounded-full bg-brandDark dark:bg-brandGold hover:bg-brandNavy shadow-md transition"
+            > */}
+
+            <Link
+  to="/contact"
+  className="hidden lg:flex items-center gap-2 h-[42px] px-5 text-[14px] font-semibold text-white rounded-full bg-brandDark dark:bg-brandGold hover:bg-brandNavy shadow-md transition"
+>
               <Phone size={12} />
               <span className="text-[12px]">Get Started</span>
               <ArrowRight size={12} />

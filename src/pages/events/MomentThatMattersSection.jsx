@@ -1,3 +1,6 @@
+
+
+
 import React, { useState, useMemo, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -37,6 +40,8 @@ import image18 from "../../assets/team-accomplishment/iia_conference_mumbai_jan_
 
 const FILTERS = [
   { name: "All", icon: LayoutGrid },
+  // { name: "Team Accomplishment", icon: Award },
+  // { name: "Emerging Risk Assurance & Advisory Firm of the Year 2024", icon: Star },
   { name: "5 Year Celebration", icon: Star },
   { name: "Team Lunches & Dinner", icon: Users },
   { name: "Meetings & Discussions", icon: Briefcase },
@@ -256,9 +261,9 @@ export default function MomentsThatMatter() {
   return (
     <section 
       id="moment-that-matters" 
-      className="relative lg:px-14 py-16 md:py-24 lg:py-32 bg-surfaceLight dark:bg-surfaceDark"
+      className="relative px-4 py-16 md:py-24 lg:py-32 bg-surfaceLight dark:bg-surfaceDark"
     >
-      <div id="accomplishment" className="mx-auto max-w-7xl">
+      <div  className="mx-auto max-w-7xl">
         
         {/* HEADER */}
         <motion.div

@@ -1,44 +1,14 @@
-import React from 'react';
+import React from 'react'
+import HeroSection from "./HeroSection";
+import 
 
-// Import all Credit Policy Framework components
-import CreditPolicyHero from './HeroSection';
-import CoreObjectives from './CoreObjectives';
-import ValueChainManagement from './Valuechainmanagement';
-import PolicyGovernanceCTAandFAQ from './Policygovernancectaanfaq';
-import PolicyFAQ from './PolicyFAQ';
+import CreditPolicyFrameworkApp from './CreditPolicyFrameworkPage'
 
-/**
- * Credit Policy Framework - Complete Service Page
- * 
- * This is the main entry point for the Credit Policy Framework service page.
- * All sections are assembled in the correct order as per the content document.
- */
-function CreditPolicyFrameworkApp() {
+function CreditPolicyFrameworkPage() {
   return (
-    <div className="min-h-screen bg-bgLight dark:bg-bgDark">
-      {/* Optional: Add Navigation/Header here */}
-      {/* <YourHeader /> */}
-
-      {/* Hero Section - Strategic Credit Policy Framework */}
-      <CreditPolicyHero />
-
-      {/* Core Objectives Section - Strategic Alignment, Asset Quality, Risk Tolerance */}
-      <CoreObjectives />
-
-      {/* Value Chain Management Section - 6-step Credit Process */}
-      <ValueChainManagement />
-
-      {/* Policy Governance & Evolution + Call-to-Action & FAQ Section */}
-      <PolicyGovernanceCTAandFAQ />
-
-      <PolicyFAQ/>
-
-      {/* Optional: Add Footer here */}
-      {/* <YourFooter /> */}
-    </div>
-  );
+      <CreditPolicyFrameworkApp/>
+    
+  )
 }
 
-
-
-export default CreditPolicyFrameworkApp;
+export default CreditPolicyFrameworkPage

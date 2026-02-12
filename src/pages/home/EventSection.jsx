@@ -1,17 +1,13 @@
+
+
+
+
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ArrowRight, Calendar, MapPin } from "lucide-react";
 
 // Image Imports
-// import EventImage1 from '../../assets/iia-bombay/2026/image-14.webp';
-// import EventImage2 from '../../assets/iia-bombay/2026/image-15.webp';
-// import EventImage3 from '../../assets/iia-bombay/2026/image-16.webp';
-// import EventImage4 from '../../assets/iia-bombay/2026/image-17.webp';
-// import EventImage5 from '../../assets/iia-bombay/2026/image-13.webp';
-// import EventImage6 from '../../assets/iia-bombay/2026/image-12.webp';
-// import EventImage7 from '../../assets/iia-bombay/2026/image-10.webp';
-
 import {Emerging_risk_advisory_and_assurance_2025} from '../../assets/emerging-risk-advisory-and-assurance/2024/index'
 import {IIA_Bangalore_2025_images} from '../../assets/iia-bangalore/2025/index'
 import  {IIA_International_Conference_2025_images} from '../../assets/iia-international-conference/2025/index'
@@ -19,13 +15,10 @@ import {IIA_Bombay_2026_images} from '../../assets/iia-bombay/2026/index'
 import { IIA_Hyderabad_2025_images } from "../../assets/iia-hyderabad/2025";
 import { IIA_Kolkata_2025_images } from "../../assets/iia-kolkata/2025";
 
-
-
 const IIA_Bombay_2026_images_slide = [
   Emerging_risk_advisory_and_assurance_2025[0], IIA_Bangalore_2025_images[1], 
   IIA_International_Conference_2025_images[1], IIA_International_Conference_2025_images[3], 
   IIA_Kolkata_2025_images[1], IIA_Bombay_2026_images[5],IIA_Hyderabad_2025_images[0],
-
 ];
 
 export const EventCTASection = () => {
@@ -53,23 +46,23 @@ export const EventCTASection = () => {
           className="absolute inset-0 z-0"
         >
           <div 
-            className="absolute inset-0 bg-no-repeat bg-cover"
+            className="absolute inset-0 bg-no-repeat bg-cover opacity-40"
             style={{ 
               backgroundImage: `url(${IIA_Bombay_2026_images_slide[index]})`,
-              backgroundPosition: 'center 40%', // Better vertical centering - slightly above center
+              backgroundPosition: 'center 40%',
               backgroundSize: 'cover'
             }}
           />
         </motion.div>
       </AnimatePresence>
 
-      {/* OVERLAY - Using Your Color Palette */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-b from-brandDark/85 via-brandNavy/40 to-brandDark/90" />
+      {/* ENHANCED OVERLAY - Stronger gradient for better text visibility */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-brandDark/95 via-brandNavy/85 to-brandDark/95" />
       
-      {/* Radial Vignette with Brand Colors */}
+      {/* Radial Vignette with Brand Colors - Stronger */}
       <div className="absolute inset-0 z-10" 
         style={{
-          background: 'radial-gradient(ellipse at center, transparent 0%, rgba(0, 31, 63, 0.6) 100%)'
+          background: 'radial-gradient(ellipse at center, transparent 0%, rgba(0, 31, 63, 0.8) 100%)'
         }}
       />
 
@@ -96,7 +89,7 @@ export const EventCTASection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="mb-6 text-3xl md:text-5xl lg:text-6xl font-black text-brandLight leading-[1.1] tracking-tight drop-shadow-2xl font-heading"
+          className="mb-6 text-3xl md:text-4xl lg:text-5xl font-black text-brandLight leading-[1.1] tracking-tight drop-shadow-2xl font-heading"
         >
           Elevate Your <br className="hidden md:block" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandLight via-brandAccent to-brandGold">
@@ -134,7 +127,7 @@ export const EventCTASection = () => {
           </button>
           
           <button
-            onClick={() => navigate("/schedule")}
+            onClick={() => navigate("/events/#upcoming-events")}
             className="flex items-center gap-2 px-8 py-4 font-semibold transition-all duration-300 border rounded-full group bg-brandLight/10 backdrop-blur-sm border-brandLight/20 text-brandLight hover:bg-brandLight/20 hover:border-brandAccent/50 active:scale-95 font-heading"
           >
             <Calendar className="w-5 h-5 transition-colors text-brandLight/70 group-hover:text-brandAccent" />
@@ -159,8 +152,8 @@ export const EventCTASection = () => {
       </div>
 
       {/* PAGINATION INDICATORS */}
-      <div className="absolute z-30 flex items-center gap-3 -translate-x-1/2 bottom-12 left-1/2">
-        {IIA_Bombay_2026_images.map((_, i) => (
+      <div className="absolute z-30 flex items-center gap-3 -translate-x-1/2 border bottom-12 left-1/2">
+        {IIA_Bombay_2026_images_slide.map((_, i) => (
           <button
             key={i}
             onClick={() => setIndex(i)}

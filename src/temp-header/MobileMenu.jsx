@@ -30,7 +30,7 @@ export const MobileMenu = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed  inset-0 z-[9999] flex justify-end">
+    <div className="fixed inset-0 z-[9999] flex justify-end">
       {/* =======================
           BACKDROP
       ======================= */}
@@ -174,9 +174,9 @@ export const MobileMenu = ({ isOpen, onClose }) => {
                               {subItem.submenus && (
                                 <div className="flex flex-wrap gap-2 pl-2">
                                   {subItem.submenus.map((sub) => (
-                                    <a
+                                    <Link
                                       key={sub.id}
-                                      href={`#${sub.id}`}
+                                      to={sub.path}
                                       onClick={onClose}
                                       className="text-[11px] px-2 py-1 rounded
                                         bg-surfaceLight dark:bg-surfaceDark
@@ -186,7 +186,7 @@ export const MobileMenu = ({ isOpen, onClose }) => {
                                         transition-colors"
                                     >
                                       {sub.title}
-                                    </a>
+                                    </Link>
                                   ))}
                                 </div>
                               )}

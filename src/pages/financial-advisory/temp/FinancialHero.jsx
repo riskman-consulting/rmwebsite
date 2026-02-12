@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const FinancialHero = () => {
+  const navigator=useNavigate();
   return (
     <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-brandDark transition-colors duration-300">
       {/* Background Image with Overlay */}
@@ -36,7 +38,7 @@ const FinancialHero = () => {
             </p>
             
             <div className="flex flex-wrap gap-4">
-              <button className="px-8 py-4 font-bold transition-all duration-300 rounded-lg shadow-lg bg-brandAccent hover:bg-brandGold text-brandDark shadow-brandAccent/20">
+              <button onClick={()=>navigator("/contact")} className="px-8 py-4 font-bold transition-all duration-300 rounded-lg shadow-lg bg-brandAccent hover:bg-brandGold text-brandDark shadow-brandAccent/20">
                 Explore Solutions
               </button>
               <button className="px-8 py-4 font-bold text-white transition-all duration-300 border-2 border-white rounded-lg hover:bg-white/10">

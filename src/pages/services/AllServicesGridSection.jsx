@@ -4,7 +4,7 @@ import { ServiceCardCompact } from "./ServiceCardCompactSection";
 
 export const AllServicesGridSection = () => {
   return (
-    <section className="py-32 bg-bgLight dark:bg-bgDark">
+    <section className="pb-10 bg-bgLight dark:bg-bgDark">
       <div className="container">
         {/* Section Header */}
         <motion.div

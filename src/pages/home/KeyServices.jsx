@@ -13,7 +13,8 @@ const services = [
     id: "01",
     title: "Enterprise Risk Management",
     description:
-      "Strengthening the backbone of corporate governance. We help organizations move from reactive risk management to a proactive, risk-aware culture. we ensure internal controls drive resilience and operational efficiency.",
+  "Strengthening corporate governance through integrated risk frameworks that enable proactive, risk-aware decision-making and operational resilience.",
+
     image: riskAssessmentImage,
     path:"/services/risk-advisory/erm"
   },
@@ -23,7 +24,7 @@ const services = [
     description:
       "Securing your digital frontier in an age of volatility. Using NIST and ISO 27001 standards, we provide assurance that protects data, systems, and stakeholder trust across the enterprise.",
     image: itCybersecurityImage,
-    path:"/services/risk-advisory/it-cybersecurity"
+    path:"/services/cybersecurity"
   },
   {
     id: "03",
@@ -31,7 +32,7 @@ const services = [
     description:
       "Future-proofing your business for a low-carbon economy. We translate sustainability goals into measurable, regulator-ready metrics aligned with investor expectations.",
     image: riskComplianceAuditImage,
-    path:"/services/risk-advisory/esg"
+    path:"/services/esg"
   },
   {
     id: "04",
@@ -39,7 +40,7 @@ const services = [
     description:
       "Protecting integrity and optimizing capital structures. Our leadership experience across global banks and rating agencies enables confident decision-making in high-stakes environments.",
     image: operationalFinancialImage,
-    path:"/services/risk-advisory/financial"
+    path:"/services/financial-advisory"
   },
 ];
 
@@ -63,7 +64,7 @@ export default function KeyServices() {
   }
   
   return (
-    <section className="transition-colors py:14 md:py-20 bg-bgLight dark:bg-bgDark">
+    <section className="transition-colors py:14 md:py-12 bg-bgLight dark:bg-bgDark">
       <div className="container max-w-7xl">
 
         {/* Header */}
@@ -128,7 +129,7 @@ export default function KeyServices() {
           <Link
             to="/services"
            
-            className="px-12 py-4 font-semibold border-2 rounded-full border-brandDark text-brandDark hover:bg-brandDark hover:text-white dark:border-brandAccent dark:text-brandAccent dark:hover:bg-brandAccent dark:hover:text-brandDark"
+            className="px-12 py-4 font-semibold text-white border-2 rounded-full border-brandDark bg-brandDark dark:border-brandAccent dark:text-brandAccent dark:hover:bg-brandAccent dark:hover:text-brandDark"
           >
             Explore All Services
           </Link>

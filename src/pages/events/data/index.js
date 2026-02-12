@@ -9,7 +9,7 @@ import { Myanmar_Image } from "../../../assets/myanmar";
 import { Philippiness_Image } from "../../../assets/philippiness";
 import { Riskman_Aniversary_5_year_images } from "../../../assets/riskman-anniversary/year-5";
 import {TEAM_LUNCH_DECEMBER_2023_Images} from "../../../assets/journey/team_lunch_dinner/index2023"
-import { TEAM_LUNCH_DECEMBER_2021_Images } from "../../../assets/journey/team_lunch_dinner/index2021";
+import { TEAM_LUNCH_DECEMBER_2021_Images } from "../../../assets/journey/team_lunch_dinner/index_2021";
 import {TEAM_LUNCH_FEB_2022_Images} from "../../../assets/journey/team_lunch_dinner/index2022";
 import { TEAM_BIRTH_DAY_Images } from "../../../assets/journey/team_lunch_dinner/team_birth_day";
 import { Ganesh_Chaturthi_Images } from "../../../assets/journey/team_lunch_dinner/ganesh_chaturthi";
@@ -29,9 +29,9 @@ export const PHOTOS = [
   {id:7,category:"5 Year Celebration", title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[6],description:"Journey of growth and success"},
   {id:8,category:"5 Year Celebration", title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[7],description:"Journey of growth and success"},
   {id:9,category:"5 Year Celebration", title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[8],description:"Journey of growth and success"},
-  {id:10, category:"5 Year Celebration", title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[9],description:"Journey of growth and success"},
-  {id:42,category:"5 Year Celebration",title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[10],description:"Journey of growth and success"},
-  {id:43,category:"5 Year Celebration",title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[11],description:"Journey of growth and success"},
+  // {id:10, category:"5 Year Celebration", title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[9],description:"Journey of growth and success"},
+  // {id:42,category:"5 Year Celebration",title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[10],description:"Journey of growth and success"},
+  // {id:43,category:"5 Year Celebration",title:"RiskMan Growth Journey",image:Riskman_Aniversary_5_year_images[11],description:"Journey of growth and success"},
     
   
 
@@ -58,7 +58,7 @@ export const PHOTOS = [
   {
     id: 24,
     category: "Office Culture",
-    subCategory: "Birthday Celebration",
+    subCategory: "Birthday Celebration's",
     image: TEAM_BIRTH_DAY_Images[0],
   },
 
@@ -67,28 +67,28 @@ export const PHOTOS = [
   {
     id:25,
     category:"Office Culture",
-    subCategory:"Birthday Celebration",
+    subCategory:"Birthday Celebration's",
     image:TEAM_BIRTH_DAY_Images[1],
   },
 
    {
     id:26,
     category:"Office Culture",
-    subCategory:"Birthday Celebration",
+    subCategory:"Birthday Celebration's",
     image:TEAM_BIRTH_DAY_Images[2],
   },
 
    {
     id:27,
     category:"Office Culture",
-    subCategory:"Birthday Celebration",
+    subCategory:"Birthday Celebration's",
     image:TEAM_BIRTH_DAY_Images[3],
   },
 
    {
     id:28,
     category:"Office Culture",
-    subCategory:"Birthday Celebration",
+    subCategory:"Birthday Celebration's",
     image:TEAM_BIRTH_DAY_Images[4],
   },
 
@@ -99,44 +99,44 @@ export const PHOTOS = [
   {
     id: 29,
     category: "Office Culture",
-    subCategory: "Zomato Client Celebration",
+    subCategory: "Festive Celebration's",
     image: Diwali_Christmas_Zomato_Team_Images[0],
   },
   {
     id: 30,
     category: "Office Culture",
-    subCategory: "Zomato Client Celebration",
+    subCategory: "Festive Celebration's",
     image: Diwali_Christmas_Zomato_Team_Images[1],
   },
   {
     id: 31,
     category: "Office Culture",
-    subCategory: "Zomato Client Celebration",
+    subCategory: "Festive Celebration's",
     image: Diwali_Christmas_Zomato_Team_Images[2],
   },
   {
     id: 32,
     category: "Office Culture",
-    subCategory: "Zomato Client Celebration",
+    subCategory: "Festive Celebration's",
     image: Diwali_Christmas_Zomato_Team_Images[3],
   },
   {
     id: 33,
     category: "Office Culture",
-    subCategory: "Zomato Client Celebration",
+    subCategory: "Festive Celebration's",
     image: Diwali_Christmas_Zomato_Team_Images[4],
   },
   {
     id: 34,
     category: "Office Culture",
-    subCategory: "Zomato Client Celebration",
+    subCategory: "Festive Celebration's",
     image: Diwali_Christmas_Zomato_Team_Images[5],
   },
 
    {
     id:35,
     category:"Office Culture",
-    subCategory:"Zomato Client Celebration",
+    subCategory:"Festive Celebration's",
     image: Ganesh_Chaturthi_Images[0],
   },
 //   {
@@ -182,21 +182,21 @@ export const PHOTOS = [
   {
     id:41,
     category:"Office Culture",
-    subCategory:"Birthday Celebration",
+    subCategory:"Birthday Celebration's",
     image:TEAM_BIRTH_DAY_Images[5],
   },
 
   {
     id:44,
     category:"Office Culture",
-    subCategory:"Birthday Celebration",
+    subCategory:"Birthday Celebration's",
     image:TEAM_BIRTH_DAY_Images[6],
   },
 
   {
     id:45,
     category:"Office Culture",
-    subCategory:"Birthday Celebration",
+    subCategory:"Birthday Celebration's",
     image:TEAM_BIRTH_DAY_Images[7],
   }
   

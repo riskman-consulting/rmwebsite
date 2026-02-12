@@ -18,19 +18,19 @@ const HeroSection = () => {
               We deliver customized risk advisory solutions, creating enduring value through expert strategic partnerships and independent internal audit services.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
-              <a 
-                href="/contact" 
+              <Link 
+                to="/contact" 
                 className="inline-flex items-center justify-center px-8 py-4 font-semibold transition-all duration-300 rounded-lg shadow-lg bg-brandAccent hover:bg-brandGold text-brandDark hover:shadow-xl hover:scale-105"
-              >
+               >
                 Book a Consultation
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </a>
-              <a 
-                href="/services" 
+              </Link>
+              <Link 
+                to="/services" 
                 className="inline-flex items-center justify-center px-8 py-4 font-semibold text-white transition-all duration-300 border-2 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur-sm border-white/30"
               >
                 Our Other Services
-              </a>
+              </Link>
             </div>
           </div>
 

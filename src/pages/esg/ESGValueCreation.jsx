@@ -8,137 +8,178 @@ const ESGValueCreation = () => {
       title: "Risk Mitigation",
       subtitle: "Protect & Defend",
       icon: "🛡️",
-      color: "from-blue-900 to-blue-700",
-      solid: "#1e3a8a",
-      description: "Identify and mitigate ESG risks to protect enterprise value and ensure business continuity.",
-      values: ["Regulatory Compliance", "Climate Risk Assessment", "Reputational Management", "Supply Chain Resilience"]
+      color: "#004080", // brandPrimary
+      description: "Identify, assess, and mitigate ESG-related risks to protect enterprise value and ensure business continuity.",
+      values: [
+        { icon: "📋", text: "Regulatory Compliance Assurance" },
+        { icon: "🌡️", text: "Climate Risk Assessment" },
+        { icon: "⚠️", text: "Reputational Risk Management" },
+        { icon: "🔒", text: "Supply Chain Resilience" }
+      ]
     },
     operational: {
       title: "Operational Excellence",
       subtitle: "Optimize & Improve",
       icon: "⚙️",
-      color: "from-slate-900 to-slate-700",
-      solid: "#0f172a",
-      description: "Drive efficiency and reduce costs through sustainable operational performance.",
-      values: ["Energy Efficiency", "Waste Circularity", "Resource Optimization", "Data Quality"]
+      color: "#003366", // brandNavy
+      description: "Drive efficiency, reduce costs, and improve operational performance through sustainable practices.",
+      values: [
+        { icon: "⚡", text: "Energy Efficiency & Cost Reduction" },
+        { icon: "♻️", text: "Waste Reduction & Circularity" },
+        { icon: "💧", text: "Resource Optimization" },
+        { icon: "📊", text: "Process Automation & Data Quality" }
+      ]
     },
     stakeholder: {
       title: "Stakeholder Value",
       subtitle: "Engage & Trust",
       icon: "👥",
-      color: "from-amber-500 to-orange-600",
-      solid: "#f59e0b",
-      description: "Strengthen relationships with investors, employees, customers, and communities.",
-      values: ["ESG Rating Growth", "Talent Retention", "Brand Loyalty", "Community Relations"]
+      color: "#FFC000", // brandAccent
+      description: "Build trust and strengthen relationships with investors, employees, customers, and communities.",
+      values: [
+        { icon: "💰", text: "Investor Confidence & ESG Ratings" },
+        { icon: "🏆", text: "Talent Attraction & Retention" },
+        { icon: "⭐", text: "Customer Loyalty & Brand Trust" },
+        { icon: "🤝", text: "Community Relations" }
+      ]
     },
     growth: {
       title: "Strategic Growth",
       subtitle: "Innovate & Expand",
       icon: "🚀",
-      color: "from-yellow-400 to-amber-500",
-      solid: "#fbbf24",
-      description: "Unlock market opportunities and create competitive advantage through innovation.",
-      values: ["Product Innovation", "Green Revenue", "Model Transformation", "Market Differentiation"]
+      color: "#FFB800", // brandGold
+      description: "Unlock new market opportunities, drive innovation, and create competitive advantage through sustainability.",
+      values: [
+        { icon: "🌱", text: "Sustainable Product Innovation" },
+        { icon: "🌍", text: "New Market Access & Green Revenue" },
+        { icon: "💡", text: "Business Model Transformation" },
+        { icon: "🏅", text: "Competitive Differentiation" }
+      ]
     }
   };
 
   const kpis = [
-    { label: "Compliance Incidents", value: "↓40%", color: "text-blue-900" },
-    { label: "Operating Costs", value: "↓25%", color: "text-slate-900" },
-    { label: "ESG Rating Score", value: "↑35%", color: "text-amber-600" },
-    { label: "Green Revenue", value: "↑20%", color: "text-yellow-600" }
+    { label: "Compliance Incidents", value: "↓40%", color: "#004080" },
+    { label: "Operating Costs", value: "↓25%", color: "#003366" },
+    { label: "ESG Rating Score", value: "↑35%", color: "#FFC000" },
+    { label: "Green Revenue", value: "↑20%", color: "#FFB800" }
   ];
 
   return (
-    <section className="relative  overflow-hidden bg-slate-50 dark:bg-slate-950 font-sans">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none" 
-           style={{ backgroundImage: `radial-gradient(#000 1px, transparent 1px)`, size: '40px 40px' }} />
-
-      <div className="container relative z-10 px-4 mx-auto max-w-7xl">
-        {/* Header */}
+    <section className="py-20 overflow-hidden lg:py-32 bg-bgLight dark:bg-bgDark">
+      <div className="container">
+        {/* Section Header */}
         <div className="mb-20 text-center">
-          <span className="inline-block px-4 py-1.5 mb-6 text-[10px] font-black tracking-[4px] uppercase rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
+          <span className="text-xs font-bold tracking-[4px] uppercase text-brandPrimary dark:text-brandGold mb-4 block">
             Value Creation Framework
           </span>
-          <h2 className="mb-6 text-4xl font-black tracking-tight text-slate-900 dark:text-white lg:text-6xl">
-            The RiskMan <span className="text-blue-700 italic">Value</span> Proposition
+          <h2 className="mb-8 text-4xl font-black leading-tight font-heading text-brandDark dark:text-surfaceLight lg:text-6xl">
+            The RiskMan <br /> Value Proposition
           </h2>
-          <p className="max-w-2xl mx-auto text-lg text-slate-500 dark:text-slate-400">
-            Measurable, sustainable value delivered through an integrated approach to ESG advisory and reporting.
+          <p className="max-w-3xl mx-auto font-sans text-xl leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
+            RiskMan delivers measurable, sustainable value through an integrated approach 
+            to ESG advisory, implementation, and reporting.
           </p>
         </div>
 
-        {/* Matrix Container */}
-        <div className="relative max-w-5xl mx-auto">
-          {/* Axis Labels */}
-          <div className="hidden lg:flex absolute -top-10 inset-x-0 justify-between px-10 text-[9px] font-bold tracking-[3px] text-slate-400 uppercase">
-            <span>← Defensive</span>
-            <span>Offensive →</span>
+        {/* Interactive Matrix Container */}
+        <div className="relative max-w-6xl mx-auto">
+          {/* Axis Labels - Desktop */}
+          <div className="hidden lg:block">
+            <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] font-black tracking-[4px] text-brandPrimary/30 dark:text-brandGold/30 uppercase">
+              ← Defensive | Offensive →
+            </div>
+            <div className="absolute top-1/2 -left-12 -translate-y-1/2 -rotate-90 text-[10px] font-black tracking-[4px] text-brandPrimary/30 dark:text-brandGold/30 uppercase">
+              Internal Focus
+            </div>
+            <div className="absolute top-1/2 -right-12 -translate-y-1/2 rotate-90 text-[10px] font-black tracking-[4px] text-brandPrimary/30 dark:text-brandGold/30 uppercase">
+              External Focus
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
+          {/* Matrix Grid */}
+          <div className="relative z-10 grid grid-cols-1 gap-4 md:grid-cols-2">
             {Object.entries(quadrants).map(([key, data]) => (
               <div
                 key={key}
                 onMouseEnter={() => setActiveQuadrant(key)}
                 onMouseLeave={() => setActiveQuadrant(null)}
-                className={`group p-8 rounded-[2.5rem] border transition-all duration-500 bg-white dark:bg-slate-900 shadow-sm hover:shadow-2xl 
-                  ${activeQuadrant === key ? 'border-transparent scale-[1.02] z-30' : 'border-slate-100 dark:border-slate-800 opacity-90'}`}
+                className={`p-8 rounded-[32px] border-2 transition-all duration-500 cursor-pointer min-h-[380px] flex flex-col justify-between ${
+                  activeQuadrant === key 
+                  ? 'bg-surfaceLight dark:bg-surfaceDark shadow-2xl scale-[1.02]' 
+                  : 'bg-bgLight dark:bg-bgDark border-transparent opacity-80'
+                }`}
+                style={{ borderColor: activeQuadrant === key ? data.color : 'transparent' }}
               >
-                <div className="flex flex-col h-full">
-                  <div className="flex items-center gap-5 mb-6">
-                    <div className={`w-14 h-14 rounded-2xl flex items-center justify-center text-2xl text-white shadow-xl bg-gradient-to-br ${data.color}`}>
+                <div>
+                  <div className="flex items-center justify-between mb-6">
+                    <div 
+                      className="flex items-center justify-center w-16 h-16 text-3xl shadow-lg rounded-2xl"
+                      style={{ backgroundColor: data.color }}
+                    >
                       {data.icon}
                     </div>
-                    <div>
-                      <h4 className="text-lg font-black tracking-tight text-slate-900 dark:text-white uppercase leading-none mb-1">{data.title}</h4>
-                      <p className="text-[10px] font-bold tracking-widest text-slate-400 uppercase">{data.subtitle}</p>
+                    <div className="text-right">
+                      <h4 className="text-xl font-black uppercase font-heading text-brandDark dark:text-white">{data.title}</h4>
+                      <p className="text-[10px] font-bold tracking-widest text-brandPrimary dark:text-brandGold uppercase">{data.subtitle}</p>
                     </div>
                   </div>
-                  
-                  <p className="mb-8 text-sm leading-relaxed text-slate-500 dark:text-slate-400">
+                  <p className="mb-8 text-sm italic leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
                     {data.description}
                   </p>
+                </div>
 
-                  <div className="grid grid-cols-1 gap-2 mt-auto">
-                    {data.values.map((val, i) => (
-                      <div key={i} className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-transparent group-hover:border-slate-200 dark:group-hover:border-slate-700 transition-all">
-                        <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: data.solid }} />
-                        <span className="text-[10px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wide">{val}</span>
-                      </div>
-                    ))}
-                  </div>
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  {data.values.map((v, i) => (
+                    <div key={i} className="flex items-center gap-3 p-3 transition-all border bg-white/50 dark:bg-white/5 rounded-xl border-borderLight dark:border-borderDark group hover:bg-white">
+                      <span className="text-lg">{v.icon}</span>
+                      <span className="text-[10px] font-bold text-brandDark dark:text-surfaceLight uppercase leading-tight">{v.text}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             ))}
 
-            {/* Central Badge */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 hidden md:block">
-              <div className="w-36 h-36 rounded-full bg-slate-900 border-[6px] border-slate-50 dark:border-slate-950 shadow-2xl flex flex-col items-center justify-center text-center p-4">
-                <span className="text-[7px] font-black text-amber-500 tracking-[2px] uppercase mb-1">Sustainable</span>
-                <span className="text-[11px] font-black text-white leading-tight uppercase">Enterprise<br/>Value</span>
-              </div>
+            {/* Central Hub - Desktop Only */}
+            <div className="absolute z-20 hidden -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 md:block">
+               <div className="flex flex-col items-center justify-center w-40 h-40 p-4 text-center border-4 rounded-full shadow-2xl bg-brandDark border-surfaceLight dark:border-bgDark">
+                  <span className="text-[8px] font-black text-brandGold tracking-widest uppercase mb-1">Sustainable</span>
+                  <span className="text-sm font-black leading-tight text-white">ENTERPRISE VALUE</span>
+                  <div className="w-10 h-0.5 bg-brandGold/30 my-2" />
+                  <span className="text-[8px] font-bold text-white/50 uppercase">ESG Integrated</span>
+               </div>
             </div>
           </div>
         </div>
 
-        {/* KPI Section */}
-        <div className="mt-24 grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
-          {kpis.map((kpi, idx) => (
-            <div key={idx} className="p-8 bg-white dark:bg-slate-900 rounded-[2rem] border border-slate-100 dark:border-slate-800 text-center shadow-sm hover:translate-y-[-4px] transition-all">
-              <div className={`text-4xl font-black mb-1 ${kpi.color}`}>{kpi.value}</div>
-              <div className="text-[9px] font-bold tracking-[2px] text-slate-400 uppercase">{kpi.label}</div>
-            </div>
-          ))}
+        {/* KPI Performance Section */}
+        <div className="mt-20">
+          <div className="grid max-w-5xl grid-cols-2 gap-6 mx-auto lg:grid-cols-4">
+            {kpis.map((kpi, index) => (
+              <div 
+                key={index}
+                className="p-8 text-center transition-all border shadow-lg bg-surfaceLight dark:bg-surfaceDark rounded-3xl border-borderLight dark:border-borderDark group hover:scale-105"
+              >
+                <div 
+                  className="mb-2 text-4xl font-black transition-transform lg:text-5xl group-hover:scale-110"
+                  style={{ color: kpi.color }}
+                >
+                  {kpi.value}
+                </div>
+                <div className="text-[10px] font-bold tracking-[3px] text-brandDark/40 dark:text-surfaceLight/40 uppercase">
+                  {kpi.label}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Footer Note */}
-        <div className="mt-20 text-center opacity-30">
-          <p className="text-[9px] font-bold uppercase tracking-[5px] text-slate-900 dark:text-white">
-            RiskMan Consulting LLP | Integrated Framework
+        {/* Professional Footer Attribution */}
+        {/* <div className="pt-8 mt-16 text-center border-t border-borderLight dark:border-borderDark">
+          <p className="text-[10px] font-bold text-brandDark/30 dark:text-surfaceLight/30 uppercase tracking-[4px]">
+            RiskMan Consulting LLP | Integrated Sustainability Value Framework
           </p>
-        </div>
+        </div> */}
       </div>
     </section>
   );

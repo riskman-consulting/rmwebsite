@@ -69,10 +69,10 @@ const ESGFrameworksSection = () => {
               Global Standards
             </span>
           </div>
-          <h2 className="font-heading font-black text-brandDark dark:text-surfaceLight text-4xl lg:text-6xl leading-tight mb-8">
+          <h2 className="mb-8 text-4xl font-black leading-tight font-heading text-brandDark dark:text-surfaceLight lg:text-6xl">
             Foundational ESG <br /> & Sustainability Frameworks
           </h2>
-          <p className="max-w-4xl mx-auto text-xl text-brandDark/70 dark:text-surfaceLight/70 font-sans leading-relaxed">
+          <p className="max-w-4xl mx-auto font-sans text-xl leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
             Effective ESG programs are built upon globally recognized frameworks that provide structure, comparability, and credibility.
           </p>
         </div>
@@ -80,23 +80,23 @@ const ESGFrameworksSection = () => {
         {/* UN SDGs Section */}
         <div className="mb-24">
           <div className="p-8 lg:p-14 bg-surfaceLight dark:bg-surfaceDark border border-borderLight dark:border-borderDark rounded-[32px] shadow-2xl overflow-hidden relative">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-brandGold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+            <div className="absolute top-0 right-0 w-64 h-64 translate-x-1/2 -translate-y-1/2 rounded-full bg-brandGold/5 blur-3xl" />
             
-            <div className="flex flex-col lg:flex-row gap-12 items-start relative z-10">
+            <div className="relative z-10 flex flex-col items-start gap-12 lg:flex-row">
               <div className="lg:w-1/3">
-                <div className="text-6xl mb-6 animate-bounce">🎯</div>
-                <h3 className="font-heading font-bold text-3xl text-brandDark dark:text-surfaceLight mb-4">
+                <div className="mb-6 text-6xl animate-bounce">🎯</div>
+                <h3 className="mb-4 text-3xl font-bold font-heading text-brandDark dark:text-surfaceLight">
                   United Nations Sustainable Development Goals (SDGs)
                 </h3>
-                <p className="text-brandDark/60 dark:text-surfaceLight/60 leading-relaxed">
+                <p className="leading-relaxed text-brandDark/60 dark:text-surfaceLight/60">
                   The 17 UN Sustainable Development Goals represent a universal framework for addressing humanity's most pressing challenges.
                 </p>
               </div>
 
-              <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 gap-6 lg:w-2/3 md:grid-cols-2">
                 {sdgPrinciples.map((principle, index) => (
-                  <div key={index} className="p-6 bg-bgLight dark:bg-bgDark rounded-2xl border border-transparent hover:border-brandGold transition-all duration-300 group">
-                    <p className="text-sm text-brandDark/80 dark:text-surfaceLight/80 leading-relaxed">
+                  <div key={index} className="p-6 transition-all duration-300 border border-transparent bg-bgLight dark:bg-bgDark rounded-2xl hover:border-brandGold group">
+                    <p className="text-sm leading-relaxed text-brandDark/80 dark:text-surfaceLight/80">
                       <span className="font-bold text-brandPrimary dark:text-brandGold group-hover:underline">
                         {principle.split(':')[0]}:
                       </span>
@@ -111,16 +111,16 @@ const ESGFrameworksSection = () => {
 
         {/* GHG Scopes Section */}
         <div className="mb-20">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+          <div className="flex flex-col items-end justify-between gap-6 mb-12 md:flex-row">
             <div className="max-w-2xl">
-              <h3 className="font-heading font-black text-brandDark dark:text-surfaceLight text-3xl lg:text-4xl mb-4">
+              <h3 className="mb-4 text-3xl font-black font-heading text-brandDark dark:text-surfaceLight lg:text-4xl">
                 GHG Accounting & Climate Measurement
               </h3>
               <p className="text-brandDark/60 dark:text-surfaceLight/60">
                 Understanding your carbon footprint across the entire value chain is essential for credible climate action.
               </p>
             </div>
-            <div className="flex gap-4 p-2 bg-surfaceLight dark:bg-surfaceDark rounded-xl border border-borderLight dark:border-borderDark">
+            <div className="flex gap-4 p-2 border bg-surfaceLight dark:bg-surfaceDark rounded-xl border-borderLight dark:border-borderDark">
               {['scope1', 'scope2', 'scope3'].map((s) => (
                 <button 
                   key={s}
@@ -135,7 +135,7 @@ const ESGFrameworksSection = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             {Object.entries(scopeData).map(([key, data]) => (
               <div
                 key={key}
@@ -148,22 +148,22 @@ const ESGFrameworksSection = () => {
                 }}
               >
                 <div className="relative z-10">
-                  <div className="flex justify-between items-start mb-6">
+                  <div className="flex items-start justify-between mb-6">
                     <div>
-                      <h4 className="font-black text-2xl mb-1" style={{ color: data.color }}>{data.title}</h4>
-                      <p className="text-xs font-bold text-brandDark/40 dark:text-surfaceLight/40 uppercase tracking-widest">{data.subtitle}</p>
+                      <h4 className="mb-1 text-2xl font-black" style={{ color: data.color }}>{data.title}</h4>
+                      <p className="text-xs font-bold tracking-widest uppercase text-brandDark/40 dark:text-surfaceLight/40">{data.subtitle}</p>
                     </div>
                     <span className="text-2xl font-black opacity-20" style={{ color: data.color }}>{data.percentage}</span>
                   </div>
 
-                  <p className="text-sm mb-8 text-brandDark/70 dark:text-surfaceLight/70 italic leading-relaxed">
+                  <p className="mb-8 text-sm italic leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
                     {data.description}
                   </p>
 
                   <div className="grid grid-cols-2 gap-3">
                     {data.sources.map((source, i) => (
-                      <div key={i} className="p-3 bg-bgLight dark:bg-bgDark rounded-xl hover:scale-105 transition-transform cursor-help group/item">
-                        <span className="text-2xl block mb-2">{source.icon}</span>
+                      <div key={i} className="p-3 transition-transform bg-bgLight dark:bg-bgDark rounded-xl hover:scale-105 cursor-help group/item">
+                        <span className="block mb-2 text-2xl">{source.icon}</span>
                         <span className="text-[10px] font-bold text-brandDark/80 dark:text-surfaceLight/80 leading-tight block">{source.label}</span>
                       </div>
                     ))}
@@ -177,14 +177,14 @@ const ESGFrameworksSection = () => {
         </div>
 
         {/* Global Distribution Bar */}
-        <div className="p-8 bg-brandDark rounded-3xl border border-white/10 shadow-inner">
-          <div className="flex flex-col lg:flex-row items-center gap-8">
-            <div className="lg:w-1/4 text-center lg:text-left">
-              <h4 className="text-white font-bold text-lg mb-1">Corporate Emissions</h4>
-              <p className="text-white/40 text-xs tracking-widest uppercase font-bold">Typical Distribution</p>
+        <div className="p-8 border shadow-inner bg-brandDark rounded-3xl border-white/10">
+          <div className="flex flex-col items-center gap-8 lg:flex-row">
+            <div className="text-center lg:w-1/4 lg:text-left">
+              <h4 className="mb-1 text-lg font-bold text-white">Corporate Emissions</h4>
+              <p className="text-xs font-bold tracking-widest uppercase text-white/40">Typical Distribution</p>
             </div>
             <div className="flex-1 w-full">
-              <div className="flex h-14 w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white/5">
+              <div className="flex w-full overflow-hidden border-4 shadow-2xl h-14 rounded-2xl border-white/5">
                 <div className="flex items-center justify-center text-[10px] font-black text-white bg-brandPrimary w-[10%] border-r border-white/10">10%</div>
                 <div className="flex items-center justify-center text-[10px] font-black text-white bg-brandNavy w-[8%] border-r border-white/10">8%</div>
                 <div className="flex items-center justify-center text-[10px] font-black text-brandDark bg-brandGold w-[82%]">82%</div>

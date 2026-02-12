@@ -4,21 +4,21 @@ import { Outlet, NavLink, useNavigate } from "react-router-dom";
 function Layout() {
   const navigate = useNavigate()
   return (
-    <div className="min-h-screen  bg-bgLight dark:bg-bgDark transition-colors duration-300">
+    <div className="min-h-screen transition-colors duration-300 bg-bgLight dark:bg-bgDark">
       {/* Navigation Bar */}
-      <nav className="fixed  w-screen z-50 bg-surfaceLight/80 dark:bg-surfaceDark/80 backdrop-blur-md border-b border-borderLight dark:border-borderDark">
-        <div className="container py-4 flex items-center justify-between">
+      <nav className="fixed z-50 w-screen border-b bg-surfaceLight/80 dark:bg-surfaceDark/80 backdrop-blur-md border-borderLight dark:border-borderDark">
+        <div className="container flex items-center justify-between py-4">
           {/* Brand Logo Placeholder */}
-          <div onClick={()=>navigate("")} className="font-heading font-black text-2xl text-brandPrimary dark:text-brandGold tracking-tighter">
+          <div onClick={()=>navigate("")} className="text-2xl font-black tracking-tighter cursor-pointer font-heading text-brandPrimary dark:text-brandGold">
             US Assurance Support
           </div>
 
           {/* Links */}
-          <div className="flex items-center gap-1 sm:gap-4">
+          <div className="flex items-center h-16 gap-1 sm:gap-4">
             <NavItem to="financial-statement-audits"  label="Financial Statement Audits" />
             <NavItem to="internal-control-reviews"  label="Internal Control Reviews" />
-            <NavItem to="compliance-audits"  label="Compliance Audits" />
-            <NavItem to="quality-assurance"  label="Quality Assurance" />
+            {/* <NavItem to="compliance-audits"  label="Compliance Audits" />
+            <NavItem to="quality-assurance"  label="Quality Assurance" /> */}
           </div>
         </div>
       </nav>

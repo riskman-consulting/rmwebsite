@@ -74,10 +74,6 @@ function Framework() {
                   </div>
                 </div>
 
-                {/* Vertical Number */}
-                <div className="absolute top-6 right-6 text-xs font-black text-slate-200 dark:text-white/5 uppercase tracking-tighter">
-                  PH-0{index + 1}
-                </div>
               </div>
             ))}
           </div>

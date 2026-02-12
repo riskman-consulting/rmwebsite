@@ -1,108 +1,3 @@
-// import React from "react";
-// import { Calendar, MapPin, Flag, Shield, Users, Network } from "lucide-react";
-
-// export default function UpcomingEventsSection() {
-//   const upcomingEvents = [
-//     {
-//       icon: Flag,
-//       category: "Conference",
-//       title: "IIA-Bangalore Conference",
-//       date: "12–13 February 2026",
-//       location: "Bangalore, India",
-//     },
-//     {
-//       icon: Shield,
-//       category: "Conference",
-//       title: "IIA-Chennai Conference",
-//       date: "27–28 February 2026",
-//       location: "Chennai, India",
-//     },
-//     {
-//       icon: Users,
-//       category: "Conference",
-//       title: " IIA-Kolkata Conference",
-//       date: "14 March 2026",
-//       location: "Kolkata, India",
-//     },
-//     {
-//       icon: Network,
-//       category: "Conference",
-//       title: "IIA-Hyderabad Conference",
-//       date: "11 April 2026",
-//       location: "Hyderabad, India",
-//     },
-//   ];
-
-//   return (
-//     <section
-//       id="upcoming-events"
-//       className="py-16 transition-colors duration-500 bg-surfaceLight dark:bg-surfaceDark"
-//     >
-//       <div className="container">
-
-//         {/* ================= HEADER ================= */}
-//         <div className="max-w-3xl mx-auto mb-20 text-center">
-//           <div className="inline-flex items-center gap-3 px-6 py-3 mb-6 border rounded-full bg-surfaceLight/80 dark:bg-surfaceDark/40 border-borderLight dark:border-borderDark backdrop-blur-xl">
-//             <Calendar className="w-4 h-4 text-brandGold" />
-//             <span className="text-xs font-black tracking-[0.3em] uppercase text-brandGold">
-//               What’s Next
-//             </span>
-//           </div>
-
-//           <h2 className="mb-5 text-4xl font-black sm:text-5xl font-heading text-brandDark dark:text-white">
-//             Upcoming Events
-//           </h2>
-
-//           <p className="text-lg text-brandDark/70 dark:text-white/60">
-//             Join us at upcoming conferences and conversations across India.
-//           </p>
-//         </div>
-
-//         {/* ================= EVENTS GRID ================= */}
-//         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-//           {upcomingEvents.map((event, i) => {
-//             const Icon = event.icon;
-//             return (
-//               <div
-//                 key={i}
-//                 className="p-6 rounded-[2rem]
-//                 bg-surfaceLight/80 dark:bg-surfaceDark/40
-//                 border border-borderLight dark:border-borderDark
-//                 transition-all duration-500
-//                 hover:-translate-y-1 hover:border-brandGold/40"
-//               >
-//                 <div className="flex items-center justify-center mb-4 border w-14 h-14 rounded-2xl bg-brandGold/10 border-brandGold/30">
-//                   <Icon className="w-7 h-7 text-brandGold" />
-//                 </div>
-
-//                 <span className="text-xs font-bold tracking-wide uppercase text-brandGold">
-//                   {event.category}
-//                 </span>
-
-//                 <h3 className="mt-2 mb-4 text-xl font-bold text-brandDark dark:text-white">
-//                   {event.title}
-//                 </h3>
-
-//                 <div className="space-y-2 text-sm text-brandDark/60 dark:text-white/60">
-//                   <div className="flex items-center gap-2">
-//                     <Calendar className="w-4 h-4 text-brandGold" />
-//                     {event.date}
-//                   </div>
-//                   <div className="flex items-center gap-2">
-//                     <MapPin className="w-4 h-4 text-brandGold" />
-//                     {event.location}
-//                   </div>
-//                 </div>
-//               </div>
-//             );
-//           })}
-//         </div>
-
-//       </div>
-//     </section>
-//   );
-// }
-
 
 import React, { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
@@ -118,8 +13,6 @@ import {
   Sparkles,
   ChevronRight
 } from "lucide-react"
-
-import IIALogoImg from "../../../assets/iia-logo/iia-logo.png";
 
 /* ================= DATA ================= */
 export const UPCOMING_EVENTS = [
@@ -154,9 +47,9 @@ export const UPCOMING_EVENTS = [
 const IIALogo = () => (
   <div className="relative group/logo">
     <div className="absolute transition duration-500 -inset-1 bg-gradient-to-r from-brandGold to-brandGoldDark rounded-2xl blur opacity-20 group-hover/logo:opacity-40"></div>
-    <div className="relative flex items-center justify-center w-12 h-12 overflow-hidden transition-transform duration-300 bg-white dark:bg-slate-900 rounded-2xl group-hover/logo:scale-105">
+    <div className="relative flex items-center justify-center w-16 h-16 p-2 overflow-hidden transition-transform duration-300 bg-white border shadow-sm dark:bg-slate-900 border-borderLight dark:border-borderDark rounded-2xl group-hover/logo:scale-105">
       <img
-        src={IIALogoImg}
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTajqF-8a1dN0w0iwQHcG1G_zBSPSliC171Xw&s"
         alt="IIA India Logo"
         className="object-contain w-full h-full"
       />
@@ -462,11 +355,11 @@ const UpcomingEventsSection = () => {
           transition={{ delay: 0.6 }}
           className="flex flex-col items-center gap-6 mt-20"
         >
-          {/* <div className="w-24 h-px bg-gradient-to-r from-transparent via-brandGold/40 to-transparent" /> */}
-          {/* <button className="flex items-center gap-4 px-10 py-4 text-sm font-bold tracking-wide transition-all duration-300 bg-white border rounded-full shadow-xl group border-slate-200 dark:border-slate-800 dark:bg-slate-900 text-slate-900 dark:text-white shadow-black/5 hover:border-brandGold">
+          <div className="w-24 h-px bg-gradient-to-r from-transparent via-brandGold/40 to-transparent" />
+          <button className="flex items-center gap-4 px-10 py-4 text-sm font-bold tracking-wide transition-all duration-300 bg-white border rounded-full shadow-xl group border-slate-200 dark:border-slate-800 dark:bg-slate-900 text-slate-900 dark:text-white shadow-black/5 hover:border-brandGold">
             View All Past Events
             <ChevronRight className="w-4 h-4 transition-transform text-brandGold group-hover:translate-x-1" />
-          </button> */}
+          </button>
         </motion.div>
       </div>
 

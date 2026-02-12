@@ -188,7 +188,7 @@ const GlobalCSAOperatingModel = ({ onZoneClick, activeZone }) => {
             fill={colors.textMedium}
             fontSize="10"
           >
-            ServiceNow • SAP GRC • MetricStream • Archer
+           • SAP GRC • MetricStream • Archer
           </text>
           <line
             x1="0"

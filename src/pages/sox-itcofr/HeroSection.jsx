@@ -1,17 +1,18 @@
 import React from 'react';
 import bg from "../../assets/images/sox/hero.png";
+import { Link } from 'react-router-dom';
 
 function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] lg:top-10 flex items-center bg-brandDark overflow-hidden">
+    <section className="relative min-h-[90vh]   lg:pt-10 lg:-top-5 flex items-center bg-brandDark overflow-hidden">
       
       {/* 1. VISUAL SIDE (RIGHT) */}
-      <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full z-0">
-        <div className="relative h-full w-full">
+      <div className="absolute top-0 right-0 z-0 w-full h-full lg:w-1/2">
+        <div className="relative w-full h-full">
           <img 
             src={bg} 
             alt="Compliance Hero" 
-            className="w-full h-full object-cover opacity-50 lg:opacity-80" 
+            className="object-cover w-full h-full opacity-50 lg:opacity-80" 
           />
           {/* Transition Gradient from brandDark to Image */}
           <div className="absolute inset-0 bg-gradient-to-r from-brandDark via-brandDark/40 to-transparent" />
@@ -32,8 +33,8 @@ function HeroSection() {
         <div className="max-w-3xl">
           {/* Top Label */}
           <div className="flex items-center gap-3 mb-6 animate-[fadeInLeft_0.8s_ease-out]">
-            <div className="w-10 h-[2px] bg-brandAccent" />
-            <span className="text-brandAccent text-xs font-black uppercase tracking-[0.3em]">
+            {/* <div className="w-10 h-[2px] bg-brandAccent" /> */}
+            <span className="text-brandAccent mt-10 text-xs font-black uppercase tracking-[0.3em]">
               Risk Advisory Specialist
             </span>
           </div>
@@ -50,26 +51,26 @@ function HeroSection() {
 
             {/* BUTTONS */}
             <div className="flex flex-wrap gap-5 pt-4 animate-[fadeInUp_0.8s_ease-out_0.4s_both]">
-              <a 
-                href="#services" 
-                className="px-10 py-4 font-bold text-brandDark bg-brandAccent rounded-sm hover:bg-brandGold transition-all duration-300 shadow-lg shadow-brandAccent/20 hover:shadow-brandGold/40 hover:-translate-y-1"
+              <Link 
+                to="/services" 
+                className="px-10 py-4 font-bold transition-all duration-300 rounded-sm shadow-lg text-brandDark bg-brandAccent hover:bg-brandGold shadow-brandAccent/20 hover:shadow-brandGold/40 hover:-translate-y-1"
               >
                 View Our Services
-              </a>
+              </Link>
               
-              <a 
-                href="#contact" 
-                className="px-10 py-4 font-bold text-white border-2 border-white/20 hover:border-brandAccent rounded-sm transition-all duration-300 hover:bg-white/5"
+              <Link 
+                to="/contact" 
+                className="px-10  py-4 font-bold text-white transition-all duration-300 border-2 rounded-sm border-white/20 hover:border-brandAccent hover:bg-white/5"
               >
                 Speak to Our Team
-              </a>
+              </Link>
             </div>
 
             {/* TAGS BAR */}
             <div className="flex items-center gap-8 pt-12 opacity-50 border-t border-white/10 mt-12 animate-[fadeIn_1s_ease-out_0.6s_both]">
-              <span className="text-white text-xs font-bold tracking-widest uppercase">SOX Compliance</span>
-              <span className="text-white text-xs font-bold tracking-widest uppercase">ICOFR</span>
-              <span className="text-white text-xs font-bold tracking-widest uppercase">IFC Testing</span>
+              <span className="text-xs font-bold tracking-widest text-white uppercase">SOX Compliance</span>
+              <span className="text-xs font-bold tracking-widest text-white uppercase">ICOFR</span>
+              <span className="text-xs font-bold tracking-widest text-white uppercase">IFC Testing</span>
             </div>
           </div>
         </div>

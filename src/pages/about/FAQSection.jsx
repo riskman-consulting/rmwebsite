@@ -19,7 +19,7 @@ export default function FAQSection() {
     {
       question: "What does RiskMan stand for?",
       answer:
-        "RiskMan is a trusted advisory firm focused on delivering sustainable value through risk, compliance, financial and strategic consulting services.",
+        "RiskMan Assurance and Advisory is a trusted advisory firm focused on delivering sustainable value through risk, compliance, financial and strategic consulting services.",
     },
     {
       question: "What is RiskMan's mission?",

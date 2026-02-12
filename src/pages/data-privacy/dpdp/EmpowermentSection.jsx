@@ -1,4 +1,6 @@
+import { Globe, Zap } from 'lucide-react'
 import React from 'react'
+import { empowermentSteps } from './data'
 
 function EmpowermentSection() {
   return (

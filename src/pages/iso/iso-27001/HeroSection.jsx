@@ -1,7 +1,7 @@
 // Hero.jsx
 import React from "react";
 import { Link } from "react-router-dom";
-import bg from "../../../assets/images/iso/iso-27701/hero.png";
+import bg from "../../../assets/images/iso/iso27001hero.png"
 
 const HeroSection = () => {
   return (
@@ -29,8 +29,8 @@ const HeroSection = () => {
       </div>
 
       {/* Accent shapes */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-brandAccent/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-brandGold/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-0 right-0 rounded-full w-96 h-96 bg-brandAccent/10 blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 rounded-full w-72 h-72 bg-brandGold/10 blur-3xl"></div>
 
       <div className="container relative z-10">
         <div className="py-20 md:py-28 lg:py-36">
@@ -70,7 +70,7 @@ const HeroSection = () => {
             {/* CTA */}
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
-                to="/iso-overview"
+                to="/services/iso-certifications"
                 className="inline-flex items-center justify-center w-full gap-2 px-8 py-4 font-semibold transition-all duration-300 bg-white rounded-lg shadow-lg text-brandPrimary hover:bg-brandLight hover:shadow-xl hover:scale-105 sm:w-auto"
               >
                 View ISO Overview

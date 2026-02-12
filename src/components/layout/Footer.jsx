@@ -76,7 +76,7 @@ export default function Footer() {
                         </Link>
             
             <p className="text-sm leading-relaxed text-brandNavy dark:text-gray-400">
-              RiskMan Consulting provides expert advisory in audit, risk, compliance, 
+              RiskMan Assurance and Advisory provides expert advisory in audit, risk, compliance, 
               cybersecurity, and digital transformation — helping businesses grow with confidence.
             </p>
             
@@ -148,29 +148,29 @@ export default function Footer() {
           
           {/* Services */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold tracking-wider uppercase text-brandDark dark:text-white">Services</h4>
+            <h4 className="mb-4 text-sm font-semibold tracking-wider uppercase text-brandDark dark:text-white">Enterprise Services</h4>
             <ul className="space-y-2 text-sm text-brandNavy dark:text-gray-400">
               <li><Link to="/services/risk-advisory" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">Risk Advisory</Link></li>
-              <li><Link to="/services/consulting" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">Consulting</Link></li>
-              <li><Link to="/services/esg-advisory" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">ESG Advisory</Link></li>
+              <li><Link to="/services/digital-transformation" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">Digital Transformation</Link></li>
+              <li><Link to="/services/esg" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">Sustainability & ESG</Link></li>
               <li><Link to="/services/financial-advisory" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">Financial Advisory</Link></li>
-              <li><Link to="/services/forensic-investigation" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">Forensic & Investigation</Link></li>
-              <li><Link to="/services/cybersecurity" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">Cyber Security</Link></li>
-              <li><Link to="/services/it-risk-management" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">IT Risk Management</Link></li>
+              <li><Link to="/services/ai-technology" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">AI & Technology</Link></li>
+              <li><Link to="/services/forensics-investigation" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">Forensics and Investigation</Link></li>
+              {/* <li><Link to="/services/it-risk-management" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">IT Risk Management</Link></li> */}
             </ul>
           </div>
 
-          {/* Industries */}
+          {}
           <div>
-            <h4 className="mb-4 text-sm font-semibold tracking-wider uppercase text-brandDark dark:text-white">Industries</h4>
+            <h4 className="mb-4 text-sm font-semibold tracking-wider uppercase text-brandDark dark:text-white">IT Risk Management</h4>
             <ul className="space-y-2 text-sm text-brandNavy dark:text-gray-400">
-              <li><Link to="/industries/automobiles" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">Automobiles</Link></li>
-              <li><Link to="/industries/banking-insurance" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">Banking & Insurance</Link></li>
-              <li><Link to="/industries/retail-consumer" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">Retail & Consumer</Link></li>
-              <li><Link to="/industries/healthcare" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">Healthcare</Link></li>
-              <li><Link to="/industries/hospitality" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">Hospitality</Link></li>
-              <li><Link to="/industries/media-communication" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">Media & Communication</Link></li>
-              <li><Link to="/industries/education-edtech" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">Education & EdTech</Link></li>
+              <li><Link to="/services/soc-services" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">SOC Compliances</Link></li>
+              <li><Link to="/services/iso-certifications" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">ISO & TISAX Readiness</Link></li>
+              <li><Link to="/services/pci-dss-compliance" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">PCI DSS</Link></li>
+              <li><Link to="/services/itgc-itac" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">ITGC and ITAC</Link></li>
+              <li><Link to="/services/bcp-dr" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">BCP/DR</Link></li>
+              <li><Link to="/services/cybersecurity" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">Cybersecurity</Link></li>
+              <li><Link to="/services/data-privacy" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">Data Privacy</Link></li>
             </ul>
           </div>
 
@@ -179,9 +179,9 @@ export default function Footer() {
             <h4 className="mb-4 text-sm font-semibold tracking-wider uppercase text-brandDark dark:text-white">Company</h4>
             <ul className="space-y-2 text-sm text-brandNavy dark:text-gray-400">
               <li><Link to="/about" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">About Us</Link></li>
-              <li><Link to="/about/leadership" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">Leadership Team</Link></li>
-              <li><Link to="/about/careers" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">Careers</Link></li>
-              <li><Link to="/blog" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">Blogs</Link></li>
+              <li><Link to="/about/#co-founders" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">Leadership Team</Link></li>
+              <li><Link to="/careers" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">Careers</Link></li>
+              <li><Link to="/governance" className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent">Governance</Link></li>
             </ul>
           </div>
 

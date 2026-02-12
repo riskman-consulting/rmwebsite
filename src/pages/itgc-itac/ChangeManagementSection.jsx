@@ -1,88 +1,145 @@
+// import React from 'react';
+// import { GitBranch, Package, FileText } from 'lucide-react';
+
+// const ChangeManagementSection = () => {
+//   const features = [
+//     {
+//       icon: GitBranch,
+//       title: "Authorization Matrix",
+//       description: "Reviewing CAB approvals, UAT signoffs, and rollback procedures."
+//     },
+//     {
+//       icon: Package,
+//       title: "Patch Management",
+//       description: "Verifying deployment timelines based on criticality across all environments."
+//     },
+//     {
+//       icon: FileText,
+//       title: "Documentation",
+//       description: "Ensuring technical manuals and SOPs align with current operational states."
+//     }
+//   ];
+
+//   return (
+//     <section className="py-16 md:py-24 bg-bgLight dark:bg-bgDark">
+//       <div className="container">
+//         <div className="max-w-6xl mx-auto">
+//           {/* Section Header */}
+//           <div className="mb-12 text-center md:mb-16">
+//             <h2 className="mb-4 text-3xl font-bold font-heading md:text-4xl lg:text-5xl text-brandDark dark:text-white">
+//               Change Management & Lifecycle Governance
+//             </h2>
+//             <p className="max-w-3xl mx-auto text-lg md:text-xl text-brandNavy/80 dark:text-white/70">
+//               RiskMan audits the lifecycle of system changes to prevent unauthorized modifications or outages.
+//             </p>
+//           </div>
+
+//           {/* Features List */}
+//           <div className="space-y-6 md:space-y-8">
+//             {features.map((feature, index) => {
+//               const Icon = feature.icon;
+//               return (
+//                 <div 
+//                   key={index}
+//                   className="p-6 transition-all duration-300 border group bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-xl md:p-8 hover:shadow-xl hover:border-brandPrimary dark:hover:border-brandPrimary"
+//                 >
+//                   <div className="flex flex-col items-start gap-6 md:flex-row md:items-center">
+//                     <div className="flex items-center justify-center flex-shrink-0 w-16 h-16 transition-all duration-300 md:w-20 md:h-20 bg-brandPrimary/10 dark:bg-brandPrimary/20 rounded-xl group-hover:bg-brandPrimary group-hover:scale-110">
+//                       <Icon className="w-8 h-8 md:w-10 md:h-10 text-brandPrimary group-hover:text-white" />
+//                     </div>
+//                     <div className="flex-1">
+//                       <h3 className="mb-2 text-xl font-semibold font-heading md:text-2xl text-brandDark dark:text-white">
+//                         {feature.title}
+//                       </h3>
+//                       <p className="text-lg leading-relaxed text-brandNavy/70 dark:text-white/60">
+//                         {feature.description}
+//                       </p>
+//                     </div>
+//                   </div>
+//                 </div>
+//               );
+//             })}
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default ChangeManagementSection;
+
+
 import React from 'react';
-import { GitBranch, Package, FileText } from 'lucide-react';
+import { FileText, RefreshCw } from 'lucide-react';
 
 const ChangeManagementSection = () => {
   const features = [
     {
-      icon: GitBranch,
       title: "Authorization Matrix",
-      description: "Reviewing CAB approvals, UAT signoffs, and rollback procedures to maintain environment stability."
+      description: "Reviewing CAB approvals, UAT signoffs, and rollback procedures.",
+      icon: <FileText size={20} />
     },
     {
-      icon: Package,
       title: "Patch Management",
-      description: "Verifying deployment timelines based on criticality across all production and staging environments."
+      description: "Verifying deployment timelines based on criticality across all environments.",
+      icon: <RefreshCw size={20} />
     },
     {
-      icon: FileText,
       title: "Documentation",
-      description: "Ensuring technical manuals and SOPs align with current operational states for seamless knowledge transfer."
+      description: "Ensuring technical manuals and SOPs align with current operational states.",
+      icon: <FileText size={20} />
     }
   ];
 
   return (
-    <section className="relative py-14 md:py-16 bg-bgLight dark:bg-bgDark transition-colors duration-500 overflow-hidden">
-      {/* Background Decor */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.03] dark:opacity-[0.05]">
-        <div className="absolute inset-0 bg-[radial-gradient(#004080_1px,transparent_1px)] [background-size:40px_40px]" />
-      </div>
-
-      <div className="container relative z-10">
-        <div className="max-w-6xl mx-auto">
+    <section className="py-20 overflow-hidden bg-white dark:bg-brandDark">
+      <div className="container px-6 mx-auto">
+        <div className="flex flex-col items-center gap-12 lg:flex-row-reverse">
           
-          {/* HEADER - Consistent Signature Style */}
-          <div className="mb-10 border-l-4 border-brandPrimary pl-6">
-            <span className="text-brandPrimary dark:text-brandAccent text-[10px] font-black uppercase tracking-[0.3em] block mb-2">
-              Lifecycle Governance
-            </span>
-            <h2 className="text-3xl font-bold font-heading md:text-5xl text-brandDark dark:text-white leading-tight">
-              Change Management & <br />
-              <span className="text-brandPrimary italic">Lifecycle Governance</span>
-            </h2>
-            <p className="mt-3 max-w-2xl text-base md:text-lg text-brandNavy/70 dark:text-brandLight/60 leading-relaxed">
-              RiskMan audits the lifecycle of system changes to prevent unauthorized modifications or unplanned outages within your IT ecosystem.
-            </p>
-          </div>
+          {/* Text Content */}
+          <div className="w-full lg:w-1/2">
+            <div className="mb-8">
+              <h2 className="mb-4 text-3xl font-bold md:text-4xl text-brandNavy dark:text-white">
+                Change Management & Lifecycle Governance
+              </h2>
+              <div className="w-20 h-1 mb-6 rounded-full bg-brandGold"></div>
+              <p className="text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+                RiskMan audits the lifecycle of system changes to prevent unauthorized modifications or outages.
+              </p>
+            </div>
 
-          {/* LIST - Compact Vertical Flow */}
-          <div className="relative space-y-4 max-w-5xl">
-            {/* Connecting Line Decoration */}
-            <div className="absolute left-10 top-0 bottom-0 w-[1px] bg-brandPrimary/10 hidden md:block" />
-
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <div 
-                  key={index}
-                  className="group relative flex flex-col md:flex-row items-start md:items-center gap-6 p-5 md:p-6 bg-white dark:bg-surfaceDark border border-borderLight dark:border-borderDark rounded-2xl transition-all duration-300 hover:shadow-xl hover:border-brandPrimary/40 overflow-hidden"
-                >
-                  {/* Icon with Step Number */}
-                  <div className="relative flex-shrink-0 flex items-center justify-center w-14 h-14 md:w-16 md:h-16 bg-brandDark dark:bg-brandPrimary/10 rounded-xl transition-all duration-500 group-hover:bg-brandPrimary group-hover:shadow-[0_10px_20px_rgba(0,64,128,0.2)] z-10">
-                    <Icon className="w-6 h-6 md:w-7 md:h-7 text-brandAccent group-hover:text-white transition-colors duration-500" />
-                    
-                    {/* Small Step Indicator */}
-                    <div className="absolute -top-2 -left-2 w-6 h-6 bg-brandAccent text-brandDark text-[10px] font-black rounded-lg flex items-center justify-center shadow-lg">
-                      0{index + 1}
+            <div className="grid gap-6">
+              {features.map((feature, index) => (
+                <div key={index} className="flex gap-4 p-4 transition-colors border rounded-lg bg-slate-50 dark:bg-slate-800/50 border-slate-100 dark:border-slate-700 hover:border-brandGold/30">
+                  <div className="flex-shrink-0 mt-1">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-brandNavy/10 dark:bg-brandGold/10 text-brandNavy dark:text-brandGold">
+                      {feature.icon}
                     </div>
                   </div>
-
-                  <div className="flex-1">
-                    <h3 className="mb-1 text-xl font-bold font-heading text-brandDark dark:text-white group-hover:text-brandPrimary transition-colors">
-                      {feature.title}
-                    </h3>
-                    <p className="text-sm md:text-base leading-relaxed text-brandNavy/60 dark:text-brandLight/50">
-                      {feature.description}
-                    </p>
-                  </div>
-
-                  {/* Right Arrow Hover Decor */}
-                  <div className="hidden md:block opacity-0 group-hover:opacity-100 transition-opacity translate-x-4 group-hover:translate-x-0 duration-300">
-                    <div className="w-8 h-[1px] bg-brandAccent" />
+                  <div>
+                    <h3 className="mb-1 text-lg font-bold text-brandNavy dark:text-white">{feature.title}</h3>
+                    <p className="text-sm text-slate-600 dark:text-slate-400">{feature.description}</p>
                   </div>
                 </div>
-              );
-            })}
+              ))}
+            </div>
           </div>
+
+          {/* Image Content */}
+          <div className="w-full lg:w-1/2">
+            <div className="relative overflow-hidden shadow-2xl rounded-2xl group">
+              <div className="absolute inset-0 z-10 transition-colors duration-500 bg-brandNavy/20 dark:bg-brandNavy/40 group-hover:bg-transparent"></div>
+              <img 
+                src="https://public.youware.com/users-website-assets/prod/40fcf0f2-b4b0-418d-a01b-f6b4ca34e916/0efdb74cea49450682042543f094fea9.jpg"
+                alt="Change Management" 
+                className="object-cover w-full h-auto transition-transform duration-700 transform group-hover:scale-105"
+              />
+              {/* Decorative Elements */}
+              <div className="absolute w-40 h-40 rounded-full -bottom-10 -right-10 bg-brandGold/20 blur-3xl"></div>
+              <div className="absolute w-40 h-40 rounded-full -top-10 -left-10 bg-brandNavy/20 blur-3xl"></div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

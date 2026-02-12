@@ -389,7 +389,7 @@ const UpcomingEventsSection = () => {
   const [selectedEvent, setSelectedEvent] = useState(null)
 
   return (
-    <div className="relative py-24 overflow-hidden lg:py-32 bg-slate-50 dark:bg-surfaceDark">
+    <div id="upcoming-events" className="relative py-24 overflow-hidden lg:py-32 bg-slate-50 dark:bg-surfaceDark">
       {/* Background Decor */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brandGold/5 blur-[120px] rounded-full" />

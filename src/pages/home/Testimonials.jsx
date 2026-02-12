@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Star } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
+import electrosteelImg from "../../assets/iia-logo/electrosteel.png"
+
 
 
 const Testimonials = () => {
@@ -30,24 +32,24 @@ const Testimonials = () => {
     },
     {
       id: 3,
-      name: "Michael Rodriguez",
+      name: "Electrosteel Castings Limited",
       role: "CEO, Global Manufacturing",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&h=600&fit=crop",
-      text: "More than auditors — strategic advisors. Their risk and compliance expertise helped us navigate complex regulations with confidence.",
+      image: electrosteelImg,
+      text: "RiskMan delivered a well-structured and comprehensive risk management engagement, covering multiple business processes. The work was completed on time and met our expectations fully",
       color: "bg-white dark:bg-surfaceDark",
       textColor: "text-brandDark dark:text-white",
       zIndex:3,
     },
-    {
-      id: 4,
-      name: "Emily Thompson",
-      role: "VP Operations, RetailMax",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&h=600&fit=crop",
-      text: "Their insights were actionable and impactful, driving measurable improvements in efficiency and compliance across our organization.",
-      color: "bg-brandPrimary",
-      textColor: "text-white",
-      zIndex:4,
-    },
+    // {
+    //   id: 4,
+    //   name: "Emily Thompson",
+    //   role: "VP Operations, RetailMax",
+    //   image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&h=600&fit=crop",
+    //   text: "Their insights were actionable and impactful, driving measurable improvements in efficiency and compliance across our organization.",
+    //   color: "bg-brandPrimary",
+    //   textColor: "text-white",
+    //   zIndex:4,
+    // },
   ];
 
   // Auto-rotate
@@ -64,7 +66,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="relative z-10 flex items-center w-full min-h-screen py-20 overflow-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark">
+    <section className="relative z-10 flex items-center w-full min-h-screen py-12 overflow-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark">
       <div className="container px-4 mx-auto md:px-8 lg:px-12">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           
@@ -85,7 +87,7 @@ const Testimonials = () => {
             </p>
 
             {/* Navigation Dots */}
-            <div className="flex justify-center p-3  lg:justify-start">
+            <div className="flex justify-center w-32 p-3 lg:justify-start">
               {testimonials.map((_, idx) => (
                 <button
                   key={idx}

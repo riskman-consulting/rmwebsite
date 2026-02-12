@@ -1,5 +1,5 @@
 // src/pages/home/Home.jsx
-import React,{useEffect, useState} from "react";
+import React,{useState} from "react";
 import { Helmet } from "react-helmet-async";
 
 // layout / common
@@ -13,10 +13,10 @@ import KeyServices from "./KeyServices";
 import IndustralizationService from "./IndustralizationService";
 import ValueDifferentiators from "./ValueDifferentiators";
 import WhyRiskman from "./WhyRiskman";
-import StatsSection from "./StatsSection";
+// import StatsSection from "./StatsSection";
 import Testimonials from "./Testimonials";
 import FAQSection from "./FAQSection";
-import BlogSection from "./BlogSection";
+// import BlogSection from "./BlogSection";
 import AuditService from "./AuditService";
 import CTASection from "./CTASections";
 import ClientSection from "./ClientsSection";
@@ -29,7 +29,6 @@ import EventSection from "./EventSection";
 
 export default function Home() {
   const [selectedLeader, setSelectedLeader] =useState(null);
- 
   return (
     <>
       {/* <Helmet>
@@ -74,8 +73,14 @@ export default function Home() {
 
           {/* FEATURES */}
           {/* <Features /> */}
+
           
             <StrategicSection/>
+
+             <ClientSection/>
+
+
+             <Testimonials />
             
 
           {/* <StatsSection /> */}
@@ -89,14 +94,14 @@ export default function Home() {
           <KeyServices />
 
           {/* INDUSTRIALIZATION */}
-          <IndustralizationService />
+          
 
           {/* VALUE DIFFERENTIATORS */}
           {/* <ValueDifferentiators /> */}
 
 
           {/* Clients Section */}
-          <ClientSection/>
+         
 
           <LeadershipSection setSelectedLeader={setSelectedLeader}/>
 
@@ -108,11 +113,15 @@ export default function Home() {
           {/* WHY RISKMAN */}
           <WhyRiskman />
 
-          <EventSection/>
+            <EventSection/>
+
+           <IndustralizationService />
 
 
 
-           <BlogSection/>
+
+{/* 
+           <BlogSection/> */}
 
 
 
@@ -120,7 +129,6 @@ export default function Home() {
           {/* <StatsSection /> */}
 
           {/* TESTIMONIALS */}
-          <Testimonials />
 
           {/* FAQ */}
           <FAQSection />

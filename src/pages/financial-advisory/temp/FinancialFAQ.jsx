@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const FinancialFAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -76,9 +77,9 @@ const FinancialFAQ = () => {
           <p className="mb-6 font-sans text-white/80">
             Our team of experts is ready to help you navigate your financial journey.
           </p>
-          <button className="px-8 py-3 font-bold transition-all duration-300 transform rounded-lg bg-brandAccent hover:bg-brandGold text-brandDark hover:scale-105">
+          <Link to="/contact" className="px-8 py-3 font-bold transition-all duration-300 transform rounded-lg bg-brandAccent hover:bg-brandGold text-brandDark hover:scale-105">
             Contact RiskMan
-          </button>
+          </Link>
         </div>
       </div>
     </section>

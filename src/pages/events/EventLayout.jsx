@@ -5,13 +5,13 @@ import { ShieldCheck, FileText, Globe } from "lucide-react";
 function Layout() {
   const navigate = useNavigate()
   return (
-    <div className="min-h-screen  bg-bgLight dark:bg-bgDark transition-colors duration-300">
+    <div className="min-h-screen transition-colors duration-300 bg-bgLight dark:bg-bgDark">
       {/* Navigation Bar */}
-      <nav className="fixed  w-screen z-50 bg-surfaceLight/80 dark:bg-surfaceDark/80 backdrop-blur-md border-b border-borderLight dark:border-borderDark">
-        <div className="container py-4 flex items-center justify-between">
+      <nav className="fixed z-50 w-screen border-b bg-surfaceLight/80 dark:bg-surfaceDark/80 backdrop-blur-md border-borderLight dark:border-borderDark">
+        <div className="container flex items-center justify-between py-4">
           {/* Brand Logo Placeholder */}
-          <div onClick={()=>navigate("")} className="font-heading font-black text-2xl text-brandPrimary dark:text-brandGold tracking-tighter">
-            Event's
+          <div onClick={()=>navigate("")} className="text-2xl font-black tracking-tighter font-heading text-brandPrimary dark:text-brandGold">
+            Events
           </div>
 
           {/* Links */}
@@ -20,8 +20,8 @@ function Layout() {
             <NavItem to="past-events"  label="Past Events" />
             <NavItem to="accomplishments"  label="Awards" />
             {/* <NavItem to="emerging-awards"  label="Emerging Awards " /> */}
-            <NavItem to="company-journey"  label="Company Journey" />
-            <NavItem to="media-coverage"  label="Culture at RiskMan" />
+            {/* <NavItem to="company-journey"  label="Company Journey" /> */}
+            <NavItem to="media-coverage"  label="Culture At RiskMan" />
           </div>
         </div>
       </nav>
@@ -38,13 +38,28 @@ function Layout() {
 const NavItem = ({ to, icon="", label }) => (
   <NavLink
     to={to}
+    // className={({ isActive }) => `
+    //   flex items-center text-[12px] gap-2 px-4 py-2 rounded-lg font-bold transition-all duration-200
+    //   ${isActive 
+    //     ? "bg-brandPrimary text-white shadow-md dark:bg-brandGold dark:text-brandDark" 
+    //     : "text-gray-600 dark:text-gray-400 hover:bg-brandPrimary/10 dark:hover:bg-brandGold/10 hover:text-brandPrimary dark:hover:text-brandGold"
+    //   }
+    // `}
+
+
     className={({ isActive }) => `
-      flex items-center text-[12px] gap-2 px-4 py-2 rounded-lg font-bold transition-all duration-200
-      ${isActive 
-        ? "bg-brandPrimary text-white shadow-md dark:bg-brandGold dark:text-brandDark" 
-        : "text-gray-600 dark:text-gray-400 hover:bg-brandPrimary/10 dark:hover:bg-brandGold/10 hover:text-brandPrimary dark:hover:text-brandGold"
-      }
-    `}
+  flex items-center gap-2 px-4 py-2 rounded-lg
+  text-[13px] sm:text-[14px]
+  font-extrabold tracking-wide
+  transition-all duration-200
+  border-[1px] border-brandPrimary dark:border-brandGold
+  ${isActive 
+    ? "bg-brandPrimary text-white shadow-md dark:bg-brandGold dark:text-brandDark" 
+    : "text-gray-700 dark:text-gray-300 hover:bg-brandPrimary/10 dark:hover:bg-brandGold/10 hover:text-brandPrimary dark:hover:text-brandGold"
+  }
+`}
+
+    
   >
     {icon}
     <span className="hidden sm:inline">{label}</span>

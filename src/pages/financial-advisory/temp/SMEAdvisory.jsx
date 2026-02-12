@@ -2,11 +2,11 @@ import React from 'react';
 
 const SMEAdvisory = () => {
   const benefits = [
-    "Guidance on organic growth and business expansion [cite: 58]",
-    "Efficient financial planning & optimising cost structure [cite: 58]",
-    "Budgeting, forecasting, and tax planning [cite: 58]",
-    "Financial reporting and digital applications to optimise operation [cite: 58]",
-    "Risk management and varied compliance support [cite: 58]"
+    "Guidance on organic growth and business expansion",
+    "Efficient financial planning & optimising cost structure",
+    "Budgeting, forecasting, and tax planning",
+    "Financial reporting and digital applications to optimise operation",
+    "Risk management and varied compliance support"
   ];
 
   return (
@@ -21,7 +21,7 @@ const SMEAdvisory = () => {
                 Support for <span className="text-brandAccent">Small Businesses</span>
               </h2>
               <p className="font-sans text-lg leading-relaxed text-brandLight/80">
-                Financial advisory services are highly beneficial for small businesses as well[cite: 57]. We provide the expertise needed to navigate both challenges and opportunities[cite: 59].
+                Financial advisory services are highly beneficial for small businesses as well. We provide the expertise needed to navigate both challenges and opportunities.
               </p>
             </div>
 
@@ -48,7 +48,7 @@ const SMEAdvisory = () => {
 
               <div className="p-6 mt-12 border-l-4 bg-brandAccent/5 border-brandAccent rounded-r-xl">
                 <p className="font-sans italic font-medium text-brandDark dark:text-brandAccent">
-                  Financial advisors can be a valuable partner for small businesses, providing the guidance needed to run a successful enterprise[cite: 59].
+                  Financial advisors can be a valuable partner for small businesses, providing the guidance needed to run a successful enterprise.
                 </p>
               </div>
             </div>

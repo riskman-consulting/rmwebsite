@@ -13,7 +13,7 @@ const industriesData = [
     icon: "zap",
     image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&h=1000&fit=crop",
     tag: "ENERGY SECTOR",
-    path: "/industries/energy-utilities"
+    // path: "/industries/energy-utilities"
   },
   {
     id: "retail",
@@ -24,7 +24,7 @@ const industriesData = [
     icon: "cart",
     image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=1000&fit=crop",
     tag: "RETAIL INDUSTRY",
-    path: "/industries/retail-consumer"
+    // path: "/industries/retail-consumer"
   },
   {
     id: "healthcare",
@@ -35,7 +35,7 @@ const industriesData = [
     icon: "heart",
     image: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&h=1000&fit=crop",
     tag: "HEALTHCARE SECTOR",
-    path: "/industries/healthcare"
+    // path: "/industries/healthcare"
   },
   {
     id: "manufacturing",
@@ -46,7 +46,7 @@ const industriesData = [
     icon: "factory",
     image: "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&h=1000&fit=crop",
     tag: "MANUFACTURING",
-    path: "/industries/manufacturing"
+    // path: "/industries/manufacturing"
   },
   {
     id: "technology",
@@ -57,7 +57,7 @@ const industriesData = [
     icon: "monitor",
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=1000&fit=crop",
     tag: "TECH INDUSTRY",
-    path: "/industries/it-consulting"
+    // path: "/industries/it-consulting"
   },
   {
     id: "banking",
@@ -68,7 +68,7 @@ const industriesData = [
     icon: "home",
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=1000&fit=crop",
     tag: "FINANCIAL SERVICES",
-    path: "/industries/banking-insurance"
+    // path: "/industries/banking-insurance"
   },
 ];
 
@@ -132,10 +132,10 @@ export function IndustryGrid() {
             >
               {/* Image Section */}
               <div 
-                className="relative h-64 overflow-hidden cursor-pointer"
+                className="relative h-64 overflow-hidden cursor-auto"
                 onMouseEnter={() => {
                   setHoveredCard(index);
-                  handleImageHover(industry.path);
+                  // handleImageHover(industry.path);
                 }}
                 onMouseLeave={() => {
                   setHoveredCard(null);

@@ -15,6 +15,15 @@ import image14 from "./team_lunch_1.jpeg"
 import image15 from "./team_lunch_2.jpeg"
 import image16 from "./team_lunch_3.jpeg"
 
+import image17 from "./team_birthday.jpeg";
+import image18 from "./team_birthday_1.jpeg";
+import image19 from "./team_birthday_2.jpeg";
+import image20 from "./team_birthday_3.jpeg";
+
+import image21 from "./ganesh_chaturthi.jpeg";
+
+
+
 
 
 export const TEAM_LUNCH_DECEMBER_2023_Images = [
@@ -34,6 +43,11 @@ export const TEAM_LUNCH_DECEMBER_2023_Images = [
     image14,
     image15,
     image16,
+    image17,
+    image18,
+    image19,
+    image20,
+    image21,
    
 
 ]

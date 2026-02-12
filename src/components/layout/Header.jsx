@@ -90,7 +90,6 @@ const getMegaData = (key) => {
 };
 
 export default function Header() {
-  const closeRef = useRef(null);
   const menuRefs = useRef({});
 
   const [theme, setTheme] = useState("light");
@@ -116,20 +115,14 @@ export default function Header() {
     document.documentElement.classList.toggle("dark", newTheme === "dark");
   };
 
-  const handleMouseEnter = (itemLabel) => {
-    if (closeRef.current) clearTimeout(closeRef.current);
-    
+  const handleMenuToggle = (itemLabel) => {
     const menuElement = menuRefs.current[itemLabel];
     if (menuElement) {
       const rect = menuElement.getBoundingClientRect();
       setMenuPosition({ left: rect.left });
     }
-    
-    setOpenMenu(itemLabel);
-  };
 
-  const handleMouseLeave = () => {
-    closeRef.current = setTimeout(() => setOpenMenu(null), 120);
+    setOpenMenu((prev) => (prev === itemLabel ? null : itemLabel));
   };
 
   if (!mounted) return null;
@@ -145,10 +138,7 @@ export default function Header() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
             className="fixed inset-0 z-[90] bg-black/20 dark:bg-black/40 backdrop-blur-xl"
-            onMouseEnter={() => {
-              if (closeRef.current) clearTimeout(closeRef.current);
-              setOpenMenu(null);
-            }}
+            onClick={() => setOpenMenu(null)}
           />
         )}
       </AnimatePresence>
@@ -219,17 +209,27 @@ export default function Header() {
                     key={item.label}
                     ref={(el) => (menuRefs.current[item.label] = el)}
                     className="relative"
-                    onMouseEnter={() => handleMouseEnter(item.label)}
-                    onMouseLeave={handleMouseLeave}
                   >
                     <div className="flex items-center gap-1 text-sm font-medium">
-                      <a
-                        href={item.path}
-                        className="transition-colors text-[#001F3F] dark:text-[#F5F5F5] hover:text-[#004080] dark:hover:text-[#FFC000] whitespace-nowrap"
+                      <button
+                        type="button"
+                        onClick={() => handleMenuToggle(item.label)}
+                        aria-expanded={openMenu === item.label}
+                        aria-controls={`mega-${item.key}`}
+                        className={`transition-colors whitespace-nowrap ${
+                          openMenu === item.label
+                            ? "text-[#004080] dark:text-[#FFC000] font-bold"
+                            : "text-[#001F3F] dark:text-[#F5F5F5]"
+                        }`}
                       >
                         {item.label}
-                      </a>
-                      <ChevronDown size={14} className="text-[#001F3F] dark:text-[#F5F5F5]" />
+                      </button>
+                      <ChevronDown
+                        size={14}
+                        className={`transition-transform duration-300 ${
+                          openMenu === item.label ? "rotate-180 text-[#004080] dark:text-[#FFC000]" : "text-[#001F3F] dark:text-[#F5F5F5]"
+                        }`}
+                      />
                     </div>
 
                     {/* MEGA MENU - Positioned relative to menu item */}
@@ -247,6 +247,7 @@ export default function Header() {
                             maxWidth: getMegaData(item.key).length === 1 ? '400px' : 
                                       getMegaData(item.key).length === 2 ? '700px' : '920px'
                           }}
+                          id={`mega-${item.key}`}
                         >
                           <div className="grid gap-6" style={{ gridTemplateColumns: `repeat(${getMegaData(item.key).length}, 1fr)` }}>
                             {getMegaData(item.key).map((section, i) => (
