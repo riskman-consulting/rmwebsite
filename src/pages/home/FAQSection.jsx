@@ -28,16 +28,17 @@ const FAQSection = () => {
   ];
 
   return (
-    <section
-      className="relative py-24 px-6 overflow-hidden bg-[#F8FAFC] dark:bg-bgDark"
-      style={{
-        backgroundImage: `url(${heroImg})`,
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "right center",
-        backgroundSize: "contain",
-      }}
-    >
-      {/* Soft white overlay for readability */}
+    <section className="relative py-24 px-10 overflow-hidden bg-[#F8FAFC] dark:bg-bgDark min-h-[720px]">
+      
+      {/* ✅ Fixed Background Image Layer (no resize fluctuation) */}
+      <div
+        className="absolute inset-0 bg-no-repeat bg-right bg-contain pointer-events-none"
+        style={{
+          backgroundImage: `url(${heroImg})`,
+        }}
+      />
+
+      {/* Overlay */}
       <div className="absolute inset-0 bg-white/70 dark:bg-bgDark/80 backdrop-blur-[1px]" />
 
       {/* LEFT CONTENT */}
@@ -64,15 +65,13 @@ const FAQSection = () => {
             return (
               <div
                 key={index}
-                className="bg-white border border-gray-200 rounded-2xl shadow-sm"
+                className="bg-white border border-gray-200 rounded-2xl max-w-[600px] shadow-sm"
               >
                 <button
-                  onClick={() =>
-                    setOpenIndex(isOpen ? null : index)
-                  }
+                  onClick={() => setOpenIndex(isOpen ? null : index)}
                   className="w-full flex items-center justify-between px-7 py-6 text-left"
                 >
-                  <span className="text-[16px] font-semibold text-gray-700 pr-6">
+                  <span className="text-[16px] font-semibold text-gray-700 pr-2">
                     {faq.question}
                   </span>
 
