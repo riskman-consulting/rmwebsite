@@ -88,7 +88,8 @@ export default function HeroSection() {
         }
       `}</style>
      
-      <section className="relative flex flex-col w-full h-screen overflow-hidden md:-top-10 lg:-top-20 bg-zinc-950 md:flex-row">
+      {/* <section className="relative flex flex-col w-full h-screen overflow-hidden md:-top-10 lg:-top-20 bg-zinc-950 md:flex-row"> */}
+      <section className="relative flex flex-col w-full h-screen overflow-hidden pt-[128px] md:pt-0 md:-top-10 lg:-top-20 bg-zinc-950 md:flex-row">
        
         {/* Left Content Area */}
         <div className="relative w-full b md:w-[65%] h-full flex items-center z-20 px-6 md:px-12 lg:px-16 bg-zinc-950 overflow-hidden">
