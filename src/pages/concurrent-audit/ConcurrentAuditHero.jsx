@@ -123,7 +123,7 @@ const ConcurrentAuditHero = () => {
             <div className="absolute top-[100px] right-[-150px] w-[600px] h-[600px] border border-brandGold/10 rounded-full opacity-30 animate-[spin_25s_linear_infinite]" />
             <div className="absolute top-[150px] right-[-100px] w-[450px] h-[450px] border border-dashed border-brandAccent/5 rounded-full animate-[spin_35s_linear_infinite_reverse]" />
 
-            <div className="container relative z-10 w-full">
+            <div className="container relative z-10 w-full px-6 lg:px-20">
                 <div className="grid items-center gap-12 lg:grid-cols-2">
                     <div className="max-w-[750px]">
                         <motion.div

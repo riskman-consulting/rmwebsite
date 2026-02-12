@@ -121,7 +121,7 @@ const Inventory = () => {
 
   return (
     <section className="py-20 bg-white">
-      <div className="container px-4 mx-auto">
+      <div className="container px-6 mx-auto lg:px-20">
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl font-heading text-brandDark">
             Comprehensive Vendor Inventory and Classification

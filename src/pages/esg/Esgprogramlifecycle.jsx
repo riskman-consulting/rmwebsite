@@ -571,7 +571,7 @@ const ESGProgramLifecycle = () => {
 
   return (
     <section className="py-12 bg-white dark:bg-surfaceDark">
-      <div className="container">
+      <div className="container px-6 lg:px-20">
         <div className="mb-10 text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
             RiskMan's Global ESG Program Methodology

@@ -52,7 +52,7 @@ import governanceImg from "../../assets/images/tprm/governance.jpg";
 const Governance = () => {
   return (
     <section className="py-20 bg-bgLight">
-      <div className="container px-4 mx-auto">
+      <div className="container px-6 mx-auto lg:px-20">
         <div className="flex flex-col items-center gap-12 lg:flex-row">
           <div className="lg:w-1/2">
             <div className="relative overflow-hidden border-4 border-white shadow-2xl rounded-2xl">

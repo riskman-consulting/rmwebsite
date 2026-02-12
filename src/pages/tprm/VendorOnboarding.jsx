@@ -135,7 +135,7 @@ const Onboarding = () => {
         <div className="absolute top-0 right-0 w-1/2 h-full transform translate-x-20 skew-x-12 bg-brandNavy"></div>
       </div>
 
-      <div className="container relative z-10 px-4 mx-auto">
+      <div className="container relative z-10 px-6 mx-auto lg:px-20">
         <div className="flex flex-col items-center gap-16 lg:flex-row">
           <div className="lg:w-1/2">
             <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading">

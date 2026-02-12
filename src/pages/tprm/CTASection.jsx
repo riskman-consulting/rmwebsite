@@ -90,7 +90,7 @@ const SupplyChain = () => {
         />
       </div>
       
-      <div className="container relative z-10 px-4 mx-auto text-center">
+      <div className="container relative z-10 px-6 mx-auto text-center lg:px-20">
         <h2 className="mb-6 text-3xl font-bold text-white md:text-5xl font-heading">
           Strengthen Your Supply Chain Integrity
         </h2>

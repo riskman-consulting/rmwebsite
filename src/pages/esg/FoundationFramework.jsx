@@ -89,7 +89,7 @@ const FoundationalFrameworks = () => {
 
   return (
     <section className="py-20 bg-bgLight dark:bg-bgDark">
-      <div className="container">
+      <div className="container px-6 lg:px-20">
         {/* Section Header */}
         <div className="mb-16 text-center">
           <p className="mb-3 text-sm font-semibold tracking-wider uppercase text-brandPrimary dark:text-brandGold">

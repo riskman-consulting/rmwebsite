@@ -3,7 +3,7 @@ import React from 'react';
 export default function ThreeLinesModel() {
   return (
     <section className="py-16 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
-      <div className="container max-w-6xl px-6 mx-auto">
+      <div className="container max-w-6xl px-6 mx-auto lg:px-20">
         {/* Section Header */}
         <h2 className="mb-8 text-4xl font-bold text-brandDark dark:text-brandAccent">
           CSA Within the Three Lines Model

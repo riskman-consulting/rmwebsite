@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 const OrganizationWideImplementationSection = () => {
   return (
     <section className="py-16 bg-white dark:bg-bgDark">
-      <div className="px-6 mx-auto max-w-7xl">
+      <div className="px-6 mx-auto lg:px-20 max-w-7xl">
 
         {/* Section Heading */}
         <motion.h2

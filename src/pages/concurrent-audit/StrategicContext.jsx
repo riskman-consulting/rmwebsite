@@ -79,7 +79,7 @@ const StrategicContext = () => {
             {/* Decorative Background */}
             <div className="absolute top-1/2 left-0 w-64 h-64 bg-brandPrimary/5 rounded-full blur-[100px] pointer-events-none" />
 
-            <div className="container relative z-10">
+            <div className="container relative z-10 px-6 lg:px-20">
                 <div className="inline-flex items-center gap-3 font-mono text-[0.7rem] font-semibold tracking-[4px] uppercase text-brandAccent dark:text-white mb-6">
                     <div className="w-5 h-[1px] bg-brandAccent" />
                     Strategic Context

@@ -85,7 +85,7 @@ import monitoringImg from "../../assets/images/tprm/monitoring.jpg"
 const Monitoring = () => {
   return (
     <section className="py-20 bg-white">
-      <div className="container px-4 mx-auto">
+      <div className="container px-6 mx-auto md:px-20">
         <div className="flex flex-col items-center gap-12 md:flex-row">
           <div className="order-2 md:w-1/2 md:order-1">
             <img 

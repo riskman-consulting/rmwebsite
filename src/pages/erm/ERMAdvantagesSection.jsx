@@ -52,8 +52,8 @@ const advantages = [
 
 const ERMAdvantagesSection = () => {
   return (
-    <section className="relative py-24 overflow-hidden bg-bgLight dark:bg-bgDark">
-      <div className="container relative z-10">
+    <section className="relative overflow-hidden py-14 md:py-20 bg-bgLight dark:bg-bgDark">
+      <div className="container relative z-10 px-6 lg:px-20">
 
         {/* Top Row */}
         <div className="grid items-center grid-cols-1 gap-16 mb-20 md:grid-cols-2">

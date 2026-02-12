@@ -20,7 +20,7 @@ const Hero = () => {
       </div>
       
       {/* Content */}
-      <div className="container relative z-10 flex flex-col items-center px-4 py-24 mx-auto text-center sm:py-32 lg:py-40">
+      <div className="container relative z-10 flex flex-col items-center px-6 py-24 mx-auto text-center lg:px-20 sm:py-32 lg:py-40">
         <div className="mb-6 animate-float">
           <Shield className="w-16 h-16 text-brandAccent" />
         </div>

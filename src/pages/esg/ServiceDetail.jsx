@@ -59,7 +59,7 @@ const ServiceDetails = () => {
 
   return (
     <section className="py-20 bg-white dark:bg-surfaceDark">
-      <div className="container">
+      <div className="container px-6 lg:px-20">
         <div className="max-w-6xl mx-auto">
           {/* Service Details */}
           {/* <div className="mb-20 space-y-12">

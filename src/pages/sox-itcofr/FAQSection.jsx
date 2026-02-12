@@ -11,11 +11,11 @@ function FAQSection() {
 
   return (
     <section className="py-20 bg-white dark:bg-surfaceDark">
-      <div className="container">
+      <div className="container px-6 lg:px-20">
 
         {/* Header */}
         <div className="max-w-4xl mx-auto mb-16 text-center">
-          <h2 className="mb-6 text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-brandDark dark:text-white">
+          <h2 className="mb-6 text-3xl font-extrabold sm:text-4xl md:text-5xl font-heading text-brandDark dark:text-white">
             Frequently Asked Questions
           </h2>
         </div>
@@ -25,19 +25,15 @@ function FAQSection() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="overflow-hidden bg-white border rounded-xl
-                         dark:bg-surfaceDark border-borderLight dark:border-borderDark
-                         transition-all duration-300 hover:shadow-xl"
+              className="overflow-hidden transition-all duration-300 bg-white border rounded-xl dark:bg-surfaceDark border-borderLight dark:border-borderDark hover:shadow-xl"
             >
 
               {/* Question */}
               <button
                 onClick={() => toggleFaq(index)}
-                className="flex items-center justify-between w-full px-6 sm:px-8 py-5 text-left
-                           hover:bg-bgLight dark:hover:bg-bgDark/50
-                           transition-colors duration-300"
+                className="flex items-center justify-between w-full px-6 py-5 text-left transition-colors duration-300 sm:px-8 hover:bg-bgLight dark:hover:bg-bgDark/50"
               >
-                <span className="pr-4 text-base sm:text-lg md:text-xl font-semibold font-heading text-brandDark dark:text-white">
+                <span className="pr-4 text-base font-semibold sm:text-lg md:text-xl font-heading text-brandDark dark:text-white">
                   {faq.question}
                 </span>
 
@@ -58,8 +54,8 @@ function FAQSection() {
                               : 'grid-rows-[0fr] opacity-0'}`}
               >
                 <div className="overflow-hidden">
-                  <div className="px-6 sm:px-8 pb-6">
-                    <p className="text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+                  <div className="px-6 pb-6 sm:px-8">
+                    <p className="text-base leading-relaxed text-gray-600 sm:text-lg dark:text-gray-300">
                       {faq.answer}
                     </p>
                   </div>

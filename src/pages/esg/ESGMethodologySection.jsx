@@ -62,7 +62,7 @@ const ESGMethodologySection = () => {
 
   return (
     <section className="py-20 lg:py-32 bg-bgLight dark:bg-bgDark">
-      <div className="container">
+      <div className="container px-6 lg:px-20">
         {/* Section Header */}
         <div className="mb-20 text-center">
           <div className="inline-block px-4 py-1.5 mb-6 border rounded-full bg-brandPrimary/5 border-brandPrimary/10 dark:border-brandGold/20">
