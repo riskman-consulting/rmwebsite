@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import Header from './components/layout/Header'
+// import Header from './components/layout/Header'
 import NotFound from './pages/notFound'
-
+import Header from './components/nav/Header'
 import Home from './pages/home/Home'
 // import ServicesList from './pages/services/ServicesList'
 import IndustriesList from './pages/industries/IndustriesList'

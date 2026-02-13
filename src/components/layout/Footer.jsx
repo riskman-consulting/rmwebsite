@@ -11,6 +11,7 @@ import {
   Phone,
 } from "lucide-react";
 import { useState, useEffect } from "react";
+import Subscriber from "../common/Subscriber"
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -124,21 +125,7 @@ export default function Footer() {
               Get the latest insights and updates delivered to your inbox.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="example@gmail.com"
-                className="flex-1 px-4 py-3 text-sm transition-colors border rounded-lg text-brandDark dark:text-white bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark focus:outline-none focus:ring-2 focus:ring-brandPrimary dark:focus:ring-brandAccent"
-              />
-              <motion.button
-                onClick={handleNewsletterSubmit}
-                className="px-8 py-3 text-sm font-semibold text-white transition-all duration-300 rounded-lg bg-gradient-to-r from-brandPrimary via-brandNavy to-brandDark dark:bg-gradient-to-r dark:from-brandAccent dark:via-brandGold dark:to-yellow-500 dark:text-brandDark hover:shadow-lg"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Subscribe Now
-              </motion.button>
+              <Subscriber/>
             </div>
           </div>
         </div>
