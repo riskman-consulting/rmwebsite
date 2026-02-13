@@ -87,14 +87,14 @@ const ISOTISAXFAQ = () => {
     ];
 
     return (
-        <section className="relative w-full py-24 overflow-hidden sm:py-32 bg-brandLight dark:bg-bgDark" id="faq">
+        <section className="relative w-full py-14 md:py-20 overflow-hidden  bg-brandLight dark:bg-bgDark" id="faq">
             {/* Background */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brandAccent/5 rounded-full blur-[120px]" />
                 <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brandPrimary/5 rounded-full blur-[100px]" />
             </div>
 
-            <div className="w-full px-5 sm:px-8 lg:px-12 xl:px-14 mx-auto max-w-[1280px] relative z-10">
+            <div className="w-full px-6 lg:px-20 mx-auto max-w-[1280px] relative z-10">
                 <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
                     {/* Left column - Header & Image */}
                     <div className="lg:col-span-2">

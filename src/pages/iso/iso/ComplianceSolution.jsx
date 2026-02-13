@@ -75,7 +75,7 @@ const ComplianceSolutions = () => {
     };
 
     return (
-        <section className="relative w-full px-5 py-24 overflow-hidden sm:px-8 lg:px-12 xl:px-14 sm:py-32 bg-brandLight dark:bg-bgDark" id="solutions">
+        <section className="relative w-full px-6 py-14 overflow-hidden lg:px-20 md:py-20 bg-brandLight dark:bg-bgDark" id="solutions">
             {/* Background decoration */}
             <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brandAccent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brandPrimary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none" />

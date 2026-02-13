@@ -87,14 +87,14 @@ const ISO22301FAQ = () => {
     ];
 
     return (
-        <section className="relative w-full py-24 overflow-hidden sm:py-32 bg-brandLight dark:bg-bgDark" id="faq">
+        <section className="relative w-full py-14 md:py-20 overflow-hidden sm:py-32 bg-brandLight dark:bg-bgDark" id="faq">
             {/* Background elements */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-1/4 -right-24 w-96 h-96 bg-brandAccent/5 rounded-full blur-[120px]" />
                 <div className="absolute bottom-1/4 -left-24 w-96 h-96 bg-brandPrimary/5 rounded-full blur-[120px]" />
             </div>
 
-            <div className="w-full px-5 sm:px-8 lg:px-12 xl:px-14 mx-auto max-w-[1280px] relative z-10">
+            <div className="w-full px-6 lg:px-20 mx-auto max-w-[1280px] relative z-10">
                 <div className="grid gap-16 lg:grid-cols-12">
                     {/* Header Side */}
                     <div className="lg:col-span-5">

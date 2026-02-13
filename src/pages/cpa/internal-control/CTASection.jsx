@@ -2,8 +2,8 @@ import React from 'react'
 
 function CTASection() {
   return (
-        <section className="py-20">
-        <div className="container text-center">
+        <section className="py-14 md:py-20">
+        <div className="container px-6 lg:px-20 text-center">
           <div className="bg-brandPrimary rounded-3xl p-12 lg:p-20 text-white shadow-2xl relative overflow-hidden">
             <h2 className="font-heading text-3xl lg:text-5xl font-bold mb-6">Build A Resilient Organization</h2>
             <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto font-medium">

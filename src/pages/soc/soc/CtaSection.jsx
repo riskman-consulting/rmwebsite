@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 function CtaSection() {
   const navigator = useNavigate()
   return (
-    <section className="container py-20">
+    <section className="container px-6 lg:px-20">
         <div className="bg-brandGold rounded-[2.5rem] p-10 lg:p-20 text-center text-brandDark shadow-2xl">
           <h2 className="mb-6 text-3xl font-extrabold font-heading md:text-5xl">Turn SOC from Obligation into Advantage</h2>
           <p className="max-w-2xl mx-auto mb-10 text-xl font-medium opacity-80">

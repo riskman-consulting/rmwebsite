@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const FinancialHero = () => {
   const navigator=useNavigate();
   return (
-    <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-brandDark transition-colors duration-300">
+    <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-brandDark transition-colors duration-300 pt-10">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -16,7 +16,7 @@ const FinancialHero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-brandDark via-brandDark/80 to-transparent" />
       </div>
 
-      <div className="container relative z-10 px-5 mx-auto py-14 md:py-20 lg:py-24 sm:px-8">
+      <div className="container relative z-10 px-6 mx-auto py-14 lg:px-20">
         <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-12">
           
           {/* Text Content */}

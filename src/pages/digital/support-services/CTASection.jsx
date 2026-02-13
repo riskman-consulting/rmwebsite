@@ -12,7 +12,7 @@ export const CTASection = () => {
                 <div className="absolute -bottom-1/2 -left-1/2 w-[800px] h-[800px] bg-brandNavy/50 rounded-full blur-[120px]"></div>
             </div>
 
-            <div className="container relative z-10 px-4 mx-auto text-center sm:px-6 lg:px-8">
+            <div className="container relative z-10 px-6 mx-auto text-center lg:px-20">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}

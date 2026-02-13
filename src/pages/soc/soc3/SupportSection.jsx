@@ -3,8 +3,8 @@ import React from 'react'
 
 function SupportSection() {
   return (
-     <section className="py-20 bg-brandNavy text-white overflow-hidden">
-        <div className="container grid lg:grid-cols-2 gap-16 items-center">
+     <section className="py-14 md:py-20 bg-brandNavy text-white overflow-hidden">
+        <div className="container px-6 lg:px-20 grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-brandGold/20 rounded-full blur-3xl" />
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-8 relative">How SOC 3 Supports <br/><span className="text-brandGold">Go-To-Market</span></h2>

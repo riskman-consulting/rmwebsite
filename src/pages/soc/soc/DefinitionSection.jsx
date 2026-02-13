@@ -2,7 +2,7 @@ import React from 'react'
 
 function DefinitionSection() {
   return (
-    <section className="py-20 container">
+    <section className="py-14 md:py-20 container px-6 lg:px-20">
         <div className="max-w-4xl mx-auto bg-brandNavy text-white rounded-[2rem] p-10 lg:p-16 relative overflow-hidden">
           <div className="relative z-10">
             <h2 className="font-heading text-3xl font-bold mb-6">What Is SOC Compliance?</h2>

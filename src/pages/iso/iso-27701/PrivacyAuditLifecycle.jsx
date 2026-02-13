@@ -31,7 +31,7 @@ const PrivacyAuditLifecycle = () => {
 
     return (
         <section
-            className="w-full px-5 py-20 sm:px-8 lg:px-12 xl:px-14 sm:py-28 bg-brandDark dark:bg-surfaceDark"
+            className="w-full py-14 md:py-20 px-6 lg:px-20 bg-brandDark dark:bg-surfaceDark"
             id="lifecycle"
         >
             <div className="mx-auto max-w-[1280px]">

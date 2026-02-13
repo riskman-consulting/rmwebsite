@@ -3,8 +3,8 @@ import React from 'react'
 
 function TransformationSection() {
   return (
-      <section className="py-24 bg-brandNavy text-white">
-        <div className="container">
+      <section className="py-14 md:py-20 bg-brandNavy text-white">
+        <div className="container px-6 lg:px-20">
           <div className="bg-surfaceDark p-12 lg:p-20 rounded-[3rem] border border-white/5 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-1/2 h-full bg-brandPrimary/10 -skew-x-12 translate-x-1/4"></div>
             <div className="relative z-10 grid lg:grid-cols-2 gap-16 items-center">

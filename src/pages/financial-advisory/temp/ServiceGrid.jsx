@@ -42,7 +42,7 @@ const ServiceCatalog = () => {
 
   return (
     <section className="py-24 bg-bgLight dark:bg-bgDark">
-      <div className="container">
+      <div className="container px-6 lg:px-20">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold font-heading md:text-4xl text-brandDark dark:text-white">
             Our Financial <span className="text-brandPrimary dark:text-brandGold">Advisory Solutions</span>

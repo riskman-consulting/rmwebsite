@@ -29,8 +29,8 @@ const TisaxFAQ = () => {
     const [openIndex, setOpenIndex] = useState(0);
 
     return (
-        <section className="py-24 bg-bgLight dark:bg-bgDark">
-            <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
+        <section className="py-14 md:py-20 bg-bgLight dark:bg-bgDark">
+            <div className="container px-6 mx-auto lg:px-20">
                 <div className="grid items-start gap-16 lg:grid-cols-12">
                     {/* Header Side */}
                     <div className="sticky lg:col-span-5 top-32">

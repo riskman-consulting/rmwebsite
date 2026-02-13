@@ -6,8 +6,8 @@ function FAQSection() {
   const [activeFaq, setActiveFaq] = useState(0); // Open first one by default
 
   return (
-     <section className="py-24 bg-bgLight dark:bg-bgDark transition-colors duration-300">
-        <div className="container max-w-4xl mx-auto px-4">
+     <section className="py-14 md:py-20 bg-bgLight dark:bg-bgDark transition-colors duration-300">
+        <div className="container max-w-4xl mx-auto px-6 lg:px-20">
           
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brandAccent/10 text-brandAccent mb-4">

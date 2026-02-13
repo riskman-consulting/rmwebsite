@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom'
 function ReportTypeSection() {
     const navigator = useNavigate()
   return (
-     <section className="py-20 bg-bgLight dark:bg-bgDark">
-        <div className="container">
+     <section className=" py-14 md:py-20 bg-bgLight dark:bg-bgDark">
+        <div className="container px-6 lg:px-20">
           <h2 className="font-heading text-3xl font-bold mb-10 text-center">SOC Report Types at a Glance</h2>
           <div className="overflow-x-auto rounded-2xl border border-borderLight dark:border-borderDark shadow-2xl">
             <table className="w-full text-left border-collapse bg-surfaceLight dark:bg-surfaceDark">

@@ -17,7 +17,7 @@ const HeroSection = () => {
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-brandPrimary/20 dark:via-brandGold/20 to-transparent" />
       </div>
 
-      <div className="container relative z-10">
+      <div className="container relative z-10 px-6 lg:px-20">
         <div className="grid items-center gap-16 lg:grid-cols-2">
           
           {/* 2. LEFT SIDE: CONTENT */}
@@ -31,7 +31,7 @@ const HeroSection = () => {
             </div>
             
             {/* Two-Line Title with Premium Styling */}
-            <h1 className="font-heading text-4xl md:text-4xl lg:text-5xl font-extrabold mb-8 leading-[1.1] text-brandDark dark:text-white tracking-tight">
+            <h1 className="font-heading text-4xl md:text-3xl lg:text-4xl font-extrabold mb-8 leading-[1.1] text-brandDark dark:text-white tracking-tight">
               Demonstrate <br />
               <span className="relative inline-block">
                 <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-brandPrimary to-brandNavy dark:from-brandGold dark:to-brandAccent">

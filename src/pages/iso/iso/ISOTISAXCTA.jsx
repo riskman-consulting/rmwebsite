@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const ISOTISAXCTA = () => {
     return (
-        <section className="relative w-full py-24 overflow-hidden sm:py-32" id="cta">
+        <section className="relative w-full py-14 md:py-20 overflow-hidden" id="cta">
             {/* Full background image */}
             <div className="absolute inset-0">
                 <img
@@ -24,7 +24,7 @@ const ISOTISAXCTA = () => {
                 <div className="absolute w-3 h-3 rounded-full top-1/3 right-1/3 bg-white/30 animate-float" style={{ animationDelay: '1s' }} />
             </div>
 
-            <div className="w-full px-5 sm:px-8 lg:px-12 xl:px-14 mx-auto max-w-[1280px] relative z-10">
+            <div className="w-full px-6 lg:px-20 mx-auto max-w-[1280px] relative z-10">
                 <div className="grid items-center gap-12 lg:grid-cols-2">
                     {/* Left content */}
                     <motion.div

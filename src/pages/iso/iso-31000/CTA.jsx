@@ -5,12 +5,12 @@ import { useNavigate } from 'react-router-dom';
 const CTA = () => {
   const navigator=useNavigate();
   return (
-    <section className="relative py-24 overflow-hidden bg-brandDark">
+    <section className="relative py-14 md:py-20 overflow-hidden bg-brandDark">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-[url('https://public.youware.com/users-website-assets/prod/bc9113de-c4e7-4bd4-b9f7-4a2e13ffb810/39108bb5693f4be886c73b5a63808691.jpg')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-brandDark/50 to-brandDark"></div>
 
-      <div className="container relative z-10 px-4 mx-auto text-center sm:px-6 lg:px-8">
+      <div className="container relative z-10 px-6 lg:px-20 mx-auto text-center">
         <h2 className="mb-6 text-4xl font-bold text-white md:text-5xl font-heading">
           Master Your Risk Landscape
         </h2>

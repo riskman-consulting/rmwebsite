@@ -28,7 +28,7 @@ const HypercareCard = ({ icon: Icon, title, description }) =>{
 export const HypercareSection = () => {
   return (
     <section className="relative py-24 bg-bgLight dark:bg-bgDark">
-      <div className="container px-4 mx-auto sm:px-6 lg:px-8">
+      <div className="container px-6 mx-auto lg:px-20">
         <div className="grid items-center grid-cols-1 gap-16 lg:grid-cols-2">
           
           <motion.div 

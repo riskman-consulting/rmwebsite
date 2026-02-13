@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const PolicyGovernance = () => {
   return (
-    <section className="relative py-24 overflow-hidden bg-brandDark">
+    <section className="relative overflow-hidden py-14 md:py-20 bg-brandDark">
       <div className="absolute inset-0 opacity-20">
         <img 
           src="https://pixabay.com/get/g6ad94061089051eb555697e2f850073668dfad669007b5e8671e00ee19ec793f222c7c612510f25412c42eb0d9dade88033a31ece1d86a7935e2aa1a0dedfe43_1280.jpg" 
@@ -17,7 +17,7 @@ const PolicyGovernance = () => {
       </div>
       <div className="absolute inset-0 bg-brandDark/90"></div>
 
-      <div className="container relative z-10 px-4 mx-auto sm:px-6 lg:px-8">
+      <div className="container relative z-10 px-6 mx-auto lg:px-20">
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <h2 className="mb-3 text-sm font-bold tracking-wider uppercase text-brandAccent">Compliance</h2>
           <h3 className="mb-6 text-3xl font-bold text-white md:text-4xl font-heading">

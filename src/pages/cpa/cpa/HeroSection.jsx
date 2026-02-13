@@ -4,7 +4,7 @@ import bg from "../../../assets/images/cpa/cpa/hero.png"
 
 function HeroSection() {
   return (
-    <section className="relative text-white py-24 lg:py-40 overflow-hidden">
+    <section className="relative text-white py-14 md:py-20 overflow-hidden">
 
       {/* Background Image */}
       <div
@@ -20,13 +20,13 @@ function HeroSection() {
         <Building2 className="absolute -right-10 bottom-0 w-[500px] h-[500px] text-brandAccent" />
       </div>
 
-      <div className="container relative z-10">
+      <div className="relative z-10 px-6 lg:px-20">
         <div className="max-w-4xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-brandPrimary text-white text-xs font-bold uppercase tracking-widest mb-6">
             Institutional Integrity
           </div>
 
-          <h1 className="font-heading text-5xl lg:text-7xl font-bold leading-tight mb-6">
+          <h1 className="font-heading text-3xl lg:text-4xl font-bold leading-tight mb-6">
             Advanced Assurance Solutions for <span className="text-brandAccent">Modern Organizations</span>
           </h1>
 

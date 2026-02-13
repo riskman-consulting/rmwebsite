@@ -17,7 +17,7 @@ const HeroSection = () => {
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-brandPrimary/20 dark:via-brandGold/20 to-transparent" />
       </div>
 
-      <div className="container relative z-10">
+      <div className="container relative z-10 px-6 lg:px-20">
         <div className="grid items-center gap-16 lg:grid-cols-2">
           
           {/* 2. LEFT SIDE: CONTENT */}

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const CTASection = () => {
   return (
-    <section className="relative py-16 overflow-hidden md:py-24 bg-gradient-to-br from-brandPrimary via-brandNavy to-brandDark dark:from-brandDark dark:via-brandNavy dark:to-brandPrimary">
+    <section className="relative py-14 overflow-hidden md:py-20 bg-gradient-to-br from-brandPrimary via-brandNavy to-brandDark dark:from-brandDark dark:via-brandNavy dark:to-brandPrimary">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -17,7 +17,7 @@ const CTASection = () => {
       <div className="absolute left-0 -translate-y-1/2 rounded-full top-1/2 w-96 h-96 bg-brandAccent/10 blur-3xl"></div>
       <div className="absolute right-0 -translate-y-1/2 rounded-full top-1/2 w-96 h-96 bg-brandGold/10 blur-3xl"></div>
 
-      <div className="container relative">
+      <div className="container relative px-6 lg:px-20">
         <div className="max-w-4xl mx-auto text-center">
           {/* Icon */}
           <div className="inline-flex items-center justify-center w-20 h-20 mb-8 rounded-full bg-brandAccent/20">

@@ -30,7 +30,7 @@ const ValueImpactDiagram = () => (
 export default function ValueSection() {
   return (
     <SectionWrapper id="value">
-      <div className="px-6 py-24 transition-colors duration-300 bg-slate-50 dark:bg-bgDark">
+      <div className="px-6 py-24 transition-colors duration-300 lg:px-20 bg-slate-50 dark:bg-bgDark">
         <div className="max-w-6xl mx-auto">
           <SectionTag>Business Value & Outcomes</SectionTag>
           <SectionTitle>From Documents to Business Enablers</SectionTitle>

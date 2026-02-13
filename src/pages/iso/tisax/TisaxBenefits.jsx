@@ -33,8 +33,8 @@ const benefits = [
 
 const TisaxBenefits = () => {
     return (
-        <section className="py-24 bg-bgLight dark:bg-bgDark">
-            <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
+        <section className="py-14 md:py-20 bg-bgLight dark:bg-bgDark">
+            <div className="container px-6 mx-auto lg:px-20">
                 <div className="grid items-center grid-cols-1 gap-12 mb-16 lg:grid-cols-12">
                     <div className="lg:col-span-7">
                         <motion.span

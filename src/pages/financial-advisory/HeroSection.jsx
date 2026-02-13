@@ -14,7 +14,7 @@ const HeroSection = () => {
       {/* Soft Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-brandPrimary/5 via-transparent to-brandPrimary/5 dark:from-brandAccent/10 dark:to-transparent" />
 
-      <div className="relative px-6 mx-auto max-w-7xl">
+      <div className="relative px-6 mx-auto lg:px-20 max-w-7xl">
         <div className="grid items-center gap-12 md:grid-cols-2">
 
           {/* LEFT CONTENT */}

@@ -21,7 +21,7 @@ const FeatureCard = ({ icon: Icon, title, description, className = "" }) => {
 export const DevTestingSection = () => {
     return (
         <section className="py-16 overflow-hidden bg-white dark:bg-surfaceDark">
-            <div className="container px-4 mx-auto sm:px-6 lg:px-8">
+            <div className="container px-6 mx-auto lg:px-20">
                 <div className="flex flex-col gap-16 lg:flex-row">
                     {/* Sticky Image Side */}
                     <div className="lg:w-1/2">

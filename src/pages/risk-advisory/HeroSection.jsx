@@ -101,7 +101,7 @@ const HeroSection = ({ data }) => {
       {/* Subtle background glow */}
       <div className="pointer-events-none absolute -top-40 right-0 h-96 w-96 rounded-full bg-brandAccent/15 blur-[140px]" />
 
-      <div className="container relative z-10 px-4 mx-auto sm:px-6 lg:px-8 lg:-top-10">
+      <div className="container relative z-10 px-8 mx-auto lg:px-20 lg:-top-10">
         <div className="grid items-center gap-16 lg:grid-cols-2">
 
           {/* LEFT: Content */}
@@ -122,7 +122,7 @@ const HeroSection = ({ data }) => {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="mb-6 text-4xl font-black leading-tight text-white font-heading sm:text-5xl md:text-5xl"
+              className="mb-6 text-3xl font-black leading-tight text-white font-heading md:text-4xl lg:text-5xl"
             >
               {data.title}
             </motion.h1>

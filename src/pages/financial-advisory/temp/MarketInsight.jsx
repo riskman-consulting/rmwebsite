@@ -29,8 +29,8 @@ const MarketInsight = () => {
   ];
 
   return (
-    <section className="py-24 transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-white">
-      <div className="container px-5 mx-auto sm:px-8">
+    <section className="transition-colors duration-300 py-14 md:py-20 bg-bgLight dark:bg-bgDark text-brandDark dark:text-white">
+      <div className="container px-6 mx-auto lg:px-20">
         <div className="grid items-center grid-cols-1 gap-16 lg:grid-cols-2">
           
           {/* Left Side: Problem Statement */}

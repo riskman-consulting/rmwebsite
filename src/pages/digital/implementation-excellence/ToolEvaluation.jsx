@@ -4,7 +4,7 @@ const ToolEvaluation = () => {
     return (
 
 <section className="bg-white py-14 md:py-20 dark:bg-surfaceDark">
-        <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
+        <div className="container px-6 mx-auto sm:px-20">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-4xl font-black font-heading md:text-5xl">
               Tool Evaluation & <span className="text-brandPrimary dark:text-brandGold">Optimization</span>

@@ -5,11 +5,11 @@ const CyberSection = () => {
   const cyberImage = "https://public.youware.com/users-website-assets/prod/9ff22b8d-6a23-4340-a80f-898c8b5c261b/af15115dc5e542d3909d88f5b1f182fe";
 
   return (
-    <section className="relative py-24 overflow-hidden text-white bg-brandNavy">
+    <section className="relative py-14 md:py-20 overflow-hidden text-white bg-brandNavy">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
       
-      <div className="container relative z-10 px-4 mx-auto">
+      <div className="container relative z-10 px-6 mx-auto lg:px-20">
         <div className="flex flex-col items-center gap-16 lg:flex-row-reverse">
           <div className="relative lg:w-1/2">
             <div className="absolute transform border-2 -inset-4 border-brandGold/30 rounded-2xl -rotate-3"></div>

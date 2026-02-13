@@ -45,14 +45,14 @@ const ImplementationRoadmap = () => {
     ];
 
     return (
-        <section className="relative w-full py-24 overflow-hidden sm:py-32 bg-surfaceLight dark:bg-bgDark" id="roadmap">
+        <section className="relative w-full py-14 overflow-hidden md:py-20 bg-surfaceLight dark:bg-bgDark" id="roadmap">
             {/* Background decorations */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-20 right-10 w-[400px] h-[400px] bg-brandAccent/5 rounded-full blur-[100px]" />
                 <div className="absolute bottom-20 left-10 w-[300px] h-[300px] bg-brandPrimary/5 rounded-full blur-[80px]" />
             </div>
 
-            <div className="w-full px-5 sm:px-8 lg:px-12 xl:px-14 mx-auto max-w-[1280px] relative z-10">
+            <div className="w-full px-6 lg:px-20 mx-auto max-w-[1280px] relative z-10">
                 {/* Header */}
                 <div className="mb-20 text-center">
                     <motion.span

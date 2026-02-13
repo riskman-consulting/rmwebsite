@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const CTASection = () => {
   return (
-    <section className="relative py-20 overflow-hidden md:py-32 bg-surfaceLight dark:bg-surfaceDark">
+    <section className="relative py-14 overflow-hidden md:py-20 bg-surfaceLight dark:bg-surfaceDark">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full">
@@ -13,7 +13,7 @@ const CTASection = () => {
         </div>
       </div>
 
-      <div className="container relative">
+      <div className="container relative px-6 lg:px-20">
         <div className="max-w-5xl mx-auto">
           <div className="relative p-12 overflow-hidden shadow-2xl bg-gradient-to-br from-brandPrimary via-brandNavy to-brandDark dark:from-brandNavy dark:to-brandDark rounded-3xl lg:p-16">
             {/* Pattern Overlay */}

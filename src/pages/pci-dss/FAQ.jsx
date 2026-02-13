@@ -53,8 +53,8 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-24 bg-white dark:bg-bgDark">
-      <div className="container px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="py-14 md:py-20 bg-white dark:bg-bgDark">
+      <div className="container px-6 lg:px-20">
         <div className="max-w-3xl mx-auto">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">

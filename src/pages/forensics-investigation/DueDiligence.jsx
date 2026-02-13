@@ -7,8 +7,8 @@ const DueDiligenceSection = () => {
   const fraudImage = "https://public.youware.com/users-website-assets/prod/9ff22b8d-6a23-4340-a80f-898c8b5c261b/a2c5f9ff022442b99be18037b98347f4";
 
   return (
-    <section className="py-24 bg-surfaceLight dark:bg-surfaceDark">
-      <div className="container px-4 mx-auto">
+    <section className="py-14 md:py-20 bg-surfaceLight dark:bg-surfaceDark">
+      <div className="container px-6 mx-auto lg:px-20">
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl font-heading text-brandNavy dark:text-white">
             Integrity Due Diligence and Compliance

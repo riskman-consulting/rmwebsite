@@ -3,8 +3,8 @@ import React from 'react'
 
 function BusinessSection() {
   return (
-     <section className="py-20 bg-brandDark text-white">
-        <div className="container">
+     <section className=" py-14 md:py-20 bg-brandDark text-white dark:bg-brandAccent">
+        <div className="container px-6 lg:px-20">
           <h2 className="font-heading text-3xl font-bold mb-12 text-center">Business Value for Leadership</h2>
           <div className="max-w-4xl mx-auto space-y-4">
             {[

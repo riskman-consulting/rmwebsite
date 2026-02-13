@@ -69,7 +69,7 @@ export default function Privacy() {
           <ul className="mt-4 space-y-3 list-none">
             <li className="flex items-start gap-3">
               <CheckCircle className="flex-shrink-0 mt-1 text-brandPrimary dark:text-brandAccent" size={16} />
-              <span>Operate and maintain our website</span>
+              <span>Manage our services and enusre website functionality</span>
             </li>
             <li className="flex items-start gap-3">
               <CheckCircle className="flex-shrink-0 mt-1 text-brandPrimary dark:text-brandAccent" size={16} />

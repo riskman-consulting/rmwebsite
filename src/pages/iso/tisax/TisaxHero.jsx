@@ -5,7 +5,7 @@ import bg from "../../../assets/images/tisax/hero.png";
 function HeroSection() {
   return (
     <section
-      className="relative py-24 overflow-hidden text-white lg:py-36"
+      className="relative py-14 md:py-20 overflow-hidden text-white"
       style={{
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover",
@@ -21,7 +21,7 @@ function HeroSection() {
         <div className="absolute right-0 w-1/2 h-full -translate-y-1/2 skew-x-12 border-l top-1/2 border-brandAccent/20 bg-surfaceDark"></div>
       </div>
 
-      <div className="container relative z-20">
+      <div className="container relative px-6 lg:px-20 z-20">
         <div className="max-w-3xl">
           {/* Label */}
           <div className="flex items-center gap-2 mb-6">

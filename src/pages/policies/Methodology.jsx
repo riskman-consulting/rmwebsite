@@ -4,7 +4,7 @@ import methodologyImg from "../../assets/images/policies/methodology-framework.p
 export default function MethodologySection() {
   return (
     <SectionWrapper id="methodology">
-      <div className="px-6 py-24 transition-colors duration-300 bg-slate-50 dark:bg-brandDark/30">
+      <div className="px-6 py-24 transition-colors duration-300 lg:px-20 bg-slate-50 dark:bg-brandDark/30">
         <div className="max-w-6xl mx-auto">
           <SectionTag>Execution</SectionTag>
           {/* <SectionTitle>Methodology and Execution Framework</SectionTitle> */}

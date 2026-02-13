@@ -3,8 +3,8 @@ import { CheckCircle2 } from 'lucide-react';
 
 const Governance = () => {
   return (
-    <section id="governance" className="py-24 transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark">
-      <div className="container px-4 mx-auto sm:px-6 lg:px-8">
+    <section id="governance" className="py-14 md:py-20 transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark">
+      <div className="container px-6 mx-auto lg:px-20">
         <div className="grid items-center gap-16 lg:grid-cols-2">
           <div className="relative">
             <div className="absolute w-64 h-64 rounded-full -top-10 -left-10 bg-brandGold/20 blur-3xl"></div>

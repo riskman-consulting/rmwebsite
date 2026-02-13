@@ -71,8 +71,8 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-24 bg-gray-50 dark:bg-bgDark/50">
-      <div className="container px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-14 md:py-20 bg-surfaceLight dark:bg-surfaceDark/50">
+      <div className="container px-6 lg:px-20">
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <span className="block mb-2 text-sm font-bold tracking-wider uppercase text-brandPrimary dark:text-brandGold">Our Expertise</span>
           <h2 className="mb-4 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">

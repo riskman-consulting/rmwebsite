@@ -10,7 +10,7 @@ const BRDSolutionDesign = () => {
     return (
 
           <section className="relative overflow-hidden bg-surfaceLight dark:bg-surfaceDark py-14 md:py-20">
-                <div className="container">
+                <div className="container px-6 lg:px-20">
                   <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-20">
                     <div className="order-2 lg:w-1/2 lg:order-1">
                       <img 

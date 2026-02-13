@@ -1,47 +1,3 @@
-
-
-// import { Helmet } from "react-helmet-async";
-
-// import CTASection from "./CTASection";
-// import FAQ from "./FAQ.";
-// import HeroSection from "./HeroSection";
-// import ServicesSection from "./ServicesSection";
-// import Offerings from "./Offerings";
-
-// const DigitalTransformationPage = () => {
-//   return (
-//     <main className="w-full overflow-hidden">
-// <Helmet>
-//   <title>Digital Transformation Services | RiskMan Consulting</title>
-//   <meta
-//     name="description"
-//     content=' Evolve your organizational digital transformation with RiskMan Consulting’s strategic PMO, implementation excellence, and support services.'
-//   />
-//   <link rel="canonical" href="https://www.riskman.in/digital-transformation" />
-// </Helmet>
-
-
-//       {/* 1. Hero Section */}
-//       <HeroSection/>
-
-//       {/* 2. Introduction / Journey */}
-//       <Offerings />
-
-//       {/* <ServicesSection /> */}
-
-//       {/* 3. ERM Advantages */}
-//       <CTASection />
-
-//       {/* 4. Strategic ERM Framework */}
-//       <FAQ />
-//     </main>
-//   );
-// };
-
-// export default DigitalTransformationPage;
-
-
-
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -129,84 +85,7 @@ function DigitalTransformationPage() {
       </Helmet>
 
       <div className="min-h-screen" style={{ fontFamily: 'Inter, sans-serif', backgroundColor: brandColors.bgLight }}>
-        {/* Hero Section */}
-        {/* <section 
-          className="relative py-24 overflow-hidden lg:py-32"
-          style={{
-            background: `linear-gradient(135deg, ${brandColors.brandDark} 0%, ${brandColors.brandPrimary} 100%)`
-          }}
-        >
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute inset-0" style={{
-              backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-              backgroundSize: '40px 40px'
-            }} />
-          </div>
-          
-          <div className="relative z-10 px-6 mx-auto max-w-7xl lg:px-8">
-            <div className="grid items-center gap-12 lg:grid-cols-2">
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                <h1 
-                  className="mb-6 text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl"
-                  style={{ fontFamily: 'Montserrat, sans-serif' }}
-                >
-                  Elevate Your Enterprise Through Digital Evolution
-                </h1>
-                <p className="mb-8 text-lg leading-relaxed text-gray-200 md:text-xl">
-                   RiskMan empowers your transformation journey by combining governance-driven execution with technical implementation excellence to deliver measurable business impact. 
-                </p>
-                <div className="flex flex-col gap-4 sm:flex-row">
-                  <Link to="/contact">
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="w-full px-8 py-4 text-lg font-semibold transition-all duration-300 rounded-lg shadow-xl sm:w-auto"
-                      style={{ 
-                        backgroundColor: brandColors.brandAccent,
-                        color: brandColors.brandDark
-                      }}
-                    >
-                      Book a Consultation
-                    </motion.button>
-                  </Link>
-                  <Link to="/services">
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="w-full px-8 py-4 text-lg font-semibold text-white transition-all duration-300 border-2 rounded-lg bg-white/10 backdrop-blur-sm border-white/30 hover:bg-white/20 sm:w-auto"
-                    >
-                      Our Other Services
-                    </motion.button>
-                  </Link>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="relative"
-              >
-                <motion.div
-                  animate={{ y: [0, -20, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="overflow-hidden shadow-2xl rounded-2xl"
-                >
-                  <img 
-                    src="https://images.unsplash.com/photo-1562600484-c6ef0ffe27a2"
-                    alt="Digital transformation and modern technology workspace"
-                    className="w-full h-auto"
-                  />
-                </motion.div>
-              </motion.div>
-            </div>
-          </div>
-        </section> */}
-
+   
     <section className="relative py-24 overflow-hidden lg:py-36">
       
       {/* background image */}
@@ -221,7 +100,7 @@ function DigitalTransformationPage() {
       {/* right glow accent */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-brandGold/10 blur-3xl" />
 
-      <div className="container relative px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
+      <div className="container relative px-6 mx-auto lg:px-20">
         <div className="max-w-3xl text-white">
 
           {/* badge */}
@@ -264,7 +143,7 @@ function DigitalTransformationPage() {
 
         {/* Core Offerings Section */}
         <section className="py-16 lg:py-24" style={{ backgroundColor: brandColors.surfaceLight }}>
-          <div className="px-6 mx-auto max-w-7xl lg:px-8">
+          <div className="px-6 mx-auto max-w-7xl lg:px-20">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -344,7 +223,7 @@ function DigitalTransformationPage() {
             background: `linear-gradient(135deg, ${brandColors.brandNavy} 0%, ${brandColors.brandPrimary} 100%)`
           }}
         >
-          <div className="max-w-4xl px-6 mx-auto text-center lg:px-8">
+          <div className="max-w-4xl px-6 mx-auto text-center lg:px-20">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -379,7 +258,7 @@ function DigitalTransformationPage() {
 
         {/* FAQ Section */}
         <section className="py-16 lg:py-24" style={{ backgroundColor: brandColors.bgLight }}>
-          <div className="max-w-4xl px-6 mx-auto lg:px-8">
+          <div className="max-w-4xl px-6 mx-auto lg:px-20">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

@@ -7,7 +7,7 @@ function HeroSection() {
   const navigator = useNavigate()
   return (
     <section
-      className="relative py-20 overflow-hidden text-white lg:py-32"
+      className="relative py-14 md:py-20 overflow-hidden text-white"
       style={{
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover",
@@ -17,7 +17,7 @@ function HeroSection() {
       {/* Dark overlay for readability */}
       <div className="absolute inset-0 bg-brandDark/85"></div>
 
-      <div className="container relative z-10">
+      <div className="container relative z-10 px-6 lg:px-20">
         <div className="max-w-3xl">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 text-sm font-bold border rounded-full bg-brandPrimary/30 border-brandAccent/30 text-brandAccent">

@@ -2,8 +2,8 @@ import React from 'react'
 
 function WhySoc2() {
   return (
-     <section className="py-20 bg-brandDark text-white">
-        <div className="container">
+     <section className="py-14 md:py-20 bg-brandDark text-white">
+        <div className="container px-6 lg:px-20">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-12 text-center underline decoration-brandGold decoration-4 underline-offset-8">
               Why SOC 2 Is Now a Sales Prerequisite

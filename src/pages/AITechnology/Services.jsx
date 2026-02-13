@@ -54,11 +54,11 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="relative py-24 overflow-hidden bg-bgLight">
+    <section id="services" className="relative overflow-hidden py-14 md:py-20 bg-bgLight">
       {/* Background Grid */}
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/grid-me.png')] opacity-5"></div>
       
-      <div className="container relative z-10 px-4 mx-auto md:px-6">
+      <div className="container relative z-10 px-6 mx-auto lg:px-20">
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <h2 className="mb-3 text-sm font-bold tracking-widest uppercase text-brandPrimary">Our Expertise</h2>
           <h3 className="mb-6 text-4xl font-bold md:text-5xl font-heading text-brandDark">

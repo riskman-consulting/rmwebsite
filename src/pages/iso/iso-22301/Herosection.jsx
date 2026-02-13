@@ -18,7 +18,7 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-brandDark via-brandDark/90 to-brandDark/60"></div>
       </div>
 
-      <div className="container relative z-10 grid items-center gap-12 px-4 mx-auto md:px-6 md:grid-cols-2">
+      <div className="container relative z-10 grid items-center gap-12  mx-auto lg:px-20 md:grid-cols-2">
         <div className="space-y-8 duration-700 animate-in slide-in-from-left">
           <div className="inline-flex items-center gap-2 px-4 py-2 border rounded-full bg-white/10 border-white/20 backdrop-blur-sm">
             <Shield className="w-4 h-4 text-brandAccent" />

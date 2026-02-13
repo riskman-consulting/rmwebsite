@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-brandDark/95 to-brandNavy/80 mix-blend-multiply"></div>
       </div>
 
-      <div className="container relative z-10 px-4 mx-auto sm:px-6 lg:px-8">
+      <div className="container relative z-10 px-6 mx-auto lg:px-20">
         <div className="max-w-3xl space-y-8 animate-float">
           <div className="inline-flex items-center gap-2 px-4 py-2 border rounded-full bg-white/10 border-white/20 backdrop-blur-sm">
             <ShieldCheck className="w-4 h-4 text-brandGold" />

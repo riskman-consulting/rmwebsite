@@ -32,8 +32,8 @@ const HeroSection = () => {
       <div className="absolute top-0 right-0 rounded-full w-96 h-96 bg-brandAccent/10 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 rounded-full w-72 h-72 bg-brandGold/10 blur-3xl"></div>
 
-      <div className="container relative z-10">
-        <div className="py-20 md:py-28 lg:py-36">
+      <div className="container relative z-10 px-6 lg:px-20">
+        <div className="py-14 md:py-20">
           <div className="max-w-4xl mx-auto text-center">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 border rounded-full bg-brandAccent/10 border-brandAccent/30">

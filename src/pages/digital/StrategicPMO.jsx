@@ -27,61 +27,6 @@ const StrategicPMO = () => {
   return (
     <div className="min-h-screen font-sans transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-brandLight">
       
-      {/* SECTION 1: HERO SECTION */}
-      {/* <section  className="relative py-20 lg:py-32">
-        <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
-          <div className="max-w-4xl">
-            <h1 className="mb-6 text-4xl font-bold leading-tight font-heading md:text-5xl lg:text-6xl">
-              Mastering Digital Complexity with <span className="text-brandPrimary dark:text-brandGold">Strategic PMO</span>
-            </h1>
-            <p className="mb-8 text-lg leading-relaxed md:text-xl opacity-90">
-              RiskMan Consulting drives transformation through governance-led execution, bridging the gap between strategy and realization with milestone tracking and rigorous project ownership.
-            </p>
-          </div>
-        </div>
-      </section> */}
-
-   {/* <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-
-  <div className="absolute inset-0 z-0">
-    <img
-      src={heroBg}
-      alt="Digital Transformation Background"
-      className="object-cover w-full h-full"
-    />
-    <div className="absolute inset-0 bg-brandDark/80 mix-blend-multiply"></div>
-    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-bgDark/90"></div>
-  </div>
-
-  <div className="container relative z-10 px-4 text-center">
-    <div className="animate-float">
-      <h1 className="mb-6 text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl font-heading">
-        Mastering Digital Complexity with{" "}
-        <span className="text-brandAccent">Strategic PMO</span>
-      </h1>
-      <p className="max-w-3xl mx-auto mb-10 text-lg leading-relaxed text-gray-200 md:text-xl">
-        RiskMan Consulting drives transformation through governance-led
-        execution, bridging the gap between strategy and realization with
-        milestone tracking and rigorous project ownership.
-      </p>
-      <div className="flex flex-wrap justify-center gap-4 mx-auto">
-                <button className="px-10 py-5 text-lg font-bold transition-all duration-300 transform rounded-full shadow-lg bg-brandGold hover:bg-brandAccent text-brandDark hover:scale-105 hover:shadow-xl">
-                  Book a Consultation
-                </button>
-                <button className="px-10 py-5 text-lg font-bold text-white transition-all duration-300 transform rounded-full bg-brandPrimary dark:text-brandGold hover:bg-brandPrimary hover:text-white dark:hover:bg-brandGold dark:hover:text-brandDark hover:scale-105">
-                  Our Other Services
-                </button>
-    </div>
-    </div>
-  </div>
-
-
-
-  <div className="absolute -translate-x-1/2 bottom-10 left-1/2 animate-bounce text-white/50">
-    <ChevronDown size={32} />
-  </div>
-</section> */}
-
 <section
       className="relative py-24 bg-center bg-cover lg:py-36"
       style={{ backgroundImage: `url(${heroBg})` }}
@@ -90,7 +35,7 @@ const StrategicPMO = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
 
-      <div className="container relative px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
+      <div className="container relative px-6 mx-auto lg:px-20">
         <div className="max-w-3xl p-8 border shadow-2xl rounded-xl bg-white/10 backdrop-blur-md border-white/20">
           
           <h1 className="mb-6 text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
@@ -127,7 +72,7 @@ const StrategicPMO = () => {
 
       {/* SECTION 2: GOVERNANCE MANAGEMENT */}
       <section className="py-16 bg-surfaceLight dark:bg-surfaceDark border-y border-borderLight dark:border-borderDark">
-        <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
+        <div className="container px-6 mx-auto lg:px-20">
           <h2 className="mb-4 text-3xl font-bold font-heading">Governance Management</h2>
           <p className="mb-12 text-lg opacity-80">Establish structural integrity and proactive control through systematic oversight and defined protocols.</p>
           
@@ -152,44 +97,7 @@ const StrategicPMO = () => {
         </div>
       </section>
 
-      {/* SECTION 3: PROJECT LIFECYCLE OWNERSHIP */}
-      {/* <section className="py-20">
-        <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
-          <h2 className="mb-4 text-3xl font-bold font-heading">Project Lifecycle Ownership</h2>
-          <p className="max-w-2xl mb-10 opacity-80">Maintain end-to-end accountability from initial concept to formal closure for consistent value delivery.</p>
-          
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            <div className="flex gap-4 p-6 border rounded-lg bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark">
-              <span className="text-3xl font-bold text-brandPrimary dark:text-brandGold font-heading">01</span>
-              <div>
-                <h3 className="mb-2 text-xl font-bold text-brandNavy dark:text-brandGold">Concept-to-Close Governance</h3>
-                <p className="opacity-80">Drive seamless execution through every phase, ensuring total accountability from project initiation through formal sign-off.</p>
-              </div>
-            </div>
-            <div className="flex gap-4 p-6 border rounded-lg bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark">
-              <span className="text-3xl font-bold text-brandPrimary dark:text-brandGold font-heading">02</span>
-              <div>
-                <h3 className="mb-2 text-xl font-bold text-brandNavy dark:text-brandGold">Milestone Health Tracking</h3>
-                <p className="opacity-80">Monitor delivery of velocity by tracking project health against key milestones to identify and mitigate delays early.</p>
-              </div>
-            </div>
-            <div className="flex gap-4 p-6 border rounded-lg bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark">
-              <span className="text-3xl font-bold text-brandPrimary dark:text-brandGold font-heading">03</span>
-              <div>
-                <h3 className="mb-2 text-xl font-bold text-brandNavy dark:text-brandGold">Integrated Performance Monitoring</h3>
-                <p className="opacity-80">Synchronize timeline, cost, and scope tracking to provide a holistic view of project integrity and performance.</p>
-              </div>
-            </div>
-            <div className="flex gap-4 p-6 border rounded-lg bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark">
-              <span className="text-3xl font-bold text-brandPrimary dark:text-brandGold font-heading">04</span>
-              <div>
-                <h3 className="mb-2 text-xl font-bold text-brandNavy dark:text-brandGold">Closure & Documentation</h3>
-                <p className="opacity-80">Systematically capture lessons learned and finalize closure documentation to preserve institutional knowledge for future digital initiatives.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
+      
 
       <section className="overflow-hidden section-padding bg-surfaceLight dark:bg-surfaceDark">
         <div className="container">
@@ -202,20 +110,6 @@ const StrategicPMO = () => {
                 alt="Project Lifecycle" 
                 className="rounded-2xl shadow-2xl relative z-10 w-full object-cover h-[500px]"
               />
-              {/* <div className="absolute z-20 hidden p-6 bg-white shadow-xl -bottom-6 -right-6 rounded-xl md:block animate-float">
-                <div className="flex items-center gap-4 mb-2">
-                  <div className="p-2 bg-green-100 rounded-full">
-                    <CheckCircle2 className="w-6 h-6 text-green-600" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-500">Project Status</p>
-                    <p className="font-bold text-brandNavy">On Track</p>
-                  </div>
-                </div>
-                <div className="w-48 h-2 overflow-hidden bg-gray-100 rounded-full">
-                  <div className="w-[85%] h-full bg-green-500 rounded-full"></div>
-                </div>
-              </div> */}
             </div>
 
             <div className="lg:w-1/2">
@@ -261,44 +155,11 @@ const StrategicPMO = () => {
         </div>
       </section>
 
-      {/* SECTION 4: RESOURCE PLANNING & RISK STRATEGY */}
-      {/* <section className="py-20 text-white bg-brandPrimary dark:bg-brandDark dark:text-brandLight border-y border-borderDark">
-        <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
-          <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
-            <div>
-              <h2 className="mb-6 text-3xl font-bold font-heading">Resource Planning & Tracking</h2>
-              <div className="space-y-6">
-                <div>
-                  <h4 className="font-bold text-brandGold">Role-Based Allocation Matrix</h4>
-                  <p className="text-sm opacity-90">Deploy specialized matrices to map the right talent to specific project roles, ensuring high-quality task execution.</p>
-                </div>
-                <div>
-                  <h4 className="font-bold text-brandGold">Capacity Forecasting Tools</h4>
-                  <p className="text-sm opacity-90">Use utilization heatmaps and advanced forecasting to predict resource needs and prevent team burnout or bottlenecks.</p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h2 className="mb-6 text-3xl font-bold font-heading text-brandGold">Risk Mitigation Strategies</h2>
-              <div className="space-y-6">
-                <div>
-                  <h4 className="font-bold">Scoring & Prioritization Models</h4>
-                  <p className="text-sm opacity-90">Apply quantitative models to score and prioritize risks, focusing resources on the most critical project impacts.</p>
-                </div>
-                <div>
-                  <h4 className="font-bold">Structured Steering Dashboards</h4>
-                  <p className="text-sm opacity-90">Provide leadership with real-time visibility through professional steering decks and interactive dashboards for data-backed decision-making.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
+    
 
       <section className="relative text-white section-padding bg-brandDark">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-        <div className="container relative z-10">
+        <div className="container relative z-10 px-6 lg:px-20">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold text-white md:text-5xl">Resource Planning & Tracking</h2>
             <div className="w-24 h-1 mx-auto mb-6 bg-brandAccent"></div>
@@ -343,19 +204,10 @@ const StrategicPMO = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brandDark/80 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6">
-                  {/* <div className="flex items-center gap-3 mb-2">
-                    <Users className="w-6 h-6 text-brandAccent" />
-                    <span className="text-lg font-bold">Team Utilization</span>
-                  </div>
-                  <div className="w-full h-2 rounded-full bg-white/20">
-                    <div className="bg-brandAccent w-[78%] h-full rounded-full animate-pulse"></div>
-                  </div> */}
+              
                 </div>
               </div>
-              {/* Floating secondary image */}
-              {/* <div className="absolute hidden w-64 overflow-hidden border-4 shadow-2xl lg:block -bottom-12 -left-12 rounded-xl border-brandAccent/50">
-                <img src={teamMeetingImg} alt="Team Meeting" className="object-cover w-full h-full" />
-              </div> */}
+            
             </div>
           </div>
         </div>
@@ -363,7 +215,7 @@ const StrategicPMO = () => {
 
 
       <section className="bg-surfaceLight dark:bg-surfaceDark section-padding">
-        <div className="container">
+        <div className="container px-6 lg:px-20">
           <div className="flex flex-col items-center gap-16 lg:flex-row-reverse">
             <div className="lg:w-1/2">
               <div className="relative overflow-hidden shadow-2xl rounded-2xl group">
@@ -430,7 +282,7 @@ const StrategicPMO = () => {
 
 
          <section className="py-20 bg-surfaceLight dark:bg-surfaceDark">
-        <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
+        <div className="container px-6 mx-auto lg:px-20">
           <h2 className="mb-12 text-3xl font-bold text-center font-heading">Strategic PMO FAQ</h2>
           <div className="max-w-3xl mx-auto space-y-4">
             {[
@@ -451,16 +303,7 @@ const StrategicPMO = () => {
         </div>
       </section>
 
-      {/* SECTION 5: CTA */}
-      {/* <section className="py-20 text-center">
-        <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
-          <h2 className="mb-6 text-3xl font-bold font-heading md:text-4xl">Ready to Elevate Your Strategy?</h2>
-          <p className="mb-10 text-xl opacity-80">Bridge the execution gap with RiskMan's governance-driven expertise.</p>
-          <button className="px-12 py-4 font-bold transition-transform rounded-md shadow-lg bg-brandGold hover:bg-brandAccent text-brandDark hover:scale-105">
-            Schedule a Consultation
-          </button>
-        </div>
-      </section> */}
+     
 
       <section id="contact" className="relative py-24 overflow-hidden bg-brandNavy">
         <div className="absolute inset-0">
@@ -469,7 +312,7 @@ const StrategicPMO = () => {
           <div className="absolute rounded-full -bottom-24 -left-24 w-96 h-96 bg-brandPrimary/40 blur-3xl"></div>
         </div>
         
-        <div className="container relative z-10 text-center">
+        <div className="container relative z-10 px-6 text-center lg:px-20">
           <h2 className="mb-6 text-3xl font-bold text-white md:text-5xl">Ready to Elevate Your Strategy?</h2>
           <p className="max-w-2xl mx-auto mb-10 text-xl text-gray-300">
             Bridge the execution gap with RiskMan’s governance-driven expertise. Let's transform your vision into reality.

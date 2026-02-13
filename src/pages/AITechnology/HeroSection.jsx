@@ -43,7 +43,7 @@ const AiTechnology = () => {
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
       </div>
 
-      <div className="container relative z-10 grid items-center gap-12 px-4 mx-auto md:px-6 lg:grid-cols-2">
+      <div className="container relative z-10 grid items-center gap-12 px-6 mx-auto lg:px-20 lg:grid-cols-2">
         <div className="space-y-8 animate-fade-in-up">
           <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-bold tracking-widest uppercase border rounded-full bg-brandAccent/10 border-brandAccent/20 text-brandAccent">
             <span className="w-2 h-2 rounded-full bg-brandAccent animate-pulse"></span>

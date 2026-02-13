@@ -17,7 +17,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-brandDark/95 via-brandNavy/90 to-brandPrimary/70 dark:from-bgDark/95 dark:via-bgDark/90 dark:to-brandNavy/80 mix-blend-multiply"></div>
       </div>
 
-      <div className="container relative z-10 px-4 mx-auto sm:px-6 lg:px-8">
+      <div className="container relative z-10 px-6 mx-auto lg:px-20">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div className="space-y-8 animate-float">
             <div className="inline-flex items-center gap-2 px-4 py-2 border rounded-full bg-brandAccent/10 border-brandAccent/20 backdrop-blur-sm">
@@ -25,7 +25,7 @@ const Hero = () => {
               <span className="text-sm font-medium tracking-wide uppercase text-brandAccent">Trusted by Top Institutions</span>
             </div>
             
-            <h1 className="text-5xl font-bold leading-tight text-white md:text-6xl lg:text-7xl font-heading">
+            <h1 className="text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl font-heading">
               Advanced <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandAccent to-brandGold">Credit Risk</span> Assessment
             </h1>
             

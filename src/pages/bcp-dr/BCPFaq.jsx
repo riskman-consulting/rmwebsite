@@ -27,8 +27,8 @@ export default function FAQSection() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   return (
-    <section className="relative py-16 md:py-20 bg-bgLight dark:bg-bgDark">
-      <div className="container relative z-10">
+    <section className="relative py-14 md:py-20 bg-bgLight dark:bg-bgDark">
+      <div className="container relative z-10 px-6 lg:px-20">
 
         {/* HEADER */}
         <div className="max-w-4xl mx-auto mb-16 text-center md:text-left">

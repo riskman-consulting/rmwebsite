@@ -39,12 +39,12 @@ export const ChangeManagementSection = () => {
 
   return (
     <section className="z-10 py-24 bg-white dark:bg-surfaceDark">
-      <div className="container px-4 mx-auto sm:px-6 lg:px-8">
+      <div className="container px-6 mx-auto lg:px-20">
         <div className="flex flex-col items-start gap-16 lg:flex-row">
           
           {/* Left Content - Tabs */}
           <div className="lg:w-1/2">
-            <h2 className="mb-6 text-4xl font-bold font-heading text-brandDark dark:text-white">
+            <h2 className="mb-6 text-3xl font-bold font-heading text-brandDark dark:text-white">
               Change Management & Adoption
             </h2>
             <p className="mb-10 text-lg text-gray-600 dark:text-gray-300">

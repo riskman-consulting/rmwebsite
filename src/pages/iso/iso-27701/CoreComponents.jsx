@@ -34,7 +34,7 @@ const CoreComponents = () => {
     ];
 
     return (
-        <section className="w-full px-5 py-20 sm:px-8 lg:px-12 xl:px-14 sm:py-28 bg-surfaceLight dark:bg-bgDark" id="components">
+        <section className="w-full py-14  md:py-20 px-6 lg:px-20 bg-surfaceLight dark:bg-bgDark" id="components">
             <div className="mx-auto max-w-[1280px]">
                 <div className="text-center">
                     <span className="text-sm font-semibold tracking-widest uppercase font-heading text-brandPrimary dark:text-brandAccent">

@@ -3,8 +3,8 @@ import React from 'react'
 function SupportSection() {
   return (
     
-     <section className="py-20 bg-brandLight dark:bg-brandDark/50">
-        <div className="container">
+     <section className=" py-14 md:py-20 bg-brandLight dark:bg-brandDark/50">
+        <div className="container px-6 lg:px-20">
           <h2 className="font-heading text-4xl font-bold mb-12">RiskMan SOC 2 Support</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[

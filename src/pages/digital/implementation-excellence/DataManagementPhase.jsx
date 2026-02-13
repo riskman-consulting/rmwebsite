@@ -3,7 +3,7 @@ import React from 'react';
 const DataManagementPhase = () => {
     return (
         <section className="py-24 bg-surfaceLight dark:bg-surfaceDark">
-            <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
+            <div className="container px-6 mx-auto lg:px-20">
                 <div className="mx-auto mb-16 text-center ">
                     <h2 className="mb-4 text-3xl font-black font-heading md:text-4xl">
                         Data Management & <span className="text-brandPrimary dark:text-brandGold">Migration</span>

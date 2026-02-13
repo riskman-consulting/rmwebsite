@@ -4,11 +4,11 @@ import valueImage from "../../../assets/images/iso/handshake.png";
 
 const ValueSection = () => {
   return (
-    <section id="benefits" className="relative py-24 overflow-hidden text-white bg-brandDark">
+    <section id="benefits" className="relative py-14 md:py-20 overflow-hidden text-white bg-brandDark">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
 
-      <div className="container relative z-10 px-4 mx-auto md:px-6">
+      <div className="container relative z-10 px-6 mx-auto lg:px-20">
         <div className="grid items-center gap-16 lg:grid-cols-2">
           <div>
             <h2 className="mb-3 text-sm font-bold tracking-wider uppercase text-brandAccent">Why It Matters</h2>

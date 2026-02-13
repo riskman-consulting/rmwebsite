@@ -8,7 +8,7 @@ const HeroSection = () => {
   const navigator = useNavigate();
   
   return (
-    <section className="relative pt-20 pb-20 overflow-hidden transition-colors duration-300 border-b lg:pt-36 lg:pb-28 bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark">
+    <section className="relative pt-20 lg:pt-40  pb-14 overflow-hidden transition-colors duration-300 border-b md:pb-20 bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark">
       
       {/* 1. ADVANCED BACKGROUND DECORATION */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
@@ -17,7 +17,7 @@ const HeroSection = () => {
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-brandPrimary/20 dark:via-brandGold/20 to-transparent" />
       </div>
 
-      <div className="container relative z-10">
+      <div className="container relative z-10 px-6 lg:px-20">
         <div className="grid items-center gap-16 lg:grid-cols-2">
           
           {/* 2. LEFT SIDE: CONTENT */}

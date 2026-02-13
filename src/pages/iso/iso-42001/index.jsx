@@ -52,12 +52,12 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 px-4 text-center sm:px-6 lg:px-8">
+      <div className="container relative z-10 px-6 text-center lg:px-20">
         <div className="inline-block mb-4 px-4 py-1.5 rounded-full border border-brandAccent/30 bg-brandAccent/10 backdrop-blur-sm">
           <span className="text-sm font-semibold tracking-wider uppercase text-brandAccent">ISO 42001 Certified</span>
         </div>
         
-        <h1 className="mb-6 text-4xl font-bold leading-tight text-white md:text-6xl lg:text-7xl font-heading animate-float">
+        <h1 className="mb-6 text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl font-heading animate-float">
           Governance for the <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandAccent to-brandGold">
             Age Of AI
@@ -121,8 +121,8 @@ const PillarsSection = () => {
   ];
 
   return (
-    <section className="relative py-20 md:py-32 bg-bgLight dark:bg-bgDark">
-      <div className="container px-4">
+    <section className="relative py-14 md:py-20  bg-bgLight dark:bg-bgDark">
+      <div className="container px-6 lg:px-20">
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
             AI Management Pillars
@@ -195,7 +195,7 @@ const RoadmapSection = () => {
   ];
 
   return (
-    <section className="relative py-20 overflow-hidden bg-white dark:bg-surfaceDark">
+    <section className="relative py-14 md:py-20 overflow-hidden bg-white dark:bg-surfaceDark">
       {/* Background Pattern */}
       <div className="absolute inset-0 pointer-events-none opacity-5 dark:opacity-10">
         <svg className="w-full h-full" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -208,7 +208,7 @@ const RoadmapSection = () => {
         </svg>
       </div>
 
-      <div className="container relative z-10 px-4">
+      <div className="container relative z-10 px-6 lg:px-20">
         <div className="flex flex-col items-center gap-16 lg:flex-row">
           <div className="lg:w-1/2">
             <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
@@ -280,8 +280,8 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-bgLight dark:bg-bgDark">
-      <div className="container px-4">
+    <section className=" py-14 md:py-20 bg-bgLight dark:bg-bgDark">
+      <div className="container px-6 lg:px-20">
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
             Strategic Benefits for Organizations
@@ -316,7 +316,7 @@ const BenefitsSection = () => {
 
 const CTASection = () => {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative  py-14 md:py-20 overflow-hidden">
       <div className="absolute inset-0">
         <img 
           src={innovationImage} 
@@ -326,7 +326,7 @@ const CTASection = () => {
         <div className="absolute inset-0 bg-brandNavy/90 mix-blend-multiply"></div>
       </div>
       
-      <div className="container relative z-10 px-4 text-center">
+      <div className="container relative z-10 px-6 lg:px-20 text-center">
         <h2 className="mb-6 text-3xl font-bold text-white md:text-5xl font-heading">
           Future-Proof Your AI Initiatives
         </h2>
@@ -368,8 +368,8 @@ const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="py-20 bg-white dark:bg-surfaceDark">
-      <div className="container max-w-4xl px-4 mx-auto">
+    <section className="py-14  md:py-20 bg-white dark:bg-surfaceDark">
+      <div className="container max-w-4xl px-6 lg:px-20 mx-auto">
         <h2 className="mb-12 text-3xl font-bold text-center md:text-4xl font-heading text-brandDark dark:text-white">
           Frequently Asked Questions
         </h2>

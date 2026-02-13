@@ -5,7 +5,7 @@ const BCPHero = () => {
   const navigator=useNavigate()
   return (
     <section className="bg-bgLight dark:bg-bgDark">
-      <div className="container px-12 py-20 mx-auto">
+      <div className="container px-6 py-20 mx-auto lg:px-20">
         <div className="grid items-center gap-12 md:grid-cols-2">
           {/* Left content */}
           <div className="max-w-xl">

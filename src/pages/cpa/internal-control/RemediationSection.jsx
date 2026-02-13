@@ -3,8 +3,8 @@ import React from 'react'
 
 function RemediationSection() {
   return (
-       <section className="py-24 bg-white">
-        <div className="container">
+       <section className="py-14 md:py-20 bg-white">
+        <div className="container px-6 lg:px-20">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2">
               <h2 className="font-heading text-3xl lg:text-4xl font-bold mb-6">Risk Assessment & Remediation</h2>

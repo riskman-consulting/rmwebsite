@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- Main Pages -->
+    <url>
+        <loc>https://riskman.in/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://riskman.in/about</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://riskman.in/contact</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://riskman.in/careers</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://riskman.in/industries</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://riskman.in/solutions</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://riskman.in/governance</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Legal -->
+    <url>
+        <loc>https://riskman.in/privacy-policy</loc>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://riskman.in/terms</loc>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Blogs -->
+    <url>
+        <loc>https://riskman.in/blogs</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://riskman.in/insights</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Services Root -->
+    <url>
+        <loc>https://riskman.in/services</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Key Services -->
+    <url><loc>https://riskman.in/services/cybersecurity</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://riskman.in/services/bcp-dr</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://riskman.in/services/forensics-investigation</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://riskman.in/services/itgc-itac</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://riskman.in/services/pci-dss-compliance</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://riskman.in/services/ai-technology</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+    <!-- ISO -->
+    <url><loc>https://riskman.in/services/iso-certifications</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://riskman.in/services/iso-certifications/iso-27001</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://riskman.in/services/iso-certifications/iso-27701</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://riskman.in/services/iso-certifications/iso-22301</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://riskman.in/services/iso-certifications/iso-31000</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://riskman.in/services/iso-certifications/iso-42001</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://riskman.in/services/iso-certifications/tisax</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+    <!-- SOC -->
+    <url><loc>https://riskman.in/services/soc-services</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://riskman.in/services/soc-services/soc-1</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://riskman.in/services/soc-services/soc-2</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://riskman.in/services/soc-services/soc-3</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+    <!-- Risk Advisory -->
+    <url><loc>https://riskman.in/services/risk-advisory</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://riskman.in/services/risk-advisory/csa</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://riskman.in/services/risk-advisory/erm</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://riskman.in/services/risk-advisory/rbia</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://riskman.in/services/risk-advisory/tprm</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+    <!-- Events -->
+    <url><loc>https://riskman.in/events</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://riskman.in/events/upcoming-events</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://riskman.in/events/past-events</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://riskman.in/events/accomplishments</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://riskman.in/events/media-coverage</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+</urlset>

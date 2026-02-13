@@ -2,8 +2,8 @@ import React from 'react'
 
 function OverviewSection() {
   return (
-     <section className="py-20 bg-bgLight dark:bg-bgDark">
-        <div className="container">
+     <section className=" py-14 md:py-20 bg-bgLight dark:bg-bgDark">
+        <div className="container px-6 lg:px-20">
           <div className="bg-surfaceLight dark:bg-surfaceDark rounded-[2rem] p-8 lg:p-16 border border-borderLight dark:border-borderDark shadow-sm flex flex-col lg:flex-row gap-12 items-center">
             <div className="lg:w-1/2">
               <h2 className="font-heading text-3xl font-bold mb-6">SOC 3 In One View</h2>

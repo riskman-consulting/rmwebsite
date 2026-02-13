@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const ISO27701CTA = () => {
     return (
-        <section className="w-full px-5 py-20 sm:px-8 lg:px-12 xl:px-14 sm:py-28 bg-surfaceLight dark:bg-bgDark" id="contact">
+        <section className="w-full py-14  md:py-20 px-6 lg:px-20  bg-surfaceLight dark:bg-bgDark" id="contact">
             <div className="mx-auto max-w-[1280px]">
                 <div className="relative p-10 overflow-hidden text-center rounded-3xl bg-gradient-to-br from-brandDark via-brandNavy to-brandPrimary sm:p-16">
                     {/* Decorative */}

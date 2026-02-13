@@ -53,11 +53,11 @@ const solutions = [
 
 const StrategicSolutions = () => {
   return (
-    <section className="relative py-16 md:py-24 bg-bgLight dark:bg-bgDark">
+    <section className="relative py-14 md:py-20 bg-bgLight dark:bg-bgDark">
       {/* Decorative Elements */}
       <div className="absolute top-0 w-64 h-64 rounded-full left-1/4 bg-brandAccent/5 blur-3xl"></div>
       
-      <div className="container relative">
+      <div className="container relative px-6 lg:px-20">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
           <h2 className="mb-6 text-3xl font-bold sm:text-4xl lg:text-5xl font-heading text-brandDark dark:text-white">

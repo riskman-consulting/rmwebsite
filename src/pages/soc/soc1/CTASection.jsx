@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 function CtaSection() {
   const navigator = useNavigate()
   return (
-    <section className="container py-20">
+    <section className="container px-6 lg:px-20 py-20">
         <div className="flex flex-col items-center justify-between p-10 bg-brandGold rounded-3xl lg:p-16 lg:flex-row text-brandDark">
           <div className="mb-10 lg:max-w-xl lg:mb-0">
             <h2 className="mb-4 text-3xl italic font-bold font-heading md:text-4xl">Give Your Customers’ Auditors Fewer Reasons to Say No</h2>

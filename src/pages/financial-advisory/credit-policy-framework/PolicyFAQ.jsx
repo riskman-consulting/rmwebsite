@@ -28,8 +28,8 @@ const PolicyFAQ = () => {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="py-24 transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark">
-      <div className="container px-4 mx-auto sm:px-6 lg:px-8">
+    <section className="transition-colors duration-300 py-14 md:py-20 bg-surfaceLight dark:bg-surfaceDark">
+      <div className="container px-6 mx-auto lg:px-20">
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <h2 className="mb-3 text-sm font-bold tracking-wider uppercase text-brandPrimary dark:text-brandAccent">FAQ</h2>
           <h3 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">

@@ -42,7 +42,7 @@ const GlobalModelDiagram = () => (
 export default function DeliverySection() {
   return (
     <SectionWrapper id="delivery">
-      <div className="px-6 py-24 transition-colors duration-300 bg-bgLight dark:bg-bgDark">
+      <div className="px-6 py-24 transition-colors duration-300 lg:px-20 bg-bgLight dark:bg-bgDark">
         <div className="max-w-6xl mx-auto">
           <SectionTag>Global Delivery Model</SectionTag>
           <SectionTitle>Scaling Governance Across Geographies</SectionTitle>

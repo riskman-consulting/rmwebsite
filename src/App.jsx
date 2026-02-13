@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Header from './components/layout/Header'
+import FooterTemp from "./components/footer-temp"
+import NotFound from './pages/not-found'
 
 import Home from './pages/home/Home'
 // import ServicesList from './pages/services/ServicesList'
@@ -284,10 +286,12 @@ function App() {
           <Route path="/solutions" element={<TechSolutions />} />
 
           <Route path="/governance" element={<GovernancePage/>} />
+          <Route path='*'  element={<NotFound/>} />
         </Routes>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
+      <FooterTemp/>
     </Router>
   )
 }

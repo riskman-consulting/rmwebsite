@@ -54,7 +54,7 @@ const ISO27701FAQ = () => {
     ];
 
     return (
-        <section className="w-full px-5 py-20 sm:px-8 lg:px-12 xl:px-14 sm:py-28 bg-surfaceLight dark:bg-bgDark" id="faq">
+        <section className="w-full py-14  md:py-20 px-6 lg:px-20 bg-surfaceLight dark:bg-bgDark" id="faq">
             <div className="mx-auto max-w-[1280px]">
                 <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
                     {/* Left column */}

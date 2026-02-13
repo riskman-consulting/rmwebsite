@@ -10,14 +10,14 @@ const HeroSection = () => {
    const navigator=useNavigate()
 
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-bgLight dark:bg-bgDark transition-colors duration-300">
+    <section className="relative min-h-[90vh]  flex items-center overflow-hidden bg-bgLight dark:bg-bgDark transition-colors duration-300">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-brandNavy/10 to-transparent dark:from-brandNavy/20"></div>
         <div className="absolute bottom-0 left-0 rounded-full w-96 h-96 bg-brandGold/5 blur-3xl"></div>
       </div>
 
-      <div className="container relative z-10 grid items-center gap-12 px-4 pt-10 mx-auto lg:grid-cols-2">
+      <div className="container relative z-10 grid items-center gap-12 px-6 mx-auto lg:grid-cols-2 lg:px-20">
         
         {/* Text Content */}
         <div className="order-2 space-y-8 lg:order-1 animate-fade-in-up">

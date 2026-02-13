@@ -84,12 +84,12 @@ const TechIntegration = () => {
   };
 
   return (
-    <section id="technology" className="relative py-24 overflow-hidden text-white bg-brandDark">
+    <section id="technology" className="relative overflow-hidden text-white py-14 md:py-20 bg-brandDark">
       {/* Background Glows */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brandPrimary/10 rounded-full blur-[100px] -mr-20 -mt-20"></div>
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brandAccent/5 rounded-full blur-[100px] -ml-20 -mb-20"></div>
 
-      <div className="container relative z-10 px-4 mx-auto md:px-6">
+      <div className="container relative z-10 px-6 mx-auto lg:px-20">
         <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-20">
           
           {/* Left Column: Navigation Loop */}

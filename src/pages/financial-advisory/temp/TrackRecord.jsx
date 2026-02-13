@@ -12,14 +12,14 @@ const TrackRecord = () => {
 
   return (
     <section className="py-24 transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark">
-      <div className="container">
+      <div className="container px-6 lg:px-20">
         <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-12">
           
           {/* Stats/Years Experience */}
           <div className="lg:col-span-5">
             <div className="relative">
               <div className="absolute w-32 h-32 rounded-full -top-10 -left-10 bg-brandAccent/10 blur-2xl"></div>
-              <h2 className="mb-6 text-4xl font-extrabold font-heading md:text-5xl text-brandDark dark:text-white">
+              <h2 className="mb-6 text-3xl font-extrabold font-heading md:text-4xl text-brandDark dark:text-white">
                 Our <span className="text-brandPrimary dark:text-brandGold">Accomplishments</span>
               </h2>
               <p className="mb-8 font-sans text-xl leading-relaxed text-gray-600 dark:text-gray-300">

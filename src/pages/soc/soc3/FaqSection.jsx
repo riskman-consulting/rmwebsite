@@ -3,7 +3,7 @@ import React from 'react'
 
 function FaqSection() {
   return (
-     <section className="py-24 container">
+     <section className="py-14 md:py-20 container px-6 lg:px-20">
         <div className="max-w-4xl mx-auto mb-20">
           <h2 className="font-heading text-3xl font-bold mb-10 flex items-center">
             <HelpCircle className="mr-3 text-brandGold" /> Frequently Asked Questions

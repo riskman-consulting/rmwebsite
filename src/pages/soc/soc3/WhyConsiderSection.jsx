@@ -4,7 +4,7 @@ import React from 'react'
 function WhyConsiderSection() {
   return (
     
-    <section className="py-20 container">
+    <section className=" py-14 md:py-20 container px-6 lg:px-20">
         <h2 className="font-heading text-3xl md:text-4xl font-bold mb-12 text-center">Why Should Organizations Consider SOC 3?</h2>
         <div className="grid md:grid-cols-2 gap-8">
           {[

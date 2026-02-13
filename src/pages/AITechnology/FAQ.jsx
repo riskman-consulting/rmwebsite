@@ -37,8 +37,8 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-20 bg-white dark:bg-surfaceDark">
-      <div className="container">
+    <section className="bg-surfaceLight py-14 md:py-20 dark:bg-surfaceDark">
+      <div className="container px-6 lg:px-20">
         <div className="max-w-4xl mx-auto mb-16 text-center">
           <h2 className="mb-6 text-4xl font-bold font-heading md:text-5xl text-brandDark dark:text-white">
             Frequently Asked Questions

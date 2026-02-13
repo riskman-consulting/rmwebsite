@@ -42,7 +42,7 @@ const FAQSection = () => {
 
   return (
     <section className="py-10 bg-white md:py-12 dark:bg-bgDark">
-      <div className="max-w-4xl px-6 mx-auto">
+      <div className="max-w-4xl px-6 mx-auto lg:px-20">
 
         {/* Header */}
         <div className="text-center">

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const TisaxCTA = () => {
     return (
-        <section className="relative py-24 overflow-hidden">
+        <section className="relative py-14 md:py-20 overflow-hidden">
             {/* Background */}
             <div className="absolute inset-0 bg-brandPrimary">
                 <div className="absolute inset-0 bg-gradient-to-br from-brandDark via-transparent to-brandAccent/20" />
@@ -16,7 +16,7 @@ const TisaxCTA = () => {
                 </div>
             </div>
 
-            <div className="container relative z-10 px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
+            <div className="container relative z-10 px-6 mx-auto lg:px-20">
                 <div className="max-w-4xl mx-auto text-center">
                     <motion.div
                         initial={{ scale: 0 }}

@@ -33,8 +33,8 @@ const areas = [
  
 const BCPFocusAreas = () => {
   return (
-    <section className="py-24 bg-surfaceLight dark:bg-surfaceDark">
-      <div className="container max-w-6xl">
+    <section className="py-14 md:py-20 bg-surfaceLight dark:bg-surfaceDark">
+      <div className="max-w-6xl px-6 lg:px-20">
  
         {/* Header */}
         <div className="max-w-3xl">

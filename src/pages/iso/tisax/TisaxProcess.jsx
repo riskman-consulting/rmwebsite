@@ -35,11 +35,11 @@ const processSteps = [
 
 const TisaxProcess = () => {
     return (
-        <section className="relative py-24 overflow-hidden bg-surfaceLight dark:bg-bgDark">
+        <section className="relative py-14 md:py-20 overflow-hidden bg-surfaceLight dark:bg-bgDark">
             {/* Background Accents */}
             <div className="absolute top-0 right-0 w-1/2 h-full bg-slate-50/50 dark:bg-white/[0.02] -skew-x-12 transform translate-x-20" />
 
-            <div className="container relative z-10 px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
+            <div className="container relative z-10 px-6 mx-auto lg:px-20">
                 <div className="max-w-4xl mb-16">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}

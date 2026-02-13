@@ -21,7 +21,7 @@ const StrategicBenefits = () => {
     ];
 
     return (
-        <section className="w-full px-5 py-20 sm:px-8 lg:px-12 xl:px-14 sm:py-28 bg-surfaceLight dark:bg-bgDark" id="benefits">
+        <section className="w-full py-14 md:py-20 px-6 lg:px-20 bg-surfaceLight dark:bg-bgDark" id="benefits">
             <div className="mx-auto max-w-[1280px]">
                 <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
                     {/* Left — Image / Visual */}

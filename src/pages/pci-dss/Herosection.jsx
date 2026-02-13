@@ -7,8 +7,8 @@ import { useNavigate } from 'react-router-dom';
 const Hero = () => {
   const navigator=useNavigate();
   return (
-    <div className="relative flex items-center min-h-screen pt-20 overflow-hidden bg-white dark:bg-brandDark">
-      <div className="container relative z-10 px-4 sm:px-6 lg:px-8">
+    <div className="relative py-14 md:py-20  lg:-top-10 flex items-center min-h-screen overflow-hidden bg-surfaceLight dark:bg-surfaceDark">
+      <div className="container relative z-10 px-6 lg:px-20">
         <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-20">
           
           {/* Text Content */}
@@ -27,7 +27,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="mb-6 text-4xl font-bold leading-tight md:text-6xl font-heading text-brandDark dark:text-white"
+              className="mb-6 text-3xl font-bold leading-tight md:text-4xl font-heading text-brandDark dark:text-white"
             >
               Secure Your <br/>
               <span className="text-brandPrimary dark:text-brandGold">Payment Ecosystem</span>

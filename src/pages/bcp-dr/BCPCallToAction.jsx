@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 
 const BCPCallToAction = () => {
   return (
-    <section className="relative py-20 overflow-hidden bg-brandPrimary">
+    <section className="relative overflow-hidden py-14 md:py-20 bg-brandPrimary">
       
       {/* BACKGROUND GLOW */}
       <div className="absolute inset-0 bg-gradient-to-br from-brandPrimary via-brandNavy to-brandDark opacity-90" />
       <div className="absolute -top-32 -right-32 w-[520px] h-[520px] rounded-full bg-brandAccent/30 blur-3xl" />
 
-      <div className="container relative z-10">
+      <div className="container relative z-10 px-6 lg:px-20">
         <div className="max-w-4xl mx-auto text-center">
 
           <h2 className="mb-6 text-3xl font-bold leading-tight text-white md:text-4xl font-heading">

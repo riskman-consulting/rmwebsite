@@ -50,14 +50,14 @@ const CompetitiveAdvantages = () => {
     ];
 
     return (
-        <section className="relative w-full py-24 overflow-hidden sm:py-32 bg-brandLight dark:bg-bgDark" id="advantages">
+        <section className="relative w-full py-14 md:py-20 overflow-hidden sm:py-32 bg-brandLight dark:bg-bgDark" id="advantages">
             {/* Background decorations */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-brandAccent/5 rounded-full blur-[120px]" />
                 <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-brandPrimary/5 rounded-full blur-[100px]" />
             </div>
 
-            <div className="w-full px-5 sm:px-8 lg:px-12 xl:px-14 mx-auto max-w-[1280px] relative z-10">
+            <div className="w-full px-6 lg:px-20 mx-auto max-w-[1280px] relative z-10">
                 {/* Header */}
                 <div className="flex flex-col gap-8 mb-16 lg:flex-row lg:items-end lg:justify-between">
                     <div className="max-w-2xl">

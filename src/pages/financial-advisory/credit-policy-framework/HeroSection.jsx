@@ -21,7 +21,7 @@ const PolicyHero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brandDark/50 to-bgLight dark:to-bgDark"></div>
       </div>
 
-      <div className="container relative z-10 px-4 mx-auto sm:px-6 lg:px-8">
+      <div className="container relative z-10 px-6 mx-auto lg:px-20">
         <div className="max-w-4xl mx-auto space-y-8 text-center animate-float">
           <div className="inline-flex items-center gap-2 px-4 py-2 mx-auto border rounded-full bg-white/10 border-white/20 backdrop-blur-sm">
             <Compass className="w-5 h-5 text-brandAccent" />

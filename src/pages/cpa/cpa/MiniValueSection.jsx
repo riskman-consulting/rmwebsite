@@ -2,8 +2,8 @@ import React from 'react'
 
 function MiniValueSection() {
   return (
-    <section className="py-12 bg-white border-y border-borderLight">
-        <div className="container">
+    <section className="py-14 md:py-20 bg-white border-y border-borderLight">
+        <div className="container px-6 lg:px-20">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <div>
               <p className="text-3xl font-heading font-black text-brandPrimary">US</p>

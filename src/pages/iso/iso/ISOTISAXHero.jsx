@@ -7,7 +7,7 @@ function HeroSection() {
   const navigator = useNavigate()
   return (
     <section
-      className="relative py-24 overflow-hidden text-white lg:py-36 bg-brandDark"
+      className="relative py-14 md:py-20 overflow-hidden text-white  bg-brandDark"
       style={{
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover",
@@ -24,7 +24,7 @@ function HeroSection() {
         <div className="absolute right-0 w-1/2 h-full -translate-y-1/2 skew-x-12 border-l top-1/2 border-brandAccent/20 bg-surfaceDark/40"></div>
       </div>
  
-      <div className="container relative z-20">
+      <div className="container relative z-20 px-6 lg:px-20">
         <div className="max-w-3xl">
           <div className="flex items-center gap-2 mb-6">
             <Car className="w-6 h-6 text-brandAccent" />

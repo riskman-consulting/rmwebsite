@@ -5,8 +5,8 @@ import frameworkBg from '../../../assets/images/data-privacy/data-privacy/framew
 
 function FrameworkSection() {
   return (
-     <section className="py-24 bg-bgLight dark:bg-bgDark transition-colors duration-300 overflow-hidden">
-        <div className="container mx-auto px-4">
+     <section className="py-14 md:py-20 bg-bgLight dark:bg-bgDark transition-colors duration-300 overflow-hidden">
+        <div className="container mx-auto px-6 lg:px-20">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             
             {/* Left Content */}

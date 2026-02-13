@@ -1,87 +1,3 @@
-// import React from 'react';
-// import { ClipboardList, Users, FileText, PlayCircle } from 'lucide-react';
-// import stepsImage from "../../../assets/images/iso/steps.png"
-
-// const StepsSection = () => {
-//   const steps = [
-//     {
-//       id: "01",
-//       title: "Scoping The BCMS",
-//       description: "Defining which parts of the organization are covered by the Business Continuity Management System for focused resilience.",
-//       icon: <ClipboardList className="w-6 h-6" />
-//     },
-//     {
-//       id: "02",
-//       title: "Resource Allocation",
-//       description: "Identifying the specific people, technology, and facilities required to maintain essential operations during downtime.",
-//       icon: <Users className="w-6 h-6" />
-//     },
-//     {
-//       id: "03",
-//       title: "Documentation And Training",
-//       description: "Creating accessible continuity manuals and ensuring staff are fully trained to execute them under pressure.",
-//       icon: <FileText className="w-6 h-6" />
-//     },
-//     {
-//       id: "04",
-//       title: "Exercising And Testing",
-//       description: "Conducting simulations and stress tests to validate the effectiveness of recovery procedures before a real incident occurs.",
-//       icon: <PlayCircle className="w-6 h-6" />
-//     }
-//   ];
-
-//   return (
-//     <section id="process" className="py-24 bg-white">
-//       <div className="container px-4 mx-auto md:px-6">
-//         <div className="flex flex-col items-center gap-16 lg:flex-row">
-//           <div className="relative order-2 lg:w-1/2 lg:order-1">
-//             <div className="relative overflow-hidden border-8 border-white shadow-2xl rounded-2xl">
-//               <img 
-//                 src={stepsImage} 
-//                 alt="Strategic Implementation" 
-//                 className="w-full h-auto"
-//               />
-//             </div>
-//             <div className="absolute hidden max-w-xs p-8 text-white shadow-xl -bottom-6 -right-6 bg-brandPrimary rounded-xl md:block">
-//               <p className="mb-2 text-lg font-bold font-heading">Expert Guidance</p>
-//               <p className="text-sm text-white/80">We work closely with leadership to ensure plans are practical and actionable.</p>
-//             </div>
-//           </div>
-
-//           <div className="order-1 lg:w-1/2 lg:order-2">
-//             <h2 className="mb-3 text-sm font-bold tracking-wider uppercase text-brandAccent">Our Process</h2>
-//             <h3 className="mb-8 text-3xl font-bold md:text-4xl font-heading text-brandDark">Strategic Implementation Steps</h3>
-            
-//             <div className="space-y-8">
-//               {steps.map((step, index) => (
-//                 <div key={index} className="flex gap-6 group">
-//                   <div className="flex-shrink-0">
-//                     <div className="flex items-center justify-center w-12 h-12 font-bold transition-colors duration-300 border rounded-full shadow-sm bg-brandLight border-brandPrimary/10 text-brandPrimary group-hover:bg-brandPrimary group-hover:text-white">
-//                       {step.id}
-//                     </div>
-//                     {index !== steps.length - 1 && (
-//                       <div className="w-0.5 h-full bg-gray-100 mx-auto mt-2 group-hover:bg-brandPrimary/20 transition-colors"></div>
-//                     )}
-//                   </div>
-//                   <div className="pb-8">
-//                     <h4 className="flex items-center gap-2 mb-2 text-xl font-bold text-brandDark">
-//                       {step.title}
-//                     </h4>
-//                     <p className="leading-relaxed text-gray-600">
-//                       {step.description}
-//                     </p>
-//                   </div>
-//                 </div>
-//               ))}
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default StepsSection;
 
 
 
@@ -133,13 +49,13 @@ const ImplementationSteps = () => {
     ];
 
     return (
-        <section className="relative w-full py-24 overflow-hidden sm:py-32 bg-surfaceLight dark:bg-bgDark" id="steps">
+        <section className="relative w-full py-14 md:py-20 overflow-hidden sm:py-32 bg-surfaceLight dark:bg-bgDark" id="steps">
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-20 right-10 w-[400px] h-[400px] bg-brandAccent/5 rounded-full blur-[100px]" />
                 <div className="absolute bottom-20 left-10 w-[300px] h-[300px] bg-brandPrimary/5 rounded-full blur-[80px]" />
             </div>
 
-            <div className="w-full px-5 sm:px-8 lg:px-12 xl:px-14 mx-auto max-w-[1280px] relative z-10">
+            <div className="w-full px-6 lg:px-20 mx-auto max-w-[1280px] relative z-10">
                 <div className="mb-20 text-center">
                     <motion.span
                         initial={{ opacity: 0, y: 20 }}

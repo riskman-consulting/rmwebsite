@@ -1,41 +1,3 @@
-// import { ChevronDown } from 'lucide-react'
-// import React, { useState } from 'react'
-// import { faqs } from './data'
-
-// function FAQSection() {
-//     const [activeFaq, setActiveFaq] = useState(null);
-//   return (
-    
-//          <section className="py-20 bg-bgLight">
-//         <div className="container max-w-3xl">
-//           <h2 className="mb-10 text-3xl font-bold text-center font-heading">Investigation Insights FAQ</h2>
-//           <div className="space-y-4">
-//             {faqs.map((faq, idx) => (
-//               <div key={idx} className="overflow-hidden bg-white border shadow-sm rounded-xl border-borderLight">
-//                 <button 
-//                   onClick={() => setActiveFaq(activeFaq === idx ? null : idx)}
-//                   className="flex items-center justify-between w-full p-6 font-bold text-left"
-//                 >
-//                   <span className="pr-8 text-brandDark">{faq.q}</span>
-//                   <ChevronDown className={`shrink-0 transition-transform text-brandPrimary ${activeFaq === idx ? 'rotate-180' : ''}`} />
-//                 </button>
-//                 {activeFaq === idx && (
-//                   <div className="px-6 pt-4 pb-6 text-gray-600 border-t border-gray-50 animate-fadeIn">
-//                     {faq.a}
-//                   </div>
-//                 )}
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-//   )
-// }
-
-// export default FAQSection
-
-
-
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
@@ -70,8 +32,8 @@ const FaqSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-bgLight dark:bg-bgDark">
-      <div className="container max-w-4xl px-4 mx-auto">
+    <section className="py-14 md:py-20 bg-bgLight dark:bg-bgDark">
+      <div className="container max-w-4xl px-6 mx-auto lg:px-20">
         <h2 className="mb-12 text-3xl font-bold text-center md:text-4xl font-heading text-brandNavy dark:text-white">
           Frequently Asked Questions
         </h2>

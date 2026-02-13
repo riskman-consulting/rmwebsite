@@ -32,7 +32,7 @@ export default function FinancialAdvisory() {
     <section className="bg-bgLight dark:bg-bgDark text-brandDark dark:text-brandLight">
 
       {/* ================= HERO ================= */}
-      <div className="container pt-24">
+      <div className="container px-6 pt-24 lg:px-20">
         <motion.h1 {...fadeUp} className="max-w-4xl text-5xl font-bold font-heading">
           Secure your financial future and mitigate risk
         </motion.h1>
@@ -63,7 +63,7 @@ export default function FinancialAdvisory() {
       />
 
       {/* ================= SOLUTIONS ================= */}
-      <div className="container">
+      <div className="container px-6 lg:px-20">
         <h2 className="mb-6 text-4xl font-bold font-heading">
           Our financial advisory solutions
         </h2>
@@ -164,8 +164,8 @@ export default function FinancialAdvisory() {
       </div>
 
       {/* ================= ACCOMPLISHMENTS ================= */}
-      <div className="container pt-24">
-        <h2 className="text-4xl font-bold font-heading">
+      <div className="container px-6 pt-24 lg:px-20">
+        <h2 className="text-3xl font-bold font-heading">
           Our accomplishments
         </h2>
 

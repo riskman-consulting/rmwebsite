@@ -6,8 +6,8 @@ import { useNavigate } from 'react-router-dom';
 const CTASection = () => {
   const navigator = useNavigate()
   return (
-    <section className="relative py-24 bg-bgLight">
-      <div className="container px-4 mx-auto md:px-6">
+    <section className="relative py-14 md:py-20 bg-bgLight">
+      <div className="container px-6 mx-auto lg:px-20">
         <div className="relative overflow-hidden shadow-2xl bg-brandPrimary rounded-3xl">
           <div className="grid lg:grid-cols-2">
             <div className="relative z-10 flex flex-col justify-center p-12 md:p-16">

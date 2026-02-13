@@ -25,7 +25,7 @@ const challenges = [
 
 const TisaxChallenges = () => {
     return (
-        <section className="relative py-24 overflow-hidden bg-surfaceLight dark:bg-surfaceDark">
+        <section className="relative py-14 md:py-20 overflow-hidden bg-surfaceLight dark:bg-surfaceDark">
             {/* Animated BG Shapes */}
             <motion.div
                 animate={{ rotate: 360 }}
@@ -33,7 +33,7 @@ const TisaxChallenges = () => {
                 className="absolute rounded-full -top-32 -right-32 w-96 h-96 bg-brandAccent/5 blur-3xl"
             />
 
-            <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
+            <div className="container px-6 mx-auto lg:px-20">
                 <div className="max-w-3xl mx-auto mb-20 text-center">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}

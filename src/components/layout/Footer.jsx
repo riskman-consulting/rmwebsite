@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import Subscriber from "../common/Subscriber"
 import {
   Send,
   Linkedin,
@@ -33,20 +34,20 @@ export default function Footer() {
   };
 
   const socialLinks = [
-    { icon: Facebook, href: "https://facebook.com/riskman", label: "Facebook" },
-    { icon: Instagram, href: "https://instagram.com/riskman", label: "Instagram" },
-    { icon: Linkedin, href: "https://linkedin.com/company/riskman", label: "LinkedIn" },
-    { icon: Twitter, href: "https://twitter.com/riskman", label: "Twitter" },
+    // { icon: Facebook, href: "https://facebook.com/riskman", label: "Facebook" },
+    // { icon: Instagram, href: "https://instagram.com/riskman", label: "Instagram" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/riskman-consulting", label: "LinkedIn" },
+    // { icon: Twitter, href: "https://twitter.com/riskman", label: "Twitter" },
   ];
 
   return (
     <footer className="transition-colors duration-300 border-t bg-surfaceLight dark:bg-surfaceDark text-brandDark dark:text-white border-borderLight dark:border-borderDark">
       {/* ✅ MATCH HEADER CONTAINER */}
-      <div className="w-full max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-14 py-16">
-        
+      <div className="w-full max-w-[1280px] mx-auto px-6 lg:px-20 py-16">
+
         {/* Top Section: Logo + Newsletter */}
         <div className="flex flex-col items-start justify-between gap-12 pb-16 border-b border-borderLight dark:border-borderDark lg:flex-row">
-          
+
           {/* Left: Logo + Description */}
           <div className="max-w-sm">
             {/* <Link to="/" className="inline-block">
@@ -62,7 +63,7 @@ export default function Footer() {
               />
             </Link> */}
 
-             <Link to="/" className="flex items-center flex-shrink-0 h-16 w-36">
+            {/* <Link to="/" className="flex items-center flex-shrink-0 h-16 w-36">
                           <img
                             className="object-contain h-12 dark:hidden"
                             src="/rm.png"
@@ -74,16 +75,31 @@ export default function Footer() {
                             alt="Riskman"
                           />
                         </Link>
-            
+             */}
+
+
+            <Link to="/" className="flex items-center flex-shrink-0 w-[140px] h-[48px]">
+              <img
+                className="object-contain w-full h-full dark:hidden"
+                src="/rm.png"
+                alt="Riskman"
+              />
+              <img
+                className="hidden object-contain w-full h-full dark:block"
+                src="/riskman-logo-white.svg"
+                alt="Riskman"
+              />
+            </Link>
+
             <p className="text-sm leading-relaxed text-brandNavy dark:text-gray-400">
-              RiskMan Assurance and Advisory provides expert advisory in audit, risk, compliance, 
+              RiskMan Assurance and Advisory provides expert advisory in audit, risk, compliance,
               cybersecurity, and digital transformation — helping businesses grow with confidence.
             </p>
-            
+
             {/* Contact Info */}
             <div className="mt-6 space-y-2">
-              <a 
-                href="mailto:info@riskman.in" 
+              <a
+                href="mailto:info@riskman.in"
                 className="flex items-center gap-2 text-sm transition-colors text-brandNavy dark:text-gray-400 hover:text-brandPrimary dark:hover:text-brandAccent"
               >
                 <Mail size={16} />
@@ -119,33 +135,13 @@ export default function Footer() {
 
           {/* Right: Newsletter */}
           <div className="w-full max-w-md">
-            <h3 className="mb-3 text-lg font-semibold text-brandDark dark:text-white">Subscribe to Our Newsletter</h3>
-            <p className="mb-4 text-sm text-brandNavy dark:text-gray-400">
-              Get the latest insights and updates delivered to your inbox.
-            </p>
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="example@gmail.com"
-                className="flex-1 px-4 py-3 text-sm transition-colors border rounded-lg text-brandDark dark:text-white bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark focus:outline-none focus:ring-2 focus:ring-brandPrimary dark:focus:ring-brandAccent"
-              />
-              <motion.button
-                onClick={handleNewsletterSubmit}
-                className="px-8 py-3 text-sm font-semibold text-white transition-all duration-300 rounded-lg bg-gradient-to-r from-brandPrimary via-brandNavy to-brandDark dark:bg-gradient-to-r dark:from-brandAccent dark:via-brandGold dark:to-yellow-500 dark:text-brandDark hover:shadow-lg"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Subscribe Now
-              </motion.button>
-            </div>
+            <Subscriber/>
           </div>
         </div>
 
         {/* Bottom Section: Links Grid */}
         <div className="grid grid-cols-2 gap-8 pt-12 md:grid-cols-4">
-          
+
           {/* Services */}
           <div>
             <h4 className="mb-4 text-sm font-semibold tracking-wider uppercase text-brandDark dark:text-white">Enterprise Services</h4>
@@ -160,7 +156,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {}
+          { }
           <div>
             <h4 className="mb-4 text-sm font-semibold tracking-wider uppercase text-brandDark dark:text-white">IT Risk Management</h4>
             <ul className="space-y-2 text-sm text-brandNavy dark:text-gray-400">

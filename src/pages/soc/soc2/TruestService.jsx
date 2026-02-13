@@ -3,12 +3,12 @@ import React from 'react'
 
 function TruestService() {
   return (
-     <section className="py-20 bg-bgLight dark:bg-bgDark">
+     <section className="py-14 md:py-20 bg-bgLight dark:bg-bgDark">
         <div className="container text-center mb-16">
           <h2 className="font-heading text-4xl font-bold mb-4">Trust Services Criteria</h2>
           <div className="h-1.5 w-24 bg-brandAccent mx-auto rounded-full" />
         </div>
-        <div className="container">
+        <div className="container px-6 lg:px-20">
           <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
             {[
               { title: "Security", desc: "Protection against unauthorized access and use." },

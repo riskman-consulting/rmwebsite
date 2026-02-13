@@ -32,7 +32,7 @@ const lifecycleStages = [
 const StrategyLifecycleSection = () => {
   return (
     <section className="py-10 bg-slate-50 md:py-12 dark:bg-bgDark">
-      <div className="px-6 mx-auto max-w-7xl">
+      <div className="px-6 mx-auto lg:px-20 max-w-7xl">
 
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center">

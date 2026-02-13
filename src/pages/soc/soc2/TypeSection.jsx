@@ -3,7 +3,7 @@ import React from 'react'
 
 function TypeSection() {
   return (
-    <section className="py-20 container">
+    <section className="py-14 md:py-20 container px-6 lg:px-20">
         <div className="grid lg:grid-cols-2 gap-12">
           <div className="p-10 rounded-3xl bg-surfaceLight dark:bg-surfaceDark border-2 border-brandPrimary/20 dark:border-brandGold/20">
             <h3 className="font-heading text-2xl font-bold mb-4 flex items-center">

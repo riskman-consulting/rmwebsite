@@ -5,21 +5,21 @@ import { faqs } from './data'
 function FAQSection() {
     const [activeFaq, setActiveFaq] = useState(null);
   return (
-        <section className="py-20 bg-bgLight">
-        <div className="container max-w-3xl">
-          <h2 className="font-heading text-3xl font-bold mb-10 text-center">Audit Insights FAQ</h2>
+        <section className="py-14 md:py-20 bg-surfaceLight dark:bg-surfaceDark">
+        <div className="container max-w-3xl px-6 lg:px-20">
+          <h2 className="mb-10 text-3xl font-bold text-center font-heading text-brandDark dark:text-brandAccent/60">Audit Insights FAQ</h2>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
-              <div key={idx} className="bg-white rounded-xl shadow-sm border border-borderLight overflow-hidden">
+              <div key={idx} className="overflow-hidden border shadow-sm bg-surfaceLight dark:bg-surfaceDark rounded-xl border-borderLight">
                 <button 
                   onClick={() => setActiveFaq(activeFaq === idx ? null : idx)}
-                  className="w-full flex items-center justify-between p-6 text-left font-bold"
+                  className="flex items-center justify-between w-full p-6 font-bold text-left"
                 >
-                  <span className="text-brandDark">{faq.q}</span>
-                  <ChevronDown className={`transition-transform text-brandPrimary ${activeFaq === idx ? 'rotate-180' : ''}`} />
+                  <span className="text-brandDark dark:text-brandAccent/60">{faq.q}</span>
+                  <ChevronDown className={`transition-transform text-brandPrimary dark:text-white ${activeFaq === idx ? 'rotate-180' : ''}`} />
                 </button>
                 {activeFaq === idx && (
-                  <div className="px-6 pb-6 text-gray-600 border-t border-gray-50 pt-4 animate-fadeIn">
+                  <div className="px-6 pt-4 pb-6 border-t text-brandNavy dark:text-white/70 dark:text- border-gray-50 animate-fadeIn">
                     {faq.a}
                   </div>
                 )}
