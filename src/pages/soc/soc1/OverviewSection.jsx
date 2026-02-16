@@ -4,7 +4,7 @@ import React from 'react'
 function OverviewSection() {
   return (
      <section className="py-14 md:py-20 bg-surfaceLight dark:bg-surfaceDark">
-        <div className="container px-6 lg:px-20">
+        <div className="container px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
               <h2 className="font-heading text-3xl font-bold mb-6">SOC 1 In One View</h2>

@@ -15,7 +15,7 @@ const phases = [
 const BCPMethodology = () => {
   return (
     <section className="py-14 md:py-20 bg-surfaceLight dark:bg-bgDark">
-      <div className="container px-6 lg:px-20">
+      <div className="container px-6 lg:px-12">
  
         {/* HEADER */}
         <div className="max-w-3xl mb-12">

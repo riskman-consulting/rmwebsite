@@ -32,7 +32,7 @@ const CreditRiskCTAandFAQ = () => {
     <>
       {/* FAQ Section */}
       <section className="py-14 md:py-20 bg-bgLight dark:bg-bgDark">
-        <div className="container px-6 lg:px-20">
+        <div className="container px-6 lg:px-12">
           <div className="max-w-4xl mx-auto">
             {/* Header */}
             <div className="mb-12 text-center">

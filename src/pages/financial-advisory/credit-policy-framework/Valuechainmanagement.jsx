@@ -4,7 +4,7 @@ import { FileText, Truck, Scale } from 'lucide-react';
 const PolicyValueChain = () => {
   return (
     <section className="relative overflow-hidden transition-colors duration-300 py-14 md:py-20 bg-bgLight dark:bg-bgDark">
-      <div className="container px-6 mx-auto lg:px-20">
+      <div className="container px-6 mx-auto lg:px-12">
         <div className="grid items-center gap-16 lg:grid-cols-2">
           <div>
             <h2 className="mb-3 text-sm font-bold tracking-wider uppercase text-brandPrimary dark:text-brandAccent">Process Flow</h2>

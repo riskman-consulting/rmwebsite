@@ -5,7 +5,7 @@ function WhenItSection() {
   return (
     
      <section className=" py-14 md:py-20 bg-brandLight dark:bg-brandDark/50">
-        <div className="container px-6 lg:px-20">
+        <div className="container px-6 lg:px-12">
           <h2 className="font-heading text-3xl font-bold mb-10 text-center">When SOC 3 Adds Most Value</h2>
           <div className="flex flex-col lg:flex-row gap-6">
             {[

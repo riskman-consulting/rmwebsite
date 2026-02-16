@@ -16,7 +16,7 @@ const FinancialHero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-brandDark via-brandDark/80 to-transparent" />
       </div>
 
-      <div className="container relative z-10 px-6 mx-auto py-14 lg:px-20">
+      <div className="container relative z-10 px-6 mx-auto py-14 lg:px-12">
         <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-12">
           
           {/* Text Content */}

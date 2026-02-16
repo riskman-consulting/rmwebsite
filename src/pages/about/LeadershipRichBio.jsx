@@ -459,14 +459,14 @@ export function ArpitGargRichBio() {
             <li className="flex gap-3 group">
               <span className="flex-shrink-0 w-2 h-2 mt-1.5 rounded-full bg-brandGold group-hover:scale-125 transition-transform" />
               <div>
-                <strong className="text-brandDark dark:text-white">RPA Business Analyst</strong>
+                <strong className="text-brandDark dark:text-white">Certified Information System Auditor (CISA)</strong>
                 <span className="block text-xs text-brandDark/60 dark:text-white/60">Certification</span>
               </div>
             </li>
             <li className="flex gap-3 group">
               <span className="flex-shrink-0 w-2 h-2 mt-1.5 rounded-full bg-brandGold group-hover:scale-125 transition-transform" />
               <div>
-                <strong className="text-brandDark dark:text-white">FAFD & IT Certification</strong>
+                <strong className="text-brandDark dark:text-white">Certification in Risk Management Assurance (CRMA)</strong>
                 <span className="block text-xs text-brandDark/60 dark:text-white/60">ICAI</span>
               </div>
             </li>

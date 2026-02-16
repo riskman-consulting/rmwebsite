@@ -25,7 +25,7 @@ const GlobalDelivery = () => {
                 <Globe2 size={800} strokeWidth={0.5} className="text-brandGold" />
             </div>
 
-            <div className="container relative z-10">
+            <div className="container relative z-10 px-6 lg:px-12">
                 <div className="inline-flex items-center gap-3 font-mono text-[0.7rem] font-semibold tracking-[4px] uppercase text-brandAccent mb-6">
                     <div className="w-5 h-[1px] bg-brandAccent" />
                     04 — Global Delivery

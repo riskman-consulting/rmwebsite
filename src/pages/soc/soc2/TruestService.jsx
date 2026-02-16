@@ -8,7 +8,7 @@ function TruestService() {
           <h2 className="font-heading text-4xl font-bold mb-4">Trust Services Criteria</h2>
           <div className="h-1.5 w-24 bg-brandAccent mx-auto rounded-full" />
         </div>
-        <div className="container px-6 lg:px-20">
+        <div className="container px-6 lg:px-12">
           <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
             {[
               { title: "Security", desc: "Protection against unauthorized access and use." },

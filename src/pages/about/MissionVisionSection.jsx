@@ -227,7 +227,7 @@ const staggerContainer = {
 export default function MissionVisionSection() {
   return (
     <section id="mission-vision" className="relative py-8 lg:py-12 bg-surfaceLight dark:bg-surfaceDark">
-      <div className="container px-6 mx-auto lg:px-20 max-w-7xl">
+      <div className="container px-6 mx-auto lg:px-12 max-w-7xl">
         {/* Main Grid: Left (Heading + Images) | Right (Mission/Vision/Goals) */}
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           

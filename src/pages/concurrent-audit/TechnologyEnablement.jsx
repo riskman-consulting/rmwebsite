@@ -100,7 +100,7 @@ const TechnologyEnablement = () => {
 
     return (
         <section id="tech" className="relative z-10 transition-colors py-14 md:py-20 bg-surfaceLight dark:bg-surfaceDark">
-            <div className="container relative z-10 px-6 lg:px-20">
+            <div className="container relative z-10 px-6 lg:px-12">
                 <div className="inline-flex items-center gap-3 font-mono text-[0.7rem] font-semibold tracking-[4px] uppercase text-brandAccent mb-6">
                     <div className="w-5 h-[1px] bg-brandAccent" />
                     Technology & Enablement

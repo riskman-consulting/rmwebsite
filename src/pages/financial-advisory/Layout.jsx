@@ -8,7 +8,7 @@ function Layout() {
     <div className="min-h-screen transition-colors duration-300 bg-bgLight dark:bg-bgDark">
       {/* Navigation Bar */}
       <nav className="fixed z-50 w-screen border-b shadow-sm bg-surfaceLight/95 dark:bg-surfaceDark/95 backdrop-blur-md border-borderLight dark:border-borderDark">
-        <div className="container flex items-center justify-between px-6 py-4 mx-auto lg:px-20">
+        <div className="container flex items-center justify-between px-6 py-4 mx-auto lg:px-12">
           {/* Brand Logo */}
           <div
             onClick={() => navigate("")}

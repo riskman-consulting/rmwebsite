@@ -24,7 +24,7 @@ const Framework = () => {
 
   return (
     <section id="framework" className="relative overflow-hidden transition-colors duration-300 py-14 md:py-20 bg-bgLight dark:bg-bgDark">
-      <div className="container px-6 mx-auto lg:px-20">
+      <div className="container px-6 mx-auto lg:px-12">
         <div className="grid items-center gap-16 lg:grid-cols-2">
           <div className="relative order-2 lg:order-1">
             <div className="relative overflow-hidden border-4 border-white shadow-2xl rounded-2xl dark:border-brandNavy/30">

@@ -12,7 +12,7 @@ const TrackRecord = () => {
 
   return (
     <section className="py-24 transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark">
-      <div className="container px-6 lg:px-20">
+      <div className="container px-6 lg:px-12">
         <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-12">
           
           {/* Stats/Years Experience */}

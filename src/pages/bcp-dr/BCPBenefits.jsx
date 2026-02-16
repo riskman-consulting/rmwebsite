@@ -34,7 +34,7 @@ const items = [
 const BCPBenefitsGrid = () => {
   return (
     <section className="bg-white py-14 md:py-20 dark:bg-brandNavy/20">
-      <div className="max-w-6xl px-6 lg:px-20">
+      <div className=" container max-w-6xl px-6 lg:px-12">
  
         {/* Header */}
         <div className="max-w-3xl">

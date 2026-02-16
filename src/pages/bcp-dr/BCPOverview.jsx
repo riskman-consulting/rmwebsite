@@ -5,7 +5,7 @@ import bcpImg from "../../assets/images/bcp/bcp-resilent.png"
 const BCPOverview = () => {
   return (
     <section className=" py-14 md:py-20 bg-surfaceLight dark:bg-surfaceDark">
-      <div className="container grid items-center px-6 lg:grid-cols-2 gap-14 lg:px-20">
+      <div className="container grid items-center px-6 lg:grid-cols-2 gap-14 lg:px-12">
         <div>
           <h2 className="text-3xl font-bold text-brandDark dark:text-white">
             Resilient Business Continuity & Disaster Recovery

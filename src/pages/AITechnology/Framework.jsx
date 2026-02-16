@@ -31,7 +31,7 @@ const Framework = () => {
 
   return (
     <section id="framework" className="relative bg-white py-14 md:py-20">
-      <div className="container px-6 mx-auto lg:px-20">
+      <div className="container px-6 mx-auto lg:px-12">
         <div className="max-w-3xl mx-auto mb-20 text-center">
           <h2 className="mb-3 text-sm font-bold tracking-widest uppercase text-brandPrimary">Compliance & Standards</h2>
           <h3 className="mb-6 text-4xl font-bold md:text-5xl font-heading text-brandDark">NIST-Aligned Framework</h3>

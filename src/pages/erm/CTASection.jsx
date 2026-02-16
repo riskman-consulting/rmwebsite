@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const CTASection = () => {
   return (
     <section className="relative py-20 bg-slate-950">
-      <div className="max-w-6xl px-6 mx-auto text-center">
+      <div className="max-w-6xl px-6 lg:px-12 mx-auto text-center">
 
         {/* Heading */}
         <motion.h2

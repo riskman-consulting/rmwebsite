@@ -9,7 +9,7 @@ const Risk = () => {
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
       </div>
 
-      <div className="container relative z-10 px-6 mx-auto lg:px-20">
+      <div className="container relative z-10 px-6 mx-auto lg:px-12">
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <h2 className="mb-3 text-sm font-bold tracking-wider uppercase text-brandAccent">Protection</h2>
           <h3 className="mb-6 text-3xl font-bold text-white md:text-4xl font-heading">

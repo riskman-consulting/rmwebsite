@@ -4,7 +4,7 @@ import React from 'react'
 function KeyBenefitsSection() {
   return (
       <section className="py-14 md:py-20 bg-surfaceLight dark:bg-surfaceDark">
-        <div className="container px-14 lg:px-20">
+        <div className="container px-14 lg:px-12">
           <h2 className="font-heading text-4xl font-bold mb-12 text-center">Key Benefits for Organizations</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[

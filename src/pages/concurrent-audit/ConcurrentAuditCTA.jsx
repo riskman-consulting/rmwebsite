@@ -13,7 +13,7 @@ const ConcurrentAuditCTA = () => {
             {/* Background Decorative */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brandGold/5 rounded-full blur-[120px] pointer-events-none" />
 
-            <div className="container relative z-10 px-6 lg:px-20">
+            <div className="container relative z-10 px-6 lg:px-12">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}

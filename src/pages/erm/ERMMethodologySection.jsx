@@ -39,7 +39,7 @@ const STEPS = [
 const ERMMethodologySection = () => {
   return (
     <section className="pt-10 pb-24 overflow-hidden bg-bgLight dark:bg-bgDark">
-      <div className="container px-6 mx-auto">
+      <div className="container px-6 lg:px-12 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}

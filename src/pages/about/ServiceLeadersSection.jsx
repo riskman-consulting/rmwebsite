@@ -428,7 +428,7 @@ function LeaderCard({ leader, index, onSelect }) {
 export default function ServiceLeadersSection({ setSelectedLeader }) {
   return (
     <section id="service-leaders" className="py-14 bg-surfaceLight md:py-20 dark:bg-surfaceDark">
-      <div className="px-4 mx-auto max-w-7xl lg:px-8">
+      <div className="px-6 mx-auto max-w-7xl lg:px-12">
 
         {/* Header */}
         <motion.div {...animations.fadeInUp} className="mb-12 text-center">

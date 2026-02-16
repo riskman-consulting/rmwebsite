@@ -17,7 +17,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-brandDark/95 via-brandNavy/90 to-brandPrimary/70 dark:from-bgDark/95 dark:via-bgDark/90 dark:to-brandNavy/80 mix-blend-multiply"></div>
       </div>
 
-      <div className="container relative z-10 px-6 mx-auto lg:px-20">
+      <div className="container relative z-10 px-6 mx-auto lg:px-12">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div className="space-y-8 animate-float">
             <div className="inline-flex items-center gap-2 px-4 py-2 border rounded-full bg-brandAccent/10 border-brandAccent/20 backdrop-blur-sm">

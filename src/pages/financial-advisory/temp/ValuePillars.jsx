@@ -26,7 +26,7 @@ const ValuePillars = () => {
 
   return (
     <section className="py-20 transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark">
-      <div className="container px-6 lg:px-20">
+      <div className="container px-6 lg:px-12">
         <div className="max-w-3xl mb-16">
           <h2 className="mb-6 text-3xl font-bold font-heading md:text-4xl text-brandDark dark:text-white">
             The Foundation of Our <span className="text-brandPrimary dark:text-brandGold">Advisory Excellence</span>

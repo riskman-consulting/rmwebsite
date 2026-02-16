@@ -8,7 +8,7 @@ const HeroSection = () => {
   const navigator = useNavigate();
   
   return (
-    <section className="relative overflow-hidden transition-colors duration-300 border-b py-14 md:py-20 lg:pt-16 lg:pb-22 bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark">
+    <section className="relative overflow-hidden transition-colors duration-300 border-b py-14 md:py-20 lg:pt-32 lg:pb-22 bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark">
       
       {/* 1. ADVANCED BACKGROUND DECORATION */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">

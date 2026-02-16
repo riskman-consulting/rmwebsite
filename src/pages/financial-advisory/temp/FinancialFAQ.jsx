@@ -29,7 +29,7 @@ const FinancialFAQ = () => {
 
   return (
     <section className="py-24 transition-colors duration-300 bg-bgLight dark:bg-bgDark">
-      <div className="container max-w-4xl px-6 mx-auto lg:px-20">
+      <div className="container max-w-4xl px-6 mx-auto lg:px-12">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold font-heading md:text-4xl text-brandDark dark:text-white">
             Financial Advisory <span className="text-brandPrimary dark:text-brandGold">FAQ</span>

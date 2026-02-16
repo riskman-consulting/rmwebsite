@@ -14,8 +14,23 @@ import { IIA_Kolkata_images } from "../../assets/iia-kolkata";
 import { IIA_DELHI_JULY_2024_Images } from "../../assets/journey/iia_conference_delhi_july_2024";
 import { Wofa_images } from "../../assets/wofa-2025";
 import { Wofa_2024_Image } from '../../assets/wofa-2025/wofa-2024';
+import {IIA_Bangalore_2026_images} from "../../assets/iia-bangalore/2026"
  
 const myEvents = [
+{
+    id: "iia-bangalore-2026",
+    title: "IIA Bangalore Chapter International Conference 2026",
+    meta: {
+    date: "12 February 2026",
+    location: "Bangalore, India",
+    type: "IIA Bangalore Chapter 2026",
+    },
+    description: "",
+    images: {
+      banner: IIA_Bangalore_2026_images[0],
+      gallery: IIA_Bangalore_2026_images,
+    },
+  },
   {
     id: "iia-bombay-ic-2026",
     title: "IIA Bombay Chapter International Conference 2026",

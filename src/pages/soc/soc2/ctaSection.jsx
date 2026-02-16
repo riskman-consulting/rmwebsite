@@ -2,7 +2,7 @@ import React from 'react'
 
 function ctaSection() {
   return (
-     <section className=" py-14 md:py-20 container px-6 lg:px-20">
+     <section className=" py-14 md:py-20 container px-6 lg:px-12">
         <div className="bg-brandPrimary rounded-[2.5rem] p-10 lg:p-20 text-center text-white relative overflow-hidden">
           <div className="relative z-10">
             <h2 className="font-heading text-3xl md:text-5xl font-bold mb-6">Make SOC 2 A Growth Enabler, Not A Checkbox</h2>
