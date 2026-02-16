@@ -123,7 +123,7 @@ const ConceptDefined = () => {
     ];
 
     return (
-        <section id="concept" className="relative z-10 py-16 transition-colors bg-surfaceLight dark:bg-surfaceDark">
+        <section id="concept" className="relative z-10 py-24 transition-colors bg-surfaceLight dark:bg-surfaceDark">
             <div className="container relative z-10">
                 <div className="inline-flex items-center gap-3 font-mono text-[0.7rem] font-semibold tracking-[4px] uppercase text-brandAccent mb-6">
                     <div className="w-5 h-[1px] bg-brandAccent" />
@@ -157,9 +157,9 @@ const ConceptDefined = () => {
                     </div>
                     {comparisonData.map((row, index) => (
                         <div key={index} className="grid grid-cols-2 transition-colors border-b border-borderLight dark:border-borderDark hover:bg-brandGold/5 last:border-b-0 group">
-                            <div className="p-5 text-[0.9rem] font-sans font-light text-black dark:text-bgLight opacity-60 flex items-center gap-3">
+                            <div className="p-5 text-[0.9rem] font-sans font-light text-gray-500 dark:text-gray-400 opacity-60 flex items-center gap-3">
                                 <AlertCircle size={14} className="transition-opacity opacity-0 group-hover:opacity-100" />
-                                {row.traditional} 
+                                {row.traditional}
                             </div>
                             <div className="p-5 text-[0.9rem] font-sans font-medium text-brandDark dark:text-brandLight border-l border-borderLight dark:border-borderDark flex items-center gap-3 transition-colors">
                                 <div className="w-1.5 h-1.5 rounded-full bg-brandAccent" />

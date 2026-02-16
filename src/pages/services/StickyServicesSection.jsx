@@ -9,7 +9,7 @@ export const StickyServicesSection = () => {
   const featuredServices = allServices.slice(0, 6);
 
   return (
-    <section className="relative pt-10 md:pt-12  bg-bgLight dark:bg-[#030712] transition-colors duration-500 overflow-hidden">
+    <section className="relative py-10 md:py-12  bg-bgLight dark:bg-[#030712] transition-colors duration-500 overflow-hidden">
       
       {/* Background Subtle Gradient Accents */}
       {/* <div className="absolute top-0 right-0 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-brandPrimary/5 dark:bg-brandPrimary/10 blur-[120px] md:blur-[150px] rounded-full pointer-events-none" />

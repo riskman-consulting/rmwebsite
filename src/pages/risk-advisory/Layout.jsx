@@ -14,20 +14,20 @@ function Layout() {
   const closeMobileMenu = () => setMobileMenuOpen(false);
 
   return (
-    <div className="min-h-screen z-[100] bg-bgLight dark:bg-bgDark transition-colors duration-300">
+    <div className="min-h-screen  z-[100] bg-bgLight dark:bg-bgDark transition-colors duration-300">
       {/* Navigation Bar */}
-      <nav className="fixed z-50 w-screen border-b bg-surfaceLight/80 dark:bg-surfaceDark/80 backdrop-blur-md border-borderLight dark:border-borderDark">
-        <div className="container flex items-center justify-between px-4 py-4 mx-auto">
+      <nav className="fixed z-50 w-screen  border-b bg-surfaceLight/80 dark:bg-surfaceDark/80 backdrop-blur-md border-borderLight dark:border-borderDark">
+        <div className="container lg:px-10 flex items-center justify-between px-4 py-4 mx-auto">
           {/* Brand Logo */}
           <div 
             onClick={() => navigate("")} 
-            className="text-base font-black tracking-tighter cursor-pointer sm:text-xl font-heading text-brandPrimary dark:text-brandGold"
+            className="text-base font-black  tracking-tighter cursor-pointer sm:text-xl font-heading text-brandPrimary dark:text-brandGold"
           >
             Risk Assurance & Advisory
           </div>
 
           {/* Desktop Navigation */}
-          <div className="items-center hidden gap-2 lg:flex xl:gap-4">
+          <div className="items-center hidden  gap-2 lg:flex xl:gap-4">
             <NavItem to="rbia" label="RBIA" />
             <NavItem to="erm" label="ERM" />
             <NavItem to="tprm" label="TPRM" />
@@ -64,7 +64,7 @@ function Layout() {
       </nav>
 
       {/* Page Content - Add top padding to account for fixed nav */}
-      <main className=" animate-fadeIn">
+      <main className="pt-16 animate-fadeIn sm:pt-20">
         <Outlet />
       </main>
     </div>

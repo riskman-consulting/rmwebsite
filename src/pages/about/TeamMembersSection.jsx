@@ -188,8 +188,6 @@ const RiskManTeams = () => {
                 </motion.div>
               )
             )}
-
-            <span className="text-lg font-semibold  w-32 text-gray-500 text-end mt-10  ">… Many more</span>
           </div>
         </motion.div>
 

@@ -34,7 +34,7 @@ function FaqSection() {
             <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto">
               Use SOC 3 to communicate that your controls are examined and trusted—without overwhelming stakeholders with technical detail.
             </p>
-            <button className="bg-white text-brandPrimary hover:bg-brandGold hover:text-brandDark px-12 py-5 rounded-full font-black text-sm md:text-sm transition-all flex items-center mx-auto">
+            <button className="bg-white text-brandPrimary hover:bg-brandGold hover:text-brandDark px-12 py-5 rounded-full font-black text-lg transition-all flex items-center mx-auto">
               Plan Your SOC 3 Rollout <ExternalLink className="ml-2 h-5 w-5" />
             </button>
           </div>

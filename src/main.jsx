@@ -6,15 +6,13 @@ import App from './App.jsx'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { ThemeProvider } from './components/context/ThemeContext.jsx'
-import GoogleAnalytics from './components/google/GoogleAnalytics.jsx'
 
 AOS.init()
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <HelmetProvider>
     <ThemeProvider>
-      <GoogleAnalytics/>
-     <App />
+    <App />
     </ThemeProvider>
     </HelmetProvider>
   </StrictMode>

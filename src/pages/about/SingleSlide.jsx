@@ -7,6 +7,10 @@ import { teamsImages } from "../../assets/teams";
  
 export default function SingleSlide() {
   const teamAvatars = [
+    // "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768895914/Shanta_Pal_fyz3dq.webp",
+    // "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768895926/pranshul_jxkf7z.webp",
+    // "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768895921/Vishal_Sharma_qfwz3c.webp"
+
     teamsImages.sukantaSir,
     "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768906075/Prasen_pal_xe5jx8.webp",
     teamsImages.arpitSir,

@@ -43,7 +43,7 @@ export default function WhySection() {
                 Let's discuss how RiskMan can help you design, implement, and sustain a world-class 
                 policy and SOP framework tailored to your organization.
               </p>
-              <button onClick={()=>navigator("/contact")} className="py-2 font-sans text-base font-semibold transition-all bg-white border-none cursor-pointer text-brandNavy px-3 rounded-xl hover:bg-brandAccent hover:text-brandDark hover:shadow-lg">
+              <button onClick={()=>navigator("/contact")} className="py-4 font-sans text-base font-semibold transition-all bg-white border-none cursor-pointer text-brandNavy px-9 rounded-xl hover:bg-brandAccent hover:text-brandDark hover:shadow-lg">
                 Schedule a Governance Assessment →
               </button>
             </div>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function HeroSection() {
   return (
-    <section className="relative min-h-[90vh]   lg:pt-10 lg:-top-5 flex items-center bg-brandDark overflow-hidden">
+    <section className="relative min-h-[90vh] lg:top-10 flex items-center bg-brandDark overflow-hidden">
       
       {/* 1. VISUAL SIDE (RIGHT) */}
       <div className="absolute top-0 right-0 z-0 w-full h-full lg:w-1/2">
@@ -33,8 +33,8 @@ function HeroSection() {
         <div className="max-w-3xl">
           {/* Top Label */}
           <div className="flex items-center gap-3 mb-6 animate-[fadeInLeft_0.8s_ease-out]">
-            {/* <div className="w-10 h-[2px] bg-brandAccent" /> */}
-            <span className="text-brandAccent mt-10 text-xs font-black uppercase tracking-[0.3em]">
+            <div className="w-10 h-[2px] bg-brandAccent" />
+            <span className="text-brandAccent text-xs font-black uppercase tracking-[0.3em]">
               Risk Advisory Specialist
             </span>
           </div>
@@ -59,8 +59,8 @@ function HeroSection() {
               </Link>
               
               <Link 
-                to="/contact" 
-                className="px-10  py-4 font-bold text-white transition-all duration-300 border-2 rounded-sm border-white/20 hover:border-brandAccent hover:bg-white/5"
+                href="/contact" 
+                className="px-10 py-4 font-bold text-white transition-all duration-300 border-2 rounded-sm border-white/20 hover:border-brandAccent hover:bg-white/5"
               >
                 Speak to Our Team
               </Link>

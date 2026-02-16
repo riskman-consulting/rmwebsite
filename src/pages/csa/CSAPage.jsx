@@ -234,7 +234,7 @@ export default function CSAPage() {
       <ValueCreation />
 
       <section className="py-12 bg-white dark:bg-slate-900">
-        <div className="container h-96 md:h-auto  px-6 mx-auto">
+        <div className="container px-6 mx-auto">
           <h2 className="mb-8 text-3xl font-bold text-center text-slate-800 dark:text-white">
             Visual Framework: CSA Maturity Model
           </h2>

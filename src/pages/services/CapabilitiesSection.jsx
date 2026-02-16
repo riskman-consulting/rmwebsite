@@ -113,7 +113,10 @@ export const CapabilitiesSection = () => {
                   </p>
                 </div>
 
-                
+                {/* Subtle Index: Faded on mobile for cleaner look */}
+                <div className="absolute top-6 right-6 md:top-8 md:right-8 font-mono text-[9px] md:text-[10px] text-brandNavy/10 dark:text-white/5">
+                  0{i + 1}
+                </div>
               </div>
             </motion.div>
           ))}

@@ -4,7 +4,7 @@ import { Shield, ArrowRight } from "lucide-react";
 
 const HeroSection = ({ data }) => {
   return (
-    <section className="relative py-20 lg:pt-32 overflow-hidden bg-brandDark md:pb-28">
+    <section className="relative py-20 overflow-hidden bg-brandDark md:py-28">
       
       {/* Subtle background glow */}
       <div className="pointer-events-none absolute -top-40 right-0 h-96 w-96 rounded-full bg-brandAccent/15 blur-[140px]" />

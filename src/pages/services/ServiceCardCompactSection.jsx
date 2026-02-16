@@ -92,8 +92,16 @@ export const ServiceCardCompact = ({ service, index }) => {
 
           {/* 2. Content Section */}
           <div className="relative flex flex-col flex-1 p-8">
-            
-           
+            {/* Index */}
+            <motion.span 
+              className="absolute top-8 right-8 font-mono text-[10px] tracking-widest text-brandNavy/20 dark:text-white/20 group-hover:text-brandAccent transition-colors"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.15 + 0.3 }}
+            >
+              // 0{index + 1}
+            </motion.span>
 
             <motion.h3 
               className="mb-4 text-2xl font-bold tracking-tight transition-colors duration-300 text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent"
