@@ -13,10 +13,10 @@ const ImplementationExcellence = () => {
             <ImplementationHero />
             <ToolEvaluation />
             <BusinessProcessReengineering />
-            <BRDSolutionDesign />
+            {/* <BRDSolutionDesign /> */}
             <DataManagementPhase />
             <ImplementationMethodology />
-            <ImplementationFAQ />
+            {/* <ImplementationFAQ /> */}
         </div>
     );
 };

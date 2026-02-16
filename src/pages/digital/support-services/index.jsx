@@ -19,7 +19,7 @@ const Cybersecurity = () => {
             <ChangeApproachSection/>
             <HypercareSection />
             <ContinuousImprovementSection />
-            <FAQSection />
+            {/* <FAQSection /> */}
             <CTASection />
         </main>
     );

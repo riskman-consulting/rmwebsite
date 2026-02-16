@@ -281,7 +281,7 @@ const StrategicPMO = () => {
 
 
 
-         <section className="py-20 bg-surfaceLight dark:bg-surfaceDark">
+         {/* <section className="py-20 bg-surfaceLight dark:bg-surfaceDark">
         <div className="container px-6 mx-auto lg:px-20">
           <h2 className="mb-12 text-3xl font-bold text-center font-heading">Strategic PMO FAQ</h2>
           <div className="max-w-3xl mx-auto space-y-4">
@@ -301,7 +301,7 @@ const StrategicPMO = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
      
 

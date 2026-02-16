@@ -129,7 +129,7 @@ export default function TeamTestimonials() {
   useEffect(() => {
     const id = setInterval(() => {
       setCurrentSlide((p) => (p + 1) % testimonials.length);
-    }, 7000);
+    }, 9000);
     return () => clearInterval(id);
   }, []);
 

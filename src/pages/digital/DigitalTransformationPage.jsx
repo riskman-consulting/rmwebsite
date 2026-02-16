@@ -44,28 +44,28 @@ const services = [
   }
 ];
 
-const faqs = [
-  {
-    question: 'How do you handle RAID (Risks, Assumptions, Issues, Dependencies) management?',
-    answer: 'We implement a comprehensive RAID management framework that includes regular risk assessments, proactive issue tracking, clear assumption documentation, and dependency mapping. Our approach uses industry-standard tools and methodologies to ensure transparency and timely mitigation of potential blockers.'
-  },
-  {
-    question: 'What is your approach to data migration in digital transformation projects?',
-    answer: 'Our data migration strategy follows a phased approach: assessment and planning, data profiling and cleansing, mapping and transformation design, pilot migration, validation, and full migration with rollback capabilities. We prioritize data integrity, security, and minimal business disruption throughout the process.'
-  },
-  {
-    question: 'How do you conduct User Acceptance Testing (UAT)?',
-    answer: 'We design comprehensive UAT strategies that involve end-users early in the process. Our approach includes test scenario development, user training, structured testing cycles, defect tracking, and sign-off procedures. We ensure that solutions meet business requirements and user expectations before go-live.'
-  },
-  {
-    question: 'What risk mitigation strategies do you employ?',
-    answer: 'We employ multi-layered risk mitigation including early risk identification, impact assessment, contingency planning, regular risk reviews, and stakeholder communication. Our proactive approach includes pilot programs, phased rollouts, and comprehensive testing to minimize project risks.'
-  },
-  {
-    question: 'How do you approach Business Requirements Documentation (BRD)?',
-    answer: 'Our BRD process involves collaborative workshops with stakeholders, detailed requirement gathering, functional and non-functional requirement documentation, traceability matrices, and iterative review cycles. We ensure requirements are clear, measurable, and aligned with business objectives.'
-  }
-];
+// const faqs = [
+//   {
+//     question: 'How do you handle RAID (Risks, Assumptions, Issues, Dependencies) management?',
+//     answer: 'We implement a comprehensive RAID management framework that includes regular risk assessments, proactive issue tracking, clear assumption documentation, and dependency mapping. Our approach uses industry-standard tools and methodologies to ensure transparency and timely mitigation of potential blockers.'
+//   },
+//   {
+//     question: 'What is your approach to data migration in digital transformation projects?',
+//     answer: 'Our data migration strategy follows a phased approach: assessment and planning, data profiling and cleansing, mapping and transformation design, pilot migration, validation, and full migration with rollback capabilities. We prioritize data integrity, security, and minimal business disruption throughout the process.'
+//   },
+//   {
+//     question: 'How do you conduct User Acceptance Testing (UAT)?',
+//     answer: 'We design comprehensive UAT strategies that involve end-users early in the process. Our approach includes test scenario development, user training, structured testing cycles, defect tracking, and sign-off procedures. We ensure that solutions meet business requirements and user expectations before go-live.'
+//   },
+//   {
+//     question: 'What risk mitigation strategies do you employ?',
+//     answer: 'We employ multi-layered risk mitigation including early risk identification, impact assessment, contingency planning, regular risk reviews, and stakeholder communication. Our proactive approach includes pilot programs, phased rollouts, and comprehensive testing to minimize project risks.'
+//   },
+//   {
+//     question: 'How do you approach Business Requirements Documentation (BRD)?',
+//     answer: 'Our BRD process involves collaborative workshops with stakeholders, detailed requirement gathering, functional and non-functional requirement documentation, traceability matrices, and iterative review cycles. We ensure requirements are clear, measurable, and aligned with business objectives.'
+//   }
+// ];
 
 function DigitalTransformationPage() {
   const [expandedFaq, setExpandedFaq] = useState(null);
@@ -257,7 +257,7 @@ function DigitalTransformationPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 lg:py-24" style={{ backgroundColor: brandColors.bgLight }}>
+        {/* <section className="py-16 lg:py-24" style={{ backgroundColor: brandColors.bgLight }}>
           <div className="max-w-4xl px-6 mx-auto lg:px-20">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -325,7 +325,7 @@ function DigitalTransformationPage() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
       </div>
     </>
   );

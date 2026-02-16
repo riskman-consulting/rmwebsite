@@ -8,7 +8,7 @@ const DataManagementPhase = () => {
                     <h2 className="mb-4 text-3xl font-black font-heading md:text-4xl">
                         Data Management & <span className="text-brandPrimary dark:text-brandGold">Migration</span>
                     </h2>
-                    <p className="max-w-2xl text-lg opacity-70">
+                    <p className="max-w-2xl text-lg opacity-70 justify-center items-center mx-auto">
                         Ensure data integrity and seamless transitions with structured cleansing, mapping, and validation frameworks.
                     </p>
                 </div>

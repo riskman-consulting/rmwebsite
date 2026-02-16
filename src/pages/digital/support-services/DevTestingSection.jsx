@@ -20,11 +20,11 @@ const FeatureCard = ({ icon: Icon, title, description, className = "" }) => {
 
 export const DevTestingSection = () => {
     return (
-        <section className="py-16 overflow-hidden bg-white dark:bg-surfaceDark">
-            <div className="container px-6 mx-auto lg:px-20">
+        <section className="py-14 md:py-20  overflow-hidden bg-white dark:bg-surfaceDark">
+            <div className="container px-6    mx-auto lg:px-12">
                 <div className="flex flex-col gap-16 lg:flex-row">
                     {/* Sticky Image Side */}
-                    <div className="lg:w-1/2">
+                    <div className="lg:w-1/2  flex">
                         <div className="sticky top-32">
                             <motion.div
                                 initial={{ opacity: 0, x: -50 }}
@@ -32,7 +32,7 @@ export const DevTestingSection = () => {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6 }}
                             >
-                                <h2 className="mb-6 text-4xl font-bold font-heading text-brandDark dark:text-white">
+                                <h2 className="mb-6 text-3xl font-bold font-heading text-brandDark dark:text-white">
                                     Development Testing & UAT
                                 </h2>
                                 <p className="mb-8 text-lg leading-relaxed text-gray-600 dark:text-gray-300">
@@ -91,7 +91,7 @@ export const DevTestingSection = () => {
                                 <FeatureCard
                                     icon={BarChart3}
                                     title="Test Case Coverage"
-                                    description="Prepare exhaustive test cases and track coverage meticulously to ensure no requirement goes unverified."
+                                    description="Prepare exhaustive test cases and track coverage meticulously to ensure no requirement goes unverified or overlooked."
                                 />
                             </motion.div>
 

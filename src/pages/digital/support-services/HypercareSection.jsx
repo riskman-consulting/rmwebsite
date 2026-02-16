@@ -47,10 +47,10 @@ export const HypercareSection = () => {
               <div className="absolute inset-0 bg-brandPrimary/10 mix-blend-multiply"></div>
               
               {/* Floating Support Badge */}
-              <div className="absolute flex items-center gap-2 px-6 py-3 font-bold rounded-full shadow-lg bottom-6 right-6 bg-brandAccent text-brandDark animate-pulse-custom">
+              {/* <div className="absolute flex items-center gap-2 px-6 py-3 font-bold rounded-full shadow-lg bottom-6 right-6 bg-brandAccent text-brandDark animate-pulse-custom">
                 <LifeBuoy className="w-5 h-5" />
                 24/7 Support Active
-              </div>
+              </div> */}
             </div>
           </motion.div>
           
