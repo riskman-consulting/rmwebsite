@@ -354,7 +354,7 @@ function LeaderCard({ leader, index, onSelect }) {
         <img
           src={leader.image}
           alt={leader.name}
-          className="object-cover object-top w-32 h-32 transition-all duration-500 border-4 border-white rounded-full shadow-lg dark:border-gray-700 grayscale group-hover:grayscale-0"
+          className="object-cover object-top w-32 h-32 transition-all duration-500 border-4 border-white rounded-full shadow-lg dark:border-gray-700"
         />
       </div>
 

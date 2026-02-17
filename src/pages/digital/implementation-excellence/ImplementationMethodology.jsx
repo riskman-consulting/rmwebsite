@@ -236,9 +236,9 @@ const ImplementationMethodology = () => {
                                     </p>
 
                                     <div className="flex items-center gap-4">
-                                        <button className="flex items-center gap-2 px-8 py-4 font-bold text-white transition-colors shadow-lg bg-brandPrimary rounded-xl hover:bg-brandDark shadow-brandPrimary/20">
+                                        {/* <button className="flex items-center gap-2 px-8 py-4 font-bold text-white transition-colors shadow-lg bg-brandPrimary rounded-xl hover:bg-brandDark shadow-brandPrimary/20">
                                             Detailed Analysis
-                                        </button>
+                                        </button> */}
 
                                         <button
                                             onClick={() => setActiveIndex((prev) => (prev + 1) % activeSteps.length)}

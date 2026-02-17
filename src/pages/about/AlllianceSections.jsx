@@ -465,7 +465,7 @@ export default function AlliancePartnersSection() {
                       >
                         {service}
                       </span>
-                      {idx < enterpriseServices.length - 1 && (
+                      {idx < enterpriseServices.length && (
                         <span className="text-3xl font-black text-brandDark/40">•</span>
                       )}
                     </React.Fragment>

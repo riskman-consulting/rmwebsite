@@ -273,6 +273,7 @@ export default function MarqueeClientsSection({ title = "Our Marquee Clients", b
     { name: "Schoolnet", logo: "https://images.financialexpressdigital.com/2022/05/schoolnet.png" },
     { name: "Danieli", logo: "https://download.logo.wine/logo/Danieli/Danieli-Logo.wine.png" },
     { name: "Care Health Insurance", logo: "https://pnghdpro.com/wp-content/themes/pnghdpro/download/social-media-and-brands/care-insurance-logo-hd.png" },
+    {name:"Omega Health Care", logo:"https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_459,h_164/https://www.omegahms.com/wp-content/uploads/2025/10/Omega_Logo_220w-01.png"},
     {
       name: "Dhunseri", logo: "https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/824ef001f4a7bb492d3a?ik-sanitizeSvg=true%22"
     },

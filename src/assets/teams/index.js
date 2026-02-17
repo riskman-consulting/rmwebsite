@@ -25,7 +25,7 @@ import SakshamAhuja from "./Saksham Ahuja.webp";
 import Sakshi from "./sakshi.webp";
 import ShantaPal from "./Shanta Pal.webp";
 import sidhi from "./sidhi.webp";
-import Simran from "./Simran.webp";
+import Simran from "./Simran.jpg";
 import Tanisha from "./Tanisha.webp";
 import Tushar from "./Tushar.jpg";
 import VanshGarg from "./Vansh Garg.webp";
