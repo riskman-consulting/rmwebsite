@@ -151,7 +151,7 @@ export default function EventRecognition() {
         {/* HEADER */}
         <div className="mb-6 sm:mb-10">
           <h2 className="mb-3 text-3xl font-bold capitalize sm:text-4xl lg:text-4xl font-heading text-brandDark dark:text-white">
-            {activeTab === "accomplishments" ? "Team Accomplishments" : "Emerging Risk Assurance and Advisory firm for the year"}
+            {activeTab === "accomplishments" ? "Team Accomplishments" : "Emerging Risk Assurance and Advisory Firm for the Year"}
           </h2>
           <div className="w-20 h-1.5 bg-gradient-to-r from-brandAccent to-brandGold rounded-full" />
         </div>
@@ -173,7 +173,7 @@ export default function EventRecognition() {
                 <img
                   src={item.image}
                   alt="Achievement"
-                  className="object-cover object-center w-full h-full transition-transform duration-500 group-hover:scale-110"
+                  className="object-cover object-top w-full h-full transition-transform duration-500 group-hover:scale-110"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 flex items-center justify-center transition-opacity opacity-0 bg-black/40 group-hover:opacity-100">

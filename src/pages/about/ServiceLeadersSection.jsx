@@ -293,30 +293,32 @@ function AnimatedCounter({ end, duration = 2, suffix = "" }) {
 const SERVICE_LEADERS = [
   {
     name: "Narayanan Rajendran",
-    location: "Chennai, India",
     title: "Service Leader",
-    credentials: "CA, CISA with 20+ years | Ex-Ford, Ex-PKF, Ex-Templar Shield",
-    bio: "Specialist in ERM, SOX, ICOFR, TPRM, InfoSec, ISO27001 and forensic engagements with Fortune 500 organizations.",
+    location: "Chennai, India",
+   
+    credentials: "CA, CISA Qualified with 20+ Years of Experience | Ex-Ford, Ex-PKF, Ex-Templar Shield",
+    bio: "Specialist in ERM, SOX, ICOFR, TPRM, InfoSec, ISO 27001 and forensic engagements with Fortune 500 organizations.",
     image: "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768904950/narayanan_er15xk.webp",
     expertise: ["ERM", "Cybersecurity", "Forensic"],
     linkedin: "https://linkedin.com/in/narayanan-rajendran-34706521"
   },
   {
     name: "Jitendra Khimavat",
+     title: "Service Leader",
     location: "Mumbai, India",
-    title: "Service Leader",
-    credentials: "CA and Certified Internal Auditor (CIA) with 17+ years",
-    bio: "Expert in risk-based internal audits, enhancing efficiency, control, compliance, and cost savings across infrastructure, mining, manufacturing, and finance.",
+    credentials: "CA, CIA Qualified with 17+ Years of Experience",
+    bio: "Experienced in RBIA, enhancing efficiency, control, compliance, and cost savings across infrastructure, mining, manufacturing, and finance.",
     image: "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898657/jitendra_s8wq8i.webp",
     expertise: ["Internal Audits", "Risk Management", "Compliance"],
     linkedin: "https://linkedin.com/in/jitendra-khimavat"
   },
   {
     name: "Pranshul Agarwal",
-    location: "Delhi, India",
     title: "Client Lead",
+    location: "Delhi, India",
+   
     credentials: "CIA, CISA Qualified with 6+ Years of Experience",
-    bio: "Risk Advisory professional with 6+ years of experience in IFC design, internal audits, SOX testing, and risk assurance. Delivers practical, value-driven risk and control solutions across industries.",
+    bio: "Risk Advisory professional in IFC design, internal audits, SOX, and risk assurance. Delivers practical, value-driven risk and control solutions across industries",
     image: teamsImages.Pranshul,
     expertise: [
       "Risk Advisory & Assurance",
@@ -332,8 +334,8 @@ const SERVICE_LEADERS = [
     name: "Vishal Sharma",
     title: "Client Lead",
     location: "Kolkata, India",
-    credentials: "7+ years",
-    bio: "Specialized in core internal audit, ERM, ICOFR, SOP & policy development, and MIS Automation through VBA",
+    credentials: "7+ Years of Experience",
+    bio: "Specialized in core internal audit, ERM, ICOFR, SOP and policy development, and MIS Automation through VBA.",
     image: teamsImages.VishalSharma,
     expertise: [],
     linkedin: ""
@@ -459,7 +461,7 @@ export default function ServiceLeadersSection({ setSelectedLeader }) {
 
             <div className="flex flex-col items-center justify-center p-10 text-center border-b border-gray-200 md:border-b-0 md:border-r dark:border-gray-700">
               <h3 className="mb-2 text-6xl font-black text-brandPrimary dark:text-brandAccent">
-                <AnimatedCounter end={50} suffix="+" />
+                <AnimatedCounter end={38} suffix="+" />
               </h3>
               <p className="text-xs font-bold tracking-widest text-gray-500 uppercase dark:text-gray-400">
                 Expert Team Size

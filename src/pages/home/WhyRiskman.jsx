@@ -47,7 +47,7 @@ export default function WhyChooseRiskMan() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-4 text-4xl font-black md:mb-6 md:text-5xl text-brandDark dark:text-white"
+            className="mb-4 text-3xl font-black md:mb-6 md:text-4xl text-brandDark dark:text-white"
           >
             Why <span className="text-brandPrimary">Choose</span> RiskMan?
           </motion.h2>

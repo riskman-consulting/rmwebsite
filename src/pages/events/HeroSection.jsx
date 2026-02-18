@@ -99,7 +99,7 @@ export default function HeroSection() {
     { value: "2020", label: "Founded", icon: Award },
     { value: "2026", label: "5 Years Strong", icon: Calendar },
     // { value: "4", label: "States", icon: Globe },
-    { value: "50+", label: "Team Members", icon: Users },
+    { value: "38+", label: "Team Members", icon: Users },
   ];
 
   /* Background Slideshow */

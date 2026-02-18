@@ -131,9 +131,11 @@ export default function Home() {
           {/* TESTIMONIALS */}
 
           {/* FAQ */}
-          <FAQSection />
+         
 
           <CTASection/>
+
+           <FAQSection />
 
           {/* AUDIT CTA */}
           {/* <AuditService /> */}

@@ -49,10 +49,10 @@ const WhyItMatters = () => {
               Core Value
             </span>
             <h2 className="mb-6 text-5xl font-bold tracking-tighter md:text-6xl">
-              <span className="text-[#001F3F] dark:text-white">Why our presence</span>
+              <span className="text-[#001F3F] dark:text-white">Why Our Presence</span>
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFB800] to-[#FFC000] italic font-serif">
-                matters to the community
+                Matters to the Community
               </span>
             </h2>
             <p className="mt-6 max-w-2xl text-[#001F3F]/60 dark:text-white/60 text-lg mx-auto italic">
