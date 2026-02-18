@@ -333,7 +333,7 @@ const SERVICE_LEADERS = [
     title: "Client Lead",
     location: "Kolkata, India",
     credentials: "7+ years",
-    bio: "Specialized in core internal audit, ERM, ICoFR, SOP & policy development, and MIS Automation through VBA",
+    bio: "Specialized in core internal audit, ERM, ICOFR, SOP & policy development, and MIS Automation through VBA",
     image: teamsImages.VishalSharma,
     expertise: [],
     linkedin: ""

@@ -40,7 +40,7 @@ export const NAV_LINKS = [
 ];
 
 export const ENTERPRISE_SERVICES = [
-  {name:"Risk Advisory",path:"/services/risk-advisory"},
+  {name:"Risk Assurance and Advisory",path:"/services/risk-advisory"},
   {name:"Digital Transformation",path:"/services/digital-tran"},
   {name:"Sustainability & ESG",path:"/services/esg"},
   {name:"Financial Advisory",path:"/services/financial-advisory"},
@@ -60,7 +60,7 @@ export const IT_RISK_SERVICES = [
 
 export const SERVICES_DATA= [
   {
-    title: "Risk Advisory",
+    title: "Risk Assurance and Advisory",
     description: "Navigate uncertainties with precision through our enterprise-grade risk assessment and management strategies.",
     icon: "Shield"
   },

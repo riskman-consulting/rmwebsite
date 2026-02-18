@@ -25,8 +25,8 @@ const Footer = () => {
                             </Link>
 
                         </div>
-                        <p className="text-brandNavy/60 dark:text-brandLight/60 leading-relaxed max-w-sm">
-                            RiskMan Assurance and Advisory provides expert advisory in audit, risk, compliance,cybersecurity, and digital transformation — helping businesses grow with confidence.
+                        <p className="text-brandNavy/60 dark:text-brandLight/60 leading-relaxed text-base max-w-sm">
+                            RiskMan provides expert Assurance & Advisory services with major focus on Risk based internal audits, ERM, TPRM, SOC 1, SOC 2, BCP/DR, ITGC/ ITAC reviews, ISO certifications, ESG assessments, Credit rating advisory, Business valuations, Digital transformation, Concurrent audits, Policy and SOPs - helping businesses grow with confidence.
 
                         </p>
                         
