@@ -13,7 +13,7 @@ import image13 from "./image-13.webp";
 import image16 from "./image-16.webp";
 import image17 from "./image-17.webp";
 
-import image19 from "./image-19.webp";
+
 
 import image21 from "./image-21.webp";
 
@@ -36,6 +36,6 @@ export const IIA_Bangalore_2026_images = [
 	image16,
 	image17,
 
-	image19,
+
 	image21
 ];
