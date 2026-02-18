@@ -90,7 +90,7 @@ export const teamsImages = {
   pranshu,
   arpitSir,
   sukantaSir,
-  vishalSharma,
+  // vishalSharma,
 };
 
 
