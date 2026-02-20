@@ -13,7 +13,7 @@ const CTASection = () => {
         </div>
       </div>
 
-      <div className="container relative px-6 lg:px-20">
+      <div className="container relative px-6 lg:px-12">
         <div className="max-w-5xl mx-auto">
           <div className="relative p-12 overflow-hidden shadow-2xl bg-gradient-to-br from-brandPrimary via-brandNavy to-brandDark dark:from-brandNavy dark:to-brandDark rounded-3xl lg:p-16">
             {/* Pattern Overlay */}

@@ -23,7 +23,7 @@ const myEvents = [
     meta: {
     date: "12 February 2026",
     location: "Bangalore, India",
-    type: "IIA Bangalore Chapter 2026",
+    type: "IIA Bangalore  2026",
     },
     description: "",
     images: {
@@ -34,7 +34,7 @@ const myEvents = [
   {
     id: "iia-bombay-ic-2026",
     title: "IIA Bombay Chapter International Conference 2026",
-    meta: { date: "15 March 2026", location: "Mumbai, India", type: "IIA Bombay Chapter 2026" },
+    meta: { date: "15 March 2026", location: "Mumbai, India", type: "IIA Bombay  2026" },
     description: "A prestigious international conference focused on the future of governance, internal audit, and risk management.",
     images: { banner: IIA_Bombay_2026_images[0], gallery: IIA_Bombay_2026_images }
   },
@@ -48,14 +48,14 @@ const myEvents = [
   {
     id: "iia-hyderabad-annual-conference-2025",
     title: "IIA Hyderabad Annual Conference 2025",
-    meta: { date: "2025", location: "ITC Kakatiya, Hyderabad, India", type: "IIA Hyderabad Chapter 2025" },
+    meta: { date: "2025", location: "ITC Kakatiya, Hyderabad, India", type: "IIA Hyderabad 2025" },
     description: "RiskMan Consulting participated as Silver Sponsors, engaging with audit and risk professionals.",
     images: { banner: IIA_Hyderabad_2025_images[0], gallery: IIA_Hyderabad_2025_images }
   },
   {
     id: "iia-kolkata-annual-meet-2025",
     title: "Thought Leadership Address – IIA Kolkata Chapter Annual Meet 2025",
-    meta: { date: "2025", location: "Bhubaneswar Club, India", type: "IIA Kolkata Chapter 2025" },
+    meta: { date: "2025", location: "Bhubaneswar Club, India", type: "IIA Kolkata  2025" },
     description: "A thought-leadership address focused on repositioning internal audit as a strategic enabler.",
     images: { banner: IIA_Kolkata_2025_images[0], gallery: IIA_Kolkata_2025_images }
   },
@@ -69,14 +69,14 @@ const myEvents = [
   {
     id: "iia-banglore-annual-conference-2025",
     title: "IIA India Banglore Chapter Annual Conference 2025",
-    meta: { date: "2025", location: "Banglore, India", type: "IIA Banglore Chapter 2025" },
+    meta: { date: "2025", location: "Banglore, India", type: "IIA Banglore 2025" },
     description: "RiskMan Consulting participated as a proud sponsor, engaging with leaders on audit transformation.",
     images: { banner: IIA_International_Conference_2025_images[0], gallery: [...IIA_Bangalore_images , ...IIA_International_Conference_2025_images] }
   },
   {
     id: "iia-bombay-chapter-2025",
     title: "IIA Bombay Chapter Meet",
-    meta: { date: "5 March 2025", location: "Mumbai, India", type: "IIA Bombay Chapter 2025" },
+    meta: { date: "5 March 2025", location: "Mumbai, India", type: "IIA Bombay  2025" },
     description: "Focused conversations on strengthening audit excellence and forward-thinking audit strategies.",
     images: { banner: IIA_Bombay_images[2], gallery: IIA_Bombay_images }
   },
@@ -91,7 +91,7 @@ const myEvents = [
 {
   id:"Wofa-2024",
   title:"WOFA 2024",
-  meta:{date: "2024", location:"New Delhi,India",type:"Wofa Chapter 2024"},
+  meta:{date: "2024", location:"New Delhi,India",type:"Wofa  2024"},
   description: "A global platform celebrating leadership, innovation, and collaboration among changemakers.",
   images:{banner:Wofa_2024_Image[0],gallery:Wofa_2024_Image}
 },
@@ -99,7 +99,7 @@ const myEvents = [
   {
     id: "iia-delhi-conference-2024",
     title: "IIA Delhi Conference 2024",
-    meta: { date: "2024", location: "Delhi, India", type: "IIA Delhi Chapter 2024" },
+    meta: { date: "2024", location: "Delhi, India", type: "IIA Delhi 2024" },
     description: "Engaging discussions on the evolving landscape of internal audit and risk management.",
     images: { banner: IIA_DELHI_JULY_2024_Images[0], gallery: IIA_DELHI_JULY_2024_Images }
   },
@@ -109,7 +109,7 @@ const myEvents = [
   {
     id: "wofa-2025",
     title: "WOFA 2025",
-    meta: { date: "31 Jan – 2 Feb 2025", location: "New Delhi, India", type: "Wofa Chapter 2025" },
+    meta: { date: "31 Jan – 2 Feb 2025", location: "New Delhi, India", type: "Wofa 2025" },
     description: "A global platform celebrating leadership, innovation, and collaboration among changemakers.",
     images: { banner: Wofa_images[0], gallery: Wofa_images }
   }

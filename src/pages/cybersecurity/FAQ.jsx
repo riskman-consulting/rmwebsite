@@ -30,7 +30,7 @@ const FAQ = () => {
 
   return (
     <section className="py-14 md:py-20 bg-bgLight dark:bg-bgDark">
-      <div className="container px-6 lg:px-20">
+      <div className="container px-6 lg:px-12">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <div className="inline-block px-4 py-2 mb-6 rounded-full bg-brandPrimary/10 dark:bg-brandAccent/10">

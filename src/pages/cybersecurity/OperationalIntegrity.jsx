@@ -46,7 +46,7 @@ const OperationalIntegrity = () => {
     
 
      <section className="py-14 md:py-20 bg-surfaceLight dark:bg-surfaceDark">
-        <div className="container px-6 lg:px-20 mx-auto text-center">
+        <div className="container px-6 lg:px-12 mx-auto text-center">
           <h2 className="mb-2 font-bold tracking-wider uppercase text-brandAccent">Trust & Governance</h2>
           <h2 className="mb-16 text-4xl font-bold font-heading text-brandDark">Operational Integrity and Governance</h2>
           

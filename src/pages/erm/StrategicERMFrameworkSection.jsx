@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 const StrategicERMFrameworkSection = () => {
   return (
     <section className="py-24 bg-white dark:bg-bgDark">
-      <div className="px-6 mx-auto lg:px-20 max-w-7xl">
+      <div className="px-6 mx-auto lg:px-12 max-w-7xl">
 
         {/* Section Heading */}
         <motion.h2

@@ -100,7 +100,7 @@ function DigitalTransformationPage() {
       {/* right glow accent */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-brandGold/10 blur-3xl" />
 
-      <div className="container relative px-6 mx-auto lg:px-20">
+      <div className="container relative px-6 mx-auto lg:px-12">
         <div className="max-w-3xl text-white">
 
           {/* badge */}
@@ -143,7 +143,7 @@ function DigitalTransformationPage() {
 
         {/* Core Offerings Section */}
         <section className="py-16 lg:py-24" style={{ backgroundColor: brandColors.surfaceLight }}>
-          <div className="px-6 mx-auto max-w-7xl lg:px-20">
+          <div className="px-6 mx-auto max-w-7xl lg:px-12">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -223,7 +223,7 @@ function DigitalTransformationPage() {
             background: `linear-gradient(135deg, ${brandColors.brandNavy} 0%, ${brandColors.brandPrimary} 100%)`
           }}
         >
-          <div className="max-w-4xl px-6 mx-auto text-center lg:px-20">
+          <div className="max-w-4xl px-6 mx-auto text-center lg:px-12">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}

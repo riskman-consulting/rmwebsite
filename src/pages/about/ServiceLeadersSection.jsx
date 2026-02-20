@@ -434,7 +434,7 @@ export default function ServiceLeadersSection({ setSelectedLeader }) {
 
         {/* Header */}
         <motion.div {...animations.fadeInUp} className="mb-12 text-center">
-          <h2 className="mb-3 text-3xl font-bold text-brandDark lg:text-4xl dark:text-white">
+          <h2 className="mb-3 text-3xl font-bold text-brandDark lg:text-5xl dark:text-white">
             Our <span className="text-brandGold">Associate Partners</span> and{" "}
             <span className="text-brandAccent">Client Leads</span>
           </h2>
@@ -450,7 +450,7 @@ export default function ServiceLeadersSection({ setSelectedLeader }) {
               key={leader.name}
               leader={leader}
               index={i}
-              // onSelect={setSelectedLeader}
+              onSelect={setSelectedLeader}
             />
           ))}
         </div>

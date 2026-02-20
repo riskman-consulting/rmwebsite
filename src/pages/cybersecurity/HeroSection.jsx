@@ -32,7 +32,7 @@ const HeroSection = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-brandDark via-brandDark/90 to-transparent"></div>
         </div>
         
-        <div className="container relative z-10 grid items-center gap-12 px-6 lg:px-20 mx-auto lg:grid-cols-2">
+        <div className="container relative z-10 grid items-center gap-12 px-6 lg:px-12 mx-auto lg:grid-cols-2">
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}

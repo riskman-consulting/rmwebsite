@@ -81,7 +81,7 @@ const ESGEvolutionTimeline = () => {
             {/* Background Subtle Gradient */}
             <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-slate-50/50 to-transparent dark:from-transparent dark:via-blue-950/10 dark:to-transparent" />
 
-            <div className="container relative z-10 px-6 mx-auto lg:px-20">
+            <div className="container relative z-10 px-6 mx-auto lg:px-12">
 
                 {/* Header Section */}
                 <div className="mb-20 text-center">

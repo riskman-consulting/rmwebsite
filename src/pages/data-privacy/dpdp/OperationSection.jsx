@@ -4,7 +4,7 @@ import React from 'react'
 function OperationSection() {
   return (
      <section className="py-20 bg-white">
-        <div className="container">
+        <div className="container px-6 lg:px-12">
           <div className="text-center mb-16">
             <h2 className="font-heading text-3xl lg:text-4xl font-bold">Operational Resilience and Reporting</h2>
           </div>

@@ -49,7 +49,7 @@ export default function FAQSection() {
               FAQ
             </span>
             
-            <h2 className="mb-6 text-4xl font-bold lg:text-5xl text-brandDark dark:text-white">
+            <h2 className="mb-6 text-3xl font-bold lg:text-5xl text-brandDark dark:text-white">
               Frequently Asked{" "}
               <span className="font-serif italic font-medium text-brandGold">
                 Questions

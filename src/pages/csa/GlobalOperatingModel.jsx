@@ -30,7 +30,7 @@ export default function GlobalOperatingModel() {
 
   return (
     <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
-      <div className="container max-w-6xl px-6 mx-auto">
+      <div className="container max-w-6xl px-6 lg:px-12 mx-auto">
         {/* Section Header */}
         <h2 className="mb-8 text-4xl font-bold text-brandDark dark:text-white ">
           RiskMan's Global CSA Operating Model

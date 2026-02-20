@@ -93,7 +93,7 @@ export default function CareersPage() {
     <div className="min-h-screen font-sans bg-surfaceLight dark:bg-surfaceDark text-zinc-900 dark:text-zinc-100">
       
       {/* --- HERO SECTION --- */}
-      <header className="relative px-6 pt-24 pb-16 overflow-hidden">
+      <header className="relative px-6 lg:px-12 pt-24 pb-16 overflow-hidden">
         <div className="absolute top-0 w-full h-full -translate-x-1/2 left-1/2 bg-gradient-to-b from-brandPrimary/5 to-transparent -z-10" />
         <div className="max-w-6xl mx-auto text-center">
           <motion.span 
@@ -102,7 +102,7 @@ export default function CareersPage() {
           >
             Join the Team
           </motion.span>
-          <h1 className="mb-8 text-5xl font-bold tracking-tight md:text-7xl">
+          <h1 className="mb-8 text-3xl font-bold tracking-tight md:text-4xl">
             Work that <span className="text-brandDark dark:text-brandAccent">matters.</span>
           </h1>
           

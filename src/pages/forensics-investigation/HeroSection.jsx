@@ -17,7 +17,7 @@ const HeroSection = () => {
         <div className="absolute bottom-0 left-0 rounded-full w-96 h-96 bg-brandGold/5 blur-3xl"></div>
       </div>
 
-      <div className="container relative z-10 grid items-center gap-12 px-6 mx-auto lg:grid-cols-2 lg:px-20">
+      <div className="container relative z-10 grid items-center gap-12 px-6 mx-auto lg:grid-cols-2 lg:px-12">
         
         {/* Text Content */}
         <div className="order-2 space-y-8 lg:order-1 animate-fade-in-up">

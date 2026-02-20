@@ -9,7 +9,7 @@ const CyberSection = () => {
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
       
-      <div className="container relative z-10 px-6 mx-auto lg:px-20">
+      <div className="container relative z-10 px-6 mx-auto lg:px-12">
         <div className="flex flex-col items-center gap-16 lg:flex-row-reverse">
           <div className="relative lg:w-1/2">
             <div className="absolute transform border-2 -inset-4 border-brandGold/30 rounded-2xl -rotate-3"></div>

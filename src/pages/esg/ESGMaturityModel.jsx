@@ -65,7 +65,7 @@ const ESGMaturityModel = () => {
       {/* Decorative Gradient Blur */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
 
-      <div className="container relative z-10 px-6 mx-auto lg:px-20 max-w-7xl">
+      <div className="container relative z-10 px-6 mx-auto lg:px-12 max-w-7xl">
         {/* Header Section */}
         <div className="mt-16 mb-10 overflow-hidden relative p-1 bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-950 rounded-[2.5rem] shadow-2xl">
           <div className="relative px-10 py-12 bg-slate-950/40 backdrop-blur-3xl rounded-[2.4rem]">

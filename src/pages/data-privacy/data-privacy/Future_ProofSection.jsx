@@ -7,7 +7,7 @@ function FutureProofSection() {
   const navigator=useNavigate()
   return (
      <section className="py-14 md:py-20 transition-colors duration-300 bg-white dark:bg-bgDark">
-        <div className="container px-6 lg:px-20 mx-auto">
+        <div className="container px-6 lg:px-12 mx-auto">
           <div className="bg-brandLight dark:bg-surfaceDark rounded-[3rem] p-8 lg:p-12 relative overflow-hidden shadow-2xl">
             
             <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-20">

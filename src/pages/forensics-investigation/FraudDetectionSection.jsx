@@ -6,7 +6,7 @@ const FraudSection = () => {
 
   return (
     <section className="py-14 lg:py-20 overflow-hidden bg-bgLight dark:bg-bgDark">
-      <div className="container px-6 mx-auto lg:px-20">
+      <div className="container px-6 mx-auto lg:px-12">
         <div className="flex flex-col items-center gap-16 lg:flex-row">
           <div className="relative lg:w-1/2 group">
             <div className="absolute transition-transform transform -inset-4 bg-brandGold/20 rounded-2xl rotate-3 group-hover:rotate-2"></div>

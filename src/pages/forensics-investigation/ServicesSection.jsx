@@ -4,7 +4,7 @@ import { Search, Shield, Globe } from 'lucide-react';
 const ServicesSection = () => {
   return (
     <section className="relative py-14 md:py-20 bg-surfaceLight dark:bg-surfaceDark">
-      <div className="container px-6 mx-auto lg:px-20">
+      <div className="container px-6 mx-auto lg:px-12">
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandNavy dark:text-white">
             Strategic Investigative Solutions

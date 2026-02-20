@@ -8,7 +8,7 @@ const HeroSection = () => {
     <section className="relative overflow-hidden bg-surfaceDark">
       
       {/* Main Container */}
-      <div className="relative z-10 grid items-center min-h-screen grid-cols-1 gap-8 px-6 pt-20 pb-12 mx-auto md:grid-cols-2 md:gap-12 lg:px-20 md:pt-0">
+      <div className="relative z-10 grid items-center min-h-screen grid-cols-1 gap-8 px-6 pt-20 pb-12 mx-auto md:grid-cols-2 md:gap-12 lg:px-12 md:pt-0">
 
         {/* Left Content */}
         <div className="text-center md:text-left">

@@ -33,7 +33,7 @@ const industryImages = [
 // 1. Hero Section
 export const HeroSection = ({ heroRef, y, opacity }) => (
   <section ref={heroRef} className="relative pt-32 pb-20 overflow-hidden bg-surfaceLight dark:bg-bgDark">
-    <div className="container relative z-10 mx-auto max-w-7xl">
+    <div className="container relative px-6 lg:px-12 z-10 mx-auto max-w-7xl">
       <motion.div initial="initial" animate="animate" variants={staggerContainer} className="mb-16 text-center">
         <motion.div variants={fadeInUp} className="flex items-center justify-center gap-2 mb-6">
           <div className="w-2 h-2 rounded-full bg-brandGold dark:bg-brandAccent" />

@@ -4,7 +4,7 @@ import React from 'react'
 function ComplianceSection() {
   return (
       <section className="py-14 md:py-20 bg-surfaceLight dark:bg-surfaceDark">
-        <div className="container px-6 lg:px-20">
+        <div className="container px-6 lg:px-12">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="font-heading text-3xl lg:text-4xl font-bold mb-4">Integrity Due Diligence</h2>
             <p className="text-brandDark dark:text-white/70">Navigate complex regulatory landscapes by providing deep insights into partners, vendors, and high-value transactions.</p>

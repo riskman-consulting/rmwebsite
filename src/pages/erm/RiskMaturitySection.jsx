@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 const RiskMaturitySection = () => {
   return (
     <section className="py-12 bg-slate-50 dark:bg-bgDark">
-      <div className="px-6 mx-auto lg:px-20 max-w-7xl">
+      <div className="px-6 mx-auto lg:px-12 max-w-7xl">
 
         {/* Section Heading */}
         <motion.h2

@@ -27,7 +27,7 @@ const StrategicAuditing = () => {
 return (
 
 <section className="relative py-14 md:py-20  overflow-hidden bg-white">
-        <div className="container px-6 lg:px-20 mx-auto">
+        <div className="container px-6 lg:px-12 mx-auto">
           <div className="grid items-center gap-16 lg:grid-cols-2">
             <motion.div 
               initial={{ opacity: 0, x: -50 }}

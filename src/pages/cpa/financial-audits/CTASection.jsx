@@ -4,7 +4,7 @@ import React from 'react'
 function CTASection() {
   return (
     <section className="py-14 md:py-20">
-        <div className="px-6 lg:px-20">
+        <div className="px-6 lg:px-12">
           <div className="bg-brandPrimary rounded-[2rem] p-12 lg:p-20 text-center text-white relative shadow-2xl overflow-hidden border-b-8 border-brandAccent">
             <h2 className="mb-6 text-3xl font-bold font-heading lg:text-5xl">Secure Your Financial Integrity</h2>
             <p className="max-w-2xl mx-auto mb-10 text-xl text-blue-100">

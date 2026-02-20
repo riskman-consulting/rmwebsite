@@ -4,7 +4,7 @@ import React from 'react'
 function IndependentSection() {
   return (
      <section className="bg-surfaceLight dark:bg-surfaceDark py-14 md:py-20">
-        <div className="container px-6 lg:px-20">
+        <div className="container px-6 lg:px-12">
           <div className="max-w-4xl mx-auto">
             <div className="mb-16 text-center">
                <h2 className="mb-4 text-3xl font-bold font-heading lg:text-4xl text-brandDark dark:text-brandAccent">Independent Opinion & Reporting</h2>

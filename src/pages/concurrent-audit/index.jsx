@@ -3,7 +3,6 @@ import ConcurrentAuditHero from './ConcurrentAuditHero';
 import StrategicContext from './StrategicContext';
 import ConceptDefined from './ConceptDefined';
 import OperatingModel from './OperationalModel';
-// import GlobalDelivery from './GlobalDelivery';
 import TechnologyEnablement from './TechnologyEnablement';
 import ValueDelivered from './ValueDelivered';
 import WhyRiskMan from './WhyRiskMan';
@@ -24,7 +23,6 @@ const ConcurrentAuditPage = () => {
             <hr className="border-none h-[1px] bg-gradient-to-r from-transparent via-brandGold/20 to-transparent" />
             <OperatingModel />
             <hr className="border-none h-[1px] bg-gradient-to-r from-transparent via-brandGold/20 to-transparent" />
-            {/* <GlobalDelivery /> */}
             <hr className="border-none h-[1px] bg-gradient-to-r from-transparent via-brandGold/20 to-transparent" />
             <TechnologyEnablement />
             <hr className="border-none h-[1px] bg-gradient-to-r from-transparent via-brandGold/20 to-transparent" />

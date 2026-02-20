@@ -23,7 +23,7 @@ function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 px-6 mx-auto lg:px-20">
+      <div className="container relative z-10 px-6 mx-auto lg:px-12">
         <div className="max-w-4xl">
           <div className="inline-block px-4 py-1 mb-6 border rounded-full border-brandAccent/30 bg-brandAccent/10 backdrop-blur-sm">
             <span className="text-sm font-bold tracking-wider uppercase text-brandAccent">Next-Gen Privacy Control</span>

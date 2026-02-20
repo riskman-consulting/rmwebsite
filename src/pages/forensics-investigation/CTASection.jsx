@@ -8,7 +8,7 @@ const CtaSection = () => {
       <div className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 rounded-full w-96 h-96 bg-brandGold/10 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-64 h-64 transform -translate-x-1/2 translate-y-1/2 rounded-full bg-brandPrimary/20 blur-3xl"></div>
       
-      <div className="container relative z-10 px-6 lg:px-20 mx-auto text-center">
+      <div className="container relative z-10 px-6 lg:px-12 mx-auto text-center">
         <h2 className="mb-6 text-3xl font-bold md:text-5xl font-heading">
           Protect Your Organization from Evolving Threats
         </h2>

@@ -11,7 +11,7 @@ function HeroSection() {
         <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_50%,_var(--tw-gradient-stops))] from-brandAccent via-transparent to-transparent"></div>
       </div>
 
-      <div className="relative z-10 px-6 lg:px-20">
+      <div className="relative z-10 px-6 lg:px-12">
         <div className="grid items-center grid-cols-1 gap-16 lg:grid-cols-2">
           
           {/* LEFT: Content (unchanged) */}

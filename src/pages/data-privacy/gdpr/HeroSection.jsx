@@ -20,7 +20,7 @@ function HeroSection() {
       {/* Texture Overlay (your original) */}
       <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]" />
 
-      <div className="container relative z-10">
+      <div className="container relative z-10 px-6 lg:px-12">
         <div className="max-w-4xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-bold tracking-widest text-blue-300 uppercase border rounded-full bg-brandPrimary/30 border-brandPrimary/50">
             <Globe size={14} className="animate-pulse" /> EU Privacy Standard

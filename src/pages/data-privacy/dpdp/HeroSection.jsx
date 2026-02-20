@@ -20,7 +20,7 @@ function HeroSection() {
       {/* Gradient Overlay (your original intent preserved) */}
       <div className="absolute inset-0 bg-gradient-to-br from-brandPrimary/20 to-transparent" />
 
-      <div className="container relative z-10">
+      <div className="container relative z-10 px-6 lg:px-12">
         <div className="max-w-4xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-bold tracking-tighter uppercase rounded bg-brandAccent text-brandDark">
             DPDP Act 2023 | India Mandate

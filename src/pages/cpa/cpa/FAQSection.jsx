@@ -6,7 +6,7 @@ function FAQSection() {
     const [activeFaq, setActiveFaq] = useState(null);
   return (
         <section className="py-14 md:py-20 bg-bgLight">
-        <div className="container px-6 lg:px-20 max-w-3xl">
+        <div className="container px-6 lg:px-12 max-w-3xl">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl font-bold">Assurance FAQ</h2>
           </div>

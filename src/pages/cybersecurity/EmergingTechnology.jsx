@@ -27,7 +27,7 @@ import emergingImage from "../../assets/images/cybersecurity/ai-security.png"
  const EmergingTechnology = () => {
   return (
  <section className="py-14 md:py-20 overflow-hidden text-white bg-brandNavy">
-        <div className="container px-6 mx-auto lg:px-20">
+        <div className="container px-6 mx-auto lg:px-12">
           <div className="flex flex-col gap-12 lg:flex-row">
             <div className="lg:w-1/3">
               <h2 className="mb-2 font-bold tracking-wider uppercase text-brandAccent">Future Proof</h2>

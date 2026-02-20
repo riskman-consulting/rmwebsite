@@ -95,7 +95,7 @@ const ImplementationMethodology = () => {
 
     return (
         <section className="relative py-24 overflow-hidden bg-surfaceLight dark:bg-bgDark">
-            <div className="container relative z-10 px-6 mx-auto lg:px-20">
+            <div className="container relative z-10 px-6 mx-auto lg:px-12">
                 <div className="max-w-4xl mx-auto mb-16 text-center">
                     <h2 className="mb-6 text-3xl font-bold md:text-5xl font-heading text-brandDark dark:text-white">
                         Implementation Methodology

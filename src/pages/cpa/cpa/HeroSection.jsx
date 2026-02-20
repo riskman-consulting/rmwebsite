@@ -20,7 +20,7 @@ function HeroSection() {
         <Building2 className="absolute -right-10 bottom-0 w-[500px] h-[500px] text-brandAccent" />
       </div>
 
-      <div className="relative z-10 px-6 lg:px-20">
+      <div className="relative z-10 px-6 lg:px-12">
         <div className="max-w-4xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-brandPrimary text-white text-xs font-bold uppercase tracking-widest mb-6">
             Institutional Integrity

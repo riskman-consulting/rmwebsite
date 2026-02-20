@@ -47,7 +47,7 @@ export default function CareersPage() {
           >
             Join the Team
           </motion.span>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8">
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-8">
             Work that <span className="text-brandDark dark:text-brandAccent">matters.</span>
           </h1>
           

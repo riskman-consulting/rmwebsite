@@ -30,7 +30,7 @@ const ImprovementItem = ({ icon: Icon, title, description, index }) => (
 export const ContinuousImprovementSection = () => {
   return (
     <section className="py-24 overflow-hidden bg-white dark:bg-surfaceDark">
-      <div className="container px-6 mx-auto lg:px-20">
+      <div className="container px-6 mx-auto lg:px-12">
         <div className="flex flex-col items-center gap-16 lg:flex-row">
           
           {/* Left Content - List */}

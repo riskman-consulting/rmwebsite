@@ -195,7 +195,7 @@ const Scope123ValueChain = () => {
 
   return (
     <section className="py-20 bg-gradient-to-b from-slate-900 via-slate-700 to-slate-200">
-      <div className="container">
+      <div className="container px-6 lg:px-12">
         <div className="py-6 text-center">
           <h1 className="mb-1 text-2xl font-semibold text-white md:text-3xl">
             GHG Emissions Across the Value Chain

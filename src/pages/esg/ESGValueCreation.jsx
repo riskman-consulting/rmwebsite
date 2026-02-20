@@ -67,7 +67,7 @@ const ESGValueCreation = () => {
 
   return (
     <section className="py-20 overflow-hidden lg:py-32 bg-bgLight dark:bg-bgDark">
-      <div className="container px-6 lg:px-20">
+      <div className="container px-6 lg:px-12">
         {/* Section Header */}
         <div className="mb-20 text-center">
           <span className="text-xs font-bold tracking-[4px] uppercase text-brandPrimary dark:text-brandGold mb-4 block">

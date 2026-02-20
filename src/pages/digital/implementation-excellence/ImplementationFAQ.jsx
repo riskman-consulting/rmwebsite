@@ -8,7 +8,7 @@ const ImplementationFAQ = () => {
 
     return (
         <section className="py-24 bg-white dark:bg-brandDark">
-            <div className="container px-6 mx-auto lg:px-20">
+            <div className="container px-6 mx-auto lg:px-12">
                 <div className="mb-16 text-center">
                     <h2 className="mb-4 text-4xl font-black font-heading md:text-5xl">
                         Frequently Asked <span className="text-brandPrimary dark:text-brandGold">Questions</span>

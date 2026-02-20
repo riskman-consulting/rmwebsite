@@ -166,7 +166,7 @@ const StrategicSection = () => {
       <div className="absolute top-10 right-0 w-[420px] h-[420px] bg-brandGold/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brandNavy/5 blur-[120px] rounded-full pointer-events-none" />
  
-      <div className="container relative z-10 px-4 mx-auto max-w-7xl">
+      <div className="container relative z-10 px-6 lg:px-12 mx-auto max-w-7xl">
  
         {/* Label */}
         <motion.div

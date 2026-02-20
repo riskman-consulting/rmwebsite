@@ -25,7 +25,7 @@ import testingImage from "../../assets/images/cybersecurity/testing-image.png"
   const TechnicalTesting = () => {
   return (
      <section className="py-14 md:py-20 bg-surfaceLight dark:bg-surfaceDark">
-        <div className="container px-6 lg:px-20 mx-auto">
+        <div className="container px-6 lg:px-12 mx-auto">
           <div className="grid items-center gap-16 lg:grid-cols-2">
             <div>
               <h2 className="mb-2 font-bold tracking-wider uppercase text-brandAccent">Offensive Security</h2>

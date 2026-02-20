@@ -6,7 +6,7 @@ export default function Footer() {
     <>
       {/* Partner CTA Section */}
       <section className="py-14 md:py-20 text-brandDark dark:text-white bg-gradient-to-r from-slate-50 to-blue-50 dark:from-slate-800 dark:to-blue-900">
-        <div className="container max-w-4xl px-6 mx-auto text-center">
+        <div className="container max-w-4xl px-6 mx-auto lg:px-12 text-center">
           <h2 className="mb-6 text-3xl font-bold md:text-4xl">
             Partner with RiskMan
           </h2>

@@ -3,7 +3,7 @@ import React from 'react'
 function StrategicSection() {
   return (
     <section className="py-14 md:py-20 bg-white border-b border-borderLight">
-        <div className="container px-6 lg:px-20">
+        <div className="container px-6 lg:px-12">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-heading text-3xl lg:text-4xl font-bold mb-6 text-brandDark tracking-tight">Strategic Investigative Solutions</h2>
             <p className="text-xl text-gray-600 leading-relaxed">

@@ -143,11 +143,11 @@ export default function TeamTestimonials() {
 
   return (
     <section className="relative py-16 bg-surfaceLight dark:bg-surfaceDark">
-      <div className="container max-w-6xl px-4 mx-auto">
+      <div className="container max-w-6xl px-6 lg:px-12 mx-auto">
 
         {/* Header */}
         <div className="max-w-3xl mx-auto mb-16 text-center text-brandDark dark:text-brandAccent">
-          <h2 className="mb-5 text-4xl font-black sm:text-5xl">
+          <h2 className="mb-5 text-3xl font-black md:text-4xl">
             Voices from Our Team
           </h2>
           <p className="text-lg opacity-70 text-brandNavy dark:text-white">

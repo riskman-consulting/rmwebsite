@@ -5,7 +5,7 @@ import { auditPlanning } from './data'
 function StrategicSection() {
   return (
        <section className="py-14 md:py-20 bg-surfaceLight dark:bg-surfaceDark">
-        <div className="container px-6 lg:px-20">
+        <div className="container px-6 lg:px-12">
           <div className="flex flex-col items-center gap-16 lg:flex-row">
             <div className="lg:w-1/2">
               <h2 className="mb-6 text-3xl font-bold font-heading lg:text-4xl text-brandDark dark:text-brandAccent/60">Strategic Audit Planning</h2>

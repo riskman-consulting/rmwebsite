@@ -6,7 +6,7 @@ function FAQSection() {
     const [activeFaq, setActiveFaq] = useState(null);
   return (
         <section className="py-14 md:py-20 bg-surfaceLight dark:bg-surfaceDark">
-        <div className="container max-w-3xl px-6 lg:px-20">
+        <div className="container max-w-3xl px-6 lg:px-12">
           <h2 className="mb-10 text-3xl font-bold text-center font-heading text-brandDark dark:text-brandAccent/60">Audit Insights FAQ</h2>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (

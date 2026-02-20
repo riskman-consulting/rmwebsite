@@ -11,7 +11,7 @@ function HeroSection() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brandPrimary rounded-full blur-[150px]"></div>
       </div>
 
-      <div className="container relative z-10 px-6 lg:px-20">
+      <div className="container relative z-10 px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           {/* LEFT: Content (unchanged) */}

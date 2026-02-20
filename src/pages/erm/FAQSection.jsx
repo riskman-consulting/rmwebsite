@@ -5,7 +5,7 @@ import FAQItem from "../risk-advisory/FAQItem";
 const FAQSection = () => {
   return (
     <section className="relative py-12 bg-bgLight dark:bg-bgDark md:py-16">
-      <div className="container px-4 mx-auto px-6 lg:px-12">
+      <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-4xl mx-auto">
 
           {/* Header */}

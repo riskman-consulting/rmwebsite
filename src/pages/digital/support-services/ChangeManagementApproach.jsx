@@ -1,7 +1,7 @@
 
  
  <section className="z-10 py-20 border-y border-borderLight dark:border-borderDark">
-        <div className="container px-6 mx-auto lg:px-20">
+        <div className="container px-6 mx-auto lg:px-12">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold font-heading md:text-4xl">
               Our <span className="text-brandPrimary dark:text-brandGold">Change Management</span> Approach

@@ -17,7 +17,7 @@ export const ChangeApproachSection = () => {
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brandPrimary/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brandAccent/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
       
-      <div className="container relative z-10 px-6 lg:px-20">
+      <div className="container relative z-10 px-6 lg:px-12">
         <div className="mb-16 text-center">
           <h2 className="mb-6 text-3xl font-bold md:text-5xl font-heading">Change Management Approach</h2>
           <p className="max-w-2xl mx-auto text-lg leading-relaxed text-gray-300">

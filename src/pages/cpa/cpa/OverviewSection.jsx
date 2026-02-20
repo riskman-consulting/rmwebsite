@@ -5,7 +5,7 @@ import { services } from './data'
 function OverviewSection() {
   return (
        <section className="py-14 md:py-20 bg-white">
-        <div className="container px-6 lg:px-20">
+        <div className="container px-6 lg:px-12">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-heading text-3xl lg:text-4xl font-bold mb-4">Integrated Service Overview</h2>
             <p className="text-gray-600">A holistic ecosystem of assurance services designed to mitigate complexity and fortify corporate governance across all operational layers.</p>

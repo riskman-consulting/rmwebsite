@@ -4,7 +4,7 @@ import { envAnalysis } from './data'
 function AnalysisSection() {
   return (
     <section className=" py-14 md:py-20 bg-white">
-        <div className="container px-6 lg:px-20">
+        <div className="container px-6 lg:px-12">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="font-heading text-3xl lg:text-4xl font-bold mb-4">Control Environment Analysis</h2>
             <p className="text-gray-600">A resilient organization begins with a disciplined control culture that cascades from the top level down.</p>

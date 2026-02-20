@@ -125,14 +125,14 @@ const WhyRiskman = () => {
 
   return (
     <section className="relative py-4 overflow-hidden lg:pb-2 lg:pt-12 bg-surfaceLight dark:bg-surfaceDark">
-      <div className="px-6 mx-auto max-w-7xl lg:px-12">
+      <div className=" container px-6 mx-auto max-w-7xl lg:px-12">
         {/* Header */}
         <motion.div {...fadeInUp} className="max-w-3xl mb-12">
           <span className="inline-block px-4 py-1 mb-6 rounded-full bg-brandAccent/10 border border-brandAccent/20 text-brandAccent text-[10px] font-black uppercase tracking-[0.3em]">
             Our Advantage
           </span>
           
-          <h2 className="mb-6 text-4xl font-bold lg:text-5xl text-brandDark dark:text-white">
+          <h2 className="mb-6 text-3xl font-bold lg:text-5xl text-brandDark dark:text-white">
             Why{" "}
             <span className="font-serif italic font-medium text-brandGold">
               RiskMan

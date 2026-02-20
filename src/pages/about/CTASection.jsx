@@ -10,13 +10,13 @@ const fadeInUp = {
 export default function CTASection() {
   return (
     <section className="text-center transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark py-14 md:py-20">
-      <div className="container">
+      <div className="container px-6 lg:px-12">
         <motion.h2
           variants={fadeInUp}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="mb-6 text-2xl font-bold md:text-3xl text-brandDark dark:text-white"
+          className="mb-6 text-3xl font-bold md:text-4xl text-brandDark dark:text-white"
         >
           Partner With
           <br />

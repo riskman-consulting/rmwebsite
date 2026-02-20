@@ -10,7 +10,7 @@ export const ExpertiseSection = () => (
         <path d="M100 20 L100 180 M40 100 L100 180 L160 100" fill="none" stroke="currentColor" strokeWidth="8" />
       </svg>
     </div>
-    <div className="container max-w-6xl px-6 mx-auto">
+    <div className="container max-w-6xl px-6 lg:px-12 mx-auto">
       <motion.div className="max-w-4xl mx-auto text-center" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
         <div className="flex items-center justify-center gap-3 mb-4">
           <div className="w-3 h-3 rounded-full bg-brandGold dark:bg-brandAccent" />

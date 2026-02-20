@@ -51,7 +51,7 @@ export default function GlobalCSAOperatingModelSection() {
     <div>
       {/* Header Section */}
       <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
-        <div className="container max-w-6xl px-6 mx-auto">
+        <div className="container max-w-6xl px-6 lg:px-12 mx-auto">
           <h2 className="mb-8 text-4xl font-bold text-brandDark dark:text-white">
             RiskMan's Global CSA Operating Model
           </h2>
@@ -141,7 +141,7 @@ export default function GlobalCSAOperatingModelSection() {
 
       {/* Technology & GRC Integration Section */}
       <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
-        <div className="container max-w-6xl px-6 mx-auto">
+        <div className="container max-w-6xl px-6 lg:px-12 mx-auto">
           <div className="p-8 shadow-md bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-900 rounded-xl">
             <h3 className="mb-4 text-2xl font-bold text-brandDark dark:text-brandAccent">
               Technology & GRC Integration

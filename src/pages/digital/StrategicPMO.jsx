@@ -35,7 +35,7 @@ const StrategicPMO = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30"></div>
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
 
-      <div className="container relative px-6 mx-auto lg:px-20">
+      <div className="container relative px-6 mx-auto lg:px-12">
         <div className="max-w-3xl p-8 border shadow-2xl rounded-xl bg-white/10 backdrop-blur-md border-white/20">
           
           <h1 className="mb-6 text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
@@ -72,7 +72,7 @@ const StrategicPMO = () => {
 
       {/* SECTION 2: GOVERNANCE MANAGEMENT */}
       <section className="py-16 bg-surfaceLight dark:bg-surfaceDark border-y border-borderLight dark:border-borderDark">
-        <div className="container px-6 mx-auto lg:px-20">
+        <div className="container px-6 mx-auto lg:px-12">
           <h2 className="mb-4 text-3xl font-bold font-heading">Governance Management</h2>
           <p className="mb-12 text-lg opacity-80">Establish structural integrity and proactive control through systematic oversight and defined protocols.</p>
           
@@ -159,7 +159,7 @@ const StrategicPMO = () => {
 
       <section className="relative text-white section-padding bg-brandDark">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-        <div className="container relative z-10 px-6 lg:px-20">
+        <div className="container relative z-10 px-6 lg:px-12">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold text-white md:text-5xl">Resource Planning & Tracking</h2>
             <div className="w-24 h-1 mx-auto mb-6 bg-brandAccent"></div>
@@ -215,7 +215,7 @@ const StrategicPMO = () => {
 
 
       <section className="bg-surfaceLight dark:bg-surfaceDark section-padding">
-        <div className="container px-6 lg:px-20">
+        <div className="container px-6 lg:px-12">
           <div className="flex flex-col items-center gap-16 lg:flex-row-reverse">
             <div className="lg:w-1/2">
               <div className="relative overflow-hidden shadow-2xl rounded-2xl group">
@@ -312,7 +312,7 @@ const StrategicPMO = () => {
           <div className="absolute rounded-full -bottom-24 -left-24 w-96 h-96 bg-brandPrimary/40 blur-3xl"></div>
         </div>
         
-        <div className="container relative z-10 px-6 text-center lg:px-20">
+        <div className="container relative z-10 px-6 text-center lg:px-12">
           <h2 className="mb-6 text-3xl font-bold text-white md:text-5xl">Ready to Elevate Your Strategy?</h2>
           <p className="max-w-2xl mx-auto mb-10 text-xl text-gray-300">
             Bridge the execution gap with RiskMan’s governance-driven expertise. Let's transform your vision into reality.

@@ -4,7 +4,7 @@ import { fieldwork } from './data'
 function TestingSection() {
   return (
         <section className="py-14 md:py-20 bg-brandLight">
-        <div className="container px-6 lg:px-20">
+        <div className="container px-6 lg:px-12">
           <div className="text-center mb-16">
             <h2 className="font-heading text-3xl lg:text-4xl font-bold mb-4">Advanced Fieldwork & Testing</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">Our methodology leverages sophisticated analytical tools to validate transactions with unprecedented depth and speed.</p>

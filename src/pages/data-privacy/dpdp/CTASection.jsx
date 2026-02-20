@@ -7,7 +7,7 @@ function CTASection() {
   const navigator=useNavigate()
   return (
      <section className="py-20 bg-white">
-        <div className="container">
+        <div className="container px-6 lg:px-12">
           <div className="relative p-12 overflow-hidden text-center border-2 shadow-2xl bg-brandAccent rounded-3xl lg:p-20 text-brandDark border-brandGold">
             <div className="relative z-10">
               <h2 className="mb-6 text-3xl font-black tracking-tight uppercase font-heading lg:text-5xl">Secure Your Fiduciary Status</h2>

@@ -46,7 +46,7 @@ export default function Contact() {
       </div>
 
       {/* ================= VALUE PROPS / FEATURES ================= */}
-      <section className="container px-4 py-24 mx-auto max-w-7xl">
+      <section className="container px-6 lg:px-12 py-24 mx-auto max-w-7xl">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {officeFeatures.map((f, i) => (
             <div 

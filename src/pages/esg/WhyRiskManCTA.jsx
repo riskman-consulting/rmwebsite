@@ -37,7 +37,7 @@ const WhyRiskManCTA = () => {
       <div className="absolute top-0 right-0 w-1/3 h-1/2 bg-brandPrimary/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
       <div className="absolute bottom-0 left-0 w-1/4 h-1/2 bg-brandGold/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
 
-      <div className="container relative z-10 px-5 mx-auto sm:px-8 lg:px-12">
+      <div className="container relative z-10 px-6 mx-auto lg:px-12">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="mb-16 text-center">

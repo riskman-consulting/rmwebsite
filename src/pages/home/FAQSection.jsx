@@ -38,7 +38,7 @@ const FAQSection = () => {
  
   return (
     <section className="relative w-full px-3 py-12 transition-colors duration-300 sm:py-20 bg-bgLight dark:bg-bgDark">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-6 lg:px-12">
         <div className="grid items-start gap-12 lg:grid-cols-2">
          
           {/* LEFT – HEADER */}

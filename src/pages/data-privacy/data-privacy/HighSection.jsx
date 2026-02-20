@@ -13,7 +13,7 @@ function HighSection() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-brandNavy/90 to-brandDark/95 dark:from-bgDark/90 dark:to-black/95" />
 
-        <div className="container mx-auto px-6 lg:px-20 relative z-10">
+        <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-heading text-3xl lg:text-5xl font-bold mb-6">High-Value Privacy Outcomes</h2>
             <p className="text-gray-300 text-lg leading-relaxed">

@@ -51,7 +51,7 @@ export default function ThreeLinesCSASection() {
 
   return (
     <section className="py-12 bg-surfaceLight dark:bg-surfaceDark">
-      <div className="container px-6 mx-auto max-w-7xl">
+      <div className="container px-6 lg:px-12 mx-auto max-w-7xl">
         {/* Section Header */}
         <h2 className="mb-4 text-3xl font-bold text-center text-brandDark dark:text-white">
           Visual Framework: Three Lines Model

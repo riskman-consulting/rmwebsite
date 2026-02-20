@@ -6,7 +6,7 @@ function EmpowermentSection() {
   return (
     
          <section className="py-20 bg-brandLight">
-        <div className="container">
+        <div className="container px-6 lg:px-12">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2">
               <h2 className="font-heading text-3xl lg:text-4xl font-bold mb-6">Consent and Principal Empowerment</h2>

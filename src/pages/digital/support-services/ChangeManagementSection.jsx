@@ -39,7 +39,7 @@ export const ChangeManagementSection = () => {
 
   return (
     <section className="z-10 py-24 bg-white dark:bg-surfaceDark">
-      <div className="container px-6 mx-auto lg:px-20">
+      <div className="container px-6 mx-auto lg:px-12">
         <div className="flex flex-col items-start gap-16 lg:flex-row">
           
           {/* Left Content - Tabs */}
