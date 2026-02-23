@@ -235,8 +235,8 @@ const EventCard = ({ event, index, onClick, totalCount }) => (
       </div>
 
       {/* Title */}
-      <h3 className="mb-5 text-xl font-black leading-tight transition-colors duration-300 sm:text-[1.35rem] text-slate-900 dark:text-white group-hover:text-brandGold">
-        {event.title}
+      <h3 className="mb-5 text-[14px] md:text-[18px]  font-black leading-tight transition-colors duration-300  text-slate-900 dark:text-white group-hover:text-brandGold">
+        {event.title}  
       </h3>
 
       {/* Date & Location */}
