@@ -59,7 +59,7 @@ export const ServiceCardCompact = ({ service, index }) => {
           {/* 1. Header: Image section */}
           <div className="relative overflow-hidden h-52">
             <img
-              src={service.headerImage}
+              src={service?.headerImage?.asset.url}
               alt={service.title}
               className="object-cover w-full h-full transition-transform duration-[1.5s] group-hover:scale-110"
             />

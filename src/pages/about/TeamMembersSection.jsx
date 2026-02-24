@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Linkedin, Users } from "lucide-react";
 import { motion } from "framer-motion";
 import { teamsImages } from "../../assets/teams";
+import { useAboutPage } from "../../store/about";
 
 /* ========= CONFIG ========= */
 // const COLUMNS_DESKTOP = 10;
@@ -34,49 +35,13 @@ const fadeInUp = {
 };
 
 const RiskManTeams = () => {
-  const allMembers = [
-    { id: 1, image: teamsImages.ShantaPal, linkedin: "https://linkedin.com/in/shanta-paul-1b0483272" },
-    { id: 22, image: teamsImages.Pranshul, linkedin: "https://linkedin.com/in/pranshul-agarwal-3b707a148" },
-    { id: 2, image: teamsImages.VishalSharma },
-    { id: 3, image: teamsImages.RohitGupta },
-    { id: 4, image: teamsImages.Yashvi },
-    { id: 5, image: teamsImages.Yugmita },
-    { id: 6, image: teamsImages.Debottam },
-    { id: 7, image: teamsImages.NishanAgarwal },
-    { id: 8, image: teamsImages.Ayush },
-    { id: 9, image: teamsImages.MayukhDhar },
-    { id: 10, image: teamsImages.Kaushik },
-    { id: 11, image: teamsImages.RishbhaJain },
-    { id: 12, image: teamsImages.SakshamAhuja },
-    { id: 13, image: teamsImages.Priyanshibisht },
-    { id: 14, image: teamsImages.JaiDeep },
-    { id: 15, image: teamsImages.Palak },
-    { id: 16, image: teamsImages.VanshGarg },
-    { id: 17, image: teamsImages.Artika },
-    { id: 18, image: teamsImages.sidhi },
-    { id: 19, image: teamsImages.Sakshi },
-    { id: 20, image: teamsImages.priyanshu },
-    { id: 21, image: teamsImages.Vipul },
-    { id: 23, image: teamsImages.Angel },
-    { id: 24, image: teamsImages.VinayakPoddar },
-    { id: 25, image: teamsImages.Tushar },
-    // { id: 26, image: teamsImages.JaiDeep },
-   { id:37,image:teamsImages.Tanisha},
-    { id: 27, image: teamsImages.Anirban },
-    { id: 28, image: teamsImages.Vanshika },
-    { id: 29, image: teamsImages.Kartik },
-    { id: 31, image: teamsImages.Simran },
-    { id: 32, image: teamsImages.Jay },
-    {id:38,image:teamsImages.Debolina},
-    { id: 30, image: teamsImages.Pawan },
-     { id: 34, image: teamsImages.Harsh },
-    { id: 33, image: teamsImages.Arif },
-      {id:39,image:teamsImages.Shreya},
-    { id: 35, image: teamsImages.Kiran },
-    { id: 36, image: teamsImages.monica },
-  ];
+  const { fetchLeaders, teamMembersSection } = useAboutPage()
 
-  const desktopGrid =allMembers;
+  useEffect(() => {
+    if (teamMembersSection.length <= 0) {
+      fetchLeaders()
+    }
+  }, [])
 
   return (
     <section id="riskman-teams" className="py-20 bg-surfaceLight dark:bg-surfaceDark">
@@ -112,7 +77,7 @@ const RiskManTeams = () => {
           <div className="flex items-center gap-2 px-6 py-3 border rounded-full bg-surfaceLight dark:bg-surfaceDark border-brandAccent/30">
             <Users className="w-5 h-5 text-brandAccent" />
             <span className="text-lg font-bold text-brandDark dark:text-white">
-              {allMembers.length}+
+              {teamMembersSection?.length}+
             </span>
             <span className="text-sm text-brandDark/70 dark:text-white/70">
               Team Members
@@ -125,15 +90,15 @@ const RiskManTeams = () => {
           initial={{ opacity: 0, scale: 0.96 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6}}
+          transition={{ duration: 0.6 }}
           className="flex justify-center"
         >
 
-           <div
+          <div
             className="grid grid-cols-4 gap-3 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-10"
           >
-         
-            {desktopGrid.map((item, idx) =>
+
+            {teamMembersSection?.map((item, idx) =>
               item.type === "logo" ? (
                 <motion.div
                   key={`logo-${idx}`}
@@ -156,7 +121,7 @@ const RiskManTeams = () => {
                 </motion.div>
               ) : (
                 <motion.div
-                  key={item.id}
+                  key={idx}
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
@@ -168,7 +133,7 @@ const RiskManTeams = () => {
                     border border-slate-200 dark:border-white/10`}
                 >
                   <img
-                    src={item.image}
+                    src={item?.image?.asset.url}
                     alt=""
                     className="object-cover object-top w-full h-full"
                   />
@@ -176,7 +141,7 @@ const RiskManTeams = () => {
                   {item.linkedin && (
                     <div className="absolute inset-0 flex items-center justify-center transition-opacity opacity-0 bg-black/60 group-hover:opacity-100">
                       <a
-                        href={item.linkedin}
+                        href={item?.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-2 transition bg-white rounded-full hover:scale-110"

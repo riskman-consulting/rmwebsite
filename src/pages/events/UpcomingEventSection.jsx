@@ -104,7 +104,7 @@
 // }
 
 
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import {
   Calendar,
@@ -120,6 +120,7 @@ import {
 } from "lucide-react"
 
 import IIALogoImg from "../../assets/iia-logo/iia-logo.png";
+import { useEventsStore } from "../../store/event";
 
 /* ================= DATA ================= */
 export const UPCOMING_EVENTS = [
@@ -219,7 +220,7 @@ const EventCard = ({ event, index, onClick }) => (
                 Date & Time
               </p>
               <p className="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                {event.date}
+                {event.eventDate}
               </p>
             </div>
           </div>
@@ -387,6 +388,12 @@ const EventDrawer = ({ event, onClose }) => (
 
 const UpcomingEventsSection = () => {
   const [selectedEvent, setSelectedEvent] = useState(null)
+  const {fetchUpcomingEvents,upcomingEvents} = useEventsStore()
+
+
+  useEffect(()=>{
+    fetchUpcomingEvents()
+  },[])
 
   return (
     <div id="upcoming-events" className="relative py-24 overflow-hidden lg:py-32 bg-slate-50 dark:bg-surfaceDark">
@@ -445,7 +452,7 @@ const UpcomingEventsSection = () => {
         </div>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {UPCOMING_EVENTS.map((event, idx) => (
+          {upcomingEvents?.map((event, idx) => (
             <EventCard
               key={event.id}
               event={event}

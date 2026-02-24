@@ -3,6 +3,8 @@ import { ArrowRight, ChevronRight, ChevronLeft } from "lucide-react";
 import heroItRisk from "../../assets/images/hero-section/home/hero-it-risk.png";
 import HeroRiskAdvisory from "../../assets/images/hero-section/home/hero-risk-advisory.webp";
 import HeroConsulting from "../../assets/images/hero-section/home/hero-consulting.webp";
+import {useHomePage} from "../../store/home"
+import { Link } from "react-router-dom";
 
 const SLIDES = [
   {
@@ -46,11 +48,21 @@ const SLIDES = [
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const timerRef = useRef(null);
+  const {heroSlides,fetchHomePage} = useHomePage()
+
+  
 
   useEffect(() => {
     startAutoSlide();
     return () => stopAutoSlide();
   }, []);
+
+
+  useEffect(()=>{
+    if(heroSlides.length<=0){
+    fetchHomePage()
+    }
+  },[])
 
   const startAutoSlide = () => {
     stopAutoSlide();
@@ -152,7 +164,7 @@ export default function HeroSection() {
 
           {/* SLIDE CONTENT WRAPPER */}
           <div className="relative w-full max-w-2xl md:h-full">
-            {SLIDES.map((slide, index) => (
+            {heroSlides.map((slide, index) => (
               <div
                 key={`text-${index}`}
                 className={`
@@ -191,25 +203,25 @@ export default function HeroSection() {
 
                 {/* Description */}
                 <p className="max-w-xl mb-8 text-sm leading-relaxed md:text-base" style={{ color: "rgba(245,245,245,0.6)" }}>
-                  {slide.desc}
+                  {slide.description}
                 </p>
 
                 {/* Action Buttons */}
                 <div className="flex flex-wrap items-center w-full gap-3">
-                  <button
-                    onClick={() => window.location.href = slide.btn1Link}
+                  <Link
+                    to={slide.btn1Link}
                     className="relative flex items-center justify-center px-6 py-3 overflow-hidden text-sm font-bold transition-all duration-300 rounded-full shadow-lg btn-primary-hero group"
                   >
-                    <span className="relative z-10">{slide.btn1}</span>
+                    <span className="relative z-10">{slide.btn1Text}</span>
                     <ArrowRight className="relative z-10 w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                     <div className="absolute inset-0 transition-transform duration-300 translate-y-full bg-white/10 group-hover:translate-y-0" />
-                  </button>
-                  <button
-                    onClick={() => window.location.href = slide.btn2Link}
+                  </Link>
+                  <Link
+                    to={slide.btn2Link}
                     className="flex items-center justify-center px-6 py-3 text-sm font-bold transition-all duration-300 border rounded-full btn-secondary-hero backdrop-blur-sm"
                   >
-                    {slide.btn2}
-                  </button>
+                    {slide.btn2Text}
+                  </Link>
                 </div>
 
                 {/* MOBILE INDICATORS */}

@@ -160,16 +160,32 @@
 // export default StrategicSection;
 
 
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Strategic from "../../assets/images/home/features/strategies 2.png";
+import { useHomePage } from "../../store/home";
+
+
+
  
 const StrategicSection = () => {
+  const {fetchHomePage,strategiesSection} = useHomePage()
   const features = [
     { title: "Governance & Compliance", desc: "Navigate complex regulatory environments with confidence." },
     { title: "Financial Discipline", desc: "Build sustainable frameworks for long-term fiscal success." },
     { title: "Digital Assurance", desc: "Integrate modern solutions into cohesive digital strategies." }
   ];
+
+  
+  
+  
+
+
+  useEffect(()=>{
+    if(!strategiesSection){
+      fetchHomePage()
+    }
+  },[])
  
   return (
     <section className="relative px-10 py-16 overflow-hidden transition-colors duration-500 md:py-20 bg-surfaceLight dark:bg-surfaceDark">
@@ -222,7 +238,7 @@ const StrategicSection = () => {
               className="relative overflow-hidden border shadow-2xl rounded-2xl border-black/5 dark:border-white/10 group"
             >
               <img
-                src={Strategic}
+                src={strategiesSection?.image.asset.url}
                 alt="Strategic Risk Management"
                 className="w-full h-[360px] md:h-[420px] object-cover transition duration-700 group-hover:scale-105"
               />
@@ -255,7 +271,7 @@ const StrategicSection = () => {
  
             {/* Features */}
             <div className="grid gap-5">
-              {features.map((feature, idx) => (
+              {strategiesSection?.features.map((feature, idx) => (
                 <motion.div
                   key={idx}
                   initial={{ opacity: 0, x: 24 }}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Star } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useHomePage } from "../../store/home"
 
 import electrosteelImg from "../../assets/iia-logo/electrosteel.png"
 
@@ -8,49 +9,60 @@ import electrosteelImg from "../../assets/iia-logo/electrosteel.png"
 
 const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const {fetchHomePage,testimonials} = useHomePage()
 
-  const testimonials = [
-    {
-      id: 1,
-      name: "Soumen Sarkar",
-      role: "Managing Director | Nexval",
-      image: "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898439/s-sarkar_tpw74c.webp",
-      text: "From the outset, Riskman demonstrated unparalleled dedication to understanding our organizations unique challenges and objectives.",
-      color: "bg-brandDark",
-      textColor: "text-white",
-      zIndex:1,
-    },
-    {
-      id: 2,
-      name: "Swapan Kumar Manna",
-      role: "CEO, Oneskai",
-      image: "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898439/s-manna_dassro.webp",
-      text: "RiskMan has been instrumental in strengthening our internal controls and regulatory compliance. Their expert guidance helped us align with industry best practices.",
-      color: "bg-brandAccent",
-      textColor: "text-brandDark",
-      zIndex:2,
-    },
-    {
-      id: 3,
-      name: "Electrosteel Castings Limited",
-      role: "CEO, Global Manufacturing",
-      image: electrosteelImg,
-      text: "RiskMan delivered a well-structured and comprehensive risk management engagement, covering multiple business processes. The work was completed on time and met our expectations fully",
-      color: "bg-white dark:bg-surfaceDark",
-      textColor: "text-brandDark dark:text-white",
-      zIndex:3,
-    },
-    // {
-    //   id: 4,
-    //   name: "Emily Thompson",
-    //   role: "VP Operations, RetailMax",
-    //   image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&h=600&fit=crop",
-    //   text: "Their insights were actionable and impactful, driving measurable improvements in efficiency and compliance across our organization.",
-    //   color: "bg-brandPrimary",
-    //   textColor: "text-white",
-    //   zIndex:4,
-    // },
-  ];
+  
+  // const testimonials = [
+  //   {
+  //     id: 1,
+  //     name: "Soumen Sarkar",
+  //     role: "Managing Director | Nexval",
+  //     image: "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898439/s-sarkar_tpw74c.webp",
+  //     text: "From the outset, Riskman demonstrated unparalleled dedication to understanding our organizations unique challenges and objectives.",
+  //     color: "bg-brandDark",
+  //     textColor: "text-white",
+  //     zIndex:1,
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "Swapan Kumar Manna",
+  //     role: "CEO, Oneskai",
+  //     image: "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898439/s-manna_dassro.webp",
+  //     text: "RiskMan has been instrumental in strengthening our internal controls and regulatory compliance. Their expert guidance helped us align with industry best practices.",
+  //     color: "bg-brandAccent",
+  //     textColor: "text-brandDark",
+  //     zIndex:2,
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "Electrosteel Castings Limited",
+  //     role: "CEO, Global Manufacturing",
+  //     image: electrosteelImg,
+  //     text: "RiskMan delivered a well-structured and comprehensive risk management engagement, covering multiple business processes. The work was completed on time and met our expectations fully",
+  //     color: "bg-white dark:bg-surfaceDark",
+  //     textColor: "text-brandDark dark:text-white",
+  //     zIndex:3,
+  //   },
+  //   // {
+  //   //   id: 4,
+  //   //   name: "Emily Thompson",
+  //   //   role: "VP Operations, RetailMax",
+  //   //   image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&h=600&fit=crop",
+  //   //   text: "Their insights were actionable and impactful, driving measurable improvements in efficiency and compliance across our organization.",
+  //   //   color: "bg-brandPrimary",
+  //   //   textColor: "text-white",
+  //   //   zIndex:4,
+  //   // },
+  // ];
+
+  
+  
+
+  useEffect(()=>{
+    if(!testimonials){
+      fetchHomePage()
+    }
+  },[])
 
   // Auto-rotate
   // Cycle through testimonials every 5 seconds
@@ -88,7 +100,7 @@ const Testimonials = () => {
 
             {/* Navigation Dots */}
             <div className="flex justify-center w-32 p-3 lg:justify-start">
-              {testimonials.map((_, idx) => (
+              {testimonials?.map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setActiveIndex(idx)}
@@ -106,7 +118,7 @@ const Testimonials = () => {
           {/* RIGHT SIDE - Stacked Carousel */}
           <div className="relative w-full h-[500px] flex items-center justify-center perspective-1000">
             <AnimatePresence mode="popLayout">
-              {testimonials.map((item, index) => {
+              {testimonials?.map((item, index) => {
                 // Calculate relative position based on activeIndex
                 const offset = (index - activeIndex + testimonials.length) % testimonials.length;
                 const isActive = offset === 0;
@@ -158,7 +170,7 @@ const Testimonials = () => {
 
                 return (
                   <motion.div
-                    key={item.id}
+                    key={index}
                     layout
                     initial={false}
                     animate={{
@@ -194,7 +206,7 @@ const Testimonials = () => {
                     <div className="flex items-center gap-4">
                       <div className="w-10 h-10 overflow-hidden rounded-full md:w-12 md:h-12 ring-2 ring-white/20">
                         <img
-                          src={item.image}
+                          src={item.image.asset.url}
                           alt={item.name}
                           className="object-cover w-full h-full"
                         />

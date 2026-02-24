@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
  
 import { Zap, ShoppingCart, HeartPulse, Factory, Monitor, Home, ArrowRight } from "lucide-react";
+import { useHomePage } from "../../store/home";
  
 
 const industriesData = [
@@ -86,7 +87,10 @@ const IconComponent = ({ type, className }) => {
 };
  
 export function IndustryGrid() {
+  const {fetchIndustries,industries,loading} = useHomePage()
   const [hoveredCard, setHoveredCard] = useState(null);
+
+  
 
   const [hoverTimer, setHoverTimer] = useState(null);
 
@@ -105,6 +109,10 @@ export function IndustryGrid() {
       setHoverTimer(null);
     }
   };
+
+  useEffect(()=>{
+    fetchIndustries()
+  },[])
  
   return (
     <section className="py-4 transition-colors duration-300 bg-gray-50 dark:bg-gray-900 sm:py-8">
@@ -125,7 +133,7 @@ export function IndustryGrid() {
  
         {/* The Grid */}
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {industriesData.map((industry, index) => (
+          {industries?.map((industry, index) => (
             <div
               key={index}
               className="flex flex-col overflow-hidden transition-all duration-500 bg-white shadow-lg group rounded-3xl dark:bg-gray-800"
@@ -143,7 +151,7 @@ export function IndustryGrid() {
                 }}
               >
                 <img
-                  src={industry.image}
+                  src={industry?.headerImage?.asset?.url}
                   alt={industry.title}
                   className="object-cover w-full h-full transition-all duration-700 group-hover:scale-110"
                   style={{

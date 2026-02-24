@@ -28,6 +28,7 @@ import image16 from "../../assets/team-accomplishment/western_8.jpeg";
 import image17 from "../../assets/team-accomplishment/western_9.jpeg";
 
 import image18 from "../../assets/team-accomplishment/iia_conference_mumbai_jan_2026​_7.webp";
+import { useEventsStore } from "../../store/event";
 
 
 const rankByBM25 = (data, query) => {
@@ -56,6 +57,7 @@ const rankByBM25 = (data, query) => {
  
 
 export default function EventRecognition() {
+  const {fetchEventRecognitionMedia,eventRecognitionMedia}  = useEventsStore()
   const [activeTab, setActiveTab] = useState("emerging");
   const [showMoreAccomplishments, setShowMoreAccomplishments] = useState(false);
   const [searchQuery, setSearchQuery]=useState("")
@@ -64,64 +66,33 @@ export default function EventRecognition() {
   const [showMoreEmerging, setShowMoreEmerging] = useState(false);
 
 
-  const allMedia = useMemo(() => [
-    { image: image1, type: "accomplishments", terms: ["iia", "conference", "mumbai", "march", "2025"] },
-    { image: image17, type: "accomplishments", terms: ["western", "leadership", "award", "nine"] },
-    { image: image4, type: "accomplishments", terms: ["iia", "conference", "mumbai", "january", "2026"] },
-    { image: image18, type: "accomplishments", terms: ["iia", "conference", "mumbai", "march", "2025"] },
-    { image: image5, type: "emerging", terms: ["audit", "leaders", "summit", "mumbai", "november", "2024"] },
-    { image: image6, type: "emerging", terms: ["audit", "leaders", "summit", "mumbai", "november", "2024"] },
-    { image: image7, type: "emerging", terms: ["audit", "leaders", "summit", "mumbai", "november", "2024"] },
-    { image: image8, type: "emerging", terms: ["audit", "leaders", "summit", "mumbai", "november", "2024"] },
-    { image: image9, type: "emerging", terms: ["western", "one"] },
-    { image: image10, type: "emerging", terms: ["western", "two"] },
-    { image: image11, type: "emerging", terms: ["western", "three"] },
-    { image: image12, type: "emerging", terms: ["western", "four"] },
-    { image: image13, type: "emerging", terms: ["western", "five"] },
-    { image: image14, type: "emerging", terms: ["western", "six"] },
-    { image: image15, type: "emerging", terms: ["western", "seven"] },
-    { image: image16, type: "emerging", terms: ["western", "eight"] },
-  ], []);
+  // const allMedia = useMemo(() => [
+  //   { image: image1, type: "accomplishments", terms: ["iia", "conference", "mumbai", "march", "2025"] },
+  //   { image: image17, type: "accomplishments", terms: ["western", "leadership", "award", "nine"] },
+  //   { image: image4, type: "accomplishments", terms: ["iia", "conference", "mumbai", "january", "2026"] },
+  //   { image: image18, type: "accomplishments", terms: ["iia", "conference", "mumbai", "march", "2025"] },
+  //   { image: image5, type: "emerging", terms: ["audit", "leaders", "summit", "mumbai", "november", "2024"] },
+  //   { image: image6, type: "emerging", terms: ["audit", "leaders", "summit", "mumbai", "november", "2024"] },
+  //   { image: image7, type: "emerging", terms: ["audit", "leaders", "summit", "mumbai", "november", "2024"] },
+  //   { image: image8, type: "emerging", terms: ["audit", "leaders", "summit", "mumbai", "november", "2024"] },
+  //   { image: image9, type: "emerging", terms: ["western", "one"] },
+  //   { image: image10, type: "emerging", terms: ["western", "two"] },
+  //   { image: image11, type: "emerging", terms: ["western", "three"] },
+  //   { image: image12, type: "emerging", terms: ["western", "four"] },
+  //   { image: image13, type: "emerging", terms: ["western", "five"] },
+  //   { image: image14, type: "emerging", terms: ["western", "six"] },
+  //   { image: image15, type: "emerging", terms: ["western", "seven"] },
+  //   { image: image16, type: "emerging", terms: ["western", "eight"] },
+  // ], []);
 
-  /* ================= ACCOMPLISHMENTS ================= */
-  const accomplishmentsInitial = [
-    { image: image1 },
-    { image: image4 },
-    { image: image17 },
-    { image: image18 },
-  ];
+  const allMedia = useMemo(()=>eventRecognitionMedia)
 
-  const allAccomplishments = [
-    { image: image1 },
-    { image: image4 },
-    { image: image17 },
-    { image: image18 },
-  ];
-
-  /* ================= EMERGING AWARDS ================= */
-  const emergingInitial = [
-    { image: image5 },
-    { image: image6 },
-    { image: image7 },
-    { image: image8 },
-  ];
-
-  const allEmerging = [
-    { image: image5 },
-    { image: image6 },
-    { image: image7 },
-    { image: image8 },
-    { image: image9 },
-    { image: image10 },
-    { image: image11 },
-    { image: image12 },
-    { image: image13 },
-    { image: image14 },
-    { image: image15 },
-    { image: image16 },
-  ];
+  console.log(eventRecognitionMedia)
 
 
+  useEffect(()=>{
+    fetchEventRecognitionMedia()
+  },[])
   const processedItems = useMemo(() => {
     const categoryItems = allMedia.filter(item => item.type === activeTab);
     
@@ -243,7 +214,7 @@ export default function EventRecognition() {
                 onClick={() => setSelectedIndex(index)}
               >
                 <img
-                  src={item.image}
+                  src={item?.image?.asset?.url}
                   alt="Achievement"
                   className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
                 />
@@ -294,7 +265,7 @@ export default function EventRecognition() {
                 onClick={(e) => e.stopPropagation()}
               >
                 <img
-                  src={processedItems[selectedIndex].image}
+                  src={processedItems[selectedIndex]?.image?.asset.url}
                   alt="Enlarged achievement"
                   className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
                 />
@@ -341,144 +312,3 @@ export default function EventRecognition() {
   );
 }
     
-    // <section id="accomplishments" className="relative bg-gradient-to-b from-bgLight to-bgLight dark:from-bgDark dark:to-bgDark border-y border-borderLight dark:border-borderDark">
-    //   <div className="container py-32">
-
-
-
-        
-        
-       
-    //     <div className="flex justify-center gap-6 mb-16">
-    //       <motion.button
-    //         onClick={() => setActiveTab("accomplishments")}
-    //         className={`relative px-8 py-4 text-lg font-bold transition-all duration-300 rounded-full ${
-    //           activeTab === "accomplishments"
-    //             ? "bg-gradient-to-r from-brandAccent to-brandGold text-brandDark shadow-lg scale-105"
-    //             : "text-brandDark dark:text-white hover:bg-brandAccent/10 dark:hover:bg-brandGold/10"
-    //         }`}
-    //         whileHover={{ scale: 1.05 }}
-    //         whileTap={{ scale: 0.95 }}
-    //       >
-    //         Team Accomplishment
-    //       </motion.button>
-
-    //       <motion.button
-    //         onClick={() => setActiveTab("emerging")}
-    //         className={`relative px-8 py-4 text-lg font-bold transition-all duration-300 rounded-full ${
-    //           activeTab === "emerging"
-    //             ? "bg-gradient-to-r from-brandAccent to-brandGold text-brandDark shadow-lg scale-105"
-    //             : "text-brandDark dark:text-white hover:bg-brandAccent/10 dark:hover:bg-brandGold/10"
-    //         }`}
-    //         whileHover={{ scale: 1.05 }}
-    //         whileTap={{ scale: 0.95 }}
-    //       >
-    //         Emerging Risk Assurance & Advisory Firm of the Year 2024
-    //       </motion.button>
-    //     </div>
-
-      
-    //     {activeTab === "accomplishments" && (
-    //       <motion.div
-    //         initial={{ opacity: 0, y: 20 }}
-    //         animate={{ opacity: 1, y: 0 }}
-    //         exit={{ opacity: 0, y: 20 }}
-    //         transition={{ duration: 0.5 }}
-    //       >
-    //         <div className="mb-16">
-    //           <h2 className="mb-4 text-4xl font-bold lg:text-5xl font-heading text-brandDark dark:text-white">
-    //             Team Accomplishment
-    //           </h2>
-    //           <div className="w-20 h-1.5 bg-gradient-to-r from-brandAccent to-brandGold rounded-full" />
-    //           <p className="max-w-3xl mt-6 text-lg text-slate-600 dark:text-slate-400">
-    //             Recognizing key achievements, leadership milestones, and award moments that define our journey.
-    //           </p>
-    //         </div>
-
-    //         <motion.div 
-    //           layout
-    //           className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-    //         >
-    //           {(showMoreAccomplishments ? allAccomplishments : accomplishmentsInitial).map((item, index) => (
-    //             <motion.div
-    //               key={index}
-    //               initial={{ opacity: 0, y: 20 }}
-    //               animate={{ opacity: 1, y: 0 }}
-    //               transition={{ duration: 0.5, delay: index * 0.1 }}
-    //               className="overflow-hidden transition-all duration-300 shadow-lg group rounded-2xl hover:shadow-xl h-72"
-    //             >
-    //               <img
-    //                 src={item.image}
-    //                 alt="Team accomplishment"
-    //                 className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-    //               />
-    //             </motion.div>
-    //           ))}
-    //         </motion.div>
-
-    //         <div className="mt-12 text-center">
-    //           <motion.button
-    //             initial={{ opacity: 0, y: 10 }}
-    //             animate={{ opacity: 1, y: 0 }}
-    //             onClick={() => setShowMoreAccomplishments(!showMoreAccomplishments)}
-    //             className="px-8 py-3 font-semibold transition-all duration-300 rounded-full bg-gradient-to-r from-brandAccent to-brandGold text-brandDark hover:shadow-lg hover:scale-105"
-    //           >
-    //             {showMoreAccomplishments ? "View Less" : "View More"}
-    //           </motion.button>
-    //         </div>
-    //       </motion.div>
-    //     )}
-
-    //     {activeTab === "emerging" && (
-    //       <motion.div
-    //         initial={{ opacity: 0, y: 20 }}
-    //         animate={{ opacity: 1, y: 0 }}
-    //         exit={{ opacity: 0, y: 20 }}
-    //         transition={{ duration: 0.5 }}
-    //       >
-    //         <div className="mb-16">
-    //           <h2 className="mb-4 text-4xl font-bold lg:text-5xl font-heading text-brandDark dark:text-white">
-    //             Emerging Risk Assurance & Advisory Firm of the Year 2024
-    //           </h2>
-    //           <div className="w-20 h-1.5 bg-gradient-to-r from-brandAccent to-brandGold rounded-full" />
-    //           <p className="max-w-3xl mt-6 text-lg text-slate-600 dark:text-slate-400">
-    //             Highlights from recent events showcasing growing recognition and industry leadership.
-    //           </p>
-    //         </div>
-
-    //         <motion.div 
-    //           layout
-    //           className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-    //         >
-    //           {(showMoreEmerging ? allEmerging : emergingInitial).map((item, index) => (
-    //             <motion.div
-    //               key={index}
-    //               initial={{ opacity: 0, y: 20 }}
-    //               animate={{ opacity: 1, y: 0 }}
-    //               transition={{ duration: 0.5, delay: index * 0.1 }}
-    //               className="overflow-hidden transition-all duration-300 shadow-lg group rounded-2xl hover:shadow-xl h-72"
-    //             >
-    //               <img
-    //                 src={item.image}
-    //                 alt="Event highlight"
-    //                 className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-    //               />
-    //             </motion.div>
-    //           ))}
-    //         </motion.div>
-
-    //         <div className="mt-12 text-center">
-    //           <motion.button
-    //             initial={{ opacity: 0, y: 10 }}
-    //             animate={{ opacity: 1, y: 0 }}
-    //             onClick={() => setShowMoreEmerging(!showMoreEmerging)}
-    //             className="px-8 py-3 font-semibold transition-all duration-300 rounded-full bg-gradient-to-r from-brandAccent to-brandGold text-brandDark hover:shadow-lg hover:scale-105"
-    //           >
-    //             {showMoreEmerging ? "View Less" : "View More"}
-    //           </motion.button>
-    //         </div>
-    //       </motion.div>
-    //     )}
-
-    //   </div>
-    // </section>

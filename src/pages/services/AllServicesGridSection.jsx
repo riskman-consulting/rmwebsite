@@ -1,12 +1,19 @@
-import { motion} from "framer-motion";
-import allServices from "../../data/services-master-list.json";
+import { motion } from "framer-motion";
+import { useEffect } from "react";
 import { ServiceCardCompact } from "./ServiceCardCompactSection";
+import { useServiceStore } from "../../store/service";
 
 export const AllServicesGridSection = () => {
+  const { fetchServices, services } = useServiceStore();
+
+  useEffect(() => {
+    fetchServices();
+  }, []);
+
   return (
     <section className="pb-10 bg-bgLight dark:bg-bgDark">
       <div className="container">
-        {/* Section Header */}
+
         <motion.div
           className="mb-20 text-center"
           initial={{ opacity: 0, y: 40 }}
@@ -30,12 +37,16 @@ export const AllServicesGridSection = () => {
           </p>
         </motion.div>
 
-        {/* Grid */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {allServices.map((service, index) => (
-            <ServiceCardCompact key={service.id} service={service} index={index} />
+          {services.map((service, index) => (
+            <ServiceCardCompact
+              key={service._id}
+              service={service}
+              index={index}
+            />
           ))}
         </div>
+
       </div>
     </section>
   );

@@ -120,6 +120,7 @@ import FinancialStatementPage from "./pages/cpa/financial-audits"
 import InternalControlReview from "./pages/cpa/internal-control"
 import ComplianceAudit from "./pages/cpa/compliance-audits"
 import QualityAssurancePage from './pages/cpa/quality-assurance'
+import { useHomePage } from './store/home'
  
 
 
@@ -130,15 +131,17 @@ import QualityAssurancePage from './pages/cpa/quality-assurance'
 
 function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
-
-  console.log('App rendered, theme:', theme); // Debug log
+  const {heroSlides,fetchHomePage} = useHomePage()
 
   // Apply theme to document
   useEffect(() => {
-    console.log('Theme changed to:', theme); // Debug log
+    
     document.documentElement.classList.toggle("dark", theme === "dark");
     localStorage.setItem("theme", theme);
   }, [theme]);
+
+
+  
 
   return (
     <Router>
