@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 
 const ZOHO_URL =  import.meta.env.VITE_ZOHO_API_URL
 
@@ -130,13 +130,29 @@ export default function ContactForm() {
         </header>
 
         {ok && (
-          <div className="mb-8 p-4 rounded-xl bg-brandGold/10 border border-brandGold/30 text-brandDark dark:text-brandAccent flex items-center gap-3 animate-in fade-in slide-in-from-top-2">
-            <span className="text-xl">✅</span>
-            <span className="font-medium">Success! We'll get back to you shortly.</span>
-          </div>
+          <>
+            <div className="mb-8 p-4 rounded-xl bg-brandGold/10 border border-brandGold/30 text-brandDark dark:text-brandAccent flex items-center gap-3 animate-in fade-in slide-in-from-top-2">
+              <span className="text-xl">✅</span>
+              <span className="font-medium">Success! We'll get back to you shortly.</span>
+            </div>
+            <button
+              type="button"
+              onClick={() => {
+                setOk(false);
+                setErrors({});
+              }}
+              className="group relative w-full overflow-hidden bg-brandDark dark:bg-brandGold text-white dark:text-brandDark font-bold py-4 rounded-xl transition-all duration-300 hover:shadow-[0_10px_20px_rgba(255,184,0,0.3)] active:scale-[0.98]"
+            >
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                Send Another Request
+              </span>
+              <div className="absolute inset-0 bg-brandPrimary dark:bg-brandAccent translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+            </button>
+          </>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-8 relative">
+        {!ok && (
+          <form onSubmit={handleSubmit} className="space-y-8 relative">
           
           {/* Row 1: Names */}
           <div className="grid md:grid-cols-2 gap-6">
@@ -220,7 +236,7 @@ export default function ContactForm() {
                       onChange={() => toggleService(s)}
                       className="peer h-5 w-5 cursor-pointer appearance-none rounded border border-brandDark/20 dark:border-white/10 bg-white dark:bg-surfaceDark checked:bg-brandGold checked:border-brandGold transition-all"
                     />
-                    <svg className="absolute h-3.5 w-3.5 text-brandDark opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="4">
+                    <svg className="absolute h-3.5 w-3.5 text-brandDark dark:text-brandAccent opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="4">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
@@ -261,8 +277,12 @@ export default function ContactForm() {
             </span>
             <div className="absolute inset-0 bg-brandPrimary dark:bg-brandAccent translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
           </button>
-        </form>
+          </form>
+        )}
       </div>
     </div>
   );
 }
+
+
+

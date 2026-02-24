@@ -213,3 +213,14 @@ h1 { font-size: clamp(1.8rem, 4vw, 3rem); }
 h2 { font-size: clamp(1.4rem, 3vw, 2.2rem); }
 p  { font-size: clamp(1rem, 2vw, 1.2rem); }
  
+.footer-heading {
+  @apply font-bold text-sm uppercase tracking-widest mb-6 text-brandNavy dark:text-brandAccent;
+}
+
+.footer-link {
+  @apply text-sm text-brandNavy/60 dark:text-brandLight/60 hover:text-brandAccent transition-colors;
+}
+
+.footer-icon {
+  @apply w-10 h-10 rounded-full bg-brandNavy/5 flex items-center justify-center hover:bg-brandAccent hover:text-white transition;
+}
