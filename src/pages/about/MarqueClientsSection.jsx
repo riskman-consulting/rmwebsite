@@ -355,6 +355,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Marquee from "../../components/Marquee/Marquee";
+import emamiLogo from "../../assets/images/logo/emami.jpg";
+import indiaPowerLogo from "../../assets/images/logo/india_power.jpg";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -372,7 +374,7 @@ export default function MarqueeClientsSection({ title = "Our Marquee Clients", b
     { name: "Indorama", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Indorama_Ventures_Logo.svg/3840px-Indorama_Ventures_Logo.svg.png" },
     { name: "Electrosteel", logo: "https://companieslogo.com/img/orig/ELECTCAST.NS_BIG-aca1b4fb.png?t=1720244491" },
     { name: "Emami Agrotech", 
-      logo: "https://media.licdn.com/dms/image/v2/D4D0BAQFWEIHbqHMR0Q/company-logo_200_200/B4DZhfVxSYHAAM-/0/1753946201569/emami_agrotech_limited_logo?e=2147483647&v=beta&t=-0zacJ2jU8H7dQK8d47V3rgZQZHJV4ZDh5tZKrvjm-M" ,
+      logo: emamiLogo ,
       logoStyle: { transform: "scale(1.7)", transformOrigin: "center" },
     },
     { name: "Ambuja Neotia", logo: "https://phrealtors.in/wp-content/uploads/2023/07/Ambuja-Neotia-logo.png" },
@@ -389,7 +391,7 @@ export default function MarqueeClientsSection({ title = "Our Marquee Clients", b
     { name: "Kariwala", logo: "https://framerusercontent.com/images/8rDBwXLJfngm6aEglJBVvfW31sQ.png?scale-down-to=512" },
     {
       name: "India Power",
-      logo: "https://media.licdn.com/dms/image/v2/C4D0BAQFwvCiZN3K5qw/company-logo_200_200/company-logo_200_200/0/1631340755897?e=2147483647&v=beta&t=h0kmW4zhFqFukc8m4-RLaK4BPrLjg6li0sFBPl-dEiM",
+      logo: indiaPowerLogo,
       logoStyle: { transform: "scale(1.8)", transformOrigin: "center" },
     },
     { name: "Pernod Ricard", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Pernod_Ricard_logo_2019.svg/1280px-Pernod_Ricard_logo_2019.svg.png?20191029154406%22" },
