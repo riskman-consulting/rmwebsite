@@ -1,23 +1,41 @@
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
-import { testimonials } from "./data";
+import { useCareerStore } from "../../store/career";
+import { sanityClient } from "../../api/sanity";
+import imageUrlBuilder from "@sanity/image-url";
+
+// 🔥 Create image builder
+const builder = imageUrlBuilder(sanityClient);
+const urlFor = (source) => builder.image(source);
 
 export default function TeamTestimonials() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const { testimonials, fetchCareerPage } = useCareerStore();
+
+  // Fetch data
+  useEffect(() => {
+    fetchCareerPage();
+  }, [fetchCareerPage]);
 
   // Auto slide
   useEffect(() => {
+    if (!testimonials.length) return;
+
     const id = setInterval(() => {
-      setCurrentSlide((p) => (p + 1) % testimonials.length);
+      setCurrentSlide((prev) => (prev + 1) % testimonials.length);
     }, 7000);
+
     return () => clearInterval(id);
-  }, []);
+  }, [testimonials]);
+
+  // Prevent crash
+  if (!testimonials.length) return null;
 
   const next = () =>
-    setCurrentSlide((p) => (p + 1) % testimonials.length);
+    setCurrentSlide((prev) => (prev + 1) % testimonials.length);
 
   const prev = () =>
-    setCurrentSlide((p) => (p - 1 + testimonials.length) % testimonials.length);
+    setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
   const t = testimonials[currentSlide];
 
@@ -35,40 +53,46 @@ export default function TeamTestimonials() {
           </p>
         </div>
 
-        {/* ===== Card Wrapper ===== */}
+        {/* Card Wrapper */}
         <div className="relative max-w-5xl mx-auto">
-
-          {/* Card - Horizontal Layout */}
           <div className="p-10 rounded-[2.5rem] border backdrop-blur-xl bg-surfaceLight dark:bg-surfaceDark shadow-lg">
             
             <div className="flex items-start gap-8">
               
-              {/* Left Side - Image and Info */}
+              {/* Left Side */}
               <div className="flex-shrink-0">
-                {/* Avatar */}
                 <img
-                  src={t.image}
+                  src={
+                    t.image
+                      ? urlFor(t.image)
+                          .width(300)
+                          .height(300)
+                          .fit("crop")
+                          .url()
+                      : "/placeholder.png"
+                  }
                   alt={t.name}
                   className="object-cover w-32 h-32 border-4 rounded-full border-brandGold/30"
                 />
-                
-                {/* Name and Position below image */}
+
                 <div className="mt-4">
-                  <div className="text-xl font-bold text-brandDark dark:text-brandAccent">{t.name}</div>
+                  <div className="text-xl font-bold text-brandDark dark:text-brandAccent">
+                    {t.name}
+                  </div>
                   {t.position && (
-                    <div className=" text-brandGold dark:text-white">{t.position}</div>
+                    <div className="text-brandGold dark:text-white">
+                      {t.position}
+                    </div>
                   )}
                 </div>
               </div>
 
-              {/* Right Side - Quote and Tag */}
+              {/* Right Side */}
               <div className="flex-1">
-                {/* Quote */}
                 <p className="text-lg italic leading-relaxed text-brandPrimary dark:text-white/70">
                   {t.quote}
                 </p>
 
-                {/* Tag at bottom right */}
                 {t.tag && (
                   <div className="flex items-center gap-1 mt-6 text-sm">
                     <Star className="w-4 h-4 fill-brandGold text-brandGold" />
@@ -76,12 +100,10 @@ export default function TeamTestimonials() {
                   </div>
                 )}
               </div>
-
             </div>
           </div>
 
-          {/* ===== Side Navigation Buttons ===== */}
-
+          {/* Navigation */}
           <button
             onClick={prev}
             className="absolute flex items-center justify-center w-12 h-12 transition -translate-y-1/2 border rounded-full shadow -left-6 top-1/2 bg-white/90 dark:bg-brandAccent hover:scale-105"
@@ -95,7 +117,6 @@ export default function TeamTestimonials() {
           >
             <ChevronRight />
           </button>
-
         </div>
 
         {/* Dots */}
@@ -104,9 +125,9 @@ export default function TeamTestimonials() {
             <button
               key={i}
               onClick={() => setCurrentSlide(i)}
-              className={`w-[1px] h-[1px] rounded-full transition ${
+              className={`w-[8px] h-[8px] rounded-full transition ${
                 currentSlide === i
-                  ? "bg-brandGold "
+                  ? "bg-brandGold"
                   : "bg-zinc-400/40"
               }`}
             />
