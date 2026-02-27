@@ -83,11 +83,25 @@ import CSAMaturityModelDiagram from "./CSAMaturityModelDiagram";
 
 import CTASection from "./CTASection";
 
+import {Helmet} from "react-helmet-async";
+
 // import Footer from "./Footer";
 
 export default function CSAPage() {
   return (
     <div className="min-h-screen transition-colors bg-white dark:bg-slate-950">
+
+      <Helmet>
+                    <title>Control Self Assessment (CSA) | RiskMan </title>
+                    <meta
+                      name="description"
+                      content="Ensure regulatory compliance and operational excellence with RiskMan’s SOX, ICOFR, and IFC services. We provide expert risk assessment, control testing, and framework designing to strengthen your governance."
+                    />
+                    <link
+                      rel="canonical"
+                      href=" https://www.riskman.in/csa"
+                    />
+                  </Helmet>
       <HeroSection />
 
       <StrategicFoundation />

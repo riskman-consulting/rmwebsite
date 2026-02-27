@@ -19,9 +19,23 @@ import FAQSection from './FAQSection';
 import TrustSection from './TrustSection';
 import FutureProofSection from './Future_ProofSection';
 
+import { Helmet } from 'react-helmet-async';
+
 const DataPrivacyPage = () => {
   return (
     <div className="font-sans bg-bgLight text-brandDark dark:bg-slate-900 dark:text-white transition-colors duration-300">
+
+      <Helmet>
+                                <title>Data Privacy Services | RiskMan</title>
+                                <meta
+                                  name="description"
+                                  content="Secure your digital future with RiskMan’s comprehensive data privacy services. We align organizational strategy with global mandates like DPDP, GDPR, and other compliances."
+                                />
+                                <link
+                                  rel="canonical"
+                                  href=" https://www.riskman.in/data-privacy"
+                                />
+                              </Helmet>
 
       {/* 1. HERO SECTION */}
       <HeroSection />

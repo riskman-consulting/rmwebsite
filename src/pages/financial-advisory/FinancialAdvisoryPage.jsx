@@ -31,6 +31,7 @@ export default function FinancialAdvisory() {
   return (
     <section className="bg-bgLight dark:bg-bgDark text-brandDark dark:text-brandLight">
 
+      
       {/* ================= HERO ================= */}
       <div className="container px-6 pt-24 lg:px-20">
         <motion.h1 {...fadeUp} className="max-w-4xl text-5xl font-bold font-heading">

@@ -172,7 +172,7 @@ export default function HeroSection() {
                 </div>
 
                 {/* Two-Line Heading */}
-                <h1 className="mb-5">
+                <h2 className="mb-5">
                   <span className="block text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-[1.15] text-brandLight tracking-tight mb-2">
                     {slide.titleLine1}
                   </span>
@@ -187,7 +187,7 @@ export default function HeroSection() {
                   >
                     {slide.titleLine2}
                   </span>
-                </h1>
+                </h2>
 
                 {/* Description */}
                 <p className="max-w-xl mb-8 text-sm leading-relaxed md:text-base" style={{ color: "rgba(245,245,245,0.6)" }}>

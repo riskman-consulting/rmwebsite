@@ -22,6 +22,9 @@ import {
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
+
+import { Helmet } from "react-helmet-async";
+
 /* ───────────────────── DATA ───────────────────── */
 const frameworks = [
   {
@@ -848,6 +851,18 @@ function Footer() {
 export default function GDPRCompliancePage() {
   return (
     <div style={{ fontFamily: "Inter, -apple-system, sans-serif", color: "#001F3F", background: "#FAFAFA" }}>
+
+      <Helmet>
+                                            <title>General Data Protection Regulation (GDPR) | RiskMan</title>
+                                            <meta
+                                              name="description"
+                                              content="Master European privacy standards with RiskMan’s GDPR services. We help Organizations manage cross-border transfers, DPO requirements, and risk assessments."
+                                            />
+                                            <link
+                                              rel="canonical"
+                                              href=" https://www.riskman.in/gdpr-compliance"
+                                            />
+                                          </Helmet>
       <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap"
         rel="stylesheet"

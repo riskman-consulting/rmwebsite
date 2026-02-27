@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
+import { Helmet } from "react-helmet-async";
+
 // ─── THEME TOKENS (from tailwind config, applied via inline + CSS vars) ───
 const theme = {
   brandDark: "#001F3F",
@@ -62,12 +64,12 @@ const GovernanceIllustration = () => (
       </linearGradient>
     </defs>
     {/* Network/graph visualization */}
-    <circle cx="250" cy="200" r="60" fill="#004080" opacity="0.2" stroke="#FFC000" strokeWidth="1"  />
+    <circle cx="250" cy="200" r="60" fill="#004080" opacity="0.2" stroke="#FFC000" strokeWidth="1" />
     <circle cx="250" cy="200" r="30" fill="#FFC000" opacity="0.15" />
-    <circle cx="100" cy="100" r="35" fill="#004080" opacity="0.15" stroke="#FFC000" strokeWidth="1"  />
-    <circle cx="400" cy="100" r="35" fill="#004080" opacity="0.15" stroke="#FFC000" strokeWidth="1"  />
-    <circle cx="100" cy="300" r="35" fill="#004080" opacity="0.15" stroke="#FFC000" strokeWidth="1"  />
-    <circle cx="400" cy="300" r="35" fill="#004080" opacity="0.15" stroke="#FFC000" strokeWidth="1"  />
+    <circle cx="100" cy="100" r="35" fill="#004080" opacity="0.15" stroke="#FFC000" strokeWidth="1" />
+    <circle cx="400" cy="100" r="35" fill="#004080" opacity="0.15" stroke="#FFC000" strokeWidth="1" />
+    <circle cx="100" cy="300" r="35" fill="#004080" opacity="0.15" stroke="#FFC000" strokeWidth="1" />
+    <circle cx="400" cy="300" r="35" fill="#004080" opacity="0.15" stroke="#FFC000" strokeWidth="1" />
     {/* Connecting lines */}
     <line x1="130" y1="120" x2="220" y2="180" stroke="#FFC000" strokeWidth="1.5" opacity="0.3" />
     <line x1="370" y1="120" x2="280" y2="180" stroke="#FFC000" strokeWidth="1.5" opacity="0.3" />
@@ -243,6 +245,18 @@ export default function USAssurancePage() {
 
   return (
     <div style={{ fontFamily: "Inter, system-ui, sans-serif", background: theme.bgLight, color: theme.brandDark }}>
+
+      <Helmet>
+        <title>US Assurance Support Services | RiskMan</title>
+        <meta
+          name="description"
+          content=": Elevate institutional integrity with RiskMan’s US Assurance Support Services. We provide sophisticated audit and control frameworks for forward-thinking Organizations."
+        />
+        <link
+          rel="canonical"
+          href="https://www.riskman.in/us-assurance-support-services"
+        />
+      </Helmet>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@400;500;600;700&display=swap');
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -263,9 +277,9 @@ export default function USAssurancePage() {
       `}</style>
 
       {/* ═══════════ HERO ═══════════ */}
-      <section  style={{ position: "relative", overflow: "hidden", background: `linear-gradient(135deg, ${theme.brandDark} 0%, ${theme.brandNavy} 50%, ${theme.bgDark} 100%)`, minHeight: "90vh", display: "flex", alignItems: "center" }}>
+      <section style={{ position: "relative", overflow: "hidden", background: `linear-gradient(135deg, ${theme.brandDark} 0%, ${theme.brandNavy} 50%, ${theme.bgDark} 100%)`, minHeight: "90vh", display: "flex", alignItems: "center" }}>
         {/* Decorative grid pattern */}
-        <div  style={{ position: "absolute", inset: 0, opacity: 0.03, backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(255,192,0,0.5) 60px, rgba(255,192,0,0.5) 61px), repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(255,192,0,0.5) 60px, rgba(255,192,0,0.5) 61px)` }} />
+        <div style={{ position: "absolute", inset: 0, opacity: 0.03, backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(255,192,0,0.5) 60px, rgba(255,192,0,0.5) 61px), repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(255,192,0,0.5) 60px, rgba(255,192,0,0.5) 61px)` }} />
         {/* Gradient orbs */}
         <div style={{ position: "absolute", top: -100, right: -100, width: 500, height: 500, borderRadius: "50%", background: `radial-gradient(circle, rgba(255,192,0,0.08) 0%, transparent 70%)` }} />
         <div style={{ position: "absolute", bottom: -200, left: -100, width: 600, height: 600, borderRadius: "50%", background: `radial-gradient(circle, rgba(0,64,128,0.15) 0%, transparent 70%)` }} />

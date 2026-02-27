@@ -5,6 +5,8 @@ import StrategicSolutions from './StrategicSolutionSection';
 import CTASection from './CTASection';
 import FAQ from './FAQSection';
 
+import { Helmet } from 'react-helmet-async';
+
 
 const ISO27001 = () => {
   useEffect(() => {
@@ -22,6 +24,19 @@ const ISO27001 = () => {
 
   return (
     <main className="min-h-screen">
+
+      <Helmet>
+                                      <title>International Organization for Standardization (ISO) 27001 Services | RiskMan</title>
+                                      <meta
+                                        name="description"
+                                        content="Achieve ISO 27001 certification with RiskMan. Our expert readiness assessments, risk mitigation, and ISMS frameworks ensure global compliance and data security."
+                                      />
+                                      <link
+                                        rel="canonical"
+                                        href="https://www.riskman.in/iso-27001"
+                                      />
+                                    </Helmet>
+
       <HeroSection />
       <StrategicSolutions />
       <CTASection />

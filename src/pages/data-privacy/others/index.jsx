@@ -18,6 +18,8 @@ import {
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
+import { Helmet } from "react-helmet-async";
+
 /* ─── palette (mirrors tailwind config) ─── */
 const C = {
   brandDark: "#001F3F",
@@ -936,6 +938,18 @@ function Footer() {
 export default function OtherCompliancesPage() {
   return (
     <div style={{ fontFamily: "Inter, sans-serif", background: C.bgLight, color: C.brandDark }}>
+
+      <Helmet>
+                                                  <title>Other Regulatory Compliance Services | RiskMan</title>
+                                                  <meta
+                                                    name="description"
+                                                    content="Simplify global privacy with RiskMan. We help Organizations comply with CCPA, HIPAA, and emerging regional data protection laws."
+                                                  />
+                                                  <link
+                                                    rel="canonical"
+                                                    href="https://www.riskman.in/other-regulatory-compliances"
+                                                  />
+                                                </Helmet>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap');
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }

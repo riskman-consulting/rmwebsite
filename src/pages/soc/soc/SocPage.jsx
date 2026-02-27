@@ -7,9 +7,23 @@ import ReportTypeSection from './ReportTypeSection';
 import SupportSection from './SupportSection';
 import BusinessSection from './BusinessSection';
 
+import { Helmet } from 'react-helmet-async';
+
 const SOCOverview = () => {
   return (
     <div className="bg-bgLight dark:bg-bgDark font-sans text-brandDark dark:text-brandLight transition-colors duration-300">
+
+          <Helmet>
+                                      <title>System and Organization Controls (SOC) Services | RiskMan</title>
+                                      <meta
+                                        name="description"
+                                        content="Strengthen trust with SOC 1, SOC 2, and SOC 3 reports. Independent audits of your controls support growth, reduce risk, and satisfy enterprise demands."
+                                      />
+                                      <link
+                                        rel="canonical"
+                                        href="https://www.riskman.in/soc"
+                                      />
+                                    </Helmet>
       
       {/* 1. HERO SECTION */}
       <HeroSection/>

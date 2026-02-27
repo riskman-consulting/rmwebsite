@@ -23,6 +23,8 @@ import {
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
+import { Helmet } from "react-helmet-async";
+
 /* ───────────────────── DATA ───────────────────── */
 const fiduciaryGovernance = [
   {
@@ -750,6 +752,18 @@ function Footer() {
 export default function DPDPCompliancePage() {
   return (
     <div style={{ fontFamily: "Inter, -apple-system, sans-serif", color: "#001F3F", background: "#FAFAFA" }}>
+
+       <Helmet>
+                                      <title>Digital Personal Data Protection Act (DPDP) Compliance Services | RiskMan</title>
+                                      <meta
+                                        name="description"
+                                        content="Navigate India’s Digital Personal Data Protection Act with RiskMan. We provide Organizations with fiduciary governance, consent orchestration, and audit readiness."
+                                      />
+                                      <link
+                                        rel="canonical"
+                                        href=" https://www.riskman.in/dpdp-compliance"
+                                      />
+                                    </Helmet>
       <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap"
         rel="stylesheet"

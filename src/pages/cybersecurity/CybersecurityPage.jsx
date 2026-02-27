@@ -9,6 +9,8 @@ import OperationalIntegrity from './OperationalIntegrity';
 import CTASection from './CTASection';
 import FAQ from './FAQ';
 
+import { Helmet } from 'react-helmet-async';
+
 const Cybersecurity = () => {
   useEffect(() => {
     // Set meta tags
@@ -25,6 +27,18 @@ const Cybersecurity = () => {
 
   return (
     <main className="min-h-screen">
+
+       <Helmet>
+                                <title>Cybersecurity Services | RiskMan</title>
+                                <meta
+                                  name="description"
+                                  content="Secure your digital future with RiskMan’s elite cybersecurity services. We provide comprehensive audits, risk assessments, and proactive defense strategies tailored to modern enterprises."
+                                />
+                                <link
+                                  rel="canonical"
+                                  href="https://www.riskman.in/cybersecurity"
+                                />
+                              </Helmet>
       <Hero />
       <StrategicAuditing />
       <VulnerabilityManagement />

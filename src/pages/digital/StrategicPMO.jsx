@@ -26,6 +26,18 @@ import riskDashboardImg from "../../assets/images/digital/risk-mitigation.jpg"
 const StrategicPMO = () => {
   return (
     <div className="min-h-screen font-sans transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-brandLight">
+
+      <Helmet>
+                                <title>Concurrent Audit | RiskMan </title>
+                                <meta
+                                  name="description"
+                                  content="Ensure regulatory compliance and operational excellence with RiskMan’s SOX, ICOFR, and IFC services. We provide expert risk assessment, control testing, and framework designing to strengthen your governance."
+                                />
+                                <link
+                                  rel="canonical"
+                                  href=" https://www.riskman.in/concurrent-audit"
+                                />
+                              </Helmet>
       
 <section
       className="relative py-24 bg-center bg-cover lg:py-36"

@@ -7,6 +7,8 @@ import ValueChainManagement from './Valuechainmanagement';
 import PolicyGovernanceCTAandFAQ from './Policygovernancectaandfaq';
 import PolicyFAQ from './PolicyFAQ';
 
+import { Helmet } from 'react-helmet-async';
+
 /**
  * Credit Policy Framework - Complete Service Page
  * 
@@ -16,6 +18,19 @@ import PolicyFAQ from './PolicyFAQ';
 function CreditPolicyFrameworkApp() {
   return (
     <div className="min-h-screen bg-bgLight dark:bg-bgDark">
+
+      
+                <Helmet>
+                               <title>Credit Policy Framework Services | RiskMan</title>
+                               <meta
+                                 name="description"
+                                 content="Implement a robust Credit Policy Framework with RiskMan. Align your credit activities with strategic goals while maintaining strict regulatory compliance."
+                               />
+                               <link
+                                 rel="canonical"
+                                 href="https://www.riskman.in/credit-policy-framework"
+                               />
+                             </Helmet>
       {/* Optional: Add Navigation/Header here */}
       {/* <YourHeader /> */}
 

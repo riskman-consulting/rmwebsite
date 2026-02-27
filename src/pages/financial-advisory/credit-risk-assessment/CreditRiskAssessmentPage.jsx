@@ -8,6 +8,8 @@ import FiveCsFramework from './Fivecsframework';
 import RiskCategorization from './Riskcategorization';
 import CreditRiskCTAandFAQ from './Creditriskctaandfaq';
 
+import { Helmet } from 'react-helmet-async';
+
 /**
  * Credit Risk Assessment - Complete Service Page
  * 
@@ -17,6 +19,19 @@ import CreditRiskCTAandFAQ from './Creditriskctaandfaq';
 function CreditRiskAssessmentApp() {
   return (
     <div className="min-h-screen bg-bgLight dark:bg-bgDark">
+
+    <Helmet>
+                                   <title>Credit Risk Assessment Services | RiskMan</title>
+                                   <meta
+                                     name="description"
+                                     content="Elevate your credit decisions with RiskMan’s sophisticated risk assessment. We quantify borrower reliability through data-driven analysis and strategic ring-fencing."
+                                   />
+                                   <link
+                                     rel="canonical"
+                                     href="https://www.riskman.in/credit-risk-assessment"
+                                   />
+                                 </Helmet>
+
       {/* Optional: Add Navigation/Header here */}
       {/* <YourHeader /> */}
 

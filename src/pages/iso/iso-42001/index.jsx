@@ -23,9 +23,23 @@ import dataImage from '../../../assets/images/iso/data-charts.png';
 import innovationImage from '../../../assets/images/iso/innovation-future.png';
 import { useNavigate } from 'react-router-dom';
 
+import { Helmet } from 'react-helmet-async';
+
 const ISO42001 = () => {
   return (
     <div className="min-h-screen font-sans transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-brandLight">
+
+        <Helmet>
+                <title>The International Organization for Standardization 42001 Services | RiskMan</title>
+                <meta
+                    name="description"
+                    content="Lead the AI revolution responsibly with RiskMan’s ISO 42001 services. We provide the governance framework for ethical and secure organizational AI management."
+                />
+                <link
+                    rel="canonical"
+                    href="https://www.riskman.in/iso-42001"
+                />
+            </Helmet>
       <HeroSection />
       <PillarsSection />
       <RoadmapSection />
