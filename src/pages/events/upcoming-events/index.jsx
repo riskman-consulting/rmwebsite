@@ -1,5 +1,11 @@
-import UpcomingPage from "../UpcomingEventSection"
+import React from 'react'
+import UpcomingSection from "../UpcomingEventSection"
 
-export default  function UpcomingSection(){
-return <UpcomingPage/>
-}  
+function UpcomingEventsSectionPage() {
+  return (
+    <UpcomingSection />
+  )
+}
+
+export default UpcomingEventsSectionPage
+
