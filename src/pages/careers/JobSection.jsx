@@ -7,8 +7,11 @@ import {
   FaSearch,
   FaChevronLeft,
   FaArrowRight,
+  FaCheckCircle,
 } from "react-icons/fa";
 import { useCareerStore } from "../../store/career";
+
+const ZOHO_URL = import.meta.env.VITE_ZOHO_CAREER_APPLICATION;
 
 export default function CareersPage() {
   const [selectedJob, setSelectedJob] = useState(null);
@@ -16,9 +19,24 @@ export default function CareersPage() {
 
   const { jobOpenings, fetchCareerPage } = useCareerStore();
 
-  // Prevent background scroll
+  // Form state
+  const [loading, setLoading] = useState(false);
+  const [ok, setOk] = useState(false);
+  const [form, setForm] = useState({
+    Name_First: "",
+    Name_Last: "",
+    Email: "",
+  });
+
+  // Prevent background scroll + reset form on modal close
   useEffect(() => {
-    document.body.style.overflow = selectedJob ? "hidden" : "unset";
+    if (selectedJob) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+      setOk(false);
+      setForm({ Name_First: "", Name_Last: "", Email: "" });
+    }
     return () => {
       document.body.style.overflow = "unset";
     };
@@ -35,6 +53,43 @@ export default function CareersPage() {
       job.title?.toLowerCase().includes(searchQuery.toLowerCase())
     );
   }, [searchQuery, jobOpenings]);
+
+  const handleChange = (e) =>
+    setForm((p) => ({ ...p, [e.target.name]: e.target.value }));
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setOk(false);
+
+    try {
+      const fd = new FormData();
+      fd.append("Name_First", form.Name_First);
+      fd.append("Name_Last", form.Name_Last);
+      fd.append("Email", form.Email);
+
+      const fileInput = e.target.querySelector('input[type="file"]');
+      if (fileInput && fileInput.files[0]) {
+        fd.append("FileUpload", fileInput.files[0]);
+      }
+
+      fd.append("zf_referrer_name", "");
+      fd.append("zf_redirect_url", "");
+      fd.append("zc_gad", "");
+
+      await fetch(ZOHO_URL, {
+        method: "POST",
+        body: fd,
+        mode: "no-cors",
+      });
+
+      setOk(true);
+    } catch (err) {
+      console.error("Zoho submit failed", err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="min-h-screen font-sans bg-surfaceLight dark:bg-surfaceDark text-zinc-900 dark:text-zinc-100">
@@ -140,7 +195,7 @@ export default function CareersPage() {
                 <FaTimes />
               </button>
 
-              {/* LEFT */}
+              {/* LEFT: JOB DETAILS */}
               <div className="flex-[1.2] p-8 md:p-12 overflow-y-auto bg-zinc-50/50 dark:bg-zinc-800/20 border-b md:border-b-0 md:border-r border-zinc-100 dark:border-zinc-800">
                 <button
                   onClick={() => setSelectedJob(null)}
@@ -168,68 +223,124 @@ export default function CareersPage() {
                 </p>
               </div>
 
-              {/* RIGHT FORM (unchanged design) */}
-              {/* RIGHT FORM */}
-              <div className="flex-1 p-8 overflow-y-auto bg-white md:p-12 dark:bg-zinc-900">
-                <h3 className="mb-2 text-xl font-bold">Apply Now</h3>
-                <p className="mb-8 text-sm text-zinc-500">
-                  Complete the form below to submit your interest.
-                </p>
+              {/* RIGHT: APPLICATION FORM / SUCCESS UI */}
+              <div className="flex-1 p-8 overflow-y-auto bg-white md:p-12 dark:bg-zinc-900 flex flex-col justify-center">
+                <AnimatePresence mode="wait">
+                  {!ok ? (
+                    <motion.div
+                      key="form"
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: -20 }}
+                    >
+                      <h3 className="mb-2 text-xl font-bold">Apply Now</h3>
+                      <p className="mb-8 text-sm text-zinc-500">
+                        Complete the form below to submit your interest.
+                      </p>
 
-                <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+                      <form onSubmit={handleSubmit} className="space-y-5">
+                        {/* First & Last Name */}
+                        <div className="grid grid-cols-2 gap-4">
+                          <div className="space-y-1.5">
+                            <label className="text-[10px] font-bold uppercase text-zinc-400 tracking-widest">
+                              First Name
+                            </label>
+                            <input
+                              type="text"
+                              name="Name_First"
+                              value={form.Name_First}
+                              onChange={handleChange}
+                              required
+                              className="w-full px-4 py-3.5 rounded-xl bg-zinc-100 dark:bg-zinc-800 border-none outline-none focus:ring-2 ring-brandPrimary/30 text-sm"
+                            />
+                          </div>
+                          <div className="space-y-1.5">
+                            <label className="text-[10px] font-bold uppercase text-zinc-400 tracking-widest">
+                              Last Name
+                            </label>
+                            <input
+                              type="text"
+                              name="Name_Last"
+                              value={form.Name_Last}
+                              onChange={handleChange}
+                              required
+                              className="w-full px-4 py-3.5 rounded-xl bg-zinc-100 dark:bg-zinc-800 border-none outline-none focus:ring-2 ring-brandPrimary/30 text-sm"
+                            />
+                          </div>
+                        </div>
 
-                  {/* Name */}
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="Full Name"
-                      className="w-full px-4 py-3.5 rounded-xl bg-zinc-100 dark:bg-zinc-800 border-none outline-none focus:ring-2 ring-brandPrimary/30 transition-all text-sm"
-                    />
-                  </div>
+                        {/* Email */}
+                        <div className="space-y-1.5">
+                          <label className="text-[10px] font-bold uppercase text-zinc-400 tracking-widest">
+                            Email Address
+                          </label>
+                          <input
+                            type="email"
+                            name="Email"
+                            value={form.Email}
+                            onChange={handleChange}
+                            required
+                            className="w-full px-4 py-3.5 rounded-xl bg-zinc-100 dark:bg-zinc-800 border-none outline-none focus:ring-2 ring-brandPrimary/30 text-sm"
+                          />
+                        </div>
 
-                  {/* Email */}
-                  <div>
-                    <input
-                      type="email"
-                      placeholder="Email Address"
-                      className="w-full px-4 py-3.5 rounded-xl bg-zinc-100 dark:bg-zinc-800 border-none outline-none focus:ring-2 ring-brandPrimary/30 transition-all text-sm"
-                    />
-                  </div>
+                        {/* Resume Upload */}
+                        <div className="space-y-1.5">
+                          <label className="text-[10px] font-bold uppercase text-zinc-400 tracking-widest">
+                            Resume / CV
+                          </label>
+                          <label className="flex flex-col items-center justify-center p-8 transition-all border-2 border-dashed cursor-pointer rounded-2xl border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-800/50">
+                            <FaUpload className="mb-3 text-brandPrimary" size={22} />
+                            <span className="text-xs font-bold text-zinc-500">
+                              Click to upload PDF
+                            </span>
+                            <span className="text-[10px] text-zinc-400 mt-1">
+                              Maximum file size 5MB
+                            </span>
+                            <input
+                              type="file"
+                              name="FileUpload"
+                              accept=".pdf"
+                              required
+                              className="hidden"
+                            />
+                          </label>
+                        </div>
 
-                  {/* ✅ Resume Upload FIX */}
-                  <div>
-                    <label className="block mb-2 text-[10px] font-bold uppercase tracking-widest text-zinc-400">
-                      Resume / CV
-                    </label>
-
-                    <label className="flex flex-col items-center justify-center p-8 transition-all border-2 border-dashed cursor-pointer rounded-2xl border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-800/50">
-
-                      <FaUpload className="mb-3 text-brandPrimary" size={22} />
-
-                      <span className="text-xs font-bold text-zinc-500">
-                        Click to upload PDF
-                      </span>
-
-                      <span className="text-[10px] text-zinc-400 mt-1">
-                        Maximum file size 5MB
-                      </span>
-
-                      {/* Hidden File Input */}
-                      <input
-                        type="file"
-                        accept=".pdf"
-                        className="hidden"
-                      />
-                    </label>
-                  </div>
-
-                  {/* Submit */}
-                  <div className="pt-4">
-                    <button className="w-full py-4 bg-brandPrimary text-white rounded-2xl font-bold shadow-xl shadow-brandPrimary/20 hover:opacity-90 active:scale-[0.98] transition-all">
-                      Submit Application
-                    </button>
-                  </div>
-                </form>
+                        {/* Submit */}
+                        <button
+                          disabled={loading}
+                          className="w-full py-4 bg-brandPrimary text-white rounded-2xl font-bold shadow-xl shadow-brandPrimary/20 hover:opacity-90 active:scale-[0.98] transition-all disabled:opacity-50 mt-4"
+                        >
+                          {loading ? "Processing..." : "Submit Application"}
+                        </button>
+                      </form>
+                    </motion.div>
+                  ) : (
+                    <motion.div
+                      key="success"
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      className="text-center"
+                    >
+                      <div className="flex justify-center mb-6">
+                        <div className="w-20 h-20 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
+                          <FaCheckCircle className="text-green-500 text-4xl" />
+                        </div>
+                      </div>
+                      <h3 className="text-2xl font-bold mb-4">Application Received!</h3>
+                      <p className="text-zinc-500 text-sm leading-relaxed mb-8 px-4">
+                        Thanks for your interest in our Organization. Our recruitment team will review your profile and get back to you shortly.
+                      </p>
+                      <button
+                        onClick={() => setSelectedJob(null)}
+                        className="px-10 py-3 bg-zinc-900 dark:bg-white dark:text-zinc-900 text-white rounded-xl font-bold transition-all hover:opacity-90"
+                      >
+                        Close
+                      </button>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             </motion.div>
           </motion.div>

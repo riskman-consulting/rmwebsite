@@ -1,6 +1,6 @@
 import React from "react";
 import { Mail, Linkedin, MapPin, ChevronUp } from "lucide-react";
-import { ENTERPRISE_SERVICES, IT_RISK_SERVICES } from "../footer-temp/data";
+import { ENTERPRISE_SERVICES, IT_RISK_SERVICES } from "./data";
 import { Link } from "react-router-dom";
 import InsightsSubscribe from "../common/Subscriber";
 

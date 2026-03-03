@@ -10,7 +10,7 @@ import ServicesTemplate from './templates/ServiceTemplate'
 import Contact from './pages/contact/Contact'
 import About from './pages/about/About'
 import Careers from './pages/careers';
-import Footer from './components/layout/Footer'
+import Footer from './components/footer-temp'
 import BlogList from './pages/blogs/BlogList'
 import BlogTemplate from './templates/BlogTemplate'
 import PrivacyPolicy from './pages/resources/Privacy'
