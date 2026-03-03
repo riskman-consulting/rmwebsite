@@ -94,6 +94,8 @@ export function IndustryGrid() {
 
   const [hoverTimer, setHoverTimer] = useState(null);
 
+  
+
   const handleImageHover = (path) => {
     // Navigate to the page after hovering on image
     const timer = setTimeout(() => {
@@ -132,6 +134,7 @@ export function IndustryGrid() {
         </div>
  
         {/* The Grid */}
+        
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {industries?.map((industry, index) => (
             <div

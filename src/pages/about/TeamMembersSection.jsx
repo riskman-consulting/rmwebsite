@@ -153,6 +153,26 @@ const RiskManTeams = () => {
                 </motion.div>
               )
             )}
+
+            {/* Many More Tile */}
+            {teamMembersSection?.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: teamMembersSection.length * 0.02 }}
+                className={`${TILE_CLASS}
+                  flex flex-col items-center justify-center gap-1
+                  rounded-md
+                  border-2 border-dashed border-brandAccent/50
+                  bg-brandAccent/5 dark:bg-brandAccent/10`}
+              >
+                <Users className="w-6 h-6 text-brandAccent" />
+                <span className="text-xs font-bold leading-tight text-center text-brandAccent">
+                  & Many<br />More
+                </span>
+              </motion.div>
+            )}
           </div>
         </motion.div>
 

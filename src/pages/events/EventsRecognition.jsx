@@ -1,33 +1,7 @@
 import React, { useState,useMemo,useEffect} from "react";
 import { motion,AnimatePresence } from "framer-motion";
 
-import image1 from "../../assets/team-accomplishment/iia_conference_mumbai_march_2025​_3.webp";
 
-// import image2 from "../../assets/team-accomplishment/iia_conference_mumbai_jan_2026​_4.webp";
-
-// import image3 from "../../assets/team-accomplishment/iia_conference_mumbai_march_2025​_1.webp";
-
-import image4 from "../../assets/team-accomplishment/vishal_award_achievement.jpeg";
-
-import image5 from "../../assets/team-accomplishment/audit_leaders_summit_ mumbai_november_2024​_2.webp";
-
-import image6 from "../../assets/team-accomplishment/audit_leaders_summit_ mumbai_november_2024​_4.webp";
-
-import image7 from "../../assets/team-accomplishment/audit_leaders_summit_ mumbai_november_2024​_5.webp";
-
-import image8 from "../../assets/team-accomplishment/audit_leaders_summit_ mumbai_november_2024​_7.webp";
-
-import image9 from "../../assets/team-accomplishment/western_1.jpeg";
-import image10 from "../../assets/team-accomplishment/western_2.jpeg";
-import image11 from "../../assets/team-accomplishment/western_3.jpeg";
-import image12 from "../../assets/team-accomplishment/western_4.jpeg";
-import image13 from "../../assets/team-accomplishment/western_5.jpeg";
-import image14 from "../../assets/team-accomplishment/western_6.jpeg";
-import image15 from "../../assets/team-accomplishment/western_7.jpeg";
-import image16 from "../../assets/team-accomplishment/western_8.jpeg";
-import image17 from "../../assets/team-accomplishment/western_9.jpeg";
-
-import image18 from "../../assets/team-accomplishment/iia_conference_mumbai_jan_2026​_7.webp";
 import { useEventsStore } from "../../store/event";
 
 
@@ -66,24 +40,6 @@ export default function EventRecognition() {
   const [showMoreEmerging, setShowMoreEmerging] = useState(false);
 
 
-  // const allMedia = useMemo(() => [
-  //   { image: image1, type: "accomplishments", terms: ["iia", "conference", "mumbai", "march", "2025"] },
-  //   { image: image17, type: "accomplishments", terms: ["western", "leadership", "award", "nine"] },
-  //   { image: image4, type: "accomplishments", terms: ["iia", "conference", "mumbai", "january", "2026"] },
-  //   { image: image18, type: "accomplishments", terms: ["iia", "conference", "mumbai", "march", "2025"] },
-  //   { image: image5, type: "emerging", terms: ["audit", "leaders", "summit", "mumbai", "november", "2024"] },
-  //   { image: image6, type: "emerging", terms: ["audit", "leaders", "summit", "mumbai", "november", "2024"] },
-  //   { image: image7, type: "emerging", terms: ["audit", "leaders", "summit", "mumbai", "november", "2024"] },
-  //   { image: image8, type: "emerging", terms: ["audit", "leaders", "summit", "mumbai", "november", "2024"] },
-  //   { image: image9, type: "emerging", terms: ["western", "one"] },
-  //   { image: image10, type: "emerging", terms: ["western", "two"] },
-  //   { image: image11, type: "emerging", terms: ["western", "three"] },
-  //   { image: image12, type: "emerging", terms: ["western", "four"] },
-  //   { image: image13, type: "emerging", terms: ["western", "five"] },
-  //   { image: image14, type: "emerging", terms: ["western", "six"] },
-  //   { image: image15, type: "emerging", terms: ["western", "seven"] },
-  //   { image: image16, type: "emerging", terms: ["western", "eight"] },
-  // ], []);
 
   const allMedia = useMemo(()=>eventRecognitionMedia)
 
@@ -129,7 +85,7 @@ export default function EventRecognition() {
   return (
 
      <section id="accomplishment" className="relative px-10 bg-gradient-to-b from-bgLight to-bgLight dark:from-bgDark dark:to-bgDark border-y border-borderLight dark:border-borderDark">
-      <div className="container px-4 py-32 mx-auto">
+      <div className="container px-4 py-32 md:py-24 mx-auto">
        
         {/* TABS & SEARCH */}
         <div className="flex flex-col items-center gap-8 mb-16 text-center">
@@ -194,7 +150,7 @@ export default function EventRecognition() {
         {/* HEADER */}
         <div className="mb-12">
           <h2 className="mb-4 text-4xl font-bold capitalize lg:text-5xl font-heading text-brandDark dark:text-white">
-            {activeTab === "accomplishments" ? "Team Accomplishments" : "Awarded Risk Assurance & Advisory Year 2024"}
+            {activeTab === "accomplishments" ? "Team Accomplishments" : "Emerging Risk Assurance and Advisory Firm for the Year"}
           </h2>
           <div className="w-20 h-1.5 bg-gradient-to-r from-brandAccent to-brandGold rounded-full" />
         </div>

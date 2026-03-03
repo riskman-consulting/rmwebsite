@@ -22,7 +22,7 @@ const Marquee = ({ companies, start, end, duration = 25 }) => {
                         className="flex items-center justify-center flex-shrink-0 w-40 h-20 px-4 transition-all duration-300 bg-white border border-gray-200 dark:bg-white dark:border-gray-300 rounded-xl hover:shadow-lg hover:scale-105"
                     >
                         <img
-                            src={company.logo}
+                            src={company?.image}
                             alt={company.name}
                             className="object-contain max-w-full max-h-full"
                         />

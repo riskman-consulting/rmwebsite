@@ -38,7 +38,7 @@ const IntroductionSection = () => {
             <div className="max-w-xl space-y-6 text-base font-medium leading-relaxed text-brandDark/70 dark:text-white/70">
               <p>
                 At RiskMan, we replace traditional consulting with{" "}
-                <strong className="font-bold text-brandDark dark:text-white">Propreneurship</strong>.
+                <strong className="font-bold text-brandDark dark:text-white">(Professional with Propreneurship)</strong>.
                 Our experienced team delivers customized, high-impact solutions
                 designed for the complexities of global enterprises.
               </p>
