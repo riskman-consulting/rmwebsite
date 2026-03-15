@@ -20,7 +20,7 @@ function Layout() {
           </div>
 
           {/* Links - Horizontally Scrollable on Mobile */}
-          <div className="flex items-center gap-2 sm:gap-3 overflow-x-auto scrollbar-hide max-w-[calc(100vw-120px)] sm:max-w-[calc(100vw-180px)] lg:max-w-none">
+          <div className="flex  py-4 items-center gap-2 sm:gap-3 overflow-x-auto scrollbar-hide max-w-[calc(100vw-120px)] sm:max-w-[calc(100vw-180px)] lg:max-w-none">
             <NavItem to="iso-27001" label="ISO 27001" mobileLabel="27001" />
             <NavItem to="iso-27701" label="ISO 27701" mobileLabel="27701" />
             <NavItem to="iso-22301" label="ISO 22301" mobileLabel="22301" />

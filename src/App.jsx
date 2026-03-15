@@ -167,9 +167,9 @@ function App() {
 
           <Route path="/services/cybersecurity" element={<CybersecurityPage />} />
 
-          <Route path='/services/iso-certifications' element={<IsoLayout />}>
+          {/* <Route path='/services/iso-certifications' element={<IsoLayout />}>
             <Route path='iso-27001' element={<ISO27001 />} />
-          </Route>
+          </Route> */}
 
           // soc routes
           <Route path='/services/soc-services' element={<SocLayout />}>
