@@ -1,6 +1,6 @@
 import React from 'react';
 
-import HeroSection from './Herosection';
+import HeroSection from './HeroSection';
 import PillarsSection from './PillarsSection';
 import StepsSection from './StepsSection';
 import ValueSection from './ValueSection';

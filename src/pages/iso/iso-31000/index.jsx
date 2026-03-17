@@ -1,4 +1,4 @@
-import Hero from './Herosection';
+import Hero from './HeroSection';
 import Framework from './Framework';
 import Process from './Process';
 import Governance from './Governance';

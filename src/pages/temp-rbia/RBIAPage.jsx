@@ -4,7 +4,7 @@ import StrategicAssessment from './StrategicAssessment';
 import AuditingPlan from './AuditingPlan';
 import RBIAAdvisory from './RBIAAdvisory';
 import FrameworkSection from './FrameworkSection';
-import CustomizedApproach from './Customizedapproach';
+import CustomizedApproach from './CustomizedApproach';
 import SampleIAPlan from './SampleIAPlan';
 import CTASection from './CTASection';
 import FAQSection from './FAQSection';
