@@ -1,5 +1,6 @@
 // src/pages/industries/IndustriesList.jsx
 import React, { useEffect, useRef } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
@@ -145,6 +146,11 @@ export default function IndustriesList() {
  
   return (
     <div className="min-h-screen overflow-x-hidden text-brandDark bg-bgLight dark:bg-bgDark dark:text-white">
+      <Helmet>
+        <title>Industries We Serve | RiskMan Consulting</title>
+        <meta name="description" content="RiskMan Consulting delivers specialized risk advisory, compliance, and ESG services across Banking, Manufacturing, Healthcare, Technology, Retail, and more industry sectors." />
+        <link rel="canonical" href="https://www.riskman.in/industries" />
+      </Helmet>
       {/* ================= HERO SECTION ================= */}
       <section ref={heroRef} className="relative pt-32 pb-20 overflow-hidden bg-surfaceLight dark:bg-bgDark">
         <div className="container relative z-10 mx-auto max-w-7xl">

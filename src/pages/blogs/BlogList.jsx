@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
@@ -32,6 +33,11 @@ const staggerContainer = {
 export default function BlogList() {
   return (
     <div className="min-h-screen overflow-x-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-white">
+      <Helmet>
+        <title>Insights & Knowledge Hub | RiskMan Consulting Blog</title>
+        <meta name="description" content="Explore expert articles and insights on risk management, regulatory compliance, cybersecurity, ESG, and strategic resilience from the RiskMan Consulting team." />
+        <link rel="canonical" href="https://www.riskman.in/insights" />
+      </Helmet>
       {/* <BackgroundGrid /> */}
 
       {/* ================= HERO SECTION ================= */}

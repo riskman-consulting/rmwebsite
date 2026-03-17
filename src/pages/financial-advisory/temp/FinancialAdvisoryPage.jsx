@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from "react-helmet-async";
 import FinancialHero from './FinancialHero';
 import ValuePillars from './ValuePillars';
 import ServiceCatalog from './ServiceGrid';
@@ -10,6 +11,11 @@ import FinancialFAQ from './FinancialFAQ';
 const FinancialAdvisoryPage = () => {
   return (
     <main className="min-h-screen font-sans bg-bgLight dark:bg-bgDark selection:bg-brandAccent selection:text-brandDark">
+      <Helmet>
+        <title>Financial Advisory Services | RiskMan Consulting</title>
+        <meta name="description" content="RiskMan Consulting provides strategic financial advisory services including credit risk assessment, portfolio management, loan review, and credit policy framework design for financial institutions." />
+        <link rel="canonical" href="https://www.riskman.in/services/financial-advisory" />
+      </Helmet>
       {/* 1. Hero Section: Direct value prop [cite: 2, 4] */}
       <section id="hero">
         <FinancialHero />

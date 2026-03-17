@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from "react-helmet-async";
 
 // Import all Credit Policy Framework components
 import CreditPolicyHero from './HeroSection';
@@ -16,6 +17,11 @@ import PolicyFAQ from './PolicyFAQ';
 function CreditPolicyFrameworkApp() {
   return (
     <div className="min-h-screen bg-bgLight dark:bg-bgDark">
+      <Helmet>
+        <title>Credit Policy Framework Services | RiskMan Consulting</title>
+        <meta name="description" content="RiskMan Consulting designs comprehensive credit policy frameworks that align lending strategies with risk appetite, regulatory standards, and value chain management for financial institutions." />
+        <link rel="canonical" href="https://www.riskman.in/services/financial-advisory/credit-policy-framework" />
+      </Helmet>
       {/* Optional: Add Navigation/Header here */}
       {/* <YourHeader /> */}
 

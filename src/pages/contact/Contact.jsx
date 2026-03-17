@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Mail, Phone, MapPin, Award, Shield, Zap, TrendingUp, MessageSquare, Calendar, HeadphonesIcon, ArrowRight, ExternalLink } from "lucide-react";
 import { teamsImages } from "../../assets/teams";
 import HeroSection from "./HeroSection";
@@ -37,6 +38,11 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen font-sans bg-bgLight dark:bg-bgDark selection:bg-brandGold/30">
+      <Helmet>
+        <title>Contact RiskMan Consulting | Get in Touch With Our Experts</title>
+        <meta name="description" content="Reach out to RiskMan Consulting for expert advisory in risk management, ESG, cybersecurity, and financial services. Offices across Kolkata, Gurgaon, Chennai, and Mumbai." />
+        <link rel="canonical" href="https://www.riskman.in/contact" />
+      </Helmet>
       
       <HeroSection />
 

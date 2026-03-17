@@ -56,10 +56,16 @@ import ESGValueCreation from './ESGValueCreation';
 import ESGServicePortfolio from './ESGServicePortfolio';
 import ServiceDetails from './ServiceDetail';
 import WhyRiskManAndCTA from './WhyRiskManCTA';
+import { Helmet } from "react-helmet-async";
 
 function App() {
   return (
     <div className="min-h-screen bg-bgLight dark:bg-bgDark">
+      <Helmet>
+        <title>ESG Advisory & Sustainability Services | RiskMan Consulting</title>
+        <meta name="description" content="RiskMan Consulting offers comprehensive ESG advisory services including strategy, carbon footprint measurement, sustainability reporting, and ESG assurance for enterprises across India and globally." />
+        <link rel="canonical" href="https://www.riskman.in/services/esg" />
+      </Helmet>
       {/* Hero Section with ESG Pillars */}
       <HeroSection/>
 

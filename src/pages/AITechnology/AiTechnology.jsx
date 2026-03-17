@@ -539,6 +539,7 @@
 
 
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import HeroSection from "./HeroSection";
 import Services from "./Services";
 import TechIntegration from "./TechIntegration";
@@ -549,6 +550,11 @@ import FAQ from "./FAQ";
 const AiTechnology = () => {
   return (
     <div className="min-h-screen bg-bgLight dark:bg-bgDark">
+      <Helmet>
+        <title>AI Technology & Innovation Services | RiskMan Consulting</title>
+        <meta name="description" content="Harness the power of AI with RiskMan Consulting's technology services. We help enterprises integrate AI-driven risk management, automation, and intelligent frameworks for strategic advantage." />
+        <link rel="canonical" href="https://www.riskman.in/services/ai-technology" />
+      </Helmet>
       <HeroSection />
       <Services />
       <TechIntegration />

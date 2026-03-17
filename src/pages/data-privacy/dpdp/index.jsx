@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Helmet } from "react-helmet-async";
 import {
   Users,
   Map,
@@ -750,6 +751,11 @@ function Footer() {
 export default function DPDPCompliancePage() {
   return (
     <div style={{ fontFamily: "Inter, -apple-system, sans-serif", color: "#001F3F", background: "#FAFAFA" }}>
+      <Helmet>
+        <title>DPDP Act Compliance Services | RiskMan Consulting</title>
+        <meta name="description" content="RiskMan Consulting helps organizations comply with India's Digital Personal Data Protection (DPDP) Act through readiness assessments, data mapping, policy design, and ongoing compliance support." />
+        <link rel="canonical" href="https://www.riskman.in/services/data-privacy/dpdp" />
+      </Helmet>
       <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap"
         rel="stylesheet"

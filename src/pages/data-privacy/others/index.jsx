@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import {
   Globe,
   ChevronDown,
@@ -936,6 +937,11 @@ function Footer() {
 export default function OtherCompliancesPage() {
   return (
     <div style={{ fontFamily: "Inter, sans-serif", background: C.bgLight, color: C.brandDark }}>
+      <Helmet>
+        <title>Other Regulatory Compliance Services | RiskMan Consulting</title>
+        <meta name="description" content="RiskMan Consulting helps organizations navigate other global data privacy regulations beyond GDPR and DPDP, providing compliance support for sector-specific and jurisdictional data protection laws." />
+        <link rel="canonical" href="https://www.riskman.in/services/data-privacy/other" />
+      </Helmet>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap');
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }

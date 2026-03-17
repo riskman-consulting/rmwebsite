@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import { 
-  BarChart3, 
-  FileCheck, 
-  Search, 
-  PieChart, 
-  ArrowRight, 
-  ChevronDown, 
-  Database, 
-  Scale, 
+import { Helmet } from "react-helmet-async";
+import {
+  BarChart3,
+  FileCheck,
+  Search,
+  PieChart,
+  ArrowRight,
+  ChevronDown,
+  Database,
+  Scale,
   ShieldCheck,
   TrendingUp
 } from 'lucide-react';
@@ -43,7 +44,11 @@ const FinancialAuditPage = () => {
 
   return (
     <div className="font-sans bg-bgLight text-brandDark">
-      
+      <Helmet>
+        <title>Financial Statement Audit Services | RiskMan Consulting</title>
+        <meta name="description" content="RiskMan Consulting delivers independent financial statement audit services adhering to US GAAS and PCAOB standards, providing organizations with credible assurance over financial reporting." />
+        <link rel="canonical" href="https://www.riskman.in/services/cpa-us-assurance/financial-statement-audits" />
+      </Helmet>
       {/* 1. HERO SECTION */}
        <HeroSection/>
 

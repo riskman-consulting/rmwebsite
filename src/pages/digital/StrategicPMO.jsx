@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from "react-helmet-async";
 import { 
   Shield, 
   Target, 
@@ -26,6 +27,11 @@ import riskDashboardImg from "../../assets/images/digital/risk-mitigation.jpg"
 const StrategicPMO = () => {
   return (
     <div className="min-h-screen font-sans transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-brandLight">
+      <Helmet>
+        <title>Strategic PMO Services | RiskMan Consulting</title>
+        <meta name="description" content="RiskMan Consulting delivers Strategic PMO services to help organizations establish effective project governance frameworks, manage delivery risk, and align initiatives with strategic objectives." />
+        <link rel="canonical" href="https://www.riskman.in/services/digital-transformation/strategic-pmo" />
+      </Helmet>
       
       {/* SECTION 1: HERO SECTION */}
       {/* <section  className="relative py-20 lg:py-32">

@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find \"c:\\\\Users\\\\Jay Kumar\\\\Downloads\\\\New folder\\\\rmwebsite-staging \\(1\\)\\\\rmwebsite-staging\" -type d \\\\\\( -name \"app\" -o -name \"pages\" -o -name \"src\" \\\\\\))",
+      "Bash(ls -la \"c:\\\\Users\\\\Jay Kumar\\\\Downloads\\\\New folder\\\\rmwebsite-staging \\(1\\)\\\\rmwebsite-staging\")",
+      "Bash(find \"c:\\\\Users\\\\Jay Kumar\\\\Downloads\\\\New folder\\\\rmwebsite-staging \\(1\\)\\\\rmwebsite-staging\" -maxdepth 2 -type d -name \"src\")",
+      "Bash(find \"c:\\\\Users\\\\Jay Kumar\\\\Downloads\\\\New folder\\\\rmwebsite-staging \\(1\\)\\\\rmwebsite-staging\\\\src\" -type d)",
+      "Bash(ls -la \"c:\\\\Users\\\\Jay Kumar\\\\Downloads\\\\New folder\\\\rmwebsite-staging \\(1\\)\\\\rmwebsite-staging\\\\src\")",
+      "Bash(find \"c:\\\\Users\\\\Jay Kumar\\\\Downloads\\\\New folder\\\\rmwebsite-staging \\(1\\)\\\\rmwebsite-staging\\\\src\\\\pages\" -type f \\\\\\( -name \"*.jsx\" -o -name \"*.js\" \\\\\\))",
+      "Bash(find \"c:\\\\Users\\\\Jay Kumar\\\\Downloads\\\\New folder\\\\rmwebsite-staging \\(1\\)\\\\rmwebsite-staging\" -name \"index.html\" -type f)",
+      "Bash(ls \"c:\\\\Users\\\\Jay Kumar\\\\Downloads\\\\New folder\\\\rmwebsite-staging \\(1\\)\\\\rmwebsite-staging\\\\public\")",
+      "Bash(find \"c:\\\\Users\\\\Jay Kumar\\\\Downloads\\\\New folder\\\\rmwebsite-staging \\(1\\)\\\\rmwebsite-staging\\\\src\\\\pages\" -type f -name \"*.jsx\")",
+      "Bash(grep -E \"\\(^[^/]*[^/]+\\\\.jsx$|Page\\\\.jsx$|\\\\.jsx$\\)\")",
+      "Bash(find \"c:\\\\Users\\\\Jay Kumar\\\\Downloads\\\\New folder\\\\rmwebsite-staging \\(1\\)\\\\rmwebsite-staging\\\\src\\\\pages\" -type f -name \"*Page.jsx\" -o -name \"*page.jsx\")",
+      "Bash(find \"c:\\\\Users\\\\Jay Kumar\\\\Downloads\\\\New folder\\\\rmwebsite-staging \\(1\\)\\\\rmwebsite-staging\\\\src\\\\pages\" -maxdepth 2 -type f -name \"*.jsx\")",
+      "Bash(ls -la \"c:\\\\Users\\\\Jay Kumar\\\\Downloads\\\\New folder\\\\rmwebsite-staging \\(1\\)\\\\rmwebsite-staging\\\\src\\\\pages\")",
+      "Read(//c/Users/Jay Kumar/Downloads/New folder/rmwebsite-staging \\(1\\)/rmwebsite-staging/**)",
+      "Bash(find \"c:\\\\Users\\\\Jay Kumar\\\\Downloads\\\\New folder\\\\rmwebsite-staging \\(1\\)\\\\rmwebsite-staging\\\\src\" -maxdepth 2 -name \"*Layout*\" -o -name \"*Header*\" -o -name \"*Footer*\")"
+    ]
+  }
+}

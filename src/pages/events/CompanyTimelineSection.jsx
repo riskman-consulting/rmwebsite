@@ -244,6 +244,7 @@ import image_2025_1 from '../../assets/journey/ai/company-timeline/2025.webp';
 import image_2025_2 from '../../assets/journey/ai/company-timeline/2025_1.webp';
  
 import React, { useState, useEffect } from 'react';
+import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from 'framer-motion';
 import { Target, TrendingUp, Globe, Zap, Trophy, Award, CheckCircle2, Sun, Moon } from 'lucide-react';
  
@@ -347,6 +348,11 @@ const Timeline = () => {
  
   return (
     <div id="journey" className="relative flex flex-col justify-center min-h-screen overflow-hidden font-sans transition-colors duration-500 bg-surfaceLight dark:bg-surfaceDark text-brandNavy dark:text-surfaceLight">
+      <Helmet>
+        <title>Company Journey & Timeline | RiskMan Consulting</title>
+        <meta name="description" content="Explore RiskMan Consulting's company journey — from our founding milestones to global expansion, innovation in risk advisory, and our growing impact across industries." />
+        <link rel="canonical" href="https://www.riskman.in/events/company-journey" />
+      </Helmet>
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-brandPrimary/10 dark:bg-brandPrimary/20 rounded-full blur-[100px]" />

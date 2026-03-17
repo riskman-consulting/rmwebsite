@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import { 
-  ShieldCheck, 
-  Settings2, 
-  Users, 
-  Zap, 
-  Search, 
-  RotateCcw, 
-  ArrowLeft, 
-  ChevronDown, 
-  Lock, 
+import { Helmet } from "react-helmet-async";
+import {
+  ShieldCheck,
+  Settings2,
+  Users,
+  Zap,
+  Search,
+  RotateCcw,
+  ArrowLeft,
+  ChevronDown,
+  Lock,
   Eye,
   LineChart
 } from 'lucide-react';
@@ -26,7 +27,12 @@ const InternalControlReviewPage = () => {
 
   return (
     <div className="font-sans bg-bgLight text-brandDark">
-      
+      <Helmet>
+        <title>Internal Control Review Services | RiskMan Consulting</title>
+        <meta name="description" content="RiskMan Consulting provides thorough internal control review services to assess the design and operating effectiveness of controls, identifying gaps and supporting remediation efforts." />
+        <link rel="canonical" href="https://www.riskman.in/services/cpa-us-assurance/internal-control-reviews" />
+      </Helmet>
+
       {/* 1. HERO SECTION */}
       <HeroSection/>
 

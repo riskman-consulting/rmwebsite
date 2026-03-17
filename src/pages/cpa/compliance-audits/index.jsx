@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import { 
-  ShieldCheck, 
-  Map, 
-  Search, 
-  TrendingUp, 
-  ChevronDown, 
-  ArrowLeft, 
-  FileCheck, 
-  Globe, 
+import { Helmet } from "react-helmet-async";
+import {
+  ShieldCheck,
+  Map,
+  Search,
+  TrendingUp,
+  ChevronDown,
+  ArrowLeft,
+  FileCheck,
+  Globe,
   Laptop,
   CheckCircle2,
   AlertCircle
@@ -23,7 +24,11 @@ const ComplianceAuditsPage = () => {
 
   return (
     <div className="font-sans bg-bgLight text-brandDark">
-      
+      <Helmet>
+        <title>Compliance Audit Services | RiskMan Consulting</title>
+        <meta name="description" content="RiskMan Consulting performs compliance audits to verify organizational adherence to regulatory requirements, industry standards, and internal policies across multiple jurisdictions." />
+        <link rel="canonical" href="https://www.riskman.in/services/cpa-us-assurance/compliance-audits" />
+      </Helmet>
       {/* 1. HERO SECTION */}
       <HeroSection/>
 

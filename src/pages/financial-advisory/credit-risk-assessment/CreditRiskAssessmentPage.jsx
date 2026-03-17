@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Helmet } from "react-helmet-async";
 
 // Import all Credit Risk Assessment components
 import CreditRiskAssessmentHero from './HeroSection';
@@ -17,6 +17,11 @@ import CreditRiskCTAandFAQ from './Creditriskctaandfaq';
 function CreditRiskAssessmentApp() {
   return (
     <div className="min-h-screen bg-bgLight dark:bg-bgDark">
+      <Helmet>
+        <title>Credit Risk Assessment Services | RiskMan Consulting</title>
+        <meta name="description" content="RiskMan Consulting provides advanced credit risk assessment services including PD, EAD, LGD analysis and the 5 C's framework to help financial institutions manage credit exposures effectively." />
+        <link rel="canonical" href="https://www.riskman.in/services/financial-advisory/credit-risk-assessment" />
+      </Helmet>
       {/* Optional: Add Navigation/Header here */}
       {/* <YourHeader /> */}
 

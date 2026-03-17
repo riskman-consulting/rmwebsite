@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Shield, Lock, Eye, Database, FileText, UserCheck, Users, Globe2, CheckCircle, Settings } from "lucide-react";
 
 export default function Privacy() {
@@ -144,6 +145,11 @@ export default function Privacy() {
 
   return (
     <div className="min-h-screen overflow-x-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-white">
+      <Helmet>
+        <title>Privacy Policy | RiskMan Consulting</title>
+        <meta name="description" content="Read RiskMan Consulting's privacy policy to understand how we collect, use, and protect your personal data in compliance with applicable data protection regulations." />
+        <link rel="canonical" href="https://www.riskman.in/privacy-policy" />
+      </Helmet>
       {/* ================= HERO ================= */}
       <section className="relative isolate min-h-[70vh] flex items-center justify-center section-padding overflow-hidden">
         <div className="absolute inset-0 z-0">

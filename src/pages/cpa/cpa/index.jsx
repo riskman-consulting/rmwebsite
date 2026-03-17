@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Helmet } from "react-helmet-async";
 
 // ─── THEME TOKENS (from tailwind config, applied via inline + CSS vars) ───
 const theme = {
@@ -243,6 +244,11 @@ export default function USAssurancePage() {
 
   return (
     <div style={{ fontFamily: "Inter, system-ui, sans-serif", background: theme.bgLight, color: theme.brandDark }}>
+      <Helmet>
+        <title>CPA & US Assurance Services | RiskMan Consulting</title>
+        <meta name="description" content="RiskMan Consulting provides CPA and US Assurance services including financial statement audits, internal control reviews, compliance audits, and quality assurance for global enterprises." />
+        <link rel="canonical" href="https://www.riskman.in/services/cpa-us-assurance" />
+      </Helmet>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@400;500;600;700&display=swap');
         * { margin: 0; padding: 0; box-sizing: border-box; }

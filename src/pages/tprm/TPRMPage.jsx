@@ -1,5 +1,6 @@
 // TPRM.jsx
 import React, { useEffect } from 'react';
+import { Helmet } from "react-helmet-async";
 import Hero from './HeroSection';
 import GovernanceFramework from './GovernanceFramework';
 import VendorInventory from './VendorInventory';
@@ -25,6 +26,11 @@ const TPRM = () => {
 
   return (
     <main className="min-h-screen">
+      <Helmet>
+        <title>Third-Party Risk Management (TPRM) | RiskMan Consulting</title>
+        <meta name="description" content="Secure your enterprise with audit-ready Third-Party Risk Management (TPRM). RiskMan provides vendor due diligence, governance frameworks, and continuous monitoring solutions." />
+        <link rel="canonical" href="https://www.riskman.in/services/risk-advisory/tprm" />
+      </Helmet>
       <Hero />
       <GovernanceFramework />
       <VendorInventory />

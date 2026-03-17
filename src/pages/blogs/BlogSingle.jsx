@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import blogs from "../../data/blogs.json";
 import BlogTemplate from "../../templates/BlogTemplate";
 
@@ -14,5 +15,14 @@ export default function BlogSingle() {
     );
   }
 
-  return <BlogTemplate blog={blog} />;
+  return (
+    <>
+      <Helmet>
+        <title>{blog.title} | RiskMan Consulting</title>
+        <meta name="description" content={blog.excerpt || blog.description || `Read the latest insights from RiskMan Consulting: ${blog.title}`} />
+        <link rel="canonical" href={`https://www.riskman.in/insights/${blog.slug}`} />
+      </Helmet>
+      <BlogTemplate blog={blog} />
+    </>
+  );
 }

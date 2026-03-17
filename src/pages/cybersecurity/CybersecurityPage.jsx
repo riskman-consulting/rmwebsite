@@ -1,5 +1,6 @@
 // Cybersecurity.jsx
 import React, { useEffect } from 'react';
+import { Helmet } from "react-helmet-async";
 import Hero from './HeroSection';
 import StrategicAuditing from './StrategicAuditing';
 import VulnerabilityManagement from './VulnerabilityManagement';
@@ -25,6 +26,11 @@ const Cybersecurity = () => {
 
   return (
     <main className="min-h-screen">
+      <Helmet>
+        <title>Cybersecurity Services | RiskMan Consulting</title>
+        <meta name="description" content="RiskMan Consulting delivers end-to-end cybersecurity services including vulnerability management, penetration testing, technical security assessments, and emerging technology risk for enterprises." />
+        <link rel="canonical" href="https://www.riskman.in/services/cybersecurity" />
+      </Helmet>
       <Hero />
       <StrategicAuditing />
       <VulnerabilityManagement />

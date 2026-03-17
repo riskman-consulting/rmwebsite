@@ -4,7 +4,7 @@ export const NAVIGATION_DATA = {
     "mainNav": [
         { "label": "About", "type": "mega", "key": "about", "path": "/about" },
         { "label": "Services", "type": "mega", "key": "services", "path": "/services" },
-        { "label": "Tech Solutions", "type": "mega", "key": "solutions", "path": "/solutions" },
+        // { "label": "Tech Solutions", "type": "mega", "key": "solutions", "path": "/solutions" },
         { "label": "Events & Journey", "type": "mega", "key": "events", "path": "/events" },
         // { "label": "Knowledge Hub", "type": "link", "path": "/insights" },
         { "label": "Careers", "type": "link", "path": "/careers" },

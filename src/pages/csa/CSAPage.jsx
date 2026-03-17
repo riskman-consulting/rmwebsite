@@ -66,7 +66,7 @@
 
 
 import React from "react";
-
+import { Helmet } from "react-helmet-async";
 import HeroSection from "./HeroSection";
 import StrategicFoundation from "./StrategicFoundation";
 import ThreeLinesModel from "./ThreeLinesModel";
@@ -88,6 +88,11 @@ import CTASection from "./CTASection";
 export default function CSAPage() {
   return (
     <div className="min-h-screen transition-colors bg-white dark:bg-slate-950">
+      <Helmet>
+        <title>Control Self-Assessment (CSA) Services | RiskMan Consulting</title>
+        <meta name="description" content="RiskMan Consulting's CSA services empower business units to evaluate their own internal controls, fostering risk ownership and strengthening governance across your organization." />
+        <link rel="canonical" href="https://www.riskman.in/services/risk-advisory/csa" />
+      </Helmet>
       <HeroSection />
 
       <StrategicFoundation />

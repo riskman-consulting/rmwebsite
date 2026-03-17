@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
+import { Helmet } from "react-helmet-async";
 import { 
   Shield, 
   Lock, 
@@ -102,6 +103,11 @@ const scrollToSection = (id) => {
 
   return (
     <div className="min-h-screen font-sans transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-brandLight">
+      <Helmet>
+        <title>Governance & Compliance Services | RiskMan Consulting</title>
+        <meta name="description" content="RiskMan Consulting delivers governance and compliance advisory services to help organizations build robust policy frameworks, regulatory adherence strategies, and governance best practices." />
+        <link rel="canonical" href="https://www.riskman.in/governance" />
+      </Helmet>
       {/* Hero Section */}
       <div className="relative overflow-hidden text-white bg-brandDark">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>

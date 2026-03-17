@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Helmet } from "react-helmet-async";
 import {
   Globe,
   FileText,
@@ -848,6 +849,11 @@ function Footer() {
 export default function GDPRCompliancePage() {
   return (
     <div style={{ fontFamily: "Inter, -apple-system, sans-serif", color: "#001F3F", background: "#FAFAFA" }}>
+      <Helmet>
+        <title>GDPR Compliance Services | RiskMan Consulting</title>
+        <meta name="description" content="RiskMan Consulting provides GDPR compliance advisory services to help organizations meet EU data protection requirements through gap assessments, DPO support, and compliance frameworks." />
+        <link rel="canonical" href="https://www.riskman.in/services/data-privacy/gdpr" />
+      </Helmet>
       <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap"
         rel="stylesheet"

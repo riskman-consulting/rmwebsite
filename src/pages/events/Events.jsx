@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from "react-helmet-async";
 import { AnimatePresence } from 'framer-motion';
 import AwardSection from './AwardSection';
 import CompanyTimelineSection from './CompanyTimelineSection';
@@ -37,6 +38,11 @@ function Events() {
 
   return (
     <div>
+      <Helmet>
+        <title>Events & Achievements | RiskMan Consulting</title>
+        <meta name="description" content="Discover RiskMan Consulting's events, awards, company milestones, and cultural moments. See how our team celebrates growth, recognition, and global assignments." />
+        <link rel="canonical" href="https://www.riskman.in/events" />
+      </Helmet>
       <HeroSection />
 
       <UpcomingEventsSection/>

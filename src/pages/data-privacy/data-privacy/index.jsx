@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from "react-helmet-async";
 import {
   ShieldCheck,
   Globe,
@@ -22,6 +23,11 @@ import FutureProofSection from './Future_ProofSection';
 const DataPrivacyPage = () => {
   return (
     <div className="font-sans bg-bgLight text-brandDark dark:bg-slate-900 dark:text-white transition-colors duration-300">
+      <Helmet>
+        <title>Data Privacy & Compliance Services | RiskMan Consulting</title>
+        <meta name="description" content="RiskMan Consulting helps organizations achieve data privacy compliance across DPDP, GDPR, and other regulatory frameworks through expert advisory, implementation, and ongoing assurance." />
+        <link rel="canonical" href="https://www.riskman.in/services/data-privacy" />
+      </Helmet>
 
       {/* 1. HERO SECTION */}
       <HeroSection />

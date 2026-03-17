@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from "react-helmet-async";
 import { 
   Shield, 
   Brain, 
@@ -26,6 +27,11 @@ import { useNavigate } from 'react-router-dom';
 const ISO42001 = () => {
   return (
     <div className="min-h-screen font-sans transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-brandLight">
+      <Helmet>
+        <title>ISO 42001 AI Management System | RiskMan Consulting</title>
+        <meta name="description" content="RiskMan Consulting guides organizations through ISO 42001 AI management system implementation, helping establish responsible AI governance frameworks and certification readiness." />
+        <link rel="canonical" href="https://www.riskman.in/services/iso-certifications/iso-42001" />
+      </Helmet>
       <HeroSection />
       <PillarsSection />
       <RoadmapSection />

@@ -614,7 +614,7 @@
 
 
 import React from 'react';
-
+import { Helmet } from "react-helmet-async";
 import HeroSection from './HeroSection';
 import ServicesSection from './ServicesSection';
 import FraudSection from './FraudDetectionSection';
@@ -627,7 +627,11 @@ import CtaSection from './CTASection';
 const ForensicsPage = () => {
   return (
     <div className="min-h-screen font-sans transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-brandLight">
-    
+      <Helmet>
+        <title>Forensics & Investigation Services | RiskMan Consulting</title>
+        <meta name="description" content="RiskMan Consulting delivers expert forensics and investigation services including fraud detection, digital forensics, cyber investigations, due diligence, and compliance reviews for enterprises." />
+        <link rel="canonical" href="https://www.riskman.in/services/forensics-investigation" />
+      </Helmet>
       <HeroSection />
       <ServicesSection />
       <FraudSection />

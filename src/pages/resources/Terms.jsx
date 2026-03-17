@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import {
   FileText,
   Shield,
@@ -183,6 +184,11 @@ export default function Terms() {
 
   return (
     <div className="min-h-screen overflow-x-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-white">
+      <Helmet>
+        <title>Terms & Conditions | RiskMan Consulting</title>
+        <meta name="description" content="Review the terms and conditions governing your use of RiskMan Consulting's website and services. Understand your rights and obligations when engaging with our platform." />
+        <link rel="canonical" href="https://www.riskman.in/terms" />
+      </Helmet>
       {/* ================= HERO ================= */}
       <section className="relative isolate min-h-[70vh] flex items-center justify-center section-padding overflow-hidden">
         <div className="absolute inset-0 z-0">

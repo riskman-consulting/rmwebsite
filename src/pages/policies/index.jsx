@@ -1,5 +1,6 @@
 
 import React,{useState} from "react"
+import { Helmet } from "react-helmet-async";
 import HeroSection from "./HeroSection";
 import OverviewSection from "./OverviewSection";
 import FrameworkSection from "./Framework";
@@ -38,6 +39,11 @@ export default function RiskManPoliciesPage() {
 
   return (
     <div className="min-h-screen overflow-x-hidden font-sans transition-colors duration-300 bg-bgLight dark:bg-bgDark text-slate-800 dark:text-slate-200 selection:bg-brandAccent selection:text-brandDark">
+      <Helmet>
+        <title>Formulation of Policies & SOPs | RiskMan Consulting</title>
+        <meta name="description" content="RiskMan Consulting helps organizations design and formulate governance-aligned policies, standard operating procedures, and internal frameworks to drive operational excellence and compliance." />
+        <link rel="canonical" href="https://www.riskman.in/services/risk-advisory/formulation-of-policies-and-sops" />
+      </Helmet>
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   
