@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
- 
+import { PortableText } from "@portabletext/react";
 import { Zap, ShoppingCart, HeartPulse, Factory, Monitor, Home, ArrowRight } from "lucide-react";
 import { useHomePage } from "../../store/home";
 import { useNavigate } from "react-router-dom";
@@ -25,9 +25,7 @@ export function IndustryGrid() {
   const navigate = useNavigate();
 
   useEffect(()=>{
-    if(!industries || industries.length === 0){
     fetchIndustries()
-    }
   },[])
  
   return (
@@ -53,7 +51,7 @@ export function IndustryGrid() {
           {industries?.map((industry, index) => (
             <div
               key={index}
-              onClick={()=> navigate(industry?.path)}
+              onClick={()=> navigate(`/industries/${industry?.slug?.current}`)}
               className="flex flex-col overflow-hidden transition-all duration-500 bg-white shadow-lg cursor-pointer group rounded-3xl dark:bg-gray-800"
             >
               {/* Image Section */}
@@ -102,9 +100,9 @@ export function IndustryGrid() {
                   {industry.subtitle}
                 </h4>
                 
-                <p className="mb-4 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-                  {industry.description}
-                </p>
+                <div className="mb-4 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                  {industry.description && <PortableText value={industry.description} />}
+                </div>
                 
                 <div className="p-4 mt-auto bg-gray-100 border-l-4 border-yellow-500 rounded-r-lg dark:bg-gray-700/50 backdrop-blur-md">
                   <p className="text-xs italic leading-tight text-gray-800 dark:text-gray-200">

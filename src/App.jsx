@@ -121,6 +121,7 @@ import InternalControlReview from "./pages/cpa/internal-control"
 import ComplianceAudit from "./pages/cpa/compliance-audits"
 import QualityAssurancePage from './pages/cpa/quality-assurance'
 import { useHomePage } from './store/home'
+import NotFound from './pages/NotFound'
  
 
 
@@ -287,6 +288,7 @@ function App() {
           <Route path="/solutions" element={<TechSolutions />} />
 
           <Route path="/governance" element={<GovernancePage/>} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
 
