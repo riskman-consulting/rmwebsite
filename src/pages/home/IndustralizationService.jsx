@@ -92,15 +92,15 @@ export function IndustryGrid() {
 
               {/* Content Section - Always Visible */}
               <div className="flex flex-col flex-1 p-6 transition-all duration-500 bg-white dark:bg-gray-800 group-hover:shadow-xl">
-                <h3 className="mb-2 text-2xl font-black text-gray-900 dark:text-white">
+                <h3 className="mb-1.5 text-base font-black text-gray-900 dark:text-white">
                   {industry.title}
                 </h3>
-                
-                <h4 className="mb-3 text-sm font-bold tracking-tight text-yellow-600 uppercase dark:text-yellow-400">
+
+                <h4 className="mb-2 text-[10px] font-bold tracking-tight text-yellow-600 uppercase dark:text-yellow-400">
                   {industry.subtitle}
                 </h4>
-                
-                <div className="mb-4 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+
+                <div className="mb-4 text-xs leading-relaxed text-gray-700 dark:text-gray-300 [&_p]:text-xs [&_p]:leading-relaxed">
                   {industry.description && <PortableText value={industry.description} />}
                 </div>
                 

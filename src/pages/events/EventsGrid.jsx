@@ -51,7 +51,7 @@ export default function EventsGrid() {
                   <button
                     key={cat}
                     onClick={() => setSelectedCategory(cat)}
-                    className={`w-full text-left px-4 py-2 rounded-lg text-sm transition-all ${
+                    className={`w-full text-left px-4 py-2 rounded-lg text-xs transition-all ${
                       selectedCategory === cat
                       ? "bg-slate-900 text-white dark:bg-white dark:text-black font-semibold"
                       : "text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"

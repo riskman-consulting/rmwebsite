@@ -135,12 +135,12 @@ export default function EventCard({ event }) {
             </span>
           </div>
 
-          <h3 className="mb-2 text-lg font-bold text-slate-900 dark:text-white">
+          <h3 className="mb-2 text-base font-bold text-slate-900 dark:text-white">
             {event.title}
           </h3>
 
           {/* Portable Text Description */}
-          <div className="text-sm text-slate-600 dark:text-slate-400 line-clamp-2">
+          <div className="text-xs text-slate-600 dark:text-slate-400 line-clamp-2 [&_p]:text-xs [&_p]:leading-relaxed">
             <PortableText value={event.description} />
           </div>
         </div>
