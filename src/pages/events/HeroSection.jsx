@@ -128,10 +128,10 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative flex items-center justify-center min-h-screen overflow-hidden transition-colors duration-500 bg-surfaceLight dark:bg-surfaceDark">
+    <section className="relative   flex items-center justify-center min-h-screen overflow-hidden transition-colors duration-500 bg-surfaceLight dark:bg-surfaceDark">
       {/* Background Slideshow with Parallax */}
       <motion.div 
-        className="absolute inset-0 z-0"
+        className="absolute  inset-0 z-0"
         style={{ y: bgY }}
       >
         <AnimatePresence mode="wait">
@@ -153,7 +153,7 @@ export default function HeroSection() {
       <ParticlesBackground mouseX={mouse.x} mouseY={mouse.y} />
 
       {/* Content Container */}
-      <div className="container relative z-20 flex flex-col items-center justify-center min-h-screen px-6 pt-20 mx-auto text-center lg:px-12">
+      <div className="container relative z-20 flex flex-col items-center justify-center min-h-screen px-6 pt-36 mx-auto text-center lg:px-12">
         
         {/* Badge */}
         <motion.div 

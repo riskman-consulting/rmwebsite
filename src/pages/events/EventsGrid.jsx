@@ -1,175 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import { Filter, PieChart } from 'lucide-react';
 import EventCard from "./EventCard";
- 
-// Your data imports
-import { IIA_Bombay_2026_images } from "../../assets/iia-bombay/2026";
-import { IIA_Internal_Leadership_2025_images } from "../../assets/internal-leadership/2025";
-import { IIA_Hyderabad_2025_images } from "../../assets/iia-hyderabad/2025";
-import { IIA_Kolkata_2025_images } from "../../assets/iia-kolkata/2025";
-import { IIA_International_Conference_2025_images } from "../../assets/iia-international-conference/2025";
-import { IIA_Bangalore_images } from "../../assets/iia-bangalore";
-import { IIA_Bombay_images } from "../../assets/iia-bombay";
-import { IIA_Kolkata_images } from "../../assets/iia-kolkata";
-import { IIA_DELHI_JULY_2024_Images } from "../../assets/journey/iia_conference_delhi_july_2024";
-import { Wofa_images } from "../../assets/wofa-2025";
-import { Wofa_2024_Image } from '../../assets/wofa-2025/wofa-2024';
-import { IIA_Bangalore_2026_images } from '../../assets/iia-bangalore/2026';
-import {useEventsStore} from "../../store/event"
- 
-// const myEvents = [
-//   {
-//     id: "iia-bangalore-2026",
-//     title: "IIA Bangalore Chapter International Conference 2026",
-//     meta: {
-//       date: "12 February 2026",
-//       location: "Bangalore, India",
-//       type: "IIA Bangalore Chapter 2026",
-//     },
-//     description: "",
-//     images: {
-//       banner: IIA_Bangalore_2026_images[0],
-//       gallery: IIA_Bangalore_2026_images,
-//     },
-//   },
-//   {
-//     id: "iia-bombay-ic-2026",
-//     title: "IIA Bombay Chapter International Conference 2026",
-//     meta: {
-//       date: "15 March 2026",
-//       location: "Mumbai, India",
-//       type: "IIA Bombay Chapter 2026",
-//     },
-//     description:
-//       "A prestigious international conference focused on the future of governance, internal audit, and risk management.",
-//     images: {
-//       banner: IIA_Bombay_2026_images[0],
-//       gallery: IIA_Bombay_2026_images,
-//     },
-//   },
-//   {
-//     id: "iia-hyderabad-annual-conference-2025",
-//     title: "IIA Hyderabad Annual Conference 2025",
-//     meta: {
-//       date: "2025",
-//       location: "ITC Kakatiya, Hyderabad, India",
-//       type: "IIA Hyderabad Chapter 2025",
-//     },
-//     description:
-//       "RiskMan Consulting participated as Silver Sponsors, engaging with audit and risk professionals.",
-//     images: {
-//       banner: IIA_Hyderabad_2025_images[0],
-//       gallery: IIA_Hyderabad_2025_images,
-//     },
-//   },
-//   {
-//     id: "iia-kolkata-annual-meet-2025",
-//     title:
-//       "Thought Leadership Address – IIA Kolkata Chapter Annual Meet 2025",
-//     meta: {
-//       date: "2025",
-//       location: "Bhubaneswar Club, India",
-//       type: "IIA Kolkata Chapter 2025",
-//     },
-//     description:
-//       "A thought-leadership address focused on repositioning internal audit as a strategic enabler.",
-//     images: {
-//       banner: IIA_Kolkata_2025_images[0],
-//       gallery: IIA_Kolkata_2025_images,
-//     },
-//   },
-//   {
-//     id: "iia-bangalore-annual-conference-2025",
-//     title: "IIA India Bangalore Chapter Annual Conference 2025",
-//     meta: {
-//       date: "2025",
-//       location: "Bangalore, India",
-//       type: "IIA Bangalore Chapter 2025",
-//     },
-//     description:
-//       "RiskMan Consulting participated as a proud sponsor, engaging with leaders on audit transformation.",
-//     images: {
-//       banner: IIA_International_Conference_2025_images[0],
-//       gallery: [
-//         ...IIA_Bangalore_images,
-//         ...IIA_International_Conference_2025_images,
-//       ],
-//     },
-//   },
-//   {
-//     id: "iia-bombay-chapter-2025",
-//     title: "IIA Bombay Chapter Meet",
-//     meta: {
-//       date: "5 March 2025",
-//       location: "Mumbai, India",
-//       type: "IIA Bombay Chapter 2025",
-//     },
-//     description:
-//       "Focused conversations on strengthening audit excellence and forward-thinking audit strategies.",
-//     images: {
-//       banner: IIA_Bombay_images[2],
-//       gallery: IIA_Bombay_images,
-//     },
-//   },
-//   {
-//     id: "wofa-2024",
-//     title: "WOFA 2024",
-//     meta: {
-//       date: "2024",
-//       location: "New Delhi, India",
-//       type: "WOFA Chapter 2024",
-//     },
-//     description:
-//       "A global platform celebrating leadership, innovation, and collaboration among changemakers.",
-//     images: {
-//       banner: Wofa_2024_Image[0],
-//       gallery: Wofa_2024_Image,
-//     },
-//   },
-//   {
-//     id: "iia-delhi-conference-2024",
-//     title: "IIA Delhi Conference 2024",
-//     meta: {
-//       date: "2024",
-//       location: "Delhi, India",
-//       type: "IIA Delhi Chapter 2024",
-//     },
-//     description:
-//       "Engaging discussions on the evolving landscape of internal audit and risk management.",
-//     images: {
-//       banner: IIA_DELHI_JULY_2024_Images[0],
-//       gallery: IIA_DELHI_JULY_2024_Images,
-//     },
-//   },
-//   {
-//     id: "wofa-2025",
-//     title: "WOFA 2025",
-//     meta: {
-//       date: "31 Jan – 2 Feb 2025",
-//       location: "New Delhi, India",
-//       type: "WOFA Chapter 2025",
-//     },
-//     description:
-//       "A global platform celebrating leadership, innovation, and collaboration among changemakers.",
-//     images: {
-//       banner: Wofa_images[0],
-//       gallery: Wofa_images,
-//     },
-//   },
-// ];
+import { useEventsStore } from "../../store/event";
 
- 
+const shortLabel = (type) =>
+  type === "All" ? "All" : type?.replace(/\s*Chapter\s*/gi, ' ').trim();
+
 export default function EventsGrid() {
   const {fetchEvents,events } = useEventsStore()
   let myEvents = events
   const [selectedCategory, setSelectedCategory] = useState("All");
  
   // Dynamically get categories from your data
-  const categories = ["All", ...new Set(myEvents?.map(e => e.category))];
+  // Events are already ordered by eventDate desc from Sanity.
+  // Preserve that order when building categories (deduplicate, keep first occurrence).
+  const categories = [
+    "All",
+    ...(myEvents?.reduce((acc, e) => {
+      if (e.type && !acc.includes(e.type)) acc.push(e.type);
+      return acc;
+    }, []) ?? []),
+  ];
  
   const filteredEvents = selectedCategory === "All"
     ? myEvents
-    : myEvents?.filter(e => e?.category === selectedCategory);
+    : myEvents?.filter(e => e?.type === selectedCategory);
 
     useEffect(()=>{
       fetchEvents()
@@ -202,7 +57,7 @@ export default function EventsGrid() {
                       : "text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"
                     }`}
                   >
-                    {cat}
+                    {shortLabel(cat)}
                   </button>
                 ))}
               </div>

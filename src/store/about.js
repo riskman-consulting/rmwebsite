@@ -124,9 +124,10 @@ export const useAboutPage = create((set) => ({
    fetchLeaders: async () => {
     try {
       const data = await sanityClient.fetch(`
-        *[_type == "leader"]{
+        *[_type == "leader"] | order(number asc){
           name,
           title,
+          number,
           linkedin,
           image{
             asset->{url}
