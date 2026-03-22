@@ -77,7 +77,7 @@ const RiskManTeams = () => {
           <div className="flex items-center gap-2 px-6 py-3 border rounded-full bg-surfaceLight dark:bg-surfaceDark border-brandAccent/30">
             <Users className="w-5 h-5 text-brandAccent" />
             <span className="text-lg font-bold text-brandDark dark:text-white">
-              {teamMembersSection?.length}+
+              50+
             </span>
             <span className="text-sm text-brandDark/70 dark:text-white/70">
               Team Members
