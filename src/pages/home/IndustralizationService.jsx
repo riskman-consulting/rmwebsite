@@ -51,7 +51,7 @@ export function IndustryGrid() {
           {industries?.map((industry, index) => (
             <div
               key={index}
-              onClick={()=> navigate(`/industries/${industry?.slug?.current}`)}
+              onClick={()=> navigate(`/services`)}
               className="flex flex-col overflow-hidden transition-all duration-500 bg-white shadow-lg cursor-pointer group rounded-3xl dark:bg-gray-800"
             >
               {/* Image Section */}

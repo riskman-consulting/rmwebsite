@@ -35,7 +35,7 @@ export const ServiceCardCompact = ({ service, index }) => {
       className="h-full"
     >
       <Link
-        to={`/services/${service.id}`}
+        to={`/services/${service?.slug?.current}`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         className="block h-full group"
