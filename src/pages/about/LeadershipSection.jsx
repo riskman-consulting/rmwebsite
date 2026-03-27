@@ -75,11 +75,11 @@ const COFOUNDERS = [
     location: "Gurgaon, India",
     linkedin: "https://www.linkedin.com/in/arpit-garg-88070560",
     image:teamsImages.arpitSir,
-    bio: "A Chartered Accountant and Certified Internal Auditor (CIA, CRMA, CISA) with 14+ years in risk assurance and advisory. Partner at RiskMan Consulting, ex-EY and Genpact. Expert in internal audit, IT risk, and fraud analytics.",
+    bio: "Mr. Arpit Garg, A Chartered Accountant, Certified Internal Auditor, CRMA, and CISA with 14+ years in risk assurance and advisory. Partner at RiskMan Consulting, ex-EY, Genpact, and SNB.",
     summaryBlocks: [
-      { text: "A <strong>Chartered Accountant and Certified Internal Auditor</strong> with over <strong>14+ years of risk assurance</strong> experience across Big Four firms including EY and Genpact, bringing deep expertise in audit, fraud analytics, and IT governance." },
+      { text: "<strong>Mr. Arpit Garg, A Chartered Accountant </strong>, Certified Internal Auditor, CRMA, and CISA with 14+ years in risk assurance and advisory. Partner at RiskMan Consulting, ex-EY, Genpact, and SNB." },
     ],
-    expertise: ["Internal Audit", "ITGC & IT Risk", "Fraud Analytics", "Risk Assurance", "Control Design", "Compliance"],
+    expertise: ["Internal Audit", "ERM", "IT Risk", "SOC 1", "SOC 2", "SOX/IFC", "Fraud Analytics"],
     highlightsTitle: "Impact Areas",
     highlights: [
       "Comprehensive risk audits across diverse industries",
