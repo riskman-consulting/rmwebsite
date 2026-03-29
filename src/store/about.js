@@ -7,6 +7,7 @@ export const useAboutPage = create((set) => ({
 
   // ================= STATE =================
   serviceLeaders: [],
+  leadership: [],
   clientsSection: [],
   alliancePartnersSection: [],
   teamMembersSection: [],
@@ -15,6 +16,28 @@ export const useAboutPage = create((set) => ({
   error: null,
 
   // ================= FETCHERS =================
+
+  fetchLeadership: async () => {
+    try {
+      set({ loading: true, error: null });
+
+      const data = await sanityClient.fetch(`${BASE}{
+        leadership[]{
+          ...,
+          image{alt, asset->{url}},
+          certifications[]{title, org}
+        }
+      }`);
+
+      set({
+        leadership: data?.leadership ?? [],
+        loading: false
+      });
+
+    } catch (e) {
+      set({ error: e.message, loading: false });
+    }
+  },
 
   fetchServiceLeaders: async () => {
     try {
@@ -103,6 +126,7 @@ export const useAboutPage = create((set) => ({
       set({ loading: true, error: null });
 
       const data = await sanityClient.fetch(`${BASE}{
+        leadership[]{..., image{alt, asset->{url}}, certifications[]{title, org}},
         serviceLeaders[]{..., image{alt, asset->{url}}},
         clientsSection[]{name, logo{alt, asset->{url}}},
         alliancePartnersSection[]{..., image{alt, asset->{url}}},
@@ -110,6 +134,7 @@ export const useAboutPage = create((set) => ({
       }`);
 
       set({
+        leadership: data?.leadership ?? [],
         serviceLeaders: data?.serviceLeaders ?? [],
         clientsSection: data?.clientsSection ?? [],
         alliancePartnersSection: data?.alliancePartnersSection ?? [],

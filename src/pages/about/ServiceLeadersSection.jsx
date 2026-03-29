@@ -4,7 +4,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Linkedin, ArrowRight, MapPin } from "lucide-react";
-import { teamsImages } from "../../assets/teams";
+import { useAboutPage } from "../../store/about";
 
 /* =========================
    Animations
@@ -47,63 +47,13 @@ function AnimatedCounter({ end, duration = 2, suffix = "" }) {
   return <span ref={ref}>{count}{suffix}</span>;
 }
 
-/* =========================
-   DATA
-========================= */
-const SERVICE_LEADERS = [
-  {
-    name: "Narayanan Rajendran",
-    location: "Chennai, India",
-    title: "Service Leader",
-    credentials: "CA, CISA with 20+ years | Ex-Ford, Ex-PKF, Ex-Templar Shield",
-    bio: "Specialist in ERM, SOX, ICOFR, TPRM, InfoSec, ISO27001 and forensic engagements with Fortune 500 organizations.",
-    image: "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768904950/narayanan_er15xk.webp",
-    expertise: ["ERM", "Cybersecurity", "Forensic"],
-    linkedin: "https://linkedin.com/in/narayanan-rajendran-34706521"
-  },
-  {
-    name: "Jitendra Khimavat",
-    location: "Mumbai, India",
-    title: "Service Leader",
-    credentials: "CA and Certified Internal Auditor (CIA) with 17+ years",
-    bio: "Expert in risk-based internal audits, enhancing efficiency, control, compliance, and cost savings across infrastructure, mining, manufacturing, and finance.",
-    image: "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768898657/jitendra_s8wq8i.webp",
-    expertise: ["Internal Audits", "Risk Management", "Compliance"],
-    linkedin: "https://linkedin.com/in/jitendra-khimavat"
-  },
-  {
-    name: "Pranshul Agarwal",
-    location: "Delhi, India",
-    title: "Client Lead",
-    credentials: "CIA, CISA Qualified with 6+ Years of Experience",
-    bio: "Risk Advisory professional with 6+ years of experience in IFC design, internal audits, SOX testing, and risk assurance. Delivers practical, value-driven risk and control solutions across industries.",
-    image: teamsImages.Pranshul,
-    expertise: [
-      "Risk Advisory & Assurance",
-      "Internal Audit",
-      "IFC Framework Design & Testing",
-      "SOX Testing",
-      "Digital Transformation Initiatives",
-      "Limited & Concurrent Audit"
-    ],
-    linkedin: "https://linkedin.com/in/pranshul-agarwal-3b707a148"
-  },
-  {
-    name: "Vishal Sharma",
-    title: "Client Lead",
-    location: "Kolkata, India",
-    credentials: "7+ years",
-    bio: "Specialized in core internal audit, ERM, ICoFR, SOP & policy development, and MIS Automation through VBA",
-    image: teamsImages.VishalSharma,
-    expertise: [],
-    linkedin: ""
-  },
-];
 
 /* =========================
    Redesigned Leader Card - Clean & Professional
 ========================= */
 function LeaderCard({ leader, index, onSelect }) {
+  const imageUrl = leader.image?.asset?.url ?? leader.image;
+
   return (
     <motion.div
       {...animations.card(index)}
@@ -112,7 +62,7 @@ function LeaderCard({ leader, index, onSelect }) {
       {/* Image Section */}
       <div className="flex justify-center pt-8 pb-6 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-surfaceDark">
         <img
-          src={leader.image}
+          src={imageUrl}
           alt={leader.name}
           className="object-cover object-top w-32 h-32 transition-all duration-500 border-4 border-white rounded-full shadow-lg dark:border-gray-700 grayscale group-hover:grayscale-0"
         />
@@ -186,6 +136,12 @@ function LeaderCard({ leader, index, onSelect }) {
    Main Section
 ========================= */
 export default function ServiceLeadersSection({ setSelectedLeader }) {
+  const { serviceLeaders, fetchServiceLeaders, loading } = useAboutPage();
+
+  useEffect(() => {
+    fetchServiceLeaders();
+  }, [fetchServiceLeaders]);
+
   return (
     <section id="service-leaders" className="py-14 bg-surfaceLight md:py-20 dark:bg-surfaceDark">
       <div className="px-4 mx-auto max-w-7xl lg:px-8">
@@ -202,16 +158,22 @@ export default function ServiceLeadersSection({ setSelectedLeader }) {
         </motion.div>
 
         {/* Cards Grid */}
-        <div className="grid gap-6 mb-16 md:grid-cols-2 lg:grid-cols-4">
-          {SERVICE_LEADERS.map((leader, i) => (
-            <LeaderCard
-              key={leader.name}
-              leader={leader}
-              index={i}
-              // onSelect={setSelectedLeader}
-            />
-          ))}
-        </div>
+        {loading && serviceLeaders.length === 0 ? (
+          <div className="flex justify-center items-center py-20 mb-16">
+            <div className="w-8 h-8 border-4 border-brandPrimary border-t-transparent rounded-full animate-spin" />
+          </div>
+        ) : (
+          <div className="grid gap-6 mb-16 md:grid-cols-2 lg:grid-cols-4">
+            {serviceLeaders.map((leader, i) => (
+              <LeaderCard
+                key={leader._key ?? leader.name}
+                leader={leader}
+                index={i}
+                onSelect={setSelectedLeader}
+              />
+            ))}
+          </div>
+        )}
 
         {/* Stats Section */}
         <motion.div {...animations.fadeInUp}>
