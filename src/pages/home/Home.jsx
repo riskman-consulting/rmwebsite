@@ -25,6 +25,7 @@ import StrategicSection from "./Features";
 import LeadershipSection from "../about/LeadershipSection";
 import LeadershipModal from "../about/LeadershipModal";
 import EventSection from "./EventSection";
+import StaticVideoCard from "../../components/yt/VIdeoCard";
 
 
 export default function Home() {
@@ -70,6 +71,7 @@ export default function Home() {
 
           {/* <BackgroundGrid/> */}
           <HeroSection />
+           
 
           {/* FEATURES */}
           {/* <Features /> */}

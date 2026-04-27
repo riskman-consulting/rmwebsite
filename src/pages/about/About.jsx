@@ -24,6 +24,7 @@ import { JourneyTimeline } from "./JourneyTimeline";
 import SingleSlide from "./SingleSlide";
 import WhyRiskman from "./WhyRiskMan";
 import TributeMarquee from "./TributeMarquee";
+import VideoCard from "../../components/yt/VIdeoCard";
 
 /* =======================
    ANIMATIONS
@@ -76,6 +77,7 @@ export default function About() {
 
         {/* ================= INTRODUCTION ================= */}
         <IntroSection />
+        <VideoCard onPlay={true}  video={{videoId:"oonsDSc64YA",title:"RiskMan"}}/>
 
         {/* ================= TRIBUTE ================= */}
         {/* <TributeSection /> */}
