@@ -77,7 +77,7 @@ export default function About() {
 
         {/* ================= INTRODUCTION ================= */}
         <IntroSection />
-        <VideoCard onPlay={true}  video={{videoId:"oonsDSc64YA",title:"RiskMan"}}/>
+        {/* <VideoCard onPlay={true}  video={{videoId:"oonsDSc64YA",title:"RiskMan"}}/> */}
 
         {/* ================= TRIBUTE ================= */}
         {/* <TributeSection /> */}
