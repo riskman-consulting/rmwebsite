@@ -325,7 +325,6 @@
 //   );
 // }
 
-
 const YOUTUBE_VIDEO_ID = "oonsDSc64YA";
 
 export default function HeroSection() {
@@ -337,7 +336,9 @@ export default function HeroSection() {
           width: 100%;
           height: 100vh;
           overflow: hidden;
+          background: #020817;
         }
+
         .yt-iframe {
           position: absolute;
           top: 50%;
@@ -349,17 +350,124 @@ export default function HeroSection() {
           transform: translate(-50%, -50%);
           border: none;
           pointer-events: none;
+          filter: brightness(0.45);
+        }
+
+        .yt-overlay {
+          position: absolute;
+          inset: 0;
+          background:
+            linear-gradient(
+              to right,
+              rgba(2, 8, 23, 0.88),
+              rgba(2, 8, 23, 0.55),
+              rgba(2, 8, 23, 0.75)
+            );
+          z-index: 1;
+        }
+
+        .yt-content {
+          position: relative;
+          z-index: 2;
+          height: 100%;
+          max-width: 1400px;
+          margin: 0 auto;
+          padding: 0 8%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          color: white;
+
+          /* moved content slightly upward */
+          transform: translateY(-60px);
+        }
+
+        .yt-tag {
+          display: inline-flex;
+          align-items: center;
+          gap: 12px;
+          margin-bottom: 24px;
+          color: #f7b500;
+          font-size: 0.9rem;
+          font-weight: 700;
+          letter-spacing: 4px;
+          text-transform: uppercase;
+        }
+
+        .yt-tag::before {
+          content: "";
+          width: 70px;
+          height: 2px;
+          background: #f7b500;
+        }
+
+        .yt-title {
+          font-size: clamp(2.4rem, 5vw, 4.8rem);
+          font-weight: 800;
+          line-height: 1.02;
+          max-width: 780px;
+          margin-bottom: 24px;
+          color: #ffffff;
+        }
+
+        .yt-title span {
+          color: #f7b500;
+        }
+
+        .yt-description {
+          max-width: 720px;
+          font-size: clamp(1rem, 1.5vw, 1.2rem);
+          line-height: 1.9;
+          color: rgba(255, 255, 255, 0.82);
+        }
+
+        @media (max-width: 768px) {
+          .yt-content {
+            align-items: center;
+            text-align: center;
+            transform: translateY(-30px);
+          }
+
+          .yt-tag {
+            justify-content: center;
+          }
+
+          .yt-title {
+            max-width: 100%;
+          }
+
+          .yt-description {
+            max-width: 100%;
+          }
         }
       `}</style>
 
       <section className="yt-section">
         <iframe
           className="yt-iframe"
-          src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&mute=1&loop=1&playlist=${YOUTUBE_VIDEO_ID}&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1&playsinline=1&enablejsapi=1`}
+          src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&mute=1&loop=1&playlist=${YOUTUBE_VIDEO_ID}&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1&playsinline=1`}
           title="Hero background video"
           allow="autoplay; encrypted-media"
           allowFullScreen={false}
         />
+
+        <div className="yt-overlay" />
+
+        <div className="yt-content">
+          <div className="yt-tag">RiskMan Insights</div>
+
+          <h1 className="yt-title">
+            RiskMan&apos;s <span>Vision</span> in Motion
+          </h1>
+
+          <p className="yt-description">
+            Step inside our process and see how RiskMan protects what
+            matters most. From proactive planning to rapid response,
+            we are the dedicated partner you can trust to secure your
+            business.
+          </p>
+        </div>
       </section>
     </>
   );
