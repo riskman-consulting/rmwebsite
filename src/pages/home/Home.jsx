@@ -71,6 +71,7 @@ export default function Home() {
 
           {/* <BackgroundGrid/> */}
           <HeroSection />
+          <StaticVideoCard />
            
 
           {/* FEATURES */}
