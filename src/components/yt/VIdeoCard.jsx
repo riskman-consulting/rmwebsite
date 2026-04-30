@@ -66,12 +66,12 @@ export default function HeroSection() {
           <div className="mx-auto max-w-5xl overflow-hidden rounded-[28px] border border-borderLight bg-brandDark shadow-[0_30px_80px_rgba(0,31,63,0.18)] transition-colors duration-300 dark:border-borderDark dark:bg-surfaceDark">
             <div className="relative aspect-video">
               <iframe
-                className="absolute inset-0 h-full w-full"
-                src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&mute=1&loop=1&playlist=${YOUTUBE_VIDEO_ID}&controls=0&rel=0&modestbranding=1&playsinline=1`}
-                title="RiskMan Video"
-                allow="autoplay; encrypted-media"
-                allowFullScreen
-              />
+  className="absolute inset-0 h-full w-full"
+  src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?loop=1&playlist=${YOUTUBE_VIDEO_ID}&controls=1&rel=0&modestbranding=1&playsinline=1`}
+  title="RiskMan Video"
+  allow="encrypted-media"
+  allowFullScreen
+/>
             </div>
           </div>
         </div>
