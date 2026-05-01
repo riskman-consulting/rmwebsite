@@ -119,7 +119,7 @@ export default function NewsletterList() {
             >
               Latest{" "}
               <span className="italic text-brandPrimary dark:text-brandAccent">
-                News
+                Newsletters
               </span>
             </motion.h1>
 
@@ -203,7 +203,7 @@ export default function NewsletterList() {
                   >
                     <Wrapper {...wrapperProps} className="flex flex-col h-full">
                       {/* Image */}
-                      <div className="relative overflow-hidden aspect-[4/3] bg-brandDark/10">
+                      <div className="relative overflow-hidden aspect-video bg-brandDark/10">
                         {item.image ? (
                           <img
                             src={item.image}
@@ -232,7 +232,7 @@ export default function NewsletterList() {
                           </p>
                         )}
 
-                        <h3 className="mb-5 text-2xl font-bold leading-tight transition-colors duration-300 md:text-[26px] font-heading text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent line-clamp-2">
+                        <h3 className="mb-5 text-xl font-bold leading-snug transition-colors duration-300 md:text-[22px] font-heading text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
                           {item.title}
                         </h3>
 

@@ -25,6 +25,7 @@ import SingleSlide from "./SingleSlide";
 import WhyRiskman from "./WhyRiskMan";
 import TributeMarquee from "./TributeMarquee";
 import VideoCard from "../../components/yt/VIdeoCard";
+import VideoAboutSection from "../../components/yt/VideoCardAbout";
 
 /* =======================
    ANIMATIONS
@@ -74,6 +75,7 @@ export default function About() {
         {/* ================= HERO ================= */}
         {/* <AboutHero /> */}
         <SingleSlide />
+        <VideoAboutSection/>
 
         {/* ================= INTRODUCTION ================= */}
         <IntroSection />

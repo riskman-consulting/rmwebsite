@@ -30,17 +30,18 @@ const staggerContainer = {
   animate: { transition: { staggerChildren: 0.1 } },
 };
 
-const CONTENT_TYPE_FILTERS = [
-  { label: "All", value: "all" },
-  { label: "Pillar", value: "pillar" },
-  { label: "Supporting", value: "supporting" },
-];
-
 const FUNNEL_STAGE_LABELS = {
   awareness: "Awareness",
   consideration: "Consideration",
   decision: "Decision",
 };
+
+const formatTypeLabel = (value) =>
+  String(value || "")
+    .replace(/[-_]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(/\b\w/g, (c) => c.toUpperCase());
 
 const formatDate = (iso) => {
   if (!iso) return "";
@@ -63,6 +64,31 @@ export default function BlogList() {
   useEffect(() => {
     fetchPosts();
   }, [fetchPosts]);
+
+  // Build filter chips from the actual contentType values present in posts
+  const contentTypeFilters = useMemo(() => {
+    const seen = new Map();
+    posts.forEach((post) => {
+      const value = post?.contentType;
+      if (!value) return;
+      const key = String(value).trim();
+      if (!key || seen.has(key)) return;
+      seen.set(key, formatTypeLabel(key));
+    });
+    return [
+      { label: "All", value: "all" },
+      ...Array.from(seen, ([value, label]) => ({ label, value })).sort((a, b) =>
+        a.label.localeCompare(b.label)
+      ),
+    ];
+  }, [posts]);
+
+  // If the active filter disappears (data refresh), fall back to "all"
+  useEffect(() => {
+    if (activeType === "all") return;
+    const stillExists = contentTypeFilters.some((f) => f.value === activeType);
+    if (!stillExists) setActiveType("all");
+  }, [contentTypeFilters, activeType]);
 
   const filteredPosts = useMemo(() => {
     const term = search.trim().toLowerCase();
@@ -149,20 +175,22 @@ export default function BlogList() {
               <FaSearch className="absolute transition-colors -translate-y-1/2 left-6 top-1/2 text-brandNavy/40 dark:text-gray-500 group-focus-within:text-brandPrimary dark:group-focus-within:text-brandAccent" />
             </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
-              {CONTENT_TYPE_FILTERS.map((cat) => (
-                <button
-                  key={cat.value}
-                  onClick={() => setActiveType(cat.value)}
-                  className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${activeType === cat.value
-                    ? "bg-brandPrimary text-white shadow-lg shadow-brandPrimary/30 dark:bg-brandAccent dark:text-brandDark dark:shadow-brandAccent/30"
-                    : "bg-surfaceLight/50 dark:bg-surfaceDark/50 border border-borderLight dark:border-borderDark hover:border-brandPrimary dark:hover:border-brandAccent"
-                    }`}
-                >
-                  {cat.label}
-                </button>
-              ))}
-            </div>
+            {contentTypeFilters.length > 1 && (
+              <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
+                {contentTypeFilters.map((cat) => (
+                  <button
+                    key={cat.value}
+                    onClick={() => setActiveType(cat.value)}
+                    className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${activeType === cat.value
+                      ? "bg-brandPrimary text-white shadow-lg shadow-brandPrimary/30 dark:bg-brandAccent dark:text-brandDark dark:shadow-brandAccent/30"
+                      : "bg-surfaceLight/50 dark:bg-surfaceDark/50 border border-borderLight dark:border-borderDark hover:border-brandPrimary dark:hover:border-brandAccent"
+                      }`}
+                  >
+                    {cat.label}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -208,11 +236,11 @@ export default function BlogList() {
                   <motion.article
                     key={post._id}
                     variants={scaleIn}
-                    className="group relative h-full flex flex-col bg-surfaceLight dark:bg-surfaceDark rounded-[2.5rem] border border-borderLight dark:border-borderDark overflow-hidden transition-all duration-500 hover:border-brandGold dark:hover:border-brandAccent hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.4)]"
+                    className="group relative h-full flex flex-col bg-surfaceLight dark:bg-surfaceDark rounded-2xl border border-borderLight dark:border-borderDark overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-brandGold dark:hover:border-brandAccent hover:shadow-[0_24px_50px_-20px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_24px_50px_-20px_rgba(0,0,0,0.4)]"
                   >
                     <Link to={`/blog/${post.slug}`} className="flex flex-col h-full">
-                      {/* Image wrapper */}
-                      <div className="relative h-64 overflow-hidden bg-brandDark/10">
+                      {/* Image wrapper - 16:9 (1920x1080) */}
+                      <div className="relative w-full overflow-hidden aspect-video bg-brandDark/10">
                         <div className="absolute inset-0 z-10 transition-colors duration-500 bg-brandDark/20 group-hover:bg-transparent" />
                         {post.mainImage && (
                           <motion.img
@@ -223,19 +251,11 @@ export default function BlogList() {
                           />
                         )}
 
-                        {/* Content type Overlay */}
-                        {post.contentType && (
-                          <div className="absolute z-20 top-6 left-6">
-                            <span className="px-4 py-1.5 rounded-full bg-white/90 dark:bg-brandDark/90 backdrop-blur-sm text-brandDark dark:text-white text-xs font-bold tracking-wide uppercase border border-white/20 shadow-lg">
-                              {post.contentType}
-                            </span>
-                          </div>
-                        )}
                       </div>
 
                       {/* Content section */}
-                      <div className="flex flex-col flex-1 p-8">
-                        <div className="flex items-center gap-4 mb-4 text-xs font-semibold text-brandNavy/60 dark:text-gray-400">
+                      <div className="flex flex-col flex-1 p-5">
+                        <div className="flex items-center gap-3 mb-3 text-[11px] font-medium text-brandNavy/60 dark:text-gray-400">
                           <div className="flex items-center gap-1.5">
                             <FaCalendar className="text-brandPrimary dark:text-brandAccent" />
                             {formatDate(post._createdAt)}
@@ -251,23 +271,19 @@ export default function BlogList() {
                           )}
                         </div>
 
-                        <h3 className="mb-4 text-2xl font-bold leading-tight transition-colors duration-300 font-heading text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent line-clamp-2">
+                        <h3 className="mb-2 text-base font-bold leading-snug transition-colors duration-300 md:text-lg font-heading text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
                           {post.title}
                         </h3>
 
                         {summary && (
-                          <p className="mb-8 leading-relaxed text-brandNavy/70 dark:text-gray-400 line-clamp-3">
+                          <p className="mb-4 text-sm leading-relaxed text-brandNavy/70 dark:text-gray-400 line-clamp-2">
                             {summary}
                           </p>
                         )}
 
-                        <div className="pt-6 mt-auto border-t border-borderLight/50 dark:border-borderDark/30">
-                          <div className="flex items-center justify-between group/btn">
-                            <span className="text-sm font-bold text-brandPrimary dark:text-brandAccent">Read Full Post</span>
-                            <div className="flex items-center justify-center w-10 h-10 transition-all duration-300 rounded-full bg-brandPrimary/10 dark:bg-brandAccent/10 group-hover/btn:bg-brandPrimary dark:group-hover/btn:bg-brandAccent">
-                              <FaChevronRight className="transition-all duration-300 text-brandPrimary dark:text-brandAccent group-hover/btn:text-white dark:group-hover/btn:text-brandDark" />
-                            </div>
-                          </div>
+                        <div className="flex items-center gap-2 mt-auto text-sm font-semibold text-brandPrimary dark:text-brandAccent">
+                          <span>Read Full Post</span>
+                          <FaChevronRight className="text-xs transition-transform duration-300 group-hover:translate-x-1" />
                         </div>
                       </div>
                     </Link>

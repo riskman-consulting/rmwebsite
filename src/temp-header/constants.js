@@ -10,7 +10,7 @@ export const NAVIGATION_DATA = {
         { "label": "Careers", "type": "link", "path": "/careers" },
 //    { "label": "Industries", "type": "mega", "key": "industries", "path": "/industries" },     
         { "label": "Governance", "type": "link", "path": "/governance" },
-        { "label": "Sources", "type": "mega", "key": "sources", "path": "/blogs" }
+        { "label": "Resources", "type": "mega", "key": "sources", "path": "/blogs" }
     ],
     "sourcesMegaMenu": [
         {
