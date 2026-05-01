@@ -27,6 +27,9 @@ export const MegaMenu = ({ menuKey }) => {
     case "solutions":
       sections = NAVIGATION_DATA.solutionsMegaMenu;
       break;
+    case "sources":
+      sections = NAVIGATION_DATA.sourcesMegaMenu;
+      break;
     default:
       return null;
   }

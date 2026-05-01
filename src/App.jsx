@@ -16,6 +16,7 @@ import BlogTemplate from './templates/BlogTemplate'
 import PrivacyPolicy from './pages/resources/Privacy'
 import Terms from './pages/resources/Terms'
 import BlogSingle from './pages/blogs/BlogSingle'
+import NewsletterList from './pages/newsletter/NewsletterList'
 import './index.css'
 import ConcurrentAuditPage from './pages/concurrent-audit'
 import PoliciesPage from "./pages/policies";
@@ -283,6 +284,7 @@ function App() {
           <Route path="/blog" element={<Navigate to="/blogs" />} />
           <Route path="/blogs" element={<BlogList />} />
           <Route path="/blog/:slug" element={<BlogSingle />} />
+          <Route path="/newsletter" element={<NewsletterList />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/solutions" element={<TechSolutions />} />

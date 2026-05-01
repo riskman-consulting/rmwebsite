@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   FaCalendar,
-  FaClock,
   FaChevronRight,
   FaSearch,
+  FaTag,
 } from "react-icons/fa";
-import blogs from "../../data/blogs.json";
+import { useBlogStore } from "../../store/blog";
 // import BackgroundGrid from "../../component/common/BackgroundGrid";
 
 /* =======================
@@ -30,13 +30,67 @@ const staggerContainer = {
   animate: { transition: { staggerChildren: 0.1 } },
 };
 
+const CONTENT_TYPE_FILTERS = [
+  { label: "All", value: "all" },
+  { label: "Pillar", value: "pillar" },
+  { label: "Supporting", value: "supporting" },
+];
+
+const FUNNEL_STAGE_LABELS = {
+  awareness: "Awareness",
+  consideration: "Consideration",
+  decision: "Decision",
+};
+
+const formatDate = (iso) => {
+  if (!iso) return "";
+  try {
+    return new Date(iso).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  } catch {
+    return "";
+  }
+};
+
 export default function BlogList() {
+  const { posts, loading, error, fetchPosts } = useBlogStore();
+  const [search, setSearch] = useState("");
+  const [activeType, setActiveType] = useState("all");
+
+  useEffect(() => {
+    fetchPosts();
+  }, [fetchPosts]);
+
+  const filteredPosts = useMemo(() => {
+    const term = search.trim().toLowerCase();
+    return posts.filter((post) => {
+      const matchesType =
+        activeType === "all" || post.contentType === activeType;
+      if (!matchesType) return false;
+      if (!term) return true;
+      const haystack = [
+        post.title,
+        post.metaDescription,
+        post.tldr,
+        post.seoTitle,
+        ...(Array.isArray(post.takeaways) ? post.takeaways : []),
+      ]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase();
+      return haystack.includes(term);
+    });
+  }, [posts, search, activeType]);
+
   return (
     <div className="min-h-screen overflow-x-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-white">
       <Helmet>
         <title>Insights & Knowledge Hub | RiskMan Consulting Blog</title>
         <meta name="description" content="Explore expert articles and insights on risk management, regulatory compliance, cybersecurity, ESG, and strategic resilience from the RiskMan Consulting team." />
-        <link rel="canonical" href="https://www.riskman.in/insights" />
+        <link rel="canonical" href="https://www.riskman.in/blogs" />
       </Helmet>
       {/* <BackgroundGrid /> */}
 
@@ -80,13 +134,15 @@ export default function BlogList() {
         </div>
       </section>
 
-      {/* ================= SEARCH & FILTER (VISUAL ONLY) ================= */}
+      {/* ================= SEARCH & FILTER ================= */}
       <section className="relative z-20 pb-12">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="relative group">
               <input
                 type="text"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search insights..."
                 className="w-full py-5 text-lg transition-all duration-300 border shadow-xl outline-none px-14 rounded-3xl bg-surfaceLight/80 dark:bg-surfaceDark/80 backdrop-blur-md border-borderLight dark:border-borderDark focus:border-brandPrimary dark:focus:border-brandAccent group-hover:shadow-2xl"
               />
@@ -94,15 +150,16 @@ export default function BlogList() {
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
-              {["All", "Risk Management", "Compliance", "Cybersecurity", "Strategy", "Business"].map((cat, i) => (
+              {CONTENT_TYPE_FILTERS.map((cat) => (
                 <button
-                  key={i}
-                  className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${i === 0
-                      ? "bg-brandPrimary text-white shadow-lg shadow-brandPrimary/30 dark:bg-brandAccent dark:text-brandDark dark:shadow-brandAccent/30"
-                      : "bg-surfaceLight/50 dark:bg-surfaceDark/50 border border-borderLight dark:border-borderDark hover:border-brandPrimary dark:hover:border-brandAccent"
+                  key={cat.value}
+                  onClick={() => setActiveType(cat.value)}
+                  className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${activeType === cat.value
+                    ? "bg-brandPrimary text-white shadow-lg shadow-brandPrimary/30 dark:bg-brandAccent dark:text-brandDark dark:shadow-brandAccent/30"
+                    : "bg-surfaceLight/50 dark:bg-surfaceDark/50 border border-borderLight dark:border-borderDark hover:border-brandPrimary dark:hover:border-brandAccent"
                     }`}
                 >
-                  {cat}
+                  {cat.label}
                 </button>
               ))}
             </div>
@@ -113,73 +170,112 @@ export default function BlogList() {
       {/* ================= BLOG GRID ================= */}
       <section className="relative py-20 transition-colors duration-300 bg-bgLight dark:bg-bgDark isolate">
         <div className="container">
-          <motion.div
-            className="grid gap-10 md:grid-cols-2 lg:grid-cols-3"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: "-80px" }}
-          >
-            {blogs.map((blog, i) => (
-              <motion.article
-                key={blog.id}
-                variants={scaleIn}
-                className="group relative h-full flex flex-col bg-surfaceLight dark:bg-surfaceDark rounded-[2.5rem] border border-borderLight dark:border-borderDark overflow-hidden transition-all duration-500 hover:border-brandGold dark:hover:border-brandAccent hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.4)]"
-              >
-                <Link to={`/insights/${blog.slug}`} className="flex flex-col h-full">
-                  {/* Image wrapper */}
-                  <div className="relative h-64 overflow-hidden">
-                    <div className="absolute inset-0 z-10 transition-colors duration-500 bg-brandDark/20 group-hover:bg-transparent" />
-                    <motion.img
-                      src={blog.featuredImage}
-                      alt={blog.title}
-                      className="object-cover w-full h-full transition-all duration-700 ease-out grayscale group-hover:grayscale-0"
-                      whileHover={{ scale: 1.1 }}
-                    />
+          {loading && (
+            <div className="py-20 text-center text-brandNavy/60 dark:text-gray-400">
+              Loading insights...
+            </div>
+          )}
 
-                    {/* Category Overlay */}
-                    <div className="absolute z-20 top-6 left-6">
-                      <span className="px-4 py-1.5 rounded-full bg-white/90 dark:bg-brandDark/90 backdrop-blur-sm text-brandDark dark:text-white text-xs font-bold tracking-wide uppercase border border-white/20 shadow-lg">
-                        {blog.category}
-                      </span>
-                    </div>
-                  </div>
+          {error && !loading && (
+            <div className="py-20 text-center text-red-500">
+              Failed to load posts: {error}
+            </div>
+          )}
 
-                  {/* Content section */}
-                  <div className="flex flex-col flex-1 p-8">
-                    <div className="flex items-center gap-4 mb-4 text-xs font-semibold text-brandNavy/60 dark:text-gray-400">
-                      <div className="flex items-center gap-1.5">
-                        <FaCalendar className="text-brandPrimary dark:text-brandAccent" />
-                        {blog.date}
+          {!loading && !error && filteredPosts.length === 0 && (
+            <div className="py-20 text-center text-brandNavy/60 dark:text-gray-400">
+              No insights found{search ? ` for “${search}”` : ""}.
+            </div>
+          )}
+
+          {!loading && !error && filteredPosts.length > 0 && (
+            <motion.div
+              className="grid gap-10 md:grid-cols-2 lg:grid-cols-3"
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true, margin: "-80px" }}
+            >
+              {filteredPosts.map((post) => {
+                const summary =
+                  post.metaDescription ||
+                  post.tldr ||
+                  (Array.isArray(post.takeaways) ? post.takeaways[0] : "") ||
+                  "";
+                const stageLabel = FUNNEL_STAGE_LABELS[post.funnelStage];
+
+                return (
+                  <motion.article
+                    key={post._id}
+                    variants={scaleIn}
+                    className="group relative h-full flex flex-col bg-surfaceLight dark:bg-surfaceDark rounded-[2.5rem] border border-borderLight dark:border-borderDark overflow-hidden transition-all duration-500 hover:border-brandGold dark:hover:border-brandAccent hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.4)]"
+                  >
+                    <Link to={`/blog/${post.slug}`} className="flex flex-col h-full">
+                      {/* Image wrapper */}
+                      <div className="relative h-64 overflow-hidden bg-brandDark/10">
+                        <div className="absolute inset-0 z-10 transition-colors duration-500 bg-brandDark/20 group-hover:bg-transparent" />
+                        {post.mainImage && (
+                          <motion.img
+                            src={post.mainImage}
+                            alt={post.mainImageAlt || post.title}
+                            className="object-cover w-full h-full transition-all duration-700 ease-out grayscale group-hover:grayscale-0"
+                            whileHover={{ scale: 1.1 }}
+                          />
+                        )}
+
+                        {/* Content type Overlay */}
+                        {post.contentType && (
+                          <div className="absolute z-20 top-6 left-6">
+                            <span className="px-4 py-1.5 rounded-full bg-white/90 dark:bg-brandDark/90 backdrop-blur-sm text-brandDark dark:text-white text-xs font-bold tracking-wide uppercase border border-white/20 shadow-lg">
+                              {post.contentType}
+                            </span>
+                          </div>
+                        )}
                       </div>
-                      <div className="w-1 h-1 rounded-full bg-borderLight dark:bg-borderDark" />
-                      <div className="flex items-center gap-1.5">
-                        <FaClock className="text-brandPrimary dark:text-brandAccent" />
-                        {blog.readTime}
-                      </div>
-                    </div>
 
-                    <h3 className="mb-4 text-2xl font-bold leading-tight transition-colors duration-300 font-heading text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent line-clamp-2">
-                      {blog.title}
-                    </h3>
+                      {/* Content section */}
+                      <div className="flex flex-col flex-1 p-8">
+                        <div className="flex items-center gap-4 mb-4 text-xs font-semibold text-brandNavy/60 dark:text-gray-400">
+                          <div className="flex items-center gap-1.5">
+                            <FaCalendar className="text-brandPrimary dark:text-brandAccent" />
+                            {formatDate(post._createdAt)}
+                          </div>
+                          {stageLabel && (
+                            <>
+                              <div className="w-1 h-1 rounded-full bg-borderLight dark:bg-borderDark" />
+                              <div className="flex items-center gap-1.5">
+                                <FaTag className="text-brandPrimary dark:text-brandAccent" />
+                                {stageLabel}
+                              </div>
+                            </>
+                          )}
+                        </div>
 
-                    <p className="mb-8 leading-relaxed text-brandNavy/70 dark:text-gray-400 line-clamp-3">
-                      {blog.shortDescription}
-                    </p>
+                        <h3 className="mb-4 text-2xl font-bold leading-tight transition-colors duration-300 font-heading text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent line-clamp-2">
+                          {post.title}
+                        </h3>
 
-                    <div className="pt-6 mt-auto border-t border-borderLight/50 dark:border-borderDark/30">
-                      <div className="flex items-center justify-between group/btn">
-                        <span className="text-sm font-bold text-brandPrimary dark:text-brandAccent">Read Full Post</span>
-                        <div className="flex items-center justify-center w-10 h-10 transition-all duration-300 rounded-full bg-brandPrimary/10 dark:bg-brandAccent/10 group-hover/btn:bg-brandPrimary dark:group-hover/btn:bg-brandAccent">
-                          <FaChevronRight className="transition-all duration-300 text-brandPrimary dark:text-brandAccent group-hover/btn:text-white dark:group-hover/btn:text-brandDark" />
+                        {summary && (
+                          <p className="mb-8 leading-relaxed text-brandNavy/70 dark:text-gray-400 line-clamp-3">
+                            {summary}
+                          </p>
+                        )}
+
+                        <div className="pt-6 mt-auto border-t border-borderLight/50 dark:border-borderDark/30">
+                          <div className="flex items-center justify-between group/btn">
+                            <span className="text-sm font-bold text-brandPrimary dark:text-brandAccent">Read Full Post</span>
+                            <div className="flex items-center justify-center w-10 h-10 transition-all duration-300 rounded-full bg-brandPrimary/10 dark:bg-brandAccent/10 group-hover/btn:bg-brandPrimary dark:group-hover/btn:bg-brandAccent">
+                              <FaChevronRight className="transition-all duration-300 text-brandPrimary dark:text-brandAccent group-hover/btn:text-white dark:group-hover/btn:text-brandDark" />
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </Link>
-              </motion.article>
-            ))}
-          </motion.div>
+                    </Link>
+                  </motion.article>
+                );
+              })}
+            </motion.div>
+          )}
         </div>
       </section>
 

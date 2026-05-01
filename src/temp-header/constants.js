@@ -9,7 +9,16 @@ export const NAVIGATION_DATA = {
         // { "label": "Knowledge Hub", "type": "link", "path": "/insights" },
         { "label": "Careers", "type": "link", "path": "/careers" },
 //    { "label": "Industries", "type": "mega", "key": "industries", "path": "/industries" },     
-        { "label": "Governance", "type": "link", "path": "/governance" }
+        { "label": "Governance", "type": "link", "path": "/governance" },
+        { "label": "Sources", "type": "mega", "key": "sources", "path": "/blogs" }
+    ],
+    "sourcesMegaMenu": [
+        {
+            "items": [
+                { "label": "Blogs", "path": "/blogs" },
+                { "label": "Newsletter", "path": "/newsletter" }
+            ]
+        }
     ],
     "servicesMegaMenu": [
         {
