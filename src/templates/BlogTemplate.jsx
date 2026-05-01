@@ -7,14 +7,7 @@ import {
   FaChevronUp,
   FaQuoteRight,
   FaQuestionCircle,
-  FaTag,
-  FaLightbulb,
   FaClock,
-  FaTwitter,
-  FaLinkedin,
-  FaFacebook,
-  FaLink,
-  FaCheckCircle,
 } from "react-icons/fa";
 import { PortableText } from "@portabletext/react";
 
@@ -177,72 +170,6 @@ const portableTextComponents = {
 };
 
 /* =======================
-   SHARE BUTTONS
-======================= */
-const ShareButtons = ({ title, url }) => {
-  const [copied, setCopied] = useState(false);
-  const encodedUrl = encodeURIComponent(url);
-  const encodedTitle = encodeURIComponent(title);
-
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(url);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      // ignore
-    }
-  };
-
-  const shares = [
-    {
-      label: "Share on Twitter",
-      icon: <FaTwitter />,
-      href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
-    },
-    {
-      label: "Share on LinkedIn",
-      icon: <FaLinkedin />,
-      href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
-    },
-    {
-      label: "Share on Facebook",
-      icon: <FaFacebook />,
-      href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
-    },
-  ];
-
-  return (
-    <div className="flex items-center gap-2">
-      {shares.map((s) => (
-        <a
-          key={s.label}
-          href={s.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={s.label}
-          className="flex items-center justify-center w-10 h-10 transition-all duration-300 border rounded-full border-borderLight dark:border-borderDark text-brandNavy/70 dark:text-gray-400 hover:border-brandPrimary dark:hover:border-brandAccent hover:text-brandPrimary dark:hover:text-brandAccent hover:scale-110"
-        >
-          {s.icon}
-        </a>
-      ))}
-      <button
-        type="button"
-        onClick={handleCopy}
-        aria-label="Copy link"
-        className={`flex items-center justify-center w-10 h-10 transition-all duration-300 border rounded-full ${
-          copied
-            ? "border-green-500 text-green-500"
-            : "border-borderLight dark:border-borderDark text-brandNavy/70 dark:text-gray-400 hover:border-brandPrimary dark:hover:border-brandAccent hover:text-brandPrimary dark:hover:text-brandAccent hover:scale-110"
-        }`}
-      >
-        {copied ? <FaCheckCircle /> : <FaLink />}
-      </button>
-    </div>
-  );
-};
-
-/* =======================
    MAIN COMPONENT
 ======================= */
 export default function BlogTemplate({ blog }) {
@@ -278,10 +205,6 @@ export default function BlogTemplate({ blog }) {
     );
 
   const stageLabel = FUNNEL_STAGE_LABELS[blog.funnelStage];
-  const shareUrl =
-    typeof window !== "undefined"
-      ? window.location.href
-      : `https://www.riskman.in/blog/${blog.slug || ""}`;
 
   return (
     <div className="min-h-screen transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-white">
@@ -302,89 +225,67 @@ export default function BlogTemplate({ blog }) {
         </Link>
       </div>
 
-      {/* ================= IMMERSIVE HERO ================= */}
-      <section className="relative h-[85vh] flex items-end overflow-hidden">
-        <motion.div
-          style={{ scale: heroScale, opacity: heroOpacity }}
-          className="absolute inset-0 z-0"
-        >
-          {blog.mainImage ? (
-            <>
-              <img
-                src={blog.mainImage}
-                alt={blog.mainImageAlt || blog.title}
-                className="object-cover w-full h-full brightness-[0.45]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-brandDark/40 via-brandDark/60 to-bgLight dark:to-bgDark" />
-              <div className="absolute inset-0 bg-gradient-to-r from-brandDark/70 via-transparent to-brandDark/30" />
-            </>
-          ) : (
-            <div className="w-full h-full bg-gradient-to-br from-brandDark via-brandNavy to-brandPrimary dark:from-bgDark dark:via-surfaceDark dark:to-brandPrimary/30">
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-bgLight dark:to-bgDark" />
-            </div>
-          )}
-        </motion.div>
-
-        <div className="container relative z-20 pb-20 md:pb-28">
+      {/* ================= TITLE HEADER ================= */}
+      <section className="relative pt-28 pb-12 md:pt-36 md:pb-16 bg-bgLight dark:bg-bgDark">
+        <div className="container max-w-5xl">
           <motion.div
             initial="initial"
             animate="animate"
             variants={fadeInUp}
-            className="max-w-4xl"
           >
             {/* Breadcrumb */}
-            <div className="flex items-center gap-2 mb-8 text-xs font-semibold tracking-wider text-white/60">
+            <div className="flex items-center gap-2 mb-8 text-xs font-semibold tracking-wider text-brandNavy/60 dark:text-gray-400">
               <Link
                 to="/"
-                className="transition-colors hover:text-brandAccent uppercase"
+                className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent uppercase"
               >
                 Home
               </Link>
               <span>/</span>
               <Link
                 to="/blogs"
-                className="transition-colors hover:text-brandAccent uppercase"
+                className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent uppercase"
               >
                 Knowledge Hub
               </Link>
               <span>/</span>
-              <span className="text-brandAccent uppercase">Article</span>
+              <span className="text-brandPrimary dark:text-brandAccent uppercase">Article</span>
             </div>
 
             {/* Tags */}
             <div className="flex flex-wrap items-center gap-3 mb-8">
               {blog.contentType && (
-                <div className="inline-flex px-4 py-1.5 rounded-full bg-brandAccent text-brandDark text-xs font-black tracking-widest uppercase shadow-2xl">
+                <div className="inline-flex px-4 py-1.5 rounded-full bg-brandAccent text-brandDark text-xs font-black tracking-widest uppercase shadow-lg">
                   {blog.contentType}
                 </div>
               )}
               {stageLabel && (
-                <div className="inline-flex px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold tracking-wide uppercase">
+                <div className="inline-flex px-4 py-1.5 rounded-full bg-brandPrimary/10 dark:bg-brandAccent/10 border border-brandPrimary/20 dark:border-brandAccent/20 text-brandPrimary dark:text-brandAccent text-xs font-bold tracking-wide uppercase">
                   {stageLabel}
                 </div>
               )}
             </div>
 
             {/* Title */}
-            <h1 className="mb-10 text-4xl md:text-6xl lg:text-7xl font-bold font-heading leading-[1.05] text-white">
+            <h1 className="mb-8 text-4xl md:text-5xl lg:text-6xl font-bold font-heading leading-[1.1] text-brandDark dark:text-white">
               {blog.title}
             </h1>
 
             {/* Meta */}
-            <div className="flex flex-wrap items-center gap-6 text-sm font-semibold text-white/80">
+            <div className="flex flex-wrap items-center gap-6 text-sm font-semibold text-brandNavy/70 dark:text-gray-400">
               <span className="flex items-center gap-2.5">
-                <FaCalendar className="text-brandAccent" />
+                <FaCalendar className="text-brandPrimary dark:text-brandAccent" />
                 {formatDate(blog._createdAt)}
               </span>
-              <span className="hidden w-1 h-1 rounded-full bg-white/30 md:block" />
+              <span className="hidden w-1 h-1 rounded-full bg-brandNavy/30 dark:bg-white/30 md:block" />
               <span className="flex items-center gap-2.5">
-                <FaClock className="text-brandAccent" />
+                <FaClock className="text-brandPrimary dark:text-brandAccent" />
                 {readingTime} min read
               </span>
               {blog._updatedAt && blog._updatedAt !== blog._createdAt && (
                 <>
-                  <span className="hidden w-1 h-1 rounded-full bg-white/30 md:block" />
-                  <span className="flex items-center gap-2.5 text-white/60">
+                  <span className="hidden w-1 h-1 rounded-full bg-brandNavy/30 dark:bg-white/30 md:block" />
+                  <span className="flex items-center gap-2.5 text-brandNavy/50 dark:text-gray-500">
                     Updated {formatDate(blog._updatedAt)}
                   </span>
                 </>
@@ -394,8 +295,29 @@ export default function BlogTemplate({ blog }) {
         </div>
       </section>
 
+      {/* ================= FEATURED IMAGE ================= */}
+      {blog.mainImage && (
+        <section className="pb-12 md:pb-20 bg-bgLight dark:bg-bgDark">
+          <div className="container max-w-5xl">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              style={{ scale: heroScale, opacity: heroOpacity }}
+              className="overflow-hidden border shadow-2xl rounded-3xl border-borderLight dark:border-borderDark"
+            >
+              <img
+                src={blog.mainImage}
+                alt={blog.mainImageAlt || blog.title}
+                className="object-cover w-full h-auto max-h-[70vh]"
+              />
+            </motion.div>
+          </div>
+        </section>
+      )}
+
       {/* ================= ARTICLE CONTENT ================= */}
-      <main className="relative z-20 pb-32 -mt-20 md:-mt-28">
+      <main className="relative z-20 pb-32">
         <div className="container max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -405,33 +327,12 @@ export default function BlogTemplate({ blog }) {
           >
             {/* TL;DR */}
             {blog.tldr && (
-              <div className="relative p-8 mb-14 overflow-hidden border rounded-3xl border-brandPrimary/20 dark:border-brandAccent/20 bg-gradient-to-br from-brandPrimary/5 to-brandAccent/5 dark:from-brandAccent/5 dark:to-brandPrimary/5">
-                <div className="absolute -top-8 -right-8 text-9xl text-brandPrimary/5 dark:text-brandAccent/5">
-                  <FaLightbulb />
-                </div>
-                <div className="relative z-10">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-brandPrimary/10 dark:bg-brandAccent/10">
-                      <FaLightbulb className="text-brandPrimary dark:text-brandAccent" />
-                    </div>
-                    <span className="text-xs font-black tracking-[0.25em] uppercase text-brandPrimary dark:text-brandAccent">
-                      TL;DR
-                    </span>
-                  </div>
-                  <p className="text-lg leading-relaxed md:text-xl text-brandNavy/85 dark:text-gray-200">
-                    {blog.tldr}
-                  </p>
-                </div>
+              <div className="p-8 mb-14 border rounded-3xl border-brandPrimary/20 dark:border-brandAccent/20 bg-gradient-to-br from-brandPrimary/5 to-brandAccent/5 dark:from-brandAccent/5 dark:to-brandPrimary/5">
+                <p className="text-lg leading-relaxed md:text-xl text-brandNavy/85 dark:text-gray-200">
+                  {blog.tldr}
+                </p>
               </div>
             )}
-
-            {/* SHARE STRIP (TOP) */}
-            <div className="flex items-center justify-between gap-4 pb-8 mb-10 border-b border-borderLight dark:border-borderDark">
-              <div className="text-xs font-bold tracking-[0.2em] uppercase text-brandNavy/50 dark:text-gray-500">
-                Share this article
-              </div>
-              <ShareButtons title={blog.title} url={shareUrl} />
-            </div>
 
             {/* BODY */}
             <article className="prose prose-lg dark:prose-invert max-w-none">
@@ -487,25 +388,6 @@ export default function BlogTemplate({ blog }) {
               </div>
             )}
 
-            {/* META FOOTER */}
-            <div className="flex flex-wrap items-center justify-between gap-6 pt-10 mt-20 border-t border-borderLight dark:border-borderDark">
-              <div className="flex flex-wrap items-center gap-3">
-                <span className="text-xs font-black tracking-[0.2em] uppercase text-brandNavy/40 dark:text-gray-500">
-                  Tags
-                </span>
-                {blog.contentType && (
-                  <span className="px-3 py-1 text-xs font-bold transition-colors border rounded-lg cursor-pointer bg-bgLight/60 dark:bg-bgDark/60 border-borderLight dark:border-borderDark hover:border-brandPrimary dark:hover:border-brandAccent">
-                    #{blog.contentType}
-                  </span>
-                )}
-                {blog.funnelStage && (
-                  <span className="px-3 py-1 text-xs font-bold transition-colors border rounded-lg cursor-pointer bg-bgLight/60 dark:bg-bgDark/60 border-borderLight dark:border-borderDark hover:border-brandPrimary dark:hover:border-brandAccent">
-                    #{blog.funnelStage}
-                  </span>
-                )}
-              </div>
-              <ShareButtons title={blog.title} url={shareUrl} />
-            </div>
           </motion.div>
 
           {/* ================= AUTHOR / CTA CARD ================= */}
@@ -518,15 +400,24 @@ export default function BlogTemplate({ blog }) {
           >
             <div className="p-8 border rounded-3xl border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark">
               <div className="flex items-center gap-4 mb-4">
-                <div className="flex items-center justify-center w-14 h-14 text-xl font-bold text-white rounded-full bg-gradient-to-br from-brandPrimary to-brandNavy dark:from-brandAccent dark:to-brandGold dark:text-brandDark">
-                  RM
+                <div className="flex items-center justify-center w-14 h-14 overflow-hidden border rounded-full border-borderLight dark:border-borderDark bg-white dark:bg-bgDark">
+                  <img
+                    src="/rm.png"
+                    alt="RiskMan"
+                    className="object-contain w-10 h-10 dark:hidden"
+                  />
+                  <img
+                    src="/riskman-logo-white.svg"
+                    alt="RiskMan"
+                    className="hidden object-contain w-10 h-10 dark:block"
+                  />
                 </div>
                 <div>
                   <div className="text-xs font-bold tracking-wider uppercase text-brandNavy/50 dark:text-gray-500">
                     Written by
                   </div>
                   <div className="text-lg font-bold text-brandDark dark:text-white">
-                    The RiskMan Team
+                    Riskman
                   </div>
                 </div>
               </div>
