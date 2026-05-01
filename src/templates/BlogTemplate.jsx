@@ -1,24 +1,22 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import {
   FaCalendar,
   FaChevronLeft,
   FaChevronUp,
   FaQuoteRight,
-  FaQuestionCircle,
   FaClock,
+  FaShareAlt,
+  FaTwitter,
+  FaLinkedin,
+  FaFacebook,
+  FaLink,
+  FaCheckCircle,
+  FaArrowRight,
 } from "react-icons/fa";
 import { PortableText } from "@portabletext/react";
-
-/* =======================
-   ANIMATIONS
-======================= */
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] },
-};
+import { useBlogStore } from "../store/blog";
 
 const FUNNEL_STAGE_LABELS = {
   awareness: "Awareness",
@@ -62,39 +60,39 @@ const estimateReadingTime = (body) => {
 const portableTextComponents = {
   block: {
     h1: ({ children }) => (
-      <h1 className="pt-12 pb-4 text-4xl font-bold leading-tight md:text-5xl font-heading text-brandDark dark:text-white">
+      <h1 className="pt-10 pb-3 text-2xl font-bold leading-tight md:text-3xl font-heading text-brandDark dark:text-white">
         {children}
       </h1>
     ),
     h2: ({ children }) => (
-      <h2 className="pt-10 pb-4 text-3xl font-bold leading-tight md:text-4xl font-heading text-brandDark dark:text-white">
+      <h2 className="pt-8 pb-3 text-xl font-bold leading-tight md:text-2xl font-heading text-brandDark dark:text-white">
         {children}
       </h2>
     ),
     h3: ({ children }) => (
-      <h3 className="pt-8 pb-3 text-2xl font-bold md:text-3xl font-heading text-brandDark dark:text-white">
+      <h3 className="pt-6 pb-2 text-lg font-bold md:text-xl font-heading text-brandDark dark:text-white">
         {children}
       </h3>
     ),
     h4: ({ children }) => (
-      <h4 className="pt-6 pb-2 text-xl font-bold md:text-2xl font-heading text-brandDark dark:text-white">
+      <h4 className="pt-5 pb-2 text-base font-bold md:text-lg font-heading text-brandDark dark:text-white">
         {children}
       </h4>
     ),
     blockquote: ({ children }) => (
-      <div className="relative my-14 group">
-        <div className="absolute text-7xl transition-transform duration-500 -top-4 -left-4 text-brandPrimary/10 dark:text-brandAccent/10 group-hover:scale-110">
+      <div className="relative my-10 group">
+        <div className="absolute text-5xl transition-transform duration-500 -top-3 -left-3 text-brandPrimary/10 dark:text-brandAccent/10 group-hover:scale-110">
           <FaQuoteRight />
         </div>
-        <blockquote className="relative z-10 rounded-[2rem] bg-gradient-to-br from-brandDark to-brandNavy dark:from-surfaceDark dark:to-bgDark border-l-[6px] border-brandAccent p-10 md:p-14 shadow-xl">
-          <div className="text-2xl italic font-light leading-relaxed text-white md:text-3xl font-heading">
+        <blockquote className="relative z-10 rounded-2xl bg-gradient-to-br from-brandDark to-brandNavy dark:from-surfaceDark dark:to-bgDark border-l-[5px] border-brandAccent p-6 md:p-8 shadow-lg">
+          <div className="text-base italic font-light leading-relaxed text-white md:text-lg font-heading">
             {children}
           </div>
         </blockquote>
       </div>
     ),
     normal: ({ children }) => (
-      <p className="text-lg leading-[1.85] md:text-xl text-brandNavy/85 dark:text-gray-300">
+      <p className="text-sm leading-[1.75] md:text-base text-brandNavy/85 dark:text-gray-300">
         {children}
       </p>
     ),
@@ -111,13 +109,13 @@ const portableTextComponents = {
   },
   listItem: {
     bullet: ({ children }) => (
-      <li className="flex items-start gap-4 text-lg leading-relaxed text-brandNavy/85 dark:text-gray-300">
-        <div className="mt-3 w-2 h-2 rounded-full bg-brandPrimary dark:bg-brandAccent flex-shrink-0" />
+      <li className="flex items-start gap-3 text-sm md:text-base leading-relaxed text-brandNavy/85 dark:text-gray-300">
+        <div className="mt-2 w-1.5 h-1.5 rounded-full bg-brandPrimary dark:bg-brandAccent flex-shrink-0" />
         <span>{children}</span>
       </li>
     ),
     number: ({ children }) => (
-      <li className="text-lg leading-relaxed pl-2 text-brandNavy/85 dark:text-gray-300">
+      <li className="text-sm md:text-base leading-relaxed pl-2 text-brandNavy/85 dark:text-gray-300">
         {children}
       </li>
     ),
@@ -170,13 +168,88 @@ const portableTextComponents = {
 };
 
 /* =======================
+   SHARE ROW
+======================= */
+const ShareRow = ({ title, url }) => {
+  const [copied, setCopied] = useState(false);
+  const encodedUrl = encodeURIComponent(url);
+  const encodedTitle = encodeURIComponent(title);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      /* ignore */
+    }
+  };
+
+  const links = [
+    {
+      label: "Share on Twitter",
+      icon: <FaTwitter />,
+      href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
+    },
+    {
+      label: "Share on LinkedIn",
+      icon: <FaLinkedin />,
+      href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+    },
+    {
+      label: "Share on Facebook",
+      icon: <FaFacebook />,
+      href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+    },
+  ];
+
+  return (
+    <div className="flex items-center justify-between gap-4 py-6 border-y border-borderLight dark:border-borderDark">
+      <div className="flex items-center gap-2 text-sm font-semibold text-brandNavy/70 dark:text-gray-400">
+        <FaShareAlt className="text-xs" />
+        Share
+      </div>
+      <div className="flex items-center gap-2">
+        {links.map((s) => (
+          <a
+            key={s.label}
+            href={s.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={s.label}
+            className="flex items-center justify-center w-9 h-9 text-sm transition-all duration-300 rounded-full bg-bgLight dark:bg-bgDark text-brandNavy/70 dark:text-gray-400 hover:bg-brandPrimary dark:hover:bg-brandAccent hover:text-white dark:hover:text-brandDark"
+          >
+            {s.icon}
+          </a>
+        ))}
+        <button
+          type="button"
+          onClick={handleCopy}
+          aria-label="Copy link"
+          className={`flex items-center justify-center w-9 h-9 text-sm transition-all duration-300 rounded-full ${
+            copied
+              ? "bg-green-500 text-white"
+              : "bg-bgLight dark:bg-bgDark text-brandNavy/70 dark:text-gray-400 hover:bg-brandPrimary dark:hover:bg-brandAccent hover:text-white dark:hover:text-brandDark"
+          }`}
+        >
+          {copied ? <FaCheckCircle /> : <FaLink />}
+        </button>
+      </div>
+    </div>
+  );
+};
+
+/* =======================
    MAIN COMPONENT
 ======================= */
 export default function BlogTemplate({ blog }) {
   const { scrollYProgress } = useScroll();
-  const heroScale = useTransform(scrollYProgress, [0, 0.2], [1, 1.08]);
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.25], [1, 0.25]);
   const [showBackTop, setShowBackTop] = useState(false);
+  const { posts, fetchPosts } = useBlogStore();
+
+  useEffect(() => {
+    if (!posts || posts.length === 0) fetchPosts();
+  }, [posts, fetchPosts]);
 
   useEffect(() => {
     const onScroll = () => setShowBackTop(window.scrollY > 600);
@@ -205,6 +278,7 @@ export default function BlogTemplate({ blog }) {
     );
 
   const stageLabel = FUNNEL_STAGE_LABELS[blog.funnelStage];
+  const shareUrl = `https://www.riskman.in/blog/${blog.slug || ""}`;
 
   return (
     <div className="min-h-screen transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-white">
@@ -214,317 +288,225 @@ export default function BlogTemplate({ blog }) {
         className="fixed top-0 left-0 right-0 z-[60] h-1 bg-gradient-to-r from-brandPrimary to-brandAccent dark:from-brandAccent dark:to-brandGold origin-left"
       />
 
-      {/* ================= BACK BUTTON (DESKTOP) ================= */}
-      <div className="fixed z-50 hidden top-32 left-6 xl:block">
-        <Link
-          to="/blogs"
-          className="flex items-center gap-3 px-5 py-3 transition-all duration-300 border rounded-full shadow-xl group bg-surfaceLight/90 dark:bg-surfaceDark/90 backdrop-blur-md border-borderLight dark:border-borderDark hover:border-brandPrimary dark:hover:border-brandAccent"
-        >
-          <FaChevronLeft className="transition-transform text-brandPrimary dark:text-brandAccent group-hover:-translate-x-1" />
-          <span className="text-sm font-bold">Back to Hub</span>
-        </Link>
-      </div>
-
-      {/* ================= TITLE HEADER ================= */}
-      <section className="relative pt-28 pb-12 md:pt-36 md:pb-16 bg-bgLight dark:bg-bgDark">
-        <div className="container max-w-5xl">
-          <motion.div
-            initial="initial"
-            animate="animate"
-            variants={fadeInUp}
+      {/* ================= ARTICLE ================= */}
+      <article className="pt-24 pb-20 md:pt-28">
+        <div className="container max-w-3xl">
+          {/* Back to Blogs */}
+          <Link
+            to="/blogs"
+            className="inline-flex items-center gap-2 mb-8 text-sm font-semibold transition-colors text-brandPrimary dark:text-brandAccent hover:opacity-80"
           >
-            {/* Breadcrumb */}
-            <div className="flex items-center gap-2 mb-8 text-xs font-semibold tracking-wider text-brandNavy/60 dark:text-gray-400">
-              <Link
-                to="/"
-                className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent uppercase"
-              >
-                Home
-              </Link>
-              <span>/</span>
-              <Link
-                to="/blogs"
-                className="transition-colors hover:text-brandPrimary dark:hover:text-brandAccent uppercase"
-              >
-                Knowledge Hub
-              </Link>
-              <span>/</span>
-              <span className="text-brandPrimary dark:text-brandAccent uppercase">Article</span>
-            </div>
+            <FaChevronLeft className="text-xs" />
+            Back to Blogs
+          </Link>
 
-            {/* Tags */}
-            <div className="flex flex-wrap items-center gap-3 mb-8">
+          {/* Tags */}
+          {(blog.contentType || stageLabel) && (
+            <div className="flex flex-wrap items-center gap-2 mb-5">
               {blog.contentType && (
-                <div className="inline-flex px-4 py-1.5 rounded-full bg-brandAccent text-brandDark text-xs font-black tracking-widest uppercase shadow-lg">
+                <span className="inline-flex px-3 py-1 rounded-full bg-brandAccent/20 dark:bg-brandAccent/10 text-brandPrimary dark:text-brandAccent text-[11px] font-bold tracking-wider uppercase">
                   {blog.contentType}
-                </div>
+                </span>
               )}
               {stageLabel && (
-                <div className="inline-flex px-4 py-1.5 rounded-full bg-brandPrimary/10 dark:bg-brandAccent/10 border border-brandPrimary/20 dark:border-brandAccent/20 text-brandPrimary dark:text-brandAccent text-xs font-bold tracking-wide uppercase">
+                <span className="inline-flex px-3 py-1 rounded-full bg-brandPrimary/10 dark:bg-brandAccent/10 text-brandPrimary dark:text-brandAccent text-[11px] font-bold tracking-wider uppercase">
                   {stageLabel}
-                </div>
+                </span>
               )}
             </div>
+          )}
 
-            {/* Title */}
-            <h1 className="mb-8 text-4xl md:text-5xl lg:text-6xl font-bold font-heading leading-[1.1] text-brandDark dark:text-white">
-              {blog.title}
-            </h1>
+          {/* Title */}
+          <h1 className="mb-5 text-2xl md:text-3xl lg:text-[2.25rem] font-bold font-heading leading-[1.2] text-brandDark dark:text-white">
+            {blog.title}
+          </h1>
 
-            {/* Meta */}
-            <div className="flex flex-wrap items-center gap-6 text-sm font-semibold text-brandNavy/70 dark:text-gray-400">
-              <span className="flex items-center gap-2.5">
-                <FaCalendar className="text-brandPrimary dark:text-brandAccent" />
-                {formatDate(blog._createdAt)}
+          {/* Author + meta row */}
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mb-10 text-sm">
+            <div className="flex items-center gap-2.5">
+              <div className="flex items-center justify-center w-8 h-8 overflow-hidden rounded-full bg-white dark:bg-bgDark border border-borderLight dark:border-borderDark">
+                <img
+                  src="/rm.png"
+                  alt="Riskman"
+                  className="object-contain w-6 h-6 dark:hidden"
+                />
+                <img
+                  src="/riskman-logo-white.svg"
+                  alt="Riskman"
+                  className="hidden object-contain w-6 h-6 dark:block"
+                />
+              </div>
+              <span className="font-semibold text-brandDark dark:text-white">
+                Riskman
               </span>
-              <span className="hidden w-1 h-1 rounded-full bg-brandNavy/30 dark:bg-white/30 md:block" />
-              <span className="flex items-center gap-2.5">
-                <FaClock className="text-brandPrimary dark:text-brandAccent" />
-                {readingTime} min read
-              </span>
-              {blog._updatedAt && blog._updatedAt !== blog._createdAt && (
-                <>
-                  <span className="hidden w-1 h-1 rounded-full bg-brandNavy/30 dark:bg-white/30 md:block" />
-                  <span className="flex items-center gap-2.5 text-brandNavy/50 dark:text-gray-500">
-                    Updated {formatDate(blog._updatedAt)}
-                  </span>
-                </>
-              )}
             </div>
-          </motion.div>
-        </div>
-      </section>
+            <span className="hidden w-1 h-1 rounded-full bg-brandNavy/30 dark:bg-white/30 sm:block" />
+            <span className="flex items-center gap-2 text-brandNavy/60 dark:text-gray-400">
+              <FaCalendar className="text-xs" />
+              {formatDate(blog._createdAt)}
+            </span>
+            <span className="hidden w-1 h-1 rounded-full bg-brandNavy/30 dark:bg-white/30 sm:block" />
+            <span className="flex items-center gap-2 text-brandNavy/60 dark:text-gray-400">
+              <FaClock className="text-xs" />
+              {readingTime} min read
+            </span>
+          </div>
 
-      {/* ================= FEATURED IMAGE ================= */}
-      {blog.mainImage && (
-        <section className="pb-12 md:pb-20 bg-bgLight dark:bg-bgDark">
-          <div className="container max-w-5xl">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1 }}
-              style={{ scale: heroScale, opacity: heroOpacity }}
-              className="overflow-hidden border shadow-2xl rounded-3xl border-borderLight dark:border-borderDark"
-            >
+          {/* Featured image */}
+          {blog.mainImage && (
+            <div className="mb-12 overflow-hidden border rounded-2xl border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark">
               <img
                 src={blog.mainImage}
                 alt={blog.mainImageAlt || blog.title}
-                className="object-cover w-full h-auto max-h-[70vh]"
+                className="object-cover w-full h-auto aspect-[16/9]"
               />
-            </motion.div>
-          </div>
-        </section>
-      )}
+            </div>
+          )}
 
-      {/* ================= ARTICLE CONTENT ================= */}
-      <main className="relative z-20 pb-32">
-        <div className="container max-w-4xl">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="bg-surfaceLight dark:bg-surfaceDark border border-borderLight dark:border-borderDark p-8 md:p-16 rounded-[3rem] shadow-2xl shadow-brandDark/10 dark:shadow-black/40"
-          >
-            {/* TL;DR */}
-            {blog.tldr && (
-              <div className="p-8 mb-14 border rounded-3xl border-brandPrimary/20 dark:border-brandAccent/20 bg-gradient-to-br from-brandPrimary/5 to-brandAccent/5 dark:from-brandAccent/5 dark:to-brandPrimary/5">
-                <p className="text-lg leading-relaxed md:text-xl text-brandNavy/85 dark:text-gray-200">
-                  {blog.tldr}
-                </p>
-              </div>
-            )}
-
-            {/* BODY */}
-            <article className="prose prose-lg dark:prose-invert max-w-none">
-              <div className="space-y-2">
-                {Array.isArray(blog.body) && blog.body.length > 0 ? (
-                  <PortableText
-                    value={blog.body}
-                    components={portableTextComponents}
-                  />
-                ) : (
-                  <p className="text-lg italic text-brandNavy/60 dark:text-gray-400">
-                    No content available for this article yet.
-                  </p>
-                )}
-              </div>
-            </article>
-
-            {/* KEY TAKEAWAYS */}
-            {Array.isArray(blog.takeaways) && blog.takeaways.length > 0 && (
-              <div className="pt-12 mt-20 border-t border-borderLight dark:border-borderDark">
-                <div className="flex items-center gap-4 mb-10">
-                  <div className="p-3 rounded-2xl bg-brandPrimary/10 dark:bg-brandAccent/10">
-                    <FaQuestionCircle className="text-2xl text-brandPrimary dark:text-brandAccent" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-black tracking-[0.25em] uppercase text-brandPrimary dark:text-brandAccent">
-                      Recap
-                    </div>
-                    <h2 className="mt-1 text-3xl font-bold font-heading text-brandDark dark:text-white">
-                      Key Takeaways
-                    </h2>
-                  </div>
-                </div>
-                <ul className="space-y-4">
-                  {blog.takeaways.map((item, i) => (
-                    <motion.li
-                      key={i}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: i * 0.08 }}
-                      className="flex items-start gap-4 p-6 transition-all duration-300 border rounded-2xl bg-bgLight/50 dark:bg-bgDark/50 border-borderLight dark:border-borderDark hover:border-brandPrimary dark:hover:border-brandAccent hover:translate-x-1"
-                    >
-                      <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-sm font-black text-white rounded-full bg-gradient-to-br from-brandPrimary to-brandNavy dark:from-brandAccent dark:to-brandGold dark:text-brandDark shadow-md">
-                        {i + 1}
-                      </div>
-                      <span className="text-lg leading-relaxed text-brandNavy/85 dark:text-gray-300">
-                        {item}
-                      </span>
-                    </motion.li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-          </motion.div>
-
-          {/* ================= AUTHOR / CTA CARD ================= */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="grid gap-6 mt-12 md:grid-cols-2"
-          >
-            <div className="p-8 border rounded-3xl border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="flex items-center justify-center w-14 h-14 overflow-hidden border rounded-full border-borderLight dark:border-borderDark bg-white dark:bg-bgDark">
-                  <img
-                    src="/rm.png"
-                    alt="RiskMan"
-                    className="object-contain w-10 h-10 dark:hidden"
-                  />
-                  <img
-                    src="/riskman-logo-white.svg"
-                    alt="RiskMan"
-                    className="hidden object-contain w-10 h-10 dark:block"
-                  />
-                </div>
-                <div>
-                  <div className="text-xs font-bold tracking-wider uppercase text-brandNavy/50 dark:text-gray-500">
-                    Written by
-                  </div>
-                  <div className="text-lg font-bold text-brandDark dark:text-white">
-                    Riskman
-                  </div>
-                </div>
-              </div>
-              <p className="text-sm leading-relaxed text-brandNavy/70 dark:text-gray-400">
-                Risk advisory, regulatory compliance, and digital transformation
-                experts helping organizations build resilient, future-ready
-                businesses.
+          {/* Quick Answer (TL;DR) */}
+          {blog.tldr && (
+            <aside className="px-5 py-4 mb-8 rounded-xl bg-brandPrimary/[0.06] dark:bg-brandAccent/[0.08] border-l-4 border-brandPrimary dark:border-brandAccent">
+              <p className="text-sm leading-relaxed text-brandNavy/85 dark:text-gray-200">
+                <span className="font-bold text-brandPrimary dark:text-brandAccent">
+                  Quick Answer:{" "}
+                </span>
+                <span className="italic">{blog.tldr}</span>
               </p>
-            </div>
+            </aside>
+          )}
 
-            <div className="relative p-8 overflow-hidden text-white border rounded-3xl bg-brandDark dark:bg-bgDark border-borderLight dark:border-borderDark">
-              <div className="absolute inset-0 pointer-events-none opacity-20">
-                <div className="absolute -top-10 -right-10 w-40 h-40 bg-brandAccent blur-3xl rounded-full" />
-                <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-brandPrimary blur-3xl rounded-full" />
+          {/* Body */}
+          <div className="prose prose-sm md:prose-base dark:prose-invert max-w-none">
+            {Array.isArray(blog.body) && blog.body.length > 0 ? (
+              <PortableText
+                value={blog.body}
+                components={portableTextComponents}
+              />
+            ) : (
+              <p className="text-lg italic text-brandNavy/60 dark:text-gray-400">
+                No content available for this article yet.
+              </p>
+            )}
+          </div>
+
+          {/* Key Takeaways */}
+          {Array.isArray(blog.takeaways) && blog.takeaways.length > 0 && (
+            <div className="pt-8 mt-10 border-t border-borderLight dark:border-borderDark">
+              <h2 className="mb-5 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
+                Key Takeaways
+              </h2>
+              <ul className="space-y-2.5">
+                {blog.takeaways.map((item, i) => (
+                  <li
+                    key={i}
+                    className="flex items-start gap-3 text-sm leading-relaxed text-brandNavy/85 dark:text-gray-300"
+                  >
+                    <span className="flex items-center justify-center flex-shrink-0 w-5 h-5 mt-0.5 text-[10px] font-bold rounded-full bg-brandPrimary/10 dark:bg-brandAccent/10 text-brandPrimary dark:text-brandAccent">
+                      {i + 1}
+                    </span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* Share */}
+          <div className="mt-12">
+            <ShareRow title={blog.title} url={shareUrl} />
+          </div>
+
+          {/* About the Author */}
+          <section className="mt-12 overflow-hidden border rounded-2xl border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark">
+            <div className="px-6 py-3 text-[11px] font-bold tracking-[0.2em] uppercase text-brandNavy/50 dark:text-gray-500 bg-bgLight/60 dark:bg-bgDark/40 border-b border-borderLight dark:border-borderDark">
+              About the Author
+            </div>
+            <div className="flex flex-col items-start gap-5 p-6 sm:flex-row md:p-8">
+              <div className="flex items-center justify-center flex-shrink-0 w-16 h-16 overflow-hidden border rounded-full bg-white dark:bg-bgDark border-borderLight dark:border-borderDark">
+                <img
+                  src="/rm.png"
+                  alt="Riskman"
+                  className="object-contain w-12 h-12 dark:hidden"
+                />
+                <img
+                  src="/riskman-logo-white.svg"
+                  alt="Riskman"
+                  className="hidden object-contain w-12 h-12 dark:block"
+                />
               </div>
-              <div className="relative z-10 flex flex-col h-full">
-                <h3 className="mb-2 text-xl font-bold font-heading">
-                  Need help with this?
+              <div className="flex-1">
+                <h3 className="text-base font-bold text-brandDark dark:text-white">
+                  Riskman
                 </h3>
-                <p className="mb-6 text-sm text-white/70">
-                  Talk to our advisory team about how this applies to your
-                  business.
-                </p>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center self-start gap-2 px-6 py-3 mt-auto text-sm font-bold transition-all rounded-full shadow-lg bg-brandAccent text-brandDark hover:bg-brandGold"
-                >
-                  Get in touch
-                  <FaChevronLeft className="transition-transform rotate-180 group-hover:translate-x-1" />
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* ================= COMMENTS SECTION ================= */}
-          <motion.section
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="mt-12"
-          >
-            <div className="rounded-[3rem] bg-surfaceLight dark:bg-surfaceDark border border-borderLight dark:border-borderDark p-8 md:p-16 shadow-xl">
-              <div className="mb-10">
-                <div className="text-xs font-black tracking-[0.25em] uppercase text-brandPrimary dark:text-brandAccent">
-                  Discussion
-                </div>
-                <h2 className="mt-2 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
-                  Join the conversation
-                </h2>
-                <p className="mt-3 text-brandNavy/60 dark:text-gray-400">
-                  Your email address will not be published. Required fields are marked *
+                <span className="inline-block mt-1 mb-2 px-2 py-0.5 rounded-full bg-brandAccent/25 dark:bg-brandAccent/15 text-brandPrimary dark:text-brandAccent text-[10px] font-bold tracking-wider">
+                  Risk Advisory
+                </span>
+                <p className="text-xs md:text-sm leading-relaxed text-brandNavy/70 dark:text-gray-400">
+                  Risk advisory, regulatory compliance, and digital
+                  transformation experts helping organizations build resilient,
+                  future-ready businesses.
                 </p>
               </div>
-
-              <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
-                <div className="grid gap-8 md:grid-cols-2">
-                  <div className="space-y-3">
-                    <label className="text-xs font-bold tracking-[0.2em] uppercase text-brandNavy/80 dark:text-white/80">
-                      Name *
-                    </label>
-                    <input
-                      className="w-full px-6 py-4 transition-all duration-300 border outline-none rounded-2xl bg-bgLight/60 dark:bg-bgDark/60 border-borderLight dark:border-borderDark focus:border-brandPrimary dark:focus:border-brandAccent text-brandDark dark:text-white"
-                      placeholder="John Doe"
-                    />
-                  </div>
-                  <div className="space-y-3">
-                    <label className="text-xs font-bold tracking-[0.2em] uppercase text-brandNavy/80 dark:text-white/80">
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      className="w-full px-6 py-4 transition-all duration-300 border outline-none rounded-2xl bg-bgLight/60 dark:bg-bgDark/60 border-borderLight dark:border-borderDark focus:border-brandPrimary dark:focus:border-brandAccent text-brandDark dark:text-white"
-                      placeholder="john@example.com"
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-3">
-                  <label className="text-xs font-bold tracking-[0.2em] uppercase text-brandNavy/80 dark:text-white/80">
-                    Comment *
-                  </label>
-                  <textarea
-                    rows={6}
-                    className="w-full px-6 py-4 transition-all duration-300 border outline-none resize-none rounded-3xl bg-bgLight/60 dark:bg-bgDark/60 border-borderLight dark:border-borderDark focus:border-brandPrimary dark:focus:border-brandAccent text-brandDark dark:text-white"
-                    placeholder="Share your thoughts..."
-                  />
-                </div>
-
-                <button className="inline-flex items-center gap-3 px-10 py-4 text-sm font-black tracking-wide text-white transition-all duration-500 rounded-full shadow-xl group bg-brandDark hover:bg-brandPrimary dark:bg-brandAccent dark:text-brandDark dark:hover:bg-brandGold hover:shadow-brandPrimary/20">
-                  Post Comment
-                  <FaChevronLeft className="transition-transform rotate-180 group-hover:translate-x-1" />
-                </button>
-              </form>
             </div>
+          </section>
 
-            <div className="flex justify-center mt-12">
-              <Link
-                to="/blogs"
-                className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.25em] text-brandNavy/40 dark:text-gray-500 hover:text-brandPrimary dark:hover:text-brandAccent transition-colors"
-              >
-                <FaChevronLeft />
-                Return to Knowledge Hub
-              </Link>
-            </div>
-          </motion.section>
+          {/* Related Articles */}
+          {Array.isArray(posts) && posts.length > 1 && (
+            <section className="mt-14">
+              <h2 className="mb-5 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
+                Related Articles
+              </h2>
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                {posts
+                  .filter((p) => p.slug !== blog.slug)
+                  .slice(0, 2)
+                  .map((post) => (
+                    <Link
+                      key={post._id}
+                      to={`/blog/${post.slug}`}
+                      className="overflow-hidden transition-all duration-300 border group rounded-2xl border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark hover:border-brandPrimary dark:hover:border-brandAccent hover:shadow-lg"
+                    >
+                      {post.mainImage && (
+                        <div className="overflow-hidden aspect-[16/9] bg-bgLight dark:bg-bgDark">
+                          <img
+                            src={post.mainImage}
+                            alt={post.mainImageAlt || post.title}
+                            className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                          />
+                        </div>
+                      )}
+                      <div className="p-4">
+                        <h3 className="mb-2 text-sm md:text-base font-bold leading-snug text-brandDark dark:text-white line-clamp-2">
+                          {post.title}
+                        </h3>
+                        {(post.metaDescription || post.tldr) && (
+                          <p className="mb-3 text-xs md:text-sm leading-relaxed text-brandNavy/65 dark:text-gray-400 line-clamp-2">
+                            {post.metaDescription || post.tldr}
+                          </p>
+                        )}
+                        <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-brandPrimary dark:text-brandAccent">
+                          Read More
+                          <FaArrowRight className="text-[9px]" />
+                        </span>
+                      </div>
+                    </Link>
+                  ))}
+              </div>
+            </section>
+          )}
+
+          {/* More Articles button */}
+          <div className="flex justify-center mt-12">
+            <Link
+              to="/blogs"
+              className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold transition-all duration-300 rounded-full bg-brandDark text-white hover:bg-brandPrimary dark:bg-brandAccent dark:text-brandDark dark:hover:bg-brandGold"
+            >
+              <FaChevronLeft />
+              More Articles
+            </Link>
+          </div>
         </div>
-      </main>
+      </article>
 
       {/* ================= BACK TO TOP ================= */}
       {showBackTop && (
