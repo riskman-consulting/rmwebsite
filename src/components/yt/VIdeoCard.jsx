@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const YOUTUBE_VIDEO_ID = "oonsDSc64YA";
 
 export default function HeroSection() {
@@ -24,12 +26,12 @@ export default function HeroSection() {
             </h2>
 
             <div className="mt-8 flex flex-wrap items-center gap-5">
-              <button className="rounded-full bg-brandDark px-7 py-4 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-brandPrimary dark:bg-brandGold dark:text-brandDark dark:hover:bg-[#ffd24d]">
-                Strategic Advisory
+              <button onClick={()=> window.location.href = "/contact"} className="rounded-full bg-brandDark px-7 py-4 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-brandPrimary dark:bg-brandGold dark:text-brandDark dark:hover:bg-[#ffd24d]">
+                Contact Us
               </button>
 
-              <a
-                href="#"
+              <Link
+                to="/about"
                 className="group inline-flex items-center gap-2 text-sm font-semibold text-brandDark transition-colors duration-300 dark:text-white"
               >
                 Learn More
@@ -44,7 +46,7 @@ export default function HeroSection() {
                   <path d="M7 17L17 7" />
                   <path d="M7 7h10v10" />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
 

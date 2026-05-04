@@ -186,7 +186,7 @@ export default function BlogList() {
                       : "bg-surfaceLight/50 dark:bg-surfaceDark/50 border border-borderLight dark:border-borderDark hover:border-brandPrimary dark:hover:border-brandAccent"
                       }`}
                   >
-                    {cat.label}
+                    {cat.label} 
                   </button>
                 ))}
               </div>
@@ -241,13 +241,11 @@ export default function BlogList() {
                     <Link to={`/blog/${post.slug}`} className="flex flex-col h-full">
                       {/* Image wrapper - 16:9 (1920x1080) */}
                       <div className="relative w-full overflow-hidden aspect-video bg-brandDark/10">
-                        <div className="absolute inset-0 z-10 transition-colors duration-500 bg-brandDark/20 group-hover:bg-transparent" />
                         {post.mainImage && (
                           <motion.img
                             src={post.mainImage}
                             alt={post.mainImageAlt || post.title}
-                            className="object-cover w-full h-full transition-all duration-700 ease-out grayscale group-hover:grayscale-0"
-                            whileHover={{ scale: 1.1 }}
+                            className="object-cover w-full h-full transition-all duration-700 ease-out"
                           />
                         )}
 
@@ -260,15 +258,7 @@ export default function BlogList() {
                             <FaCalendar className="text-brandPrimary dark:text-brandAccent" />
                             {formatDate(post._createdAt)}
                           </div>
-                          {stageLabel && (
-                            <>
-                              <div className="w-1 h-1 rounded-full bg-borderLight dark:bg-borderDark" />
-                              <div className="flex items-center gap-1.5">
-                                <FaTag className="text-brandPrimary dark:text-brandAccent" />
-                                {stageLabel}
-                              </div>
-                            </>
-                          )}
+                          
                         </div>
 
                         <h3 className="mb-2 text-base font-bold leading-snug transition-colors duration-300 md:text-lg font-heading text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">

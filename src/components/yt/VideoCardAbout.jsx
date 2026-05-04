@@ -42,12 +42,10 @@ export default function VideoAboutSection() {
 
             <div className="mt-8 flex items-center gap-4">
               <button onClick={()=>window.location.href = "/contact"} className="rounded-full bg-brandGold px-6 py-3 text-sm font-semibold text-brandDark transition hover:scale-105">
-                Our Strategy
+                Contact Us
               </button>
 
-              <button onClick={()=>window.location.href = "/"} className="rounded-full border border-brandDark px-6 py-3 text-sm font-semibold text-brandDark transition hover:bg-brandDark hover:text-white dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black">
-                Learn More
-              </button>
+              
             </div>
           </div>
         </div>

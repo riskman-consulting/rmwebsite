@@ -77,6 +77,25 @@ const extractHeadings = (body) => {
     .filter((h) => h.text);
 };
 
+const isTocHeadingBlock = (block) =>
+  block?._type === "block" && (block.style === "h2" || block.style === "h3");
+
+const splitIntroBlocks = (body, hasHeadings) => {
+  if (!Array.isArray(body) || !hasHeadings) {
+    return { introBlocks: [], contentBlocks: body || [] };
+  }
+
+  const firstHeadingIndex = body.findIndex(isTocHeadingBlock);
+  if (firstHeadingIndex <= 0) {
+    return { introBlocks: [], contentBlocks: body };
+  }
+
+  return {
+    introBlocks: body.slice(0, firstHeadingIndex),
+    contentBlocks: body.slice(firstHeadingIndex),
+  };
+};
+
 /* =======================
    PORTABLE TEXT COMPONENTS
 ======================= */
@@ -323,6 +342,10 @@ export default function BlogTemplate({ blog }) {
 
   const readingTime = useMemo(() => estimateReadingTime(blog?.body), [blog?.body]);
   const headings = useMemo(() => extractHeadings(blog?.body), [blog?.body]);
+  const { introBlocks, contentBlocks } = useMemo(
+    () => splitIntroBlocks(blog?.body, headings.length > 0),
+    [blog?.body, headings.length]
+  );
 
   if (!blog)
     return (
@@ -432,14 +455,23 @@ export default function BlogTemplate({ blog }) {
             </aside>
           )}
 
+          {introBlocks.length > 0 && (
+            <div className="prose prose-sm md:prose-base dark:prose-invert max-w-none mb-8">
+              <PortableText
+                value={introBlocks}
+                components={portableTextComponents}
+              />
+            </div>
+          )}
+
           {/* Table of Contents */}
           <TableOfContents headings={headings} />
 
           {/* Body */}
           <div className="prose prose-sm md:prose-base dark:prose-invert max-w-none">
-            {Array.isArray(blog.body) && blog.body.length > 0 ? (
+            {Array.isArray(contentBlocks) && contentBlocks.length > 0 ? (
               <PortableText
-                value={blog.body}
+                value={contentBlocks}
                 components={portableTextComponents}
               />
             ) : (
