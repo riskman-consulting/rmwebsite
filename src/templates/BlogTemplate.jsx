@@ -18,12 +18,6 @@ import {
 import { PortableText } from "@portabletext/react";
 import { useBlogStore } from "../store/blog";
 
-const FUNNEL_STAGE_LABELS = {
-  awareness: "Awareness",
-  consideration: "Consideration",
-  decision: "Decision",
-};
-
 const formatDate = (iso) => {
   if (!iso) return "";
   try {
@@ -55,6 +49,35 @@ const estimateReadingTime = (body) => {
 };
 
 /* =======================
+   HEADING / SLUG UTILITIES
+======================= */
+const blockText = (block) => {
+  if (block?._type !== "block" || !Array.isArray(block.children)) return "";
+  return block.children.map((c) => c.text || "").join("");
+};
+
+const slugify = (text) =>
+  String(text || "")
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/[\s_-]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
+const extractHeadings = (body) => {
+  if (!Array.isArray(body)) return [];
+  return body
+    .filter(
+      (b) => b?._type === "block" && (b.style === "h2" || b.style === "h3")
+    )
+    .map((b) => {
+      const text = blockText(b);
+      return { level: b.style, text, id: slugify(text) };
+    })
+    .filter((h) => h.text);
+};
+
+/* =======================
    PORTABLE TEXT COMPONENTS
 ======================= */
 const portableTextComponents = {
@@ -64,13 +87,19 @@ const portableTextComponents = {
         {children}
       </h1>
     ),
-    h2: ({ children }) => (
-      <h2 className="pt-8 pb-3 text-xl font-bold leading-tight md:text-2xl font-heading text-brandDark dark:text-white">
+    h2: ({ children, value }) => (
+      <h2
+        id={slugify(blockText(value))}
+        className="pt-8 pb-3 text-xl font-bold leading-tight md:text-2xl font-heading text-brandDark dark:text-white scroll-mt-24"
+      >
         {children}
       </h2>
     ),
-    h3: ({ children }) => (
-      <h3 className="pt-6 pb-2 text-lg font-bold md:text-xl font-heading text-brandDark dark:text-white">
+    h3: ({ children, value }) => (
+      <h3
+        id={slugify(blockText(value))}
+        className="pt-6 pb-2 text-lg font-bold md:text-xl font-heading text-brandDark dark:text-white scroll-mt-24"
+      >
         {children}
       </h3>
     ),
@@ -168,6 +197,41 @@ const portableTextComponents = {
 };
 
 /* =======================
+   TABLE OF CONTENTS
+======================= */
+const TableOfContents = ({ headings }) => {
+  if (!headings || headings.length === 0) return null;
+  return (
+    <nav
+      aria-label="Table of contents"
+      className="px-5 py-5 mb-8 border rounded-xl border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark"
+    >
+      <h2 className="mb-3 text-xs font-black tracking-[0.2em] uppercase text-brandPrimary dark:text-brandAccent">
+        Table of Contents
+      </h2>
+      <ol className="space-y-2 text-sm">
+        {headings.map((h, i) => (
+          <li
+            key={`${h.id}-${i}`}
+            className={h.level === "h3" ? "pl-4" : ""}
+          >
+            <a
+              href={`#${h.id}`}
+              className="inline-flex gap-2 leading-snug transition-colors text-brandNavy/80 dark:text-gray-300 hover:text-brandPrimary dark:hover:text-brandAccent"
+            >
+              <span className="font-bold text-brandPrimary/70 dark:text-brandAccent/70 tabular-nums">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <span>{h.text}</span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </nav>
+  );
+};
+
+/* =======================
    SHARE ROW
 ======================= */
 const ShareRow = ({ title, url }) => {
@@ -258,6 +322,7 @@ export default function BlogTemplate({ blog }) {
   }, []);
 
   const readingTime = useMemo(() => estimateReadingTime(blog?.body), [blog?.body]);
+  const headings = useMemo(() => extractHeadings(blog?.body), [blog?.body]);
 
   if (!blog)
     return (
@@ -277,7 +342,6 @@ export default function BlogTemplate({ blog }) {
       </div>
     );
 
-  const stageLabel = FUNNEL_STAGE_LABELS[blog.funnelStage];
   const shareUrl = `https://www.riskman.in/blog/${blog.slug || ""}`;
 
   return (
@@ -301,18 +365,11 @@ export default function BlogTemplate({ blog }) {
           </Link>
 
           {/* Tags */}
-          {(blog.contentType || stageLabel) && (
+          {blog.contentType && (
             <div className="flex flex-wrap items-center gap-2 mb-5">
-              {blog.contentType && (
-                <span className="inline-flex px-3 py-1 rounded-full bg-brandAccent/20 dark:bg-brandAccent/10 text-brandPrimary dark:text-brandAccent text-[11px] font-bold tracking-wider uppercase">
-                  {blog.contentType}
-                </span>
-              )}
-              {stageLabel && (
-                <span className="inline-flex px-3 py-1 rounded-full bg-brandPrimary/10 dark:bg-brandAccent/10 text-brandPrimary dark:text-brandAccent text-[11px] font-bold tracking-wider uppercase">
-                  {stageLabel}
-                </span>
-              )}
+              <span className="inline-flex px-3 py-1 rounded-full bg-brandAccent/20 dark:bg-brandAccent/10 text-brandPrimary dark:text-brandAccent text-[11px] font-bold tracking-wider uppercase">
+                {blog.contentType}
+              </span>
             </div>
           )}
 
@@ -363,17 +420,20 @@ export default function BlogTemplate({ blog }) {
             </div>
           )}
 
-          {/* Quick Answer (TL;DR) */}
+          {/* TL;DR */}
           {blog.tldr && (
-            <aside className="px-5 py-4 mb-8 rounded-xl bg-brandPrimary/[0.06] dark:bg-brandAccent/[0.08] border-l-4 border-brandPrimary dark:border-brandAccent">
+            <aside className="px-5 py-4 mb-6 rounded-xl bg-brandPrimary/[0.06] dark:bg-brandAccent/[0.08] border-l-4 border-brandPrimary dark:border-brandAccent">
+              <div className="mb-2 text-[11px] font-black tracking-[0.25em] uppercase text-brandPrimary dark:text-brandAccent">
+                TL;DR
+              </div>
               <p className="text-sm leading-relaxed text-brandNavy/85 dark:text-gray-200">
-                <span className="font-bold text-brandPrimary dark:text-brandAccent">
-                  Quick Answer:{" "}
-                </span>
-                <span className="italic">{blog.tldr}</span>
+                {blog.tldr}
               </p>
             </aside>
           )}
+
+          {/* Table of Contents */}
+          <TableOfContents headings={headings} />
 
           {/* Body */}
           <div className="prose prose-sm md:prose-base dark:prose-invert max-w-none">

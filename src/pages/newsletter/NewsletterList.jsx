@@ -217,11 +217,7 @@ export default function NewsletterList() {
                         )}
 
                         {/* NEWS label badge - top left */}
-                        <div className="absolute top-0 left-0 z-10">
-                          <span className="inline-block px-5 py-2 text-xs font-black tracking-[0.3em] uppercase text-white bg-brandDark/65 backdrop-blur-sm">
-                            News
-                          </span>
-                        </div>
+                        
                       </div>
 
                       {/* Content */}
