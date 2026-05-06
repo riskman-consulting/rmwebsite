@@ -16,7 +16,37 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 import { PortableText } from "@portabletext/react";
+import imageUrlBuilder from "@sanity/image-url";
+import { sanityClient } from "../api/sanity";
 import { useBlogStore } from "../store/blog";
+
+const builder = imageUrlBuilder(sanityClient);
+const urlFor = (source) => {
+  try {
+    return builder.image(source);
+  } catch {
+    return null;
+  }
+};
+
+const resolveImageUrl = (value) => {
+  if (!value) return null;
+  if (value.asset?.url) return value.asset.url;
+  if (value.url) return value.url;
+  if (value.asset?._ref || value.asset?._id || value._ref) {
+    const b = urlFor(value);
+    return b ? b.auto("format").fit("max").url() : null;
+  }
+  return null;
+};
+
+const parseImageRefDims = (value) => {
+  const ref = value?.asset?._ref || value?.asset?._id || value?._ref;
+  if (!ref) return null;
+  const match = /-(\d+)x(\d+)-/.exec(ref);
+  if (!match) return null;
+  return { width: Number(match[1]), height: Number(match[2]) };
+};
 
 const formatDate = (iso) => {
   if (!iso) return "";
@@ -193,20 +223,32 @@ const portableTextComponents = {
   },
   types: {
     image: ({ value }) => {
-      const url = value?.asset?.url || value?.url;
+      const url = resolveImageUrl(value);
       if (!url) return null;
+
+      const dims = parseImageRefDims(value);
+      const alignment = value?.alignment || "center";
+
+      const alignClass =
+        alignment === "left"
+          ? "items-start"
+          : alignment === "right"
+          ? "items-end"
+          : "items-center";
+
       return (
-        <figure className="my-14 space-y-4 -mx-4 md:-mx-12 lg:-mx-20">
-          <div className="overflow-hidden border shadow-2xl rounded-3xl border-borderLight dark:border-borderDark group">
-            <img
-              src={url}
-              alt={value?.alt || ""}
-              className="w-full transition-transform duration-700 group-hover:scale-[1.02]"
-            />
-          </div>
+        <figure className={`not-prose my-10 flex flex-col ${alignClass}`}>
+          <img
+            src={url}
+            alt={value?.alt || ""}
+            width={dims?.width}
+            height={dims?.height}
+            loading="lazy"
+            className="block max-w-full h-auto"
+          />
           {value?.caption && (
-            <figcaption className="text-sm italic font-medium text-center text-brandNavy/50 dark:text-gray-500">
-              — {value.caption}
+            <figcaption className="mt-3 text-sm italic font-medium text-center text-brandNavy/60 dark:text-gray-500">
+              {value.caption}
             </figcaption>
           )}
         </figure>
@@ -219,6 +261,38 @@ const portableTextComponents = {
    TABLE OF CONTENTS
 ======================= */
 const TableOfContents = ({ headings }) => {
+  const [activeId, setActiveId] = useState("");
+
+  useEffect(() => {
+    if (!headings || headings.length === 0) return;
+    const elements = headings
+      .map((h) => document.getElementById(h.id))
+      .filter(Boolean);
+    if (elements.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible[0]) setActiveId(visible[0].target.id);
+      },
+      { rootMargin: "-96px 0px -65% 0px", threshold: 0 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, [headings]);
+
+  const handleClick = (e, id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    e.preventDefault();
+    const top = el.getBoundingClientRect().top + window.scrollY - 96;
+    window.scrollTo({ top, behavior: "smooth" });
+    if (history.replaceState) history.replaceState(null, "", `#${id}`);
+  };
+
   if (!headings || headings.length === 0) return null;
   return (
     <nav
@@ -229,22 +303,36 @@ const TableOfContents = ({ headings }) => {
         Table of Contents
       </h2>
       <ol className="space-y-2 text-sm">
-        {headings.map((h, i) => (
-          <li
-            key={`${h.id}-${i}`}
-            className={h.level === "h3" ? "pl-4" : ""}
-          >
-            <a
-              href={`#${h.id}`}
-              className="inline-flex gap-2 leading-snug transition-colors text-brandNavy/80 dark:text-gray-300 hover:text-brandPrimary dark:hover:text-brandAccent"
+        {headings.map((h, i) => {
+          const isActive = activeId === h.id;
+          return (
+            <li
+              key={`${h.id}-${i}`}
+              className={h.level === "h3" ? "pl-4" : ""}
             >
-              <span className="font-bold text-brandPrimary/70 dark:text-brandAccent/70 tabular-nums">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <span>{h.text}</span>
-            </a>
-          </li>
-        ))}
+              <a
+                href={`#${h.id}`}
+                onClick={(e) => handleClick(e, h.id)}
+                className={`inline-flex gap-2 leading-snug transition-colors ${
+                  isActive
+                    ? "text-brandPrimary dark:text-brandAccent font-semibold"
+                    : "text-brandNavy/80 dark:text-gray-300 hover:text-brandPrimary dark:hover:text-brandAccent"
+                }`}
+              >
+                <span
+                  className={`font-bold tabular-nums ${
+                    isActive
+                      ? "text-brandPrimary dark:text-brandAccent"
+                      : "text-brandPrimary/70 dark:text-brandAccent/70"
+                  }`}
+                >
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span>{h.text}</span>
+              </a>
+            </li>
+          );
+        })}
       </ol>
     </nav>
   );
