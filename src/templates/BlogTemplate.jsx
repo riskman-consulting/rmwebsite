@@ -231,23 +231,38 @@ const portableTextComponents = {
 
       const alignClass =
         alignment === "left"
-          ? "items-start"
+          ? "items-start text-left"
           : alignment === "right"
-          ? "items-end"
-          : "items-center";
+          ? "items-end text-right"
+          : "items-center text-center";
+
+      const aspectRatio =
+        dims?.width && dims?.height ? dims.width / dims.height : null;
+      const isTall = aspectRatio && aspectRatio < 1;
+      const isWide = aspectRatio && aspectRatio >= 1;
 
       return (
-        <figure className={`not-prose my-10 flex flex-col ${alignClass}`}>
-          <img
-            src={url}
-            alt={value?.alt || ""}
-            width={dims?.width}
-            height={dims?.height}
-            loading="lazy"
-            className="block max-w-full h-auto"
-          />
+        <figure className={`not-prose my-8 md:my-10 flex flex-col ${alignClass}`}>
+          <div
+            className={`relative w-full overflow-hidden border rounded-2xl border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark shadow-sm ${
+              isTall ? "max-w-md mx-auto" : "max-w-full"
+            }`}
+          >
+            <img
+              src={url}
+              alt={value?.alt || ""}
+              width={dims?.width}
+              height={dims?.height}
+              loading="lazy"
+              className={`block w-full h-auto ${
+                isWide
+                  ? "max-h-[560px] object-contain"
+                  : "max-h-[720px] object-contain"
+              } mx-auto`}
+            />
+          </div>
           {value?.caption && (
-            <figcaption className="mt-3 text-sm italic font-medium text-center text-brandNavy/60 dark:text-gray-500">
+            <figcaption className="max-w-2xl mx-auto mt-3 text-xs italic font-medium md:text-sm text-brandNavy/60 dark:text-gray-500">
               {value.caption}
             </figcaption>
           )}
@@ -465,7 +480,7 @@ export default function BlogTemplate({ blog }) {
 
       {/* ================= ARTICLE ================= */}
       <article className="pt-24 pb-20 md:pt-28">
-        <div className="container max-w-3xl">
+        <div className="container max-w-3xl px-4 mx-auto md:px-6">
           {/* Back to Blogs */}
           <Link
             to="/blogs"
@@ -522,13 +537,14 @@ export default function BlogTemplate({ blog }) {
 
           {/* Featured image */}
           {blog.mainImage && (
-            <div className="mb-12 overflow-hidden border rounded-2xl border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark">
+            <figure className="mb-12 overflow-hidden border rounded-2xl border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark shadow-sm">
               <img
                 src={blog.mainImage}
                 alt={blog.mainImageAlt || blog.title}
-                className="object-cover w-full h-auto aspect-[16/9]"
+                loading="eager"
+                className="block w-full h-auto max-h-[520px] object-cover"
               />
-            </div>
+            </figure>
           )}
 
           {/* TL;DR */}
@@ -647,10 +663,11 @@ export default function BlogTemplate({ blog }) {
                       className="overflow-hidden transition-all duration-300 border group rounded-2xl border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark hover:border-brandPrimary dark:hover:border-brandAccent hover:shadow-lg"
                     >
                       {post.mainImage && (
-                        <div className="overflow-hidden aspect-[16/9] bg-bgLight dark:bg-bgDark">
+                        <div className="overflow-hidden aspect-[16/9] bg-bgLight dark:bg-bgDark border-b border-borderLight dark:border-borderDark">
                           <img
                             src={post.mainImage}
                             alt={post.mainImageAlt || post.title}
+                            loading="lazy"
                             className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                           />
                         </div>
