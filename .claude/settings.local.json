@@ -18,7 +18,9 @@
       "Bash(find \"c:\\\\Users\\\\Jay Kumar\\\\Downloads\\\\New folder\\\\rmwebsite-staging \\(1\\)\\\\rmwebsite-staging\\\\src\" -maxdepth 2 -name \"*Layout*\" -o -name \"*Header*\" -o -name \"*Footer*\")",
       "Bash(npx --no-install vite --version)",
       "Bash(npx --no-install eslint src/templates/BlogTemplate.jsx src/pages/blogs/BlogList.jsx)",
-      "Bash(node -e ' *)"
+      "Bash(node -e ' *)",
+      "Bash(npm run *)",
+      "Bash(node scripts/generate-meta.mjs)"
     ],
     "additionalDirectories": [
       "C:\\Users\\Jay Kumar\\Downloads\\sanity-next-portfolio\\sanity-next-portfolio\\src\\sanity\\schemaTypes"
