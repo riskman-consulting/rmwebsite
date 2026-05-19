@@ -99,8 +99,104 @@ export default function BlogSingle() {
 
   const description =
     singlePost.metaDescription ||
+    singlePost.shortDescription ||
     singlePost.tldr ||
     `Read the latest insights from RiskMan Consulting: ${singlePost.title}`;
+
+  const canonicalHref =
+    singlePost.canonicalUrl ||
+    `https://www.riskman.in/blog/${singlePost.slug}`;
+
+  const datePublished =
+    singlePost.publishedDate || singlePost._createdAt || null;
+  const dateModified =
+    singlePost.lastUpdated ||
+    singlePost._updatedAt ||
+    datePublished;
+
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: singlePost.seoTitle || singlePost.title,
+    description,
+    image: singlePost.mainImage ? [singlePost.mainImage] : undefined,
+    datePublished,
+    dateModified,
+    author: {
+      "@type": "Person",
+      name: singlePost.author?.name || "Riskman",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Riskman Consulting",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.riskman.in/rm.png",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": canonicalHref,
+    },
+    keywords: [
+      singlePost.primaryKeyword,
+      ...(Array.isArray(singlePost.secondaryKeywords)
+        ? singlePost.secondaryKeywords
+        : []),
+      ...(Array.isArray(singlePost.tags) ? singlePost.tags : []),
+    ]
+      .filter(Boolean)
+      .join(", "),
+  };
+
+  const faqBlocks = Array.isArray(singlePost.body)
+    ? singlePost.body.filter(
+        (b) => b?._type === "faq" && Array.isArray(b.faqs) && b.faqs.length > 0
+      )
+    : [];
+  const faqEntities = faqBlocks
+    .flatMap((b) => b.faqs)
+    .filter((f) => f?.question && f?.answer);
+  const faqJsonLd =
+    faqEntities.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqEntities.map((f) => ({
+            "@type": "Question",
+            name: f.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: f.answer,
+            },
+          })),
+        }
+      : null;
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.riskman.in/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blogs",
+        item: "https://www.riskman.in/blogs",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: singlePost.title,
+        item: canonicalHref,
+      },
+    ],
+  };
 
   return (
     <>
@@ -109,16 +205,34 @@ export default function BlogSingle() {
           {(singlePost.seoTitle || singlePost.title)} | RiskMan Consulting
         </title>
         <meta name="description" content={description} />
+        {singlePost.primaryKeyword && (
+          <meta name="keywords" content={articleJsonLd.keywords} />
+        )}
         <meta property="og:title" content={singlePost.seoTitle || singlePost.title} />
         <meta property="og:description" content={description} />
         {singlePost.mainImage && (
           <meta property="og:image" content={singlePost.mainImage} />
         )}
         <meta property="og:type" content="article" />
-        <link
-          rel="canonical"
-          href={`https://www.riskman.in/blog/${singlePost.slug}`}
-        />
+        <meta property="og:url" content={canonicalHref} />
+        {datePublished && (
+          <meta property="article:published_time" content={datePublished} />
+        )}
+        {dateModified && (
+          <meta property="article:modified_time" content={dateModified} />
+        )}
+        <link rel="canonical" href={canonicalHref} />
+        <script type="application/ld+json">
+          {JSON.stringify(articleJsonLd)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbJsonLd)}
+        </script>
+        {faqJsonLd && (
+          <script type="application/ld+json">
+            {JSON.stringify(faqJsonLd)}
+          </script>
+        )}
       </Helmet>
       <BlogTemplate blog={singlePost} />
     </>

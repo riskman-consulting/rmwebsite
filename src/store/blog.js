@@ -7,14 +7,36 @@ const POST_LIST_PROJECTION = `{
   "slug": slug.current,
   "mainImage": mainImage.asset->url,
   "mainImageAlt": mainImage.alt,
+  shortDescription,
   contentType,
   funnelStage,
+  articleType,
+  targetReader,
+  topicOwnership,
+  tags,
   seoTitle,
   metaDescription,
+  primaryKeyword,
+  secondaryKeywords,
+  canonicalUrl,
   tldr,
   takeaways,
+  publishedDate,
+  lastUpdated,
   _createdAt,
-  _updatedAt
+  _updatedAt,
+  author->{
+    name,
+    "slug": slug.current,
+    "image": image.asset->url,
+    title,
+    bio
+  },
+  categories[]->{
+    title,
+    "slug": slug.current,
+    description
+  }
 }`;
 
 const POST_DETAIL_PROJECTION = `{
@@ -23,15 +45,68 @@ const POST_DETAIL_PROJECTION = `{
   "slug": slug.current,
   "mainImage": mainImage.asset->url,
   "mainImageAlt": mainImage.alt,
-  body,
+  shortDescription,
+  body[]{
+    ...,
+    _type == "block" => {
+      ...,
+      markDefs[]{
+        ...,
+        _type == "internalLink" => {
+          ...,
+          "reference": reference->{
+            _type,
+            title,
+            "slug": slug.current
+          }
+        }
+      }
+    }
+  },
   contentType,
   funnelStage,
+  articleType,
+  targetReader,
+  topicOwnership,
+  tags,
   seoTitle,
   metaDescription,
+  primaryKeyword,
+  secondaryKeywords,
+  canonicalUrl,
   tldr,
   takeaways,
+  publishedDate,
+  lastUpdated,
+  relatedPostsPosition,
   _createdAt,
-  _updatedAt
+  _updatedAt,
+  author->{
+    name,
+    "slug": slug.current,
+    "image": image.asset->url,
+    title,
+    bio
+  },
+  categories[]->{
+    title,
+    "slug": slug.current,
+    description
+  },
+  parentPillar->{
+    title,
+    "slug": slug.current
+  },
+  "relatedPosts": relatedPosts[]->{
+    _id,
+    title,
+    "slug": slug.current,
+    "mainImage": mainImage.asset->url,
+    "mainImageAlt": mainImage.alt,
+    shortDescription,
+    tldr,
+    metaDescription
+  }
 }`;
 
 export const useBlogStore = create((set) => ({
