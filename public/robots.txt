@@ -31,4 +31,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://globalprofessionalcertifications.com/sitemap.xml
+Sitemap: https://riskman.in/sitemap.xml

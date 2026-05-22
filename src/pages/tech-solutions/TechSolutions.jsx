@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 // ============================================================
 // INTEGRITAT SCREENSHOTS - Your actual images
@@ -288,6 +289,11 @@ export default function IntegritatSolutionPage() {
 
   return (
     <div className="min-h-screen font-sans bg-white">
+      <Helmet>
+        <title>Technology Solutions | RiskMan Consulting</title>
+        <meta name="description" content="Explore RiskMan's portfolio of technology-led GRC, audit, and compliance solutions designed for modern enterprises." />
+        <link rel="canonical" href="https://www.riskman.in/solutions" />
+      </Helmet>
       
       {/* ==================== HERO SECTION ==================== */}
       <section className="relative flex items-center min-h-screen overflow-hidden bg-bgLight">
