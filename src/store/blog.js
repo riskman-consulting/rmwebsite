@@ -76,6 +76,7 @@ const POST_DETAIL_PROJECTION = `{
   canonicalUrl,
   tldr,
   takeaways,
+  faqs,
   publishedDate,
   lastUpdated,
   relatedPostsPosition,

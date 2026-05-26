@@ -65,23 +65,34 @@ const formatDate = (iso) => {
   }
 };
 
-const estimateReadingTime = (body) => {
-  if (!Array.isArray(body)) return 3;
-  const text = body
-    .map((block) => {
-      if (block?._type === "block" && Array.isArray(block.children)) {
-        return block.children.map((c) => c.text || "").join(" ");
-      }
-      if (block?._type === "faq" && Array.isArray(block.faqs)) {
-        return block.faqs
-          .map((f) => `${f.question || ""} ${f.answer || ""}`)
-          .join(" ");
-      }
-      if (block?._type === "code") return block.code || "";
-      return "";
-    })
-    .join(" ");
-  const words = text.trim().split(/\s+/).filter(Boolean).length;
+const estimateReadingTime = (body, extraFaqs) => {
+  const parts = [];
+  if (Array.isArray(body)) {
+    parts.push(
+      body
+        .map((block) => {
+          if (block?._type === "block" && Array.isArray(block.children)) {
+            return block.children.map((c) => c.text || "").join(" ");
+          }
+          if (block?._type === "faq" && Array.isArray(block.faqs)) {
+            return block.faqs
+              .map((f) => `${f.question || ""} ${f.answer || ""}`)
+              .join(" ");
+          }
+          if (block?._type === "code") return block.code || "";
+          return "";
+        })
+        .join(" ")
+    );
+  }
+  if (Array.isArray(extraFaqs)) {
+    parts.push(
+      extraFaqs
+        .map((f) => `${f?.question || ""} ${f?.answer || ""}`)
+        .join(" ")
+    );
+  }
+  const words = parts.join(" ").trim().split(/\s+/).filter(Boolean).length;
   return Math.max(1, Math.ceil(words / 220));
 };
 
@@ -927,18 +938,35 @@ export default function BlogTemplate({ blog }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const readingTime = useMemo(
-    () => estimateReadingTime(blog?.body),
-    [blog?.body]
+  const topLevelFaqs = useMemo(
+    () =>
+      Array.isArray(blog?.faqs)
+        ? blog.faqs.filter((f) => f?.question && f?.answer)
+        : [],
+    [blog?.faqs]
   );
-  const headings = useMemo(() => extractHeadings(blog?.body), [blog?.body]);
+  const readingTime = useMemo(
+    () => estimateReadingTime(blog?.body, topLevelFaqs),
+    [blog?.body, topLevelFaqs]
+  );
+  const bodyHeadings = useMemo(() => extractHeadings(blog?.body), [blog?.body]);
+  const headings = useMemo(
+    () =>
+      topLevelFaqs.length > 0
+        ? [
+            ...bodyHeadings,
+            { level: "h2", text: "Frequently Asked Questions", id: "faqs" },
+          ]
+        : bodyHeadings,
+    [bodyHeadings, topLevelFaqs.length]
+  );
   const explicitToc = useMemo(
     () => hasExplicitTocBlock(blog?.body),
     [blog?.body]
   );
   const { introBlocks, contentBlocks } = useMemo(
-    () => splitIntroBlocks(blog?.body, headings.length > 0),
-    [blog?.body, headings.length]
+    () => splitIntroBlocks(blog?.body, bodyHeadings.length > 0),
+    [blog?.body, bodyHeadings.length]
   );
 
   const portableTextComponents = useMemo(
@@ -1025,6 +1053,27 @@ export default function BlogTemplate({ blog }) {
         style={{ scaleX: scrollYProgress }}
         className="fixed top-0 left-0 right-0 z-[60] h-1 bg-gradient-to-r from-brandPrimary to-brandAccent dark:from-brandAccent dark:to-brandGold origin-left"
       />
+
+      {/* ================= FAQPage STRUCTURED DATA ================= */}
+      {topLevelFaqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: topLevelFaqs.map((f) => ({
+                "@type": "Question",
+                name: f.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: f.answer,
+                },
+              })),
+            }),
+          }}
+        />
+      )}
 
       {/* ================= ARTICLE ================= */}
       <article className="pt-20 pb-16 md:pt-24">
@@ -1209,6 +1258,13 @@ export default function BlogTemplate({ blog }) {
               </p>
             )}
           </div>
+
+          {/* Top-level FAQ (post.faqs) */}
+          {topLevelFaqs.length > 0 && (
+            <div id="faqs" className="scroll-mt-24">
+              <FaqBlock value={{ faqs: topLevelFaqs }} />
+            </div>
+          )}
 
           {/* Tags */}
           {tags.length > 0 && (
