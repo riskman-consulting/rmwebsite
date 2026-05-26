@@ -200,7 +200,7 @@ const FaqBlock = ({ value }) => {
   const title = value?.title || "Frequently Asked Questions";
   return (
     <section className="my-10">
-      <h2 className="mb-5 text-xl font-bold md:text-2xl font-heading text-brandDark dark:text-white">
+      <h2 className="mb-5 text-lg font-bold md:text-xl font-heading text-brandDark dark:text-white">
         {title}
       </h2>
       <div className="space-y-3">
@@ -210,7 +210,7 @@ const FaqBlock = ({ value }) => {
             className="overflow-hidden border group rounded-xl border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark"
           >
             <summary className="flex items-center justify-between gap-3 px-5 py-4 list-none cursor-pointer">
-              <span className="text-sm font-semibold md:text-base text-brandDark dark:text-white">
+              <span className="text-sm font-semibold text-brandDark dark:text-white">
                 {item?.question}
               </span>
               <FaPlus className="flex-shrink-0 text-xs transition-transform text-brandPrimary dark:text-brandAccent group-open:rotate-45" />
@@ -259,12 +259,12 @@ const InternalCtaBlock = ({ value }) => {
     <aside className={`${baseClasses} ${variantClasses}`}>
       <div className="flex-1">
         {title && (
-          <h3 className="mb-1 text-lg font-bold md:text-xl font-heading">
+          <h3 className="mb-1 text-base font-bold md:text-lg font-heading">
             {title}
           </h3>
         )}
         {description && (
-          <p className="text-sm opacity-90 md:text-base">{description}</p>
+          <p className="text-sm opacity-90">{description}</p>
         )}
       </div>
       {isExternal ? (
@@ -487,14 +487,14 @@ const alignmentClass = (style) => {
 const basePortableTextComponents = {
   block: {
     h1: ({ children }) => (
-      <h1 className="pt-10 pb-3 text-2xl font-bold leading-tight md:text-3xl font-heading text-brandDark dark:text-white">
+      <h1 className="pt-10 pb-3 text-xl font-bold leading-tight md:text-2xl font-heading text-brandDark dark:text-white">
         {children}
       </h1>
     ),
     h2: ({ children, value }) => (
       <h2
         id={slugify(blockText(value))}
-        className="pt-8 pb-3 text-xl font-bold leading-tight md:text-2xl font-heading text-brandDark dark:text-white scroll-mt-24"
+        className="pt-8 pb-3 text-lg font-bold leading-tight md:text-xl font-heading text-brandDark dark:text-white scroll-mt-24"
       >
         {children}
       </h2>
@@ -502,23 +502,23 @@ const basePortableTextComponents = {
     h3: ({ children, value }) => (
       <h3
         id={slugify(blockText(value))}
-        className="pt-6 pb-2 text-lg font-bold md:text-xl font-heading text-brandDark dark:text-white scroll-mt-24"
+        className="pt-6 pb-2 text-base font-bold md:text-lg font-heading text-brandDark dark:text-white scroll-mt-24"
       >
         {children}
       </h3>
     ),
     h4: ({ children }) => (
-      <h4 className="pt-5 pb-2 text-base font-bold md:text-lg font-heading text-brandDark dark:text-white">
+      <h4 className="pt-5 pb-2 text-sm font-bold md:text-base font-heading text-brandDark dark:text-white">
         {children}
       </h4>
     ),
     h5: ({ children }) => (
-      <h5 className="pt-4 pb-2 text-sm font-bold md:text-base font-heading text-brandDark dark:text-white">
+      <h5 className="pt-4 pb-2 text-sm font-bold font-heading text-brandDark dark:text-white">
         {children}
       </h5>
     ),
     h6: ({ children }) => (
-      <h6 className="pt-3 pb-1 text-xs font-bold uppercase tracking-wider md:text-sm font-heading text-brandDark dark:text-white">
+      <h6 className="pt-3 pb-1 text-xs font-bold uppercase tracking-wider font-heading text-brandDark dark:text-white">
         {children}
       </h6>
     ),
@@ -528,7 +528,7 @@ const basePortableTextComponents = {
           <FaQuoteRight />
         </div>
         <blockquote className="relative z-10 rounded-2xl bg-gradient-to-br from-brandDark to-brandNavy dark:from-surfaceDark dark:to-bgDark border-l-[5px] border-brandAccent p-6 md:p-8 shadow-lg">
-          <div className="text-base italic font-light leading-relaxed text-white md:text-lg font-heading">
+          <div className="text-sm italic font-light leading-relaxed text-white md:text-base font-heading">
             {children}
           </div>
         </blockquote>
@@ -538,7 +538,7 @@ const basePortableTextComponents = {
       const align = alignmentClass(value?.style);
       return (
         <p
-          className={`text-sm leading-[1.75] md:text-base text-brandNavy/85 dark:text-gray-300 ${
+          className={`text-sm leading-[1.75] text-brandNavy/85 dark:text-gray-300 ${
             align || ""
           }`}
         >
@@ -547,22 +547,22 @@ const basePortableTextComponents = {
       );
     },
     alignLeft: ({ children }) => (
-      <p className="text-sm leading-[1.75] md:text-base text-left text-brandNavy/85 dark:text-gray-300">
+      <p className="text-sm leading-[1.75] text-left text-brandNavy/85 dark:text-gray-300">
         {children}
       </p>
     ),
     alignCenter: ({ children }) => (
-      <p className="text-sm leading-[1.75] md:text-base text-center text-brandNavy/85 dark:text-gray-300">
+      <p className="text-sm leading-[1.75] text-center text-brandNavy/85 dark:text-gray-300">
         {children}
       </p>
     ),
     alignRight: ({ children }) => (
-      <p className="text-sm leading-[1.75] md:text-base text-right text-brandNavy/85 dark:text-gray-300">
+      <p className="text-sm leading-[1.75] text-right text-brandNavy/85 dark:text-gray-300">
         {children}
       </p>
     ),
     alignJustify: ({ children }) => (
-      <p className="text-sm leading-[1.75] md:text-base text-justify text-brandNavy/85 dark:text-gray-300">
+      <p className="text-sm leading-[1.75] text-justify text-brandNavy/85 dark:text-gray-300">
         {children}
       </p>
     ),
@@ -579,13 +579,13 @@ const basePortableTextComponents = {
   },
   listItem: {
     bullet: ({ children }) => (
-      <li className="flex items-start gap-3 text-sm leading-relaxed md:text-base text-brandNavy/85 dark:text-gray-300">
+      <li className="flex items-start gap-3 text-sm leading-relaxed text-brandNavy/85 dark:text-gray-300">
         <div className="mt-2 w-1.5 h-1.5 rounded-full bg-brandPrimary dark:bg-brandAccent flex-shrink-0" />
         <span>{children}</span>
       </li>
     ),
     number: ({ children }) => (
-      <li className="pl-2 text-sm leading-relaxed md:text-base text-brandNavy/85 dark:text-gray-300">
+      <li className="pl-2 text-sm leading-relaxed text-brandNavy/85 dark:text-gray-300">
         {children}
       </li>
     ),
@@ -813,7 +813,7 @@ const RelatedArticles = ({ items, title = "Related Articles" }) => {
   if (!Array.isArray(items) || items.length === 0) return null;
   return (
     <section className="mt-10">
-      <h2 className="mb-5 text-lg font-bold md:text-xl font-heading text-brandDark dark:text-white">
+      <h2 className="mb-5 text-base font-bold md:text-lg font-heading text-brandDark dark:text-white">
         {title}
       </h2>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -834,11 +834,11 @@ const RelatedArticles = ({ items, title = "Related Articles" }) => {
               </div>
             )}
             <div className="p-4">
-              <h3 className="mb-2 text-sm font-bold leading-snug md:text-base text-brandDark dark:text-white line-clamp-2">
+              <h3 className="mb-2 text-sm font-bold leading-snug text-brandDark dark:text-white line-clamp-2">
                 {post.title}
               </h3>
               {(post.shortDescription || post.metaDescription || post.tldr) && (
-                <p className="mb-3 text-xs md:text-sm leading-relaxed text-brandNavy/65 dark:text-gray-400 line-clamp-2">
+                <p className="mb-3 text-xs leading-relaxed text-brandNavy/65 dark:text-gray-400 line-clamp-2">
                   {post.shortDescription || post.metaDescription || post.tldr}
                 </p>
               )}
@@ -864,7 +864,7 @@ const InlineGuidanceCta = () => (
         <FaLightbulb className="text-2xl" />
       </div>
       <div>
-        <h3 className="mb-1 text-lg font-bold md:text-xl font-heading text-brandDark dark:text-white">
+        <h3 className="mb-1 text-base font-bold md:text-lg font-heading text-brandDark dark:text-white">
           Need Guidance for Your Business?
         </h3>
         <p className="text-sm leading-relaxed text-brandNavy/75 dark:text-gray-400">
@@ -1065,34 +1065,19 @@ export default function BlogTemplate({ blog }) {
           )}
 
           {/* Title */}
-          <h1 className="mb-4 text-2xl md:text-3xl lg:text-[2.25rem] font-bold font-heading leading-[1.2] text-brandDark dark:text-white">
+          <h1 className="mb-4 text-xl md:text-2xl lg:text-3xl font-bold font-heading leading-[1.2] text-brandDark dark:text-white">
             {blog.title}
           </h1>
 
           {/* Author + meta row */}
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mb-8 text-sm">
             <div className="flex items-center gap-2.5">
-              <div className="flex items-center justify-center w-8 h-8 overflow-hidden border rounded-full bg-white dark:bg-bgDark border-borderLight dark:border-borderDark">
-                {authorImage ? (
-                  <img
-                    src={authorImage}
-                    alt={authorName}
-                    className="object-cover w-full h-full"
-                  />
-                ) : (
-                  <>
-                    <img
-                      src="/rm.png"
-                      alt="Riskman"
-                      className="object-contain w-6 h-6 dark:hidden"
-                    />
-                    <img
-                      src="/riskman-logo-white.svg"
-                      alt="Riskman"
-                      className="hidden object-contain w-6 h-6 dark:block"
-                    />
-                  </>
-                )}
+              <div className="flex items-center justify-center w-9 h-9 p-1 overflow-hidden border rounded-full bg-white border-borderLight dark:border-borderDark shadow-sm">
+                <img
+                  src={authorImage || "/rm.png"}
+                  alt={authorName}
+                  className="object-contain w-full h-full"
+                />
               </div>
               <span className="font-semibold text-brandDark dark:text-white">
                 {authorName}
@@ -1146,8 +1131,30 @@ export default function BlogTemplate({ blog }) {
             </aside>
           )}
 
+          {/* Key Takeaways */}
+          {Array.isArray(blog.takeaways) && blog.takeaways.length > 0 && (
+            <div className="mb-6">
+              <div className="mb-3 text-[11px] font-black tracking-[0.25em] uppercase text-brandPrimary dark:text-brandAccent">
+                Key Takeaways
+              </div>
+              <ul className="space-y-2">
+                {blog.takeaways.map((item, i) => (
+                  <li
+                    key={i}
+                    className="flex items-start gap-2.5 text-[13px] leading-relaxed text-brandNavy/85 dark:text-gray-300"
+                  >
+                    <span className="flex items-center justify-center flex-shrink-0 w-4 h-4 mt-0.5 text-[9px] font-bold rounded-full bg-brandPrimary/10 dark:bg-brandAccent/10 text-brandPrimary dark:text-brandAccent">
+                      {i + 1}
+                    </span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           {introBlocks.length > 0 && (
-            <div className="mb-6 prose prose-sm md:prose-base dark:prose-invert max-w-none">
+            <div className="mb-6 prose prose-sm dark:prose-invert max-w-none">
               <PortableText
                 value={introBlocks}
                 components={portableTextComponents}
@@ -1163,7 +1170,7 @@ export default function BlogTemplate({ blog }) {
           )}
 
           {/* Body */}
-          <div className="prose prose-sm md:prose-base dark:prose-invert max-w-none">
+          <div className="prose prose-sm dark:prose-invert max-w-none">
             {Array.isArray(contentBlocks) && contentBlocks.length > 0 ? (
               showRelatedMiddle && contentSecondHalf.length > 0 ? (
                 <>
@@ -1197,33 +1204,11 @@ export default function BlogTemplate({ blog }) {
                 />
               )
             ) : (
-              <p className="text-lg italic text-brandNavy/60 dark:text-gray-400">
+              <p className="text-sm italic text-brandNavy/60 dark:text-gray-400">
                 No content available for this article yet.
               </p>
             )}
           </div>
-
-          {/* Key Takeaways */}
-          {Array.isArray(blog.takeaways) && blog.takeaways.length > 0 && (
-            <div className="pt-6 mt-8 border-t border-borderLight dark:border-borderDark">
-              <h2 className="mb-5 text-lg font-bold md:text-xl font-heading text-brandDark dark:text-white">
-                Key Takeaways
-              </h2>
-              <ul className="space-y-2.5">
-                {blog.takeaways.map((item, i) => (
-                  <li
-                    key={i}
-                    className="flex items-start gap-3 text-sm leading-relaxed text-brandNavy/85 dark:text-gray-300"
-                  >
-                    <span className="flex items-center justify-center flex-shrink-0 w-5 h-5 mt-0.5 text-[10px] font-bold rounded-full bg-brandPrimary/10 dark:bg-brandAccent/10 text-brandPrimary dark:text-brandAccent">
-                      {i + 1}
-                    </span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
 
           {/* Tags */}
           {tags.length > 0 && (
@@ -1253,30 +1238,15 @@ export default function BlogTemplate({ blog }) {
               About the Author
             </div>
             <div className="flex flex-col items-start gap-5 p-6 sm:flex-row md:p-8">
-              <div className="flex items-center justify-center flex-shrink-0 w-16 h-16 overflow-hidden border rounded-full bg-white dark:bg-bgDark border-borderLight dark:border-borderDark">
-                {authorImage ? (
-                  <img
-                    src={authorImage}
-                    alt={authorName}
-                    className="object-cover w-full h-full"
-                  />
-                ) : (
-                  <>
-                    <img
-                      src="/rm.png"
-                      alt="Riskman"
-                      className="object-contain w-12 h-12 dark:hidden"
-                    />
-                    <img
-                      src="/riskman-logo-white.svg"
-                      alt="Riskman"
-                      className="hidden object-contain w-12 h-12 dark:block"
-                    />
-                  </>
-                )}
+              <div className="flex items-center justify-center flex-shrink-0 w-16 h-16 p-2 overflow-hidden border rounded-full bg-white border-borderLight dark:border-borderDark shadow-sm">
+                <img
+                  src={authorImage || "/rm.png"}
+                  alt={authorName}
+                  className="object-contain w-full h-full"
+                />
               </div>
               <div className="flex-1">
-                <h3 className="text-base font-bold text-brandDark dark:text-white">
+                <h3 className="text-sm font-bold text-brandDark dark:text-white">
                   {authorName}
                 </h3>
                 {authorTitle && (
@@ -1289,7 +1259,7 @@ export default function BlogTemplate({ blog }) {
                     Risk Advisory
                   </span>
                 )}
-                <p className="text-xs leading-relaxed md:text-sm text-brandNavy/70 dark:text-gray-400">
+                <p className="text-xs leading-relaxed text-brandNavy/70 dark:text-gray-400">
                   {authorBio}
                 </p>
               </div>

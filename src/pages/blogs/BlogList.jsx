@@ -47,6 +47,9 @@ const formatTypeLabel = (value) =>
     .trim()
     .replace(/\b\w/g, (c) => c.toUpperCase());
 
+const isPillarType = (value) =>
+  String(value || "").trim().toLowerCase() === "pillar";
+
 const formatDate = (iso) => {
   if (!iso) return "";
   try {
@@ -135,7 +138,7 @@ const FeaturedPostCard = ({ post }) => {
         <div className="flex flex-col justify-center p-6 md:p-10">
           {/* Pills */}
           <div className="flex flex-wrap items-center gap-2 mb-5">
-            {post.contentType && (
+            {post.contentType && !isPillarType(post.contentType) && (
               <span className="px-3 py-1 rounded-full bg-brandPrimary/10 dark:bg-brandAccent/15 text-brandPrimary dark:text-brandAccent text-[11px] font-bold tracking-wider uppercase">
                 {formatTypeLabel(post.contentType)}
               </span>
@@ -165,20 +168,12 @@ const FeaturedPostCard = ({ post }) => {
           {/* Author + meta */}
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-6 text-[13px] text-brandNavy/70 dark:text-gray-400">
             <div className="flex items-center gap-2">
-              <div className="flex items-center justify-center w-8 h-8 overflow-hidden border rounded-full bg-white dark:bg-bgDark border-borderLight dark:border-borderDark">
-                {post.author?.image ? (
-                  <img
-                    src={post.author.image}
-                    alt={post.author.name}
-                    className="object-cover w-full h-full"
-                  />
-                ) : (
-                  <img
-                    src="/rm.png"
-                    alt="Riskman"
-                    className="object-contain w-5 h-5"
-                  />
-                )}
+              <div className="flex items-center justify-center w-9 h-9 p-1 overflow-hidden border rounded-full bg-white border-borderLight dark:border-borderDark shadow-sm">
+                <img
+                  src={post.author?.image || "/rm.png"}
+                  alt={post.author?.name || "Riskman"}
+                  className="object-contain w-full h-full"
+                />
               </div>
               <span className="font-semibold text-brandDark dark:text-white">
                 {post.author?.name || "Riskman"}
@@ -225,7 +220,7 @@ const CompactBlogCard = ({ post }) => {
               RM
             </div>
           )}
-          {post.contentType && (
+          {post.contentType && !isPillarType(post.contentType) && (
             <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/95 dark:bg-bgDark/95 backdrop-blur text-brandPrimary dark:text-brandAccent text-[10px] font-bold tracking-wider uppercase shadow">
               {formatTypeLabel(post.contentType)}
             </span>
@@ -391,23 +386,40 @@ export default function BlogList() {
 
   const filteredPosts = useMemo(() => {
     const term = search.trim().toLowerCase();
+    const seenIds = new Set();
+    const seenSlugs = new Set();
+    const seenTitles = new Set();
     return posts.filter((post) => {
+      const idKey = post?._id;
+      const slugKey = post?.slug;
+      const titleKey = post?.title?.trim().toLowerCase();
+      if (idKey && seenIds.has(idKey)) return false;
+      if (slugKey && seenSlugs.has(slugKey)) return false;
+      if (titleKey && seenTitles.has(titleKey)) return false;
+
       const matchesType =
         activeType === "all" || post.contentType === activeType;
       if (!matchesType) return false;
-      if (!term) return true;
-      const haystack = [
-        post.title,
-        post.metaDescription,
-        post.shortDescription,
-        post.tldr,
-        post.seoTitle,
-        ...(Array.isArray(post.takeaways) ? post.takeaways : []),
-      ]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase();
-      return haystack.includes(term);
+
+      if (term) {
+        const haystack = [
+          post.title,
+          post.metaDescription,
+          post.shortDescription,
+          post.tldr,
+          post.seoTitle,
+          ...(Array.isArray(post.takeaways) ? post.takeaways : []),
+        ]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase();
+        if (!haystack.includes(term)) return false;
+      }
+
+      if (idKey) seenIds.add(idKey);
+      if (slugKey) seenSlugs.add(slugKey);
+      if (titleKey) seenTitles.add(titleKey);
+      return true;
     });
   }, [posts, search, activeType]);
 
