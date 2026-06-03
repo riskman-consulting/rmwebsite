@@ -22,6 +22,7 @@ import { PortableText } from "@portabletext/react";
 import imageUrlBuilder from "@sanity/image-url";
 import { sanityClient } from "../api/sanity";
 import { useBlogStore } from "../store/blog";
+import { imageUrl, imageDimensions } from "../utils/sanityImage";
 
 const builder = imageUrlBuilder(sanityClient);
 const urlFor = (source) => {
@@ -837,7 +838,7 @@ const RelatedArticles = ({ items, title = "Related Articles" }) => {
             {post.mainImage && (
               <div className="overflow-hidden aspect-[16/9] bg-bgLight dark:bg-bgDark border-b border-borderLight dark:border-borderDark">
                 <img
-                  src={post.mainImage}
+                  src={imageUrl(post.mainImage, { width: 640, height: 360 })}
                   alt={post.mainImageAlt || post.title}
                   loading="lazy"
                   className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
@@ -1054,26 +1055,8 @@ export default function BlogTemplate({ blog }) {
         className="fixed top-0 left-0 right-0 z-[60] h-1 bg-gradient-to-r from-brandPrimary to-brandAccent dark:from-brandAccent dark:to-brandGold origin-left"
       />
 
-      {/* ================= FAQPage STRUCTURED DATA ================= */}
-      {topLevelFaqs.length > 0 && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              mainEntity: topLevelFaqs.map((f) => ({
-                "@type": "Question",
-                name: f.question,
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: f.answer,
-                },
-              })),
-            }),
-          }}
-        />
-      )}
+      {/* FAQPage structured data is emitted once in BlogSingle (Helmet),
+          sourced from both post.faqs and any inline FAQ blocks. */}
 
       {/* ================= ARTICLE ================= */}
       <article className="pt-20 pb-16 md:pt-24">
@@ -1093,14 +1076,9 @@ export default function BlogTemplate({ blog }) {
             Back to Blogs
           </Link>
 
-          {/* Tags row: content type + categories */}
-          {(blog.contentType || categories.length > 0) && (
+          {/* Tags row: categories */}
+          {categories.length > 0 && (
             <div className="flex flex-wrap items-center gap-2 mb-4">
-              {blog.contentType && (
-                <span className="inline-flex px-3 py-1 rounded-full bg-brandAccent/20 dark:bg-brandAccent/10 text-brandPrimary dark:text-brandAccent text-[11px] font-bold tracking-wider uppercase">
-                  {blog.contentType}
-                </span>
-              )}
               {categories.map((c) => (
                 <Link
                   key={c.slug || c.title}
@@ -1156,14 +1134,16 @@ export default function BlogTemplate({ blog }) {
             )}
           </div>
 
-          {/* Featured image */}
+          {/* Featured image — shown at its natural ratio (no crop) */}
           {blog.mainImage && (
-            <figure className="mb-8 overflow-hidden border shadow-sm rounded-2xl border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark">
+            <figure className="flex justify-center mb-8 overflow-hidden border shadow-sm rounded-2xl border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark">
               <img
-                src={blog.mainImage}
+                src={imageUrl(blog.mainImage, { width: 1280 })}
                 alt={blog.mainImageAlt || blog.title}
+                width={imageDimensions(blog.mainImage)?.width}
+                height={imageDimensions(blog.mainImage)?.height}
                 loading="eager"
-                className="block w-full h-auto max-h-[520px] object-cover"
+                className="block w-full h-auto max-h-[560px] object-contain"
               />
             </figure>
           )}

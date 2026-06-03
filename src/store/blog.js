@@ -1,11 +1,22 @@
 import { create } from "zustand";
 import { sanityClient } from "../api/sanity";
 
+const IMAGE_PROJECTION = `{
+  alt,
+  hotspot,
+  crop,
+  asset->{
+    _id,
+    url,
+    metadata { dimensions, lqip }
+  }
+}`;
+
 const POST_LIST_PROJECTION = `{
   _id,
   title,
   "slug": slug.current,
-  "mainImage": mainImage.asset->url,
+  "mainImage": mainImage${IMAGE_PROJECTION},
   "mainImageAlt": mainImage.alt,
   shortDescription,
   contentType,
@@ -13,6 +24,7 @@ const POST_LIST_PROJECTION = `{
   articleType,
   targetReader,
   topicOwnership,
+  "parentTopic": parentPillar->topicOwnership,
   tags,
   seoTitle,
   metaDescription,
@@ -43,7 +55,7 @@ const POST_DETAIL_PROJECTION = `{
   _id,
   title,
   "slug": slug.current,
-  "mainImage": mainImage.asset->url,
+  "mainImage": mainImage${IMAGE_PROJECTION},
   "mainImageAlt": mainImage.alt,
   shortDescription,
   body[]{
@@ -102,7 +114,7 @@ const POST_DETAIL_PROJECTION = `{
     _id,
     title,
     "slug": slug.current,
-    "mainImage": mainImage.asset->url,
+    "mainImage": mainImage${IMAGE_PROJECTION},
     "mainImageAlt": mainImage.alt,
     shortDescription,
     tldr,

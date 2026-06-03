@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { FaChevronLeft, FaExclamationTriangle } from "react-icons/fa";
 import { useBlogStore } from "../../store/blog";
 import BlogTemplate from "../../templates/BlogTemplate";
+import { imageUrl } from "../../utils/sanityImage";
 
 /* =======================
    SKELETON / STATE COMPONENTS
@@ -107,6 +108,8 @@ export default function BlogSingle() {
     singlePost.canonicalUrl ||
     `https://www.riskman.in/blog/${singlePost.slug}`;
 
+  const mainImageUrl = imageUrl(singlePost.mainImage, { width: 1200, height: 630 });
+
   const datePublished =
     singlePost.publishedDate || singlePost._createdAt || null;
   const dateModified =
@@ -119,7 +122,7 @@ export default function BlogSingle() {
     "@type": "Article",
     headline: singlePost.seoTitle || singlePost.title,
     description,
-    image: singlePost.mainImage ? [singlePost.mainImage] : undefined,
+    image: mainImageUrl ? [mainImageUrl] : undefined,
     datePublished,
     dateModified,
     author: {
@@ -149,14 +152,26 @@ export default function BlogSingle() {
       .join(", "),
   };
 
-  const faqBlocks = Array.isArray(singlePost.body)
-    ? singlePost.body.filter(
-        (b) => b?._type === "faq" && Array.isArray(b.faqs) && b.faqs.length > 0
-      )
+  // FAQs can live on the dedicated `faqs` field and/or in inline FAQ blocks
+  // within the body. Gather from both sources and de-dupe by question so the
+  // FAQPage schema matches exactly what's rendered on the page.
+  const bodyFaqs = Array.isArray(singlePost.body)
+    ? singlePost.body
+        .filter((b) => b?._type === "faq" && Array.isArray(b.faqs))
+        .flatMap((b) => b.faqs)
     : [];
-  const faqEntities = faqBlocks
-    .flatMap((b) => b.faqs)
-    .filter((f) => f?.question && f?.answer);
+  const seenQuestions = new Set();
+  const faqEntities = [
+    ...(Array.isArray(singlePost.faqs) ? singlePost.faqs : []),
+    ...bodyFaqs,
+  ]
+    .filter((f) => f?.question && f?.answer)
+    .filter((f) => {
+      const key = f.question.trim().toLowerCase();
+      if (seenQuestions.has(key)) return false;
+      seenQuestions.add(key);
+      return true;
+    });
   const faqJsonLd =
     faqEntities.length > 0
       ? {
@@ -210,8 +225,8 @@ export default function BlogSingle() {
         )}
         <meta property="og:title" content={singlePost.seoTitle || singlePost.title} />
         <meta property="og:description" content={description} />
-        {singlePost.mainImage && (
-          <meta property="og:image" content={singlePost.mainImage} />
+        {mainImageUrl && (
+          <meta property="og:image" content={mainImageUrl} />
         )}
         <meta property="og:type" content="article" />
         <meta property="og:url" content={canonicalHref} />

@@ -11,6 +11,7 @@ import {
   FaChartLine,
 } from "react-icons/fa";
 import { useBlogStore } from "../../store/blog";
+import { imageUrl } from "../../utils/sanityImage";
 
 /* =======================
    ANIMATIONS
@@ -34,21 +35,10 @@ const staggerContainer = {
 /* =======================
    HELPERS
 ======================= */
-const FUNNEL_STAGE_LABELS = {
-  awareness: "Awareness",
-  consideration: "Consideration",
-  decision: "Decision",
-};
-
-const formatTypeLabel = (value) =>
-  String(value || "")
-    .replace(/[-_]+/g, " ")
-    .replace(/\s+/g, " ")
-    .trim()
-    .replace(/\b\w/g, (c) => c.toUpperCase());
-
-const isPillarType = (value) =>
-  String(value || "").trim().toLowerCase() === "pillar";
+// Effective topic for a post: its own topic ownership (pillars) or, for
+// supporting/cluster articles, the topic owned by their parent pillar.
+const getTopic = (post) =>
+  String(post?.topicOwnership || post?.parentTopic || "").trim();
 
 const formatDate = (iso) => {
   if (!iso) return "";
@@ -101,7 +91,6 @@ const PROMO_BANNERS = [
 const FeaturedPostCard = ({ post }) => {
   if (!post) return null;
   const summary = getSummary(post);
-  const stageLabel = FUNNEL_STAGE_LABELS[post.funnelStage];
 
   return (
     <motion.article
@@ -118,7 +107,7 @@ const FeaturedPostCard = ({ post }) => {
         <div className="relative overflow-hidden aspect-video lg:aspect-auto lg:min-h-[360px] bg-brandDark/10">
           {post.mainImage ? (
             <img
-              src={post.mainImage}
+              src={imageUrl(post.mainImage, { width: 760, height: 760 })}
               alt={post.mainImageAlt || post.title}
               className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
               loading="eager"
@@ -128,26 +117,12 @@ const FeaturedPostCard = ({ post }) => {
               RM
             </div>
           )}
-          <span className="absolute top-5 left-5 inline-flex items-center gap-2 px-3 py-1.5 text-[10px] font-bold tracking-[0.18em] uppercase rounded-full bg-white/95 backdrop-blur text-brandPrimary shadow-md">
-            <span className="w-1.5 h-1.5 rounded-full bg-brandPrimary animate-pulse" />
-            Featured Insight
-          </span>
         </div>
 
         {/* CONTENT */}
         <div className="flex flex-col justify-center p-6 md:p-10">
           {/* Pills */}
           <div className="flex flex-wrap items-center gap-2 mb-5">
-            {post.contentType && !isPillarType(post.contentType) && (
-              <span className="px-3 py-1 rounded-full bg-brandPrimary/10 dark:bg-brandAccent/15 text-brandPrimary dark:text-brandAccent text-[11px] font-bold tracking-wider uppercase">
-                {formatTypeLabel(post.contentType)}
-              </span>
-            )}
-            {stageLabel && (
-              <span className="px-3 py-1 rounded-full bg-brandGold/20 text-brandDark dark:text-brandGold text-[11px] font-bold tracking-wider uppercase">
-                {stageLabel}
-              </span>
-            )}
             {Array.isArray(post.categories) && post.categories[0] && (
               <span className="px-3 py-1 rounded-full bg-bgLight dark:bg-bgDark border border-borderLight dark:border-borderDark text-brandNavy/80 dark:text-gray-300 text-[11px] font-bold tracking-wider uppercase">
                 {post.categories[0].title}
@@ -210,7 +185,7 @@ const CompactBlogCard = ({ post }) => {
         <div className="relative w-full overflow-hidden aspect-video bg-brandDark/10">
           {post.mainImage ? (
             <img
-              src={post.mainImage}
+              src={imageUrl(post.mainImage, { width: 640, height: 360 })}
               alt={post.mainImageAlt || post.title}
               loading="lazy"
               className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
@@ -219,11 +194,6 @@ const CompactBlogCard = ({ post }) => {
             <div className="flex items-center justify-center w-full h-full text-4xl font-black text-brandPrimary/15 dark:text-brandAccent/15">
               RM
             </div>
-          )}
-          {post.contentType && !isPillarType(post.contentType) && (
-            <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/95 dark:bg-bgDark/95 backdrop-blur text-brandPrimary dark:text-brandAccent text-[10px] font-bold tracking-wider uppercase shadow">
-              {formatTypeLabel(post.contentType)}
-            </span>
           )}
         </div>
 
@@ -341,7 +311,7 @@ const CategorySection = ({ title, slug, description, posts }) => {
         whileInView="animate"
         viewport={{ once: true, margin: "-60px" }}
       >
-        {posts.slice(0, 3).map((post) => (
+        {posts.map((post) => (
           <CompactBlogCard key={post._id} post={post} />
         ))}
       </motion.div>
@@ -355,34 +325,33 @@ const CategorySection = ({ title, slug, description, posts }) => {
 export default function BlogList() {
   const { posts, loading, error, fetchPosts } = useBlogStore();
   const [search, setSearch] = useState("");
-  const [activeType, setActiveType] = useState("all");
+  const [activeTopic, setActiveTopic] = useState("all");
 
   useEffect(() => {
     fetchPosts();
   }, [fetchPosts]);
 
-  const contentTypeFilters = useMemo(() => {
-    const seen = new Map();
+  // Filter chips are driven by Topic Ownership (e.g. "SOC", "PCI DSS"),
+  // grouping each pillar together with the cluster articles beneath it.
+  const topicFilters = useMemo(() => {
+    const seen = new Set();
     posts.forEach((post) => {
-      const value = post?.contentType;
-      if (!value) return;
-      const key = String(value).trim();
-      if (!key || seen.has(key)) return;
-      seen.set(key, formatTypeLabel(key));
+      const topic = getTopic(post);
+      if (topic) seen.add(topic);
     });
     return [
       { label: "All Topics", value: "all" },
-      ...Array.from(seen, ([value, label]) => ({ label, value })).sort((a, b) =>
-        a.label.localeCompare(b.label)
-      ),
+      ...Array.from(seen)
+        .sort((a, b) => a.localeCompare(b))
+        .map((topic) => ({ label: topic, value: topic })),
     ];
   }, [posts]);
 
   useEffect(() => {
-    if (activeType === "all") return;
-    const stillExists = contentTypeFilters.some((f) => f.value === activeType);
-    if (!stillExists) setActiveType("all");
-  }, [contentTypeFilters, activeType]);
+    if (activeTopic === "all") return;
+    const stillExists = topicFilters.some((f) => f.value === activeTopic);
+    if (!stillExists) setActiveTopic("all");
+  }, [topicFilters, activeTopic]);
 
   const filteredPosts = useMemo(() => {
     const term = search.trim().toLowerCase();
@@ -397,9 +366,9 @@ export default function BlogList() {
       if (slugKey && seenSlugs.has(slugKey)) return false;
       if (titleKey && seenTitles.has(titleKey)) return false;
 
-      const matchesType =
-        activeType === "all" || post.contentType === activeType;
-      if (!matchesType) return false;
+      const matchesTopic =
+        activeTopic === "all" || getTopic(post) === activeTopic;
+      if (!matchesTopic) return false;
 
       if (term) {
         const haystack = [
@@ -421,10 +390,15 @@ export default function BlogList() {
       if (titleKey) seenTitles.add(titleKey);
       return true;
     });
-  }, [posts, search, activeType]);
+  }, [posts, search, activeTopic]);
 
-  // Featured = first filtered post
-  const featuredPost = filteredPosts[0] || null;
+  // When a topic chip is selected or a search is active we show a single flat
+  // grid of every matching post (no featured pick-out, no category grouping),
+  // so results always appear right below the filter.
+  const isFiltering = activeTopic !== "all" || search.trim() !== "";
+
+  // Featured = first filtered post (only used in the default, unfiltered view)
+  const featuredPost = !isFiltering ? filteredPosts[0] || null : null;
   const restOfPosts = featuredPost ? filteredPosts.slice(1) : filteredPosts;
 
   // Group rest of posts by category
@@ -488,7 +462,7 @@ export default function BlogList() {
       </Helmet>
 
       {/* ================= HERO SECTION ================= */}
-      <section className="relative pt-32 pb-12 overflow-hidden isolate">
+      <section className="relative pt-28 pb-8 overflow-hidden isolate md:pt-32">
         <div className="absolute top-0 z-0 w-full h-full overflow-hidden -translate-x-1/2 pointer-events-none left-1/2">
           <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-brandPrimary/10 blur-[120px] rounded-full" />
           <div className="absolute bottom-[20%] -right-[5%] w-[30%] h-[30%] bg-brandAccent/10 blur-[100px] rounded-full" />
@@ -557,14 +531,14 @@ export default function BlogList() {
               <FaSearch className="absolute transition-colors -translate-y-1/2 left-6 top-1/2 text-brandNavy/40 dark:text-gray-500 group-focus-within:text-brandPrimary dark:group-focus-within:text-brandAccent" />
             </div>
 
-            {contentTypeFilters.length > 1 && (
+            {topicFilters.length > 1 && (
               <div className="flex flex-wrap items-center justify-center gap-2.5 mt-6">
-                {contentTypeFilters.map((cat) => (
+                {topicFilters.map((cat) => (
                   <button
                     key={cat.value}
-                    onClick={() => setActiveType(cat.value)}
+                    onClick={() => setActiveTopic(cat.value)}
                     className={`px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 ${
-                      activeType === cat.value
+                      activeTopic === cat.value
                         ? "bg-brandPrimary text-white shadow-md shadow-brandPrimary/30 dark:bg-brandAccent dark:text-brandDark dark:shadow-brandAccent/30"
                         : "bg-surfaceLight dark:bg-surfaceDark border border-borderLight dark:border-borderDark text-brandNavy/75 dark:text-gray-400 hover:border-brandPrimary dark:hover:border-brandAccent hover:text-brandPrimary dark:hover:text-brandAccent"
                     }`}
@@ -599,8 +573,31 @@ export default function BlogList() {
             </div>
           )}
 
+          {/* Filtered view: flat grid of every matching post */}
+          {!loading && !error && isFiltering && filteredPosts.length > 0 && (
+            <section className="py-10">
+              <p className="mb-8 text-sm font-medium text-brandNavy/60 dark:text-gray-400">
+                {filteredPosts.length}{" "}
+                {filteredPosts.length === 1 ? "insight" : "insights"}
+                {activeTopic !== "all" ? ` in ${activeTopic}` : ""}
+              </p>
+              <motion.div
+                className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+                variants={staggerContainer}
+                initial="initial"
+                animate="animate"
+              >
+                {filteredPosts.map((post) => (
+                  <CompactBlogCard key={post._id} post={post} />
+                ))}
+              </motion.div>
+            </section>
+          )}
+
+          {/* Default view: featured + category groups + promos */}
           {!loading &&
             !error &&
+            !isFiltering &&
             renderedSections.map((item) =>
               item.kind === "category" ? (
                 <CategorySection
@@ -615,8 +612,8 @@ export default function BlogList() {
               )
             )}
 
-          {/* More Insights (uncategorized) */}
-          {!loading && !error && uncategorized.length > 0 && (
+          {/* More Insights (uncategorized) — default view only */}
+          {!loading && !error && !isFiltering && uncategorized.length > 0 && (
             <CategorySection
               title="More Insights"
               description="Additional perspectives from across our advisory practice."
@@ -626,38 +623,6 @@ export default function BlogList() {
         </div>
       </section>
 
-      {/* ================= NEWSLETTER CTA ================= */}
-      <section className="relative px-6 py-24 overflow-hidden isolate">
-        <div className="container">
-          <div className="relative max-w-6xl mx-auto rounded-[3rem] overflow-hidden bg-brandDark dark:bg-surfaceDark border border-borderLight dark:border-borderDark p-8 md:p-16 text-center">
-            <div className="absolute inset-0 pointer-events-none opacity-10">
-              <div className="absolute top-0 right-0 w-96 h-96 bg-brandAccent blur-[100px] rounded-full" />
-              <div className="absolute bottom-0 left-0 w-96 h-96 bg-brandPrimary blur-[100px] rounded-full" />
-            </div>
-
-            <div className="relative z-10 max-w-2xl mx-auto">
-              <h2 className="mb-6 text-3xl font-bold text-white md:text-5xl">
-                Stay Ahead of the Curve
-              </h2>
-              <p className="mb-10 text-lg text-white/70">
-                Subscribe to our newsletter for the latest insights in risk
-                management and strategic advisory delivered to your inbox.
-              </p>
-
-              <div className="flex flex-col max-w-md gap-4 mx-auto sm:flex-row">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-6 py-4 text-white transition-all border rounded-full outline-none bg-white/10 border-white/20 placeholder:text-white/40 focus:border-brandAccent"
-                />
-                <button className="px-8 py-4 font-bold transition-all rounded-full shadow-lg bg-brandAccent text-brandDark hover:bg-brandGold hover:shadow-brandAccent/20">
-                  Subscribe
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
