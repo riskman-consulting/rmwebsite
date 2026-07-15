@@ -260,7 +260,7 @@ const StrategicSection = () => {
               viewport={{ once: true }}
               className="text-xl font-medium leading-relaxed md:text-2xl text-brandNavy dark:text-white/90"
             >
-              At <span className="font-semibold text-brandGold">RiskMan Consulting</span>, we deliver customized
+              At <span className="font-semibold text-brandGold">RiskMan</span>, we deliver customized
               solutions that empower leadership to navigate uncertainty and unlock sustainable growth.
             </motion.p>
  

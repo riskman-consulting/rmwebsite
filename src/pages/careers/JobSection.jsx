@@ -8,6 +8,7 @@ import {
   FaChevronLeft,
   FaArrowRight,
   FaCheckCircle,
+  FaFilePdf,
 } from "react-icons/fa";
 import { useCareerStore } from "../../store/career";
 
@@ -27,6 +28,19 @@ export default function CareersPage() {
     Name_Last: "",
     Email: "",
   });
+  const [resumeFile, setResumeFile] = useState(null);
+  const [fileError, setFileError] = useState("");
+
+  // Preview URL for the selected resume so the user can view it before sending.
+  const resumeUrl = useMemo(
+    () => (resumeFile ? URL.createObjectURL(resumeFile) : null),
+    [resumeFile]
+  );
+  useEffect(() => {
+    return () => {
+      if (resumeUrl) URL.revokeObjectURL(resumeUrl);
+    };
+  }, [resumeUrl]);
 
   // Prevent background scroll + reset form on modal close
   useEffect(() => {
@@ -36,6 +50,8 @@ export default function CareersPage() {
       document.body.style.overflow = "unset";
       setOk(false);
       setForm({ Name_First: "", Name_Last: "", Email: "" });
+      setResumeFile(null);
+      setFileError("");
     }
     return () => {
       document.body.style.overflow = "unset";
@@ -57,6 +73,18 @@ export default function CareersPage() {
   const handleChange = (e) =>
     setForm((p) => ({ ...p, [e.target.name]: e.target.value }));
 
+  const handleFileChange = (e) => {
+    const file = e.target.files?.[0] || null;
+    if (file && file.size > 5 * 1024 * 1024) {
+      setFileError("File is too large. Maximum size is 5MB.");
+      e.target.value = "";
+      setResumeFile(null);
+      return;
+    }
+    setFileError("");
+    setResumeFile(file);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -68,9 +96,8 @@ export default function CareersPage() {
       fd.append("Name_Last", form.Name_Last);
       fd.append("Email", form.Email);
 
-      const fileInput = e.target.querySelector('input[type="file"]');
-      if (fileInput && fileInput.files[0]) {
-        fd.append("FileUpload", fileInput.files[0]);
+      if (resumeFile) {
+        fd.append("FileUpload", resumeFile);
       }
 
       fd.append("zf_referrer_name", "");
@@ -289,22 +316,64 @@ export default function CareersPage() {
                           <label className="text-[10px] font-bold uppercase text-zinc-400 tracking-widest">
                             Resume / CV
                           </label>
-                          <label className="flex flex-col items-center justify-center p-8 transition-all border-2 border-dashed cursor-pointer rounded-2xl border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-800/50">
-                            <FaUpload className="mb-3 text-brandPrimary" size={22} />
-                            <span className="text-xs font-bold text-zinc-500">
-                              Click to upload PDF
-                            </span>
-                            <span className="text-[10px] text-zinc-400 mt-1">
-                              Maximum file size 5MB
-                            </span>
-                            <input
-                              type="file"
-                              name="FileUpload"
-                              accept=".pdf"
-                              required
-                              className="hidden"
-                            />
-                          </label>
+
+                          {!resumeFile ? (
+                            <label className="flex flex-col items-center justify-center p-8 transition-all border-2 border-dashed cursor-pointer rounded-2xl border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-800/50">
+                              <FaUpload className="mb-3 text-brandPrimary" size={22} />
+                              <span className="text-xs font-bold text-zinc-500">
+                                Click to upload PDF
+                              </span>
+                              <span className="text-[10px] text-zinc-400 mt-1">
+                                Maximum file size 5MB
+                              </span>
+                              <input
+                                type="file"
+                                name="FileUpload"
+                                accept=".pdf"
+                                required
+                                onChange={handleFileChange}
+                                className="hidden"
+                              />
+                            </label>
+                          ) : (
+                            <div className="flex items-center gap-3 p-4 border rounded-2xl border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-800/50">
+                              <div className="flex items-center justify-center w-10 h-10 rounded-lg shrink-0 bg-brandPrimary/10 text-brandPrimary">
+                                <FaFilePdf size={18} />
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                <p className="text-sm font-semibold truncate text-zinc-700 dark:text-zinc-200">
+                                  {resumeFile.name}
+                                </p>
+                                <p className="text-[10px] text-zinc-400 mt-0.5">
+                                  {(resumeFile.size / 1024 / 1024).toFixed(2)} MB
+                                </p>
+                              </div>
+                              <a
+                                href={resumeUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-xs font-bold shrink-0 text-brandPrimary hover:underline"
+                              >
+                                View
+                              </a>
+                              <label className="text-xs font-bold cursor-pointer shrink-0 text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200">
+                                Change
+                                <input
+                                  type="file"
+                                  name="FileUpload"
+                                  accept=".pdf"
+                                  onChange={handleFileChange}
+                                  className="hidden"
+                                />
+                              </label>
+                            </div>
+                          )}
+
+                          {fileError && (
+                            <p className="text-[11px] font-medium text-red-500 mt-1.5">
+                              {fileError}
+                            </p>
+                          )}
                         </div>
 
                         {/* Submit */}

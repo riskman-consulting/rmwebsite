@@ -88,9 +88,9 @@ const Footer = () => {
           </p>
 
           <div className="flex flex-wrap justify-center md:justify-end gap-6 text-sm text-brandNavy/60 dark:text-brandLight/60">
-            <a href="#" className="hover:text-brandAccent transition">
+            <Link to="/privacy-policy" className="hover:text-brandAccent transition">
               Privacy Policy
-            </a>
+            </Link>
             <a href="#" className="hover:text-brandAccent transition">
               Terms of Use
             </a>
