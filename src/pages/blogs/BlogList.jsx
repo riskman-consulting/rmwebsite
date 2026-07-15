@@ -11,7 +11,7 @@ import {
   FaChartLine,
 } from "react-icons/fa";
 import { useBlogStore } from "../../store/blog";
-import { imageUrl } from "../../utils/sanityImage";
+import { imageUrl, imageDimensions } from "../../utils/sanityImage";
 
 /* =======================
    ANIMATIONS
@@ -92,6 +92,12 @@ const FeaturedPostCard = ({ post }) => {
   if (!post) return null;
   const summary = getSummary(post);
 
+  // Drive the image area's aspect ratio from the image's real dimensions so it
+  // is shown in full (no crop) with no letterbox gaps, and the card height
+  // adjusts to the image instead of being forced to a fixed min-height.
+  const dims = imageDimensions(post.mainImage);
+  const imageRatio = dims ? `${dims.width} / ${dims.height}` : "3 / 2";
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 30 }}
@@ -101,15 +107,18 @@ const FeaturedPostCard = ({ post }) => {
     >
       <Link
         to={`/blog/${post.slug}`}
-        className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] group"
+        className="grid   grid-cols-1 lg:grid-cols-[1.1fr_1fr] group"
       >
         {/* IMAGE */}
-        <div className="relative overflow-hidden aspect-video lg:aspect-auto lg:min-h-[360px] bg-brandDark/10">
+        <div
+          className="relative self-center overflow-hidden bg-brandDark/10"
+          style={{ aspectRatio: imageRatio }}
+        >
           {post.mainImage ? (
             <img
-              src={imageUrl(post.mainImage, { width: 760, height: 760 })}
+              src={imageUrl(post.mainImage, { width: 900 })}
               alt={post.mainImageAlt || post.title}
-              className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+              className="absolute inset-0 object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
               loading="eager"
             />
           ) : (
