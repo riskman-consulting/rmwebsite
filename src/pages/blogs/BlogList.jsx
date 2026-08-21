@@ -1,14 +1,12 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   FaCalendar,
   FaChevronRight,
   FaSearch,
   FaArrowRight,
-  FaRocket,
-  FaChartLine,
 } from "react-icons/fa";
 import { useBlogStore } from "../../store/blog";
 import { imageUrl, imageDimensions } from "../../utils/sanityImage";
@@ -40,6 +38,32 @@ const staggerContainer = {
 const getTopic = (post) =>
   String(post?.topicOwnership || post?.parentTopic || "").trim();
 
+// "ESG & Sustainability" -> "esg-and-sustainability". The trailing "-blogs" that
+// some Sanity category slugs carry is dropped so both spellings compare equal.
+const slugifyTopic = (value) =>
+  String(value || "")
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .replace(/-blogs?$/, "");
+
+// Resolve a ?topic= / ?category= slug to one of the real topic values, matching
+// either the topic itself or a category slug attached to a post of that topic.
+const resolveTopicFromSlug = (slug, allPosts) => {
+  const target = slugifyTopic(slug);
+  if (!target) return "";
+  for (const post of allPosts) {
+    const topic = getTopic(post);
+    if (!topic) continue;
+    if (slugifyTopic(topic) === target) return topic;
+    const cats = Array.isArray(post.categories) ? post.categories : [];
+    if (cats.some((c) => slugifyTopic(c?.slug || c?.title) === target))
+      return topic;
+  }
+  return "";
+};
+
 const formatDate = (iso) => {
   if (!iso) return "";
   try {
@@ -59,31 +83,6 @@ const getSummary = (post) =>
   post?.tldr ||
   (Array.isArray(post?.takeaways) ? post.takeaways[0] : "") ||
   "";
-
-/* =======================
-   STATIC PROMO BANNERS
-   (Editorial promo cards interleaved between category sections)
-======================= */
-const PROMO_BANNERS = [
-  {
-    eyebrow: "Featured Playbook",
-    title: "An Introduction to Digital Risk Strategy",
-    description:
-      "A practical guide to building resilient digital operations — from governance to incident response.",
-    cta: { label: "Read the Guide", to: "/services" },
-    accent: "primary",
-    Icon: FaRocket,
-  },
-  {
-    eyebrow: "2026 Outlook",
-    title: "The State of Inbound Risk Advisory in 2026",
-    description:
-      "Benchmarks, signals, and the shifts shaping how leading firms manage emerging risk this year.",
-    cta: { label: "Explore Insights", to: "/services" },
-    accent: "navy",
-    Icon: FaChartLine,
-  },
-];
 
 /* =======================
    FEATURED CARD
@@ -235,106 +234,14 @@ const CompactBlogCard = ({ post }) => {
 };
 
 /* =======================
-   PROMO BANNER
-======================= */
-const PromoBanner = ({ banner }) => {
-  const { eyebrow, title, description, cta, Icon, accent } = banner;
-  const bgClass =
-    accent === "navy"
-      ? "from-brandDark via-brandNavy to-brandDark"
-      : "from-brandPrimary via-brandPrimary to-brandAccent";
-
-  return (
-    <motion.aside
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.6 }}
-      className={`relative overflow-hidden rounded-3xl bg-gradient-to-r ${bgClass} text-white p-8 md:p-12 my-16 shadow-xl`}
-    >
-      {/* decorative blobs */}
-      <div className="absolute pointer-events-none -top-1/2 -right-1/4 w-[40%] aspect-square rounded-full bg-white/10 blur-3xl" />
-      <div className="absolute pointer-events-none -bottom-1/2 -left-1/4 w-[40%] aspect-square rounded-full bg-white/5 blur-3xl" />
-
-      <div className="relative grid items-center gap-8 md:grid-cols-[1.4fr_1fr]">
-        <div>
-          <span className="inline-flex items-center px-3 py-1 mb-4 text-[10px] font-bold tracking-[0.2em] uppercase rounded-full bg-white/15 backdrop-blur">
-            {eyebrow}
-          </span>
-          <h3 className="mb-3 text-2xl font-bold leading-tight md:text-3xl font-heading">
-            {title}
-          </h3>
-          <p className="mb-6 text-sm leading-relaxed md:text-base text-white/85 max-w-prose">
-            {description}
-          </p>
-          <Link
-            to={cta.to}
-            className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold transition-all rounded-full bg-white text-brandDark hover:bg-brandGold hover:scale-[1.02] shadow-lg"
-          >
-            {cta.label}
-            <FaArrowRight className="text-xs" />
-          </Link>
-        </div>
-
-        <div className="justify-self-end hidden md:flex items-center justify-center w-44 h-44 rounded-2xl bg-white/10 backdrop-blur-sm shadow-inner">
-          <Icon className="text-6xl text-white/85" />
-        </div>
-      </div>
-    </motion.aside>
-  );
-};
-
-/* =======================
-   CATEGORY SECTION
-======================= */
-const CategorySection = ({ title, slug, description, posts }) => {
-  if (!posts || posts.length === 0) return null;
-  return (
-    <section className="py-12">
-      <div className="flex items-end justify-between gap-6 mb-8">
-        <div>
-          <h2 className="text-2xl font-bold md:text-3xl font-heading text-brandDark dark:text-white">
-            {title}
-          </h2>
-          {description && (
-            <p className="mt-1 text-sm text-brandNavy/65 dark:text-gray-400">
-              {description}
-            </p>
-          )}
-        </div>
-        {slug && (
-          <Link
-            to={`/blogs?category=${slug}`}
-            className="inline-flex items-center gap-1.5 text-sm font-bold text-brandPrimary dark:text-brandAccent hover:opacity-80 transition-opacity shrink-0"
-          >
-            See All
-            <FaArrowRight className="text-[10px]" />
-          </Link>
-        )}
-      </div>
-
-      <motion.div
-        className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
-        variants={staggerContainer}
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true, margin: "-60px" }}
-      >
-        {posts.map((post) => (
-          <CompactBlogCard key={post._id} post={post} />
-        ))}
-      </motion.div>
-    </section>
-  );
-};
-
-/* =======================
    MAIN COMPONENT
 ======================= */
 export default function BlogList() {
   const { posts, loading, error, fetchPosts } = useBlogStore();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState("");
   const [activeTopic, setActiveTopic] = useState("all");
+  const urlTopicSlug = searchParams.get("topic") || searchParams.get("category") || "";
 
   useEffect(() => {
     fetchPosts();
@@ -361,6 +268,22 @@ export default function BlogList() {
     const stillExists = topicFilters.some((f) => f.value === activeTopic);
     if (!stillExists) setActiveTopic("all");
   }, [topicFilters, activeTopic]);
+
+  // Landing on /blogs?topic=iso (or the legacy ?category=<slug> links used by
+  // the post pages) preselects that chip instead of silently showing everything.
+  useEffect(() => {
+    if (!urlTopicSlug || posts.length === 0) return;
+    setActiveTopic(resolveTopicFromSlug(urlTopicSlug, posts) || "all");
+  }, [urlTopicSlug, posts]);
+
+  const handleTopicChange = (value) => {
+    setActiveTopic(value);
+    const next = new URLSearchParams(searchParams);
+    next.delete("category");
+    if (value === "all") next.delete("topic");
+    else next.set("topic", slugifyTopic(value));
+    setSearchParams(next, { replace: true });
+  };
 
   const filteredPosts = useMemo(() => {
     const term = search.trim().toLowerCase();
@@ -401,63 +324,18 @@ export default function BlogList() {
     });
   }, [posts, search, activeTopic]);
 
-  // When a topic chip is selected or a search is active we show a single flat
-  // grid of every matching post (no featured pick-out, no category grouping),
-  // so results always appear right below the filter.
+  // With a topic chip or a search active the featured hero is skipped so the
+  // matching cards start right below the filter. Posts are never grouped into
+  // topic sections — the grid is flat in every view.
   const isFiltering = activeTopic !== "all" || search.trim() !== "";
 
   // Featured = first filtered post (only used in the default, unfiltered view)
   const featuredPost = !isFiltering ? filteredPosts[0] || null : null;
-  const restOfPosts = featuredPost ? filteredPosts.slice(1) : filteredPosts;
 
-  // Group rest of posts by category
-  const { categoryGroups, uncategorized } = useMemo(() => {
-    const groups = new Map(); // slug -> { title, slug, description, posts }
-    const uncategorizedPosts = [];
-
-    restOfPosts.forEach((post) => {
-      const cats = Array.isArray(post.categories) ? post.categories : [];
-      if (cats.length === 0) {
-        uncategorizedPosts.push(post);
-        return;
-      }
-      cats.forEach((cat) => {
-        if (!cat?.title) return;
-        const key = cat.slug || cat.title;
-        if (!groups.has(key)) {
-          groups.set(key, {
-            title: cat.title,
-            slug: cat.slug,
-            description: cat.description,
-            posts: [],
-          });
-        }
-        groups.get(key).posts.push(post);
-      });
-    });
-
-    return {
-      categoryGroups: Array.from(groups.values()),
-      uncategorized: uncategorizedPosts,
-    };
-  }, [restOfPosts]);
-
-  // Compose sections: interleave promo banners between category groups
-  const renderedSections = useMemo(() => {
-    const items = [];
-    categoryGroups.forEach((group, idx) => {
-      items.push({ kind: "category", data: group, key: `cat-${idx}` });
-      const promoIndex = Math.floor(idx / 3);
-      if ((idx + 1) % 3 === 0 && PROMO_BANNERS[promoIndex]) {
-        items.push({
-          kind: "promo",
-          data: PROMO_BANNERS[promoIndex],
-          key: `promo-${idx}`,
-        });
-      }
-    });
-    return items;
-  }, [categoryGroups]);
+  // Both views render the same flat card grid. In the default (unfiltered)
+  // view the first post is lifted out into the featured hero above, so it is
+  // dropped from the grid to avoid showing it twice.
+  const gridPosts = featuredPost ? filteredPosts.slice(1) : filteredPosts;
 
   return (
     <div className="min-h-screen overflow-x-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-white">
@@ -545,7 +423,7 @@ export default function BlogList() {
                 {topicFilters.map((cat) => (
                   <button
                     key={cat.value}
-                    onClick={() => setActiveTopic(cat.value)}
+                    onClick={() => handleTopicChange(cat.value)}
                     className={`px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 ${
                       activeTopic === cat.value
                         ? "bg-brandPrimary text-white shadow-md shadow-brandPrimary/30 dark:bg-brandAccent dark:text-brandDark dark:shadow-brandAccent/30"
@@ -561,7 +439,7 @@ export default function BlogList() {
         </div>
       </section>
 
-      {/* ================= CATEGORY GROUPS + PROMO BANNERS ================= */}
+      {/* ================= INSIGHTS GRID ================= */}
       <section className="relative pb-10 transition-colors duration-300 bg-bgLight dark:bg-bgDark isolate">
         <div className="container">
           {loading && (
@@ -582,12 +460,12 @@ export default function BlogList() {
             </div>
           )}
 
-          {/* Filtered view: flat grid of every matching post */}
-          {!loading && !error && isFiltering && filteredPosts.length > 0 && (
+          {/* Card grid — same layout for "All Topics" and for a filtered topic */}
+          {!loading && !error && gridPosts.length > 0 && (
             <section className="py-10">
               <p className="mb-8 text-sm font-medium text-brandNavy/60 dark:text-gray-400">
-                {filteredPosts.length}{" "}
-                {filteredPosts.length === 1 ? "insight" : "insights"}
+                {gridPosts.length}{" "}
+                {gridPosts.length === 1 ? "insight" : "insights"}
                 {activeTopic !== "all" ? ` in ${activeTopic}` : ""}
               </p>
               <motion.div
@@ -596,38 +474,11 @@ export default function BlogList() {
                 initial="initial"
                 animate="animate"
               >
-                {filteredPosts.map((post) => (
+                {gridPosts.map((post) => (
                   <CompactBlogCard key={post._id} post={post} />
                 ))}
               </motion.div>
             </section>
-          )}
-
-          {/* Default view: featured + category groups + promos */}
-          {!loading &&
-            !error &&
-            !isFiltering &&
-            renderedSections.map((item) =>
-              item.kind === "category" ? (
-                <CategorySection
-                  key={item.key}
-                  title={item.data.title}
-                  slug={item.data.slug}
-                  description={item.data.description}
-                  posts={item.data.posts}
-                />
-              ) : (
-                <PromoBanner key={item.key} banner={item.data} />
-              )
-            )}
-
-          {/* More Insights (uncategorized) — default view only */}
-          {!loading && !error && !isFiltering && uncategorized.length > 0 && (
-            <CategorySection
-              title="More Insights"
-              description="Additional perspectives from across our advisory practice."
-              posts={uncategorized}
-            />
           )}
         </div>
       </section>
