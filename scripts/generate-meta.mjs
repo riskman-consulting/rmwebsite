@@ -505,6 +505,25 @@ async function main() {
     }
   }
 
+  // 4) 404 page — Vercel serves dist/404.html when no other route matches.
+  //    Without it a stray URL renders Vercel's raw NOT_FOUND screen instead
+  //    of the app's own Not Found route.
+  const notFoundHead = `${buildBaseHead({
+    title: "Page Not Found | RiskMan Consulting",
+    description:
+      "The page you are looking for does not exist or has been moved. Explore RiskMan Consulting's risk advisory, compliance and cybersecurity services.",
+    canonical: `${SITE_URL}/404`,
+    image: DEFAULT_OG_IMAGE,
+    ogType: "website",
+  })}
+    <meta name="robots" content="noindex, follow" />`;
+  await fs.writeFile(
+    path.join(DIST, "404.html"),
+    injectMeta(template, notFoundHead),
+    "utf8"
+  );
+  written++;
+
   console.log(
     `[generate-meta] Done. Wrote ${written} HTML files${
       skipped > 0 ? `, skipped ${skipped} routes (no Helmet meta)` : ""
