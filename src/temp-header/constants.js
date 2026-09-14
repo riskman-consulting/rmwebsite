@@ -67,6 +67,18 @@ export const NAVIGATION_DATA = {
                     ]
                 },
                 {
+                    "label": "Financial Accounting and Advisory Services (FAAS)",
+                    "path": "/services/faas",
+                    "submenus": [
+                        { "id": "faas-managed-services", "title": "Managed Services", "path": "/services/faas/managed-services" },
+                        { "id": "faas-strategic-leadership", "title": "Strategic Leadership", "path": "/services/faas/strategic-leadership" },
+                        { "id": "faas-financial-advisory", "title": "Financial Advisory", "path": "/services/faas/financial-advisory" },
+                        { "id": "faas-transaction-audit-readiness", "title": "Transaction & Audit Readiness", "path": "/services/faas/transaction-audit-readiness" },
+                        { "id": "faas-costing-plant-finance", "title": "Costing & Plant Finance", "path": "/services/faas/costing-plant-finance" },
+                        { "id": "faas-compliance-assurance", "title": "Compliance & Assurance", "path": "/services/faas/compliance-assurance" }
+                    ]
+                },
+                {
                     "label": "AI & Technology",
                     "path": "/services/ai-technology",
                     "submenus": [

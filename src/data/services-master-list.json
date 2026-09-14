@@ -5,82 +5,79 @@
     "headerImage": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/risk-advisory.webp ",
     "summary": "Identify, assess, and mitigate business risks, ensuring compliance and resilience."
   },
-
-   {
+  {
     "id": "digital-transformation",
     "title": " Digital Transformation",
     "headerImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9-yEUd2Agi-5XSBoGIaoch--Qt77iF2kabQ&s",
     "summary": "We help businesses modernize IT systems, enhance cybersecurity, and improve operational efficiency."
   },
-
-   {
+  {
     "id": "esg",
     "title": " Sustainability & ESG",
     "headerImage": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/green-world.webp",
     "summary": "Advisory services to achieve environmental compliance and corporate responsibility goals."
   },
-   {
+  {
     "id": "financial-advisory",
     "title": "Financial Advisory",
     "headerImage": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/team-work.webp",
     "summary": "Expert financial planning and investment strategies to secure your business’s financial future."
   },
-   {
+  {
+    "id": "faas",
+    "title": "Financial Accounting and Advisory Services (FAAS)",
+    "headerImage": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/team-work.webp",
+    "summary": "Managed finance operations, virtual CFO and controller services, transaction and audit readiness, costing and compliance support."
+  },
+  {
     "id": "ai-technology",
     "title": "AI & Technology",
     "headerImage": "https://preemptive.in/wp-content/uploads/2025/07/cyber-security-protection-firewall-interface-concept-1024x683.webp",
     "summary": "Robust cybersecurity services to protect your business with advanced data security and threat mitigation."
   },
-    {
+  {
     "id": "forensics-investigation",
     "title": "Forensic and Investigation",
     "headerImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHZFihNpIoICZIraRMAeKd_E8drNdOuAAnuA&s",
     "summary": "Specialized forensic investigation services for fraud detection and compliance audits."
   },
-
-   {
+  {
     "id": "soc-services",
     "title": "SOC Compliance",
     "headerImage": "https://swimlane.com/wp-content/uploads/YOURGUIDETOSOC-1.png",
     "summary": "Trusted SOC services to ensure cybersecurity compliance and deliver reliable SOC reporting."
   },
-
   {
     "id": "iso-certifications",
     "title": "ISO & TISAX Readiness",
     "headerImage": "https://devopsstaging.riskman.in/wp-content/uploads/2025/06/happy-client.webp",
     "summary": "Achieve quality management and compliance with international ISO standards."
   },
-
-   {
+  {
     "id": "pci-dss-compliance",
     "title": "PCI DSS",
     "headerImage": "https://static.vecteezy.com/system/resources/previews/005/843/784/non_2x/abstract-technology-ui-futuristic-concept-hud-interface-hologram-elements-of-digital-data-chart-communication-computing-and-circle-percent-vitality-innovation-on-hi-tech-future-design-background-vector.jpg",
     "summary": "Solutions to secure payment processing and protect cardholder data effectively."
   },
-
-   {
+  {
     "id": "itgc-itac",
     "title": "ITGC and ITAC",
     "headerImage": "https://www.safepaas.com/wp-content/uploads/2025/10/image.webp",
     "summary": "Strengthen IT controls, ensuring compliance and audit readiness for your systems."
   },
-
-   {
+  {
     "id": "bcp-dr",
     "title": "BCP DR",
     "headerImage": "https://belmohn.com/wp-content/uploads/2025/02/5642.jpg",
     "summary": "Business continuity planning (BCP) and disaster recovery (DR) services for operational resilience."
   },
-
-   {
+  {
     "id": "cybersecurity",
-    "title":"Cybers Security",
+    "title": "Cybers Security",
     "headerImage": "https://cdn.elearningindustry.com/wp-content/uploads/2016/05/4-benefits-managed-learning-services-outsourcing-training-success.jpeg",
     "summary": "Solutions to optimize processes and enhance workforce skills with BPO expertise."
   },
-
-   {
+  {
     "id": "data-privacy",
     "title": "Data Privacy & Protection",
     "headerImage": "https://static.vecteezy.com/system/resources/thumbnails/005/419/403/small/data-protection-personal-data-security-concept-on-virtual-screen-protected-folder-icon-cyber-security-internet-privacy-and-safety-wireframe-hand-touching-digital-interface-illustration-vector.jpg",
@@ -92,5 +89,4 @@
     "headerImage": "https://media.istockphoto.com/id/698336830/photo/risk-management-concept-on.jpg?s=612x612&w=0&k=20&c=sPTavxuRXDQj5a7AvxA9Jbj8L3x1zVjGgpH0zkFisBQ=",
     "summary": "Solutions to mitigate cybersecurity risks and ensure IT compliance and security."
   }
- 
 ]

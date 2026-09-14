@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { getCompanyYearsWord } from "../../utils/companyAge";
 
 /* =====================
    Animation
@@ -170,7 +171,7 @@ export default function FinancialAdvisory() {
         </h2>
 
         <p className="max-w-5xl mt-6 opacity-85">
-          Over the last five years, RiskMan has successfully completed multiple
+          Over the last {getCompanyYearsWord()} years, RiskMan has successfully completed multiple
           financial advisory assignments encompassing Credit Rating Advisory,
           Business Valuation, Project Feasibility Report Compilation and Debt
           Structuring across food & beverage, power, construction, steel forging,

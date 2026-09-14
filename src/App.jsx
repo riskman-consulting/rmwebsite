@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom'
+import { useState, useEffect, lazy, Suspense } from 'react'
 import Header from './components/layout/Header'
 
 import Home from './pages/home/Home'
@@ -23,6 +23,8 @@ import PoliciesPage from "./pages/policies";
 
 import { Toaster } from 'react-hot-toast'
 import ScrollToTop from './components/common/ScrollToTop'
+// Studio is a large bundle - keep it out of the main site chunk.
+const StudioPage = lazy(() => import('./pages/studio/StudioPage'))
 import ThemeToggle from './components/common/ThemeToggle'
 // import Events from './temp/MainEvent'
 import Events from './pages/events/Events'
@@ -97,6 +99,14 @@ import OtherRegulatoryCompliance from './pages/data-privacy/others'
 
 import SOXICOFRPage from "./pages/sox-itcofr"
 import AiTechnology from './pages/AITechnology/AiTechnology'
+import FAASLayout from './pages/faas/Layout'
+import FAASPage from './pages/faas/FAASPage'
+import FAASManagedServices from './pages/faas/managed-services'
+import FAASStrategicLeadership from './pages/faas/strategic-leadership'
+import FAASFinancialAdvisory from './pages/faas/financial-advisory'
+import FAASTransactionAuditReadiness from './pages/faas/transaction-audit-readiness'
+import FAASCostingPlantFinance from './pages/faas/costing-plant-finance'
+import FAASComplianceAssurance from './pages/faas/compliance-assurance'
 
 
 
@@ -131,25 +141,20 @@ import NotFound from './pages/NotFound'
 
 
 
-function App() {
-  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
-  const {heroSlides,fetchHomePage} = useHomePage()
+function SiteShell() {
+  const { pathname } = useLocation()
 
-  // Apply theme to document
-  useEffect(() => {
-    
-    document.documentElement.classList.toggle("dark", theme === "dark");
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
-
-  
+  // Sanity Studio owns the whole viewport under /cms - no site header/footer.
+  if (pathname === '/cms' || pathname.startsWith('/cms/')) {
+    return (
+      <Suspense fallback={<div style={{ padding: '2rem', fontFamily: 'system-ui' }}>Loading Studio…</div>}>
+        <StudioPage />
+      </Suspense>
+    )
+  }
 
   return (
-    <Router>
-      <ScrollToTop />
-      {/* <ThemeToggle theme={theme} setTheme={setTheme} /> */}
-      {/* <Header theme={theme} setTheme={setTheme} /> */}
+    <>
       <HeaderTemp />
       <Toaster position="top-right" />
 
@@ -218,6 +223,17 @@ function App() {
           </Route>
 
           <Route path ="/services/ai-technology" element={<AiTechnology/>} />
+
+          {/* Financial Accounting and Advisory Services (FAAS) Nested Routes */}
+          <Route path="/services/faas" element={<FAASLayout />}>
+            <Route path="" element={<FAASPage />} />
+            <Route path="managed-services" element={<FAASManagedServices />} />
+            <Route path="strategic-leadership" element={<FAASStrategicLeadership />} />
+            <Route path="financial-advisory" element={<FAASFinancialAdvisory />} />
+            <Route path="transaction-audit-readiness" element={<FAASTransactionAuditReadiness />} />
+            <Route path="costing-plant-finance" element={<FAASCostingPlantFinance />} />
+            <Route path="compliance-assurance" element={<FAASComplianceAssurance />} />
+          </Route>
 
           // ESG Nested Routes
           <Route path='/services/esg' element={<ESGLayout />}>
@@ -295,6 +311,28 @@ function App() {
       </main>
 
       <Footer />
+    </>
+  )
+}
+
+function App() {
+  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
+  const {heroSlides,fetchHomePage} = useHomePage()
+
+  // Apply theme to document
+  useEffect(() => {
+    
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+
+  
+
+  return (
+    <Router>
+      <ScrollToTop />
+      <SiteShell />
     </Router>
   )
 }
