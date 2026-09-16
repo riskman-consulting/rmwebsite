@@ -1,11 +1,16 @@
 import { create } from "zustand";
 import { sanityClient } from "../api/sanity";
+import { isJobOpen } from "../utils/jobSlug";
 
 
 export const useCareerStore = create((set) => ({
   testimonials: [],
   jobOpenings: [],
+  // Unfiltered list — a shared link to a closed role must still resolve so the
+  // page can say "applications closed" instead of 404-ing.
+  allJobOpenings: [],
   loading: false,
+  loaded: false,
   error: null,
 
   fetchCareerPage: async () => {
@@ -25,6 +30,7 @@ export const useCareerStore = create((set) => ({
           jobOpenings[]{
             _key,
             title,
+            "slug": slug.current,
             description,
             location,
             employmentType,
@@ -36,23 +42,22 @@ export const useCareerStore = create((set) => ({
 
       const data = await sanityClient.fetch(query);
 
-      // ✅ Filter expired jobs
-      const today = new Date();
-      const activeJobs =
-        data?.jobOpenings?.filter((job) =>
-          job.lastDate ? new Date(job.lastDate) >= today : true
-        ) || [];
+      const allJobs = data?.jobOpenings || [];
 
       set({
         testimonials: data?.testimonials || [],
-        jobOpenings: activeJobs,
+        // ✅ Filter expired jobs
+        jobOpenings: allJobs.filter(isJobOpen),
+        allJobOpenings: allJobs,
         loading: false,
+        loaded: true,
       });
 
     } catch (error) {
       set({
         error: error.message || "Failed to fetch career page",
         loading: false,
+        loaded: true,
       });
     }
   },

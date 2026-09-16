@@ -1,18 +1,18 @@
 import React, { useState, useMemo, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FaMapMarkerAlt,
   FaTimes,
-  FaUpload,
   FaSearch,
   FaChevronLeft,
   FaArrowRight,
-  FaCheckCircle,
-  FaFilePdf,
+  FaExternalLinkAlt,
 } from "react-icons/fa";
 import { useCareerStore } from "../../store/career";
-
-const ZOHO_URL = import.meta.env.VITE_ZOHO_CAREER_APPLICATION;
+import ApplicationForm from "./ApplicationForm";
+import CopyLinkButton from "./CopyLinkButton";
+import { getJobPath } from "../../utils/jobSlug";
 
 export default function CareersPage() {
   const [selectedJob, setSelectedJob] = useState(null);
@@ -20,39 +20,9 @@ export default function CareersPage() {
 
   const { jobOpenings, fetchCareerPage } = useCareerStore();
 
-  // Form state
-  const [loading, setLoading] = useState(false);
-  const [ok, setOk] = useState(false);
-  const [form, setForm] = useState({
-    Name_First: "",
-    Name_Last: "",
-    Email: "",
-  });
-  const [resumeFile, setResumeFile] = useState(null);
-  const [fileError, setFileError] = useState("");
-
-  // Preview URL for the selected resume so the user can view it before sending.
-  const resumeUrl = useMemo(
-    () => (resumeFile ? URL.createObjectURL(resumeFile) : null),
-    [resumeFile]
-  );
+  // Prevent background scroll while the modal is open
   useEffect(() => {
-    return () => {
-      if (resumeUrl) URL.revokeObjectURL(resumeUrl);
-    };
-  }, [resumeUrl]);
-
-  // Prevent background scroll + reset form on modal close
-  useEffect(() => {
-    if (selectedJob) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-      setOk(false);
-      setForm({ Name_First: "", Name_Last: "", Email: "" });
-      setResumeFile(null);
-      setFileError("");
-    }
+    document.body.style.overflow = selectedJob ? "hidden" : "unset";
     return () => {
       document.body.style.overflow = "unset";
     };
@@ -69,54 +39,6 @@ export default function CareersPage() {
       job.title?.toLowerCase().includes(searchQuery.toLowerCase())
     );
   }, [searchQuery, jobOpenings]);
-
-  const handleChange = (e) =>
-    setForm((p) => ({ ...p, [e.target.name]: e.target.value }));
-
-  const handleFileChange = (e) => {
-    const file = e.target.files?.[0] || null;
-    if (file && file.size > 5 * 1024 * 1024) {
-      setFileError("File is too large. Maximum size is 5MB.");
-      e.target.value = "";
-      setResumeFile(null);
-      return;
-    }
-    setFileError("");
-    setResumeFile(file);
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setOk(false);
-
-    try {
-      const fd = new FormData();
-      fd.append("Name_First", form.Name_First);
-      fd.append("Name_Last", form.Name_Last);
-      fd.append("Email", form.Email);
-
-      if (resumeFile) {
-        fd.append("FileUpload", resumeFile);
-      }
-
-      fd.append("zf_referrer_name", "");
-      fd.append("zf_redirect_url", "");
-      fd.append("zc_gad", "");
-
-      await fetch(ZOHO_URL, {
-        method: "POST",
-        body: fd,
-        mode: "no-cors",
-      });
-
-      setOk(true);
-    } catch (err) {
-      console.error("Zoho submit failed", err);
-    } finally {
-      setLoading(false);
-    }
-  };
 
   return (
     <div className="min-h-screen font-sans bg-surfaceLight dark:bg-surfaceDark text-zinc-900 dark:text-zinc-100">
@@ -164,10 +86,23 @@ export default function CareersPage() {
                   <span className="text-[10px] font-bold px-2 py-1 bg-brandPrimary/10 text-brandPrimary rounded uppercase">
                     {job.employmentType?.replace("_", " ")}
                   </span>
+
+                  {/* A real anchor, so the role can be opened in a new tab or
+                      its URL copied straight from the card. */}
+                  <Link
+                    to={getJobPath(job)}
+                    onClick={(e) => e.stopPropagation()}
+                    title="Open this job in its own page"
+                    className="p-2 -m-2 transition-colors text-zinc-300 dark:text-zinc-600 hover:text-brandPrimary"
+                  >
+                    <FaExternalLinkAlt size={11} />
+                  </Link>
                 </div>
 
                 <h3 className="mb-2 text-xl font-bold transition-colors group-hover:text-brandPrimary">
-                  {job.title}
+                  <Link to={getJobPath(job)} onClick={(e) => e.stopPropagation()}>
+                    {job.title}
+                  </Link>
                 </h3>
 
                 <p className="mb-6 text-sm font-medium text-zinc-500">
@@ -245,171 +180,36 @@ export default function CareersPage() {
                   </span>
                 </div>
 
+                {/* SHARE / STANDALONE PAGE */}
+                <div className="flex flex-wrap items-center gap-3 mb-8">
+                  <Link
+                    to={getJobPath(selectedJob)}
+                    className="inline-flex items-center gap-2 px-4 py-2 text-[11px] font-bold tracking-widest uppercase transition-all border rounded-full border-zinc-200 dark:border-zinc-700 text-zinc-500 hover:text-brandPrimary hover:border-brandPrimary"
+                  >
+                    <FaExternalLinkAlt size={10} /> Open full page
+                  </Link>
+                  <CopyLinkButton path={getJobPath(selectedJob)} />
+                </div>
+
                 <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-300 whitespace-pre-line">
                   {selectedJob.description}
                 </p>
               </div>
 
               {/* RIGHT: APPLICATION FORM / SUCCESS UI */}
-              <div className="flex-1 p-8 overflow-y-auto bg-white md:p-12 dark:bg-zinc-900 flex flex-col justify-center">
-                <AnimatePresence mode="wait">
-                  {!ok ? (
-                    <motion.div
-                      key="form"
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
+              <div className="flex flex-col justify-center flex-1 p-8 overflow-y-auto bg-white md:p-12 dark:bg-zinc-900">
+                <ApplicationForm
+                  key={selectedJob._key || selectedJob.title}
+                  jobTitle={selectedJob.title}
+                  renderSuccessAction={() => (
+                    <button
+                      onClick={() => setSelectedJob(null)}
+                      className="px-10 py-3 font-bold text-white transition-all bg-zinc-900 dark:bg-white dark:text-zinc-900 rounded-xl hover:opacity-90"
                     >
-                      <h3 className="mb-2 text-xl font-bold">Apply Now</h3>
-                      <p className="mb-8 text-sm text-zinc-500">
-                        Complete the form below to submit your interest.
-                      </p>
-
-                      <form onSubmit={handleSubmit} className="space-y-5">
-                        {/* First & Last Name */}
-                        <div className="grid grid-cols-2 gap-4">
-                          <div className="space-y-1.5">
-                            <label className="text-[10px] font-bold uppercase text-zinc-400 tracking-widest">
-                              First Name
-                            </label>
-                            <input
-                              type="text"
-                              name="Name_First"
-                              value={form.Name_First}
-                              onChange={handleChange}
-                              required
-                              className="w-full px-4 py-3.5 rounded-xl bg-zinc-100 dark:bg-zinc-800 border-none outline-none focus:ring-2 ring-brandPrimary/30 text-sm"
-                            />
-                          </div>
-                          <div className="space-y-1.5">
-                            <label className="text-[10px] font-bold uppercase text-zinc-400 tracking-widest">
-                              Last Name
-                            </label>
-                            <input
-                              type="text"
-                              name="Name_Last"
-                              value={form.Name_Last}
-                              onChange={handleChange}
-                              required
-                              className="w-full px-4 py-3.5 rounded-xl bg-zinc-100 dark:bg-zinc-800 border-none outline-none focus:ring-2 ring-brandPrimary/30 text-sm"
-                            />
-                          </div>
-                        </div>
-
-                        {/* Email */}
-                        <div className="space-y-1.5">
-                          <label className="text-[10px] font-bold uppercase text-zinc-400 tracking-widest">
-                            Email Address
-                          </label>
-                          <input
-                            type="email"
-                            name="Email"
-                            value={form.Email}
-                            onChange={handleChange}
-                            required
-                            className="w-full px-4 py-3.5 rounded-xl bg-zinc-100 dark:bg-zinc-800 border-none outline-none focus:ring-2 ring-brandPrimary/30 text-sm"
-                          />
-                        </div>
-
-                        {/* Resume Upload */}
-                        <div className="space-y-1.5">
-                          <label className="text-[10px] font-bold uppercase text-zinc-400 tracking-widest">
-                            Resume / CV
-                          </label>
-
-                          {!resumeFile ? (
-                            <label className="flex flex-col items-center justify-center p-8 transition-all border-2 border-dashed cursor-pointer rounded-2xl border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-800/50">
-                              <FaUpload className="mb-3 text-brandPrimary" size={22} />
-                              <span className="text-xs font-bold text-zinc-500">
-                                Click to upload PDF
-                              </span>
-                              <span className="text-[10px] text-zinc-400 mt-1">
-                                Maximum file size 5MB
-                              </span>
-                              <input
-                                type="file"
-                                name="FileUpload"
-                                accept=".pdf"
-                                required
-                                onChange={handleFileChange}
-                                className="hidden"
-                              />
-                            </label>
-                          ) : (
-                            <div className="flex items-center gap-3 p-4 border rounded-2xl border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-800/50">
-                              <div className="flex items-center justify-center w-10 h-10 rounded-lg shrink-0 bg-brandPrimary/10 text-brandPrimary">
-                                <FaFilePdf size={18} />
-                              </div>
-                              <div className="flex-1 min-w-0">
-                                <p className="text-sm font-semibold truncate text-zinc-700 dark:text-zinc-200">
-                                  {resumeFile.name}
-                                </p>
-                                <p className="text-[10px] text-zinc-400 mt-0.5">
-                                  {(resumeFile.size / 1024 / 1024).toFixed(2)} MB
-                                </p>
-                              </div>
-                              <a
-                                href={resumeUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-xs font-bold shrink-0 text-brandPrimary hover:underline"
-                              >
-                                View
-                              </a>
-                              <label className="text-xs font-bold cursor-pointer shrink-0 text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200">
-                                Change
-                                <input
-                                  type="file"
-                                  name="FileUpload"
-                                  accept=".pdf"
-                                  onChange={handleFileChange}
-                                  className="hidden"
-                                />
-                              </label>
-                            </div>
-                          )}
-
-                          {fileError && (
-                            <p className="text-[11px] font-medium text-red-500 mt-1.5">
-                              {fileError}
-                            </p>
-                          )}
-                        </div>
-
-                        {/* Submit */}
-                        <button
-                          disabled={loading}
-                          className="w-full py-4 bg-brandPrimary text-white rounded-2xl font-bold shadow-xl shadow-brandPrimary/20 hover:opacity-90 active:scale-[0.98] transition-all disabled:opacity-50 mt-4"
-                        >
-                          {loading ? "Processing..." : "Submit Application"}
-                        </button>
-                      </form>
-                    </motion.div>
-                  ) : (
-                    <motion.div
-                      key="success"
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      className="text-center"
-                    >
-                      <div className="flex justify-center mb-6">
-                        <div className="w-20 h-20 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
-                          <FaCheckCircle className="text-green-500 text-4xl" />
-                        </div>
-                      </div>
-                      <h3 className="text-2xl font-bold mb-4">Application Received!</h3>
-                      <p className="text-zinc-500 text-sm leading-relaxed mb-8 px-4">
-                        Thanks for your interest in our Organization. Our recruitment team will review your profile and get back to you shortly.
-                      </p>
-                      <button
-                        onClick={() => setSelectedJob(null)}
-                        className="px-10 py-3 bg-zinc-900 dark:bg-white dark:text-zinc-900 text-white rounded-xl font-bold transition-all hover:opacity-90"
-                      >
-                        Close
-                      </button>
-                    </motion.div>
+                      Close
+                    </button>
                   )}
-                </AnimatePresence>
+                />
               </div>
             </motion.div>
           </motion.div>

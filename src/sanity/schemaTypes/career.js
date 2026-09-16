@@ -65,6 +65,17 @@ export const careerPage = defineType({
               validation: (Rule) => Rule.required()
             }),
             defineField({
+              name: "slug",
+              title: "URL Slug",
+              type: "slug",
+              description:
+                "Used for the job's own page: /careers/<slug>. Generate it from the title, or set it manually to keep a shared link stable.",
+              options: {
+                source: (doc, { parent }) => parent?.title,
+                maxLength: 96
+              }
+            }),
+            defineField({
               name: "description",
               title: "Description",
               type: "text"

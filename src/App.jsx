@@ -10,6 +10,7 @@ import ServicesTemplate from './templates/ServiceTemplate'
 import Contact from './pages/contact/Contact'
 import About from './pages/about/About'
 import Careers from './pages/careers';
+import JobDetail from './pages/careers/JobDetail';
 import Footer from './components/footer-temp'
 import BlogList from './pages/blogs/BlogList'
 import BlogTemplate from './templates/BlogTemplate'
@@ -315,6 +316,7 @@ function SiteShell() {
           <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/careers/:jobId" element={<JobDetail />} />
           <Route path="/blog" element={<Navigate to="/blogs" />} />
           <Route path="/blogs" element={<BlogList />} />
           <Route path="/blog/:slug" element={<BlogSingle />} />

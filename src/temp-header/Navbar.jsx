@@ -201,13 +201,15 @@ export const Navbar = ({
               className="hidden mr-10  lg:flex items-center gap-2 h-[42px] px-5 text-[14px] font-semibold text-white rounded-full bg-brandDark dark:bg-brandGold hover:bg-brandNavy shadow-md transition"
             > */}
 
+            {/* shrink-0 + whitespace-nowrap: the nav squeezes this flex item on
+                narrower desktop widths, which wrapped the label onto two lines. */}
             <Link
-  to="/contact"
-  className="hidden lg:flex items-center gap-2 h-[42px] px-5 text-[14px] font-semibold text-white rounded-full bg-brandDark dark:bg-brandGold hover:bg-brandNavy shadow-md transition"
->
-              <Phone size={12} />
-              <span className="text-[12px]">Get Started</span>
-              <ArrowRight size={12} />
+              to="/contact"
+              className="hidden lg:flex shrink-0 whitespace-nowrap items-center gap-2 h-[42px] px-5 text-[14px] font-semibold text-white rounded-full bg-brandDark dark:bg-brandGold hover:bg-brandNavy shadow-md transition"
+            >
+              <Phone size={12} className="shrink-0" />
+              <span className="text-[12px] leading-none">Get Started</span>
+              <ArrowRight size={12} className="shrink-0" />
             </Link>
 
             {/* MOBILE MENU */}
