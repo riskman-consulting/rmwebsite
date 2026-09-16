@@ -14,6 +14,8 @@ export const MobileMenu = ({ isOpen, onClose }) => {
     switch (key) {
       case "services":
         return NAVIGATION_DATA.servicesMegaMenu;
+      case "products":
+        return NAVIGATION_DATA.productsMegaMenu;
       case "about":
         return NAVIGATION_DATA.aboutMegaMenu;
       case "industries":

@@ -1,25 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, CalendarCheck } from "lucide-react";
 
-/**
- * Closing call to action. Pitched at the scoping review rather than at a sale,
- * which is what the first conversation actually is.
- */
-const CTASection = ({
-  heading,
-  body,
-  className = "bg-surfaceLight dark:bg-surfaceDark",
-}) => (
-  <section className={`py-14 md:py-20 ${className}`}>
+/** Closing call to action, pitched at a walkthrough rather than a signup. */
+const ModuleCta = ({ mod }) => (
+  <section className="py-14 md:py-20 bg-bgLight dark:bg-bgDark">
     <div className="container">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 0.5 }}
-        className="relative overflow-hidden p-8 md:p-12 lg:p-14 rounded-3xl bg-brandDark dark:bg-bgDark dark:border dark:border-borderDark"
+        className="relative overflow-hidden p-8 md:p-12 lg:p-14 rounded-3xl bg-brandDark dark:bg-surfaceDark dark:border dark:border-borderDark"
       >
         <div
           aria-hidden="true"
@@ -31,11 +24,12 @@ const CTASection = ({
             Next step
           </span>
           <h2 className="mb-4 text-2xl font-black leading-tight font-heading sm:text-3xl md:text-4xl text-white">
-            {heading || "Not sure which group you need?"}
+            See {mod.shortName} running on your own framework
           </h2>
           <p className="mb-8 text-base leading-relaxed sm:text-lg text-white/70">
-            {body ||
-              "Most engagements start with a short review of your current close, controls and reporting. We will tell you where the gaps are before you commit to anything."}
+            A working session with our team — we walk the module against your
+            current process, your matrix and your reporting calendar, and you
+            see what the file looks like at the end of a cycle.
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -43,8 +37,8 @@ const CTASection = ({
               to="/contact"
               className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-black tracking-wide uppercase transition-all duration-200 rounded-full bg-brandAccent text-brandDark hover:opacity-90"
             >
-              <Phone className="w-4 h-4" />
-              Talk to our FAAS team
+              <CalendarCheck className="w-4 h-4" />
+              Book a walkthrough
             </Link>
             <Link
               to="/contact"
@@ -60,4 +54,4 @@ const CTASection = ({
   </section>
 );
 
-export default CTASection;
+export default ModuleCta;

@@ -99,6 +99,13 @@ import OtherRegulatoryCompliance from './pages/data-privacy/others'
 
 import SOXICOFRPage from "./pages/sox-itcofr"
 import AiTechnology from './pages/AITechnology/AiTechnology'
+import ProductsLayout from './pages/products/Layout'
+import ProductPage from './pages/products/ProductPage'
+import GrcRiskBasedInternalAudit from './pages/products/riskman-grc/risk-based-internal-audit'
+import GrcControlTesting from './pages/products/riskman-grc/control-testing'
+import GrcPolicy from './pages/products/riskman-grc/policy'
+import GrcActionTakenReport from './pages/products/riskman-grc/action-taken-report'
+import GrcEnterpriseRiskManagement from './pages/products/riskman-grc/enterprise-risk-management'
 import FAASLayout from './pages/faas/Layout'
 import FAASPage from './pages/faas/FAASPage'
 import FAASManagedServices from './pages/faas/managed-services'
@@ -223,6 +230,17 @@ function SiteShell() {
           </Route>
 
           <Route path ="/services/ai-technology" element={<AiTechnology/>} />
+
+          {/* Products — RiskMan GRC */}
+          <Route path="/products" element={<ProductsLayout />}>
+            <Route path="" element={<ProductPage />} />
+            <Route path="riskman-grc" element={<ProductPage />} />
+            <Route path="riskman-grc/risk-based-internal-audit" element={<GrcRiskBasedInternalAudit />} />
+            <Route path="riskman-grc/control-testing" element={<GrcControlTesting />} />
+            <Route path="riskman-grc/policy" element={<GrcPolicy />} />
+            <Route path="riskman-grc/action-taken-report" element={<GrcActionTakenReport />} />
+            <Route path="riskman-grc/enterprise-risk-management" element={<GrcEnterpriseRiskManagement />} />
+          </Route>
 
           {/* Financial Accounting and Advisory Services (FAAS) Nested Routes */}
           <Route path="/services/faas" element={<FAASLayout />}>

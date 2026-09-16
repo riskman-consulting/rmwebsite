@@ -29,7 +29,9 @@ export const FAAS_BASE_PATH = "/services/faas";
  * grid, and every group page — so a new group only has to be added here
  * (plus a thin route file + a <Route> in App.jsx).
  *
- * `id` is kept as the anchor used on the overview page.
+ * `id` is kept as the anchor used on the overview page. `navShort` is the
+ * label the sub-nav falls back to below 1280px, where six full titles cannot
+ * share a row with the brand.
  */
 export const FAAS_GROUPS = [
   {
@@ -41,6 +43,7 @@ export const FAAS_GROUPS = [
     imageAlt:
       "Two colleagues reviewing financial paperwork and laptops at a desk",
     navLabel: "Managed Services",
+    navShort: "Managed",
     icon: Wallet,
     summary:
       "End-to-end ownership of the day-to-day finance function, run by a dedicated team.",
@@ -64,6 +67,7 @@ export const FAAS_GROUPS = [
     image: strategicLeadershipImg,
     imageAlt: "Finance team working through a plan around a meeting table",
     navLabel: "Strategic Leadership",
+    navShort: "Leadership",
     icon: Briefcase,
     summary:
       "Senior finance leadership on demand, without carrying a full-time hire.",
@@ -86,6 +90,7 @@ export const FAAS_GROUPS = [
     imageAlt:
       "Laptop showing a financial analytics dashboard with charts and metrics",
     navLabel: "Financial Advisory",
+    navShort: "Advisory",
     icon: TrendingUp,
     summary:
       "Valuation, funding and feasibility support for capital and growth decisions.",
@@ -106,6 +111,7 @@ export const FAAS_GROUPS = [
     image: transactionReadinessImg,
     imageAlt: "Advisers shaking hands across a table after agreeing a deal",
     navLabel: "Transaction & Audit Readiness",
+    navShort: "Transaction",
     icon: FileSearch,
     summary:
       "Getting the books, controls and disclosures ready before a deal or an audit begins.",
@@ -128,6 +134,7 @@ export const FAAS_GROUPS = [
     image: costingPlantFinanceImg,
     imageAlt: "Production line on a manufacturing plant floor",
     navLabel: "Costing & Plant Finance",
+    navShort: "Costing",
     icon: Factory,
     summary:
       "Plant-floor costing and margin visibility for manufacturing operations.",
@@ -152,6 +159,7 @@ export const FAAS_GROUPS = [
     imageAlt:
       "Hand signing off a set of printed financial documents",
     navLabel: "Compliance & Assurance",
+    navShort: "Compliance",
     icon: ShieldCheck,
     summary:
       "Technical accounting positions and regulatory reporting you can stand behind.",

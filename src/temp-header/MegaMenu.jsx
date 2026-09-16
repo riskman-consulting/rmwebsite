@@ -12,6 +12,9 @@ export const MegaMenu = ({ menuKey }) => {
     case "services":
       sections = NAVIGATION_DATA.servicesMegaMenu;
       break;
+    case "products":
+      sections = NAVIGATION_DATA.productsMegaMenu;
+      break;
     case "about":
       sections = NAVIGATION_DATA.aboutMegaMenu;
       break;

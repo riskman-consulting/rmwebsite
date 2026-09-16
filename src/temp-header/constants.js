@@ -4,6 +4,7 @@ export const NAVIGATION_DATA = {
     "mainNav": [
         { "label": "About", "type": "mega", "key": "about", "path": "/about" },
         { "label": "Services", "type": "mega", "key": "services", "path": "/services" },
+        { "label": "Products", "type": "mega", "key": "products", "path": "/products" },
         // { "label": "Tech Solutions", "type": "mega", "key": "solutions", "path": "/solutions" },
         { "label": "Events & Journey", "type": "mega", "key": "events", "path": "/events" },
         // { "label": "Knowledge Hub", "type": "link", "path": "/insights" },
@@ -17,6 +18,24 @@ export const NAVIGATION_DATA = {
             "items": [
                 { "label": "Blogs", "path": "/blogs" },
                 { "label": "Newsletter", "path": "/newsletter" }
+            ]
+        }
+    ],
+    "productsMegaMenu": [
+        {
+            "title": "Products",
+            "items": [
+                {
+                    "label": "RiskMan GRC",
+                    "path": "/products/riskman-grc",
+                    "submenus": [
+                        { "id": "grc-erm", "title": "Enterprise Risk Management", "path": "/products/riskman-grc/enterprise-risk-management" },
+                        { "id": "grc-rbia", "title": "Risk Based Internal Audit", "path": "/products/riskman-grc/risk-based-internal-audit" },
+                        { "id": "grc-control-testing", "title": "Control Testing", "path": "/products/riskman-grc/control-testing" },
+                        { "id": "grc-atr", "title": "Action Taken Report", "path": "/products/riskman-grc/action-taken-report" },
+                        { "id": "grc-policy", "title": "Policy and SOP", "path": "/products/riskman-grc/policy" }
+                    ]
+                }
             ]
         }
     ],
@@ -56,16 +75,16 @@ export const NAVIGATION_DATA = {
                     //     { "id": "sustainability-assurance", "title": "Sustainability Assurance","path":"/services/esg/sustainability-assurance" }
                     // ]
                 },
-                {
-                    "label": "Financial Advisory",
-                    "path": "/services/financial-advisory",
-                    "submenus": [
-                        { "id": "credit-risk", "title": "Credit Risk Assessment" ,"path":"/services/financial-advisory/credit-risk-assessment"},
-                        { "id": "portfolio-management", "title": "Credit Portfolio Management" ,"path":"/services/financial-advisory/portfolio-management"},
-                        { "id": "loan-review", "title": "Loan Review & Monitoring","path":"/services/financial-advisory/loan-review" },
-                        { "id": "credit-policy", "title": "Credit Policy Framework", "path":"/services/financial-advisory/credit-policy" }
-                    ]
-                },
+                // {
+                //     "label": "Financial Advisory",
+                //     "path": "/services/financial-advisory",
+                //     "submenus": [
+                //         { "id": "credit-risk", "title": "Credit Risk Assessment" ,"path":"/services/financial-advisory/credit-risk-assessment"},
+                //         { "id": "portfolio-management", "title": "Credit Portfolio Management" ,"path":"/services/financial-advisory/portfolio-management"},
+                //         { "id": "loan-review", "title": "Loan Review & Monitoring","path":"/services/financial-advisory/loan-review" },
+                //         { "id": "credit-policy", "title": "Credit Policy Framework", "path":"/services/financial-advisory/credit-policy" }
+                //     ]
+                // },
                 {
                     "label": "Financial Accounting and Advisory Services (FAAS)",
                     "path": "/services/faas",
