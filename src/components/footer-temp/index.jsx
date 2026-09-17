@@ -61,7 +61,7 @@ const Footer = () => {
             </div>
 
             <div>
-              <h4 className="footer-heading">IT Risk Mgmt</h4>
+              <h4 className="footer-heading">IT Risk Management</h4>
               <ul className="space-y-3">
                 {IT_RISK_SERVICES.map((s, idx) => (
                   <li key={idx}>

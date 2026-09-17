@@ -72,7 +72,7 @@ export const CTASection = () => {
             </Link>
 
             <Link
-              to="/services"
+              to="/"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-4 text-xs font-bold tracking-[0.2em] uppercase text-brandDark dark:text-white transition-all duration-300 border border-brandDark/20 dark:border-white/20 rounded-full bg-transparent hover:bg-brandDark/5 dark:hover:bg-white/5 backdrop-blur-md"
             >
               Our Portfolio
