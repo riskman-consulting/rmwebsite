@@ -79,6 +79,51 @@ class BM25Filter {
 }
 
 /* ======================================================
+   ORDERING
+   Photos are always shown newest-first. `year` is the only
+   editorial date on the `photo` schema, so it is the primary
+   key; entries without a year sink to the bottom instead of
+   landing in an arbitrary spot.
+
+   Ties inside a year fall back to `_createdAt`, the timestamp
+   Sanity stamps on every document. That is when the photo was
+   added to the CMS, not when it was taken, so treat it as a
+   deterministic tiebreak rather than a real capture date.
+
+   This mirrors `order(year desc, _createdAt desc)` in the GROQ
+   query, so the order survives the BM25 search re-rank too.
+====================================================== */
+const getPhotoYear = (photo) => {
+  const year = Number(photo?.year);
+  return Number.isFinite(year) ? year : null;
+};
+
+const getPhotoCreatedAt = (photo) => {
+  const created = Date.parse(photo?._createdAt ?? "");
+  return Number.isFinite(created) ? created : null;
+};
+
+const byCreatedAtDesc = (a, b) => {
+  const createdA = getPhotoCreatedAt(a);
+  const createdB = getPhotoCreatedAt(b);
+  if (createdA === createdB) return 0;
+  if (createdA === null) return 1;
+  if (createdB === null) return -1;
+  return createdB - createdA;
+};
+
+const byYearDesc = (a, b) => {
+  const yearA = getPhotoYear(a);
+  const yearB = getPhotoYear(b);
+  if (yearA !== yearB) {
+    if (yearA === null) return 1;
+    if (yearB === null) return -1;
+    return yearB - yearA;
+  }
+  return byCreatedAtDesc(a, b);
+};
+
+/* ======================================================
    MAIN COMPONENT
 ====================================================== */
 export default function MomentsThatMatter() {
@@ -136,7 +181,7 @@ export default function MomentsThatMatter() {
       data = data.filter(p => p.category === activeFilter);
     }
     if (activeFilter === "Team Lunches & Dinner" && activeYear) {
-      data = data.filter(p => p.displayDate?.includes(activeYear.toString()));
+      data = data.filter(p => getPhotoYear(p) === Number(activeYear));
     }
     if (activeFilter === "Office Culture" && activeOfficeSection) {
       data = data.filter(p => p.location?.includes(activeOfficeSection));
@@ -144,14 +189,14 @@ export default function MomentsThatMatter() {
     if (searchQuery.trim()) {
       data = bm25.rank(searchQuery, data);
     }
-    return data;
+    return data.sort(byYearDesc);
   }, [photos, activeFilter, activeYear, activeOfficeSection, searchQuery, bm25]);
 
   const availableYears = useMemo(() => {
     const years = (photos || [])
       .filter(p => p.category === "Team Lunches & Dinner")
-      .map(p => p.displayDate?.match(/\d{4}/)?.[0])
-      .filter(Boolean);
+      .map(getPhotoYear)
+      .filter((year) => year !== null);
     return [...new Set(years)].sort((a, b) => b - a);
   }, [photos]);
 

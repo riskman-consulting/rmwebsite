@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom'
+import { useState, useEffect, lazy, Suspense } from 'react'
 import Header from './components/layout/Header'
 
 import Home from './pages/home/Home'
@@ -10,6 +10,7 @@ import ServicesTemplate from './templates/ServiceTemplate'
 import Contact from './pages/contact/Contact'
 import About from './pages/about/About'
 import Careers from './pages/careers';
+import JobDetail from './pages/careers/JobDetail';
 import Footer from './components/footer-temp'
 import BlogList from './pages/blogs/BlogList'
 import BlogTemplate from './templates/BlogTemplate'
@@ -23,6 +24,8 @@ import PoliciesPage from "./pages/policies";
 
 import { Toaster } from 'react-hot-toast'
 import ScrollToTop from './components/common/ScrollToTop'
+// Studio is a large bundle - keep it out of the main site chunk.
+const StudioPage = lazy(() => import('./pages/studio/StudioPage'))
 import ThemeToggle from './components/common/ThemeToggle'
 // import Events from './temp/MainEvent'
 import Events from './pages/events/Events'
@@ -97,6 +100,21 @@ import OtherRegulatoryCompliance from './pages/data-privacy/others'
 
 import SOXICOFRPage from "./pages/sox-itcofr"
 import AiTechnology from './pages/AITechnology/AiTechnology'
+import ProductsLayout from './pages/products/Layout'
+import ProductPage from './pages/products/ProductPage'
+import GrcRiskBasedInternalAudit from './pages/products/riskman-grc/risk-based-internal-audit'
+import GrcControlTesting from './pages/products/riskman-grc/control-testing'
+import GrcPolicy from './pages/products/riskman-grc/policy'
+import GrcActionTakenReport from './pages/products/riskman-grc/action-taken-report'
+import GrcEnterpriseRiskManagement from './pages/products/riskman-grc/enterprise-risk-management'
+import FAASLayout from './pages/faas/Layout'
+import FAASPage from './pages/faas/FAASPage'
+import FAASManagedServices from './pages/faas/managed-services'
+import FAASStrategicLeadership from './pages/faas/strategic-leadership'
+import FAASFinancialAdvisory from './pages/faas/financial-advisory'
+import FAASTransactionAuditReadiness from './pages/faas/transaction-audit-readiness'
+import FAASCostingPlantFinance from './pages/faas/costing-plant-finance'
+import FAASComplianceAssurance from './pages/faas/compliance-assurance'
 
 
 
@@ -131,25 +149,20 @@ import NotFound from './pages/NotFound'
 
 
 
-function App() {
-  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
-  const {heroSlides,fetchHomePage} = useHomePage()
+function SiteShell() {
+  const { pathname } = useLocation()
 
-  // Apply theme to document
-  useEffect(() => {
-    
-    document.documentElement.classList.toggle("dark", theme === "dark");
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
-
-  
+  // Sanity Studio owns the whole viewport under /cms - no site header/footer.
+  if (pathname === '/cms' || pathname.startsWith('/cms/')) {
+    return (
+      <Suspense fallback={<div style={{ padding: '2rem', fontFamily: 'system-ui' }}>Loading Studio…</div>}>
+        <StudioPage />
+      </Suspense>
+    )
+  }
 
   return (
-    <Router>
-      <ScrollToTop />
-      {/* <ThemeToggle theme={theme} setTheme={setTheme} /> */}
-      {/* <Header theme={theme} setTheme={setTheme} /> */}
+    <>
       <HeaderTemp />
       <Toaster position="top-right" />
 
@@ -219,6 +232,28 @@ function App() {
 
           <Route path ="/services/ai-technology" element={<AiTechnology/>} />
 
+          {/* Products — RiskMan GRC */}
+          <Route path="/products" element={<ProductsLayout />}>
+            <Route path="" element={<ProductPage />} />
+            <Route path="riskman-grc" element={<ProductPage />} />
+            <Route path="riskman-grc/risk-based-internal-audit" element={<GrcRiskBasedInternalAudit />} />
+            <Route path="riskman-grc/control-testing" element={<GrcControlTesting />} />
+            <Route path="riskman-grc/policy" element={<GrcPolicy />} />
+            <Route path="riskman-grc/action-taken-report" element={<GrcActionTakenReport />} />
+            <Route path="riskman-grc/enterprise-risk-management" element={<GrcEnterpriseRiskManagement />} />
+          </Route>
+
+          {/* Financial Accounting and Advisory Services (FAAS) Nested Routes */}
+          <Route path="/services/faas" element={<FAASLayout />}>
+            <Route path="" element={<FAASPage />} />
+            <Route path="managed-services" element={<FAASManagedServices />} />
+            <Route path="strategic-leadership" element={<FAASStrategicLeadership />} />
+            <Route path="financial-advisory" element={<FAASFinancialAdvisory />} />
+            <Route path="transaction-audit-readiness" element={<FAASTransactionAuditReadiness />} />
+            <Route path="costing-plant-finance" element={<FAASCostingPlantFinance />} />
+            <Route path="compliance-assurance" element={<FAASComplianceAssurance />} />
+          </Route>
+
           // ESG Nested Routes
           <Route path='/services/esg' element={<ESGLayout />}>
             <Route path='' element={<ESGPage />} />
@@ -281,6 +316,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/careers/:jobId" element={<JobDetail />} />
           <Route path="/blog" element={<Navigate to="/blogs" />} />
           <Route path="/blogs" element={<BlogList />} />
           <Route path="/blog/:slug" element={<BlogSingle />} />
@@ -295,6 +331,28 @@ function App() {
       </main>
 
       <Footer />
+    </>
+  )
+}
+
+function App() {
+  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
+  const {heroSlides,fetchHomePage} = useHomePage()
+
+  // Apply theme to document
+  useEffect(() => {
+    
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+
+  
+
+  return (
+    <Router>
+      <ScrollToTop />
+      <SiteShell />
     </Router>
   )
 }

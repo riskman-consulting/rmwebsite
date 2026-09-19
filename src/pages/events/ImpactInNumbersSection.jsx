@@ -7,6 +7,7 @@ import {
   Users,
   FileCheck,
 } from "lucide-react";
+import { getCompanyYears, getCompanyYearsWordCapitalized } from "../../utils/companyAge";
 
 export default function ImpactSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -15,7 +16,7 @@ export default function ImpactSection() {
   const impactStats = [
     {
       icon: Trophy,
-      number: 5,
+      number: getCompanyYears(),
       label: "Years of Excellence",
       countUp: false,
     },
@@ -112,8 +113,8 @@ export default function ImpactSection() {
             Our Impact in Numbers
           </h2>
           <p className="text-lg leading-relaxed text-brandDark/70 dark:text-white/60">
-            Five years of dedication, growth, and measurable excellence across
-            industries and geographies.
+            {getCompanyYearsWordCapitalized()} years of dedication, growth, and measurable
+            excellence across industries and geographies.
           </p>
         </div>
 

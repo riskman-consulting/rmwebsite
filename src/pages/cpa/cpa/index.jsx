@@ -551,36 +551,6 @@ export default function USAssurancePage() {
         </div>
       </section>
 
-      {/* ═══════════ FOOTER ═══════════ */}
-      <footer style={{ padding: "64px 0 48px", background: theme.brandDark, borderTop: `1px solid rgba(255,255,255,0.05)` }}>
-        <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: 48, marginBottom: 48 }}>
-            <div>
-              <p className="heading" style={{ fontSize: 24, fontWeight: 900, color: "white", marginBottom: 16 }}>
-                RISK<span style={{ color: theme.brandAccent }}>MAN</span>
-              </p>
-              <p style={{ fontSize: 14, color: "rgba(255,255,255,0.4)", lineHeight: 1.7, maxWidth: 300 }}>
-                Delivering high-fidelity assurance frameworks for modern organizations. Your partner in institutional integrity.
-              </p>
-            </div>
-            {[
-              { title: "Services", links: ["Financial Audits", "Internal Controls", "Compliance", "Quality Assurance"] },
-              { title: "Company", links: ["About Us", "Leadership", "Careers", "Contact"] },
-              { title: "Resources", links: ["Insights", "Case Studies", "Whitepapers", "Events"] },
-            ].map((col, i) => (
-              <div key={i}>
-                <p className="heading" style={{ fontSize: 12, fontWeight: 800, color: "rgba(255,255,255,0.6)", letterSpacing: 2, textTransform: "uppercase", marginBottom: 20 }}>{col.title}</p>
-                {col.links.map((link, j) => (
-                  <p key={j} style={{ fontSize: 14, color: "rgba(255,255,255,0.35)", marginBottom: 12, cursor: "pointer" }}>{link}</p>
-                ))}
-              </div>
-            ))}
-          </div>
-          <div style={{ borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: 28, textAlign: "center" }}>
-            <p style={{ fontSize: 13, color: "rgba(255,255,255,0.3)" }}>© 2026 RiskMan Consulting | US Assurance & Corporate Governance Group</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

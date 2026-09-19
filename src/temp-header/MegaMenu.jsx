@@ -12,6 +12,9 @@ export const MegaMenu = ({ menuKey }) => {
     case "services":
       sections = NAVIGATION_DATA.servicesMegaMenu;
       break;
+    case "products":
+      sections = NAVIGATION_DATA.productsMegaMenu;
+      break;
     case "about":
       sections = NAVIGATION_DATA.aboutMegaMenu;
       break;
@@ -59,9 +62,18 @@ export const MegaMenu = ({ menuKey }) => {
         z-[9999]
       "
     >
-      <div className={`grid ${gridCols} gap-x-12 gap-y-8`}>
+      <div className={`grid ${gridCols} gap-x-6 xl:gap-x-10 gap-y-8`}>
         {sections.map((section, idx) => (
-          <div key={idx} className="transition-opacity duration-300">
+          /* max-w caps how wide one long label can make a column. Without it
+             the panel is sized by its longest item and, because the grid
+             columns are equal, that width is multiplied across every column —
+             which pushed the panel past the right edge of the viewport. The
+             tighter cap at lg is for 1024px, the narrowest width that still
+             renders the desktop nav, where the panel starts ~319px in. */
+          <div
+            key={idx}
+            className="transition-opacity duration-300 max-w-[190px] xl:max-w-[260px]"
+          >
             {section.title && (
               <h3 className="mb-4 text-xs font-black tracking-widest uppercase text-brandPrimary/80 dark:text-brandGold/80">
                 {section.title}

@@ -101,8 +101,14 @@ export const useEventsStore = create((set) => ({
     try {
       set({ loading: true, error: null });
 
-      const query = `*[_type == "photo"] | order(year desc){
+      // `year` is the only editorial date on the photo schema, so it is the
+      // primary key. `_createdAt` is Sanity's own timestamp (every document
+      // gets one) and breaks ties inside a year deterministically, the same
+      // way the newsletter query does.
+      const query = `*[_type == "photo"] | order(year desc, _createdAt desc){
         _id,
+        _createdAt,
+        _updatedAt,
         title,
         category,
         subCategory,

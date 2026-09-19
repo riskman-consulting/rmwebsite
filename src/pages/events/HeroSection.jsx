@@ -7,6 +7,7 @@ import bg3 from "../../assets/images/hero-section/events/bg3.png"
 import bg4 from "../../assets/images/hero-section/events/bg4.png"
 import bg5 from "../../assets/images/hero-section/events/bg5.png"
 import { useNavigate } from "react-router-dom";
+import { FOUNDING_YEAR, getCompanyYearsPhrase, getCurrentYear } from "../../utils/companyAge";
 
 
 
@@ -96,8 +97,8 @@ export default function HeroSection() {
 
 
   const milestones = [
-    { value: "2020", label: "Founded", icon: Award },
-    { value: "2026", label: "5 Years Strong", icon: Calendar },
+    { value: String(FOUNDING_YEAR), label: "Founded", icon: Award },
+    { value: String(getCurrentYear()), label: `${getCompanyYearsPhrase()} Strong`, icon: Calendar },
     // { value: "4", label: "States", icon: Globe },
     { value: "50+", label: "Team Members", icon: Users },
   ];
@@ -164,7 +165,7 @@ export default function HeroSection() {
         >
           <div className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-brandGold to-[#D4AF37] shadow-[0_4px_20px_rgba(255,184,0,0.3)] border border-white/20">
             <span className="text-sm font-bold tracking-widest text-white uppercase drop-shadow-sm">
-              Celebrating 5 Years
+              Celebrating {getCompanyYearsPhrase()}
             </span>
           </div>
         </motion.div>

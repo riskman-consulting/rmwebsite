@@ -17,6 +17,7 @@ import {
 
 import { PHOTOS } from "./index";
 import Lightbox from "./LightBox";
+import { getCompanyYearsLabel } from "../utils/companyAge";
 
 /* ===================== FILTERS ===================== */
 const FILTERS = [
@@ -71,7 +72,7 @@ const App = () => {
   /* ===================== STATS ===================== */
   const stats = [
     { label: "Total Memories", value: PHOTOS.length, icon: Camera },
-    { label: "Years Experience", value: "5", icon: History },
+    { label: "Years Experience", value: getCompanyYearsLabel(), icon: History },
     { label: "Key Categories", value: FILTERS.length - 1, icon: TrendingUp },
   ];
 

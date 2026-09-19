@@ -28,6 +28,9 @@ const SRC = path.join(ROOT, "src");
 const DIST = path.join(ROOT, "dist");
 const SITE_URL = "https://www.riskman.in";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/rm.png`;
+// Real pixel size of public/rm.png — declared so crawlers size the card correctly.
+const DEFAULT_OG_IMAGE_WIDTH = 1500;
+const DEFAULT_OG_IMAGE_HEIGHT = 400;
 
 /* ------------------------------------------------------------------ *
  * Load .env for local dev (Vercel injects process.env directly)
@@ -249,6 +252,17 @@ const INDUSTRIES_QUERY = `*[_type == "industry" && defined(slug.current)]{
   "headerImage": headerImage.asset->url
 }`;
 
+const CAREER_JOBS_QUERY = `*[_type == "careerPage"][0].jobOpenings[]{
+  _key,
+  title,
+  "slug": slug.current,
+  description,
+  location,
+  employmentType,
+  datePosted,
+  lastDate
+}`;
+
 /* ------------------------------------------------------------------ *
  * HTML head builders
  * ------------------------------------------------------------------ */
@@ -265,11 +279,47 @@ const trimTo = (str, n) => {
   return s.length > n ? s.slice(0, n - 1).trimEnd() + "…" : s;
 };
 
+/**
+ * Resolves the OG image and its real pixel size.
+ *
+ * LinkedIn lays the preview card out from the declared og:image:width/height
+ * before the file finishes downloading, so those numbers must match the actual
+ * image or the card renders blank/cropped. Sanity assets are re-cropped to the
+ * 1.91:1 ratio LinkedIn and X render as a large card; the fallback logo is
+ * declared at its true size.
+ */
+function resolveOgImage(image) {
+  // Callers pass DEFAULT_OG_IMAGE explicitly as often as they omit it.
+  if (!image || image === DEFAULT_OG_IMAGE) {
+    return {
+      url: DEFAULT_OG_IMAGE,
+      width: DEFAULT_OG_IMAGE_WIDTH,
+      height: DEFAULT_OG_IMAGE_HEIGHT,
+      type: "image/png",
+    };
+  }
+
+  if (/cdn\.sanity\.io/.test(image)) {
+    const sep = image.includes("?") ? "&" : "?";
+    // fm=jpg, not auto=format — LinkedIn's crawler does not reliably read WebP.
+    return {
+      url: `${image}${sep}w=1200&h=630&fit=crop&fm=jpg&q=80`,
+      width: 1200,
+      height: 630,
+      type: "image/jpeg",
+    };
+  }
+
+  // Unknown host — advertise the URL without lying about its dimensions.
+  return { url: image, width: null, height: null, type: null };
+}
+
 function buildBaseHead({ title, description, canonical, image, ogType = "website" }) {
   const safeTitle = escapeHtml(title);
   const safeDesc = escapeHtml(description);
   const safeCanon = escapeHtml(canonical);
-  const safeImage = escapeHtml(image || DEFAULT_OG_IMAGE);
+  const img = resolveOgImage(image);
+  const safeImage = escapeHtml(img.url);
 
   return `
     <title>${safeTitle}</title>
@@ -284,6 +334,9 @@ function buildBaseHead({ title, description, canonical, image, ogType = "website
     <meta property="og:description" content="${safeDesc}" />
     <meta property="og:image" content="${safeImage}" />
     <meta property="og:image:secure_url" content="${safeImage}" />
+    ${img.width ? `<meta property="og:image:width" content="${img.width}" />` : ""}
+    ${img.height ? `<meta property="og:image:height" content="${img.height}" />` : ""}
+    ${img.type ? `<meta property="og:image:type" content="${img.type}" />` : ""}
     <meta property="og:image:alt" content="${safeTitle}" />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -381,6 +434,75 @@ function buildIndustryHead(industry) {
   const description = trimTo(descRaw, 170);
   const image = industry.headerImage || DEFAULT_OG_IMAGE;
   return buildBaseHead({ title, description, canonical: url, image, ogType: "website" });
+}
+
+const slugifyJobTitle = (value = "") =>
+  String(value)
+    .toLowerCase()
+    .trim()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
+const jobSlug = (job) => job?.slug || slugifyJobTitle(job?.title) || job?._key || "";
+
+function buildJobHead(job) {
+  const slug = jobSlug(job);
+  const url = `${SITE_URL}/careers/${slug}`;
+  const title = `${job.title} | Careers at RiskMan Consulting`;
+  const description = trimTo(
+    job.description ||
+      `Apply for the ${job.title} role at RiskMan Consulting${
+        job.location ? ` in ${job.location}` : ""
+      }.`,
+    170
+  );
+
+  const jobJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    title: job.title,
+    description: job.description || job.title,
+    datePosted: job.datePosted || undefined,
+    validThrough: job.lastDate || undefined,
+    employmentType: job.employmentType || undefined,
+    directApply: true,
+    hiringOrganization: {
+      "@type": "Organization",
+      name: "RiskMan Consulting",
+      sameAs: SITE_URL,
+      logo: `${SITE_URL}/rm.png`,
+    },
+    jobLocation: job.location
+      ? {
+          "@type": "Place",
+          address: { "@type": "PostalAddress", addressLocality: job.location },
+        }
+      : undefined,
+    url,
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+      { "@type": "ListItem", position: 2, name: "Careers", item: `${SITE_URL}/careers` },
+      { "@type": "ListItem", position: 3, name: job.title, item: url },
+    ],
+  };
+
+  return `
+    ${buildBaseHead({
+      title,
+      description,
+      canonical: url,
+      image: DEFAULT_OG_IMAGE,
+      ogType: "website",
+    })}
+    <script type="application/ld+json">${JSON.stringify(jobJsonLd)}</script>
+    <script type="application/ld+json">${JSON.stringify(breadcrumbJsonLd)}</script>
+  `.trim();
 }
 
 /* ------------------------------------------------------------------ *
@@ -502,6 +624,27 @@ async function main() {
       );
     } catch (e) {
       console.error(`[generate-meta] Industries fetch failed: ${e.message}`);
+    }
+
+    // 3b) Dynamic routes — job openings (/careers/<slug>). Expired roles are
+    //     skipped: their page renders an "applications closed" state anyway.
+    try {
+      const jobs = await client.fetch(CAREER_JOBS_QUERY);
+      const now = new Date();
+      const openJobs = (jobs || []).filter(
+        (job) => job?.title && (!job.lastDate || new Date(job.lastDate) >= now)
+      );
+      for (const job of openJobs) {
+        const slug = jobSlug(job);
+        if (!slug) continue;
+        const outFile = path.join(DIST, "careers", slug, "index.html");
+        await fs.mkdir(path.dirname(outFile), { recursive: true });
+        await fs.writeFile(outFile, injectMeta(template, buildJobHead(job)), "utf8");
+        written++;
+      }
+      console.log(`[generate-meta] Prerendered ${openJobs.length} job pages`);
+    } catch (e) {
+      console.error(`[generate-meta] Career jobs fetch failed: ${e.message}`);
     }
   }
 

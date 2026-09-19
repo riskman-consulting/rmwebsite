@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { getCompanyYearsPhrase } from "../../utils/companyAge";
 
 const milestones = [
     {
@@ -54,7 +55,7 @@ export const JourneyTimeline = () => {
                         Our Story
                     </span>
                     <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white mt-2 mb-4 tracking-tight">
-                        7 Years of Excellence
+                        {getCompanyYearsPhrase()} of Excellence
                     </h2>
                     <p className="text-zinc-500 dark:text-zinc-400 text-base leading-relaxed">
                         The journey that shaped Riskman's authority in risk and compliance advisory.

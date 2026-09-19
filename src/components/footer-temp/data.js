@@ -43,7 +43,7 @@ export const ENTERPRISE_SERVICES = [
   {name:"Risk Assurance and Advisory",path:"/services/risk-advisory"},
   {name:"Digital Transformation",path:"/services/digital-tran"},
   {name:"Sustainability & ESG",path:"/services/esg"},
-  {name:"Financial Advisory",path:"/services/financial-advisory"},
+  {name:"Financial Accounting and Advisory Services (FAAS)",path:"/services/faas"},
   {name:"AI & Technology",path:"/services/ai-technology"},
   {name:"Forensics and Investigation",path:"/services/forensics-investigation"}
 ];
