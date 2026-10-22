@@ -22,6 +22,7 @@ const customListedTypes = [
   "engagement",
   "mediaFolder",
   "mediaAsset",
+  "moduleVideo",
 ];
 
 export default defineConfig({
@@ -96,6 +97,15 @@ export default defineConfig({
               .icon(() => "🖼️")
               .schemaType("mediaAsset")
               .child(S.documentTypeList("mediaAsset").title("All Media Assets")),
+
+            S.divider(),
+
+            // ---------- Products ----------
+            S.listItem()
+              .title("Module Videos")
+              .icon(() => "🎬")
+              .schemaType("moduleVideo")
+              .child(S.documentTypeList("moduleVideo").title("All Module Videos")),
 
             S.divider(),
 

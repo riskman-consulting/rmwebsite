@@ -871,6 +871,15 @@ export const PRODUCTS = [
           "Every observation, from any source, tracked to an evidence-backed closure",
         description:
           "Turn audit observations and control failures into owned actions with due dates, then track them to closure. The ATR is generated from live status instead of being re-compiled by hand each cycle.",
+        // Copy for the walkthrough video section (videos come from Sanity)
+        videoSection: {
+          title: "Streamline Audit Remediation",
+          lead: "Transform static audit observations into structured workflows using the RiskMan GRC Remediation Module. Eliminate decentralized spreadsheets and endless email chains by assigning tasks, automating reminders, and centralizing approvals.",
+          cta: {
+            label: "Learn More",
+            href: `${PRODUCTS_BASE_PATH}/riskman-grc`,
+          },
+        },
         overview:
           "The Action Taken Report is the part of governance that most often runs on email. This module makes it a register instead: every observation — from internal audit, control testing, statutory and tax audit, regulatory inspection or management review — becomes an action with an owner, a due date and a defined closure standard. Closure requires evidence and a reviewer's acceptance, and the quarterly ATR is produced from the register rather than compiled the week before the meeting.",
         atAGlance: [
