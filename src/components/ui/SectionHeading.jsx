@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 /**
  * Shared section header for the module pages — an eyebrow, the heading and an
  * optional lead line. Keeps every section on the same rhythm so the page reads
- * as one document rather than a stack of blocks.
+ * as one document rather than a stack of blocks. `children` render under the
+ * lead — e.g. a call-to-action button.
  */
-const SectionHeading = ({ eyebrow, title, lead, align = "left" }) => (
+const SectionHeading = ({ eyebrow, title, lead, align = "left", children }) => (
   <motion.div
     initial={{ opacity: 0, y: 18 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -31,6 +32,7 @@ const SectionHeading = ({ eyebrow, title, lead, align = "left" }) => (
         {lead}
       </p>
     )}
+    {children}
   </motion.div>
 );
 

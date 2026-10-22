@@ -11,6 +11,11 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  // ffmpeg.wasm spawns its worker via `new URL(..., import.meta.url)`, which
+  // breaks if Vite pre-bundles it. Only the Studio's video input uses it.
+  optimizeDeps: {
+    exclude: ['@ffmpeg/ffmpeg', '@ffmpeg/util'],
+  },
   server: {
     port: 3200,
     host: true,

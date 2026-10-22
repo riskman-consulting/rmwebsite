@@ -26,6 +26,7 @@ import { eventRecognitionMedia } from './eventRecognitionMedia'
 import { careerPage } from './career'
 import clients from './clients'
 import { newLetter } from './newLetter'
+import { moduleVideo } from './moduleVideo'
 
 export const schemaTypes = [
     // Blog
@@ -59,6 +60,8 @@ export const schemaTypes = [
     service,
     mediaFolder,
     mediaAsset,
+    // Products
+    moduleVideo,
 ]
 
 export const schema = { types: schemaTypes }

@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { PRODUCTS, getModule } from "../productsData";
+import { useModuleVideoStore } from "../../../store/moduleVideo";
 import ModuleHero from "./ModuleHero";
 import ModuleChallenges from "./ModuleChallenges";
 import ModuleCapabilities from "./ModuleCapabilities";
 import ModuleScreens from "./ModuleScreens";
+import ModuleVideos from "./ModuleVideos";
 import ModuleLifecycle from "./ModuleLifecycle";
 import ModuleOutputs from "./ModuleOutputs";
 import ModuleRoles from "./ModuleRoles";
@@ -15,11 +17,12 @@ import RelatedModules from "./RelatedModules";
 const product = PRODUCTS[0];
 
 /**
- * Jump links in the hero, in the order the sections appear. The screens link
- * only appears for modules that actually carry screenshots.
+ * Jump links in the hero, in the order the sections appear. The screens and
+ * videos links only appear for modules that actually carry them.
  */
-const buildSections = (mod) => [
+const buildSections = (mod, hasVideos) => [
   { id: "why", label: "Why it exists" },
+  ...(hasVideos ? [{ id: "videos", label: "Videos" }] : []),
   { id: "capabilities", label: "Capabilities" },
   ...(mod.screens?.length ? [{ id: "screens", label: "Screens" }] : []),
   { id: "how-it-works", label: "How it works" },
@@ -35,7 +38,18 @@ const buildSections = (mod) => [
  */
 const ModulePage = ({ slug }) => {
   const mod = getModule(product.slug, slug);
+  const videos = useModuleVideoStore((state) => state.videosByModule[slug]);
+  const fetchModuleVideos = useModuleVideoStore((state) => state.fetchModuleVideos);
+
+  // Videos come from Sanity and are optional — until they load, or if the
+  // module has none, the page renders without the section.
+  useEffect(() => {
+    if (mod) fetchModuleVideos(slug);
+  }, [mod, slug, fetchModuleVideos]);
+
   if (!mod) return null;
+
+  const hasVideos = videos?.length > 0;
 
   const canonical = `https://www.riskman.in${product.path}/${mod.slug}`;
 
@@ -64,8 +78,10 @@ const ModulePage = ({ slug }) => {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
-      <ModuleHero product={product} mod={mod} sections={buildSections(mod)} />
+      <ModuleHero product={product} mod={mod} sections={buildSections(mod, hasVideos)} />
       <ModuleChallenges mod={mod} />
+      {/* Right after the problem statement, so the video plays as its answer */}
+      {hasVideos && <ModuleVideos mod={mod} videos={videos} />}
       <ModuleCapabilities mod={mod} />
       {mod.screens?.length > 0 && <ModuleScreens mod={mod} />}
       <ModuleLifecycle mod={mod} />
