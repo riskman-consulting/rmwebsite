@@ -42,25 +42,42 @@ const ModuleVideos = ({ mod, videos }) => (
   <section
     id="videos"
     /* Sits between Challenges (page tone) and Capabilities (surface tone);
-       the gradient carries one into the other with no seam. */
-    className="py-14 md:py-20 scroll-mt-[200px] bg-gradient-to-b from-bgLight to-surfaceLight dark:from-bgDark dark:to-surfaceDark"
+       the gradient carries one into the other with no seam. No vertical
+       padding of its own: the neighbours' py-14/md:py-20 already space it,
+       and adding more doubled the gap. */
+    className="scroll-mt-[200px] bg-gradient-to-b from-bgLight to-surfaceLight dark:from-bgDark dark:to-surfaceDark"
   >
-    <div className="container">
-      <SectionHeading
-        eyebrow="See it in action"
-        title={mod.videoSection?.title || `${mod.shortName} walkthrough`}
-        lead={
-          mod.videoSection?.lead ||
-          "A short tour of the module, recorded on the working product."
-        }
+    {/* Copy on the left, video on the right from lg up; stacked below that.
+        With several videos the copy sticks beside them as they scroll. */}
+    <div
+      className={`container grid gap-10 lg:grid-cols-12 lg:gap-14 ${
+        videos.length > 1 ? "items-start" : "items-center"
+      }`}
+    >
+      <div
+        className={`lg:col-span-5 lg:[&>div]:mb-0 ${
+          videos.length > 1 ? "lg:sticky lg:top-[220px]" : ""
+        }`}
       >
-        {mod.videoSection?.cta && <Cta cta={mod.videoSection.cta} />}
-      </SectionHeading>
+        <SectionHeading
+          eyebrow="See it in action"
+          title={mod.videoSection?.title || `${mod.shortName} walkthrough`}
+          lead={
+            mod.videoSection?.lead ||
+            "A short tour of the module, recorded on the working product."
+          }
+        >
+          {mod.videoSection?.cta && <Cta cta={mod.videoSection.cta} />}
+        </SectionHeading>
+      </div>
 
-      <div className="max-w-5xl mx-auto space-y-10 md:space-y-14">
+      <div className="w-full space-y-10 lg:col-span-7 md:space-y-14">
         {videos.map((video, index) => (
           <motion.figure
             key={video._id}
+            /* Width capped by viewport height so the whole 16:9 frame fits
+               below the sticky header + module tabs (~200px) without overlap. */
+            className="w-full mx-auto max-w-[max(20rem,calc((100svh_-_260px)*16/9))]"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
@@ -86,7 +103,7 @@ const ModuleVideos = ({ mod, videos }) => (
               </video>
             </div>
 
-            <figcaption className="max-w-3xl mx-auto mt-5 text-center">
+            <figcaption className="mt-4 text-center">
               <h3 className="mb-2 text-base font-bold font-heading md:text-lg text-brandDark dark:text-white">
                 {video.title}
               </h3>

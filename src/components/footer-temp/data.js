@@ -58,6 +58,11 @@ export const IT_RISK_SERVICES = [
   {name:"Data Privacy",path:"/services/data-privacy"}
 ];
 
+// TODO: fill in the full street address for each office (building, street, area, PIN code).
+export const OFFICE_LOCATIONS = [
+  { city: "Kolkata", region: "West Bengal, India", address: "" },
+];
+
 export const SERVICES_DATA= [
   {
     title: "Risk Assurance and Advisory",
