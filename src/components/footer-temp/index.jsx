@@ -1,13 +1,8 @@
 import React from "react";
 import { Mail, Linkedin, MapPin, ChevronUp } from "lucide-react";
-import { ENTERPRISE_SERVICES, IT_RISK_SERVICES, OFFICE_LOCATIONS } from "./data";
+import { ENTERPRISE_SERVICES, IT_RISK_SERVICES } from "./data";
 import { Link } from "react-router-dom";
 import InsightsSubscribe from "../common/Subscriber";
-
-const mapUrl = (office) =>
-  `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    ["RiskMan Consulting", office.address, office.city, office.region].filter(Boolean).join(", ")
-  )}`;
 
 const Footer = () => {
   return (
@@ -96,35 +91,6 @@ const Footer = () => {
             <InsightsSubscribe />
           </div>
 
-        </div>
-
-        {/* Office Locations */}
-        <div className="pt-10 pb-10 border-t border-borderLight dark:border-borderDark">
-          <h4 className="footer-heading">
-            {OFFICE_LOCATIONS.length > 1 ? "Our Offices" : "Our Office"}
-          </h4>
-          <address className="not-italic grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {OFFICE_LOCATIONS.map((office) => (
-              <a
-                key={office.city}
-                href={mapUrl(office)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex gap-3 items-start"
-              >
-                <MapPin size={18} className="mt-0.5 shrink-0 text-brandAccent" />
-                <span className="text-sm leading-relaxed">
-                  <span className="block font-semibold text-brandNavy dark:text-brandLight group-hover:text-brandAccent transition-colors">
-                    {office.city}
-                  </span>
-                  <span className="block text-brandNavy/60 dark:text-brandLight/60">
-                    {office.address && <>{office.address}<br /></>}
-                    {office.region}
-                  </span>
-                </span>
-              </a>
-            ))}
-          </address>
         </div>
 
         {/* Bottom Bar */}
