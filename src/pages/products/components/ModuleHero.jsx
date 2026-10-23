@@ -1,16 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, ChevronRight, CalendarCheck } from "lucide-react";
-import { PRODUCTS_BASE_PATH } from "../productsData";
+import { ArrowRight, CalendarCheck } from "lucide-react";
+import ModuleBreadcrumb from "./ModuleBreadcrumb";
 
 /**
  * Module hero — breadcrumb, positioning line, the two calls to action and an
  * "at a glance" panel that answers who the module is for before the visitor
  * has to read a section. The jump links below it act as the page's contents.
+ *
+ * `belowVideoHero`: the module has Sanity videos, so ModuleVideos opens the
+ * page instead. That section owns the breadcrumb and the page's h1, so this
+ * one drops the breadcrumb and steps its title down to h2.
  */
-const ModuleHero = ({ product, mod, sections }) => {
+const ModuleHero = ({ product, mod, sections, belowVideoHero = false }) => {
   const Icon = mod.icon;
+  const Heading = belowVideoHero ? motion.h2 : motion.h1;
 
   return (
     <section className="relative overflow-hidden border-b bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark">
@@ -21,29 +26,14 @@ const ModuleHero = ({ product, mod, sections }) => {
         className="absolute inset-0 pointer-events-none bg-[radial-gradient(60%_80%_at_85%_0%,rgba(0,64,128,0.07),transparent_60%)] dark:bg-[radial-gradient(60%_80%_at_85%_0%,rgba(255,184,0,0.08),transparent_60%)]"
       />
 
-      <div className="container relative py-10 md:py-16">
-        <nav
-          aria-label="Breadcrumb"
-          className="flex flex-wrap items-center gap-1 mb-8 text-[11px] font-bold tracking-wide uppercase sm:text-xs text-brandNavy/50 dark:text-white/40"
-        >
-          <Link
-            to={PRODUCTS_BASE_PATH}
-            className="hover:text-brandPrimary dark:hover:text-brandGold"
-          >
-            Products
-          </Link>
-          <ChevronRight className="w-3 h-3" />
-          <Link
-            to={product.path}
-            className="hover:text-brandPrimary dark:hover:text-brandGold"
-          >
-            {product.shortName}
-          </Link>
-          <ChevronRight className="w-3 h-3" />
-          <span className="text-brandPrimary dark:text-brandGold">
-            {mod.name}
-          </span>
-        </nav>
+      {/* Opening the page, the breadcrumb sits close under the module tabs;
+          below the video hero it keeps full section spacing. */}
+      <div
+        className={`container relative pb-10 md:pb-16 ${
+          belowVideoHero ? "pt-10 md:pt-16" : "pt-6 md:pt-8"
+        }`}
+      >
+        {!belowVideoHero && <ModuleBreadcrumb product={product} mod={mod} />}
 
         <div className="grid items-start grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
           {/* Left — positioning */}
@@ -62,20 +52,28 @@ const ModuleHero = ({ product, mod, sections }) => {
               </span>
             </motion.div>
 
-            <motion.h1
+            <Heading
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.05 }}
-              className="text-3xl font-black leading-[1.1] font-heading sm:text-4xl md:text-5xl text-brandDark dark:text-white"
+              /* Below the video hero this is a section heading, not the page
+                 title, so it takes SectionHeading's h2 size. */
+              className={`font-heading text-brandDark dark:text-white ${
+                belowVideoHero
+                  ? "text-2xl font-bold leading-tight sm:text-3xl md:text-4xl"
+                  : "text-3xl font-black leading-[1.1] sm:text-4xl md:text-5xl"
+              }`}
             >
               {mod.name}
-            </motion.h1>
+            </Heading>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.12 }}
-              className="mt-4 text-lg font-semibold leading-snug sm:text-xl md:text-2xl font-heading text-brandPrimary dark:text-brandGold"
+              className={`mt-4 font-semibold leading-snug font-heading text-brandPrimary dark:text-brandGold ${
+                belowVideoHero ? "text-base sm:text-lg md:text-xl" : "text-lg sm:text-xl md:text-2xl"
+              }`}
             >
               {mod.tagline}
             </motion.p>

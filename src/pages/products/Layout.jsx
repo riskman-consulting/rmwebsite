@@ -44,7 +44,7 @@ function Layout() {
           </div>
 
           {/* Desktop module pills */}
-          <div className="items-center justify-end flex-1 hidden min-w-0 gap-1 lg:flex xl:gap-2 flex-wrap">
+          <div className="items-center justify-end flex-1 hidden min-w-0 gap-1 lg:flex min-[1100px]:gap-2 flex-wrap">
             {product.modules.map((mod) => (
               <NavItem
                 key={mod.slug}
@@ -90,17 +90,23 @@ function Layout() {
 }
 
 /**
- * Desktop pill. Five module names do not fit on one row below 1280px, so the
- * pill carries the short form (ERM, RBIA, ATR) up to xl and the full name from
- * xl up — rather than wrapping the bar onto a second line.
+ * Desktop pill. Five module names do not fit on one row below ~1100px, so the
+ * pill carries the short form (ERM, RBIA, ATR) below that and the full name
+ * above — rather than wrapping the bar onto a second line.
+ *
+ * The switch is deliberately not at xl (1280px): a 1920px screen at 150%
+ * scaling gives a ~1280px viewport, and browser chrome (Edge's window inset,
+ * scrollbar) decides which side of 1280 it lands on, so Chrome and Edge showed
+ * different labels on the same machine. .container caps at 1200px, so the
+ * full labels fit well before 1280.
  */
 const NavItem = ({ to, label, compact }) => (
   <NavLink
     to={to}
     end
     className={({ isActive }) => `
-      flex flex-shrink-0 whitespace-nowrap items-center gap-2 px-1.5 xl:px-3 py-2 rounded-lg
-      text-[11px] xl:text-xs
+      flex flex-shrink-0 whitespace-nowrap items-center gap-2 px-1.5 min-[1100px]:px-3 py-2 rounded-lg
+      text-[11px] min-[1100px]:text-xs
       font-extrabold tracking-wide
       transition-all duration-200
       border border-brandPrimary dark:border-brandGold
@@ -110,8 +116,8 @@ const NavItem = ({ to, label, compact }) => (
       }
     `}
   >
-    <span className="xl:hidden">{compact || label}</span>
-    <span className="hidden xl:inline">{label}</span>
+    <span className="min-[1100px]:hidden">{compact || label}</span>
+    <span className="hidden min-[1100px]:inline">{label}</span>
   </NavLink>
 );
 
