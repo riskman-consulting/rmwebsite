@@ -17,12 +17,12 @@ import RelatedModules from "./RelatedModules";
 const product = PRODUCTS[0];
 
 /**
- * Jump links in the hero, in the order the sections appear. The screens and
- * videos links only appear for modules that actually carry them.
+ * Jump links in the hero, in the order the sections appear. The screens link
+ * only appears for modules that carry screens. Videos get no link: when a
+ * module has them they open the page, above these links.
  */
-const buildSections = (mod, hasVideos) => [
+const buildSections = (mod) => [
   { id: "why", label: "Why it exists" },
-  ...(hasVideos ? [{ id: "videos", label: "Videos" }] : []),
   { id: "capabilities", label: "Capabilities" },
   ...(mod.screens?.length ? [{ id: "screens", label: "Screens" }] : []),
   { id: "how-it-works", label: "How it works" },
@@ -78,10 +78,15 @@ const ModulePage = ({ slug }) => {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
-      <ModuleHero product={product} mod={mod} sections={buildSections(mod, hasVideos)} />
+      {/* A module with Sanity videos opens on them — the video is the hero */}
+      {hasVideos && <ModuleVideos product={product} mod={mod} videos={videos} />}
+      <ModuleHero
+        product={product}
+        mod={mod}
+        sections={buildSections(mod)}
+        belowVideoHero={hasVideos}
+      />
       <ModuleChallenges mod={mod} />
-      {/* Right after the problem statement, so the video plays as its answer */}
-      {hasVideos && <ModuleVideos mod={mod} videos={videos} />}
       <ModuleCapabilities mod={mod} />
       {mod.screens?.length > 0 && <ModuleScreens mod={mod} />}
       <ModuleLifecycle mod={mod} />
