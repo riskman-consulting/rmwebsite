@@ -5,6 +5,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { NAVIGATION_DATA } from "./constants";
 import { MegaMenu } from "./MegaMenu";
+import AnnouncementTicker from "./AnnouncementTicker";
 import { Moon, Sun, Phone, ArrowRight } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -72,7 +73,7 @@ export const Navbar = ({
          ANNOUNCEMENT BANNER
       ======================= */}
       <div className="fixed  top-0 left-0 right-0 z-[9999] h-[48px] bg-bgDark dark:bg-surfaceLight flex items-center">
-        <div className="max-w-[1400px] mx-auto px-6 w-full" />
+        <AnnouncementTicker />
       </div>
 
       {/* =======================
