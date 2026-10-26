@@ -31,4 +31,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://riskman.in/sitemap.xml
+Sitemap: https://www.riskman.in/sitemap.xml

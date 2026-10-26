@@ -5,6 +5,9 @@ import { table } from "@sanity/table";
 
 import { projectId, dataset, apiVersion } from "./sanity/env";
 import { schemaTypes } from "./sanity/schemaTypes";
+import { OptimizedImageInput } from "./sanity/components/OptimizedImageInput";
+import { BarChartIcon } from "@sanity/icons";
+import { AnalyticsTool } from "./sanity/tools/analytics/AnalyticsTool";
 
 // Document types that should exist only once (no "create new" / delete)
 // Only these two exist in the dataset under a fixed document id.
@@ -119,6 +122,21 @@ export default defineConfig({
     visionTool({ defaultApiVersion: apiVersion }),
     table(),
   ],
+
+  // Analytics first, so it is the page /cms opens on
+  tools: (prev) => [
+    { name: "analytics", title: "Analytics", icon: BarChartIcon, component: AnalyticsTool },
+    ...prev,
+  ],
+
+  // Every image field and image gallery: new uploads are converted to WebP
+  // (and scaled down) automatically; older images get a "Convert to WebP"
+  // button. All other fields render unchanged.
+  form: {
+    components: {
+      input: OptimizedImageInput,
+    },
+  },
 
   schema: {
     types: schemaTypes,

@@ -16,6 +16,12 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['@ffmpeg/ffmpeg', '@ffmpeg/util'],
   },
+  // Build-time page rendering (src/entry-server.jsx). Bundle every package
+  // into the server build so CommonJS ones (react-helmet-async) import
+  // cleanly in Node. Does not affect the browser build.
+  ssr: {
+    noExternal: true,
+  },
   server: {
     port: 3200,
     host: true,

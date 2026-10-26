@@ -20,7 +20,7 @@ const RBIAPage = () => {
                     name="description"
                     content='Secure your future with RiskMan Consulting’s customized RBIA services. Our team delivers strategic insight and enduring value for your business.'
                 />
-                <link rel="canonical" href="https://www.riskman.in/rbia" />
+                <link rel="canonical" href="https://www.riskman.in/services/risk-advisory/rbia" />
             </Helmet>
             {/* Hero Section with Image */}
             <HeroSection />

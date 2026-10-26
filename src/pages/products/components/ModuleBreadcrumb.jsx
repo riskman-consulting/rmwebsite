@@ -10,7 +10,7 @@ import { PRODUCTS_BASE_PATH } from "../productsData";
 const ModuleBreadcrumb = ({ product, mod }) => (
   <nav
     aria-label="Breadcrumb"
-    className="flex flex-wrap items-center gap-1 mb-8 text-[11px] font-bold tracking-wide uppercase sm:text-xs text-brandNavy/50 dark:text-white/40"
+    className="flex flex-wrap items-center gap-1 mb-8 text-[13px] text-brandNavy/55 dark:text-white/45"
   >
     <Link
       to={PRODUCTS_BASE_PATH}
@@ -26,7 +26,7 @@ const ModuleBreadcrumb = ({ product, mod }) => (
       {product.shortName}
     </Link>
     <ChevronRight className="w-3 h-3" />
-    <span className="text-brandPrimary dark:text-brandGold">{mod.name}</span>
+    <span className="font-medium text-brandDark dark:text-white/80">{mod.name}</span>
   </nav>
 );
 

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom'
+import { BrowserRouter as Router, StaticRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { useState, useEffect, lazy, Suspense } from 'react'
 import Header from './components/layout/Header'
 
@@ -24,6 +24,7 @@ import PoliciesPage from "./pages/policies";
 
 import { Toaster } from 'react-hot-toast'
 import ScrollToTop from './components/common/ScrollToTop'
+import PageViewTracker from './components/common/PageViewTracker'
 // Studio is a large bundle - keep it out of the main site chunk.
 const StudioPage = lazy(() => import('./pages/studio/StudioPage'))
 import ThemeToggle from './components/common/ThemeToggle'
@@ -107,6 +108,7 @@ import GrcControlTesting from './pages/products/riskman-grc/control-testing'
 import GrcPolicy from './pages/products/riskman-grc/policy'
 import GrcActionTakenReport from './pages/products/riskman-grc/action-taken-report'
 import GrcEnterpriseRiskManagement from './pages/products/riskman-grc/enterprise-risk-management'
+import GrcGlobalSox from './pages/products/riskman-grc/global-sox'
 import FAASLayout from './pages/faas/Layout'
 import FAASPage from './pages/faas/FAASPage'
 import FAASManagedServices from './pages/faas/managed-services'
@@ -241,6 +243,7 @@ function SiteShell() {
             <Route path="riskman-grc/policy" element={<GrcPolicy />} />
             <Route path="riskman-grc/action-taken-report" element={<GrcActionTakenReport />} />
             <Route path="riskman-grc/enterprise-risk-management" element={<GrcEnterpriseRiskManagement />} />
+            <Route path="riskman-grc/global-sox" element={<GrcGlobalSox />} />
           </Route>
 
           {/* Financial Accounting and Advisory Services (FAAS) Nested Routes */}
@@ -335,8 +338,12 @@ function SiteShell() {
   )
 }
 
-function App() {
-  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
+// `location` is only passed by src/entry-server.jsx, which renders each route
+// to HTML at build time; in the browser the app runs on BrowserRouter as before.
+function App({ location }) {
+  const [theme, setTheme] = useState(() =>
+    (typeof window !== "undefined" && localStorage.getItem("theme")) || "light"
+  );
   const {heroSlides,fetchHomePage} = useHomePage()
 
   // Apply theme to document
@@ -349,9 +356,19 @@ function App() {
 
   
 
+  if (location) {
+    return (
+      <StaticRouter location={location}>
+        <ScrollToTop />
+        <SiteShell />
+      </StaticRouter>
+    )
+  }
+
   return (
     <Router>
       <ScrollToTop />
+      <PageViewTracker />
       <SiteShell />
     </Router>
   )

@@ -318,7 +318,7 @@ export default function LeadershipSection() {
   }, [fetchLeadership]);
 
   return (
-    <section className="py-20 px-6 min-h-screen bg-bgLight dark:bg-bgDark font-sans">
+    <section className="py-14 md:py-16 px-6 bg-bgLight dark:bg-bgDark font-sans">
       {loading && leadership.length === 0 ? (
         <div className="flex justify-center items-center py-20">
           <div className="w-8 h-8 border-4 border-brandPrimary border-t-transparent rounded-full animate-spin" />

@@ -17,15 +17,15 @@ export default function InsightsSubscribe() {
   };
 
   return (
-    <div className="w-full bg-[#073B6F] rounded-3xl p-6 sm:p-8 text-white shadow-lg">
-
-      <h3 className="text-xl sm:text-2xl font-bold mb-3">
-        Subscribe to Insights
-      </h3>
-
-      <p className="text-blue-200/80 text-sm sm:text-base mb-6 leading-relaxed">
-        Get the latest risk alerts and compliance updates delivered to your inbox.
-      </p>
+    <div className="grid w-full grid-cols-1 gap-4 lg:grid-cols-12 lg:items-center lg:gap-10">
+      <div className="lg:col-span-5">
+        <h3 className="text-[15px] font-semibold text-brandDark dark:text-white">
+          Get our newsletter
+        </h3>
+        <p className="mt-1 text-sm leading-relaxed text-brandNavy/70 dark:text-brandLight/60">
+          Risk alerts and compliance updates, once in a while. No spam.
+        </p>
+      </div>
 
       <iframe
         name="zoho_hidden_iframe"
@@ -37,28 +37,30 @@ export default function InsightsSubscribe() {
         method="POST"
         action={ZOHO_SUBSCRIBER}
         target="zoho_hidden_iframe"
-        className="space-y-3"
+        className="lg:col-span-7"
       >
+        <div className="flex flex-col gap-2 sm:flex-row">
         <input
           type="email"
           name="CONTACT_EMAIL"
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="example@gmail.com"
-          className="w-full h-12 sm:h-14 px-4 sm:px-6 rounded-xl bg-[#1D4B7D] border border-white/15 text-white text-sm sm:text-base placeholder:text-blue-200/70 focus:outline-none focus:ring-2 focus:ring-yellow-300"
+          placeholder="you@company.com"
+          aria-label="Email address"
+          className="w-full sm:flex-1 min-w-0 h-11 px-4 text-sm rounded-md bg-surfaceLight dark:bg-bgDark border border-borderLight dark:border-borderDark text-brandDark dark:text-white placeholder:text-brandNavy/40 dark:placeholder:text-white/35 focus:outline-none focus:ring-2 focus:ring-brandPrimary/40 dark:focus:ring-brandAccent/50"
         />
 
         <button
           type="submit"
-          className="w-full h-12 sm:h-14 rounded-xl bg-[#FFC107] text-[#0B3A6E] text-sm sm:text-base font-semibold flex items-center justify-center gap-2 hover:brightness-105 transition"
+          className="h-11 px-5 text-sm font-semibold rounded-md bg-brandPrimary dark:bg-brandGold text-white dark:text-brandDark hover:bg-brandNavy dark:hover:bg-brandAccent transition-colors"
         >
-          Subscribe Now
-          <span>→</span>
+          Subscribe
         </button>
+        </div>
 
         {msg && (
-          <p className="text-green-300 text-xs text-center">
+          <p className="mt-2 text-xs text-green-700 dark:text-green-300">
             {msg}
           </p>
         )}

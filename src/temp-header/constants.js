@@ -33,7 +33,8 @@ export const NAVIGATION_DATA = {
                         { "id": "grc-rbia", "title": "Risk Based Internal Audit", "path": "/products/riskman-grc/risk-based-internal-audit" },
                         { "id": "grc-control-testing", "title": "Control Testing", "path": "/products/riskman-grc/control-testing" },
                         { "id": "grc-atr", "title": "Action Taken Report", "path": "/products/riskman-grc/action-taken-report" },
-                        { "id": "grc-policy", "title": "Policy and SOP", "path": "/products/riskman-grc/policy" }
+                        { "id": "grc-policy", "title": "Policy and SOP", "path": "/products/riskman-grc/policy" },
+                        { "id": "grc-global-sox", "title": "Global SOX", "path": "/products/riskman-grc/global-sox" }
                     ]
                 }
             ]

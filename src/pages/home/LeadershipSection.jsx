@@ -49,7 +49,7 @@ const TEAM_MEMBERS = [
     location: "Kolkata, India",
     bio: "A Chartered Accountant with 18+ years of global experience, formerly Deloitte and Genpact ERC. Certified in SCR (GARP), Six Sigma, RPA, and BRSR. Expert in ERM, Internal Audit, ESG, AI Automation, and Tax Advisory.",
     image:
-      "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768906075/Prasen_pal_xe5jx8.webp",
+      "https://res.cloudinary.com/dwbcjcqdt/image/upload/c_limit,w_400,q_auto,f_auto/v1768906075/Prasen_pal_xe5jx8.webp",
     linkedin: "https://www.linkedin.com/in/prasen-pal",
     richBio: <PrasenPalRichBio />,
   },

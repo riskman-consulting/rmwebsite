@@ -26,7 +26,7 @@ const ERMPage = () => {
     name="description"
     content='Transform uncertainty into opportunity with RiskMan Consulting’s ERM services. We identify "Risks That Matter" to build organizational resilience, drive growth, and ensure long-term sustainability.'
   />
-  <link rel="canonical" href="https://www.riskman.in/erm" />
+  <link rel="canonical" href="https://www.riskman.in/services/risk-advisory/erm" />
 </Helmet>
 
 

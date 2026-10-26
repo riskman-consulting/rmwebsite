@@ -6,7 +6,7 @@ import { PRODUCTS, PRODUCTS_BASE_PATH } from "./productsData";
 /**
  * Product section shell.
  *
- * The sub-nav carries the product name on the left and its modules as pills on
+ * The sub-nav carries the product name on the left and its modules as tabs on
  * the right — the same pattern as the FAAS and Risk Advisory layouts.
  * `sticky top-[128px]` parks it under the global fixed header (48px banner +
  * 80px navbar).
@@ -32,18 +32,18 @@ function Layout() {
     <div className="min-h-screen z-[100] bg-bgLight dark:bg-bgDark transition-colors duration-300">
       <nav className="sticky top-[128px] z-40 border-b bg-surfaceLight/80 dark:bg-surfaceDark/80 backdrop-blur-md border-borderLight dark:border-borderDark">
         <div /* px-4 matches .container's own 16px padding-inline, so the brand lines
-             up with the page heading and the last pill lines up with the right
+             up with the page heading and the last tab lines up with the right
              edge of the page content. xl:px-10 inset the bar by 24px. */
           className="container flex items-center justify-between gap-4 px-4 py-4 mx-auto">
           {/* Product name */}
           <div
             onClick={() => navigate(product.path)}
-            className="flex-shrink-0 text-base font-black tracking-tighter cursor-pointer sm:text-xl font-heading text-brandPrimary dark:text-brandGold"
+            className="flex-shrink-0 text-base font-bold cursor-pointer sm:text-lg text-brandDark dark:text-white"
           >
             RiskMan GRC
           </div>
 
-          {/* Desktop module pills */}
+          {/* Desktop module tabs */}
           <div className="items-center justify-end flex-1 hidden min-w-0 gap-1 lg:flex min-[1100px]:gap-2 flex-wrap">
             {product.modules.map((mod) => (
               <NavItem
@@ -68,7 +68,7 @@ function Layout() {
         {/* Mobile dropdown */}
         {mobileMenuOpen && (
           <div className="border-t lg:hidden border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark">
-            <div className="container flex flex-col gap-2 px-4 py-4 mx-auto">
+            <div className="container flex flex-col gap-1 px-4 py-3 mx-auto">
               {product.modules.map((mod) => (
                 <MobileNavItem
                   key={mod.slug}
@@ -90,8 +90,8 @@ function Layout() {
 }
 
 /**
- * Desktop pill. Five module names do not fit on one row below ~1100px, so the
- * pill carries the short form (ERM, RBIA, ATR) below that and the full name
+ * Desktop tab. Six module names do not fit on one row below ~1100px, so the
+ * tab carries the short form (ERM, RBIA, ATR) below that and the full name
  * above — rather than wrapping the bar onto a second line.
  *
  * The switch is deliberately not at xl (1280px): a 1920px screen at 150%
@@ -105,14 +105,12 @@ const NavItem = ({ to, label, compact }) => (
     to={to}
     end
     className={({ isActive }) => `
-      flex flex-shrink-0 whitespace-nowrap items-center gap-2 px-1.5 min-[1100px]:px-3 py-2 rounded-lg
-      text-[11px] min-[1100px]:text-xs
-      font-extrabold tracking-wide
-      transition-all duration-200
-      border border-brandPrimary dark:border-brandGold
+      flex flex-shrink-0 whitespace-nowrap items-center px-1.5 min-[1100px]:px-2.5 py-1.5 rounded-md
+      text-[13px] min-[1100px]:text-sm font-medium
+      transition-colors duration-150
       ${isActive
-        ? "bg-brandPrimary text-white shadow-md dark:bg-brandGold dark:text-brandDark"
-        : "text-gray-700 dark:text-gray-300 hover:bg-brandPrimary/10 dark:hover:bg-brandGold/10 hover:text-brandPrimary dark:hover:text-brandGold"
+        ? "bg-brandPrimary/10 text-brandPrimary font-semibold dark:bg-brandGold/15 dark:text-brandGold"
+        : "text-brandNavy/70 dark:text-white/65 hover:text-brandPrimary dark:hover:text-brandGold hover:bg-brandPrimary/5 dark:hover:bg-white/5"
       }
     `}
   >
@@ -127,14 +125,12 @@ const MobileNavItem = ({ to, label, onClick }) => (
     end
     onClick={onClick}
     className={({ isActive }) => `
-      flex items-center gap-2 px-4 py-3 rounded-lg
-      text-sm
-      font-extrabold tracking-wide
-      transition-all duration-200
-      border border-brandPrimary dark:border-brandGold
+      flex items-center px-3 py-2.5 rounded-md
+      text-base font-medium
+      transition-colors duration-150
       ${isActive
-        ? "bg-brandPrimary text-white shadow-md dark:bg-brandGold dark:text-brandDark"
-        : "text-gray-700 dark:text-gray-300 hover:bg-brandPrimary/10 dark:hover:bg-brandGold/10 hover:text-brandPrimary dark:hover:text-brandGold"
+        ? "bg-brandPrimary/10 text-brandPrimary font-semibold dark:bg-brandGold/15 dark:text-brandGold"
+        : "text-brandNavy/75 dark:text-white/70 hover:text-brandPrimary dark:hover:text-brandGold"
       }
     `}
   >

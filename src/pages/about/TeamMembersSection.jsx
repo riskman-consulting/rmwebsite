@@ -113,9 +113,10 @@ const RiskManTeams = () => {
                     border-2 border-brandAccent
                     shadow-md`}
                 >
-                  <img src="/rm.png" className="mb-1 w-14 dark:hidden" />
+                  <img src="/rm.png" alt="RiskMan" className="mb-1 w-14 dark:hidden" />
                   <img
                     src="/riskman-logo-white.svg"
+                    alt="RiskMan"
                     className="hidden mb-1 w-14 dark:block"
                   />
                 </motion.div>

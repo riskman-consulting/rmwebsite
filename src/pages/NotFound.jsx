@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { reportNotFound } from '../components/common/PageViewTracker'
 
 const mainPages = [
   { label: 'Home', to: '/' },
@@ -27,6 +29,13 @@ const popularServices = [
 ]
 
 export default function NotFound() {
+  const { pathname } = useLocation()
+
+  // Lets the Studio Analytics tab list missing URLs people actually open
+  useEffect(() => {
+    reportNotFound(pathname)
+  }, [pathname])
+
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center px-4 py-20">
       {/* 404 heading */}

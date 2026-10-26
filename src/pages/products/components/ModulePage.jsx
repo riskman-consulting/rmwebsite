@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { PRODUCTS, getModule } from "../productsData";
+import { moduleSeo } from "../productsSeo";
 import { useModuleVideoStore } from "../../../store/moduleVideo";
 import ModuleHero from "./ModuleHero";
 import ModuleChallenges from "./ModuleChallenges";
@@ -33,7 +34,7 @@ const buildSections = (mod) => [
 
 /**
  * Shared shell for every RiskMan GRC module page. Each module's route file is a
- * thin wrapper passing its slug, so the five pages stay in step and a content
+ * thin wrapper passing its slug, so the pages stay in step and a content
  * change only has to happen in `productsData.js`.
  */
 const ModulePage = ({ slug }) => {
@@ -51,31 +52,21 @@ const ModulePage = ({ slug }) => {
 
   const hasVideos = videos?.length > 0;
 
-  const canonical = `https://www.riskman.in${product.path}/${mod.slug}`;
-
-  // FAQ rich result — the questions are already on the page, so marking them
-  // up costs nothing and keeps the module eligible for the FAQ treatment.
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: mod.faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.q,
-      acceptedAnswer: { "@type": "Answer", text: faq.a },
-    })),
-  };
+  // Same tags generate-meta bakes into this route's static HTML
+  const seo = moduleSeo(product, mod);
 
   return (
     <div className="min-h-screen bg-bgLight dark:bg-bgDark">
       <Helmet>
-        <title>{`${mod.name} | ${product.name} | RiskMan Consulting`}</title>
-        <meta name="description" content={`${mod.tagline}. ${mod.summary}`} />
-        <link rel="canonical" href={canonical} />
-        <meta property="og:title" content={`${mod.name} | ${product.name}`} />
-        <meta property="og:description" content={mod.tagline} />
-        <meta property="og:url" content={canonical} />
+        <title>{seo.title}</title>
+        <meta name="description" content={seo.description} />
+        <link rel="canonical" href={seo.canonical} />
+        <meta property="og:title" content={seo.title} />
+        <meta property="og:description" content={seo.description} />
+        <meta property="og:url" content={seo.canonical} />
         <meta property="og:type" content="website" />
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        {/* JSON-LD is baked into the static HTML by generate-meta; adding
+            it here too would give crawlers every schema twice. */}
       </Helmet>
 
       {/* A module with Sanity videos opens on them — the video is the hero */}

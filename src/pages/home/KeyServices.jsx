@@ -37,7 +37,7 @@ export default function KeyServices() {
   },[])
   
   return (
-    <section className="transition-colors py:14 md:py-12 bg-bgLight dark:bg-bgDark">
+    <section className="transition-colors py-14 md:py-12 bg-bgLight dark:bg-bgDark">
       <div className="container max-w-7xl">
 
         {/* Header */}

@@ -5,5 +5,7 @@ export const sanityClient = createClient({
   dataset: import.meta.env.VITE_SANITY_DATA_SET,
   apiVersion: "2024-01-01",
   useCdn: true, // fast read
-  token: import.meta.env.VITE_SANITY_API_TOKEN, // optional (protected)
+  // No token: the dataset is public, so published content reads without one.
+  // Anything with a VITE_ prefix ends up in the public JavaScript bundle, and a
+  // token here would also let anyone read unpublished drafts.
 })

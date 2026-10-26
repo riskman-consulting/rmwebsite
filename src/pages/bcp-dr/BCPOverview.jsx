@@ -21,7 +21,7 @@ const BCPOverview = () => {
         </div>
  
         <div className="p-8 bg-white shadow dark:bg-brandNavy/30 rounded-3xl">
-          <img src={bcpImg} className="object-contain w-full" />
+          <img src={bcpImg} alt="Business continuity and disaster recovery overview" className="object-contain w-full" />
         </div>
       </div>
     </section>

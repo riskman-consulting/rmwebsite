@@ -34,6 +34,10 @@ import {
   Clock,
   Stamp,
   SlidersHorizontal,
+  Globe,
+  MessagesSquare,
+  Send,
+  CalendarCheck,
 } from "lucide-react";
 
 // Product screenshots. Only the modules with artwork carry a `screens` array —
@@ -63,7 +67,7 @@ export const PRODUCTS_BASE_PATH = "/products";
  * Each module carries its own documentation set: the problem it addresses,
  * capabilities, the lifecycle it runs, the artefacts it produces, the
  * governance references it is built around, the roles that use it and FAQs.
- * `components/ModulePage.jsx` renders all of it, so the five module pages stay
+ * `components/ModulePage.jsx` renders all of it, so the module pages stay
  * in step and a copy change only happens here.
  *
  * NOTE FOR REVIEW: the statutory and framework references below (Companies Act
@@ -78,6 +82,7 @@ export const PRODUCTS = [
     path: `${PRODUCTS_BASE_PATH}/riskman-grc`,
     name: "RiskMan GRC",
     shortName: "RiskMan GRC",
+    seoTitle: "RiskMan GRC: Governance, Risk and Compliance Software",
     tagline: "Governance, risk and compliance in one connected workspace",
     summary:
       "A single place to plan audits, test controls, manage policies, track actions and maintain the risk register — so the same data feeds every view instead of living in scattered spreadsheets.",
@@ -90,6 +95,7 @@ export const PRODUCTS = [
         name: "Enterprise Risk Management",
         navLabel: "Enterprise Risk Management",
         shortName: "ERM",
+        seoTitle: "Enterprise Risk Management (ERM) Software",
         icon: Layers,
         summary:
           "A live risk register feeding heat maps and management reporting.",
@@ -355,6 +361,7 @@ export const PRODUCTS = [
         name: "Risk Based Internal Audit",
         navLabel: "Risk Based Internal Audit",
         shortName: "RBIA",
+        seoTitle: "Risk Based Internal Audit (RBIA) Software",
         icon: ClipboardCheck,
         summary:
           "Plan by risk, approve the plan, assign it process-wise and execute it.",
@@ -609,6 +616,7 @@ export const PRODUCTS = [
         name: "Control Testing",
         navLabel: "Control Testing",
         shortName: "Control Testing",
+        seoTitle: "Internal Control Testing Software for IFC and ICFR",
         icon: ShieldCheck,
         summary:
           "Run a testing project end to end — RCM, IDR, testing, approval, management response and report.",
@@ -864,6 +872,7 @@ export const PRODUCTS = [
         name: "Action Taken Report",
         navLabel: "Action Taken Report",
         shortName: "ATR",
+        seoTitle: "Action Taken Report (ATR) and Audit Issue Tracking Software",
         icon: ListChecks,
         summary:
           "Track every observation through to closure, with owners and due dates.",
@@ -1117,6 +1126,7 @@ export const PRODUCTS = [
         name: "Policy and SOP",
         navLabel: "Policy and SOP",
         shortName: "Policy and SOP",
+        seoTitle: "Policy and SOP Management Software",
         icon: FileText,
         summary:
           "One library for policies and SOPs, with versions and approvals tracked.",
@@ -1345,6 +1355,249 @@ export const PRODUCTS = [
           {
             q: "How does this help during an audit?",
             a: "For any document, the auditor can be shown the current version, who approved it and when, the change history, the acknowledgement position and the controls it governs — without assembling it from separate sources.",
+          },
+        ],
+      },
+
+      /* ---------------------------------------------------------------- */
+      /* 6. Global SOX                                                     */
+      /* ---------------------------------------------------------------- */
+      {
+        slug: "global-sox",
+        name: "Global SOX",
+        navLabel: "Global SOX",
+        shortName: "Global SOX",
+        seoTitle: "Global SOX Compliance Software for Multi-Entity Groups",
+        icon: Globe,
+        summary:
+          "For groups testing the same SOX controls across many entities. One control library, one approved scope, and projects that end in a signed-off report.",
+        tagline: "Your SOX programme across every entity, in one place",
+        description:
+          "Keep one risk and control library for the whole group. Decide each year which entities are in scope. Then run testing projects from the first evidence request to the final report.",
+        overview:
+          "If your group has twenty subsidiaries, you probably have twenty versions of the same RCM. Global SOX keeps one. You write a control once, roll it out to the entities that perform it, and every project tests against that same library. The CAE approves the scope and each project before work starts. Evidence comes in against each request, staff test on a workpaper, and the final report only goes out once every control and every management response has been signed off.",
+        atAGlance: [
+          { label: "Built for", value: "Group SOX teams, CAEs and controllers" },
+          { label: "Replaces", value: "One RCM workbook per entity, and evidence chased over email" },
+          { label: "Runs as", value: "Projects by entity, process and audit period" },
+          { label: "Ends with", value: "A final report signed off by the CAE" },
+        ],
+        challenges: [
+          {
+            title: "Twenty entities, twenty RCMs",
+            text: "Group changes a control description. Three subsidiaries update their workbook, the rest don't. By year end nobody is sure which version was tested.",
+          },
+          {
+            title: "Scope agreed on a call",
+            text: "Which entities are in scope this year? The answer is in someone's email from March. The external auditor asks for it in December.",
+          },
+          {
+            title: "The same request, sent fifty times",
+            text: "Each control owner gets a mail asking for documents. Some reply, some forward it, some send the wrong file. Tracking who still owes what becomes a spreadsheet.",
+          },
+          {
+            title: "Who approved this?",
+            text: "Testing was reviewed on a call, the response was agreed on mail, and the report was signed off in a meeting. Proving it later means digging.",
+          },
+        ],
+        outcomes: [
+          "A control is written once and used by every entity that performs it",
+          "Scope for the year is approved by the CAE and kept on record",
+          "You can see, per control, which documents are still pending",
+          "The person who tested a control can't approve it",
+          "Management responds once testing is complete, not control by control",
+        ],
+        capabilities: [
+          {
+            icon: Database,
+            title: "One risk and control library",
+            text: "Upload your existing RCM or build it on screen. Each control carries its type, frequency, COSO component, assertions, sampling criteria and testing steps. A master control can be rolled out to sub-entities, cloned to another entity, or edited once and applied everywhere.",
+            points: [
+              "Automated, manual or semi-manual; preventive, detective or corrective",
+              "Classified as Operational, Financial, ITGC, ELC or Stat Compliance",
+            ],
+          },
+          {
+            icon: FileSpreadsheet,
+            title: "Excel upload that checks your file first",
+            text: "Nothing is saved until the file is clean. You see every error in a preview grid, fix it right there, and then commit. If you'd rather fix it in Excel, download the error report.",
+            points: [
+              "Templates for RCM, Risk Master and Control Master",
+              "Full history of every upload and who did it",
+            ],
+          },
+          {
+            icon: Stamp,
+            title: "Changes to the library need approval",
+            text: "When an Audit Manager edits, adds, deletes or links a risk or control, it goes to the CAE as a change request. The CAE sees exactly which fields changed and either approves it or sends it back with a note.",
+            points: [
+              "Deleted records can be restored",
+              "Every change is logged with the old and new value",
+            ],
+          },
+          {
+            icon: CalendarCheck,
+            title: "SOX applicability for the year",
+            text: "List every entity and sub-entity, mark each one Yes or No, and send it to the CAE. Once approved it's locked. If scope changes mid-year, you raise a new version, say SOXA-2026-000001 v2, and the old one is archived.",
+          },
+          {
+            icon: FolderOpen,
+            title: "Projects the CAE approves before work starts",
+            text: "Pick control-wise or entity-wise, the audit period, and the processes and entities in scope. Drop any controls you're deferring, assign staff by entity, process or control with start and due dates, and send it to the CAE.",
+            points: [
+              "The CAE can defer or bring back controls while approving",
+              "Can be limited to the entities marked Yes in the applicability",
+              "Close or reopen a project when you need to",
+            ],
+          },
+          {
+            icon: Send,
+            title: "Evidence requests and uploads",
+            text: "The data requirements on each control become its IDR. Staff send it to the Audit Manager, who approves it and releases it now or on a date you pick. Control owners then upload files against each line, or drop everything in one go and let the system match files to requests by name.",
+            points: [
+              "Process Owner and Business Head are copied as escalation contacts",
+              "Need more? Raise an Additional Data Request",
+              "Return a file with a reason if it isn't what you asked for",
+            ],
+          },
+          {
+            icon: ClipboardCheck,
+            title: "Workpapers and review",
+            text: "Staff record the population, sample, exceptions and test steps, rate design and operating effectiveness, and mark the control Pass or Fail. A failed control gets a gap analysis with root cause and recommendation. Review then goes to the Audit Manager and on to the CAE.",
+            points: [
+              "Nobody can approve a control they tested",
+              "Approve or send back several controls at once",
+            ],
+          },
+          {
+            icon: ShieldAlert,
+            title: "Management response",
+            text: "Responses open for all failed controls together, once the whole project is tested. The control owner fills in the response, action plan, owner and target date. The Process Owner or Business Head approves it first, then audit staff, the Audit Manager and the CAE.",
+          },
+          {
+            icon: BarChart3,
+            title: "Reports and analytics",
+            text: "Each project has a live view of testing progress, effectiveness rate, deficiencies by process and staff workload. The final report is issued once everything is approved, and downloads as a PDF, laid out by entity or by control.",
+          },
+          {
+            icon: MessagesSquare,
+            title: "Chat and reminders",
+            text: "Every control has its own chat thread with the client contacts, so questions about a document stay next to it. Your admin decides which reminders go out, on which days and to whom, so overdue items get chased without anyone doing it by hand.",
+          },
+        ],
+        lifecycle: [
+          {
+            title: "Load the RCM",
+            text: "Upload your risk and control matrix and roll out each control to the entities that perform it.",
+          },
+          {
+            title: "Agree the scope",
+            text: "Mark which entities are in SOX scope for the period. The CAE approves it.",
+          },
+          {
+            title: "Set up the project",
+            text: "The Audit Manager picks the period, scope, controls and staff, and sends it to the CAE.",
+          },
+          {
+            title: "Send the IDR",
+            text: "Staff prepare the document request for each control. The Audit Manager approves and releases it.",
+          },
+          {
+            title: "Collect evidence",
+            text: "Control owners upload files. Staff accept them, return them, or ask for more.",
+          },
+          {
+            title: "Test",
+            text: "Staff fill in the workpaper and mark each control Pass or Fail.",
+          },
+          {
+            title: "Review",
+            text: "The Audit Manager and then the CAE approve each control, or send it back.",
+          },
+          {
+            title: "Get management's response",
+            text: "Control owners respond on failed controls. The business and then audit approve the responses.",
+          },
+          {
+            title: "Issue the report",
+            text: "The final report goes out to the audit team and the client contacts.",
+          },
+        ],
+        deliverables: [
+          "Risk and control library, with the entities each control applies to",
+          "Approved SOX applicability for each period",
+          "Approved project scope and staff assignment",
+          "IDR list with the evidence received against each line",
+          "Workpapers with samples, exceptions and conclusions",
+          "Gap analysis for every failed control",
+          "Management responses with action plans and target dates",
+          "Final SOX testing report (PDF)",
+          "Log of every change made to the library",
+        ],
+        standards: [
+          {
+            name: "SOX Section 404",
+            note: "Testing of internal control over financial reporting across the entities in scope.",
+          },
+          {
+            name: "SOX Section 302",
+            note: "A current view of control status to back the officer certifications.",
+          },
+          {
+            name: "PCAOB AS 2201",
+            note: "Workpapers and evidence in the form the external auditor reviews.",
+          },
+          {
+            name: "COSO Internal Control (2013)",
+            note: "Each control is tagged to its COSO component, and each risk to its financial assertions.",
+          },
+          {
+            name: "Companies Act 2013, Sec 134(5)(e) and 143(3)(i)",
+            note: "For Indian groups running IFC on the same control library.",
+          },
+        ],
+        roles: [
+          {
+            role: "Chief Audit Executive",
+            text: "Approves the scope, each project and changes to the library, and gives the final sign-off on testing and responses.",
+          },
+          {
+            role: "Audit Manager",
+            text: "Sets up projects, approves IDRs before they go out, and reviews testing.",
+          },
+          {
+            role: "Staff Auditor",
+            text: "Prepares IDRs, checks evidence, tests controls and reviews responses.",
+          },
+          {
+            role: "Control owners",
+            text: "Upload evidence and write the management response on failed controls.",
+          },
+          {
+            role: "Process Owners and Business Heads",
+            text: "Escalation contacts on each control, and first approvers of the response.",
+          },
+        ],
+        faqs: [
+          {
+            q: "Why is it called Global SOX?",
+            a: "Because it's built for groups. You keep one set of risks and controls and roll it out to every entity, sub-entity and division that uses it. One project and one report can cover many entities.",
+          },
+          {
+            q: "How is this different from Control Testing?",
+            a: "Control Testing suits a single entity running a testing project. Global SOX adds what a group needs on top: a shared control library with approved changes, yearly scope approval, CAE approval of each project, scheduled IDR release, additional data requests, and a longer approval chain for management responses.",
+          },
+          {
+            q: "Can we bring in our current RCM?",
+            a: "Yes. Download the template, paste your RCM in, and upload it. If something doesn't fit, such as a missing owner or an unknown entity, you'll see it in the preview and can fix it before anything is saved.",
+          },
+          {
+            q: "Can the approval steps be changed?",
+            a: "Yes. Your admin sets up who approves library changes, scope and testing, with up to four stages each. Out of the box it's the Audit Manager followed by the CAE.",
+          },
+          {
+            q: "Why don't management responses open straight away?",
+            a: "So management sees the full picture. Responses open once every control in the project has been tested and approved, and then all failed controls are sent together.",
           },
         ],
       },

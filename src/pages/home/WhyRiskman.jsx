@@ -38,7 +38,7 @@ export default function WhyChooseRiskMan() {
     }
   },[])
   return (
-    <section className="relative py-24 overflow-hidden bg-bgLight dark:bg-bgDark">
+    <section className="relative py-16 md:py-20 overflow-hidden bg-bgLight dark:bg-bgDark">
       {/* Decorative Background Element */}
       <div className="absolute top-0 w-full h-full -translate-x-1/2 pointer-events-none left-1/2 opacity-5">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brandPrimary rounded-full blur-[120px]" />
