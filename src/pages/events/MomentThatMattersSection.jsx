@@ -309,7 +309,7 @@ export default function MomentsThatMatter() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[...Prasen_Pal_Germany_Image.slice(0, 2), ...Prasen_Pal_Indonesia_Image.slice(0, 2)].map((img, idx) => (
-                <img key={idx} src={img} className="rounded-2xl h-48 w-full object-cover cursor-pointer hover:opacity-80 transition" onClick={() => openLightbox([img], 0)} />
+                <img key={idx} src={img} alt="Prasen Pal at an international business meeting" className="rounded-2xl h-48 w-full object-cover cursor-pointer hover:opacity-80 transition" onClick={() => openLightbox([img], 0)} />
               ))}
             </div>
           </motion.div>

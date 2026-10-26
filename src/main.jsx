@@ -1,5 +1,5 @@
 import { StrictMode } from 'react'
-import { createRoot, hydrateRoot } from 'react-dom/client'
+import { createRoot } from 'react-dom/client'
 import { HelmetProvider } from 'react-helmet-async'
 import './index.css'
 import App from './App.jsx'
@@ -21,10 +21,9 @@ const tree = (
   </StrictMode>
 )
 
-if (rootEl.hasChildNodes()) {
-  // react-snap has prerendered HTML — hydrate it
-  hydrateRoot(rootEl, tree)
-} else {
-  // Dev mode or first-load fallback — render fresh
-  createRoot(rootEl).render(tree)
-}
+// Most routes arrive with their markup already in #root (prerendered at build
+// time by scripts/generate-meta.mjs, for crawlers). Render fresh rather than
+// hydrate: the browser-only state (saved theme, fetched data) can differ from
+// the build-time render, and React 18 does not patch attribute mismatches
+// during hydration. createRoot replaces the markup in a single commit.
+createRoot(rootEl).render(tree)

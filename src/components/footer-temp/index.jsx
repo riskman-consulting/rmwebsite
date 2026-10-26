@@ -1,23 +1,28 @@
 import React from "react";
-import { Mail, Linkedin, MapPin, ChevronUp } from "lucide-react";
+import { ChevronUp } from "lucide-react";
 import { ENTERPRISE_SERVICES, IT_RISK_SERVICES } from "./data";
+import { PRODUCTS } from "../../pages/products/productsData";
 import { Link } from "react-router-dom";
 import InsightsSubscribe from "../common/Subscriber";
 
+const grc = PRODUCTS[0];
+
+const FooterColumn = ({ title, children }) => (
+  <div>
+    <h4 className="footer-heading">{title}</h4>
+    <ul className="space-y-2.5">{children}</ul>
+  </div>
+);
+
 const Footer = () => {
   return (
-    <footer className="bg-bgLight dark:bg-surfaceDark pt-16 md:pt-20 pb-10 border-t border-borderLight dark:border-borderDark">
+    <footer className="border-t bg-bgLight dark:bg-surfaceDark border-borderLight dark:border-borderDark">
+      <div className="container">
 
-      <div className="container mx-auto px-6 lg:px-12">
-
-        {/* Main Grid */}
-        {/* lg+: four columns sized to their content, so neither the "IT Risk
-            Management" heading nor the subscribe card gets squeezed. */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)_minmax(0,1fr)_minmax(0,1.25fr)] gap-10 lg:gap-8 xl:gap-12 mb-14">
-
-          {/* Brand Section */}
-          <div className="sm:col-span-2 lg:col-span-1 space-y-6">
-            <Link to="/" className="flex w-[140px] h-[48px]">
+        {/* Brand and link columns */}
+        <div className="grid grid-cols-1 gap-10 pt-14 pb-12 sm:grid-cols-2 lg:grid-cols-[minmax(0,1.4fr)_repeat(3,minmax(0,1fr))] lg:gap-10">
+          <div className="sm:col-span-2 lg:col-span-1">
+            <Link to="/" className="flex w-[130px] h-[44px]">
               <img
                 className="object-contain w-full h-full dark:hidden"
                 src="/rm.png"
@@ -30,96 +35,103 @@ const Footer = () => {
               />
             </Link>
 
-            <p className="text-brandNavy/60 dark:text-brandLight/60 text-sm leading-relaxed max-w-md">
-              RiskMan provides expert Assurance & Advisory services with major focus on Risk based internal audits, ERM, TPRM, SOC 1, SOC 2, BCP/DR, ITGC/ ITAC reviews, ISO certifications, ESG assessments, Credit rating advisory, Business valuations, Digital transformation, Concurrent audits, Policy and SOPs - helping businesses grow with confidence.
+            <p className="max-w-sm mt-4 text-sm leading-relaxed text-brandNavy/70 dark:text-brandLight/60">
+              Risk, assurance and advisory for companies in India and abroad.
+              We also build RiskMan GRC, our software for audit, controls,
+              SOX and risk.
             </p>
 
-            <div className="flex gap-4">
-              <a href="mailto:contact@riskman.in" className="footer-icon" aria-label="Email RiskMan">
-                <Mail size={18} />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/riskman-consulting"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-icon"
-                aria-label="RiskMan on LinkedIn"
-              >
-                <Linkedin size={18} />
-              </a>
-              <a
-                href="https://www.google.com/maps/place/RiskMan+Consulting"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-icon"
-                aria-label="RiskMan on Google Maps"
-              >
-                <MapPin size={18} />
-              </a>
-            </div>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="footer-heading">Enterprise Services</h4>
-            <ul className="space-y-3">
-              {ENTERPRISE_SERVICES.map((s, idx) => (
-                <li key={idx}>
-                  <Link to={s.path} className="footer-link">
-                    {s.name}
-                  </Link>
-                </li>
-              ))}
+            <ul className="mt-5 space-y-1.5 text-sm">
+              <li>
+                <a href="mailto:contact@riskman.in" className="footer-link">
+                  contact@riskman.in
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/riskman-consulting"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer-link"
+                >
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.google.com/maps/place/RiskMan+Consulting"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer-link"
+                >
+                  Find us on Google Maps
+                </a>
+              </li>
             </ul>
           </div>
 
-          <div>
-            <h4 className="footer-heading">IT Risk Management</h4>
-            <ul className="space-y-3">
-              {IT_RISK_SERVICES.map((s, idx) => (
-                <li key={idx}>
-                  <Link to={s.path} className="footer-link">
-                    {s.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <FooterColumn title="Services">
+            {ENTERPRISE_SERVICES.map((s) => (
+              <li key={s.name}>
+                <Link to={s.path} className="footer-link">
+                  {s.name}
+                </Link>
+              </li>
+            ))}
+          </FooterColumn>
 
-          {/* Newsletter */}
-          <div className="sm:col-span-2 lg:col-span-1 w-full max-w-md lg:max-w-none">
-            <InsightsSubscribe />
-          </div>
+          <FooterColumn title="IT risk">
+            {IT_RISK_SERVICES.map((s) => (
+              <li key={s.name}>
+                <Link to={s.path} className="footer-link">
+                  {s.name}
+                </Link>
+              </li>
+            ))}
+          </FooterColumn>
 
+          <FooterColumn title={grc.name}>
+            {grc.modules.map((mod) => (
+              <li key={mod.slug}>
+                <Link to={`${grc.path}/${mod.slug}`} className="footer-link">
+                  {mod.name}
+                </Link>
+              </li>
+            ))}
+          </FooterColumn>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-borderLight dark:border-borderDark flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4 md:gap-6">
-          <p className="text-sm text-brandNavy/40 dark:text-brandLight/40">
-            RiskMan © {new Date().getFullYear()}. All rights reserved.
-          </p>
+        {/* Newsletter */}
+        <div className="py-8 border-t border-borderLight dark:border-borderDark">
+          <InsightsSubscribe />
+        </div>
 
-          <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-sm text-brandNavy/60 dark:text-brandLight/60">
-            <Link to="/privacy-policy" className="hover:text-brandAccent transition">
+        {/* Bottom bar */}
+        <div className="flex flex-col gap-3 pt-6 pb-20 text-sm border-t md:pb-6 md:flex-row md:items-center md:justify-between border-borderLight dark:border-borderDark">
+          <p className="text-sm text-brandNavy/55 dark:text-brandLight/45">
+            © {new Date().getFullYear()} RiskMan Consulting. All rights reserved.
+          </p>
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            <Link to="/privacy-policy" className="footer-link">
               Privacy Policy
             </Link>
-            <a href="#" className="hover:text-brandAccent transition">
+            <Link to="/terms" className="footer-link">
               Terms of Use
-            </a>
-            <a href="#" className="hover:text-brandAccent transition">
-              Cookie Settings
-            </a>
+            </Link>
+            <Link to="/contact" className="footer-link">
+              Contact
+            </Link>
           </div>
         </div>
       </div>
 
-      {/* Scroll Button */}
+      {/* Scroll to top */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         aria-label="Scroll to top"
-        className="fixed bottom-6 md:bottom-10 right-6 md:right-10 z-40 w-10 h-10 md:w-12 md:h-12 rounded-full bg-brandLight dark:bg-surfaceDark shadow-lg border border-borderLight dark:border-borderDark flex items-center justify-center text-brandNavy dark:text-brandAccent hover:bg-brandNavy hover:text-white transition-all transform hover:-translate-y-1"
+        className="fixed z-40 flex items-center justify-center w-10 h-10 transition-colors border rounded-full bottom-6 right-6 md:bottom-8 md:right-8 bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark text-brandNavy dark:text-brandAccent hover:bg-brandNavy hover:text-white dark:hover:bg-brandAccent dark:hover:text-brandDark"
       >
-        <ChevronUp size={20} />
+        <ChevronUp size={18} />
       </button>
     </footer>
   );

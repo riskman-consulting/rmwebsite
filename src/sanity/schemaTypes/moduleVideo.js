@@ -13,6 +13,7 @@ const GRC_MODULES = [
     { title: 'Control Testing', value: 'control-testing' },
     { title: 'Action Taken Report', value: 'action-taken-report' },
     { title: 'Policy and SOP', value: 'policy' },
+    { title: 'Global SOX', value: 'global-sox' },
 ]
 
 export const moduleVideo = defineType({

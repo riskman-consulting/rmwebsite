@@ -7,12 +7,12 @@ const CTASection = () => {
  
   const topAvatars = [
     teamsImages.sukantaSir,
-    "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768906075/Prasen_pal_xe5jx8.webp",
+    "https://res.cloudinary.com/dwbcjcqdt/image/upload/c_limit,w_400,q_auto,f_auto/v1768906075/Prasen_pal_xe5jx8.webp",
     teamsImages.arpitSir,
   ];
  
   return (
-    <section className="relative w-full py-8 transition-colors duration-300 bg-bgLight dark:bg-bgDark md:pt-20">
+    <section className="relative w-full py-8 transition-colors duration-300 bg-bgLight dark:bg-bgDark md:pt-10">
       <div className="container px-4 mx-auto">
        
         {/* TOP AVATARS - Social Proof */}

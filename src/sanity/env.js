@@ -6,8 +6,24 @@
  * tooling — which loads this config in Node, where `import.meta.env` does not
  * exist — keeps working too.
  */
-const browserEnv =
-  typeof import.meta !== 'undefined' && import.meta.env ? import.meta.env : {}
+// Each variable is read by its full name. Reading `import.meta.env` as a whole
+// makes Vite inline every VITE_ variable into the Studio bundle, secrets
+// included. In Node (Sanity CLI) `import.meta.env` is undefined, so each read
+// is guarded and falls back to process.env below.
+const fromVite = (read) => {
+  try {
+    return read()
+  } catch {
+    return undefined
+  }
+}
+
+const browserEnv = {
+  VITE_SANITY_PROJECT_ID: fromVite(() => import.meta.env.VITE_SANITY_PROJECT_ID),
+  VITE_SANITY_DATA_SET: fromVite(() => import.meta.env.VITE_SANITY_DATA_SET),
+  VITE_SANITY_API_VERSION: fromVite(() => import.meta.env.VITE_SANITY_API_VERSION),
+  VITE_SANITY_ENBALE_CDN: fromVite(() => import.meta.env.VITE_SANITY_ENBALE_CDN),
+}
 
 const nodeEnv = typeof process !== 'undefined' && process.env ? process.env : {}
 
@@ -34,8 +50,6 @@ export const apiVersion =
 
 export const useCdn =
   String(readEnv('VITE_SANITY_ENBALE_CDN') ?? 'true') === 'true'
-
-export const token = readEnv('VITE_SANITY_API_TOKEN')
 
 function assertValue(value, errorMessage) {
   if (value === undefined || value === null || value === '') {

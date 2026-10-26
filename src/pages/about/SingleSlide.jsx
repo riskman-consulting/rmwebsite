@@ -12,7 +12,7 @@ export default function SingleSlide() {
     // "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768895921/Vishal_Sharma_qfwz3c.webp"
 
     teamsImages.sukantaSir,
-    "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768906075/Prasen_pal_xe5jx8.webp",
+    "https://res.cloudinary.com/dwbcjcqdt/image/upload/c_limit,w_400,q_auto,f_auto/v1768906075/Prasen_pal_xe5jx8.webp",
     teamsImages.arpitSir,
   ];
 

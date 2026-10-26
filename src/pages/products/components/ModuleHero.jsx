@@ -1,163 +1,103 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, CalendarCheck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import ModuleBreadcrumb from "./ModuleBreadcrumb";
 
 /**
- * Module hero — breadcrumb, positioning line, the two calls to action and an
- * "at a glance" panel that answers who the module is for before the visitor
- * has to read a section. The jump links below it act as the page's contents.
+ * Module hero — breadcrumb, name, one-line positioning, the overview, two
+ * calls to action and a short "at a glance" table. The "On this page" links
+ * below act as the page's contents.
  *
  * `belowVideoHero`: the module has Sanity videos, so ModuleVideos opens the
  * page instead. That section owns the breadcrumb and the page's h1, so this
  * one drops the breadcrumb and steps its title down to h2.
  */
 const ModuleHero = ({ product, mod, sections, belowVideoHero = false }) => {
-  const Icon = mod.icon;
-  const Heading = belowVideoHero ? motion.h2 : motion.h1;
+  const Heading = belowVideoHero ? "h2" : "h1";
 
   return (
-    <section className="relative overflow-hidden border-b bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark">
-      {/* Soft brand wash — keeps the hero distinct from the sections below
-          without introducing a second background colour. */}
+    <section className="bg-bgLight dark:bg-bgDark">
       <div
-        aria-hidden="true"
-        className="absolute inset-0 pointer-events-none bg-[radial-gradient(60%_80%_at_85%_0%,rgba(0,64,128,0.07),transparent_60%)] dark:bg-[radial-gradient(60%_80%_at_85%_0%,rgba(255,184,0,0.08),transparent_60%)]"
-      />
-
-      {/* Opening the page, the breadcrumb sits close under the module tabs;
-          below the video hero it keeps full section spacing. */}
-      <div
-        className={`container relative pb-10 md:pb-16 ${
-          belowVideoHero ? "pt-10 md:pt-16" : "pt-6 md:pt-8"
+        className={`container pb-10 md:pb-14 ${
+          belowVideoHero ? "pt-10 md:pt-14" : "pt-6 md:pt-8"
         }`}
       >
         {!belowVideoHero && <ModuleBreadcrumb product={product} mod={mod} />}
 
         <div className="grid items-start grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
-          {/* Left — positioning */}
           <div className="lg:col-span-7">
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.45 }}
-              className="flex items-center gap-3 mb-6"
-            >
-              <span className="flex items-center justify-center flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-brandPrimary/10 dark:bg-brandGold/10">
-                <Icon className="w-6 h-6 md:w-7 md:h-7 text-brandPrimary dark:text-brandGold" />
-              </span>
-              <span className="text-[11px] font-black tracking-[0.2em] uppercase text-brandNavy/50 dark:text-white/40">
-                {product.name} module
-              </span>
-            </motion.div>
-
             <Heading
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.05 }}
-              /* Below the video hero this is a section heading, not the page
-                 title, so it takes SectionHeading's h2 size. */
-              className={`font-heading text-brandDark dark:text-white ${
+              className={` text-brandDark dark:text-white ${
                 belowVideoHero
-                  ? "text-2xl font-bold leading-tight sm:text-3xl md:text-4xl"
-                  : "text-3xl font-black leading-[1.1] sm:text-4xl md:text-5xl"
+                  ? "text-2xl font-bold leading-tight md:text-[30px]"
+                  : "text-3xl font-bold leading-[1.15] sm:text-[32px] md:text-[38px]"
               }`}
             >
               {mod.name}
             </Heading>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.12 }}
-              className={`mt-4 font-semibold leading-snug font-heading text-brandPrimary dark:text-brandGold ${
-                belowVideoHero ? "text-base sm:text-lg md:text-xl" : "text-lg sm:text-xl md:text-2xl"
-              }`}
-            >
+            <p className="mt-3 max-w-[62ch] text-base font-medium leading-snug sm:text-lg [text-wrap:balance] text-brandPrimary dark:text-brandGold">
               {mod.tagline}
-            </motion.p>
+            </p>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.18 }}
-              className="mt-5 text-base leading-relaxed sm:text-lg text-brandNavy/70 dark:text-white/60"
-            >
+            <p className="mt-4 max-w-[62ch] text-[15px] leading-relaxed sm:text-base text-gray-800 dark:text-white/80">
               {mod.overview}
-            </motion.p>
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.24 }}
-              className="flex flex-col gap-3 mt-8 sm:flex-row sm:items-center"
-            >
+            <div className="flex flex-col gap-3 mt-7 sm:flex-row sm:items-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-black tracking-wide uppercase transition-all duration-200 rounded-full bg-brandPrimary dark:bg-brandGold text-white dark:text-brandDark hover:opacity-90"
+                className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold transition-colors rounded-md bg-brandPrimary dark:bg-brandGold text-white dark:text-brandDark hover:bg-brandNavy dark:hover:bg-brandAccent"
               >
-                <CalendarCheck className="w-4 h-4" />
                 Request a demo
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-black tracking-wide uppercase transition-all duration-200 border rounded-full border-borderLight dark:border-borderDark text-brandDark dark:text-white/85 hover:border-brandAccent hover:text-brandPrimary dark:hover:text-brandGold"
+                className="inline-flex items-center justify-center gap-1.5 px-2 py-2.5 text-sm font-semibold transition-colors text-brandPrimary dark:text-brandGold hover:underline underline-offset-4"
               >
                 Talk to a specialist
                 <ArrowRight className="w-4 h-4" />
               </Link>
-            </motion.div>
+            </div>
           </div>
 
-          {/* Right — at a glance */}
-          <motion.aside
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="lg:col-span-5"
-          >
-            <div className="p-6 border shadow-sm bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark rounded-2xl md:p-7">
-              <h2 className="mb-5 text-xs font-black tracking-[0.2em] uppercase text-brandNavy/50 dark:text-white/40">
-                At a glance
-              </h2>
-              <dl className="divide-y divide-borderLight dark:divide-borderDark">
-                {mod.atAGlance.map((row) => (
-                  <div
-                    key={row.label}
-                    className="flex flex-col gap-1 py-3 first:pt-0 last:pb-0 sm:flex-row sm:items-baseline sm:gap-4"
-                  >
-                    <dt className="text-xs font-bold tracking-wide uppercase sm:w-28 sm:flex-shrink-0 text-brandNavy/50 dark:text-white/40">
-                      {row.label}
-                    </dt>
-                    <dd className="text-[15px] font-semibold leading-snug text-brandDark dark:text-white/85">
-                      {row.value}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-          </motion.aside>
+          <aside className="lg:col-span-5 lg:pt-2">
+            <h2 className="mb-3 text-sm font-semibold text-brandNavy/60 dark:text-white/50">
+              At a glance
+            </h2>
+            <dl className="border-t divide-y border-borderLight dark:border-borderDark divide-borderLight dark:divide-borderDark">
+              {mod.atAGlance.map((row) => (
+                <div
+                  key={row.label}
+                  className="grid grid-cols-[6.5rem_minmax(0,1fr)] gap-4 py-3"
+                >
+                  <dt className="text-sm text-brandNavy/60 dark:text-white/50">
+                    {row.label}
+                  </dt>
+                  <dd className="text-sm font-semibold leading-snug text-brandDark dark:text-white/85">
+                    {row.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </aside>
         </div>
 
-        {/* Jump links — the page's table of contents */}
-        <motion.nav
+        <nav
           aria-label="On this page"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="flex gap-2 pb-1 mt-10 -mx-1 overflow-x-auto md:mt-12 md:flex-wrap md:overflow-visible"
+          className="flex flex-wrap items-baseline mt-10 text-sm gap-x-5 gap-y-2 md:mt-12"
         >
+          <span className="text-brandNavy/50 dark:text-white/40">On this page:</span>
           {sections.map((section) => (
             <a
               key={section.id}
               href={`#${section.id}`}
-              className="flex-shrink-0 px-4 py-2 mx-1 text-xs font-bold tracking-wide uppercase transition-colors border rounded-full border-borderLight dark:border-borderDark text-brandNavy/70 dark:text-white/60 hover:border-brandAccent hover:text-brandPrimary dark:hover:text-brandGold"
+              className="font-medium transition-colors text-brandNavy/80 dark:text-white/70 hover:text-brandPrimary dark:hover:text-brandGold hover:underline underline-offset-4"
             >
               {section.label}
             </a>
           ))}
-        </motion.nav>
+        </nav>
       </div>
     </section>
   );

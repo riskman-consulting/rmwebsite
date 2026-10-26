@@ -215,11 +215,11 @@ h2 { font-size: clamp(1.4rem, 3vw, 2.2rem); }
 p  { font-size: clamp(1rem, 2vw, 1.2rem); }
  
 .footer-heading {
-  @apply font-bold text-sm uppercase tracking-wider whitespace-nowrap mb-6 text-brandNavy dark:text-brandAccent;
+  @apply font-semibold text-[15px] mb-4 text-brandDark dark:text-white;
 }
 
 .footer-link {
-  @apply text-sm text-brandNavy/60 dark:text-brandLight/60 hover:text-brandAccent transition-colors;
+  @apply text-sm text-brandNavy/70 dark:text-brandLight/60 hover:text-brandPrimary dark:hover:text-brandAccent hover:underline underline-offset-4 transition-colors;
 }
 
 .footer-icon {

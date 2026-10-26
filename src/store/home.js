@@ -1,7 +1,10 @@
 import { create } from "zustand";
 import { sanityClient } from "../api/sanity";
 
-const BASE = `*[_type == "homePage"][1]`;
+// The singleton by its fixed id. It used to be picked as the second
+// "homePage" result, which only worked while a token also returned an old
+// stray draft alongside it.
+const BASE = `*[_type == "homePage" && _id == "homePage"][0]`;
 
 export const useHomePage = create((set) => ({
 

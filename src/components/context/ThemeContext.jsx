@@ -3,7 +3,9 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
+  // No localStorage when the page is rendered to HTML at build time
   const [theme, setTheme] = useState(() => {
+    if (typeof window === "undefined") return "light";
     return localStorage.getItem("theme") || "light";
   });
 

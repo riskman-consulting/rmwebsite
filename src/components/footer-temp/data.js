@@ -41,7 +41,7 @@ export const NAV_LINKS = [
 
 export const ENTERPRISE_SERVICES = [
   {name:"Risk Assurance and Advisory",path:"/services/risk-advisory"},
-  {name:"Digital Transformation",path:"/services/digital-tran"},
+  {name:"Digital Transformation",path:"/services/digital-transformation"},
   {name:"Sustainability & ESG",path:"/services/esg"},
   {name:"Financial Accounting and Advisory Services (FAAS)",path:"/services/faas"},
   {name:"AI & Technology",path:"/services/ai-technology"},
@@ -49,11 +49,11 @@ export const ENTERPRISE_SERVICES = [
 ];
 
 export const IT_RISK_SERVICES = [
-  {name:"SOC Compliances",path:""},
+  {name:"SOC Compliances",path:"/services/soc-services"},
   {name:"ISO & TISAX Readiness",path:"/services/iso-certifications"},
-  {name:"PCI DSS",path:"/services/pci-dss"},
-  {name:"ITGC and ITAC",path:"/services/itgc"},
-  {name:"BCP/DR", path:"/services/bcp"},
+  {name:"PCI DSS",path:"/services/pci-dss-compliance"},
+  {name:"ITGC and ITAC",path:"/services/itgc-itac"},
+  {name:"BCP/DR", path:"/services/bcp-dr"},
   {name:"Cybersecurity",path:"/services/cybersecurity"},
   {name:"Data Privacy",path:"/services/data-privacy"}
 ];

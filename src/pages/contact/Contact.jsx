@@ -10,7 +10,7 @@ export default function Contact() {
     {
       location: "Kolkata, India",
       founder: "Prasen Pal",
-      image: "https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768906075/Prasen_pal_xe5jx8.webp",
+      image: "https://res.cloudinary.com/dwbcjcqdt/image/upload/c_limit,w_400,q_auto,f_auto/v1768906075/Prasen_pal_xe5jx8.webp",
     },
     {
       location: "Gurgaon, India",

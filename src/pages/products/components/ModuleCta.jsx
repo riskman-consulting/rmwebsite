@@ -1,55 +1,38 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, CalendarCheck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
-/** Closing call to action, pitched at a walkthrough rather than a signup. */
+/** Closing call to action, kept to one line of copy and two links. */
 const ModuleCta = ({ mod }) => (
-  <section className="py-14 md:py-20 bg-bgLight dark:bg-bgDark">
-    <div className="container">
-      <motion.div
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-60px" }}
-        transition={{ duration: 0.5 }}
-        className="relative overflow-hidden p-8 md:p-12 lg:p-14 rounded-3xl bg-brandDark dark:bg-surfaceDark dark:border dark:border-borderDark"
-      >
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 pointer-events-none bg-[radial-gradient(70%_100%_at_100%_0%,rgba(255,192,0,0.16),transparent_60%)]"
-        />
-
-        <div className="relative max-w-3xl">
-          <span className="inline-block mb-4 text-xs font-black tracking-[0.2em] uppercase text-brandAccent">
-            Next step
-          </span>
-          <h2 className="mb-4 text-2xl font-black leading-tight font-heading sm:text-3xl md:text-4xl text-white">
-            See {mod.shortName} running on your own framework
+  <section className="border-t border-borderLight dark:border-borderDark">
+    <div className="container py-12 md:py-16">
+      <div className="grid grid-cols-1 gap-6 p-6 border-l-[3px] md:p-8 lg:grid-cols-12 lg:items-center lg:gap-12 bg-surfaceLight dark:bg-surfaceDark border-brandAccent rounded-r-lg">
+        <div className="lg:col-span-8">
+          <h2 className="text-xl font-bold leading-snug md:text-2xl text-brandDark dark:text-white">
+            See {mod.shortName} on your own data
           </h2>
-          <p className="mb-8 text-base leading-relaxed sm:text-lg text-white/70">
-            A working session with our team — we walk the module against your
-            current process, your matrix and your reporting calendar, and you
-            see what the file looks like at the end of a cycle.
+          <p className="mt-2 text-[15px] leading-relaxed text-gray-800 dark:text-white/80">
+            Book an hour with our team. We will run the module on your own
+            process and control matrix, so you can see how a full cycle would
+            look for you.
           </p>
-
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-black tracking-wide uppercase transition-all duration-200 rounded-full bg-brandAccent text-brandDark hover:opacity-90"
-            >
-              <CalendarCheck className="w-4 h-4" />
-              Book a walkthrough
-            </Link>
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-black tracking-wide uppercase transition-all duration-200 border rounded-full border-white/25 text-white hover:border-brandAccent hover:text-brandAccent"
-            >
-              Ask a question
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
         </div>
-      </motion.div>
+        <div className="flex flex-col gap-3 sm:flex-row lg:col-span-4 lg:justify-end">
+          <Link
+            to="/contact"
+            className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold transition-colors rounded-md bg-brandPrimary dark:bg-brandGold text-white dark:text-brandDark hover:bg-brandNavy dark:hover:bg-brandAccent"
+          >
+            Book a walkthrough
+          </Link>
+          <Link
+            to="/contact"
+            className="inline-flex items-center justify-center gap-1.5 px-2 py-2.5 text-sm font-semibold transition-colors text-brandPrimary dark:text-brandGold hover:underline underline-offset-4"
+          >
+            Ask a question
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </div>
     </div>
   </section>
 );

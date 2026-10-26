@@ -123,6 +123,7 @@ function DigitalTransformationPage() {
       <Helmet>
         <title>Digital Transformation Services | RiskMan Consulting</title>
         <meta name="description" content="Elevate your enterprise through digital evolution with RiskMan Consulting's comprehensive digital transformation services including Strategic PMO, Implementation Excellence, and Support Services." />
+        <link rel="canonical" href="https://www.riskman.in/services/digital-transformation" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />

@@ -124,7 +124,7 @@ export default function RiskAdvisoryPage() {
   />
   <link
     rel="canonical"
-    href="https://www.riskman.in/risk-assurance-and-advisory"
+    href="https://www.riskman.in/services/risk-advisory"
   />
 </Helmet>
 

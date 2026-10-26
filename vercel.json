@@ -1,12 +1,29 @@
 {
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/blog", "destination": "/blogs", "permanent": true },
+    { "source": "/erm", "destination": "/services/risk-advisory/erm", "permanent": true },
+    { "source": "/rbia", "destination": "/services/risk-advisory/rbia", "permanent": true },
+    { "source": "/risk-assurance-and-advisory", "destination": "/services/risk-advisory", "permanent": true },
+    { "source": "/digital-transformation", "destination": "/services/digital-transformation", "permanent": true }
+  ],
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+    { "source": "/blog/:slug", "destination": "/index.html" },
+    { "source": "/insights/:slug", "destination": "/index.html" },
+    { "source": "/industries/:id", "destination": "/index.html" },
+    { "source": "/careers/:jobId", "destination": "/index.html" },
+    { "source": "/events/emerging-awards", "destination": "/index.html" },
+    { "source": "/cms", "destination": "/index.html" },
+    { "source": "/cms/:path*", "destination": "/index.html" }
   ],
   "headers": [
+    {
+      "source": "/seo-report.json",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
     {
       "source": "/(.*)\\.html",
       "headers": [

@@ -63,7 +63,7 @@ const HeroSection = () => {
     // </section>
 
     <section className="relative flex items-center justify-center min-h-screen">
-    <img src="https://public.youware.com/users-website-assets/prod/40fcf0f2-b4b0-418d-a01b-f6b4ca34e916/6ca2779f20284edca08c4ceef94541a8.jpg" className="absolute inset-0 object-cover w-full h-full" />
+    <img src="https://public.youware.com/users-website-assets/prod/40fcf0f2-b4b0-418d-a01b-f6b4ca34e916/6ca2779f20284edca08c4ceef94541a8.jpg" alt="" className="absolute inset-0 object-cover w-full h-full" />
     <div className="absolute inset-0 bg-brandNavy/80" />
 
     <div className="relative z-10 px-6 text-center text-white">
