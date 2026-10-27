@@ -44,8 +44,8 @@ const ModuleScreens = ({ mod }) => {
     <DocSection
       id="screens"
       wide
-      title={`${mod.shortName} on screen`}
-      lead="Screenshots taken from the live product."
+      title={`${mod.shortName} in the product`}
+      lead="Screenshots from the live product."
     >
 
         {tabbed ? (

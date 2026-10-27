@@ -473,7 +473,28 @@ function buildIndustryHead(industry) {
     `Specialised risk advisory and compliance services for the ${industry.title} sector.`;
   const description = trimTo(descRaw, 160);
   const image = industry.headerImage || DEFAULT_OG_IMAGE;
-  return buildBaseHead({ title, description, canonical: url, image, ogType: "website" });
+
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: title,
+      description,
+      url,
+      about: { "@type": "Thing", name: industry.title },
+      publisher: ORGANIZATION,
+    },
+    breadcrumbJsonLd([
+      { name: "Home", url: `${SITE_URL}/` },
+      { name: "Industries", url: `${SITE_URL}/industries` },
+      { name: industry.title, url },
+    ]),
+  ];
+
+  return `
+    ${buildBaseHead({ title, description, canonical: url, image, ogType: "website" })}
+    ${jsonLdScripts(jsonLd)}
+  `.trim();
 }
 
 const slugifyJobTitle = (value = "") =>
@@ -546,6 +567,110 @@ function buildJobHead(job) {
 }
 
 /* ------------------------------------------------------------------ *
+ * Structured data (JSON-LD) for static, industry and FAAS pages
+ * ------------------------------------------------------------------ */
+
+const ORGANIZATION = {
+  "@type": "Organization",
+  "@id": `${SITE_URL}/#organization`,
+  name: "RiskMan Consulting",
+  url: `${SITE_URL}/`,
+  logo: `${SITE_URL}/rm.png`,
+  email: "contact@riskman.in",
+  sameAs: ["https://www.linkedin.com/company/riskman-consulting"],
+};
+
+/** Breadcrumb label for a route; titles that lead with the brand are named here. */
+const CRUMB_NAMES = {
+  "/": "Home",
+  "/services": "Services",
+};
+
+/** "ERM Services | RiskMan Consulting" → "ERM Services" */
+const crumbName = (route, title) =>
+  CRUMB_NAMES[route] || String(title || "").split(" | ")[0].trim();
+
+const breadcrumbJsonLd = (items) => ({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: items.map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
+});
+
+/**
+ * Home, then every parent route that has a page of its own, then the page.
+ * A parent with no page (e.g. /services/esg/x has /services/esg) is skipped.
+ */
+function breadcrumbFor(route, name, names) {
+  const items = [{ name: "Home", url: `${SITE_URL}/` }];
+  const parts = route.split("/").filter(Boolean);
+  for (let i = 1; i < parts.length; i++) {
+    const parent = `/${parts.slice(0, i).join("/")}`;
+    if (names.has(parent)) items.push({ name: names.get(parent), url: `${SITE_URL}${parent}` });
+  }
+  items.push({ name, url: `${SITE_URL}${route}` });
+  return breadcrumbJsonLd(items);
+}
+
+const PAGE_TYPES = {
+  "/about": "AboutPage",
+  "/contact": "ContactPage",
+  "/services": "CollectionPage",
+  "/industries": "CollectionPage",
+  "/blogs": "CollectionPage",
+  "/insights": "CollectionPage",
+  "/newsletter": "CollectionPage",
+  "/events": "CollectionPage",
+};
+
+/**
+ * Home: the Organization and the WebSite. A service page: the Service it
+ * offers. Any other page: its WebPage type. Every page but home: a breadcrumb.
+ */
+function buildStaticJsonLd({ route, title, description, canonical, names }) {
+  if (route === "/") {
+    return [
+      { "@context": "https://schema.org", ...ORGANIZATION, description },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
+        name: "RiskMan Consulting",
+        url: `${SITE_URL}/`,
+        publisher: { "@id": ORGANIZATION["@id"] },
+      },
+    ];
+  }
+
+  const name = crumbName(route, title);
+  const page = route.startsWith("/services/")
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name,
+        serviceType: name,
+        description,
+        url: canonical,
+        provider: ORGANIZATION,
+        areaServed: "Worldwide",
+      }
+    : {
+        "@context": "https://schema.org",
+        "@type": PAGE_TYPES[route] || "WebPage",
+        name: title,
+        description,
+        url: canonical,
+        publisher: ORGANIZATION,
+      };
+
+  return [page, breadcrumbFor(route, name, names)];
+}
+
+/* ------------------------------------------------------------------ *
  * Data-driven pages — products, modules and FAAS groups
  * ------------------------------------------------------------------ */
 
@@ -578,13 +703,17 @@ async function loadPageData() {
   return import(`${pathToFileURL(outFile).href}?t=${Date.now()}`);
 }
 
+// "<" escaped so text such as "</script>" inside a value cannot end the tag
 const jsonLdScripts = (schemas = []) =>
   schemas
-    .map((schema) => `<script type="application/ld+json">${JSON.stringify(schema)}</script>`)
+    .map(
+      (schema) =>
+        `<script type="application/ld+json">${JSON.stringify(schema).replace(/</g, "\\u003c")}</script>`
+    )
     .join("\n    ");
 
 /** Route, meta and JSON-LD for every data-driven page. */
-function buildDataRoutes({ PRODUCTS, productSeo, moduleSeo, FAAS_GROUPS }) {
+function buildDataRoutes({ PRODUCTS, productSeo, moduleSeo, FAAS_GROUPS }, names) {
   const routes = [];
 
   for (const product of PRODUCTS) {
@@ -597,12 +726,15 @@ function buildDataRoutes({ PRODUCTS, productSeo, moduleSeo, FAAS_GROUPS }) {
   routes.push({ route: "/products", ...productSeo(PRODUCTS[0]) });
 
   for (const group of FAAS_GROUPS) {
+    const title = `${group.title} | FAAS | RiskMan Consulting`;
+    const description = trimTo(`${group.summary} ${group.intro}`, 160);
+    const canonical = `${SITE_URL}${group.path}`;
     routes.push({
       route: group.path,
-      title: `${group.title} | FAAS | RiskMan Consulting`,
-      description: trimTo(`${group.summary} ${group.intro}`, 160),
-      canonical: `${SITE_URL}${group.path}`,
-      jsonLd: [],
+      title,
+      description,
+      canonical,
+      jsonLd: buildStaticJsonLd({ route: group.path, title, description, canonical, names }),
     });
   }
 
@@ -870,6 +1002,13 @@ async function main() {
   const sitemap = createSitemap();
   const render = await loadRenderer();
 
+  // Breadcrumb label of every static page, so a child page can name its parents
+  const crumbNames = new Map();
+  for (const { route, file } of STATIC_ROUTES) {
+    const title = readHelmetMeta(path.join(SRC, file))?.title || FALLBACK_META[route]?.title;
+    if (title && !NOINDEX_ROUTES.has(route)) crumbNames.set(route, crumbName(route, title));
+  }
+
   // 1) Static routes — extract from page source files
   for (const { route, file } of STATIC_ROUTES) {
     const sourcePath = path.join(SRC, file);
@@ -904,13 +1043,17 @@ async function main() {
       160
     );
 
+    const jsonLd = noindex
+      ? []
+      : buildStaticJsonLd({ route, title: meta.title, description, canonical, names: crumbNames });
     const head = `${buildBaseHead({
       title: meta.title,
       description,
       canonical,
       image: DEFAULT_OG_IMAGE,
       ogType: "website",
-    })}${noindex ? `\n    ${NOINDEX_TAG}` : ""}`;
+    })}
+    ${jsonLdScripts(jsonLd)}${noindex ? `\n    ${NOINDEX_TAG}` : ""}`;
 
     const outFile =
       route === "/"
@@ -928,7 +1071,7 @@ async function main() {
   // 1b) Data-driven routes — products, modules, FAAS groups
   try {
     const data = await loadPageData();
-    const routes = buildDataRoutes(data);
+    const routes = buildDataRoutes(data, crumbNames);
     for (const { route, title, description, canonical, jsonLd } of routes) {
       const head = `${buildBaseHead({ title, description, canonical, image: DEFAULT_OG_IMAGE })}
     ${jsonLdScripts(jsonLd)}`;

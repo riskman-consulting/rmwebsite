@@ -9,12 +9,12 @@ const ModuleCta = ({ mod }) => (
       <div className="grid grid-cols-1 gap-6 p-6 border-l-[3px] md:p-8 lg:grid-cols-12 lg:items-center lg:gap-12 bg-surfaceLight dark:bg-surfaceDark border-brandAccent rounded-r-lg">
         <div className="lg:col-span-8">
           <h2 className="text-xl font-bold leading-snug md:text-2xl text-brandDark dark:text-white">
-            See {mod.shortName} on your own data
+            See {mod.shortName} applied to your organisation
           </h2>
           <p className="mt-2 text-[15px] leading-relaxed text-gray-800 dark:text-white/80">
-            Book an hour with our team. We will run the module on your own
-            process and control matrix, so you can see how a full cycle would
-            look for you.
+            Schedule a one-hour session with our team. We will demonstrate
+            {mod.shortName} using your own processes and controls, so you can
+            assess how a complete cycle would work for your organisation.
           </p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row lg:col-span-4 lg:justify-end">

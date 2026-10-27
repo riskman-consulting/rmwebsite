@@ -9,6 +9,7 @@ import ModuleCapabilities from "./ModuleCapabilities";
 import ModuleScreens from "./ModuleScreens";
 import ModuleVideos from "./ModuleVideos";
 import ModuleLifecycle from "./ModuleLifecycle";
+import ModuleFlow from "./ModuleFlow";
 import ModuleOutputs from "./ModuleOutputs";
 import ModuleRoles from "./ModuleRoles";
 import ModuleFaqs from "./ModuleFaqs";
@@ -23,12 +24,12 @@ const product = PRODUCTS[0];
  * module has them they open the page, above these links.
  */
 const buildSections = (mod) => [
-  { id: "why", label: "Why it exists" },
+  { id: "why", label: "The challenge" },
   { id: "capabilities", label: "Capabilities" },
   ...(mod.screens?.length ? [{ id: "screens", label: "Screens" }] : []),
   { id: "how-it-works", label: "How it works" },
   { id: "outputs", label: "Outputs" },
-  { id: "who", label: "Who uses it" },
+  { id: "who", label: "Roles" },
   { id: "faqs", label: "FAQs" },
 ];
 
@@ -80,7 +81,8 @@ const ModulePage = ({ slug }) => {
       <ModuleChallenges mod={mod} />
       <ModuleCapabilities mod={mod} />
       {mod.screens?.length > 0 && <ModuleScreens mod={mod} />}
-      <ModuleLifecycle mod={mod} />
+      {/* A module with a detailed `flow` shows it in place of the short step list */}
+      {mod.flow?.length ? <ModuleFlow mod={mod} /> : <ModuleLifecycle mod={mod} />}
       <ModuleOutputs mod={mod} />
       <ModuleRoles mod={mod} />
       <ModuleFaqs mod={mod} />

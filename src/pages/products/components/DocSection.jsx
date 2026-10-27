@@ -11,7 +11,7 @@ import React from "react";
 const DocSection = ({ id, title, lead, wide = false, children }) => (
   <section
     id={id}
-    className="scroll-mt-[200px] border-t border-borderLight dark:border-borderDark"
+    className="scroll-mt-[195px] border-t border-borderLight dark:border-borderDark"
   >
     <div className="container py-12 md:py-16">
       {wide ? (
@@ -31,7 +31,7 @@ const DocSection = ({ id, title, lead, wide = false, children }) => (
       ) : (
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-12">
           <header className="lg:col-span-4">
-            <div className="lg:sticky lg:top-[210px]">
+            <div className="lg:sticky lg:top-[205px]">
               <h2 className="text-2xl font-bold leading-tight md:text-[30px] text-brandDark dark:text-white">
                 {title}
               </h2>

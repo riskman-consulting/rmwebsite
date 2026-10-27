@@ -5,8 +5,8 @@ import DocSection from "./DocSection";
 const ModuleLifecycle = ({ mod }) => (
   <DocSection
     id="how-it-works"
-    title="How a cycle runs"
-    lead="The steps in the order your team will actually work through them."
+    title="How it works"
+    lead="The key steps, in the order your team completes them."
   >
     <ol className="relative">
       {mod.lifecycle.map((step, index) => (
