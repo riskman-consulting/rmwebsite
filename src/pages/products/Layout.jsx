@@ -8,7 +8,7 @@ import { PRODUCTS, PRODUCTS_BASE_PATH } from "./productsData";
  *
  * The sub-nav carries the product name on the left and its modules as tabs on
  * the right — the same pattern as the FAAS and Risk Advisory layouts.
- * `sticky top-[128px]` parks it under the global fixed header (48px banner +
+ * `sticky top-[123px]` parks it under the global fixed header (43px banner +
  * 80px navbar).
  *
  * Only one product ships today, so the nav shows that product's modules. Once
@@ -30,7 +30,7 @@ function Layout() {
 
   return (
     <div className="min-h-screen z-[100] bg-bgLight dark:bg-bgDark transition-colors duration-300">
-      <nav className="sticky top-[128px] z-40 border-b bg-surfaceLight/80 dark:bg-surfaceDark/80 backdrop-blur-md border-borderLight dark:border-borderDark">
+      <nav className="sticky top-[123px] z-40 border-b bg-surfaceLight/80 dark:bg-surfaceDark/80 backdrop-blur-md border-borderLight dark:border-borderDark">
         <div /* px-4 matches .container's own 16px padding-inline, so the brand lines
              up with the page heading and the last tab lines up with the right
              edge of the page content. xl:px-10 inset the bar by 24px. */

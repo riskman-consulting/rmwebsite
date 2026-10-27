@@ -168,12 +168,12 @@ function SiteShell() {
       <HeaderTemp />
       <Toaster position="top-right" />
 
-      {/* CRITICAL FIX: Add pt-[128px] to account for fixed header 
-          - Announcement banner: 48px (top-0)
-          - Navbar: 80px (top-[48px])
-          - Total: 128px
+      {/* CRITICAL FIX: Add pt-[123px] to account for fixed header 
+          - Announcement banner: 43px (top-0)
+          - Navbar: 80px (top-[43px])
+          - Total: 123px
       */}
-      <main className="pt-[128px]">
+      <main className="pt-[123px]">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<ServicePage />} />

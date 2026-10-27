@@ -225,20 +225,3 @@ p  { font-size: clamp(1rem, 2vw, 1.2rem); }
 .footer-icon {
   @apply w-10 h-10 rounded-full bg-brandNavy/5 dark:bg-white/10 text-brandNavy dark:text-brandLight flex items-center justify-center hover:bg-brandAccent hover:text-white transition;
 }
-/* Module ticker in the header announcement bar (temp-header/AnnouncementTicker).
-   The track holds the list twice, so sliding it by half loops seamlessly.
-   Pauses on hover and keyboard focus so an item can be clicked. */
-@keyframes module-ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-.module-ticker-track {
-  animation: module-ticker 45s linear infinite;
-}
-.module-ticker:hover .module-ticker-track,
-.module-ticker:focus-within .module-ticker-track {
-  animation-play-state: paused;
-}
-@media (prefers-reduced-motion: reduce) {
-  .module-ticker-track { animation: none; }
-}

@@ -72,14 +72,14 @@ export const Navbar = ({
       {/* =======================
          ANNOUNCEMENT BANNER
       ======================= */}
-      <div className="fixed  top-0 left-0 right-0 z-[9999] h-[48px] bg-bgDark dark:bg-surfaceLight flex items-center">
+      <div className="fixed  top-0 left-0 right-0 z-[9999] h-[43px] overflow-hidden rounded-b-xl bg-bgDark dark:bg-surfaceLight flex items-center">
         <AnnouncementTicker />
       </div>
 
       {/* =======================
          NAVBAR
       ======================= */}
-      <nav className="fixed top-[48px] left-0 right-0 z-50 h-20 border-b bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark">
+      <nav className="fixed top-[43px] left-0 right-0 z-50 h-20 border-b bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark">
         <div className="flex items-center w-full h-full px-6 mx-auto lg:px-20 max-w-screen">
 
           {/* LEFT CLUSTER */}
@@ -227,7 +227,7 @@ export const Navbar = ({
 
         {/* BACKDROP */}
         {activeMegaKey && (
-          <div className="fixed inset-0 top-[128px] z-[45] bg-black/40 backdrop-blur-lg pointer-events-none" />
+          <div className="fixed inset-0 top-[123px] z-[45] bg-black/40 backdrop-blur-lg pointer-events-none" />
         )}
       </nav>
     </>

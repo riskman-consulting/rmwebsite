@@ -9,8 +9,8 @@ import DocSection from "./DocSection";
 const ModuleChallenges = ({ mod }) => (
   <DocSection
     id="why"
-    title="Where it usually goes wrong"
-    lead="Most teams know how to do this work. The trouble is that it lives in workbooks, mail threads and shared folders, and keeping them in sync becomes a job of its own."
+    title="The challenge"
+    lead="The expertise is rarely the problem. The difficulty is that the work is spread across workbooks, email threads and shared folders, and keeping them aligned becomes a task in itself."
   >
     <div className="grid grid-cols-1 gap-x-10 gap-y-7 sm:grid-cols-2">
       {mod.challenges.map((item) => (
@@ -27,7 +27,7 @@ const ModuleChallenges = ({ mod }) => (
 
     <div className="pl-5 mt-10 border-l-[3px] border-brandAccent">
       <h3 className="mb-3 text-base font-bold text-brandDark dark:text-white">
-        With {mod.shortName}
+        What {mod.shortName} delivers
       </h3>
       <ul className="space-y-2">
         {mod.outcomes.map((outcome) => (

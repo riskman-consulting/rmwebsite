@@ -9,8 +9,8 @@ import DocSection from "./DocSection";
 const ModuleFaqs = ({ mod }) => (
   <DocSection
     id="faqs"
-    title="Questions we usually get"
-    lead="Don't see your question here? Write to us and we'll answer it for your setup."
+    title="Frequently asked questions"
+    lead="If your question is not covered here, please contact us and our team will answer it for your specific requirements."
   >
     <div className="border-t divide-y border-borderLight dark:border-borderDark divide-borderLight dark:divide-borderDark">
       {mod.faqs.map((faq, index) => (

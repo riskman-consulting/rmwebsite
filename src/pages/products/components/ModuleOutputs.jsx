@@ -9,8 +9,8 @@ import DocSection from "./DocSection";
 const ModuleOutputs = ({ mod }) => (
   <DocSection
     id="outputs"
-    title="What you have at the end"
-    lead="The records the module produces, and the regulations and frameworks they help you meet."
+    title="Outputs and compliance alignment"
+    lead="The records the module produces, and the regulations and frameworks they support."
   >
     <h3 className="mb-4 text-base font-bold text-brandDark dark:text-white">
       Reports and records

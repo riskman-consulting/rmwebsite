@@ -5,8 +5,8 @@ import DocSection from "./DocSection";
 const ModuleRoles = ({ mod }) => (
   <DocSection
     id="who"
-    title="Who works in it"
-    lead="Everyone works on the same record. Each person sees the part they are responsible for."
+    title="Roles and responsibilities"
+    lead="Every role works on the same record, and each sees the part for which it is accountable."
   >
     <dl className="border-t divide-y border-borderLight dark:border-borderDark divide-borderLight dark:divide-borderDark">
       {mod.roles.map((role) => (
