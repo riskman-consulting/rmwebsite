@@ -15,36 +15,11 @@ import heroFront from "../../assets/products/riskman-grc/atr/dashboard-01-analyt
 const product = PRODUCTS[0];
 const seo = productSeo(product);
 const moduleLink = (slug) => `${product.path}/${slug}`;
-const moduleName = (slug) => product.modules.find((m) => m.slug === slug)?.name || slug;
 
 const FACTS = [
   { value: "6", label: "modules" },
   { value: "1", label: "platform for audit, risk and compliance" },
   { value: "0", label: "spreadsheets to reconcile" },
-];
-
-/** How work moves from one module to the next. */
-const FLOW = [
-  {
-    from: "enterprise-risk-management",
-    to: ["risk-based-internal-audit", "control-testing", "action-taken-report"],
-    text: "The approval matrix configured in ERM, which defines the approver for each owner, is also used by the audit, testing and follow-up modules, so every approval is routed to the correct person.",
-  },
-  {
-    from: "risk-based-internal-audit",
-    to: ["action-taken-report"],
-    text: "When an internal audit report is released, its failed items and management responses are converted into actions with owners and due dates.",
-  },
-  {
-    from: "control-testing",
-    to: ["action-taken-report"],
-    text: "When the CAE grants final approval to a testing report, failed controls and their management responses are transferred to action tracking.",
-  },
-  {
-    from: "policy",
-    to: ["control-testing"],
-    text: "Each policy and SOP can be linked to the controls, risks and processes it governs, so that processes without a governing policy are identified.",
-  },
 ];
 
 const REASONS = [
@@ -197,35 +172,6 @@ const ProductPage = () => {
             );
           })}
         </ul>
-      </DocSection>
-
-      {/* How the modules connect */}
-      <DocSection
-        id="how-it-connects"
-        title="How the modules work together"
-        lead="Findings from audits and testing flow automatically into follow-up, and approvers are configured once for the whole platform."
-      >
-        <ol className="divide-y divide-borderLight dark:divide-borderDark">
-          {FLOW.map((step) => (
-            <li key={step.from} className="py-5 first:pt-0 last:pb-0">
-              <p className="flex flex-wrap items-center gap-2 mb-2 text-sm font-semibold">
-                <Link to={moduleLink(step.from)} className="text-brandDark dark:text-white hover:text-brandPrimary dark:hover:text-brandGold hover:underline underline-offset-4">
-                  {moduleName(step.from)}
-                </Link>
-                <ArrowRight aria-label="feeds" className="w-4 h-4 text-brandAccent" />
-                {step.to.map((slug, i) => (
-                  <React.Fragment key={slug}>
-                    {i > 0 && <span className="text-gray-500">and</span>}
-                    <Link to={moduleLink(slug)} className="text-brandDark dark:text-white hover:text-brandPrimary dark:hover:text-brandGold hover:underline underline-offset-4">
-                      {moduleName(slug)}
-                    </Link>
-                  </React.Fragment>
-                ))}
-              </p>
-              <p className="text-[15px] leading-relaxed text-gray-800 dark:text-white/80">{step.text}</p>
-            </li>
-          ))}
-        </ol>
       </DocSection>
 
       {/* Why */}

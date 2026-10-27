@@ -83,9 +83,9 @@ export const PRODUCTS = [
     name: "RiskMan GRC",
     shortName: "RiskMan GRC",
     seoTitle: "RiskMan GRC: Governance, Risk and Compliance Software",
-    tagline: "Governance, risk and compliance on one connected platform",
+    tagline: "One connected system for governance, risk and compliance, with AI-enabled workflows",
     summary:
-      "A single platform to plan audits, test controls, manage policies, track remediation and maintain the risk register, so that every report draws on the same data rather than on scattered spreadsheets.",
+      "Connect policies, procedures, risks and controls on a single platform across every entity and business process. Evidence is captured as the work is done, with a complete trail of activity, while AI-enabled workflows generate test plans, surface insights and feed dashboards configured for your organisation.",
     modules: [
       /* ---------------------------------------------------------------- */
       /* 1. Enterprise Risk Management                                     */
