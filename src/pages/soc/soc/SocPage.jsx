@@ -8,7 +8,7 @@ import ReportTypeSection from './ReportTypeSection';
 import SupportSection from './SupportSection';
 import BusinessSection from './BusinessSection';
 import FaqSection from './FaqSection';
-import CTASection from './CTASection';
+import CTASection from './CtaSection';
 
 const SOCOverview = () => {
   return (

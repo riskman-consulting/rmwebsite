@@ -22,7 +22,7 @@ const GroupHero = ({ group }) => {
         className="absolute inset-0 pointer-events-none bg-[radial-gradient(55%_75%_at_90%_0%,rgba(0,64,128,0.06),transparent_60%)] dark:bg-[radial-gradient(55%_75%_at_90%_0%,rgba(255,184,0,0.07),transparent_60%)]"
       />
 
-      <div className="container relative py-16 lg:py-20">
+      <div className="container relative pt-8 pb-16 lg:pt-10 lg:pb-20">
         <nav
           aria-label="Breadcrumb"
           className="flex flex-wrap items-center gap-1 mb-8 text-[11px] font-bold tracking-wide uppercase sm:text-xs text-brandNavy/50 dark:text-white/40"
