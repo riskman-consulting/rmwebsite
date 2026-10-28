@@ -129,13 +129,13 @@ const Onboarding = () => {
   ];
 
   return (
-    <section className="relative py-20 overflow-hidden text-white bg-brandDark">
+    <section className="relative py-16 overflow-hidden text-white bg-brandDark">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 right-0 w-1/2 h-full transform translate-x-20 skew-x-12 bg-brandNavy"></div>
       </div>
 
-      <div className="container relative z-10 px-4 mx-auto">
+      <div className="container relative z-10">
         <div className="flex flex-col items-center gap-16 lg:flex-row">
           <div className="lg:w-1/2">
             <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading">

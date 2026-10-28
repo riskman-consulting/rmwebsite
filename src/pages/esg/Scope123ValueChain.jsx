@@ -11,8 +11,8 @@ const Scope123ValueChain = () => {
     scope1: {
       title: "SCOPE 1",
       subtitle: "Direct Emissions",
-      color: "#4CAF50",
-      colorLight: "#E8F5E9",
+      color: "#004080",
+      colorLight: "#0040801A",
       percentage: "~10%",
       description:
         "GHG emissions from sources owned or controlled by the organization",
@@ -28,8 +28,8 @@ const Scope123ValueChain = () => {
     scope2: {
       title: "SCOPE 2",
       subtitle: "Indirect Energy",
-      color: "#26A69A",
-      colorLight: "#E0F2F1",
+      color: "#64748B",
+      colorLight: "#64748B1A",
       percentage: "~8%",
       description:
         "GHG emissions from purchased electricity, steam, heating and cooling",
@@ -43,8 +43,8 @@ const Scope123ValueChain = () => {
     scope3: {
       title: "SCOPE 3",
       subtitle: "Value Chain",
-      color: "#FF9800",
-      colorLight: "#FFF3E0",
+      color: "#FFB800",
+      colorLight: "#FFB8001A",
       percentage: "~82%",
       description:
         "All other indirect emissions in the value chain (upstream and downstream)",
@@ -99,7 +99,7 @@ const Scope123ValueChain = () => {
     return (
       <button
         type="button"
-        className={`flex flex-col items-center p-2 transition-all duration-300 bg-white rounded-lg shadow-sm cursor-pointer dark:bg-gray-800 hover:shadow-md hover:scale-[1.02] ${
+        className={`flex flex-col items-center p-2 transition-all duration-300 bg-white rounded-lg shadow-sm cursor-pointer dark:bg-bgDark hover:shadow-md hover:scale-[1.02] ${
           isSelected ? "ring-2 ring-brandAccent/50" : ""
         }`}
         onMouseEnter={() => setHoveredSource({ scopeKey, source })}
@@ -142,7 +142,7 @@ const Scope123ValueChain = () => {
       onMouseEnter={() => setHoveredScope(scopeKey)}
       onMouseLeave={() => setHoveredScope(null)}
     >
-      <div className="p-3 bg-white/90 dark:bg-gray-800/90">
+      <div className="p-3 bg-white dark:bg-surfaceDark">
         <div className="flex items-center gap-3 mb-2">
           <div
             className="flex items-center justify-center w-10 h-10 text-lg font-bold text-white rounded-full shadow"
@@ -158,7 +158,7 @@ const Scope123ValueChain = () => {
           </div>
         </div>
         {displaySource && (
-          <div className="p-2 mb-3 border rounded-lg border-borderLight/70 dark:border-borderDark/70 bg-white/80 dark:bg-gray-900/60">
+          <div className="p-2 mb-3 border rounded-lg border-borderLight/70 dark:border-borderDark/70 bg-white/80 dark:bg-bgDark/60">
             <div className="flex items-center gap-2">
               <span className="text-lg">{displaySource.icon}</span>
               <div>
@@ -194,20 +194,20 @@ const Scope123ValueChain = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-slate-900 via-slate-700 to-slate-200">
+    <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
       <div className="container">
-        <div className="py-6 text-center">
-          <h1 className="mb-1 text-2xl font-semibold text-white md:text-3xl">
+        <div className="mb-10 text-center">
+          <h2 className="mb-3 text-3xl font-bold font-heading text-brandDark dark:text-white md:text-4xl">
             GHG Emissions Across the Value Chain
-          </h1>
-          <p className="text-sm text-slate-300">
+          </h2>
+          <p className="text-sm text-slate-600 dark:text-slate-300">
             Scope 1, 2 and 3 Greenhouse Gas Protocol Framework
           </p>
         </div>
 
-        <div className="overflow-hidden border shadow-2xl rounded-3xl border-white/10">
+        <div className="overflow-hidden border shadow-2xl rounded-2xl border-borderLight dark:border-borderDark">
           {/* Sky Area */}
-          <div className="px-6 py-8 bg-gradient-to-b from-slate-900 to-slate-800">
+          <div className="px-6 py-8 bg-gradient-to-b from-brandDark to-brandNavy">
             <div className="flex flex-wrap justify-center gap-6 mb-8">
               {ghgGases.map((gas, i) => (
                 <Cloud key={gas} label={gas} delay={i * 0.6} />
@@ -215,14 +215,14 @@ const Scope123ValueChain = () => {
             </div>
 
             <div className="grid max-w-xl grid-cols-3 gap-4 mx-auto">
-              {["#4CAF50", "#26A69A", "#FF9800"].map((color, i) => (
+              {["#4D8CCC", "#94A3B8", "#FFB800"].map((color, i) => (
                 <ArrowFlow key={color} color={color} delay={i * 0.6} />
               ))}
             </div>
           </div>
 
           {/* Content Area */}
-          <div className="p-6 bg-gradient-to-b from-slate-200 to-slate-300">
+          <div className="p-6 bg-bgLight dark:bg-bgDark">
             {/* Scopes grid */}
             <div className="grid grid-cols-1 gap-4 mb-6 md:grid-cols-3">
               <ScopeSection scopeKey="scope1" data={scopeData.scope1} />
@@ -231,41 +231,41 @@ const Scope123ValueChain = () => {
             </div>
 
             {/* Distribution bar */}
-            <div className="p-4 bg-white shadow-lg dark:bg-gray-800 rounded-xl">
+            <div className="p-4 bg-white shadow-lg dark:bg-surfaceDark rounded-xl">
               <h4 className="mb-3 text-sm font-semibold text-center text-gray-700 dark:text-gray-300">
                 Typical Corporate Emissions Distribution
               </h4>
               <div className="flex h-10 overflow-hidden rounded-lg shadow-inner">
                 <div
                   className="flex items-center justify-center text-sm font-semibold text-white"
-                  style={{ width: "10%", background: "linear-gradient(135deg, #4CAF50, #2E7D32)" }}
+                  style={{ width: "10%", background: "linear-gradient(135deg, #004080, #003366)" }}
                 >
                   10%
                 </div>
                 <div
                   className="flex items-center justify-center text-sm font-semibold text-white"
-                  style={{ width: "8%", background: "linear-gradient(135deg, #26A69A, #00796B)" }}
+                  style={{ width: "8%", background: "linear-gradient(135deg, #64748B, #475569)" }}
                 >
                   8%
                 </div>
                 <div
-                  className="flex items-center justify-center text-sm font-semibold text-white"
-                  style={{ width: "82%", background: "linear-gradient(135deg, #FF9800, #E65100)" }}
+                  className="flex items-center justify-center text-sm font-semibold text-brandDark"
+                  style={{ width: "82%", background: "linear-gradient(135deg, #FFC000, #FFB800)" }}
                 >
                   82%
                 </div>
               </div>
               <div className="flex justify-between mt-3 text-xs text-gray-500 dark:text-gray-400">
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full" />
+                  <div className="w-3 h-3 bg-brandPrimary rounded-full" />
                   <span>Scope 1 - Direct Control</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-teal-500 rounded-full" />
+                  <div className="w-3 h-3 bg-slate-500 rounded-full" />
                   <span>Scope 2 - Energy Procurement</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-orange-500 rounded-full" />
+                  <div className="w-3 h-3 bg-brandGold rounded-full" />
                   <span>Scope 3 - Value Chain Engagement</span>
                 </div>
               </div>

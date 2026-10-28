@@ -11,11 +11,11 @@ export const AllServicesGridSection = () => {
   }, []);
 
   return (
-    <section className="pb-10 bg-bgLight dark:bg-bgDark">
+    <section className="pb-20 bg-bgLight dark:bg-bgDark">
       <div className="container">
 
         <motion.div
-          className="mb-20 text-center"
+          className="mb-12 text-center"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -25,7 +25,7 @@ export const AllServicesGridSection = () => {
             Complete Portfolio
           </div>
 
-          <h2 className="mb-6 text-4xl font-bold md:text-5xl text-brandDark dark:text-white font-heading">
+          <h2 className="mb-6 text-3xl font-bold md:text-4xl text-brandDark dark:text-white font-heading">
             All{" "}
             <span className="text-brandPrimary dark:text-brandAccent">
               Services & Solutions

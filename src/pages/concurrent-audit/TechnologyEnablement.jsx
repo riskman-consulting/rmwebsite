@@ -99,7 +99,7 @@ const TechnologyEnablement = () => {
     ];
 
     return (
-        <section id="tech" className="relative z-10 transition-colors py-14 md:py-20 bg-surfaceLight dark:bg-surfaceDark">
+      <section id="tech" className="relative z-10 transition-colors py-16 bg-surfaceLight dark:bg-surfaceDark">
             <div className="container relative z-10">
                 <div className="inline-flex items-center gap-3 font-mono text-[0.7rem] font-semibold tracking-[4px] uppercase text-brandAccent mb-6">
                     <div className="w-5 h-[1px] bg-brandAccent" />
@@ -113,7 +113,7 @@ const TechnologyEnablement = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="mb-6 text-2xl font-extrabold leading-tight font-heading md:text-3xl text-brandDark dark:text-white">
+                        <h2 className="mb-6 text-3xl font-bold leading-tight font-heading md:text-4xl text-brandDark dark:text-white">
                             Assurance Powered by Analytics
                         </h2>
                         <hr className="w-12 h-[2px] border-none bg-gradient-to-r from-brandGold to-brandAccent mb-8" />
@@ -124,7 +124,7 @@ const TechnologyEnablement = () => {
 
                         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                             {techStack.map((tech, index) => (
-                                <div key={index} className="p-6 transition-all border bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-xl hover:border-brandGold/20">
+                                <div key={index} className="h-full p-6 transition-all border bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark rounded-2xl hover:border-brandGold/20">
                                     <div className="mb-4">{tech.icon}</div>
                                     <div className="mb-2 text-sm font-bold font-heading text-brandDark dark:text-brandAccent">{tech.title}</div>
                                     <div className="text-[0.8rem] text-brandNavy dark:text-white/70 opacity-60 leading-relaxed font-sans font-semibold">{tech.desc}</div>
@@ -146,7 +146,6 @@ const TechnologyEnablement = () => {
                                 alt="Technology & Analytics"
                                 className="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
                             {/* Overlay elements */}
                             <div className="absolute p-4 transition-colors border rounded-lg top-6 left-6 bg-bgLight/80 dark:bg-bgDark/80 backdrop-blur-md border-brandGold/30">

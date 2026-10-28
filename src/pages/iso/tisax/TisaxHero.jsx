@@ -1,8 +1,10 @@
 import { ArrowLeft, Car } from "lucide-react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import bg from "../../../assets/images/tisax/hero.png";
 
 function HeroSection() {
+  const navigator = useNavigate();
   return (
     <section
       className="relative py-24 overflow-hidden text-white lg:py-36"
@@ -46,12 +48,12 @@ function HeroSection() {
 
           {/* CTAs */}
           <div className="flex flex-wrap gap-4">
-            <button className="flex items-center gap-2 px-8 py-4 font-bold transition-all bg-transparent border rounded-md border-white/20 hover:bg-white/10">
+            <button onClick={() => navigator("/services/iso-certifications")} className="flex items-center gap-2 px-8 py-4 font-bold transition-all bg-transparent border rounded-md border-white/20 hover:bg-white/10">
               <ArrowLeft className="w-4 h-4" />
               Return To Main
             </button>
 
-            <button className="px-8 py-4 font-bold transition-all rounded-md shadow-lg bg-brandAccent text-brandDark hover:bg-brandGold shadow-brandAccent/20">
+            <button onClick={() => navigator("/contact")} className="px-8 py-4 font-bold transition-all rounded-md shadow-lg bg-brandAccent text-brandDark hover:bg-brandGold shadow-brandAccent/20">
               Get In Touch
             </button>
           </div>

@@ -3,7 +3,7 @@ import React from 'react'
 
 function InternationalSection() {
   return (
-      <section className="py-20 bg-brandNavy text-white">
+    <section className="py-16 bg-brandNavy text-white">
         <div className="container">
           <div className="bg-surfaceDark p-10 lg:p-16 rounded-[3rem] border border-white/10 shadow-2xl relative overflow-hidden">
             <div className="absolute right-0 top-0 w-1/2 h-full bg-brandPrimary/5 skew-x-12 translate-x-1/2"></div>

@@ -5,8 +5,8 @@ import DEFAULT_IMAGE from "../../assets/images/risk-advisory/overview.png";
 
 const OverviewSection = ({ data }) => {
   return (
-    <section className="relative bg-bgLight py-12 dark:bg-bgDark">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative bg-bgLight py-16 dark:bg-bgDark">
+      <div className="container">
 
         {/* Title */}
         <motion.div
@@ -40,7 +40,7 @@ const OverviewSection = ({ data }) => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
             >
-              <h2 className="font-heading text-3xl font-extrabold leading-tight text-brandDark dark:text-brandLight sm:text-4xl md:text-4xl">
+              <h2 className="font-heading text-3xl font-bold leading-tight text-brandDark dark:text-brandLight md:text-4xl">
                 {data.title}
               </h2>
             </motion.div>

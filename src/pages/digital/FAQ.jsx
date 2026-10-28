@@ -180,7 +180,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="py-20 lg:py-32 bg-bgLight">
+    <section className="py-16 lg:py-32 bg-bgLight">
       <div className="container mx-auto px-5 sm:px-8 lg:px-12 xl:px-14 max-w-[1280px]">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto mb-16 text-center">

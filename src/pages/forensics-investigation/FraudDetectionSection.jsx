@@ -34,8 +34,8 @@ const FraudSection = () => {
   const fraudImage = "https://public.youware.com/users-website-assets/prod/9ff22b8d-6a23-4340-a80f-898c8b5c261b/a2c5f9ff022442b99be18037b98347f4";
 
   return (
-    <section className="py-24 overflow-hidden bg-bgLight dark:bg-bgDark">
-      <div className="container px-4 mx-auto">
+    <section className="py-16 overflow-hidden bg-bgLight dark:bg-bgDark">
+      <div className="container">
         <div className="flex flex-col items-center gap-16 lg:flex-row">
           <div className="relative lg:w-1/2 group">
             <div className="absolute transition-transform transform -inset-4 bg-brandGold/20 rounded-2xl rotate-3 group-hover:rotate-2"></div>

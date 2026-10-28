@@ -1,10 +1,12 @@
 import { Scale } from 'lucide-react'
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import image from "../../../assets/images/cpa/financial-audits/hero.png"
 
 function HeroSection() {
+  const navigate = useNavigate()
   return (
-    <section className="relative bg-brandDark text-white py-24 lg:py-36 overflow-hidden">
+    <section className="relative bg-brandDark text-white py-16 lg:py-20 overflow-hidden">
       
       {/* Decorative Background (your original) */}
       <div className="absolute inset-0 opacity-5">
@@ -16,7 +18,7 @@ function HeroSection() {
           
           {/* LEFT: Content (unchanged) */}
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-brandPrimary/40 border border-brandPrimary text-blue-200 rounded text-xs font-bold uppercase mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-brandPrimary/40 border border-brandPrimary text-brandAccent rounded text-xs font-bold uppercase mb-6">
               <Scale size={14} /> Financial Integrity & Accuracy
             </div>
 
@@ -29,11 +31,11 @@ function HeroSection() {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <button className="bg-brandPrimary text-white px-8 py-4 rounded-md font-bold hover:bg-brandNavy transition-all border border-brandPrimary shadow-lg">
+              <button onClick={() => navigate("/services/cpa-us-assurance")} className="bg-brandPrimary text-white px-8 py-4 rounded-md font-bold hover:bg-brandNavy transition-all border border-brandPrimary shadow-lg">
                 View Assurance Suite
               </button>
 
-              <button className="border border-white/20 bg-white/5 backdrop-blur-sm px-8 py-4 rounded-md font-bold hover:bg-white hover:text-brandDark transition-all">
+              <button onClick={() => navigate("/contact")} className="border border-white/20 bg-white/5 backdrop-blur-sm px-8 py-4 rounded-md font-bold hover:bg-white hover:text-brandDark transition-all">
                 Contact Our Audit Team
               </button>
             </div>

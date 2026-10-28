@@ -74,10 +74,10 @@ const IndustryCard = ({ industry, index }) => {
       className="h-full group"
     >
       <Link to={`/industries/${industry.id}`}>
-        <div className="relative h-full overflow-hidden transition-all duration-300 border shadow-lg bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-3xl hover:shadow-2xl hover:-translate-y-2 hover:border-brandGold dark:hover:border-brandAccent">
+        <div className="relative h-full overflow-hidden transition-all duration-300 border shadow-lg bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark rounded-2xl hover:shadow-2xl hover:-translate-y-2 hover:border-brandGold dark:hover:border-brandAccent">
           {/* Image with curtain effect on scroll reveal */}
           {industry.headerImage && (
-            <div className="relative overflow-hidden h-72 rounded-t-3xl">
+            <div className="relative overflow-hidden h-72 rounded-t-2xl">
               <img
                 src={industry.headerImage}
                 alt={industry.title}
@@ -87,7 +87,7 @@ const IndustryCard = ({ industry, index }) => {
               {/* Curtain Effect that reveals on scroll */}
               {isVisible && (
                 <motion.div
-                  className="absolute inset-0 bg-white dark:bg-gray-900"
+                  className="absolute inset-0 bg-surfaceLight dark:bg-surfaceDark"
                   initial={{ x: 0 }}
                   animate={{ x: "100%" }}
                   transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -152,19 +152,19 @@ export default function IndustriesList() {
         <link rel="canonical" href="https://www.riskman.in/industries" />
       </Helmet>
       {/* ================= HERO SECTION ================= */}
-      <section ref={heroRef} className="relative pt-32 pb-20 overflow-hidden bg-surfaceLight dark:bg-bgDark">
-        <div className="container relative z-10 mx-auto max-w-7xl">
-          {/* Centered Header Content */}
+      <section ref={heroRef} className="relative py-16 overflow-hidden lg:py-28 bg-surfaceLight dark:bg-surfaceDark">
+        <div className="container relative z-10">
+          {/* Header Content */}
           <motion.div
             initial="initial"
             animate="animate"
             variants={staggerContainer}
-            className="mb-16 text-center"
+            className="max-w-4xl mb-16 text-left"
           >
             {/* INDUSTRIES Label with Orange Dot */}
             <motion.div
               variants={fadeInUp}
-              className="flex items-center justify-center gap-2 mb-6"
+              className="flex items-center gap-2 mb-6"
             >
               <div className="w-2 h-2 rounded-full bg-brandGold dark:bg-brandAccent" />
               <p className="text-sm font-semibold tracking-widest uppercase text-brandDark/70 dark:text-white/70">
@@ -175,17 +175,17 @@ export default function IndustriesList() {
             {/* Main Heading */}
             <motion.h1
               variants={fadeInUp}
-              className="mb-8 text-5xl font-bold leading-tight md:text-6xl lg:text-7xl text-brandDark dark:text-white"
+              className="mb-8 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl font-heading text-brandDark dark:text-white"
             >
-              Tailored to your Industry.
+              Tailored to Your <span className="text-brandPrimary dark:text-brandAccent">Industry</span>
             </motion.h1>
  
             {/* Description */}
             <motion.p
               variants={fadeInUp}
-              className="max-w-4xl mx-auto text-lg leading-relaxed md:text-xl text-brandNavy dark:text-gray-300"
+              className="max-w-3xl text-lg leading-relaxed md:text-xl text-brandNavy dark:text-gray-300"
             >
-              From perishable foods to high-value electronics, Loginord crafts specialized supply-chain solutions that fit your requirements and regulations.
+              RiskMan Consulting delivers specialized risk advisory, compliance, and ESG services across Banking, Manufacturing, Healthcare, Technology, Retail, and more industry sectors.
             </motion.p>
           </motion.div>
  
@@ -211,7 +211,7 @@ export default function IndustriesList() {
       </section>
  
       {/* ================= WHY EXPERTISE MATTERS ================= */}
-      <section className="relative py-24 transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark">
+      <section className="relative py-16 transition-colors duration-300 bg-bgLight dark:bg-bgDark">
         {/* Arrow Background Pattern - Left Side */}
         <div className="absolute w-48 h-48 -translate-y-1/2 left-8 top-1/2 opacity-5 dark:opacity-10">
           <svg viewBox="0 0 200 200" className="w-full h-full text-brandDark dark:text-white">
@@ -219,7 +219,7 @@ export default function IndustriesList() {
           </svg>
         </div>
  
-        <div className="container max-w-6xl px-6 mx-auto">
+        <div className="container">
           <motion.div
             className="max-w-4xl mx-auto text-center"
             initial={{ opacity: 0, y: 30 }}
@@ -233,7 +233,7 @@ export default function IndustriesList() {
               </p>
             </div>
  
-            <h2 className="mb-6 text-4xl font-bold md:text-5xl text-brandDark dark:text-white">
+            <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
               Deep Sector Knowledge, Seamless Execution.
             </h2>
  
@@ -245,8 +245,8 @@ export default function IndustriesList() {
       </section>
  
       {/* ================= INDUSTRIES GRID ================= */}
-      <section className="relative py-24 transition-colors duration-300 bg-bgLight dark:bg-bgDark">
-        <div className="container px-6 mx-auto max-w-7xl">
+      <section className="relative py-16 transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark">
+        <div className="container">
           {/* Section Header */}
           <motion.div
             className="mb-16 text-center"
@@ -258,7 +258,7 @@ export default function IndustriesList() {
               Specialized by Sector
             </p>
  
-            <h2 className="mb-6 text-4xl font-bold md:text-5xl text-brandDark dark:text-white">
+            <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
               Tailored Industry Solutions
             </h2>
  
@@ -281,15 +281,15 @@ export default function IndustriesList() {
       </section>
  
       {/* ================= THREE FEATURE CARDS ================= */}
-      <section className="relative py-24 transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark">
-        <div className="container max-w-6xl px-6 mx-auto">
+      <section className="relative py-16 transition-colors duration-300 bg-bgLight dark:bg-bgDark">
+        <div className="container">
           <motion.div
             className="mb-16 text-center"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="mb-6 text-4xl font-bold md:text-5xl text-brandDark dark:text-white">
+            <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
               Industry-Specific Excellence
             </h2>
           </motion.div>
@@ -314,7 +314,7 @@ export default function IndustriesList() {
             ].map((item, i) => (
               <motion.div
                 key={i}
-                className="p-8 text-center transition-all duration-300 bg-surfaceLight dark:bg-surfaceDark rounded-3xl hover:shadow-xl hover:-translate-y-1"
+                className="h-full p-8 text-center transition-all duration-300 border bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-2xl hover:shadow-xl hover:-translate-y-1"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -338,15 +338,15 @@ export default function IndustriesList() {
       </section>
  
       {/* ================= CTA SECTION ================= */}
-      <section className="relative py-24 text-center transition-colors duration-300 bg-bgLight dark:bg-bgDark">
-        <div className="container relative z-10 max-w-6xl px-6 mx-auto">
+      <section className="relative py-16 text-center transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark">
+        <div className="container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h2 className="text-4xl font-bold md:text-5xl text-brandDark dark:text-white">
+            <h2 className="text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
               Ready to Transform Your Industry Resilience?
             </h2>
  
@@ -359,11 +359,8 @@ export default function IndustriesList() {
                 (item, i) => (
                   <motion.span
                     key={i}
-                    className="px-6 py-3 font-semibold border rounded-full bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark text-brandDark dark:text-white"
-                    whileHover={{
-                      y: -2,
-                      borderColor: "#FFC000",
-                    }}
+                    className="px-6 py-3 font-semibold transition-colors border rounded-full bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark text-brandDark dark:text-white hover:border-brandAccent"
+                    whileHover={{ y: -2 }}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.1 }}
@@ -376,14 +373,13 @@ export default function IndustriesList() {
             </div>
  
             <motion.div className="flex flex-wrap justify-center gap-4">
-              <motion.a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold text-white transition-all duration-300 rounded-full shadow-lg bg-brandDark hover:bg-brandPrimary dark:bg-brandAccent dark:text-brandDark dark:hover:bg-brandGold hover:shadow-xl hover:scale-105"
-                whileTap={{ scale: 0.98 }}
               >
                 Discuss Your Industry Needs
                 <FaArrowRight />
-              </motion.a>
+              </Link>
             </motion.div>
           </motion.div>
         </div>
@@ -397,7 +393,7 @@ export default function IndustriesList() {
 ======================= */
 function HeroImageWithCurtain({ img, index }) {
   const ref = useRef(null);
-  const [hasRevealed, setHasRevealed] = React.useState(false);
+  const [hasRevealed, setHasRevealed] = React.useState(true);
  
   useEffect(() => {
     const handleScroll = () => {

@@ -27,7 +27,7 @@ export default function FAQSection() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   return (
-    <section className="relative py-16 md:py-20 bg-bgLight dark:bg-bgDark">
+    <section className="relative py-16 bg-surfaceLight dark:bg-surfaceDark">
       <div className="container relative z-10">
 
         {/* HEADER */}
@@ -36,7 +36,7 @@ export default function FAQSection() {
             Common Questions
           </div>
 
-          <h2 className="mb-6 text-3xl font-bold leading-tight md:text-4xl lg:text-5xl font-heading text-brandDark dark:text-white">
+          <h2 className="mb-6 text-3xl font-bold leading-tight md:text-4xl font-heading text-brandDark dark:text-white">
             Frequently Asked Questions
           </h2>
 
@@ -51,7 +51,7 @@ export default function FAQSection() {
             return (
               <div
                 key={index}
-                className="transition-all border shadow-sm bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-2xl hover:shadow-md"
+                className="transition-all border shadow-sm bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark rounded-2xl hover:shadow-md"
               >
                 <button
                   onClick={() =>

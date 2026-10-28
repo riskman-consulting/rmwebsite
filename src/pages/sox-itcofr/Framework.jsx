@@ -4,7 +4,7 @@ import Ifc_Image from "../../assets/images/sox/internal-ifc.png";
 
 function Framework() {
   return (
-    <section id="services" className="py-24 bg-bgLight dark:bg-bgDark transition-colors duration-500 overflow-hidden">
+    <section id="services" className="py-16 bg-bgLight dark:bg-bgDark transition-colors duration-500 overflow-hidden">
       <div className="container">
         {/* HEADER SECTION */}
         <div className="max-w-4xl mb-20 text-left">
@@ -12,7 +12,7 @@ function Framework() {
             Control Architecture
           </div>
           
-          <h2 className="mb-6 text-4xl font-bold font-heading md:text-5xl lg:text-6xl text-brandDark dark:text-white leading-tight">
+          <h2 className="mb-6 text-3xl font-bold font-heading md:text-4xl text-brandDark dark:text-white leading-tight">
             Internal Financial Controls <br />
             <span className="text-brandPrimary dark:text-brandAccent">IFC Framework Design</span>
           </h2>
@@ -30,13 +30,13 @@ function Framework() {
             {/* Decorative Background for Image */}
             <div className="absolute -inset-4 bg-gradient-to-tr from-brandPrimary/20 to-brandAccent/20 rounded-[2rem] blur-2xl opacity-50 group-hover:opacity-80 transition-opacity duration-700" />
             
-            <div className="relative p-2 bg-white dark:bg-surfaceDark border border-borderLight dark:border-borderDark rounded-3xl shadow-2xl overflow-hidden">
+            <div className="relative p-2 bg-white dark:bg-surfaceDark border border-borderLight dark:border-borderDark rounded-2xl shadow-2xl overflow-hidden">
               {/* Image Header/Browser Style */}
               <div className="flex items-center gap-2 px-6 py-4 border-b border-borderLight dark:border-borderDark bg-slate-50 dark:bg-bgDark/50">
                 <div className="flex gap-1.5">
-                  <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-brandAccent/30" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-brandAccent/50" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-brandAccent" />
                 </div>
                 <div className="mx-auto text-[10px] font-bold text-slate-400 uppercase tracking-widest">IFC_Methodology_Map.png</div>
               </div>

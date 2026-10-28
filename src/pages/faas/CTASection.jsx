@@ -12,14 +12,14 @@ const CTASection = ({
   body,
   className = "bg-surfaceLight dark:bg-surfaceDark",
 }) => (
-  <section className={`py-14 md:py-20 ${className}`}>
+  <section className={`py-16 ${className}`}>
     <div className="container">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 0.5 }}
-        className="relative overflow-hidden p-8 md:p-12 lg:p-14 rounded-3xl bg-brandDark dark:bg-bgDark dark:border dark:border-borderDark"
+        className="relative overflow-hidden p-8 md:p-12 lg:p-14 rounded-2xl bg-brandDark dark:bg-bgDark dark:border dark:border-borderDark"
       >
         <div
           aria-hidden="true"

@@ -70,8 +70,9 @@ const FaqSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-bgLight dark:bg-bgDark">
-      <div className="container max-w-4xl px-4 mx-auto">
+    <section className="py-16 bg-bgLight dark:bg-bgDark">
+      <div className="container">
+      <div className="max-w-4xl mx-auto">
         <h2 className="mb-12 text-3xl font-bold text-center md:text-4xl font-heading text-brandNavy dark:text-white">
           Frequently Asked Questions
         </h2>
@@ -79,7 +80,7 @@ const FaqSection = () => {
           {faqs.map((faq, index) => (
             <div 
               key={index} 
-              className="overflow-hidden transition-all bg-white border shadow-sm dark:bg-surfaceDark rounded-xl border-borderLight dark:border-borderDark hover:shadow-md"
+              className="overflow-hidden transition-all bg-white border shadow-sm dark:bg-surfaceDark rounded-2xl border-borderLight dark:border-borderDark hover:shadow-md"
             >
               <button 
                 onClick={() => toggleFaq(index)}
@@ -104,6 +105,7 @@ const FaqSection = () => {
             </div>
           ))}
         </div>
+      </div>
       </div>
     </section>
   );

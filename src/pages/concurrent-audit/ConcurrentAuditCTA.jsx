@@ -70,7 +70,7 @@ import { useNavigate } from 'react-router-dom';
 const ConcurrentAuditCTA = () => {
     const navigator = useNavigate()
     return (
-        <section className="relative py-24 overflow-hidden transition-colors bg-bgLight dark:bg-bgDark">
+      <section className="relative py-16 overflow-hidden transition-colors bg-bgLight dark:bg-bgDark">
             {/* Background Decorative */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brandGold/5 rounded-full blur-[120px] pointer-events-none" />
 
@@ -88,7 +88,7 @@ const ConcurrentAuditCTA = () => {
                         <Calendar size={36} />
                     </div>
 
-                    <h2 className="mb-8 text-3xl font-extrabold leading-tight md:text-5xl text-brandLight font-heading">
+                    <h2 className="mb-8 text-3xl font-bold leading-tight md:text-4xl text-brandLight font-heading">
                         Transition to<br />
                         <span className="italic text-transparent bg-gradient-to-r from-brandGold to-brandAccent bg-clip-text">
                             Real-Time Assurance
@@ -107,13 +107,6 @@ const ConcurrentAuditCTA = () => {
                             className="flex items-center justify-center gap-3 px-10 py-5 font-extrabold transition-colors rounded-full shadow-xl bg-brandGold text-brandNavy font-heading hover:bg-brandAccent"
                         >
                             Request a Diagnostic <ArrowRight size={20} />
-                        </motion.button>
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="px-10 py-5 font-bold transition-colors bg-transparent border rounded-full border-brandGold/30 text-brandGold font-heading hover:bg-brandGold/10"
-                        >
-                            Download Brochure
                         </motion.button>
                     </div>
 

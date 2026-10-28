@@ -76,7 +76,7 @@ export const SERVICES_DATA= [
   },
   {
     title: "Digital Transformation",
-    description: "Leverage cutting-edge technology to reinvent your business processes and customer experiences.",
+    description: "Modernize your business processes and systems with structured planning, implementation and support.",
     icon: "Cpu"
   },
   {

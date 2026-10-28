@@ -10,7 +10,7 @@ import SectionHeading from "../../../components/ui/SectionHeading";
 const CapabilityGrid = ({ group }) => (
   <section
     id="coverage"
-    className="py-14 md:py-20 scroll-mt-48 bg-bgLight dark:bg-bgDark"
+    className="py-20 scroll-mt-48 bg-bgLight dark:bg-bgDark"
   >
     <div className="container">
       <SectionHeading
@@ -27,7 +27,7 @@ const CapabilityGrid = ({ group }) => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.4, delay: (index % 3) * 0.07 }}
-            className="flex items-start gap-3 p-5 transition-all duration-300 border bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-xl hover:border-brandAccent hover:shadow-lg"
+            className="flex items-start h-full gap-3 p-5 transition-all duration-300 border bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-2xl hover:border-brandAccent hover:shadow-lg"
           >
             <span className="flex items-center justify-center flex-shrink-0 w-6 h-6 mt-0.5 rounded-full bg-brandAccent/15">
               <Check className="w-3.5 h-3.5 text-brandAccent" strokeWidth={3} />

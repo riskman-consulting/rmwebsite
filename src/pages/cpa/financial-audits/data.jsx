@@ -8,7 +8,7 @@ export const auditPlanning = [
 
   export const fieldwork = [
     { title: "Sub-ledger Reconstruction", d: "Ensuring granular accuracy across all accounts for complete financial visibility.", icon: <Database size={20} /> },
-    { title: "Algorithmic Sampling", d: "Utilizing statistical models to detect anomalies with unprecedented depth.", icon: <TrendingUp size={20} /> },
+    { title: "Algorithmic Sampling", d: "Utilizing statistical models to detect anomalies across full transaction populations.", icon: <TrendingUp size={20} /> },
     { title: "Control Integration", d: "Validating the reliability of financial reporting systems and internal protocols.", icon: <ShieldCheck size={20} /> },
   ];
 

@@ -5,13 +5,13 @@ export default function WhySection() {
   const navigator = useNavigate()
   return (
     <SectionWrapper id="why">
-      <div className="px-6 py-24 transition-colors duration-300 bg-bgLight dark:bg-bgDark">
-        <div className="max-w-6xl mx-auto">
+      <div className="py-20 transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark">
+        <div className="container">
           <SectionTag>Differentiated Positioning</SectionTag>
           <SectionTitle>Why RiskMan</SectionTitle>
           <SectionDesc>
-            We are not a documentation vendor. We are a governance partner. RiskMan brings the strategic depth 
-            of quality execution of the execution agility of a specialist firm — purpose-built for enterprise governance.
+            We are not a documentation vendor. We are a governance partner. RiskMan brings strategic depth 
+            and the execution agility of a specialist firm — purpose-built for enterprise governance.
           </SectionDesc>
 
           <div className="grid grid-cols-1 gap-6 mb-12 md:grid-cols-2 lg:grid-cols-3">
@@ -23,7 +23,7 @@ export default function WhySection() {
               { title: "Execution, Not Just Advisory", desc: "We don't just recommend — we design, implement, train, and embed governance into your organization's DNA. End-to-end delivery is our standard.", icon: "🚀" },
               { title: "Long-Term Partnership", desc: "Governance is a journey, not a project. RiskMan stands as your ongoing governance partner — adapting frameworks as your business evolves.", icon: "🤝" },
             ].map((c, i) => (
-              <div key={i} className="relative p-8 overflow-hidden transition-colors bg-white border shadow-sm dark:bg-gradient-to-br dark:from-brandDark dark:to-bgDark border-slate-200 dark:border-brandPrimary/30 rounded-2xl hover:border-brandPrimary/50 group dark:shadow-none">
+              <div key={i} className="relative h-full p-8 overflow-hidden transition-colors bg-bgLight border shadow-sm dark:bg-gradient-to-br dark:from-brandDark dark:to-bgDark border-slate-200 dark:border-brandPrimary/30 rounded-2xl hover:border-brandPrimary/50 group dark:shadow-none">
                 <div className="absolute -top-2.5 -right-2.5 text-6xl opacity-[0.06] group-hover:opacity-[0.1] transition-opacity">{c.icon}</div>
                 <div className="text-2xl mb-3.5">{c.icon}</div>
                 <div className="text-[17px] font-bold text-brandDark dark:text-white mb-2.5 font-sans">{c.title}</div>
@@ -40,7 +40,7 @@ export default function WhySection() {
                 Ready to Strengthen Your Governance Foundation?
               </h3>
               <p className="text-[15px] text-brandLight/80 max-w-xl mx-auto mb-7 leading-relaxed">
-                Let's discuss how RiskMan can help you design, implement, and sustain a world-class 
+                Let's discuss how RiskMan can help you design, implement, and sustain a practical 
                 policy and SOP framework tailored to your organization.
               </p>
               <button onClick={()=>navigator("/contact")} className="py-4 font-sans text-base font-semibold transition-all bg-white border-none cursor-pointer text-brandNavy px-9 rounded-xl hover:bg-brandAccent hover:text-brandDark hover:shadow-lg">

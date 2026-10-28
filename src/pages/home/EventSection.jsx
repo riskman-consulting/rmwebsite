@@ -67,7 +67,7 @@ export const EventCTASection = () => {
       />
 
       {/* CONTENT AREA */}
-      <div className="container relative z-20 flex flex-col items-center justify-center h-full px-5 text-center sm:px-8 lg:px-12">
+      <div className="container relative z-20 flex flex-col items-center justify-center h-full text-center">
         
         {/* Subtitle Badge */}
         <motion.div
@@ -89,7 +89,7 @@ export const EventCTASection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="mb-6 text-3xl md:text-4xl lg:text-5xl font-black text-brandLight leading-[1.1] tracking-tight drop-shadow-2xl font-heading"
+          className="mb-6 font-heading text-3xl md:text-4xl font-bold text-brandLight leading-[1.1] tracking-tight drop-shadow-2xl"
         >
           Elevate Your <br className="hidden md:block" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandLight via-brandAccent to-brandGold">
@@ -105,8 +105,8 @@ export const EventCTASection = () => {
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           className="max-w-2xl mb-12 text-lg font-light leading-relaxed md:text-xl text-brandLight/90 drop-shadow-md"
         >
-          Experience world-class auditing workshops and events. Connect with 
-          industry pioneers and transform your professional journey in the heart of Mumbai.
+          Join our auditing workshops and events in Mumbai. Learn from practitioners 
+          and connect with peers across risk, audit and compliance.
         </motion.p>
 
         {/* Action Buttons */}
@@ -127,7 +127,7 @@ export const EventCTASection = () => {
           </button>
           
           <button
-            onClick={() => navigate("/events/#upcoming-events")}
+            onClick={() => navigate("/events/upcoming-events")}
             className="flex items-center gap-2 px-8 py-4 font-semibold transition-all duration-300 border rounded-full group bg-brandLight/10 backdrop-blur-sm border-brandLight/20 text-brandLight hover:bg-brandLight/20 hover:border-brandAccent/50 active:scale-95 font-heading"
           >
             <Calendar className="w-5 h-5 transition-colors text-brandLight/70 group-hover:text-brandAccent" />

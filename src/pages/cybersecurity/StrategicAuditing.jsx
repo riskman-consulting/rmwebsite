@@ -180,8 +180,8 @@ import auditImage from "../../assets/images/cybersecurity/audit-analysis.png"
 const StrategicAuditing = () => {
 return (
 
-<section className="relative py-24 overflow-hidden bg-white">
-        <div className="container px-6 mx-auto">
+<section className="relative py-16 overflow-hidden bg-bgLight dark:bg-bgDark">
+        <div className="container">
           <div className="grid items-center gap-16 lg:grid-cols-2">
             <motion.div 
               initial={{ opacity: 0, x: -50 }}
@@ -196,9 +196,9 @@ return (
             </motion.div>
             
             <div className="order-1 lg:order-2">
-              <h2 className="mb-2 font-bold tracking-wider uppercase text-brandAccent">Our Process</h2>
-              <h2 className="mb-6 text-4xl font-bold font-heading text-brandDark">Strategic Cyber Security Auditing</h2>
-              <p className="mb-8 text-lg text-gray-600">
+              <p className="mb-2 font-bold tracking-wider uppercase text-brandPrimary dark:text-brandAccent">Our Process</p>
+              <h2 className="mb-6 text-3xl md:text-4xl font-bold font-heading text-brandDark dark:text-white">Strategic Cyber Security Auditing</h2>
+              <p className="mb-8 text-lg text-gray-600 dark:text-gray-300">
                 We provide a systematic and independent assessment of your organization's security controls and policies. Our process evaluates the effectiveness of your protections against evolving cyber threats to ensure data integrity.
               </p>
               
@@ -209,10 +209,10 @@ return (
                   { title: "Security Posture Improvement", desc: "We analyze your ability to prevent, detect, and respond to incidents effectively.", icon: Shield },
                   { title: "Compliance Assurance", desc: "Aligning your operations with industry standards and mandatory regulatory requirements.", icon: CheckCircle },
                 ].map((item, idx) => (
-                  <div key={idx} className="p-6 transition-shadow border border-gray-100 bg-bgLight rounded-xl hover:shadow-lg">
-                    <item.icon className="w-10 h-10 mb-4 text-brandPrimary" />
-                    <h3 className="mb-2 font-bold text-brandDark">{item.title}</h3>
-                    <p className="text-sm text-gray-600">{item.desc}</p>
+                  <div key={idx} className="h-full p-6 transition-shadow border border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark rounded-2xl hover:shadow-lg">
+                    <item.icon className="w-10 h-10 mb-4 text-brandPrimary dark:text-brandAccent" />
+                    <h3 className="mb-2 font-bold text-brandDark dark:text-white">{item.title}</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">{item.desc}</p>
                   </div>
                 ))}
               </div>

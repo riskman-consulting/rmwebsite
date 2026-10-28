@@ -778,7 +778,7 @@ export default function NewServiceTemplate() {
 
       {/* ================= TRUSTED COMPANIES (LOGO STRIP) ================= */}
       {trusteSection?.company && (
-        <section className="relative py-24 overflow-hidden transition-colors bg-surfaceLight dark:bg-surfaceDark border-y border-borderLight dark:border-borderDark">
+        <section className="relative py-16 overflow-hidden transition-colors bg-surfaceLight dark:bg-surfaceDark border-y border-borderLight dark:border-borderDark">
           <div className="container">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

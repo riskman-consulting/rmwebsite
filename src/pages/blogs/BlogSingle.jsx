@@ -11,7 +11,7 @@ import { imageUrl } from "../../utils/sanityImage";
    SKELETON / STATE COMPONENTS
 ======================= */
 const ArticleSkeleton = () => (
-  <div className="min-h-screen pt-20 pb-32 bg-bgLight dark:bg-bgDark">
+  <div className="min-h-screen py-20 bg-bgLight dark:bg-bgDark">
     <div className="container max-w-4xl">
       <div className="flex flex-col gap-6 animate-pulse">
         <div className="w-32 h-6 rounded-full bg-surfaceLight dark:bg-surfaceDark" />
@@ -34,7 +34,7 @@ const ArticleSkeleton = () => (
 );
 
 const StateScreen = ({ icon, title, message, accent = false }) => (
-  <div className="flex items-center justify-center min-h-screen px-6 bg-bgLight dark:bg-bgDark">
+  <div className="container flex items-center justify-center min-h-screen bg-bgLight dark:bg-bgDark">
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}

@@ -19,7 +19,7 @@ const GlobalDelivery = () => {
     ];
 
     return (
-        <section id="global" className="relative z-10 py-24 overflow-hidden bg-bgDark">
+      <section id="global" className="relative z-10 py-16 overflow-hidden bg-bgDark">
             {/* Background World Pattern (Decorative) */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none flex items-center justify-center">
                 <Globe2 size={800} strokeWidth={0.5} className="text-brandGold" />

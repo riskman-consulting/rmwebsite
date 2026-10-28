@@ -92,12 +92,12 @@ const CreditRiskCTAandFAQ = () => {
       </section> */}
 
       {/* FAQ Section */}
-      <section className="py-20 bg-bgLight dark:bg-bgDark">
+      <section className="py-16 bg-bgLight dark:bg-bgDark">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             {/* Header */}
             <div className="mb-12 text-center">
-              <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl font-heading text-brandDark dark:text-white">
+              <h2 className="mb-4 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
                 Frequently Asked Questions
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300">
@@ -110,7 +110,7 @@ const CreditRiskCTAandFAQ = () => {
               {faqs.map((faq, index) => (
                 <div
                   key={index}
-                  className="overflow-hidden transition-all duration-300 border bg-surfaceLight dark:bg-surfaceDark rounded-xl border-borderLight dark:border-borderDark hover:shadow-lg"
+                  className="overflow-hidden transition-all duration-300 border bg-surfaceLight dark:bg-surfaceDark rounded-2xl border-borderLight dark:border-borderDark hover:shadow-lg"
                 >
                   <button
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
@@ -158,7 +158,7 @@ const CreditRiskCTAandFAQ = () => {
             </div>
 
             {/* Contact Support */}
-            <div className="p-8 mt-12 text-center border bg-gradient-to-br from-brandPrimary/5 to-brandAccent/5 rounded-xl border-borderLight dark:border-borderDark">
+            <div className="p-8 mt-12 text-center border bg-gradient-to-br from-brandPrimary/5 to-brandAccent/5 rounded-2xl border-borderLight dark:border-borderDark">
               <h3 className="mb-2 text-xl font-bold text-brandDark dark:text-white">
                 Still have questions?
               </h3>

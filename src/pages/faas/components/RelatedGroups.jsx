@@ -9,14 +9,14 @@ const RelatedGroups = ({ currentSlug }) => {
   const others = FAAS_GROUPS.filter((group) => group.slug !== currentSlug);
 
   return (
-    <section className="py-14 md:py-20 bg-bgLight dark:bg-bgDark">
+    <section className="py-16 bg-bgLight dark:bg-bgDark">
       <div className="container">
         <div className="flex flex-col gap-3 mb-8 sm:flex-row sm:items-end sm:justify-between md:mb-10">
           <div>
             <span className="inline-block mb-3 text-xs font-black tracking-[0.2em] uppercase text-brandPrimary dark:text-brandGold">
               The rest of the practice
             </span>
-            <h2 className="text-2xl font-bold font-heading md:text-3xl text-brandDark dark:text-white">
+            <h2 className="text-3xl font-bold font-heading md:text-4xl text-brandDark dark:text-white">
               Other FAAS services
             </h2>
           </div>
@@ -39,6 +39,7 @@ const RelatedGroups = ({ currentSlug }) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.4, delay: (index % 3) * 0.07 }}
+                className="h-full"
               >
                 <Link
                   to={group.path}

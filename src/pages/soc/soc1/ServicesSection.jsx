@@ -4,11 +4,11 @@ import React from 'react'
 function ServicesSection() {
   return (
     
-    <section className="py-20 bg-brandDark text-white overflow-hidden relative">
+    <section className="py-16 bg-brandDark text-white overflow-hidden relative">
         <div className="container relative z-10">
           <div className="grid lg:grid-cols-2 gap-16">
             <div>
-              <h2 className="font-heading text-3xl font-bold mb-8">RiskMan SOC 1 Services</h2>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-8">RiskMan SOC 1 Services</h2>
               <div className="space-y-6">
                 {[
                   { t: "Scope Definition", d: "Aligned to financial reporting impact and customer expectations." },

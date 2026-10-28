@@ -120,7 +120,7 @@ const Scope123ValueChain = () => {
   );
 
   return (
-    <section className="py-20 bg-gradient-to-b from-brandDark via-brandNavy to-bgLight dark:from-bgDark dark:via-brandDark dark:to-surfaceDark">
+    <section className="py-16 bg-gradient-to-b from-brandDark via-brandNavy to-bgLight dark:from-bgDark dark:via-brandDark dark:to-surfaceDark">
       <div className="container">
         {/* Header */}
         <div className="py-6 mb-8 text-center">

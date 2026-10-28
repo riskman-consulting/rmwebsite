@@ -58,7 +58,7 @@ const ServiceDetails = () => {
   ];
 
   return (
-    <section className="py-20 bg-white dark:bg-surfaceDark">
+    <section className="py-16 bg-bgLight dark:bg-bgDark">
       <div className="container">
         <div className="max-w-6xl mx-auto">
           {/* Service Details */}
@@ -95,7 +95,7 @@ const ServiceDetails = () => {
           {/* Multi-Country Execution */}
           <div className="p-8 shadow-2xl text-brandDark dark:text-white bg-surfaceLight dark:bg-surfaceDark rounded-2xl md:p-12">
             <div className="flex items-start gap-6 mb-8">
-              <div className="flex items-center justify-center flex-shrink-0 w-16 h-16 text-3xl bg-white/20 rounded-xl backdrop-blur-sm">
+              <div className="flex items-center justify-center flex-shrink-0 w-16 h-16 text-3xl bg-brandPrimary/10 dark:bg-white/10 rounded-xl backdrop-blur-sm">
                 🌍
               </div>
               <div>
@@ -111,7 +111,7 @@ const ServiceDetails = () => {
             </div>
 
             <div className="grid gap-6 md:grid-cols-2">
-              <div className="p-6 border bg-surfaceLight dark:bg-surfaceDark backdrop-blur-sm rounded-xl border-brandDark/10 dark:border-white/20">
+              <div className="h-full p-6 border bg-bgLight dark:bg-bgDark backdrop-blur-sm rounded-2xl border-brandDark/10 dark:border-white/20">
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-2xl">🎯</span>
                   <h4 className="text-lg font-bold">Centralized Governance, Localized Execution</h4>
@@ -121,7 +121,7 @@ const ServiceDetails = () => {
                 </p>
               </div>
 
-              <div className="p-6 border bg-surfaceLight dark:bg-surfaceDark backdrop-blur-sm rounded-xl border-brandDark/10 dark:border-white/20">
+              <div className="h-full p-6 border bg-bgLight dark:bg-bgDark backdrop-blur-sm rounded-2xl border-brandDark/10 dark:border-white/20">
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-2xl">📡</span>
                   <h4 className="text-lg font-bold">Regulatory Intelligence</h4>
@@ -131,7 +131,7 @@ const ServiceDetails = () => {
                 </p>
               </div>
 
-              <div className="p-6 border bg-surfaceLight dark:bg-surfaceDark backdrop-blur-sm rounded-xl border-brandDark/10 dark:border-white/20">
+              <div className="h-full p-6 border bg-bgLight dark:bg-bgDark backdrop-blur-sm rounded-2xl border-brandDark/10 dark:border-white/20">
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-2xl">📄</span>
                   <h4 className="text-lg font-bold">Harmonized Reporting</h4>
@@ -141,7 +141,7 @@ const ServiceDetails = () => {
                 </p>
               </div>
 
-              <div className="p-6 border bg-surfaceLight dark:bg-surfaceDark backdrop-blur-sm rounded-xl border-brandDark/10 dark:border-white/20">
+              <div className="h-full p-6 border bg-bgLight dark:bg-bgDark backdrop-blur-sm rounded-2xl border-brandDark/10 dark:border-white/20">
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-2xl">🔗</span>
                   <h4 className="text-lg font-bold">Cross-Border Coordination</h4>
@@ -155,7 +155,7 @@ const ServiceDetails = () => {
 
           {/* Regulatory & Disclosure Excellence */}
           <div className="grid gap-6 mt-16 md:grid-cols-3">
-            <div className="p-6 border-2 border-blue-200 bg-blue-50 dark:bg-blue-900/20 rounded-xl dark:border-blue-800">
+            <div className="h-full p-6 border-2 border-borderLight bg-surfaceLight dark:bg-surfaceDark rounded-2xl dark:border-borderDark">
               <div className="mb-4 text-3xl">📋</div>
               <h4 className="mb-2 text-lg font-bold font-heading text-brandDark dark:text-white">
                 Regulatory & Disclosure Excellence
@@ -167,7 +167,7 @@ const ServiceDetails = () => {
               </ul>
             </div>
 
-            <div className="p-6 border-2 border-purple-200 bg-purple-50 dark:bg-purple-900/20 rounded-xl dark:border-purple-800">
+            <div className="h-full p-6 border-2 border-borderLight bg-surfaceLight dark:bg-surfaceDark rounded-2xl dark:border-borderDark">
               <div className="mb-4 text-3xl">🤝</div>
               <h4 className="mb-2 text-lg font-bold font-heading text-brandDark dark:text-white">
                 Enhanced Stakeholder Confidence
@@ -179,7 +179,7 @@ const ServiceDetails = () => {
               </ul>
             </div>
 
-            <div className="p-6 border-2 border-green-200 bg-green-50 dark:bg-green-900/20 rounded-xl dark:border-green-800">
+            <div className="h-full p-6 border-2 border-borderLight bg-surfaceLight dark:bg-surfaceDark rounded-2xl dark:border-borderDark">
               <div className="mb-4 text-3xl">🌡️</div>
               <h4 className="mb-2 text-lg font-bold font-heading text-brandDark dark:text-white">
                 Climate Risk Mitigation

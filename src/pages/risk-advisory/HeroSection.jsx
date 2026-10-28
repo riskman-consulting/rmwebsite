@@ -4,12 +4,12 @@ import { Shield, ArrowRight } from "lucide-react";
 
 const HeroSection = ({ data }) => {
   return (
-    <section className="relative py-20 overflow-hidden bg-brandDark md:py-28">
+    <section className="relative py-16 overflow-hidden bg-brandDark md:py-28">
       
       {/* Subtle background glow */}
       <div className="pointer-events-none absolute -top-40 right-0 h-96 w-96 rounded-full bg-brandAccent/15 blur-[140px]" />
 
-      <div className="container relative z-10 px-4 mx-auto sm:px-6 lg:px-8 lg:-top-10">
+      <div className="container relative z-10">
         <div className="grid items-center gap-16 lg:grid-cols-2">
 
           {/* LEFT: Content */}
@@ -22,7 +22,7 @@ const HeroSection = ({ data }) => {
               className="inline-flex items-center gap-2 px-5 py-2 mb-6 text-xs font-bold tracking-widest uppercase border rounded-full border-brandAccent/30 bg-brandAccent/10 text-brandAccent"
             >
               <Shield className="w-4 h-4" />
-              {data.id}
+              Risk Advisory
             </motion.div>
 
             {/* Title */}
@@ -32,7 +32,10 @@ const HeroSection = ({ data }) => {
               transition={{ duration: 0.6 }}
               className="mb-6 text-4xl font-black leading-tight text-white font-heading sm:text-5xl md:text-5xl"
             >
-              {data.title}
+              {data.title}{" "}
+              {data.highlight && (
+                <span className="text-brandAccent">{data.highlight}</span>
+              )}
             </motion.h1>
 
             {/* Description */}
@@ -63,19 +66,16 @@ const HeroSection = ({ data }) => {
 
           {/* RIGHT: Image (Zig-Zag Up) */}
           <motion.div
-            initial={{ opacity: 0, x: 40, y: -30 }}
-            animate={{ opacity: 1, x: 0, y: -30 }}
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="relative lg:-mt-12"
+            className="relative"
           >
             <img
               src={data.bgImage}
               alt={data.title}
               className="object-cover w-full shadow-2xl rounded-3xl"
             />
-
-            {/* Image overlay */}
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-brandDark/20 to-transparent" />
           </motion.div>
 
         </div>

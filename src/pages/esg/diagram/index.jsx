@@ -12,19 +12,20 @@ const App = () => {
   )
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] flex flex-col items-center p-4 md:p-8 lg:p-12 overflow-x-hidden">
+    <section className="relative py-16 overflow-hidden bg-bgLight dark:bg-bgDark">
+    <div className="container flex flex-col items-center">
       {/* Header Area */}
-      <div className="w-full mb-6 text-center select-none md:mb-8 max-w-7xl md:text-left">
-        <h1 className="text-3xl font-black tracking-tight text-center md:text-4xl lg:text-5xl text-slate-800">
+      <div className="w-full mb-10 text-center select-none">
+        <h2 className="text-3xl font-bold tracking-tight text-center font-heading md:text-4xl text-slate-800 dark:text-white">
         ESG Stakeholder Ecosystem
-        </h1>
-        <p className="text-slate-500 text-center font-bold tracking-[0.2em] uppercase text-[10px] md:text-xs mt-2">
+        </h2>
+        <p className="text-slate-500 dark:text-slate-400 text-center font-bold tracking-[0.2em] uppercase text-[10px] md:text-xs mt-2">
          The Multi-Stakeholder Imperative: Bidirectional Value Exchange
         </p>
       </div>
 
       {/* Main Content Area */}
-      <div className="flex flex-col items-start justify-center w-full gap-6 max-w-7xl lg:flex-row lg:gap-8 xl:gap-12">
+      <div className="flex flex-col items-start justify-center w-full gap-6 lg:flex-row lg:gap-8 xl:gap-12">
         {/* Left Section: Diagram - MADE BIGGER */}
         <div className="flex items-center justify-center w-full lg:w-auto shrink-0">
           <div className="w-full max-w-[520px] md:max-w-[600px] lg:max-w-[650px]">
@@ -46,7 +47,7 @@ const App = () => {
                 />
               </div>
             ) : (
-              <div className="hidden lg:flex flex-col items-center justify-center p-12 border-2 border-dashed border-slate-200 rounded-3xl opacity-30 min-h-[320px]">
+              <div className="hidden lg:flex flex-col items-center justify-center p-12 border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-2xl opacity-30 min-h-[320px]">
                 <svg 
                   className="w-16 h-16 mb-4 text-slate-300" 
                   fill="none" 
@@ -70,11 +71,8 @@ const App = () => {
           </div>
         </div>
       </div>
-
-      {/* Background visual depth */}
-      <div className="fixed -top-40 -left-40 w-[600px] h-[600px] bg-blue-50/50 rounded-full blur-[120px] pointer-events-none -z-10"></div>
-      <div className="fixed -bottom-40 -right-40 w-[600px] h-[600px] bg-indigo-50/50 rounded-full blur-[120px] pointer-events-none -z-10"></div>
     </div>
+    </section>
   )
 }
 

@@ -1,14 +1,14 @@
 import React from "react"
 
 const colors = {
-  phase1: "#0D9488", // Teal - Risk Identification
-  phase2: "#0891B2", // Cyan - Control Mapping
-  phase3: "#2563EB", // Blue - Self-Assessment
-  phase4: "#1E3A5F", // Navy - Independent Review
-  phase5: "#7C3AED", // Purple - Reporting
-  phase6: "#C9A227", // Gold - Remediation
-  centerDark: "#1E3A5F",
-  centerLight: "#2B5278",
+  phase1: "#004080", // Brand primary - Risk Identification
+  phase2: "#003366", // Brand navy - Control Mapping
+  phase3: "#001F3F", // Brand dark - Self-Assessment
+  phase4: "#475569", // Slate - Independent Review
+  phase5: "#334155", // Dark slate - Reporting
+  phase6: "#FFB800", // Brand gold - Remediation
+  centerDark: "#001F3F",
+  centerLight: "#003366",
   white: "#FFFFFF",
   lightGray: "#F8FAFC",
   textDark: "#1E293B",

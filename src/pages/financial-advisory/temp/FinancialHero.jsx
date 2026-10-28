@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const FinancialHero = () => {
   const navigator=useNavigate();
   return (
-    <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-brandDark transition-colors duration-300">
+    <section className="relative overflow-hidden bg-brandDark transition-colors duration-300">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -16,7 +16,7 @@ const FinancialHero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-brandDark via-brandDark/80 to-transparent" />
       </div>
 
-      <div className="container relative z-10 px-5 mx-auto py-14 md:py-20 lg:py-24 sm:px-8">
+      <div className="container relative z-10 py-16 lg:py-20">
         <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-12">
           
           {/* Text Content */}
@@ -26,14 +26,14 @@ const FinancialHero = () => {
             </span>
             
             <h1 className="mb-6 text-3xl font-extrabold leading-tight text-white font-heading md:text-4xl lg:text-5xl">
-              Secure your <span className="text-brandGold">financial future</span> and mitigate risk
+              Secure Your <span className="text-brandGold">Financial Future</span> and Mitigate Risk
             </h1>
             
             <p className="max-w-2xl mb-8 font-sans text-lg leading-relaxed text-gray-300 md:text-xl">
               {/* Our Financial Advisory Services provide guidance to corporates and business entities to navigate funding sources, 
               optimise borrowings, and adopt actionable financial strategies including capex management. */}
 
-              At RiskMan Consulting, our Financial Advisory Services are designed to provide guidances and advisories to corporates and other business entities to navigate funding sources, optimise borrowings and adopt actionable financial strategies including capex management.
+              At RiskMan Consulting, our Financial Advisory Services are designed to provide guidance and advisory to corporates and other business entities to navigate funding sources, optimise borrowings and adopt actionable financial strategies including capex management.
               
             </p>
             
@@ -41,7 +41,7 @@ const FinancialHero = () => {
               <button onClick={()=>navigator("/contact")} className="px-8 py-4 font-bold transition-all duration-300 rounded-lg shadow-lg bg-brandAccent hover:bg-brandGold text-brandDark shadow-brandAccent/20">
                 Explore Solutions
               </button>
-              <button className="px-8 py-4 font-bold text-white transition-all duration-300 border-2 border-white rounded-lg hover:bg-white/10">
+              <button onClick={()=>document.getElementById("accomplishments")?.scrollIntoView({ behavior: "smooth" })} className="px-8 py-4 font-bold text-white transition-all duration-300 border-2 border-white rounded-lg hover:bg-white/10">
                 Our Accomplishments
               </button>
             </div>

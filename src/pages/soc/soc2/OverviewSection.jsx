@@ -8,7 +8,7 @@ function OverviewSection() {
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-heading text-3xl font-bold mb-6">SOC 2 In One View</h2>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">SOC 2 In One View</h2>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
                 SOC 2 focuses on security plus the selected Trust Services Criteria—availability, processing integrity, confidentiality, and privacy. Security is mandatory and included in every SOC 2 report.
               </p>

@@ -8,7 +8,7 @@ const HeroSection = () => {
   const navigator = useNavigate();
   
   return (
-    <section className="relative pt-20 pb-20 overflow-hidden transition-colors duration-300 border-b lg:pt-36 lg:pb-28 bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark">
+    <section className="relative py-16 overflow-hidden transition-colors duration-300 border-b lg:py-28 bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark">
       
       {/* 1. ADVANCED BACKGROUND DECORATION */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
@@ -24,7 +24,7 @@ const HeroSection = () => {
           <div className="text-left animate-fadeIn">
             {/* Branded Tag */}
             <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 text-xs font-bold tracking-widest uppercase border rounded-full shadow-sm bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark animate-bounce-slow">
-              <span className="flex w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+              <span className="flex w-2 h-2 rounded-full bg-brandGold animate-pulse"></span>
               <span className="text-gray-600 dark:text-gray-400">Financial Integrity</span>
               <span className="mx-1 text-slate-300">|</span>
               <span className="text-brandPrimary dark:text-brandGold">ICFR Assurance</span>

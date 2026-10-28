@@ -84,7 +84,7 @@ export default function NewsletterList() {
       </Helmet>
 
       {/* ================= HERO ================= */}
-      <section className="relative pt-32 pb-16 overflow-hidden isolate">
+      <section className="relative py-16 overflow-hidden isolate">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute -top-32 -left-20 w-[480px] h-[480px] bg-brandPrimary/10 dark:bg-brandAccent/10 blur-[140px] rounded-full" />
           <div className="absolute top-40 -right-32 w-[420px] h-[420px] bg-brandGold/10 dark:bg-brandGold/10 blur-[140px] rounded-full" />
@@ -257,7 +257,7 @@ export default function NewsletterList() {
       </section>
 
       {/* ================= SUBSCRIBE CTA ================= */}
-      <section className="relative px-6 py-24 overflow-hidden isolate">
+      <section className="relative py-16 overflow-hidden isolate">
         <div className="container">
           <div className="relative max-w-6xl mx-auto rounded-[3rem] overflow-hidden bg-brandDark dark:bg-surfaceDark border border-borderLight dark:border-borderDark p-10 md:p-16">
             <div className="absolute inset-0 pointer-events-none opacity-20">
@@ -271,7 +271,7 @@ export default function NewsletterList() {
                   <FaEnvelopeOpenText />
                   Subscribe
                 </div>
-                <h2 className="mb-5 text-3xl font-bold leading-tight text-white md:text-5xl font-heading">
+                <h2 className="mb-5 font-heading text-3xl md:text-4xl font-bold leading-tight text-white">
                   Get the next issue in your inbox.
                 </h2>
                 <p className="text-base text-white/70 md:text-lg">
@@ -281,23 +281,15 @@ export default function NewsletterList() {
               </div>
 
               <div className="lg:col-span-5">
-                <form
-                  onSubmit={(e) => e.preventDefault()}
-                  className="flex flex-col gap-3"
-                >
-                  <input
-                    type="email"
-                    required
-                    placeholder="you@company.com"
-                    className="w-full px-6 py-4 text-white transition-all border rounded-full outline-none bg-white/10 border-white/20 placeholder:text-white/40 focus:border-brandAccent"
-                  />
-                  <button
-                    type="submit"
+                {/* No subscription backend exists yet, so subscribe requests go through the contact form. */}
+                <div className="flex flex-col gap-3">
+                  <a
+                    href="/contact"
                     className="inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-black tracking-wide transition-all rounded-full shadow-xl group bg-brandAccent text-brandDark hover:bg-brandGold hover:shadow-brandAccent/30"
                   >
-                    Subscribe to the brief
+                    Contact Us to Subscribe
                     <FaArrowRight className="transition-transform group-hover:translate-x-1" />
-                  </button>
+                  </a>
                   <p className="mt-1 text-xs text-white/50">
                     By subscribing, you agree to our{" "}
                     <a
@@ -308,7 +300,7 @@ export default function NewsletterList() {
                     </a>
                     .
                   </p>
-                </form>
+                </div>
               </div>
             </div>
           </div>

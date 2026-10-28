@@ -2,7 +2,7 @@ import React from 'react'
 
 function TypeSection() {
   return (
-    <section className="py-20 bg-bgLight dark:bg-bgDark">
+    <section className="py-16 bg-bgLight dark:bg-bgDark">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-0 border border-borderLight dark:border-borderDark rounded-3xl overflow-hidden shadow-xl">
             <div className="p-10 bg-surfaceLight dark:bg-surfaceDark border-r border-borderLight dark:border-borderDark">

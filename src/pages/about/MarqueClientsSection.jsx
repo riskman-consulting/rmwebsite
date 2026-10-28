@@ -18,14 +18,14 @@ export default function MarqueeClientsSection({ title = "Our Marquee Clients", b
     
   },[])
   return (
-    <section className={`relative overflow-hidden py-14 ${bgStyle} md:py-20`}>
+    <section className={`relative overflow-hidden py-16 ${bgStyle}`}>
       <div className="container">
         <motion.h2
           variants={fadeInUp}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="mb-12 text-3xl font-bold text-start md:text-4xl"
+          className="mb-12 font-heading text-3xl font-bold text-start md:text-4xl"
         >
           {title.split(" ")[0] + " "}
           {/* <br /> */}

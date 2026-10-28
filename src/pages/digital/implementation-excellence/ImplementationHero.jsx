@@ -7,7 +7,7 @@ const ImplementationHero = () => {
     return (
 
         <section
-              className="relative py-24 bg-center bg-cover lg:py-36"
+              className="relative py-20 bg-center bg-cover lg:py-28"
               style={{ backgroundImage: `url(${bg})` }}
             >
               {/* layered gradient overlay */}
@@ -16,10 +16,14 @@ const ImplementationHero = () => {
               {/* subtle bottom fade */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
         
-              <div className="container relative px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
-                <div className="max-w-3xl p-8 border shadow-2xl rounded-xl bg-white/10 backdrop-blur-md border-white/20">
+              <div className="container relative">
+                <div className="max-w-3xl p-8 border shadow-2xl rounded-2xl bg-white/10 backdrop-blur-md border-white/20">
+
+                  <div className="inline-block px-4 py-2 mb-6 text-sm font-semibold text-white border rounded-full bg-white/15 backdrop-blur border-white/20">
+                    Digital Transformation
+                  </div>
                   
-                  <h1 className="mb-6 text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
+                  <h1 className="mb-6 text-4xl font-bold leading-tight text-white font-heading md:text-5xl lg:text-6xl">
                     Accelerating Value Realization with{" "}
                     <span className="text-brandGold">
                       Implementation Excellence

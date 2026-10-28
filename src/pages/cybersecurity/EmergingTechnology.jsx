@@ -153,12 +153,12 @@ import emergingImage from "../../assets/images/cybersecurity/ai-security.png"
 
  const EmergingTechnology = () => {
   return (
- <section className="py-24 overflow-hidden text-white bg-brandNavy">
-        <div className="container px-6 mx-auto">
+    <section className="py-16 overflow-hidden text-white bg-brandNavy">
+        <div className="container">
           <div className="flex flex-col gap-12 lg:flex-row">
             <div className="lg:w-1/3">
-              <h2 className="mb-2 font-bold tracking-wider uppercase text-brandAccent">Future Proof</h2>
-              <h2 className="mb-6 text-4xl font-bold font-heading">Emerging Technology & Supply Chain</h2>
+              <p className="mb-2 font-bold tracking-wider uppercase text-brandAccent">Future Proof</p>
+              <h2 className="mb-6 text-3xl md:text-4xl font-bold font-heading">Emerging Technology & Supply Chain</h2>
               <p className="mb-8 text-gray-300">
                 RiskMan offers specialized audits for modern digital environments, including AI systems and blockchain infrastructure, to ensure resilience. We identify supply chain risks to safeguard your broader ecosystem.
               </p>
@@ -172,7 +172,7 @@ import emergingImage from "../../assets/images/cybersecurity/ai-security.png"
                 { title: "Blockchain Security", desc: "Structured assessments of smart contracts and infrastructure to verify cryptographic integrity and access controls.", icon: Lock },
                 { title: "BOM Auditing", desc: "Ensuring transparency and integrity of components used in software, quantum, and AI systems.", icon: Server },
               ].map((item, idx) => (
-                <div key={idx} className="p-8 transition-all border bg-brandDark/50 rounded-xl border-white/5 hover:bg-brandDark hover:border-brandAccent/30 group">
+                <div key={idx} className="h-full p-8 transition-all border bg-brandDark/50 rounded-2xl border-white/5 hover:bg-brandDark hover:border-brandAccent/30 group">
                   <item.icon className="w-10 h-10 mb-4 transition-transform text-brandAccent group-hover:scale-110" />
                   <h3 className="mb-3 text-xl font-bold">{item.title}</h3>
                   <p className="text-sm leading-relaxed text-gray-400">{item.desc}</p>

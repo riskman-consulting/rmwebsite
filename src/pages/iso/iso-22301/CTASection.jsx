@@ -6,15 +6,15 @@ import { useNavigate } from 'react-router-dom';
 const CTASection = () => {
   const navigator = useNavigate()
   return (
-    <section className="relative py-24 bg-bgLight">
-      <div className="container px-4 mx-auto md:px-6">
+    <section className="relative py-16 bg-surfaceLight dark:bg-surfaceDark">
+      <div className="container">
         <div className="relative overflow-hidden shadow-2xl bg-brandPrimary rounded-3xl">
           <div className="grid lg:grid-cols-2">
             <div className="relative z-10 flex flex-col justify-center p-12 md:p-16">
               <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl font-heading">
                 Prepare Your Business for the Unexpected
               </h2>
-              <p className="mb-10 text-lg leading-relaxed text-blue-100">
+              <p className="mb-10 text-lg leading-relaxed text-gray-200">
                 Build a resilient organization that thrives under pressure with RiskMan’s expert continuity and recovery consulting.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">
@@ -22,7 +22,7 @@ const CTASection = () => {
                   Start Your Journey
                   <ArrowRight className="w-5 h-5" />
                 </button>
-                <button className="px-8 py-4 font-semibold text-white transition-colors border rounded-lg border-white/30 hover:bg-white/10">
+                <button onClick={()=>navigator("/contact")} className="px-8 py-4 font-semibold text-white transition-colors border rounded-lg border-white/30 hover:bg-white/10">
                   Schedule Consultation
                 </button>
               </div>
@@ -34,7 +34,6 @@ const CTASection = () => {
                 alt="Expert Consultation" 
                 className="absolute inset-0 object-cover w-full h-full"
               />
-              <div className="absolute inset-0 bg-brandPrimary/40 lg:bg-gradient-to-r lg:from-brandPrimary lg:to-transparent"></div>
             </div>
           </div>
         </div>

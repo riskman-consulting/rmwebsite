@@ -107,10 +107,10 @@ const OperationalIntegrity = () => {
     //   </div>
     // </section>
 
-     <section className="py-24 bg-white">
-        <div className="container px-6 mx-auto text-center">
-          <h2 className="mb-2 font-bold tracking-wider uppercase text-brandAccent">Trust & Governance</h2>
-          <h2 className="mb-16 text-4xl font-bold font-heading text-brandDark">Operational Integrity and Governance</h2>
+      <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
+        <div className="container text-center">
+          <p className="mb-2 font-bold tracking-wider uppercase text-brandPrimary dark:text-brandAccent">Trust & Governance</p>
+          <h2 className="mb-16 text-3xl md:text-4xl font-bold font-heading text-brandDark dark:text-white">Operational Integrity and Governance</h2>
           
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
@@ -119,12 +119,12 @@ const OperationalIntegrity = () => {
               { title: "Confidentiality", desc: "All audit data and findings are protected through strict NDAs and secure communication channels." },
               { title: "Quality Control", desc: "Multi-level reviews ensure the completeness, accuracy, and integrity of all findings and recommendations." }
             ].map((item, idx) => (
-              <div key={idx} className="p-6 transition-all border border-gray-100 rounded-xl bg-bgLight hover:shadow-xl hover:-translate-y-2">
+              <div key={idx} className="h-full p-6 transition-all border border-borderLight dark:border-borderDark rounded-2xl bg-bgLight dark:bg-bgDark hover:shadow-xl hover:-translate-y-2">
                 <div className="flex items-center justify-center w-16 h-16 mx-auto mb-6 text-2xl font-bold text-white rounded-full shadow-lg bg-brandPrimary shadow-brandPrimary/30">
                   {idx + 1}
                 </div>
-                <h3 className="mb-4 text-xl font-bold text-brandDark">{item.title}</h3>
-                <p className="text-sm text-gray-600">{item.desc}</p>
+                <h3 className="mb-4 text-xl font-bold text-brandDark dark:text-white">{item.title}</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300">{item.desc}</p>
               </div>
             ))}
           </div>

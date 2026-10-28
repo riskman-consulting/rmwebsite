@@ -28,8 +28,9 @@ const FinancialFAQ = () => {
   ];
 
   return (
-    <section className="py-24 transition-colors duration-300 bg-bgLight dark:bg-bgDark">
-      <div className="container max-w-4xl px-5 mx-auto sm:px-8">
+    <section className="py-16 transition-colors duration-300 bg-bgLight dark:bg-bgDark">
+      <div className="container">
+      <div className="max-w-4xl mx-auto">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold font-heading md:text-4xl text-brandDark dark:text-white">
             Financial Advisory <span className="text-brandPrimary dark:text-brandGold">FAQ</span>
@@ -43,7 +44,7 @@ const FinancialFAQ = () => {
           {faqs.map((faq, index) => (
             <div 
               key={index} 
-              className="overflow-hidden border border-borderLight dark:border-borderDark rounded-xl bg-surfaceLight dark:bg-surfaceDark"
+              className="overflow-hidden border border-borderLight dark:border-borderDark rounded-2xl bg-surfaceLight dark:bg-surfaceDark"
             >
               <button 
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
@@ -77,10 +78,11 @@ const FinancialFAQ = () => {
           <p className="mb-6 font-sans text-white/80">
             Our team of experts is ready to help you navigate your financial journey.
           </p>
-          <Link to="/contact" className="px-8 py-3 font-bold transition-all duration-300 transform rounded-lg bg-brandAccent hover:bg-brandGold text-brandDark hover:scale-105">
+          <Link to="/contact" className="inline-block px-8 py-3 font-bold transition-all duration-300 transform rounded-lg bg-brandAccent hover:bg-brandGold text-brandDark hover:scale-105">
             Contact RiskMan
           </Link>
         </div>
+      </div>
       </div>
     </section>
   );

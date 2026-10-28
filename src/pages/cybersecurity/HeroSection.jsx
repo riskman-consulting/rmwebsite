@@ -125,13 +125,13 @@ const HeroSection = () => {
     //   </div>
     // </section>
 
-    <section className="relative flex items-center min-h-screen pt-20 overflow-hidden bg-brandDark">
+      <section className="relative py-16 overflow-hidden lg:py-28 bg-brandDark">
         <div className="absolute inset-0 z-0 opacity-40">
           <img src={heroImage} alt="Cybersecurity Shield" className="object-cover w-full h-full" />
           <div className="absolute inset-0 bg-gradient-to-r from-brandDark via-brandDark/90 to-transparent"></div>
         </div>
         
-        <div className="container relative z-10 grid items-center gap-12 px-6 mx-auto lg:grid-cols-2">
+        <div className="container relative z-10 grid items-center gap-12 lg:grid-cols-2">
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -145,7 +145,7 @@ const HeroSection = () => {
               </span>
               Elite Cybersecurity Services
             </div>
-            <h1 className="mb-6 text-5xl font-bold leading-tight lg:text-7xl font-heading">
+            <h1 className="mb-6 text-4xl font-bold leading-tight lg:text-6xl font-heading">
               Empowering <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandAccent to-brandGold">Resilience</span> Through Proactive Defense
             </h1>
             <p className="max-w-xl mb-8 text-lg leading-relaxed text-gray-300">
@@ -176,27 +176,6 @@ const HeroSection = () => {
                 className="relative z-10 object-cover w-full h-full border shadow-2xl rounded-2xl border-white/10 mask-image-gradient"
                 style={{ clipPath: 'polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%)' }}
               />
-              
-              {/* Floating Elements */}
-              <motion.div 
-                animate={{ y: [0, -20, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute z-20 p-4 border shadow-xl -top-10 -right-10 bg-brandNavy/90 backdrop-blur rounded-xl border-brandAccent/30"
-              >
-                <Shield className="w-8 h-8 mb-2 text-brandAccent" />
-                <div className="font-bold text-white">100% Secure</div>
-                <div className="text-xs text-gray-400">System Status</div>
-              </motion.div>
-
-              <motion.div 
-                animate={{ y: [0, 20, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute z-20 p-4 border shadow-xl -bottom-10 -left-10 bg-brandNavy/90 backdrop-blur rounded-xl border-brandAccent/30"
-              >
-                <Activity className="w-8 h-8 mb-2 text-green-400" />
-                <div className="font-bold text-white">Real-time</div>
-                <div className="text-xs text-gray-400">Monitoring</div>
-              </motion.div>
             </div>
           </motion.div>
         </div>

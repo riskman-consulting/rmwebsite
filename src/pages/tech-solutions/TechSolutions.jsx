@@ -77,10 +77,10 @@ const FeatureScreenshotCard = ({ label, title, description, image, delay = 0 }) 
         {/* Screenshot content area */}
         <div className="p-4 bg-white">
           <p className="mb-1 text-xs font-semibold tracking-wide uppercase text-brandAccent">{label}</p>
-          <h4 className="mb-3 text-base font-bold font-heading text-brandDark">{title}</h4>
+          <h4 className="mb-3 text-base font-bold font-heading text-brandDark dark:text-white">{title}</h4>
           
           {/* Screenshot image */}
-          <div className="overflow-hidden border rounded-xl border-borderLight">
+          <div className="overflow-hidden border rounded-xl border-borderLight dark:border-borderDark">
             <img 
               src={image} 
               alt={title} 
@@ -92,7 +92,7 @@ const FeatureScreenshotCard = ({ label, title, description, image, delay = 0 }) 
       
       {/* Title and CTA below card */}
       <div className="mt-6">
-        <h3 className="mb-3 text-xl font-bold font-heading text-brandDark">{description}</h3>
+        <h3 className="mb-3 text-xl font-bold font-heading text-brandDark dark:text-white">{description}</h3>
         <button className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold transition-colors duration-300 rounded-full bg-brandAccent text-brandDark hover:bg-brandGold hover:shadow-lg hover:shadow-brandAccent/30">
           Try it now
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -109,16 +109,16 @@ const FeatureScreenshotCard = ({ label, title, description, image, delay = 0 }) 
 // ============================================================
 const BentoCard = ({ variant = 'light', title, description, image, buttonText,...other }) => {
   const bgClass = variant === 'light' 
-    ? 'bg-brandLight' 
+    ? 'bg-surfaceLight dark:bg-surfaceDark' 
     : 'bg-gradient-to-br from-brandDark to-brandNavy';
-  const textClass = variant === 'light' ? 'text-brandDark' : 'text-white';
+  const textClass = variant === 'light' ? 'text-brandDark dark:text-white' : 'text-white';
   
   return (
     <div {...other} className={`${bgClass} rounded-3xl p-8 lg:p-10 h-full flex flex-col`}>
       <h3 className={`text-2xl lg:text-3xl font-heading font-bold ${textClass} mb-4`}>
         {title}
       </h3>
-      <p className={`${variant === 'light' ? 'text-brandDark/70' : 'text-white/70'} mb-6 leading-relaxed`}>
+      <p className={`${variant === 'light' ? 'text-brandDark/70 dark:text-white/70' : 'text-white/70'} mb-6 leading-relaxed`}>
         {description}
       </p>
       {buttonText && (
@@ -137,7 +137,7 @@ const BentoCard = ({ variant = 'light', title, description, image, buttonText,..
       {/* Screenshot */}
       {image && (
         <div className="flex items-end flex-1">
-          <div className="w-full overflow-hidden border shadow-2xl rounded-xl border-borderLight">
+          <div className="w-full overflow-hidden border shadow-2xl rounded-xl border-borderLight dark:border-borderDark">
             <img src={image} alt={title} className="w-full h-auto" />
           </div>
         </div>
@@ -180,8 +180,8 @@ const ScreenshotShowcase = ({ image, title, description, features, reverse = fal
         ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
     >
       <div className={`${reverse ? 'lg:order-2' : ''}`}>
-        <h3 className="mb-4 text-3xl font-bold font-heading text-brandDark">{title}</h3>
-        <p className="mb-6 leading-relaxed text-brandDark/70">{description}</p>
+        <h3 className="mb-4 text-3xl font-bold font-heading text-brandDark dark:text-white">{title}</h3>
+        <p className="mb-6 leading-relaxed text-brandDark/70 dark:text-white/70">{description}</p>
         <ul className="space-y-3">
           {features.map((feature, i) => (
             <li key={i} className="flex items-start gap-3">
@@ -190,7 +190,7 @@ const ScreenshotShowcase = ({ image, title, description, features, reverse = fal
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <span className="text-sm text-brandDark/80">{feature}</span>
+              <span className="text-sm text-brandDark/80 dark:text-white/80">{feature}</span>
             </li>
           ))}
         </ul>
@@ -199,7 +199,7 @@ const ScreenshotShowcase = ({ image, title, description, features, reverse = fal
       <div className={`${reverse ? 'lg:order-1' : ''}`}>
         <div className="relative">
           <div className="absolute -inset-4 bg-gradient-to-r from-brandPrimary/10 to-brandAccent/10 rounded-3xl blur-2xl" />
-          <div className="relative overflow-hidden border shadow-2xl rounded-2xl border-borderLight">
+          <div className="relative overflow-hidden border shadow-2xl rounded-2xl border-borderLight dark:border-borderDark">
             <img src={image} alt={title} className="w-full" />
           </div>
         </div>
@@ -212,9 +212,9 @@ const ScreenshotShowcase = ({ image, title, description, features, reverse = fal
 // PLAN FEATURE CARD
 // ============================================================
 const PlanFeatureCard = ({ icon, title }) => (
-  <div className="p-6 transition-all duration-300 bg-white border rounded-2xl border-borderLight hover:shadow-lg hover:shadow-brandPrimary/5">
+  <div className="p-6 transition-all duration-300 bg-white border rounded-2xl border-borderLight dark:border-borderDark hover:shadow-lg hover:shadow-brandPrimary/5">
     <div className="w-10 h-10 mb-4">{icon}</div>
-    <p className="text-sm font-medium leading-relaxed text-brandDark">{title}</p>
+    <p className="text-sm font-medium leading-relaxed text-brandDark dark:text-white">{title}</p>
   </div>
 );
 
@@ -222,8 +222,8 @@ const PlanFeatureCard = ({ icon, title }) => (
 // TESTIMONIAL CARD
 // ============================================================
 const TestimonialCard = ({ quote, name, rating = 5 }) => (
-  <div className="bg-brandLight rounded-2xl p-6 min-w-[300px] max-w-[350px] border border-borderLight">
-    <p className="mb-6 text-sm leading-relaxed text-brandDark/80">"{quote}"</p>
+  <div className="bg-brandLight rounded-2xl p-6 min-w-[300px] max-w-[350px] border border-borderLight dark:border-borderDark">
+    <p className="mb-6 text-sm leading-relaxed text-brandDark/80 dark:text-white/80">"{quote}"</p>
     <div className="flex items-center gap-3">
       <div className="flex items-center justify-center w-10 h-10 rounded-full bg-brandPrimary/20">
         <span className="text-sm font-bold text-brandPrimary">{name.charAt(0)}</span>
@@ -236,7 +236,7 @@ const TestimonialCard = ({ quote, name, rating = 5 }) => (
             </svg>
           ))}
         </div>
-        <p className="text-sm font-semibold text-brandDark">{name}</p>
+        <p className="text-sm font-semibold text-brandDark dark:text-white">{name}</p>
       </div>
     </div>
   </div>
@@ -246,12 +246,12 @@ const TestimonialCard = ({ quote, name, rating = 5 }) => (
 // FAQ ACCORDION
 // ============================================================
 const FAQItem = ({ question, answer, isOpen, onClick }) => (
-  <div className="overflow-hidden border bg-brandLight rounded-2xl border-borderLight">
+  <div className="overflow-hidden border bg-surfaceLight dark:bg-surfaceDark rounded-2xl border-borderLight dark:border-borderDark">
     <button
       onClick={onClick}
-      className="flex items-center justify-between w-full px-6 py-5 text-left transition-colors hover:bg-brandLight/80"
+      className="flex items-center justify-between w-full px-6 py-5 text-left transition-colors hover:bg-brandLight/80 dark:hover:bg-white/5"
     >
-      <span className="pr-4 font-medium text-brandDark">{question}</span>
+      <span className="pr-4 font-medium text-brandDark dark:text-white">{question}</span>
       <div className={`w-8 h-8 rounded-full bg-brandPrimary/10 flex items-center justify-center flex-shrink-0 
         transition-transform duration-300 ${isOpen ? 'rotate-45' : ''}`}>
         <svg className="w-4 h-4 text-brandPrimary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -260,7 +260,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => (
       </div>
     </button>
     <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-48' : 'max-h-0'}`}>
-      <p className="px-6 pb-5 text-sm leading-relaxed text-brandDark/70">{answer}</p>
+      <p className="px-6 pb-5 text-sm leading-relaxed text-brandDark/70 dark:text-white/70">{answer}</p>
     </div>
   </div>
 );
@@ -288,7 +288,7 @@ export default function IntegritatSolutionPage() {
   ];
 
   return (
-    <div className="min-h-screen font-sans bg-white">
+    <div className="min-h-screen font-sans bg-bgLight dark:bg-bgDark">
       <Helmet>
         <title>Technology Solutions | RiskMan Consulting</title>
         <meta name="description" content="Explore RiskMan's portfolio of technology-led GRC, audit, and compliance solutions designed for modern enterprises." />
@@ -296,40 +296,40 @@ export default function IntegritatSolutionPage() {
       </Helmet>
       
       {/* ==================== HERO SECTION ==================== */}
-      <section className="relative flex items-center min-h-screen overflow-hidden bg-bgLight">
+      <section className="relative flex items-center min-h-screen overflow-hidden bg-bgLight dark:bg-bgDark">
         <div className="absolute inset-0">
           <div className="absolute rounded-full top-20 right-20 w-96 h-96 bg-brandAccent/10 blur-3xl" />
           <div className="absolute rounded-full bottom-20 left-20 w-96 h-96 bg-brandPrimary/10 blur-3xl" />
         </div>
 
-        <div className="container relative z-10 px-6 py-20 mx-auto lg:px-12">
+        <div className="container relative z-10 py-20">
           <div className="grid items-center gap-16 lg:grid-cols-2">
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 border rounded-full bg-brandPrimary/10 border-brandPrimary/20">
                 <span className="w-2 h-2 rounded-full bg-brandAccent animate-pulse" />
-                <span className="text-sm font-medium text-brandPrimary">Audit Management Platform</span>
+                <span className="text-sm font-medium text-brandPrimary dark:text-brandAccent">Audit Management Platform</span>
               </div>
               
-              <h1 className="mb-6 text-5xl font-bold leading-tight lg:text-6xl xl:text-7xl font-heading text-brandDark">
+              <h1 className="mb-6 text-5xl font-bold leading-tight lg:text-6xl xl:text-7xl font-heading text-brandDark dark:text-white">
                 Streamline Your{' '}
-                <span className="text-brandPrimary">Audit Workflow</span>
+                <span className="text-brandPrimary dark:text-brandAccent">Audit Workflow</span>
               </h1>
               
-              <p className="max-w-lg mb-8 text-xl leading-relaxed text-brandDark/70">
+              <p className="max-w-lg mb-8 text-xl leading-relaxed text-brandDark/70 dark:text-white/70">
                 CPA firms can automate document collection, tracking, and review — 
                 everything in between from within Integritat.
               </p>
               
               <div className="flex flex-wrap gap-4 mb-12">
                 <Link to ="/contact" className="px-8 py-4 font-semibold transition-all duration-300 rounded-full shadow-lg text-brandDark bg-brandAccent hover:bg-brandGold shadow-brandAccent/30 hover:shadow-xl">
-                  Start your free trial
+                  Request a Demo
                 </Link>
                 {/* <button className="px-8 py-4 font-semibold transition-all duration-300 border-2 rounded-full text-brandPrimary border-brandPrimary/30 hover:bg-brandPrimary/5">
                   Watch demo
                 </button> */}
               </div>
 
-              {/* <div className="flex items-center gap-2 text-sm text-brandDark/60">
+              {/* <div className="flex items-center gap-2 text-sm text-brandDark/60 dark:text-white/60">
                 <span className="font-semibold text-brandPrimary">Excellent</span>
                 <div className="flex gap-0.5">
                   {[...Array(5)].map((_, i) => (
@@ -345,12 +345,12 @@ export default function IntegritatSolutionPage() {
             {/* Hero Screenshot */}
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-brandPrimary/20 to-brandAccent/20 rounded-3xl blur-2xl" />
-              <div className="relative overflow-hidden border shadow-2xl rounded-2xl border-borderLight">
+              <div className="relative overflow-hidden border shadow-2xl rounded-2xl border-borderLight dark:border-borderDark">
                 <img src={SCREENSHOTS.hero} alt="Integritat Login" className="w-full" />
               </div>
               
               {/* Floating dashboard preview */}
-              <div className="absolute w-48 overflow-hidden transition-transform duration-300 transform border shadow-xl -bottom-6 -left-6 rounded-xl border-borderLight hover:scale-105 animate-float">
+              <div className="absolute w-48 overflow-hidden transition-transform duration-300 transform border shadow-xl -bottom-6 -left-6 rounded-xl border-borderLight dark:border-borderDark hover:scale-105 animate-float">
                 <img src={SCREENSHOTS.mainDash} alt="Dashboard" className="w-full" />
               </div>
             </div>
@@ -359,14 +359,14 @@ export default function IntegritatSolutionPage() {
       </section>
 
       {/* ==================== WORKFLOW STEPS SECTION ==================== */}
-      <section className="py-24 bg-white">
-        <div className="container px-6 mx-auto lg:px-12">
+      <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
+        <div className="container">
           <div className="max-w-3xl mx-auto mb-16 text-center">
-            <h2 className="mb-6 text-4xl font-bold lg:text-5xl font-heading text-brandDark">
+            <h2 className="mb-6 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
               Complete Audit Workflow in{' '}
-              <span className="text-brandPrimary">8 Simple Steps</span>
+              <span className="text-brandPrimary dark:text-brandAccent">8 Simple Steps</span>
             </h2>
-            <p className="text-lg text-brandDark/70">
+            <p className="text-lg text-brandDark/70 dark:text-white/70">
               From client onboarding to governance dashboard — manage your entire audit lifecycle seamlessly
             </p>
           </div>
@@ -529,14 +529,14 @@ export default function IntegritatSolutionPage() {
       </section>
 
       {/* ==================== FEATURE CARDS (Lexend Style with Screenshots) ==================== */}
-      {/* <section className="py-24 bg-brandLight">
-        <div className="container px-6 mx-auto lg:px-12">
+      {/* <section className="py-20 bg-bgLight dark:bg-bgDark">
+        <div className="container">
           <div className="max-w-3xl mx-auto mb-16 text-center">
-            <h2 className="mb-6 text-4xl font-bold lg:text-5xl font-heading text-brandDark">
+            <h2 className="mb-6 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
               We've got you covered throughout the{' '}
-              <span className="text-brandPrimary">audit lifecycle</span>
+              <span className="text-brandPrimary dark:text-brandAccent">audit lifecycle</span>
             </h2>
-            <p className="text-lg text-brandDark/70">
+            <p className="text-lg text-brandDark/70 dark:text-white/70">
               CPA firms can automate client onboarding, document collection, and review processes —
               everything in between from within Integritat.
             </p>
@@ -569,8 +569,8 @@ export default function IntegritatSolutionPage() {
       </section> */}
 
       {/* ==================== BENTO GRID SECTION ==================== */}
-      <section className="py-24 bg-white">
-        <div className="container px-6 mx-auto lg:px-12">
+      <section className="py-16 bg-bgLight dark:bg-bgDark">
+        <div className="container">
           <div className="grid gap-8 lg:grid-cols-2">
             <BentoCard
               variant="light"
@@ -593,7 +593,7 @@ export default function IntegritatSolutionPage() {
       </section>
 
       {/* ==================== SOLUTIONS SECTION (Dark) ==================== */}
-      <section className="relative py-24 overflow-hidden bg-gradient-to-br from-brandDark to-brandNavy">
+      <section className="relative py-16 overflow-hidden bg-gradient-to-br from-brandDark to-brandNavy">
         <div className="absolute inset-0 opacity-30">
           <svg width="100%" height="100%">
             <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
@@ -603,12 +603,12 @@ export default function IntegritatSolutionPage() {
           </svg>
         </div>
         
-        <div className="container relative z-10 px-6 mx-auto lg:px-12">
+        <div className="container relative z-10">
           <div className="mb-16 text-center">
             <span className="inline-block px-4 py-2 mb-6 text-sm font-medium text-white rounded-full bg-white/10">
               Solutions
             </span>
-            <h2 className="mb-6 text-4xl font-bold text-white lg:text-5xl font-heading">
+            <h2 className="mb-6 font-heading text-3xl md:text-4xl font-bold text-white">
               End-to-End Audit Management Solutions
             </h2>
             <p className="max-w-2xl mx-auto text-lg text-white/60">
@@ -657,22 +657,22 @@ export default function IntegritatSolutionPage() {
 
           {/* <div className="text-center">
             <button className="px-8 py-4 font-semibold transition-all duration-300 rounded-full shadow-lg text-brandDark bg-brandAccent hover:bg-brandGold shadow-brandAccent/30">
-              Start your free trial
+              Request a Demo
             </button>
           </div> */}
         </div>
       </section>
 
       {/* ==================== WHAT EVERY PLAN GETS YOU ==================== */}
-      {/* <section className="py-24 bg-brandLight">
-        <div className="container px-6 mx-auto lg:px-12">
+      {/* <section className="py-20 bg-bgLight dark:bg-bgDark">
+        <div className="container">
           <div className="mb-8 text-center">
             <button className="px-6 py-3 font-medium text-white transition-colors rounded-full bg-brandPrimary hover:bg-brandNavy">
               + Full list of features
             </button>
           </div>
 
-          <h3 className="mb-8 text-2xl font-bold font-heading text-brandDark">
+          <h3 className="mb-8 text-2xl font-bold font-heading text-brandDark dark:text-white">
             What every plan gets you
           </h3>
 
@@ -702,10 +702,10 @@ export default function IntegritatSolutionPage() {
       </section> */}
 
       {/* ==================== FAQ ==================== */}
-      <section className="py-24 bg-brandLight">
-        <div className="container px-6 mx-auto lg:px-12">
-          <h2 className="mb-12 text-4xl font-bold text-center font-heading text-brandDark">
-            Frequently asked questions!
+      <section className="py-16 bg-bgLight dark:bg-bgDark">
+        <div className="container">
+          <h2 className="mb-12 font-heading text-3xl md:text-4xl font-bold text-center text-brandDark dark:text-white">
+            Frequently Asked Questions
           </h2>
 
           <div className="max-w-3xl mx-auto space-y-4">
@@ -723,7 +723,7 @@ export default function IntegritatSolutionPage() {
       </section>
 
       {/* ==================== CTA SECTION ==================== */}
-      <section className="relative py-32 overflow-hidden bg-white">
+      <section className="relative py-16 overflow-hidden bg-surfaceLight dark:bg-surfaceDark">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-[15%] w-14 h-14 rounded-full bg-brandPrimary/10 flex items-center justify-center animate-float">
             <svg className="w-6 h-6 text-brandPrimary" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
@@ -739,22 +739,22 @@ export default function IntegritatSolutionPage() {
           </div>
         </div>
 
-        <div className="container relative z-10 px-6 mx-auto lg:px-12">
+        <div className="container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block px-4 py-2 mb-6 text-sm font-medium border rounded-full border-borderLight text-brandDark">
+            <span className="inline-block px-4 py-2 mb-6 text-sm font-medium border rounded-full border-borderLight dark:border-borderDark text-brandDark dark:text-white">
               Get started today!
             </span>
-            <h2 className="mb-6 text-4xl font-bold lg:text-5xl font-heading text-brandDark">
+            <h2 className="mb-6 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
               Seamless integration with your{' '}
-              <span className="text-brandPrimary">existing workflow</span>
+              <span className="text-brandPrimary dark:text-brandAccent">existing workflow</span>
             </h2>
-            <p className="mb-8 text-lg text-brandDark/70">
+            <p className="mb-8 text-lg text-brandDark/70 dark:text-white/70">
               See how we help your team solve today's biggest audit challenges.
             </p>
             <button onClick={()=>navigator("/contact")} className="px-10 py-5 text-lg font-semibold transition-all duration-300 rounded-full shadow-xl text-brandDark bg-brandAccent hover:bg-brandGold shadow-brandAccent/30">
-              Start your free trial
+              Request a Demo
             </button>
-            <div className="flex items-center justify-center gap-2 mt-6 text-sm text-brandDark/60">
+            <div className="flex items-center justify-center gap-2 mt-6 text-sm text-brandDark/60 dark:text-white/60">
               {/* <span className="font-semibold text-brandPrimary">Excellent</span> */}
               <div className="flex gap-0.5">
                 {/* {[...Array(5)].map((_, i) => (

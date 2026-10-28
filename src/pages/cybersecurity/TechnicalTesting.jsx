@@ -78,7 +78,7 @@
 //               <div className="absolute inset-[2px] rounded-2xl bg-bgLight dark:bg-bgDark -z-10"></div>
 
 //               {/* Badge */}
-//               <div className="absolute px-3 py-1 text-xs font-bold rounded-full -top-3 left-6 bg-brandAccent text-brandDark">
+//               <div className="absolute px-3 py-1 text-xs font-bold rounded-full -top-3 left-6 bg-brandAccent text-brandDark dark:text-white">
 //                 {service.badge}
 //               </div>
 
@@ -142,13 +142,13 @@ import testingImage from "../../assets/images/cybersecurity/testing-image.png"
 
   const TechnicalTesting = () => {
   return (
-     <section className="py-24 bg-bgLight">
-        <div className="container px-6 mx-auto">
+    <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
+        <div className="container">
           <div className="grid items-center gap-16 lg:grid-cols-2">
             <div>
-              <h2 className="mb-2 font-bold tracking-wider uppercase text-brandAccent">Offensive Security</h2>
-              <h2 className="mb-6 text-4xl font-bold font-heading text-brandDark">Specialized Technical Testing</h2>
-              <p className="mb-8 text-lg text-gray-600">
+              <p className="mb-2 font-bold tracking-wider uppercase text-brandPrimary dark:text-brandAccent">Offensive Security</p>
+              <h2 className="mb-6 text-3xl md:text-4xl font-bold font-heading text-brandDark dark:text-white">Specialized Technical Testing</h2>
+              <p className="mb-8 text-lg text-gray-600 dark:text-gray-300">
                 Our experts conduct active testing of individual components or entire applications to identify and exploit potential vulnerabilities. This simulated adversary approach ensures your infrastructure can withstand sophisticated attacks.
               </p>
 
@@ -160,12 +160,12 @@ import testingImage from "../../assets/images/cybersecurity/testing-image.png"
                   { title: "Configuration Audits", desc: "Ensuring secure deployment of assets, including blocking unused ports and securing default credentials." }
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-4 group">
-                    <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 transition-colors rounded-full bg-brandPrimary/10 group-hover:bg-brandPrimary group-hover:text-white">
+                    <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 transition-colors rounded-full bg-brandPrimary/10 dark:bg-brandAccent/10 dark:text-brandAccent group-hover:bg-brandPrimary group-hover:text-white">
                       <span className="font-bold">{idx + 1}</span>
                     </div>
                     <div>
-                      <h3 className="mb-2 text-xl font-bold text-brandDark">{item.title}</h3>
-                      <p className="text-gray-600">{item.desc}</p>
+                      <h3 className="mb-2 text-xl font-bold text-brandDark dark:text-white">{item.title}</h3>
+                      <p className="text-gray-600 dark:text-gray-300">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -179,7 +179,7 @@ import testingImage from "../../assets/images/cybersecurity/testing-image.png"
               className="relative"
             >
               <div className="absolute inset-0 transform translate-x-2 translate-y-2 bg-brandAccent rounded-2xl rotate-3"></div>
-              <img src={testingImage} alt="Technical Testing" className="relative object-cover w-full border-4 border-white shadow-2xl rounded-2xl" />
+              <img src={testingImage} alt="Technical Testing" className="relative object-cover w-full border-4 border-white shadow-2xl dark:border-surfaceDark rounded-2xl" />
             </motion.div>
           </div>
         </div>

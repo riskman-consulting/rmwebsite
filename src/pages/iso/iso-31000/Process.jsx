@@ -26,7 +26,7 @@ const Process = () => {
   ];
 
   return (
-    <section id="process" className="relative py-24 overflow-hidden bg-brandNavy">
+    <section id="process" className="relative py-16 overflow-hidden bg-brandNavy">
       {/* Background Image */}
       <div className="absolute inset-0 z-0 opacity-10">
         <img 
@@ -36,12 +36,12 @@ const Process = () => {
         />
       </div>
 
-      <div className="container relative z-10 px-4 mx-auto sm:px-6 lg:px-8">
+      <div className="container relative z-10">
         <div className="max-w-3xl mx-auto mb-16 text-center">
-          <h2 className="mb-3 text-sm font-semibold tracking-wide uppercase text-brandGold">How We Work</h2>
-          <h3 className="mb-6 text-3xl font-bold text-white md:text-4xl font-heading">
+          <p className="mb-3 text-sm font-semibold tracking-wide uppercase text-brandGold">How We Work</p>
+          <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl font-heading">
             RiskMan’s Strategic Process
-          </h3>
+          </h2>
           <p className="text-lg text-gray-300">
             We help organizations build a culture of risk awareness that permeates every department, ensuring long-term stability and sustainable growth.
           </p>
@@ -54,7 +54,7 @@ const Process = () => {
                 {process.icon}
               </div>
               <div>
-                <h4 className="mb-3 text-xl font-bold text-white">{process.title}</h4>
+                <h3 className="mb-3 text-xl font-bold text-white">{process.title}</h3>
                 <p className="leading-relaxed text-gray-300">{process.description}</p>
               </div>
             </div>

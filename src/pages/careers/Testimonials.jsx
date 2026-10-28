@@ -41,11 +41,11 @@ export default function TeamTestimonials() {
 
   return (
     <section className="relative py-16 bg-surfaceLight dark:bg-surfaceDark">
-      <div className="container max-w-6xl px-4 mx-auto">
+      <div className="container">
 
         {/* Header */}
         <div className="max-w-3xl mx-auto mb-16 text-center text-brandDark dark:text-brandAccent">
-          <h2 className="mb-5 text-4xl font-black sm:text-5xl">
+          <h2 className="mb-5 font-heading text-3xl md:text-4xl font-bold">
             Voices from Our Team
           </h2>
           <p className="text-lg opacity-70 text-brandNavy dark:text-white">
@@ -55,7 +55,7 @@ export default function TeamTestimonials() {
 
         {/* Card Wrapper */}
         <div className="relative max-w-5xl mx-auto">
-          <div className="p-10 rounded-[2.5rem] border backdrop-blur-xl bg-surfaceLight dark:bg-surfaceDark shadow-lg">
+          <div className="p-10 rounded-[2.5rem] border border-borderLight dark:border-borderDark backdrop-blur-xl bg-bgLight dark:bg-bgDark shadow-lg">
             
             <div className="flex items-start gap-8">
               

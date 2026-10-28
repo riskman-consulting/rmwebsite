@@ -1,12 +1,13 @@
 import React from 'react'
 import { complianceCards } from './data'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import frameworkBg from '../../../assets/images/data-privacy/data-privacy/framework-bg.jpg'
 
 function FrameworkSection() {
   return (
-     <section className="py-24 bg-bgLight dark:bg-bgDark transition-colors duration-300 overflow-hidden">
-        <div className="container mx-auto px-4">
+    <section className="py-16 bg-bgLight dark:bg-bgDark transition-colors duration-300 overflow-hidden">
+        <div className="container">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             
             {/* Left Content */}
@@ -14,7 +15,7 @@ function FrameworkSection() {
               <div className="inline-block mb-4">
                 <span className="text-brandPrimary dark:text-brandAccent font-bold tracking-widest uppercase text-sm">Comprehensive Coverage</span>
               </div>
-              <h2 className="font-heading text-4xl lg:text-5xl font-bold mb-6 text-brandDark dark:text-white leading-tight">
+              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-brandDark dark:text-white leading-tight">
                 Integrated Compliance <span className="text-brandPrimary dark:text-brandAccent">Frameworks</span>
               </h2>
               <p className="text-gray-600 dark:text-gray-300 text-lg mb-10 leading-relaxed">
@@ -35,9 +36,9 @@ function FrameworkSection() {
                         <span className="text-[10px] font-black uppercase tracking-widest text-brandPrimary bg-brandPrimary/10 px-2 py-1 rounded-full">{card.tag}</span>
                       </div>
                       <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">{card.desc}</p>
-                      <button className="flex items-center gap-2 text-brandPrimary dark:text-brandAccent font-bold text-sm hover:gap-3 transition-all">
+                      <Link to={card.link} className="flex items-center gap-2 text-brandPrimary dark:text-brandAccent font-bold text-sm hover:gap-3 transition-all">
                         LEARN MORE <ArrowRight size={16} />
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 ))}

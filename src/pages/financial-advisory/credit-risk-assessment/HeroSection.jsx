@@ -1,12 +1,12 @@
 import React from 'react';
-import { ArrowRight, ShieldCheck, TrendingUp, BarChart3 } from 'lucide-react';
+import { ArrowRight, ShieldCheck } from 'lucide-react';
 import buildingImg from "../../../assets/images/financial-advisory/building.png"
-import { useNavigate, useNavigation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => { 
    const navigator=useNavigate();
   return (
-    <section className="relative flex items-center min-h-screen pt-20 overflow-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark">
+    <section className="relative py-16 overflow-hidden transition-colors duration-300 lg:py-28 bg-brandDark">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -17,15 +17,15 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-brandDark/95 via-brandNavy/90 to-brandPrimary/70 dark:from-bgDark/95 dark:via-bgDark/90 dark:to-brandNavy/80 mix-blend-multiply"></div>
       </div>
 
-      <div className="container relative z-10 px-4 mx-auto sm:px-6 lg:px-8">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
-          <div className="space-y-8 animate-float">
+      <div className="container relative z-10">
+        <div className="max-w-3xl">
+          <div className="space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 border rounded-full bg-brandAccent/10 border-brandAccent/20 backdrop-blur-sm">
               <ShieldCheck className="w-5 h-5 text-brandAccent" />
-              <span className="text-sm font-medium tracking-wide uppercase text-brandAccent">Trusted by Top Institutions</span>
+              <span className="text-sm font-medium tracking-wide uppercase text-brandAccent">Financial Advisory</span>
             </div>
             
-            <h1 className="text-5xl font-bold leading-tight text-white md:text-6xl lg:text-7xl font-heading">
+            <h1 className="text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl font-heading">
               Advanced <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandAccent to-brandGold">Credit Risk</span> Assessment
             </h1>
             
@@ -58,43 +58,6 @@ const Hero = () => {
             </div> */}
           </div>
 
-          {/* Abstract Visual Element */}
-          <div className="relative hidden lg:block">
-            <div className="relative w-full max-w-lg mx-auto aspect-square">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-brandAccent/20 to-transparent blur-3xl animate-pulse-custom"></div>
-              <div className="relative z-10 p-8 transition-transform duration-500 transform border shadow-2xl bg-white/5 backdrop-blur-xl border-white/10 rounded-2xl rotate-3 hover:rotate-0">
-                <div className="flex items-center justify-between mb-8">
-                  <h3 className="text-xl font-bold text-white font-heading">Risk Analysis</h3>
-                  <BarChart3 className="w-6 h-6 text-brandAccent" />
-                </div>
-                <div className="space-y-4">
-                  {[1, 2, 3].map((i) => (
-                    <div key={i} className="space-y-2">
-                      <div className="flex justify-between text-sm text-gray-300">
-                        <span>Metric {i}</span>
-                        <span>{85 + i * 4}%</span>
-                      </div>
-                      <div className="h-2 overflow-hidden rounded-full bg-white/10">
-                        <div 
-                          className="h-full rounded-full bg-gradient-to-r from-brandPrimary to-brandAccent animate-dash"
-                          style={{ width: `${85 + i * 4}%` }}
-                        ></div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div className="flex items-center gap-4 pt-6 mt-8 border-t border-white/10">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-brandAccent/20">
-                    <TrendingUp className="w-6 h-6 text-brandAccent" />
-                  </div>
-                  <div>
-                    <p className="font-bold text-white">Portfolio Health</p>
-                    <p className="text-sm text-brandAccent">+12.5% Growth</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

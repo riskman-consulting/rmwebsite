@@ -4,8 +4,8 @@ import ermImage from "../../assets/images/erm/erm-2.jpg";
 
 const IntroSection = () => {
   return (
-    <section className="relative overflow-hidden bg-bgLight py-28 dark:bg-surfaceDark">
-      <div className="grid items-center max-w-6xl grid-cols-1 gap-16 px-6 mx-auto md:grid-cols-2">
+    <section className="relative overflow-hidden bg-surfaceLight py-16 dark:bg-surfaceDark">
+      <div className="container grid items-center grid-cols-1 gap-16 md:grid-cols-2">
 
         {/* IMAGE — LEFT */}
         <motion.div
@@ -33,17 +33,17 @@ const IntroSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center md:text-left"
         >
-          <h2 className="text-3xl font-semibold leading-tight font-heading text-slate-900 dark:text-brandLight md:text-4xl">
+          <h2 className="text-3xl font-bold leading-tight font-heading text-brandDark dark:text-brandLight md:text-4xl">
             Turning Uncertainty into <span className="text-brandPrimary dark:text-brandAccent">Opportunity</span>
           </h2>
 
           {/* Accent line */}
           <div className="w-20 h-1 mx-auto mt-4 rounded-full bg-brandGold dark:bg-white/70 md:mx-0" />
 
-          <p className="mt-8 text-lg leading-relaxed text-slate-600 dark:text-brandLight/70">
-            In an ever-evolving business landscape where uncertainty is the only constant, RiskMan
-            serves as the guardian of your corporate success story. We don't just consult; we partner
-            with you to navigate complex risks and unlock unprecedented strategic opportunities.
+          <p className="mt-8 text-lg leading-relaxed text-gray-600 dark:text-brandLight/70">
+            RiskMan helps leadership teams identify, assess and respond to the risks that matter
+            most to their business. We work alongside your people to build a risk framework that
+            supports better decisions, not just compliance.
           </p>
         </motion.div>
 

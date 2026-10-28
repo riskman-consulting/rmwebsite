@@ -34,13 +34,13 @@ const Framework = () => {
   ];
 
   return (
-    <section id="framework" className="py-24 transition-colors duration-300 bg-bgLight dark:bg-bgDark">
-      <div className="container px-4 mx-auto sm:px-6 lg:px-8">
+    <section id="framework" className="py-16 transition-colors duration-300 bg-bgLight dark:bg-bgDark">
+      <div className="container">
         <div className="max-w-3xl mx-auto mb-16 text-center">
-          <h2 className="mb-3 text-sm font-semibold tracking-wide uppercase text-brandPrimary dark:text-brandGold">Our Methodology</h2>
-          <h3 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+          <p className="mb-3 text-sm font-semibold tracking-wide uppercase text-brandPrimary dark:text-brandGold">Our Methodology</p>
+          <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
             The Risk Management Framework
-          </h3>
+          </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400">
             Effective risk management involves a systematic approach to identifying threats and converting them into actionable business intelligence for organizations.
           </p>
@@ -50,7 +50,6 @@ const Framework = () => {
           {steps.map((step) => (
             <div key={step.id} className="relative flex flex-col overflow-hidden transition-all duration-300 border shadow-lg group bg-surfaceLight dark:bg-surfaceDark rounded-2xl hover:shadow-2xl border-borderLight dark:border-borderDark">
               <div className="relative h-40 overflow-hidden">
-                <div className="absolute inset-0 z-10 transition-colors bg-brandDark/20 group-hover:bg-brandDark/0"></div>
                 <img 
                   src={step.image} 
                   alt={step.title} 
@@ -63,9 +62,9 @@ const Framework = () => {
                   {step.icon}
                 </div>
                 
-                <h4 className="mb-2 text-lg font-bold transition-colors text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandGold">
+                <h3 className="mb-2 text-lg font-bold transition-colors text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandGold">
                   {step.title}
-                </h4>
+                </h3>
                 
                 <p className="flex-1 text-sm text-gray-600 dark:text-gray-400">
                   {step.description}

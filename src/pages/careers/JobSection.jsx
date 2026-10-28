@@ -41,16 +41,16 @@ export default function CareersPage() {
   }, [searchQuery, jobOpenings]);
 
   return (
-    <div className="min-h-screen font-sans bg-surfaceLight dark:bg-surfaceDark text-zinc-900 dark:text-zinc-100">
+    <div className="min-h-screen font-sans bg-bgLight dark:bg-bgDark text-zinc-900 dark:text-zinc-100">
 
       {/* HERO SECTION */}
-      <header className="relative px-6 pt-24 pb-16 overflow-hidden">
+      <header className="relative py-20 overflow-hidden">
         <div className="absolute top-0 w-full h-full -translate-x-1/2 left-1/2 bg-gradient-to-b from-brandPrimary/5 to-transparent -z-10" />
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="container text-center">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-block px-4 py-1.5 rounded-full bg-brandDark dark:bg-brandAccent text-zinc-500 text-[10px] font-bold uppercase tracking-widest mb-6"
+            className="inline-block px-4 py-1.5 rounded-full bg-brandDark dark:bg-brandAccent text-white dark:text-brandDark text-[10px] font-bold uppercase tracking-widest mb-6"
           >
             Join the Team
           </motion.span>
@@ -64,7 +64,7 @@ export default function CareersPage() {
             <input
               type="text"
               placeholder="Search by role..."
-              className="w-full py-4 pl-12 pr-6 transition-all bg-white border shadow-xl outline-none dark:bg-bgSurfaceDark border-zinc-200 dark:border-zinc-800 rounded-2xl shadow-zinc-200/50 dark:shadow-none focus:ring-2 ring-brandPrimary/20"
+              className="w-full py-4 pl-12 pr-6 transition-all bg-white border shadow-xl outline-none dark:bg-surfaceDark border-zinc-200 dark:border-zinc-800 rounded-2xl shadow-zinc-200/50 dark:shadow-none focus:ring-2 ring-brandPrimary/20"
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
@@ -72,7 +72,7 @@ export default function CareersPage() {
       </header>
 
       {/* JOB LIST GRID */}
-      <main className="max-w-6xl px-6 pb-24 mx-auto">
+      <div className="container pb-20">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {filteredJobs.length > 0 ? (
             filteredJobs.map((job, idx) => (
@@ -80,7 +80,7 @@ export default function CareersPage() {
                 layout
                 key={job._key || idx}
                 onClick={() => setSelectedJob(job)}
-                className="p-8 transition-all border cursor-pointer group bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-3xl hover:border-brandPrimary hover:shadow-2xl hover:shadow-brandPrimary/5"
+                className="h-full p-8 transition-all border cursor-pointer group bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-3xl hover:border-brandPrimary hover:shadow-2xl hover:shadow-brandPrimary/5"
               >
                 <div className="flex items-start justify-between mb-6">
                   <span className="text-[10px] font-bold px-2 py-1 bg-brandPrimary/10 text-brandPrimary rounded uppercase">
@@ -127,7 +127,7 @@ export default function CareersPage() {
             </div>
           )}
         </div>
-      </main>
+      </div>
 
       {/* MODAL */}
       <AnimatePresence>
@@ -144,7 +144,7 @@ export default function CareersPage() {
             />
 
             <motion.div
-              className="relative w-full h-full md:h-auto md:max-h-[92vh] md:max-w-6xl bg-white dark:bg-zinc-900 md:rounded-[32px] shadow-2xl overflow-hidden flex flex-col md:flex-row"
+              className="relative w-full h-full md:h-auto md:max-h-[92vh] md:max-w-6xl bg-white dark:bg-surfaceDark md:rounded-[32px] shadow-2xl overflow-hidden flex flex-col md:flex-row"
               initial={{ y: 50, opacity: 0, scale: 0.95 }}
               animate={{ y: 0, opacity: 1, scale: 1 }}
               exit={{ y: 50, opacity: 0, scale: 0.95 }}
@@ -197,7 +197,7 @@ export default function CareersPage() {
               </div>
 
               {/* RIGHT: APPLICATION FORM / SUCCESS UI */}
-              <div className="flex flex-col justify-center flex-1 p-8 overflow-y-auto bg-white md:p-12 dark:bg-zinc-900">
+              <div className="flex flex-col justify-center flex-1 p-8 overflow-y-auto bg-white md:p-12 dark:bg-surfaceDark">
                 <ApplicationForm
                   key={selectedJob._key || selectedJob.title}
                   jobTitle={selectedJob.title}

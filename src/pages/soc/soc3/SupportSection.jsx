@@ -3,7 +3,7 @@ import React from 'react'
 
 function SupportSection() {
   return (
-     <section className="py-20 bg-brandNavy text-white overflow-hidden">
+    <section className="py-16 bg-brandNavy text-white overflow-hidden">
         <div className="container grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-brandGold/20 rounded-full blur-3xl" />

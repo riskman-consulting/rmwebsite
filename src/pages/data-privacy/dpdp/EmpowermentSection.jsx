@@ -5,7 +5,7 @@ import { empowermentSteps } from './data'
 function EmpowermentSection() {
   return (
     
-         <section className="py-20 bg-brandLight">
+    <section className="py-16 bg-brandLight">
         <div className="container">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Shield, CheckCircle } from 'lucide-react';
+import { ArrowRight, Shield } from 'lucide-react';
 import heroImage from "../../../assets/images/iso/ISO22301.png";
 import { useNavigate } from 'react-router-dom';
 
@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 const HeroSection = () => {
   const navigator = useNavigate()
   return (
-    <section className="relative flex items-center min-h-screen pt-20 overflow-hidden bg-brandDark">
+    <section className="relative py-16 overflow-hidden lg:py-28 bg-brandDark">
       {/* Background Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -18,14 +18,14 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-brandDark via-brandDark/90 to-brandDark/60"></div>
       </div>
 
-      <div className="container relative z-10 grid items-center gap-12 px-4 mx-auto md:px-6 md:grid-cols-2">
+      <div className="container relative z-10 grid items-center gap-12 md:grid-cols-2">
         <div className="space-y-8 duration-700 animate-in slide-in-from-left">
           <div className="inline-flex items-center gap-2 px-4 py-2 border rounded-full bg-white/10 border-white/20 backdrop-blur-sm">
             <Shield className="w-4 h-4 text-brandAccent" />
-            <span className="text-xs font-bold tracking-wider uppercase text-brandAccent">ISO 22301 Certified Solutions</span>
+            <span className="text-xs font-bold tracking-wider uppercase text-brandAccent">ISO 22301 Business Continuity</span>
           </div>
           
-          <h1 className="text-2xl font-bold leading-tight text-white md:text-3xl lg:text-4xl font-heading">
+          <h1 className="text-4xl font-bold leading-tight text-white lg:text-5xl font-heading">
             Guarantee <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandAccent to-brandGold">Operational Resilience</span> and Continuity
           </h1>
           
@@ -42,44 +42,15 @@ const HeroSection = () => {
               Back To Main Page
             </button>
           </div>
-
-          <div className="flex items-center gap-8 pt-8 border-t border-white/10">
-            <div className="flex flex-col">
-              <span className="text-3xl font-bold text-white">99.9%</span>
-              <span className="text-sm text-gray-400">Uptime Guarantee</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-3xl font-bold text-white">24/7</span>
-              <span className="text-sm text-gray-400">Expert Support</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-3xl font-bold text-white">500+</span>
-              <span className="text-sm text-gray-400">Clients Secured</span>
-            </div>
-          </div>
         </div>
 
         <div className="relative hidden duration-700 delay-200 md:block animate-in slide-in-from-right">
           <div className="relative overflow-hidden border shadow-2xl rounded-2xl border-white/10 group">
-            <div className="absolute inset-0 z-10 transition-colors duration-500 bg-brandAccent/20 group-hover:bg-transparent"></div>
             <img 
               src={heroImage} 
               alt="RiskMan Team" 
               className="w-full h-auto transition-transform duration-700 transform group-hover:scale-105"
             />
-            
-            {/* Floating Card */}
-            <div className="absolute z-20 p-6 shadow-lg bottom-8 left-8 right-8 bg-white/95 backdrop-blur-md rounded-xl animate-float">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-green-100 rounded-full">
-                  <CheckCircle className="w-6 h-6 text-green-600" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-brandDark">System Status: Protected</h3>
-                  <p className="mt-1 text-sm text-gray-600">Your business continuity plan is active and monitoring for potential threats.</p>
-                </div>
-              </div>
-            </div>
           </div>
           
           {/* Decorative Elements */}

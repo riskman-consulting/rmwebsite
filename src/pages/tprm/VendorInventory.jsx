@@ -120,25 +120,25 @@ const Inventory = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container px-4 mx-auto">
+    <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
+      <div className="container">
         <div className="max-w-3xl mx-auto mb-16 text-center">
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl font-heading text-brandDark">
+          <h2 className="mb-4 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
             Comprehensive Vendor Inventory and Classification
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 dark:text-gray-300">
             We establish a centralized inventory of all third parties, documenting data access types and system integrations. By applying a rigorous criticality methodology, we classify vendors from low to high risk to prioritize your oversight efforts.
           </p>
         </div>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, index) => (
-            <div key={index} className="p-8 transition-all duration-300 transform border-t-4 shadow-lg bg-bgLight rounded-xl hover:shadow-2xl hover:-translate-y-2 border-brandNavy group">
-              <div className="inline-block p-4 mb-6 transition-colors duration-300 bg-white rounded-full shadow-md group-hover:bg-brandNavy group-hover:text-white">
+            <div key={index} className="h-full p-8 transition-all duration-300 transform border-t-4 shadow-lg bg-bgLight rounded-2xl hover:shadow-2xl hover:-translate-y-2 border-brandNavy group dark:bg-bgDark dark:border-brandAccent">
+              <div className="inline-block p-4 mb-6 transition-colors duration-300 bg-white rounded-full shadow-md group-hover:bg-brandNavy group-hover:text-white dark:bg-surfaceDark">
                 {feature.icon}
               </div>
-              <h3 className="mb-3 text-xl font-bold text-brandDark">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <h3 className="mb-3 text-xl font-bold text-brandDark dark:text-white">{feature.title}</h3>
+              <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>
             </div>
           ))}
         </div>

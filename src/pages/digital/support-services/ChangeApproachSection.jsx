@@ -12,14 +12,14 @@ const approachItems = [
 
 export const ChangeApproachSection = () => {
   return (
-    <section className="relative py-24 overflow-hidden text-white bg-brandDark">
+    <section className="relative py-16 overflow-hidden text-white bg-brandDark">
       {/* Abstract Background Shapes */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brandPrimary/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brandAccent/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
       
-      <div className="container relative z-10 px-4 mx-auto sm:px-6 lg:px-8">
+      <div className="container relative z-10">
         <div className="mb-16 text-center">
-          <h2 className="mb-6 text-3xl font-bold md:text-5xl font-heading">Change Management Approach</h2>
+          <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading">Change Management Approach</h2>
           <p className="max-w-2xl mx-auto text-lg leading-relaxed text-gray-300">
             We manage the people side of change so RiskMan is adopted smoothly and delivers sustained value across the organization.
           </p>
@@ -34,7 +34,7 @@ export const ChangeApproachSection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ scale: 1.02 }}
-              className={`bg-white/5 backdrop-blur-lg p-8 rounded-2xl border border-white/10 hover:bg-white/10 hover:border-brandAccent/50 transition-all duration-300 ${item.colSpan}`}
+              className={`h-full bg-white/5 backdrop-blur-lg p-8 rounded-2xl border border-white/10 hover:bg-white/10 hover:border-brandAccent/50 transition-all duration-300 ${item.colSpan}`}
             >
               <h3 className="mb-4 text-2xl font-bold text-brandAccent">{item.title}</h3>
               <p className="leading-relaxed text-gray-300">{item.desc}</p>

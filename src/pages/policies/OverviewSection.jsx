@@ -13,11 +13,11 @@ const GovernancePyramid = () => (
       </linearGradient>
       <linearGradient id="gp3" x1="0%" y1="0%" x2="0%" y2="100%">
         <stop offset="0%" stopColor="var(--color-brandPrimary)" className="stop-brandPrimary" />
-        <stop offset="100%" stopColor="#2D5F8A" />
+        <stop offset="100%" stopColor="#336699" />
       </linearGradient>
       <linearGradient id="gp4" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stopColor="#2D5F8A" />
-        <stop offset="100%" stopColor="#4A90C4" />
+        <stop offset="0%" stopColor="#336699" />
+        <stop offset="100%" stopColor="#4D79A6" />
       </linearGradient>
       
       {/* Light Mode Gradients - using CSS variables or classes would be ideal, but for SVG we use currentcolor or specific IDs */}
@@ -29,7 +29,7 @@ const GovernancePyramid = () => (
         /* Light mode overrides */
         :root .stop-brandDark { stop-color: #003366; }
         :root .stop-brandNavy { stop-color: #004080; }
-        :root .stop-brandPrimary { stop-color: #2D5F8A; }
+        :root .stop-brandPrimary { stop-color: #336699; }
       `}</style>
     </defs>
     {/* Pyramid layers */}
@@ -39,10 +39,10 @@ const GovernancePyramid = () => (
     <polygon points="175,130 325,130 370,220 130,220" fill="url(#gp2)" className="fill-brandPrimary dark:fill-[url(#gp2)]">
       <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="0.2s" fill="freeze" />
     </polygon>
-    <polygon points="125,230 375,230 420,320 80,320" fill="url(#gp3)" className="fill-[#2D5F8A] dark:fill-[url(#gp3)]">
+    <polygon points="125,230 375,230 420,320 80,320" fill="url(#gp3)" className="fill-[#336699] dark:fill-[url(#gp3)]">
       <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="0.4s" fill="freeze" />
     </polygon>
-    <rect x="55" y="330" width="390" height="40" rx="4" fill="url(#gp4)" className="fill-[#4A90C4] dark:fill-[url(#gp4)]">
+    <rect x="55" y="330" width="390" height="40" rx="4" fill="url(#gp4)" className="fill-[#4D79A6] dark:fill-[url(#gp4)]">
       <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="0.6s" fill="freeze" />
     </rect>
     {/* Labels */}
@@ -58,18 +58,11 @@ const GovernancePyramid = () => (
   </svg>
 );
 
-const StatCard = ({ num, label }) => (
-  <div className="bg-white dark:bg-gradient-to-br dark:from-brandDark dark:to-brandNavy border border-slate-200 dark:border-brandPrimary/30 rounded-xl p-7 text-center flex-1 min-w-[160px] hover:border-brandPrimary/50 dark:hover:border-brandAccent/50 transition-colors duration-300 shadow-sm dark:shadow-none">
-    <div className="text-3xl font-extrabold leading-none text-brandPrimary dark:text-brandAccent font-heading">{num}</div>
-    <div className="mt-2 font-sans text-xs tracking-wide text-slate-500 dark:text-slate-400">{label}</div>
-  </div>
-);
-
 export default function OverviewSection() {
   return (
     <SectionWrapper id="overview-detail">
-      <div className="px-6 py-24 transition-colors duration-300 bg-bgLight dark:bg-bgDark">
-        <div className="max-w-6xl mx-auto">
+      <div className="py-20 transition-colors duration-300 bg-bgLight dark:bg-bgDark">
+        <div className="container">
           <SectionTag>Executive Overview</SectionTag>
           <SectionTitle>Governance Through Policies & SOPs</SectionTitle>
           <SectionDesc>
@@ -102,13 +95,6 @@ export default function OverviewSection() {
             <div className="flex items-center justify-center">
               <GovernancePyramid />
             </div>
-          </div>
-
-          <div className="flex flex-wrap gap-4 mt-12">
-            <StatCard num="100+" label="Policies Designed Across Industries" />
-            <StatCard num="150+" label="SOPs Standardized Globally" />
-            <StatCard num="10+" label="Countries Covered" />
-            <StatCard num="40+" label="Regulatory Frameworks Mapped" />
           </div>
         </div>
       </div>

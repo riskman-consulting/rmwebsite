@@ -5,13 +5,13 @@ import React from 'react'
       
       function ImprovementSection() {
         return (
-          <section className="py-24 bg-white">
+          <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="font-heading text-3xl lg:text-4xl font-bold mb-4">Continuous Improvement Frameworks</h2>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">Continuous Improvement Frameworks</h2>
         
         
-        <p className="text-gray-600">Quality is not a destination; we help build a culture of perpetual refinement and innovation.</p>
+        <p className="text-gray-600 dark:text-gray-300">Quality is not a destination; we help build a culture of perpetual refinement and innovation.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-12">
             {[
@@ -20,11 +20,11 @@ import React from 'react'
               { t: "Agility Testing", d: "Ensuring quality remains high even during periods of rapid scaling.", icon: <TrendingUp /> }
             ].map((framework, i) => (
               <div key={i} className="text-center group">
-                <div className="w-16 h-16 bg-brandLight text-brandPrimary rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-brandPrimary group-hover:text-white transition-all">
+                <div className="w-16 h-16 bg-brandLight dark:bg-bgDark text-brandPrimary dark:text-brandAccent rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-brandPrimary group-hover:text-white transition-all">
                   {framework.icon}
                 </div>
                 <h4 className="font-bold text-xl mb-3">{framework.t}</h4>
-                <p className="text-sm text-gray-500 leading-relaxed">{framework.d}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{framework.d}</p>
               </div>
             ))}
           </div>

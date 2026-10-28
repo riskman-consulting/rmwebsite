@@ -10,7 +10,6 @@ import SOPSection from "./SOPSection";
 import DeliverySection from "./DeliverySection";
 import ValueSection from "./ValueSection";
 import WhySection from "./WhySection";
-import { Divider } from "../../components/ui/SectionComponents";
 import SOPDeliverables from "./SOPDeliverable";
 
 
@@ -50,25 +49,19 @@ export default function RiskManPoliciesPage() {
       
       <HeroSection/>
       <OverviewSection />
-      <Divider />
       <FrameworkSection />
-      <Divider />
       {/* <MethodologySection /> */}
       {/* <Divider /> */}
 
       <ExecutionMethodology/>
-      <Divider/>
 
       <SOPSection/>
 
 
       {/* <SOPDeliverables/> */}
       {/* <SOPSection /> */}
-      <Divider />
       {/* <DeliverySection /> */}
-      <Divider />
       <ValueSection />
-      <Divider />
       <WhySection />
     </div>
   );

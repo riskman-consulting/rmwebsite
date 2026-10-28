@@ -106,7 +106,7 @@ const FeaturedPostCard = ({ post }) => {
     >
       <Link
         to={`/blog/${post.slug}`}
-        className="grid   grid-cols-1 lg:grid-cols-[1.1fr_1fr] group"
+        className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] group"
       >
         {/* IMAGE */}
         <div
@@ -349,7 +349,7 @@ export default function BlogList() {
       </Helmet>
 
       {/* ================= HERO SECTION ================= */}
-      <section className="relative pt-28 pb-8 overflow-hidden isolate md:pt-32">
+      <section className="relative pt-20 pb-12 overflow-hidden isolate">
         <div className="absolute top-0 z-0 w-full h-full overflow-hidden -translate-x-1/2 pointer-events-none left-1/2">
           <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-brandPrimary/10 blur-[120px] rounded-full" />
           <div className="absolute bottom-[20%] -right-[5%] w-[30%] h-[30%] bg-brandAccent/10 blur-[100px] rounded-full" />
@@ -440,7 +440,7 @@ export default function BlogList() {
       </section>
 
       {/* ================= INSIGHTS GRID ================= */}
-      <section className="relative pb-10 transition-colors duration-300 bg-bgLight dark:bg-bgDark isolate">
+      <section className="relative pb-20 transition-colors duration-300 bg-bgLight dark:bg-bgDark isolate">
         <div className="container">
           {loading && (
             <div className="py-20 text-center text-brandNavy/60 dark:text-gray-400">

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const ISOTISAXCTA = () => {
     return (
-        <section className="relative w-full py-24 overflow-hidden sm:py-32" id="cta">
+      <section className="relative w-full py-16 overflow-hidden sm:py-32" id="cta">
             {/* Full background image */}
             <div className="absolute inset-0">
                 <img
@@ -24,7 +24,7 @@ const ISOTISAXCTA = () => {
                 <div className="absolute w-3 h-3 rounded-full top-1/3 right-1/3 bg-white/30 animate-float" style={{ animationDelay: '1s' }} />
             </div>
 
-            <div className="w-full px-5 sm:px-8 lg:px-12 xl:px-14 mx-auto max-w-[1280px] relative z-10">
+            <div className="container relative z-10">
                 <div className="grid items-center gap-12 lg:grid-cols-2">
                     {/* Left content */}
                     <motion.div
@@ -41,17 +41,17 @@ const ISOTISAXCTA = () => {
                             Secure Your Competitive Edge Today
                         </h2>
 
-                        <p className="mt-6 text-lg leading-relaxed text-blue-100/80">
+                        <p className="mt-6 text-lg leading-relaxed text-gray-200">
                             Partner with RiskMan to transform your compliance requirements into a strategic and sustainable business advantage.
                         </p>
 
                         {/* Benefits list */}
                         <div className="mt-8 space-y-4">
                             {[
-                                "Free initial consultation",
-                                "Expert guidance throughout",
-                                "Fast-track certification process",
-                                "24/7 dedicated support"
+                                "Gap assessment against the standard",
+                                "Guidance from scoping to certification",
+                                "Audit-ready documentation and evidence",
+                                "Support through the certification audit"
                             ].map((item, idx) => (
                                 <motion.div
                                     key={idx}
@@ -140,9 +140,6 @@ const ISOTISAXCTA = () => {
                         </div>
 
                         {/* Floating badge */}
-                        <div className="absolute px-4 py-2 text-sm font-bold text-white bg-green-500 shadow-lg -top-4 -right-4 rounded-xl animate-float">
-                            ✓ Free Consultation
-                        </div>
                     </motion.div>
                 </div>
             </div>

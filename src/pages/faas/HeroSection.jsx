@@ -20,7 +20,7 @@ const HeroSection = () => {
         className="absolute inset-0 pointer-events-none bg-[radial-gradient(55%_75%_at_90%_0%,rgba(0,64,128,0.07),transparent_60%)] dark:bg-[radial-gradient(55%_75%_at_90%_0%,rgba(255,184,0,0.08),transparent_60%)]"
       />
 
-      <div className="container relative py-12 md:py-16 lg:py-20">
+      <div className="container relative py-16 lg:py-20">
         <div className="grid items-start grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14">
           {/* Positioning */}
           <div className="lg:col-span-7">

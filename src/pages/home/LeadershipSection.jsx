@@ -129,7 +129,7 @@ export default function LeadershipSection() {
 
   return (
     <>
-      <section className="px-6 py-20 bg-surfaceLight dark:bg-surfaceDark">
+      <section className="px-6 py-16 bg-surfaceLight dark:bg-surfaceDark">
         <div className="mx-auto max-w-7xl">
           <motion.h2
             {...animations.fadeInUp}

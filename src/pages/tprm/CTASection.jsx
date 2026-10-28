@@ -81,7 +81,7 @@ import ctaImg from "../../assets/images/tprm/supply-chain.png"
 
 const SupplyChain = () => {
   return (
-    <section className="relative py-24 overflow-hidden bg-brandNavy">
+    <section className="relative py-16 overflow-hidden bg-brandNavy">
       <div className="absolute inset-0 z-0">
         <img 
           src={ctaImg}
@@ -90,15 +90,15 @@ const SupplyChain = () => {
         />
       </div>
       
-      <div className="container relative z-10 px-4 mx-auto text-center">
-        <h2 className="mb-6 text-3xl font-bold text-white md:text-5xl font-heading">
+      <div className="container relative z-10 text-center">
+        <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl font-heading">
           Strengthen Your Supply Chain Integrity
         </h2>
-        <p className="max-w-2xl mx-auto mb-10 text-xl text-blue-100">
+        <p className="max-w-2xl mx-auto mb-10 text-xl text-white/80">
           Protect your business from third-party vulnerabilities with our expert TPRM audit and implementation services.
         </p>
         <Link to="/contact" className="inline-flex items-center gap-2 px-10 py-4 mx-auto text-lg font-bold transition-all duration-300 transform rounded-full shadow-lg bg-brandAccent text-brandDark hover:bg-brandGold hover:shadow-2xl hover:-translate-y-1">
-          Book A Consultation
+          Book a Consultation
           <ArrowRight className="w-5 h-5" />
         </Link>
       </div>

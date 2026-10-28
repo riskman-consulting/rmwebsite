@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 function HeroSection() {
   const navigator=useNavigate()
   return (
-    <section className="relative py-24 overflow-hidden text-white lg:py-36">
+    <section className="relative py-16 overflow-hidden text-white lg:py-36">
 
       {/* Background Image */}
       <div

@@ -457,7 +457,7 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
       </section>
 
       {/* SECTION 6: DATA MANAGEMENT & MIGRATION - Phase Cards */}
-      <section className="py-24 bg-surfaceLight dark:bg-surfaceDark">
+      <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="mx-auto mb-16 text-center ">
             <h2 className="mb-4 text-3xl font-black font-heading md:text-4xl">
@@ -699,7 +699,7 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
           </div>
         </div>
       </section> */}
- <section className="relative py-20 overflow-hidden bg-surfaceLight dark:bg-bgDark">
+          <section className="relative py-16 overflow-hidden bg-surfaceLight dark:bg-bgDark">
             {/* Background Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 <div className="absolute top-[-10%] left-[-5%] w-96 h-96 bg-brandPrimary/5 rounded-full blur-3xl" />
@@ -858,7 +858,7 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
       </section> */}
 
       {/* SECTION 8: FAQ SECTION - Modern Accordion Style */}
-      <section className="py-24 bg-white dark:bg-brandDark">
+      <section className="py-16 bg-white dark:bg-brandDark">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-4xl font-black font-heading md:text-5xl">

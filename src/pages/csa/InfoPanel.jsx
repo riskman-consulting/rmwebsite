@@ -7,7 +7,7 @@ const InfoPanel = ({ selectedZone, onClose, mode }) => {
         return {
           title: "Governing Body",
           subtitle: "Board & Audit Committee",
-          color: "bg-yellow-500",
+          color: "bg-brandGold",
           desc:
             "High-level oversight of risk management framework effectiveness and alignment with corporate strategy.",
           points: [
@@ -21,7 +21,7 @@ const InfoPanel = ({ selectedZone, onClose, mode }) => {
         return {
           title: "First Line",
           subtitle: "Operational Management",
-          color: "bg-teal-600",
+          color: "bg-brandPrimary",
           desc:
             "Primary owners of risk. They execute daily business operations and implement internal control measures.",
           points: [
@@ -35,7 +35,7 @@ const InfoPanel = ({ selectedZone, onClose, mode }) => {
         return {
           title: "Second Line",
           subtitle: "Risk & Compliance",
-          color: "bg-blue-900",
+          color: "bg-brandDark",
           desc:
             "Ensures the first line is managing risk effectively and provides independent challenge and expertise.",
           points: [
@@ -70,7 +70,7 @@ const InfoPanel = ({ selectedZone, onClose, mode }) => {
         return {
           title: "Risk Identification",
           subtitle: "Phase 1",
-          color: "bg-[#0D9488]",
+          color: "bg-brandPrimary",
           desc:
             "Defining the universe of risks and aligning them to the organizational taxonomy.",
           points: [
@@ -84,7 +84,7 @@ const InfoPanel = ({ selectedZone, onClose, mode }) => {
         return {
           title: "Control Mapping",
           subtitle: "Phase 2",
-          color: "bg-[#0891B2]",
+          color: "bg-brandNavy",
           desc:
             "Documenting and aligning control measures to specific risks for coverage analysis.",
           points: [
@@ -98,7 +98,7 @@ const InfoPanel = ({ selectedZone, onClose, mode }) => {
         return {
           title: "Self-Assessment",
           subtitle: "Phase 3",
-          color: "bg-[#2563EB]",
+          color: "bg-brandDark",
           desc:
             "Operational testing where owners certify the effectiveness of their control environment.",
           points: [
@@ -112,7 +112,7 @@ const InfoPanel = ({ selectedZone, onClose, mode }) => {
         return {
           title: "Independent Review",
           subtitle: "Phase 4",
-          color: "bg-[#1E3A5F]",
+          color: "bg-slate-600",
           desc:
             'The "Challenge" phase where risk functions validate management certifications.',
           points: [
@@ -126,7 +126,7 @@ const InfoPanel = ({ selectedZone, onClose, mode }) => {
         return {
           title: "Reporting",
           subtitle: "Phase 5",
-          color: "bg-[#7C3AED]",
+          color: "bg-slate-700",
           desc:
             "Synthesizing assessment data into actionable intelligence for leadership.",
           points: [
@@ -140,7 +140,7 @@ const InfoPanel = ({ selectedZone, onClose, mode }) => {
         return {
           title: "Remediation",
           subtitle: "Phase 6",
-          color: "bg-[#C9A227]",
+          color: "bg-brandGold",
           desc:
             "Continuous improvement through tracking and closing identified weaknesses.",
           points: [
@@ -175,7 +175,7 @@ const InfoPanel = ({ selectedZone, onClose, mode }) => {
         return {
           title: "Global CSA PMO",
           subtitle: "Central Governance",
-          color: "bg-[#1E3A5F]",
+          color: "bg-brandDark",
           desc:
             "The nerve center for the global CSA program, setting standards and methodology.",
           points: [
@@ -189,7 +189,7 @@ const InfoPanel = ({ selectedZone, onClose, mode }) => {
         return {
           title: "Americas Region",
           subtitle: "Regional Hub",
-          color: "bg-[#0D9488]",
+          color: "bg-brandPrimary",
           desc:
             "Manages execution across US, Canada, and Latin America, ensuring SOX compliance.",
           points: [
@@ -203,7 +203,7 @@ const InfoPanel = ({ selectedZone, onClose, mode }) => {
         return {
           title: "EMEA Region",
           subtitle: "Regional Hub",
-          color: "bg-[#7C3AED]",
+          color: "bg-slate-600",
           desc:
             "Regional hub for Europe, Middle East, and Africa, focusing on UK SOX and EU directives.",
           points: [
@@ -217,7 +217,7 @@ const InfoPanel = ({ selectedZone, onClose, mode }) => {
         return {
           title: "APAC Region",
           subtitle: "Regional Hub",
-          color: "bg-[#2563EB]",
+          color: "bg-brandGold",
           desc:
             "Covers high-growth Asian markets, focusing on J-SOX, SEBI, and ANZ regulations.",
           points: [
@@ -231,7 +231,7 @@ const InfoPanel = ({ selectedZone, onClose, mode }) => {
         return {
           title: "GRC Technology",
           subtitle: "Cloud Integration",
-          color: "bg-[#3B82F6]",
+          color: "bg-brandPrimary",
           desc:
             "The technical backbone enabling real-time assessment and automated reporting.",
           points: [
@@ -266,7 +266,7 @@ const InfoPanel = ({ selectedZone, onClose, mode }) => {
         return {
           title: "Level 2: Standardized",
           subtitle: "Defined / Repeatable",
-          color: "bg-[#0D9488]",
+          color: "bg-brandPrimary",
           desc:
             "The organization has documented processes and consistent templates, but execution remains regional and siloed.",
           points: [
@@ -280,7 +280,7 @@ const InfoPanel = ({ selectedZone, onClose, mode }) => {
         return {
           title: "Level 3: Integrated",
           subtitle: "Managed / Collaborative",
-          color: "bg-[#2563EB]",
+          color: "bg-brandNavy",
           desc:
             "Risk and control activities are integrated via a central GRC platform, allowing for better collaboration and tracking.",
           points: [
@@ -294,7 +294,7 @@ const InfoPanel = ({ selectedZone, onClose, mode }) => {
         return {
           title: "Level 4: Strategic",
           subtitle: "Predictive / Quantitative",
-          color: "bg-[#7C3AED]",
+          color: "bg-brandDark",
           desc:
             "The program shifts toward quantitative metrics and predictive risk intelligence using real-time data feeds.",
           points: [
@@ -308,7 +308,7 @@ const InfoPanel = ({ selectedZone, onClose, mode }) => {
         return {
           title: "Level 5: Optimized",
           subtitle: "Resilient / World-Class",
-          color: "bg-[#C9A227]",
+          color: "bg-brandGold",
           desc:
             "Risk management is a strategic differentiator, fully embedded in the culture and leveraging advanced AI/ML for real-time resilience.",
           points: [
@@ -335,8 +335,8 @@ const InfoPanel = ({ selectedZone, onClose, mode }) => {
 
   if (!content) {
     return (
-      <div className="p-8 text-center border shadow-lg bg-surfaceLight dark:bg-surfaceDark rounded-2xl border-slate-100">
-        <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-slate-100 text-slate-400">
+      <div className="p-8 text-center border shadow-lg bg-bgLight dark:bg-bgDark rounded-2xl border-borderLight dark:border-borderDark">
+        <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-slate-100 dark:bg-white/10 text-slate-400">
           <svg
             className="w-8 h-8"
             fill="none"
@@ -371,7 +371,7 @@ const InfoPanel = ({ selectedZone, onClose, mode }) => {
   }
 
   return (
-    <div className="overflow-hidden duration-300 border shadow-xl bg-surfaceLight dark:bg-surfaceDark rounded-2xl border-slate-200 animate-in fade-in slide-in-from-right-4">
+    <div className="overflow-hidden duration-300 border shadow-xl bg-bgLight dark:bg-bgDark rounded-2xl border-borderLight dark:border-borderDark">
       <div
         className={`${content.color} px-6 py-4 flex items-center justify-between`}
       >
@@ -401,7 +401,7 @@ const InfoPanel = ({ selectedZone, onClose, mode }) => {
         </button>
       </div>
       <div className="p-6">
-        <p className="pl-4 mb-6 text-sm italic leading-relaxed border-l-4 text-brandDark dark:text-white/70 border-slate-100">
+        <p className="pl-4 mb-6 text-sm italic leading-relaxed border-l-4 text-brandDark dark:text-white/70 border-brandAccent">
           "{content.desc}"
         </p>
         <div className="space-y-4">
@@ -411,7 +411,7 @@ const InfoPanel = ({ selectedZone, onClose, mode }) => {
           <ul className="space-y-3">
             {content.points.map((point, i) => (
               <li key={i} className="flex items-start gap-3">
-                <div className="mt-1 flex-shrink-0 w-4 h-4 rounded-full bg-slate-100 flex items-center justify-center text-[10px] font-bold text-brandNavy dark:text-brandAccent">
+                <div className="mt-1 flex-shrink-0 w-4 h-4 rounded-full bg-slate-100 dark:bg-white/10 flex items-center justify-center text-[10px] font-bold text-brandNavy dark:text-brandAccent">
                   {i + 1}
                 </div>
                 <span className="text-sm leading-snug text-brandDark dark:text-white/70">
@@ -420,11 +420,6 @@ const InfoPanel = ({ selectedZone, onClose, mode }) => {
               </li>
             ))}
           </ul>
-        </div>
-        <div className="pt-6 mt-8 border-t border-slate-100">
-          <button className="w-full py-2 text-xs font-bold tracking-wider uppercase transition-colors rounded-lg bg-slate-50 hover:bg-slate-100 text-brandNavy dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-white/70">
-            Access Methodology Guide
-          </button>
         </div>
       </div>
     </div>

@@ -34,8 +34,8 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="relative z-10 flex items-center w-full py-12 md:py-14 overflow-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark">
-      <div className="container px-4 mx-auto md:px-8 lg:px-12">
+    <section className="relative z-10 flex items-center w-full py-16 overflow-hidden transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark">
+      <div className="container">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           
           {/* LEFT SIDE - Typography */}
@@ -44,7 +44,7 @@ const Testimonials = () => {
               Testimonials
             </p>
             
-            <h2 className="mb-8 text-4xl font-black leading-tight md:text-5xl lg:text-6xl text-brandDark dark:text-white">
+            <h2 className="mb-8 font-heading text-3xl md:text-4xl font-bold leading-tight text-brandDark dark:text-white">
               What Our <span className="text-transparent bg-gradient-to-r from-brandGold to-brandAccent bg-clip-text">Clients</span> Say
             </h2>
 

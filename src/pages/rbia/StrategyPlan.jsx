@@ -21,18 +21,13 @@ const strategyPoints = [
 
 export default function StrategyPlanSection() {
   return (
-    <section className="relative px-4 overflow-hidden py-20 bg-bgLight dark:bg-bgDark">
+    <section className="relative overflow-hidden py-16 bg-bgLight dark:bg-bgDark">
       {/* Background Decor */}
       <div className="absolute inset-0 pointer-events-none">
-        <div 
-          className="absolute inset-0 opacity-20 dark:opacity-10 bg-center bg-cover"
-          style={{ backgroundImage: "url('/images/rbia-strategy-bg.png')" }}
-        />
         <div className="absolute inset-0 bg-gradient-to-b from-bgLight via-bgLight/80 to-bgLight dark:from-bgDark dark:via-bgDark/80 dark:to-bgDark" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,#brandPrimary_0%,transparent_70%)] opacity-[0.03]" />
       </div>
 
-      <div className="container relative z-10 mx-auto max-w-7xl">
+      <div className="container relative z-10">
         {/* Header Section */}
         <div className="flex flex-col items-center mb-16 text-center">
           <motion.span 
@@ -49,9 +44,9 @@ export default function StrategyPlanSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-bold font-heading text-brandDark dark:text-white mb-6"
+            className="text-3xl md:text-4xl font-bold font-heading text-brandDark dark:text-white mb-6"
           >
-            Risk-Based <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandPrimary to-brandAccent">Internal Audit</span> Plan
+            Risk-Based <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandPrimary to-brandNavy dark:from-brandGold dark:to-brandAccent">Internal Audit</span> Plan
           </motion.h2>
           
           <div className="w-24 h-1 rounded-full bg-gradient-to-r from-brandAccent to-brandGold mb-6" />
@@ -71,7 +66,7 @@ export default function StrategyPlanSection() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
               whileHover={{ y: -5 }}
-              className="group relative p-8 bg-white/50 dark:bg-surfaceDark/50 backdrop-blur-md border border-borderLight dark:border-borderDark rounded-3xl overflow-hidden shadow-xl"
+              className="group relative h-full p-8 bg-surfaceLight dark:bg-surfaceDark border border-borderLight dark:border-borderDark rounded-2xl overflow-hidden shadow-xl"
             >
               {/* Animated Accent Line */}
               <div className="absolute top-0 left-0 w-0 h-1.5 bg-gradient-to-r from-brandAccent to-brandGold group-hover:w-full transition-all duration-500 ease-in-out" />
@@ -85,7 +80,7 @@ export default function StrategyPlanSection() {
                     {point.title}
                   </h3>
                 </div>
-                <span className="text-5xl font-black opacity-10 group-hover:opacity-30 transition-opacity duration-300 italic">
+                <span className="text-5xl font-black text-brandPrimary dark:text-brandAccent opacity-10 group-hover:opacity-30 transition-opacity duration-300 italic">
                   0{index + 1}
                 </span>
               </div>

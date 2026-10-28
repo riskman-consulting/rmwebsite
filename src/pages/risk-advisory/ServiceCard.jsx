@@ -31,7 +31,7 @@ const ServiceCard = ({ service, index }) => {
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.08 }}
       whileHover={{ y: -6 }}
-      className="group relative rounded-3xl border border-borderLight bg-surfaceLight p-8 shadow-lg transition-all duration-300 hover:border-brandPrimary hover:shadow-2xl dark:border-borderDark dark:bg-surfaceDark dark:hover:border-brandAccent"
+      className="group relative flex h-full flex-col rounded-2xl border border-borderLight bg-bgLight p-8 shadow-lg transition-all duration-300 hover:border-brandPrimary hover:shadow-2xl dark:border-borderDark dark:bg-bgDark dark:hover:border-brandAccent"
     >
       {/* Icon */}
       <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-brandPrimary/10 transition-colors duration-300 group-hover:bg-brandPrimary/20 dark:bg-brandPrimary/20 dark:group-hover:bg-brandPrimary/30">
@@ -44,7 +44,7 @@ const ServiceCard = ({ service, index }) => {
       </h3>
 
       {/* Description */}
-      <p className="mb-6 text-sm leading-relaxed text-brandDark/70 dark:text-brandLight/70">
+      <p className="mb-6 flex-grow text-sm leading-relaxed text-brandDark/70 dark:text-brandLight/70">
         {service.description}
       </p>
 

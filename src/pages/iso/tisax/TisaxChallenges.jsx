@@ -25,7 +25,7 @@ const challenges = [
 
 const TisaxChallenges = () => {
     return (
-        <section className="relative py-24 overflow-hidden bg-surfaceLight dark:bg-surfaceDark">
+      <section className="relative py-16 overflow-hidden bg-surfaceLight dark:bg-surfaceDark">
             {/* Animated BG Shapes */}
             <motion.div
                 animate={{ rotate: 360 }}
@@ -33,12 +33,12 @@ const TisaxChallenges = () => {
                 className="absolute rounded-full -top-32 -right-32 w-96 h-96 bg-brandAccent/5 blur-3xl"
             />
 
-            <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
+            <div className="container">
                 <div className="max-w-3xl mx-auto mb-20 text-center">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        className="text-3xl font-black font-heading text-brandDark dark:text-white sm:text-5xl"
+                        className="text-3xl font-bold font-heading text-brandDark dark:text-white md:text-4xl"
                     >
                         Addressing TISAX <span className="text-brandAccent">Challenges</span>
                     </motion.h2>
@@ -99,7 +99,7 @@ const TisaxChallenges = () => {
                     </div>
                     <div>
                         <h4 className="mb-2 text-xl font-bold text-white font-heading">Our Expert Allocation Approach</h4>
-                        <p className="text-sm italic text-blue-100/60">
+                        <p className="text-sm italic text-gray-300">
                             We don't just advise; we embed experts into your workflows to ensure every AL level requirement is met with precision and documented for audit success.
                         </p>
                     </div>

@@ -47,7 +47,7 @@ function HeroSection() {
   const navigator = useNavigate()
   return (
     <section
-      className="relative py-20 overflow-hidden text-white lg:py-32"
+      className="relative py-20 overflow-hidden text-white lg:py-28"
       style={{
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover",

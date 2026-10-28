@@ -36,8 +36,8 @@ const ISO42001 = () => {
       <PillarsSection />
       <RoadmapSection />
       <BenefitsSection />
-      <CTASection />
       <FAQSection />
+      <CTASection />
     </div>
   );
 };
@@ -45,7 +45,7 @@ const ISO42001 = () => {
 const HeroSection = () => {
   const navigator=useNavigate()
   return (
-    <section className="relative w-full h-[90vh] flex items-center justify-center overflow-hidden">
+    <section className="relative py-16 overflow-hidden lg:py-32">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -58,23 +58,24 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 px-4 text-center sm:px-6 lg:px-8">
+      <div className="container relative z-10">
+        <div className="max-w-3xl">
         <div className="inline-block mb-4 px-4 py-1.5 rounded-full border border-brandAccent/30 bg-brandAccent/10 backdrop-blur-sm">
-          <span className="text-sm font-semibold tracking-wider uppercase text-brandAccent">ISO 42001 Certified</span>
+          <span className="text-sm font-semibold tracking-wider uppercase text-brandAccent">ISO/IEC 42001 AI Management</span>
         </div>
         
-        <h1 className="mb-6 text-4xl font-bold leading-tight text-white md:text-6xl lg:text-7xl font-heading animate-float">
+        <h1 className="mb-6 text-4xl font-bold leading-tight text-white lg:text-6xl font-heading">
           Governance for the <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandAccent to-brandGold">
-            Age Of AI
+            Age of AI
           </span>
         </h1>
         
-        <p className="max-w-2xl mx-auto mb-10 text-lg leading-relaxed text-gray-200 md:text-xl">
+        <p className="max-w-2xl mb-10 text-lg leading-relaxed text-gray-200 md:text-xl">
           RiskMan helps organizations implement ISO 42001, the world’s first AI management system standard, ensuring ethical, transparent, and secure AI development across the entire enterprise.
         </p>
         
-        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <div className="flex flex-col gap-4 sm:flex-row">
           <button onClick={()=>navigator("/services/iso-certifications")} className="relative px-8 py-4 overflow-hidden font-bold transition-all duration-300 transform rounded-lg shadow-lg group bg-brandAccent hover:bg-brandGold text-brandDark hover:-translate-y-1 hover:shadow-brandAccent/50">
             <span className="relative z-10 flex items-center gap-2">
               Explore All ISOs
@@ -86,10 +87,8 @@ const HeroSection = () => {
             Consult Our Team
           </button>
         </div>
+        </div>
       </div>
-
-      {/* Decorative Elements */}
-      <div className="absolute bottom-0 left-0 z-20 w-full h-24 bg-gradient-to-t from-bgLight dark:from-bgDark to-transparent"></div>
     </section>
   );
 };
@@ -100,35 +99,31 @@ const PillarsSection = () => {
       title: "Ethical Oversight",
       desc: "Establish frameworks to ensure AI systems are unbiased, fair, and transparent in their automated decision-making.",
       icon: <Users className="w-8 h-8" />,
-      image: governanceImage,
-      color: "border-blue-500"
+      image: governanceImage
     },
     {
       title: "AI Risk Assessment",
       desc: "Identify unique vulnerabilities in AI models, including data poisoning, algorithmic bias, and security exploits.",
       icon: <Shield className="w-8 h-8" />,
-      image: riskImage,
-      color: "border-red-500"
+      image: riskImage
     },
     {
       title: "Data Quality Management",
       desc: "Ensure the data used to train and operate AI systems is accurate, secure, and legally compliant.",
       icon: <Database className="w-8 h-8" />,
-      image: dataImage,
-      color: "border-green-500"
+      image: dataImage
     },
     {
       title: "Performance Monitoring",
       desc: "Implement continuous tracking to ensure AI systems behave as intended and do not \"drift\" over time.",
       icon: <Activity className="w-8 h-8" />,
-      image: innovationImage, // Reusing innovation image for monitoring context
-      color: "border-purple-500"
+      image: innovationImage // Reusing innovation image for monitoring context
     }
   ];
 
   return (
-    <section className="relative py-20 md:py-32 bg-bgLight dark:bg-bgDark">
-      <div className="container px-4">
+    <section className="relative py-16 bg-bgLight dark:bg-bgDark">
+      <div className="container">
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
             AI Management Pillars
@@ -153,10 +148,9 @@ const PillarsSection = () => {
                     alt={pillar.title} 
                     className="object-cover w-full h-full transition-transform duration-700 transform group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 transition-colors duration-300 bg-brandPrimary/20 group-hover:bg-transparent"></div>
                 </div>
-                
-                <div className="flex flex-col justify-center p-8 md:w-3/5">
+
+                <div className="flex flex-col justify-start p-8 md:w-3/5">
                   <div className="p-3 mb-4 transition-transform duration-300 rounded-lg bg-brandLight dark:bg-brandDark/50 w-fit text-brandPrimary dark:text-brandAccent group-hover:scale-110">
                     {pillar.icon}
                   </div>
@@ -201,7 +195,7 @@ const RoadmapSection = () => {
   ];
 
   return (
-    <section className="relative py-20 overflow-hidden bg-white dark:bg-surfaceDark">
+    <section className="relative py-16 overflow-hidden bg-surfaceLight dark:bg-surfaceDark">
       {/* Background Pattern */}
       <div className="absolute inset-0 pointer-events-none opacity-5 dark:opacity-10">
         <svg className="w-full h-full" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -214,7 +208,7 @@ const RoadmapSection = () => {
         </svg>
       </div>
 
-      <div className="container relative z-10 px-4">
+      <div className="container relative z-10">
         <div className="flex flex-col items-center gap-16 lg:flex-row">
           <div className="lg:w-1/2">
             <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
@@ -229,7 +223,6 @@ const RoadmapSection = () => {
                 alt="Implementation Roadmap" 
                 className="w-full h-auto transition-transform duration-700 transform hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-tr from-brandPrimary/40 to-transparent"></div>
             </div>
           </div>
 
@@ -268,26 +261,23 @@ const BenefitsSection = () => {
     {
       title: "Trust And Transparency",
       desc: "Build confidence with users, employees, and regulators regarding your organization's use of AI.",
-      icon: <Users className="w-10 h-10" />,
-      bg: "bg-blue-50 dark:bg-blue-900/20"
+      icon: <Users className="w-10 h-10" />
     },
     {
       title: "Innovation Security",
       desc: "Protect your intellectual property and AI investments from emerging cyber threats and model theft.",
-      icon: <Lock className="w-10 h-10" />,
-      bg: "bg-amber-50 dark:bg-amber-900/20"
+      icon: <Lock className="w-10 h-10" />
     },
     {
       title: "Regulatory Readiness",
       desc: "Stay ahead of global AI laws, such as the EU AI Act, and avoid costly non-compliance.",
-      icon: <Globe className="w-10 h-10" />,
-      bg: "bg-green-50 dark:bg-green-900/20"
+      icon: <Globe className="w-10 h-10" />
     }
   ];
 
   return (
-    <section className="py-20 bg-bgLight dark:bg-bgDark">
-      <div className="container px-4">
+    <section className="py-16 bg-bgLight dark:bg-bgDark">
+      <div className="container">
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
             Strategic Benefits for Organizations
@@ -301,7 +291,7 @@ const BenefitsSection = () => {
           {benefits.map((benefit, index) => (
             <div 
               key={index} 
-              className={`p-8 rounded-2xl ${benefit.bg} border border-transparent hover:border-brandAccent/30 transition-all duration-300 hover:-translate-y-2`}
+              className={`h-full p-8 rounded-2xl bg-surfaceLight dark:bg-surfaceDark border border-borderLight dark:border-borderDark hover:border-brandAccent/30 transition-all duration-300 hover:-translate-y-2`}
             >
               <div className="mb-6 text-brandPrimary dark:text-brandAccent">
                 {benefit.icon}
@@ -321,8 +311,9 @@ const BenefitsSection = () => {
 };
 
 const CTASection = () => {
+  const navigator = useNavigate()
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-16 overflow-hidden ">
       <div className="absolute inset-0">
         <img 
           src={innovationImage} 
@@ -332,14 +323,14 @@ const CTASection = () => {
         <div className="absolute inset-0 bg-brandNavy/90 mix-blend-multiply"></div>
       </div>
       
-      <div className="container relative z-10 px-4 text-center">
-        <h2 className="mb-6 text-3xl font-bold text-white md:text-5xl font-heading">
+      <div className="container relative z-10 text-center">
+        <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl font-heading">
           Future-Proof Your AI Initiatives
         </h2>
         <p className="max-w-2xl mx-auto mb-10 text-xl text-gray-200">
           Implement a robust AI Management System with RiskMan and lead your industry in responsible and secure innovation.
         </p>
-        <button onClick={()=>navigator("/contact")}className="px-10 py-4 bg-brandAccent text-brandDark font-bold text-lg rounded-full hover:bg-brandGold hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,192,0,0.5)]">
+        <button onClick={()=>navigator("/contact")} className="px-10 py-4 bg-brandAccent text-brandDark font-bold text-lg rounded-full hover:bg-brandGold hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,192,0,0.5)]">
           Request AI Insights
         </button>
       </div>
@@ -374,8 +365,8 @@ const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="py-20 bg-white dark:bg-surfaceDark">
-      <div className="container max-w-4xl px-4 mx-auto">
+    <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
+      <div className="container max-w-4xl">
         <h2 className="mb-12 text-3xl font-bold text-center md:text-4xl font-heading text-brandDark dark:text-white">
           Frequently Asked Questions
         </h2>
@@ -405,7 +396,7 @@ const FAQSection = () => {
                   openIndex === index ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
-                <div className="px-6 py-5 text-gray-600 bg-white dark:bg-surfaceDark dark:text-gray-400">
+                <div className="px-6 py-5 text-gray-600 bg-surfaceLight dark:bg-surfaceDark dark:text-gray-400">
                   {faq.a}
                 </div>
               </div>

@@ -32,19 +32,19 @@ const WhyRiskManCTA = () => {
   ];
 
   return (
-    <section className="relative py-24 overflow-hidden bg-bgLight dark:bg-bgDark">
+    <section className="relative py-16 overflow-hidden bg-surfaceLight dark:bg-surfaceDark">
       {/* Decorative Brand Accents */}
       <div className="absolute top-0 right-0 w-1/3 h-1/2 bg-brandPrimary/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
       <div className="absolute bottom-0 left-0 w-1/4 h-1/2 bg-brandGold/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
 
-      <div className="container relative z-10 px-5 mx-auto sm:px-8 lg:px-12">
+      <div className="container relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="mb-16 text-center">
             <span className="text-xs font-bold tracking-[4px] uppercase text-brandPrimary dark:text-brandGold mb-4 block">
               The RiskMan Advantage
             </span>
-            <h2 className="text-4xl font-black leading-tight uppercase font-heading text-brandDark dark:text-white md:text-5xl">
+            <h2 className="text-3xl font-bold leading-tight font-heading text-brandDark dark:text-white md:text-4xl">
               Why Partner With <span className="text-brandPrimary dark:text-brandGold">RiskMan?</span>
             </h2>
           </div>
@@ -54,9 +54,9 @@ const WhyRiskManCTA = () => {
             {differentiators.map((item, index) => (
               <div 
                 key={index}
-                className="group p-8 bg-surfaceLight dark:bg-surfaceDark border border-borderLight dark:border-borderDark rounded-[32px] hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                className="group h-full p-8 bg-bgLight dark:bg-bgDark border border-borderLight dark:border-borderDark rounded-2xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
               >
-                <div className="flex items-center justify-center mb-6 text-3xl transition-transform shadow-inner w-14 h-14 rounded-2xl bg-bgLight dark:bg-bgDark group-hover:scale-110">
+                <div className="flex items-center justify-center mb-6 text-3xl transition-transform shadow-inner w-14 h-14 rounded-2xl bg-surfaceLight dark:bg-surfaceDark group-hover:scale-110">
                   {item.icon}
                 </div>
                 <h4 className="mb-3 text-lg font-bold tracking-tight uppercase font-heading text-brandDark dark:text-white">
@@ -70,7 +70,7 @@ const WhyRiskManCTA = () => {
           </div>
 
           {/* High-Impact CTA Block */}
-          <div className="relative p-10 lg:p-16 bg-brandDark rounded-[48px] shadow-2xl overflow-hidden group">
+          <div className="relative p-10 lg:p-16 bg-brandDark rounded-2xl shadow-2xl overflow-hidden group">
             {/* Animated Glow Overlay */}
             <div className="absolute inset-0 opacity-50 bg-gradient-to-br from-brandPrimary/20 to-transparent" />
             <div className="absolute transition-transform duration-1000 rounded-full -top-24 -right-24 w-96 h-96 bg-brandGold/10 blur-3xl group-hover:scale-125" />
@@ -103,7 +103,7 @@ const WhyRiskManCTA = () => {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="p-4 text-center border bg-white/5 border-white/10 rounded-2xl backdrop-blur-sm">
                     <p className="text-[10px] font-bold text-white/40 uppercase mb-1">Email Us</p>
-                    <p className="text-xs font-bold text-white">contact@riskman.com</p>
+                    <p className="text-xs font-bold text-white">contact@riskman.in</p>
                   </div>
                   <div className="p-4 text-center border bg-white/5 border-white/10 rounded-2xl backdrop-blur-sm">
                     <p className="text-[10px] font-bold text-white/40 uppercase mb-1">Expert Hub</p>

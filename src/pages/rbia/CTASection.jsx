@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function CTASection() {
   return (
-    <section className="relative py-20 overflow-hidden bg-brandDark dark:bg-black">
+    <section className="relative py-16 overflow-hidden bg-brandDark">
 
       {/* GRADIENT OVERLAY */}
       <div className="absolute inset-0 bg-gradient-to-br from-brandPrimary/30 via-brandAccent/20 to-brandGold/25" />
@@ -14,7 +14,7 @@ export default function CTASection() {
       {/* GLOW */}
       <div className="absolute -top-32 -right-32 w-[520px] h-[520px] rounded-full bg-brandAccent/40 blur-3xl" />
 
-      <div className="container relative z-10 px-6">
+      <div className="container relative z-10">
 
         <div className="max-w-4xl mx-auto text-center">
 
@@ -22,7 +22,7 @@ export default function CTASection() {
             Let’s Get Started
           </div>
 
-          <h2 className="mb-6 text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl font-heading">
+          <h2 className="mb-6 text-3xl font-bold leading-tight text-white md:text-4xl font-heading">
             Strengthen Your Internal Controls with Risk-Based Auditing
           </h2>
 

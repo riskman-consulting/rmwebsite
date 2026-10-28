@@ -56,11 +56,11 @@ const CountdownTimer = ({ eventDate, endDate }) => {
   }, [eventDate, endDate])
 
   if (!timeLeft) return (
-    <span className="text-xs font-bold text-rose-400 uppercase tracking-wider">Event Concluded</span>
+    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Event Concluded</span>
   )
 
   if (timeLeft.isLive) return (
-    <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl w-fit">
+    <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-brandPrimary to-brandNavy rounded-xl w-fit">
       <div className="relative flex items-center justify-center w-2 h-2">
         <div className="absolute w-2 h-2 bg-white rounded-full animate-ping" />
         <div className="relative w-2 h-2 bg-white rounded-full" />
@@ -79,7 +79,7 @@ const CountdownTimer = ({ eventDate, endDate }) => {
       ].map(({ value, label }) => (
         <div
           key={label}
-          className="flex flex-col items-center py-2 px-1 border rounded-xl bg-white dark:bg-slate-800/80 border-slate-100 dark:border-slate-700 shadow-sm"
+          className="flex flex-col items-center py-2 px-1 border rounded-xl bg-white dark:bg-surfaceDark border-slate-100 dark:border-slate-700 shadow-sm"
         >
           <span className="text-base font-black tabular-nums text-brandGold leading-none mb-1">
             {String(value).padStart(2, "0")}
@@ -95,8 +95,8 @@ const CountdownTimer = ({ eventDate, endDate }) => {
 
 const IIALogo = () => (
   <div className="relative group/logo">
-    <div className="absolute transition duration-500 -inset-1 bg-gradient-to-r from-brandGold to-brandGoldDark rounded-2xl blur opacity-20 group-hover/logo:opacity-40" />
-    <div className="relative flex items-center justify-center w-12 h-12 overflow-hidden transition-transform duration-300 bg-white dark:bg-slate-900 rounded-2xl group-hover/logo:scale-105 shadow-sm">
+    <div className="absolute transition duration-500 -inset-1 bg-gradient-to-r from-brandGold to-brandAccent rounded-2xl blur opacity-20 group-hover/logo:opacity-40" />
+    <div className="relative flex items-center justify-center w-12 h-12 overflow-hidden transition-transform duration-300 bg-white dark:bg-surfaceDark rounded-2xl group-hover/logo:scale-105 shadow-sm">
       <img src={IIALogoImg} alt="IIA India Logo" className="object-contain w-10 h-10 p-1" />
     </div>
   </div>
@@ -108,7 +108,7 @@ const EventCard = ({ event, index }) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.6, delay: index * 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
-    className="group relative flex flex-col h-full bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-[2rem] overflow-hidden hover:border-brandGold/50 transition-all duration-500 hover:shadow-2xl hover:shadow-brandGold/10"
+    className="group relative flex flex-col h-full bg-white dark:bg-bgDark border border-slate-200 dark:border-slate-800 rounded-[2rem] overflow-hidden hover:border-brandGold/50 transition-all duration-500 hover:shadow-2xl hover:shadow-brandGold/10"
   >
     {/* Top accent line */}
     <div className="h-1 w-full bg-gradient-to-r from-brandGold/30 via-brandGold to-brandGold/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -171,42 +171,59 @@ const EventCard = ({ event, index }) => (
 
     {/* Bottom hover bar */}
     <div className="h-1 w-full bg-slate-100 dark:bg-slate-800">
-      <div className="w-0 h-full transition-all duration-700 ease-in-out group-hover:w-full bg-gradient-to-r from-brandGold to-brandGoldDark" />
+      <div className="w-0 h-full transition-all duration-700 ease-in-out group-hover:w-full bg-gradient-to-r from-brandGold to-brandAccent" />
     </div>
   </motion.div>
 )
 
 /* ================= MAIN COMPONENT ================= */
 
-const UpcomingEventsSection = () => {
+// isPage: rendered as the whole /events/upcoming-events page, so the heading
+// is the page's <h1> and an empty list shows a message instead of nothing.
+const UpcomingEventsSection = ({ isPage = false }) => {
   const { fetchUpcomingEvents, upcomingEvents } = useEventsStore()
+  const Heading = isPage ? motion.h1 : motion.h2
 
   useEffect(() => {
     fetchUpcomingEvents()
   }, [])
 
-  if (!upcomingEvents?.length) return null
+  if (!upcomingEvents?.length) {
+    if (!isPage) return null
+    return (
+      <div id="upcoming-events" className="py-20 bg-bgLight dark:bg-bgDark">
+        <div className="container text-center">
+          <h1 className="mb-6 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
+            Upcoming <span className="text-brandGold">Events</span>
+          </h1>
+          <p className="max-w-2xl mx-auto text-lg text-slate-600 dark:text-slate-400">
+            There are no upcoming events scheduled right now. Please check back soon.
+          </p>
+        </div>
+      </div>
+    )
+  }
 
   return (
-    <div id="upcoming-events" className="relative py-24 overflow-hidden lg:py-32 bg-slate-50 dark:bg-surfaceDark">
+    <div id="upcoming-events" className="relative py-20 overflow-hidden bg-bgLight dark:bg-bgDark">
       {/* Background Decor */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brandGold/5 blur-[120px] rounded-full" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brandBlue/5 blur-[120px] rounded-full" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brandPrimary/5 blur-[120px] rounded-full" />
         <div
           className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"
           style={{ backgroundImage: "radial-gradient(#003366 1px, transparent 1px)", backgroundSize: "40px 40px" }}
         />
       </div>
 
-      <div className="container relative px-6 mx-auto">
+      <div className="container relative">
         {/* Header */}
         <div className="max-w-4xl mx-auto mb-16 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-3 px-5 py-2 mb-8 bg-white border rounded-full shadow-sm dark:bg-slate-900 border-borderLight dark:border-borderDark"
+            className="inline-flex items-center gap-3 px-5 py-2 mb-8 bg-white border rounded-full shadow-sm dark:bg-bgDark border-borderLight dark:border-borderDark"
           >
             <div className="p-1 rounded-full bg-brandGold/10 text-brandGold">
               <Sparkles className="w-4 h-4" />
@@ -214,16 +231,16 @@ const UpcomingEventsSection = () => {
             <span className="text-[10px] font-black tracking-[0.4em] uppercase text-brandGold">Strategic Excellence</span>
           </motion.div>
 
-          <motion.h2
+          <Heading
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-3xl lg:text-5xl font-black text-brandDark dark:text-white mb-6 tracking-tight leading-[1.1]"
+            className="font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white mb-6 tracking-tight leading-[1.1]"
           >
             Knowledge &{" "}
-            <span className="italic text-brandGold font-heading">Networking</span>
-          </motion.h2>
+            <span className="italic text-brandGold">Networking</span>
+          </Heading>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}

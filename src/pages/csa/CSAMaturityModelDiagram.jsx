@@ -23,15 +23,15 @@ export default function CSAMaturityModel() {
 
   // Color palette - theme-aware colors
   const colors = {
-    level1: '#94D2BD',      // Light teal - Ad Hoc
-    level2: '#40916C',      // Medium teal - Defined
-    level3: '#2D6A4F',      // Darker green - Managed
-    level4: '#1E3A5F',      // Navy - Integrated
-    level5: '#0D1B2A',      // Dark navy - Optimized
+    level1: '#99B3CC',      // Light brand blue - Ad Hoc
+    level2: '#4D79A6',      // Medium brand blue - Defined
+    level3: '#004080',      // Brand primary - Managed
+    level4: '#003366',      // Brand navy - Integrated
+    level5: '#001F3F',      // Brand dark - Optimized
     
     // Supporting colors - theme-aware
-    gold: '#C9A227',
-    goldLight: '#E8D59A',
+    gold: '#FFB800',
+    goldLight: '#FFE08A',
     white: isDark ? '#001A33' : '#FFFFFF',
     lightGray: isDark ? '#001122' : '#F8FAFC',
     gray: isDark ? 'rgba(255, 192, 0, 0.15)' : '#E2E8F0',
@@ -40,8 +40,8 @@ export default function CSAMaturityModel() {
     textLight: isDark ? 'rgba(255, 255, 255, 0.6)' : '#64748B',
     
     // Axis colors
-    axisBlue: '#3B82F6',
-    axisPurple: '#7C3AED',
+    axisBlue: '#004080',
+    axisPurple: '#003366',
   };
 
   // Maturity levels data
@@ -578,12 +578,12 @@ export default function CSAMaturityModel() {
   );
 
   return (
-    <div className="flex flex-col w-full h-screen p-4 overflow-hidden font-sans bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-blue-900">
+    <div className="flex flex-col w-full p-4 overflow-hidden font-sans rounded-2xl bg-bgLight dark:bg-bgDark">
       {/* Title */}
       <div className="flex-shrink-0 mb-2 text-center">
-        <h1 className="text-2xl font-bold tracking-tight text-brandDark dark:text-white">
+        <h3 className="text-2xl font-bold tracking-tight text-brandDark dark:text-white">
           CSA Maturity Model
-        </h1>
+        </h3>
         <p className="mt-1 text-sm text-brandNavy dark:text-white/70">
           Five-Level Program Maturity Assessment Framework
         </p>
@@ -591,7 +591,7 @@ export default function CSAMaturityModel() {
 
       {/* SVG Container - fills remaining space */}
       <div className="flex items-center justify-center flex-1 overflow-hidden">
-        <svg viewBox="0 0 920 570" className="w-full h-full" preserveAspectRatio="xMidYMid meet">
+        <svg viewBox="0 0 920 570" className="w-full h-auto" preserveAspectRatio="xMidYMid meet">
           <Definitions />
 
           {/* Background */}

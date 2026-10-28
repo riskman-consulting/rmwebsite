@@ -123,14 +123,14 @@ const ConceptDefined = () => {
     ];
 
     return (
-        <section id="concept" className="relative z-10 py-24 transition-colors bg-surfaceLight dark:bg-surfaceDark">
+      <section id="concept" className="relative z-10 py-16 transition-colors bg-surfaceLight dark:bg-surfaceDark">
             <div className="container relative z-10">
                 <div className="inline-flex items-center gap-3 font-mono text-[0.7rem] font-semibold tracking-[4px] uppercase text-brandAccent mb-6">
                     <div className="w-5 h-[1px] bg-brandAccent" />
                     Concept Defined
                 </div>
 
-                <h2 className="mb-6 text-3xl font-extrabold leading-tight font-heading md:text-4xl text-brandDark dark:text-brandLight">
+                <h2 className="mb-6 text-3xl font-bold leading-tight font-heading md:text-4xl text-brandDark dark:text-brandLight">
                     What Is a Concurrent Audit?
                 </h2>
                 <hr className="w-12 h-[2px] border-none bg-gradient-to-r from-brandGold to-brandAccent mb-8" />
@@ -145,7 +145,7 @@ const ConceptDefined = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="mt-12 overflow-hidden transition-colors border shadow-2xl border-borderLight dark:border-borderDark rounded-2xl bg-surfaceLight dark:bg-surfaceDark backdrop-blur-sm"
+                    className="mt-12 overflow-hidden transition-colors border shadow-2xl border-borderLight dark:border-borderDark rounded-2xl bg-bgLight dark:bg-bgDark backdrop-blur-sm"
                 >
                     <div className="grid grid-cols-2 transition-colors border-b bg-brandGold/5 border-borderLight dark:border-borderDark">
                         <div className="p-5 text-xs font-bold tracking-widest text-gray-500 uppercase opacity-50 font-heading dark:text-gray-400">
@@ -186,7 +186,7 @@ const ConceptDefined = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="relative p-8 overflow-hidden transition-all duration-300 border group bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-2xl hover:border-brandGold/30 hover:shadow-xl"
+                            className="relative h-full p-8 overflow-hidden transition-all duration-300 border group bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark rounded-2xl hover:border-brandGold/30 hover:shadow-xl"
                         >
                             <div className="absolute top-0 right-0 w-24 h-24 -mt-12 -mr-12 transition-colors rounded-full bg-brandGold/5 blur-2xl group-hover:bg-brandGold/10" />
                             <div className="relative z-10 mb-6 transition-transform duration-300 transform group-hover:-translate-y-1">{card.icon}</div>

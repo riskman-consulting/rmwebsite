@@ -1,10 +1,12 @@
 import React from 'react';
 import { ArrowRight, Sparkles, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const TisaxCTA = () => {
+    const navigator = useNavigate();
     return (
-        <section className="relative py-24 overflow-hidden">
+      <section className="relative py-16 overflow-hidden ">
             {/* Background */}
             <div className="absolute inset-0 bg-brandPrimary">
                 <div className="absolute inset-0 bg-gradient-to-br from-brandDark via-transparent to-brandAccent/20" />
@@ -16,7 +18,7 @@ const TisaxCTA = () => {
                 </div>
             </div>
 
-            <div className="container relative z-10 px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
+            <div className="container relative z-10">
                 <div className="max-w-4xl mx-auto text-center">
                     <motion.div
                         initial={{ scale: 0 }}
@@ -29,7 +31,7 @@ const TisaxCTA = () => {
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        className="mb-6 text-4xl font-black text-white font-heading sm:text-6xl"
+                        className="mb-6 text-3xl font-bold text-white font-heading md:text-4xl"
                     >
                         Secure Your Automotive <br />
                         <span className="text-brandAccent">Partnerships</span>
@@ -39,7 +41,7 @@ const TisaxCTA = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="max-w-2xl mx-auto mb-12 text-xl text-blue-100/80"
+                        className="max-w-2xl mx-auto mb-12 text-xl text-gray-200"
                     >
                         Don't let non-compliance stall your growth—partner with RiskMan for a streamlined and successful TISAX journey.
                     </motion.p>
@@ -50,7 +52,7 @@ const TisaxCTA = () => {
                         transition={{ delay: 0.2 }}
                         className="flex flex-col items-center justify-center gap-6 sm:flex-row"
                     >
-                        <button className="relative px-10 py-5 overflow-hidden text-sm font-black transition-all shadow-2xl group rounded-2xl bg-brandAccent font-heading text-brandDark shadow-brandAccent/30 hover:scale-105 active:scale-95">
+                        <button onClick={() => navigator("/contact")} className="relative px-10 py-5 overflow-hidden text-sm font-black transition-all shadow-2xl group rounded-2xl bg-brandAccent font-heading text-brandDark shadow-brandAccent/30 hover:scale-105 active:scale-95">
                             <span className="relative z-10 flex items-center gap-3">
                                 <Sparkles className="w-5 h-5" />
                                 Become TISAX Ready
@@ -58,10 +60,6 @@ const TisaxCTA = () => {
                             </span>
                             <div className="absolute inset-0 transition-opacity bg-white opacity-0 group-hover:opacity-20" />
                         </button>
-
-                        <p className="text-sm font-medium text-white/60">
-                            Join 500+ secure organizations
-                        </p>
                     </motion.div>
                 </div>
             </div>

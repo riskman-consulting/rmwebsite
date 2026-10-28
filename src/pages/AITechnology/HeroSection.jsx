@@ -31,7 +31,7 @@ const AiTechnology = () => {
       
      
 
-      <section className="relative flex items-center min-h-screen pt-20 overflow-hidden bg-brandDark">
+      <section className="relative py-16 lg:py-20 overflow-hidden bg-brandDark">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -43,7 +43,7 @@ const AiTechnology = () => {
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
       </div>
 
-      <div className="container relative z-10 grid items-center gap-12 px-4 mx-auto md:px-6 lg:grid-cols-2">
+      <div className="container relative z-10 grid items-center gap-12 lg:grid-cols-2">
         <div className="space-y-8 animate-fade-in-up">
           <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-bold tracking-widest uppercase border rounded-full bg-brandAccent/10 border-brandAccent/20 text-brandAccent">
             <span className="w-2 h-2 rounded-full bg-brandAccent animate-pulse"></span>
@@ -77,20 +77,6 @@ const AiTechnology = () => {
             </Link>
           </div>
 
-          <div className="grid grid-cols-3 gap-6 pt-8 border-t border-white/10">
-            <div className="text-center sm:text-left">
-              <div className="mb-1 text-2xl font-bold text-brandAccent">40%</div>
-              <div className="text-xs tracking-wider text-gray-400 uppercase">Faster Risk ID</div>
-            </div>
-            <div className="text-center sm:text-left">
-              <div className="mb-1 text-2xl font-bold text-brandAccent">100%</div>
-              <div className="text-xs tracking-wider text-gray-400 uppercase">NIST Compliant</div>
-            </div>
-            <div className="text-center sm:text-left">
-              <div className="mb-1 text-2xl font-bold text-brandAccent">24/7</div>
-              <div className="text-xs tracking-wider text-gray-400 uppercase">Real-time Watch</div>
-            </div>
-          </div>
         </div>
 
         <div className="relative hidden lg:block">
@@ -106,13 +92,13 @@ const AiTechnology = () => {
               </div>
               
               <div className="p-6 transform -translate-y-4 border rounded-lg shadow-xl bg-surfaceDark/80 backdrop-blur-md border-white/10 animate-float" style={{animationDelay: '1s'}}>
-                <Activity className="w-10 h-10 mb-4 text-blue-400" />
+                <Activity className="w-10 h-10 mb-4 text-brandAccent" />
                 <h3 className="mb-2 font-bold text-white">Predictive Analytics</h3>
                 <p className="text-sm text-gray-400">Forecast emerging threats before they impact.</p>
               </div>
               
               <div className="p-6 transform translate-y-4 border rounded-lg shadow-xl bg-surfaceDark/80 backdrop-blur-md border-white/10 animate-float" style={{animationDelay: '2s'}}>
-                <BarChart3 className="w-10 h-10 mb-4 text-green-400" />
+                <BarChart3 className="w-10 h-10 mb-4 text-brandAccent" />
                 <h3 className="mb-2 font-bold text-white">Executive Insights</h3>
                 <p className="text-sm text-gray-400">Clear visualizations for strategic decision making.</p>
               </div>

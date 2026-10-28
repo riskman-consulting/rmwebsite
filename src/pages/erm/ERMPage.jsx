@@ -19,7 +19,7 @@ import { Helmet } from "react-helmet-async";
 
 const ERMPage = () => {
   return (
-    <main className="w-full overflow-hidden">
+    <main className="w-full overflow-hidden bg-bgLight dark:bg-bgDark">
 <Helmet>
   <title>Enterprise Risk Management (ERM) Services | RiskMan Consulting</title>
   <meta
@@ -51,11 +51,11 @@ const ERMPage = () => {
       {/* 7. Risk Maturity & Path Ahead */}
       <RiskMaturitySection />
 
-      {/* 8. Final CTA */}
-      <CTASection />
-
-      {/* 9. FAQs */}
+      {/* 8. FAQs */}
       <FAQSection />
+
+      {/* 9. Final CTA */}
+      <CTASection />
 
 
     </main>

@@ -4,7 +4,7 @@ import rbiaRiskAdvisoryImage from "../../assets/images/rbia/rbia-risk-advisory.p
 
 export default function RbiaRiskAdvisorySection() {
   return (
-    <section className="relative px-4 overflow-hidden py-16 md:py-24 bg-bgLight dark:bg-bgDark">
+    <section className="relative overflow-hidden py-16 bg-surfaceLight dark:bg-surfaceDark">
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-b from-brandPrimary/5 via-transparent to-brandAccent/5 dark:from-brandPrimary/10 dark:to-brandAccent/5" />
@@ -12,7 +12,7 @@ export default function RbiaRiskAdvisorySection() {
         <div className="absolute left-[-10%] top-1/4 w-[40%] h-[40%] bg-brandPrimary/10 blur-[120px] rounded-full" />
       </div>
 
-      <div className="container relative z-10 mx-auto max-w-7xl">
+      <div className="container relative z-10">
         {/* HEADER - More compact margin */}
         <div className="max-w-4xl mx-auto mb-16 md:mb-20 text-center">
           <motion.div 
@@ -24,7 +24,7 @@ export default function RbiaRiskAdvisorySection() {
             Core Service
           </motion.div>
 
-          <h2 className="mb-6 text-3xl font-bold leading-tight md:text-5xl font-heading text-brandDark dark:text-white">
+          <h2 className="mb-6 text-3xl font-bold leading-tight md:text-4xl font-heading text-brandDark dark:text-white">
             Risk-Based Internal Audit <br className="hidden md:block" /> 
             <span className="text-brandPrimary dark:text-brandAccent">(RBIA)</span> under Risk Advisory
           </h2>
@@ -84,7 +84,7 @@ export default function RbiaRiskAdvisorySection() {
             {/* Glow Background */}
             <div className="absolute -inset-4 bg-gradient-to-tr from-brandPrimary/20 to-brandAccent/20 rounded-[2rem] blur-2xl opacity-50 group-hover:opacity-80 transition-opacity duration-500" />
             
-            <div className="relative p-2 bg-white dark:bg-surfaceDark border border-borderLight dark:border-borderDark rounded-2xl shadow-2xl overflow-hidden">
+            <div className="relative p-2 bg-bgLight dark:bg-bgDark border border-borderLight dark:border-borderDark rounded-2xl shadow-2xl overflow-hidden">
               {/* Top Decorative bar */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brandPrimary via-brandAccent to-brandGold" />
               
@@ -94,12 +94,6 @@ export default function RbiaRiskAdvisorySection() {
                 className="w-full h-auto rounded-xl transition-transform duration-700 ease-out group-hover:scale-[1.03]"
               />
               
-              {/* Floating Overlay Element for "Premium" look */}
-              <div className="absolute bottom-6 right-6 px-4 py-2 bg-white/90 dark:bg-brandDark/90 backdrop-blur-md rounded-lg shadow-xl border border-white/20">
-                <p className="text-[10px] font-bold uppercase tracking-widest text-brandPrimary dark:text-brandAccent">
-                  RBIA Standard v2.0
-                </p>
-              </div>
             </div>
           </motion.div>
 

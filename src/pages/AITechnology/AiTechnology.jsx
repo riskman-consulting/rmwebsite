@@ -559,6 +559,7 @@ const AiTechnology = () => {
       <Services />
       <TechIntegration />
       <Framework />
+      <FAQ />
       <CTA />
     
     </div>

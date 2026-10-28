@@ -6,14 +6,15 @@ function FAQSection() {
   const [activeFaq, setActiveFaq] = useState(0); // Open first one by default
 
   return (
-     <section className="py-24 bg-bgLight dark:bg-bgDark transition-colors duration-300">
-        <div className="container max-w-4xl mx-auto px-4">
+    <section className="py-16 bg-bgLight dark:bg-bgDark transition-colors duration-300">
+        <div className="container">
           
+          <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brandAccent/10 text-brandAccent mb-4">
               <HelpCircle size={24} />
             </div>
-            <h2 className="font-heading text-3xl lg:text-4xl font-bold text-brandDark dark:text-white mb-4">Privacy Governance FAQ</h2>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white mb-4">Privacy Governance FAQ</h2>
             <p className="text-gray-600 dark:text-gray-400">Common questions about our compliance frameworks and services.</p>
           </div>
 
@@ -54,6 +55,7 @@ function FAQSection() {
                 </div>
               </div>
             ))}
+          </div>
           </div>
 
         </div>

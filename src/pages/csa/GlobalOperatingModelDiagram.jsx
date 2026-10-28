@@ -1,25 +1,25 @@
 import React from "react"
 
 const colors = {
-  navy: "#1E3A5F",
-  navyLight: "#2B5278",
-  navyDark: "#152A45",
-  americas: "#0D9488",
-  americasLight: "#14B8A6",
-  emea: "#7C3AED",
-  emeaLight: "#8B5CF6",
-  apac: "#2563EB",
-  apacLight: "#3B82F6",
-  gold: "#C9A227",
-  goldLight: "#E8D59A",
+  navy: "#001F3F",
+  navyLight: "#003366",
+  navyDark: "#001122",
+  americas: "#004080",
+  americasLight: "#336699",
+  emea: "#475569",
+  emeaLight: "#64748B",
+  apac: "#FFB800",
+  apacLight: "#FFC000",
+  gold: "#FFB800",
+  goldLight: "#FFE08A",
   white: "#FFFFFF",
   lightGray: "#F8FAFC",
   gray: "#E2E8F0",
   textDark: "#1E293B",
   textMedium: "#475569",
   textLight: "#64748B",
-  cloudBlue: "#3B82F6",
-  cloudLight: "#93C5FD"
+  cloudBlue: "#004080",
+  cloudLight: "#99B3CC"
 }
 
 const regions = [

@@ -43,13 +43,11 @@ export const CapabilitiesSection = () => {
   ];
 
   return (
-    <section className="relative px-8 py-8 md:py-8 lg:pb-16 lg:pt-10 overflow-hidden bg-bgLight dark:bg-[#030712]">
+    <section className="relative py-16 overflow-hidden bg-surfaceLight dark:bg-surfaceDark">
       {/* Background Dots Pattern - Hidden on very small screens for performance */}
-      <div className="absolute inset-0 opacity-[0.1] hidden sm:block" 
-           style={{ backgroundImage: `radial-gradient(circle at 1px 1px, #FFC000 0.5px, transparent 0)`, backgroundSize: '32px 32px' }} />
 
       {/* Main Wrapper: Responsive Padding (px-4 for mobile, lg:px-12 for desktop) */}
-      <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 relative z-10">
+      <div className="container relative z-10">
         
         {/* --- HEADER: Responsive Layout (Stack on mobile, Row on md+) --- */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12 md:mb-16 border-b border-borderLight dark:border-white/5 pb-10 md:pb-12 text-left">
@@ -66,7 +64,7 @@ export const CapabilitiesSection = () => {
               </span>
             </div>
             {/* Responsive Heading: 3xl on mobile, 4xl on tablet, 5xl on desktop */}
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-brandDark dark:text-white leading-tight font-heading">
+            <h2 className="text-3xl md:text-4xl font-bold text-brandDark dark:text-white leading-tight font-heading">
               Proven <span className="text-brandPrimary dark:text-brandAccent">Capabilities</span>
             </h2>
           </motion.div>
@@ -78,7 +76,7 @@ export const CapabilitiesSection = () => {
             className="max-w-md"
           >
             <p className="text-sm md:text-base text-brandNavy/70 dark:text-slate-400 leading-relaxed">
-              Industry-leading expertise backed by proven methodologies and cutting-edge technology for the global enterprise.
+              Experienced practitioners, proven methodologies and practical technology for enterprises in India and abroad.
             </p>
           </motion.div>
         </div>
@@ -94,7 +92,7 @@ export const CapabilitiesSection = () => {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="group relative h-full"
             >
-              <div className="relative h-full p-6 md:p-8 overflow-hidden bg-white dark:bg-white/[0.02] border border-borderLight dark:border-white/5 rounded-2xl md:rounded-3xl transition-all duration-500 hover:border-brandAccent/40 sm:group-hover:-translate-y-1 group-hover:shadow-xl group-hover:bg-white/[0.05]">
+              <div className="relative h-full p-6 md:p-8 overflow-hidden bg-bgLight dark:bg-bgDark border border-borderLight dark:border-borderDark rounded-2xl transition-all duration-500 hover:border-brandAccent/40 sm:group-hover:-translate-y-1 group-hover:shadow-xl">
                 
                 {/* Icon Container: Slightly smaller on mobile */}
                 <div className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 mb-5 md:mb-6 rounded-xl bg-brandPrimary/5 dark:bg-brandAccent/10 border border-brandPrimary/10 dark:border-brandAccent/20 text-brandPrimary dark:text-brandAccent group-hover:bg-brandAccent group-hover:text-brandDark transition-all duration-500">

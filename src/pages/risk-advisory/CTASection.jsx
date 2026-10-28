@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 const CTASection = ({ data }) => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-brandPrimary via-brandNavy to-brandDark py-20 md:py-28">
+    <section className="relative overflow-hidden bg-gradient-to-br from-brandPrimary via-brandNavy to-brandDark py-16">
       
       {/* Background Grid */}
       <div className="pointer-events-none absolute inset-0 opacity-10">
@@ -15,7 +15,7 @@ const CTASection = ({ data }) => {
       <div className="pointer-events-none absolute -top-24 right-0 h-72 w-72 rounded-full bg-brandAccent/20 blur-[120px]" />
       <div className="pointer-events-none absolute -bottom-24 left-0 h-72 w-72 rounded-full bg-brandAccent/20 blur-[120px]" />
 
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -24,7 +24,7 @@ const CTASection = ({ data }) => {
           className="mx-auto max-w-4xl text-center"
         >
           {/* Title */}
-          <h2 className="mb-6 font-heading text-3xl font-black leading-tight text-white sm:text-3xl md:text-4xl">
+          <h2 className="mb-6 font-heading text-3xl font-bold leading-tight text-white md:text-4xl">
             {data.title}
           </h2>
 

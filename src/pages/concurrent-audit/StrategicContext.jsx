@@ -75,7 +75,7 @@ import { motion } from 'framer-motion';
 
 const StrategicContext = () => {
     return (
-        <section id="context" className="relative z-10 py-24 transition-colors bg-surfaceLight dark:bg-surfaceDark">
+      <section id="context" className="relative z-10 py-16 transition-colors bg-bgLight dark:bg-bgDark">
             {/* Decorative Background */}
             <div className="absolute top-1/2 left-0 w-64 h-64 bg-brandPrimary/5 rounded-full blur-[100px] pointer-events-none" />
 
@@ -92,7 +92,7 @@ const StrategicContext = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="mb-6 text-3xl font-extrabold leading-tight font-heading md:text-4xl text-brandDark dark:text-brandAccent">
+                        <h2 className="mb-6 text-3xl font-bold leading-tight font-heading md:text-4xl text-brandDark dark:text-brandAccent">
                             The Limits of Looking Back
                         </h2>
                         <hr className="w-12 h-[2px] border-none bg-gradient-to-r from-brandGold to-brandAccent mb-8" />

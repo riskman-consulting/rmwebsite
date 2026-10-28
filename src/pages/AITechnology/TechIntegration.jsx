@@ -84,12 +84,12 @@ const TechIntegration = () => {
   };
 
   return (
-    <section id="technology" className="relative py-24 overflow-hidden text-white bg-brandDark">
+    <section id="technology" className="relative py-16 overflow-hidden text-white bg-brandDark">
       {/* Background Glows */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brandPrimary/10 rounded-full blur-[100px] -mr-20 -mt-20"></div>
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brandAccent/5 rounded-full blur-[100px] -ml-20 -mb-20"></div>
 
-      <div className="container relative z-10 px-4 mx-auto md:px-6">
+      <div className="container relative z-10">
         <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-20">
           
           {/* Left Column: Navigation Loop */}
@@ -169,11 +169,10 @@ const TechIntegration = () => {
                       alt={feature.fullTitle} 
                       className="object-cover w-full h-full transition-transform duration-700 transform hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent to-surfaceDark/80 md:bg-gradient-to-l"></div>
                     
                     <div className="absolute top-4 left-4">
                       <div className="inline-flex items-center gap-2 px-2 py-1 rounded-full bg-black/40 border border-white/10 text-white text-[10px] font-bold uppercase tracking-widest backdrop-blur-md">
-                        <Circle size={6} fill="#4ade80" className="text-green-400 animate-pulse" />
+                        <Circle size={6} fill="#FFC000" className="text-brandAccent animate-pulse" />
                         Active
                       </div>
                     </div>
@@ -197,11 +196,7 @@ const TechIntegration = () => {
                         <span className="text-[10px] text-gray-500 uppercase tracking-wider">Security</span>
                         <span className="text-xs font-bold text-brandAccent">Enterprise Grade</span>
                       </div>
-                      
-                      <button className="flex items-center gap-2 text-sm font-bold text-white transition-colors hover:text-brandAccent group/btn">
-                        Learn more <ArrowRight size={16} className="transition-transform group-hover/btn:translate-x-1" />
-                      </button>
-                    </div>
+                                          </div>
                   </div>
                 </div>
               </div>

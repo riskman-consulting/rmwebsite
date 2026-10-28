@@ -137,7 +137,7 @@ export default function HeroSection() {
       `}</style>
 
       {/* SECTION */}
-      <section className="relative flex flex-col w-full overflow-hidden hero-bg md:h-screen md:flex-row md:-top-10 lg:-top-20">
+      <section className="relative flex flex-col w-full overflow-hidden hero-bg md:h-screen md:flex-row">
 
         {/* LEFT CONTENT AREA */}
         <div className="relative w-full md:w-[65%] md:h-full flex items-center z-20 px-6 md:px-12 lg:px-16 pt-10 pb-6 md:pt-0 md:pb-0 md:overflow-hidden hero-bg">

@@ -11,8 +11,8 @@ const ComplianceSolutions = () => {
             subtitle: "Information Security",
             desc: "Deploy a risk-based approach to protect your most sensitive corporate data assets and operational information systems.",
             link: "iso-27001",
-            image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=250&fit=crop",
-            color: "from-blue-500 to-indigo-600"
+            image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=500&fit=crop",
+            color: "from-brandPrimary to-brandNavy"
         },
         {
             icon: Eye,
@@ -20,8 +20,8 @@ const ComplianceSolutions = () => {
             subtitle: "Privacy Management",
             desc: "Establish a Privacy Information Management System to handle personal identifiable information with global regulatory compliance.",
             link: "iso-27701",
-            image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop",
-            color: "from-purple-500 to-violet-600"
+            image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=500&fit=crop",
+            color: "from-brandNavy to-brandDark"
         },
         {
             icon: RefreshCw,
@@ -29,8 +29,8 @@ const ComplianceSolutions = () => {
             subtitle: "Business Continuity",
             desc: "Ensure operational resilience and rapid recovery during unforeseen disruptions to maintain service availability.",
             link: "iso-22301",
-            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=250&fit=crop",
-            color: "from-emerald-500 to-teal-600"
+            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=500&fit=crop",
+            color: "from-brandPrimary to-brandNavy"
         },
         {
             icon: Brain,
@@ -38,8 +38,8 @@ const ComplianceSolutions = () => {
             subtitle: "AI Management",
             desc: "Implement the world's first AI management standard to ensure ethical, transparent, and secure AI development.",
             link: "iso-42001",
-            image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop",
-            color: "from-pink-500 to-rose-600"
+            image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop",
+            color: "from-brandNavy to-brandDark"
         },
         {
             icon: AlertTriangle,
@@ -47,8 +47,8 @@ const ComplianceSolutions = () => {
             subtitle: "Risk Management",
             desc: "Proactively identify and mitigate enterprise-wide vulnerabilities before they impact your bottom line.",
             link: "iso-31000",
-            image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop",
-            color: "from-orange-500 to-amber-600"
+            image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
+            color: "from-brandPrimary to-brandNavy"
         },
         {
             icon: Car,
@@ -56,7 +56,7 @@ const ComplianceSolutions = () => {
             subtitle: "Automotive Security",
             desc: "Secure your position in the automotive supply chain with industry-mandated security assessment exchanges.",
             link: "tisax",
-            image: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=400&h=250&fit=crop",
+            image: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&h=500&fit=crop",
             color: "from-brandPrimary to-brandNavy"
         }
     ];
@@ -75,12 +75,12 @@ const ComplianceSolutions = () => {
     };
 
     return (
-        <section className="relative w-full px-5 py-24 overflow-hidden sm:px-8 lg:px-12 xl:px-14 sm:py-32 bg-brandLight dark:bg-bgDark" id="solutions">
+      <section className="relative w-full py-16 overflow-hidden sm:py-32 bg-brandLight dark:bg-bgDark" id="solutions">
             {/* Background decoration */}
             <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brandAccent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brandPrimary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none" />
 
-            <div className="mx-auto max-w-[1280px] relative z-10">
+            <div className="container relative z-10">
                 {/* Header */}
                 <div className="mb-16 text-center">
                     <motion.span
@@ -133,8 +133,6 @@ const ComplianceSolutions = () => {
                                         alt={service.title}
                                         className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
                                     />
-                                    <div className={`absolute inset-0 bg-gradient-to-t ${service.color} opacity-60`} />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
                                     {/* Floating icon */}
                                     <div className="absolute bottom-4 left-4">
@@ -145,7 +143,7 @@ const ComplianceSolutions = () => {
 
                                     {/* Badge */}
                                     <div className="absolute top-4 right-4">
-                                        <span className="px-3 py-1 text-xs font-bold text-white border rounded-full bg-white/20 backdrop-blur-sm border-white/20">
+                                        <span className="px-3 py-1 text-xs font-bold rounded-full shadow-md text-brandDark bg-white/95">
                                             {service.subtitle}
                                         </span>
                                     </div>

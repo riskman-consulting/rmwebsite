@@ -4,8 +4,8 @@ import FAQItem from "./FAQItem";
 
 const FAQSection = ({ data }) => {
   return (
-    <section className="relative py-10 md:py-16 bg-bgLight dark:bg-bgDark overflow-hidden">
-      <div className="container relative z-10 px-4 sm:px-6 lg:px-8">
+    <section className="relative py-16 bg-surfaceLight dark:bg-surfaceDark overflow-hidden">
+      <div className="container relative z-10">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -19,7 +19,7 @@ const FAQSection = ({ data }) => {
               FAQ
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-4xl font-black text-brandDark dark:text-brandLight font-heading">
+            <h2 className="text-3xl md:text-4xl font-bold text-brandDark dark:text-brandLight font-heading">
               {data.title}
             </h2>
           </motion.div>

@@ -104,7 +104,7 @@ const OperatingModel = () => {
     ];
 
     return (
-        <section id="model" className="relative z-10 overflow-hidden transition-colors py-14 md:py-20 bg-surfaceLight dark:bg-surfaceDark">
+      <section id="model" className="relative z-10 overflow-hidden transition-colors py-16 bg-bgLight dark:bg-bgDark">
             {/* Background decoration */}
             <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-brandAccent/5 rounded-full blur-[120px] -mr-64 -mb-64 pointer-events-none" />
 
@@ -114,7 +114,7 @@ const OperatingModel = () => {
                     Operating Model
                 </div>
 
-                <h2 className="mb-6 text-3xl font-extrabold leading-tight font-heading md:text-4xl text-brandDark dark:text-brandLight">
+                <h2 className="mb-6 text-3xl font-bold leading-tight font-heading md:text-4xl text-brandDark dark:text-brandLight">
                     How RiskMan Designs & Delivers
                 </h2>
                 <hr className="w-12 h-[2px] border-none bg-gradient-to-r from-brandGold to-brandAccent mb-8" />
@@ -149,7 +149,7 @@ const OperatingModel = () => {
                             </div>
 
                             {index < phases.length - 1 && (
-                                <div className="absolute z-20 hidden transition-colors -translate-y-1/2 md:flex -right-3 top-1/2 text-brandDark/10 dark:brandGold group-hover:text-brandGold dark:group-hover:text-brandLight">
+                                <div className="absolute z-20 hidden transition-colors -translate-y-1/2 md:flex -right-3 top-1/2 text-brandDark/10 dark:text-brandGold group-hover:text-brandGold dark:group-hover:text-brandLight">
                                     <ArrowRight size={24} />
                                 </div>
                             )}

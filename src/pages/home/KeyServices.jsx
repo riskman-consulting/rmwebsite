@@ -37,12 +37,12 @@ export default function KeyServices() {
   },[])
   
   return (
-    <section className="transition-colors py-14 md:py-12 bg-bgLight dark:bg-bgDark">
-      <div className="container max-w-7xl">
+    <section className="transition-colors py-16 bg-bgLight dark:bg-bgDark">
+      <div className="container">
 
         {/* Header */}
         <div className="max-w-3xl mx-auto mb-16 text-center">
-          <h2 className="mb-6 text-4xl font-bold text-brandDark dark:text-white">
+          <h2 className="mb-6 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
             {keyServices?.title}
           </h2>
           <p className="text-lg leading-relaxed text-brandNavy dark:text-white/70">
@@ -60,7 +60,7 @@ export default function KeyServices() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="overflow-hidden rounded-3xl bg-white/60 dark:bg-white/5 backdrop-blur-sm"
+              className="h-full overflow-hidden rounded-3xl bg-surfaceLight dark:bg-surfaceDark backdrop-blur-sm"
             >
               {/* Image */}
               <div className="relative h-56 overflow-hidden">

@@ -3,24 +3,24 @@ import React from 'react'
 
 function FaqSection() {
   return (
-    <section className="py-24 container max-w-4xl">
-        <h2 className="font-heading text-4xl font-bold mb-12 flex items-center">
+    <section className="container max-w-4xl py-16">
+        <h2 className="flex items-center mb-12 text-4xl font-bold font-heading">
           <HelpCircle className="mr-4 text-brandGold" /> Frequently Asked Questions
         </h2>
         <div className="space-y-4">
           {[
-            { q: "Why Should Organizations Prioritize SOC Now?", a: "SOC is a baseline expectation for enterprise customers and regulators, directly affecting revenue, risk exposure, and board-level assurance." },
-            { q: "How Do SOC Reports Support the Board and Audit Committee?", a: "They provide an independent view of control design and effectiveness, supporting conversations on risk appetite and third-party reliance." },
-            { q: "Is SOC Only Relevant for Technology Companies?", a: "No, any service organization impacting customer financials or handling sensitive data benefits from SOC assurance." },
-            { q: "How Often Do Reports Need Updating?", a: "Most organizations renew SOC reports annually to remain acceptable to customers and regulators." },
-            { q: "Does SOC Overlap with Other Standards Like ISO 27001?", a: "There is an overlap. SOC complements frameworks like ISO 27001 and can often reuse similar controls and artefacts." }
+            { q: "What Is the Difference Between SOC 1, SOC 2 and SOC 3?", a: "SOC 1 covers controls relevant to your customers’ financial reporting. SOC 2 covers security, availability, processing integrity, confidentiality and privacy. SOC 3 is a general-use summary of a SOC 2 examination that can be shared publicly." },
+            { q: "What Is the Difference Between Type 1 and Type 2 Reports?", a: "A Type 1 report assesses whether controls are suitably designed at a point in time. A Type 2 report also tests whether those controls operated effectively over a period, typically 6 to 12 months." },
+            { q: "Who Issues the SOC Report?", a: "SOC reports are issued by an independent licensed CPA firm. RiskMan prepares you for the examination, helps remediate gaps and coordinates with the CPA firm through fieldwork." },
+            { q: "How Do We Know Which SOC Report We Need?", a: "Start from who is asking and why. Customers’ financial auditors usually ask for SOC 1, while customers assessing security and data handling usually ask for SOC 2." },
+            { q: "Is SOC a One-Time Exercise?", a: "No. Most customers expect a current report every year, so SOC is run as an annual cycle with ongoing evidence collection and control monitoring." }
           ].map((faq, i) => (
-            <details key={i} className="group p-6 bg-surfaceLight dark:bg-surfaceDark rounded-xl border border-borderLight dark:border-borderDark">
-              <summary className="list-none font-bold text-lg cursor-pointer flex justify-between items-center group-open:text-brandPrimary dark:group-open:text-brandGold transition-colors">
+            <details key={i} className="p-6 border group bg-surfaceLight dark:bg-surfaceDark rounded-xl border-borderLight dark:border-borderDark">
+              <summary className="flex items-center justify-between text-lg font-bold list-none cursor-pointer group-open:text-brandPrimary dark:group-open:text-brandGold">
                 {faq.q}
                 <span className="transition-transform group-open:rotate-180">+</span>
               </summary>
-              <p className="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed border-t border-borderLight dark:border-borderDark pt-4">{faq.a}</p>
+              <p className="pt-4 mt-4 leading-relaxed text-gray-600 border-t dark:text-gray-400 border-borderLight dark:border-borderDark">{faq.a}</p>
             </details>
           ))}
         </div>

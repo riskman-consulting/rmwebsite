@@ -2,7 +2,7 @@ import React from "react"
 
 const CTASection = () => {
   return (
-    <section className="py-20">
+    <section className="py-16">
       <div className="container">
         <div className="bg-brandDark dark:bg-brandNavy rounded-[2.5rem] overflow-hidden relative shadow-2xl p-10 md:p-20 text-center">
           {/* Decoration */}

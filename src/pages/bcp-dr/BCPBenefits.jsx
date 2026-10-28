@@ -33,13 +33,13 @@ const items = [
  
 const BCPBenefitsGrid = () => {
   return (
-    <section className="py-24 bg-white dark:bg-brandNavy/20">
-      <div className="container max-w-6xl">
+    <section className="py-16 bg-bgLight dark:bg-bgDark">
+      <div className="container">
  
         {/* Header */}
         <div className="max-w-3xl">
           <div className="h-1.5 w-20 bg-brandAccent mb-6 rounded-full" />
-          <h2 className="text-3xl font-extrabold md:text-4xl text-brandDark dark:text-white">
+          <h2 className="text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
             How BCP Ensures Business Continuity
           </h2>
           <p className="mt-4 text-gray-600 dark:text-gray-300">
@@ -53,7 +53,7 @@ const BCPBenefitsGrid = () => {
           {items.map((item, i) => (
             <div
               key={item.title}
-              className="transition duration-300 bg-white border shadow-sm group dark:bg-brandNavy/30 border-borderLight dark:border-borderDark rounded-2xl p-7 hover:shadow-xl hover:-translate-y-1"
+              className="h-full transition duration-300 bg-white border shadow-sm group dark:bg-brandNavy/30 border-borderLight dark:border-borderDark rounded-2xl p-7 hover:shadow-xl hover:-translate-y-1"
             >
               {/* icon badge */}
               <div className="flex items-center justify-center mb-5 font-bold transition w-11 h-11 rounded-xl bg-brandAccent/15 text-brandPrimary group-hover:bg-brandPrimary group-hover:text-white">

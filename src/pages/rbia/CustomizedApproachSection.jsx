@@ -77,13 +77,13 @@ export default function CustomizedApproachSection() {
   };
 
   return (
-    <section className="relative px-6 py-24 overflow-hidden bg-bgLight dark:bg-bgDark lg:py-40">
+    <section className="relative py-16 overflow-hidden bg-bgLight dark:bg-bgDark ">
       {/* BACKGROUND TEXTURE */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03] dark:opacity-[0.05]">
         <div className="absolute inset-0 bg-[radial-gradient(#004080_1.5px,transparent_1.5px)] [background-size:60px_60px]" />
       </div>
 
-      <div className="container relative z-10 mx-auto max-w-7xl">
+      <div className="container relative z-10">
         {/* HEADER */}
         <div className="max-w-3xl mx-auto mb-20 text-center lg:mb-32">
           <motion.span 
@@ -93,8 +93,8 @@ export default function CustomizedApproachSection() {
           >
             Operational Cycle
           </motion.span>
-          <h2 className="mb-6 text-4xl font-bold tracking-tight lg:text-6xl text-brandDark dark:text-white font-heading">
-            Our <span className="text-brandPrimary italic">Customized</span> Approach
+          <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl text-brandDark dark:text-white font-heading">
+            Our <span className="text-brandPrimary dark:text-brandAccent italic">Customized</span> Approach
           </h2>
           <p className="text-lg text-slate-500 dark:text-slate-400 font-light leading-relaxed">
             A tailored methodology to evaluate risks and enhance operational effectiveness across your organization's unique landscape.
@@ -151,7 +151,7 @@ export default function CustomizedApproachSection() {
                       )}
                       <div className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-300 border-2 shadow-lg 
                         ${isActive ? `bg-gradient-to-br ${phase.color} border-white text-white scale-110` 
-                                  : "bg-white dark:bg-surfaceDark border-slate-200 dark:border-slate-800 text-slate-400 group-hover:border-brandPrimary"}`}
+                                  : "bg-surfaceLight dark:bg-surfaceDark border-slate-200 dark:border-slate-800 text-slate-400 group-hover:border-brandPrimary"}`}
                       >
                         {phase.icon}
                       </div>
@@ -163,7 +163,7 @@ export default function CustomizedApproachSection() {
 
             {/* CENTER HUB */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="w-44 h-44 rounded-full bg-white dark:bg-surfaceDark border border-slate-100 dark:border-slate-800 shadow-2xl flex flex-col items-center justify-center backdrop-blur-sm">
+              <div className="w-44 h-44 rounded-full bg-surfaceLight dark:bg-surfaceDark border border-slate-100 dark:border-slate-800 shadow-2xl flex flex-col items-center justify-center backdrop-blur-sm">
                 <span className="text-5xl font-black text-brandPrimary dark:text-brandAccent">0{PHASES[activeIndex].step}</span>
                 <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-400">Phase</span>
               </div>
@@ -178,7 +178,7 @@ export default function CustomizedApproachSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                className="relative p-8 lg:p-14 bg-white dark:bg-surfaceDark border border-slate-100 dark:border-slate-800 rounded-[2.5rem] shadow-2xl overflow-hidden"
+                className="relative p-8 lg:p-14 bg-surfaceLight dark:bg-surfaceDark border border-slate-100 dark:border-slate-800 rounded-[2.5rem] shadow-2xl overflow-hidden"
               >
                 {/* Background Large Number */}
                 <div className="absolute -right-4 -top-10 text-[12rem] font-black text-slate-50 dark:text-white/[0.02] leading-none select-none pointer-events-none">
@@ -197,9 +197,6 @@ export default function CustomizedApproachSection() {
                   </p>
                   
                   <div className="flex flex-wrap items-center gap-6">
-                    <button className="px-8 py-4 bg-brandDark dark:bg-brandAccent dark:text-brandDark text-white font-bold rounded-xl transition-transform hover:-translate-y-1">
-                      Detailed Analysis
-                    </button>
                     <button 
                       onClick={() => setActiveIndex((activeIndex + 1) % PHASES.length)}
                       className="group flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-brandPrimary dark:text-brandAccent"
@@ -213,26 +210,6 @@ export default function CustomizedApproachSection() {
           </div>
         </div>
 
-        {/* METRICS */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-20">
-          {[
-            { label: "Efficiency", value: "+42%" },
-            { label: "Gaps Found", value: "100%" },
-            { label: "Client ROI", value: "4.8x" },
-            { label: "Governance", value: "AAA" }
-          ].map((m, i) => (
-            <motion.div 
-              key={i} 
-              initial={{ opacity: 0 }} 
-              whileInView={{ opacity: 1 }} 
-              transition={{ delay: i * 0.1 }}
-              className="p-8 rounded-3xl bg-white dark:bg-surfaceDark border border-slate-100 dark:border-slate-800 text-center"
-            >
-              <div className="text-3xl font-bold text-brandPrimary dark:text-brandAccent mb-1">{m.value}</div>
-              <div className="text-[9px] font-black uppercase tracking-widest text-slate-400">{m.label}</div>
-            </motion.div>
-          ))}
-        </div>
       </div>
     </section>
   );

@@ -2,9 +2,9 @@ import React from 'react'
 
 function RiskmanEnablement() {
   return (
-     <section className="py-24 container">
+    <section className="py-16 container">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="font-heading text-3xl font-bold mb-4">RiskMan SOC 3 Enablement</h2>
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">RiskMan SOC 3 Enablement</h2>
           <p className="text-gray-500">Strategically mapping your compliance to your brand narrative.</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

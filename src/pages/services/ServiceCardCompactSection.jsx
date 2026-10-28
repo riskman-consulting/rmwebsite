@@ -41,7 +41,7 @@ export const ServiceCardCompact = ({ service, index }) => {
         className="block h-full group"
       >
         {/* Main Card with CURTAIN OVER ENTIRE CARD */}
-        <div className="relative h-full flex flex-col bg-surfaceLight dark:bg-surfaceDark border border-borderLight dark:border-borderDark rounded-[2.5rem] overflow-hidden transition-all duration-500 hover:shadow-2xl hover:border-brandAccent/40">
+        <div className="relative h-full flex flex-col bg-surfaceLight dark:bg-surfaceDark border border-borderLight dark:border-borderDark rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:border-brandAccent/40">
           
           {/* CURTAIN EFFECT - Covers ENTIRE card, not just image */}
           <motion.div

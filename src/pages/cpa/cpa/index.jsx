@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
 
 // ─── THEME TOKENS (from tailwind config, applied via inline + CSS vars) ───
 const theme = {
@@ -203,10 +204,10 @@ const FadeIn = ({ children, delay = 0, direction = "up" }) => {
 
 // ─── DATA ───
 const services = [
-  { title: "Financial Statement Audits", desc: "Rigorous examination of financial disclosures to ensure transparency and compliance with evolving regulatory benchmarks.", iconType: "audit" },
-  { title: "Internal Control Reviews", desc: "Systematic evaluation of organizational protocols to eliminate inefficiencies and mitigate systemic risk factors effectively.", iconType: "control" },
-  { title: "Compliance Audits", desc: "Specialized assessments ensuring strict adherence to federal, state, and industry-specific legal mandates.", iconType: "compliance" },
-  { title: "Quality Assurance", desc: "Comprehensive validation of operational processes to maintain superior performance standards and institutional resilience.", iconType: "quality" },
+  { title: "Financial Statement Audits", desc: "Rigorous examination of financial disclosures to ensure transparency and compliance with evolving regulatory benchmarks.", iconType: "audit", path: "/services/cpa-us-assurance/financial-statement-audits" },
+  { title: "Internal Control Reviews", desc: "Systematic evaluation of organizational protocols to eliminate inefficiencies and mitigate systemic risk factors effectively.", iconType: "control", path: "/services/cpa-us-assurance/internal-control-reviews" },
+  { title: "Compliance Audits", desc: "Specialized assessments ensuring strict adherence to federal, state, and industry-specific legal mandates.", iconType: "compliance", path: "/services/cpa-us-assurance/compliance-audits" },
+  { title: "Quality Assurance", desc: "Comprehensive validation of operational processes to maintain superior performance standards and institutional resilience.", iconType: "quality", path: "/services/cpa-us-assurance/quality-assurance" },
 ];
 
 const faqs = [
@@ -224,26 +225,13 @@ const processSteps = [
   { num: "04", title: "Continuous Optimization", desc: "Ongoing refinement through data-driven insights, ensuring sustained compliance and institutional resilience." },
 ];
 
-const testimonials = [
-  { quote: "RiskMan transformed our audit process from a compliance burden into a strategic advantage. Their real-time oversight capabilities are unmatched.", name: "Sarah Chen", role: "CFO, Meridian Holdings", initials: "SC" },
-  { quote: "The depth of their internal control reviews uncovered efficiencies we never knew existed. A true partner in institutional governance.", name: "James Whitfield", role: "VP Risk, Atlantic Corp", initials: "JW" },
-  { quote: "Scalable, rigorous, and forward-thinking — exactly what we needed to navigate an increasingly complex regulatory landscape.", name: "Maria Torres", role: "Director of Compliance, Vertex Group", initials: "MT" },
-];
-
 // ─── MAIN COMPONENT ───
 export default function USAssurancePage() {
   const [activeFaq, setActiveFaq] = useState(null);
-  const [activeTestimonial, setActiveTestimonial] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveTestimonial((p) => (p + 1) % testimonials.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+  const navigate = useNavigate();
 
   return (
-    <div style={{ fontFamily: "Inter, system-ui, sans-serif", background: theme.bgLight, color: theme.brandDark }}>
+    <div className="cpa-page" style={{ fontFamily: "Inter, system-ui, sans-serif", background: theme.bgLight, color: theme.brandDark }}>
       <Helmet>
         <title>CPA & US Assurance Services | RiskMan Consulting</title>
         <meta name="description" content="RiskMan Consulting provides CPA and US Assurance services including financial statement audits, internal control reviews, compliance audits, and quality assurance for global enterprises." />
@@ -251,9 +239,9 @@ export default function USAssurancePage() {
       </Helmet>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@400;500;600;700&display=swap');
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
-        @media (min-width: 768px) { .container { padding: 0 48px; } }
+        /* Scoped to .cpa-page so these resets don't leak into the global header, sub-nav and footer.
+           .container is left to the site-wide rule so content lines up with the sub-nav. */
+        :where(.cpa-page, .cpa-page *) { margin: 0; padding: 0; box-sizing: border-box; }
         .heading { font-family: Montserrat, sans-serif; }
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
         @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
@@ -269,14 +257,14 @@ export default function USAssurancePage() {
       `}</style>
 
       {/* ═══════════ HERO ═══════════ */}
-      <section  style={{ position: "relative", overflow: "hidden", background: `linear-gradient(135deg, ${theme.brandDark} 0%, ${theme.brandNavy} 50%, ${theme.bgDark} 100%)`, minHeight: "90vh", display: "flex", alignItems: "center" }}>
+      <section  style={{ position: "relative", overflow: "hidden", background: `linear-gradient(135deg, ${theme.brandDark} 0%, ${theme.brandNavy} 50%, ${theme.bgDark} 100%)` }}>
         {/* Decorative grid pattern */}
         <div  style={{ position: "absolute", inset: 0, opacity: 0.03, backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(255,192,0,0.5) 60px, rgba(255,192,0,0.5) 61px), repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(255,192,0,0.5) 60px, rgba(255,192,0,0.5) 61px)` }} />
         {/* Gradient orbs */}
         <div style={{ position: "absolute", top: -100, right: -100, width: 500, height: 500, borderRadius: "50%", background: `radial-gradient(circle, rgba(255,192,0,0.08) 0%, transparent 70%)` }} />
         <div style={{ position: "absolute", bottom: -200, left: -100, width: 600, height: 600, borderRadius: "50%", background: `radial-gradient(circle, rgba(0,64,128,0.15) 0%, transparent 70%)` }} />
 
-        <div className="container" style={{ position: "relative", zIndex: 10, padding: "120px 24px 80px" }}>
+        <div className="container" style={{ position: "relative", zIndex: 10, paddingTop: 96, paddingBottom: 96 }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 60, alignItems: "center" }}>
             <div>
               <FadeIn delay={0}>
@@ -306,26 +294,15 @@ export default function USAssurancePage() {
 
               <FadeIn delay={0.45}>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 16 }}>
-                  <button className="cta-btn" style={{ background: theme.brandAccent, color: theme.brandDark, padding: "18px 40px", borderRadius: 6, fontWeight: 800, fontSize: 15, border: "none", cursor: "pointer", fontFamily: "Montserrat, sans-serif", boxShadow: "0 8px 32px rgba(255,192,0,0.3)" }}>
+                  <button onClick={() => navigate("/services")} className="cta-btn" style={{ background: theme.brandAccent, color: theme.brandDark, padding: "18px 40px", borderRadius: 6, fontWeight: 800, fontSize: 15, border: "none", cursor: "pointer", fontFamily: "Montserrat, sans-serif", boxShadow: "0 8px 32px rgba(255,192,0,0.3)" }}>
                     Explore Our Services →
                   </button>
-                  <button style={{ background: "rgba(255,255,255,0.05)", color: "white", padding: "18px 40px", borderRadius: 6, fontWeight: 700, fontSize: 15, border: "1px solid rgba(255,255,255,0.15)", cursor: "pointer", fontFamily: "Inter, sans-serif", backdropFilter: "blur(8px)" }}>
+                  <button onClick={() => navigate("/contact")} style={{ background: "rgba(255,255,255,0.05)", color: "white", padding: "18px 40px", borderRadius: 6, fontWeight: 700, fontSize: 15, border: "1px solid rgba(255,255,255,0.15)", cursor: "pointer", fontFamily: "Inter, sans-serif", backdropFilter: "blur(8px)" }}>
                     Consult Our Experts
                   </button>
                 </div>
               </FadeIn>
 
-              {/* Trust badges */}
-              <FadeIn delay={0.6}>
-                <div style={{ display: "flex", gap: 32, marginTop: 56, paddingTop: 32, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-                  {[{ num: "500+", label: "Enterprises Served" }, { num: "99.8%", label: "Client Retention" }, { num: "24/7", label: "Real-Time Monitoring" }].map((stat, i) => (
-                    <div key={i}>
-                      <p className="heading" style={{ fontSize: 22, fontWeight: 900, color: theme.brandAccent }}>{stat.num}</p>
-                      <p style={{ fontSize: 11, color: "rgba(255,255,255,0.4)", letterSpacing: 1, textTransform: "uppercase", marginTop: 2 }}>{stat.label}</p>
-                    </div>
-                  ))}
-                </div>
-              </FadeIn>
             </div>
           </div>
         </div>
@@ -337,7 +314,7 @@ export default function USAssurancePage() {
       </section>
 
       {/* ═══════════ SERVICES OVERVIEW ═══════════ */}
-      <section style={{ padding: "100px 0", background: "white" }}>
+      <section style={{ padding: "80px 0", background: "white" }}>
         <div className="container">
           <FadeIn>
             <div style={{ textAlign: "center", maxWidth: 640, margin: "0 auto 64px" }}>
@@ -350,7 +327,7 @@ export default function USAssurancePage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 28 }}>
             {services.map((service, i) => (
               <FadeIn key={i} delay={i * 0.1}>
-                <div className="service-card" style={{ display: "flex", flexDirection: "column", padding: 36, border: `1px solid ${theme.borderLight}`, borderRadius: 20, background: "white", transition: "all 0.4s ease", cursor: "pointer", height: "100%" }}>
+                <div className="service-card" onClick={() => navigate(service.path)} style={{ display: "flex", flexDirection: "column", padding: 36, border: `1px solid ${theme.borderLight}`, borderRadius: 20, background: "white", transition: "all 0.4s ease", cursor: "pointer", height: "100%" }}>
                   <div className="service-icon" style={{ marginBottom: 24, transition: "transform 0.3s ease" }}>
                     <ServiceIcon type={service.iconType} />
                   </div>
@@ -367,21 +344,8 @@ export default function USAssurancePage() {
         </div>
       </section>
 
-      {/* ═══════════ STATS BAR ═══════════ */}
-      <section style={{ padding: "60px 0", background: `linear-gradient(135deg, ${theme.brandDark}, ${theme.brandNavy})`, position: "relative", overflow: "hidden" }}>
-        <div style={{ position: "absolute", inset: 0, opacity: 0.05, backgroundImage: `radial-gradient(circle at 20% 50%, ${theme.brandAccent} 1px, transparent 1px), radial-gradient(circle at 80% 50%, ${theme.brandAccent} 1px, transparent 1px)`, backgroundSize: "40px 40px" }} />
-        <div className="container" style={{ position: "relative" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 32, textAlign: "center" }}>
-            <AnimatedCounter end={500} suffix="+" label="Enterprises Served" />
-            <AnimatedCounter end={98} suffix="%" label="High-Fidelity Assurance" />
-            <AnimatedCounter end={24} suffix="/7" label="Real-Time Insights" />
-            <AnimatedCounter end={15} suffix="+" label="Years of Excellence" />
-          </div>
-        </div>
-      </section>
-
       {/* ═══════════ PROCESS SECTION ═══════════ */}
-      <section style={{ padding: "100px 0", background: theme.bgLight }}>
+      <section style={{ padding: "80px 0", background: theme.bgLight }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "start" }}>
             <FadeIn direction="right">
@@ -428,7 +392,7 @@ export default function USAssurancePage() {
       </section>
 
       {/* ═══════════ TRANSFORMATION / GOVERNANCE ═══════════ */}
-      <section style={{ padding: "100px 0", background: theme.brandNavy }}>
+      <section style={{ padding: "80px 0", background: theme.brandNavy }}>
         <div className="container">
           <div style={{ background: theme.surfaceDark, padding: "clamp(40px, 5vw, 80px)", borderRadius: 48, border: "1px solid rgba(255,255,255,0.05)", position: "relative", overflow: "hidden" }}>
             {/* Decorative skew */}
@@ -443,7 +407,7 @@ export default function USAssurancePage() {
                   <p style={{ fontSize: 17, color: "rgba(255,255,255,0.5)", lineHeight: 1.75, marginBottom: 48 }}>
                     Partner with RiskMan to transform your assurance processes into a strategic asset for sustainable growth. We move beyond simple verification to provide enterprise-wide clarity.
                   </p>
-                  <button className="cta-btn" style={{ background: theme.brandAccent, color: theme.brandDark, padding: "20px 48px", borderRadius: 6, fontWeight: 900, fontSize: 16, border: "none", cursor: "pointer", fontFamily: "Montserrat, sans-serif", boxShadow: "0 8px 32px rgba(255,192,0,0.25)" }}>
+                  <button onClick={() => navigate("/contact")} className="cta-btn" style={{ background: theme.brandAccent, color: theme.brandDark, padding: "20px 48px", borderRadius: 6, fontWeight: 900, fontSize: 16, border: "none", cursor: "pointer", fontFamily: "Montserrat, sans-serif", boxShadow: "0 8px 32px rgba(255,192,0,0.25)" }}>
                     Request A Comprehensive Review
                   </button>
                 </div>
@@ -470,39 +434,8 @@ export default function USAssurancePage() {
         </div>
       </section>
 
-      {/* ═══════════ TESTIMONIALS ═══════════ */}
-      <section style={{ padding: "100px 0", background: "white" }}>
-        <div className="container">
-          <FadeIn>
-            <div style={{ textAlign: "center", maxWidth: 640, margin: "0 auto 56px" }}>
-              <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: 3, textTransform: "uppercase", color: theme.brandPrimary, marginBottom: 12 }}>Client Voices</p>
-              <h2 className="heading" style={{ fontSize: "clamp(28px, 3vw, 42px)", fontWeight: 900, color: theme.brandDark }}>Trusted by Industry Leaders</h2>
-            </div>
-          </FadeIn>
-
-          <div style={{ maxWidth: 720, margin: "0 auto", textAlign: "center", position: "relative", minHeight: 240 }}>
-            {testimonials.map((t, i) => (
-              <div key={i} style={{ opacity: activeTestimonial === i ? 1 : 0, transform: activeTestimonial === i ? "translateY(0)" : "translateY(20px)", transition: "all 0.6s ease", position: activeTestimonial === i ? "relative" : "absolute", top: 0, left: 0, right: 0, pointerEvents: activeTestimonial === i ? "auto" : "none" }}>
-                <div style={{ width: 64, height: 64, borderRadius: "50%", background: `linear-gradient(135deg, ${theme.brandPrimary}, ${theme.brandNavy})`, display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 28px" }}>
-                  <span className="heading" style={{ color: theme.brandAccent, fontWeight: 800, fontSize: 20 }}>{t.initials}</span>
-                </div>
-                <p style={{ fontSize: 20, color: theme.brandDark, lineHeight: 1.7, fontStyle: "italic", marginBottom: 24, maxWidth: 600, margin: "0 auto 24px" }}>"{t.quote}"</p>
-                <p className="heading" style={{ fontWeight: 800, fontSize: 15, color: theme.brandDark }}>{t.name}</p>
-                <p style={{ fontSize: 13, color: "#9CA3AF" }}>{t.role}</p>
-              </div>
-            ))}
-
-            <div style={{ display: "flex", justifyContent: "center", gap: 10, marginTop: 36 }}>
-              {testimonials.map((_, i) => (
-                <button key={i} onClick={() => setActiveTestimonial(i)} style={{ width: activeTestimonial === i ? 32 : 10, height: 10, borderRadius: 5, background: activeTestimonial === i ? theme.brandAccent : theme.borderLight, border: "none", cursor: "pointer", transition: "all 0.3s ease" }} />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ═══════════ FAQ ═══════════ */}
-      <section style={{ padding: "100px 0", background: theme.bgLight }}>
+      <section style={{ padding: "80px 0", background: theme.bgLight }}>
         <div className="container" style={{ maxWidth: 760 }}>
           <FadeIn>
             <div style={{ textAlign: "center", marginBottom: 56 }}>
@@ -544,7 +477,7 @@ export default function USAssurancePage() {
           <FadeIn>
             <h2 className="heading" style={{ fontSize: "clamp(24px, 3vw, 36px)", fontWeight: 900, color: theme.brandDark, marginBottom: 8 }}>Safeguard Your Institutional Integrity Today</h2>
             <p style={{ fontSize: 16, color: "rgba(0,31,63,0.6)", marginBottom: 32, maxWidth: 500, margin: "0 auto 32px" }}>Take the first step toward enterprise-wide assurance clarity with a confidential consultation.</p>
-            <button className="cta-btn" style={{ background: theme.brandDark, color: "white", padding: "20px 56px", borderRadius: 50, fontWeight: 800, fontSize: 16, border: "none", cursor: "pointer", fontFamily: "Montserrat, sans-serif", boxShadow: "0 12px 40px rgba(0,31,63,0.3)", transition: "all 0.3s ease" }}>
+            <button onClick={() => navigate("/contact")} className="cta-btn" style={{ background: theme.brandDark, color: "white", padding: "20px 56px", borderRadius: 50, fontWeight: 800, fontSize: 16, border: "none", cursor: "pointer", fontFamily: "Montserrat, sans-serif", boxShadow: "0 12px 40px rgba(0,31,63,0.3)", transition: "all 0.3s ease" }}>
               Contact A Specialist
             </button>
           </FadeIn>

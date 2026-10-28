@@ -281,8 +281,8 @@ const Diagram = ({ activeId, onHover }) => {
       >
         <defs>
           <linearGradient id="investorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style={{ stopColor: "#1565C0" }} />
-            <stop offset="100%" style={{ stopColor: "#0D47A1" }} />
+            <stop offset="0%" style={{ stopColor: "#004080" }} />
+            <stop offset="100%" style={{ stopColor: "#003366" }} />
           </linearGradient>
           <linearGradient
             id="regulatorGrad"
@@ -291,24 +291,24 @@ const Diagram = ({ activeId, onHover }) => {
             x2="100%"
             y2="100%"
           >
-            <stop offset="0%" style={{ stopColor: "#F57C00" }} />
-            <stop offset="100%" style={{ stopColor: "#E65100" }} />
+            <stop offset="0%" style={{ stopColor: "#003366" }} />
+            <stop offset="100%" style={{ stopColor: "#001F3F" }} />
           </linearGradient>
           <linearGradient id="customerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style={{ stopColor: "#2E7D32" }} />
-            <stop offset="100%" style={{ stopColor: "#1B5E20" }} />
+            <stop offset="0%" style={{ stopColor: "#003366" }} />
+            <stop offset="100%" style={{ stopColor: "#001F3F" }} />
           </linearGradient>
           <linearGradient id="employeeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style={{ stopColor: "#7B1FA2" }} />
-            <stop offset="100%" style={{ stopColor: "#6A1B9A" }} />
+            <stop offset="0%" style={{ stopColor: "#FFC000" }} />
+            <stop offset="100%" style={{ stopColor: "#FFB800" }} />
           </linearGradient>
           <linearGradient id="societyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style={{ stopColor: "#1A7A8C" }} />
-            <stop offset="100%" style={{ stopColor: "#0D4F6B" }} />
+            <stop offset="0%" style={{ stopColor: "#FFC000" }} />
+            <stop offset="100%" style={{ stopColor: "#FFB800" }} />
           </linearGradient>
           <linearGradient id="centerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style={{ stopColor: "#455A64" }} />
-            <stop offset="100%" style={{ stopColor: "#263238" }} />
+            <stop offset="0%" style={{ stopColor: "#003366" }} />
+            <stop offset="100%" style={{ stopColor: "#001F3F" }} />
           </linearGradient>
 
           <marker
@@ -320,7 +320,7 @@ const Diagram = ({ activeId, onHover }) => {
             orient="auto"
             markerUnits="strokeWidth"
           >
-            <path d="M0,0 L0,6 L9,3 z" fill="#0D4F6B" />
+            <path d="M0,0 L0,6 L9,3 z" className="fill-brandNavy dark:fill-brandGold" />
           </marker>
           <marker
             id="arrowTipRev"
@@ -331,7 +331,7 @@ const Diagram = ({ activeId, onHover }) => {
             orient="auto"
             markerUnits="strokeWidth"
           >
-            <path d="M9,0 L9,6 L0,3 z" fill="#0D4F6B" />
+            <path d="M9,0 L9,6 L0,3 z" className="fill-brandNavy dark:fill-brandGold" />
           </marker>
 
           <filter id="nodeShadow" x="-30%" y="-30%" width="160%" height="160%">
@@ -344,20 +344,20 @@ const Diagram = ({ activeId, onHover }) => {
           cx="350"
           cy="350"
           r="280"
-          className="stroke-2 stroke-slate-200 fill-none"
+          className="stroke-2 stroke-slate-200 dark:stroke-slate-700 fill-none"
           strokeDasharray="4,4"
         />
         <circle
           cx="350"
           cy="350"
           r="200"
-          className="stroke-2 stroke-slate-200 fill-none"
+          className="stroke-2 stroke-slate-200 dark:stroke-slate-700 fill-none"
         />
         <circle
           cx="350"
           cy="350"
           r="120"
-          className="stroke-2 stroke-slate-200 fill-none"
+          className="stroke-2 stroke-slate-200 dark:stroke-slate-700 fill-none"
           strokeDasharray="2,2"
         />
 
@@ -384,10 +384,10 @@ const Diagram = ({ activeId, onHover }) => {
                 y1={start.y + py * arrowSpacing}
                 x2={end.x + px * arrowSpacing}
                 y2={end.y + py * arrowSpacing}
-                stroke="#0D4F6B"
+                stroke="currentColor"
                 strokeWidth="2"
                 strokeDasharray="6,4"
-                className="animate-dash"
+                className="animate-dash text-brandNavy dark:text-brandGold"
                 markerEnd="url(#arrowTip)"
                 opacity="0.6"
               />
@@ -396,10 +396,10 @@ const Diagram = ({ activeId, onHover }) => {
                 y1={end.y - py * arrowSpacing}
                 x2={start.x - px * arrowSpacing}
                 y2={start.y - py * arrowSpacing}
-                stroke="#0D4F6B"
+                stroke="currentColor"
                 strokeWidth="2"
                 strokeDasharray="6,4"
-                className="animate-dash"
+                className="animate-dash text-brandNavy dark:text-brandGold"
                 markerEnd="url(#arrowTipRev)"
                 opacity="0.6"
               />
@@ -410,8 +410,7 @@ const Diagram = ({ activeId, onHover }) => {
               >
                 <text
                   textAnchor="middle"
-                  fill="#0D4F6B"
-                  className="text-[10px] font-bold italic opacity-70 uppercase tracking-widest"
+                  className="fill-brandNavy dark:fill-brandGold text-[10px] font-bold italic opacity-70 uppercase tracking-widest"
                 >
                   {s.labels[1]}
                 </text>
@@ -422,8 +421,7 @@ const Diagram = ({ activeId, onHover }) => {
               >
                 <text
                   textAnchor="middle"
-                  fill="#0D4F6B"
-                  className="text-[10px] font-bold italic opacity-70 uppercase tracking-widest"
+                  className="fill-brandNavy dark:fill-brandGold text-[10px] font-bold italic opacity-70 uppercase tracking-widest"
                 >
                   {s.labels[0]}
                 </text>
@@ -453,7 +451,7 @@ const Diagram = ({ activeId, onHover }) => {
               x={s.position.x}
               y={s.position.y - 4}
               textAnchor="middle"
-              fill="white"
+              fill={s.textColor || "white"}
               className="text-[14px] font-black uppercase tracking-wider"
             >
               {s.name}
@@ -462,7 +460,7 @@ const Diagram = ({ activeId, onHover }) => {
               x={s.position.x}
               y={s.position.y + 16}
               textAnchor="middle"
-              fill="white"
+              fill={s.textColor || "white"}
               className="text-[10px] font-medium opacity-80"
             >
               {s.subtitle}

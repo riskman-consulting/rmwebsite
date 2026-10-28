@@ -57,7 +57,7 @@ export default function EventCard({ event }) {
 
   return (
     <>
-      <div className="overflow-hidden transition-all bg-white border dark:bg-slate-900 rounded-2xl border-slate-200 dark:border-slate-800 hover:shadow-xl group">
+      <div className="h-full overflow-hidden transition-all bg-white border dark:bg-bgDark rounded-2xl border-slate-200 dark:border-slate-800 hover:shadow-xl group">
 
         {/* Main Image */}
         <div className="relative overflow-hidden h-52 bg-slate-200 dark:bg-slate-800">

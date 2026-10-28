@@ -7,8 +7,8 @@ const processSteps = [
         title: "Preparation",
         icon: Search,
         description: "We help your organization understand specific assessment requirements and identify current security gaps through internal audits.",
-        color: "bg-blue-500",
-        shadow: "shadow-blue-500/20"
+        color: "bg-brandPrimary",
+        shadow: "shadow-brandPrimary/20"
     },
     {
         title: "Assessment",
@@ -21,31 +21,31 @@ const processSteps = [
         title: "Evaluation",
         icon: BarChart4,
         description: "Receiving a comprehensive report that highlights your organizational strengths and identifies critical areas for improvement.",
-        color: "bg-indigo-500",
-        shadow: "shadow-indigo-500/20"
+        color: "bg-brandNavy",
+        shadow: "shadow-brandNavy/20"
     },
     {
         title: "Exchange",
         icon: Share2,
         description: "Facilitating the sharing of your certified results with business partners through the secure and official ENX portal.",
-        color: "bg-emerald-500",
-        shadow: "shadow-emerald-500/20"
+        color: "bg-brandGold",
+        shadow: "shadow-brandGold/20"
     }
 ];
 
 const TisaxProcess = () => {
     return (
-        <section className="relative py-24 overflow-hidden bg-surfaceLight dark:bg-bgDark">
+      <section className="relative py-16 overflow-hidden bg-surfaceLight dark:bg-surfaceDark">
             {/* Background Accents */}
             <div className="absolute top-0 right-0 w-1/2 h-full bg-slate-50/50 dark:bg-white/[0.02] -skew-x-12 transform translate-x-20" />
 
-            <div className="container relative z-10 px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
+            <div className="container relative z-10">
                 <div className="max-w-4xl mb-16">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-3xl font-black font-heading text-brandDark dark:text-white sm:text-4xl lg:text-5xl"
+                        className="text-3xl font-bold font-heading text-brandDark dark:text-white md:text-4xl"
                     >
                         The TISAX Process <span className="text-brandAccent">Roadmap</span>
                     </motion.h2>
@@ -70,7 +70,7 @@ const TisaxProcess = () => {
                             transition={{ delay: idx * 0.1 }}
                             className="relative group"
                         >
-                            <div className="h-full p-8 transition-all duration-300 bg-white border shadow-xl rounded-3xl dark:bg-surfaceDark border-slate-100 dark:border-white/5 hover:shadow-2xl hover:-translate-y-2">
+                            <div className="h-full p-8 transition-all duration-300 border shadow-xl bg-bgLight rounded-2xl dark:bg-bgDark border-slate-100 dark:border-white/5 hover:shadow-2xl hover:-translate-y-2">
                                 <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl text-white ${step.color} ${step.shadow} mb-6 transition-transform group-hover:rotate-12`}>
                                     <step.icon className="h-7 w-7" />
                                 </div>

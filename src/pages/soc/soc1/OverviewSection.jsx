@@ -3,11 +3,11 @@ import React from 'react'
 
 function OverviewSection() {
   return (
-     <section className="py-20 bg-surfaceLight dark:bg-surfaceDark">
+    <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
-              <h2 className="font-heading text-3xl font-bold mb-6">SOC 1 In One View</h2>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">SOC 1 In One View</h2>
               <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-8">
                 SOC 1 focuses on controls that impact our customers’ financial reporting. Typical users include CFOs, controllers, and external auditors of our clients.
               </p>

@@ -30,10 +30,9 @@ export default function Contact() {
   ];
 
   const officeFeatures = [
-    { icon: <MessageSquare className="w-8 h-8 text-brandGold" />, title: "Free Consultation", description: "Initial 30-minute high-level risk assessment." },
+    { icon: <MessageSquare className="w-8 h-8 text-brandGold" />, title: "Initial Consultation", description: "Initial 30-minute high-level risk assessment." },
     { icon: <Calendar className="w-8 h-8 text-brandGold" />, title: "Flexible Scheduling", description: "Available across multiple global time zones." },
-    { icon: <HeadphonesIcon className="w-8 h-8 text-brandGold" />, title: "Dedicated Support", description: "Direct access to a senior account manager." },
-    { icon: <Award className="w-8 h-8 text-brandGold" />, title: "Quality Assurance", description: "ISO certified processes and 98% satisfaction." }
+    { icon: <HeadphonesIcon className="w-8 h-8 text-brandGold" />, title: "Dedicated Support", description: "Direct access to a senior account manager." }
   ];
 
   return (
@@ -47,17 +46,17 @@ export default function Contact() {
       <HeroSection />
 
       {/* ================= FORM SECTION WRAPPER ================= */}
-      <div className="relative z-10 px-4 -mt-20">
+      <div className="container relative z-10 -mt-20">
         <FormSection />
       </div>
 
       {/* ================= VALUE PROPS / FEATURES ================= */}
-      <section className="container px-4 py-24 mx-auto max-w-7xl">
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <section className="container py-16">
+        <div className="grid gap-6 md:grid-cols-3">
           {officeFeatures.map((f, i) => (
             <div 
               key={i} 
-              className="group p-8 bg-surfaceLight dark:bg-surfaceDark border border-borderLight dark:border-borderDark rounded-[2rem] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-brandDark/5 dark:hover:shadow-brandGold/5"
+              className="group h-full p-8 bg-surfaceLight dark:bg-surfaceDark border border-borderLight dark:border-borderDark rounded-[2rem] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-brandDark/5 dark:hover:shadow-brandGold/5"
             >
               <div className="inline-block p-4 mb-6 transition-colors bg-brandLight dark:bg-bgDark rounded-2xl group-hover:bg-brandGold/10">
                 {f.icon}
@@ -70,19 +69,19 @@ export default function Contact() {
       </section>
 
       {/* ================= LOCATION MAP ================= */}
-      <section className="relative py-24 overflow-hidden bg-brandDark">
+      <section className="relative py-16 overflow-hidden bg-brandDark">
         {/* Abstract Background Shapes */}
         <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-10">
           <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] rounded-full bg-brandGold blur-[120px]" />
           <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-brandPrimary blur-[120px]" />
         </div>
 
-        <div className="container relative z-10 px-4 mx-auto max-w-7xl">
+        <div className="container relative z-10">
           <div className="mb-16 text-center">
             <span className="inline-block py-1 px-4 rounded-full bg-brandGold/20 text-brandGold text-xs font-bold uppercase tracking-[0.2em] mb-4">
               Our Global Network
             </span>
-            <h2 className="mb-6 text-4xl font-extrabold text-white md:text-5xl font-heading">
+            <h2 className="mb-6 font-heading text-3xl md:text-4xl font-bold text-white">
               Expertise Across <span className="text-brandGold">India</span>
             </h2>
             <p className="max-w-2xl mx-auto text-lg text-gray-300">
@@ -118,11 +117,11 @@ export default function Contact() {
       </section>
 
       {/* ================= CTA SECTION ================= */}
-      <section className="container max-w-5xl px-4 py-24 mx-auto">
+      <section className="container max-w-5xl py-16">
         <div className="bg-brandGold p-1 rounded-[3rem]"> {/* Gradient Border Wrapper */}
           <div className="bg-bgLight dark:bg-surfaceDark rounded-[2.9rem] p-12 md:p-20 text-center relative overflow-hidden">
              <div className="relative z-10">
-                <h2 className="mb-8 text-4xl font-black md:text-4xl font-heading text-brandDark dark:text-white">
+                <h2 className="mb-8 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
                   Ready to secure your <br />
                   <span className="text-brandPrimary dark:text-brandGold">digital future?</span>
                 </h2>

@@ -218,7 +218,7 @@ const SupportServices = () => {
     </section>
 
       {/* SECTION 2: DEVELOPMENT TESTING & UAT */}
-      <section className="py-20 border-y border-borderLight dark:border-borderDark">
+      <section className="py-16 border-y border-borderLight dark:border-borderDark">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="flex flex-col gap-12 lg:flex-row">
             <div className="lg:w-1/3">
@@ -248,7 +248,7 @@ const SupportServices = () => {
       </section>
 
       {/* NEW SECTION: UAT APPROACH - TIMELINE STYLE */}
-      <section className="py-20 bg-gradient-to-br from-surfaceLight to-bgLight dark:from-surfaceDark dark:to-bgDark">
+      <section className="py-16 bg-gradient-to-br from-surfaceLight to-bgLight dark:from-surfaceDark dark:to-bgDark">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold font-heading md:text-4xl">
@@ -331,7 +331,7 @@ const SupportServices = () => {
       </section>
 
       {/* SECTION 3: CHANGE MANAGEMENT & ADOPTION */}
-      <section className="py-20 bg-surfaceLight dark:bg-surfaceDark">
+      <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <h2 className="mb-4 text-3xl font-bold text-center font-heading">Change Management & Adoption</h2>
           <p className="max-w-3xl mx-auto mb-12 text-center opacity-80">Empower your workforce and drive high adoption rates through structured impact analysis and continuous engagement.</p>
@@ -353,7 +353,7 @@ const SupportServices = () => {
       </section>
 
       {/* NEW SECTION: CHANGE MANAGEMENT APPROACH - HEXAGON GRID */}
-      <section className="py-20 border-y border-borderLight dark:border-borderDark">
+      <section className="py-16 border-y border-borderLight dark:border-borderDark">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold font-heading md:text-4xl">
@@ -431,7 +431,7 @@ const SupportServices = () => {
       </section>
 
       {/* SECTION 4: POST GO-LIVE HYPERCARE & CONTINUOUS IMPROVEMENT */}
-      <section className="py-20 text-white bg-brandNavy dark:bg-brandDark">
+      <section className="py-16 text-white bg-brandNavy dark:bg-brandDark">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
             <div>
@@ -465,7 +465,7 @@ const SupportServices = () => {
       </section>
 
       {/* SECTION 5: CTA */}
-      <section className="py-20 text-center">
+      <section className="py-16 text-center">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <h2 className="mb-6 text-3xl font-bold font-heading md:text-5xl">Ready to Sustain Your Success?</h2>
           <p className="mb-10 text-xl opacity-80">Ensure a smooth digital future with RiskMan's dedicated Support Services.</p>
@@ -476,7 +476,7 @@ const SupportServices = () => {
       </section>
 
       {/* SECTION 6: FAQ */}
-      <section className="py-20 border-t bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark">
+      <section className="py-16 border-t bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <h2 className="mb-12 text-3xl font-bold font-heading">Frequently Asked Questions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">

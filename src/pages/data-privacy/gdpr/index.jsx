@@ -144,7 +144,7 @@ function HeroSection() {
   useEffect(() => setLoaded(true), []);
 
   return (
-    <section className="relative overflow-hidden text-white" style={{ minHeight: "92vh" }}>
+    <section className="relative overflow-hidden text-white">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-center bg-cover"
@@ -165,10 +165,8 @@ function HeroSection() {
         }}
       />
 
-      <div className="relative z-10 flex items-center" style={{ minHeight: "92vh", padding: "0 max(1.25rem, calc((100% - 1280px)/2))" }}>
-        <div className="grid lg:grid-cols-2 gap-16 items-center w-full max-w-[1280px] mx-auto py-20">
-          {/* Left content */}
-          <div>
+      <div className="container relative z-10 py-16 lg:py-20">
+          <div className="max-w-3xl">
             <div
               style={{
                 opacity: loaded ? 1 : 0,
@@ -247,75 +245,7 @@ function HeroSection() {
               </button>
             </div>
 
-            {/* Trust badges */}
-            <div
-              className="flex items-center gap-6 mt-12"
-              style={{
-                opacity: loaded ? 1 : 0,
-                transition: "all 0.7s ease 0.6s",
-              }}
-            >
-              {["ISO 27701", "SOC 2", "EU-US DPF"].map((badge, i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-2 text-xs font-semibold"
-                  style={{ color: "rgba(255,255,255,0.5)" }}
-                >
-                  <CheckCircle size={14} style={{ color: "#FFC000" }} />
-                  {badge}
-                </div>
-              ))}
-            </div>
           </div>
-
-          {/* Right - Stats card */}
-          <div
-            className="hidden lg:block"
-            style={{
-              opacity: loaded ? 1 : 0,
-              transform: loaded ? "translateY(0)" : "translateY(40px)",
-              transition: "all 0.8s ease 0.5s",
-            }}
-          >
-            <div
-              className="relative p-8 overflow-hidden rounded-3xl"
-              style={{
-                background: "rgba(0,26,51,0.7)",
-                border: "1px solid rgba(255,192,0,0.15)",
-                backdropFilter: "blur(20px)",
-              }}
-            >
-              <div className="absolute top-0 right-0 w-32 h-32 rounded-full" style={{ background: "radial-gradient(circle, rgba(255,192,0,0.1) 0%, transparent 70%)" }} />
-              <h3 className="mb-6 text-lg font-bold" style={{ fontFamily: "Montserrat, sans-serif", color: "#FFC000" }}>
-                Compliance at a Glance
-              </h3>
-              {[
-                { label: "Data Processing Records", value: "2,400+", sub: "across 30 jurisdictions" },
-                { label: "Avg. DSAR Response Time", value: "< 72hrs", sub: "below 30-day mandate" },
-                { label: "Successful Audits", value: "99.7%", sub: "pass rate for clients" },
-                { label: "Active DPO Engagements", value: "180+", sub: "enterprise-grade support" },
-              ].map((stat, i) => (
-                <div
-                  key={i}
-                  className="flex items-center justify-between py-4"
-                  style={{ borderBottom: i < 3 ? "1px solid rgba(255,255,255,0.06)" : "none" }}
-                >
-                  <div>
-                    <div className="text-sm font-medium" style={{ color: "rgba(255,255,255,0.6)" }}>
-                      {stat.label}
-                    </div>
-                    <div className="text-xs mt-0.5" style={{ color: "rgba(255,255,255,0.3)" }}>
-                      {stat.sub}
-                    </div>
-                  </div>
-                  <div className="text-xl font-bold" style={{ fontFamily: "Montserrat, sans-serif", color: "#fff" }}>
-                    {stat.value}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
@@ -325,8 +255,8 @@ function HeroSection() {
 function FrameworkSection() {
   const IconMap = { Search, Scale, FileText };
   return (
-    <section style={{ background: "#FAFAFA", padding: "6rem 0" }}>
-      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 1.25rem" }}>
+    <section style={{ background: "#FAFAFA", padding: "5rem 0" }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 16px" }}>
         <RevealSection>
           <div className="text-center" style={{ maxWidth: 640, margin: "0 auto 4rem" }}>
             <div
@@ -348,7 +278,7 @@ function FrameworkSection() {
           {frameworks.map((item, idx) => {
             const Icon = item.icon;
             return (
-              <RevealSection key={idx} delay={idx * 0.12}>
+              <RevealSection key={idx} delay={idx * 0.12} className="h-full">
                 <div
                   className="relative p-8 overflow-hidden rounded-2xl group"
                   style={{
@@ -420,7 +350,7 @@ function InternationalSection() {
     <section
       style={{
         background: "linear-gradient(135deg, #001F3F 0%, #003366 100%)",
-        padding: "6rem 0",
+        padding: "5rem 0",
         position: "relative",
         overflow: "hidden",
       }}
@@ -433,7 +363,7 @@ function InternationalSection() {
         }}
       />
 
-      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 1.25rem", position: "relative", zIndex: 2 }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 16px", position: "relative", zIndex: 2 }}>
         <div className="grid items-center gap-16 lg:grid-cols-2">
           {/* Left - Image */}
           <RevealSection>
@@ -447,21 +377,6 @@ function InternationalSection() {
                   border: "1px solid rgba(255,192,0,0.15)",
                 }}
               />
-              {/* Floating badge */}
-              <div
-                className="absolute flex items-center gap-3 px-6 py-4 -bottom-5 -right-3 lg:-right-5 rounded-2xl"
-                style={{
-                  background: "rgba(0,26,51,0.95)",
-                  border: "1px solid rgba(255,192,0,0.2)",
-                  backdropFilter: "blur(20px)",
-                }}
-              >
-                <Shield size={24} style={{ color: "#FFC000" }} />
-                <div>
-                  <div className="text-sm font-bold text-white">30+ Jurisdictions</div>
-                  <div style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.75rem" }}>Active compliance</div>
-                </div>
-              </div>
             </div>
           </RevealSection>
 
@@ -531,8 +446,8 @@ function InternationalSection() {
 function SubjectSection() {
   const IconMap = { Zap, Trash2, Share2 };
   return (
-    <section style={{ background: "#fff", padding: "6rem 0", position: "relative" }}>
-      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 1.25rem" }}>
+    <section style={{ background: "#fff", padding: "5rem 0", position: "relative" }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 16px" }}>
         <div className="grid items-center gap-16 lg:grid-cols-2">
           {/* Left - Content */}
           <RevealSection>
@@ -613,7 +528,7 @@ function SubjectSection() {
           <RevealSection delay={0.15}>
             <div className="relative hidden lg:block">
               <img
-                src="https://images.unsplash.com/photo-1563986768609-322da13575f2?w=800&q=80"
+                src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80"
                 alt="Data privacy and security"
                 className="object-cover w-full rounded-3xl"
                 style={{ height: 540, border: "1px solid rgba(0,31,63,0.08)" }}
@@ -653,8 +568,9 @@ function SubjectSection() {
 function FAQSection() {
   const [activeFaq, setActiveFaq] = useState(null);
   return (
-    <section style={{ background: "#FAFAFA", padding: "6rem 0" }}>
-      <div style={{ maxWidth: 780, margin: "0 auto", padding: "0 1.25rem" }}>
+    <section style={{ background: "#FAFAFA", padding: "5rem 0" }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 16px" }}>
+        <div style={{ maxWidth: 780, margin: "0 auto" }}>
         <RevealSection>
           <div className="text-center" style={{ marginBottom: "3rem" }}>
             <div
@@ -729,6 +645,7 @@ function FAQSection() {
             </RevealSection>
           ))}
         </div>
+        </div>
       </div>
     </section>
   );
@@ -736,9 +653,10 @@ function FAQSection() {
 
 /* ─────────────────── CTA SECTION ─────────────────── */
 function CTASection() {
+  const navigator = useNavigate();
   return (
-    <section style={{ background: "#fff", padding: "6rem 0" }}>
-      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 1.25rem" }}>
+    <section style={{ background: "#fff", padding: "5rem 0" }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 16px" }}>
         <RevealSection>
           <div
             className="relative overflow-hidden text-center"
@@ -790,6 +708,7 @@ function CTASection() {
                 and enables global data flows.
               </p>
               <button
+                onClick={() => navigator("/contact")}
                 className="inline-flex items-center gap-2 px-10 py-4 text-lg font-bold rounded-xl"
                 style={{
                   background: "#FFC000",
@@ -817,34 +736,6 @@ function CTASection() {
   );
 }
 
-/* ─────────────────── FOOTER ─────────────────── */
-function Footer() {
-  return (
-    <footer
-      style={{
-        background: "#fff",
-        borderTop: "1px solid rgba(0,31,63,0.06)",
-        padding: "3rem 0",
-      }}
-    >
-      <div
-        className="flex flex-col items-center justify-between gap-4 md:flex-row"
-        style={{ maxWidth: 1280, margin: "0 auto", padding: "0 1.25rem" }}
-      >
-        <div style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 900, fontSize: "1.5rem", color: "#001F3F" }}>
-          Risk<span style={{ color: "#FFC000" }}>Man</span>
-          <span style={{ fontSize: "0.65rem", fontWeight: 400, color: "#999", marginLeft: "0.5rem" }}>
-            gdpr division
-          </span>
-        </div>
-        <p style={{ color: "#999", fontSize: "0.8rem" }}>
-          © 2026 RiskMan Consulting | EEA Data Sovereignty & GDPR Compliance
-        </p>
-      </div>
-    </footer>
-  );
-}
-
 /* ───────────────── MAIN PAGE ───────────────── */
 export default function GDPRCompliancePage() {
   return (
@@ -864,7 +755,6 @@ export default function GDPRCompliancePage() {
       <SubjectSection />
       <FAQSection />
       <CTASection />
-      <Footer />
     </div>
   );
 }

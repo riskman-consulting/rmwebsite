@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 export const CTASection = () => {
   return (
-    <section className="relative py-20 md:py-32 overflow-hidden bg-bgLight dark:bg-bgDark transition-colors duration-500">
+    <section className="relative py-16 overflow-hidden bg-bgLight dark:bg-bgDark transition-colors duration-500">
       
       {/* Background Subtle Pattern - Adaptive Opacity */}
       <div className="absolute inset-0 opacity-[0.05] dark:opacity-[0.03] pointer-events-none">
@@ -20,7 +20,7 @@ export const CTASection = () => {
       <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-brandPrimary/20 dark:bg-brandPrimary/10 blur-[120px] rounded-full" />
 
       {/* Main Content Wrapper */}
-      <div className="w-full px-4 sm:px-8 md:px-12 lg:px-20 relative z-10 text-center">
+      <div className="container relative z-10 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -34,9 +34,9 @@ export const CTASection = () => {
           </div>
 
           {/* Title: Fixed text color (Dark mode: White, Light mode: Dark Navy) */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-brandDark dark:text-white leading-[1.15] mb-8 font-heading">
+          <h2 className="text-3xl md:text-4xl font-bold text-brandDark dark:text-white leading-[1.15] mb-8 font-heading">
             Partner with RiskMan for <br className="hidden md:block" />
-            <span className="text-brandPrimary dark:text-brandAccent italic">Unmatched Excellence</span>
+            <span className="text-brandPrimary dark:text-brandAccent">Unmatched Excellence</span>
           </h2>
 
           {/* Description: Adaptive Text Color */}
@@ -47,7 +47,7 @@ export const CTASection = () => {
 
           {/* Feature Pills: Clean Glassmorphism */}
           <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-14">
-            {["Expert Guidance", "Proven Results", "24/7 Support"].map((item, i) => (
+            {["Expert Guidance", "Proven Results"].map((item, i) => (
               <motion.span
                 key={i}
                 initial={{ opacity: 0, scale: 0.95 }}

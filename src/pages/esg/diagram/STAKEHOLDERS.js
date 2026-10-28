@@ -7,7 +7,7 @@ export const STAKEHOLDERS = [
     subtitle: 'Capital Access',
     title: 'Investors',
     description: 'Institutional investors integrate ESG factors into investment decisions. Strong ESG performance improves access to capital and favorable financing terms.',
-    color: '#1565C0',
+    color: '#004080',
     gradient: 'investorGrad',
     position: { x: 350, y: 90 },
     connection: {
@@ -22,7 +22,7 @@ export const STAKEHOLDERS = [
     subtitle: 'Compliance',
     title: 'Regulators',
     description: 'Global regulatory bodies mandate ESG disclosures (CSRD, BRSR, SEC). Compliance is increasingly tied to market access and operational licenses.',
-    color: '#F57C00',
+    color: '#003366',
     gradient: 'regulatorGrad',
     position: { x: 120, y: 205 },
     connection: {
@@ -37,7 +37,7 @@ export const STAKEHOLDERS = [
     subtitle: 'Procurement',
     title: 'Customers',
     description: 'B2B and B2C customers prioritize sustainable suppliers. Supply chain ESG requirements cascade throughout vendor ecosystems.',
-    color: '#2E7D32',
+    color: '#003366',
     gradient: 'customerGrad',
     position: { x: 580, y: 205 },
     connection: {
@@ -52,7 +52,8 @@ export const STAKEHOLDERS = [
     subtitle: 'Talent & Culture',
     title: 'Employees',
     description: 'Top talent seeks employers with genuine sustainability commitments. Strong ESG profiles enhance engagement, retention, and productivity.',
-    color: '#7B1FA2',
+    color: '#FFB800',
+    textColor: '#001F3F',
     gradient: 'employeeGrad',
     position: { x: 150, y: 585 },
     connection: {
@@ -67,7 +68,8 @@ export const STAKEHOLDERS = [
     subtitle: 'License to Operate',
     title: 'Society',
     description: 'Communities and civil society grant social license to operate. ESG performance impacts reputation, brand value, and stakeholder trust.',
-    color: '#1A7A8C',
+    color: '#FFB800',
+    textColor: '#001F3F',
     gradient: 'societyGrad',
     position: { x: 550, y: 585 },
     connection: {

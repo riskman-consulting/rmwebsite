@@ -88,18 +88,22 @@ import heroImage from "../../assets/images/erm/hero-image.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden bg-slate-950">
+    <section className="relative overflow-hidden bg-brandDark">
       
       {/* Main Container */}
-      <div className="relative z-10 grid items-center min-h-screen grid-cols-1 gap-8 px-6 pt-20 pb-12 mx-auto md:grid-cols-2 md:gap-12 lg:px-10 xl:px-10 md:pt-0">
+      <div className="container relative z-10 grid items-center grid-cols-1 gap-8 py-20 md:grid-cols-2 md:gap-12 lg:py-28">
 
         {/* Left Content */}
-        <div className="text-center md:text-left">
+        <div className="text-left">
+          <span className="inline-block px-4 py-1 mb-6 text-xs font-semibold tracking-widest uppercase border rounded-full border-brandAccent/30 bg-brandAccent/10 text-brandAccent">
+            Enterprise Risk Management
+          </span>
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl"
+            className="text-3xl font-bold leading-tight text-white font-heading sm:text-4xl lg:text-5xl"
           >
             Your Trusted Advisors for <span className="text-brandAccent">Enterprise Risk Management</span>
           </motion.h1>
@@ -108,7 +112,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="max-w-2xl mx-auto mt-6 text-base text-white/80 md:mx-0 lg:text-lg"
+            className="max-w-2xl mt-6 text-base text-white/80 lg:text-lg"
           >
             We partner with you to identify the &apos;Risks That Matter,&apos; building a resilient,
             customized ERM framework that protects your reputation and fuels sustainable long-term growth.
@@ -118,11 +122,11 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex flex-col gap-4 mt-8 sm:flex-row sm:justify-center md:justify-start"
+            className="flex flex-col gap-4 mt-8 sm:flex-row"
           >
             <Link
-              to="/contact-us"
-              className="px-6 py-3 text-sm font-medium transition-colors rounded-lg bg-brandAccent text-slate-900 hover:bg-brandGold"
+              to="/contact"
+              className="px-6 py-3 text-sm font-medium transition-colors rounded-lg bg-brandAccent text-brandDark hover:bg-brandGold"
             >
               Book a Consultation
             </Link>
@@ -145,7 +149,7 @@ const HeroSection = () => {
         >
           <img
             src={heroImage}
-            alt="hero image"
+            alt="Enterprise risk management advisory"
             className="w-full max-w-md shadow-2xl md:max-w-lg lg:max-w-xl rounded-2xl"
           />
         </motion.div>
@@ -153,7 +157,7 @@ const HeroSection = () => {
       </div>
 
       {/* Background Glow */}
-      <div className="pointer-events-none absolute -top-32 right-0 h-[28rem] w-[28rem] rounded-full bg-blue-500/10 blur-3xl" />
+      <div className="pointer-events-none absolute -top-32 right-0 h-[28rem] w-[28rem] rounded-full bg-brandAccent/10 blur-3xl" />
     </section>
   );
 };

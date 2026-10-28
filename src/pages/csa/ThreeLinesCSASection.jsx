@@ -6,10 +6,10 @@
 //   const [selectedZone, setSelectedZone] = useState(null);
 
 //   return (
-//     <section className="py-12 bg-surfaceLight dark:bg-surfaceDark">
-//       <div className="container px-6 mx-auto max-w-7xl">
+//     <section className="py-20 bg-surfaceLight dark:bg-surfaceDark">
+//       <div className="container">
 //         {/* Section Header */}
-//         <h2 className="mb-4 text-3xl font-bold text-center text-brandDark dark:text-white">
+//         <h2 className="mb-4 text-3xl font-bold text-center font-heading md:text-4xl text-brandDark dark:text-white">
 //           Visual Framework: Three Lines Model
 //         </h2>
 
@@ -50,10 +50,10 @@ export default function ThreeLinesCSASection() {
   const [selectedZone, setSelectedZone] = useState(null);
 
   return (
-    <section className="py-12 bg-surfaceLight dark:bg-surfaceDark">
-      <div className="container px-6 mx-auto max-w-7xl">
+    <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
+      <div className="container">
         {/* Section Header */}
-        <h2 className="mb-4 text-3xl font-bold text-center text-brandDark dark:text-white">
+        <h2 className="mb-4 text-3xl font-bold text-center font-heading md:text-4xl text-brandDark dark:text-white">
           Visual Framework: Three Lines Model
         </h2>
 
@@ -82,7 +82,7 @@ export default function ThreeLinesCSASection() {
 
         {/* Governance Alignment Box */}
         {/* <div className="max-w-3xl mx-auto mt-8">
-          <div className="p-8 border-l-4 border-yellow-500 rounded-r-lg shadow-md bg-gradient-to-r from-yellow-50 to-yellow-100 dark:from-brandDark/10 dark:to-brandDark/20">
+          <div className="p-8 border-l-4 shadow-md border-brandAccent rounded-r-2xl bg-bgLight dark:bg-bgDark">
             <h3 className="mb-3 text-xl font-bold text-brandDark dark:text-brandAccent">
               Governance Alignment
             </h3>
@@ -94,7 +94,7 @@ export default function ThreeLinesCSASection() {
           </div>
         </div> */}
 
-         <div className="p-8 border-l-4 border-yellow-500 rounded-r-lg shadow-md bg-gradient-to-r from-yellow-50 to-yellow-100 dark:from-brandDark/10 dark:to-brandDark/20">
+         <div className="p-8 border-l-4 shadow-md border-brandAccent rounded-r-2xl bg-bgLight dark:bg-bgDark">
           <h3 className="mb-3 text-xl font-bold text-brandDark dark:text-brandAccent">Governance Alignment</h3>
           <p className="italic leading-relaxed text-brandPrimary dark:text-white/70">
             RiskMan's CSA methodology ensures seamless integration across all three lines, creating 

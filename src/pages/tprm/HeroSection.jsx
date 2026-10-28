@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <div className="relative overflow-hidden text-white bg-brandDark">
+    <section className="relative overflow-hidden text-white bg-brandDark">
       {/* Background Overlay with Image */}
       <div className="absolute inset-0 z-0 opacity-20">
         <img 
@@ -20,14 +20,15 @@ const Hero = () => {
       </div>
       
       {/* Content */}
-      <div className="container relative z-10 flex flex-col items-center px-4 py-24 mx-auto text-center sm:py-32 lg:py-40">
-        <div className="mb-6 animate-float">
-          <Shield className="w-16 h-16 text-brandAccent" />
+      <div className="container relative z-10 flex flex-col items-start py-20 text-left lg:py-28">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase border rounded-full border-brandAccent/30 bg-brandAccent/10 text-brandAccent">
+          <Shield className="w-4 h-4" />
+          Third-Party Risk Management
         </div>
         <h1 className="mb-6 text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl font-heading">
           Audit-Ready <span className="text-brandAccent">Third-Party Risk Management</span>
         </h1>
-        <p className="max-w-3xl mx-auto mb-10 text-lg leading-relaxed text-gray-300 sm:text-xl">
+        <p className="max-w-3xl mb-10 text-lg leading-relaxed text-gray-300 sm:text-xl">
           Build evidence-driven TPRM frameworks that satisfy regulators. We move beyond "checkbox compliance" to provide deep visibility into vendor lifecycles.
         </p>
         <div className="flex flex-col w-full gap-4 sm:flex-row sm:w-auto">
@@ -53,7 +54,7 @@ const Hero = () => {
           <path fillOpacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
         </svg>
       </div> */}
-    </div>
+    </section>
   );
 };
 

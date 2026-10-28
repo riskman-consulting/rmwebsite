@@ -4,7 +4,7 @@ import { ShieldCheck } from 'lucide-react'
 
 function PerformanceSection() {
   return (
-      <section className="py-20 bg-brandNavy text-white">
+    <section className="py-16 bg-brandNavy text-white">
         <div className="container">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2">

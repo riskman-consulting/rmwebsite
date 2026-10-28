@@ -3,12 +3,12 @@ import React from 'react'
 
 function IndependentSection() {
   return (
-     <section className="py-24 bg-white">
+    <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-               <h2 className="font-heading text-3xl lg:text-4xl font-bold mb-4">Independent Opinion & Reporting</h2>
-               <p className="text-gray-600">RiskMan delivers definitive audit opinions that serve as a bedrock of trust for investors and regulatory bodies.</p>
+               <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">Independent Opinion & Reporting</h2>
+               <p className="text-gray-600 dark:text-gray-300">RiskMan delivers definitive audit opinions that serve as a bedrock of trust for investors and regulatory bodies.</p>
             </div>
             <div className="grid md:grid-cols-3 gap-12">
                {[
@@ -19,7 +19,7 @@ function IndependentSection() {
                  <div key={i} className="text-center">
                     <div className="flex justify-center mb-4">{item.icon}</div>
                     <h5 className="font-bold mb-2">{item.t}</h5>
-                    <p className="text-xs text-gray-500 leading-relaxed">{item.d}</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">{item.d}</p>
                  </div>
                ))}
             </div>

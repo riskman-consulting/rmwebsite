@@ -25,7 +25,7 @@ const ValuePillars = () => {
   ];
 
   return (
-    <section className="py-20 transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark">
+    <section className="py-16 transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark">
       <div className="container">
         <div className="max-w-3xl mb-16">
           <h2 className="mb-6 text-3xl font-bold font-heading md:text-4xl text-brandDark dark:text-white">
@@ -40,7 +40,7 @@ const ValuePillars = () => {
           {pillars.map((pillar, index) => (
             <div 
               key={index} 
-              className="p-8 transition-all duration-300 border border-borderLight dark:border-borderDark rounded-xl hover:shadow-2xl hover:border-brandPrimary/30 dark:hover:border-brandGold/30 bg-bgLight dark:bg-bgDark group"
+              className="h-full p-8 transition-all duration-300 border border-borderLight dark:border-borderDark rounded-2xl hover:shadow-2xl hover:border-brandPrimary/30 dark:hover:border-brandGold/30 bg-bgLight dark:bg-bgDark group"
             >
               <div className="flex items-center justify-center w-12 h-12 mb-6 transition-colors duration-300 rounded-lg bg-brandPrimary/10 dark:bg-brandGold/10 group-hover:bg-brandPrimary dark:group-hover:bg-brandGold">
                 <span className="text-xl font-bold text-brandPrimary dark:text-brandGold group-hover:text-white dark:group-hover:text-brandDark">
@@ -57,7 +57,7 @@ const ValuePillars = () => {
           ))}
           
           {/* Summary Box */}
-          <div className="flex flex-col justify-center p-8 border border-transparent bg-brandNavy dark:bg-brandPrimary rounded-xl">
+          <div className="flex flex-col justify-center h-full p-8 border border-transparent bg-brandNavy dark:bg-brandPrimary rounded-2xl">
              <h3 className="mb-4 text-xl italic font-bold text-white font-heading">
                "Expert corporate financial advisory is more critical than ever".
              </h3>

@@ -29,14 +29,14 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="py-20 md:py-32 bg-bgLight dark:bg-bgDark">
+    <section className="py-16 bg-bgLight dark:bg-bgDark">
       <div className="container">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <div className="inline-block px-4 py-2 mb-6 rounded-full bg-brandPrimary/10 dark:bg-brandAccent/10">
             <span className="text-sm font-bold tracking-wide text-brandPrimary dark:text-brandAccent">COMMON QUESTIONS</span>
           </div>
-          <h2 className="mb-6 text-3xl font-bold sm:text-4xl lg:text-5xl font-heading text-brandDark dark:text-white">
+          <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300">

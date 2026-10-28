@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const BCPCallToAction = () => {
   return (
-    <section className="relative py-20 overflow-hidden bg-brandPrimary">
+    <section className="relative py-16 overflow-hidden bg-brandPrimary">
       
       {/* BACKGROUND GLOW */}
       <div className="absolute inset-0 bg-gradient-to-br from-brandPrimary via-brandNavy to-brandDark opacity-90" />

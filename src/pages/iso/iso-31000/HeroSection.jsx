@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 const Hero = () => {
   const  navigator = useNavigate()
   return (
-    <section id="home" className="relative flex items-center min-h-screen pt-20 overflow-hidden">
+    <section id="home" className="relative flex items-center py-16 overflow-hidden lg:py-32">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -18,11 +18,11 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-brandDark/95 to-brandNavy/80 mix-blend-multiply"></div>
       </div>
 
-      <div className="container relative z-10 px-4 mx-auto sm:px-6 lg:px-8">
-        <div className="max-w-3xl space-y-8 animate-float">
+      <div className="container relative z-10">
+        <div className="max-w-3xl space-y-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 border rounded-full bg-white/10 border-white/20 backdrop-blur-sm">
             <ShieldCheck className="w-4 h-4 text-brandGold" />
-            <span className="text-sm font-medium tracking-wide text-brandLight">ISO 31000 Certified Consulting</span>
+            <span className="text-sm font-medium tracking-wide text-brandLight">ISO 31000 Risk Management Consulting</span>
           </div>
           
           <h1 className="text-5xl font-bold leading-tight text-white md:text-6xl lg:text-7xl font-heading">
@@ -35,7 +35,7 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col gap-4 pt-4 sm:flex-row">
-            <button onClick={()=>navigator("/services")} className="inline-flex px-4 py-4 text-lg rounded-full bg-brandAccent">
+            <button onClick={()=>navigator("/services")} className="inline-flex items-center justify-center gap-2 px-8 py-4 font-bold transition-all duration-300 rounded-lg text-brandDark bg-brandAccent hover:bg-brandGold">
               View Main Services
               <ArrowRight size={18} />
             </button>

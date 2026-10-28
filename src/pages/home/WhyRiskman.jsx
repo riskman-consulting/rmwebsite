@@ -33,19 +33,19 @@ export default function WhyChooseRiskMan() {
   
   useEffect(()=>{
     if(!whyRiskManImage){
-      fetchHomePage
+      fetchHomePage()
 
     }
   },[])
   return (
-    <section className="relative py-16 md:py-20 overflow-hidden bg-bgLight dark:bg-bgDark">
+    <section className="relative py-16 overflow-hidden bg-bgLight dark:bg-bgDark">
       {/* Decorative Background Element */}
       <div className="absolute top-0 w-full h-full -translate-x-1/2 pointer-events-none left-1/2 opacity-5">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brandPrimary rounded-full blur-[120px]" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brandAccent rounded-full blur-[120px]" />
       </div>
 
-      <div className="relative z-10 px-6 mx-auto max-w-7xl">
+      <div className="container relative z-10">
         {/* HEADING */}
         <div className="max-w-3xl mx-auto mb-20 text-center">
           <motion.span 
@@ -59,9 +59,9 @@ export default function WhyChooseRiskMan() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-6 text-4xl font-black md:text-5xl text-brandDark dark:text-white"
+            className="mb-6 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white"
           >
-            Why <span className="text-brandPrimary">Choose</span> RiskMan?
+            Why <span className="text-brandPrimary dark:text-brandAccent">Choose</span> RiskMan?
           </motion.h2>
           <p className="text-lg text-brandNavy/70 dark:text-white/70">
             Strategic risk management led by industry veterans to ensure your
@@ -106,7 +106,6 @@ export default function WhyChooseRiskMan() {
                   alt="Risk Management Strategy"
                   className="object-cover object-top w-full h-full"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-brandDark/40 to-transparent" />
               </div>
             </motion.div>
           </div>

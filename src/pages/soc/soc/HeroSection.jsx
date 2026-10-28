@@ -8,7 +8,7 @@ const HeroSection = () => {
   const navigator = useNavigate();
   
   return (
-    <section className="relative overflow-hidden transition-colors duration-300 border-b py-14 md:py-20 lg:pt-16 lg:pb-22 bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark">
+    <section className="relative overflow-hidden transition-colors duration-300 border-b py-14 md:py-20 lg:pt-16 lg:pb-20 bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark">
       
       {/* 1. ADVANCED BACKGROUND DECORATION */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
@@ -24,17 +24,17 @@ const HeroSection = () => {
           <div className="text-left animate-fadeIn">
             {/* Enterprise Tag */}
             <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 text-xs font-bold tracking-widest uppercase border rounded-full shadow-sm bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark animate-bounce-slow">
-              <span className="flex w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+              <span className="flex w-2 h-2 rounded-full bg-brandGold animate-pulse"></span>
               <span className="text-gray-600 dark:text-gray-400">Compliance Excellence</span>
               <span className="mx-1 text-slate-300">|</span>
-              <span className="text-brandGold">2026 AICPA Verified</span>
+              <span className="text-brandPrimary dark:text-brandGold">SOC 1 · SOC 2 · SOC 3</span>
             </div>
             
             {/* Corrected Two-Line Title with Premium Styling */}
             <h1 className="font-heading text-4xl md:text-4xl lg:text-5xl font-extrabold mb-8 leading-[1.1] text-brandDark dark:text-white tracking-tight">
               Enterprise-Grade <br />
               <span className="relative inline-block">
-                <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-brandPrimary to-brandGold">
+                <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-brandPrimary to-brandNavy dark:from-brandGold dark:to-brandAccent">
                   SOC Assurance
                 </span>
                 <span className="absolute left-0 w-full h-3 bottom-2 bg-brandGold/10 dark:bg-brandGold/20 -z-0"></span>

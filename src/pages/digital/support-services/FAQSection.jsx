@@ -6,7 +6,7 @@ const AccordionItem = ({ question, answer, isOpen, onClick }) => {
     
     
     return(
-  <div className="mb-4 overflow-hidden transition-colors duration-300 bg-white border border-gray-200 dark:border-gray-700 rounded-xl dark:bg-surfaceDark hover:border-brandPrimary/50 dark:hover:border-brandAccent/50">
+  <div className="mb-4 overflow-hidden transition-colors duration-300 bg-white border border-gray-200 dark:border-gray-700 rounded-2xl dark:bg-surfaceDark hover:border-brandPrimary/50 dark:hover:border-brandAccent/50">
     <button
       className="flex items-center justify-between w-full px-6 py-5 text-left focus:outline-none group"
       onClick={onClick}
@@ -50,8 +50,8 @@ export const FAQSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-brandLight dark:bg-bgDark">
-      <div className="container px-4 mx-auto sm:px-6 lg:px-8">
+    <section className="py-16 bg-bgLight dark:bg-bgDark">
+      <div className="container">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
             Frequently Asked Questions

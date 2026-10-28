@@ -4,10 +4,10 @@ import bcpImg from "../../assets/images/bcp/bcp-resilent.png"
  
 const BCPOverview = () => {
   return (
-    <section className="py-20 bg-surfaceLight dark:bg-surfaceDark">
+    <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
       <div className="container grid items-center lg:grid-cols-2 gap-14">
         <div>
-          <h2 className="text-3xl font-bold text-brandDark dark:text-white">
+          <h2 className="text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
             Resilient Business Continuity & Disaster Recovery
           </h2>
  
@@ -20,7 +20,7 @@ const BCPOverview = () => {
           </p>
         </div>
  
-        <div className="p-8 bg-white shadow dark:bg-brandNavy/30 rounded-3xl">
+        <div className="p-8 bg-bgLight shadow dark:bg-brandNavy/30 rounded-2xl">
           <img src={bcpImg} alt="Business continuity and disaster recovery overview" className="object-contain w-full" />
         </div>
       </div>

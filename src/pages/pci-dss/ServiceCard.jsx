@@ -1,5 +1,5 @@
 import React from "react"
-import { CheckCircle, ArrowRight } from "lucide-react"
+import { CheckCircle } from "lucide-react"
 import { motion } from "framer-motion"
 
 const ServiceCard = ({ title, description, image, features, index }) => {
@@ -9,7 +9,7 @@ const ServiceCard = ({ title, description, image, features, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
-      className="flex flex-col h-full overflow-hidden transition-shadow duration-300 bg-white border border-gray-100 shadow-sm dark:bg-surfaceDark rounded-xl dark:border-white/5 hover:shadow-md"
+      className="flex flex-col h-full overflow-hidden transition-shadow duration-300 border shadow-sm bg-bgLight dark:bg-bgDark rounded-2xl border-borderLight dark:border-borderDark hover:shadow-md"
     >
       <div className="relative h-48 overflow-hidden">
         <img
@@ -17,7 +17,6 @@ const ServiceCard = ({ title, description, image, features, index }) => {
           alt={title}
           className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
         />
-        <div className="absolute inset-0 bg-brandDark/10"></div>
       </div>
 
       <div className="flex flex-col flex-1 p-6">
@@ -29,7 +28,7 @@ const ServiceCard = ({ title, description, image, features, index }) => {
           {description}
         </p>
 
-        <div className="mb-6 space-y-3">
+        <div className="space-y-3">
           {features.map((feature, idx) => (
             <div key={idx} className="flex items-start gap-2">
               <CheckCircle className="w-4 h-4 text-brandPrimary dark:text-brandGold flex-shrink-0 mt-0.5" />
@@ -39,10 +38,6 @@ const ServiceCard = ({ title, description, image, features, index }) => {
             </div>
           ))}
         </div>
-
-        <button className="flex items-center gap-1 mt-auto text-sm font-bold transition-all text-brandPrimary dark:text-brandGold hover:gap-2">
-          Learn more <ArrowRight className="w-4 h-4" />
-        </button>
       </div>
     </motion.div>
   )

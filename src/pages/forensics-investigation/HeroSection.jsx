@@ -10,14 +10,14 @@ const HeroSection = () => {
    const navigator=useNavigate()
 
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-bgLight dark:bg-bgDark transition-colors duration-300">
+    <section className="relative py-16 lg:py-20 overflow-hidden bg-bgLight dark:bg-bgDark transition-colors duration-300">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-brandNavy/10 to-transparent dark:from-brandNavy/20"></div>
         <div className="absolute bottom-0 left-0 rounded-full w-96 h-96 bg-brandGold/5 blur-3xl"></div>
       </div>
 
-      <div className="container relative z-10 grid items-center gap-12 px-4 pt-10 mx-auto lg:grid-cols-2">
+      <div className="container relative z-10 grid items-center gap-12 lg:grid-cols-2">
         
         {/* Text Content */}
         <div className="order-2 space-y-8 lg:order-1 animate-fade-in-up">
@@ -28,8 +28,8 @@ const HeroSection = () => {
             </span>
           </div>
           
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold leading-[1.1] text-brandNavy dark:text-white">
-            Advanced Forensics and  <br/>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-[1.1] text-brandNavy dark:text-white">
+            Advanced Forensics and <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandGold to-brandAccent">
             Investigation Services
             </span>
@@ -64,7 +64,6 @@ const HeroSection = () => {
         {/* Image Content */}
         <div className="relative order-1 lg:order-2">
           <div className="relative overflow-hidden transition-transform duration-500 transform border-4 border-white shadow-2xl rounded-3xl dark:border-surfaceDark lg:rotate-2 hover:rotate-0">
-            <div className="absolute inset-0 z-10 bg-brandNavy/20 mix-blend-multiply"></div>
             <img 
               src={heroImage} 
               alt="Forensic Investigation" 

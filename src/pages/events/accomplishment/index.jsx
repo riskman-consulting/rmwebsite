@@ -10,7 +10,7 @@ function AccomplishmentsPage() {
         <meta name="description" content="Explore RiskMan Consulting's accomplishments, awards, and industry recognition that reflect our commitment to excellence in risk management and advisory services." />
         <link rel="canonical" href="https://www.riskman.in/events/accomplishments" />
       </Helmet>
-      <EventRecognition/>
+      <EventRecognition isPage />
     </>
   )
 }

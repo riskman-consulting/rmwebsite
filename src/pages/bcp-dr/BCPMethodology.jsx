@@ -257,13 +257,13 @@ const phases = [
  
 const BCPMethodology = () => {
   return (
-    <section className="py-14 md:py-20 bg-surfaceLight dark:bg-bgDark">
+    <section className="py-16 bg-bgLight dark:bg-bgDark">
       <div className="container">
  
         {/* HEADER */}
         <div className="max-w-3xl mb-12">
           <div className="h-1.5 w-16 bg-brandAccent mb-4 rounded-full" />
-          <h2 className="text-3xl font-bold leading-tight md:text-5xl font-heading text-brandDark dark:text-white">
+          <h2 className="text-3xl font-bold leading-tight md:text-4xl font-heading text-brandDark dark:text-white">
             7-Phase BCP/DR <br />
             <span className="text-brandPrimary dark:text-brandAccent">
               Delivery Lifecycle
@@ -284,7 +284,7 @@ const BCPMethodology = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: i * 0.08 }}
-      className="p-6 transition-all bg-white border shadow-sm group dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-2xl hover:border-brandAccent/50 hover:shadow-xl hover:-translate-y-1"
+      className="h-full p-6 transition-all bg-white border shadow-sm group dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-2xl hover:border-brandAccent/50 hover:shadow-xl hover:-translate-y-1"
     >
       <div className="flex items-start gap-5">
         {/* Step Number */}

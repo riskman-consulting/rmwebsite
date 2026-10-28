@@ -11,53 +11,45 @@ const CompetitiveAdvantages = () => {
             icon: Handshake,
             title: "Trust Building",
             desc: "Demonstrates a verified commitment to security for partners and global clients.",
-            stat: "95%",
-            statLabel: "Client Retention",
-            image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400&h=300&fit=crop",
-            color: "#3B82F6",
+            image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=600&fit=crop",
+            color: "#004080",
             features: ["Partner confidence", "Brand credibility", "Client loyalty"]
         },
         {
             icon: ShieldCheck,
             title: "Risk Reduction",
             desc: "Minimizes data breaches and significant legal or financial liabilities.",
-            stat: "70%",
-            statLabel: "Risk Decrease",
-            image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=300&fit=crop",
-            color: "#10B981",
+            image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop",
+            color: "#FFB800",
             features: ["Threat mitigation", "Legal protection", "Financial safety"]
         },
         {
             icon: Gauge,
             title: "Operational Efficiency",
             desc: "Streamlines processes and reduces waste through standardized workflows.",
-            stat: "40%",
-            statLabel: "Cost Savings",
-            image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
-            color: "#F59E0B",
+            image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+            color: "#004080",
             features: ["Process optimization", "Resource efficiency", "Time savings"]
         },
         {
             icon: Globe,
             title: "Market Access",
             desc: "Essential for contracts in regulated sectors like automotive or finance.",
-            stat: "3x",
-            statLabel: "More Opportunities",
-            image: "https://images.unsplash.com/photo-1529400971008-f566de0e6dfc?w=400&h=300&fit=crop",
-            color: "#8B5CF6",
+            image: "https://images.unsplash.com/photo-1529400971008-f566de0e6dfc?w=800&h=600&fit=crop",
+            color: "#FFB800",
             features: ["Global reach", "New markets", "Competitive edge"]
         }
     ];
 
     return (
-        <section className="relative w-full py-24 overflow-hidden sm:py-32 bg-brandLight dark:bg-bgDark" id="advantages">
+      <section className="relative w-full py-16 overflow-hidden sm:py-32 bg-brandLight dark:bg-bgDark" id="advantages">
             {/* Background decorations */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-brandAccent/5 rounded-full blur-[120px]" />
                 <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-brandPrimary/5 rounded-full blur-[100px]" />
             </div>
 
-            <div className="w-full px-5 sm:px-8 lg:px-12 xl:px-14 mx-auto max-w-[1280px] relative z-10">
+            <div className="container relative z-10">
                 {/* Header */}
                 <div className="flex flex-col gap-8 mb-16 lg:flex-row lg:items-end lg:justify-between">
                     <div className="max-w-2xl">
@@ -90,24 +82,6 @@ const CompetitiveAdvantages = () => {
                         </motion.p>
                     </div>
 
-                    {/* Stats summary */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        className="flex gap-8 p-6 bg-white border shadow-xl rounded-2xl dark:bg-surfaceDark border-slate-100 dark:border-white/10"
-                    >
-                        {[
-                            { value: "500+", label: "Audits" },
-                            { value: "98%", label: "Success" },
-                            { value: "50+", label: "Countries" }
-                        ].map((stat, idx) => (
-                            <div key={idx} className="text-center">
-                                <p className="text-2xl font-black text-brandPrimary dark:text-brandAccent">{stat.value}</p>
-                                <p className="text-xs text-slate-500 dark:text-slate-400">{stat.label}</p>
-                            </div>
-                        ))}
-                    </motion.div>
                 </div>
 
                 {/* Advantage Cards Grid */}
@@ -137,18 +111,6 @@ const CompetitiveAdvantages = () => {
                                             className={`w-full h-full object-cover transition-transform duration-700 ${isActive ? 'scale-110' : 'scale-100'
                                                 }`}
                                         />
-                                        <div
-                                            className="absolute inset-0 transition-opacity duration-300"
-                                            style={{
-                                                background: `linear-gradient(to top, ${item.color}dd, ${item.color}66, transparent)`
-                                            }}
-                                        />
-
-                                        {/* Stat overlay */}
-                                        <div className="absolute px-4 py-2 shadow-lg top-4 right-4 rounded-xl bg-white/95 dark:bg-brandDark/95 backdrop-blur-sm">
-                                            <p className="text-xl font-black" style={{ color: item.color }}>{item.stat}</p>
-                                            <p className="text-xs text-slate-600 dark:text-slate-400">{item.statLabel}</p>
-                                        </div>
 
                                         {/* Icon */}
                                         <div className="absolute bottom-4 left-4">

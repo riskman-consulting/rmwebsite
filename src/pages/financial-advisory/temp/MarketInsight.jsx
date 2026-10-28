@@ -29,8 +29,8 @@ const MarketInsight = () => {
   ];
 
   return (
-    <section className="py-24 transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-white">
-      <div className="container px-5 mx-auto sm:px-8">
+    <section className="py-16 transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark text-brandDark dark:text-white">
+      <div className="container">
         <div className="grid items-center grid-cols-1 gap-16 lg:grid-cols-2">
           
           {/* Left Side: Problem Statement */}
@@ -65,7 +65,7 @@ const MarketInsight = () => {
             {strategies.map((item, index) => (
               <div 
                 key={index} 
-                className="p-6 transition-all border bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-xl hover:shadow-lg dark:hover:border-brandGold/40"
+                className="h-full p-6 transition-all border bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark rounded-2xl hover:shadow-lg dark:hover:border-brandGold/40"
               >
                 <h4 className="mb-2 font-bold font-heading text-brandPrimary dark:text-brandGold">{item.title}</h4>
                 <p className="font-sans text-sm leading-relaxed text-gray-600 dark:text-gray-400">
@@ -74,7 +74,7 @@ const MarketInsight = () => {
               </div>
             ))}
             
-            <div className="p-6 mt-4 border sm:col-span-2 bg-brandPrimary/5 dark:bg-brandPrimary/20 border-brandPrimary/20 dark:border-brandPrimary/30 rounded-xl">
+            <div className="p-6 mt-4 border sm:col-span-2 bg-brandPrimary/5 dark:bg-brandPrimary/20 border-brandPrimary/20 dark:border-brandPrimary/30 rounded-2xl">
               <p className="font-sans italic font-medium text-center text-brandPrimary dark:text-brandAccent">
                 "Business enterprises that leverage expert advisories effectively are better positioned to thrive in a rapidly evolving landscape."
               </p>

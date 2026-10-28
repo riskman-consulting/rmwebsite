@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Plus, Minus, HelpCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const faqs = [
     {
@@ -27,10 +28,11 @@ const faqs = [
 
 const TisaxFAQ = () => {
     const [openIndex, setOpenIndex] = useState(0);
+    const navigator = useNavigate();
 
     return (
-        <section className="py-24 bg-bgLight dark:bg-bgDark">
-            <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
+      <section className="py-16 bg-bgLight dark:bg-bgDark">
+            <div className="container">
                 <div className="grid items-start gap-16 lg:grid-cols-12">
                     {/* Header Side */}
                     <div className="sticky lg:col-span-5 top-32">
@@ -38,17 +40,17 @@ const TisaxFAQ = () => {
                             <HelpCircle className="w-4 h-4" />
                             General Knowledge
                         </div>
-                        <h2 className="mb-6 text-4xl font-black leading-tight lg:text-5xl text-brandDark dark:text-white">
+                        <h2 className="mb-6 text-3xl font-bold leading-tight font-heading md:text-4xl text-brandDark dark:text-white">
                             Common <br />Questions About <br /><span className="text-brandAccent">TISAX</span>
                         </h2>
                         <p className="max-w-sm mb-10 text-slate-500 dark:text-slate-400">
                             Get answers to the most common questions about the Trusted Information Security Assessment Exchange.
                         </p>
 
-                        <div className="p-8 bg-white border shadow-2xl rounded-3xl dark:bg-surfaceDark border-slate-100 dark:border-white/5">
+                        <div className="p-8 bg-white border shadow-2xl rounded-2xl dark:bg-surfaceDark border-slate-100 dark:border-white/5">
                             <h4 className="mb-2 font-bold text-brandDark dark:text-white">Need more clarity?</h4>
-                            <p className="mb-6 text-sm text-slate-500">Our experts are available for a 1-on-1 discovery call to discuss your specific needs.</p>
-                            <button className="w-full py-4 text-sm font-bold text-white transition-colors rounded-xl bg-brandPrimary hover:bg-brandNavy">
+                            <p className="mb-6 text-sm text-slate-500 dark:text-slate-400">Our experts are available for a 1-on-1 discovery call to discuss your specific needs.</p>
+                            <button onClick={() => navigator("/contact")} className="w-full py-4 text-sm font-bold text-white transition-colors rounded-xl bg-brandPrimary hover:bg-brandNavy">
                                 Schedule a Call
                             </button>
                         </div>

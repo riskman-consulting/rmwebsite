@@ -3,7 +3,7 @@ import { fiduciaryGovernance } from './data'
 
 function DataFiduciarySection() {
   return (
-      <section className="py-20 bg-white">
+    <section className="py-16 bg-white">
         <div className="container">
           <div className="max-w-3xl mb-16">
             <h2 className="font-heading text-3xl lg:text-4xl font-bold mb-6">Data Fiduciary Governance</h2>

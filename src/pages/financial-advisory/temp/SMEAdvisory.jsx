@@ -10,9 +10,9 @@ const SMEAdvisory = () => {
   ];
 
   return (
-    <section className="py-20 transition-colors duration-300 bg-bgLight dark:bg-bgDark">
+    <section className="py-16 transition-colors duration-300 bg-bgLight dark:bg-bgDark">
       <div className="container">
-        <div className="overflow-hidden border shadow-xl bg-surfaceLight dark:bg-surfaceDark rounded-3xl border-borderLight dark:border-borderDark">
+        <div className="overflow-hidden border shadow-xl bg-surfaceLight dark:bg-surfaceDark rounded-2xl border-borderLight dark:border-borderDark">
           <div className="flex flex-col lg:flex-row">
             
             {/* Left Column: Visual/Heading Area */}

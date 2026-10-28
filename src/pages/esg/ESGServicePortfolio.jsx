@@ -303,8 +303,8 @@ const ESGServicePortfolio = () => {
       number: 1,
       title: "ESG Strategy & Materiality",
       icon: "📊",
-      color: "#1565C0",
-      gradient: "from-blue-600 to-blue-700",
+      color: "#004080",
+      gradient: "from-brandPrimary to-brandNavy",
       description: "Develop comprehensive ESG strategy through rigorous double materiality assessment, stakeholder engagement, and strategic target setting aligned with global frameworks.",
       offerings: [
         "Double Materiality",
@@ -319,8 +319,8 @@ const ESGServicePortfolio = () => {
       number: 2,
       title: "Climate Risk & GHG Management",
       icon: "🌡️",
-      color: "#2E7D32",
-      gradient: "from-green-600 to-green-700",
+      color: "#003366",
+      gradient: "from-brandNavy to-brandDark",
       description: "Comprehensive climate risk assessment and GHG emissions management supporting your net-zero journey through science-based approaches.",
       offerings: [
         "Scope 1-2-3 Inventory",
@@ -335,8 +335,8 @@ const ESGServicePortfolio = () => {
       number: 3,
       title: "ESG Reporting & Disclosure",
       icon: "📋",
-      color: "#00838F",
-      gradient: "from-teal-600 to-teal-700",
+      color: "#475569",
+      gradient: "from-slate-600 to-slate-700",
       description: "Navigate complex global disclosure requirements with expert guidance ensuring compliance and stakeholder confidence.",
       offerings: [
         "CSRD/ESRS",
@@ -351,8 +351,8 @@ const ESGServicePortfolio = () => {
       number: 4,
       title: "ESG Governance & Operating Model",
       icon: "⚖️",
-      color: "#37474F",
-      gradient: "from-gray-700 to-gray-800",
+      color: "#334155",
+      gradient: "from-slate-700 to-slate-800",
       description: "Design and implement robust governance structures with clear accountability, decision-making frameworks, and performance management.",
       offerings: [
         "Board Oversight",
@@ -367,8 +367,8 @@ const ESGServicePortfolio = () => {
       number: 5,
       title: "Internal Controls & Assurance",
       icon: "🔒",
-      color: "#7B1FA2",
-      gradient: "from-purple-600 to-purple-700",
+      color: "#001F3F",
+      gradient: "from-brandDark to-brandNavy",
       description: "Build assurance-ready ESG programs with robust COSO-aligned internal controls, data governance, and verification processes.",
       offerings: [
         "COSO Controls",
@@ -383,8 +383,8 @@ const ESGServicePortfolio = () => {
       number: 6,
       title: "ESG Capability Building",
       icon: "🎓",
-      color: "#E65100",
-      gradient: "from-orange-600 to-orange-700",
+      color: "#004080",
+      gradient: "from-brandPrimary to-brandDark",
       description: "Build lasting internal capabilities through comprehensive training programs tailored to executives, practitioners, and operational teams.",
       offerings: [
         "Executive Immersion",
@@ -413,10 +413,10 @@ const ESGServicePortfolio = () => {
   };
 
   return (
-    <section className="py-20 bg-surfaceLight dark:bg-surfaceDark">
+    <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
       <div className="container">
         <div className="mb-10 text-center">
-          <h2 className="mb-4 text-3xl font-bold text-brandDark dark:text-brandAccent md:text-4xl font-heading">
+          <h2 className="mb-4 text-3xl font-bold text-brandDark dark:text-white md:text-4xl font-heading">
             Sustainability & ESG Service Portfolio
           </h2>
           <p className="max-w-3xl mx-auto text-brandPrimary dark:text-white/70">
@@ -437,7 +437,7 @@ const ESGServicePortfolio = () => {
         {/* Diagram + Info Panel - Side by Side on Desktop */}
         <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           {/* Diagram - Left Side */}
-          <div className="flex justify-center">
+          <div className="justify-center hidden lg:flex">
             <div className="w-full max-w-[650px]">
               <div className="relative h-[700px]">
                 {/* Center Hub */}
@@ -459,22 +459,22 @@ const ESGServicePortfolio = () => {
                     </filter>
                   </defs>
                   {/* Strategy - Top */}
-                  <line x1="50%" y1="50%" x2="50%" y2="12%" stroke="#1565C0" strokeWidth="2" strokeDasharray="8,4" 
+                  <line x1="50%" y1="50%" x2="50%" y2="12%" stroke="#004080" strokeWidth="2" strokeDasharray="8,4" 
                     opacity={activeService && activeService !== 'strategy' ? "0.2" : "0.5"} className="transition-opacity duration-300"/>
                   {/* Climate - Top Right */}
-                  <line x1="50%" y1="50%" x2="85%" y2="25%" stroke="#2E7D32" strokeWidth="2" strokeDasharray="8,4" 
+                  <line x1="50%" y1="50%" x2="85%" y2="25%" stroke="#003366" strokeWidth="2" strokeDasharray="8,4" 
                     opacity={activeService && activeService !== 'climate' ? "0.2" : "0.5"} className="transition-opacity duration-300"/>
                   {/* Reporting - Bottom Right */}
-                  <line x1="50%" y1="50%" x2="85%" y2="75%" stroke="#00838F" strokeWidth="2" strokeDasharray="8,4" 
+                  <line x1="50%" y1="50%" x2="85%" y2="75%" stroke="#475569" strokeWidth="2" strokeDasharray="8,4" 
                     opacity={activeService && activeService !== 'reporting' ? "0.2" : "0.5"} className="transition-opacity duration-300"/>
                   {/* Governance - Bottom */}
-                  <line x1="50%" y1="50%" x2="50%" y2="88%" stroke="#37474F" strokeWidth="2" strokeDasharray="8,4" 
+                  <line x1="50%" y1="50%" x2="50%" y2="88%" stroke="#334155" strokeWidth="2" strokeDasharray="8,4" 
                     opacity={activeService && activeService !== 'governance' ? "0.2" : "0.5"} className="transition-opacity duration-300"/>
                   {/* Controls - Bottom Left */}
-                  <line x1="50%" y1="50%" x2="15%" y2="75%" stroke="#7B1FA2" strokeWidth="2" strokeDasharray="8,4" 
+                  <line x1="50%" y1="50%" x2="15%" y2="75%" stroke="#001F3F" strokeWidth="2" strokeDasharray="8,4" 
                     opacity={activeService && activeService !== 'controls' ? "0.2" : "0.5"} className="transition-opacity duration-300"/>
                   {/* Capability - Top Left */}
-                  <line x1="50%" y1="50%" x2="15%" y2="25%" stroke="#E65100" strokeWidth="2" strokeDasharray="8,4" 
+                  <line x1="50%" y1="50%" x2="15%" y2="25%" stroke="#004080" strokeWidth="2" strokeDasharray="8,4" 
                     opacity={activeService && activeService !== 'capability' ? "0.2" : "0.5"} className="transition-opacity duration-300"/>
                 </svg>
 
@@ -604,7 +604,7 @@ const ESGServicePortfolio = () => {
 
           {/* Info Panel - Right Side */}
           <div className="w-full">
-            <div className="p-6 shadow-2xl bg-surfaceLight dark:bg-surfaceDark rounded-2xl">
+            <div className="hidden p-6 shadow-2xl lg:block bg-bgLight dark:bg-bgDark rounded-2xl">
               <div className="flex items-center justify-between mb-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brandDark dark:text-brandAccent">
                   Service Details
@@ -663,10 +663,10 @@ const ESGServicePortfolio = () => {
             </div>
 
             {/* Capabilities - Below Info Panel */}
-            <div className="grid grid-cols-2 gap-6 p-6 mt-6 shadow-lg bg-white/90 dark:bg-gray-900/90 rounded-2xl">
+            <div className="grid grid-cols-2 gap-6 p-6 shadow-lg lg:mt-6 bg-bgLight dark:bg-bgDark rounded-2xl">
               {capabilities.map((cap, index) => (
                 <div key={index} className="flex items-center gap-3">
-                  <div className="flex items-center justify-center w-12 h-12 text-2xl shadow-md bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800 rounded-xl">
+                  <div className="flex items-center justify-center w-12 h-12 text-2xl shadow-md bg-brandPrimary/10 dark:bg-white/10 rounded-xl">
                     {cap.icon}
                   </div>
                   <span className="text-sm font-semibold text-brandDark dark:text-white">
@@ -696,7 +696,7 @@ const ESGServicePortfolio = () => {
 
         {/* Mobile Info Panel */}
         <div className="mt-6 lg:hidden">
-          <div className="p-6 shadow-2xl bg-white/95 dark:bg-surfaceDark rounded-2xl">
+          <div className="p-6 shadow-2xl bg-bgLight dark:bg-bgDark rounded-2xl">
             {activeService ? (
               <div>
                 <div className="flex items-center gap-4 mb-4">

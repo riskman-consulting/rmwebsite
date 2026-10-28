@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, HelpCircle, MessageSquare, ArrowRight, ShieldCheck } from 'lucide-react';
+import { ChevronDown, HelpCircle, MessageSquare, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -87,14 +87,14 @@ const ISO22301FAQ = () => {
     ];
 
     return (
-        <section className="relative w-full py-24 overflow-hidden sm:py-32 bg-brandLight dark:bg-bgDark" id="faq">
+      <section className="relative w-full py-16 overflow-hidden bg-bgLight dark:bg-bgDark" id="faq">
             {/* Background elements */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-1/4 -right-24 w-96 h-96 bg-brandAccent/5 rounded-full blur-[120px]" />
                 <div className="absolute bottom-1/4 -left-24 w-96 h-96 bg-brandPrimary/5 rounded-full blur-[120px]" />
             </div>
 
-            <div className="w-full px-5 sm:px-8 lg:px-12 xl:px-14 mx-auto max-w-[1280px] relative z-10">
+            <div className="container relative z-10">
                 <div className="grid gap-16 lg:grid-cols-12">
                     {/* Header Side */}
                     <div className="lg:col-span-5">
@@ -107,7 +107,7 @@ const ISO22301FAQ = () => {
                                 <HelpCircle className="w-4 h-4 text-brandPrimary dark:text-brandAccent" />
                                 <span className="text-sm font-black tracking-widest uppercase font-heading text-brandPrimary dark:text-brandAccent">Expert Guide</span>
                             </div>
-                            <h2 className="text-4xl font-black leading-tight font-heading text-brandDark dark:text-white sm:text-5xl">
+                            <h2 className="text-3xl font-bold leading-tight font-heading text-brandDark dark:text-white md:text-4xl">
                                 Frequently Asked <br />
                                 <span className="text-brandPrimary dark:text-brandAccent">Questions</span>
                             </h2>
@@ -123,7 +123,7 @@ const ISO22301FAQ = () => {
                                     </div>
                                     <div>
                                         <p className="text-lg font-bold text-brandDark dark:text-white">Still have questions?</p>
-                                        <p className="text-sm text-slate-500">Contact our resilience experts</p>
+                                        <p className="text-sm text-slate-500 dark:text-slate-400">Contact our resilience experts</p>
                                     </div>
                                 </div>
                                 <Link
@@ -135,11 +135,6 @@ const ISO22301FAQ = () => {
                                 </Link>
                             </div>
 
-                            {/* Badge */}
-                            <div className="flex items-center gap-4 px-6 py-4 mt-8 border rounded-2xl bg-green-500/10 border-green-500/20">
-                                <ShieldCheck className="w-6 h-6 text-green-500" />
-                                <span className="text-sm font-bold tracking-tighter text-green-600 uppercase dark:text-green-400">Verified Continuity Strategist</span>
-                            </div>
                         </motion.div>
                     </div>
 

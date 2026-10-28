@@ -244,19 +244,19 @@ import { FileText, Truck, Scale } from 'lucide-react';
 
 const PolicyValueChain = () => {
   return (
-    <section className="relative py-24 overflow-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark">
-      <div className="container px-4 mx-auto sm:px-6 lg:px-8">
+    <section className="relative py-16 overflow-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark">
+      <div className="container">
         <div className="grid items-center gap-16 lg:grid-cols-2">
           <div>
-            <h2 className="mb-3 text-sm font-bold tracking-wider uppercase text-brandPrimary dark:text-brandAccent">Process Flow</h2>
-            <h3 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+            <p className="mb-3 text-sm font-bold tracking-wider uppercase text-brandPrimary dark:text-brandAccent">Process Flow</p>
+            <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
               Value Chain Management
-            </h3>
+            </h2>
             <p className="mb-10 text-lg text-gray-600 dark:text-gray-300">
               Our framework covers the entire spectrum of credit operations to prevent the deterioration of borrower creditworthiness and reporting.
             </p>
 
-            <div className="space-y-12 relative before:absolute before:left-8 before:top-4 before:bottom-4 before:w-0.5 before:bg-gray-200 dark:before:bg-gray-700">
+            <div className="space-y-12 relative before:absolute before:left-8 before:top-4 before:bottom-4 before:w-0.5 before:bg-borderLight dark:before:bg-borderDark">
               <div className="relative flex gap-8">
                 <div className="z-10 flex items-center justify-center flex-shrink-0 w-16 h-16 text-white border-4 rounded-full shadow-lg bg-brandPrimary border-bgLight dark:border-bgDark">
                   <FileText className="w-7 h-7" />
@@ -290,7 +290,7 @@ const PolicyValueChain = () => {
           </div>
 
           <div className="relative">
-            <div className="relative overflow-hidden border-8 border-white shadow-2xl rounded-2xl dark:border-gray-800">
+            <div className="relative overflow-hidden border-8 border-white shadow-2xl rounded-2xl dark:border-surfaceDark">
               <img 
                 src="https://pixabay.com/get/g4a7004523dd931ae1277088febcb15f6c1ce22d7f430f0d7a2ea3c68a29f16ab62df7ef43f75d13b95498cb3a235fe700a993d005452d5d2e8a18f31c2e1bfac_1280.jpg" 
                 alt="Value Chain Process" 

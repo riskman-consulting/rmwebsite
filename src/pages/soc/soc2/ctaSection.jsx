@@ -1,15 +1,17 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
-function ctaSection() {
+function CtaSection() {
+  const navigator = useNavigate()
   return (
-     <section className="py-20 container">
+    <section className="py-16 container">
         <div className="bg-brandPrimary rounded-[2.5rem] p-10 lg:p-20 text-center text-white relative overflow-hidden">
           <div className="relative z-10">
-            <h2 className="font-heading text-3xl md:text-5xl font-bold mb-6">Make SOC 2 A Growth Enabler, Not A Checkbox</h2>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">Make SOC 2 A Growth Enabler, Not A Checkbox</h2>
             <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
               Use SOC 2 to remove security as a sales blocker and position your service as a low-risk, high-trust choice.
             </p>
-            <button className="bg-brandGold hover:bg-brandAccent text-brandDark px-10 py-5 rounded-full font-extrabold text-lg transition-all transform hover:scale-105 shadow-2xl">
+            <button onClick={()=>navigator("/contact")} className="bg-brandGold hover:bg-brandAccent text-brandDark px-10 py-5 rounded-full font-extrabold text-lg transition-all transform hover:scale-105 shadow-2xl">
               Schedule SOC 2 Strategy Call
             </button>
           </div>
@@ -21,4 +23,4 @@ function ctaSection() {
   )
 }
 
-export default ctaSection
+export default CtaSection

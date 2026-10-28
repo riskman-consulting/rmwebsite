@@ -33,21 +33,21 @@ const benefits = [
 
 const TisaxBenefits = () => {
     return (
-        <section className="py-24 bg-bgLight dark:bg-bgDark">
-            <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
+      <section className="py-16 bg-bgLight dark:bg-bgDark">
+            <div className="container">
                 <div className="grid items-center grid-cols-1 gap-12 mb-16 lg:grid-cols-12">
                     <div className="lg:col-span-7">
                         <motion.span
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
-                            className="text-sm font-bold tracking-widest uppercase text-brandAccent"
+                            className="text-sm font-bold tracking-widest uppercase text-brandPrimary dark:text-brandAccent"
                         >
                             Advantages
                         </motion.span>
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            className="mt-4 text-4xl font-black font-heading text-brandDark dark:text-white lg:text-5xl"
+                            className="mt-4 text-3xl font-bold font-heading text-brandDark dark:text-white md:text-4xl"
                         >
                             Essential Benefits <br />
                             <span className="text-slate-400">of Compliance</span>
@@ -72,7 +72,7 @@ const TisaxBenefits = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
-                            className="group relative h-80 overflow-hidden rounded-[2rem] border border-slate-100 dark:border-white/5"
+                            className="group relative h-80 overflow-hidden rounded-2xl border border-slate-100 dark:border-white/5"
                         >
                             {/* Background Image */}
                             <img

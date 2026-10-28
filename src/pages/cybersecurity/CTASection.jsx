@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const CTASection = () => {
   return (
-    <section className="relative py-20 overflow-hidden md:py-32 bg-surfaceLight dark:bg-surfaceDark">
+    <section className="relative py-16 overflow-hidden bg-surfaceLight dark:bg-surfaceDark">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full">
@@ -33,7 +33,7 @@ const CTASection = () => {
               </div>
 
               {/* Heading */}
-              <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl lg:text-5xl font-heading">
+              <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl font-heading">
                 Elevate Your Security Strategy
               </h2>
 
@@ -58,18 +58,6 @@ const CTASection = () => {
 
               {/* Trust Badges */}
               <div className="flex flex-wrap items-center justify-center gap-8 mt-12 text-white/90">
-                <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-brandAccent" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-sm font-medium">ISO Compliant</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-brandAccent" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-sm font-medium">OWASP Certified</span>
-                </div>
                 <div className="flex items-center gap-2">
                   <svg className="w-5 h-5 text-brandAccent" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />

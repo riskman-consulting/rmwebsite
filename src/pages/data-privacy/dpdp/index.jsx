@@ -140,8 +140,8 @@ function Reveal({ children, className = "", delay = 0 }) {
 
 /* ─────── SHARED STYLES ─────── */
 const cx = {
-  section: (bg = "#fff") => ({ background: bg, padding: "6rem 0", position: "relative", overflow: "hidden" }),
-  container: { maxWidth: 1280, margin: "0 auto", padding: "0 1.25rem" },
+  section: (bg = "#fff") => ({ background: bg, padding: "5rem 0", position: "relative", overflow: "hidden" }),
+  container: { maxWidth: 1200, margin: "0 auto", padding: "0 16px" },
   heading: (color = "#001F3F") => ({
     fontFamily: "Montserrat, sans-serif",
     fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
@@ -171,7 +171,7 @@ function HeroSection() {
   useEffect(() => setLoaded(true), []);
 
   return (
-    <section className="relative overflow-hidden text-white" style={{ minHeight: "92vh" }}>
+    <section className="relative overflow-hidden text-white">
       <div
         className="absolute inset-0 bg-center bg-cover"
         style={{
@@ -184,12 +184,6 @@ function HeroSection() {
           background: "linear-gradient(135deg, rgba(0,31,63,0.94) 0%, rgba(0,51,102,0.9) 50%, rgba(0,31,63,0.96) 100%)",
         }}
       />
-      {/* Saffron-white-green accent at top */}
-      <div className="absolute top-0 left-0 w-full h-1.5 flex">
-        <div className="flex-1" style={{ background: "#FF9933" }} />
-        <div className="flex-1" style={{ background: "#FFFFFF" }} />
-        <div className="flex-1" style={{ background: "#138808" }} />
-      </div>
       {/* Grid overlay */}
       <div
         className="absolute inset-0 opacity-[0.03]"
@@ -199,10 +193,8 @@ function HeroSection() {
         }}
       />
 
-      <div className="relative z-10 flex items-center" style={{ minHeight: "92vh", padding: "0 max(1.25rem, calc((100% - 1280px)/2))" }}>
-        <div className="grid lg:grid-cols-2 gap-16 items-center w-full max-w-[1280px] mx-auto py-20">
-          {/* Left */}
-          <div>
+      <div className="container relative z-10 py-16 lg:py-20">
+          <div className="max-w-3xl">
             <div style={{ opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(24px)", transition: "all 0.6s ease 0.1s" }}>
               <div
                 className="inline-flex items-center gap-2 px-4 py-1.5 rounded text-xs font-bold uppercase tracking-wide"
@@ -266,63 +258,7 @@ function HeroSection() {
               </button>
             </div>
 
-            {/* Trust markers */}
-            <div
-              className="flex flex-wrap items-center gap-6 mt-12"
-              style={{ opacity: loaded ? 1 : 0, transition: "all 0.7s ease 0.6s" }}
-            >
-              {["DPDP Certified", "MeitY Aligned", "ISO 27701"].map((b, i) => (
-                <div key={i} className="flex items-center gap-2 text-xs font-semibold" style={{ color: "rgba(255,255,255,0.45)" }}>
-                  <CheckCircle size={14} style={{ color: "#FFC000" }} /> {b}
-                </div>
-              ))}
-            </div>
           </div>
-
-          {/* Right — Key metrics card */}
-          <div
-            className="hidden lg:block"
-            style={{
-              opacity: loaded ? 1 : 0,
-              transform: loaded ? "translateY(0)" : "translateY(40px)",
-              transition: "all 0.8s ease 0.5s",
-            }}
-          >
-            <div
-              className="relative p-8 overflow-hidden rounded-3xl"
-              style={{
-                background: "rgba(0,26,51,0.65)",
-                border: "1px solid rgba(255,192,0,0.12)",
-                backdropFilter: "blur(20px)",
-              }}
-            >
-              <div className="absolute top-0 right-0 w-40 h-40 rounded-full" style={{ background: "radial-gradient(circle, rgba(255,192,0,0.08) 0%, transparent 70%)" }} />
-              <h3 className="mb-6 text-lg font-bold" style={{ fontFamily: "Montserrat, sans-serif", color: "#FFC000" }}>
-                India Compliance Dashboard
-              </h3>
-              {[
-                { label: "Data Fiduciary Assessments", value: "850+", sub: "across 12 Indian states" },
-                { label: "Consent Frameworks Deployed", value: "1,200+", sub: "multilingual coverage" },
-                { label: "Avg. Breach Response", value: "< 48hrs", sub: "well under 72-hr mandate" },
-                { label: "DPO Appointments Facilitated", value: "320+", sub: "localized expertise" },
-              ].map((stat, i) => (
-                <div
-                  key={i}
-                  className="flex items-center justify-between py-4"
-                  style={{ borderBottom: i < 3 ? "1px solid rgba(255,255,255,0.05)" : "none" }}
-                >
-                  <div>
-                    <div className="text-sm font-medium" style={{ color: "rgba(255,255,255,0.55)" }}>{stat.label}</div>
-                    <div className="text-xs mt-0.5" style={{ color: "rgba(255,255,255,0.3)" }}>{stat.sub}</div>
-                  </div>
-                  <div className="text-xl font-bold" style={{ fontFamily: "Montserrat, sans-serif", color: "#fff" }}>
-                    {stat.value}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
@@ -536,7 +472,7 @@ function OperationSection() {
           {operationalItems.map((item, i) => {
             const Icon = item.icon;
             return (
-              <Reveal key={i} delay={i * 0.12}>
+              <Reveal key={i} delay={i * 0.12} className="h-full">
                 <div
                   className="relative p-8 overflow-hidden text-center rounded-2xl"
                   style={{
@@ -571,33 +507,6 @@ function OperationSection() {
             );
           })}
         </div>
-
-        {/* Image strip below cards */}
-        <Reveal delay={0.2}>
-          <div className="relative mt-12 overflow-hidden rounded-2xl" style={{ height: 220 }}>
-            <img
-              src="https://images.unsplash.com/photo-1551836022-4c4c79ecde51?w=1200&q=80"
-              alt="Team collaboration on data security"
-              className="object-cover w-full h-full"
-            />
-            <div
-              className="absolute inset-0"
-              style={{ background: "linear-gradient(90deg, rgba(0,31,63,0.85) 0%, rgba(0,51,102,0.5) 50%, rgba(0,31,63,0.85) 100%)" }}
-            />
-            <div className="absolute inset-0 flex items-center justify-center gap-12">
-              {[
-                { val: "72hr", label: "Breach Response SLA" },
-                { val: "100%", label: "Privacy by Design Adoption" },
-                { val: "5,000+", label: "Employees Trained" },
-              ].map((s, i) => (
-                <div key={i} className="text-center">
-                  <div style={{ fontFamily: "Montserrat, sans-serif", fontSize: "1.8rem", fontWeight: 800, color: "#FFC000" }}>{s.val}</div>
-                  <div style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.75rem", marginTop: "0.25rem" }}>{s.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Reveal>
       </div>
     </section>
   );
@@ -608,7 +517,8 @@ function FAQSection() {
   const [active, setActive] = useState(null);
   return (
     <section style={cx.section("#FAFAFA")}>
-      <div style={{ maxWidth: 780, margin: "0 auto", padding: "0 1.25rem" }}>
+      <div style={cx.container}>
+        <div style={{ maxWidth: 780, margin: "0 auto" }}>
         <Reveal>
           <div className="text-center" style={{ marginBottom: "3rem" }}>
             <div style={cx.badge("rgba(255,192,0,0.1)", "#004080")}>FAQ</div>
@@ -652,6 +562,7 @@ function FAQSection() {
             </Reveal>
           ))}
         </div>
+        </div>
       </div>
     </section>
   );
@@ -659,6 +570,7 @@ function FAQSection() {
 
 /* ─────────────────── CTA SECTION ─────────────────── */
 function CTASection() {
+  const navigator = useNavigate();
   return (
     <section style={cx.section("#fff")}>
       <div style={cx.container}>
@@ -705,6 +617,7 @@ function CTASection() {
                 into a streamlined, compliant ecosystem.
               </p>
               <button
+                onClick={() => navigator("/contact")}
                 className="inline-flex items-center gap-2 px-10 py-4 text-lg font-bold rounded-xl"
                 style={{
                   background: "#001F3F",
@@ -733,20 +646,6 @@ function CTASection() {
   );
 }
 
-/* ─────────────────── FOOTER ─────────────────── */
-function Footer() {
-  return (
-    <footer style={{ background: "#fff", borderTop: "1px solid rgba(0,31,63,0.06)", padding: "3rem 0" }}>
-      <div className="flex flex-col items-center justify-between gap-4 md:flex-row" style={cx.container}>
-        <div style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 900, fontSize: "1.5rem", color: "#001F3F" }}>
-          RISK<span style={{ color: "#FFC000" }}>MAN</span>
-        </div>
-        <p style={{ color: "#999", fontSize: "0.8rem" }}>© 2026 RiskMan Consulting | Specialized India DPDP Advisory</p>
-      </div>
-    </footer>
-  );
-}
-
 /* ───────────────── MAIN PAGE ───────────────── */
 export default function DPDPCompliancePage() {
   return (
@@ -766,7 +665,6 @@ export default function DPDPCompliancePage() {
       <OperationSection />
       <FAQSection />
       <CTASection />
-      <Footer />
     </div>
   );
 }

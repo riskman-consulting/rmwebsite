@@ -30,7 +30,9 @@ const rankByBM25 = (data, query) => {
 };
  
 
-export default function EventRecognition() {
+export default function EventRecognition({ isPage = false }) {
+  // isPage: rendered as the whole /events/accomplishments page, so the heading is its <h1>
+  const Heading = isPage ? "h1" : "h2";
   const {fetchEventRecognitionMedia,eventRecognitionMedia}  = useEventsStore()
   const [activeTab, setActiveTab] = useState("emerging");
   const [showMoreAccomplishments, setShowMoreAccomplishments] = useState(false);
@@ -43,7 +45,6 @@ export default function EventRecognition() {
 
   const allMedia = useMemo(()=>eventRecognitionMedia)
 
-  console.log(eventRecognitionMedia)
 
 
   useEffect(()=>{
@@ -84,8 +85,8 @@ export default function EventRecognition() {
 
   return (
 
-     <section id="accomplishment" className="relative px-10 bg-gradient-to-b from-bgLight to-bgLight dark:from-bgDark dark:to-bgDark border-y border-borderLight dark:border-borderDark">
-      <div className="container px-4 py-32 md:py-24 mx-auto">
+     <section id="accomplishment" className="relative bg-surfaceLight dark:bg-surfaceDark border-y border-borderLight dark:border-borderDark">
+      <div className="container py-20">
        
         {/* TABS & SEARCH */}
         <div className="flex flex-col items-center gap-8 mb-16 text-center">
@@ -141,7 +142,7 @@ export default function EventRecognition() {
             <input
               type="text"
               placeholder="Semantic search (e.g., 'Mumbai 2025' or 'Audit Summit')..."
-              className="w-full px-6 py-4 bg-white border outline-none rounded-xl border-brandGold/30 dark:bg-slate-900 dark:text-white focus:ring-2 focus:ring-brandGold"
+              className="w-full px-6 py-4 bg-white border outline-none rounded-xl border-brandGold/30 dark:bg-bgDark dark:text-white focus:ring-2 focus:ring-brandGold"
               onChange={(e) => { setSearchQuery(e.target.value); setDisplayLimit(4); }}
             />
           </div>
@@ -149,9 +150,9 @@ export default function EventRecognition() {
  
         {/* HEADER */}
         <div className="mb-12">
-          <h2 className="mb-4 text-4xl font-bold capitalize lg:text-5xl font-heading text-brandDark dark:text-white">
+          <Heading className="mb-4 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
             {activeTab === "accomplishments" ? "Team Accomplishments" : "Emerging Risk Assurance and Advisory Firm for the Year"}
-          </h2>
+          </Heading>
           <div className="w-20 h-1.5 bg-gradient-to-r from-brandAccent to-brandGold rounded-full" />
         </div>
  

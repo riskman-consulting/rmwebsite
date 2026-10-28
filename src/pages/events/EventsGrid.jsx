@@ -6,7 +6,9 @@ import { useEventsStore } from "../../store/event";
 const shortLabel = (type) =>
   type === "All" ? "All" : type?.replace(/\s*Chapter\s*/gi, ' ').trim();
 
-export default function EventsGrid() {
+export default function EventsGrid({ isPage = false }) {
+  // isPage: rendered as the whole /events/past-events page, so the heading is its <h1>
+  const Heading = isPage ? "h1" : "h2";
   const {fetchEvents,events } = useEventsStore()
   let myEvents = events
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -31,17 +33,17 @@ export default function EventsGrid() {
     },[])
  
   return (
-    <div id="past-events" className="min-h-screen px-4 py-16 bg-slate-50 dark:bg-surfaceDark">
-      <div className="mx-auto max-w-7xl">
+    <div id="past-events" className="min-h-screen py-20 bg-surfaceLight dark:bg-surfaceDark">
+      <div className="container">
         <header className="mb-12">
-          <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Past Events & Conferences</h2>
-          <p className="mt-2 text-slate-500">Explore our journey across global audit leadership forums.</p>
+          <Heading className="font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">Past Events & Conferences</Heading>
+          <p className="mt-2 text-slate-500 dark:text-slate-400">Explore our journey across global audit leadership forums.</p>
         </header>
  
         <div className="flex flex-col gap-8 lg:flex-row">
           {/* Filter Sidebar */}
           <aside className="flex-shrink-0 lg:w-64">
-            <div className="sticky p-6 bg-white border shadow-sm dark:bg-slate-900 rounded-2xl border-slate-200 dark:border-slate-800 top-24">
+            <div className="sticky p-6 bg-bgLight border shadow-sm dark:bg-bgDark rounded-2xl border-slate-200 dark:border-slate-800 top-48">
               <div className="flex items-center gap-2 mb-6 font-bold text-slate-800 dark:text-slate-200">
                 <Filter size={18} />
                 <span>Categories</span>
@@ -53,7 +55,7 @@ export default function EventsGrid() {
                     onClick={() => setSelectedCategory(cat)}
                     className={`w-full text-left px-4 py-2 rounded-lg text-xs transition-all ${
                       selectedCategory === cat
-                      ? "bg-slate-900 text-white dark:bg-white dark:text-black font-semibold"
+                      ? "bg-brandDark text-white dark:bg-brandAccent dark:text-brandDark font-semibold"
                       : "text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"
                     }`}
                   >
@@ -82,13 +84,13 @@ export default function EventsGrid() {
           </aside>
  
           {/* Grid Area */}
-          <main className="flex-1">
+          <div className="flex-1">
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {filteredEvents?.map((event,idx)=> (
                 <EventCard key={idx} event={event} />
               ))}
             </div>
-          </main>
+          </div>
         </div>
       </div>
     </div>

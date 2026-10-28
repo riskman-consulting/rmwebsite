@@ -31,11 +31,11 @@ const FAQItem = ({ question, answer }) => {
 const FAQ = () => {
   const faqs = [
     {
-      question: "How does RiskMan help Organizations with network security?",
+      question: "How does RiskMan help organizations with network security?",
       answer: "We manage the configuration of firewalls and network security controls to prevent unauthorized traffic from entering your cardholder environment."
     },
     {
-      question: "Is it mandatory for Organizations to change default passwords?",
+      question: "Is it mandatory for organizations to change default passwords?",
       answer: "Yes, Requirement 2 mandates changing all vendor-supplied defaults to prevent common exploits used by malicious actors."
     },
     {
@@ -53,8 +53,8 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-24 bg-white dark:bg-bgDark">
-      <div className="container px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="py-16 bg-bgLight dark:bg-bgDark">
+      <div className="container">
         <div className="max-w-3xl mx-auto">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
@@ -65,7 +65,7 @@ const FAQ = () => {
             </p>
           </div>
           
-          <div className="p-8 border border-gray-100 bg-gray-50 dark:bg-white/5 rounded-2xl dark:border-white/5">
+          <div className="p-8 border border-borderLight bg-surfaceLight dark:bg-surfaceDark rounded-2xl dark:border-borderDark">
             {faqs.map((faq, index) => (
               <FAQItem key={index} {...faq} />
             ))}

@@ -5,7 +5,7 @@ import { faqs } from './data'
 function FAQSection() {
     const [activeFaq, setActiveFaq] = useState(null);
   return (
-    <section className="py-20 bg-bgLight">
+    <section className="py-16 bg-bgLight">
         <div className="container max-w-3xl">
           <h2 className="font-heading text-3xl font-bold mb-10 text-center">Global Privacy FAQ</h2>
           <div className="space-y-4">

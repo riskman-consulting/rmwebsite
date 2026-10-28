@@ -10,7 +10,7 @@ import {
 
 
 export const FeatureHighlights = () => (
-  <section className="relative py-24 transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark">
+  <section className="relative py-16 transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark">
     <div className="container max-w-6xl px-6 mx-auto text-center">
       <h2 className="mb-16 text-4xl font-bold md:text-5xl text-brandDark dark:text-white">Industry-Specific Excellence</h2>
       <div className="grid gap-8 md:grid-cols-3">

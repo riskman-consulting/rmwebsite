@@ -19,8 +19,8 @@ const IntroductionSection = () => {
   return (
     <div className="relative overflow-hidden bg-surfaceLight dark:bg-surfaceDark">
       {/* ================= ABOUT SECTION ================= */}
-      <section id="introduction" className="relative py-4 lg:pb-2 lg:pt-12 isolate">
-        <div className="grid items-center gap-12 px-6 mx-auto max-w-7xl lg:px-12 lg:grid-cols-12 lg:gap-16">
+      <section id="introduction" className="relative py-16 isolate">
+        <div className="container grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
 
           {/* LEFT CONTENT */}
           <motion.div {...fadeInUp} className="lg:col-span-6">
@@ -28,7 +28,7 @@ const IntroductionSection = () => {
               About RiskMan
             </span>
 
-            <h2 className="mb-8 text-4xl font-bold leading-tight lg:text-5xl text-brandDark dark:text-white">
+            <h2 className="mb-8 font-heading text-3xl md:text-4xl font-bold leading-tight text-brandDark dark:text-white">
               <span className="font-serif italic font-medium text-brandGold">
                 Who
               </span>{" "}
@@ -55,7 +55,7 @@ const IntroductionSection = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative p-6 mt-10 border shadow-xl lg:p-8 rounded-2xl bg-white/10 dark:bg-brandNavy/30 backdrop-blur-xl border-brandGold/30 dark:border-brandAccent/30"
+              className="relative p-6 mt-10 border shadow-xl lg:p-8 rounded-2xl bg-bgLight dark:bg-brandNavy/30 backdrop-blur-xl border-brandGold/30 dark:border-brandAccent/30"
             >
               <div className="absolute top-0 left-0 w-1 h-16 rounded-r-full bg-brandGold" />
               <p className="text-sm italic font-semibold leading-snug lg:text-xl text-brandDark dark:text-white/90">
@@ -107,8 +107,6 @@ const IntroductionSection = () => {
                 className="object-cover w-full h-full transition-transform duration-1000 group-hover:scale-105"
               />
 
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-brandNavy/60 via-transparent to-transparent opacity-60" />
 
               {/* STATS CARDS - Desktop Only */}
               {/* <div className="absolute hidden gap-3 bottom-6 left-6 right-6 lg:flex">

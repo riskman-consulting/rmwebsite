@@ -225,36 +225,36 @@ const ESGMaturityModel = () => {
     {
       stage: 2,
       title: "Developing",
-      color: "from-blue-600 to-indigo-700",
-      accent: "border-blue-500",
-      shadow: "shadow-blue-200",
+      color: "from-brandPrimary to-brandNavy",
+      accent: "border-brandPrimary",
+      shadow: "shadow-slate-200",
       characteristics: "Formalized policies; basic metrics; initial stakeholder engagement.",
       icon: "📋",
     },
     {
       stage: 3,
       title: "Defined",
-      color: "from-indigo-600 to-purple-700",
-      accent: "border-indigo-500",
-      shadow: "shadow-indigo-200",
+      color: "from-brandNavy to-brandDark",
+      accent: "border-brandNavy",
+      shadow: "shadow-slate-200",
       characteristics: "Integrated operations; standardized governance and tracking systems.",
       icon: "📊",
     },
     {
       stage: 4,
       title: "Advanced",
-      color: "from-purple-600 to-pink-600",
-      accent: "border-purple-500",
-      shadow: "shadow-purple-200",
+      color: "from-brandDark to-brandPrimary",
+      accent: "border-brandDark dark:border-slate-400",
+      shadow: "shadow-slate-200",
       characteristics: "Mature practices; proactive management; full framework alignment.",
       icon: "🚀",
     },
     {
       stage: 5,
       title: "Transformative",
-      color: "from-amber-500 to-orange-600",
-      accent: "border-amber-500",
-      shadow: "shadow-amber-200",
+      color: "from-brandAccent to-brandGold",
+      accent: "border-brandGold",
+      shadow: "shadow-slate-200",
       characteristics: "Industry-leading; ESG embedded in culture; driving innovation.",
       icon: "🏆",
     },
@@ -269,14 +269,11 @@ const ESGMaturityModel = () => {
   ];
 
   return (
-    <section className="relative py-16 overflow-hidden font-sans bg-slate-50 dark:bg-slate-950">
-      {/* Decorative Gradient Blur */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
-
-      <div className="container relative z-10 px-4 mx-auto max-w-7xl">
+    <section className="relative py-16 overflow-hidden font-sans bg-surfaceLight dark:bg-surfaceDark">
+      <div className="container relative z-10">
         {/* Header Section */}
-        <div className="mt-16 mb-10 overflow-hidden relative p-1 bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-950 rounded-[2.5rem] shadow-2xl">
-          <div className="relative px-10 py-12 bg-slate-950/40 backdrop-blur-3xl rounded-[2.4rem]">
+        <div className="mb-10 overflow-hidden relative p-1 bg-gradient-to-r from-brandDark via-brandNavy to-brandPrimary rounded-2xl shadow-2xl">
+          <div className="relative px-10 py-12 bg-brandDark/40 backdrop-blur-3xl rounded-2xl">
 
             <div className="relative z-10 flex flex-col items-center gap-8 lg:flex-row">
 
@@ -285,7 +282,7 @@ const ESGMaturityModel = () => {
                 <h3 className="mb-4 text-2xl font-black tracking-wider text-white uppercase">
                   Phase 1: ESG Baseline Assessment
                 </h3>
-                <p className="text-sm leading-relaxed text-blue-100/70">
+                <p className="text-sm leading-relaxed text-white/70">
                   We evaluate your current ESG posture across key dimensions to identify maturity, gaps,
                   and improvement opportunities.
                 </p>
@@ -298,7 +295,7 @@ const ESGMaturityModel = () => {
                     key={idx}
                     className="flex items-start gap-3 p-3 transition-colors border rounded-xl bg-white/5 border-white/10 hover:bg-white/10"
                   >
-                    <span className="text-lg text-amber-400">
+                    <span className="text-lg text-brandGold">
                       {dim.icon}
                     </span>
 
@@ -306,7 +303,7 @@ const ESGMaturityModel = () => {
                       <div className="text-[10px] font-bold text-white uppercase tracking-widest">
                         {dim.title}
                       </div>
-                      <div className="text-[10px] text-blue-100/60 leading-tight">
+                      <div className="text-[10px] text-white/60 leading-tight">
                         {dim.desc}
                       </div>
                     </div>
@@ -320,9 +317,9 @@ const ESGMaturityModel = () => {
         </div>
 
         {/* Maturity Progression Visualization */}
-        <div className="relative p-8 lg:p-12 overflow-hidden bg-white border border-slate-200 dark:bg-slate-900 dark:border-slate-800 shadow-2xl rounded-[3rem]">
+        <div className="relative p-8 lg:p-12 overflow-hidden bg-bgLight border border-borderLight dark:bg-bgDark dark:border-borderDark shadow-2xl rounded-2xl">
           {/* Top Progress Bar Gradient */}
-          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-slate-400 via-blue-600 to-amber-500" />
+          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-slate-400 via-brandPrimary to-brandGold" />
 
           <h3 className="mb-16 text-center text-sm font-black uppercase tracking-[4px] text-slate-400">
             Maturity Progression Model
@@ -330,7 +327,7 @@ const ESGMaturityModel = () => {
 
           <div className="relative">
             {/* Desktop Path Line */}
-            <div className="absolute top-12 left-0 right-0 hidden h-0.5 bg-slate-100 dark:bg-slate-800 lg:block" />
+            <div className="absolute top-12 left-0 right-0 hidden h-0.5 bg-slate-200 dark:bg-slate-700 lg:block" />
 
             <div className="flex flex-col gap-8 lg:flex-row lg:justify-between">
               {maturityStages.map((s, i) => (
@@ -342,19 +339,19 @@ const ESGMaturityModel = () => {
                     }`}
                 >
                   {/* Circle Icon */}
-                  <div className={`flex flex-col items-center justify-center w-24 h-24 mb-6 transition-all duration-500 border-4 rounded-full shadow-2xl bg-gradient-to-br border-white dark:border-slate-900 ${s.color} ${activeStage === i ? "scale-110 rotate-6" : ""}`}>
+                  <div className={`flex flex-col items-center justify-center w-24 h-24 mb-6 transition-all duration-500 border-4 rounded-full shadow-2xl bg-gradient-to-br border-white dark:border-bgDark ${s.color} ${activeStage === i ? "scale-110 rotate-6" : ""}`}>
                     <span className="mb-1 text-3xl">{s.icon}</span>
                     <span className="text-[8px] font-black text-white/80 uppercase tracking-tighter">Stage {s.stage}</span>
                   </div>
 
                   {/* Title Badge */}
-                  <div className={`px-4 py-1.5 mb-4 rounded-full border shadow-sm transition-colors ${s.accent} ${activeStage === i ? "bg-slate-900 text-white" : "bg-white dark:bg-slate-800"}`}>
+                  <div className={`px-4 py-1.5 mb-4 rounded-full border shadow-sm transition-colors ${s.accent} ${activeStage === i ? "bg-brandDark text-white" : "bg-white dark:bg-surfaceDark"}`}>
                     <span className={`text-[10px] font-black uppercase tracking-widest ${activeStage === i ? "text-white" : "text-slate-800 dark:text-slate-100"}`}>
                       {s.title}
                     </span>
                   </div>
 
-                  <p className="px-2 text-[11px] font-medium leading-relaxed text-slate-500">
+                  <p className="px-2 text-[11px] font-medium leading-relaxed text-slate-500 dark:text-slate-400">
                     {s.characteristics}
                   </p>
                 </div>
@@ -364,19 +361,19 @@ const ESGMaturityModel = () => {
         </div>
 
         {/* Phase 2 CTA - Redesigned for Impact */}
-        <div className="mt-16 overflow-hidden relative p-1 bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-950 rounded-[2.5rem] shadow-2xl">
-          <div className="relative px-10 py-12 bg-slate-950/40 backdrop-blur-3xl rounded-[2.4rem]">
+        <div className="mt-16 overflow-hidden relative p-1 bg-gradient-to-r from-brandDark via-brandNavy to-brandPrimary rounded-2xl shadow-2xl">
+          <div className="relative px-10 py-12 bg-brandDark/40 backdrop-blur-3xl rounded-2xl">
             <div className="relative z-10 flex flex-col items-center gap-8 lg:flex-row">
               <div className="lg:w-1/2">
                 <h3 className="mb-4 text-2xl font-black tracking-wider text-white uppercase">Phase 2: Customized ESG Roadmap</h3>
-                <p className="text-sm leading-relaxed text-blue-100/70">
+                <p className="text-sm leading-relaxed text-white/70">
                   Based on findings, we develop a tailored roadmap balancing ambition with practicality—addressing resource needs and milestones.
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-4 lg:w-1/2">
                 {["Priority Initiatives", "Phased Timelines", "Resource Plans", "Success Metrics"].map((item) => (
                   <div key={item} className="flex items-center gap-3 p-3 transition-colors border rounded-xl bg-white/5 border-white/10 hover:bg-white/10">
-                    <span className="text-amber-400">★</span>
+                    <span className="text-brandGold">★</span>
                     <span className="text-[10px] font-bold text-white uppercase tracking-widest">{item}</span>
                   </div>
                 ))}

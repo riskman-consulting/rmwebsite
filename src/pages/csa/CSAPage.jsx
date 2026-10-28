@@ -87,7 +87,7 @@ import CTASection from "./CTASection";
 
 export default function CSAPage() {
   return (
-    <div className="min-h-screen transition-colors bg-white dark:bg-slate-950">
+    <div className="min-h-screen transition-colors bg-bgLight dark:bg-bgDark">
       <Helmet>
         <title>Control Self-Assessment (CSA) Services | RiskMan Consulting</title>
         <meta name="description" content="RiskMan Consulting's CSA services empower business units to evaluate their own internal controls, fostering risk ownership and strengthening governance across your organization." />
@@ -107,9 +107,9 @@ export default function CSAPage() {
       {/* ✅ CSA Lifecycle Diagram + InfoPanel */}
       <CSALifecycleSection />
 
-      <section className="bg-white py-14 md:py-20 dark:bg-slate-900">
-        <div className="container px-6 mx-auto">
-          <h2 className="mb-8 text-3xl font-bold text-center text-slate-800 dark:text-white">
+        <section className="py-16 bg-bgLight dark:bg-bgDark">
+        <div className="container">
+          <h2 className="mb-8 text-3xl font-bold text-center font-heading md:text-4xl text-brandDark dark:text-white">
             Visual Framework: Global Operating Model Architecture
           </h2>
           <GlobalOperatingModelDiagram />
@@ -178,11 +178,12 @@ export default function CSAPage() {
         </div>
       </section> */}
     
-     {/* <section className="py-14 md:py-20 bg-surfaceLight dark:bg-surfaceDark"> */}
-      <div className="p-8 shadow-md bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-900 rounded-xl">
-          <h3 className="mb-4 text-2xl font-bold text-brandDark dark:text-brandAccent">
+      <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
+        <div className="container">
+      <div className="p-8 border shadow-md bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark rounded-2xl">
+          <h2 className="mb-4 text-3xl font-bold font-heading md:text-4xl text-brandDark dark:text-white">
             Technology & GRC Integration
-          </h3>
+          </h2>
           <p className="mb-6 leading-relaxed text-brandNavy dark:text-white">
             RiskMan's CSA programs are designed for seamless integration with leading GRC platforms. 
             Our technology-enabled approach ensures:
@@ -190,7 +191,7 @@ export default function CSAPage() {
 
           <div className="grid gap-4 md:grid-cols-2">
             <div className="flex items-start gap-3">
-              <svg className="flex-shrink-0 w-6 h-6 mt-1 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="flex-shrink-0 w-6 h-6 mt-1 text-brandPrimary dark:text-brandAccent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
               </svg>
               <p className="text-brandNavy dark:text-white/70">
@@ -199,7 +200,7 @@ export default function CSAPage() {
             </div>
 
             <div className="flex items-start gap-3">
-              <svg className="flex-shrink-0 w-6 h-6 mt-1 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="flex-shrink-0 w-6 h-6 mt-1 text-brandPrimary dark:text-brandAccent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
               </svg>
               <p className="text-brandNavy dark:text-white/70">
@@ -208,7 +209,7 @@ export default function CSAPage() {
             </div>
 
             <div className="flex items-start gap-3">
-              <svg className="flex-shrink-0 w-6 h-6 mt-1 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="flex-shrink-0 w-6 h-6 mt-1 text-brandPrimary dark:text-brandAccent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
               </svg>
               <p className="text-brandNavy dark:text-white/70">
@@ -217,7 +218,7 @@ export default function CSAPage() {
             </div>
 
             <div className="flex items-start gap-3">
-              <svg className="flex-shrink-0 w-6 h-6 mt-1 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="flex-shrink-0 w-6 h-6 mt-1 text-brandPrimary dark:text-brandAccent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
               </svg>
               <p className="text-brandNavy dark:text-white/70">
@@ -226,7 +227,7 @@ export default function CSAPage() {
             </div>
 
             <div className="flex items-start gap-3">
-              <svg className="flex-shrink-0 w-6 h-6 mt-1 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="flex-shrink-0 w-6 h-6 mt-1 text-brandPrimary dark:text-brandAccent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
               </svg>
               <p className="text-brandNavy dark:text-white/70">
@@ -235,12 +236,14 @@ export default function CSAPage() {
             </div>
           </div>
         </div>
+        </div>
+      </section>
 
       <ValueCreation />
 
-      <section className="py-12 bg-white dark:bg-slate-900">
-        <div className="container px-6 mx-auto">
-          <h2 className="mb-8 text-3xl font-bold text-center text-slate-800 dark:text-white">
+        <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
+        <div className="container">
+          <h2 className="mb-8 text-3xl font-bold text-center font-heading md:text-4xl text-brandDark dark:text-white">
             Visual Framework: CSA Maturity Model
           </h2>
           <CSAMaturityModelDiagram />

@@ -7,7 +7,7 @@ const ServiceCatalog = () => {
       description: "Independent credit assessment to identify Credit Positives and Negatives. We leverage positives through presentation and improvise negatives like capital structure and market reach to help enterprises get rated higher and access market borrowings.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       )
     },
@@ -41,7 +41,7 @@ const ServiceCatalog = () => {
   ];
 
   return (
-    <section className="py-24 bg-bgLight dark:bg-bgDark">
+    <section className="py-16 bg-bgLight dark:bg-bgDark">
       <div className="container">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold font-heading md:text-4xl text-brandDark dark:text-white">
@@ -54,7 +54,7 @@ const ServiceCatalog = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="p-8 transition-all duration-300 border group bg-surfaceLight dark:bg-surfaceDark rounded-2xl border-borderLight dark:border-borderDark hover:shadow-xl"
+              className="h-full p-8 transition-all duration-300 border group bg-surfaceLight dark:bg-surfaceDark rounded-2xl border-borderLight dark:border-borderDark hover:shadow-xl"
             >
               <div className="flex items-start gap-6">
                 <div className="flex items-center justify-center flex-shrink-0 w-16 h-16 transition-transform duration-300 bg-brandPrimary/5 dark:bg-brandGold/5 text-brandPrimary dark:text-brandGold rounded-xl group-hover:scale-110">

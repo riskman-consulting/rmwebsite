@@ -143,12 +143,12 @@ export default function ServiceLeadersSection({ setSelectedLeader }) {
   }, [fetchServiceLeaders]);
 
   return (
-    <section id="service-leaders" className="py-14 bg-surfaceLight md:py-20 dark:bg-surfaceDark">
-      <div className="px-4 mx-auto max-w-7xl lg:px-8">
+    <section id="service-leaders" className="py-16 bg-bgLight dark:bg-bgDark">
+      <div className="container">
 
         {/* Header */}
         <motion.div {...animations.fadeInUp} className="mb-12 text-center">
-          <h2 className="mb-3 text-3xl font-bold text-brandDark lg:text-4xl dark:text-white">
+          <h2 className="mb-3 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
             Our <span className="text-brandGold">Associate Partners</span> and{" "}
             <span className="text-brandAccent">Client Leads</span>
           </h2>

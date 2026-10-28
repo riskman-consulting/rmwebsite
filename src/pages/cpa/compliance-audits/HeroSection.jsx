@@ -1,10 +1,12 @@
 import { ArrowLeft } from 'lucide-react'
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import bg from '../../../assets/images/cpa/compliance-audits/hero.png'
 
 function HeroSection() {
+  const navigate = useNavigate()
   return (
-    <section className="relative text-white py-24 lg:py-36 overflow-hidden">
+    <section className="relative text-white py-16 lg:py-20 overflow-hidden">
 
       {/* Background Image */}
       <div
@@ -35,11 +37,11 @@ function HeroSection() {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <button className="flex items-center gap-2 bg-white text-brandDark px-8 py-4 rounded-md font-bold hover:bg-brandLight transition-all shadow-lg">
+            <button onClick={() => navigate("/services/cpa-us-assurance")} className="flex items-center gap-2 bg-white text-brandDark px-8 py-4 rounded-md font-bold hover:bg-brandLight transition-all shadow-lg">
               <ArrowLeft size={18} /> Return to Services
             </button>
 
-            <button className="bg-brandAccent text-brandDark px-8 py-4 rounded-md font-bold hover:bg-brandGold transition-all">
+            <button onClick={() => navigate("/contact")} className="bg-brandAccent text-brandDark px-8 py-4 rounded-md font-bold hover:bg-brandGold transition-all">
               Speak with a Specialist
             </button>
           </div>

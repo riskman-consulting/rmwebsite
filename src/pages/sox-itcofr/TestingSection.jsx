@@ -6,7 +6,7 @@ import testingImage from "../../assets/images/sox/testing.png";
 function TestingSection() {
   return (
     // 1. py-24 ko kam karke py-12 ya 16 kijiye
-    <section className="relative py-14 md:py-16 bg-bgLight dark:bg-bgDark overflow-hidden transition-colors duration-500">
+    <section className="relative py-16 bg-surfaceLight dark:bg-surfaceDark overflow-hidden transition-colors duration-500">
       
       {/* BACKGROUND ELEMENTS */}
       <div className="absolute inset-0 pointer-events-none">
@@ -29,7 +29,7 @@ function TestingSection() {
             Continuous Validation
           </motion.div>
 
-          <h2 className="mb-4 text-3xl md:text-5xl font-bold font-heading text-brandDark dark:text-white leading-tight">
+          <h2 className="mb-4 text-3xl md:text-4xl font-bold font-heading text-brandDark dark:text-white leading-tight">
             Rigorous Control <br /> 
             <span className="text-brandPrimary dark:text-brandAccent">Testing & Sustenance</span>
           </h2>
@@ -48,7 +48,7 @@ function TestingSection() {
             {testingItems.map((item, index) => (
               <motion.div
                 key={index}
-                className="group relative flex gap-5 p-5 bg-white dark:bg-surfaceDark border border-borderLight dark:border-borderDark rounded-2xl transition-all hover:shadow-lg hover:border-brandAccent/40"
+                className="group relative flex gap-5 p-5 bg-bgLight dark:bg-bgDark border border-borderLight dark:border-borderDark rounded-2xl transition-all hover:shadow-lg hover:border-brandAccent/40"
               >
                 <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 bg-brandDark dark:bg-brandPrimary/10 rounded-xl group-hover:bg-brandAccent transition-colors">
                   <div className="text-brandAccent group-hover:text-brandDark text-lg">
@@ -70,7 +70,7 @@ function TestingSection() {
 
           {/* RIGHT: IMAGE DASHBOARD (Span 7) */}
           <div className="lg:col-span-7 order-1 lg:order-2 sticky top-20">
-            <div className="relative p-2 bg-white dark:bg-surfaceDark border border-borderLight dark:border-borderDark rounded-3xl shadow-xl overflow-hidden">
+            <div className="relative p-2 bg-bgLight dark:bg-bgDark border border-borderLight dark:border-borderDark rounded-2xl shadow-xl overflow-hidden">
               {/* Window Controls - Padding kam kiya */}
               <div className="flex items-center justify-between px-5 py-3 border-b border-borderLight dark:border-borderDark bg-slate-50/50 dark:bg-transparent">
                 <div className="flex gap-1.5">

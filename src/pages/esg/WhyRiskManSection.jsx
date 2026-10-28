@@ -33,7 +33,7 @@ const WhyRiskManSection = () => {
 
   return (
     <>
-      <section className="py-24 overflow-hidden bg-bgLight dark:bg-bgDark">
+      <section className="py-16 overflow-hidden bg-bgLight dark:bg-bgDark">
         <div className="container">
           {/* Section Header */}
           <div className="flex flex-col items-end justify-between gap-8 mb-20 text-center lg:text-left lg:flex-row">

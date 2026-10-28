@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
 
 const DueDiligenceSection = () => {
   const mapImage = "https://public.youware.com/users-website-assets/prod/9ff22b8d-6a23-4340-a80f-898c8b5c261b/262fe200a8374e1c8b14894806e4aa38";
@@ -7,8 +6,8 @@ const DueDiligenceSection = () => {
   const fraudImage = "https://public.youware.com/users-website-assets/prod/9ff22b8d-6a23-4340-a80f-898c8b5c261b/a2c5f9ff022442b99be18037b98347f4";
 
   return (
-    <section className="py-24 bg-surfaceLight dark:bg-surfaceDark">
-      <div className="container px-4 mx-auto">
+    <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
+      <div className="container">
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl font-heading text-brandNavy dark:text-white">
             Integrity Due Diligence and Compliance
@@ -36,9 +35,8 @@ const DueDiligenceSection = () => {
               image: fraudImage
             }
           ].map((card, idx) => (
-            <div key={idx} className="flex flex-col overflow-hidden transition-all duration-300 bg-white border shadow-lg group dark:bg-bgDark rounded-2xl hover:shadow-2xl border-borderLight dark:border-borderDark">
+            <div key={idx} className="flex flex-col h-full overflow-hidden transition-all duration-300 bg-white border shadow-lg group dark:bg-bgDark rounded-2xl hover:shadow-2xl border-borderLight dark:border-borderDark">
               <div className="relative h-56 overflow-hidden">
-                <div className="absolute inset-0 z-10 transition-colors bg-brandNavy/20 group-hover:bg-transparent"></div>
                 <img 
                   src={card.image} 
                   alt={card.title} 
@@ -49,12 +47,9 @@ const DueDiligenceSection = () => {
                 <h3 className="mb-3 text-xl font-bold transition-colors text-brandNavy dark:text-white group-hover:text-brandGold">
                   {card.title}
                 </h3>
-                <p className="flex-1 mb-6 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+                <p className="flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
                   {card.desc}
                 </p>
-                <a href="#" className="inline-flex items-center mt-auto text-sm font-semibold text-brandPrimary dark:text-brandGold hover:underline">
-                  Learn More <ArrowRight size={16} className="ml-1" />
-                </a>
               </div>
             </div>
           ))}

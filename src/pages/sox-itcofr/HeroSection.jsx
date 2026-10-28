@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] lg:top-10 flex items-center bg-brandDark overflow-hidden">
+    <section className="relative flex items-center py-16 lg:py-20 bg-brandDark overflow-hidden">
       
       {/* 1. VISUAL SIDE (RIGHT) */}
       <div className="absolute top-0 right-0 z-0 w-full h-full lg:w-1/2">
@@ -23,7 +23,7 @@ function HeroSection() {
       {/* 2. BACKGROUND DECOR */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         {/* Subtle Grid using brandNavy */}
-        <div className="absolute inset-0 opacity-[0.15] bg-[radial-gradient(#003366_1px,transparent_1px)] [background-size:30px_30px]" />
+        <div className="absolute inset-0 opacity-[0.15] bg-[radial-gradient(theme(colors.brandNavy)_1px,transparent_1px)] [background-size:30px_30px]" />
         {/* Ambient Glow using brandAccent */}
         <div className="absolute top-1/4 -left-20 w-96 h-96 bg-brandAccent/10 blur-[120px] rounded-full" />
       </div>
@@ -40,7 +40,7 @@ function HeroSection() {
           </div>
 
           <div className="space-y-8">
-            <h1 className="font-heading text-5xl md:text-7xl font-bold text-white leading-[1.1] animate-[fadeInUp_0.8s_ease-out]">
+            <h1 className="font-heading text-5xl md:text-7xl font-bold text-white leading-[1.1]">
               Governance and <br />
               <span className="text-brandGold">Compliance Excellence</span>
             </h1>
@@ -59,7 +59,7 @@ function HeroSection() {
               </Link>
               
               <Link 
-                href="/contact" 
+                to="/contact" 
                 className="px-10 py-4 font-bold text-white transition-all duration-300 border-2 rounded-sm border-white/20 hover:border-brandAccent hover:bg-white/5"
               >
                 Speak to Our Team

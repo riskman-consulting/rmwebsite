@@ -10,12 +10,12 @@ function FAQSection() {
   }
 
   return (
-    <section className="py-20 bg-white dark:bg-surfaceDark">
+    <section className="py-16 bg-bgLight dark:bg-bgDark">
       <div className="container">
 
         {/* Header */}
         <div className="max-w-4xl mx-auto mb-16 text-center">
-          <h2 className="mb-6 text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-brandDark dark:text-white">
+          <h2 className="mb-6 text-3xl md:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Frequently Asked Questions
           </h2>
         </div>
@@ -25,7 +25,7 @@ function FAQSection() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="overflow-hidden bg-white border rounded-xl
+              className="overflow-hidden bg-white border rounded-2xl
                          dark:bg-surfaceDark border-borderLight dark:border-borderDark
                          transition-all duration-300 hover:shadow-xl"
             >

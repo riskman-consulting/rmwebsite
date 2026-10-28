@@ -361,7 +361,7 @@ const Timeline = () => {
  
      
  
-      <div className="container relative z-10 flex flex-col justify-between h-full px-6 py-12 mx-auto md:px-12 lg:px-24">
+      <div className="container relative z-10 flex flex-col justify-between h-full py-20">
        
         {/* Top Section: Content & Images */}
         <div className="flex flex-col items-center justify-between flex-grow gap-12 lg:flex-row lg:gap-24">
@@ -446,7 +446,6 @@ const Timeline = () => {
                     alt={`${activeEvent.title} secondary`}
                     className="object-cover w-full h-full transition-opacity duration-500 opacity-60 hover:opacity-100"
                   />
-                  <div className="absolute inset-0 bg-brandNavy/10 dark:bg-brandNavy/30 mix-blend-multiply" />
                 </motion.div>
  
                 {/* Front Image (Main) */}
@@ -462,7 +461,6 @@ const Timeline = () => {
                     className="object-cover w-full h-full"
                   />
                   {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-brandDark/80 via-transparent to-transparent opacity-60" />
                  
                   {/* Icon Badge */}
                   <div className="absolute p-3 border shadow-lg bottom-6 left-6 bg-white/80 dark:bg-white/10 backdrop-blur-md rounded-xl border-white/20 text-brandPrimary dark:text-brandAccent">

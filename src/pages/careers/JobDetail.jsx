@@ -52,7 +52,7 @@ export default function JobDetailPage() {
    * ---------------------------------------------------------------- */
   if (!loaded || loading) {
     return (
-      <div className="min-h-[60vh] max-w-6xl px-6 py-24 mx-auto animate-pulse">
+      <div className="container min-h-[60vh] py-20 animate-pulse">
         <div className="w-40 h-3 mb-10 rounded bg-zinc-200 dark:bg-zinc-800" />
         <div className="w-2/3 h-10 mb-6 rounded bg-zinc-200 dark:bg-zinc-800" />
         <div className="w-1/3 h-4 mb-12 rounded bg-zinc-200 dark:bg-zinc-800" />
@@ -67,7 +67,7 @@ export default function JobDetailPage() {
 
   if (!job) {
     return (
-      <div className="min-h-[60vh] flex flex-col items-center justify-center px-6 py-24 text-center">
+      <div className="container min-h-[60vh] flex flex-col items-center justify-center py-20 text-center">
         <Helmet>
           <title>Position Not Found | RiskMan Consulting</title>
           <meta name="robots" content="noindex, follow" />
@@ -127,7 +127,7 @@ export default function JobDetailPage() {
   );
 
   return (
-    <div className="min-h-screen font-sans bg-surfaceLight dark:bg-surfaceDark text-zinc-900 dark:text-zinc-100">
+    <div className="min-h-screen font-sans bg-bgLight dark:bg-bgDark text-zinc-900 dark:text-zinc-100">
       <Helmet>
         <title>{`${job.title} | Careers at RiskMan Consulting`}</title>
         <meta name="description" content={metaDescription} />
@@ -153,9 +153,9 @@ export default function JobDetailPage() {
       </Helmet>
 
       {/* HEADER */}
-      <header className="relative px-6 pt-16 pb-12 overflow-hidden border-b border-borderLight dark:border-borderDark">
+      <header className="relative py-16 overflow-hidden border-b border-borderLight dark:border-borderDark">
         <div className="absolute top-0 w-full h-full -translate-x-1/2 left-1/2 bg-gradient-to-b from-brandPrimary/5 to-transparent -z-10" />
-        <div className="max-w-6xl mx-auto">
+        <div className="container">
           <Link
             to="/careers"
             className="inline-flex items-center gap-2 text-[10px] font-black tracking-widest text-zinc-400 hover:text-brandPrimary mb-10 transition-colors"
@@ -242,7 +242,7 @@ export default function JobDetailPage() {
       </header>
 
       {/* BODY */}
-      <main className="grid max-w-6xl gap-12 px-6 py-16 mx-auto lg:grid-cols-[1.3fr_1fr]">
+      <div className="container grid gap-12 py-16 lg:grid-cols-[1.3fr_1fr]">
         {/* DESCRIPTION */}
         <section>
           <h2 className="mb-6 text-[11px] font-black tracking-widest uppercase text-zinc-400">
@@ -255,7 +255,7 @@ export default function JobDetailPage() {
 
         {/* APPLY */}
         <section id="apply" className="lg:sticky lg:top-[150px] h-fit">
-          <div className="p-8 bg-white border shadow-xl dark:bg-zinc-900 border-borderLight dark:border-borderDark rounded-3xl shadow-zinc-200/40 dark:shadow-none">
+          <div className="p-8 bg-white border shadow-xl dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-3xl shadow-zinc-200/40 dark:shadow-none">
             {open ? (
               <ApplicationForm
                 jobTitle={job.title}
@@ -286,7 +286,7 @@ export default function JobDetailPage() {
             )}
           </div>
         </section>
-      </main>
+      </div>
     </div>
   );
 }

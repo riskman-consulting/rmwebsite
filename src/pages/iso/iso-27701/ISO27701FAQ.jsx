@@ -54,15 +54,15 @@ const ISO27701FAQ = () => {
     ];
 
     return (
-        <section className="w-full px-5 py-20 sm:px-8 lg:px-12 xl:px-14 sm:py-28 bg-surfaceLight dark:bg-bgDark" id="faq">
-            <div className="mx-auto max-w-[1280px]">
+      <section className="py-16 bg-bgLight dark:bg-bgDark" id="faq">
+            <div className="container">
                 <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
                     {/* Left column */}
                     <div className="lg:col-span-2">
                         <span className="text-sm font-semibold tracking-widest uppercase font-heading text-brandPrimary dark:text-brandAccent">
                             FAQ
                         </span>
-                        <h2 className="mt-3 text-3xl font-bold font-heading text-brandDark dark:text-white sm:text-4xl">
+                        <h2 className="mt-3 text-3xl font-bold font-heading text-brandDark dark:text-white md:text-4xl">
                             Frequently Asked Questions
                         </h2>
                         <p className="mt-4 text-slate-600 dark:text-slate-400">
@@ -71,7 +71,7 @@ const ISO27701FAQ = () => {
                         </p>
                         <div className="mt-8">
                             <img
-                                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=400&fit=crop"
+                                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=900&h=600&fit=crop"
                                 alt="Privacy consulting session"
                                 className="object-cover w-full h-auto rounded-2xl"
                             />

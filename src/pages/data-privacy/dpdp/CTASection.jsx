@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 function CTASection() {
   const navigator=useNavigate()
   return (
-     <section className="py-20 bg-white">
+    <section className="py-16 bg-white">
         <div className="container">
           <div className="relative p-12 overflow-hidden text-center border-2 shadow-2xl bg-brandAccent rounded-3xl lg:p-20 text-brandDark border-brandGold">
             <div className="relative z-10">

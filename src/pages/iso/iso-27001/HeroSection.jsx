@@ -34,7 +34,7 @@ const HeroSection = () => {
 
       <div className="container relative z-10">
         <div className="py-20 md:py-28 lg:py-36">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-3xl">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 border rounded-full bg-brandAccent/10 border-brandAccent/30">
               <svg
@@ -49,26 +49,26 @@ const HeroSection = () => {
                 />
               </svg>
               <span className="text-sm font-medium">
-                ISO 27701 Privacy Certification
+                ISO 27001 Information Security
               </span>
             </div>
 
             {/* Heading */}
             <h1 className="mb-6 text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl font-heading">
               Build Trust with{" "}
-              <span className="text-brandAccent">ISO 27701</span>{" "}
-              Privacy Excellence
+              <span className="text-brandAccent">ISO 27001</span>{" "}
+              Security Excellence
             </h1>
 
             {/* Description */}
-            <p className="max-w-3xl mx-auto mb-10 text-lg leading-relaxed text-gray-200 sm:text-xl">
-              Establish a robust Privacy Information Management System (PIMS),
-              ensure GDPR alignment, and demonstrate accountability in handling
-              personal data across your organization.
+            <p className="max-w-2xl mb-10 text-lg leading-relaxed text-gray-200 sm:text-xl">
+              Establish a robust Information Security Management System (ISMS),
+              manage information security risks, and demonstrate accountability
+              in protecting data across your organization.
             </p>
 
             {/* CTA */}
-            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="flex flex-col gap-4 sm:flex-row">
               <Link
                 to="/services/iso-certifications"
                 className="inline-flex items-center justify-center w-full gap-2 px-8 py-4 font-semibold transition-all duration-300 bg-white rounded-lg shadow-lg text-brandPrimary hover:bg-brandLight hover:shadow-xl hover:scale-105 sm:w-auto"
@@ -77,10 +77,10 @@ const HeroSection = () => {
               </Link>
 
               <Link
-                to="/services"
+                to="/contact"
                 className="inline-flex items-center justify-center w-full gap-2 px-8 py-4 font-semibold transition-all duration-300 rounded-lg shadow-lg bg-brandAccent text-brandDark hover:bg-brandGold hover:shadow-xl hover:scale-105 sm:w-auto"
               >
-                Get ISO 27701 Consultation
+                Get ISO 27001 Consultation
               </Link>
             </div>
           </div>

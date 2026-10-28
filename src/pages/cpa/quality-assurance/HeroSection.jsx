@@ -1,9 +1,11 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import image from "../../../assets/images/cpa/quality-assurance/hero.png"
 
 function HeroSection() {
+  const navigate = useNavigate()
   return (
-    <section className="relative bg-brandDark text-white py-24 lg:py-36 overflow-hidden">
+    <section className="relative bg-brandDark text-white py-16 lg:py-20 overflow-hidden">
       
       {/* Decorative Glow (your original) */}
       <div className="absolute inset-0 opacity-10">
@@ -28,11 +30,11 @@ function HeroSection() {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <button className="bg-brandPrimary text-white px-8 py-4 rounded-md font-bold hover:bg-brandNavy transition-all shadow-lg">
+              <button onClick={() => navigate("/services/cpa-us-assurance")} className="bg-brandPrimary text-white px-8 py-4 rounded-md font-bold hover:bg-brandNavy transition-all shadow-lg">
                 Discover All Services
               </button>
 
-              <button className="bg-brandAccent text-brandDark px-8 py-4 rounded-md font-bold hover:bg-brandGold transition-all">
+              <button onClick={() => navigate("/contact")} className="bg-brandAccent text-brandDark px-8 py-4 rounded-md font-bold hover:bg-brandGold transition-all">
                 Consult A Quality Lead
               </button>
             </div>

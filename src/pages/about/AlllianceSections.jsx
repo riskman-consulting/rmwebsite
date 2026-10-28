@@ -28,7 +28,7 @@ const alliancePartners = [
     shortName: "SM CPA",
     title: "US based CPA firm delivering reliable services on SOC 1, SOC 2 engagements",
     description: "Delivering insightful, reliable, and globally informed accounting and advisory services.",
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=533&fit=crop",
     website: "https://smcpaservices.com",
     fullDescription: `Specializing in US GAAP and international financial reporting, serving clients from emerging startups to established global enterprises with precision and integrity.`,
     services: ["Financial Statement Audits & Reviews", "Tax Planning & Compliance", "Management Consulting", "Business Process Improvement"],
@@ -59,8 +59,8 @@ export default function AlliancePartnersSection() {
   const [selectedPartner, setSelectedPartner] = useState(null);
 
   return (
-    <section id="alliance-partners" className="relative py-4 overflow-hidden lg:pb-2 lg:pt-12 bg-surfaceLight dark:bg-surfaceDark">
-      <div className="px-6 mx-auto max-w-7xl lg:px-12">
+    <section id="alliance-partners" className="relative py-16 overflow-hidden bg-bgLight dark:bg-bgDark">
+      <div className="container">
 
         {/* Header */}
         <motion.div {...fadeInUp} className="max-w-3xl mx-auto mb-16 text-center">
@@ -72,7 +72,7 @@ export default function AlliancePartnersSection() {
             <Handshake size={32} className="text-brandAccent" />
           </div>
 
-          <h2 className="mb-6 text-3xl font-bold lg:text-5xl text-brandDark dark:text-white">
+          <h2 className="mb-6 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
             Our CPA{" "}
             <span className="font-serif italic font-medium text-brandGold">
               Alliance
@@ -164,7 +164,7 @@ export default function AlliancePartnersSection() {
             }}
           >
             {/* Main Background with Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#D4AF37] via-brandAccent to-brandGold dark:from-brandAccent dark:via-brandGold dark:to-[#FFD700]" />
+            <div className="absolute inset-0 bg-gradient-to-r from-brandGold via-brandAccent to-brandGold dark:from-brandAccent dark:via-brandGold dark:to-brandAccent" />
 
             {/* Shine Effect */}
             <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-transparent to-black/10" />
@@ -243,7 +243,7 @@ export default function AlliancePartnersSection() {
             }}
           >
             {/* Main Background with Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#001a33] via-brandDark to-brandNavy dark:from-brandNavy dark:via-[#003d6b] dark:to-brandNavy" />
+            <div className="absolute inset-0 bg-gradient-to-r from-surfaceDark via-brandDark to-brandNavy dark:from-brandNavy dark:via-brandPrimary dark:to-brandNavy" />
 
             {/* Metallic Shine */}
             <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-black/20" />

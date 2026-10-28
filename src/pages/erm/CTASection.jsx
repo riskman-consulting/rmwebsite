@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 
 const CTASection = () => {
   return (
-    <section className="relative py-20 bg-slate-950">
-      <div className="max-w-6xl px-6 mx-auto text-center">
+    <section className="relative py-16 bg-brandDark">
+      <div className="container text-center">
 
         {/* Heading */}
         <motion.h2
@@ -18,7 +18,7 @@ const CTASection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-6 text-3xl font-semibold text-brandAccent md:text-4xl"
+          className="mb-6 text-3xl font-bold font-heading text-brandAccent md:text-4xl"
         >
           Ready to Secure Your Future?
         </motion.h2>
@@ -44,7 +44,7 @@ const CTASection = () => {
         >
           <Link
             to="/contact"
-            className="inline-flex items-center justify-center px-8 py-3 text-sm font-medium transition rounded-lg bg-brandAccent hover:bg-brandGold text-slate-900 "
+            className="inline-flex items-center justify-center px-8 py-3 text-sm font-medium transition rounded-lg bg-brandAccent hover:bg-brandGold text-brandDark"
           >
             Schedule a Consultation Call
           </Link>

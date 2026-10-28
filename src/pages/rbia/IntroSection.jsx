@@ -4,11 +4,11 @@ import bg from "../../assets/images/rbia/strategies.png";
 
 const RBIALandscape = () => {
   return (
-    <section className="relative overflow-hidden transition-colors duration-300 bg-white dark:bg-bgDark py-24 lg:py-32">
+    <section className="relative overflow-hidden transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark py-16">
       {/* Decorative Background Element for "Section" feel */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-borderLight dark:via-borderDark to-transparent" />
 
-      <div className="container mx-auto px-6">
+      <div className="container">
         <div className="grid items-center gap-12 lg:grid-cols-12">
           
           {/* LEFT CONTENT AREA */}
@@ -22,7 +22,7 @@ const RBIALandscape = () => {
             </div>
 
             {/* Heading */}
-            <h2 className="text-4xl md:text-4xl lg:text-5xl font-heading font-extrabold leading-tight text-brandDark dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold leading-tight text-brandDark dark:text-white">
               Strategic Assessment of{" "}
               <span className="text-brandPrimary dark:text-brandGold block">
                 Organizational
@@ -69,15 +69,8 @@ const RBIALandscape = () => {
                 className="absolute inset-0 object-cover object-right-top w-full h-full transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
               />
-              {/* Subtle Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-brandDark/40 to-transparent" />
             </div>
 
-            {/* Floating Trust Badge - Simplified */}
-            <div className="absolute -bottom-6 -left-6 md:bottom-12 md:-left-12 p-8 bg-white dark:bg-surfaceDark rounded-3xl shadow-xl border border-borderLight dark:border-borderDark max-w-[200px]">
-                <p className="text-3xl font-black text-brandPrimary dark:text-brandGold italic">99%</p>
-                <p className="text-xs font-bold uppercase tracking-tighter text-brandNavy/50 dark:text-white/40">Reliability & Audit Precision</p>
-            </div>
           </div>
 
         </div>

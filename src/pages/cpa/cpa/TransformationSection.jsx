@@ -3,7 +3,7 @@ import React from 'react'
 
 function TransformationSection() {
   return (
-      <section className="py-24 bg-brandNavy text-white">
+    <section className="py-16 bg-brandNavy text-white">
         <div className="container">
           <div className="bg-surfaceDark p-12 lg:p-20 rounded-[3rem] border border-white/5 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-1/2 h-full bg-brandPrimary/10 -skew-x-12 translate-x-1/4"></div>

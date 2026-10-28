@@ -1,6 +1,6 @@
 
  
- <section className="z-10 py-20 border-y border-borderLight dark:border-borderDark">
+      <section className="z-10 py-16 border-y border-borderLight dark:border-borderDark">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold font-heading md:text-4xl">

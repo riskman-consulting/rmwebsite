@@ -131,7 +131,7 @@ const TestimonialAvatar = ({ testimonial, index, total }) => {
 
 export default function TestimonialsSection() {
   return (
-    <section className="relative py-20 overflow-hidden transition-colors duration-300 bg-">
+    <section className="relative py-16 overflow-hidden transition-colors duration-300 bg-">
 
       <div className="absolute w-64 h-64 rounded-full top-20 left-10 bg-brandPrimary/5 dark:bg-brandAccent/5 blur-3xl" />
       <div className="absolute rounded-full bottom-20 right-10 w-80 h-80 bg-brandPrimary/5 dark:bg-brandAccent/5 blur-3xl" />

@@ -9,17 +9,17 @@ export const StickyServicesSection = () => {
   const featuredServices = allServices.slice(0, 6);
 
   return (
-    <section className="relative py-10 md:py-12  bg-bgLight dark:bg-[#030712] transition-colors duration-500 overflow-hidden">
+    <section className="relative pt-20 bg-bgLight dark:bg-bgDark transition-colors duration-500 overflow-hidden">
       
       {/* Background Subtle Gradient Accents */}
       {/* <div className="absolute top-0 right-0 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-brandPrimary/5 dark:bg-brandPrimary/10 blur-[120px] md:blur-[150px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-brandAccent/5 dark:bg-brandAccent/10 blur-[100px] rounded-full pointer-events-none" /> */}
 
       {/* Main Wrapper - Responsive Edge Alignment */}
-      <div className="relative z-10 w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24">
+      <div className="container relative z-10">
         
         {/* --- HEADER: Left Aligned with Modern Spacing --- */}
-        <div className="flex flex-col justify-between gap-10 pb-12 mb-16 border-b lg:flex-row lg:items-end md:mb-24 border-borderLight dark:border-white/10 md:pb-16">
+        <div className="flex flex-col justify-between gap-10 pb-12 mb-16 border-b lg:flex-row lg:items-end border-borderLight dark:border-white/10 md:pb-16">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -32,9 +32,9 @@ export const StickyServicesSection = () => {
                 Strategic Resilience
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-brandDark dark:text-white leading-[1.1] tracking-tighter uppercase font-heading">
+            <h2 className="text-3xl md:text-4xl font-bold text-brandDark dark:text-white leading-[1.1] font-heading">
               Enterprise <br className="hidden md:block" /> 
-              <span className="italic text-brandPrimary dark:text-brandAccent">Services.</span>
+              <span className="text-brandPrimary dark:text-brandAccent">Services</span>
             </h2>
           </motion.div>
 

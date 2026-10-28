@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { CheckCircle2, FileCheck, Eye, Settings, BarChart, ArrowRight } from 'lucide-react';
 
 const Framework = () => {
@@ -30,12 +31,12 @@ const Framework = () => {
   ];
 
   return (
-    <section id="framework" className="relative py-24 bg-white">
-      <div className="container px-4 mx-auto md:px-6">
+    <section id="framework" className="relative py-16 bg-surfaceLight dark:bg-surfaceDark">
+      <div className="container">
         <div className="max-w-3xl mx-auto mb-20 text-center">
-          <h2 className="mb-3 text-sm font-bold tracking-widest uppercase text-brandPrimary">Compliance & Standards</h2>
-          <h3 className="mb-6 text-4xl font-bold md:text-5xl font-heading text-brandDark">NIST-Aligned Framework</h3>
-          <p className="text-lg text-gray-600">
+          <h2 className="mb-3 text-sm font-bold tracking-widest uppercase text-brandPrimary dark:text-brandAccent">Compliance & Standards</h2>
+          <h3 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">NIST-Aligned Framework</h3>
+          <p className="text-lg text-gray-600 dark:text-gray-300">
             RiskMan operationalizes NIST AI RMF for trustworthy deployments, delivering compliance and innovation for CXO strategies.
           </p>
         </div>
@@ -43,14 +44,14 @@ const Framework = () => {
         {/* Process Steps */}
         <div className="relative mb-24">
           {/* Connecting Line (Desktop) */}
-          <div className="hidden lg:block absolute top-12 left-0 w-full h-0.5 bg-gray-100 z-0">
+          <div className="hidden lg:block absolute top-12 left-0 w-full h-0.5 bg-gray-100 dark:bg-white/10 z-0">
             <div className="absolute top-0 left-0 w-1/4 h-full bg-brandAccent animate-pulse"></div>
           </div>
 
           <div className="relative z-10 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {steps.map((step, index) => (
               <div key={index} className="relative group">
-                <div className="relative z-10 flex items-center justify-center w-24 h-24 mx-auto mb-8 transition-all duration-300 bg-white border-8 rounded-full shadow-lg border-gray-50 group-hover:border-brandAccent/20 group-hover:scale-110">
+                <div className="relative z-10 flex items-center justify-center w-24 h-24 mx-auto mb-8 transition-all duration-300 bg-white dark:bg-bgDark border-8 rounded-full shadow-lg border-gray-50 dark:border-surfaceDark group-hover:border-brandAccent/20 group-hover:scale-110">
                   <div className="transition-colors text-brandPrimary group-hover:text-brandAccent">
                     {step.icon}
                   </div>
@@ -60,8 +61,8 @@ const Framework = () => {
                 </div>
                 
                 <div className="px-4 text-center">
-                  <h4 className="mb-3 text-2xl font-bold transition-colors text-brandDark group-hover:text-brandPrimary">{step.title}</h4>
-                  <p className="text-sm leading-relaxed text-gray-600">
+                  <h4 className="mb-3 text-2xl font-bold transition-colors text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">{step.title}</h4>
+                  <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-300">
                     {step.desc}
                   </p>
                 </div>
@@ -71,7 +72,7 @@ const Framework = () => {
         </div>
 
         {/* Feature Box */}
-        <div className="relative p-10 overflow-hidden text-white shadow-2xl bg-brandNavy rounded-3xl md:p-16">
+        <div className="relative p-10 overflow-hidden text-white shadow-2xl bg-brandNavy rounded-2xl md:p-16">
           {/* Background Image */}
           <div className="absolute inset-0 opacity-10">
              <img 
@@ -88,9 +89,9 @@ const Framework = () => {
               <p className="mb-8 leading-relaxed text-gray-300">
                 Adhering to NIST standards ensures your AI systems are not just powerful, but ethical, safe, and globally compliant.
               </p>
-              <a href="#" className="inline-flex items-center gap-2 font-bold transition-colors text-brandAccent hover:text-white">
-                Read the Whitepaper <ArrowRight size={18} />
-              </a>
+              <Link to="/contact" className="inline-flex items-center gap-2 font-bold transition-colors text-brandAccent hover:text-white">
+                Discuss Your AI Governance Needs <ArrowRight size={18} />
+              </Link>
             </div>
             
             <div className="grid gap-8 lg:col-span-2 md:grid-cols-2">
@@ -110,7 +111,7 @@ const Framework = () => {
                 </div>
                 <div>
                   <h4 className="mb-2 text-lg font-bold">Compliance Acceleration</h4>
-                  <p className="text-sm text-gray-300">Streamline NIST certification with pre-built frameworks, reducing audit timelines by 50%.</p>
+                  <p className="text-sm text-gray-300">Streamline NIST alignment with pre-built frameworks that help shorten audit timelines.</p>
                 </div>
               </div>
             </div>

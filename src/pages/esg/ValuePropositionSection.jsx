@@ -61,7 +61,7 @@ const ValuePropositionSection = () => {
   };
 
   return (
-    <section className="py-24 overflow-hidden bg-bgLight dark:bg-bgDark">
+    <section className="py-16 overflow-hidden bg-bgLight dark:bg-bgDark">
       <div className="container">
         {/* Section Header */}
         <div className="max-w-4xl mx-auto mb-20 text-center">

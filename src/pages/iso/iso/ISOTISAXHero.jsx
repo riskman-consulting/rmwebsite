@@ -1,4 +1,4 @@
-import { ArrowLeft, Car } from 'lucide-react'
+import { ArrowLeft, ShieldCheck } from 'lucide-react'
 import React from 'react'
 import bg from "../../../assets/images/iso/isohero.png"
 import { useNavigate } from 'react-router-dom'
@@ -27,26 +27,27 @@ function HeroSection() {
       <div className="container relative z-20">
         <div className="max-w-3xl">
           <div className="flex items-center gap-2 mb-6">
-            <Car className="w-6 h-6 text-brandAccent" />
+            <ShieldCheck className="w-6 h-6 text-brandAccent" />
             <span className="text-sm font-bold tracking-widest uppercase text-brandGold">
-              Automotive Supply Chain Security
+              ISO Standards & TISAX
             </span>
           </div>
  
           <h1 className="mb-6 text-5xl font-bold leading-tight font-heading lg:text-7xl">
-            The Gold Standard for{" "}
-            <span className="text-brandAccent">Automotive Security</span>
+            Management Systems{" "}
+            <span className="text-brandAccent">Built for Certification</span>
           </h1>
  
           <p className="max-w-2xl mb-10 text-lg leading-relaxed text-gray-300 lg:text-xl">
-            RiskMan provides expert guidance for TISAX compliance, ensuring your
-            information security practices meet the rigorous and specific demands
-            of the global automotive supply chain.
+            RiskMan takes you from gap assessment to certification audit for
+            ISO 27001, ISO 27701, ISO 22301 and ISO 42001, aligns your risk
+            management with ISO 31000, and prepares automotive suppliers for
+            TISAX assessments.
           </p>
  
           <div className="flex flex-wrap gap-4">
             <button onClick={()=>navigator("/services")} className="flex items-center gap-2 px-8 py-4 font-bold transition-all bg-transparent border rounded-md border-white/20 hover:bg-white/10">
-              <ArrowLeft className="w-4 h-4" /> Return To Main
+              <ArrowLeft className="w-4 h-4" /> All Services
             </button>
  
             <button  onClick={()=>navigator("/contact")} className="px-8 py-4 font-bold transition-all rounded-md shadow-lg bg-brandAccent text-brandDark hover:bg-brandGold shadow-brandAccent/20">

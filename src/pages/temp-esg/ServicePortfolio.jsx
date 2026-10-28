@@ -91,7 +91,7 @@ const ServicePortfolio = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-brandDark via-brandNavy to-brandPrimary dark:from-bgDark dark:via-brandDark dark:to-brandNavy">
+    <section className="py-16 bg-gradient-to-br from-brandDark via-brandNavy to-brandPrimary dark:from-bgDark dark:via-brandDark dark:to-brandNavy">
       <div className="container">
         {/* Section Header */}
         <div className="max-w-4xl mx-auto mb-16 text-center">

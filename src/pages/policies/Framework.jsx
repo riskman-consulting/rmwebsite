@@ -171,7 +171,7 @@ const LifecycleWheel = () => {
                     <stop offset="100%" stopColor="#001F3F" />
                 </radialGradient>
             </defs>
-            <circle cx={cx} cy={cy} r={r + 30} fill="none" className="stroke-brandPrimary dark:stroke-[#004080]" strokeWidth="2" strokeDasharray="6,4" opacity="0.4" />
+            <circle cx={cx} cy={cy} r={r + 30} fill="none" className="stroke-brandPrimary" strokeWidth="2" strokeDasharray="6,4" opacity="0.4" />
             <circle cx={cx} cy={cy} r="38" className="fill-brandPrimary dark:fill-[url(#lcg)]" />
             <text x={cx} y={cy - 5} textAnchor="middle" className="fill-white dark:fill-brandAccent" fontSize="10" fontWeight="700" fontFamily="Montserrat, sans-serif">POLICY</text>
             <text x={cx} y={cy + 10} textAnchor="middle" className="fill-white dark:fill-brandAccent" fontSize="10" fontWeight="700" fontFamily="Montserrat, sans-serif">LIFECYCLE</text>
@@ -182,7 +182,7 @@ const LifecycleWheel = () => {
 
                 return (
                     <g key={i}>
-                        <line x1={cx + 42 * Math.cos(rad)} y1={cy + 42 * Math.sin(rad)} x2={cx + (r - 36) * Math.cos(rad)} y2={cy + (r - 36) * Math.sin(rad)} className="stroke-brandPrimary dark:stroke-[#004080]" strokeWidth="1.5" />
+                        <line x1={cx + 42 * Math.cos(rad)} y1={cy + 42 * Math.sin(rad)} x2={cx + (r - 36) * Math.cos(rad)} y2={cy + (r - 36) * Math.sin(rad)} className="stroke-brandPrimary" strokeWidth="1.5" />
                         {/* Increased radius to 40 to accommodate text better */}
                         <motion.circle
                             initial={{ r: 0 }}
@@ -209,9 +209,9 @@ const LifecycleWheel = () => {
                 const sy = cy + arcR * Math.sin(a1 + 0.18);
                 const ex = cx + arcR * Math.cos(a2 - 0.18);
                 const ey = cy + arcR * Math.sin(a2 - 0.18);
-                return <path key={`a${i}`} d={`M ${sx} ${sy} A ${arcR} ${arcR} 0 0 1 ${ex} ${ey}`} fill="none" className="stroke-brandPrimary dark:stroke-[#4A90C4]" strokeWidth="1.5" opacity="0.5" markerEnd="url(#arrowBlue)" />;
+                return <path key={`a${i}`} d={`M ${sx} ${sy} A ${arcR} ${arcR} 0 0 1 ${ex} ${ey}`} fill="none" className="stroke-brandPrimary dark:stroke-brandAccent" strokeWidth="1.5" opacity="0.5" markerEnd="url(#arrowBlue)" />;
             })}
-            <defs><marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" className="fill-brandPrimary dark:fill-[#4A90C4]" /></marker></defs>
+            <defs><marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" className="fill-brandPrimary dark:fill-brandAccent" /></marker></defs>
         </svg>
     );
 };
@@ -256,8 +256,8 @@ const GovernanceApproach = () => {
             </SectionWrapper> */}
 
             {/* 2. Lifecycle Section */}
-            <SectionWrapper id="framework" className="relative px-6 py-32 transition-colors duration-300 border-t bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark">
-                <div className="container mx-auto">
+              <SectionWrapper id="framework" className="relative py-16 transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark">
+                <div className="container">
                     <SectionTag>Methodology</SectionTag>
                     <SectionTitle>RiskMan's Enterprise Policy & SOP Framework</SectionTitle>
                     <SectionDesc>
@@ -293,7 +293,7 @@ const GovernanceApproach = () => {
                     {/* Framework pillars */}
                     <div className="flex flex-wrap gap-5 mt-12">
                         {["Regulatory Alignment", "Risk Appetite Integration", "Industry Best Practices", "Technology Enablement"].map((t, i) => (
-                            <div key={i} className="flex-1 min-w-[200px] bg-white dark:bg-gradient-to-br dark:from-brandDark dark:to-brandNavy border border-slate-200 dark:border-brandPrimary/30 rounded-xl p-5 text-center hover:border-brandPrimary/40 dark:hover:border-brandAccent/40 transition-all shadow-sm dark:shadow-none">
+                            <div key={i} className="flex-1 min-w-[200px] bg-bgLight dark:bg-gradient-to-br dark:from-brandDark dark:to-brandNavy border border-slate-200 dark:border-brandPrimary/30 rounded-2xl p-5 text-center hover:border-brandPrimary/40 dark:hover:border-brandAccent/40 transition-all shadow-sm dark:shadow-none">
                                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="mx-auto mb-2.5 text-brandPrimary dark:text-brandAccent">
                                     {[
                                         <path key="a" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />,

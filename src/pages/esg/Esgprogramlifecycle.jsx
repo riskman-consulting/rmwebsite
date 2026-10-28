@@ -478,7 +478,7 @@ const ESGProgramLifecycle = () => {
     1: {
       title: "ASSESS",
       subtitle: "Maturity Assessment & Gap Analysis",
-      color: "#1565C0",
+      color: "#004080",
       description:
         "Comprehensive evaluation of your organization's current ESG position across governance, strategy, data, reporting, and culture dimensions. Establishes baseline metrics and identifies improvement opportunities.",
       activities: [
@@ -492,7 +492,8 @@ const ESGProgramLifecycle = () => {
     2: {
       title: "DESIGN",
       subtitle: "Strategy & Roadmap Development",
-      color: "#00897B",
+      color: "#FFB800",
+      textColor: "#001F3F",
       description:
         "Development of tailored ESG strategy aligned with business objectives. Creates prioritized roadmap with clear milestones, resource requirements, and success metrics.",
       activities: [
@@ -506,7 +507,7 @@ const ESGProgramLifecycle = () => {
     3: {
       title: "BUILD",
       subtitle: "Governance & Infrastructure",
-      color: "#7B1FA2",
+      color: "#003366",
       description:
         "Establishment of robust governance structures, data collection systems, and process frameworks. Builds the foundation for sustainable ESG program execution.",
       activities: [
@@ -520,7 +521,8 @@ const ESGProgramLifecycle = () => {
     4: {
       title: "IMPLEMENT",
       subtitle: "Rollout & Change Management",
-      color: "#F57C00",
+      color: "#FFC000",
+      textColor: "#001F3F",
       description:
         "Systematic deployment of ESG initiatives across the organization. Focuses on change management, capability building, and stakeholder engagement.",
       activities: [
@@ -534,7 +536,7 @@ const ESGProgramLifecycle = () => {
     5: {
       title: "OPERATE",
       subtitle: "Manage, Report & Engage",
-      color: "#C62828",
+      color: "#001F3F",
       description:
         "Ongoing management of ESG programs, regular reporting to stakeholders, and continuous engagement with internal and external parties.",
       activities: [
@@ -548,7 +550,7 @@ const ESGProgramLifecycle = () => {
     6: {
       title: "OPTIMIZE",
       subtitle: "Review, Improve & Innovate",
-      color: "#0D4F6B",
+      color: "#475569",
       description:
         "Continuous improvement through performance review, emerging trend analysis, and innovation. Drives the cycle back to assessment for sustained excellence.",
       activities: [
@@ -570,7 +572,7 @@ const ESGProgramLifecycle = () => {
   };
 
   return (
-    <section className="py-12 bg-white dark:bg-surfaceDark">
+    <section className="py-16 bg-bgLight dark:bg-bgDark">
       <div className="container">
         <div className="mb-10 text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
@@ -598,32 +600,32 @@ const ESGProgramLifecycle = () => {
               <svg viewBox="0 0 500 500" className="w-full h-auto">
                 <defs>
                   <linearGradient id="assessGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#1565C0" />
-                    <stop offset="100%" stopColor="#0D47A1" />
+                    <stop offset="0%" stopColor="#004080" />
+                    <stop offset="100%" stopColor="#003366" />
                   </linearGradient>
                   <linearGradient id="designGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#00897B" />
-                    <stop offset="100%" stopColor="#00695C" />
+                    <stop offset="0%" stopColor="#FFC000" />
+                    <stop offset="100%" stopColor="#FFB800" />
                   </linearGradient>
                   <linearGradient id="buildGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#7B1FA2" />
-                    <stop offset="100%" stopColor="#6A1B9A" />
+                    <stop offset="0%" stopColor="#003366" />
+                    <stop offset="100%" stopColor="#001F3F" />
                   </linearGradient>
                   <linearGradient id="implementGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#F57C00" />
-                    <stop offset="100%" stopColor="#E65100" />
+                    <stop offset="0%" stopColor="#FFB800" />
+                    <stop offset="100%" stopColor="#FFC000" />
                   </linearGradient>
                   <linearGradient id="operateGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#C62828" />
-                    <stop offset="100%" stopColor="#B71C1C" />
+                    <stop offset="0%" stopColor="#001F3F" />
+                    <stop offset="100%" stopColor="#003366" />
                   </linearGradient>
                   <linearGradient id="optimizeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#0D4F6B" />
-                    <stop offset="100%" stopColor="#1B2B3A" />
+                    <stop offset="0%" stopColor="#64748B" />
+                    <stop offset="100%" stopColor="#475569" />
                   </linearGradient>
-                  <linearGradient id="centerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#0D4F6B" />
-                    <stop offset="100%" stopColor="#1A7A8C" />
+                  <linearGradient id="lifecycleCenterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#003366" />
+                    <stop offset="100%" stopColor="#004080" />
                   </linearGradient>
 
                   <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
@@ -644,10 +646,9 @@ const ESGProgramLifecycle = () => {
                   cy="250"
                   r="230"
                   fill="none"
-                  stroke="#E8EDF0"
+                  className="animate-spin-slow stroke-slate-200 dark:stroke-slate-700"
                   strokeWidth="2"
                   strokeDasharray="8,4"
-                  className="animate-spin-slow"
                   style={{ animationDuration: "60s" }}
                 />
 
@@ -659,7 +660,7 @@ const ESGProgramLifecycle = () => {
 
                 <g className="cursor-pointer" onClick={() => handlePhaseClick(2)} opacity={activePhase && activePhase !== 2 ? "0.6" : "1"}>
                   <path d="M 419 152 A 195 195 0 0 1 419 348" fill="none" stroke="url(#designGrad)" strokeWidth="65" strokeLinecap="round" />
-                  <text x="435" y="250" className="text-sm font-semibold fill-white" textAnchor="middle" transform="rotate(90, 435, 250)">DESIGN</text>
+                  <text x="435" y="250" className="text-sm font-semibold fill-brandDark" textAnchor="middle" transform="rotate(90, 435, 250)">DESIGN</text>
                 </g>
 
                 <g className="cursor-pointer" onClick={() => handlePhaseClick(3)} opacity={activePhase && activePhase !== 3 ? "0.6" : "1"}>
@@ -669,7 +670,7 @@ const ESGProgramLifecycle = () => {
 
                 <g className="cursor-pointer" onClick={() => handlePhaseClick(4)} opacity={activePhase && activePhase !== 4 ? "0.6" : "1"}>
                   <path d="M 250 445 A 195 195 0 0 1 81 348" fill="none" stroke="url(#implementGrad)" strokeWidth="65" strokeLinecap="round" />
-                  <text x="145" y="410" className="text-xs font-semibold fill-white" textAnchor="middle" transform="rotate(30, 145, 410)">IMPLEMENT</text>
+                  <text x="145" y="410" className="text-xs font-semibold fill-brandDark" textAnchor="middle" transform="rotate(30, 145, 410)">IMPLEMENT</text>
                 </g>
 
                 <g className="cursor-pointer" onClick={() => handlePhaseClick(5)} opacity={activePhase && activePhase !== 5 ? "0.6" : "1"}>
@@ -684,7 +685,7 @@ const ESGProgramLifecycle = () => {
 
                 {/* Center hub */}
                 <g filter="url(#shadow)">
-                  <circle cx="250" cy="250" r="90" fill="url(#centerGrad)" filter="url(#glow)" />
+                  <circle cx="250" cy="250" r="90" fill="url(#lifecycleCenterGrad)" filter="url(#glow)" />
                   <circle cx="250" cy="250" r="75" fill="none" stroke="white" strokeWidth="2" opacity="0.3" />
                   <text x="250" y="235" textAnchor="middle" className="text-xs font-semibold fill-white">INTEGRATED</text>
                   <text x="250" y="255" textAnchor="middle" className="text-lg font-bold fill-white">ESG</text>
@@ -696,7 +697,7 @@ const ESGProgramLifecycle = () => {
 
           {/* Info Panel */}
           <div className="w-full">
-            <div className="p-6 shadow-lg bg-gray-50 dark:bg-gray-800 rounded-2xl">
+            <div className="p-6 shadow-lg bg-white dark:bg-surfaceDark rounded-2xl">
               <div className="flex items-center justify-between mb-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brandDark/60 dark:text-white/60">
                   Phase Details
@@ -716,7 +717,7 @@ const ESGProgramLifecycle = () => {
                   <div className="flex items-center gap-4 mb-4">
                     <div
                       className="flex items-center justify-center w-12 h-12 text-xl font-bold text-white rounded-full shadow-lg"
-                      style={{ backgroundColor: phaseData[activePhase].color }}
+                      style={{ backgroundColor: phaseData[activePhase].color, color: phaseData[activePhase].textColor || "#FFFFFF" }}
                     >
                       {activePhase}
                     </div>
@@ -737,7 +738,7 @@ const ESGProgramLifecycle = () => {
                       <span
                         key={i}
                         className="px-3 py-1 text-xs font-medium text-white rounded-full"
-                        style={{ backgroundColor: phaseData[activePhase].color }}
+                        style={{ backgroundColor: phaseData[activePhase].color, color: phaseData[activePhase].textColor || "#FFFFFF" }}
                       >
                         {activity}
                       </span>

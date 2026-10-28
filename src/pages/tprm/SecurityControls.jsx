@@ -98,53 +98,53 @@
 
 
 import React from 'react';
-import { Lock, Shield, Server, Activity } from 'lucide-react';
+import { Lock, Shield, Server } from 'lucide-react';
 
 import securityImg from "../../assets/images/tprm/security.png"
 
 const Security = () => {
   return (
-    <section className="py-20 bg-bgLight">
-      <div className="container px-4 mx-auto">
+    <section className="py-16 bg-bgLight dark:bg-bgDark">
+      <div className="container">
         <div className="max-w-4xl mx-auto mb-12 text-center">
-          <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark">
+          <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
             Advanced Information Security and Cyber Risk Controls
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 dark:text-gray-300">
             Cyber threats often enter through the supply chain. We assess vendor incident response capabilities and evaluate encryption controls for data at rest and in transit. Our audits review patch management and vulnerability practices to ensure your data remains secure within the vendor’s ecosystem.
           </p>
         </div>
 
-        <div className="relative overflow-hidden bg-white shadow-xl rounded-2xl">
+        <div className="relative overflow-hidden shadow-xl bg-surfaceLight rounded-2xl dark:bg-surfaceDark">
           <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-brandNavy via-brandPrimary to-brandAccent"></div>
           <div className="grid md:grid-cols-2">
             <div className="flex flex-col justify-center p-8 md:p-12">
               <div className="space-y-8">
                 <div className="flex items-center gap-4">
-                  <div className="p-3 bg-blue-100 rounded-lg text-brandPrimary">
+                  <div className="p-3 rounded-lg bg-brandPrimary/10 text-brandPrimary dark:bg-brandAccent/10 dark:text-brandAccent">
                     <Shield className="w-8 h-8" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-brandDark">Incident Response</h3>
-                    <p className="text-gray-500">Assess vendor capabilities</p>
+                    <h3 className="text-xl font-bold text-brandDark dark:text-white">Incident Response</h3>
+                    <p className="text-gray-500 dark:text-gray-400">Assess vendor capabilities</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="p-3 bg-blue-100 rounded-lg text-brandPrimary">
+                  <div className="p-3 rounded-lg bg-brandPrimary/10 text-brandPrimary dark:bg-brandAccent/10 dark:text-brandAccent">
                     <Lock className="w-8 h-8" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-brandDark">Encryption Controls</h3>
-                    <p className="text-gray-500">Data at rest and in transit</p>
+                    <h3 className="text-xl font-bold text-brandDark dark:text-white">Encryption Controls</h3>
+                    <p className="text-gray-500 dark:text-gray-400">Data at rest and in transit</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="p-3 bg-blue-100 rounded-lg text-brandPrimary">
+                  <div className="p-3 rounded-lg bg-brandPrimary/10 text-brandPrimary dark:bg-brandAccent/10 dark:text-brandAccent">
                     <Server className="w-8 h-8" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-brandDark">Patch Management</h3>
-                    <p className="text-gray-500">Vulnerability practices review</p>
+                    <h3 className="text-xl font-bold text-brandDark dark:text-white">Patch Management</h3>
+                    <p className="text-gray-500 dark:text-gray-400">Vulnerability practices review</p>
                   </div>
                 </div>
               </div>
@@ -155,10 +155,6 @@ const Security = () => {
                 alt="Cyber Security Lock" 
                 className="absolute inset-0 object-cover w-full h-full"
               />
-              <div className="absolute inset-0 bg-brandDark opacity-40"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Activity className="w-20 h-20 text-white opacity-80 animate-pulse" />
-              </div>
             </div>
           </div>
         </div>

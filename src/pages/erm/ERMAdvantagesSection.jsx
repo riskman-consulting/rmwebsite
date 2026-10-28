@@ -52,7 +52,7 @@ const advantages = [
 
 const ERMAdvantagesSection = () => {
   return (
-    <section className="relative py-24 overflow-hidden bg-bgLight dark:bg-bgDark">
+    <section className="relative py-16 overflow-hidden bg-bgLight dark:bg-bgDark">
       <div className="container relative z-10">
 
         {/* Top Row */}
@@ -65,7 +65,7 @@ const ERMAdvantagesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="mb-4 text-3xl font-semibold leading-tight font-heading text-brandDark dark:text-brandLight md:text-4xl"
+              className="mb-4 text-3xl font-bold leading-tight font-heading text-brandDark dark:text-brandLight md:text-4xl"
             >
               Enterprise Risk Assessment <span className="text-brandPrimary dark:text-brandAccent">Advantages</span>
             </motion.h2>
@@ -100,7 +100,7 @@ const ERMAdvantagesSection = () => {
             className="relative flex justify-center"
           >
             {/* Subtle frame */}
-            <div className="absolute -inset-4 rounded-2xl bg-brandPrimary/5 dark:bg-white/70" />
+            <div className="absolute -inset-4 rounded-2xl bg-brandPrimary/5 dark:bg-brandAccent/10" />
 
             <img
               src={ermImage}
@@ -120,7 +120,7 @@ const ERMAdvantagesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.06 }}
-              className="relative p-6 overflow-hidden transition-all border shadow-sm group rounded-xl border-borderLight bg-surfaceLight hover:-translate-y-1 hover:shadow-lg dark:border-borderDark dark:bg-surfaceDark"
+              className="relative h-full p-6 overflow-hidden transition-all border shadow-sm group rounded-2xl border-borderLight bg-surfaceLight hover:-translate-y-1 hover:shadow-lg dark:border-borderDark dark:bg-surfaceDark"
             >
               {/* Hover accent */}
               <div className="absolute inset-x-0 top-0 h-1 transition opacity-0 bg-brandAccent group-hover:opacity-100 dark:bg-brandAccent" />

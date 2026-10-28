@@ -278,13 +278,13 @@ const ApproachSection = () => {
       </section> */}
 
       {/* UAT Approach Section */}
-      <section className="bg-surfaceLight dark:bg-surfaceDark md:py-10">
+      <section className="py-16 bg-bgLight dark:bg-bgDark">
         <div className="container">
           {/* Header */}
           <div className="flex items-center mb-12 md:mb-16">
             <div className="w-1.5 h-14 md:h-16 bg-brandPrimary dark:bg-brandAccent mr-4"></div>
-            <h2 className="text-3xl font-bold tracking-wide uppercase md:text-4xl text-brandPrimary dark:text-brandAccent">
-              UAT APPROACH
+            <h2 className="text-3xl font-bold font-heading md:text-4xl text-brandPrimary dark:text-brandAccent">
+              UAT Approach
             </h2>
           </div>
 
@@ -320,7 +320,7 @@ const ApproachSection = () => {
                     {/* Arrow Box */}
                     <div 
                       className={`h-20 flex items-center justify-center text-white font-bold text-sm px-4 relative transition-all duration-300 ${
-                        step.color === 'red' ? 'bg-[#8B0000]' : 'bg-brandDark'
+                        step.color === 'red' ? 'bg-brandPrimary' : 'bg-brandDark'
                       } ${hoveredUat === idx ? 'shadow-xl scale-105 z-10' : ''}`}
                       style={{
                         clipPath: idx === 0 
@@ -339,11 +339,11 @@ const ApproachSection = () => {
                         hoveredUat === idx ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
                       }`}>
                         <div className="flex justify-center mb-2">
-                          <svg width="2" height="20" className="text-[#8B0000]">
+                          <svg width="2" height="20" className="text-brandPrimary">
                             <line x1="1" y1="0" x2="1" y2="20" stroke="currentColor" strokeWidth="2" strokeDasharray="4,4"/>
                           </svg>
                         </div>
-                        <p className="text-sm text-brandNavy dark:text-white/70 text-center bg-white dark:bg-surfaceDark p-3 rounded-lg shadow-lg border border-[#8B0000]">
+                        <p className="text-sm text-brandNavy dark:text-white/70 text-center bg-white dark:bg-surfaceDark p-3 rounded-lg shadow-lg border border-brandPrimary">
                           {step.bottomDesc}
                         </p>
                       </div>
@@ -378,7 +378,7 @@ const ApproachSection = () => {
                 {/* Step Box */}
                 <div 
                   className={`${
-                    step.color === 'red' ? 'bg-[#8B0000]' : 'bg-brandDark'
+                    step.color === 'red' ? 'bg-brandPrimary' : 'bg-brandDark'
                   } text-white font-bold py-4 px-6 rounded-lg relative transition-all duration-300 ${
                     hoveredUat === idx ? 'shadow-xl scale-105' : ''
                   }`}
@@ -394,7 +394,7 @@ const ApproachSection = () => {
                   <div className={`mt-4 transition-all duration-300 ${
                     hoveredUat === idx ? 'opacity-100 max-h-40' : 'opacity-0 max-h-0 overflow-hidden'
                   }`}>
-                    <p className="text-sm text-brandNavy dark:text-white/70 pl-4 border-l-2 border-[#8B0000] bg-white dark:bg-bgDark p-3 rounded">
+                    <p className="text-sm text-brandNavy dark:text-white/70 pl-4 border-l-2 border-brandPrimary bg-white dark:bg-bgDark p-3 rounded">
                       {step.bottomDesc}
                     </p>
                   </div>

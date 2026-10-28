@@ -58,23 +58,16 @@ const ESGValueCreation = () => {
     }
   };
 
-  const kpis = [
-    { label: "Compliance Incidents", value: "↓40%", color: "#004080" },
-    { label: "Operating Costs", value: "↓25%", color: "#003366" },
-    { label: "ESG Rating Score", value: "↑35%", color: "#FFC000" },
-    { label: "Green Revenue", value: "↑20%", color: "#FFB800" }
-  ];
-
   return (
-    <section className="py-20 overflow-hidden lg:py-32 bg-bgLight dark:bg-bgDark">
+    <section className="py-16 overflow-hidden bg-bgLight dark:bg-bgDark">
       <div className="container">
         {/* Section Header */}
-        <div className="mb-20 text-center">
+        <div className="mb-16 text-center">
           <span className="text-xs font-bold tracking-[4px] uppercase text-brandPrimary dark:text-brandGold mb-4 block">
             Value Creation Framework
           </span>
-          <h2 className="mb-8 text-4xl font-black leading-tight font-heading text-brandDark dark:text-surfaceLight lg:text-6xl">
-            The RiskMan <br /> Value Proposition
+          <h2 className="mb-6 text-3xl font-bold leading-tight font-heading text-brandDark dark:text-surfaceLight md:text-4xl">
+            The RiskMan Value Proposition
           </h2>
           <p className="max-w-3xl mx-auto font-sans text-xl leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
             RiskMan delivers measurable, sustainable value through an integrated approach 
@@ -104,10 +97,10 @@ const ESGValueCreation = () => {
                 key={key}
                 onMouseEnter={() => setActiveQuadrant(key)}
                 onMouseLeave={() => setActiveQuadrant(null)}
-                className={`p-8 rounded-[32px] border-2 transition-all duration-500 cursor-pointer min-h-[380px] flex flex-col justify-between ${
+                className={`h-full p-8 rounded-2xl border-2 transition-all duration-500 cursor-pointer min-h-[380px] flex flex-col justify-between ${
                   activeQuadrant === key 
                   ? 'bg-surfaceLight dark:bg-surfaceDark shadow-2xl scale-[1.02]' 
-                  : 'bg-bgLight dark:bg-bgDark border-transparent opacity-80'
+                  : 'bg-surfaceLight dark:bg-surfaceDark border-transparent opacity-80'
                 }`}
                 style={{ borderColor: activeQuadrant === key ? data.color : 'transparent' }}
               >
@@ -131,7 +124,7 @@ const ESGValueCreation = () => {
 
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                   {data.values.map((v, i) => (
-                    <div key={i} className="flex items-center gap-3 p-3 transition-all border bg-white/50 dark:bg-white/5 rounded-xl border-borderLight dark:border-borderDark group hover:bg-white">
+                    <div key={i} className="flex items-center gap-3 p-3 transition-all border bg-white/50 dark:bg-white/5 rounded-xl border-borderLight dark:border-borderDark group hover:bg-white dark:hover:bg-white/10">
                       <span className="text-lg">{v.icon}</span>
                       <span className="text-[10px] font-bold text-brandDark dark:text-surfaceLight uppercase leading-tight">{v.text}</span>
                     </div>
@@ -149,28 +142,6 @@ const ESGValueCreation = () => {
                   <span className="text-[8px] font-bold text-white/50 uppercase">ESG Integrated</span>
                </div>
             </div>
-          </div>
-        </div>
-
-        {/* KPI Performance Section */}
-        <div className="mt-20">
-          <div className="grid max-w-5xl grid-cols-2 gap-6 mx-auto lg:grid-cols-4">
-            {kpis.map((kpi, index) => (
-              <div 
-                key={index}
-                className="p-8 text-center transition-all border shadow-lg bg-surfaceLight dark:bg-surfaceDark rounded-3xl border-borderLight dark:border-borderDark group hover:scale-105"
-              >
-                <div 
-                  className="mb-2 text-4xl font-black transition-transform lg:text-5xl group-hover:scale-110"
-                  style={{ color: kpi.color }}
-                >
-                  {kpi.value}
-                </div>
-                <div className="text-[10px] font-bold tracking-[3px] text-brandDark/40 dark:text-surfaceLight/40 uppercase">
-                  {kpi.label}
-                </div>
-              </div>
-            ))}
           </div>
         </div>
 

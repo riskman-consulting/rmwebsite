@@ -227,8 +227,8 @@ export default function ApplicationForm({ jobTitle, renderSuccessAction }) {
           className="text-center"
         >
           <div className="flex justify-center mb-6">
-            <div className="flex items-center justify-center w-20 h-20 bg-green-100 rounded-full dark:bg-green-900/30">
-              <FaCheckCircle className="text-4xl text-green-500" />
+            <div className="flex items-center justify-center w-20 h-20 bg-brandAccent/10 rounded-full dark:bg-brandAccent/15">
+              <FaCheckCircle className="text-4xl text-brandGold" />
             </div>
           </div>
           <h3 className="mb-4 text-2xl font-bold">Application Received!</h3>

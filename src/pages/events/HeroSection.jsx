@@ -129,7 +129,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative   flex items-center justify-center min-h-screen overflow-hidden transition-colors duration-500 bg-surfaceLight dark:bg-surfaceDark">
+    <section className="relative flex items-center justify-center min-h-screen overflow-hidden transition-colors duration-500 bg-surfaceLight dark:bg-surfaceDark">
       {/* Background Slideshow with Parallax */}
       <motion.div 
         className="absolute  inset-0 z-0"
@@ -154,7 +154,7 @@ export default function HeroSection() {
       <ParticlesBackground mouseX={mouse.x} mouseY={mouse.y} />
 
       {/* Content Container */}
-      <div className="container relative z-20 flex flex-col items-center justify-center min-h-screen px-6 pt-36 mx-auto text-center lg:px-12">
+      <div className="container relative z-20 flex flex-col items-center justify-center min-h-screen py-20 text-center">
         
         {/* Badge */}
         <motion.div 
@@ -163,7 +163,7 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-8"
         >
-          <div className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-brandGold to-[#D4AF37] shadow-[0_4px_20px_rgba(255,184,0,0.3)] border border-white/20">
+          <div className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-brandGold to-brandAccent shadow-[0_4px_20px_rgba(255,184,0,0.3)] border border-white/20">
             <span className="text-sm font-bold tracking-widest text-white uppercase drop-shadow-sm">
               Celebrating {getCompanyYearsPhrase()}
             </span>
@@ -199,11 +199,11 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="flex flex-wrap justify-center gap-6 mb-20"
         >
-          <button onClick={()=>navigator("/events/#past-events")} className="px-10 py-4 rounded-xl bg-gradient-to-r from-brandGold to-[#D4AF37] text-brandDark font-black tracking-widest uppercase shadow-[0_10px_30px_rgba(255,184,0,0.3)] hover:scale-105 transition-transform duration-300 border border-white/20">
+          <button onClick={()=>navigator("/events/past-events")} className="px-10 py-4 rounded-xl bg-gradient-to-r from-brandGold to-brandAccent text-brandDark font-black tracking-widest uppercase shadow-[0_10px_30px_rgba(255,184,0,0.3)] hover:scale-105 transition-transform duration-300 border border-white/20">
             Explore Journey
           </button>
 
-          <button onClick={()=>navigator("#moment-that-matters")} className="px-10 py-4 font-bold tracking-widest uppercase transition-colors duration-300 border shadow-lg rounded-xl bg-brandDark/90 dark:bg-surfaceDark/80 border-brandGold text-brandGold hover:bg-brandDark">
+          <button onClick={()=>navigator("/events/media-coverage")} className="px-10 py-4 font-bold tracking-widest uppercase transition-colors duration-300 border shadow-lg rounded-xl bg-brandDark/90 dark:bg-surfaceDark/80 border-brandGold text-brandGold hover:bg-brandDark">
             View Gallery
           </button>
         </motion.div>
@@ -218,7 +218,7 @@ export default function HeroSection() {
           {milestones.map((m, i) => (
             <div
               key={i}
-              className="flex flex-col items-center justify-center p-6 transition-colors duration-300 border w-52 w- rounded-2xl border-brandGold/30 bg-surfaceLight dark:bg-surfaceDark/60 backdrop-blur-md group hover:border-brandGold/60"
+              className="flex flex-col items-center justify-center p-6 transition-colors duration-300 border w-52 rounded-2xl border-brandGold/30 bg-surfaceLight dark:bg-surfaceDark/60 backdrop-blur-md group hover:border-brandGold/60"
             >
               <div className="mb-1 text-3xl font-bold transition-transform duration-300 text-brandDark dark:text-white group-hover:scale-110">
                 {m.value}

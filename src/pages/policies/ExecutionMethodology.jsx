@@ -169,7 +169,7 @@ const ExecutionMethodology = () => {
         {
             id: "Phase I",
             title: "Current State Understanding & Diagnostic",
-            color: "#0A1F44",
+            color: "#001F3F",
             items: [
                 "Review existing informal practices and documentation, where available",
                 "Conduct structured process walkthroughs with all the relevant stakeholders",
@@ -181,7 +181,7 @@ const ExecutionMethodology = () => {
         {
             id: "Phase II",
             title: "Design of Core SOP",
-            color: "#00A693",
+            color: "#003366",
             items: [
                 {
                     text: "Develop the Core SOP incorporating:",
@@ -200,7 +200,7 @@ const ExecutionMethodology = () => {
         {
             id: "Phase III",
             title: "Customization Identification & Structuring",
-            color: "#0076C0",
+            color: "#004080",
             items: [
                 {
                     text: "Identify genuine location-specific deviations arising from:",
@@ -223,7 +223,7 @@ const ExecutionMethodology = () => {
         {
             id: "Phase IV",
             title: "Stakeholder Validation & Alignment",
-            color: "#70757A",
+            color: "#336699",
             items: [
                 {
                     text: "Conduct alignment workshops and review sessions with relevant stakeholders for:",
@@ -239,7 +239,7 @@ const ExecutionMethodology = () => {
         {
             id: "Phase V",
             title: "Finalization & Handover",
-            color: "#0056B3",
+            color: "#4D79A6",
             items: [
                 "Deliver the final SOP",
                 "Provide standard key MIS and reporting templates",
@@ -251,44 +251,45 @@ const ExecutionMethodology = () => {
     ];
 
     const outcomes = [
-        { text: "A consolidated understanding of current practices, deviations, and control expectations.", color: "#8E44AD" },
-        { text: "A draft Core SOP applicable uniformly across all locations.", color: "#9B59B6" },
-        { text: "A controlled addendum framework that preserves standardization while enabling flexibility.", color: "#2980B9" },
-        { text: "Finalized, approved SOP and addendums ready for rollout.", color: "#16A085" },
-        { text: "A robust, auditable, and scalable SOP framework ready for enterprise-wide adoption.", color: "#27AE60" }
+        { text: "A consolidated understanding of current practices, deviations, and control expectations.", color: "#001F3F" },
+        { text: "A draft Core SOP applicable uniformly across all locations.", color: "#003366" },
+        { text: "A controlled addendum framework that preserves standardization while enabling flexibility.", color: "#004080" },
+        { text: "Finalized, approved SOP and addendums ready for rollout.", color: "#336699" },
+        { text: "A robust, auditable, and scalable SOP framework ready for enterprise-wide adoption.", color: "#4D79A6" }
     ];
 
     return (
-        <SectionWrapper id="methodology" className="px-6 py-24 transition-colors duration-300 bg-white dark:bg-bgDark">
-            <div className="mx-auto max-w-7xl">
-                <h2 className="text-4xl font-black mb-12 text-[#0A1F44] dark:text-white">Methodology and Execution Framework</h2>
+      <SectionWrapper id="methodology" className="py-16 transition-colors duration-300 bg-bgLight dark:bg-bgDark">
+            <div className="container">
+                <h2 className="mb-12 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">Methodology and Execution Framework</h2>
 
                 {/* Scrollable container with visible scrollbar */}
-                <div className="relative pb-4 overflow-x-auto overflow-y-visible" style={{ scrollbarWidth: 'thin', scrollbarColor: '#888 #f1f1f1' }}>
-                    <style jsx>{`
-                        /* Webkit browsers (Chrome, Safari, Edge) */
-                        div::-webkit-scrollbar {
+                <div className="relative pb-4 overflow-x-auto overflow-y-visible methodology-scroll" style={{ scrollbarWidth: 'thin', scrollbarColor: '#888 #f1f1f1' }}>
+                    <style>{`
+                        /* Webkit browsers (Chrome, Safari, Edge). Scoped to .methodology-scroll: styled-jsx
+                           isn't installed, so a bare div selector here styled every div on the site. */
+                        .methodology-scroll::-webkit-scrollbar {
                             height: 12px;
                         }
-                        div::-webkit-scrollbar-track {
+                        .methodology-scroll::-webkit-scrollbar-track {
                             background: #f1f1f1;
                             border-radius: 6px;
                         }
-                        div::-webkit-scrollbar-thumb {
+                        .methodology-scroll::-webkit-scrollbar-thumb {
                             background: #888;
                             border-radius: 6px;
                         }
-                        div::-webkit-scrollbar-thumb:hover {
+                        .methodology-scroll::-webkit-scrollbar-thumb:hover {
                             background: #555;
                         }
                         /* Dark mode scrollbar */
-                        .dark div::-webkit-scrollbar-track {
+                        .dark .methodology-scroll::-webkit-scrollbar-track {
                             background: #374151;
                         }
-                        .dark div::-webkit-scrollbar-thumb {
+                        .dark .methodology-scroll::-webkit-scrollbar-thumb {
                             background: #6B7280;
                         }
-                        .dark div::-webkit-scrollbar-thumb:hover {
+                        .dark .methodology-scroll::-webkit-scrollbar-thumb:hover {
                             background: #9CA3AF;
                         }
                     `}</style>
@@ -333,7 +334,7 @@ const ExecutionMethodology = () => {
 
                         {/* Outcomes Section */}
                         <div className="mt-16">
-                            <h3 className="text-base font-black mb-4 text-[#0A1F44] dark:text-white">Outcomes:</h3>
+                            <h3 className="mb-4 text-base font-black text-brandDark dark:text-white">Outcomes:</h3>
                             <div className="grid grid-cols-5">
                                 {outcomes.map((outcome, idx) => (
                                     <div key={idx} className="relative h-20 flex items-center justify-center p-4 text-center text-[10px] font-bold leading-tight border border-gray-200 dark:border-gray-700" style={{ backgroundColor: idx > 0 ? outcome.color : 'white', color: idx > 0 ? 'white' : '#333', clipPath: idx === 4 ? "polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 8% 50%)" : idx === 0 ? "polygon(0 0, 92% 0, 100% 50%, 92% 100%, 0 100%)" : "polygon(0 0, 92% 0, 100% 50%, 92% 100%, 0 100%, 8% 50%)", marginLeft: idx === 0 ? 0 : "-2%" }}>

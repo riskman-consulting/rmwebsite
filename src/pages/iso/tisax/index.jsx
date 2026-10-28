@@ -24,8 +24,8 @@ const TisaxPage = () => {
             <TisaxProcess />
             <TisaxBenefits />
             <TisaxChallenges />
-            <TisaxCTA />
             <TisaxFAQ />
+            <TisaxCTA />
         </div>
     );
 };

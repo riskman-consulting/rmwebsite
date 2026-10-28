@@ -26,7 +26,7 @@ const QualityAssurancePage = () => {
   
 
   return (
-    <div className="font-sans bg-bgLight text-brandDark">
+    <div className="font-sans bg-bgLight text-brandDark dark:bg-bgDark dark:text-white">
       <Helmet>
         <title>Quality Assurance Services | RiskMan Consulting</title>
         <meta name="description" content="RiskMan Consulting provides quality assurance services to help organizations implement process integrity validation, performance monitoring, and continuous improvement frameworks." />
@@ -50,15 +50,6 @@ const QualityAssurancePage = () => {
       {/* 6. CTA SECTION */}
       <CTASection/>
 
-      {/* 7. FOOTER */}
-      <footer className="py-12 border-t border-borderLight bg-white">
-        <div className="container flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="font-heading font-black text-2xl tracking-tighter text-brandNavy uppercase">
-            RISK<span className="text-brandAccent">MAN</span> <span className="text-xs font-normal text-gray-400 lowercase ml-2">Quality Division</span>
-          </div>
-          <p className="text-gray-500 text-sm">© 2026 RiskMan Consulting | Lean & Six Sigma Integration Specialists</p>
-        </div>
-      </footer>
     </div>
   );
 };

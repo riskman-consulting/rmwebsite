@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Mail,
   Linkedin,
@@ -7,31 +7,23 @@ import {
 } from "lucide-react";
 
 export default function CTASections() {
-  const [email, setEmail] = useState("");
-
-  const handleSubscribe = () => {
-    if (!email) return;
-    alert("Thank you for subscribing!");
-    setEmail("");
-  };
-
   return (
     <section
       id="cta"
-      className="py-16 transition-colors duration-500 bg-surfaceLight dark:bg-surfaceDark"
+      className="py-20 transition-colors duration-500 bg-surfaceLight dark:bg-surfaceDark"
     >
       <div className="container">
 
         {/* ================= HEADER ================= */}
         <div className="max-w-3xl mx-auto mb-20 text-center">
-          <div className="inline-flex items-center gap-3 px-6 py-3 mb-6 border rounded-full bg-surfaceLight/80 dark:bg-surfaceDark/40 border-borderLight dark:border-borderDark backdrop-blur-xl">
+          <div className="inline-flex items-center gap-3 px-6 py-3 mb-6 border rounded-full bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark backdrop-blur-xl">
             <Calendar className="w-4 h-4 text-brandGold" />
             <span className="text-xs font-black tracking-[0.3em] uppercase text-brandGold">
               Stay Connected
             </span>
           </div>
 
-          <h2 className="mb-5 text-4xl font-black sm:text-5xl font-heading text-brandDark dark:text-white">
+          <h2 className="mb-5 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
             Let’s Stay in Touch
           </h2>
 
@@ -45,7 +37,7 @@ export default function CTASections() {
         <div className="grid gap-10 lg:grid-cols-2">
 
           {/* -------- Newsletter -------- */}
-          <div className="p-10 rounded-[3rem] bg-surfaceLight/80 dark:bg-surfaceDark/40 border border-borderLight dark:border-borderDark">
+          <div className="h-full p-10 rounded-[3rem] bg-bgLight dark:bg-bgDark border border-borderLight dark:border-borderDark">
             <div className="flex items-center justify-center w-16 h-16 mb-6 border rounded-2xl bg-brandGold/10 border-brandGold/30">
               <Mail className="w-8 h-8 text-brandGold" />
             </div>
@@ -55,29 +47,19 @@ export default function CTASections() {
             </h3>
 
             <p className="mb-6 text-lg text-brandDark/60 dark:text-white/60">
-              Subscribe to receive updates on events, insights, and milestones.
+              Read our newsletter for updates on events, insights, and milestones.
             </p>
 
-            <div className="space-y-4">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-6 py-4 border rounded-xl bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark text-brandDark dark:text-white placeholder:text-brandDark/40 dark:placeholder:text-white/40 focus:outline-none focus:border-brandGold/50"
-              />
-
-              <button
-                onClick={handleSubscribe}
-                className="w-full px-6 py-4 font-bold transition-transform rounded-xl bg-brandGold text-brandDark hover:scale-105"
-              >
-                Subscribe Now
-              </button>
-            </div>
+            <a
+              href="/newsletter"
+              className="block w-full px-6 py-4 font-bold text-center transition-transform rounded-xl bg-brandGold text-brandDark hover:scale-105"
+            >
+              Read Our Newsletter
+            </a>
           </div>
 
           {/* -------- LinkedIn -------- */}
-          <div className="p-10 rounded-[3rem] bg-surfaceLight/80 dark:bg-surfaceDark/40 border border-borderLight dark:border-borderDark">
+          <div className="h-full p-10 rounded-[3rem] bg-bgLight dark:bg-bgDark border border-borderLight dark:border-borderDark">
             <div className="flex items-center justify-center w-16 h-16 mb-6 border rounded-2xl bg-brandGold/10 border-brandGold/30">
               <Linkedin className="w-8 h-8 text-brandGold" />
             </div>

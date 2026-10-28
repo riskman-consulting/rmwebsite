@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const RBIAHero = () => {
   const navigator = useNavigate()
   return (
-    <section className="relative lg:top-10 w-full min-h-[85vh] flex items-center overflow-hidden transition-colors duration-300">
+    <section className="relative w-full py-16 overflow-hidden transition-colors duration-300 lg:py-28">
       
       {/* 1. THE BACKGROUND IMAGE - Always sharp in the base layer */}
       <div 
@@ -21,11 +21,11 @@ const RBIAHero = () => {
       {/* Provides the color theme (Light/Dark) only on the left to ensure text contrast */}
       <div className="absolute inset-0 z-20 bg-gradient-to-r from-bgLight via-bgLight/40 to-transparent dark:from-bgDark dark:via-bgDark/40 dark:to-transparent" />
 
-      <div className="container relative z-30 px-4 mx-auto">
+      <div className="container relative z-30">
         <div className="grid items-center lg:grid-cols-12">
           
           {/* LEFT CONTENT */}
-          <div className="py-12 lg:col-span-7 xl:col-span-6">
+          <div className="lg:col-span-7 xl:col-span-6">
             
             {/* TOP BADGE */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-xs font-bold tracking-widest uppercase border rounded-full bg-brandAccent/10 border-brandAccent/30 text-brandPrimary dark:text-brandAccent">
@@ -34,7 +34,7 @@ const RBIAHero = () => {
             </div>
 
             {/* MAIN HEADING */}
-            <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-extrabold text-brandDark dark:text-white leading-[1.1] tracking-tight">
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold text-brandDark dark:text-white leading-[1.1] tracking-tight">
               Mastering Risk,{" "}
               <span className="block text-brandPrimary dark:text-brandAccent">
                 Empowering Success

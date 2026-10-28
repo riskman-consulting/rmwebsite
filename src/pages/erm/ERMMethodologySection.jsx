@@ -7,7 +7,7 @@ const STEPS = [
     title: "Understanding As-Is Business Processes",
     description:
       "We gain a deep understanding of your business processes, operating environment, and organizational context.",
-    gradient: "from-[#001F3F] to-[#FFC000]", // Dark Blue
+    gradient: "from-brandDark to-brandAccent", // Dark Blue
     shadowColor: "#000f1f",
   },
   {
@@ -15,7 +15,7 @@ const STEPS = [
     title: "Risk Identification",
     description:
       "Internal and external risk factors impacting core business processes are systematically identified and documented.",
-    gradient: "from-[#003366] to-[#FFC000]", // Navy Blue
+    gradient: "from-brandNavy to-brandAccent", // Navy Blue
     shadowColor: "#001a33",
   },
   {
@@ -23,7 +23,7 @@ const STEPS = [
     title: "Risk Scoring & Mitigation",
     description:
       "We formulate risk scoring matrices, assess residual risks, recommend mitigation controls, and design strategic action plans.",
-    gradient: "from-[#004080] to-[#FFC000]", // Primary Blue
+    gradient: "from-brandPrimary to-brandAccent", // Primary Blue
     shadowColor: "#002040",
   },
   {
@@ -31,15 +31,15 @@ const STEPS = [
     title: "Implementation & Review",
     description:
       "RiskMan provides hands-on support to implement controls, evaluate design effectiveness, and perform reviews.",
-    gradient: "from-[#00509d] to-[#FFC000]", // Lighter Blue
+    gradient: "from-brandPrimary to-brandGold", // Lighter Blue
     shadowColor: "#002850",
   },
 ];
 
 const ERMMethodologySection = () => {
   return (
-    <section className="pt-10 pb-24 overflow-hidden bg-bgLight dark:bg-bgDark">
-      <div className="container px-6 mx-auto">
+    <section className="py-16 overflow-hidden bg-bgLight dark:bg-bgDark">
+      <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -116,7 +116,7 @@ const ERMMethodologySection = () => {
                     </div>
 
                     {/* WHITE CONTENT CARD */}
-                    <div className="p-6 transition-all duration-300 border shadow-md rounded-xl bg-surfaceLight dark:bg-surfaceDark hover:shadow-2xl group-hover:-translate-y-2 border-white/50 dark:border-white/5">
+                    <div className="p-6 transition-all duration-300 border shadow-md rounded-2xl bg-surfaceLight dark:bg-surfaceDark hover:shadow-2xl group-hover:-translate-y-2 border-borderLight dark:border-borderDark">
                       <h3 className="mb-2 font-heading text-[11px] font-bold uppercase tracking-widest text-brandAccent/70 dark:text-brandAccent/80">
                         Step {index + 1} of 4
                       </h3>

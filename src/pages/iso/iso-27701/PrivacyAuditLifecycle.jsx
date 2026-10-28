@@ -31,18 +31,18 @@ const PrivacyAuditLifecycle = () => {
 
     return (
         <section
-            className="w-full px-5 py-20 sm:px-8 lg:px-12 xl:px-14 sm:py-28 bg-brandDark dark:bg-surfaceDark"
+            className="py-20 md:py-24 bg-brandDark dark:bg-surfaceDark"
             id="lifecycle"
         >
-            <div className="mx-auto max-w-[1280px]">
+            <div className="container">
                 <div className="text-center">
                     <span className="text-sm font-semibold tracking-widest uppercase font-heading text-brandAccent">
                         Process
                     </span>
-                    <h2 className="mt-3 text-3xl font-bold text-white font-heading sm:text-4xl">
+                    <h2 className="mt-3 text-3xl font-bold text-white font-heading md:text-4xl">
                         The Privacy Audit Lifecycle
                     </h2>
-                    <p className="max-w-2xl mx-auto mt-4 text-blue-200/70 dark:text-slate-400 sm:text-lg">
+                    <p className="max-w-2xl mx-auto mt-4 text-gray-300 dark:text-slate-400 sm:text-lg">
                         Our audit process ensures that every touchpoint of personal data is
                         mapped, secured, and managed according to international privacy best
                         practices.
@@ -65,7 +65,7 @@ const PrivacyAuditLifecycle = () => {
                             <h3 className="mt-5 text-lg font-bold text-white font-heading">
                                 {item.title}
                             </h3>
-                            <p className="mt-3 text-sm leading-relaxed text-blue-200/60 dark:text-slate-400">
+                            <p className="mt-3 text-sm leading-relaxed text-gray-400 dark:text-slate-400">
                                 {item.desc}
                             </p>
                         </div>

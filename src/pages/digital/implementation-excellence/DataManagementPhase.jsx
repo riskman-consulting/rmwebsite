@@ -2,13 +2,13 @@ import React from 'react';
 
 const DataManagementPhase = () => {
     return (
-        <section className="py-24 bg-surfaceLight dark:bg-surfaceDark">
-            <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
+      <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
+            <div className="container">
                 <div className="mx-auto mb-16 text-center ">
-                    <h2 className="mb-4 text-3xl font-black font-heading md:text-4xl">
+                    <h2 className="mb-4 text-3xl font-bold font-heading md:text-4xl">
                         Data Management & <span className="text-brandPrimary dark:text-brandGold">Migration</span>
                     </h2>
-                    <p className="max-w-2xl text-lg opacity-70">
+                    <p className="max-w-2xl mx-auto text-lg opacity-70">
                         Ensure data integrity and seamless transitions with structured cleansing, mapping, and validation frameworks.
                     </p>
                 </div>
@@ -19,34 +19,34 @@ const DataManagementPhase = () => {
                             phase: "Phase 1",
                             title: "Data Lifecycle Planning",
                             desc: "Establish end-to-end strategic plans for managing data assets from extraction to integration.",
-                            color: "from-blue-500 to-cyan-500",
-                            bgColor: "bg-blue-500/10"
+                            color: "from-brandPrimary to-brandGold",
+                            bgColor: "bg-brandPrimary/10 text-brandPrimary dark:bg-brandGold/10 dark:text-brandGold"
                         },
                         {
                             phase: "Phase 2",
                             title: "Cleansing & Validation",
                             desc: "Implement rigorous frameworks to ensure only accurate, high-quality data reaches the new environment.",
-                            color: "from-purple-500 to-pink-500",
-                            bgColor: "bg-purple-500/10"
+                            color: "from-brandPrimary to-brandGold",
+                            bgColor: "bg-brandPrimary/10 text-brandPrimary dark:bg-brandGold/10 dark:text-brandGold"
                         },
                         {
                             phase: "Phase 3",
                             title: "Field-Level Mapping",
                             desc: "Define precise transformation logic to maintain data consistency across disparate digital systems.",
-                            color: "from-orange-500 to-red-500",
-                            bgColor: "bg-orange-500/10"
+                            color: "from-brandPrimary to-brandGold",
+                            bgColor: "bg-brandPrimary/10 text-brandPrimary dark:bg-brandGold/10 dark:text-brandGold"
                         },
                         {
                             phase: "Phase 4",
                             title: "Defect Reconciliation",
                             desc: "Utilize specialized logging tools to identify and resolve migration discrepancies in real time.",
-                            color: "from-green-500 to-emerald-500",
-                            bgColor: "bg-green-500/10"
+                            color: "from-brandPrimary to-brandGold",
+                            bgColor: "bg-brandPrimary/10 text-brandPrimary dark:bg-brandGold/10 dark:text-brandGold"
                         }
                     ].map((item, index) => (
                         <div
                             key={index}
-                            className="relative overflow-hidden transition-all duration-300 border group bg-surfaceLight dark:bg-surfaceDark rounded-2xl border-borderLight dark:border-borderDark hover:shadow-2xl hover:-translate-y-2"
+                            className="relative h-full overflow-hidden transition-all duration-300 border group bg-bgLight dark:bg-bgDark rounded-2xl border-borderLight dark:border-borderDark hover:shadow-2xl hover:-translate-y-2"
                         >
                             {/* Gradient Top Bar */}
                             <div className={`h-2 bg-gradient-to-r ${item.color}`}></div>

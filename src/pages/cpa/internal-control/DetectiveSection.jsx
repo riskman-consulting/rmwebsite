@@ -4,15 +4,15 @@ import { Eye, Lock } from 'lucide-react'
 
 function DetectiveSection() {
   return (
-        <section className="py-20 bg-brandNavy text-white">
+    <section className="py-16 bg-brandNavy text-white">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="font-heading text-3xl lg:text-4xl font-bold mb-4 text-brandGold">Preventative & Detective Measures</h2>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4 text-brandGold">Preventative & Detective Measures</h2>
             <p className="text-gray-300">Our dual-layered defense system protects institutional assets at every stage of the operational lifecycle.</p>
           </div>
           <div className="grid md:grid-cols-2 gap-12">
             {defenseSystem.map((sys, i) => (
-              <div key={i} className="p-10 bg-surfaceDark rounded-3xl border border-white/10 relative overflow-hidden group">
+              <div key={i} className="p-10 bg-surfaceDark rounded-2xl border border-white/10 relative overflow-hidden group">
                 <div className="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity">
                   {i === 0 ? <Lock size={200} /> : <Eye size={200} />}
                 </div>

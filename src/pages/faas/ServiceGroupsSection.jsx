@@ -13,7 +13,7 @@ import SectionHeading from "../../components/ui/SectionHeading";
  * the shorter ones looking unfinished next to them.
  */
 const ServiceGroupsSection = () => (
-  <section id="groups" className="py-14 md:py-20 scroll-mt-48 bg-bgLight dark:bg-bgDark">
+  <section id="groups" className="py-16 scroll-mt-48 bg-bgLight dark:bg-bgDark">
     <div className="container">
       <SectionHeading
         eyebrow="The practice"
@@ -34,7 +34,7 @@ const ServiceGroupsSection = () => (
               transition={{ duration: 0.45, delay: (index % 2) * 0.08 }}
               /* scroll-mt clears the fixed global header plus the FAAS
                  sub-nav when something deep-links to this anchor */
-              className="flex flex-col p-6 transition-all duration-300 border scroll-mt-48 group bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-2xl md:p-8 hover:shadow-xl hover:border-brandAccent"
+              className="flex flex-col h-full p-6 transition-all duration-300 border scroll-mt-48 group bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-2xl md:p-8 hover:shadow-xl hover:border-brandAccent"
             >
               <div className="flex items-start gap-4 mb-5">
                 <span className="flex items-center justify-center flex-shrink-0 transition-all duration-300 w-14 h-14 rounded-xl bg-brandPrimary/10 dark:bg-brandGold/10 group-hover:bg-brandAccent">

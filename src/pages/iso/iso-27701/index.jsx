@@ -19,8 +19,8 @@ const ISO27701Page = () => {
             <CoreComponents />
             <PrivacyAuditLifecycle />
             <StrategicBenefits />
-            <ISO27701CTA />
             <ISO27701FAQ />
+            <ISO27701CTA />
         </>
     );
 };

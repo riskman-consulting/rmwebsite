@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 function CTASection() {
   const navigator=useNavigate()
   return (
-        <section className="py-20">
+    <section className="py-16">
         <div className="container">
           <div className="bg-brandPrimary rounded-[3rem] p-12 lg:p-24 text-center text-white relative shadow-2xl overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-brandAccent/20 via-transparent to-transparent"></div>

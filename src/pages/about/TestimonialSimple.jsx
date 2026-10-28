@@ -62,7 +62,7 @@ const testimonials = [
 
 export default function TestimonialsSimple() {
   return (
-    <section className="relative py-20 overflow-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark">
+    <section className="relative py-16 overflow-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark">
       {/* Background Decorations */}
       <div className="absolute w-64 h-64 rounded-full top-20 left-10 bg-brandPrimary/5 dark:bg-brandAccent/5 blur-3xl" />
       <div className="absolute rounded-full bottom-20 right-10 w-80 h-80 bg-brandPrimary/5 dark:bg-brandAccent/5 blur-3xl" />

@@ -17,8 +17,8 @@ const staggerContainer = {
 
 export default function MissionVisionSection() {
   return (
-    <section id="mission-vision" className="relative py-8 lg:py-12 bg-surfaceLight dark:bg-surfaceDark">
-      <div className="container px-8 mx-auto md:px-10 lg:px-12 max-w-7xl">
+    <section id="mission-vision" className="relative py-16 bg-bgLight dark:bg-bgDark">
+      <div className="container">
         {/* Main Grid: Left (Heading + Images) | Right (Mission/Vision/Goals) */}
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           
@@ -34,7 +34,7 @@ export default function MissionVisionSection() {
               {/* <p className="mb-4 text-sm font-semibold tracking-wider uppercase text-brandDark dark:text-brandAccent">
                 • Who we are
               </p> */}
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-[1.1] text-brandNavy dark:text-white">
+              <h2 className="font-heading text-3xl md:text-4xl font-bold leading-[1.1] text-brandNavy dark:text-white">
                 Our Path to <span className="text-brandAccent">Sustainable Growth</span>
               </h2>
             </motion.div>

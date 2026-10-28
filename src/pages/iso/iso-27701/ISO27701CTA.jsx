@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 const ISO27701CTA = () => {
     return (
-        <section className="w-full px-5 py-20 sm:px-8 lg:px-12 xl:px-14 sm:py-28 bg-surfaceLight dark:bg-bgDark" id="contact">
-            <div className="mx-auto max-w-[1280px]">
+      <section className="py-16 bg-surfaceLight dark:bg-surfaceDark" id="contact">
+            <div className="container">
                 <div className="relative p-10 overflow-hidden text-center rounded-3xl bg-gradient-to-br from-brandDark via-brandNavy to-brandPrimary sm:p-16">
                     {/* Decorative */}
                     <div className="absolute rounded-full pointer-events-none -right-10 -top-10 h-60 w-60 bg-brandAccent/10 blur-3xl" />
@@ -15,10 +15,10 @@ const ISO27701CTA = () => {
                         <div className="flex items-center justify-center w-16 h-16 mx-auto mb-6 shadow-lg rounded-2xl bg-brandAccent shadow-brandAccent/30">
                             <Lock className="w-8 h-8 text-brandDark" />
                         </div>
-                        <h2 className="text-3xl font-bold text-white font-heading sm:text-4xl lg:text-5xl">
+                        <h2 className="text-3xl font-bold text-white font-heading md:text-4xl">
                             Protect Your Data Subjects Today
                         </h2>
-                        <p className="max-w-xl mx-auto mt-4 text-blue-200/80 sm:text-lg">
+                        <p className="max-w-xl mx-auto mt-4 text-gray-200 sm:text-lg">
                             Let RiskMan guide your organization through the complexities of
                             international privacy management and ISO 27701 certification.
                         </p>

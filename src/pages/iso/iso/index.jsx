@@ -12,15 +12,15 @@ const ISOTISAXPage = () => {
         <div className="min-h-screen font-sans transition-colors duration-300 bg-bgLight dark:bg-bgDark">
             <Helmet>
               <title>ISO Certification Services | RiskMan Consulting</title>
-              <meta name="description" content="RiskMan Consulting provides end-to-end ISO certification services including ISO 27001, 27701, 22301, 31000, 42001, and TISAX for enterprises seeking global compliance standards." />
+              <meta name="description" content="RiskMan Consulting provides end-to-end ISO certification support for ISO 27001, 27701, 22301 and 42001, ISO 31000 risk management alignment, and TISAX assessment readiness." />
               <link rel="canonical" href="https://www.riskman.in/services/iso-certifications" />
             </Helmet>
             <ISOTISAXHero />
             <ComplianceSolution />
             <ImplementationRoadmap />
             <CompetitiveAdvantages />
-            <ISOTISAXCTA />
             <ISOTISAXFAQ />
+            <ISOTISAXCTA />
         </div>
     );
 };

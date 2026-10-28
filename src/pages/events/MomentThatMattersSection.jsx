@@ -126,7 +126,9 @@ const byYearDesc = (a, b) => {
 /* ======================================================
    MAIN COMPONENT
 ====================================================== */
-export default function MomentsThatMatter() {
+export default function MomentsThatMatter({ isPage = false }) {
+  // isPage: rendered as the whole /events/media-coverage page, so the heading is its <h1>
+  const Heading = isPage ? "h1" : "h2";
   const { photos, fetchPhoto,fetchEngagement,engagement } = useEventsStore();
   const [activeFilter, setActiveFilter] = useState("All");
   const [lightboxImages, setLightboxImages] = useState([]);
@@ -206,14 +208,14 @@ export default function MomentsThatMatter() {
   };
 
   return (
-    <section id="moment-that-matters" className="relative px-4 py-14 lg:px-20 bg-surfaceLight dark:bg-surfaceDark min-h-screen">
-      <div className="mx-auto max-w-7xl">
+    <section id="moment-that-matters" className="relative py-16 bg-bgLight dark:bg-bgDark min-h-screen">
+      <div className="container">
         
         {/* HEADER */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-12 text-center">
-          <h1 className="mb-4 text-4xl font-bold text-transparent md:text-6xl bg-gradient-to-r from-brandNavy via-brandDark to-brandNavy dark:from-brandAccent dark:via-brandGold dark:to-brandAccent bg-clip-text">
+          <Heading className="mb-4 font-heading text-3xl md:text-4xl font-bold text-transparent bg-gradient-to-r from-brandPrimary to-brandNavy dark:from-brandGold dark:to-brandAccent bg-clip-text">
             Moments That Matter
-          </h1>
+          </Heading>
           <p className="text-lg text-brandPrimary/70 dark:text-white/70">Capturing our journey of excellence and growth</p>
         </motion.div>
 
@@ -236,7 +238,7 @@ export default function MomentsThatMatter() {
               key={f.name}
               onClick={() => setActiveFilter(f.name)}
               className={`px-5 py-2.5 rounded-full text-xs md:text-sm font-bold flex items-center gap-2 transition-all ${
-                activeFilter === f.name ? "bg-brandNavy dark:bg-brandAccent text-white" : "bg-white dark:bg-surfaceDark text-brandPrimary/70 dark:text-white/70 border border-brandAccent/20"
+                activeFilter === f.name ? "bg-brandNavy dark:bg-brandAccent text-white dark:text-brandDark" : "bg-surfaceLight dark:bg-surfaceDark text-brandPrimary/70 dark:text-white/70 border border-brandAccent/20"
               }`}
             >
               <f.icon className="w-4 h-4" />
@@ -286,7 +288,7 @@ export default function MomentsThatMatter() {
             {engagement.map((e, i) => (
               <motion.div key={i} whileHover={{ y: -10 }} className="relative overflow-hidden shadow-xl rounded-2xl h-96 cursor-pointer group" onClick={() => openLightbox(e.images, 0)}>
                 <img src={e.images[0]} alt={e.country} className="object-cover w-full h-full" />
-                <div className="absolute inset-0 bg-brandNavy/40 flex items-end p-6">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent flex items-end p-6">
                   <h3 className="text-3xl font-bold text-white">{e.country}</h3>
                 </div>
               </motion.div>
@@ -298,7 +300,7 @@ export default function MomentsThatMatter() {
         {activeFilter === GLOBAL_LEADERSHIP_FILTER && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="grid lg:grid-cols-2 gap-16">
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold dark:text-white">Connecting Continents: Global Client Engagement</h2>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">Connecting Continents: Global Client Engagement</h2>
               <p className="text-brandPrimary/70 dark:text-white/70 leading-relaxed">
                 Our journey across Germany, France, and Vietnam reinforced relationships built on trust and shared purpose. 
                 Beyond the boardroom, it's the human connections that transform transactions into lasting partnerships.

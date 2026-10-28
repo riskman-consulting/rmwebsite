@@ -7,6 +7,8 @@ import DefinitionSection from './DefinitionSection';
 import ReportTypeSection from './ReportTypeSection';
 import SupportSection from './SupportSection';
 import BusinessSection from './BusinessSection';
+import FaqSection from './FaqSection';
+import CTASection from './CTASection';
 
 const SOCOverview = () => {
   return (
@@ -19,11 +21,11 @@ const SOCOverview = () => {
       {/* 1. HERO SECTION */}
       <HeroSection/>
 
-      {/* 2. STRATEGIC VALUE */}
-      <StrategicSection/>
-
-      {/* 3. DEFINITION SECTION */}
+      {/* 2. DEFINITION SECTION */}
       <DefinitionSection/>
+
+      {/* 3. STRATEGIC VALUE */}
+      <StrategicSection/>
 
       {/* 4. REPORT TYPES TABLE */}
      <ReportTypeSection/>
@@ -35,20 +37,10 @@ const SOCOverview = () => {
      <BusinessSection/>
 
       {/* 7. FAQ SECTION */}
-     
+      <FaqSection/>
 
       {/* 8. FINAL CTA */}
-      <section className="py-20 container">
-        <div className="bg-brandGold rounded-[2.5rem] p-10 lg:p-20 text-center text-brandDark shadow-2xl">
-          <h2 className="font-heading text-3xl md:text-5xl font-extrabold mb-6">Turn SOC from Obligation into Advantage</h2>
-          <p className="text-xl font-medium mb-10 max-w-2xl mx-auto opacity-80">
-            Use SOC reports not just to pass audits, but to strengthen trust, unlock deals, and support strategic growth.
-          </p>
-          <button className="bg-brandDark text-white hover:bg-brandNavy px-12 py-5 rounded-full font-black text-lg transition-all shadow-xl hover:scale-105 transform">
-            Discuss Your SOC Roadmap
-          </button>
-        </div>
-      </section>
+      <CTASection/>
 
     </div>
   );

@@ -222,10 +222,10 @@ export default function Terms() {
       </section>
 
       {/* ================= TERMS SECTIONS ================= */}
-      <section className="relative section-padding isolate">
-        <div className="container mx-auto max-w-7xl">
+      <section className="relative py-16 isolate">
+        <div className="container">
           <div className="mb-16 text-center">
-            <h2 className="mb-6 text-4xl font-bold md:text-5xl text-brandDark dark:text-white">
+            <h2 className="mb-6 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
               Understanding Our <span className="text-brandPrimary dark:text-brandAccent">Terms</span>
             </h2>
             <p className="max-w-3xl mx-auto text-lg text-brandNavy dark:text-gray-400">
@@ -240,7 +240,7 @@ export default function Terms() {
                 key={i}
                 onMouseEnter={() => setHoveredSection(section.id)}
                 onMouseLeave={() => setHoveredSection(null)}
-                className="relative p-8 overflow-hidden transition-all duration-300 border cursor-pointer bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-3xl group hover:border-brandGold dark:hover:border-brandAccent hover:shadow-2xl hover:-translate-y-1"
+                className="relative h-full p-8 overflow-hidden transition-all duration-300 border cursor-pointer bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-3xl group hover:border-brandGold dark:hover:border-brandAccent hover:shadow-2xl hover:-translate-y-1"
               >
                 <div className="absolute inset-0 transition-all duration-300 opacity-0 bg-brandPrimary group-hover:opacity-5 dark:bg-brandAccent rounded-3xl" />
 
@@ -264,8 +264,9 @@ export default function Terms() {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="text-center section-padding bg-surfaceLight/50 dark:bg-surfaceDark/50">
-        <h2 className="mb-6 text-4xl font-bold md:text-5xl text-brandDark dark:text-white">
+      <section className="py-16 text-center bg-surfaceLight dark:bg-surfaceDark">
+        <div className="container">
+        <h2 className="mb-6 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
           Questions About
           <br />
           <span className="text-brandPrimary dark:text-brandAccent">
@@ -291,6 +292,7 @@ export default function Terms() {
           >
             View Privacy Policy
           </a>
+        </div>
         </div>
       </section>
     </div>

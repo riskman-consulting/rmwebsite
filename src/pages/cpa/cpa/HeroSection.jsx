@@ -4,7 +4,7 @@ import bg from "../../../assets/images/cpa/cpa/hero.png"
 
 function HeroSection() {
   return (
-    <section className="relative text-white py-24 lg:py-40 overflow-hidden">
+    <section className="relative text-white py-16 lg:py-40 overflow-hidden">
 
       {/* Background Image */}
       <div

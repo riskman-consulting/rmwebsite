@@ -90,11 +90,11 @@ const WhyRiskMan = () => {
         { icon: <Award className="text-brandGold" />, title: "Domain Expertise", desc: "Auditors with deep process understanding across P2P, O2C, Payroll, and Treasury cycles." },
         { icon: <Users className="text-brandAccent" />, title: "Hybrid Delivery", desc: "Strategic mix of onsite presence and offshore scale for cost-effective global coverage." },
         { icon: <Search className="text-brandGold" />, title: "Risk-First Lens", desc: "Methodology focused on identifying high-impact leakage and control bypasses." },
-        { icon: <Briefcase className="text-brandAccent" />, title: "Governance Track Record", desc: "Trusted by Fortune 500 audit committees for multi-year concurrent audit programs." }
+        { icon: <Briefcase className="text-brandAccent" />, title: "Governance Track Record", desc: "Experience supporting audit committees with structured, multi-year concurrent audit programs." }
     ];
 
     return (
-        <section id="why" className="relative z-10 transition-colors py-14 md:py-20 bg-surfaceLight dark:bg-surfaceDark">
+      <section id="why" className="relative z-10 transition-colors py-16 bg-surfaceLight dark:bg-surfaceDark">
             <div className="container relative z-10">
                 <div className="inline-flex items-center gap-3 font-mono text-[0.7rem] font-semibold tracking-[4px] uppercase text-brandAccent mb-6">
                     <div className="w-5 h-[1px] bg-brandAccent" />
@@ -108,7 +108,7 @@ const WhyRiskMan = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="mb-6 text-3xl font-extrabold leading-tight font-heading md:text-4xl text-brandDark dark:text-white">
+                        <h2 className="mb-6 text-3xl font-bold leading-tight font-heading md:text-4xl text-brandDark dark:text-white">
                             The RiskMan Advantage
                         </h2>
                         <hr className="w-12 h-[2px] border-none bg-gradient-to-r from-brandGold to-brandAccent mb-8" />
@@ -119,7 +119,7 @@ const WhyRiskMan = () => {
 
                         <div className="space-y-4">
                             {differentiators.map((item, index) => (
-                                <div key={index} className="flex gap-5 p-5 transition-all border bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-xl hover:border-brandGold/20 group">
+                                <div key={index} className="flex gap-5 p-5 transition-all border bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark rounded-2xl hover:border-brandGold/20 group">
                                     <div className="flex items-center justify-center w-10 h-10 transition-colors border rounded-lg shadow-sm shrink-0 bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark group-hover:border-brandGold/40">
                                         {item.icon}
                                     </div>
@@ -145,7 +145,6 @@ const WhyRiskMan = () => {
                                 alt="RiskMan Team Collaboration"
                                 className="w-full h-[600px] object-top object-cover"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
                             <div className="absolute p-6 transition-colors border bottom-8 left-8 right-8 bg-bgLight/90 dark:bg-bgDark/90 backdrop-blur-md rounded-xl border-brandGold/30">
                                 <div className="mb-1 text-xl font-bold text-brandGold font-heading">Global Scale. Local Nuance.</div>

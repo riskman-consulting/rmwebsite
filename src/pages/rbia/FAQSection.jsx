@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
-    q: "How do you tailor the audit approach for PTI?",
-    a: "We conduct stakeholder interviews to understand PTI's unique \"as-is\" processes, identifying specific concerns like newsroom cybersecurity and freelancer payments.",
+    q: "How do you tailor the audit approach for my organization?",
+    a: "We conduct stakeholder interviews to understand your organization's unique \"as-is\" processes, identifying specific concerns like cybersecurity and vendor payments.",
   },
   {
     q: "How does RBIA differ from conventional auditing?",
@@ -39,7 +39,7 @@ export default function FAQSection() {
       {/* DECORATIVE GLOW */}
       <div className="absolute rounded-full top-40 left-10 w-96 h-96 bg-brandPrimary/8 blur-3xl dark:bg-brandPrimary/12" />
 
-      <div className="container relative z-10 px-6">
+      <div className="container relative z-10">
 
         {/* HEADER */}
         <div className="max-w-4xl mx-auto mb-16 text-center md:text-left">
@@ -47,7 +47,7 @@ export default function FAQSection() {
             Common Questions
           </div>
 
-          <h2 className="mb-6 text-3xl font-bold leading-tight md:text-4xl lg:text-5xl font-heading text-brandDark dark:text-white">
+          <h2 className="mb-6 text-3xl font-bold leading-tight md:text-4xl font-heading text-brandDark dark:text-white">
             Frequently Asked Questions
           </h2>
 
@@ -62,7 +62,7 @@ export default function FAQSection() {
             return (
               <div
                 key={index}
-                className="relative bg-white border shadow-md rounded-2xl border-borderLight dark:border-borderDark dark:bg-surfaceDark backdrop-blur-xl hover:shadow-xl hover:border-brandAccent/40"
+                className="relative border shadow-md bg-surfaceLight rounded-2xl border-borderLight dark:border-borderDark dark:bg-surfaceDark backdrop-blur-xl hover:shadow-xl hover:border-brandAccent/40"
               >
                 <button
                   onClick={() => setActiveIndex(isOpen ? null : index)}

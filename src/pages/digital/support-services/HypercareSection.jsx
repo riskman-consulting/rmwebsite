@@ -8,7 +8,7 @@ const HypercareCard = ({ icon: Icon, title, description }) =>{
 
     return (
    <motion.div whileHover={{ y: -5 }}
-    className="p-6 transition-all duration-300 bg-white border-l-4 shadow-lg dark:bg-surfaceDark rounded-xl border-brandAccent hover:shadow-xl"
+    className="h-full p-6 transition-all duration-300 bg-white border-l-4 shadow-lg dark:bg-surfaceDark rounded-2xl border-brandAccent hover:shadow-xl"
   >
     <div className="flex items-start gap-4">
       <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 rounded-lg bg-brandAccent/20">
@@ -27,8 +27,8 @@ const HypercareCard = ({ icon: Icon, title, description }) =>{
 
 export const HypercareSection = () => {
   return (
-    <section className="relative py-24 bg-bgLight dark:bg-bgDark">
-      <div className="container px-4 mx-auto sm:px-6 lg:px-8">
+    <section className="relative py-16 bg-bgLight dark:bg-bgDark">
+      <div className="container">
         <div className="grid items-center grid-cols-1 gap-16 lg:grid-cols-2">
           
           <motion.div 
@@ -42,20 +42,13 @@ export const HypercareSection = () => {
             <div className="absolute w-40 h-40 rounded-full -top-10 -left-10 bg-brandPrimary/10 blur-3xl"></div>
             <div className="absolute w-40 h-40 rounded-full -bottom-10 -right-10 bg-brandAccent/10 blur-3xl"></div>
             
-            <div className="relative overflow-hidden border-8 border-white shadow-2xl rounded-3xl dark:border-surfaceDark/50">
+            <div className="relative overflow-hidden border-8 border-white shadow-2xl rounded-2xl dark:border-surfaceDark/50">
               <img src={hypercareImage} alt="Hypercare Support" className="w-full h-auto" />
-              <div className="absolute inset-0 bg-brandPrimary/10 mix-blend-multiply"></div>
-              
-              {/* Floating Support Badge */}
-              <div className="absolute flex items-center gap-2 px-6 py-3 font-bold rounded-full shadow-lg bottom-6 right-6 bg-brandAccent text-brandDark animate-pulse-custom">
-                <LifeBuoy className="w-5 h-5" />
-                24/7 Support Active
-              </div>
             </div>
           </motion.div>
           
           <div>
-            <h2 className="mb-6 text-4xl font-bold font-heading text-brandDark dark:text-white">
+            <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
               Post Go-Live Hypercare
             </h2>
             <p className="pl-6 mb-10 text-lg leading-relaxed text-gray-600 border-l-4 dark:text-gray-300 border-brandPrimary">

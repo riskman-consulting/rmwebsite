@@ -51,58 +51,57 @@ import governanceImg from "../../assets/images/tprm/governance.jpg";
 
 const Governance = () => {
   return (
-    <section className="py-20 bg-bgLight">
-      <div className="container px-4 mx-auto">
+    <section className="py-16 bg-bgLight dark:bg-bgDark">
+      <div className="container">
         <div className="flex flex-col items-center gap-12 lg:flex-row">
           <div className="lg:w-1/2">
-            <div className="relative overflow-hidden border-4 border-white shadow-2xl rounded-2xl">
+            <div className="relative overflow-hidden border-4 border-white shadow-2xl rounded-2xl dark:border-surfaceDark">
               <img 
                 src={governanceImg}
                 alt="Team Governance Meeting" 
                 className="w-full h-auto transition-transform duration-700 transform hover:scale-105"
               />
-              <div className="absolute inset-0 bg-brandPrimary opacity-10 mix-blend-multiply"></div>
             </div>
           </div>
           
           <div className="space-y-6 lg:w-1/2">
-            <div className="inline-block px-4 py-1 mb-2 text-sm font-bold rounded-full bg-brandAccent/20 text-brandPrimary">
+            <div className="inline-block px-4 py-1 mb-2 text-sm font-bold rounded-full bg-brandAccent/20 text-brandPrimary dark:text-brandAccent">
               FOUNDATION
             </div>
-            <h2 className="text-3xl font-bold md:text-4xl font-heading text-brandDark">
-              Establish A Robust TPRM Governance Framework
+            <h2 className="text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+              Establish a Robust TPRM Governance Framework
             </h2>
-            <p className="text-lg leading-relaxed text-gray-600">
+            <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-300">
               Governance is the foundation of effective risk management. A policy approved by top management ensures that roles and responsibilities are clearly defined across IT, Legal, and Procurement. We help you document board-level oversight and align your risk appetite with third-party exposure to ensure total transparency.
             </p>
             
             <div className="grid grid-cols-1 gap-6 mt-8 sm:grid-cols-2">
-              <div className="flex items-start gap-4 p-4 transition-shadow bg-white border-l-4 rounded-lg shadow-sm hover:shadow-md border-brandAccent">
-                <Gavel className="flex-shrink-0 w-8 h-8 text-brandNavy" />
+              <div className="flex items-start h-full gap-4 p-4 transition-shadow border-l-4 shadow-sm bg-surfaceLight rounded-2xl hover:shadow-md border-brandAccent dark:bg-surfaceDark">
+                <Gavel className="flex-shrink-0 w-8 h-8 text-brandNavy dark:text-brandAccent" />
                 <div>
-                  <h3 className="font-bold text-brandDark">Policy Definition</h3>
-                  <p className="text-sm text-gray-500">Clear roles & responsibilities</p>
+                  <h3 className="font-bold text-brandDark dark:text-white">Policy Definition</h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Clear roles & responsibilities</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 p-4 transition-shadow bg-white border-l-4 rounded-lg shadow-sm hover:shadow-md border-brandAccent">
-                <Eye className="flex-shrink-0 w-8 h-8 text-brandNavy" />
+              <div className="flex items-start h-full gap-4 p-4 transition-shadow border-l-4 shadow-sm bg-surfaceLight rounded-2xl hover:shadow-md border-brandAccent dark:bg-surfaceDark">
+                <Eye className="flex-shrink-0 w-8 h-8 text-brandNavy dark:text-brandAccent" />
                 <div>
-                  <h3 className="font-bold text-brandDark">Board Oversight</h3>
-                  <p className="text-sm text-gray-500">Documented supervision</p>
+                  <h3 className="font-bold text-brandDark dark:text-white">Board Oversight</h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Documented supervision</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 p-4 transition-shadow bg-white border-l-4 rounded-lg shadow-sm hover:shadow-md border-brandAccent">
-                <Users className="flex-shrink-0 w-8 h-8 text-brandNavy" />
+              <div className="flex items-start h-full gap-4 p-4 transition-shadow border-l-4 shadow-sm bg-surfaceLight rounded-2xl hover:shadow-md border-brandAccent dark:bg-surfaceDark">
+                <Users className="flex-shrink-0 w-8 h-8 text-brandNavy dark:text-brandAccent" />
                 <div>
-                  <h3 className="font-bold text-brandDark">Cross-Functional</h3>
-                  <p className="text-sm text-gray-500">IT, Legal, Procurement alignment</p>
+                  <h3 className="font-bold text-brandDark dark:text-white">Cross-Functional</h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">IT, Legal, Procurement alignment</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 p-4 transition-shadow bg-white border-l-4 rounded-lg shadow-sm hover:shadow-md border-brandAccent">
-                <FileText className="flex-shrink-0 w-8 h-8 text-brandNavy" />
+              <div className="flex items-start h-full gap-4 p-4 transition-shadow border-l-4 shadow-sm bg-surfaceLight rounded-2xl hover:shadow-md border-brandAccent dark:bg-surfaceDark">
+                <FileText className="flex-shrink-0 w-8 h-8 text-brandNavy dark:text-brandAccent" />
                 <div>
-                  <h3 className="font-bold text-brandDark">Risk Appetite</h3>
-                  <p className="text-sm text-gray-500">Aligned with exposure</p>
+                  <h3 className="font-bold text-brandDark dark:text-white">Risk Appetite</h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Aligned with exposure</p>
                 </div>
               </div>
             </div>

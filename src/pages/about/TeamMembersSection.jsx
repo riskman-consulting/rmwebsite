@@ -44,7 +44,7 @@ const RiskManTeams = () => {
   }, [])
 
   return (
-    <section id="riskman-teams" className="py-20 bg-surfaceLight dark:bg-surfaceDark">
+    <section id="riskman-teams" className="py-16 bg-surfaceLight dark:bg-surfaceDark">
       <div className="container">
 
         {/* Header */}
@@ -53,7 +53,7 @@ const RiskManTeams = () => {
             Our Team
           </span>
 
-          <h2 className="mb-6 text-4xl font-bold lg:text-5xl text-brandDark dark:text-white">
+          <h2 className="mb-6 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
             Meet the{" "}
             <span className="font-serif italic font-medium text-brandGold">
               RiskMan
@@ -74,7 +74,7 @@ const RiskManTeams = () => {
           viewport={{ once: true }}
           className="flex justify-center mb-12"
         >
-          <div className="flex items-center gap-2 px-6 py-3 border rounded-full bg-surfaceLight dark:bg-surfaceDark border-brandAccent/30">
+          <div className="flex items-center gap-2 px-6 py-3 border rounded-full bg-bgLight dark:bg-bgDark border-brandAccent/30">
             <Users className="w-5 h-5 text-brandAccent" />
             <span className="text-lg font-bold text-brandDark dark:text-white">
               50+

@@ -47,7 +47,7 @@ const FinancialAdvisoryPage = () => {
       </section>
 
       {/* 7. FAQ: Common questions [cite: 37-55] */}
-      <section id="faq" className="pb-20">
+      <section id="faq">
         <FinancialFAQ />
       </section>
     </main>

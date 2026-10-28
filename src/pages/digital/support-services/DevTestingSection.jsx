@@ -7,7 +7,7 @@ const FeatureCard = ({ icon: Icon, title, description, className = "" }) => {
     return (
         <motion.div
             whileHover={{ y: -5 }}
-            className={`bg-white dark:bg-surfaceDark p-6 rounded-2xl shadow-lg border border-borderLight dark:border-borderDark hover:border-brandAccent/50 transition-all duration-300 ${className}`}
+            className={`h-full bg-bgLight dark:bg-bgDark p-6 rounded-2xl shadow-lg border border-borderLight dark:border-borderDark hover:border-brandAccent/50 transition-all duration-300 ${className}`}
         >
             <div className="flex items-center justify-center w-12 h-12 mb-4 bg-brandPrimary/10 dark:bg-brandAccent/10 rounded-xl">
                 <Icon className="w-6 h-6 text-brandPrimary dark:text-brandAccent" />
@@ -20,8 +20,8 @@ const FeatureCard = ({ icon: Icon, title, description, className = "" }) => {
 
 export const DevTestingSection = () => {
     return (
-        <section className="py-16 overflow-hidden bg-white dark:bg-surfaceDark">
-            <div className="container px-4 mx-auto sm:px-6 lg:px-8">
+      <section className="py-16 overflow-hidden bg-surfaceLight dark:bg-surfaceDark">
+            <div className="container">
                 <div className="flex flex-col gap-16 lg:flex-row">
                     {/* Sticky Image Side */}
                     <div className="lg:w-1/2">
@@ -32,7 +32,7 @@ export const DevTestingSection = () => {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6 }}
                             >
-                                <h2 className="mb-6 text-4xl font-bold font-heading text-brandDark dark:text-white">
+                                <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
                                     Development Testing & UAT
                                 </h2>
                                 <p className="mb-8 text-lg leading-relaxed text-gray-600 dark:text-gray-300">
@@ -45,7 +45,6 @@ export const DevTestingSection = () => {
                                         alt="Development Testing"
                                         className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
                                     />
-                                    <div className="absolute inset-0 transition-opacity duration-300 bg-brandPrimary/20 mix-blend-multiply group-hover:opacity-0"></div>
                                 </div>
                             </motion.div>
                         </div>
@@ -65,7 +64,7 @@ export const DevTestingSection = () => {
                                     icon={ShieldCheck}
                                     title="Scenario-Based UAT"
                                     description="Execute detailed User Acceptance Testing based on realistic business scenarios to ensure the system meets all functional needs and edge cases."
-                                    className="bg-brandLight/50 dark:bg-surfaceDark/50"
+                                    className=""
                                 />
                             </motion.div>
 
@@ -74,6 +73,7 @@ export const DevTestingSection = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: 0.2 }}
+                                className="h-full"
                             >
                                 <FeatureCard
                                     icon={Target}
@@ -87,6 +87,7 @@ export const DevTestingSection = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: 0.3 }}
+                                className="h-full"
                             >
                                 <FeatureCard
                                     icon={BarChart3}

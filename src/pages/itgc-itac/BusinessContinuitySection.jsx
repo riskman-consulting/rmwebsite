@@ -68,11 +68,11 @@ import { Activity, FileText } from 'lucide-react';
 
 const BusinessContinuitySection = () => {
   return (
-    <section className="py-20 bg-slate-50 dark:bg-slate-900">
-      <div className="container px-6 mx-auto">
+    <section className="py-16 bg-bgLight dark:bg-bgDark">
+      <div className="container">
         {/* Section Header */}
         <div className="mb-12 text-center">
-          <h2 className="relative inline-block mb-4 text-3xl font-bold md:text-4xl text-brandNavy dark:text-white">
+          <h2 className="relative inline-block mb-4 text-3xl font-bold font-heading md:text-4xl text-brandNavy dark:text-white">
             Business Continuity & Statutory Compliance
             <span className="absolute left-0 w-1/2 h-1 rounded-full -bottom-2 bg-brandGold"></span>
           </h2>
@@ -88,11 +88,10 @@ const BusinessContinuitySection = () => {
               alt="Business Continuity" 
               className="object-cover w-full h-full"
             />
-            <div className="absolute inset-0 bg-brandNavy/30 dark:bg-brandNavy/50"></div>
           </div>
           
           <div className="space-y-6">
-            <div className="p-6 bg-white border-l-4 shadow-md dark:bg-slate-800 rounded-xl border-brandGold">
+            <div className="p-6 bg-surfaceLight border-l-4 shadow-md dark:bg-surfaceDark rounded-xl border-brandGold">
               <h3 className="flex items-center gap-2 mb-2 text-xl font-bold text-brandNavy dark:text-white">
                 <Activity className="text-brandGold" /> Resilience Testing
               </h3>
@@ -101,7 +100,7 @@ const BusinessContinuitySection = () => {
               </p>
             </div>
             
-            <div className="p-6 bg-white border-l-4 shadow-md dark:bg-slate-800 rounded-xl border-brandNavy dark:border-brandPrimary">
+            <div className="p-6 bg-surfaceLight border-l-4 shadow-md dark:bg-surfaceDark rounded-xl border-brandNavy dark:border-brandPrimary">
               <h3 className="flex items-center gap-2 mb-2 text-xl font-bold text-brandNavy dark:text-white">
                 <FileText className="text-brandNavy dark:text-brandPrimary" /> Regulatory Alignment
               </h3>

@@ -30,7 +30,7 @@ const WhyRiskManAndCTA = () => {
   ];
 
   return (
-    <section className="py-20 bg-surfaceLight dark:bg-surfaceDark">
+    <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
       <div className="container">
         {/* Why RiskMan Section */}
         <div className="max-w-6xl mx-auto mb-20">

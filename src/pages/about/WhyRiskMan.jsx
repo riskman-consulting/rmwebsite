@@ -23,7 +23,7 @@ const WhyRiskman = () => {
       icon: Zap,
       title: "Adaptive Innovation",
       description:
-        "By integrating cutting-edge technologies and forward-thinking methodologies, we ensure your organization remains resilient and ahead of shifting global industry trends."
+        "We combine proven audit methodologies with practical technology, so your organization keeps pace with changing regulations and industry practice."
     },
     {
       icon: Users,
@@ -52,15 +52,15 @@ const WhyRiskman = () => {
   ];
 
   return (
-    <section className="relative py-4 overflow-hidden lg:pb-2 lg:pt-12 bg-surfaceLight dark:bg-surfaceDark">
-      <div className="px-6 mx-auto max-w-7xl lg:px-12">
+    <section className="relative py-16 overflow-hidden bg-bgLight dark:bg-bgDark">
+      <div className="container">
         {/* Header */}
         <motion.div {...fadeInUp} className="max-w-3xl mb-12">
           <span className="inline-block px-4 py-1 mb-6 rounded-full bg-brandAccent/10 border border-brandAccent/20 text-brandAccent text-[10px] font-black uppercase tracking-[0.3em]">
             Our Advantage
           </span>
           
-          <h2 className="mb-6 text-4xl font-bold lg:text-5xl text-brandDark dark:text-white">
+          <h2 className="mb-6 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
             Why{" "}
             <span className="font-serif italic font-medium text-brandGold">
               RiskMan
@@ -85,7 +85,7 @@ const WhyRiskman = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="relative p-6 transition-all duration-300 border group bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-2xl hover:border-brandGold dark:hover:border-brandAccent hover:shadow-2xl hover:-translate-y-1"
+                className="relative h-full p-6 transition-all duration-300 border group bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-2xl hover:border-brandGold dark:hover:border-brandAccent hover:shadow-2xl hover:-translate-y-1"
               >
                 {/* Icon */}
                 <div className="flex items-center justify-center w-12 h-12 mb-4 transition-all duration-300 rounded-full bg-brandAccent/10 dark:bg-brandAccent/15 group-hover:scale-110">

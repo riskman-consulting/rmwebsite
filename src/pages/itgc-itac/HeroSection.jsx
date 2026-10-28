@@ -62,32 +62,32 @@ const HeroSection = () => {
     //   </div>
     // </section>
 
-    <section className="relative flex items-center justify-center min-h-screen">
+      <section className="relative py-16 overflow-hidden lg:py-28">
     <img src="https://public.youware.com/users-website-assets/prod/40fcf0f2-b4b0-418d-a01b-f6b4ca34e916/6ca2779f20284edca08c4ceef94541a8.jpg" alt="" className="absolute inset-0 object-cover w-full h-full" />
-    <div className="absolute inset-0 bg-brandNavy/80" />
+    <div className="absolute inset-0 bg-brandDark/85" />
 
-    <div className="relative z-10 px-6 text-center text-white">
-      <div className="inline-flex items-center gap-2 mb-6 text-brandGold">
-        <Shield size={16} /> RiskMan Services
+    <div className="container relative z-10 text-white">
+      <div className="max-w-3xl">
+      <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-bold border rounded-full bg-brandAccent/10 border-brandAccent/30 text-brandGold">
+        <Shield size={16} /> ITGC &amp; ITAC Auditing
       </div>
 
-      <h1 className="mb-6 text-5xl font-bold">
+      <h1 className="mb-6 text-4xl font-bold leading-tight font-heading lg:text-6xl">
          Comprehensive IT Auditing with <span className="text-brandGold">ITGC & ITAC</span>
       </h1>
 
-      <p className="max-w-2xl mx-auto mb-10 text-lg">
+      <p className="max-w-2xl mb-10 text-lg leading-relaxed text-gray-300 lg:text-xl">
        Empower your enterprise with expert IT General and Application Controls auditing to mitigate risks, ensure compliance, and drive operational excellence.
       </p>
 
-      <div className="flex justify-center gap-4">
+      <div className="flex flex-wrap gap-4">
         <button onClick={()=>navigator("/services")} className="flex items-center gap-2 px-8 py-4 font-bold rounded-lg bg-brandGold text-brandNavy">
           Explore <ArrowRight />
         </button>
-        <button onClick={()=>navigator("/contact")} className="px-8 py-4 border-2 rounded-lg">Contact</button>
+        <button onClick={()=>navigator("/contact")} className="px-8 py-4 font-bold border-2 rounded-lg border-white/30 hover:bg-white/10">Contact</button>
+      </div>
       </div>
     </div>
-
-    <ChevronDown className="absolute text-white bottom-10 animate-bounce" />
   </section>
 
     

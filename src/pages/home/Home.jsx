@@ -53,8 +53,8 @@ export default function Home() {
       <main
         className="
           w-full overflow-x-hidden transition-colors duration-300
-          bg-white text-slate-900
-          dark:bg-[#06071B] dark:text-white
+          bg-bgLight text-slate-900
+          dark:bg-bgDark dark:text-white
         "
       >
         {/* 1. CINEMATIC INTRO EXPERIENCE (400vh scroll) */}

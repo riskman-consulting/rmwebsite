@@ -4,13 +4,13 @@ import { useNavigate } from 'react-router-dom'
 function CtaSection() {
   const navigator = useNavigate()
   return (
-    <section className="container py-20">
-        <div className="bg-brandGold rounded-[2.5rem] p-10 lg:p-20 text-center text-brandDark shadow-2xl">
-          <h2 className="mb-6 text-3xl font-extrabold font-heading md:text-5xl">Turn SOC from Obligation into Advantage</h2>
-          <p className="max-w-2xl mx-auto mb-10 text-xl font-medium opacity-80">
-            Use SOC reports not just to pass audits, but to strengthen trust, unlock deals, and support strategic growth.
-          </p>
-          <button onClick={()=>navigator("/solutions")} className="px-12 py-5 text-lg font-black text-white transition-all transform rounded-full shadow-xl bg-brandDark hover:bg-brandNavy hover:scale-105">
+    <section className="container py-16">
+        <div className="flex flex-col items-center justify-between p-10 bg-brandGold rounded-3xl lg:p-16 lg:flex-row text-brandDark">
+          <div className="mb-10 lg:max-w-xl lg:mb-0">
+            <h2 className="mb-4 text-3xl font-bold font-heading md:text-4xl">Turn SOC from Obligation into Advantage</h2>
+            <p className="font-medium text-brandDark/80">Use your SOC reports to answer customer security reviews faster, reduce repeat audits and support enterprise sales.</p>
+          </div>
+          <button onClick={()=>navigator("/contact")} className="px-10 py-5 text-lg font-extrabold text-white transition-all shadow-xl bg-brandDark hover:bg-brandNavy rounded-xl whitespace-nowrap">
             Discuss Your SOC Roadmap
           </button>
         </div>
