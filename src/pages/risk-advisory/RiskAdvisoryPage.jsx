@@ -13,7 +13,8 @@ export default function RiskAdvisoryPage() {
   const pageData = {
     heroSection: {
       id: "risk-advisory",
-      title: "Strengthening Governance and Enterprise Resilience",
+      title: "Strengthening Governance and",
+      highlight: "Enterprise Resilience",
       description: "RiskMan Consulting provides the independent oversight and strategic insight required for boards and executive leadership to manage risk, ensure regulatory compliance, and drive sustainable organizational growth.",
       bgImage: "https://www.scoutnetworkblog.com/wp-content/uploads/2018/03/Business-Meeting-201801-002.jpg"
     },
@@ -55,7 +56,7 @@ export default function RiskAdvisoryPage() {
       {
         title: "Formulation of Policies and SOPs",
         description: "The formulation of Policies and Standard Operating Procedures (SOPs) is a fundamental service that helps organizations establish clear, consistent, and governance-aligned directives for their global operations. RiskMan Consulting works with leadership to translate high-level board strategies into actionable operating procedures.",
-        path: "/services/risk-advisory/policies-sops"
+        path: "/services/risk-advisory/formulation-of-policies-and-sops"
       }
     ],
     whyRiskmanSection: {
@@ -132,8 +133,8 @@ export default function RiskAdvisoryPage() {
       <OverviewSection data={pageData.OverviewSection} />
       <ServicesSection data={pageData.ServicesSection} />
       <WhyRiskManSection data={pageData.whyRiskmanSection} />
-      <CTASection data={pageData.ctaSection} />
       <FAQSection data={pageData.faqSection} />
+      <CTASection data={pageData.ctaSection} />
     </div>
   );
 }

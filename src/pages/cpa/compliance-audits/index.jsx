@@ -23,7 +23,7 @@ import CTASection from './CTASection';
 const ComplianceAuditsPage = () => {
 
   return (
-    <div className="font-sans bg-bgLight text-brandDark">
+    <div className="font-sans bg-bgLight text-brandDark dark:bg-bgDark dark:text-white">
       <Helmet>
         <title>Compliance Audit Services | RiskMan Consulting</title>
         <meta name="description" content="RiskMan Consulting performs compliance audits to verify organizational adherence to regulatory requirements, industry standards, and internal policies across multiple jurisdictions." />
@@ -47,15 +47,6 @@ const ComplianceAuditsPage = () => {
       {/* 6. CTA SECTION */}
       <CTASection/>
 
-      {/* 7. FOOTER */}
-      <footer className="py-12 border-t border-borderLight bg-white">
-        <div className="container flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="font-heading font-black text-2xl tracking-tighter text-brandNavy">
-            RISK<span className="text-brandAccent">MAN</span> <span className="text-sm font-normal text-gray-400 lowercase ml-2">Compliance Division</span>
-          </div>
-          <p className="text-gray-500 text-sm">© 2026 RiskMan Consulting | Federal & Industry Compliance Auditing Group</p>
-        </div>
-      </footer>
     </div>
   );
 };

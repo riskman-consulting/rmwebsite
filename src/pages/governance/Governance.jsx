@@ -117,14 +117,14 @@ const scrollToSection = (id) => {
         <div className="absolute w-64 h-64 rounded-full top-20 left-10 bg-brandAccent/10 blur-3xl animate-pulse-custom"></div>
         <div className="absolute rounded-full bottom-20 right-10 w-96 h-96 bg-brandGold/5 blur-3xl animate-pulse-custom" style={{ animationDelay: '1s' }}></div>
 
-        <div className="container relative z-10 px-5 py-24 mx-auto text-center">
+        <div className="container relative z-10 py-24 text-center">
           <div className="inline-block px-4 py-1 mb-4 text-sm font-medium border rounded-full bg-brandGold/20 border-brandGold/30 text-brandGold animate-fade-in-up backdrop-blur-sm">
             Corporate Standards
           </div>
-          <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-6xl font-heading text-brandGold animate-evaporate drop-shadow-2xl">
+          <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold font-heading text-brandGold drop-shadow-2xl">
             Governance & Ethics
           </h1>
-          <p className="max-w-3xl mx-auto text-xl font-light leading-relaxed md:text-2xl text-brandLight/90">
+          <p className="max-w-3xl mx-auto text-base md:text-lg font-light leading-relaxed text-brandLight/90">
             Our commitment to integrity, transparency, and ethical leadership is the foundation of our trust.
           </p>
         </div>
@@ -133,14 +133,14 @@ const scrollToSection = (id) => {
       </div>
 
       {/* Intro / Governance Approach */}
-      <section className="container px-5 py-20 mx-auto">
+      <section className="container py-16">
         <div className="grid items-center gap-16 md:grid-cols-2">
           <div>
-            <h2 className="relative inline-block mb-8 text-3xl font-bold md:text-4xl font-heading text-brandNavy dark:text-white">
+            <h2 className="relative inline-block mb-8 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandNavy dark:text-white">
               Our Governance Approach
               <span className="absolute bottom-0 left-0 w-1/2 h-1.5 bg-brandAccent rounded-full"></span>
             </h2>
-            <p className="mb-8 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+            <p className="mb-8 text-base leading-relaxed text-gray-700 dark:text-gray-300">
               RiskMan’s governance philosophy is founded on integrity, ethical leadership, and prudent risk management. 
               We recognize that strong governance is essential to maintaining client trust, regulatory confidence, and sustainable growth.
             </p>
@@ -163,7 +163,7 @@ const scrollToSection = (id) => {
           <div className="relative mt-8 md:mt-0">
             <div className="absolute inset-0 rounded-full bg-brandAccent opacity-10 dark:opacity-20 blur-3xl animate-pulse-custom"></div>
             <div className="relative p-8 transition-colors duration-300 bg-white border-t-4 shadow-2xl dark:bg-surfaceDark rounded-2xl border-brandGold hover:shadow-brandGold/10">
-              <h3 className="mb-6 text-2xl font-bold font-heading text-brandDark dark:text-white">Core Ethical Principles</h3>
+              <h3 className="mb-6 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">Core Ethical Principles</h3>
               <ul className="space-y-5">
                 {[
                   { title: "Integrity", desc: "Honest and transparent dealings." },
@@ -188,19 +188,19 @@ const scrollToSection = (id) => {
       </section>
 
       {/* Policies Grid */}
-      <section className="relative py-20 transition-colors duration-300 bg-white dark:bg-surfaceDark/30">
-        <div className="container px-5 mx-auto">
+      <section className="relative py-16 transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark">
+        <div className="container">
           <div className="mb-16 text-center">
-            <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
               Policies & Frameworks
             </h2>
-            <p className="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">
+            <p className="max-w-2xl mx-auto text-base text-gray-600 dark:text-gray-400">
               Our comprehensive suite of policies ensures we operate with the highest standards of conduct and compliance.
             </p>
           </div>
 
           {/* Search and Filter */}
-          <div className="flex flex-col items-center justify-between max-w-6xl gap-6 p-4 mx-auto mb-12 border border-gray-100 shadow-sm md:flex-row bg-gray-50 dark:bg-surfaceDark/50 rounded-2xl dark:border-gray-700/50 backdrop-blur-sm">
+          <div className="flex flex-col items-center justify-between max-w-6xl gap-6 p-4 mx-auto mb-12 border border-gray-100 shadow-sm md:flex-row bg-bgLight dark:bg-bgDark rounded-2xl dark:border-gray-700/50 backdrop-blur-sm">
             {/* Categories */}
             <div className="flex flex-wrap justify-center gap-2">
               {categories.map(cat => (
@@ -239,7 +239,7 @@ const scrollToSection = (id) => {
               {filteredPolicies.map((policy, index) => (
                 <div 
                   key={index}
-                  className="relative flex flex-col h-full p-8 overflow-hidden transition-all duration-300 border cursor-pointer group bg-bgLight dark:bg-surfaceDark rounded-2xl border-borderLight dark:border-borderDark hover:border-brandGold/50 dark:hover:border-brandGold/50 hover:shadow-2xl hover:-translate-y-2"
+                  className="relative flex flex-col h-full p-8 overflow-hidden transition-all duration-300 border cursor-pointer group bg-bgLight dark:bg-bgDark rounded-2xl border-borderLight dark:border-borderDark hover:border-brandGold/50 dark:hover:border-brandGold/50 hover:shadow-2xl hover:-translate-y-2"
                   onClick={() => setSelectedPolicy(policy)}
                 >
                   <div className="absolute top-0 right-0 w-32 h-32 -mt-12 -mr-12 transition-transform duration-500 rounded-bl-full bg-brandAccent/5 dark:bg-brandAccent/5 group-hover:scale-150"></div>
@@ -253,7 +253,7 @@ const scrollToSection = (id) => {
                     </span>
                   </div>
                   
-                  <h3 className="mb-4 text-xl font-bold leading-tight transition-colors text-brandNavy dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
+                  <h3 className="mb-4 text-lg md:text-xl font-bold leading-tight transition-colors text-brandNavy dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
                     {policy.title}
                   </h3>
                   
@@ -273,7 +273,7 @@ const scrollToSection = (id) => {
               <div className="inline-block p-6 mb-6 bg-white rounded-full shadow-sm dark:bg-surfaceDark">
                 <Search className="w-10 h-10 text-gray-400" />
               </div>
-              <h3 className="mb-2 text-2xl font-bold text-gray-900 dark:text-white">No policies found</h3>
+              <h3 className="mb-2 text-lg md:text-xl font-bold text-gray-900 dark:text-white">No policies found</h3>
               <p className="mb-6 text-gray-500 dark:text-gray-400">We couldn't find any policies matching your search.</p>
               <button 
                 onClick={() => {setSearchTerm(""); setActiveCategory("All");}}
@@ -290,8 +290,8 @@ const scrollToSection = (id) => {
       {/* <section className="relative py-24 overflow-hidden text-center text-white transition-colors duration-300 bg-brandNavy dark:bg-black">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
         <div className="container relative z-10 px-5 mx-auto">
-          <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading">Commitment to Excellence</h2>
-          <p className="max-w-2xl mx-auto mb-10 text-lg text-brandLight/80">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading">Commitment to Excellence</h2>
+          <p className="max-w-2xl mx-auto mb-10 text-base text-brandLight/80">
             We continuously review and update our governance frameworks to align with global best practices and regulatory requirements.
           </p>
           <Link to="/contact" className="px-10 py-4 font-bold transition-all duration-200 transform rounded-full shadow-xl bg-brandGold text-brandDark hover:bg-white hover:text-brandNavy hover:scale-105 ring-4 ring-brandGold/20">
@@ -312,7 +312,7 @@ const scrollToSection = (id) => {
                   <selectedPolicy.icon size={28} strokeWidth={1.5} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold leading-tight md:text-2xl text-brandDark dark:text-white">{selectedPolicy.title}</h3>
+                  <h3 className="text-lg md:text-xl font-bold leading-tight text-brandDark dark:text-white">{selectedPolicy.title}</h3>
                   <div className="flex items-center mt-1 space-x-2 text-sm text-gray-500 dark:text-gray-400">
                     <span className="px-2 py-0.5 rounded bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-xs font-medium uppercase tracking-wide">
                       {selectedPolicy.category}
@@ -331,7 +331,7 @@ const scrollToSection = (id) => {
                 </button>
                 <button 
                   onClick={() => setSelectedPolicy(null)}
-                  className="z-50 p-3 text-gray-600 transition-colors bg-gray-100 rounded-full dark:bg-white/10 hover:bg-red-100 dark:hover:bg-red-900/30 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400"
+                  className="z-50 p-3 text-gray-600 transition-colors bg-gray-100 rounded-full dark:bg-white/10 hover:bg-brandPrimary/10 dark:hover:bg-brandAccent/10 dark:text-gray-300 hover:text-brandPrimary dark:hover:text-brandAccent"
                   title="Close"
                 >
                   <X size={24} strokeWidth={2.5} />
@@ -386,12 +386,12 @@ const scrollToSection = (id) => {
                       className="flex items-center justify-between p-4 transition-all duration-200 bg-white border border-gray-200 group dark:bg-surfaceDark dark:border-gray-700 rounded-xl hover:border-brandPrimary dark:hover:border-brandAccent hover:shadow-md"
                     >
                       <div className="flex items-center space-x-3">
-                        <div className="p-2 text-red-500 rounded-lg bg-slate-50 dark:bg-red-900/20">
+                        <div className="p-2 rounded-lg text-brandPrimary bg-slate-50 dark:text-brandAccent dark:bg-brandAccent/10">
                           <FileText size={20} />
                         </div>
                         <div className="text-left">
                           <span className="block text-sm font-bold text-gray-900 transition-colors dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">Full Policy PDF</span>
-                          <span className="block text-xs text-gray-500">1.2 MB • PDF</span>
+                          <span className="block text-xs text-gray-500">PDF</span>
                         </div>
                       </div>
                       <Download size={18} className="text-gray-400 group-hover:text-brandPrimary dark:group-hover:text-brandAccent" />
@@ -421,7 +421,7 @@ const scrollToSection = (id) => {
                 ) : (
                   <div className="flex flex-col items-center justify-center h-full text-center opacity-50">
                     <FileText size={64} className="mb-6 text-gray-200 dark:text-gray-700" />
-                    <p className="text-lg font-medium text-gray-400">Full content preview not available.</p>
+                    <p className="text-base font-medium text-gray-400">Full content preview not available.</p>
                     <p className="mt-2 text-sm text-gray-400">Please download the document to read more.</p>
                   </div>
                 )}

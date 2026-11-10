@@ -8,7 +8,7 @@ const HeroSection = () => {
   const navigator = useNavigate();
   
   return (
-    <section className="relative pb-20 overflow-hidden transition-colors duration-300 border-b pt-18 lg:pt-28 lg:pb-24 bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark">
+    <section className="relative py-16 overflow-hidden transition-colors duration-300 border-b lg:py-28 bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark">
       
       {/* 1. ADVANCED BACKGROUND DECORATION */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
@@ -31,7 +31,7 @@ const HeroSection = () => {
             </div>
             
             {/* Two-Line Title with Premium Styling */}
-            <h1 className="font-heading text-4xl md:text-4xl lg:text-5xl font-extrabold mb-8 leading-[1.1] text-brandDark dark:text-white tracking-tight">
+            <h1 className="font-heading text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-8 leading-[1.1] text-brandDark dark:text-white ">
               Public Proof of Your <br />
               <span className="relative inline-block">
                 <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-brandPrimary to-brandNavy dark:from-brandGold dark:to-brandAccent">
@@ -42,7 +42,7 @@ const HeroSection = () => {
               to the Market.
             </h1>
             
-            <p className="max-w-xl mb-10 text-xl font-medium leading-relaxed text-gray-600 dark:text-gray-300">
+            <p className="max-w-xl mb-10 text-base md:text-lg font-medium leading-relaxed text-gray-600 dark:text-gray-300">
               Share an independent, high-level SOC 3 report to signal strong controls to the market without exposing sensitive internal details.
             </p>
             
@@ -86,32 +86,6 @@ const HeroSection = () => {
                 alt="Global Market Trust and Analytics" 
                 className="w-full h-[600px] object-cover"
               />
-              
-              {/* Floating Report Status Overlay */}
-              <div className="absolute p-6 border shadow-2xl top-10 right-10 bg-white/90 dark:bg-surfaceDark/90 backdrop-blur-md rounded-3xl border-white/20 animate-float">
-                <div className="flex items-center gap-4 mb-2">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-brandPrimary/10 text-brandPrimary dark:text-brandGold">
-                    <CheckCircle2 className="w-7 h-7" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-bold tracking-widest text-gray-400 uppercase">Market Signal</div>
-                    <div className="text-2xl font-black text-brandPrimary dark:text-brandGold">Audited</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating Distribution Overlay */}
-              <div className="absolute p-6 border shadow-2xl bottom-10 left-10 bg-brandGold/90 backdrop-blur-md rounded-3xl border-white/10 animate-float" style={{ animationDelay: '1s' }}>
-                <div className="flex items-center gap-4">
-                  <div className="p-3 bg-brandDark/10 rounded-xl text-brandDark">
-                    <Shield className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-brandDark">Unrestricted Use</div>
-                    <div className="text-xs font-medium text-brandDark/70">Public Distribution Ready</div>
-                  </div>
-                </div>
-              </div>
             </div>
             
             {/* Background Aesthetic Blobs */}

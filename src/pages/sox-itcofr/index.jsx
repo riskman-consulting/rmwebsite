@@ -27,11 +27,11 @@ const SoxIcofrIfc = () => {
       {/* Control Testing */}
       <TestingSection />
 
-      {/* CTA */}
-      <CTASection />
-
       {/* FAQ */}
       <FAQSection />
+
+      {/* CTA */}
+      <CTASection />
 
     </div>
   );

@@ -29,17 +29,17 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="py-20 md:py-32 bg-bgLight dark:bg-bgDark">
+    <section className="py-16 bg-bgLight dark:bg-bgDark">
       <div className="container">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <div className="inline-block px-4 py-2 mb-6 rounded-full bg-brandPrimary/10 dark:bg-brandAccent/10">
             <span className="text-sm font-bold tracking-wide text-brandPrimary dark:text-brandAccent">COMMON QUESTIONS</span>
           </div>
-          <h2 className="mb-6 text-3xl font-bold sm:text-4xl lg:text-5xl font-heading text-brandDark dark:text-white">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
+          <p className="text-base text-gray-600 dark:text-gray-300">
             Get answers to the most common questions about our cybersecurity services
           </p>
         </div>
@@ -67,7 +67,7 @@ const FAQ = () => {
 
                 {/* Question Text */}
                 <div className="flex-1">
-                  <h3 className="pr-4 text-lg font-semibold text-brandDark dark:text-white">
+                  <h3 className="pr-4 text-lg md:text-xl font-bold text-brandDark dark:text-white">
                     {faq.question}
                   </h3>
                 </div>
@@ -109,7 +109,7 @@ const FAQ = () => {
 
             <div className="relative flex flex-col items-center justify-between gap-6 md:flex-row">
               <div>
-                <h3 className="mb-2 text-2xl font-bold text-white font-heading">
+                <h3 className="mb-2 text-lg md:text-xl font-bold text-white font-heading">
                   Still have questions?
                 </h3>
                 <p className="text-gray-200">

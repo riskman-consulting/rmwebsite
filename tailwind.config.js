@@ -48,7 +48,7 @@
 
         fontFamily: {
           sans: ["Inter", "sans-serif"],
-          heading: ["Montserrat", "sans-serif"],
+          heading: ["Inter", "sans-serif"], // one font for headings and body (Montserrat was never loaded site-wide)
         },
       },
     },

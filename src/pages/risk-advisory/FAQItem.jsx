@@ -11,7 +11,7 @@ const FAQItem = ({ question, answer, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.08 }}
-      className="overflow-hidden rounded-2xl border border-borderLight bg-surfaceLight shadow-md transition-all duration-300 hover:shadow-lg dark:border-borderDark dark:bg-surfaceDark"
+      className="overflow-hidden rounded-2xl border border-borderLight bg-bgLight shadow-md transition-all duration-300 hover:shadow-lg dark:border-borderDark dark:bg-bgDark"
     >
       {/* Header */}
       <button

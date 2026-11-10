@@ -115,9 +115,9 @@ const faqs = [
 
 /* ─── helpers ─── */
 const container = {
-  maxWidth: 1280,
+  maxWidth: 1200,
   margin: "0 auto",
-  padding: "0 1.25rem",
+  padding: "0 16px",
 };
 
 /* ─── HERO ─── */
@@ -128,7 +128,7 @@ function HeroSection() {
       style={{
         position: "relative",
         color: "#fff",
-        padding: "7rem 0 6rem",
+        padding: "6rem 0",
         overflow: "hidden",
         background: `linear-gradient(135deg, ${C.brandDark} 0%, ${C.brandNavy} 40%, ${C.brandPrimary} 100%)`,
       }}
@@ -175,14 +175,14 @@ function HeroSection() {
               padding: "6px 16px",
               background: "rgba(0,64,128,0.45)",
               border: "1px solid rgba(0,64,128,0.7)",
-              color: "#93c5fd",
+              color: C.brandAccent,
               borderRadius: 999,
               fontSize: 11,
               fontWeight: 800,
               textTransform: "uppercase",
               letterSpacing: 2,
               marginBottom: 28,
-              fontFamily: "Montserrat, sans-serif",
+              fontFamily: "Inter, sans-serif",
             }}
           >
             Multi-Jurisdictional Privacy
@@ -190,7 +190,7 @@ function HeroSection() {
 
           <h1
             style={{
-              fontFamily: "Montserrat, sans-serif",
+              fontFamily: "Inter, sans-serif",
               fontSize: "clamp(2.4rem, 5vw, 4.2rem)",
               fontWeight: 800,
               lineHeight: 1.1,
@@ -206,7 +206,7 @@ function HeroSection() {
           <p
             style={{
               fontSize: "1.15rem",
-              color: "#bcc8d6",
+              color: "rgba(255,255,255,0.75)",
               lineHeight: 1.7,
               maxWidth: 600,
               marginBottom: 40,
@@ -231,7 +231,7 @@ function HeroSection() {
                 border: "none",
                 cursor: "pointer",
                 fontSize: 15,
-                fontFamily: "Montserrat, sans-serif",
+                fontFamily: "Inter, sans-serif",
               }}
             >
               <ArrowLeft size={16} /> Back To Main Page
@@ -247,7 +247,7 @@ function HeroSection() {
                 cursor: "pointer",
                 fontSize: 15,
                 boxShadow: `0 12px 40px ${C.brandAccent}22`,
-                fontFamily: "Montserrat, sans-serif",
+                fontFamily: "Inter, sans-serif",
               }}
             >
               Request Global Strategy
@@ -262,14 +262,14 @@ function HeroSection() {
 /* ─── FRAMEWORKS ─── */
 function FrameworksSection() {
   return (
-    <section style={{ padding: "5.5rem 0", background: "#fff" }}>
+    <section style={{ padding: "5rem 0", background: "#fff" }}>
       <div style={container}>
         <div
           style={{ textAlign: "center", maxWidth: 640, margin: "0 auto 3.5rem" }}
         >
           <h2
             style={{
-              fontFamily: "Montserrat, sans-serif",
+              fontFamily: "Inter, sans-serif",
               fontSize: "clamp(1.8rem, 3vw, 2.4rem)",
               fontWeight: 800,
               marginBottom: 12,
@@ -291,44 +291,18 @@ function FrameworksSection() {
             overflow: "hidden",
             marginBottom: 48,
             height: 260,
-            background: `linear-gradient(to right, ${C.brandNavy}, ${C.brandPrimary})`,
             position: "relative",
           }}
         >
           <img
-            src="https://images.unsplash.com/photo-1508738249927-2e79926b58cf?w=1200&q=80"
+            src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80"
             alt="US privacy landscape"
             style={{
               width: "100%",
               height: "100%",
               objectFit: "cover",
-              opacity: 0.35,
             }}
           />
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexDirection: "column",
-              gap: 8,
-            }}
-          >
-            <Scale size={48} color={C.brandAccent} />
-            <span
-              style={{
-                color: "#fff",
-                fontFamily: "Montserrat, sans-serif",
-                fontWeight: 700,
-                fontSize: 20,
-                letterSpacing: 1,
-              }}
-            >
-              50+ State-Level Regulations Managed
-            </span>
-          </div>
         </div>
 
         <div
@@ -367,7 +341,7 @@ function FrameworksSection() {
               />
               <h3
                 style={{
-                  fontFamily: "Montserrat, sans-serif",
+                  fontFamily: "Inter, sans-serif",
                   fontSize: 18,
                   fontWeight: 700,
                   marginBottom: 10,
@@ -393,7 +367,7 @@ function FrameworksSection() {
 function SpecificSection() {
   return (
     <section
-      style={{ padding: "5.5rem 0", background: C.brandNavy, color: "#fff" }}
+      style={{ padding: "5rem 0", background: C.brandNavy, color: "#fff" }}
     >
       <div style={container}>
         <div
@@ -408,7 +382,7 @@ function SpecificSection() {
           <div style={{ flex: "1 1 420px" }}>
             <h2
               style={{
-                fontFamily: "Montserrat, sans-serif",
+                fontFamily: "Inter, sans-serif",
                 fontSize: "clamp(1.8rem, 3vw, 2.4rem)",
                 fontWeight: 800,
                 marginBottom: 20,
@@ -419,7 +393,7 @@ function SpecificSection() {
             </h2>
             <p
               style={{
-                color: "#b0bec5",
+                color: "rgba(255,255,255,0.7)",
                 fontSize: 17,
                 marginBottom: 36,
                 lineHeight: 1.7,
@@ -456,7 +430,7 @@ function SpecificSection() {
                     >
                       {item.t}
                     </h5>
-                    <p style={{ fontSize: 13, color: "#90a4ae" }}>{item.d}</p>
+                    <p style={{ fontSize: 13, color: "rgba(255,255,255,0.6)" }}>{item.d}</p>
                   </div>
                 </div>
               ))}
@@ -508,7 +482,7 @@ function SpecificSection() {
                       color: "#fff",
                       fontWeight: 600,
                       fontSize: 14,
-                      fontFamily: "Montserrat, sans-serif",
+                      fontFamily: "Inter, sans-serif",
                     }}
                   >
                     End-to-End Data Protection
@@ -538,14 +512,14 @@ function SpecificSection() {
                     fontSize: 22,
                     fontWeight: 700,
                     marginBottom: 14,
-                    fontFamily: "Montserrat, sans-serif",
+                    fontFamily: "Inter, sans-serif",
                   }}
                 >
                   Vertical Compliance
                 </h3>
                 <p
                   style={{
-                    color: "#b0bec5",
+                    color: "rgba(255,255,255,0.7)",
                     fontStyle: "italic",
                     lineHeight: 1.7,
                     fontSize: 15,
@@ -567,12 +541,12 @@ function SpecificSection() {
 /* ─── INTERNATIONAL ─── */
 function InternationalSection() {
   return (
-    <section style={{ padding: "6rem 0", background: "#fff" }}>
+    <section style={{ padding: "5rem 0", background: "#fff" }}>
       <div style={container}>
         <div style={{ textAlign: "center", marginBottom: 56 }}>
           <h2
             style={{
-              fontFamily: "Montserrat, sans-serif",
+              fontFamily: "Inter, sans-serif",
               fontSize: "clamp(1.8rem, 3vw, 2.4rem)",
               fontWeight: 800,
               marginBottom: 12,
@@ -605,33 +579,6 @@ function InternationalSection() {
               objectFit: "cover",
             }}
           />
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              background: `linear-gradient(135deg, ${C.brandDark}dd 0%, ${C.brandPrimary}99 100%)`,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              flexDirection: "column",
-              gap: 12,
-            }}
-          >
-            <Eye size={40} color={C.brandAccent} />
-            <span
-              style={{
-                color: "#fff",
-                fontFamily: "Montserrat, sans-serif",
-                fontWeight: 700,
-                fontSize: 22,
-              }}
-            >
-              120+ Jurisdictions Covered
-            </span>
-            <span style={{ color: "#93c5fd", fontSize: 14 }}>
-              From GDPR to PIPL — one platform, every regulation
-            </span>
-          </div>
         </div>
 
         <div
@@ -648,7 +595,7 @@ function InternationalSection() {
                 textAlign: "center",
                 padding: "40px 28px",
                 background: C.brandLight,
-                borderRadius: 24,
+                borderRadius: 16,
                 border: "2px solid transparent",
                 transition: "all .3s",
                 cursor: "default",
@@ -686,7 +633,7 @@ function InternationalSection() {
                   fontSize: 18,
                   marginBottom: 10,
                   color: C.brandDark,
-                  fontFamily: "Montserrat, sans-serif",
+                  fontFamily: "Inter, sans-serif",
                 }}
               >
                 {market.title}
@@ -708,11 +655,11 @@ function InternationalSection() {
 function FAQSection() {
   const [active, setActive] = useState(null);
   return (
-    <section style={{ padding: "5.5rem 0", background: C.bgLight }}>
+    <section style={{ padding: "5rem 0", background: C.bgLight }}>
       <div style={{ ...container, maxWidth: 740 }}>
         <h2
           style={{
-            fontFamily: "Montserrat, sans-serif",
+            fontFamily: "Inter, sans-serif",
             fontSize: "clamp(1.8rem, 3vw, 2.4rem)",
             fontWeight: 800,
             marginBottom: 40,
@@ -751,7 +698,7 @@ function FAQSection() {
                     background: "none",
                     border: "none",
                     cursor: "pointer",
-                    fontFamily: "Montserrat, sans-serif",
+                    fontFamily: "Inter, sans-serif",
                   }}
                 >
                   <span style={{ paddingRight: 16 }}>{faq.q}</span>
@@ -791,8 +738,9 @@ function FAQSection() {
 
 /* ─── CTA ─── */
 function CTASection() {
+  const navigator = useNavigate();
   return (
-    <section style={{ padding: "5.5rem 0" }}>
+    <section style={{ padding: "5rem 0", background: "#fff" }}>
       <div style={container}>
         <div
           style={{
@@ -830,7 +778,7 @@ function CTASection() {
           <div style={{ position: "relative", zIndex: 2 }}>
             <h2
               style={{
-                fontFamily: "Montserrat, sans-serif",
+                fontFamily: "Inter, sans-serif",
                 fontSize: "clamp(1.8rem, 4vw, 3.4rem)",
                 fontWeight: 800,
                 marginBottom: 20,
@@ -842,7 +790,7 @@ function CTASection() {
             <p
               style={{
                 fontSize: 18,
-                color: "#a5c4e8",
+                color: "rgba(255,255,255,0.75)",
                 marginBottom: 44,
                 maxWidth: 580,
                 margin: "0 auto 44px",
@@ -853,6 +801,7 @@ function CTASection() {
               advantage with RiskMan's cross-border privacy expertise.
             </p>
             <button
+              onClick={() => navigator("/contact")}
               style={{
                 background: C.brandGold,
                 color: C.brandDark,
@@ -864,7 +813,7 @@ function CTASection() {
                 cursor: "pointer",
                 boxShadow: "0 12px 40px rgba(255,184,0,0.3)",
                 transition: "transform .2s",
-                fontFamily: "Montserrat, sans-serif",
+                fontFamily: "Inter, sans-serif",
               }}
               onMouseEnter={(e) =>
                 (e.currentTarget.style.transform = "scale(1.05)")
@@ -882,57 +831,6 @@ function CTASection() {
   );
 }
 
-/* ─── FOOTER ─── */
-function Footer() {
-  return (
-    <footer
-      style={{
-        padding: "48px 0",
-        borderTop: `1px solid ${C.borderLight}`,
-        background: "#fff",
-      }}
-    >
-      <div
-        style={{
-          ...container,
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "space-between",
-          alignItems: "center",
-          gap: 24,
-        }}
-      >
-        <div
-          style={{
-            fontFamily: "Montserrat, sans-serif",
-            fontWeight: 900,
-            fontSize: 22,
-            letterSpacing: -1,
-            color: C.brandNavy,
-            textTransform: "uppercase",
-          }}
-        >
-          RISK<span style={{ color: C.brandAccent }}>MAN</span>
-          <span
-            style={{
-              fontSize: 12,
-              fontWeight: 400,
-              color: "#999",
-              textTransform: "lowercase",
-              marginLeft: 10,
-            }}
-          >
-            global division
-          </span>
-        </div>
-        <p style={{ color: "#999", fontSize: 13 }}>
-          © 2026 RiskMan Consulting | CCPA, HIPAA & Global Privacy Strategy
-        </p>
-      </div>
-    </footer>
-  );
-}
-
 /* ─── PAGE ─── */
 export default function OtherCompliancesPage() {
   return (
@@ -943,10 +841,7 @@ export default function OtherCompliancesPage() {
         <link rel="canonical" href="https://www.riskman.in/services/data-privacy/other" />
       </Helmet>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap');
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        img { display: block; }
-        button { font-family: inherit; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         @keyframes fadeSlide {
           from { opacity: 0; transform: translateY(-6px); }
           to { opacity: 1; transform: translateY(0); }
@@ -958,7 +853,6 @@ export default function OtherCompliancesPage() {
       <InternationalSection />
       <FAQSection />
       <CTASection />
-      <Footer />
     </div>
   );
 }

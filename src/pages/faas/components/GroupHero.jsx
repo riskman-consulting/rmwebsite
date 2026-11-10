@@ -22,7 +22,7 @@ const GroupHero = ({ group }) => {
         className="absolute inset-0 pointer-events-none bg-[radial-gradient(55%_75%_at_90%_0%,rgba(0,64,128,0.06),transparent_60%)] dark:bg-[radial-gradient(55%_75%_at_90%_0%,rgba(255,184,0,0.07),transparent_60%)]"
       />
 
-      <div className="container relative py-10 md:py-16">
+      <div className="container relative pt-8 pb-16 lg:pt-10 lg:pb-20">
         <nav
           aria-label="Breadcrumb"
           className="flex flex-wrap items-center gap-1 mb-8 text-[11px] font-bold tracking-wide uppercase sm:text-xs text-brandNavy/50 dark:text-white/40"
@@ -66,7 +66,7 @@ const GroupHero = ({ group }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.05 }}
-              className="text-3xl font-black leading-[1.1] font-heading sm:text-4xl md:text-5xl text-brandDark dark:text-white"
+              className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-[1.1] font-heading text-brandDark dark:text-white"
             >
               {group.title}
             </motion.h1>
@@ -75,7 +75,7 @@ const GroupHero = ({ group }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.12 }}
-              className="mt-4 text-lg font-semibold leading-snug sm:text-xl font-heading text-brandPrimary dark:text-brandGold"
+              className="mt-4 text-base md:text-lg font-semibold leading-snug font-heading text-brandPrimary dark:text-brandGold"
             >
               {group.summary}
             </motion.p>
@@ -84,7 +84,7 @@ const GroupHero = ({ group }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.18 }}
-              className="mt-5 text-base leading-relaxed sm:text-lg text-brandNavy/70 dark:text-white/60"
+              className="mt-5 text-base leading-relaxed text-brandNavy/70 dark:text-white/60"
             >
               {group.intro}
             </motion.p>

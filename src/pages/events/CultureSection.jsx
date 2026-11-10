@@ -58,11 +58,11 @@ export default function CultureSection() {
             </span>
           </div>
 
-          <h2 className="mb-5 text-4xl font-black sm:text-5xl font-heading text-brandDark dark:text-white">
+          <h2 className="mb-5 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Culture at RiskMan
           </h2>
 
-          <p className="text-lg leading-relaxed text-brandDark/70 dark:text-white/60">
+          <p className="text-base leading-relaxed text-brandDark/70 dark:text-white/60">
             A culture that shapes confident professionals through ownership,
             learning, and meaningful collaboration.
           </p>
@@ -89,7 +89,7 @@ export default function CultureSection() {
                     <Icon className="w-7 h-7 text-brandGold" />
                   </div>
 
-                  <h3 className="text-2xl font-bold font-heading text-brandDark dark:text-white">
+                  <h3 className="text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
                     {value.title}
                   </h3>
                 </div>

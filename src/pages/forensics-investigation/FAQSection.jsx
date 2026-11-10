@@ -8,7 +8,7 @@
     
 //          <section className="py-20 bg-bgLight">
 //         <div className="container max-w-3xl">
-//           <h2 className="mb-10 text-3xl font-bold text-center font-heading">Investigation Insights FAQ</h2>
+//           <h2 className="mb-10 text-2xl md:text-3xl lg:text-4xl font-bold text-center font-heading">Investigation Insights FAQ</h2>
 //           <div className="space-y-4">
 //             {faqs.map((faq, idx) => (
 //               <div key={idx} className="overflow-hidden bg-white border shadow-sm rounded-xl border-borderLight">
@@ -70,16 +70,17 @@ const FaqSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-bgLight dark:bg-bgDark">
-      <div className="container max-w-4xl px-4 mx-auto">
-        <h2 className="mb-12 text-3xl font-bold text-center md:text-4xl font-heading text-brandNavy dark:text-white">
+    <section className="py-16 bg-bgLight dark:bg-bgDark">
+      <div className="container">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="mb-12 text-2xl md:text-3xl lg:text-4xl font-bold text-center font-heading text-brandNavy dark:text-white">
           Frequently Asked Questions
         </h2>
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div 
               key={index} 
-              className="overflow-hidden transition-all bg-white border shadow-sm dark:bg-surfaceDark rounded-xl border-borderLight dark:border-borderDark hover:shadow-md"
+              className="overflow-hidden transition-all bg-white border shadow-sm dark:bg-surfaceDark rounded-2xl border-borderLight dark:border-borderDark hover:shadow-md"
             >
               <button 
                 onClick={() => toggleFaq(index)}
@@ -104,6 +105,7 @@ const FaqSection = () => {
             </div>
           ))}
         </div>
+      </div>
       </div>
     </section>
   );

@@ -1,13 +1,13 @@
 import React from "react"
 
 const colors = {
-  gold: "#C9A227",
-  goldLight: "#E8D59A",
-  teal: "#0D9488",
-  tealDark: "#0F766E",
-  tealLight: "#5EEAD4",
-  navy: "#1E3A5F",
-  navyLight: "#2B5278",
+  gold: "#FFB800",
+  goldLight: "#FFE08A",
+  teal: "#004080",
+  tealDark: "#003366",
+  tealLight: "#99B3CC",
+  navy: "#001F3F",
+  navyLight: "#003366",
   slate: "#475569",
   slateLight: "#64748B",
   white: "#FFFFFF",
@@ -196,7 +196,7 @@ const ThreeLinesCSADiagram = ({ onZoneClick, activeZone }) => {
             fill="url(#goldGradient)"
             className={`transition-all duration-300 ${
               isSelected("governance")
-                ? "stroke-2 stroke-yellow-500 scale-[1.005] origin-center"
+                ? "stroke-2 stroke-brandAccent scale-[1.005] origin-center"
                 : "opacity-90 group-hover:opacity-100"
             }`}
           />
@@ -287,7 +287,7 @@ const ThreeLinesCSADiagram = ({ onZoneClick, activeZone }) => {
               filter="url(#shadow)"
               className={`transition-all duration-300 ${
                 isSelected("firstLine")
-                  ? "stroke-[3px] stroke-teal-300"
+                  ? "stroke-[3px] stroke-brandAccent"
                   : "opacity-95 group-hover:opacity-100"
               }`}
             />
@@ -517,7 +517,7 @@ const ThreeLinesCSADiagram = ({ onZoneClick, activeZone }) => {
               filter="url(#shadow)"
               className={`transition-all duration-300 ${
                 isSelected("secondLine")
-                  ? "stroke-[3px] stroke-blue-300"
+                  ? "stroke-[3px] stroke-brandAccent"
                   : "opacity-95 group-hover:opacity-100"
               }`}
             />

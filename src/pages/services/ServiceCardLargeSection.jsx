@@ -100,7 +100,7 @@ export const ServiceCardLarge = ({ service, index }) => {
             </div>
 
             {/* Title - Smaller */}
-            <h3 className="text-xl font-bold text-brandDark dark:text-white font-heading">
+            <h3 className="text-lg md:text-xl font-bold text-brandDark dark:text-white font-heading">
               {service.title}
             </h3>
 

@@ -6,7 +6,7 @@ import WhySoc2 from './WhySoc2';
 import TypeSection from './TypeSection';
 import SupportSection from './SupportSection';
 import FaqSection from './FaqSection';
-import ctaSection from './ctaSection';
+import CtaSection from './ctaSection';
 
 const SOC2Page = () => {
   return (
@@ -38,7 +38,7 @@ const SOC2Page = () => {
      <FaqSection/>
 
       {/* 8. FINAL CTA SECTION */}
-      <ctaSection/>
+      <CtaSection/>
 
     </div>
   );

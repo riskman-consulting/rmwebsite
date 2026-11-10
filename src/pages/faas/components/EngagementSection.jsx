@@ -52,7 +52,7 @@ const EngagementSection = ({ tone = "page" }) => {
   const t = TONES[tone] || TONES.page;
 
   return (
-  <section className={`py-14 md:py-20 ${t.section}`}>
+    <section className={`py-16 ${t.section}`}>
     <div className="container">
       <SectionHeading
         eyebrow="Working together"
@@ -68,7 +68,7 @@ const EngagementSection = ({ tone = "page" }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.4, delay: (index % 4) * 0.07 }}
-            className={`relative p-6 pt-8 transition-colors duration-300 border ${t.card} border-borderLight dark:border-borderDark rounded-2xl hover:border-brandAccent`}
+            className={`relative h-full p-6 pt-8 transition-colors duration-300 border ${t.card} border-borderLight dark:border-borderDark rounded-2xl hover:border-brandAccent`}
           >
             <span className={`absolute top-0 flex items-center justify-center w-10 h-10 text-sm font-black -translate-y-1/2 border-4 rounded-full left-6 ${t.ring} bg-brandPrimary dark:bg-brandGold text-white dark:text-brandDark`}>
               {index + 1}

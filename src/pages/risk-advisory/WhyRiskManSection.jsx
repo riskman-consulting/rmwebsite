@@ -3,13 +3,13 @@ import { Award, CheckCircle } from "lucide-react";
 
 const WhyRiskManSection = ({ data }) => {
   return (
-    <section className="relative py-10 md:py-16 bg-bgLight dark:bg-bgDark overflow-hidden">
+    <section className="relative py-16 bg-bgLight dark:bg-bgDark overflow-hidden">
       {/* Background Decorations */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-brandPrimary/5 dark:bg-brandPrimary/10 rounded-full blur-[120px]" />
       </div>
 
-      <div className="container relative z-10 px-4 sm:px-6 lg:px-8">
+      <div className="container relative z-10">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -23,11 +23,11 @@ const WhyRiskManSection = ({ data }) => {
               Why Choose Us
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-4xl font-black text-brandDark dark:text-brandLight mb-6 font-heading">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-brandLight mb-6 font-heading">
               {data.title}
             </h2>
 
-            <p className="text-lg md:text-xl text-brandDark/70 dark:text-brandLight/70 max-w-3xl mx-auto">
+            <p className="text-base md:text-lg text-brandDark/70 dark:text-brandLight/70 max-w-3xl mx-auto">
               {data.description}
             </p>
           </motion.div>
@@ -41,14 +41,14 @@ const WhyRiskManSection = ({ data }) => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ scale: 1.03 }}
-                className="group bg-surfaceLight dark:bg-surfaceDark border border-borderLight dark:border-borderDark hover:border-brandPrimary dark:hover:border-brandAccent rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+                className="group h-full bg-surfaceLight dark:bg-surfaceDark border border-borderLight dark:border-borderDark hover:border-brandPrimary dark:hover:border-brandAccent rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
                     <CheckCircle className="w-6 h-6 text-brandPrimary dark:text-brandAccent" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-brandDark dark:text-brandLight mb-3 group-hover:text-brandPrimary dark:group-hover:text-brandAccent transition-colors duration-300">
+                    <h3 className="text-lg md:text-xl font-bold text-brandDark dark:text-brandLight mb-3 group-hover:text-brandPrimary dark:group-hover:text-brandAccent transition-colors duration-300">
                       {item.title}
                     </h3>
                     <p className="text-brandDark/70 dark:text-brandLight/70 leading-relaxed">

@@ -9,17 +9,17 @@ export const StickyServicesSection = () => {
   const featuredServices = allServices.slice(0, 6);
 
   return (
-    <section className="relative py-10 md:py-12  bg-bgLight dark:bg-[#030712] transition-colors duration-500 overflow-hidden">
+    <section className="relative pt-20 bg-bgLight dark:bg-bgDark transition-colors duration-500 overflow-hidden">
       
       {/* Background Subtle Gradient Accents */}
       {/* <div className="absolute top-0 right-0 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-brandPrimary/5 dark:bg-brandPrimary/10 blur-[120px] md:blur-[150px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-brandAccent/5 dark:bg-brandAccent/10 blur-[100px] rounded-full pointer-events-none" /> */}
 
       {/* Main Wrapper - Responsive Edge Alignment */}
-      <div className="relative z-10 w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24">
+      <div className="container relative z-10">
         
         {/* --- HEADER: Left Aligned with Modern Spacing --- */}
-        <div className="flex flex-col justify-between gap-10 pb-12 mb-16 border-b lg:flex-row lg:items-end md:mb-24 border-borderLight dark:border-white/10 md:pb-16">
+        <div className="flex flex-col justify-between gap-10 pb-12 mb-16 border-b lg:flex-row lg:items-end border-borderLight dark:border-white/10 md:pb-16">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -32,9 +32,9 @@ export const StickyServicesSection = () => {
                 Strategic Resilience
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-brandDark dark:text-white leading-[1.1] tracking-tighter uppercase font-heading">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white leading-[1.1] font-heading">
               Enterprise <br className="hidden md:block" /> 
-              <span className="italic text-brandPrimary dark:text-brandAccent">Services.</span>
+              <span className="text-brandPrimary dark:text-brandAccent">Services</span>
             </h2>
           </motion.div>
 
@@ -45,7 +45,7 @@ export const StickyServicesSection = () => {
             transition={{ delay: 0.2 }}
             className="max-w-xl "
           >
-            <p className="text-base font-light leading-relaxed md:text-xl text-brandNavy/70 dark:text-slate-400">
+            <p className="text-base md:text-lg font-light leading-relaxed text-brandNavy/70 dark:text-slate-400">
               Our Enterprise Services provide a high-impact suite of risk, financial, and operational solutions designed to bolster resilience and ensure regulatory excellence for global organizations.
             </p>
           </motion.div>
@@ -79,7 +79,7 @@ export const StickyServicesSection = () => {
 
                    
                     <div className="space-y-4 md:space-y-6">
-                      <h3 className="text-2xl font-bold tracking-tight transition-colors duration-300 md:text-3xl text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
+                      <h3 className="text-xl md:text-2xl lg:text-3xl font-bold transition-colors duration-300 text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
                         {service.title}
                       </h3>
                       <p className="text-sm leading-relaxed text-brandNavy/60 dark:text-slate-400 md:text-base line-clamp-3">

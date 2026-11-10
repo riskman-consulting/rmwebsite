@@ -36,14 +36,14 @@ export default function HeroSection({ data }) {
         >
           <motion.h1
             variants={fadeInUp}
-            className="mb-6 text-5xl font-bold leading-tight text-white md:text-7xl"
+            className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight text-white "
           >
             {data.title}
           </motion.h1>
 
           <motion.p
             variants={fadeInUp}
-            className="max-w-3xl mx-auto mb-8 text-xl leading-relaxed md:text-2xl text-white/90"
+            className="max-w-3xl mx-auto mb-8 text-base md:text-lg leading-relaxed text-white/90"
           >
             {data.description}
           </motion.p>

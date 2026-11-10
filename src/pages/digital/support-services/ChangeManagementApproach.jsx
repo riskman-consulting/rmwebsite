@@ -1,12 +1,12 @@
 
  
- <section className="z-10 py-20 border-y border-borderLight dark:border-borderDark">
+      <section className="z-10 py-16 border-y border-borderLight dark:border-borderDark">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="mb-16 text-center">
-            <h2 className="mb-4 text-3xl font-bold font-heading md:text-4xl">
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
               Our <span className="text-brandPrimary dark:text-brandGold">Change Management</span> Approach
             </h2>
-            <p className="max-w-3xl mx-auto text-lg opacity-80">
+            <p className="max-w-3xl mx-auto text-base opacity-80">
               We manage the people side of change so RiskMan is adopted smoothly and delivers sustained value across the organization.
             </p>
           </div>
@@ -60,7 +60,7 @@
                     {item.icon}
                   </div>
                   
-                  <h3 className="mb-4 text-xl font-bold text-brandNavy dark:text-brandGold group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
+                  <h3 className="mb-4 text-lg md:text-xl font-bold text-brandNavy dark:text-brandGold group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
                     {item.title}
                   </h3>
                   

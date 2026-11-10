@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const CTASection = () => {
   return (
-    <section className="relative py-16 overflow-hidden md:py-24 bg-gradient-to-br from-brandPrimary via-brandNavy to-brandDark dark:from-brandDark dark:via-brandNavy dark:to-brandPrimary">
+    <section className="relative py-16 overflow-hidden bg-gradient-to-br from-brandPrimary via-brandNavy to-brandDark dark:from-brandDark dark:via-brandNavy dark:to-brandPrimary">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -27,12 +27,12 @@ const CTASection = () => {
           </div>
 
           {/* Heading */}
-          <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl lg:text-5xl font-heading">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading">
             Secure Your Future Today
           </h2>
 
           {/* Description */}
-          <p className="max-w-2xl mx-auto mb-10 text-lg leading-relaxed text-gray-200 sm:text-xl">
+          <p className="max-w-2xl mx-auto mb-10 text-base md:text-lg leading-relaxed text-gray-200 ">
             Ready to achieve global information security standards and enhance your organizational resilience?
           </p>
 

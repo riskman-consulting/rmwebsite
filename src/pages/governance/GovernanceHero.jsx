@@ -25,7 +25,7 @@ const GovernanceHero = ({ containerRef }) => {
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
-                    className="text-6xl md:text-9xl font-heading font-black leading-[0.9] mb-12 text-white max-w-5xl mx-auto"
+                    className="text-[1.75rem] md:text-4xl lg:text-5xl font-heading font-bold leading-[0.9] mb-12 text-white max-w-5xl mx-auto"
                 >
                     POLICIES <span className="text-brandAccent">&</span> SOP<span className="text-brandAccent">s</span>
                 </motion.h1>
@@ -34,7 +34,7 @@ const GovernanceHero = ({ containerRef }) => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="max-w-3xl mx-auto mb-16 text-xl font-light leading-relaxed md:text-2xl text-white/70"
+                    className="max-w-3xl mx-auto mb-16 text-base md:text-lg font-light leading-relaxed text-white/70"
                 >
                     The silent backbone of enterprise excellence. Translating boardroom vision into frontline reality through structured, auditable discipline.
                 </motion.p>

@@ -137,7 +137,7 @@ export default function HeroSection() {
       `}</style>
 
       {/* SECTION */}
-      <section className="relative flex flex-col w-full overflow-hidden hero-bg md:h-screen md:flex-row md:-top-10 lg:-top-20">
+      <section className="relative flex flex-col w-full overflow-hidden hero-bg md:h-screen md:flex-row">
 
         {/* LEFT CONTENT AREA */}
         <div className="relative w-full md:w-[65%] md:h-full flex items-center z-20 px-6 md:px-12 lg:px-16 pt-10 pb-6 md:pt-0 md:pb-0 md:overflow-hidden hero-bg">
@@ -184,12 +184,12 @@ export default function HeroSection() {
                 </div>
 
                 {/* Two-Line Heading */}
-                <h1 className="mb-5">
-                  <span className="block text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-[1.15] text-brandLight tracking-tight mb-2">
+                <h1 className="mb-5 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-[1.15]">
+                  <span className="block text-brandLight mb-2">
                     {slide.titleLine1}
                   </span>
                   <span
-                    className="block text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-[1.15] tracking-tight"
+                    className="block"
                     style={{
                       background: "linear-gradient(90deg, #FFC000, #FFB800, #FFD44D)",
                       WebkitBackgroundClip: "text",

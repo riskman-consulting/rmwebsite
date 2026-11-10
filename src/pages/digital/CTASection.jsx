@@ -2,7 +2,7 @@ import React from "react"
 
 const CTASection = () => {
   return (
-    <section className="py-20">
+    <section className="py-16">
       <div className="container">
         <div className="bg-brandDark dark:bg-brandNavy rounded-[2.5rem] overflow-hidden relative shadow-2xl p-10 md:p-20 text-center">
           {/* Decoration */}
@@ -10,10 +10,10 @@ const CTASection = () => {
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-brandPrimary opacity-10 rounded-full blur-[80px]" />
 
           <div className="relative z-10 max-w-2xl mx-auto">
-            <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white ">
               Ready to Future-Proof Your Business?
             </h2>
-            <p className="mb-10 text-lg text-white/70">
+            <p className="mb-10 text-base text-white/70">
               Partner with RiskMan to bridge the gap between strategy and
               execution.
             </p>

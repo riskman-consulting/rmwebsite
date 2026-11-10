@@ -37,10 +37,10 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-20 bg-white dark:bg-surfaceDark">
+    <section className="py-16 bg-bgLight dark:bg-bgDark">
       <div className="container">
         <div className="max-w-4xl mx-auto mb-16 text-center">
-          <h2 className="mb-6 text-4xl font-bold font-heading md:text-5xl text-brandDark dark:text-white">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Frequently Asked Questions
           </h2>
         </div>
@@ -49,7 +49,7 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="overflow-hidden transition-all duration-300 bg-white border rounded-xl dark:bg-surfaceDark border-borderLight dark:border-borderDark hover:shadow-xl"
+              className="overflow-hidden transition-all duration-300 bg-white border rounded-2xl dark:bg-surfaceDark border-borderLight dark:border-borderDark hover:shadow-xl"
             >
               <button
                 onClick={() => toggleFaq(index)}
@@ -75,7 +75,7 @@ const FAQ = () => {
                             ${openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
               >
                 <div className="px-8 pt-2 pb-6">
-                  <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+                  <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
                     {faq.answer}
                   </p>
                 </div>

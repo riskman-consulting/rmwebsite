@@ -47,7 +47,7 @@
 
 //             {/* Right Column - Content */}
 //             <div className="space-y-8">
-//               <p className="text-base leading-relaxed md:text-xl text-brandNavy dark:text-white/80">
+//               <p className="text-base md:text-lg leading-relaxed text-brandNavy dark:text-white/80">
 //                 At{" "}
 //                 <span className="font-semibold text-brandDark dark:text-brandAccent">
 //                   RiskMan Consulting
@@ -99,7 +99,7 @@
 //           {/* Bottom Statement */}
 //           <div className="max-w-4xl mx-auto mt-16">
 //             <div className="relative p-8 border-l-4 md:p-10 bg-bgLight dark:bg-bgDark border-brandGold dark:border-brandAccent">
-//               <p className="text-lg leading-relaxed md:text-xl text-brandNavy dark:text-white/80">
+//               <p className="text-base md:text-lg leading-relaxed text-brandNavy dark:text-white/80">
 //                 Our approach integrates governance, risk, compliance, financial
 //                 discipline, and digital assurance into a{" "}
 //                 <span className="font-bold text-brandDark dark:text-brandAccent">
@@ -119,7 +119,7 @@
 //               <div className="mb-3 text-4xl font-bold text-brandGold dark:text-brandAccent">
 //                 360°
 //               </div>
-//               <h3 className="mb-2 text-lg font-bold text-brandDark dark:text-white">
+//               <h3 className="mb-2 text-lg md:text-xl font-bold text-brandDark dark:text-white">
 //                 Holistic Approach
 //               </h3>
 //               <p className="text-sm text-brandNavy/70 dark:text-white/60">
@@ -131,7 +131,7 @@
 //               <div className="mb-3 text-4xl font-bold text-brandGold dark:text-brandAccent">
 //                 24/7
 //               </div>
-//               <h3 className="mb-2 text-lg font-bold text-brandDark dark:text-white">
+//               <h3 className="mb-2 text-lg md:text-xl font-bold text-brandDark dark:text-white">
 //                 Continuous Support
 //               </h3>
 //               <p className="text-sm text-brandNavy/70 dark:text-white/60">
@@ -143,7 +143,7 @@
 //               <div className="mb-3 text-4xl font-bold text-brandGold dark:text-brandAccent">
 //                 100%
 //               </div>
-//               <h3 className="mb-2 text-lg font-bold text-brandDark dark:text-white">
+//               <h3 className="mb-2 text-lg md:text-xl font-bold text-brandDark dark:text-white">
 //                 Tailored Solutions
 //               </h3>
 //               <p className="text-sm text-brandNavy/70 dark:text-white/60">
@@ -188,7 +188,7 @@ const StrategicSection = () => {
   },[])
  
   return (
-    <section className="relative px-10 py-16 overflow-hidden transition-colors duration-500 md:py-20 bg-surfaceLight dark:bg-surfaceDark">
+    <section className="relative py-16 overflow-hidden transition-colors duration-500 bg-surfaceLight dark:bg-surfaceDark">
  
       {/* Accent line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brandGold/50 to-transparent" />
@@ -197,7 +197,7 @@ const StrategicSection = () => {
       <div className="absolute top-10 right-0 w-[420px] h-[420px] bg-brandGold/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brandNavy/5 blur-[120px] rounded-full pointer-events-none" />
  
-      <div className="container relative z-10 px-4 mx-auto max-w-7xl">
+      <div className="container relative z-10">
  
         {/* Label */}
         <motion.div
@@ -221,7 +221,7 @@ const StrategicSection = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-3xl font-bold leading-tight md:text-4xl lg:text-5xl"
+              className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold leading-tight"
             >
               Strategic Risk
               <br />
@@ -258,13 +258,13 @@ const StrategicSection = () => {
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-xl font-medium leading-relaxed md:text-2xl text-brandNavy dark:text-white/90"
+              className="text-base md:text-lg font-medium leading-relaxed text-brandNavy dark:text-white/90"
             >
               At <span className="font-semibold text-brandGold">RiskMan</span>, we deliver customized
               solutions that empower leadership to navigate uncertainty and unlock sustainable growth.
             </motion.p>
  
-            <p className="text-lg leading-relaxed text-brandNavy/70 dark:text-white/70">
+            <p className="text-base leading-relaxed text-brandNavy/70 dark:text-white/70">
               Our team combines deep industry expertise with an entrepreneurial mindset, ensuring that strategic advisory
               is not just a service, but a value driver for your resilience.
             </p>
@@ -278,7 +278,7 @@ const StrategicSection = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: idx * 0.08 }}
                   viewport={{ once: true }}
-                  className="flex gap-4 p-6 transition-all border group rounded-xl bg-white/70 dark:bg-white/5 border-black/5 dark:border-white/10 hover:shadow-lg hover:-translate-y-1"
+                  className="flex gap-4 p-6 transition-all border group rounded-xl bg-bgLight dark:bg-bgDark border-black/5 dark:border-white/10 hover:shadow-lg hover:-translate-y-1"
                 >
                   <div className="w-3 h-3 mt-2 rounded-full shadow-lg bg-brandGold" />
  
@@ -302,7 +302,7 @@ const StrategicSection = () => {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto mt-20"
         >
-          <div className="relative p-8 bg-white border shadow-xl md:p-12 rounded-3xl dark:bg-white/5 border-black/5 dark:border-white/10">
+          <div className="relative p-8 bg-bgLight border shadow-xl md:p-12 rounded-3xl dark:bg-bgDark border-black/5 dark:border-white/10">
  
             <div className="absolute left-0 top-0 h-full w-1.5 bg-brandGold rounded-l-3xl" />
  

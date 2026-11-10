@@ -11,6 +11,7 @@ import ModuleCta from "./components/ModuleCta";
 // tracker in front
 import heroBack from "../../assets/products/riskman-grc/control-testing/project-dashboard.png";
 import heroFront from "../../assets/products/riskman-grc/atr/dashboard-01-analytics.png";
+import { toTitleCase } from "../../utils/titleCase";
 
 const product = PRODUCTS[0];
 const seo = productSeo(product);
@@ -99,13 +100,13 @@ const ProductPage = () => {
           <div className="grid items-center grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
             <div className="lg:col-span-5">
               <p className="mb-3 text-sm text-brandNavy/55 dark:text-white/45">Products</p>
-              <h1 className="text-3xl font-bold leading-tight sm:text-[32px] md:text-[38px] text-brandDark dark:text-white">
+              <h1 className="text-[1.75rem] md:text-4xl lg:text-5xl font-heading font-bold leading-tight text-brandDark dark:text-white">
                 {product.name}
               </h1>
-              <p className="mt-3 text-base font-medium leading-snug sm:text-lg text-brandPrimary dark:text-brandGold [text-wrap:balance]">
+              <p className="mt-3 text-base md:text-lg font-medium leading-snug text-brandPrimary dark:text-brandGold [text-wrap:balance]">
                 {product.tagline}
               </p>
-              <p className="mt-4 max-w-[62ch] text-[15px] leading-relaxed sm:text-base text-gray-800 dark:text-white/80">
+              <p className="mt-4 max-w-[62ch] text-base leading-relaxed text-gray-800 dark:text-white/80">
                 {product.summary}
               </p>
 
@@ -126,13 +127,13 @@ const ProductPage = () => {
                   to="/contact"
                   className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold transition-colors rounded-md bg-brandPrimary dark:bg-brandGold text-white dark:text-brandDark hover:bg-brandNavy dark:hover:bg-brandAccent"
                 >
-                  Request a demo
+                  Request a Demo
                 </Link>
                 <a
                   href="#modules"
                   className="inline-flex items-center justify-center gap-1.5 px-2 py-2.5 text-sm font-semibold transition-colors text-brandPrimary dark:text-brandGold hover:underline underline-offset-4"
                 >
-                  Explore the modules
+                  Explore the Modules
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
@@ -159,7 +160,7 @@ const ProductPage = () => {
                 <Link to={moduleLink(mod.slug)} className="flex items-start gap-4 py-5 group">
                   <Icon aria-hidden="true" className="flex-shrink-0 w-5 h-5 mt-0.5 text-brandPrimary dark:text-brandGold" />
                   <span className="flex-1">
-                    <span className="block text-base font-bold text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandGold">
+                    <span className="block text-base font-heading font-semibold text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandGold">
                       {mod.name}
                     </span>
                     <span className="block mt-1 text-[15px] leading-relaxed text-gray-800 dark:text-white/80">
@@ -183,9 +184,9 @@ const ProductPage = () => {
         <div className="grid grid-cols-1 gap-x-10 gap-y-7 sm:grid-cols-2">
           {REASONS.map((reason) => (
             <article key={reason.title}>
-              <h3 className="flex items-start gap-2 mb-1.5 text-base font-bold leading-snug text-brandDark dark:text-white">
+              <h3 className="text-lg font-heading flex items-start gap-2 mb-1.5 font-semibold leading-snug text-brandDark dark:text-white">
                 <Check className="flex-shrink-0 w-4 h-4 mt-1 text-brandPrimary dark:text-brandGold" strokeWidth={2.5} />
-                {reason.title}
+                {toTitleCase(reason.title)}
               </h3>
               <p className="pl-6 text-[15px] leading-relaxed text-gray-800 dark:text-white/80">{reason.text}</p>
             </article>
@@ -198,7 +199,7 @@ const ProductPage = () => {
         <dl className="border-t divide-y border-borderLight dark:border-borderDark divide-borderLight dark:divide-borderDark">
           {ROLES.map((r) => (
             <div key={r.role} className="grid grid-cols-1 gap-1 py-4 sm:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] sm:gap-6">
-              <dt className="text-base font-bold leading-snug text-brandDark dark:text-white">{r.role}</dt>
+              <dt className="text-base font-heading font-semibold leading-snug text-brandDark dark:text-white">{toTitleCase(r.role)}</dt>
               <dd className="text-[15px] leading-relaxed text-gray-800 dark:text-white/80">{r.text}</dd>
             </div>
           ))}

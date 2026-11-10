@@ -12,14 +12,14 @@ const CTASection = ({
   body,
   className = "bg-surfaceLight dark:bg-surfaceDark",
 }) => (
-  <section className={`py-14 md:py-20 ${className}`}>
+  <section className={`py-16 ${className}`}>
     <div className="container">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 0.5 }}
-        className="relative overflow-hidden p-8 md:p-12 lg:p-14 rounded-3xl bg-brandDark dark:bg-bgDark dark:border dark:border-borderDark"
+        className="relative overflow-hidden p-8 md:p-12 lg:p-14 rounded-2xl bg-brandDark dark:bg-bgDark dark:border dark:border-borderDark"
       >
         <div
           aria-hidden="true"
@@ -30,10 +30,10 @@ const CTASection = ({
           <span className="inline-block mb-4 text-xs font-black tracking-[0.2em] uppercase text-brandAccent">
             Next step
           </span>
-          <h2 className="mb-4 text-2xl font-black leading-tight font-heading sm:text-3xl md:text-4xl text-white">
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-white">
             {heading || "Not sure which group you need?"}
           </h2>
-          <p className="mb-8 text-base leading-relaxed sm:text-lg text-white/70">
+          <p className="mb-8 text-base leading-relaxed text-white/70">
             {body ||
               "Most engagements start with a short review of your current close, controls and reporting. We will tell you where the gaps are before you commit to anything."}
           </p>

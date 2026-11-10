@@ -8,10 +8,10 @@ const FrameworkSection = () => {
       <div className="container">
         <div className="max-w-5xl mx-auto">
           <div className="mb-12 text-center">
-            <h2 className="mb-6 text-3xl font-bold font-heading md:text-4xl">
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
               Our 'Risk-Based' Internal Audit Framework
             </h2>
-            <p className="max-w-3xl mx-auto text-lg leading-relaxed text-white/90">
+            <p className="max-w-3xl mx-auto text-base leading-relaxed text-white/90">
               Our Internal Audit services are supported by a consistent, substantially field tested 'risk-based' methodology derived from our experiences on multiple Internal audits and is consistent with the International Standards for the Professional Practice of Internal Auditing. Our methodology is linked to a number of supporting knowledge tools and databases. This methodology is aligned to our overarching methodology.
             </p>
           </div>

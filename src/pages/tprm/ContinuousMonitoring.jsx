@@ -31,10 +31,10 @@
 //         <div className="max-w-5xl mx-auto">
 //           {/* Header */}
 //           <div className="mb-16 text-center">
-//             <h2 className="mb-6 text-3xl font-bold sm:text-4xl lg:text-5xl font-heading text-brandDark dark:text-white">
+//             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //               Continuous Monitoring and Risk Mitigation
 //             </h2>
-//             <p className="max-w-3xl mx-auto text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+//             <p className="max-w-3xl mx-auto text-base leading-relaxed text-gray-600 dark:text-gray-300">
 //               Risk management is not a one-time event. We implement annual reassessments for high-risk vendors and maintain detailed audit trails of all activities. Our strategy includes performance reviews against SLAs and coordinated incident response plans to mitigate breaches immediately if they occur.
 //             </p>
 //           </div>
@@ -51,7 +51,7 @@
 //                   {/* Content */}
 //                   <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
 //                     <div className="p-6 transition-all duration-300 border bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark rounded-xl hover:border-brandAccent/50 hover:shadow-lg">
-//                       <h3 className="mb-3 text-xl font-bold font-heading text-brandDark dark:text-white">
+//                       <h3 className="mb-3 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
 //                         {feature.title}
 //                       </h3>
 //                       <p className="text-gray-600 dark:text-gray-300">
@@ -84,40 +84,40 @@ import monitoringImg from "../../assets/images/tprm/monitoring.jpg"
 
 const Monitoring = () => {
   return (
-    <section className="py-20 bg-white">
-      <div className="container px-4 mx-auto">
+    <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
+      <div className="container">
         <div className="flex flex-col items-center gap-12 md:flex-row">
           <div className="order-2 md:w-1/2 md:order-1">
             <img 
               src={monitoringImg} 
               alt="Continuous Monitoring Audit" 
-              className="w-full rounded-lg shadow-2xl"
+              className="w-full shadow-2xl rounded-2xl"
             />
           </div>
           <div className="order-1 md:w-1/2 md:order-2">
-            <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark">
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
               Continuous Monitoring and Risk Mitigation
             </h2>
-            <p className="mb-8 text-lg text-gray-600">
+            <p className="mb-8 text-base text-gray-600 dark:text-gray-300">
               Risk management is not a one-time event. We implement annual reassessments for high-risk vendors and maintain detailed audit trails of all activities. Our strategy includes performance reviews against SLAs and coordinated incident response plans to mitigate breaches immediately if they occur.
             </p>
             
             <div className="grid grid-cols-2 gap-6">
-              <div className="p-4 text-center transition-colors border border-gray-200 rounded-lg bg-bgLight hover:border-brandAccent">
-                <RefreshCw className="w-8 h-8 mx-auto mb-2 text-brandNavy" />
-                <h4 className="font-bold text-brandDark">Annual Reassessments</h4>
+              <div className="h-full p-4 text-center transition-colors border border-borderLight rounded-2xl bg-bgLight hover:border-brandAccent dark:border-borderDark dark:bg-bgDark">
+                <RefreshCw className="w-8 h-8 mx-auto mb-2 text-brandNavy dark:text-brandAccent" />
+                <h4 className="font-bold text-brandDark dark:text-white">Annual Reassessments</h4>
               </div>
-              <div className="p-4 text-center transition-colors border border-gray-200 rounded-lg bg-bgLight hover:border-brandAccent">
-                <FileSearch className="w-8 h-8 mx-auto mb-2 text-brandNavy" />
-                <h4 className="font-bold text-brandDark">Detailed Audit Trails</h4>
+              <div className="h-full p-4 text-center transition-colors border border-borderLight rounded-2xl bg-bgLight hover:border-brandAccent dark:border-borderDark dark:bg-bgDark">
+                <FileSearch className="w-8 h-8 mx-auto mb-2 text-brandNavy dark:text-brandAccent" />
+                <h4 className="font-bold text-brandDark dark:text-white">Detailed Audit Trails</h4>
               </div>
-              <div className="p-4 text-center transition-colors border border-gray-200 rounded-lg bg-bgLight hover:border-brandAccent">
-                <TrendingUp className="w-8 h-8 mx-auto mb-2 text-brandNavy" />
-                <h4 className="font-bold text-brandDark">SLA Performance Reviews</h4>
+              <div className="h-full p-4 text-center transition-colors border border-borderLight rounded-2xl bg-bgLight hover:border-brandAccent dark:border-borderDark dark:bg-bgDark">
+                <TrendingUp className="w-8 h-8 mx-auto mb-2 text-brandNavy dark:text-brandAccent" />
+                <h4 className="font-bold text-brandDark dark:text-white">SLA Performance Reviews</h4>
               </div>
-              <div className="p-4 text-center transition-colors border border-gray-200 rounded-lg bg-bgLight hover:border-brandAccent">
-                <AlertOctagon className="w-8 h-8 mx-auto mb-2 text-brandNavy" />
-                <h4 className="font-bold text-brandDark">Incident Mitigation</h4>
+              <div className="h-full p-4 text-center transition-colors border border-borderLight rounded-2xl bg-bgLight hover:border-brandAccent dark:border-borderDark dark:bg-bgDark">
+                <AlertOctagon className="w-8 h-8 mx-auto mb-2 text-brandNavy dark:text-brandAccent" />
+                <h4 className="font-bold text-brandDark dark:text-white">Incident Mitigation</h4>
               </div>
             </div>
           </div>

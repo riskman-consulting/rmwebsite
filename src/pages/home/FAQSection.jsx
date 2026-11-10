@@ -37,19 +37,19 @@ const FAQSection = () => {
   };
  
   return (
-    <section className="relative w-full px-3 py-12 transition-colors duration-300 sm:py-20 bg-bgLight dark:bg-bgDark">
-      <div className="container mx-auto">
+    <section className="relative w-full py-16 transition-colors duration-300 bg-bgLight dark:bg-bgDark">
+      <div className="container">
         <div className="grid items-start gap-12 lg:grid-cols-2">
          
           {/* LEFT – HEADER */}
           <div className="lg:sticky lg:top-24">
            
  
-            <h2 className="mb-6 text-xl font-black leading-tight md:text-2xl text-brandDark dark:text-white">
+            <h2 className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-brandDark dark:text-white">
               Frequently Asked Questions
             </h2>
  
-            <p className="max-w-md text-lg leading-relaxed text-brandNavy dark:text-white/70">
+            <p className="max-w-md text-base leading-relaxed text-brandNavy dark:text-white/70">
               Discover how RiskMan's "Propreneurial" (Professionals with an entrepreneurial) approach transforms regulatory complexities into strategic opportunities for your organization.
             </p>
           </div>

@@ -62,7 +62,7 @@ const testimonials = [
 
 export default function TestimonialsSimple() {
   return (
-    <section className="relative py-20 overflow-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark">
+    <section className="relative py-16 overflow-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark">
       {/* Background Decorations */}
       <div className="absolute w-64 h-64 rounded-full top-20 left-10 bg-brandPrimary/5 dark:bg-brandAccent/5 blur-3xl" />
       <div className="absolute rounded-full bottom-20 right-10 w-80 h-80 bg-brandPrimary/5 dark:bg-brandAccent/5 blur-3xl" />
@@ -87,7 +87,7 @@ export default function TestimonialsSimple() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="mb-4 text-4xl font-bold md:text-5xl text-stone-900 dark:text-white"
+            className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold text-stone-900 dark:text-white"
           >
             Client
             <br />
@@ -101,7 +101,7 @@ export default function TestimonialsSimple() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="max-w-2xl mx-auto text-lg text-brandNavy dark:text-gray-400"
+            className="max-w-2xl mx-auto text-base text-brandNavy dark:text-gray-400"
           >
             Hear what our clients say about working with RiskMan
           </motion.p>

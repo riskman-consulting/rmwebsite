@@ -30,8 +30,8 @@ const ISO27001 = () => {
       </Helmet>
       <HeroSection />
       <StrategicSolutions />
-      <CTASection />
       <FAQ />
+      <CTASection />
     </main>
   );
 };

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap%22");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
  
 @tailwind base;
 @tailwind components;
@@ -209,10 +209,24 @@ img, video, canvas, svg {
 }
 
  
-/* Text scaling */
-h1 { font-size: clamp(1.8rem, 4vw, 3rem); }
-h2 { font-size: clamp(1.4rem, 3vw, 2.2rem); }
-p  { font-size: clamp(1rem, 2vw, 1.2rem); }
+/* =====================
+   TYPE SCALE (site-wide, mobile-first)
+   Fallback sizes for headings/paragraphs without a text-* class. Mirrors the
+   Tailwind classes used across pages so every page reads the same:
+                        mobile   tablet(md)  laptop(lg)
+     h1 page title       28px     36px        48px   text-[1.75rem] md:text-4xl lg:text-5xl
+     h2 section title    24px     30px        36px   text-2xl md:text-3xl lg:text-4xl
+     h3 sub-section      20px     24px        30px   text-xl md:text-2xl lg:text-3xl
+     h3 card title       18px     20px        20px   text-lg md:text-xl
+     p  lead             16px     18px        18px   text-base md:text-lg
+     p  body             16px     16px        16px   text-base
+   Kept in the base layer so any text-* utility on the element still wins.
+===================== */
+@layer base {
+  h1 { @apply text-[1.75rem] md:text-4xl lg:text-5xl; }
+  h2 { @apply text-2xl md:text-3xl lg:text-4xl; }
+  p  { @apply text-base; }
+}
  
 .footer-heading {
   @apply font-semibold text-[15px] mb-4 text-brandDark dark:text-white;

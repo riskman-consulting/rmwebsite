@@ -30,7 +30,7 @@ const FinancialAuditPage = () => {
 
   const fieldwork = [
     { title: "Sub-ledger Reconstruction", d: "Ensuring granular accuracy across all accounts for complete financial visibility.", icon: <Database size={20} /> },
-    { title: "Algorithmic Sampling", d: "Utilizing statistical models to detect anomalies with unprecedented depth.", icon: <TrendingUp size={20} /> },
+    { title: "Algorithmic Sampling", d: "Utilizing statistical models to detect anomalies across full transaction populations.", icon: <TrendingUp size={20} /> },
     { title: "Control Integration", d: "Validating the reliability of financial reporting systems and internal protocols.", icon: <ShieldCheck size={20} /> },
   ];
 
@@ -43,7 +43,7 @@ const FinancialAuditPage = () => {
   ];
 
   return (
-    <div className="font-sans bg-bgLight text-brandDark">
+    <div className="font-sans bg-bgLight text-brandDark dark:bg-bgDark dark:text-white">
       <Helmet>
         <title>Financial Statement Audit Services | RiskMan Consulting</title>
         <meta name="description" content="RiskMan Consulting delivers independent financial statement audit services adhering to US GAAS and PCAOB standards, providing organizations with credible assurance over financial reporting." />
@@ -67,15 +67,6 @@ const FinancialAuditPage = () => {
       {/* 6. CTA SECTION */}
       <CTASection/>
 
-      {/* 7. FOOTER */}
-      <footer className="py-12 border-t border-borderLight bg-white">
-        <div className="container flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
-          <div className="font-heading font-black text-2xl tracking-tighter text-brandNavy">
-            RISK<span className="text-brandAccent">MAN</span> <span className="text-sm font-normal text-gray-400 lowercase ml-2">auditing division</span>
-          </div>
-          <p className="text-gray-500 text-sm">© 2026 RiskMan Consulting | GAAS & PCAOB Independent Auditing</p>
-        </div>
-      </footer>
     </div>
   );
 };

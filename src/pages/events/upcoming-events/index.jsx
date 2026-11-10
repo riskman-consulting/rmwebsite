@@ -12,7 +12,7 @@ function UpcomingEventSection1() {
         <meta name="description" content="Stay updated with RiskMan Consulting's upcoming events, webinars, conferences, and industry engagements in risk management, ESG, and cybersecurity." />
         <link rel="canonical" href="https://www.riskman.in/events/upcoming-events" />
       </Helmet>
-      <UpcomingEventsSection/>
+      <UpcomingEventsSection isPage />
     </>
   )
 }

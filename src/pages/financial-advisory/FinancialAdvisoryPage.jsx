@@ -34,14 +34,14 @@ export default function FinancialAdvisory() {
 
       {/* ================= HERO ================= */}
       <div className="container pt-24">
-        <motion.h1 {...fadeUp} className="max-w-4xl text-5xl font-bold font-heading">
+        <motion.h1 {...fadeUp} className="max-w-4xl text-[1.75rem] md:text-4xl lg:text-5xl font-bold font-heading">
           Secure your financial future and mitigate risk
         </motion.h1>
 
         <motion.p
           {...fadeUp}
           transition={{ delay: 0.1 }}
-          className="max-w-3xl mt-6 text-lg opacity-85"
+          className="max-w-3xl mt-6 text-base opacity-85"
         >
           At RiskMan Consulting, our Financial Advisory Services are designed to
           provide guidances and advisories to corporates and other business
@@ -65,7 +65,7 @@ export default function FinancialAdvisory() {
 
       {/* ================= SOLUTIONS ================= */}
       <div className="container">
-        <h2 className="mb-6 text-4xl font-bold font-heading">
+        <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading">
           Our financial advisory solutions
         </h2>
 
@@ -82,7 +82,7 @@ export default function FinancialAdvisory() {
           alt="Credit Rating Advisory"
         />
 
-        <h3 className="text-2xl font-semibold font-heading">
+        <h3 className="text-lg md:text-xl font-bold font-heading">
           Credit Rating Advisory
         </h3>
 
@@ -102,7 +102,7 @@ export default function FinancialAdvisory() {
           alt="Business Valuation"
         />
 
-        <h3 className="text-2xl font-semibold font-heading">
+        <h3 className="text-lg md:text-xl font-bold font-heading">
           Business Valuation
         </h3>
 
@@ -119,7 +119,7 @@ export default function FinancialAdvisory() {
           alt="Debt Structuring"
         />
 
-        <h3 className="text-2xl font-semibold font-heading">
+        <h3 className="text-lg md:text-xl font-bold font-heading">
           Debt Structuring
         </h3>
 
@@ -135,7 +135,7 @@ export default function FinancialAdvisory() {
           alt="Project Feasibility Study"
         />
 
-        <h3 className="text-2xl font-semibold font-heading">
+        <h3 className="text-lg md:text-xl font-bold font-heading">
           Project Feasibility Study
         </h3>
 
@@ -153,7 +153,7 @@ export default function FinancialAdvisory() {
       />
 
       <div className="container">
-        <h2 className="text-4xl font-bold font-heading">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading">
           Why expert financial advisory is more critical than ever
         </h2>
 
@@ -166,7 +166,7 @@ export default function FinancialAdvisory() {
 
       {/* ================= ACCOMPLISHMENTS ================= */}
       <div className="container pt-24">
-        <h2 className="text-4xl font-bold font-heading">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading">
           Our accomplishments
         </h2>
 
@@ -208,7 +208,7 @@ export default function FinancialAdvisory() {
           {...fadeUp}
           className="flex flex-col items-center justify-between gap-8 p-12 text-white rounded-3xl bg-gradient-to-r from-brandNavy to-brandDark md:flex-row"
         >
-          <h3 className="max-w-xl text-3xl font-semibold font-heading">
+          <h3 className="max-w-xl text-xl md:text-2xl lg:text-3xl font-bold font-heading">
             Looking for clarity on a critical financial decision?
           </h3>
 
@@ -228,7 +228,7 @@ export default function FinancialAdvisory() {
       />
 
       <div className="container pb-24">
-        <h2 className="text-4xl font-bold font-heading">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading">
           Financial Advisory – FAQ
         </h2>
 

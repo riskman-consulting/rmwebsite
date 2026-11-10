@@ -9,9 +9,9 @@ import FAQSection from './FAQSection';
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen font-sans bg-white text-brandDark selection:bg-brandAccent selection:text-brandDark">
+    <div className="min-h-screen font-sans bg-bgLight dark:bg-bgDark text-brandDark dark:text-brandLight selection:bg-brandAccent selection:text-brandDark">
       <Helmet>
-        <title>ISO 22301 Business Continuity Management | RiskMan Consulting</title>
+        <title>ISO 22301 Business Continuity (BCMS) | RiskMan Consulting</title>
         <meta name="description" content="Achieve ISO 22301 certification with RiskMan Consulting. We guide organizations through BCM framework design, risk assessment, and business continuity implementation to ensure operational resilience." />
         <link rel="canonical" href="https://www.riskman.in/services/iso-certifications/iso-22301" />
       </Helmet>
@@ -20,8 +20,8 @@ const LandingPage = () => {
         <PillarsSection />
         <StepsSection />
         <ValueSection />
-        <CTASection />
         <FAQSection />
+        <CTASection />
       </main>
       {/* <Footer /> */}
     </div>

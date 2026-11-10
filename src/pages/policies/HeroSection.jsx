@@ -9,7 +9,7 @@
 //       <div className="relative z-10">
 //         <SectionTag>Enterprise Governance Advisory</SectionTag>
         
-//         <h1 className="font-heading text-[clamp(36px,5vw,58px)] font-bold text-brandDark dark:text-white leading-[1.15] mb-6 max-w-4xl mx-auto">
+//         <h1 className="font-heading text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-brandDark dark:text-white leading-[1.15] mb-6 max-w-4xl mx-auto">
 //           Policies & SOPs: The Backbone of <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandPrimary to-brandNavy dark:from-brandAccent dark:to-brandGold">Enterprise Governance</span>
 //         </h1>
         
@@ -47,7 +47,7 @@ function HeroSection() {
   const navigator = useNavigate()
   return (
     <section
-      className="relative py-20 overflow-hidden text-white lg:py-32"
+      className="relative py-20 overflow-hidden text-white lg:py-28"
       style={{
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover",
@@ -66,13 +66,13 @@ function HeroSection() {
           </div>
 
           {/* Heading */}
-          <h1 className="mb-6 text-3xl font-bold leading-tight font-heading lg:text-5xl">
+          <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading ">
              Policies & SOPs: The Backbone of{" "}
             <span className="text-brandAccent">Enterprise Governance</span>
           </h1>
 
           {/* Description */}
-          <p className="mb-10 text-lg leading-relaxed text-gray-300 lg:text-xl">
+          <p className="mb-10 text-base md:text-lg leading-relaxed text-gray-300 ">
             Translating Board intent into operational discipline. RiskMan designs, implements, and sustains 
            governance frameworks that drive consistency, accountability, and control across entities and geographies.
           </p>

@@ -32,10 +32,10 @@
 //       <div className="container">
 //         {/* Section Header */}
 //         <div className="max-w-3xl mx-auto mb-16 text-center">
-//           <h2 className="mb-6 text-3xl font-bold sm:text-4xl lg:text-5xl font-heading text-brandDark dark:text-white">
+//           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //             Frequently Asked Questions
 //           </h2>
-//           <p className="text-lg text-gray-600 dark:text-gray-300">
+//           <p className="text-base text-gray-600 dark:text-gray-300">
 //             Common questions about our TPRM services and framework
 //           </p>
 //         </div>
@@ -84,7 +84,7 @@
 //         {/* Contact Card */}
 //         <div className="max-w-2xl mx-auto mt-12">
 //           <div className="p-8 text-center shadow-xl bg-gradient-to-r from-brandPrimary to-brandNavy dark:from-brandNavy dark:to-brandDark rounded-xl">
-//             <h3 className="mb-4 text-2xl font-bold text-white font-heading">
+//             <h3 className="mb-4 text-lg md:text-xl font-bold text-white font-heading">
 //               Need More Information?
 //             </h3>
 //             <p className="mb-6 text-gray-200">
@@ -143,13 +143,14 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-20 bg-bgLight">
-      <div className="container max-w-4xl px-4 mx-auto">
+    <section className="py-16 bg-bgLight dark:bg-bgDark">
+      <div className="container">
+        <div className="max-w-4xl mx-auto">
         <div className="mb-12 text-center">
           <div className="inline-flex items-center justify-center p-3 mb-4 text-white rounded-full bg-brandNavy">
             <HelpCircle className="w-8 h-8" />
           </div>
-          <h2 className="text-3xl font-bold md:text-4xl font-heading text-brandDark">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Frequently Asked Questions
           </h2>
         </div>
@@ -158,13 +159,13 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div 
               key={index} 
-              className={`bg-white rounded-lg overflow-hidden transition-all duration-300 border ${openIndex === index ? 'border-brandAccent shadow-md' : 'border-gray-200'}`}
+              className={`bg-surfaceLight dark:bg-surfaceDark rounded-2xl overflow-hidden transition-all duration-300 border ${openIndex === index ? 'border-brandAccent shadow-md' : 'border-borderLight dark:border-borderDark'}`}
             >
               <button
                 className="flex items-center justify-between w-full px-6 py-4 text-left focus:outline-none"
                 onClick={() => toggleFAQ(index)}
               >
-                <span className={`font-bold text-lg ${openIndex === index ? 'text-brandPrimary' : 'text-gray-700'}`}>
+                <span className={`font-bold text-lg ${openIndex === index ? 'text-brandPrimary dark:text-brandAccent' : 'text-gray-700 dark:text-gray-200'}`}>
                   {faq.question}
                 </span>
                 {openIndex === index ? (
@@ -176,12 +177,13 @@ const FAQ = () => {
               <div 
                 className={`px-6 transition-all duration-300 ease-in-out overflow-hidden ${openIndex === index ? 'max-h-40 py-4 opacity-100' : 'max-h-0 py-0 opacity-0'}`}
               >
-                <p className="pt-4 text-gray-600 border-t border-gray-100">
+                <p className="pt-4 text-gray-600 border-t border-borderLight dark:text-gray-300 dark:border-borderDark">
                   {faq.answer}
                 </p>
               </div>
             </div>
           ))}
+        </div>
         </div>
       </div>
     </section>

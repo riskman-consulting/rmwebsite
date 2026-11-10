@@ -57,11 +57,11 @@ export default function VideoHighlightsSection() {
             <Play className="w-10 h-10 ml-1 text-brandGold fill-brandGold" />
           </div>
 
-          <h2 className="mb-5 text-4xl font-black sm:text-5xl font-heading text-brandDark dark:text-white">
+          <h2 className="mb-5 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Video Highlights
           </h2>
 
-          <p className="text-lg text-brandDark/70 dark:text-white/60">
+          <p className="text-base text-brandDark/70 dark:text-white/60">
             Experience our journey through moments captured on camera.
           </p>
         </div>
@@ -94,7 +94,7 @@ export default function VideoHighlightsSection() {
                 <span className="inline-block px-3 py-1 mb-3 text-xs font-black tracking-wide rounded-full bg-brandGold/20 text-brandGold">
                   {videos[0].category}
                 </span>
-                <h3 className="mb-2 text-2xl font-bold text-white sm:text-3xl">
+                <h3 className="mb-2 text-xl md:text-2xl lg:text-3xl font-bold text-white ">
                   {videos[0].title}
                 </h3>
                 <p className="text-white/70">

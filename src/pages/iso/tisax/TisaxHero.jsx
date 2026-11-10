@@ -1,8 +1,10 @@
 import { ArrowLeft, Car } from "lucide-react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import bg from "../../../assets/images/tisax/hero.png";
 
 function HeroSection() {
+  const navigator = useNavigate();
   return (
     <section
       className="relative py-24 overflow-hidden text-white lg:py-36"
@@ -32,13 +34,13 @@ function HeroSection() {
           </div>
 
           {/* Heading */}
-          <h1 className="mb-6 text-5xl font-bold leading-tight font-heading lg:text-7xl">
+          <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading ">
             The Gold Standard for{" "}
             <span className="text-brandAccent">Automotive Security</span>
           </h1>
 
           {/* Description */}
-          <p className="max-w-2xl mb-10 text-lg leading-relaxed text-gray-300 lg:text-xl">
+          <p className="max-w-2xl mb-10 text-base md:text-lg leading-relaxed text-gray-300 ">
             RiskMan provides expert guidance for TISAX compliance, ensuring your
             information security practices meet the rigorous and specific
             demands of the global automotive supply chain.
@@ -46,12 +48,12 @@ function HeroSection() {
 
           {/* CTAs */}
           <div className="flex flex-wrap gap-4">
-            <button className="flex items-center gap-2 px-8 py-4 font-bold transition-all bg-transparent border rounded-md border-white/20 hover:bg-white/10">
+            <button onClick={() => navigator("/services/iso-certifications")} className="flex items-center gap-2 px-8 py-4 font-bold transition-all bg-transparent border rounded-md border-white/20 hover:bg-white/10">
               <ArrowLeft className="w-4 h-4" />
               Return To Main
             </button>
 
-            <button className="px-8 py-4 font-bold transition-all rounded-md shadow-lg bg-brandAccent text-brandDark hover:bg-brandGold shadow-brandAccent/20">
+            <button onClick={() => navigator("/contact")} className="px-8 py-4 font-bold transition-all rounded-md shadow-lg bg-brandAccent text-brandDark hover:bg-brandGold shadow-brandAccent/20">
               Get In Touch
             </button>
           </div>

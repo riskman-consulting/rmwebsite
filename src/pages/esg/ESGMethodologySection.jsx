@@ -61,7 +61,7 @@ const ESGMethodologySection = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-bgLight dark:bg-bgDark">
+    <section className="py-16 lg:py-32 bg-bgLight dark:bg-bgDark">
       <div className="container">
         {/* Section Header */}
         <div className="mb-20 text-center">
@@ -70,10 +70,10 @@ const ESGMethodologySection = () => {
               Our Methodology
             </span>
           </div>
-          <h2 className="mb-8 text-4xl font-black leading-tight font-heading text-brandDark dark:text-surfaceLight lg:text-6xl">
+          <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandDark dark:text-surfaceLight ">
             RiskMan's Global ESG <br /> Program Methodology
           </h2>
-          <p className="max-w-3xl mx-auto font-sans text-xl leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
+          <p className="max-w-3xl mx-auto font-sans text-base md:text-lg leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
             We deliver enterprise-grade ESG programs that combine strategic vision with practical execution excellence.
           </p>
         </div>
@@ -136,7 +136,7 @@ const ESGMethodologySection = () => {
           
           <div className="relative z-10 flex flex-col items-center gap-12 lg:flex-row">
             <div className="lg:w-1/2">
-              <h3 className="mb-6 text-3xl font-black tracking-tight text-white uppercase font-heading lg:text-4xl">
+              <h3 className="mb-6 text-xl md:text-2xl lg:text-3xl font-bold text-white uppercase font-heading ">
                 Multi-Country, Multi-Regulation Execution
               </h3>
               <p className="mb-8 leading-relaxed text-white/70">

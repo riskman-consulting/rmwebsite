@@ -11,7 +11,7 @@ function PastEventPage() {
         <meta name="description" content="Browse RiskMan Consulting's past events, conferences, workshops, and seminars in risk management, governance, ESG, and cybersecurity advisory." />
         <link rel="canonical" href="https://www.riskman.in/events/past-events" />
       </Helmet>
-      <EventsGrid />
+      <EventsGrid isPage />
     </>
   )
 }

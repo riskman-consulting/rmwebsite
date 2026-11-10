@@ -53,17 +53,17 @@ const solutions = [
 
 const StrategicSolutions = () => {
   return (
-    <section className="relative py-16 md:py-24 bg-bgLight dark:bg-bgDark">
+    <section className="relative py-16 bg-bgLight dark:bg-bgDark">
       {/* Decorative Elements */}
       <div className="absolute top-0 w-64 h-64 rounded-full left-1/4 bg-brandAccent/5 blur-3xl"></div>
       
       <div className="container relative">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
-          <h2 className="mb-6 text-3xl font-bold sm:text-4xl lg:text-5xl font-heading text-brandDark dark:text-white">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Strategic ISO 27001 Readiness Solutions
           </h2>
-          <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+          <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
             Strengthen your organization's resilience by aligning with global standards through our comprehensive, executive-led ISO 27001 readiness framework.
           </p>
         </div>
@@ -73,7 +73,7 @@ const StrategicSolutions = () => {
           {solutions.map((solution, index) => (
             <div 
               key={index}
-              className="p-8 transition-all duration-300 border group bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-xl hover:shadow-xl hover:border-brandAccent/30 dark:hover:border-brandAccent/40"
+              className="h-full p-8 transition-all duration-300 border group bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-2xl hover:shadow-xl hover:border-brandAccent/30 dark:hover:border-brandAccent/40"
             >
               {/* Icon */}
               <div className="flex items-center justify-center w-16 h-16 mb-6 text-white transition-transform duration-300 rounded-lg bg-gradient-to-br from-brandPrimary to-brandNavy dark:from-brandAccent dark:to-brandGold group-hover:scale-110">
@@ -81,7 +81,7 @@ const StrategicSolutions = () => {
               </div>
 
               {/* Title */}
-              <h3 className="mb-4 text-xl font-bold leading-tight font-heading text-brandDark dark:text-white">
+              <h3 className="mb-4 text-lg md:text-xl font-bold leading-tight font-heading text-brandDark dark:text-white">
                 {solution.title}
               </h3>
 

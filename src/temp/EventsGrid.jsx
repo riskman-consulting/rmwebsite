@@ -59,7 +59,7 @@ const EventsGrid = ({ events, onCardClick }) => {
             </div>
 
             {/* Title */}
-            <h3 className="text-2xl font-bold text-[#001F3F] dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#FFB800] group-hover:to-[#FFC000] transition-all duration-300 mb-4 tracking-tight">
+            <h3 className="text-lg md:text-xl font-bold text-[#001F3F] dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#FFB800] group-hover:to-[#FFC000] transition-all duration-300 mb-4 ">
               {event.title}
             </h3>
 

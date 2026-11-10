@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 function HeroSection() {
   const navigator=useNavigate()
   return (
-    <section className="relative py-24 overflow-hidden text-white lg:py-36">
+    <section className="relative py-16 overflow-hidden text-white lg:py-36">
 
       {/* Background Image */}
       <div
@@ -26,11 +26,11 @@ function HeroSection() {
             <Globe size={14} className="animate-pulse" /> EU Privacy Standard
           </div>
 
-          <h1 className="mb-6 text-5xl font-bold leading-tight font-heading lg:text-7xl">
+          <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading ">
             Global GDPR Governance for <span className="text-brandAccent">Resilient Organizations</span>
           </h1>
 
-          <p className="max-w-2xl mb-10 text-lg leading-relaxed text-gray-300 lg:text-xl">
+          <p className="max-w-2xl mb-10 text-base md:text-lg leading-relaxed text-gray-300 ">
             Ensure seamless compliance with the EU’s gold standard for privacy through expert consulting, impact assessments, and cross-border transfer strategies.
           </p>
 

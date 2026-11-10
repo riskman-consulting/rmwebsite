@@ -1,4 +1,5 @@
 import React from "react";
+import { toTitleCase } from "../../../utils/titleCase";
 
 /**
  * Section shell for the module pages. Heading and lead on the left, content on
@@ -17,11 +18,11 @@ const DocSection = ({ id, title, lead, wide = false, children }) => (
       {wide ? (
         <>
           <header className="max-w-2xl mb-8">
-            <h2 className="text-2xl font-bold leading-tight md:text-[30px] text-brandDark dark:text-white">
-              {title}
+            <h2 className="text-2xl lg:text-[1.75rem] font-heading font-bold leading-tight text-brandDark dark:text-white">
+              {toTitleCase(title)}
             </h2>
             {lead && (
-              <p className="mt-3 text-[15px] md:text-base leading-relaxed text-gray-800 dark:text-white/80">
+              <p className="mt-3 text-base leading-relaxed text-gray-600 dark:text-white/65">
                 {lead}
               </p>
             )}
@@ -32,11 +33,11 @@ const DocSection = ({ id, title, lead, wide = false, children }) => (
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-12">
           <header className="lg:col-span-4">
             <div className="lg:sticky lg:top-[205px]">
-              <h2 className="text-2xl font-bold leading-tight md:text-[30px] text-brandDark dark:text-white">
-                {title}
+              <h2 className="text-2xl lg:text-[1.75rem] font-heading font-bold leading-tight text-brandDark dark:text-white">
+                {toTitleCase(title)}
               </h2>
               {lead && (
-                <p className="mt-3 text-[15px] md:text-base leading-relaxed text-gray-800 dark:text-white/80">
+                <p className="mt-3 text-base leading-relaxed text-gray-600 dark:text-white/65">
                   {lead}
                 </p>
               )}

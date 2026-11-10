@@ -16,7 +16,7 @@ export default function TrustedCompanies({ data }) {
             viewport={{ once: true }}
             className="mb-12 text-center"
           >
-            <h3 className="text-xl font-semibold md:text-2xl text-brandNavy dark:text-gray-400">
+            <h3 className="text-lg md:text-xl font-bold text-brandNavy dark:text-gray-400">
               {data.title}
             </h3>
           </motion.div>

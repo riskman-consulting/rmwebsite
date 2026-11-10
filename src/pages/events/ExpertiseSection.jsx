@@ -68,7 +68,7 @@ export default function ExpertiseSection() {
               <div className="flex items-center justify-center border w-14 h-14 rounded-2xl bg-brandGold/10 border-brandGold/30">
                 <Building2 className="w-7 h-7 text-brandGold" />
               </div>
-              <h2 className="text-3xl font-black font-heading text-brandDark dark:text-white">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
                 Industries Covered
               </h2>
             </div>
@@ -102,7 +102,7 @@ export default function ExpertiseSection() {
               <div className="flex items-center justify-center border w-14 h-14 rounded-2xl bg-brandGold/10 border-brandGold/30">
                 <Briefcase className="w-7 h-7 text-brandGold" />
               </div>
-              <h2 className="text-3xl font-black font-heading text-brandDark dark:text-white">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
                 Major Clients
               </h2>
             </div>
@@ -131,10 +131,10 @@ export default function ExpertiseSection() {
           backdrop-blur-xl">
 
           <div className="text-center mb-14">
-            <h2 className="mb-3 text-3xl font-black sm:text-4xl font-heading text-brandDark dark:text-white">
+            <h2 className="mb-3 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
               Areas of Expertise
             </h2>
-            <p className="text-lg text-brandDark/70 dark:text-white/60">
+            <p className="text-base text-brandDark/70 dark:text-white/60">
               Experience across audit, compliance, and digital transformation
             </p>
           </div>
@@ -157,7 +157,7 @@ export default function ExpertiseSection() {
                     <div className="flex items-center justify-center transition-transform duration-300 border w-14 h-14 rounded-xl bg-brandGold/10 border-brandGold/30 group-hover:scale-110">
                       <Icon className="w-7 h-7 text-brandGold" />
                     </div>
-                    <h3 className="text-xl font-semibold text-brandDark dark:text-white">
+                    <h3 className="text-lg md:text-xl font-bold text-brandDark dark:text-white">
                       {area.title}
                     </h3>
                   </div>

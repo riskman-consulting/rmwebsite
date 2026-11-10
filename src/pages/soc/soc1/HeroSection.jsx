@@ -8,7 +8,7 @@ const HeroSection = () => {
   const navigator = useNavigate();
   
   return (
-    <section className="relative pt-20 pb-20 overflow-hidden transition-colors duration-300 border-b lg:pt-36 lg:pb-28 bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark">
+    <section className="relative py-16 overflow-hidden transition-colors duration-300 border-b lg:py-28 bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark">
       
       {/* 1. ADVANCED BACKGROUND DECORATION */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
@@ -24,14 +24,14 @@ const HeroSection = () => {
           <div className="text-left animate-fadeIn">
             {/* Branded Tag */}
             <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 text-xs font-bold tracking-widest uppercase border rounded-full shadow-sm bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark animate-bounce-slow">
-              <span className="flex w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+              <span className="flex w-2 h-2 rounded-full bg-brandGold animate-pulse"></span>
               <span className="text-gray-600 dark:text-gray-400">Financial Integrity</span>
               <span className="mx-1 text-slate-300">|</span>
               <span className="text-brandPrimary dark:text-brandGold">ICFR Assurance</span>
             </div>
             
             {/* Two-Line Title with Premium Gradient */}
-            <h1 className="font-heading text-4xl md:text-4xl lg:text-5xl font-extrabold mb-8 leading-[1.1] text-brandDark dark:text-white tracking-tight">
+            <h1 className="font-heading text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-8 leading-[1.1] text-brandDark dark:text-white ">
               SOC 1 Assurance for <br />
               <span className="relative inline-block">
                 <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-brandPrimary to-brandNavy dark:from-brandGold dark:to-brandAccent">
@@ -42,7 +42,7 @@ const HeroSection = () => {
               Reliability.
             </h1>
             
-            <p className="max-w-xl mb-10 text-xl font-medium leading-relaxed text-gray-600 dark:text-gray-300">
+            <p className="max-w-xl mb-10 text-base md:text-lg font-medium leading-relaxed text-gray-600 dark:text-gray-300">
               Reassure customer CFOs and auditors that outsourced processes supporting financial statements are controlled, tested, and independently verified.
             </p>
             

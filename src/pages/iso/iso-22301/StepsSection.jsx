@@ -43,14 +43,14 @@
 //               />
 //             </div>
 //             <div className="absolute hidden max-w-xs p-8 text-white shadow-xl -bottom-6 -right-6 bg-brandPrimary rounded-xl md:block">
-//               <p className="mb-2 text-lg font-bold font-heading">Expert Guidance</p>
+//               <p className="mb-2 text-base font-bold font-heading">Expert Guidance</p>
 //               <p className="text-sm text-white/80">We work closely with leadership to ensure plans are practical and actionable.</p>
 //             </div>
 //           </div>
 
 //           <div className="order-1 lg:w-1/2 lg:order-2">
 //             <h2 className="mb-3 text-sm font-bold tracking-wider uppercase text-brandAccent">Our Process</h2>
-//             <h3 className="mb-8 text-3xl font-bold md:text-4xl font-heading text-brandDark">Strategic Implementation Steps</h3>
+//             <h3 className="mb-8 text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark">Strategic Implementation Steps</h3>
             
 //             <div className="space-y-8">
 //               {steps.map((step, index) => (
@@ -100,8 +100,7 @@ const ImplementationSteps = () => {
             title: "Scoping The BCMS",
             desc: "Defining which parts of the organization are covered by the Business Continuity Management System for focused resilience.",
             details: ["Boundary definition", "Stakeholder mapping", "Context analysis", "Policy establishment"],
-            color: "#3B82F6",
-            image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
+            image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=600&fit=crop"
         },
         {
             icon: HardDrive,
@@ -109,7 +108,6 @@ const ImplementationSteps = () => {
             title: "Resource Allocation",
             desc: "Identifying the specific people, technology, and facilities required to maintain essential operations during downtime.",
             details: ["Talent identification", "Tech redundancy", "Fallback facilities", "Budgeting"],
-            color: "#10B981",
             image: stepsImage
         },
         {
@@ -118,8 +116,7 @@ const ImplementationSteps = () => {
             title: "Documentation & Training",
             desc: "Creating accessible continuity manuals and ensuring staff are fully trained to execute them under pressure.",
             details: ["Manual creation", "Staff workshops", "Role play exercises", "Knowledge base"],
-            color: "#F59E0B",
-            image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&h=400&fit=crop"
+            image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=900&h=600&fit=crop"
         },
         {
             icon: Activity,
@@ -127,19 +124,18 @@ const ImplementationSteps = () => {
             title: "Exercising & Testing",
             desc: "Conducting simulations and stress tests to validate the effectiveness of recovery procedures before a real incident occurs.",
             details: ["Tabletop exercises", "Full-scale simulations", "Performance metrics", "Continuous tuning"],
-            color: "#8B5CF6",
-            image: "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=600&h=400&fit=crop"
+            image: "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=900&h=600&fit=crop"
         }
     ];
 
     return (
-        <section className="relative w-full py-24 overflow-hidden sm:py-32 bg-surfaceLight dark:bg-bgDark" id="steps">
+      <section className="relative w-full py-16 overflow-hidden bg-surfaceLight dark:bg-surfaceDark" id="steps">
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-20 right-10 w-[400px] h-[400px] bg-brandAccent/5 rounded-full blur-[100px]" />
                 <div className="absolute bottom-20 left-10 w-[300px] h-[300px] bg-brandPrimary/5 rounded-full blur-[80px]" />
             </div>
 
-            <div className="w-full px-5 sm:px-8 lg:px-12 xl:px-14 mx-auto max-w-[1280px] relative z-10">
+            <div className="container relative z-10">
                 <div className="mb-20 text-center">
                     <motion.span
                         initial={{ opacity: 0, y: 20 }}
@@ -154,7 +150,7 @@ const ImplementationSteps = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-3xl font-bold font-heading text-brandDark dark:text-white sm:text-4xl lg:text-5xl"
+                        className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white "
                     >
                         Strategic Implementation Steps
                     </motion.h2>
@@ -163,7 +159,7 @@ const ImplementationSteps = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="max-w-2xl mx-auto mt-6 text-lg text-slate-600 dark:text-slate-400"
+                        className="max-w-2xl mx-auto mt-6 text-base text-slate-600 dark:text-slate-400"
                     >
                         We work closely with leadership to ensure that continuity plans are practical, actionable, and integrated into the daily culture of organizations.
                     </motion.p>
@@ -183,8 +179,8 @@ const ImplementationSteps = () => {
                                 <button
                                     onClick={() => setActiveStep(idx)}
                                     className={`w-full text-left p-6 rounded-2xl border transition-all duration-300 ${activeStep === idx
-                                        ? 'bg-white dark:bg-surfaceDark border-transparent shadow-xl ring-2 ring-brandPrimary dark:ring-brandAccent'
-                                        : 'bg-white/50 dark:bg-white/5 border-slate-100 dark:border-white/10 hover:border-brandPrimary/30 dark:hover:border-brandAccent/30'
+                                        ? 'bg-bgLight dark:bg-bgDark border-transparent shadow-xl ring-2 ring-brandPrimary dark:ring-brandAccent'
+                                        : 'bg-bgLight/50 dark:bg-white/5 border-slate-100 dark:border-white/10 hover:border-brandPrimary/30 dark:hover:border-brandAccent/30'
                                         }`}
                                 >
                                     <div className="flex items-center gap-4">
@@ -214,7 +210,7 @@ const ImplementationSteps = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -20 }}
                                 transition={{ duration: 0.4 }}
-                                className="h-full overflow-hidden bg-white border shadow-2xl rounded-3xl dark:bg-surfaceDark border-slate-100 dark:border-white/5"
+                                className="h-full overflow-hidden border shadow-2xl bg-bgLight rounded-3xl dark:bg-bgDark border-slate-100 dark:border-white/5"
                             >
                                 <div className="relative h-48 overflow-hidden">
                                     <img
@@ -233,7 +229,7 @@ const ImplementationSteps = () => {
                                     </div>
                                 </div>
                                 <div className="p-8">
-                                    <h3 className="mb-4 text-2xl font-bold font-heading text-brandDark dark:text-white">
+                                    <h3 className="mb-4 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
                                         {steps[activeStep].title}
                                     </h3>
                                     <p className="mb-6 leading-relaxed text-slate-600 dark:text-slate-400">

@@ -25,11 +25,11 @@ const ServiceCard = ({ service, index }) => {
             <span className="text-sm font-semibold text-brandPrimary">Service {String(index + 1).padStart(2, '0')}</span>
           </div>
           
-          <h3 className="text-3xl font-bold font-heading lg:text-4xl text-brandDark">
+          <h3 className="text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark">
             {service.title}
           </h3>
           
-          <p className="text-lg leading-relaxed text-gray-600">
+          <p className="text-base leading-relaxed text-gray-600">
             {service.description}
           </p>
 
@@ -110,14 +110,14 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-surfaceLight">
+    <section className="py-16 lg:py-32 bg-surfaceLight">
       <div className="container mx-auto px-5 sm:px-8 lg:px-12 xl:px-14 max-w-[1280px]">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto mb-16 text-center lg:mb-24">
-          <h2 className="mb-6 text-3xl font-bold font-heading md:text-4xl lg:text-5xl text-brandDark">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark">
             Explore Our Core Digital Transformation Offerings
           </h2>
-          <p className="text-lg leading-relaxed text-gray-600 md:text-xl">
+          <p className="text-base md:text-lg leading-relaxed text-gray-600 ">
             RiskMan Consulting bridges the gap between strategy and execution through governance-led PMO, implementation excellence, and comprehensive support. The services we offer are the following:
           </p>
         </div>

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import ModuleBreadcrumb from "./ModuleBreadcrumb";
+import { toTitleCase } from "../../../utils/titleCase";
 
 /**
  * Module hero — breadcrumb, name, one-line positioning, the overview, two
@@ -29,18 +30,18 @@ const ModuleHero = ({ product, mod, sections, belowVideoHero = false }) => {
             <Heading
               className={` text-brandDark dark:text-white ${
                 belowVideoHero
-                  ? "text-2xl font-bold leading-tight md:text-[30px]"
-                  : "text-3xl font-bold leading-[1.15] sm:text-[32px] md:text-[38px]"
+                  ? "text-2xl lg:text-[1.75rem] font-heading font-bold leading-tight"
+                  : "text-[1.75rem] md:text-4xl lg:text-5xl font-heading font-bold leading-[1.15]"
               }`}
             >
               {mod.name}
             </Heading>
 
-            <p className="mt-3 max-w-[62ch] text-base font-medium leading-snug sm:text-lg [text-wrap:balance] text-brandPrimary dark:text-brandGold">
+            <p className="mt-3 max-w-[62ch] text-base md:text-lg font-medium leading-snug [text-wrap:balance] text-brandPrimary dark:text-brandGold">
               {mod.tagline}
             </p>
 
-            <p className="mt-4 max-w-[62ch] text-[15px] leading-relaxed sm:text-base text-gray-800 dark:text-white/80">
+            <p className="mt-4 max-w-[62ch] text-base leading-relaxed text-gray-800 dark:text-white/80">
               {mod.overview}
             </p>
 
@@ -49,13 +50,13 @@ const ModuleHero = ({ product, mod, sections, belowVideoHero = false }) => {
                 to="/contact"
                 className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold transition-colors rounded-md bg-brandPrimary dark:bg-brandGold text-white dark:text-brandDark hover:bg-brandNavy dark:hover:bg-brandAccent"
               >
-                Request a demo
+                Request a Demo
               </Link>
               <Link
                 to="/contact"
                 className="inline-flex items-center justify-center gap-1.5 px-2 py-2.5 text-sm font-semibold transition-colors text-brandPrimary dark:text-brandGold hover:underline underline-offset-4"
               >
-                Talk to a specialist
+                Talk to a Specialist
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -63,7 +64,7 @@ const ModuleHero = ({ product, mod, sections, belowVideoHero = false }) => {
 
           <aside className="lg:col-span-5 lg:pt-2">
             <h2 className="mb-3 text-sm font-semibold text-brandNavy/60 dark:text-white/50">
-              At a glance
+              At a Glance
             </h2>
             <dl className="border-t divide-y border-borderLight dark:border-borderDark divide-borderLight dark:divide-borderDark">
               {mod.atAGlance.map((row) => (
@@ -72,7 +73,7 @@ const ModuleHero = ({ product, mod, sections, belowVideoHero = false }) => {
                   className="grid grid-cols-[6.5rem_minmax(0,1fr)] gap-4 py-3"
                 >
                   <dt className="text-sm text-brandNavy/60 dark:text-white/50">
-                    {row.label}
+                    {toTitleCase(row.label)}
                   </dt>
                   <dd className="text-sm font-semibold leading-snug text-brandDark dark:text-white/85">
                     {row.value}

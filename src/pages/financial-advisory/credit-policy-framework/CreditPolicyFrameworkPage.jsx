@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet-async";
 import CreditPolicyHero from './HeroSection';
 import CoreObjectives from './Coreobjectives';
 import ValueChainManagement from './Valuechainmanagement';
-import PolicyGovernanceCTAandFAQ from './Policygovernancectaandfaq';
+import PolicyGovernanceCTAandFAQ, { PolicyCTA } from './Policygovernancectaandfaq';
 import PolicyFAQ from './PolicyFAQ';
 
 /**
@@ -34,10 +34,13 @@ function CreditPolicyFrameworkApp() {
       {/* Value Chain Management Section - 6-step Credit Process */}
       <ValueChainManagement />
 
-      {/* Policy Governance & Evolution + Call-to-Action & FAQ Section */}
+      {/* Policy Governance & Evolution */}
       <PolicyGovernanceCTAandFAQ />
 
       <PolicyFAQ/>
+
+      {/* Call-to-Action */}
+      <PolicyCTA />
 
       {/* Optional: Add Footer here */}
       {/* <YourFooter /> */}

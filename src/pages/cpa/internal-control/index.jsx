@@ -26,7 +26,7 @@ const InternalControlReviewPage = () => {
   
 
   return (
-    <div className="font-sans bg-bgLight text-brandDark">
+    <div className="font-sans bg-bgLight text-brandDark dark:bg-bgDark dark:text-white">
       <Helmet>
         <title>Internal Control Review Services | RiskMan Consulting</title>
         <meta name="description" content="RiskMan Consulting provides thorough internal control review services to assess the design and operating effectiveness of controls, identifying gaps and supporting remediation efforts." />
@@ -51,15 +51,6 @@ const InternalControlReviewPage = () => {
       {/* 6. CTA SECTION */}
       <CTASection/>
 
-      {/* 7. FOOTER */}
-      <footer className="py-12 border-t border-borderLight bg-white">
-        <div className="container flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="font-heading font-black text-2xl tracking-tighter text-brandNavy">
-            RISK<span className="text-brandAccent">MAN</span> <span className="text-xs font-normal text-gray-400 lowercase ml-2">Internal Controls</span>
-          </div>
-          <p className="text-gray-500 text-sm">© 2026 RiskMan Consulting | SOX & Internal Governance Compliance</p>
-        </div>
-      </footer>
     </div>
   );
 };

@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 function HeroSection() {
    const navigator=useNavigate()
   return (
-    <section className="relative py-24 overflow-hidden text-white lg:py-36">
+    <section className="relative py-16 overflow-hidden text-white lg:py-36">
 
       {/* Background Image */}
       <div
@@ -28,11 +28,11 @@ function HeroSection() {
             Multi-Jurisdictional Privacy
           </div>
 
-          <h1 className="mb-6 text-5xl font-bold leading-tight font-heading lg:text-7xl">
+          <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading ">
             Unified Compliance for <span className="text-brandAccent">Global Privacy Mandates</span>
           </h1>
 
-          <p className="max-w-2xl mb-10 text-lg leading-relaxed text-gray-300 lg:text-xl">
+          <p className="max-w-2xl mb-10 text-base md:text-lg leading-relaxed text-gray-300 ">
             Streamline your international regulatory obligations by integrating CCPA, HIPAA, and regional data laws into a single, high-performance privacy management system.
           </p>
 

@@ -49,8 +49,8 @@ function LeadershipModal({ leader, onClose }) {
                   />
                 )}
                 <div>
-                  <h2 className="font-heading text-2xl md:text-[1.75rem] font-bold leading-tight mb-1
-                                 text-brandDark dark:text-white">
+                  <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-1
+ text-brandDark dark:text-white">
                     {leader.name}
                   </h2>
                   <p className="text-sm font-semibold mb-2 text-brandPrimary dark:text-brandAccent">
@@ -240,9 +240,9 @@ function MemberCard({ member, index, onSelect, isSelected }) {
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       onClick={() => onSelect(member)}
-      className={`group flex flex-col items-center px-6 py-8 rounded-2xl cursor-pointer
+      className={`group h-full flex flex-col items-center px-6 py-8 rounded-2xl cursor-pointer
                   transition-all duration-200 font-sans
-                  bg-surfaceLight dark:bg-surfaceDark
+                  bg-bgLight dark:bg-bgDark
                   ${isSelected
                     ? "border-2 border-brandGold shadow-[0_8px_32px_rgba(255,184,0,0.2)] dark:shadow-[0_8px_32px_rgba(255,192,0,0.15)]"
                     : "border border-borderLight dark:border-borderDark hover:shadow-xl hover:border-brandGold/50 dark:hover:border-brandGold/30"
@@ -250,7 +250,7 @@ function MemberCard({ member, index, onSelect, isSelected }) {
     >
       {/* Avatar */}
       <div className={`w-28 h-28 rounded-full overflow-hidden mb-4 transition-all duration-200
-                       ring-offset-2 ring-offset-surfaceLight dark:ring-offset-surfaceDark
+                       ring-offset-2 ring-offset-bgLight dark:ring-offset-bgDark
                        ${isSelected
                          ? "ring-[3px] ring-brandGold"
                          : "ring-[3px] ring-borderLight dark:ring-borderDark group-hover:ring-brandGold/60"
@@ -264,7 +264,7 @@ function MemberCard({ member, index, onSelect, isSelected }) {
         )}
       </div>
 
-      <h3 className="font-heading text-xl font-bold text-center mb-1 text-brandDark dark:text-white">
+      <h3 className="font-heading text-lg md:text-xl font-bold text-center mb-1 text-brandDark dark:text-white">
         {member.name}
       </h3>
       <p className="text-sm font-semibold text-center mb-2 text-brandPrimary dark:text-brandAccent">
@@ -318,13 +318,13 @@ export default function LeadershipSection() {
   }, [fetchLeadership]);
 
   return (
-    <section className="py-14 md:py-16 px-6 bg-bgLight dark:bg-bgDark font-sans">
+    <section className="py-16 bg-surfaceLight dark:bg-surfaceDark font-sans">
       {loading && leadership.length === 0 ? (
         <div className="flex justify-center items-center py-20">
           <div className="w-8 h-8 border-4 border-brandPrimary border-t-transparent rounded-full animate-spin" />
         </div>
       ) : (
-        <div className="grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
+        <div className="container grid gap-6 md:grid-cols-3">
           {leadership.map((m, i) => (
             <MemberCard
               key={m._key ?? m.name}

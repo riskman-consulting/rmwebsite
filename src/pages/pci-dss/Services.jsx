@@ -71,11 +71,11 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-24 bg-gray-50 dark:bg-bgDark/50">
-      <div className="container px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-16 bg-surfaceLight dark:bg-surfaceDark">
+      <div className="container">
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <span className="block mb-2 text-sm font-bold tracking-wider uppercase text-brandPrimary dark:text-brandGold">Our Expertise</span>
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             PCI DSS Control Objectives
           </h2>
           <p className="text-gray-600 dark:text-gray-400">

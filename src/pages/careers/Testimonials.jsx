@@ -41,21 +41,21 @@ export default function TeamTestimonials() {
 
   return (
     <section className="relative py-16 bg-surfaceLight dark:bg-surfaceDark">
-      <div className="container max-w-6xl px-4 mx-auto">
+      <div className="container">
 
         {/* Header */}
         <div className="max-w-3xl mx-auto mb-16 text-center text-brandDark dark:text-brandAccent">
-          <h2 className="mb-5 text-4xl font-black sm:text-5xl">
+          <h2 className="mb-5 font-heading text-2xl md:text-3xl lg:text-4xl font-bold">
             Voices from Our Team
           </h2>
-          <p className="text-lg opacity-70 text-brandNavy dark:text-white">
+          <p className="text-base opacity-70 text-brandNavy dark:text-white">
             Experiences that reflect growth, trust, and shared success.
           </p>
         </div>
 
         {/* Card Wrapper */}
         <div className="relative max-w-5xl mx-auto">
-          <div className="p-10 rounded-[2.5rem] border backdrop-blur-xl bg-surfaceLight dark:bg-surfaceDark shadow-lg">
+          <div className="p-10 rounded-[2.5rem] border border-borderLight dark:border-borderDark backdrop-blur-xl bg-bgLight dark:bg-bgDark shadow-lg">
             
             <div className="flex items-start gap-8">
               
@@ -89,7 +89,7 @@ export default function TeamTestimonials() {
 
               {/* Right Side */}
               <div className="flex-1">
-                <p className="text-lg italic leading-relaxed text-brandPrimary dark:text-white/70">
+                <p className="text-base italic leading-relaxed text-brandPrimary dark:text-white/70">
                   {t.quote}
                 </p>
 
@@ -106,14 +106,14 @@ export default function TeamTestimonials() {
           {/* Navigation */}
           <button
             onClick={prev}
-            className="absolute flex items-center justify-center w-12 h-12 transition -translate-y-1/2 border rounded-full shadow -left-6 top-1/2 bg-white/90 dark:bg-brandAccent hover:scale-105"
+            className="absolute flex items-center justify-center w-12 h-12 transition -translate-y-1/2 border rounded-full shadow left-1 xl:-left-6 top-1/2 bg-white/90 dark:bg-brandAccent hover:scale-105"
           >
             <ChevronLeft />
           </button>
 
           <button
             onClick={next}
-            className="absolute flex items-center justify-center w-12 h-12 transition -translate-y-1/2 border rounded-full shadow -right-6 top-1/2 bg-white/90 dark:bg-brandAccent hover:scale-105"
+            className="absolute flex items-center justify-center w-12 h-12 transition -translate-y-1/2 border rounded-full shadow right-1 xl:-right-6 top-1/2 bg-white/90 dark:bg-brandAccent hover:scale-105"
           >
             <ChevronRight />
           </button>

@@ -3,9 +3,9 @@ import React from 'react'
 
 function BusinessSection() {
   return (
-     <section className="py-20 bg-brandDark text-white">
+    <section className="py-16 bg-brandDark text-white">
         <div className="container">
-          <h2 className="font-heading text-3xl font-bold mb-12 text-center">Business Value for Leadership</h2>
+          <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-12 text-center">Business Value for Leadership</h2>
           <div className="max-w-4xl mx-auto space-y-4">
             {[
               "Revenue enablement through access to customers that mandate SOC.",

@@ -21,7 +21,7 @@ const ImprovementItem = ({ icon: Icon, title, description, index }) => (
       )}
     </div>
     <div className="pb-12">
-      <h3 className="mb-3 text-xl font-bold transition-colors text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">{title}</h3>
+      <h3 className="mb-3 text-lg md:text-xl font-bold transition-colors text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">{title}</h3>
       <p className="leading-relaxed text-gray-600 dark:text-gray-300">{description}</p>
     </div>
   </motion.div>
@@ -29,16 +29,16 @@ const ImprovementItem = ({ icon: Icon, title, description, index }) => (
 
 export const ContinuousImprovementSection = () => {
   return (
-    <section className="py-24 overflow-hidden bg-white dark:bg-surfaceDark">
-      <div className="container px-4 mx-auto sm:px-6 lg:px-8">
+    <section className="py-16 overflow-hidden bg-surfaceLight dark:bg-surfaceDark">
+      <div className="container">
         <div className="flex flex-col items-center gap-16 lg:flex-row">
           
           {/* Left Content - List */}
           <div className="order-2 lg:w-1/2 lg:order-1">
-            <h2 className="mb-6 text-4xl font-bold font-heading text-brandDark dark:text-white">
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
               Continuous Improvement
             </h2>
-            <p className="mb-12 text-lg text-gray-600 dark:text-gray-300">
+            <p className="mb-12 text-base text-gray-600 dark:text-gray-300">
               Iterate and evolve your digital landscape through constant feedback, KPI adjustments, and governance-aligned enhancements.
             </p>
             
@@ -80,7 +80,6 @@ export const ContinuousImprovementSection = () => {
           >
             <div className="relative overflow-hidden border-8 rounded-full shadow-2xl aspect-square border-brandLight dark:border-gray-800">
               <img src={continuousImpImage} alt="Continuous Improvement" className="object-cover w-full h-full" />
-              <div className="absolute inset-0 bg-brandNavy/20 mix-blend-multiply"></div>
               
               {/* Rotating Ring */}
               <div className="absolute inset-0 border-4 border-dashed border-white/30 rounded-full animate-[spin_20s_linear_infinite]"></div>

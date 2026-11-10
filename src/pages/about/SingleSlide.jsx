@@ -17,7 +17,7 @@ export default function SingleSlide() {
   ];
 
   return (
-    <section className="relative w-full h-screen min-h-[650px] flex items-center overflow-hidden bg-[#001122]">
+    <section className="relative w-full h-screen min-h-[650px] flex items-center overflow-hidden bg-bgDark">
       {/* 1. BACKGROUND IMAGE LAYER */}
       <div className="absolute inset-0 z-0">
         <img
@@ -30,18 +30,18 @@ export default function SingleSlide() {
       </div>
  
       {/* 3. CONTENT LAYER */}
-      <div className="container relative z-10 px-6 mx-auto lg:px-12">
+      <div className="container relative z-10">
         <div className="max-w-3xl">
           {/* Headline - Styled like the image */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-[1.1] tracking-tight">
+          <h1 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-white leading-[1.1] ">
             RiskMan Assurance and Advisory <br />
-            <span className="font-medium opacity-90 text-[#FFC000] dark:text-[#FFC000]">
+            <span className="font-medium opacity-90 text-brandAccent">
               Your Partner in Sustainable Growth
             </span>
           </h1>
  
           {/* Body Text */}
-          <p className="max-w-xl mt-8 text-lg leading-relaxed md:text-xl text-white/80">
+          <p className="max-w-xl mt-8 text-base md:text-lg leading-relaxed text-white/80">
             Strategic risk advisory driven by <strong className="text-white">propreneurs</strong>.
             We deliver customized solutions that secure sustainable growth and
             create enduring value for global enterprises.
@@ -51,7 +51,7 @@ export default function SingleSlide() {
           <div className="flex flex-wrap gap-4 mt-10">
             <a
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 text-sm font-bold text-white uppercase tracking-wider transition-all bg-[#004080] hover:bg-[#0056b3] border border-white/10"
+              className="inline-flex items-center gap-2 px-8 py-4 text-sm font-bold text-white uppercase tracking-wider transition-all bg-brandPrimary hover:bg-brandNavy border border-white/10"
             >
               Get Started
               <ArrowRight size={18} />
@@ -69,7 +69,7 @@ export default function SingleSlide() {
           <div className="flex items-center gap-4 mt-16 md:mt-24">
             <div className="flex -space-x-4">
               {teamAvatars.map((image,i) => (
-                <div key={i} className="w-12 h-12 rounded-full border-2 border-[#001a17] overflow-hidden">
+                <div key={i} className="w-12 h-12 rounded-full border-2 border-bgDark overflow-hidden">
                   <img src={image} alt="Expert" />
                 </div>
               ))}

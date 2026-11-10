@@ -77,10 +77,10 @@ const Offerings = () => {
     >
       <div className="container">
         <div className="max-w-3xl mx-auto mb-16 text-center">
-          <h2 className="mb-6 text-3xl font-bold md:text-4xl text-brandDark dark:text-brandLight">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-brandLight">
             Explore Our Core Digital Transformation Offerings
           </h2>
-          <p className="text-lg text-brandNavy/70 dark:text-brandLight/70">
+          <p className="text-base text-brandNavy/70 dark:text-brandLight/70">
             RiskMan Consulting bridges the gap between strategy and execution
             through governance-led PMO, implementation excellence, and
             comprehensive support. The services we offer are the following:
@@ -96,7 +96,7 @@ const Offerings = () => {
               <div className="flex items-center justify-center w-16 h-16 mb-6 transition-transform bg-brandPrimary/10 dark:bg-brandAccent/10 text-brandPrimary dark:text-brandAccent rounded-xl group-hover:scale-110">
                 {item.icon}
               </div>
-              <h3 className="mb-4 text-2xl font-bold text-brandDark dark:text-brandLight">
+              <h3 className="mb-4 text-lg md:text-xl font-bold text-brandDark dark:text-brandLight">
                 {item.title}
               </h3>
               <p className="mb-8 leading-relaxed text-brandNavy/70 dark:text-brandLight/60">

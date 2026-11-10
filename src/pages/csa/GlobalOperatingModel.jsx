@@ -29,14 +29,14 @@ export default function GlobalOperatingModel() {
   ];
 
   return (
-    <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
-      <div className="container max-w-6xl px-6 mx-auto">
+    <section className="py-16 bg-bgLight dark:bg-bgDark">
+      <div className="container">
         {/* Section Header */}
-        <h2 className="mb-8 text-4xl font-bold text-brandDark dark:text-white ">
+        <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
           RiskMan's Global CSA Operating Model
         </h2>
 
-        <p className="mb-12 text-lg leading-relaxed text-brandNavy dark:text-white/70">
+        <p className="mb-12 text-base leading-relaxed text-brandNavy dark:text-white/70">
           RiskMan has developed a proven, scalable CSA operating model specifically designed for 
           complex global organizations operating across multiple geographies, regulatory regimes, 
           and business models. Our approach balances global consistency with local adaptability—ensuring 
@@ -45,7 +45,7 @@ export default function GlobalOperatingModel() {
 
         {/* Centralized Governance */}
         <div className="mb-12">
-          <h3 className="mb-4 text-2xl font-bold text-brandDark dark:text-brandAccent">
+          <h3 className="mb-4 text-lg md:text-xl font-bold text-brandDark dark:text-brandAccent">
             Centralized Governance, Localized Execution
           </h3>
           <p className="mb-6 leading-relaxed text-brandNavy dark:text-white/70">
@@ -55,32 +55,32 @@ export default function GlobalOperatingModel() {
           </p>
 
           <div className="grid gap-6 md:grid-cols-2">
-            <div className="p-6 border-l-4 border-teal-600 rounded-lg bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 ">
-              <h4 className="mb-2 text-lg font-bold text-teal-700 dark:text-teal-400">Consistent Methodology</h4>
+            <div className="h-full p-6 border-l-4 rounded-2xl border-brandAccent bg-surfaceLight dark:bg-surfaceDark">
+              <h4 className="mb-2 text-lg font-bold text-brandPrimary dark:text-brandAccent">Consistent Methodology</h4>
               <p className="text-brandNavy dark:text-white/70">
                 Standardized assessment frameworks, rating scales, and documentation requirements 
                 across all business units and regions.
               </p>
             </div>
 
-            <div className="p-6 border-l-4 border-purple-600 rounded-lg bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900">
-              <h4 className="mb-2 text-lg font-bold text-purple-700 dark:text-purple-400">Regulatory Customization</h4>
+            <div className="h-full p-6 border-l-4 rounded-2xl border-brandAccent bg-surfaceLight dark:bg-surfaceDark">
+              <h4 className="mb-2 text-lg font-bold text-brandPrimary dark:text-brandAccent">Regulatory Customization</h4>
               <p className="text-brandNavy dark:text-white/70">
                 Tailored control libraries and assessment criteria reflecting jurisdiction-specific 
                 requirements (SOX, J-SOX, UK SOX, SEBI LODR, and others).
               </p>
             </div>
 
-            <div className="p-6 border-l-4 border-blue-600 rounded-lg bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900">
-              <h4 className="mb-2 text-lg font-bold text-blue-700 dark:text-blue-400">Cultural Sensitivity</h4>
+            <div className="h-full p-6 border-l-4 rounded-2xl border-brandAccent bg-surfaceLight dark:bg-surfaceDark">
+              <h4 className="mb-2 text-lg font-bold text-brandPrimary dark:text-brandAccent">Cultural Sensitivity</h4>
               <p className="text-brandNavy dark:text-white/70">
                 Assessment facilitation approaches adapted to local organizational cultures and 
                 communication norms.
               </p>
             </div>
 
-            <div className="p-6 border-l-4 border-yellow-600 rounded-lg bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900">
-              <h4 className="mb-2 text-lg font-bold text-yellow-700 dark:text-yellow-400">Language Localization</h4>
+            <div className="h-full p-6 border-l-4 rounded-2xl border-brandAccent bg-surfaceLight dark:bg-surfaceDark">
+              <h4 className="mb-2 text-lg font-bold text-brandPrimary dark:text-brandAccent">Language Localization</h4>
               <p className="text-brandNavy dark:text-white/70">
                 Assessment materials and reporting available in local languages to maximize First 
                 Line engagement.
@@ -91,7 +91,7 @@ export default function GlobalOperatingModel() {
 
         {/* End-to-End CSA Lifecycle */}
         {/* <div className="mb-12">
-          <h3 className="mb-4 text-2xl font-bold text-brandDark dark:text-brandAccent">
+          <h3 className="mb-4 text-lg md:text-xl font-bold text-brandDark dark:text-brandAccent">
             End-to-End CSA Lifecycle
           </h3>
           <p className="mb-6 leading-relaxed text-brandDark dark:text-white/70">
@@ -127,7 +127,7 @@ export default function GlobalOperatingModel() {
 
         {/* Technology & GRC Integration */}
         {/* <div className="p-8 shadow-md bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-900 rounded-xl">
-          <h3 className="mb-4 text-2xl font-bold text-brandDark dark:text-brandAccent">
+          <h3 className="mb-4 text-lg md:text-xl font-bold text-brandDark dark:text-brandAccent">
             Technology & GRC Integration
           </h3>
           <p className="mb-6 leading-relaxed text-brandNavy dark:text-white">

@@ -1,5 +1,6 @@
 import React from "react";
 import DocSection from "./DocSection";
+import { toTitleCase } from "../../../utils/titleCase";
 
 /**
  * What the module does, as a list of features separated by rules. `points` is
@@ -17,14 +18,14 @@ const ModuleCapabilities = ({ mod }) => (
         const Icon = cap.icon;
         return (
           <article key={cap.title} className="py-6 first:pt-0 last:pb-0">
-            <h3 className="flex items-center gap-2.5 mb-2 text-base font-bold leading-snug text-brandDark dark:text-white">
+            <h3 className="text-lg font-heading flex items-center gap-2.5 mb-2 font-semibold leading-snug text-brandDark dark:text-white">
               {Icon && (
                 <Icon
                   aria-hidden="true"
                   className="flex-shrink-0 w-[18px] h-[18px] text-brandPrimary dark:text-brandGold"
                 />
               )}
-              {cap.title}
+              {toTitleCase(cap.title)}
             </h3>
             <p className="text-[15px] leading-relaxed text-gray-800 dark:text-white/80">
               {cap.text}

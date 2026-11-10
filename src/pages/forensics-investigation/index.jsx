@@ -129,13 +129,13 @@
 //               <Lock size={14} className="mr-1" /> Confidential Investigative Elite
 //             </div>
 //             <h1
-//               className="mb-6 text-5xl font-bold leading-tight lg:text-7xl"
-//               style={{ fontFamily: "Montserrat, sans-serif" }}
+//               className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight "
+//               style={{ fontFamily: "Inter, sans-serif" }}
 //             >
 //               Advanced Forensics and{" "}
 //               <span className="text-[#FFC000]">Investigation</span> Services
 //             </h1>
-//             <p className="max-w-2xl mb-10 text-lg leading-relaxed text-gray-300 lg:text-xl">
+//             <p className="max-w-2xl mb-10 text-base md:text-lg leading-relaxed text-gray-300 ">
 //               Protect organizational integrity through rigorous investigative
 //               protocols. We provide the clarity and evidence needed to resolve
 //               complex internal and external threats.
@@ -190,12 +190,12 @@
 //           className={`max-w-4xl mx-auto text-center transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
 //         >
 //           <h2
-//             className="text-3xl lg:text-4xl font-bold mb-6 text-[#001F3F] dark:text-white tracking-tight"
-//             style={{ fontFamily: "Montserrat, sans-serif" }}
+//             className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-[#001F3F] dark:text-white "
+//             style={{ fontFamily: "Inter, sans-serif" }}
 //           >
 //             Strategic Investigative Solutions
 //           </h2>
-//           <p className="text-xl leading-relaxed text-gray-600 dark:text-gray-300">
+//           <p className="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300">
 //             Organizations today face sophisticated threats that demand more than
 //             just standard oversight. RiskMan delivers high-stakes investigative
 //             expertise to identify vulnerabilities and resolve misconduct with
@@ -213,7 +213,7 @@
 //             />
 //             <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/70 to-transparent" />
 //             <div className="absolute bottom-0 left-0 right-0 p-8">
-//               <p className="text-lg font-bold text-white" style={{ fontFamily: "Montserrat, sans-serif" }}>
+//               <p className="text-base font-bold text-white" style={{ fontFamily: "Inter, sans-serif" }}>
 //                 20+ Years of Elite Investigation
 //               </p>
 //               <p className="mt-1 text-sm text-gray-300">
@@ -233,7 +233,7 @@
 //                 className="bg-[#F5F5F5] dark:bg-[#001A33] p-6 rounded-xl text-center border border-[rgba(0,31,63,0.1)] dark:border-[rgba(255,192,0,0.15)] hover:border-[#FFC000]/40 transition-colors"
 //               >
 //                 <div className="text-[#FFC000] mx-auto mb-2 flex justify-center">{s.icon}</div>
-//                 <p className="text-2xl font-black text-[#001F3F] dark:text-white" style={{ fontFamily: "Montserrat, sans-serif" }}>
+//                 <p className="text-2xl font-black text-[#001F3F] dark:text-white" style={{ fontFamily: "Inter, sans-serif" }}>
 //                   {s.num}
 //                 </p>
 //                 <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">{s.label}</p>
@@ -254,8 +254,8 @@
 //       <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-14">
 //         <div className="flex items-center gap-4 mb-16">
 //           <h2
-//             className="text-2xl lg:text-3xl font-bold shrink-0 text-[#001F3F] dark:text-white"
-//             style={{ fontFamily: "Montserrat, sans-serif" }}
+//             className="text-2xl md:text-3xl lg:text-4xl font-bold shrink-0 text-[#001F3F] dark:text-white"
+//             style={{ fontFamily: "Inter, sans-serif" }}
 //           >
 //             Fraud and Misconduct Detection
 //           </h2>
@@ -272,7 +272,7 @@
 //               <div className="mb-6 text-[#FFC000] group-hover:text-[#FFC000] transition-colors">
 //                 {item.icon}
 //               </div>
-//               <h3 className="mb-3 text-xl font-bold" style={{ fontFamily: "Montserrat, sans-serif" }}>
+//               <h3 className="mb-3 text-lg md:text-xl font-bold" style={{ fontFamily: "Inter, sans-serif" }}>
 //                 {item.title}
 //               </h3>
 //               <p className="text-sm leading-relaxed opacity-80">{item.desc}</p>
@@ -293,7 +293,7 @@
 //               <p className="text-[#FFC000] text-sm font-bold uppercase tracking-widest mb-2">
 //                 Financial Intelligence
 //               </p>
-//               <p className="text-xl font-bold text-white lg:text-2xl" style={{ fontFamily: "Montserrat, sans-serif" }}>
+//               <p className="text-base md:text-lg font-bold text-white " style={{ fontFamily: "Inter, sans-serif" }}>
 //                 Every dollar tells a story. Our forensic accountants read between the lines.
 //               </p>
 //             </div>
@@ -313,8 +313,8 @@
 //         <div ref={ref} className="flex flex-col items-center gap-16 lg:flex-row">
 //           <div className={`lg:w-1/2 transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"}`}>
 //             <h2
-//               className="text-3xl lg:text-4xl font-bold mb-6 text-[#FFC000]"
-//               style={{ fontFamily: "Montserrat, sans-serif" }}
+//               className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-[#FFC000]"
+//               style={{ fontFamily: "Inter, sans-serif" }}
 //             >
 //               Digital Forensics & Response
 //             </h2>
@@ -355,7 +355,7 @@
 //                       <Fingerprint size={28} className="text-[#FFC000]" />
 //                     </div>
 //                     <div>
-//                       <h3 className="text-lg font-bold">Evidence Preservation</h3>
+//                       <h3 className="text-lg md:text-xl font-bold">Evidence Preservation</h3>
 //                       <p className="text-xs italic text-gray-400">
 //                         Strict chain of custody with international standards
 //                       </p>
@@ -379,8 +379,8 @@
 //       <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-14">
 //         <div className="max-w-2xl mx-auto mb-16 text-center">
 //           <h2
-//             className="text-3xl lg:text-4xl font-bold mb-4 text-[#001F3F] dark:text-white"
-//             style={{ fontFamily: "Montserrat, sans-serif" }}
+//             className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-[#001F3F] dark:text-white"
+//             style={{ fontFamily: "Inter, sans-serif" }}
 //           >
 //             Integrity Due Diligence
 //           </h2>
@@ -403,7 +403,7 @@
 //             <div className="absolute bottom-6 left-6 right-6">
 //               <div className="p-5 border bg-white/10 backdrop-blur-md rounded-xl border-white/20">
 //                 <Scale className="text-[#FFC000] mb-3" size={28} />
-//                 <p className="text-lg font-bold text-white" style={{ fontFamily: "Montserrat, sans-serif" }}>
+//                 <p className="text-base font-bold text-white" style={{ fontFamily: "Inter, sans-serif" }}>
 //                   Regulatory Confidence
 //                 </p>
 //                 <p className="mt-1 text-sm text-gray-300">
@@ -441,7 +441,7 @@
 //                   {item.icon}
 //                 </div>
 //                 <div>
-//                   <h4 className="font-bold text-xl mb-2 text-[#001F3F] dark:text-white" style={{ fontFamily: "Montserrat, sans-serif" }}>
+//                   <h4 className="font-bold text-xl mb-2 text-[#001F3F] dark:text-white" style={{ fontFamily: "Inter, sans-serif" }}>
 //                     {item.t}
 //                   </h4>
 //                   <p className="text-sm leading-relaxed text-gray-500 dark:text-gray-400">
@@ -464,8 +464,8 @@
 //     <section className="py-20 bg-[#FAFAFA] dark:bg-[#000d1a]">
 //       <div className="max-w-3xl px-5 mx-auto sm:px-8">
 //         <h2
-//           className="text-3xl font-bold mb-10 text-center text-[#001F3F] dark:text-white"
-//           style={{ fontFamily: "Montserrat, sans-serif" }}
+//           className="text-2xl md:text-3xl lg:text-4xl font-bold mb-10 text-center text-[#001F3F] dark:text-white"
+//           style={{ fontFamily: "Inter, sans-serif" }}
 //         >
 //           Investigation Insights FAQ
 //         </h2>
@@ -531,10 +531,10 @@
 //           />
 
 //           <div className="relative z-10">
-//             <h2 className="mb-6 text-3xl font-bold lg:text-5xl" style={{ fontFamily: "Montserrat, sans-serif" }}>
+//             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold " style={{ fontFamily: "Inter, sans-serif" }}>
 //               Protect Your Organization
 //             </h2>
-//             <p className="max-w-2xl mx-auto mb-10 text-xl font-medium text-gray-300">
+//             <p className="max-w-2xl mx-auto mb-10 text-base md:text-lg font-medium text-gray-300">
 //               Implement proactive safeguards and reactive excellence for all
 //               investigative requirements.
 //             </p>
@@ -583,7 +583,7 @@
 //       <footer className="py-12 border-t border-[rgba(0,31,63,0.1)] dark:border-[rgba(255,192,0,0.15)] bg-white dark:bg-[#000d1a]">
 //         <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-14">
 //           <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-//             <div className="font-black text-2xl tracking-tighter text-[#003366] dark:text-white uppercase" style={{ fontFamily: "Montserrat, sans-serif" }}>
+//             <div className="font-black text-2xl tracking-tighter text-[#003366] dark:text-white uppercase" style={{ fontFamily: "Inter, sans-serif" }}>
 //               RISK<span className="text-[#FFC000]">MAN</span>{" "}
 //               <span className="ml-2 text-sm font-normal text-gray-400 lowercase">
 //                 Forensics Unit

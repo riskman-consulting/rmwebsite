@@ -56,11 +56,11 @@ export default function AwardsSection() {
             <Award className="w-8 h-8 text-brandGold" />
           </div>
 
-          <h2 className="mb-5 text-4xl font-black sm:text-5xl font-heading text-brandDark dark:text-white">
+          <h2 className="mb-5 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Awards & Recognition
           </h2>
 
-          <p className="text-lg leading-relaxed text-brandDark/70 dark:text-white/60">
+          <p className="text-base leading-relaxed text-brandDark/70 dark:text-white/60">
             Celebrating excellence, trust, and achievements that define our
             professional journey.
           </p>
@@ -90,7 +90,7 @@ export default function AwardsSection() {
                   </div>
                 </div>
 
-                <h3 className="mb-3 text-2xl font-bold font-heading text-brandDark dark:text-white">
+                <h3 className="mb-3 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
                   {award.title}
                 </h3>
 
@@ -155,7 +155,7 @@ export default function AwardsSection() {
           border border-borderLight dark:border-borderDark
           backdrop-blur-xl"
         >
-          <h3 className="mb-10 text-3xl font-black text-center font-heading text-brandDark dark:text-white">
+          <h3 className="mb-10 text-xl md:text-2xl lg:text-3xl font-bold text-center font-heading text-brandDark dark:text-white">
             Recent Recognitions
           </h3>
 

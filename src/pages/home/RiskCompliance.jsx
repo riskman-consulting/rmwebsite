@@ -63,7 +63,7 @@ const RiskCompliance = () => {
               Key Risk & Compliance
             </p>
  
-            <h2 className="mb-6 text-3xl font-bold leading-tight md:text-4xl text-brandDark dark:text-white">
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-brandDark dark:text-white">
               Managing Risk,
               <br />
               Ensuring Total
@@ -97,7 +97,7 @@ const RiskCompliance = () => {
                       <Icon size={28} />
                     </div>
  
-                    <h3 className="mb-3 text-xl font-semibold transition-colors duration-300 text-brandDark dark:text-white">
+                    <h3 className="mb-3 text-lg md:text-xl font-bold transition-colors duration-300 text-brandDark dark:text-white">
                       {service.title}
                     </h3>
  

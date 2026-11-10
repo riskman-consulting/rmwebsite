@@ -17,8 +17,8 @@ function App() {
       <main>
         <Hero />
         <ServicesSection />
-        <CTA />
         <FAQ />
+        <CTA />
       </main>
    
     </div>

@@ -22,8 +22,8 @@ const BCPPage = () => {
       <BCPBenefits />
       <BCPFocusAreas/>
       <BCPMethodology/>
-      <BCPCallToAction />
       <BCPFaq />
+      <BCPCallToAction />
     </>
   );
 };

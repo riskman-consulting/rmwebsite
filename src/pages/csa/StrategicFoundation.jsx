@@ -2,15 +2,15 @@ import React from 'react';
 
 function StrategicFoundation() {
   return (
-    <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
-      <div className="container max-w-6xl px-6 mx-auto">
+    <section className="py-16 bg-bgLight dark:bg-bgDark">
+      <div className="container">
         {/* Section Header */}
-        <h2 className="mb-8 text-4xl font-bold text-brandDark dark:text-brandAccent">
+        <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
           Control Self-Assessment: Strategic Foundation
         </h2>
 
         {/* Introduction */}
-        <p className="mb-8 text-lg leading-relaxed text-brandNavy dark:text-white/70">
+        <p className="mb-8 text-base leading-relaxed text-brandNavy dark:text-white/70">
           In an era defined by regulatory complexity, operational volatility, and heightened 
           stakeholder expectations, Control Self-Assessment (CSA) has emerged as a cornerstone 
           of modern risk governance. Far more than a compliance exercise, CSA represents a 
@@ -19,8 +19,8 @@ function StrategicFoundation() {
         </p>
 
         {/* Strategic Imperative Callout */}
-        <div className="p-8 mb-12 border-l-4 border-yellow-500 rounded-r-lg shadow-md bg-gradient-to-r from-slate-50 to-blue-50 dark:from-slate-800 dark:to-blue-900">
-          <h3 className="mb-3 text-xl font-bold text-brandDark dark:text-brandAccent">Strategic Imperative</h3>
+        <div className="p-8 mb-12 border-l-4 rounded-r-2xl shadow-md border-brandAccent bg-surfaceLight dark:bg-surfaceDark">
+          <h3 className="mb-3 text-lg md:text-xl font-bold text-brandDark dark:text-brandAccent">Strategic Imperative</h3>
           <p className="italic leading-relaxed text-brandPrimary dark:text-white/70">
             CSA transforms risk management from a periodic audit activity into a continuous, 
             organization-wide discipline that drives accountability at every level of the enterprise.
@@ -29,7 +29,7 @@ function StrategicFoundation() {
 
         {/* Defining CSA */}
         <div className="mb-12">
-          <h3 className="mb-4 text-2xl font-bold text-brandDark dark:text-white">
+          <h3 className="mb-4 text-lg md:text-xl font-bold text-brandDark dark:text-white">
             Defining CSA in the Modern Enterprise
           </h3>
           <p className="mb-4 leading-relaxed text-brandNavy dark:text-white/70">
@@ -48,7 +48,7 @@ function StrategicFoundation() {
 
         {/* Why CSA Matters Now */}
         <div>
-          <h3 className="mb-4 text-2xl font-bold text-brandDark dark:text-white">
+          <h3 className="mb-4 text-lg md:text-xl font-bold text-brandDark dark:text-white">
             Why CSA Matters Now
           </h3>
           <p className="mb-6 leading-relaxed text-brandNavy dark:text-white/70">
@@ -61,7 +61,7 @@ function StrategicFoundation() {
 
           {/* Key Points Grid */}
           <div className="grid gap-6 md:grid-cols-2">
-            <div className="p-6 transition-shadow border rounded-lg shadow-sm bg-surfaceLight dark:bg-surfaceDark border-slate-200 hover:shadow-md">
+            <div className="h-full p-6 transition-shadow border shadow-sm rounded-2xl bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark hover:shadow-md">
               <h4 className="mb-3 text-lg font-bold text-brandDark dark:text-brandAccent">Regulatory Expectations</h4>
               <p className="text-brandNavy dark:text-white/70">
                 Global regulators mandate evidence of active first-line engagement in risk and 
@@ -69,7 +69,7 @@ function StrategicFoundation() {
               </p>
             </div>
 
-            <div className="p-6 transition-shadow border rounded-lg shadow-sm bg-surfaceLight dark:bg-surfaceDark border-slate-200 hover:shadow-md">
+            <div className="h-full p-6 transition-shadow border shadow-sm rounded-2xl bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark hover:shadow-md">
               <h4 className="mb-3 text-lg font-bold text-brandDark dark:text-brandAccent">Operational Resilience</h4>
               <p className="text-brandNavy dark:text-white/70">
                 Organizations must demonstrate robust control environments that can withstand 
@@ -77,7 +77,7 @@ function StrategicFoundation() {
               </p>
             </div>
 
-            <div className="p-6 transition-shadow border rounded-lg shadow-sm bg-surfaceLight dark:bg-surfaceDark border-slate-200 hover:shadow-md">
+            <div className="h-full p-6 transition-shadow border shadow-sm rounded-2xl bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark hover:shadow-md">
               <h4 className="mb-3 text-lg font-bold text-brandDark dark:text-brandAccent">Enterprise Risk Culture</h4>
               <p className="text-brandNavy dark:text-white/70">
                 Sustainable risk management requires embedding risk awareness into daily 
@@ -85,7 +85,7 @@ function StrategicFoundation() {
               </p>
             </div>
 
-            <div className="p-6 transition-shadow border rounded-lg shadow-sm bg-surfaceLight dark:bg-surfaceDark border-slate-200 hover:shadow-md">
+            <div className="h-full p-6 transition-shadow border shadow-sm rounded-2xl bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark hover:shadow-md">
               <h4 className="mb-3 text-lg font-bold text-brandDark dark:text-brandAccent">Board Governance</h4>
               <p className="text-brandNavy dark:text-white/70">
                 Audit Committees require timely, reliable insights into control health across 

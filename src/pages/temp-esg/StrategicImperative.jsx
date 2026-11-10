@@ -34,14 +34,14 @@ const StrategicImperative = () => {
   ];
 
   return (
-    <section className="py-20 bg-bgLight dark:bg-bgDark">
+    <section className="py-16 bg-bgLight dark:bg-bgDark">
       <div className="container">
         {/* Section Header */}
         <div className="max-w-4xl mx-auto mb-16">
-          <h2 className="mb-6 text-4xl font-bold text-center font-heading md:text-5xl text-brandDark dark:text-white">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-center font-heading text-brandDark dark:text-white">
             Sustainability & ESG: The Strategic Imperative
           </h2>
-          <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+          <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
             Sustainability is no longer a peripheral concern—it has become a core determinant of enterprise value, 
             competitive resilience, and long-term business viability. Environmental, Social, and Governance (ESG) criteria 
             now fundamentally shape how organizations are evaluated by investors, regulators, customers, and society at large.
@@ -50,7 +50,7 @@ const StrategicImperative = () => {
 
         {/* Evolution Section */}
         <div className="max-w-6xl mx-auto mb-20">
-          <h3 className="mb-12 text-3xl font-bold text-center font-heading text-brandDark dark:text-white">
+          <h3 className="mb-12 text-xl md:text-2xl lg:text-3xl font-bold text-center font-heading text-brandDark dark:text-white">
             The Evolution from Compliance to Value Creation
           </h3>
           
@@ -121,7 +121,7 @@ const StrategicImperative = () => {
 
         {/* Multi-Stakeholder Imperative */}
         <div className="max-w-4xl mx-auto mt-20">
-          <h3 className="mb-8 text-3xl font-bold text-center font-heading text-brandDark dark:text-white">
+          <h3 className="mb-8 text-xl md:text-2xl lg:text-3xl font-bold text-center font-heading text-brandDark dark:text-white">
             The Multi-Stakeholder Imperative
           </h3>
           

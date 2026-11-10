@@ -128,7 +128,7 @@ export default function Card({
         {/* Title */}
         {title && (
           <motion.h3
-            className="mb-2 text-xl font-bold transition-colors text-white/90 group-hover:text-white"
+            className="mb-2 text-lg md:text-xl font-bold transition-colors text-white/90 group-hover:text-white"
             whileHover={{ x: 5 }}
             transition={{ duration: 0.3 }}
           >

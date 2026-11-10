@@ -22,14 +22,14 @@ export default function TributeSection() {
             <FaHeart /> In Loving Memory
           </div>
 
-          <h2 className="mb-6 text-4xl font-bold">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold">
             A Tribute to <br />
             <span className="text-brandPrimary dark:text-brandAccent">
               Excellence & Leadership
             </span>
           </h2>
 
-          <h3 className="px-2 mb-2 text-xl font-semibold">
+          <h3 className="px-2 mb-2 text-lg md:text-xl font-bold">
             Prabirsen Gupta
           </h3>
           <blockquote className="pl-4 mb-4 text-lg italic border-l-4 border-brandAccent text-brandNavy/80 dark:text-white/70">

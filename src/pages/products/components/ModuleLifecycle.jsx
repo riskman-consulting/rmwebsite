@@ -1,5 +1,6 @@
 import React from "react";
 import DocSection from "./DocSection";
+import { toTitleCase } from "../../../utils/titleCase";
 
 /** The cycle the module runs, as a numbered list joined by a rail. */
 const ModuleLifecycle = ({ mod }) => (
@@ -22,8 +23,8 @@ const ModuleLifecycle = ({ mod }) => (
             {index + 1}
           </span>
           <div className="pt-0.5">
-            <h3 className="mb-1 text-base font-bold leading-snug text-brandDark dark:text-white">
-              {step.title}
+            <h3 className="text-lg font-heading mb-1 font-semibold leading-snug text-brandDark dark:text-white">
+              {toTitleCase(step.title)}
             </h3>
             <p className="text-[15px] leading-relaxed text-gray-800 dark:text-white/80">
               {step.text}

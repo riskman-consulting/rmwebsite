@@ -33,13 +33,13 @@ const areas = [
  
 const BCPFocusAreas = () => {
   return (
-    <section className="py-24 bg-surfaceLight dark:bg-surfaceDark">
-      <div className="container max-w-6xl">
+    <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
+      <div className="container">
  
         {/* Header */}
         <div className="max-w-3xl">
           <div className="h-1.5 w-20 bg-brandAccent mb-6 rounded-full" />
-          <h2 className="text-3xl font-extrabold md:text-4xl text-brandDark dark:text-white">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Strategic Areas of Focus for Implementing BCP/DR
           </h2>
           <p className="mt-4 text-gray-600 dark:text-gray-300">
@@ -53,14 +53,14 @@ const BCPFocusAreas = () => {
           {areas.map((item, i) => (
             <div
               key={item.title}
-              className="transition duration-300 bg-white border shadow-sm group dark:bg-brandNavy/30 border-borderLight dark:border-borderDark rounded-2xl p-7 hover:shadow-xl hover:-translate-y-1"
+              className="h-full transition duration-300 bg-bgLight border shadow-sm group dark:bg-brandNavy/30 border-borderLight dark:border-borderDark rounded-2xl p-7 hover:shadow-xl hover:-translate-y-1"
             >
               {/* Number badge */}
               <div className="flex items-center justify-center w-10 h-10 mb-5 font-bold transition rounded-xl bg-brandPrimary/10 text-brandPrimary group-hover:bg-brandPrimary group-hover:text-white">
                 {i + 1}
               </div>
  
-              <h3 className="text-lg font-bold text-brandDark dark:text-white">
+              <h3 className="text-lg md:text-xl font-bold text-brandDark dark:text-white">
                 {item.title}
               </h3>
  

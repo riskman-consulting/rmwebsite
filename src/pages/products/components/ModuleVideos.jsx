@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import ModuleBreadcrumb from "./ModuleBreadcrumb";
+import { toTitleCase } from "../../../utils/titleCase";
 
 const ctaClass =
   "inline-flex items-center justify-center gap-1.5 mt-7 px-5 py-2.5 text-sm font-semibold transition-colors rounded-md bg-brandPrimary dark:bg-brandGold text-white dark:text-brandDark hover:bg-brandNavy dark:hover:bg-brandAccent";
@@ -58,13 +59,13 @@ const ModuleVideos = ({ product, mod, videos }) => (
           }`}
         >
           <p className="mb-3 text-sm font-semibold text-brandNavy/60 dark:text-white/50">
-            See it in action
+            See It in Action
           </p>
           {/* Same title style as ModuleHero */}
-          <h1 className="text-3xl font-bold leading-[1.15] sm:text-[32px] md:text-[38px] text-brandDark dark:text-white">
-            {mod.videoSection?.title || `${mod.shortName} walkthrough`}
+          <h1 className="text-[1.75rem] md:text-4xl lg:text-5xl font-heading font-bold leading-[1.15] text-brandDark dark:text-white">
+            {toTitleCase(mod.videoSection?.title || `${mod.shortName} Walkthrough`)}
           </h1>
-          <p className="mt-4 max-w-[62ch] text-[15px] leading-relaxed sm:text-base text-gray-800 dark:text-white/80">
+          <p className="mt-4 max-w-[62ch] text-base leading-relaxed text-gray-800 dark:text-white/80">
             {mod.videoSection?.lead ||
               "A short tour of the module, recorded on the working product."}
           </p>
@@ -102,8 +103,8 @@ const ModuleVideos = ({ product, mod, videos }) => (
               </div>
 
               <figcaption className="mt-3">
-                <h3 className="mb-2 text-base font-bold text-brandDark dark:text-white">
-                  {video.title}
+                <h3 className="text-lg font-heading mb-2 font-semibold text-brandDark dark:text-white">
+                  {toTitleCase(video.title)}
                 </h3>
                 {video.caption && (
                   <p className="text-sm leading-relaxed md:text-base text-gray-800 dark:text-white/80">

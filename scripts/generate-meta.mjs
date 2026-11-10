@@ -233,7 +233,7 @@ const FALLBACK_META = {
     },
   "/services/iso-certifications/iso-27701":
     {
-      title: "ISO 27701 Privacy Information Management | RiskMan Consulting",
+      title: "ISO 27701 Privacy Information (PIMS) | RiskMan Consulting",
       description:
         "ISO 27701 certification advisory for privacy information management — establish accountable, auditable data privacy practices aligned with GDPR and DPDP.",
     },
@@ -466,7 +466,12 @@ function flattenPortableText(value) {
 
 function buildIndustryHead(industry) {
   const url = `${SITE_URL}/industries/${industry.slug}`;
-  const title = `${industry.title} Industry Solutions | RiskMan Consulting`;
+  // Longest form that fits Google's ~60-character title display
+  const title = [
+    `${industry.title} Industry Solutions | RiskMan Consulting`,
+    `${industry.title} Industry | RiskMan Consulting`,
+    `${industry.title} | RiskMan Consulting`,
+  ].find((t) => t.length <= 60) || `${industry.title} | RiskMan`;
   const descRaw =
     flattenPortableText(industry.description) ||
     flattenPortableText(industry.subtitle) ||

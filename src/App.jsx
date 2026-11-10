@@ -49,7 +49,6 @@ import SupportServices from './pages/digital/support-services'
 
 // import ESGPage from "./pages/esg/ESGPage"
 
-import ESGTempPage from "./pages/temp-esg";
 import ISO27001 from './pages/iso/iso-27001'
 import IsoLayout from './pages/iso/IsoLayout'
 import TPRM from './pages/tprm/TPRMPage'
@@ -179,15 +178,8 @@ function SiteShell() {
           <Route path="/services" element={<ServicePage />} />
 
           <Route path="/services/bcp-dr" element={<BCPPage />} />
-          
-          <Route path="/services/esg" element={<ESGTempPage />} />
-
 
           <Route path="/services/cybersecurity" element={<CybersecurityPage />} />
-
-          <Route path='/services/iso-certifications' element={<IsoLayout />}>
-            <Route path='iso-27001' element={<ISO27001 />} />
-          </Route>
 
           // soc routes
           <Route path='/services/soc-services' element={<SocLayout />}>
@@ -317,7 +309,6 @@ function SiteShell() {
           <Route path="/insights/:slug" element={<BlogSingle />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
-          <Route path="/events" element={<Events />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/careers/:jobId" element={<JobDetail />} />
           <Route path="/blog" element={<Navigate to="/blogs" />} />

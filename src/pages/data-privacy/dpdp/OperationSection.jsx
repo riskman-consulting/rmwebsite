@@ -3,10 +3,10 @@ import React from 'react'
 
 function OperationSection() {
   return (
-     <section className="py-20 bg-white">
+    <section className="py-16 bg-white">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="font-heading text-3xl lg:text-4xl font-bold">Operational Resilience and Reporting</h2>
+            <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold">Operational Resilience and Reporting</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[

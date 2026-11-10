@@ -7,7 +7,7 @@ const BCPDRFrameworkPhases = () => {
 
         {/* SECTION HEADER */}
         <div className="max-w-3xl mb-14">
-          <h2 className="mb-4 text-2xl font-semibold font-heading md:text-3xl text-brandDark dark:text-brandAccent">
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-brandAccent">
             BCP / DR Framework &amp; Implementation Phases
           </h2>
           <p className="font-sans text-base leading-relaxed md:text-lg text-brandNavy dark:text-brandLight">
@@ -22,7 +22,7 @@ const BCPDRFrameworkPhases = () => {
 
           {/* PHASE I */}
           <div className="p-6 border rounded-2xl border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark">
-            <h3 className="mb-3 text-lg font-semibold font-heading text-brandDark dark:text-brandAccent">
+            <h3 className="mb-3 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-brandAccent">
               Phase I – Project Initiation
             </h3>
             <ul className="space-y-2 text-sm text-brandPrimary dark:text-brandLight/80">
@@ -35,7 +35,7 @@ const BCPDRFrameworkPhases = () => {
 
           {/* PHASE II */}
           <div className="p-6 border rounded-2xl border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark">
-            <h3 className="mb-3 text-lg font-semibold font-heading text-brandDark dark:text-brandAccent">
+            <h3 className="mb-3 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-brandAccent">
               Phase II – Business Impact Analysis (BIA)
             </h3>
             <ul className="space-y-2 text-sm text-brandPrimary dark:text-brandLight/80">
@@ -48,7 +48,7 @@ const BCPDRFrameworkPhases = () => {
 
           {/* PHASE III */}
           <div className="p-6 border rounded-2xl border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark">
-            <h3 className="mb-3 text-lg font-semibold font-heading text-brandDark dark:text-brandAccent">
+            <h3 className="mb-3 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-brandAccent">
               Phase III – Recovery Strategy
             </h3>
             <ul className="space-y-2 text-sm text-brandPrimary dark:text-brandLight/80">
@@ -60,7 +60,7 @@ const BCPDRFrameworkPhases = () => {
 
           {/* PHASE IV */}
           <div className="p-6 border rounded-2xl border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark">
-            <h3 className="mb-3 text-lg font-semibold font-heading text-brandDark dark:text-brandAccent">
+            <h3 className="mb-3 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-brandAccent">
               Phase IV – Plan Design &amp; Development
             </h3>
             <ul className="space-y-2 text-sm text-brandPrimary dark:text-brandLight/80">
@@ -73,7 +73,7 @@ const BCPDRFrameworkPhases = () => {
 
           {/* PHASE V */}
           <div className="p-6 border rounded-2xl border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark">
-            <h3 className="mb-3 text-lg font-semibold font-heading text-brandDark dark:text-brandAccent">
+            <h3 className="mb-3 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-brandAccent">
               Phase V – Implementation
             </h3>
             <ul className="space-y-2 text-sm text-brandPrimary dark:text-brandLight/80">
@@ -85,7 +85,7 @@ const BCPDRFrameworkPhases = () => {
 
           {/* PHASE VI */}
           <div className="p-6 border rounded-2xl border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark">
-            <h3 className="mb-3 text-lg font-semibold font-heading text-brandDark dark:text-brandAccent">
+            <h3 className="mb-3 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-brandAccent">
               Phase VI – Testing
             </h3>
             <ul className="space-y-2 text-sm text-brandPrimary dark:text-brandLight/80">
@@ -97,7 +97,7 @@ const BCPDRFrameworkPhases = () => {
 
           {/* PHASE VII */}
           <div className="p-6 border rounded-2xl border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark lg:col-span-3">
-            <h3 className="mb-3 text-lg font-semibold font-heading text-brandDark dark:text-brandAccent">
+            <h3 className="mb-3 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-brandAccent">
               Phase VII – Awareness, Training &amp; Maintenance
             </h3>
             <ul className="space-y-2 text-sm text-brandPrimary dark:text-brandLight/80">

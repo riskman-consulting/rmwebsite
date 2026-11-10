@@ -69,14 +69,14 @@ const FoundationalFrameworks = () => {
   ];
 
   return (
-    <section className="py-20 bg-bgLight dark:bg-bgDark">
+    <section className="py-16 bg-bgLight dark:bg-bgDark">
       <div className="container">
         {/* Section Header */}
         <div className="max-w-4xl mx-auto mb-16 text-center">
-          <h2 className="mb-6 text-4xl font-bold font-heading md:text-5xl text-brandDark dark:text-white">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Foundational ESG & Sustainability Frameworks
           </h2>
-          <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+          <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
             Effective ESG programs are built upon globally recognized frameworks that provide structure, 
             comparability, and credibility. RiskMan's approach integrates these foundational standards to 
             deliver comprehensive, internationally aligned sustainability solutions.
@@ -111,7 +111,7 @@ const FoundationalFrameworks = () => {
                     {framework.icon}
                   </div>
                   <div className="flex-1">
-                    <h3 className="mb-1 text-2xl font-bold font-heading text-brandDark dark:text-white">
+                    <h3 className="mb-1 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
                       {framework.title}
                     </h3>
                     <p className="text-sm text-gray-600 dark:text-gray-400">

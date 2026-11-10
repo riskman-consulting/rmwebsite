@@ -45,10 +45,10 @@
 //       <div className="container">
 //         {/* Section Header */}
 //         <div className="mb-16 text-center">
-//           <h3 className="mb-4 text-4xl font-black font-heading text-brandDark dark:text-surfaceLight">
+//           <h3 className="mb-4 text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark dark:text-surfaceLight">
 //             ESG Evolution Timeline
 //           </h3>
-//           <p className="max-w-2xl mx-auto font-sans text-lg text-brandDark/70 dark:text-surfaceLight/70">
+//           <p className="max-w-2xl mx-auto font-sans text-base text-brandDark/70 dark:text-surfaceLight/70">
 //             The three distinct phases of ESG evolution, moving from a necessity of compliance to a powerful driver of enterprise value.
 //           </p>
 //         </div>
@@ -184,10 +184,10 @@
 //       <div className="container px-4 mx-auto max-w-7xl">
 //         {/* Section Header */}
 //         <div className="mb-20 text-center">
-//           <h3 className="mb-4 text-4xl font-black font-heading text-brandDark dark:text-surfaceLight">
+//           <h3 className="mb-4 text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark dark:text-surfaceLight">
 //             ESG Evolution Timeline
 //           </h3>
-//           <p className="max-w-2xl mx-auto font-sans text-lg text-gray-600 dark:text-surfaceLight/70">
+//           <p className="max-w-2xl mx-auto font-sans text-base text-gray-600 dark:text-surfaceLight/70">
 //             The three distinct phases of ESG evolution, moving from a necessity of compliance to a powerful driver of enterprise value.
 //           </p>
 //         </div>
@@ -488,12 +488,12 @@ const ESGEvolutionTimeline = () => {
             ],
             idealFor: "For scaling organizations",
             // Growth Blue / Teal
-            colorClass: "text-brandPrimary dark:text-blue-400",
-            bgClass: "bg-blue-50 dark:bg-blue-900/30",
-            borderClass: "border-brandPrimary/30 dark:border-blue-500/30",
-            shadowClass: "shadow-brandPrimary/20 dark:shadow-blue-900/30",
-            iconBgClass: "bg-blue-100 dark:bg-blue-800",
-            timelineDotClass: "bg-brandPrimary dark:bg-blue-500"
+            colorClass: "text-brandPrimary dark:text-brandGold",
+            bgClass: "bg-brandPrimary/5 dark:bg-brandPrimary/20",
+            borderClass: "border-brandPrimary/30 dark:border-brandGold/30",
+            shadowClass: "shadow-brandPrimary/20 dark:shadow-black/30",
+            iconBgClass: "bg-brandPrimary/10 dark:bg-brandPrimary/40",
+            timelineDotClass: "bg-brandPrimary dark:bg-brandGold"
         },
         {
             period: "2020+",
@@ -506,12 +506,12 @@ const ESGEvolutionTimeline = () => {
             ],
             idealFor: "For ESG-led enterprises",
             // Accent / Gold
-            colorClass: "text-brandAccent dark:text-amber-400",
-            bgClass: "bg-amber-50 dark:bg-amber-900/20",
-            borderClass: "border-brandAccent/30 dark:border-amber-500/30",
-            shadowClass: "shadow-brandAccent/20 dark:shadow-amber-900/30",
-            iconBgClass: "bg-amber-100 dark:bg-amber-800",
-            timelineDotClass: "bg-brandAccent dark:bg-amber-500"
+            colorClass: "text-brandAccent dark:text-brandAccent",
+            bgClass: "bg-brandAccent/10 dark:bg-brandAccent/10",
+            borderClass: "border-brandAccent/30 dark:border-brandAccent/30",
+            shadowClass: "shadow-brandAccent/20 dark:shadow-black/30",
+            iconBgClass: "bg-brandAccent/20 dark:bg-brandAccent/20",
+            timelineDotClass: "bg-brandAccent"
         }
     ];
 
@@ -531,12 +531,9 @@ const ESGEvolutionTimeline = () => {
     };
 
     return (
-        <section className="relative py-24 overflow-hidden font-sans bg-white dark:bg-bgDark">
+      <section className="relative py-16 overflow-hidden font-sans bg-bgLight dark:bg-bgDark">
 
-            {/* Background Subtle Gradient */}
-            <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-slate-50/50 to-transparent dark:from-transparent dark:via-blue-950/10 dark:to-transparent" />
-
-            <div className="container relative z-10 px-4 mx-auto">
+            <div className="container relative z-10">
 
                 {/* Header Section */}
                 <div className="mb-20 text-center">
@@ -546,12 +543,12 @@ const ESGEvolutionTimeline = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h2 className="mb-6 text-4xl font-bold tracking-tight md:text-5xl font-heading text-brandDark dark:text-surfaceLight">
+                        <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-surfaceLight">
                             The Evolution of ESG
                         </h2>
-                        <p className="max-w-2xl mx-auto text-xl leading-relaxed text-slate-600 dark:text-slate-400">
+                        <p className="max-w-2xl mx-auto text-base md:text-lg leading-relaxed text-slate-600 dark:text-slate-400">
                             From mandatory compliance to a core driver of
-                            <span className="font-semibold text-brandPrimary dark:text-blue-400"> strategic value</span>.
+                            <span className="font-semibold text-brandPrimary dark:text-brandGold"> strategic value</span>.
                         </p>
                     </motion.div>
                 </div>
@@ -609,7 +606,7 @@ const ESGEvolutionTimeline = () => {
                                             <span className="mb-2 text-sm font-bold tracking-wider uppercase text-slate-500 dark:text-slate-400">
                                                 {item.period}
                                             </span>
-                                            <h3 className={`text-2xl font-bold ${item.colorClass} font-heading`}>
+                                            <h3 className={`text-lg md:text-xl font-bold ${item.colorClass} font-heading`}>
                                                 {item.phase}
                                             </h3>
                                         </div>

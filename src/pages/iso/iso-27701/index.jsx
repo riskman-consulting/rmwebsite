@@ -11,7 +11,7 @@ const ISO27701Page = () => {
     return (
         <>
             <Helmet>
-                <title>ISO 27701 Privacy Information Management | RiskMan Consulting</title>
+                <title>ISO 27701 Privacy Information (PIMS) | RiskMan Consulting</title>
                 <meta name="description" content="ISO 27701 certification advisory for privacy information management — establish accountable, auditable data privacy practices aligned with GDPR and DPDP." />
                 <link rel="canonical" href="https://www.riskman.in/services/iso-certifications/iso-27701" />
             </Helmet>
@@ -19,8 +19,8 @@ const ISO27701Page = () => {
             <CoreComponents />
             <PrivacyAuditLifecycle />
             <StrategicBenefits />
-            <ISO27701CTA />
             <ISO27701FAQ />
+            <ISO27701CTA />
         </>
     );
 };

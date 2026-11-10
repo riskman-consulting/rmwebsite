@@ -114,7 +114,7 @@ const MainEvent = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <h2 className="mb-6 text-5xl font-bold md:text-6xl tracking-tighter">
+                <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold ">
                   <span className="text-[#001F3F] dark:text-white">Explore our Collective</span>
                   <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFB800] to-[#FFC000] italic font-serif">
@@ -157,7 +157,7 @@ const MainEvent = () => {
                   <div className="w-24 h-24 mx-auto mb-8 rounded-[2.5rem] bg-white dark:bg-[#001A33] shadow-2xl flex items-center justify-center border border-[#FFC000]/10">
                     <FiCalendar className="w-10 h-10 text-[#FFC000]/40" />
                   </div>
-                  <h3 className="text-3xl font-bold text-[#001F3F] dark:text-white mb-4 tracking-tight">No Pathways Found</h3>
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#001F3F] dark:text-white mb-4 ">No Pathways Found</h3>
                   <p className="text-[#001F3F]/60 dark:text-white/60 max-w-md mx-auto italic">
                     "We couldn't find any events matching your current filters. Try exploring different years or resetting your search."
                   </p>

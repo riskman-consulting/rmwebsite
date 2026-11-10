@@ -10,24 +10,24 @@ const SMEAdvisory = () => {
   ];
 
   return (
-    <section className="py-20 transition-colors duration-300 bg-bgLight dark:bg-bgDark">
+    <section className="py-16 transition-colors duration-300 bg-bgLight dark:bg-bgDark">
       <div className="container">
-        <div className="overflow-hidden border shadow-xl bg-surfaceLight dark:bg-surfaceDark rounded-3xl border-borderLight dark:border-borderDark">
+        <div className="overflow-hidden border shadow-xl bg-surfaceLight dark:bg-surfaceDark rounded-2xl border-borderLight dark:border-borderDark">
           <div className="flex flex-col lg:flex-row">
             
             {/* Left Column: Visual/Heading Area */}
             <div className="flex flex-col justify-center p-10 lg:w-1/3 bg-brandNavy dark:bg-brandPrimary lg:p-16">
-              <h2 className="mb-6 text-3xl font-bold text-white font-heading md:text-4xl">
+              <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading ">
                 Support for <span className="text-brandAccent">Small Businesses</span>
               </h2>
-              <p className="font-sans text-lg leading-relaxed text-brandLight/80">
+              <p className="font-sans text-base leading-relaxed text-brandLight/80">
                 Financial advisory services are highly beneficial for small businesses as well. We provide the expertise needed to navigate both challenges and opportunities.
               </p>
             </div>
 
             {/* Right Column: Benefits Grid */}
             <div className="p-10 lg:w-2/3 lg:p-16">
-              <h3 className="mb-8 text-2xl font-bold font-heading text-brandDark dark:text-white">
+              <h3 className="mb-8 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
                 How We Empower Smaller Entities
               </h3>
               

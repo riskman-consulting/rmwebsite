@@ -63,10 +63,10 @@
 //       <div className="container">
 //         {/* Section Header */}
 //         <div className="max-w-3xl mx-auto mb-16 text-center">
-//           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl font-heading text-brandDark dark:text-white">
+//           <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //             Value Chain Management
 //           </h2>
-//           <p className="mb-6 text-lg text-gray-600 dark:text-gray-300">
+//           <p className="mb-6 text-base text-gray-600 dark:text-gray-300">
 //             Our framework covers the entire spectrum of credit operations to prevent the deterioration of borrower creditworthiness and reporting.
 //           </p>
           
@@ -118,7 +118,7 @@
 //                     </div>
 
 //                     {/* Title */}
-//                     <h3 className="mb-2 text-lg font-bold text-center text-brandDark dark:text-white">
+//                     <h3 className="mb-2 text-lg md:text-xl font-bold text-center text-brandDark dark:text-white">
 //                       {step.title}
 //                     </h3>
 
@@ -166,7 +166,7 @@
 //                     <span className={`inline-block px-3 py-1 bg-gradient-to-r ${step.color} text-white text-xs font-bold rounded-full mb-2`}>
 //                       {step.phase}
 //                     </span>
-//                     <h3 className="mb-2 text-xl font-bold text-brandDark dark:text-white">
+//                     <h3 className="mb-2 text-lg md:text-xl font-bold text-brandDark dark:text-white">
 //                       {step.title}
 //                     </h3>
 //                     <p className="mb-3 text-sm text-gray-600 dark:text-gray-400">
@@ -200,7 +200,7 @@
 //         <div className="p-8 text-white bg-gradient-to-br from-brandNavy to-brandDark rounded-2xl md:p-12">
 //           <div className="grid items-center gap-8 md:grid-cols-2">
 //             <div>
-//               <h3 className="mb-4 text-2xl font-bold md:text-3xl font-heading">
+//               <h3 className="mb-4 text-xl md:text-2xl lg:text-3xl font-bold font-heading">
 //                 Prudent Exposure Management
 //               </h3>
 //               <p className="mb-6 leading-relaxed text-gray-300">
@@ -244,19 +244,19 @@ import { FileText, Truck, Scale } from 'lucide-react';
 
 const PolicyValueChain = () => {
   return (
-    <section className="relative py-24 overflow-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark">
-      <div className="container px-4 mx-auto sm:px-6 lg:px-8">
+    <section className="relative py-16 overflow-hidden transition-colors duration-300 bg-bgLight dark:bg-bgDark">
+      <div className="container">
         <div className="grid items-center gap-16 lg:grid-cols-2">
           <div>
-            <h2 className="mb-3 text-sm font-bold tracking-wider uppercase text-brandPrimary dark:text-brandAccent">Process Flow</h2>
-            <h3 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+            <p className="mb-3 text-sm font-bold tracking-wider uppercase text-brandPrimary dark:text-brandAccent">Process Flow</p>
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
               Value Chain Management
-            </h3>
-            <p className="mb-10 text-lg text-gray-600 dark:text-gray-300">
+            </h2>
+            <p className="mb-10 text-base text-gray-600 dark:text-gray-300">
               Our framework covers the entire spectrum of credit operations to prevent the deterioration of borrower creditworthiness and reporting.
             </p>
 
-            <div className="space-y-12 relative before:absolute before:left-8 before:top-4 before:bottom-4 before:w-0.5 before:bg-gray-200 dark:before:bg-gray-700">
+            <div className="space-y-12 relative before:absolute before:left-8 before:top-4 before:bottom-4 before:w-0.5 before:bg-borderLight dark:before:bg-borderDark">
               <div className="relative flex gap-8">
                 <div className="z-10 flex items-center justify-center flex-shrink-0 w-16 h-16 text-white border-4 rounded-full shadow-lg bg-brandPrimary border-bgLight dark:border-bgDark">
                   <FileText className="w-7 h-7" />
@@ -290,7 +290,7 @@ const PolicyValueChain = () => {
           </div>
 
           <div className="relative">
-            <div className="relative overflow-hidden border-8 border-white shadow-2xl rounded-2xl dark:border-gray-800">
+            <div className="relative overflow-hidden border-8 border-white shadow-2xl rounded-2xl dark:border-surfaceDark">
               <img 
                 src="https://pixabay.com/get/g4a7004523dd931ae1277088febcb15f6c1ce22d7f430f0d7a2ea3c68a29f16ab62df7ef43f75d13b95498cb3a235fe700a993d005452d5d2e8a18f31c2e1bfac_1280.jpg" 
                 alt="Value Chain Process" 

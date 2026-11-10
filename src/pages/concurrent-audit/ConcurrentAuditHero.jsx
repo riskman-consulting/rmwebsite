@@ -37,7 +37,7 @@
 //                             initial={{ opacity: 0, y: 30 }}
 //                             animate={{ opacity: 1, y: 0 }}
 //                             transition={{ duration: 0.8, delay: 0.15 }}
-//                             className="text-4xl md:text-6xl font-extrabold leading-[1.1] text-brandDark dark:text-white mb-8 font-heading"
+//                             className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-[1.1] text-brandDark dark:text-white mb-8 font-heading"
 //                         >
 //                             Concurrent Audit:<br />
 //                             <span className="text-transparent bg-gradient-to-r from-brandGold to-brandAccent bg-clip-text">
@@ -49,7 +49,7 @@
 //                             initial={{ opacity: 0, y: 24 }}
 //                             animate={{ opacity: 1, y: 0 }}
 //                             transition={{ duration: 0.8, delay: 0.3 }}
-//                             className="text-lg font-light leading-relaxed text-brandNavy dark:text-white/70 max-w-[620px] mb-10 font-sans"
+//                             className="text-base font-light leading-relaxed text-brandNavy dark:text-white/70 max-w-[620px] mb-10 font-sans"
 //                         >
 //                             Transform your control environment from retrospective review to real-time risk mitigation. RiskMan's Concurrent Audit programs embed proactive oversight directly into your operational cycles, catching exceptions before they become liabilities.
 //                         </motion.p>
@@ -109,12 +109,11 @@ import concurrentImg from "../../assets/images/rbia/ai.jpg"
 const ConcurrentAuditHero = () => {
     const stats = [
         { number: "18+", label: "Years of Experience" },
-        { number: "Global", label: "Delivery Network" },
-        { number: "100%", label: "Process Assurance" }
+        { number: "Global", label: "Delivery Network" }
     ];
 
     return (
-        <section className="relative min-h-[90vh] flex items-center pt-10 pb-10 overflow-hidden bg-surfaceLight dark:bg-surfaceDark">
+      <section className="relative py-16 lg:py-20 overflow-hidden bg-surfaceLight dark:bg-surfaceDark">
             {/* Background Decorative Elements */}
             <div className="absolute top-0 right-0 w-1/2 h-full bg-brandGold/5 blur-[120px] pointer-events-none" />
             <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-brandNavy/10 rounded-full blur-[80px] pointer-events-none dark:opacity-100 opacity-30" />
@@ -142,10 +141,10 @@ const ConcurrentAuditHero = () => {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.15 }}
-                            className="text-3xl md:text-4xl font-extrabold leading-[1.1] text-brandDark dark:text-brandLight mb-8 font-heading"
+                            className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-[1.1] text-brandDark dark:text-brandLight mb-8 font-heading"
                         >
                             Concurrent Audit:<br />
-                            <span className="text-transparent bg-gradient-to-r from-brandGold to-brandAccent bg-clip-text">
+                            <span className="text-transparent bg-gradient-to-r from-brandPrimary to-brandNavy dark:from-brandGold dark:to-brandAccent bg-clip-text">
                                 Assurance at the Speed of Business
                             </span>
                         </motion.h1>
@@ -154,7 +153,7 @@ const ConcurrentAuditHero = () => {
                             initial={{ opacity: 0, y: 24 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.3 }}
-                            className="text-lg font-light leading-relaxed text-brandNavy dark:text-white/70 max-w-[620px] mb-10 font-sans"
+                            className="text-base font-light leading-relaxed text-brandNavy dark:text-white/70 max-w-[620px] mb-10 font-sans"
                         >
                             Transform your control environment from retrospective review to real-time risk mitigation. RiskMan's Concurrent Audit programs embed proactive oversight directly into your operational cycles, catching exceptions before they become liabilities.
                         </motion.p>
@@ -190,7 +189,6 @@ const ConcurrentAuditHero = () => {
                                 alt="Concurrent Audit Visualization"
                                 className="w-full h-[300px] md:h-[400px] lg:h-[500px] object-cover"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-brandDark/60 via-transparent to-transparent" />
                         </div>
                         {/* Decorative boxes */}
                         <div className="absolute w-24 h-24 border -top-6 -right-6 md:w-32 md:h-32 bg-brandGold/10 rounded-xl border-brandGold/20 -z-10" />

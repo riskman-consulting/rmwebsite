@@ -51,7 +51,7 @@ const FAQSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl font-semibold text-slate-900 dark:text-brandLight md:text-4xl"
+            className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-brandLight "
           >
             Frequently Asked Questions About Financial Advisory
           </motion.h2>

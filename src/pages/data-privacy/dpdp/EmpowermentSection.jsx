@@ -5,11 +5,11 @@ import { empowermentSteps } from './data'
 function EmpowermentSection() {
   return (
     
-         <section className="py-20 bg-brandLight">
+    <section className="py-16 bg-brandLight">
         <div className="container">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2">
-              <h2 className="font-heading text-3xl lg:text-4xl font-bold mb-6">Consent and Principal Empowerment</h2>
+              <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-6">Consent and Principal Empowerment</h2>
               <p className="text-gray-600 mb-8 leading-relaxed">The DPDP Act requires Organizations to implement transparent and revocable consent mechanisms across all digital touchpoints.</p>
               <div className="space-y-4">
                 {empowermentSteps.map((step, i) => (
@@ -26,7 +26,7 @@ function EmpowermentSection() {
             <div className="lg:w-1/2 w-full">
               <div className="aspect-video bg-brandNavy rounded-3xl p-12 flex flex-col justify-center relative overflow-hidden">
                 <Globe className="absolute -right-20 -bottom-20 text-brandAccent/10 w-80 h-80" />
-                <h3 className="text-brandGold text-3xl font-heading font-black mb-4">India Mandate</h3>
+                <h3 className="text-brandGold text-xl md:text-2xl lg:text-3xl font-heading font-bold mb-4">India Mandate</h3>
                 <p className="text-white text-lg font-light italic">"Valid, informed, and granular consent is no longer an option—it is the foundation of trust."</p>
               </div>
             </div>

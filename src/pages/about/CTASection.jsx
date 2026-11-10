@@ -9,14 +9,14 @@ const fadeInUp = {
 
 export default function CTASection() {
   return (
-    <section className="text-center transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark py-14 md:py-20">
+    <section className="text-center transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark py-16">
       <div className="container">
         <motion.h2
           variants={fadeInUp}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="mb-6 text-2xl font-bold md:text-3xl text-brandDark dark:text-white"
+          className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white"
         >
           Partner With
           <br />
@@ -28,7 +28,7 @@ export default function CTASection() {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="max-w-2xl mx-auto mb-8 text-xl text-gray-600 dark:text-gray-400"
+          className="max-w-2xl mx-auto mb-8 text-base md:text-lg text-gray-600 dark:text-gray-400"
         >
           Strengthen governance, manage risk and drive sustainable growth with
           confidence.
@@ -44,8 +44,8 @@ export default function CTASection() {
           <a href="/contact" className="inline-block px-8 py-4 text-lg text-white transition-all duration-300 rounded-full shadow-lg bg-brandDark hover:bg-brandPrimary dark:bg-brandAccent dark:text-brandDark dark:hover:bg-brandGold hover:shadow-xl hover:scale-105">
             Schedule Consultation
           </a>
-          <a href="/about" className="inline-block px-8 py-4 text-lg transition-all duration-300 border-2 rounded-full shadow-lg border-brandDark text-brandDark dark:border-brandAccent dark:text-brandAccent hover:bg-brandDark hover:text-white dark:hover:bg-brandAccent dark:hover:text-brandDark">
-            Learn More
+          <a href="/services" className="inline-block px-8 py-4 text-lg transition-all duration-300 border-2 rounded-full shadow-lg border-brandDark text-brandDark dark:border-brandAccent dark:text-brandAccent hover:bg-brandDark hover:text-white dark:hover:bg-brandAccent dark:hover:text-brandDark">
+            Explore Services
           </a>
         </motion.div>
       </div>

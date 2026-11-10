@@ -33,7 +33,7 @@ const WhyRiskManSection = () => {
 
   return (
     <>
-      <section className="py-24 overflow-hidden bg-bgLight dark:bg-bgDark">
+      <section className="py-16 overflow-hidden bg-bgLight dark:bg-bgDark">
         <div className="container">
           {/* Section Header */}
           <div className="flex flex-col items-end justify-between gap-8 mb-20 text-center lg:text-left lg:flex-row">
@@ -41,11 +41,11 @@ const WhyRiskManSection = () => {
               <span className="text-xs font-bold tracking-[4px] uppercase text-brandPrimary dark:text-brandGold mb-4 block">
                 The RiskMan Advantage
               </span>
-              <h2 className="text-4xl font-black leading-tight uppercase font-heading text-brandDark dark:text-white lg:text-5xl">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase font-heading text-brandDark dark:text-white ">
                 Why Global Leaders <br /> <span className="underline text-brandPrimary decoration-brandAccent underline-offset-8">Trust RiskMan</span>
               </h2>
             </div>
-            <p className="max-w-md font-sans text-lg text-brandDark/60 dark:text-surfaceLight/60 lg:text-right">
+            <p className="max-w-md font-sans text-base text-brandDark/60 dark:text-surfaceLight/60 lg:text-right">
               We bridge the gap between strategic sustainability ambition and operational execution excellence.
             </p>
           </div>
@@ -97,7 +97,7 @@ const WhyRiskManSection = () => {
           <div className="grid grid-cols-1 gap-12 mb-20 md:grid-cols-2 lg:grid-cols-4">
             {/* Brand Column */}
             <div className="lg:col-span-1">
-              <h3 className="mb-6 text-2xl font-black tracking-tighter text-white">
+              <h3 className="mb-6 text-lg md:text-xl font-bold text-white">
                 RISK<span className="text-brandGold">MAN</span>
               </h3>
               <p className="mb-6 text-sm leading-relaxed text-white/50">

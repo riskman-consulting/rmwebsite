@@ -22,7 +22,7 @@ import FutureProofSection from './Future_ProofSection';
 
 const DataPrivacyPage = () => {
   return (
-    <div className="font-sans bg-bgLight text-brandDark dark:bg-slate-900 dark:text-white transition-colors duration-300">
+    <div className="font-sans bg-bgLight text-brandDark dark:bg-bgDark dark:text-white transition-colors duration-300">
       <Helmet>
         <title>Data Privacy & Compliance Services | RiskMan Consulting</title>
         <meta name="description" content="RiskMan Consulting helps organizations achieve data privacy compliance across DPDP, GDPR, and other regulatory frameworks through expert advisory, implementation, and ongoing assurance." />
@@ -38,14 +38,14 @@ const DataPrivacyPage = () => {
       {/* 3. HIGH-VALUE PRIVACY OUTCOMES */}
       <HighSection />
 
-      {/* 4. FUTURE-PROOF STRATEGY (Visual Section) */}
-      <FutureProofSection />
-      
+      {/* 4. TRUST SECTION */}
+      <TrustSection />
+
       {/* 5. FAQ SECTION */}
       <FAQSection />
 
-      {/* 6. TRUST SECTION */}
-      <TrustSection />
+      {/* 6. FUTURE-PROOF STRATEGY (CTA) */}
+      <FutureProofSection />
 
     </div>
   );

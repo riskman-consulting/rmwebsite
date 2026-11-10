@@ -20,7 +20,7 @@ const HeroSection = () => {
         className="absolute inset-0 pointer-events-none bg-[radial-gradient(55%_75%_at_90%_0%,rgba(0,64,128,0.07),transparent_60%)] dark:bg-[radial-gradient(55%_75%_at_90%_0%,rgba(255,184,0,0.08),transparent_60%)]"
       />
 
-      <div className="container relative py-12 md:py-16 lg:py-20">
+      <div className="container relative py-16 lg:py-20">
         <div className="grid items-start grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14">
           {/* Positioning */}
           <div className="lg:col-span-7">
@@ -40,7 +40,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-3xl font-black leading-[1.1] font-heading sm:text-4xl xl:text-5xl text-brandDark dark:text-white"
+              className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-[1.1] font-heading text-brandDark dark:text-white"
             >
               Financial Accounting and{" "}
               <span className="text-brandPrimary dark:text-brandGold">
@@ -52,7 +52,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.18 }}
-              className="max-w-2xl mt-5 text-base leading-relaxed sm:text-lg md:text-xl text-brandNavy/70 dark:text-white/60"
+              className="max-w-2xl mt-5 text-base md:text-lg leading-relaxed text-brandNavy/70 dark:text-white/60"
             >
               From running the day-to-day finance function to standing up a CFO
               office, closing the books, and getting you audit- and deal-ready —

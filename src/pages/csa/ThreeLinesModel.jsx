@@ -5,11 +5,11 @@ export default function ThreeLinesModel() {
     <section className="py-16 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
       <div className="container max-w-6xl px-6 mx-auto">
         {/* Section Header */}
-        <h2 className="mb-8 text-4xl font-bold text-brandDark dark:text-brandAccent">
+        <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-brandAccent">
           CSA Within the Three Lines Model
         </h2>
 
-        <p className="mb-12 text-lg leading-relaxed text-brandNavy dark:text-white/70">
+        <p className="mb-12 text-base leading-relaxed text-brandNavy dark:text-white/70">
           The IIA's Three Lines Model provides the foundational governance architecture within 
           which effective CSA programs operate. RiskMan's approach ensures that CSA is not merely 
           a compliance activity but a strategic enabler of integrated risk governance across all 
@@ -29,7 +29,7 @@ export default function ThreeLinesModel() {
                 </div>
                 <span className="text-sm font-semibold tracking-wide">FIRST LINE</span>
               </div>
-              <h3 className="text-2xl font-bold">Risk Ownership & Control Accountability</h3>
+              <h3 className="text-lg md:text-xl font-bold">Risk Ownership & Control Accountability</h3>
             </div>
             <div className="p-6">
               <p className="mb-4 text-brandNavy dark:text-white/70">
@@ -77,7 +77,7 @@ export default function ThreeLinesModel() {
                 </div>
                 <span className="text-sm font-semibold tracking-wide">SECOND LINE</span>
               </div>
-              <h3 className="text-2xl font-bold">Independent Challenge & Oversight</h3>
+              <h3 className="text-lg md:text-xl font-bold">Independent Challenge & Oversight</h3>
             </div>
             <div className="p-6">
               <p className="mb-4 text-brandNavy dark:text-white/70">
@@ -123,7 +123,7 @@ export default function ThreeLinesModel() {
                 </div>
                 <span className="text-sm font-semibold tracking-wide">THIRD LINE</span>
               </div>
-              <h3 className="text-2xl font-bold">Risk-Based Assurance</h3>
+              <h3 className="text-lg md:text-xl font-bold">Risk-Based Assurance</h3>
             </div>
             <div className="p-6">
               <p className="mb-4 text-brandNavy dark:text-white/70">
@@ -158,7 +158,7 @@ export default function ThreeLinesModel() {
 
         {/* Governance Alignment Callout */}
         <div className="p-8 border-l-4 border-yellow-500 rounded-r-lg shadow-md bg-gradient-to-r from-yellow-50 to-yellow-100 dark:from-brandDark/10 dark:to-brandDark/20">
-          <h3 className="mb-3 text-xl font-bold text-brandDark dark:text-brandAccent">Governance Alignment</h3>
+          <h3 className="mb-3 text-lg md:text-xl font-bold text-brandDark dark:text-brandAccent">Governance Alignment</h3>
           <p className="italic leading-relaxed text-brandPrimary dark:text-white/70">
             RiskMan's CSA methodology ensures seamless integration across all three lines, creating 
             a unified control assurance ecosystem that satisfies regulatory expectations and Board 
@@ -181,7 +181,7 @@ export default function ThreeLinesModel() {
 //   return (
 //     <section className="py-12 bg-white dark:bg-slate-900">
 //       <div className="container px-6 mx-auto">
-//         <h2 className="mb-8 text-3xl font-bold text-center text-slate-800 dark:text-white">
+//         <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold text-center text-slate-800 dark:text-white">
 //           Visual Framework: Three Lines Model
 //         </h2>
 

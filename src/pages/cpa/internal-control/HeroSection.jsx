@@ -1,10 +1,12 @@
 import { ArrowLeft, Zap } from 'lucide-react'
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import image from "../../../assets/images/cpa/internal-control/hero.png"
 
 function HeroSection() {
+  const navigate = useNavigate()
   return (
-    <section className="relative bg-brandDark text-white py-24 lg:py-36 overflow-hidden">
+    <section className="relative bg-brandDark text-white py-16 lg:py-20 overflow-hidden">
       
       {/* Decorative Glow (your original) */}
       <div className="absolute inset-0 opacity-10">
@@ -20,20 +22,20 @@ function HeroSection() {
               <Zap size={14} className="animate-pulse" /> Operational Excellence
             </div>
 
-            <h1 className="font-heading text-5xl lg:text-7xl font-bold leading-tight mb-6">
+            <h1 className="font-heading text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
               Optimizing Institutional <span className="text-brandAccent">Control Environments</span>
             </h1>
 
-            <p className="text-lg lg:text-xl text-gray-300 mb-10 leading-relaxed">
+            <p className="text-base md:text-lg text-gray-300 mb-10 leading-relaxed">
               RiskMan empowers Organizations to identify structural vulnerabilities and implement robust control activities that prevent fraud and enhance operational performance.
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <button className="flex items-center gap-2 bg-transparent border border-white/30 hover:bg-white/10 px-8 py-4 rounded-md font-bold transition-all">
+              <button onClick={() => navigate("/services/cpa-us-assurance")} className="flex items-center gap-2 bg-transparent border border-white/30 hover:bg-white/10 px-8 py-4 rounded-md font-bold transition-all">
                 <ArrowLeft size={18} /> Back To Assurance
               </button>
 
-              <button className="bg-brandAccent text-brandDark px-8 py-4 rounded-md font-bold hover:bg-brandGold transition-all shadow-xl shadow-brandAccent/20">
+              <button onClick={() => navigate("/contact")} className="bg-brandAccent text-brandDark px-8 py-4 rounded-md font-bold hover:bg-brandGold transition-all shadow-xl shadow-brandAccent/20">
                 Discuss Your Controls
               </button>
             </div>

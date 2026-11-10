@@ -15,15 +15,15 @@ export default function MethodologySection() {
           
           <div className="grid grid-cols-1 gap-6 mt-10 md:grid-cols-3">
             <div className="p-6 bg-white border shadow-sm dark:bg-brandNavy/20 border-slate-200 dark:border-brandPrimary/20 rounded-xl dark:shadow-none">
-              <h3 className="mb-3 text-lg font-bold text-brandPrimary dark:text-brandAccent">Phase I-II: Diagnostic & Design</h3>
+              <h3 className="mb-3 text-lg md:text-xl font-bold text-brandPrimary dark:text-brandAccent">Phase I-II: Diagnostic & Design</h3>
               <p className="text-sm text-slate-600 dark:text-slate-400">Review existing practices, map current processes, and develop Core SOPs with standardized process maps and clear RACI matrices.</p>
             </div>
             <div className="p-6 bg-white border shadow-sm dark:bg-brandNavy/20 border-slate-200 dark:border-brandPrimary/20 rounded-xl dark:shadow-none">
-              <h3 className="mb-3 text-lg font-bold text-brandPrimary dark:text-brandAccent">Phase III-IV: Customization & Alignment</h3>
+              <h3 className="mb-3 text-lg md:text-xl font-bold text-brandPrimary dark:text-brandAccent">Phase III-IV: Customization & Alignment</h3>
               <p className="text-sm text-slate-600 dark:text-slate-400">Identify location-specific deviations, conduct alignment workshops, and ensure validation of SOP design and controls.</p>
             </div>
             <div className="p-6 bg-white border shadow-sm dark:bg-brandNavy/20 border-slate-200 dark:border-brandPrimary/20 rounded-xl dark:shadow-none">
-              <h3 className="mb-3 text-lg font-bold text-brandPrimary dark:text-brandAccent">Phase V: Finalization</h3>
+              <h3 className="mb-3 text-lg md:text-xl font-bold text-brandPrimary dark:text-brandAccent">Phase V: Finalization</h3>
               <p className="text-sm text-slate-600 dark:text-slate-400">Deliver final SOPs, provide MIS templates, conduct training workshops, and ensure smooth internal rollout.</p>
             </div>
           </div>

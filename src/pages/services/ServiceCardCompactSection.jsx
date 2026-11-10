@@ -41,7 +41,7 @@ export const ServiceCardCompact = ({ service, index }) => {
         className="block h-full group"
       >
         {/* Main Card with CURTAIN OVER ENTIRE CARD */}
-        <div className="relative h-full flex flex-col bg-surfaceLight dark:bg-surfaceDark border border-borderLight dark:border-borderDark rounded-[2.5rem] overflow-hidden transition-all duration-500 hover:shadow-2xl hover:border-brandAccent/40">
+        <div className="relative h-full flex flex-col bg-surfaceLight dark:bg-surfaceDark border border-borderLight dark:border-borderDark rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:border-brandAccent/40">
           
           {/* CURTAIN EFFECT - Covers ENTIRE card, not just image */}
           <motion.div
@@ -104,7 +104,7 @@ export const ServiceCardCompact = ({ service, index }) => {
             </motion.span>
 
             <motion.h3 
-              className="mb-4 text-2xl font-bold tracking-tight transition-colors duration-300 text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent"
+              className="mb-4 text-lg md:text-xl font-bold transition-colors duration-300 text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

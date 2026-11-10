@@ -6,7 +6,9 @@
  * day in the site's own Sanity dataset, `analytics.day.YYYY-MM-DD`, holding
  * totals and per-page / source / device / country / hour counts, the page each
  * visit started on (and which of those came from search), and the missing
- * URLs people opened (sent by the Not Found page as `type: "notFound"`). Nothing about the
+ * URLs people opened (sent by the Not Found page as `type: "notFound"`), and
+ * real-visitor loading speed (`type: "vitals"`, counted into `speed` /
+ * `speedPages` buckets for the Studio's Speed tab). Nothing about the
  * visitor is stored beyond those counters: no IP, no cookie, no user agent.
  *
  * Needs SANITY_WRITE_TOKEN (a Sanity API token with Editor rights) in the
@@ -39,6 +41,47 @@ const deviceOf = (ua) => {
 
 const SOURCES = ['Search', 'LinkedIn', 'Social', 'Other site', 'Direct']
 
+/**
+ * Loading-speed buckets for real-visitor measurements (`type: "vitals"`).
+ * Each value is counted in the first bucket it fits ("le_<edge>"), or "over".
+ * The edges include the good / poor limits so the Studio can rate exactly.
+ * Keep in sync with SPEED_BUCKETS in src/sanity/tools/analytics/SpeedTab.jsx.
+ */
+const SPEED_BUCKETS = {
+  lcp: [1000, 1500, 2000, 2500, 3000, 4000, 6000, 10000],
+  fcp: [1000, 1500, 1800, 2500, 3000, 4000, 6000],
+  ttfb: [200, 400, 600, 800, 1200, 1800, 3000],
+  inp: [100, 200, 300, 500, 1000],
+  cls: [0.05, 0.1, 0.15, 0.25, 0.5],
+  load: [1000, 2000, 3000, 4000, 6000, 8000, 12000],
+}
+const bucketOf = (edges, value) => {
+  const edge = edges.find((e) => value <= e)
+  return edge === undefined ? 'over' : `le_${String(edge).replace('.', '_')}`
+}
+const validMetric = (name, value) =>
+  typeof value === 'number' && Number.isFinite(value) && value >= 0 && value <= (name === 'cls' ? 10 : 120000)
+
+/** Counters for one visit's speed measurements, or null if nothing usable was sent. */
+const speedCounters = (metrics, device, pageKey) => {
+  if (!metrics || typeof metrics !== 'object') return null
+  const counters = {}
+  const objects = []
+  for (const [name, edges] of Object.entries(SPEED_BUCKETS)) {
+    const value = metrics[name]
+    if (!validMetric(name, value)) continue
+    const group = `speed.${keyOf('d', device)}_${name}`
+    objects.push(group)
+    counters[`${group}.${bucketOf(edges, value)}`] = 1
+    // Per page, only LCP — enough to see which pages are slow
+    if (name === 'lcp') {
+      objects.push(`speedPages.${pageKey}`)
+      counters[`speedPages.${pageKey}.${bucketOf(edges, value)}`] = 1
+    }
+  }
+  return Object.keys(counters).length ? { counters, objects } : null
+}
+
 const readBody = (req) => {
   if (req.body && typeof req.body === 'object') return req.body
   try {
@@ -68,6 +111,27 @@ export default async function handler(req, res) {
   const country = /^[A-Z]{2}$/.test(req.headers['x-vercel-ip-country'] || '') ? req.headers['x-vercel-ip-country'] : 'XX'
   const device = deviceOf(ua)
   const source = SOURCES.includes(body.source) ? body.source : null
+
+  // Real-visitor loading speed (sent once per page load by PageViewTracker)
+  if (body.type === 'vitals') {
+    const speed = speedCounters(body.metrics, device, pageKey)
+    if (!speed) return res.status(204).end()
+    const speedMutations = [
+      { createIfNotExists: { _id: id, _type: 'analyticsDay', date } },
+      { patch: { id, setIfMissing: { speed: {}, speedPages: {}, paths: {} } } },
+      { patch: { id, setIfMissing: Object.fromEntries(speed.objects.map((k) => [k, {}])) } },
+      {
+        patch: {
+          id,
+          setIfMissing: Object.fromEntries(Object.keys(speed.counters).map((k) => [k, 0])),
+          set: { [`paths.${pageKey}`]: path },
+          inc: speed.counters,
+        },
+      },
+    ]
+    await mutate(speedMutations)
+    return res.status(204).end()
+  }
 
   const notFound = body.type === 'notFound'
 
@@ -115,6 +179,12 @@ export default async function handler(req, res) {
     },
   ]
 
+  await mutate(mutations)
+  return res.status(204).end()
+}
+
+/** Apply mutations to the dataset; failures are logged, never thrown. */
+async function mutate(mutations) {
   try {
     const response = await fetch(`https://${PROJECT_ID}.api.sanity.io/v2024-01-01/data/mutate/${DATASET}`, {
       method: 'POST',
@@ -125,5 +195,4 @@ export default async function handler(req, res) {
   } catch (err) {
     console.error('[track] Sanity mutate error', err)
   }
-  return res.status(204).end()
 }

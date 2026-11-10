@@ -119,8 +119,8 @@ export default function FeaturesSection() {
                 </div>
               </div>
               <div>
-                <h3 className="mb-2 text-3xl font-bold transition-colors duration-300 text-brandDark dark:text-white">{f.title}</h3>
-                <p className="mb-3 text-lg font-semibold transition-colors duration-300 text-brandNavy/70 dark:text-white/70">
+                <h3 className="mb-2 text-xl md:text-2xl lg:text-3xl font-bold transition-colors duration-300 text-brandDark dark:text-white">{f.title}</h3>
+                <p className="mb-3 text-base font-semibold transition-colors duration-300 text-brandNavy/70 dark:text-white/70">
                   {f.subtitle}
                 </p>
                 <p className="text-sm text-gray-500 transition-colors duration-300 dark:text-gray-400">{f.description}</p>

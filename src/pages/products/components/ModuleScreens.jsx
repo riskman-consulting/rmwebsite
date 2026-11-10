@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import DocSection from "./DocSection";
+import { toTitleCase } from "../../../utils/titleCase";
 
 /**
  * Product screenshots for the module, framed with a thin border and the
@@ -25,8 +26,8 @@ const Frame = ({ screen }) => (
 
 const Caption = ({ screen }) => (
   <figcaption className="max-w-3xl mt-4">
-    <h3 className="mb-2 text-base font-bold text-brandDark dark:text-white">
-      {screen.title}
+    <h3 className="text-lg font-heading mb-2 font-semibold text-brandDark dark:text-white">
+      {toTitleCase(screen.title)}
     </h3>
     <p className="text-sm leading-relaxed md:text-base text-gray-800 dark:text-white/80">
       {screen.caption}
@@ -70,7 +71,7 @@ const ModuleScreens = ({ mod }) => {
                       : "border-borderLight dark:border-borderDark text-gray-800 dark:text-white/80 hover:border-brandAccent hover:text-brandPrimary dark:hover:text-brandGold"
                   }`}
                 >
-                  {screen.tab || screen.title}
+                  {toTitleCase(screen.tab || screen.title)}
                 </button>
               ))}
             </div>

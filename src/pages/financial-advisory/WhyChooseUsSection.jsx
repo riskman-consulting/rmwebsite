@@ -45,7 +45,7 @@ const WhyChooseUsSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl font-semibold text-slate-900 dark:text-brandLight md:text-4xl"
+            className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-brandLight "
           >
             Why Organisations Trust Our Financial Advisory Approach
           </motion.h2>
@@ -63,7 +63,7 @@ const WhyChooseUsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mx-auto mt-8 text-lg leading-relaxed text-slate-600 dark:text-brandLight/70"
+            className="mx-auto mt-8 text-base leading-relaxed text-slate-600 dark:text-brandLight/70"
           >
             Financial advisory creates real value only when it is aligned with
             business execution. Our focus is to combine financial expertise,
@@ -85,7 +85,7 @@ const WhyChooseUsSection = () => {
               transition={{ delay: index * 0.07 }}
               className="p-8 transition border shadow-sm rounded-2xl border-borderLight bg-surfaceLight hover:-translate-y-1 hover:shadow-lg dark:border-borderDark dark:bg-surfaceDark"
             >
-              <h3 className="mb-4 text-lg font-semibold text-slate-900 dark:text-brandLight">
+              <h3 className="mb-4 text-lg md:text-xl font-bold text-slate-900 dark:text-brandLight">
                 {item.title}
               </h3>
 

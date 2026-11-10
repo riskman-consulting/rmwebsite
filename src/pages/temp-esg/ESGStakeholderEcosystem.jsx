@@ -62,7 +62,7 @@
 //       <div className="container">
 //         {/* Header */}
 //         <div className="mb-12 text-center">
-//           <h3 className="mb-4 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+//           <h3 className="mb-4 text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark dark:text-white">
 //             ESG Stakeholder Ecosystem
 //           </h3>
 //           <p className="text-gray-600 dark:text-gray-400">
@@ -162,7 +162,7 @@
 //                   {stakeholders[activeStakeholder].icon}
 //                 </div>
 //                 <div className="flex-1">
-//                   <h3 className="text-lg font-semibold" style={{ color: stakeholders[activeStakeholder].color }}>
+//                   <h3 className="text-lg md:text-xl font-bold" style={{ color: stakeholders[activeStakeholder].color }}>
 //                     {stakeholders[activeStakeholder].title}
 //                   </h3>
 //                   <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">{stakeholders[activeStakeholder].description}</p>

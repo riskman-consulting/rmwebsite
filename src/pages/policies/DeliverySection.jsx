@@ -10,14 +10,14 @@ const GlobalModelDiagram = () => (
     </defs>
     {/* Central HQ */}
     <rect x="185" y="20" width="150" height="56" rx="8" className="fill-brandNavy dark:fill-[url(#hqg)] stroke-brandPrimary dark:stroke-brandAccent" strokeWidth="1.5" />
-    <text x="260" y="44" textAnchor="middle" className="fill-white dark:fill-brandAccent" fontSize="10" fontWeight="700" fontFamily="Montserrat, sans-serif">CENTRAL GOVERNANCE</text>
+    <text x="260" y="44" textAnchor="middle" className="fill-white dark:fill-brandAccent" fontSize="10" fontWeight="700" fontFamily="Inter, sans-serif">CENTRAL GOVERNANCE</text>
     <text x="260" y="60" textAnchor="middle" className="fill-slate-300 dark:fill-slate-400" fontSize="9" fontFamily="Inter, sans-serif">Global Policy Framework</text>
     {/* Connectors */}
     {[80, 260, 440].map((x, i) => (
       <g key={i}>
         <line x1="260" y1="76" x2={x} y2="120" className="stroke-brandPrimary dark:stroke-[#004080]" strokeWidth="1.5" strokeDasharray="4,3" />
         <rect x={x - 65} y="120" width="130" height="50" rx="6" className="fill-brandPrimary dark:fill-[#003366] stroke-brandNavy dark:stroke-[#004080]" strokeWidth="1" />
-        <text x={x} y="142" textAnchor="middle" fill="#fff" fontSize="10" fontWeight="600" fontFamily="Montserrat, sans-serif">
+        <text x={x} y="142" textAnchor="middle" fill="#fff" fontSize="10" fontWeight="600" fontFamily="Inter, sans-serif">
           {["AMERICAS", "EMEA", "APAC"][i]}
         </text>
         <text x={x} y="158" textAnchor="middle" className="fill-slate-200 dark:fill-slate-400" fontSize="8" fontFamily="Inter, sans-serif">Regional Adaptation</text>

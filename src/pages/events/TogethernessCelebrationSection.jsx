@@ -73,11 +73,11 @@ export default function TogethernessCelebration() {
             </span>
           </div>
 
-          <h2 className="mb-5 text-4xl font-black sm:text-5xl font-heading text-brandDark dark:text-white">
+          <h2 className="mb-5 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             5 Years of Togetherness
           </h2>
 
-          <p className="text-lg leading-relaxed text-brandDark/70 dark:text-white/60">
+          <p className="text-base leading-relaxed text-brandDark/70 dark:text-white/60">
             Celebrating milestones, memories, and the bonds that make RiskMan a
             family.
           </p>
@@ -113,7 +113,7 @@ export default function TogethernessCelebration() {
                 </div>
 
                 <div className="p-8">
-                  <h3 className="mb-3 text-2xl font-bold font-heading text-brandDark dark:text-white">
+                  <h3 className="mb-3 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
                     {item.title}
                   </h3>
                   <p className="leading-relaxed text-brandDark/70 dark:text-white/60">
@@ -133,7 +133,7 @@ export default function TogethernessCelebration() {
           backdrop-blur-xl"
         >
           <div className="mb-12 text-center">
-            <h3 className="text-3xl font-black sm:text-4xl font-heading text-brandDark dark:text-white">
+            <h3 className="text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark dark:text-white">
               Our Celebration in Numbers
             </h3>
             <p className="mt-3 text-brandDark/60 dark:text-white/60">

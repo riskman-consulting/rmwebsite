@@ -181,10 +181,10 @@
 //               <Brain className="w-12 h-12 text-brandAccent" />
 //               <span className="text-lg font-semibold tracking-wider uppercase text-brandAccent">AI-Powered Solutions</span>
 //             </div>
-//             <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight animate-[fadeInUp_0.8s_ease-out_0.1s_both]">
+//             <h1 className="font-heading text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight animate-[fadeInUp_0.8s_ease-out_0.1s_both]">
 //               Harness AI for Enterprise Risk Mastery
 //             </h1>
-//             <p className="text-xl md:text-2xl text-white/90 mb-10 leading-relaxed max-w-3xl animate-[fadeInUp_0.8s_ease-out_0.2s_both]">
+//             <p className="text-base md:text-lg text-white/90 mb-10 leading-relaxed max-w-3xl animate-[fadeInUp_0.8s_ease-out_0.2s_both]">
 //               Elevate your risk strategy with RiskMan's AI-driven technology solutions. Achieve precision, foresight, and compliance in a dynamic threat landscape seamlessly integrated for your organization.
 //             </p>
 //             <div className="flex flex-wrap gap-4 animate-[fadeInUp_0.8s_ease-out_0.3s_both]">
@@ -224,14 +224,14 @@
 //             AI-Driven Risk Mastery
 //           </div>
           
-//           <h1 className="text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl font-heading">
+//           <h1 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight text-white font-heading">
 //             Harness AI for <br />
 //             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandAccent to-brandGold">
 //               Enterprise Risk Mastery
 //             </span>
 //           </h1>
           
-//           <p className="max-w-xl pl-6 text-lg leading-relaxed text-gray-300 border-l-4 border-brandAccent">
+//           <p className="max-w-xl pl-6 text-base leading-relaxed text-gray-300 border-l-4 border-brandAccent">
 //             Elevate your risk strategy with RiskMan's AI-driven technology solutions. Achieve precision, foresight, and compliance in a dynamic threat landscape seamlessly integrated for your organization.
 //           </p>
           
@@ -305,10 +305,10 @@
 //       <section id="services" className="py-20 bg-white dark:bg-surfaceDark">
 //         <div className="container">
 //           <div className="max-w-4xl mx-auto mb-16 text-center">
-//             <h2 className="mb-6 text-4xl font-bold font-heading md:text-5xl text-brandDark dark:text-white">
+//             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //               AI-Powered Risk Intelligence
 //             </h2>
-//             <p className="text-xl leading-relaxed text-gray-600 dark:text-gray-300">
+//             <p className="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300">
 //               Transform raw data into strategic foresight with RiskMan's AI ecosystem, empowering CXOs to lead with precision.
 //             </p>
 //           </div>
@@ -333,7 +333,7 @@
 //                     </div>
 //                   </div>
 
-//                   <h3 className="mb-4 text-2xl font-bold transition-colors duration-300 font-heading text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
+//                   <h3 className="mb-4 text-lg md:text-xl font-bold transition-colors duration-300 font-heading text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
 //                     {feature.title}
 //                   </h3>
 //                   <p className="leading-relaxed text-gray-600 dark:text-gray-300">
@@ -350,10 +350,10 @@
 //       <section className="py-12 bg-gradient-to-r from-brandPrimary via-brandNavy to-brandDark">
 //         <div className="container">
 //           <div className="text-center">
-//             <h3 className="mb-4 text-3xl font-bold text-white font-heading md:text-4xl">
+//             <h3 className="mb-4 text-xl md:text-2xl lg:text-3xl font-bold text-white font-heading ">
 //               Strategic Outcomes
 //             </h3>
-//             <p className="max-w-4xl mx-auto text-xl text-white/90">
+//             <p className="max-w-4xl mx-auto text-base md:text-lg text-white/90">
 //               Gain unified visibility, regulatory agility, and proven ROI, positioning your organization as a risk management leader.
 //             </p>
 //           </div>
@@ -364,10 +364,10 @@
 //       <section className="py-20 bg-bgLight dark:bg-bgDark">
 //         <div className="container">
 //           <div className="max-w-4xl mx-auto mb-16 text-center">
-//             <h2 className="mb-6 text-4xl font-bold font-heading md:text-5xl text-brandDark dark:text-white">
+//             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //               Advanced Technology Integration
 //             </h2>
-//             <p className="text-xl leading-relaxed text-gray-600 dark:text-gray-300">
+//             <p className="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300">
 //               Embed cutting-edge tech into your risk framework with RiskMan, driving agility and resilience for global enterprises.
 //             </p>
 //           </div>
@@ -388,7 +388,7 @@
 //                   </div>
 //                 </div>
 
-//                 <h3 className="mb-4 text-2xl font-bold font-heading text-brandDark dark:text-white">
+//                 <h3 className="mb-4 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
 //                   {feature.title}
 //                 </h3>
 //                 <p className="leading-relaxed text-gray-600 dark:text-gray-300">
@@ -407,10 +407,10 @@
 //             <div className="inline-block px-4 py-2 mb-4 rounded-full bg-brandAccent/10">
 //               <span className="text-sm font-semibold tracking-wide uppercase text-brandPrimary dark:text-brandAccent">NIST-Aligned Framework</span>
 //             </div>
-//             <h2 className="mb-6 text-4xl font-bold font-heading md:text-5xl text-brandDark dark:text-white">
+//             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //               AI Risk Management Framework (NIST-Aligned)
 //             </h2>
-//             <p className="text-xl leading-relaxed text-gray-600 dark:text-gray-300">
+//             <p className="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300">
 //               RiskMan operationalizes NIST AI RMF for trustworthy deployments, delivering compliance and innovation for CXO strategies.
 //             </p>
 //           </div>
@@ -428,7 +428,7 @@
 //                     </div>
 //                   </div>
 //                   <div>
-//                     <h3 className="mb-2 text-lg font-bold font-heading text-brandDark dark:text-white">
+//                     <h3 className="mb-2 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
 //                       {item.title}
 //                     </h3>
 //                     <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-300">
@@ -442,10 +442,10 @@
 
 //           <div className="mt-16 text-center">
 //             <div className="inline-block p-8 bg-gradient-to-r from-brandAccent/10 to-brandGold/10 rounded-2xl">
-//               <h3 className="mb-3 text-2xl font-bold font-heading md:text-3xl text-brandDark dark:text-white">
+//               <h3 className="mb-3 text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark dark:text-white">
 //                 Proven Impact
 //               </h3>
-//               <p className="max-w-2xl text-lg text-gray-600 dark:text-gray-300">
+//               <p className="max-w-2xl text-base text-gray-600 dark:text-gray-300">
 //                 Mitigate vulnerabilities, build trust, and accelerate innovation with audit-ready, NIST-validated AI risk mastery.
 //               </p>
 //             </div>
@@ -462,10 +462,10 @@
 //         </div>
 
 //         <div className="container relative z-10 text-center">
-//           <h2 className="mb-6 text-4xl font-bold text-white font-heading md:text-5xl lg:text-6xl">
+//           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading ">
 //             Accelerate Your AI Risk Transformation
 //           </h2>
-//           <p className="max-w-3xl mx-auto mb-10 text-xl leading-relaxed md:text-2xl text-white/90">
+//           <p className="max-w-3xl mx-auto mb-10 text-base md:text-lg leading-relaxed text-white/90">
 //             Unlock enterprise-wide resilience with RiskMan's AI and Technology expertise.
 //           </p>
 //           <a 
@@ -481,7 +481,7 @@
 //       <section className="py-20 bg-white dark:bg-surfaceDark">
 //         <div className="container">
 //           <div className="max-w-4xl mx-auto mb-16 text-center">
-//             <h2 className="mb-6 text-4xl font-bold font-heading md:text-5xl text-brandDark dark:text-white">
+//             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //               Frequently Asked Questions
 //             </h2>
 //           </div>
@@ -507,7 +507,7 @@
 //                   className={`transition-all duration-300 overflow-hidden ${openFaq === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
 //                 >
 //                   <div className="px-8 pt-2 pb-6">
-//                     <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+//                     <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
 //                       {faq.answer}
 //                     </p>
 //                   </div>
@@ -559,6 +559,7 @@ const AiTechnology = () => {
       <Services />
       <TechIntegration />
       <Framework />
+      <FAQ />
       <CTA />
     
     </div>

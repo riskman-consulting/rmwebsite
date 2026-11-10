@@ -17,7 +17,7 @@ const PolicyCard = ({ policy, onClick }) => (
             </span>
         </div>
 
-        <h3 className="mb-4 text-xl font-bold leading-tight transition-colors text-brandNavy dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
+        <h3 className="mb-4 text-lg md:text-xl font-bold leading-tight transition-colors text-brandNavy dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
             {policy.title}
         </h3>
 

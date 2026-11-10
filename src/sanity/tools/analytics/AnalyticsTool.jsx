@@ -20,6 +20,7 @@ import {
   useRootTheme,
 } from '@sanity/ui'
 import { LaunchIcon, SearchIcon } from '@sanity/icons'
+import { Speed } from './SpeedTab'
 
 const SITE = 'https://www.riskman.in'
 const RANGES = [7, 30, 90]
@@ -1082,6 +1083,7 @@ export function AnalyticsTool() {
   const tabs = [
     ['overview', 'Traffic'],
     ['seo', 'SEO'],
+    ['speed', 'Speed'],
     ['content', 'Content'],
   ]
 
@@ -1142,6 +1144,9 @@ export function AnalyticsTool() {
           </TabPanel>
           <TabPanel id="analytics-panel-seo" aria-labelledby="analytics-tab-seo" hidden={tab !== 'seo'}>
             <Seo report={report} posts={posts} landings={view?.searchLandings || []} color={color} />
+          </TabPanel>
+          <TabPanel id="analytics-panel-speed" aria-labelledby="analytics-tab-speed" hidden={tab !== 'speed'}>
+            <Speed client={client} range={range} docs={docs ? docs.filter((d) => d.date >= lastDays(range)[0]) : null} />
           </TabPanel>
           <TabPanel id="analytics-panel-content" aria-labelledby="analytics-tab-content" hidden={tab !== 'content'}>
             <Content content={content} client={client} />

@@ -5,11 +5,11 @@ const CyberSection = () => {
   const cyberImage = "https://public.youware.com/users-website-assets/prod/9ff22b8d-6a23-4340-a80f-898c8b5c261b/af15115dc5e542d3909d88f5b1f182fe";
 
   return (
-    <section className="relative py-24 overflow-hidden text-white bg-brandNavy">
+    <section className="relative py-16 overflow-hidden text-white bg-brandNavy">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
       
-      <div className="container relative z-10 px-4 mx-auto">
+      <div className="container relative z-10">
         <div className="flex flex-col items-center gap-16 lg:flex-row-reverse">
           <div className="relative lg:w-1/2">
             <div className="absolute transform border-2 -inset-4 border-brandGold/30 rounded-2xl -rotate-3"></div>
@@ -32,10 +32,10 @@ const CyberSection = () => {
               </div>
               <h3 className="text-sm font-bold tracking-wider uppercase text-brandGold">Cyber Intelligence</h3>
             </div>
-            <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading">
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading">
               Digital Forensics and Cyber Incident Response
             </h2>
-            <p className="mb-8 text-lg text-gray-300">
+            <p className="mb-8 text-base text-gray-300">
               In an era of data-centric operations, our team secures critical evidence from digital environments to mitigate high-tech risks.
             </p>
             

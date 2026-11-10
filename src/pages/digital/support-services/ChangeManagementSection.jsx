@@ -38,16 +38,16 @@ export const ChangeManagementSection = () => {
   const [activeTab, setActiveTab] = useState(tabs[0].id);
 
   return (
-    <section className="z-10 py-24 bg-white dark:bg-surfaceDark">
-      <div className="container px-4 mx-auto sm:px-6 lg:px-8">
+    <section className="z-10 py-16 bg-surfaceLight dark:bg-surfaceDark">
+      <div className="container">
         <div className="flex flex-col items-start gap-16 lg:flex-row">
           
           {/* Left Content - Tabs */}
           <div className="lg:w-1/2">
-            <h2 className="mb-6 text-4xl font-bold font-heading text-brandDark dark:text-white">
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
               Change Management & Adoption
             </h2>
-            <p className="mb-10 text-lg text-gray-600 dark:text-gray-300">
+            <p className="mb-10 text-base text-gray-600 dark:text-gray-300">
               Empower your workforce and drive high adoption rates through structured impact analysis and continuous engagement.
             </p>
 
@@ -81,8 +81,8 @@ export const ChangeManagementSection = () => {
                       exit={{ opacity: 0, x: -20 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <h3 className="mb-4 text-2xl font-bold text-brandDark dark:text-white">{tab.title}</h3>
-                      <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+                      <h3 className="mb-4 text-lg md:text-xl font-bold text-brandDark dark:text-white">{tab.title}</h3>
+                      <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
                         {tab.description}
                       </p>
                     </motion.div>
@@ -99,19 +99,18 @@ export const ChangeManagementSection = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
-              className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]"
+              className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]"
             >
               <img 
                 src={changeMgmtImage} 
                 alt="Change Management" 
                 className="object-cover w-full h-full " 
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-brandDark/60 to-transparent"></div>
               
               {/* Overlay Text */}
               <div className="absolute bottom-0 left-0 p-8">
-                <div className="inline-block p-4 border bg-white/10 backdrop-blur-md border-white/20 rounded-xl">
-                  <p className="text-lg font-bold text-white">
+                <div className="inline-block p-4 border bg-black/50 backdrop-blur-md border-white/20 rounded-xl">
+                  <p className="text-base font-bold text-white">
                     {tabs.find(t => t.id === activeTab)?.label} Focus
                   </p>
                 </div>

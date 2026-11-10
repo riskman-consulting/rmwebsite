@@ -28,12 +28,12 @@ export default function CTASection({ data }) {
           className="space-y-8"
         >
           {/* Title */}
-          <h2 className="text-4xl font-bold text-white md:text-6xl">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white ">
             {data.title}
           </h2>
 
           {/* Description */}
-          <p className="max-w-3xl mx-auto text-lg leading-relaxed md:text-xl text-white/80">
+          <p className="max-w-3xl mx-auto text-base md:text-lg leading-relaxed text-white/80">
             {data.description}
           </p>
 

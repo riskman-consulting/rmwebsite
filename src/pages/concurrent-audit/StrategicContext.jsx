@@ -20,7 +20,7 @@
 //                         viewport={{ once: true }}
 //                         transition={{ duration: 0.8 }}
 //                     >
-//                         <h2 className="mb-6 text-3xl font-extrabold leading-tight font-heading md:text-4xl text-brandLight">
+//                         <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandLight">
 //                             The Limits of Looking Back
 //                         </h2>
 //                         <hr className="w-12 h-[2px] border-none bg-gradient-to-r from-brandGold to-brandAccent mb-8" />
@@ -47,7 +47,7 @@
 //                     >
 //                         <div className="relative group">
 //                             <div className="absolute inset-0 transition-colors duration-500 bg-brandGold/10 rounded-2xl blur-xl group-hover:bg-brandGold/20" />
-//                             <p className="relative py-4 pl-8 text-xl italic font-medium leading-relaxed border-l-4 font-heading md:text-2xl text-brandLight border-brandGold bg-surfaceDark/40 backdrop-blur-sm rounded-r-2xl">
+//                             <p className="relative py-4 pl-8 text-base md:text-lg italic font-medium leading-relaxed border-l-4 font-heading text-brandLight border-brandGold bg-surfaceDark/40 backdrop-blur-sm rounded-r-2xl">
 //                                 "Traditional audits tell you what <em className="not-italic text-brandGold">happened</em>. Concurrent Audits ensure the right thing <em className="not-italic font-bold text-brandAccent">is happening</em> — in real time, at every transaction touchpoint."
 //                             </p>
 //                         </div>
@@ -75,7 +75,7 @@ import { motion } from 'framer-motion';
 
 const StrategicContext = () => {
     return (
-        <section id="context" className="relative z-10 py-24 transition-colors bg-surfaceLight dark:bg-surfaceDark">
+      <section id="context" className="relative z-10 py-16 transition-colors bg-bgLight dark:bg-bgDark">
             {/* Decorative Background */}
             <div className="absolute top-1/2 left-0 w-64 h-64 bg-brandPrimary/5 rounded-full blur-[100px] pointer-events-none" />
 
@@ -92,7 +92,7 @@ const StrategicContext = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="mb-6 text-3xl font-extrabold leading-tight font-heading md:text-4xl text-brandDark dark:text-brandAccent">
+                        <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandDark dark:text-brandAccent">
                             The Limits of Looking Back
                         </h2>
                         <hr className="w-12 h-[2px] border-none bg-gradient-to-r from-brandGold to-brandAccent mb-8" />

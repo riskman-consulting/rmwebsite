@@ -197,7 +197,7 @@ const SOPDeliverables = () => {
     ];
 
     return (
-        <SectionWrapper id="deliverables" className="py-24 px-6 bg-slate-50 dark:bg-[#001428] transition-colors duration-300">
+      <SectionWrapper id="deliverables" className="py-16 px-6 bg-slate-50 dark:bg-[#001428] transition-colors duration-300">
             <div className="mx-auto max-w-7xl">
                 <div className="relative p-8 overflow-hidden bg-white border shadow-xl dark:bg-surfaceDark rounded-3xl lg:p-12 border-slate-200 dark:border-white/5">
 
@@ -237,7 +237,7 @@ const SOPDeliverables = () => {
                                 transition={{ delay: idx * 0.1 }}
                                 className="p-6 transition-all bg-white border shadow-sm dark:bg-slate-800/50 rounded-2xl border-slate-100 dark:border-white/5 hover:shadow-md group"
                             >
-                                <h3 className="mb-2 text-lg font-black tracking-tight transition-transform text-brandPrimary dark:text-brandAccent group-hover:translate-x-1">{card.title}</h3>
+                                <h3 className="mb-2 text-lg md:text-xl font-bold transition-transform text-brandPrimary dark:text-brandAccent group-hover:translate-x-1">{card.title}</h3>
                                 <p className="text-sm font-semibold leading-relaxed text-slate-600 dark:text-slate-400">{card.desc}</p>
                             </motion.div>
                         ))}

@@ -7,7 +7,7 @@ const ISO22301BCMAlignment = () => {
 
         {/* SECTION HEADER */}
         <div className="max-w-3xl mb-14">
-          <h2 className="mb-4 text-2xl font-semibold font-heading md:text-3xl text-brandDark dark:text-brandAccent">
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-brandAccent">
             ISO 22301 Alignment &amp; Business Continuity Management
           </h2>
           <p className="font-sans text-base leading-relaxed md:text-lg text-brandNavy dark:text-brandLight">
@@ -22,7 +22,7 @@ const ISO22301BCMAlignment = () => {
 
           {/* LEFT – PDCA MODEL */}
           <div className="p-8 border rounded-2xl border-borderLight dark:border-borderDark bg-bgLight dark:bg-bgDark">
-            <h3 className="mb-4 text-lg font-semibold font-heading text-brandDark dark:text-brandAccent">
+            <h3 className="mb-4 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-brandAccent">
               Plan – Do – Check – Act (PDCA)
             </h3>
 
@@ -48,7 +48,7 @@ const ISO22301BCMAlignment = () => {
 
           {/* RIGHT – ISO CLAUSE OVERVIEW */}
           <div className="p-8 border rounded-2xl border-borderLight dark:border-borderDark bg-bgLight dark:bg-bgDark">
-            <h3 className="mb-4 text-lg font-semibold font-heading text-brandDark dark:text-brandAccent">
+            <h3 className="mb-4 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-brandAccent">
               Key ISO 22301 Focus Areas
             </h3>
 
@@ -69,7 +69,7 @@ const ISO22301BCMAlignment = () => {
 
           {/* CONTENT */}
           <div>
-            <h3 className="mb-4 text-lg font-semibold font-heading text-brandDark dark:text-brandAccent">
+            <h3 className="mb-4 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-brandAccent">
               BCP Maturity Model
             </h3>
             <p className="font-sans text-sm leading-relaxed md:text-base text-brandPrimary dark:text-brandLight/80">

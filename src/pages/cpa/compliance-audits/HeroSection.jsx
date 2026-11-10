@@ -1,10 +1,12 @@
 import { ArrowLeft } from 'lucide-react'
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import bg from '../../../assets/images/cpa/compliance-audits/hero.png'
 
 function HeroSection() {
+  const navigate = useNavigate()
   return (
-    <section className="relative text-white py-24 lg:py-36 overflow-hidden">
+    <section className="relative text-white py-16 lg:py-20 overflow-hidden">
 
       {/* Background Image */}
       <div
@@ -26,20 +28,20 @@ function HeroSection() {
             Strategic Regulatory Oversight
           </div>
 
-          <h1 className="font-heading text-5xl lg:text-7xl font-bold leading-tight mb-6">
+          <h1 className="font-heading text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
             Strategic Compliance <span className="text-brandAccent">Oversight</span> for Organizations
           </h1>
 
-          <p className="text-lg lg:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl">
+          <p className="text-base md:text-lg text-gray-300 mb-10 leading-relaxed max-w-2xl">
             RiskMan ensures Organizations maintain a perfect standing with regulators through rigorous compliance auditing and proactive risk mitigation across all jurisdictions.
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <button className="flex items-center gap-2 bg-white text-brandDark px-8 py-4 rounded-md font-bold hover:bg-brandLight transition-all shadow-lg">
+            <button onClick={() => navigate("/services/cpa-us-assurance")} className="flex items-center gap-2 bg-white text-brandDark px-8 py-4 rounded-md font-bold hover:bg-brandLight transition-all shadow-lg">
               <ArrowLeft size={18} /> Return to Services
             </button>
 
-            <button className="bg-brandAccent text-brandDark px-8 py-4 rounded-md font-bold hover:bg-brandGold transition-all">
+            <button onClick={() => navigate("/contact")} className="bg-brandAccent text-brandDark px-8 py-4 rounded-md font-bold hover:bg-brandGold transition-all">
               Speak with a Specialist
             </button>
           </div>

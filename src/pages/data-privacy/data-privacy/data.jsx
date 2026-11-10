@@ -5,19 +5,22 @@ export const complianceCards = [
       title: "DPDP Compliance",
       desc: "Align with India’s Digital Personal Data Protection Act through automated data mapping, consent orchestration, and robust fiduciary accountability.",
       icon: <Fingerprint className="w-8 h-8 text-brandAccent" />,
-      tag: "India Focus"
+      tag: "India Focus",
+      link: "/services/data-privacy/dpdp"
     },
     {
       title: "GDPR Compliance",
       desc: "Navigate European mandates with privacy-by-design, cross-border transfer impact assessments, and outsourced DPO services.",
       icon: <Globe className="w-8 h-8 text-brandAccent" />,
-      tag: "EU Standards"
+      tag: "EU Standards",
+      link: "/services/data-privacy/gdpr"
     },
     {
       title: "Other Regulatory Compliances",
       desc: "Streamline adherence to CCPA/CPRA, HIPAA, and LGPD through centralized risk management and reporting dashboard.",
       icon: <Scale className="w-8 h-8 text-brandAccent" />,
-      tag: "Global Reach"
+      tag: "Global Reach",
+      link: "/services/data-privacy/other"
     }
   ];
 

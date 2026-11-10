@@ -46,7 +46,7 @@ const WhyItMatters = () => {
             <span className="text-[10px] font-black text-[#FFB800] uppercase tracking-[0.3em] mb-4 block">
               Core Value
             </span>
-            <h2 className="text-5xl md:text-6xl font-bold tracking-tighter mb-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
               <span className="text-[#001F3F] dark:text-white">Why our presence</span>
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFB800] to-[#FFC000] italic font-serif">
@@ -73,7 +73,7 @@ const WhyItMatters = () => {
               <div className="w-16 h-16 bg-[#001F3F]/5 dark:bg-white/5 text-[#FFB800] text-2xl flex items-center justify-center rounded-2xl mb-8 group-hover:bg-gradient-to-br group-hover:from-[#FFB800] group-hover:to-[#FFC000] group-hover:text-[#001F3F] group-hover:scale-110 transition-all duration-500 shadow-inner">
                 {item.icon}
               </div>
-              <h3 className="text-xl font-black text-[#001F3F] dark:text-white mb-4 tracking-tight uppercase tracking-wider">
+              <h3 className="text-lg md:text-xl font-bold text-[#001F3F] dark:text-white mb-4 uppercase ">
                 {item.title}
               </h3>
               <p className="text-[#001F3F]/70 dark:text-white/70 leading-relaxed text-sm font-medium">
@@ -94,7 +94,7 @@ const WhyItMatters = () => {
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#FFC000]/10 rounded-full blur-[80px]"></div>
           
           <div className="mb-10 md:mb-0 md:mr-10 text-center md:text-left relative z-10">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4 tracking-tighter">
+            <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 ">
               Ready to elevate your <span className="text-[#FFC000]">career?</span>
             </h3>
             <p className="text-white/60 text-lg font-light italic leading-relaxed max-w-lg">

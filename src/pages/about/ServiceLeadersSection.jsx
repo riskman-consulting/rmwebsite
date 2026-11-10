@@ -71,7 +71,7 @@ function LeaderCard({ leader, index, onSelect }) {
       {/* Content Section */}
       <div className="flex flex-col flex-grow px-6 pb-6">
         {/* Name */}
-        <h3 className="mb-1 text-lg font-bold text-center text-gray-900 dark:text-white">
+        <h3 className="mb-1 text-lg md:text-xl font-bold text-center text-gray-900 dark:text-white">
           {leader.name}
         </h3>
 
@@ -143,12 +143,12 @@ export default function ServiceLeadersSection({ setSelectedLeader }) {
   }, [fetchServiceLeaders]);
 
   return (
-    <section id="service-leaders" className="py-14 bg-surfaceLight md:py-20 dark:bg-surfaceDark">
-      <div className="px-4 mx-auto max-w-7xl lg:px-8">
+    <section id="service-leaders" className="py-16 bg-bgLight dark:bg-bgDark">
+      <div className="container">
 
         {/* Header */}
         <motion.div {...animations.fadeInUp} className="mb-12 text-center">
-          <h2 className="mb-3 text-3xl font-bold text-brandDark lg:text-4xl dark:text-white">
+          <h2 className="mb-3 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
             Our <span className="text-brandGold">Associate Partners</span> and{" "}
             <span className="text-brandAccent">Client Leads</span>
           </h2>
@@ -189,7 +189,7 @@ export default function ServiceLeadersSection({ setSelectedLeader }) {
             </div>
 
             <div className="flex flex-col items-center justify-center p-10 text-center border-b border-gray-200 md:border-b-0 md:border-r dark:border-gray-700">
-              <h3 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+              <h3 className="mb-2 text-lg md:text-xl font-bold text-gray-900 dark:text-white">
                 Qualified Professionals
               </h3>
               <p className="mb-1 text-sm text-gray-600 dark:text-gray-400">
@@ -201,7 +201,7 @@ export default function ServiceLeadersSection({ setSelectedLeader }) {
             </div>
 
             <div className="flex flex-col items-center justify-center p-10 text-center">
-              <h3 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+              <h3 className="mb-2 text-lg md:text-xl font-bold text-gray-900 dark:text-white">
                 Industry SMEs
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">

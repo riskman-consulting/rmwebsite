@@ -6,14 +6,14 @@
 //       <section className="py-20 bg-white">
 //         <div className="container">
 //           <div className="flex items-center gap-4 mb-16">
-//             <h2 className="text-2xl font-bold font-heading lg:text-3xl shrink-0">Fraud and Misconduct Detection</h2>
+//             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading shrink-0">Fraud and Misconduct Detection</h2>
 //             <div className="w-full h-px bg-borderLight"></div>
 //           </div>
 //           <div className="grid gap-8 md:grid-cols-3">
 //             {fraudDetection.map((item, idx) => (
 //               <div key={idx} className="p-8 transition-all bg-brandLight rounded-2xl hover:bg-brandPrimary hover:text-white group">
 //                 <div className="mb-6 transition-colors group-hover:text-brandAccent">{item.icon}</div>
-//                 <h3 className="mb-3 text-xl font-bold font-heading">{item.title}</h3>
+//                 <h3 className="mb-3 text-lg md:text-xl font-bold font-heading">{item.title}</h3>
 //                 <p className="text-sm leading-relaxed opacity-80">{item.desc}</p>
 //               </div>
 //             ))}
@@ -34,8 +34,8 @@ const FraudSection = () => {
   const fraudImage = "https://public.youware.com/users-website-assets/prod/9ff22b8d-6a23-4340-a80f-898c8b5c261b/a2c5f9ff022442b99be18037b98347f4";
 
   return (
-    <section className="py-24 overflow-hidden bg-bgLight dark:bg-bgDark">
-      <div className="container px-4 mx-auto">
+    <section className="py-16 overflow-hidden bg-bgLight dark:bg-bgDark">
+      <div className="container">
         <div className="flex flex-col items-center gap-16 lg:flex-row">
           <div className="relative lg:w-1/2 group">
             <div className="absolute transition-transform transform -inset-4 bg-brandGold/20 rounded-2xl rotate-3 group-hover:rotate-2"></div>
@@ -60,10 +60,10 @@ const FraudSection = () => {
               </div>
               <h3 className="text-sm font-bold tracking-wider uppercase text-brandGold">Financial Integrity</h3>
             </div>
-            <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandNavy dark:text-white">
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandNavy dark:text-white">
               Corporate Fraud and Misconduct Detection
             </h2>
-            <p className="mb-8 text-lg text-gray-600 dark:text-gray-300">
+            <p className="mb-8 text-base text-gray-600 dark:text-gray-300">
               We deploy advanced methodologies to uncover financial irregularities and unethical behavior that threaten your operational stability.
             </p>
             

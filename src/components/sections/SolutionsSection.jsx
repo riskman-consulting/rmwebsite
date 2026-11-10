@@ -21,12 +21,12 @@ export default function SolutionsSection({ data }) {
           viewport={{ once: true }}
           className="mb-16 text-center"
         >
-          <h2 className="text-4xl font-bold tracking-wider uppercase md:text-5xl text-brandDark dark:text-white">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold uppercase text-brandDark dark:text-white">
             {data.title}
           </h2>
 
           {data.description && (
-            <p className="max-w-3xl mx-auto mt-4 text-lg text-brandNavy dark:text-gray-400">
+            <p className="max-w-3xl mx-auto mt-4 text-base text-brandNavy dark:text-gray-400">
               {data.description}
             </p>
           )}
@@ -50,7 +50,7 @@ export default function SolutionsSection({ data }) {
               </div>
 
               {/* Title */}
-              <h3 className="mb-4 text-lg font-bold capitalize transition-colors duration-300 text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
+              <h3 className="mb-4 text-lg md:text-xl font-bold capitalize transition-colors duration-300 text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
                 {solution.name}
               </h3>
 

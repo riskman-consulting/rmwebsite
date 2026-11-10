@@ -5,15 +5,19 @@ const BCPHero = () => {
   const navigator=useNavigate()
   return (
     <section className="bg-bgLight dark:bg-bgDark">
-      <div className="container px-12 py-20 mx-auto">
+      <div className="container py-16 lg:py-20">
         <div className="grid items-center gap-12 md:grid-cols-2">
           {/* Left content */}
           <div className="max-w-xl">
-            <h1 className="text-4xl font-bold leading-tight font-heading text-brandDark dark:text-white md:text-5xl">
-              Strengthen Business Continuity with BCP & DR Services
+            <div className="inline-flex items-center px-4 py-1.5 mb-6 text-xs font-semibold tracking-wide uppercase rounded-full bg-brandPrimary/10 text-brandPrimary border border-brandPrimary/20 dark:bg-brandAccent/10 dark:text-brandAccent dark:border-brandAccent/20">
+              Business Continuity & Disaster Recovery
+            </div>
+            <h1 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading text-brandDark dark:text-white ">
+              Strengthen Business Continuity with{" "}
+              <span className="text-brandPrimary dark:text-brandAccent">BCP & DR Services</span>
             </h1>
 
-            <p className="mt-6 text-lg text-gray-700 dark:text-gray-300">
+            <p className="mt-6 text-base text-gray-700 dark:text-gray-300">
               Operational resilience is essential for sustainable growth. Our
               Business Continuity and Disaster Recovery services help reduce risk,
               ensure uptime, and keep your organization prepared for disruption.

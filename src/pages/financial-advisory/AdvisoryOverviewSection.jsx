@@ -37,7 +37,7 @@ const AdvisoryOverviewSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl font-semibold text-slate-900 dark:text-brandLight md:text-4xl"
+            className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-brandLight "
           >
             Financial Advisory Designed Around Real Business Needs
           </motion.h2>
@@ -55,7 +55,7 @@ const AdvisoryOverviewSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mx-auto mt-8 text-lg leading-relaxed text-slate-600 dark:text-brandLight/70"
+            className="mx-auto mt-8 text-base leading-relaxed text-slate-600 dark:text-brandLight/70"
           >
             Our financial advisory services are built to address practical
             business challenges rather than theoretical models. We work closely
@@ -78,7 +78,7 @@ const AdvisoryOverviewSection = () => {
               transition={{ delay: index * 0.08 }}
               className="p-8 transition bg-white border shadow-sm rounded-2xl border-borderLight hover:-translate-y-1 hover:shadow-lg dark:border-borderDark dark:bg-surfaceDark"
             >
-              <h3 className="mb-4 text-lg font-semibold text-slate-900 dark:text-brandLight">
+              <h3 className="mb-4 text-lg md:text-xl font-bold text-slate-900 dark:text-brandLight">
                 {item.title}
               </h3>
 

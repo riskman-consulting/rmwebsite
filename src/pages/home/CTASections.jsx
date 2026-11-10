@@ -12,8 +12,8 @@ const CTASection = () => {
   ];
  
   return (
-    <section className="relative w-full py-8 transition-colors duration-300 bg-bgLight dark:bg-bgDark md:pt-10">
-      <div className="container px-4 mx-auto">
+    <section className="relative w-full py-16 transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark">
+      <div className="container">
        
         {/* TOP AVATARS - Social Proof */}
         <div className="flex justify-center mb-10">
@@ -30,9 +30,6 @@ const CTASection = () => {
                 />
               </div>
             ))}
-            <div className="relative flex items-center justify-center w-16 h-16 border-4 border-white rounded-full shadow-xl dark:border-surfaceDark bg-brandGold dark:bg-brandAccent">
-              <span className="text-sm font-black text-white dark:text-brandDark">12K+</span>
-            </div>
           </div>
         </div>
  
@@ -41,13 +38,13 @@ const CTASection = () => {
           <p className="mb-4 text-sm font-bold tracking-[0.2em] uppercase text-brandNavy dark:text-brandAccent">
             Get Started
           </p>
-          <h2 className="mb-6 text-4xl font-black leading-tight md:text-5xl lg:text-6xl text-brandDark dark:text-white">
-            Create Your <span className="text-transparent bg-gradient-to-r from-yellow-500 to-amber-500 bg-clip-text">Scalable Success</span>
+          <h2 className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-brandDark dark:text-white">
+            Create Your <span className="text-transparent bg-gradient-to-r from-brandAccent to-brandGold bg-clip-text">Scalable Success</span>
           </h2>
         </div>
  
         {/* DESCRIPTION - Matches FAQ answer text size */}
-        <p className="max-w-3xl mx-auto mb-12 text-lg leading-relaxed text-center text-brandNavy dark:text-white/70">
+        <p className="max-w-3xl mx-auto mb-12 text-base leading-relaxed text-center text-brandNavy dark:text-white/70">
           Leverage the collective wisdom of partners who have successfully navigated the complexities of global markets and regulatory landscapes. At RiskMan, we don't just offer advice; we provide a blueprint for resilience. Benefit from personalized guidance rooted in decades of experience building high-growth service lines and safeguarding multi-national enterprises.
         </p>
  
@@ -57,7 +54,7 @@ const CTASection = () => {
             href="/contact"
             className="inline-block px-10 py-5 text-sm font-black tracking-widest text-white uppercase transition-all duration-300 rounded-full shadow-lg hover:scale-105 bg-brandDark hover:bg-brandPrimary hover:shadow-2xl dark:bg-brandAccent dark:text-brandDark dark:hover:bg-brandGold"
           >
-            Schedule a Free Consultation
+            Schedule a Consultation
           </a>
         </div>
  
@@ -83,7 +80,7 @@ const CTASection = () => {
                
                 {member.featured && (
                   <div className="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/80 via-transparent to-transparent">
-                    <h3 className="mb-1 text-lg font-black text-white">
+                    <h3 className="mb-1 text-lg md:text-xl font-bold text-white">
                       {member.name}
                     </h3>
                     <p className="text-xs font-bold tracking-wider uppercase text-white/80">

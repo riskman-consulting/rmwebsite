@@ -92,10 +92,10 @@
 //           <span className="text-xs font-bold tracking-[4px] uppercase text-brandPrimary dark:text-brandGold mb-4 block">
 //             Market Dynamics
 //           </span>
-//           <h3 className="mb-6 text-4xl font-black lg:text-5xl font-heading text-brandDark dark:text-surfaceLight">
+//           <h3 className="mb-6 text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark dark:text-surfaceLight">
 //             The Multi-Stakeholder Imperative
 //           </h3>
-//           <p className="max-w-2xl mx-auto text-lg text-brandDark/70 dark:text-surfaceLight/70">
+//           <p className="max-w-2xl mx-auto text-base text-brandDark/70 dark:text-surfaceLight/70">
 //             Multiple market forces are converging to make ESG excellence a core business necessity.
 //           </p>
 //         </div>
@@ -120,7 +120,7 @@
 
         
 //         <div className="mb-16 text-center">
-//           <h3 className="mb-4 text-3xl font-black lg:text-4xl font-heading text-brandDark dark:text-surfaceLight">
+//           <h3 className="mb-4 text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark dark:text-surfaceLight">
 //             ESG Maturity Ladder
 //           </h3>
 //           <p className="max-w-2xl mx-auto font-medium text-brandDark/60 dark:text-surfaceLight/60">
@@ -175,7 +175,7 @@
 //                       <div className="flex-1 text-center md:text-left">
 //                         <h4 className={`text-3xl font-black uppercase mb-1 ${data.textColor}`}>Level {data.level}: {data.title}</h4>
 //                         <p className="text-brandDark/40 dark:text-surfaceLight/40 text-xs font-bold uppercase tracking-[4px] mb-4">{data.subtitle}</p>
-//                         <p className="text-lg italic leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
+//                         <p className="text-base italic leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
 //                           "{data.description}"
 //                         </p>
 //                       </div>
@@ -218,21 +218,21 @@ const MultiStakeholderImperative = () => {
   ];
 
   return (
-    <section className="py-4 bg-gray-50 dark:bg-[#0f172a] transition-colors duration-300">
-      <div className="px-6 mx-auto max-w-7xl">
+    <section className="py-16 bg-surfaceLight dark:bg-surfaceDark transition-colors duration-300">
+      <div className="container">
         
         {/* Minimalist Header */}
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl dark:text-white">
-            ESG Maturity <span className="text-blue-600">Model</span>
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-gray-900 dark:text-white">
+            ESG Maturity <span className="text-brandPrimary dark:text-brandGold">Model</span>
           </h2>
-          <p className="max-w-2xl mx-auto text-lg text-gray-500 dark:text-gray-400">
+          <p className="max-w-2xl mx-auto text-base text-gray-500 dark:text-gray-400">
             A structured pathway for organizations evolving from basic compliance to transformative industry leadership.
           </p>
         </div>
 
         {/* Unified Stepper & Content Container */}
-        <div className="bg-white dark:bg-gray-800/50 rounded-[2rem] p-8 md:p-12 shadow-xl border border-gray-100 dark:border-gray-700">
+        <div className="bg-bgLight dark:bg-bgDark rounded-2xl p-8 md:p-12 shadow-xl border border-borderLight dark:border-borderDark">
           
           {/* Stepper Rail */}
           <div className="relative flex items-center justify-between max-w-4xl mx-auto mb-12">
@@ -241,7 +241,7 @@ const MultiStakeholderImperative = () => {
             
             {/* Active Progress Line */}
             <div 
-              className="absolute top-1/2 left-0 h-0.5 bg-blue-600 transition-all duration-500 -translate-y-1/2" 
+              className="absolute top-1/2 left-0 h-0.5 bg-brandPrimary dark:bg-brandGold transition-all duration-500 -translate-y-1/2" 
               style={{ width: `${(active - 1) * 25}%` }}
             />
 
@@ -249,18 +249,19 @@ const MultiStakeholderImperative = () => {
               <button
                 key={m.level}
                 onMouseEnter={() => setActive(m.level)}
+                onClick={() => setActive(m.level)}
                 className={`relative z-10 flex flex-col items-center group transition-all duration-300`}
               >
                 <div className={`w-12 h-12 rounded-full flex items-center justify-center text-xl transition-all duration-500 
                   ${active >= m.level 
-                    ? "bg-blue-600 text-white ring-4 ring-blue-100 dark:ring-blue-900/30" 
-                    : "bg-white dark:bg-gray-800 text-gray-400 border-2 border-gray-200 dark:border-gray-700 hover:border-blue-400"
+                    ? "bg-brandPrimary text-white ring-4 ring-brandPrimary/20 dark:ring-brandGold/30" 
+                    : "bg-white dark:bg-surfaceDark text-gray-400 border-2 border-gray-200 dark:border-borderDark hover:border-brandPrimary dark:hover:border-brandGold"
                   } ${active === m.level ? "scale-125 shadow-xl" : "scale-100"}`}
                 >
                   {m.icon}
                 </div>
                 <span className={`absolute -bottom-8 whitespace-nowrap text-xs font-bold uppercase tracking-tighter transition-colors
-                  ${active === m.level ? "text-blue-600" : "text-gray-400"}`}>
+                  ${active === m.level ? "text-brandPrimary dark:text-brandGold" : "text-gray-400"}`}>
                   Level {m.level}
                 </span>
               </button>
@@ -271,13 +272,13 @@ const MultiStakeholderImperative = () => {
           <div className="mt-20 flex flex-col items-center text-center max-w-3xl mx-auto min-h-[200px]">
             {maturityLevels.map((m) => m.level === active && (
               <div key={m.level} className="duration-500 animate-in fade-in slide-in-from-bottom-4">
-                <span className="inline-block px-4 py-1 mb-4 text-sm font-bold tracking-widest text-blue-600 uppercase rounded-full bg-blue-50 dark:bg-blue-900/20">
+                <span className="inline-block px-4 py-1 mb-4 text-sm font-bold tracking-widest text-brandPrimary dark:text-brandGold uppercase rounded-full bg-brandPrimary/10 dark:bg-brandGold/10">
                   {m.subtitle}
                 </span>
-                <h3 className="mb-6 text-4xl font-black text-gray-900 dark:text-white">
+                <h3 className="mb-6 text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white">
                   {m.title}
                 </h3>
-                <p className="text-xl leading-relaxed text-gray-600 dark:text-gray-300">
+                <p className="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300">
                   {m.desc}
                 </p>
               </div>

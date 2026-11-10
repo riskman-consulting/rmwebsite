@@ -26,13 +26,13 @@ function HeroSection() {
           </div>
 
           {/* Heading */}
-          <h1 className="mb-6 text-4xl font-bold leading-tight font-heading lg:text-6xl">
+          <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading ">
             Elevate Data Privacy to{" "}
             <span className="text-brandAccent">Global Standards</span>
           </h1>
 
           {/* Description */}
-          <p className="mb-10 text-lg leading-relaxed text-gray-300 lg:text-xl">
+          <p className="mb-10 text-base md:text-lg leading-relaxed text-gray-300 ">
             RiskMan provides comprehensive ISO 27701 consulting to integrate
             privacy management into your existing security posture, protecting
             personally identifiable information and building stakeholder trust.

@@ -91,14 +91,14 @@ const ServicePortfolio = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-brandDark via-brandNavy to-brandPrimary dark:from-bgDark dark:via-brandDark dark:to-brandNavy">
+    <section className="py-16 bg-gradient-to-br from-brandDark via-brandNavy to-brandPrimary dark:from-bgDark dark:via-brandDark dark:to-brandNavy">
       <div className="container">
         {/* Section Header */}
         <div className="max-w-4xl mx-auto mb-16 text-center">
-          <h2 className="mb-6 text-4xl font-bold text-white font-heading md:text-5xl">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading ">
             Sustainability & ESG Service Portfolio
           </h2>
-          <p className="text-lg leading-relaxed text-brandLight/90">
+          <p className="text-base leading-relaxed text-brandLight/90">
             RiskMan offers a comprehensive, modular service portfolio that can be deployed individually or as 
             integrated solutions. Our services are designed to be scalable and globally deployable.
           </p>

@@ -12,8 +12,8 @@ const ImplementationRoadmap = () => {
             title: "Scoping & Survey",
             desc: "Define audit boundaries and identify high-risk areas for focused protection.",
             details: ["Boundary definition", "Risk identification", "Stakeholder mapping", "Timeline planning"],
-            image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop",
-            color: "#3B82F6"
+            image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&h=600&fit=crop",
+            color: "#004080"
         },
         {
             icon: CalendarClock,
@@ -21,8 +21,8 @@ const ImplementationRoadmap = () => {
             title: "Strategic Planning",
             desc: "Create detailed work plan with resource allocation and timings.",
             details: ["Resource allocation", "Milestone setting", "Team assignment", "Communication plan"],
-            image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=600&h=400&fit=crop",
-            color: "#10B981"
+            image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=900&h=600&fit=crop",
+            color: "#FFB800"
         },
         {
             icon: FileSearch,
@@ -30,8 +30,8 @@ const ImplementationRoadmap = () => {
             title: "Evidence Fieldwork",
             desc: "Gather evidence through reviews, interviews, and observations.",
             details: ["Document review", "Staff interviews", "Process observation", "Technical testing"],
-            image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=400&fit=crop",
-            color: "#F59E0B"
+            image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=900&h=600&fit=crop",
+            color: "#004080"
         },
         {
             icon: BarChart3,
@@ -39,20 +39,20 @@ const ImplementationRoadmap = () => {
             title: "Analysis & Reporting",
             desc: "Identify gaps and provide recommendations for certification.",
             details: ["Gap analysis", "Risk scoring", "Remediation plan", "Executive summary"],
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-            color: "#8B5CF6"
+            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&h=600&fit=crop",
+            color: "#FFB800"
         }
     ];
 
     return (
-        <section className="relative w-full py-24 overflow-hidden sm:py-32 bg-surfaceLight dark:bg-bgDark" id="roadmap">
+      <section className="relative w-full py-16 overflow-hidden sm:py-32 bg-surfaceLight dark:bg-bgDark" id="roadmap">
             {/* Background decorations */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-20 right-10 w-[400px] h-[400px] bg-brandAccent/5 rounded-full blur-[100px]" />
                 <div className="absolute bottom-20 left-10 w-[300px] h-[300px] bg-brandPrimary/5 rounded-full blur-[80px]" />
             </div>
 
-            <div className="w-full px-5 sm:px-8 lg:px-12 xl:px-14 mx-auto max-w-[1280px] relative z-10">
+            <div className="container relative z-10">
                 {/* Header */}
                 <div className="mb-20 text-center">
                     <motion.span
@@ -68,7 +68,7 @@ const ImplementationRoadmap = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-3xl font-bold font-heading text-brandDark dark:text-white sm:text-4xl lg:text-5xl"
+                        className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white "
                     >
                         The RiskMan Implementation Roadmap
                     </motion.h2>
@@ -77,7 +77,7 @@ const ImplementationRoadmap = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="max-w-2xl mx-auto mt-6 text-lg text-slate-600 dark:text-slate-400"
+                        className="max-w-2xl mx-auto mt-6 text-base text-slate-600 dark:text-slate-400"
                     >
                         Our structured methodology ensures seamless transition from assessment to compliance.
                     </motion.p>
@@ -89,7 +89,7 @@ const ImplementationRoadmap = () => {
                     <div className="hidden lg:block absolute top-[60px] left-[calc(12.5%+20px)] right-[calc(12.5%+20px)] h-1 z-0">
                         <div className="w-full h-full overflow-hidden rounded-full bg-slate-200 dark:bg-white/10">
                             <motion.div
-                                className="h-full rounded-full bg-gradient-to-r from-blue-500 via-emerald-500 via-amber-500 to-purple-500"
+                                className="h-full rounded-full bg-gradient-to-r from-brandPrimary via-brandNavy to-brandGold"
                                 initial={{ width: "0%" }}
                                 whileInView={{ width: "100%" }}
                                 viewport={{ once: true }}
@@ -168,7 +168,7 @@ const ImplementationRoadmap = () => {
                                                 : 'bg-white/50 dark:bg-white/5 border-slate-100 dark:border-white/10'
                                             }`}
                                     >
-                                        <h3 className="mb-2 text-lg font-bold text-center font-heading text-brandDark dark:text-white">
+                                        <h3 className="mb-2 text-lg md:text-xl font-bold text-center font-heading text-brandDark dark:text-white">
                                             {step.title}
                                         </h3>
                                         <p className="mb-4 text-sm text-center text-slate-600 dark:text-slate-400">

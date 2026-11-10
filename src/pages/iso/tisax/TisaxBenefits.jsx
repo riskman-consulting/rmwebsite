@@ -33,21 +33,21 @@ const benefits = [
 
 const TisaxBenefits = () => {
     return (
-        <section className="py-24 bg-bgLight dark:bg-bgDark">
-            <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
+      <section className="py-16 bg-bgLight dark:bg-bgDark">
+            <div className="container">
                 <div className="grid items-center grid-cols-1 gap-12 mb-16 lg:grid-cols-12">
                     <div className="lg:col-span-7">
                         <motion.span
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
-                            className="text-sm font-bold tracking-widest uppercase text-brandAccent"
+                            className="text-sm font-bold tracking-widest uppercase text-brandPrimary dark:text-brandAccent"
                         >
                             Advantages
                         </motion.span>
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            className="mt-4 text-4xl font-black font-heading text-brandDark dark:text-white lg:text-5xl"
+                            className="mt-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white "
                         >
                             Essential Benefits <br />
                             <span className="text-slate-400">of Compliance</span>
@@ -57,7 +57,7 @@ const TisaxBenefits = () => {
                         <motion.p
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
-                            className="text-lg text-slate-500 dark:text-slate-400"
+                            className="text-base text-slate-500 dark:text-slate-400"
                         >
                             Organizations that achieve TISAX compliance gain immediate credibility within the global automotive network, unlocking new and lucrative partnership opportunities.
                         </motion.p>
@@ -72,7 +72,7 @@ const TisaxBenefits = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
-                            className="group relative h-80 overflow-hidden rounded-[2rem] border border-slate-100 dark:border-white/5"
+                            className="group relative h-80 overflow-hidden rounded-2xl border border-slate-100 dark:border-white/5"
                         >
                             {/* Background Image */}
                             <img
@@ -87,7 +87,7 @@ const TisaxBenefits = () => {
                                 <div className="inline-flex items-center justify-center w-12 h-12 mb-4 transition-colors rounded-xl bg-brandAccent/20 backdrop-blur-md text-brandAccent group-hover:bg-brandAccent group-hover:text-brandDark">
                                     <benefit.icon className="w-6 h-6" />
                                 </div>
-                                <h3 className="mb-2 text-2xl font-black text-white">{benefit.title}</h3>
+                                <h3 className="mb-2 text-lg md:text-xl font-bold text-white">{benefit.title}</h3>
                                 <p className="max-w-sm text-sm transition-all duration-300 transform translate-y-4 opacity-0 text-white/70 group-hover:translate-y-0 group-hover:opacity-100">
                                     {benefit.desc}
                                 </p>

@@ -7,7 +7,7 @@ import { FaHeart } from "react-icons/fa";
 export default function TributeMarquee() {
   return (
     <div className="w-full py-5 bg-surfaceLight dark:bg-surfaceDark border-y border-brandAccent/20">
-      <div className="max-w-[1200px] mx-auto px-6">
+      <div className="container">
         <div className="flex items-center justify-center gap-6 text-center">
 
           {/* Badge */}

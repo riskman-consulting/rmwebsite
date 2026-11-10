@@ -13,7 +13,7 @@ export default function WeHelpSection({ data }) {
           viewport={{ once: true }}
           className="mb-12 text-center"
         >
-          <h2 className="text-4xl font-bold md:text-5xl">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold ">
             {data.title}
           </h2>
         </motion.div>
@@ -27,7 +27,7 @@ export default function WeHelpSection({ data }) {
               viewport={{ once: true }}
             >
               {idx === 0 && (
-                <p className="max-w-5xl mx-auto text-xl text-center">
+                <p className="max-w-5xl mx-auto text-base md:text-lg text-center">
                   {item.content}
                 </p>
               )}
@@ -43,10 +43,10 @@ export default function WeHelpSection({ data }) {
                   )}
 
                   <div>
-                    <h3 className="mb-6 text-3xl font-bold">
+                    <h3 className="mb-6 text-xl md:text-2xl lg:text-3xl font-bold">
                       {item.title}
                     </h3>
-                    <p className="text-lg">{item.content}</p>
+                    <p className="text-base">{item.content}</p>
                   </div>
                 </div>
               )}

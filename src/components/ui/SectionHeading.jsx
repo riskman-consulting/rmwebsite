@@ -24,11 +24,11 @@ const SectionHeading = ({ eyebrow, title, lead, align = "left", children }) => (
         {eyebrow}
       </span>
     )}
-    <h2 className="text-2xl font-bold leading-tight font-heading sm:text-3xl md:text-4xl text-brandDark dark:text-white">
+    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandDark dark:text-white">
       {title}
     </h2>
     {lead && (
-      <p className="mt-4 text-base leading-relaxed sm:text-lg text-brandNavy/70 dark:text-white/60">
+      <p className="mt-4 text-base leading-relaxed text-brandNavy/70 dark:text-white/60">
         {lead}
       </p>
     )}

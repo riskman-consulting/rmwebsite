@@ -67,7 +67,7 @@ const EventModal = ({ event, onClose }) => {
                 <span className="bg-gradient-to-r from-[#FFB800] to-[#FFC000] text-[#001F3F] text-[10px] font-black uppercase px-4 py-1.5 rounded-full tracking-widest inline-block shadow-lg">
                   {event.type || 'Experience'}
                 </span>
-                <h2 className="max-w-xl text-4xl font-bold leading-none tracking-tighter text-white md:text-6xl">
+                <h2 className="max-w-xl text-2xl md:text-3xl lg:text-4xl font-bold leading-none text-white ">
                   {event.title}
                 </h2>
                 <div className="flex flex-wrap gap-6 pt-4">

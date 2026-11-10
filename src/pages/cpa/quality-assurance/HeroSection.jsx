@@ -1,9 +1,11 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import image from "../../../assets/images/cpa/quality-assurance/hero.png"
 
 function HeroSection() {
+  const navigate = useNavigate()
   return (
-    <section className="relative bg-brandDark text-white py-24 lg:py-36 overflow-hidden">
+    <section className="relative bg-brandDark text-white py-16 lg:py-20 overflow-hidden">
       
       {/* Decorative Glow (your original) */}
       <div className="absolute inset-0 opacity-10">
@@ -19,20 +21,20 @@ function HeroSection() {
               Peak Operational Performance
             </div>
 
-            <h1 className="font-heading text-5xl lg:text-7xl font-bold leading-tight mb-6">
+            <h1 className="font-heading text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
               Elevating Standards Through <span className="text-brandAccent">Quality Assurance</span>
             </h1>
 
-            <p className="text-lg lg:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl">
+            <p className="text-base md:text-lg text-gray-300 mb-10 leading-relaxed max-w-2xl">
               RiskMan provides Organizations with the validation and oversight necessary to maintain peak operational performance and consistent service delivery across the enterprise.
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <button className="bg-brandPrimary text-white px-8 py-4 rounded-md font-bold hover:bg-brandNavy transition-all shadow-lg">
+              <button onClick={() => navigate("/services/cpa-us-assurance")} className="bg-brandPrimary text-white px-8 py-4 rounded-md font-bold hover:bg-brandNavy transition-all shadow-lg">
                 Discover All Services
               </button>
 
-              <button className="bg-brandAccent text-brandDark px-8 py-4 rounded-md font-bold hover:bg-brandGold transition-all">
+              <button onClick={() => navigate("/contact")} className="bg-brandAccent text-brandDark px-8 py-4 rounded-md font-bold hover:bg-brandGold transition-all">
                 Consult A Quality Lead
               </button>
             </div>

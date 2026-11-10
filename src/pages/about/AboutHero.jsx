@@ -174,8 +174,8 @@
 
 //                 {/* Title */}
 //                 <h1
-//                   className={`mb-4 text-5xl font-extrabold tracking-tight text-white md:text-6xl lg:text-7xl leading-[1.1] transition-all duration-700 delay-200 ${
-//                     index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+//                   className={`mb-4 text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-white leading-[1.1] transition-all duration-700 delay-200 ${
+// index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
 //                   }`}
 //                 >
 //                   <span className="block mb-2">{slide.title}</span>
@@ -186,8 +186,8 @@
 
 //                 {/* Description */}
 //                 <p
-//                   className={`max-w-2xl mx-auto mb-10 text-lg leading-relaxed text-white/80 md:text-xl transition-all duration-700 delay-300 ${
-//                     index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+//                   className={`max-w-2xl mx-auto mb-10 text-base md:text-lg leading-relaxed text-white/80 transition-all duration-700 delay-300 ${
+// index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
 //                   }`}
 //                 >
 //                   {slide.description}

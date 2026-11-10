@@ -137,7 +137,7 @@
 //             <Clock className="w-3.5 h-3.5 text-brandGold" />
 //             <span className="text-[10px] font-black tracking-widest uppercase text-brandGold">Our Journey</span>
 //           </div>
-//           <h2 className="text-3xl font-black md:text-5xl text-brandDark dark:text-white">
+//           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
 //             5 Years of <span className="text-brandGold">Growth</span>
 //           </h2>
 //         </div>
@@ -361,7 +361,7 @@ const Timeline = () => {
  
      
  
-      <div className="container relative z-10 flex flex-col justify-between h-full px-6 py-12 mx-auto md:px-12 lg:px-24">
+      <div className="container relative z-10 flex flex-col justify-between h-full py-20">
        
         {/* Top Section: Content & Images */}
         <div className="flex flex-col items-center justify-between flex-grow gap-12 lg:flex-row lg:gap-24">
@@ -400,7 +400,7 @@ const Timeline = () => {
                   <h2 className="flex items-center gap-3 mb-4 text-2xl font-bold md:text-3xl font-heading text-brandNavy dark:text-brandLight">
                     {activeEvent.title}
                   </h2>
-                  <p className="max-w-xl mb-8 text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                  <p className="max-w-xl mb-8 text-base leading-relaxed text-gray-600 dark:text-gray-400">
                     {activeEvent.description}
                   </p>
                  
@@ -446,7 +446,6 @@ const Timeline = () => {
                     alt={`${activeEvent.title} secondary`}
                     className="object-cover w-full h-full transition-opacity duration-500 opacity-60 hover:opacity-100"
                   />
-                  <div className="absolute inset-0 bg-brandNavy/10 dark:bg-brandNavy/30 mix-blend-multiply" />
                 </motion.div>
  
                 {/* Front Image (Main) */}
@@ -462,7 +461,6 @@ const Timeline = () => {
                     className="object-cover w-full h-full"
                   />
                   {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-brandDark/80 via-transparent to-transparent opacity-60" />
                  
                   {/* Icon Badge */}
                   <div className="absolute p-3 border shadow-lg bottom-6 left-6 bg-white/80 dark:bg-white/10 backdrop-blur-md rounded-xl border-white/20 text-brandPrimary dark:text-brandAccent">

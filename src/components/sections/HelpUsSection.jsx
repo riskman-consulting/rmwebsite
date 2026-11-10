@@ -16,7 +16,7 @@ export default function HelpUsSection({ data }) {
           viewport={{ once: true }}
           className="mb-16 text-center"
         >
-          <h2 className="text-4xl font-bold md:text-5xl text-brandDark dark:text-white">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
             Industry <span className="text-brandPrimary dark:text-brandAccent">Insights</span>
           </h2>
         </motion.div>
@@ -46,7 +46,7 @@ export default function HelpUsSection({ data }) {
               </div>
 
               {/* Title */}
-              <h3 className="mb-4 text-xl font-bold transition-colors duration-300 text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
+              <h3 className="mb-4 text-lg md:text-xl font-bold transition-colors duration-300 text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
                 {item.title}
               </h3>
 

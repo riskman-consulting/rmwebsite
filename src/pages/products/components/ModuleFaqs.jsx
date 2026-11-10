@@ -16,7 +16,7 @@ const ModuleFaqs = ({ mod }) => (
       {mod.faqs.map((faq, index) => (
         <details key={faq.q} open={index === 0} className="group">
           <summary className="flex items-start justify-between gap-4 py-4 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
-            <h3 className="text-base font-bold leading-snug text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandGold">
+            <h3 className="text-lg font-heading font-semibold leading-snug text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandGold">
               {faq.q}
             </h3>
             <Plus
