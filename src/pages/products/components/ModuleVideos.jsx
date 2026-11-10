@@ -103,7 +103,7 @@ const ModuleVideos = ({ product, mod, videos }) => (
               </div>
 
               <figcaption className="mt-3">
-                <h3 className="text-lg md:text-xl font-heading mb-2 font-bold text-brandDark dark:text-white">
+                <h3 className="text-lg font-heading mb-2 font-semibold text-brandDark dark:text-white">
                   {toTitleCase(video.title)}
                 </h3>
                 {video.caption && (

@@ -23,7 +23,7 @@ const ModuleLifecycle = ({ mod }) => (
             {index + 1}
           </span>
           <div className="pt-0.5">
-            <h3 className="text-lg md:text-xl font-heading mb-1 font-bold leading-snug text-brandDark dark:text-white">
+            <h3 className="text-lg font-heading mb-1 font-semibold leading-snug text-brandDark dark:text-white">
               {toTitleCase(step.title)}
             </h3>
             <p className="text-[15px] leading-relaxed text-gray-800 dark:text-white/80">

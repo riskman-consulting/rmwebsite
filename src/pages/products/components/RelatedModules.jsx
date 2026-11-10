@@ -10,7 +10,7 @@ const RelatedModules = ({ product, currentSlug }) => {
     <section className="border-t bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark">
       <div className="container py-12 md:py-14">
         <div className="flex flex-wrap items-baseline justify-between gap-3 mb-6">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-brandDark dark:text-white">
+          <h2 className="text-2xl lg:text-[1.75rem] font-heading font-bold text-brandDark dark:text-white">
             Other {product.shortName} Modules
           </h2>
           <Link
@@ -30,7 +30,7 @@ const RelatedModules = ({ product, currentSlug }) => {
                 className="flex items-start justify-between gap-4 py-4 group"
               >
                 <span>
-                  <span className="block text-base md:text-lg font-heading font-bold text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandGold">
+                  <span className="block text-base font-heading font-semibold text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandGold">
                     {other.name}
                   </span>
                   <span className="block mt-1 text-sm leading-relaxed text-gray-800 dark:text-white/80">

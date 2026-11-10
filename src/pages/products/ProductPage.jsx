@@ -160,7 +160,7 @@ const ProductPage = () => {
                 <Link to={moduleLink(mod.slug)} className="flex items-start gap-4 py-5 group">
                   <Icon aria-hidden="true" className="flex-shrink-0 w-5 h-5 mt-0.5 text-brandPrimary dark:text-brandGold" />
                   <span className="flex-1">
-                    <span className="block text-base md:text-lg font-heading font-bold text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandGold">
+                    <span className="block text-base font-heading font-semibold text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandGold">
                       {mod.name}
                     </span>
                     <span className="block mt-1 text-[15px] leading-relaxed text-gray-800 dark:text-white/80">
@@ -184,7 +184,7 @@ const ProductPage = () => {
         <div className="grid grid-cols-1 gap-x-10 gap-y-7 sm:grid-cols-2">
           {REASONS.map((reason) => (
             <article key={reason.title}>
-              <h3 className="text-lg md:text-xl font-heading flex items-start gap-2 mb-1.5 font-bold leading-snug text-brandDark dark:text-white">
+              <h3 className="text-lg font-heading flex items-start gap-2 mb-1.5 font-semibold leading-snug text-brandDark dark:text-white">
                 <Check className="flex-shrink-0 w-4 h-4 mt-1 text-brandPrimary dark:text-brandGold" strokeWidth={2.5} />
                 {toTitleCase(reason.title)}
               </h3>
@@ -199,7 +199,7 @@ const ProductPage = () => {
         <dl className="border-t divide-y border-borderLight dark:border-borderDark divide-borderLight dark:divide-borderDark">
           {ROLES.map((r) => (
             <div key={r.role} className="grid grid-cols-1 gap-1 py-4 sm:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] sm:gap-6">
-              <dt className="text-base md:text-lg font-heading font-bold leading-snug text-brandDark dark:text-white">{toTitleCase(r.role)}</dt>
+              <dt className="text-base font-heading font-semibold leading-snug text-brandDark dark:text-white">{toTitleCase(r.role)}</dt>
               <dd className="text-[15px] leading-relaxed text-gray-800 dark:text-white/80">{r.text}</dd>
             </div>
           ))}

@@ -26,7 +26,7 @@ const Frame = ({ screen }) => (
 
 const Caption = ({ screen }) => (
   <figcaption className="max-w-3xl mt-4">
-    <h3 className="text-lg md:text-xl font-heading mb-2 font-bold text-brandDark dark:text-white">
+    <h3 className="text-lg font-heading mb-2 font-semibold text-brandDark dark:text-white">
       {toTitleCase(screen.title)}
     </h3>
     <p className="text-sm leading-relaxed md:text-base text-gray-800 dark:text-white/80">

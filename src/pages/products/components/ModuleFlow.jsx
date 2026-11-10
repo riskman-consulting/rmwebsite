@@ -21,7 +21,7 @@ const ModuleFlow = ({ mod }) => {
         {mod.flow.map((phase) => (
           <div key={phase.title}>
             <div className="pb-3 mb-5 border-b border-borderLight dark:border-borderDark">
-              <h3 className="text-lg md:text-xl font-heading font-bold leading-snug text-brandDark dark:text-white">
+              <h3 className="text-lg font-heading font-semibold leading-snug text-brandDark dark:text-white">
                 {toTitleCase(phase.title)}
               </h3>
               {phase.text && (
@@ -46,7 +46,7 @@ const ModuleFlow = ({ mod }) => {
                       {counter}
                     </span>
                     <div className="flex-1 pt-0.5">
-                      <h4 className="text-base md:text-lg font-heading mb-1 font-bold leading-snug text-brandDark dark:text-white">
+                      <h4 className="text-base font-heading mb-1 font-semibold leading-snug text-brandDark dark:text-white">
                         {toTitleCase(step.title)}
                       </h4>
                       <p className="text-[15px] leading-relaxed text-gray-800 dark:text-white/80">

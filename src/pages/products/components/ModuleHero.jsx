@@ -30,7 +30,7 @@ const ModuleHero = ({ product, mod, sections, belowVideoHero = false }) => {
             <Heading
               className={` text-brandDark dark:text-white ${
                 belowVideoHero
-                  ? "text-2xl md:text-3xl lg:text-4xl font-heading font-bold leading-tight"
+                  ? "text-2xl lg:text-[1.75rem] font-heading font-bold leading-tight"
                   : "text-[1.75rem] md:text-4xl lg:text-5xl font-heading font-bold leading-[1.15]"
               }`}
             >

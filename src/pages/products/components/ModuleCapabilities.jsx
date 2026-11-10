@@ -18,7 +18,7 @@ const ModuleCapabilities = ({ mod }) => (
         const Icon = cap.icon;
         return (
           <article key={cap.title} className="py-6 first:pt-0 last:pb-0">
-            <h3 className="text-lg md:text-xl font-heading flex items-center gap-2.5 mb-2 font-bold leading-snug text-brandDark dark:text-white">
+            <h3 className="text-lg font-heading flex items-center gap-2.5 mb-2 font-semibold leading-snug text-brandDark dark:text-white">
               {Icon && (
                 <Icon
                   aria-hidden="true"
