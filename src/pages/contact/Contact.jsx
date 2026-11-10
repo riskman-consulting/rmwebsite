@@ -61,7 +61,7 @@ export default function Contact() {
               <div className="inline-block p-4 mb-6 transition-colors bg-brandLight dark:bg-bgDark rounded-2xl group-hover:bg-brandGold/10">
                 {f.icon}
               </div>
-              <h3 className="mb-3 text-xl font-bold text-brandDark dark:text-white font-heading">{f.title}</h3>
+              <h3 className="mb-3 text-lg md:text-xl font-bold text-brandDark dark:text-white font-heading">{f.title}</h3>
               <p className="text-sm leading-relaxed text-brandNavy/70 dark:text-gray-400">{f.description}</p>
             </div>
           ))}
@@ -81,10 +81,10 @@ export default function Contact() {
             <span className="inline-block py-1 px-4 rounded-full bg-brandGold/20 text-brandGold text-xs font-bold uppercase tracking-[0.2em] mb-4">
               Our Global Network
             </span>
-            <h2 className="mb-6 font-heading text-3xl md:text-4xl font-bold text-white">
+            <h2 className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-white">
               Expertise Across <span className="text-brandGold">India</span>
             </h2>
-            <p className="max-w-2xl mx-auto text-lg text-gray-300">
+            <p className="max-w-2xl mx-auto text-base text-gray-300">
               Connect with our regional leaders for localized risk management solutions tailored to your market.
             </p>
           </div>
@@ -104,7 +104,7 @@ export default function Contact() {
                   />
                 </div>
                 <div className="text-center">
-                  <h3 className="text-xl font-bold text-white transition-colors group-hover:text-brandGold">{loc.founder}</h3>
+                  <h3 className="text-lg md:text-xl font-bold text-white transition-colors group-hover:text-brandGold">{loc.founder}</h3>
                   <div className="flex items-center justify-center gap-2 mt-3 text-gray-400 transition-colors group-hover:text-white">
                     <MapPin size={16} className="text-brandGold" />
                     <span className="text-sm font-medium tracking-wide">{loc.location}</span>
@@ -121,7 +121,7 @@ export default function Contact() {
         <div className="bg-brandGold p-1 rounded-[3rem]"> {/* Gradient Border Wrapper */}
           <div className="bg-bgLight dark:bg-surfaceDark rounded-[2.9rem] p-12 md:p-20 text-center relative overflow-hidden">
              <div className="relative z-10">
-                <h2 className="mb-8 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
+                <h2 className="mb-8 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
                   Ready to secure your <br />
                   <span className="text-brandPrimary dark:text-brandGold">digital future?</span>
                 </h2>

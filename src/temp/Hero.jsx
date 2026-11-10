@@ -54,7 +54,7 @@
 //             initial={{ opacity: 0, y: 20 }}
 //             animate={{ opacity: 1, y: 0 }}
 //             transition={{ duration: 0.8, delay: 0.2 }}
-//             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]"
+//             className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-[1.1]"
 //           >
 //             {featuredEvent?.title}
 //             <br />
@@ -68,7 +68,7 @@
 //             initial={{ opacity: 0, y: 20 }}
 //             animate={{ opacity: 1, y: 0 }}
 //             transition={{ duration: 0.8, delay: 0.4 }}
-//             className="max-w-lg md:max-w-xl text-white/70 text-base md:text-lg lg:text-xl leading-relaxed mb-10 font-light italic"
+//             className="max-w-lg md:max-w-xl text-white/70 text-base md:text-lg leading-relaxed mb-10 font-light italic"
 //           >
 //             "{featuredEvent?.shortDesc || 'Redefining the boundaries of excellence.'}"
 //           </motion.p>
@@ -381,7 +381,7 @@
 //                 <div className="absolute inset-[-4px] border-t-2 border-[#FFB800] rounded-full animate-spin-slow" />
 //                 <Award size={48} className="text-[#FFB800] drop-shadow-[0_0_15px_rgba(255,184,0,0.5)]" />
 //               </div>
-//               <h2 className="font-serif text-5xl tracking-[1em] text-[#FFB800] ml-[1em]">IIA</h2>
+//               <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-[#FFB800] ml-[1em]">IIA</h2>
 //             </div>
 //           </div>
 //         </div>
@@ -441,7 +441,7 @@
 
 //           <div className="mb-16">
 //             <h1 
-//               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white mb-8 leading-[0.8] transition-all duration-1500"
+//               className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-white mb-8 leading-[0.8] transition-all duration-1500"
 //               style={{
 //                 opacity: isLoaded ? 1 : 0,
 //                 transform: isLoaded ? 'translateY(0)' : 'translateY(80px)'
@@ -529,7 +529,7 @@
                 
 //                 <div className="relative z-10 text-left">
 //                   <p className="text-[11px] text-[#FFC000] font-black uppercase tracking-[0.5em] mb-3 opacity-60 group-hover:opacity-100 transition-opacity">{card.label}</p>
-//                   <p className="text-white font-bold text-xl tracking-tight leading-tight group-hover:text-white transition-colors">{card.val}</p>
+//                   <p className="text-white font-bold text-base md:text-lg tracking-tight leading-tight group-hover:text-white transition-colors">{card.val}</p>
 //                 </div>
 
 //                 <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-[1500ms] bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none" />
@@ -951,7 +951,7 @@ const Hero = () => {
               </div>
               <div className="text-center">
                 <h2 
-                  className="font-black text-5xl tracking-[0.2em] text-[#FFB800] mb-2"
+                  className="font-bold text-2xl md:text-3xl lg:text-4xl text-[#FFB800] mb-2"
                   style={{
                     textShadow: `0 0 ${30 - (curtainProgress * 20)}px rgba(255, 184, 0, 0.8)`
                   }}
@@ -1041,7 +1041,7 @@ const Hero = () => {
 
           <div className="mb-16">
             <h1 
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white mb-8 leading-[0.8] transition-all duration-1500"
+              className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-white mb-8 leading-[0.8] transition-all duration-1500"
               style={{
                 opacity: isLoaded ? 1 : 0,
                 transform: isLoaded ? 'translateY(0)' : 'translateY(80px)'
@@ -1129,7 +1129,7 @@ const Hero = () => {
                 
                 <div className="relative z-10 text-left">
                   <p className="text-[11px] text-[#FFC000] font-black uppercase tracking-[0.5em] mb-3 opacity-60 group-hover:opacity-100 transition-opacity">{card.label}</p>
-                  <p className="text-white font-bold text-xl tracking-tight leading-tight group-hover:text-white transition-colors">{card.val}</p>
+                  <p className="text-white font-bold text-base md:text-lg tracking-tight leading-tight group-hover:text-white transition-colors">{card.val}</p>
                 </div>
 
                 <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-[1500ms] bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none" />

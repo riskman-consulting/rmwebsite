@@ -63,10 +63,10 @@
 //       <div className="container">
 //         {/* Section Header */}
 //         <div className="max-w-3xl mx-auto mb-16 text-center">
-//           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl font-heading text-brandDark dark:text-white">
+//           <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //             Value Chain Management
 //           </h2>
-//           <p className="mb-6 text-lg text-gray-600 dark:text-gray-300">
+//           <p className="mb-6 text-base text-gray-600 dark:text-gray-300">
 //             Our framework covers the entire spectrum of credit operations to prevent the deterioration of borrower creditworthiness and reporting.
 //           </p>
           
@@ -118,7 +118,7 @@
 //                     </div>
 
 //                     {/* Title */}
-//                     <h3 className="mb-2 text-lg font-bold text-center text-brandDark dark:text-white">
+//                     <h3 className="mb-2 text-lg md:text-xl font-bold text-center text-brandDark dark:text-white">
 //                       {step.title}
 //                     </h3>
 
@@ -166,7 +166,7 @@
 //                     <span className={`inline-block px-3 py-1 bg-gradient-to-r ${step.color} text-white text-xs font-bold rounded-full mb-2`}>
 //                       {step.phase}
 //                     </span>
-//                     <h3 className="mb-2 text-xl font-bold text-brandDark dark:text-white">
+//                     <h3 className="mb-2 text-lg md:text-xl font-bold text-brandDark dark:text-white">
 //                       {step.title}
 //                     </h3>
 //                     <p className="mb-3 text-sm text-gray-600 dark:text-gray-400">
@@ -200,7 +200,7 @@
 //         <div className="p-8 text-white bg-gradient-to-br from-brandNavy to-brandDark rounded-2xl md:p-12">
 //           <div className="grid items-center gap-8 md:grid-cols-2">
 //             <div>
-//               <h3 className="mb-4 text-2xl font-bold md:text-3xl font-heading">
+//               <h3 className="mb-4 text-xl md:text-2xl lg:text-3xl font-bold font-heading">
 //                 Prudent Exposure Management
 //               </h3>
 //               <p className="mb-6 leading-relaxed text-gray-300">
@@ -249,10 +249,10 @@ const PolicyValueChain = () => {
         <div className="grid items-center gap-16 lg:grid-cols-2">
           <div>
             <p className="mb-3 text-sm font-bold tracking-wider uppercase text-brandPrimary dark:text-brandAccent">Process Flow</p>
-            <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
               Value Chain Management
             </h2>
-            <p className="mb-10 text-lg text-gray-600 dark:text-gray-300">
+            <p className="mb-10 text-base text-gray-600 dark:text-gray-300">
               Our framework covers the entire spectrum of credit operations to prevent the deterioration of borrower creditworthiness and reporting.
             </p>
 

@@ -40,7 +40,7 @@ export const SectionTag = ({ children }) => (
 );
 
 export const SectionTitle = ({ children }) => (
-  <h2 className="font-heading text-[clamp(28px,3.5vw,40px)] font-bold text-brandDark dark:text-white leading-tight mb-4">
+  <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white leading-tight mb-4">
     {children}
   </h2>
 );

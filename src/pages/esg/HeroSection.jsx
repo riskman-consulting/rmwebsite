@@ -31,17 +31,17 @@ const HeroSection = () => {
           </div>
 
           {/* Primary Heading */}
-          <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight text-white font-heading sm:text-5xl lg:text-6xl">
+          <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight text-white font-heading ">
             Sustainability & <span className="text-brandAccent">ESG</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="mb-4 font-serif text-xl italic font-light leading-relaxed text-white/90 sm:text-2xl md:text-3xl">
+          <p className="mb-4 font-serif text-base md:text-lg italic font-light leading-relaxed text-white/90 ">
             Advisory, Implementation
           </p>
 
           {/* Tagline */}
-          <p className="mb-10 text-base font-light leading-relaxed text-white/85 sm:text-lg md:text-xl">
+          <p className="mb-10 text-base md:text-lg font-light leading-relaxed text-white/85 ">
             Transforming Organizations for a Sustainable Future
           </p>
 

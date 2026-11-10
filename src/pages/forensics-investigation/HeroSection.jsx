@@ -28,14 +28,14 @@ const HeroSection = () => {
             </span>
           </div>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-[1.1] text-brandNavy dark:text-white">
+          <h1 className="text-[1.75rem] md:text-4xl lg:text-5xl font-heading font-bold leading-[1.1] text-brandNavy dark:text-white">
             Advanced Forensics and <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandGold to-brandAccent">
             Investigation Services
             </span>
           </h1>
           
-          <p className="max-w-xl pl-6 text-lg leading-relaxed text-gray-600 border-l-4 md:text-xl dark:text-gray-300 border-brandGold">
+          <p className="max-w-xl pl-6 text-base md:text-lg leading-relaxed text-gray-600 border-l-4 dark:text-gray-300 border-brandGold">
             Protect organizational integrity through rigorous investigative protocols. We provide the clarity and evidence needed to resolve complex internal and external threats.
           </p>
           

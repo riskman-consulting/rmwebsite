@@ -25,12 +25,12 @@
 //                         viewport={{ once: true }}
 //                         transition={{ duration: 0.8 }}
 //                     >
-//                         <h2 className="mb-6 text-3xl font-extrabold leading-tight font-heading md:text-4xl text-brandLight">
+//                         <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandLight">
 //                             The RiskMan Advantage
 //                         </h2>
 //                         <hr className="w-12 h-[2px] border-none bg-gradient-to-r from-brandGold to-brandAccent mb-8" />
 
-//                         <p className="mb-10 font-sans text-lg font-light leading-relaxed text-brandLight/70">
+//                         <p className="mb-10 font-sans text-base font-light leading-relaxed text-brandLight/70">
 //                             Deploying a concurrent audit program requires more than just tools; it requires a partner who understands the nuance of global operations and the rigor of assurance standards. RiskMan brings a combined 18 years of specialized experience in audit and advisory.
 //                         </p>
 
@@ -108,7 +108,7 @@ const WhyRiskMan = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="mb-6 text-3xl font-bold leading-tight font-heading md:text-4xl text-brandDark dark:text-white">
+                        <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandDark dark:text-white">
                             The RiskMan Advantage
                         </h2>
                         <hr className="w-12 h-[2px] border-none bg-gradient-to-r from-brandGold to-brandAccent mb-8" />

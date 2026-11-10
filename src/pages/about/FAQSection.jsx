@@ -49,14 +49,14 @@ export default function FAQSection() {
               FAQ
             </span>
             
-            <h2 className="mb-6 text-4xl font-bold lg:text-5xl text-brandDark dark:text-white">
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
               Frequently Asked{" "}
-              <span className="font-serif italic font-medium text-brandGold">
+              <span className="text-brandGold">
                 Questions
               </span>
             </h2>
             
-            <p className="text-lg leading-relaxed text-brandDark/70 dark:text-white/70">
+            <p className="text-base leading-relaxed text-brandDark/70 dark:text-white/70">
               Find answers to common questions about RiskMan's services, approach, and how we can help your organization achieve sustainable growth.
             </p>
 
@@ -72,7 +72,7 @@ export default function FAQSection() {
                   <HelpCircle className="w-6 h-6 text-brandAccent" />
                 </div>
                 <div>
-                  <h3 className="mb-2 text-lg font-bold text-brandDark dark:text-white">
+                  <h3 className="mb-2 text-lg md:text-xl font-bold text-brandDark dark:text-white">
                     Still have questions?
                   </h3>
                   <p className="text-sm text-brandDark/70 dark:text-white/70">
@@ -106,7 +106,7 @@ export default function FAQSection() {
                 onClick={() => toggleFaq(i)}
               >
                 <div className="flex items-center justify-between gap-4 p-6">
-                  <h3 className="text-lg font-bold text-brandDark dark:text-white lg:text-xl">
+                  <h3 className="text-lg md:text-xl font-bold text-brandDark dark:text-white ">
                     {f.question}
                   </h3>
                   <motion.div
@@ -152,7 +152,7 @@ export default function FAQSection() {
               <HelpCircle className="w-6 h-6 text-brandAccent" />
             </div>
             <div>
-              <h3 className="mb-2 text-lg font-bold text-brandDark dark:text-white">
+              <h3 className="mb-2 text-lg md:text-xl font-bold text-brandDark dark:text-white">
                 Still have questions?
               </h3>
               <p className="text-sm text-brandDark/70 dark:text-white/70">

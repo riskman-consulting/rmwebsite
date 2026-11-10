@@ -35,8 +35,8 @@ const PillarsSection = () => {
       <div className="container">
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <p className="mb-3 text-sm font-bold tracking-wider uppercase text-brandPrimary dark:text-brandAccent">Core Methodology</p>
-          <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">Resilience Framework Pillars</h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">Resilience Framework Pillars</h2>
+          <p className="text-base text-gray-600 dark:text-gray-300">
             A successful Business Continuity Management System (BCMS) relies on proactive planning and a deep understanding of critical organizational operations.
           </p>
         </div>
@@ -51,7 +51,7 @@ const PillarsSection = () => {
                 <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${pillar.color} group-hover:scale-110 transition-transform`}>
                   {pillar.icon}
                 </div>
-                <h3 className="mb-3 text-xl font-bold text-brandDark dark:text-white">{pillar.title}</h3>
+                <h3 className="mb-3 text-lg md:text-xl font-bold text-brandDark dark:text-white">{pillar.title}</h3>
                 <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
                   {pillar.description}
                 </p>
@@ -68,7 +68,7 @@ const PillarsSection = () => {
               />
               <div className="absolute inset-0 flex items-end p-8 bg-gradient-to-t from-brandDark/80 to-transparent">
                 <div className="text-white">
-                  <p className="mb-2 text-xl font-bold">Data-Driven Decisions</p>
+                  <p className="mb-2 text-base md:text-lg font-bold">Data-Driven Decisions</p>
                   <p className="text-sm text-white/80">Our framework is built on rigorous analysis and real-world testing scenarios.</p>
                 </div>
               </div>

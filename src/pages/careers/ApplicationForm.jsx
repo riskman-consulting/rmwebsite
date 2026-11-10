@@ -92,7 +92,7 @@ export default function ApplicationForm({ jobTitle, renderSuccessAction }) {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -20 }}
         >
-          <h3 className="mb-2 text-xl font-bold">Apply Now</h3>
+          <h3 className="mb-2 text-lg md:text-xl font-bold">Apply Now</h3>
           <p className="mb-8 text-sm text-zinc-500">
             {jobTitle
               ? `Complete the form below to apply for ${jobTitle}.`
@@ -231,7 +231,7 @@ export default function ApplicationForm({ jobTitle, renderSuccessAction }) {
               <FaCheckCircle className="text-4xl text-brandGold" />
             </div>
           </div>
-          <h3 className="mb-4 text-2xl font-bold">Application Received!</h3>
+          <h3 className="mb-4 text-lg md:text-xl font-bold">Application Received!</h3>
           <p className="px-4 mb-8 text-sm leading-relaxed text-zinc-500">
             Thanks for your interest in our Organization. Our recruitment team will
             review your profile and get back to you shortly.

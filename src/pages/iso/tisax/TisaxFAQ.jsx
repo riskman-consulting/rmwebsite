@@ -40,7 +40,7 @@ const TisaxFAQ = () => {
                             <HelpCircle className="w-4 h-4" />
                             General Knowledge
                         </div>
-                        <h2 className="mb-6 text-3xl font-bold leading-tight font-heading md:text-4xl text-brandDark dark:text-white">
+                        <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandDark dark:text-white">
                             Common <br />Questions About <br /><span className="text-brandAccent">TISAX</span>
                         </h2>
                         <p className="max-w-sm mb-10 text-slate-500 dark:text-slate-400">

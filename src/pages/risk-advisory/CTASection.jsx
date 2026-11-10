@@ -24,12 +24,12 @@ const CTASection = ({ data }) => {
           className="mx-auto max-w-4xl text-center"
         >
           {/* Title */}
-          <h2 className="mb-6 font-heading text-3xl font-bold leading-tight text-white md:text-4xl">
+          <h2 className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white ">
             {data.title}
           </h2>
 
           {/* Description */}
-          <p className="mx-auto mb-10 max-w-3xl text-lg leading-relaxed text-white/85 md:text-xl">
+          <p className="mx-auto mb-10 max-w-3xl text-base md:text-lg leading-relaxed text-white/85 ">
             {data.description}
           </p>
 

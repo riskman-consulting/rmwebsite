@@ -1,6 +1,7 @@
 import React from "react";
 import { Check } from "lucide-react";
 import DocSection from "./DocSection";
+import { toTitleCase } from "../../../utils/titleCase";
 
 /**
  * What typically breaks when the work runs on spreadsheets and email, followed
@@ -15,8 +16,8 @@ const ModuleChallenges = ({ mod }) => (
     <div className="grid grid-cols-1 gap-x-10 gap-y-7 sm:grid-cols-2">
       {mod.challenges.map((item) => (
         <article key={item.title}>
-          <h3 className="mb-1.5 text-base font-bold leading-snug text-brandDark dark:text-white">
-            {item.title}
+          <h3 className="text-lg md:text-xl font-heading mb-1.5 font-bold leading-snug text-brandDark dark:text-white">
+            {toTitleCase(item.title)}
           </h3>
           <p className="text-[15px] leading-relaxed text-gray-800 dark:text-white/80">
             {item.text}
@@ -26,8 +27,8 @@ const ModuleChallenges = ({ mod }) => (
     </div>
 
     <div className="pl-5 mt-10 border-l-[3px] border-brandAccent">
-      <h3 className="mb-3 text-base font-bold text-brandDark dark:text-white">
-        What {mod.shortName} delivers
+      <h3 className="text-lg md:text-xl font-heading mb-3 font-bold text-brandDark dark:text-white">
+        What {mod.shortName} Delivers
       </h3>
       <ul className="space-y-2">
         {mod.outcomes.map((outcome) => (

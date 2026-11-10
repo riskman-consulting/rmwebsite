@@ -14,7 +14,7 @@ function FAQSection() {
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brandAccent/10 text-brandAccent mb-4">
               <HelpCircle size={24} />
             </div>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white mb-4">Privacy Governance FAQ</h2>
+            <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white mb-4">Privacy Governance FAQ</h2>
             <p className="text-gray-600 dark:text-gray-400">Common questions about our compliance frameworks and services.</p>
           </div>
 

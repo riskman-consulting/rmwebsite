@@ -60,10 +60,10 @@ const StrategicSolutions = () => {
       <div className="container relative">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
-          <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Strategic ISO 27001 Readiness Solutions
           </h2>
-          <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+          <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
             Strengthen your organization's resilience by aligning with global standards through our comprehensive, executive-led ISO 27001 readiness framework.
           </p>
         </div>
@@ -81,7 +81,7 @@ const StrategicSolutions = () => {
               </div>
 
               {/* Title */}
-              <h3 className="mb-4 text-xl font-bold leading-tight font-heading text-brandDark dark:text-white">
+              <h3 className="mb-4 text-lg md:text-xl font-bold leading-tight font-heading text-brandDark dark:text-white">
                 {solution.title}
               </h3>
 

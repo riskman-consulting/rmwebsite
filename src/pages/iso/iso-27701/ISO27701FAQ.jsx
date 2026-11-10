@@ -62,7 +62,7 @@ const ISO27701FAQ = () => {
                         <span className="text-sm font-semibold tracking-widest uppercase font-heading text-brandPrimary dark:text-brandAccent">
                             FAQ
                         </span>
-                        <h2 className="mt-3 text-3xl font-bold font-heading text-brandDark dark:text-white md:text-4xl">
+                        <h2 className="mt-3 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white ">
                             Frequently Asked Questions
                         </h2>
                         <p className="mt-4 text-slate-600 dark:text-slate-400">

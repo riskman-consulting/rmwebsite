@@ -27,11 +27,11 @@ const PolicyHero = () => {
             <span className="text-sm font-medium tracking-wide uppercase text-brandAccent">Strategic Direction</span>
           </div>
           
-          <h1 className="text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl font-heading">
+          <h1 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight text-white font-heading">
             Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandAccent to-brandGold">Credit Policy</span> Framework
           </h1>
           
-          <p className="max-w-2xl text-xl leading-relaxed text-gray-200">
+          <p className="max-w-2xl text-base md:text-lg leading-relaxed text-gray-200">
             RiskMan formulates structured policies to identify, measure, and control credit risk, ensuring your activities align with long-term enterprise goals.
           </p>
           

@@ -5,10 +5,10 @@ const DataManagementPhase = () => {
       <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
             <div className="container">
                 <div className="mx-auto mb-16 text-center ">
-                    <h2 className="mb-4 text-3xl font-bold font-heading md:text-4xl">
+                    <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
                         Data Management & <span className="text-brandPrimary dark:text-brandGold">Migration</span>
                     </h2>
-                    <p className="max-w-2xl mx-auto text-lg opacity-70">
+                    <p className="max-w-2xl mx-auto text-base opacity-70">
                         Ensure data integrity and seamless transitions with structured cleansing, mapping, and validation frameworks.
                     </p>
                 </div>

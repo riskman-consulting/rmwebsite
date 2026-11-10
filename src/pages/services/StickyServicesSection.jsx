@@ -32,7 +32,7 @@ export const StickyServicesSection = () => {
                 Strategic Resilience
               </span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-brandDark dark:text-white leading-[1.1] font-heading">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white leading-[1.1] font-heading">
               Enterprise <br className="hidden md:block" /> 
               <span className="text-brandPrimary dark:text-brandAccent">Services</span>
             </h2>
@@ -45,7 +45,7 @@ export const StickyServicesSection = () => {
             transition={{ delay: 0.2 }}
             className="max-w-xl "
           >
-            <p className="text-base font-light leading-relaxed md:text-xl text-brandNavy/70 dark:text-slate-400">
+            <p className="text-base md:text-lg font-light leading-relaxed text-brandNavy/70 dark:text-slate-400">
               Our Enterprise Services provide a high-impact suite of risk, financial, and operational solutions designed to bolster resilience and ensure regulatory excellence for global organizations.
             </p>
           </motion.div>
@@ -79,7 +79,7 @@ export const StickyServicesSection = () => {
 
                    
                     <div className="space-y-4 md:space-y-6">
-                      <h3 className="text-2xl font-bold tracking-tight transition-colors duration-300 md:text-3xl text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
+                      <h3 className="text-xl md:text-2xl lg:text-3xl font-bold transition-colors duration-300 text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
                         {service.title}
                       </h3>
                       <p className="text-sm leading-relaxed text-brandNavy/60 dark:text-slate-400 md:text-base line-clamp-3">

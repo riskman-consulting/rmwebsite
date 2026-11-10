@@ -11,7 +11,7 @@ export default function BlogTemplate({ blog }) {
         className="w-full h-[60vh] bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: `url(${blog.bannerImage})` }}
       >
-        <h1 className="max-w-4xl px-6 text-5xl font-bold text-center text-white drop-shadow-lg">
+        <h1 className="max-w-4xl px-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-center text-white drop-shadow-lg">
           {blog.title}
         </h1>
       </div>
@@ -41,7 +41,7 @@ export default function BlogTemplate({ blog }) {
 
             case "heading":
               return (
-                <h2 key={index} className="mt-10 text-3xl font-bold">
+                <h2 key={index} className="mt-10 text-2xl md:text-3xl lg:text-4xl font-bold">
                   {block.text}
                 </h2>
               );
@@ -79,14 +79,14 @@ export default function BlogTemplate({ blog }) {
             case "faq":
               return (
                 <div key={index} className="mt-16">
-                  <h2 className="mb-6 text-3xl font-bold">FAQ</h2>
+                  <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold">FAQ</h2>
                   <div className="space-y-6">
                     {block.items.map((faq, i) => (
                       <div
                         key={i}
                         className="p-6 border shadow-sm rounded-xl bg-gray-50"
                       >
-                        <p className="text-xl font-semibold">❓ {faq.question}</p>
+                        <p className="text-base md:text-lg font-semibold">❓ {faq.question}</p>
                         <p className="mt-2 leading-relaxed text-gray-700">
                           {faq.answer}
                         </p>
@@ -104,7 +104,7 @@ export default function BlogTemplate({ blog }) {
 
       {/* COMMENT FORM */}
       <div className="max-w-4xl px-6 mx-auto mt-20">
-        <h2 className="mb-4 text-3xl font-bold">Leave a Reply</h2>
+        <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold">Leave a Reply</h2>
         <p className="mb-6 text-gray-600">
           Your email address will not be published. Required fields are marked *
         </p>

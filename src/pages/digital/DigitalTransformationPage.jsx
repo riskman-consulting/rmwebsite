@@ -131,7 +131,7 @@ function DigitalTransformationPage() {
                 Digital Transformation Suite
               </div>
 
-              <h1 className="mb-6 text-4xl font-bold leading-tight font-heading md:text-5xl lg:text-6xl">
+              <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading ">
                 Elevate Your Enterprise Through{" "}
                 <span className="text-brandGold">Digital Evolution</span>
               </h1>
@@ -139,7 +139,7 @@ function DigitalTransformationPage() {
               {/* accent divider */}
               <div className="w-24 h-1 mb-6 rounded bg-brandGold" />
 
-              <p className="mb-10 text-lg leading-relaxed md:text-xl text-white/90">
+              <p className="mb-10 text-base md:text-lg leading-relaxed text-white/90">
                 RiskMan empowers your transformation journey by combining
                 governance-driven execution with technical implementation
                 excellence to deliver measurable business impact.
@@ -174,10 +174,10 @@ function DigitalTransformationPage() {
               transition={{ duration: 0.6 }}
               className="mb-16 text-center"
             >
-              <h2 className="mb-6 text-3xl font-bold font-heading md:text-4xl text-brandDark dark:text-white">
+              <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
                 Explore Our Core Digital Transformation Offerings
               </h2>
-              <p className="max-w-3xl mx-auto text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+              <p className="max-w-3xl mx-auto text-base leading-relaxed text-gray-600 dark:text-gray-300">
                 Our comprehensive suite of services is designed to guide your organization through every phase of digital transformation, from strategic planning to ongoing optimization.
               </p>
             </motion.div>
@@ -197,7 +197,7 @@ function DigitalTransformationPage() {
                     <div className="flex items-center justify-center w-16 h-16 mb-6 rounded-full bg-brandPrimary/10 dark:bg-brandGold/10">
                       <IconComponent size={32} className="text-brandPrimary dark:text-brandGold" />
                     </div>
-                    <h3 className="mb-4 text-2xl font-bold font-heading text-brandDark dark:text-white">
+                    <h3 className="mb-4 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
                       {service.title}
                     </h3>
                     <p className="flex-grow mb-6 leading-relaxed text-gray-600 dark:text-gray-300">
@@ -228,7 +228,7 @@ function DigitalTransformationPage() {
                 transition={{ duration: 0.6 }}
                 className="mb-12 text-center"
               >
-                <h2 className="mb-6 text-3xl font-bold font-heading md:text-4xl text-brandDark dark:text-white">
+                <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
                   Frequently Asked Questions
                 </h2>
               </motion.div>
@@ -287,10 +287,10 @@ function DigitalTransformationPage() {
               transition={{ duration: 0.6 }}
               className="max-w-4xl mx-auto text-center"
             >
-              <h2 className="mb-6 text-3xl font-bold text-white font-heading md:text-4xl">
+              <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading ">
                 Ready to Future-Proof Your Business?
               </h2>
-              <p className="mb-8 text-lg leading-relaxed text-gray-200 md:text-xl">
+              <p className="mb-8 text-base md:text-lg leading-relaxed text-gray-200 ">
                 Partner with RiskMan Consulting to navigate your digital transformation journey with confidence. Our expert team is ready to help you unlock new opportunities and achieve sustainable competitive advantage.
               </p>
               <Link

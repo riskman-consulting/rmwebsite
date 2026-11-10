@@ -216,7 +216,7 @@ export default function MomentsThatMatter({ isPage = false }) {
           <Heading className="mb-4 font-heading text-3xl md:text-4xl font-bold text-transparent bg-gradient-to-r from-brandPrimary to-brandNavy dark:from-brandGold dark:to-brandAccent bg-clip-text">
             Moments That Matter
           </Heading>
-          <p className="text-lg text-brandPrimary/70 dark:text-white/70">Capturing our journey of excellence and growth</p>
+          <p className="text-base text-brandPrimary/70 dark:text-white/70">Capturing our journey of excellence and growth</p>
         </motion.div>
 
         {/* SEARCH BAR */}
@@ -289,7 +289,7 @@ export default function MomentsThatMatter({ isPage = false }) {
               <motion.div key={i} whileHover={{ y: -10 }} className="relative overflow-hidden shadow-xl rounded-2xl h-96 cursor-pointer group" onClick={() => openLightbox(e.images, 0)}>
                 <img src={e.images[0]} alt={e.country} className="object-cover w-full h-full" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent flex items-end p-6">
-                  <h3 className="text-3xl font-bold text-white">{e.country}</h3>
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white">{e.country}</h3>
                 </div>
               </motion.div>
             ))}
@@ -300,7 +300,7 @@ export default function MomentsThatMatter({ isPage = false }) {
         {activeFilter === GLOBAL_LEADERSHIP_FILTER && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="grid lg:grid-cols-2 gap-16">
             <div className="space-y-6">
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">Connecting Continents: Global Client Engagement</h2>
+              <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">Connecting Continents: Global Client Engagement</h2>
               <p className="text-brandPrimary/70 dark:text-white/70 leading-relaxed">
                 Our journey across Germany, France, and Vietnam reinforced relationships built on trust and shared purpose. 
                 Beyond the boardroom, it's the human connections that transform transactions into lasting partnerships.

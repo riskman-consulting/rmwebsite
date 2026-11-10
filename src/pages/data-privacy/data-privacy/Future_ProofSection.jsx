@@ -17,11 +17,11 @@ function FutureProofSection() {
                 <div className="inline-block px-4 py-1 mb-6 border rounded-full border-brandPrimary/20 bg-white/50 dark:bg-white/5">
                   <span className="text-sm font-bold tracking-wider uppercase text-brandPrimary dark:text-brandAccent">Strategic Advantage</span>
                 </div>
-                <h2 className="mb-6 text-3xl font-bold leading-tight font-heading md:text-4xl text-brandDark dark:text-white">
+                <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandDark dark:text-white">
                   Future-Proof Your <br/>
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandPrimary to-brandAccent">Data Strategy</span>
                 </h2>
-                <p className="mb-10 text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+                <p className="mb-10 text-base leading-relaxed text-gray-600 dark:text-gray-300">
                   Don't just react to regulations. Proactively build a privacy-first architecture that scales with your business. Contact RiskMan today to elevate your privacy program from a cost center to a strategic business enabler.
                 </p>
                 

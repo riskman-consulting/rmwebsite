@@ -34,7 +34,7 @@ export default function MissionVisionSection() {
               {/* <p className="mb-4 text-sm font-semibold tracking-wider uppercase text-brandDark dark:text-brandAccent">
                 • Who we are
               </p> */}
-              <h2 className="font-heading text-3xl md:text-4xl font-bold leading-[1.1] text-brandNavy dark:text-white">
+              <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold leading-[1.1] text-brandNavy dark:text-white">
                 Our Path to <span className="text-brandAccent">Sustainable Growth</span>
               </h2>
             </motion.div>

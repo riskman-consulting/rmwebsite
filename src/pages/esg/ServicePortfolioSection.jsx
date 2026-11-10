@@ -106,11 +106,11 @@ const ServicePortfolioSection = () => {
             <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-16 h-0.5 bg-brandAccent" />
           </div>
           
-          <h2 className="font-heading font-extrabold text-white text-3xl sm:text-4xl md:text-5xl lg:text-[52px] leading-tight tracking-tight mb-6">
+          <h2 className="font-heading font-bold text-white text-2xl md:text-3xl lg:text-4xl leading-tight mb-6">
             Sustainability & ESG Service Portfolio
           </h2>
           
-          <p className="max-w-4xl mx-auto font-serif text-lg leading-relaxed sm:text-xl md:text-2xl text-white/90">
+          <p className="max-w-4xl mx-auto font-serif text-base md:text-lg leading-relaxed text-white/90">
             RiskMan offers a comprehensive, modular service portfolio that can be deployed individually or as integrated solutions.
           </p>
         </div>
@@ -157,7 +157,7 @@ const ServicePortfolioSection = () => {
                         <span className="flex items-center justify-center w-6 h-6 text-xs font-bold rounded-full bg-white/25">
                           {service.number}
                         </span>
-                        <h3 className="text-lg font-bold leading-tight">
+                        <h3 className="text-lg md:text-xl font-bold leading-tight">
                           {service.title}
                         </h3>
                       </div>
@@ -265,7 +265,7 @@ const ServicePortfolioSection = () => {
               className="p-8 transition-all duration-300 bg-white shadow-lg dark:bg-surfaceDark rounded-2xl hover:shadow-xl"
             >
               <span className="block mb-4 text-5xl">{detail.icon}</span>
-              <h3 className="mb-3 text-2xl font-bold text-brandDark dark:text-white">
+              <h3 className="mb-3 text-lg md:text-xl font-bold text-brandDark dark:text-white">
                 {detail.title}
               </h3>
               <p className="mb-6 leading-relaxed text-gray-600 dark:text-gray-300">

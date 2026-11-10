@@ -16,7 +16,7 @@ export default function CTASection() {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="mb-6 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white"
+          className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white"
         >
           Partner With
           <br />
@@ -28,7 +28,7 @@ export default function CTASection() {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="max-w-2xl mx-auto mb-8 text-xl text-gray-600 dark:text-gray-400"
+          className="max-w-2xl mx-auto mb-8 text-base md:text-lg text-gray-600 dark:text-gray-400"
         >
           Strengthen governance, manage risk and drive sustainable growth with
           confidence.

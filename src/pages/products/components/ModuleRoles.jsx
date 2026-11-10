@@ -1,5 +1,6 @@
 import React from "react";
 import DocSection from "./DocSection";
+import { toTitleCase } from "../../../utils/titleCase";
 
 /** Who works in the module day to day, and what each of them does there. */
 const ModuleRoles = ({ mod }) => (
@@ -14,8 +15,8 @@ const ModuleRoles = ({ mod }) => (
           key={role.role}
           className="grid grid-cols-1 gap-1 py-4 sm:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] sm:gap-6"
         >
-          <dt className="text-base font-bold leading-snug text-brandDark dark:text-white">
-            {role.role}
+          <dt className="text-base md:text-lg font-heading font-bold leading-snug text-brandDark dark:text-white">
+            {toTitleCase(role.role)}
           </dt>
           <dd className="text-[15px] leading-relaxed text-gray-800 dark:text-white/80">
             {role.text}

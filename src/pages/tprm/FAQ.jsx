@@ -32,10 +32,10 @@
 //       <div className="container">
 //         {/* Section Header */}
 //         <div className="max-w-3xl mx-auto mb-16 text-center">
-//           <h2 className="mb-6 text-3xl font-bold sm:text-4xl lg:text-5xl font-heading text-brandDark dark:text-white">
+//           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //             Frequently Asked Questions
 //           </h2>
-//           <p className="text-lg text-gray-600 dark:text-gray-300">
+//           <p className="text-base text-gray-600 dark:text-gray-300">
 //             Common questions about our TPRM services and framework
 //           </p>
 //         </div>
@@ -84,7 +84,7 @@
 //         {/* Contact Card */}
 //         <div className="max-w-2xl mx-auto mt-12">
 //           <div className="p-8 text-center shadow-xl bg-gradient-to-r from-brandPrimary to-brandNavy dark:from-brandNavy dark:to-brandDark rounded-xl">
-//             <h3 className="mb-4 text-2xl font-bold text-white font-heading">
+//             <h3 className="mb-4 text-lg md:text-xl font-bold text-white font-heading">
 //               Need More Information?
 //             </h3>
 //             <p className="mb-6 text-gray-200">
@@ -150,7 +150,7 @@ const FAQ = () => {
           <div className="inline-flex items-center justify-center p-3 mb-4 text-white rounded-full bg-brandNavy">
             <HelpCircle className="w-8 h-8" />
           </div>
-          <h2 className="text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Frequently Asked Questions
           </h2>
         </div>

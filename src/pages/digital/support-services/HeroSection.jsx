@@ -26,14 +26,14 @@
 //               Digital Transformation Support
 //             </div>
             
-//             <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl lg:text-7xl font-heading text-brandDark dark:text-white">
+//             <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading text-brandDark dark:text-white">
 //               Sustaining <br/>
 //               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandPrimary to-brandAccent">
 //                 Long-Term Success
 //               </span>
 //             </h1>
             
-//             <p className="max-w-lg mb-8 text-xl leading-relaxed text-gray-600 dark:text-gray-300">
+//             <p className="max-w-lg mb-8 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300">
 //               RiskMan ensures seamless transitions through rigorous testing, proactive change management, and continuous process optimization.
 //             </p>
             
@@ -96,7 +96,7 @@
 //                 </div>
 //                 <div>
 //                   <p className="text-sm text-gray-500 dark:text-gray-400">System Reliability</p>
-//                   <p className="text-lg font-bold text-brandDark dark:text-white">99.9% Guaranteed</p>
+//                   <p className="text-base font-bold text-brandDark dark:text-white">99.9% Guaranteed</p>
 //                 </div>
 //               </div>
 //             </motion.div>
@@ -130,12 +130,12 @@ function HeroSection() {
             Digital Transformation
           </div>
           
-          <h1 className="mb-6 text-4xl font-bold leading-tight text-white font-heading md:text-5xl lg:text-6xl">
+          <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight text-white font-heading ">
             Sustaining Long-Term Success with{" "}
             <span className="text-brandGold">Support Services</span>
           </h1>
 
-          <p className="mb-10 text-lg leading-relaxed text-white/90 md:text-xl">
+          <p className="mb-10 text-base md:text-lg leading-relaxed text-white/90 ">
             RiskMan ensures seamless transitions through rigorous testing,
             proactive change management, and continuous process optimization
             to maximize the lasting value of your digital investments.

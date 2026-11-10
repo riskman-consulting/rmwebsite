@@ -50,10 +50,10 @@
 //       <div className="container relative">
 //         {/* Section Header */}
 //         <div className="max-w-3xl mb-16">
-//           <h2 className="mb-6 text-3xl font-bold sm:text-4xl lg:text-5xl font-heading text-brandDark dark:text-white">
+//           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //             Strategic Vendor Onboarding and Due Diligence
 //           </h2>
-//           <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+//           <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
 //             Our process involves pre-engagement risk assessments and detailed due diligence before any contract is signed. We evaluate financial stability, regulatory compliance, and security postures to ensure your partners meet your high standards.
 //           </p>
 //         </div>
@@ -80,7 +80,7 @@
 //                 </div>
 
 //                 {/* Title */}
-//                 <h3 className="mb-3 text-lg font-bold font-heading text-brandDark dark:text-white">
+//                 <h3 className="mb-3 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
 //                   {step.title}
 //                 </h3>
 
@@ -138,10 +138,10 @@ const Onboarding = () => {
       <div className="container relative z-10">
         <div className="flex flex-col items-center gap-16 lg:flex-row">
           <div className="lg:w-1/2">
-            <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading">
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading">
               Strategic Vendor Onboarding and Due Diligence
             </h2>
-            <p className="mb-10 text-lg leading-relaxed text-gray-300">
+            <p className="mb-10 text-base leading-relaxed text-gray-300">
               Our process involves pre-engagement risk assessments and detailed due diligence before any contract is signed. We evaluate financial stability, regulatory compliance, and security postures to ensure your partners meet your high standards.
             </p>
             
@@ -152,7 +152,7 @@ const Onboarding = () => {
                     {step.icon}
                   </div>
                   <div>
-                    <h3 className="mb-1 text-xl font-bold text-white transition-colors group-hover:text-brandAccent">{step.title}</h3>
+                    <h3 className="mb-1 text-lg md:text-xl font-bold text-white transition-colors group-hover:text-brandAccent">{step.title}</h3>
                     <p className="text-gray-400">{step.desc}</p>
                   </div>
                 </div>

@@ -50,14 +50,14 @@ const AiTechnology = () => {
             AI-Driven Risk Mastery
           </div>
           
-          <h1 className="text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl font-heading">
+          <h1 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight text-white font-heading">
             Harness AI for <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandAccent to-brandGold">
               Enterprise Risk Mastery
             </span>
           </h1>
           
-          <p className="max-w-xl pl-6 text-lg leading-relaxed text-gray-300 border-l-4 border-brandAccent">
+          <p className="max-w-xl pl-6 text-base leading-relaxed text-gray-300 border-l-4 border-brandAccent">
             Elevate your risk strategy with RiskMan's AI-driven technology solutions. Achieve precision, foresight, and compliance in a dynamic threat landscape seamlessly integrated for your organization.
           </p>
           

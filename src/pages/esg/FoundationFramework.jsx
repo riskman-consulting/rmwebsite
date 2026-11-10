@@ -95,7 +95,7 @@ const FoundationalFrameworks = () => {
           <p className="mb-3 text-sm font-semibold tracking-wider uppercase text-brandPrimary dark:text-brandGold">
             Foundational Frameworks
           </p>
-          <h2 className="mb-4 text-3xl font-bold tracking-tight uppercase md:text-4xl font-heading text-brandDark dark:text-white">
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold uppercase font-heading text-brandDark dark:text-white">
             Foundational ESG & Sustainability Frameworks
           </h2>
           <p className="max-w-4xl mx-auto leading-relaxed text-gray-600 dark:text-gray-400">
@@ -115,7 +115,7 @@ const FoundationalFrameworks = () => {
                   <span className="text-4xl">🎯</span>
                 </div>
                 <div>
-                  <h3 className="mb-3 text-2xl font-bold tracking-wide text-white uppercase font-heading">
+                  <h3 className="mb-3 text-lg md:text-xl font-bold text-white uppercase font-heading">
                     United Nations Sustainable Development Goals (SDGs)
                   </h3>
                   <p className="leading-relaxed text-white/90">
@@ -151,7 +151,7 @@ const FoundationalFrameworks = () => {
         {/* GHG Accounting Section */}
         <div className="max-w-6xl mx-auto mb-20">
           <div className="mb-12 text-center">
-            <h3 className="mb-4 text-3xl font-bold tracking-tight uppercase font-heading text-brandDark dark:text-white">
+            <h3 className="mb-4 text-xl md:text-2xl lg:text-3xl font-bold uppercase font-heading text-brandDark dark:text-white">
               GHG Accounting & Climate Measurement
             </h3>
             <p className="max-w-3xl mx-auto text-gray-600 dark:text-gray-400">
@@ -237,7 +237,7 @@ const FoundationalFrameworks = () => {
                   <span className="text-4xl">🌍</span>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold tracking-widest text-white uppercase font-heading">
+                  <h3 className="text-lg md:text-xl font-bold text-white uppercase font-heading">
                     The GHG Protocol
                   </h3>
                   <p className="mt-1 text-sm font-medium text-brandGold">Global Standard for Climate Accounting</p>

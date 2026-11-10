@@ -7,10 +7,10 @@ const SampleIAPlan = () => {
     <section className="py-16 bg-white lg:py-24 dark:bg-surfaceDark">
       <div className="container">
         <div className="max-w-5xl mx-auto">
-          <h2 className="mb-6 text-3xl font-bold text-center font-heading md:text-4xl text-brandDark dark:text-white">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-center font-heading text-brandDark dark:text-white">
             Our Sample IA Plan
           </h2>
-          <p className="max-w-3xl mx-auto mb-12 text-lg text-center text-gray-700 dark:text-gray-300">
+          <p className="max-w-3xl mx-auto mb-12 text-base text-center text-gray-700 dark:text-gray-300">
             Our sample plan identifies high-risk areas like revenue and payroll, providing tailored audit programs to strengthen controls, ensure compliance, and others that are based on your business needs.
           </p>
           

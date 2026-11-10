@@ -47,7 +47,7 @@ export default function CareersPage() {
           >
             Join the Team
           </motion.span>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8">
+          <h1 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-8">
             Work that <span className="text-brandDark dark:text-brandAccent">matters.</span>
           </h1>
           
@@ -79,7 +79,7 @@ export default function CareersPage() {
                     {job.employmentType.replace('_', ' ')}
                   </span>
                 </div>
-                <h3 className="text-xl font-bold mb-2 group-hover:text-brandPrimary transition-colors">{job.title}</h3>
+                <h3 className="text-lg md:text-xl font-bold mb-2 group-hover:text-brandPrimary transition-colors">{job.title}</h3>
                 <p className="text-sm text-zinc-500 mb-6 font-medium">{job.hiringOrganization.name}</p>
                 
                 <div className="flex items-center justify-between pt-6 border-t border-zinc-50 dark:border-zinc-800">
@@ -137,7 +137,7 @@ export default function CareersPage() {
                   <FaChevronLeft /> BACK TO OPPORTUNITIES
                 </button>
                 
-                <h2 className="text-3xl md:text-4xl font-black mb-4 tracking-tight leading-tight">{selectedJob.title}</h2>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 leading-tight">{selectedJob.title}</h2>
                 <div className="flex gap-4 mb-8">
                   <span className="text-xs font-bold text-brandPrimary">{selectedJob.hiringOrganization.name}</span>
                   <span className="text-xs font-bold text-zinc-400">•</span>
@@ -153,7 +153,7 @@ export default function CareersPage() {
 
               {/* RIGHT: APPLICATION FORM */}
               <div className="flex-1 p-8 md:p-12 overflow-y-auto bg-white dark:bg-zinc-900">
-                <h3 className="text-xl font-bold mb-2">Apply Now</h3>
+                <h3 className="text-lg md:text-xl font-bold mb-2">Apply Now</h3>
                 <p className="text-sm text-zinc-500 mb-8">Complete the form below to submit your interest.</p>
 
                 <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>

@@ -78,10 +78,10 @@ const PoliciesPage = () => {
             <section className="relative px-6 py-32 transition-colors duration-300 bg-white dark:bg-surfaceDark/30">
                 <div className="container mx-auto">
                     <div className="mb-20 text-center">
-                        <h2 className="mb-6 text-4xl font-black md:text-6xl font-heading text-brandDark dark:text-white">
+                        <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
                             Policies <span className="text-brandAccent">&</span> Frameworks
                         </h2>
-                        <p className="max-w-2xl mx-auto text-xl font-light leading-relaxed text-gray-600 dark:text-gray-400">
+                        <p className="max-w-2xl mx-auto text-base md:text-lg font-light leading-relaxed text-gray-600 dark:text-gray-400">
                             Our comprehensive suite of policies ensures we operate with the highest standards of conduct and compliance.
                         </p>
                     </div>
@@ -108,8 +108,8 @@ const PoliciesPage = () => {
                             <div className="inline-block p-8 mb-6 bg-white rounded-full shadow-2xl dark:bg-surfaceDark">
                                 <Search className="w-12 h-12 text-gray-300 dark:text-gray-600" />
                             </div>
-                            <h3 className="mb-4 text-3xl font-black text-gray-900 dark:text-white">No policies match your criteria</h3>
-                            <p className="mb-10 text-xl font-light text-gray-500 dark:text-gray-400">Try adjusting your search terms or filters.</p>
+                            <h3 className="mb-4 text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white">No policies match your criteria</h3>
+                            <p className="mb-10 text-base md:text-lg font-light text-gray-500 dark:text-gray-400">Try adjusting your search terms or filters.</p>
                             <button
                                 onClick={() => { setSearchTerm(""); setActiveCategory("All"); }}
                                 className="px-10 py-4 font-black transition-all duration-300 shadow-xl rounded-2xl bg-brandAccent text-brandDark hover:scale-105"
@@ -127,8 +127,8 @@ const PoliciesPage = () => {
                     <div className="bg-brandDark rounded-[80px] p-16 md:p-32 relative overflow-hidden text-center border-2 border-brandAccent/30 shadow-3xl">
                         <div className="absolute inset-0 hero-grid opacity-10" />
                         <div className="relative z-10 max-w-3xl mx-auto">
-                            <h2 className="text-5xl md:text-8xl font-heading font-black text-white mb-10 text-balance leading-[0.9]">READY TO <span className="text-brandAccent">GOVERN?</span></h2>
-                            <p className="max-w-2xl mx-auto mb-16 text-xl font-light leading-relaxed text-white/60">Let's build a foundation that eliminates ambiguity and drives enterprise maturity.</p>
+                            <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-white mb-10 text-balance leading-[0.9]">READY TO <span className="text-brandAccent">GOVERN?</span></h2>
+                            <p className="max-w-2xl mx-auto mb-16 text-base md:text-lg font-light leading-relaxed text-white/60">Let's build a foundation that eliminates ambiguity and drives enterprise maturity.</p>
                             <div className="flex flex-wrap justify-center gap-6">
                                 <Link to="/contact" className="px-12 py-6 text-xl font-black transition-all bg-brandAccent text-brandDark rounded-3xl hover:scale-105 shadow-3xl">Book a Governance Audit</Link>
                                 <button className="px-12 py-6 text-xl font-black text-white transition-all border bg-white/5 border-white/20 rounded-3xl hover:bg-white/10">View Case Studies</button>

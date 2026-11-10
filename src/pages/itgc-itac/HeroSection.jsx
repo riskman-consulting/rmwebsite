@@ -38,10 +38,10 @@ const HeroSection = () => {
       
     //   <div className="container relative z-10">
     //     <div className="max-w-4xl mx-auto text-center">
-    //       <h1 className="mb-6 text-4xl font-bold leading-tight font-heading md:text-5xl lg:text-6xl">
+    //       <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading ">
     //         Comprehensive IT Auditing with ITGC & ITAC Excellence
     //       </h1>
-    //       <p className="mb-10 text-lg leading-relaxed md:text-xl text-white/90">
+    //       <p className="mb-10 text-base md:text-lg leading-relaxed text-white/90">
     //         Empower your enterprise with expert IT General and Application Controls auditing to mitigate risks, ensure compliance, and drive operational excellence.
     //       </p>
     //       <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -72,11 +72,11 @@ const HeroSection = () => {
         <Shield size={16} /> ITGC &amp; ITAC Auditing
       </div>
 
-      <h1 className="mb-6 text-4xl font-bold leading-tight font-heading lg:text-6xl">
+      <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading ">
          Comprehensive IT Auditing with <span className="text-brandGold">ITGC & ITAC</span>
       </h1>
 
-      <p className="max-w-2xl mb-10 text-lg leading-relaxed text-gray-300 lg:text-xl">
+      <p className="max-w-2xl mb-10 text-base md:text-lg leading-relaxed text-gray-300 ">
        Empower your enterprise with expert IT General and Application Controls auditing to mitigate risks, ensure compliance, and drive operational excellence.
       </p>
 

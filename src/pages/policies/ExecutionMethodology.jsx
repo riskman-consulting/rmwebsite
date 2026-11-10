@@ -98,7 +98,7 @@
 //     return (
 //         <SectionWrapper id="methodology" className="px-6 py-24 transition-colors duration-300 bg-white dark:bg-bgDark">
 //             <div className="mx-auto max-w-7xl">
-//                 <h2 className="text-4xl font-black mb-12 text-[#0A1F44] dark:text-white">Methodology and Execution Framework</h2>
+//                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-12 text-[#0A1F44] dark:text-white">Methodology and Execution Framework</h2>
 
 //                 <div className="relative overflow-x-auto lg:overflow-visible">
 //                     <div className="min-w-[1000px] lg:min-w-0">
@@ -261,7 +261,7 @@ const ExecutionMethodology = () => {
     return (
       <SectionWrapper id="methodology" className="py-16 transition-colors duration-300 bg-bgLight dark:bg-bgDark">
             <div className="container">
-                <h2 className="mb-12 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">Methodology and Execution Framework</h2>
+                <h2 className="mb-12 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">Methodology and Execution Framework</h2>
 
                 {/* Scrollable container with visible scrollbar */}
                 <div className="relative pb-4 overflow-x-auto overflow-y-visible methodology-scroll" style={{ scrollbarWidth: 'thin', scrollbarColor: '#888 #f1f1f1' }}>

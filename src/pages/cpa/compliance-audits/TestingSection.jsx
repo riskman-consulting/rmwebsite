@@ -7,7 +7,7 @@ function TestingSection() {
         <div className="container">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2">
-              <h2 className="font-heading text-3xl lg:text-4xl font-bold mb-6">Verification & Substantive Testing</h2>
+              <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-6">Verification & Substantive Testing</h2>
               <p className="text-gray-300 mb-8 leading-relaxed">Our audits provide empirical evidence of compliance, shielding the organization from penalties and reputational damage.</p>
               <div className="space-y-4">
                 {[
@@ -28,7 +28,7 @@ function TestingSection() {
             <div className="lg:w-1/2">
               <div className="relative p-12 bg-brandPrimary/10 border border-brandAccent/20 rounded-[3rem] text-center">
                  <ShieldCheck className="mx-auto mb-6 text-brandAccent" size={64} />
-                 <h3 className="text-2xl font-bold mb-4">Secure License to Operate</h3>
+                 <h3 className="text-lg md:text-xl font-bold mb-4">Secure License to Operate</h3>
                  <p className="text-gray-400 text-sm italic">"We identify and close compliance gaps before they escalate, ensuring your organizational standing remains impeccable."</p>
               </div>
             </div>

@@ -6,10 +6,10 @@ const AuditingPlan = () => {
     <section className="py-16 lg:py-24 bg-bgLight dark:bg-bgDark">
       <div className="container">
         <div className="max-w-5xl mx-auto">
-          <h2 className="mb-4 text-3xl font-bold text-center font-heading md:text-4xl text-brandDark dark:text-white">
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold text-center font-heading text-brandDark dark:text-white">
             Our Risk-based Internal Auditing Plan
           </h2>
-          <p className="max-w-3xl mx-auto mb-16 text-lg text-center text-gray-700 dark:text-gray-300">
+          <p className="max-w-3xl mx-auto mb-16 text-base text-center text-gray-700 dark:text-gray-300">
             The transition from traditional methods to a Risk-Based Internal Audit (RBIA) framework is driven by the need for deeper organizational value and proactive risk management.
           </p>
 
@@ -20,7 +20,7 @@ const AuditingPlan = () => {
               <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-lg bg-brandPrimary/10">
                 <Shield className="w-6 h-6 text-brandPrimary" />
               </div>
-              <h3 className="mb-4 text-xl font-bold font-heading text-brandDark dark:text-white">
+              <h3 className="mb-4 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
                 Conventional vs. Modern Auditing
               </h3>
               <p className="leading-relaxed text-gray-600 dark:text-gray-400">
@@ -33,7 +33,7 @@ const AuditingPlan = () => {
               <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-lg bg-brandAccent/10">
                 <TrendingUp className="w-6 h-6 text-brandGold" />
               </div>
-              <h3 className="mb-4 text-xl font-bold font-heading text-brandDark dark:text-white">
+              <h3 className="mb-4 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
                 Key Drivers for Change
               </h3>
               <p className="leading-relaxed text-gray-600 dark:text-gray-400">
@@ -46,7 +46,7 @@ const AuditingPlan = () => {
               <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-lg bg-brandPrimary/10">
                 <BarChart3 className="w-6 h-6 text-brandPrimary" />
               </div>
-              <h3 className="mb-4 text-xl font-bold font-heading text-brandDark dark:text-white">
+              <h3 className="mb-4 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
                 Value vs. Cost Dynamics
               </h3>
               <p className="leading-relaxed text-gray-600 dark:text-gray-400">

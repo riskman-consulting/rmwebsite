@@ -61,10 +61,10 @@ const ESGProgramLifecycle = () => {
       <div className="container">
         {/* Section Header */}
         <div className="max-w-4xl mx-auto mb-16 text-center">
-          <h2 className="mb-6 text-4xl font-bold font-heading md:text-5xl text-brandDark dark:text-white">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             RiskMan's Global ESG Program Methodology
           </h2>
-          <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+          <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
             RiskMan delivers enterprise-grade ESG programs that combine strategic vision with practical execution 
             excellence. Our methodology has been refined through engagements with multinational organizations across 
             diverse industries and regulatory environments.
@@ -73,7 +73,7 @@ const ESGProgramLifecycle = () => {
 
         {/* Lifecycle Diagram */}
         <div className="max-w-6xl mx-auto mb-20">
-          <h3 className="mb-12 text-3xl font-bold text-center font-heading text-brandDark dark:text-white">
+          <h3 className="mb-12 text-xl md:text-2xl lg:text-3xl font-bold text-center font-heading text-brandDark dark:text-white">
             End-to-End ESG Lifecycle Coverage
           </h3>
 
@@ -202,7 +202,7 @@ const ESGProgramLifecycle = () => {
 
         {/* Maturity Model */}
         <div className="max-w-6xl mx-auto">
-          <h3 className="mb-8 text-3xl font-bold text-center font-heading text-brandDark dark:text-white">
+          <h3 className="mb-8 text-xl md:text-2xl lg:text-3xl font-bold text-center font-heading text-brandDark dark:text-white">
             Phase 1: ESG Maturity Assessment
           </h3>
           

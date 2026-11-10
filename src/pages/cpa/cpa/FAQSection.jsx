@@ -8,7 +8,7 @@ function FAQSection() {
     <section className="py-16 bg-bgLight">
         <div className="container max-w-3xl">
           <div className="text-center mb-12">
-            <h2 className="font-heading text-3xl font-bold">Assurance FAQ</h2>
+            <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold">Assurance FAQ</h2>
           </div>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (

@@ -46,7 +46,7 @@ const EventFAQ = () => {
             <HelpCircle className="w-4 h-4 text-yellow-500" />
             <span className="text-xs font-bold uppercase tracking-widest text-yellow-600 dark:text-yellow-500">Support</span>
           </motion.div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#111827] dark:text-white">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#111827] dark:text-white">
             Event <span className="text-brandAccent">FAQs</span>
           </h2>
           <p className="mt-4 text-gray-600 dark:text-gray-400">

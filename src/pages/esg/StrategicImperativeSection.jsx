@@ -49,13 +49,13 @@
 //               Strategic Imperative
 //             </span>
 //           </div>
-//           <h2 className="mb-8 text-4xl font-black leading-tight font-heading md:text-5xl lg:text-6xl text-brandDark dark:text-white">
+//           <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandDark dark:text-white">
 //             Sustainability & ESG: <br />
 //             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandPrimary to-brandNavy dark:from-brandGold dark:to-brandAccent">
 //               The Strategic Imperative
 //             </span>
 //           </h2>
-//           <p className="max-w-3xl mx-auto font-sans text-lg leading-relaxed md:text-xl text-brandDark/70 dark:text-surfaceLight/70">
+//           <p className="max-w-3xl mx-auto font-sans text-base md:text-lg leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
 //             ESG has evolved from a discretionary "nice-to-have" or a pure compliance exercise 
 //             into a fundamental pillar of modern corporate strategy and long-term enterprise value.
 //           </p>
@@ -103,7 +103,7 @@
           
 //           <div className="relative z-10 flex flex-col items-center justify-between gap-8 md:flex-row">
 //             <div className="md:w-2/3">
-//               <h3 className="mb-4 text-2xl font-bold text-white">Ready to move beyond compliance?</h3>
+//               <h3 className="mb-4 text-lg md:text-xl font-bold text-white">Ready to move beyond compliance?</h3>
 //               <p className="leading-relaxed text-white/70">
 //                 RiskMan helps organizations navigate this evolution, identifying unique 
 //                 value creation opportunities specific to your industry and operational context.

@@ -45,7 +45,7 @@ const AdvisorySolutionsSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl font-semibold text-slate-900 dark:text-brandLight md:text-4xl"
+            className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-brandLight "
           >
             Core Financial Advisory Solutions That Support Business Decisions
           </motion.h2>
@@ -63,7 +63,7 @@ const AdvisorySolutionsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mx-auto mt-8 text-lg leading-relaxed text-slate-600 dark:text-brandLight/70"
+            className="mx-auto mt-8 text-base leading-relaxed text-slate-600 dark:text-brandLight/70"
           >
             Our financial advisory solutions are designed to address practical
             financial decision challenges faced by organisations across growth,
@@ -86,7 +86,7 @@ const AdvisorySolutionsSection = () => {
               transition={{ delay: index * 0.07 }}
               className="p-8 transition border shadow-sm rounded-2xl border-borderLight bg-surfaceLight hover:-translate-y-1 hover:shadow-lg dark:border-borderDark dark:bg-surfaceDark"
             >
-              <h3 className="mb-4 text-lg font-semibold text-slate-900 dark:text-brandLight">
+              <h3 className="mb-4 text-lg md:text-xl font-bold text-slate-900 dark:text-brandLight">
                 {item.title}
               </h3>
 

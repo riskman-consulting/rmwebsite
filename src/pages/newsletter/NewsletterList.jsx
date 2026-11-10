@@ -115,7 +115,7 @@ export default function NewsletterList() {
 
             <motion.h1
               variants={fadeInUp}
-              className="mb-6 text-5xl font-bold leading-[1.05] md:text-7xl font-heading text-brandDark dark:text-white"
+              className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-[1.05] font-heading text-brandDark dark:text-white"
             >
               Latest{" "}
               <span className="italic text-brandPrimary dark:text-brandAccent">
@@ -125,7 +125,7 @@ export default function NewsletterList() {
 
             <motion.p
               variants={fadeInUp}
-              className="max-w-2xl text-lg leading-relaxed md:text-xl text-brandNavy/80 dark:text-gray-400"
+              className="max-w-2xl text-base md:text-lg leading-relaxed text-brandNavy/80 dark:text-gray-400"
             >
               Curated stories, regulatory updates, and industry highlights
               delivered straight from the RiskMan team.
@@ -228,7 +228,7 @@ export default function NewsletterList() {
                           </p>
                         )}
 
-                        <h3 className="mb-5 text-xl font-bold leading-snug transition-colors duration-300 md:text-[22px] font-heading text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
+                        <h3 className="mb-5 text-lg md:text-xl font-bold leading-snug transition-colors duration-300 font-heading text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
                           {item.title}
                         </h3>
 
@@ -271,7 +271,7 @@ export default function NewsletterList() {
                   <FaEnvelopeOpenText />
                   Subscribe
                 </div>
-                <h2 className="mb-5 font-heading text-3xl md:text-4xl font-bold leading-tight text-white">
+                <h2 className="mb-5 font-heading text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white">
                   Get the next issue in your inbox.
                 </h2>
                 <p className="text-base text-white/70 md:text-lg">

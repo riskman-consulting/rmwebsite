@@ -10,10 +10,10 @@ const ImplementationFAQ = () => {
       <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
             <div className="container">
                 <div className="mb-16 text-center">
-                    <h2 className="mb-4 text-3xl font-bold font-heading md:text-4xl">
+                    <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
                         Frequently Asked <span className="text-brandPrimary dark:text-brandGold">Questions</span>
                     </h2>
-                    <p className="max-w-2xl mx-auto text-lg opacity-70">
+                    <p className="max-w-2xl mx-auto text-base opacity-70">
                         Get answers to common questions about our implementation excellence services
                     </p>
                 </div>
@@ -94,7 +94,7 @@ const ImplementationFAQ = () => {
 
                 {/* Additional Help CTA */}
                 <div className="max-w-4xl p-8 mx-auto mt-12 text-center border bg-gradient-to-r from-brandGold/5 to-brandPrimary/5 dark:from-brandGold/10 dark:to-brandPrimary/5 rounded-2xl border-brandGold/20">
-                    <h3 className="mb-3 text-2xl font-bold text-brandPrimary dark:text-brandGold">
+                    <h3 className="mb-3 text-lg md:text-xl font-bold text-brandPrimary dark:text-brandGold">
                         Still have questions?
                     </h3>
                     <p className="mb-6 opacity-70">

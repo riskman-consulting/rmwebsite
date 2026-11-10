@@ -22,14 +22,14 @@
 //                         <Calendar size={36} />
 //                     </div>
 
-//                     <h2 className="mb-8 text-3xl font-extrabold leading-tight md:text-5xl text-brandLight font-heading">
+//                     <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-brandLight font-heading">
 //                         Transition to<br />
 //                         <span className="italic text-transparent bg-gradient-to-r from-brandGold to-brandAccent bg-clip-text">
 //                             Real-Time Assurance
 //                         </span>
 //                     </h2>
 
-//                     <p className="max-w-2xl mx-auto mb-12 font-sans text-lg font-light leading-relaxed text-brandLight/60">
+//                     <p className="max-w-2xl mx-auto mb-12 font-sans text-base font-light leading-relaxed text-brandLight/60">
 //                         Ready to explore how RiskMan's Concurrent Audit programs can transform your control environment? Schedule a diagnostic session with our risk advisory leadership.
 //                     </p>
 
@@ -88,14 +88,14 @@ const ConcurrentAuditCTA = () => {
                         <Calendar size={36} />
                     </div>
 
-                    <h2 className="mb-8 text-3xl font-bold leading-tight md:text-4xl text-brandLight font-heading">
+                    <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-brandLight font-heading">
                         Transition to<br />
                         <span className="italic text-transparent bg-gradient-to-r from-brandGold to-brandAccent bg-clip-text">
                             Real-Time Assurance
                         </span>
                     </h2>
 
-                    <p className="max-w-2xl mx-auto mb-12 font-sans text-lg font-light leading-relaxed text-brandLight/60">
+                    <p className="max-w-2xl mx-auto mb-12 font-sans text-base font-light leading-relaxed text-brandLight/60">
                         Ready to explore how RiskMan's Concurrent Audit programs can transform your control environment? Schedule a diagnostic session with our risk advisory leadership.
                     </p>
 

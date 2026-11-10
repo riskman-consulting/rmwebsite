@@ -37,7 +37,7 @@
 //         onClick={() => setIsOpen(!isOpen)}
 //         className="flex items-center justify-between w-full py-6 text-left focus:outline-none group"
 //       >
-//         <h3 className="pr-4 text-lg font-bold transition-colors text-brandDark dark:text-brandLight group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
+//         <h3 className="pr-4 text-lg md:text-xl font-bold transition-colors text-brandDark dark:text-brandLight group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
 //           {q}
 //         </h3>
 //         <span
@@ -82,7 +82,7 @@
 //             <span className="inline-block mb-4 text-sm font-bold tracking-widest uppercase text-brandPrimary dark:text-brandAccent">
 //               Support & Clarity
 //             </span>
-//             <h2 className="mb-6 text-3xl font-bold md:text-4xl text-brandDark dark:text-brandLight">
+//             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-brandLight">
 //               Frequently Asked Questions
 //             </h2>
 //             <p className="mb-8 text-brandNavy/70 dark:text-brandLight/70">
@@ -140,7 +140,7 @@ const FAQItem = ({ question, answer, isOpen, toggleFAQ }) => {
         }`}
       >
         <div className="px-6 pb-6 lg:px-8">
-          <p className="text-base leading-relaxed text-gray-600 lg:text-lg">
+          <p className="text-base leading-relaxed text-gray-600 ">
             {answer}
           </p>
         </div>
@@ -188,7 +188,7 @@ const FAQSection = () => {
             <span className="text-sm font-semibold text-brandPrimary">FAQ</span>
           </div>
           
-          <h2 className="mb-6 text-3xl font-bold font-heading md:text-4xl lg:text-5xl text-brandDark">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark">
             Frequently Asked Questions
           </h2>
         </div>

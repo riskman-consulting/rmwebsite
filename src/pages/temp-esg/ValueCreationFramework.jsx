@@ -89,10 +89,10 @@ const ValueCreationFramework = () => {
       <div className="container">
         {/* Section Header */}
         <div className="max-w-4xl mx-auto mb-16 text-center">
-          <h2 className="mb-6 text-4xl font-bold font-heading md:text-5xl text-brandDark dark:text-white">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             The RiskMan Value Proposition
           </h2>
-          <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+          <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
             RiskMan delivers measurable, sustainable value to global organizations through our integrated ESG 
             advisory, implementation, and capabilities.
           </p>
@@ -100,7 +100,7 @@ const ValueCreationFramework = () => {
 
         {/* Value Creation Matrix */}
         <div className="max-w-6xl mx-auto mb-16">
-          <h3 className="mb-12 text-3xl font-bold text-center font-heading text-brandDark dark:text-white">
+          <h3 className="mb-12 text-xl md:text-2xl lg:text-3xl font-bold text-center font-heading text-brandDark dark:text-white">
             ESG Value Creation Framework
           </h3>
 

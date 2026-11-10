@@ -7,7 +7,7 @@ function FaqSection() {
   return (
     <section className="py-16 container">
         <div className="max-w-4xl mx-auto mb-20">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-10 flex items-center">
+          <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-10 flex items-center">
             <HelpCircle className="mr-3 text-brandGold" /> Frequently Asked Questions
           </h2>
           <div className="divide-y divide-borderLight dark:divide-borderDark">
@@ -32,8 +32,8 @@ function FaqSection() {
         {/* FINAL CTA CARD */}
         <div className="bg-gradient-to-br from-brandPrimary to-brandNavy rounded-[3rem] p-10 lg:p-20 text-center text-white relative overflow-hidden shadow-2xl">
           <div className="relative z-10">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">Make Independent Assurance Part of Your Brand Story</h2>
-            <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto">
+            <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-6">Make Independent Assurance Part of Your Brand Story</h2>
+            <p className="text-base md:text-lg text-white/70 mb-10 max-w-2xl mx-auto">
               Use SOC 3 to communicate that your controls are examined and trusted—without overwhelming stakeholders with technical detail.
             </p>
             <button onClick={()=>navigator("/contact")} className="bg-white text-brandPrimary hover:bg-brandGold hover:text-brandDark px-12 py-5 rounded-full font-black text-lg transition-all flex items-center mx-auto">

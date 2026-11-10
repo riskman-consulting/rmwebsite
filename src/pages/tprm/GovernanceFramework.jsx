@@ -28,10 +28,10 @@
 
 //             {/* Content */}
 //             <div className="flex-1 text-center lg:text-left">
-//               <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl lg:text-5xl font-heading">
+//               <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading">
 //                 Establish A Robust TPRM Governance Framework
 //               </h2>
-//               <p className="text-lg leading-relaxed text-gray-200">
+//               <p className="text-base leading-relaxed text-gray-200">
 //                 Governance is the foundation of effective risk management. A policy approved by top management ensures that roles and responsibilities are clearly defined across IT, Legal, and Procurement. We help you document board-level oversight and align your risk appetite with third-party exposure to ensure total transparency.
 //               </p>
 //             </div>
@@ -68,10 +68,10 @@ const Governance = () => {
             <div className="inline-block px-4 py-1 mb-2 text-sm font-bold rounded-full bg-brandAccent/20 text-brandPrimary dark:text-brandAccent">
               FOUNDATION
             </div>
-            <h2 className="text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
               Establish a Robust TPRM Governance Framework
             </h2>
-            <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+            <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
               Governance is the foundation of effective risk management. A policy approved by top management ensures that roles and responsibilities are clearly defined across IT, Legal, and Procurement. We help you document board-level oversight and align your risk appetite with third-party exposure to ensure total transparency.
             </p>
             

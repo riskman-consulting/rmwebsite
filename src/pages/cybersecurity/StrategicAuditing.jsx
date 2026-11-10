@@ -81,10 +81,10 @@ import auditImage from "../../assets/images/cybersecurity/audit-analysis.png"
 //           <div className="inline-block px-4 py-2 mb-6 rounded-full bg-brandPrimary/10 dark:bg-brandAccent/10">
 //             <span className="text-sm font-bold tracking-wide text-brandPrimary dark:text-brandAccent">SYSTEMATIC APPROACH</span>
 //           </div>
-//           <h2 className="mb-6 text-3xl font-bold sm:text-4xl lg:text-5xl font-heading text-brandDark dark:text-white">
+//           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //             Strategic Cyber Security Auditing
 //           </h2>
-//           <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+//           <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
 //             We provide a systematic and independent assessment of your organization's security controls and policies. Our process evaluates the effectiveness of your protections against evolving cyber threats to ensure data integrity.
 //           </p>
 //         </div>
@@ -114,7 +114,7 @@ import auditImage from "../../assets/images/cybersecurity/audit-analysis.png"
 //                 </div>
 
 //                 {/* Title */}
-//                 <h3 className="mb-4 text-2xl font-bold transition-colors duration-300 font-heading text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
+//                 <h3 className="mb-4 text-lg md:text-xl font-bold transition-colors duration-300 font-heading text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
 //                   {feature.title}
 //                 </h3>
 
@@ -197,8 +197,8 @@ return (
             
             <div className="order-1 lg:order-2">
               <p className="mb-2 font-bold tracking-wider uppercase text-brandPrimary dark:text-brandAccent">Our Process</p>
-              <h2 className="mb-6 text-3xl md:text-4xl font-bold font-heading text-brandDark dark:text-white">Strategic Cyber Security Auditing</h2>
-              <p className="mb-8 text-lg text-gray-600 dark:text-gray-300">
+              <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">Strategic Cyber Security Auditing</h2>
+              <p className="mb-8 text-base text-gray-600 dark:text-gray-300">
                 We provide a systematic and independent assessment of your organization's security controls and policies. Our process evaluates the effectiveness of your protections against evolving cyber threats to ensure data integrity.
               </p>
               

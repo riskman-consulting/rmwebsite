@@ -46,7 +46,7 @@ const EngagementProcessSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl font-semibold text-slate-900 dark:text-brandLight md:text-4xl"
+            className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-brandLight "
           >
             Our Structured Financial Advisory Engagement Approach
           </motion.h2>
@@ -64,7 +64,7 @@ const EngagementProcessSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mx-auto mt-8 text-lg leading-relaxed text-slate-600 dark:text-brandLight/70"
+            className="mx-auto mt-8 text-base leading-relaxed text-slate-600 dark:text-brandLight/70"
           >
             Our advisory engagement is designed to move from understanding to
             execution. We follow a structured, transparent, and measurable
@@ -93,7 +93,7 @@ const EngagementProcessSection = () => {
               </div>
 
               {/* Title */}
-              <h3 className="mb-3 text-lg font-semibold text-slate-900 dark:text-brandLight">
+              <h3 className="mb-3 text-lg md:text-xl font-bold text-slate-900 dark:text-brandLight">
                 {item.title}
               </h3>
 

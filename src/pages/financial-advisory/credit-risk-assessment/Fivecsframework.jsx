@@ -59,10 +59,10 @@
 //               Our Methodology
 //             </span>
 //           </div>
-//           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl font-heading text-brandDark dark:text-white">
+//           <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //             The 5 C's Framework
 //           </h2>
-//           <p className="text-lg text-gray-600 dark:text-gray-300">
+//           <p className="text-base text-gray-600 dark:text-gray-300">
 //             Our methodology prioritizes the core pillars of credit integrity to provide a holistic view of borrower risk profiles.
 //           </p>
 //         </div>
@@ -98,7 +98,7 @@
 
 //                 {/* Content */}
 //                 <div className="p-6">
-//                   <h3 className="mb-1 text-xl font-bold font-heading text-brandDark dark:text-white">
+//                   <h3 className="mb-1 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
 //                     {item.title}
 //                   </h3>
 //                   <p className="mb-3 text-sm font-semibold text-brandPrimary dark:text-brandAccent">
@@ -146,7 +146,7 @@
 
 //                 {/* Content */}
 //                 <div className="p-6 md:w-3/5">
-//                   <h3 className="mb-2 text-2xl font-bold font-heading text-brandDark dark:text-white">
+//                   <h3 className="mb-2 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
 //                     {item.title}
 //                   </h3>
 //                   <p className="mb-3 text-sm font-semibold text-brandPrimary dark:text-brandAccent">
@@ -241,10 +241,10 @@ const Framework = () => {
 
           <div className="order-1 lg:order-2">
             <p className="mb-3 text-sm font-bold tracking-wider uppercase text-brandPrimary dark:text-brandAccent">Methodology</p>
-            <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
               The 5 C’s Framework
             </h2>
-            <p className="mb-10 text-lg text-gray-600 dark:text-gray-300">
+            <p className="mb-10 text-base text-gray-600 dark:text-gray-300">
               Our methodology prioritizes the core pillars of credit integrity to provide a holistic view of borrower risk profiles.
             </p>
 

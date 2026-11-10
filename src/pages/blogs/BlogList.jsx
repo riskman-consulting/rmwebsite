@@ -372,7 +372,7 @@ export default function BlogList() {
 
             <motion.h1
               variants={fadeInUp}
-              className="mb-6 text-5xl font-bold leading-[1.05] md:text-6xl lg:text-7xl font-heading text-brandDark dark:text-white"
+              className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-[1.05] font-heading text-brandDark dark:text-white"
             >
               Latest{" "}
               <span className="text-brandPrimary dark:text-brandAccent">

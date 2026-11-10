@@ -30,11 +30,11 @@ export default function VideoAboutSection() {
               About Us
             </span>
 
-            <h2 className="mt-4 font-heading text-4xl font-extrabold text-brandDark dark:text-white sm:text-5xl">
+            <h2 className="mt-4 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white ">
               The RiskMan Approach
             </h2>
 
-            <p className="mt-6 max-w-xl text-base leading-8 text-slate-600 dark:text-slate-300 sm:text-lg">
+            <p className="mt-6 max-w-xl text-base leading-8 text-slate-600 dark:text-slate-300 ">
               Take a look behind the scenes of our process to see how we defend what you’ve built.
               From preventative planning to agile intervention, we are the committed partner you
               can count on to keep your organization secure.

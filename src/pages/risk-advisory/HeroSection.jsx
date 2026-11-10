@@ -30,7 +30,7 @@ const HeroSection = ({ data }) => {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="mb-6 text-4xl font-black leading-tight text-white font-heading sm:text-5xl md:text-5xl"
+              className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight text-white font-heading "
             >
               {data.title}{" "}
               {data.highlight && (
@@ -43,7 +43,7 @@ const HeroSection = ({ data }) => {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="max-w-xl mb-10 text-lg leading-relaxed text-white/85 md:text-xl"
+              className="max-w-xl mb-10 text-base md:text-lg leading-relaxed text-white/85 "
             >
               {data.description}
             </motion.p>

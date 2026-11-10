@@ -73,7 +73,7 @@ const Lightbox = ({ photo, onClose, onPrev, onNext }) => {
             {photo.category}
           </div>
 
-          <h2 className="mb-4 text-4xl font-black tracking-tight">
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold ">
             {photo.title}
           </h2>
 
@@ -81,7 +81,7 @@ const Lightbox = ({ photo, onClose, onPrev, onNext }) => {
             {photo.date}
           </p>
 
-          <p className="text-lg font-medium leading-loose text-white/60">
+          <p className="text-base font-medium leading-loose text-white/60">
             {photo.description}
           </p>
         </div>

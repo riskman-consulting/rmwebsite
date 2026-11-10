@@ -43,14 +43,14 @@
 //               />
 //             </div>
 //             <div className="absolute hidden max-w-xs p-8 text-white shadow-xl -bottom-6 -right-6 bg-brandPrimary rounded-xl md:block">
-//               <p className="mb-2 text-lg font-bold font-heading">Expert Guidance</p>
+//               <p className="mb-2 text-base font-bold font-heading">Expert Guidance</p>
 //               <p className="text-sm text-white/80">We work closely with leadership to ensure plans are practical and actionable.</p>
 //             </div>
 //           </div>
 
 //           <div className="order-1 lg:w-1/2 lg:order-2">
 //             <h2 className="mb-3 text-sm font-bold tracking-wider uppercase text-brandAccent">Our Process</h2>
-//             <h3 className="mb-8 text-3xl font-bold md:text-4xl font-heading text-brandDark">Strategic Implementation Steps</h3>
+//             <h3 className="mb-8 text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark">Strategic Implementation Steps</h3>
             
 //             <div className="space-y-8">
 //               {steps.map((step, index) => (
@@ -150,7 +150,7 @@ const ImplementationSteps = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-3xl font-bold font-heading text-brandDark dark:text-white md:text-4xl"
+                        className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white "
                     >
                         Strategic Implementation Steps
                     </motion.h2>
@@ -159,7 +159,7 @@ const ImplementationSteps = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="max-w-2xl mx-auto mt-6 text-lg text-slate-600 dark:text-slate-400"
+                        className="max-w-2xl mx-auto mt-6 text-base text-slate-600 dark:text-slate-400"
                     >
                         We work closely with leadership to ensure that continuity plans are practical, actionable, and integrated into the daily culture of organizations.
                     </motion.p>
@@ -229,7 +229,7 @@ const ImplementationSteps = () => {
                                     </div>
                                 </div>
                                 <div className="p-8">
-                                    <h3 className="mb-4 text-2xl font-bold font-heading text-brandDark dark:text-white">
+                                    <h3 className="mb-4 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
                                         {steps[activeStep].title}
                                     </h3>
                                     <p className="mb-6 leading-relaxed text-slate-600 dark:text-slate-400">

@@ -4,7 +4,7 @@ const ValueImpactDiagram = () => (
   <svg viewBox="0 0 500 260" className="w-full max-w-[500px]">
     {/* Before */}
     <rect x="10" y="10" width="210" height="240" rx="10" className="fill-slate-100 dark:fill-brandDark stroke-slate-300 dark:stroke-slate-600" strokeWidth="1" />
-    <text x="115" y="38" textAnchor="middle" className="fill-slate-600 dark:fill-slate-400" fontSize="12" fontWeight="700" fontFamily="Montserrat, sans-serif">BEFORE</text>
+    <text x="115" y="38" textAnchor="middle" className="fill-slate-600 dark:fill-slate-400" fontSize="12" fontWeight="700" fontFamily="Inter, sans-serif">BEFORE</text>
     {["Ambiguous processes", "Audit findings", "Inconsistent controls", "Siloed operations", "Compliance gaps"].map((t, i) => (
       <g key={i}>
         <circle cx="35" cy={70 + i * 36} r="5" className="fill-slate-400 dark:fill-slate-600" />
@@ -17,7 +17,7 @@ const ValueImpactDiagram = () => (
     </polygon>
     {/* After */}
     <rect x="300" y="10" width="190" height="240" rx="10" className="fill-brandPrimary/10 dark:fill-brandNavy stroke-brandPrimary/30 dark:stroke-brandAccent/40" strokeWidth="1" />
-    <text x="395" y="38" textAnchor="middle" className="fill-brandPrimary dark:fill-brandAccent" fontSize="12" fontWeight="700" fontFamily="Montserrat, sans-serif">AFTER</text>
+    <text x="395" y="38" textAnchor="middle" className="fill-brandPrimary dark:fill-brandAccent" fontSize="12" fontWeight="700" fontFamily="Inter, sans-serif">AFTER</text>
     {["Standardized governance", "Audit readiness", "Unified controls", "Cross-entity alignment", "Regulatory confidence"].map((t, i) => (
       <g key={i}>
         <circle cx="320" cy={70 + i * 36} r="5" className="fill-brandPrimary dark:fill-brandAccent" />

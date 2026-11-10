@@ -53,10 +53,10 @@
 //               Foundation of Excellence
 //             </span>
 //           </div>
-//           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl font-heading text-brandDark dark:text-white">
+//           <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //             Core Objectives of Credit Policy
 //           </h2>
-//           <p className="text-lg text-gray-600 dark:text-gray-300">
+//           <p className="text-base text-gray-600 dark:text-gray-300">
 //             A well-defined framework acts as the blueprint for asset quality, guiding every stage of the credit lifecycle toward profitability.
 //           </p>
 //         </div>
@@ -80,7 +80,7 @@
 //                 </div>
 
 //                 {/* Content */}
-//                 <h3 className="mb-3 text-2xl font-bold transition-colors font-heading text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandGold">
+//                 <h3 className="mb-3 text-lg md:text-xl font-bold transition-colors font-heading text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandGold">
 //                   {objective.title}
 //                 </h3>
                 
@@ -126,7 +126,7 @@
 //           <div className="grid items-center gap-8 md:grid-cols-2">
 //             {/* Left - Content */}
 //             <div>
-//               <h3 className="mb-4 text-2xl font-bold md:text-3xl font-heading">
+//               <h3 className="mb-4 text-xl md:text-2xl lg:text-3xl font-bold font-heading">
 //                 Blueprint for Asset Quality Excellence
 //               </h3>
 //               <p className="mb-6 leading-relaxed text-gray-300">
@@ -211,10 +211,10 @@ const PolicyObjectives = () => {
       <div className="container">
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <p className="mb-3 text-sm font-bold tracking-wider uppercase text-brandPrimary dark:text-brandAccent">Our Goals</p>
-          <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Core Objectives of Credit Policy
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
+          <p className="text-base text-gray-600 dark:text-gray-300">
             A well-defined framework acts as the blueprint for asset quality, guiding every stage of the credit lifecycle toward profitability.
           </p>
         </div>

@@ -37,11 +37,11 @@ const ISOTISAXCTA = () => {
                             <span className="text-sm font-bold text-brandAccent">Get Started Today</span>
                         </div>
 
-                        <h2 className="text-3xl font-bold leading-tight text-white font-heading sm:text-4xl lg:text-5xl">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white font-heading ">
                             Secure Your Competitive Edge Today
                         </h2>
 
-                        <p className="mt-6 text-lg leading-relaxed text-gray-200">
+                        <p className="mt-6 text-base leading-relaxed text-gray-200">
                             Partner with RiskMan to transform your compliance requirements into a strategic and sustainable business advantage.
                         </p>
 
@@ -99,7 +99,7 @@ const ISOTISAXCTA = () => {
                                     <Shield className="w-8 h-8 text-white" />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold font-heading text-brandDark dark:text-white">Contact RiskMan</h3>
+                                    <h3 className="text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">Contact RiskMan</h3>
                                     <p className="text-sm text-slate-500 dark:text-slate-400">We're here to help</p>
                                 </div>
                             </div>

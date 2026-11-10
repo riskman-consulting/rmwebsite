@@ -95,7 +95,7 @@ const RiskmanRevealCard = ({ service }) => {
           Advisory Service
         </span>
 
-        <h3 className="mb-4 text-lg font-semibold text-brandDark dark:text-white">
+        <h3 className="mb-4 text-lg md:text-xl font-bold text-brandDark dark:text-white">
           {service.title}
         </h3>
 

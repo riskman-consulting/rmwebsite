@@ -8,7 +8,7 @@
 //   return (
 //     <section className="py-16 bg-white dark:bg-slate-900">
 //       <div className="container px-6 mx-auto max-w-7xl">
-//         <h2 className="mb-12 text-4xl font-bold text-center text-slate-800 dark:text-white">
+//         <h2 className="mb-12 text-2xl md:text-3xl lg:text-4xl font-bold text-center text-slate-800 dark:text-white">
 //           Visual Framework: Global Operating Model Architecture
 //         </h2>
 
@@ -52,11 +52,11 @@ export default function GlobalCSAOperatingModelSection() {
       {/* Header Section */}
       <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
         <div className="container max-w-6xl px-6 mx-auto">
-          <h2 className="mb-8 text-4xl font-bold text-brandDark dark:text-white">
+          <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
             RiskMan's Global CSA Operating Model
           </h2>
 
-          <p className="mb-12 text-lg leading-relaxed text-brandNavy dark:text-white/70">
+          <p className="mb-12 text-base leading-relaxed text-brandNavy dark:text-white/70">
             RiskMan has developed a proven, scalable CSA operating model specifically designed for 
             complex global organizations operating across multiple geographies, regulatory regimes, 
             and business models. Our approach balances global consistency with local adaptability—ensuring 
@@ -65,7 +65,7 @@ export default function GlobalCSAOperatingModelSection() {
 
           {/* Centralized Governance */}
           <div className="mb-12">
-            <h3 className="mb-4 text-2xl font-bold text-brandDark dark:text-brandAccent">
+            <h3 className="mb-4 text-lg md:text-xl font-bold text-brandDark dark:text-brandAccent">
               Centralized Governance, Localized Execution
             </h3>
             <p className="mb-6 leading-relaxed text-brandNavy dark:text-white/70">
@@ -114,7 +114,7 @@ export default function GlobalCSAOperatingModelSection() {
       {/* Visual Framework Section */}
       <section className="py-16 bg-white dark:bg-slate-900">
         <div className="container px-6 mx-auto max-w-7xl">
-          <h2 className="mb-12 text-4xl font-bold text-center text-slate-800 dark:text-white">
+          <h2 className="mb-12 text-2xl md:text-3xl lg:text-4xl font-bold text-center text-slate-800 dark:text-white">
             Visual Framework: Global Operating Model Architecture
           </h2>
 
@@ -143,7 +143,7 @@ export default function GlobalCSAOperatingModelSection() {
       <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
         <div className="container max-w-6xl px-6 mx-auto">
           <div className="p-8 shadow-md bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-900 rounded-xl">
-            <h3 className="mb-4 text-2xl font-bold text-brandDark dark:text-brandAccent">
+            <h3 className="mb-4 text-lg md:text-xl font-bold text-brandDark dark:text-brandAccent">
               Technology & GRC Integration
             </h3>
             <p className="mb-6 leading-relaxed text-brandNavy dark:text-white">

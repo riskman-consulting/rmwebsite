@@ -23,11 +23,11 @@ export default function CTASections() {
             </span>
           </div>
 
-          <h2 className="mb-5 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
+          <h2 className="mb-5 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
             Let’s Stay in Touch
           </h2>
 
-          <p className="text-lg text-brandDark/70 dark:text-white/60">
+          <p className="text-base text-brandDark/70 dark:text-white/60">
             Subscribe or follow us to stay updated with RiskMan’s journey,
             insights, and milestones.
           </p>
@@ -42,11 +42,11 @@ export default function CTASections() {
               <Mail className="w-8 h-8 text-brandGold" />
             </div>
 
-            <h3 className="mb-3 text-3xl font-black font-heading text-brandDark dark:text-white">
+            <h3 className="mb-3 text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark dark:text-white">
               Stay Updated
             </h3>
 
-            <p className="mb-6 text-lg text-brandDark/60 dark:text-white/60">
+            <p className="mb-6 text-base text-brandDark/60 dark:text-white/60">
               Read our newsletter for updates on events, insights, and milestones.
             </p>
 
@@ -64,11 +64,11 @@ export default function CTASections() {
               <Linkedin className="w-8 h-8 text-brandGold" />
             </div>
 
-            <h3 className="mb-3 text-3xl font-black font-heading text-brandDark dark:text-white">
+            <h3 className="mb-3 text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark dark:text-white">
               Follow Our Journey
             </h3>
 
-            <p className="mb-6 text-lg text-brandDark/60 dark:text-white/60">
+            <p className="mb-6 text-base text-brandDark/60 dark:text-white/60">
               Join us on LinkedIn for professional insights, events, and stories
               from our journey.
             </p>

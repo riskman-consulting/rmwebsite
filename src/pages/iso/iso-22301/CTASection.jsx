@@ -11,10 +11,10 @@ const CTASection = () => {
         <div className="relative overflow-hidden shadow-2xl bg-brandPrimary rounded-3xl">
           <div className="grid lg:grid-cols-2">
             <div className="relative z-10 flex flex-col justify-center p-12 md:p-16">
-              <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl font-heading">
+              <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading">
                 Prepare Your Business for the Unexpected
               </h2>
-              <p className="mb-10 text-lg leading-relaxed text-gray-200">
+              <p className="mb-10 text-base leading-relaxed text-gray-200">
                 Build a resilient organization that thrives under pressure with RiskMan’s expert continuity and recovery consulting.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">

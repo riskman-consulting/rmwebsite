@@ -182,7 +182,7 @@ function HeroSection() {
               textTransform: "uppercase",
               letterSpacing: 2,
               marginBottom: 28,
-              fontFamily: "Montserrat, sans-serif",
+              fontFamily: "Inter, sans-serif",
             }}
           >
             Multi-Jurisdictional Privacy
@@ -190,7 +190,7 @@ function HeroSection() {
 
           <h1
             style={{
-              fontFamily: "Montserrat, sans-serif",
+              fontFamily: "Inter, sans-serif",
               fontSize: "clamp(2.4rem, 5vw, 4.2rem)",
               fontWeight: 800,
               lineHeight: 1.1,
@@ -231,7 +231,7 @@ function HeroSection() {
                 border: "none",
                 cursor: "pointer",
                 fontSize: 15,
-                fontFamily: "Montserrat, sans-serif",
+                fontFamily: "Inter, sans-serif",
               }}
             >
               <ArrowLeft size={16} /> Back To Main Page
@@ -247,7 +247,7 @@ function HeroSection() {
                 cursor: "pointer",
                 fontSize: 15,
                 boxShadow: `0 12px 40px ${C.brandAccent}22`,
-                fontFamily: "Montserrat, sans-serif",
+                fontFamily: "Inter, sans-serif",
               }}
             >
               Request Global Strategy
@@ -269,7 +269,7 @@ function FrameworksSection() {
         >
           <h2
             style={{
-              fontFamily: "Montserrat, sans-serif",
+              fontFamily: "Inter, sans-serif",
               fontSize: "clamp(1.8rem, 3vw, 2.4rem)",
               fontWeight: 800,
               marginBottom: 12,
@@ -341,7 +341,7 @@ function FrameworksSection() {
               />
               <h3
                 style={{
-                  fontFamily: "Montserrat, sans-serif",
+                  fontFamily: "Inter, sans-serif",
                   fontSize: 18,
                   fontWeight: 700,
                   marginBottom: 10,
@@ -382,7 +382,7 @@ function SpecificSection() {
           <div style={{ flex: "1 1 420px" }}>
             <h2
               style={{
-                fontFamily: "Montserrat, sans-serif",
+                fontFamily: "Inter, sans-serif",
                 fontSize: "clamp(1.8rem, 3vw, 2.4rem)",
                 fontWeight: 800,
                 marginBottom: 20,
@@ -482,7 +482,7 @@ function SpecificSection() {
                       color: "#fff",
                       fontWeight: 600,
                       fontSize: 14,
-                      fontFamily: "Montserrat, sans-serif",
+                      fontFamily: "Inter, sans-serif",
                     }}
                   >
                     End-to-End Data Protection
@@ -512,7 +512,7 @@ function SpecificSection() {
                     fontSize: 22,
                     fontWeight: 700,
                     marginBottom: 14,
-                    fontFamily: "Montserrat, sans-serif",
+                    fontFamily: "Inter, sans-serif",
                   }}
                 >
                   Vertical Compliance
@@ -546,7 +546,7 @@ function InternationalSection() {
         <div style={{ textAlign: "center", marginBottom: 56 }}>
           <h2
             style={{
-              fontFamily: "Montserrat, sans-serif",
+              fontFamily: "Inter, sans-serif",
               fontSize: "clamp(1.8rem, 3vw, 2.4rem)",
               fontWeight: 800,
               marginBottom: 12,
@@ -633,7 +633,7 @@ function InternationalSection() {
                   fontSize: 18,
                   marginBottom: 10,
                   color: C.brandDark,
-                  fontFamily: "Montserrat, sans-serif",
+                  fontFamily: "Inter, sans-serif",
                 }}
               >
                 {market.title}
@@ -659,7 +659,7 @@ function FAQSection() {
       <div style={{ ...container, maxWidth: 740 }}>
         <h2
           style={{
-            fontFamily: "Montserrat, sans-serif",
+            fontFamily: "Inter, sans-serif",
             fontSize: "clamp(1.8rem, 3vw, 2.4rem)",
             fontWeight: 800,
             marginBottom: 40,
@@ -698,7 +698,7 @@ function FAQSection() {
                     background: "none",
                     border: "none",
                     cursor: "pointer",
-                    fontFamily: "Montserrat, sans-serif",
+                    fontFamily: "Inter, sans-serif",
                   }}
                 >
                   <span style={{ paddingRight: 16 }}>{faq.q}</span>
@@ -778,7 +778,7 @@ function CTASection() {
           <div style={{ position: "relative", zIndex: 2 }}>
             <h2
               style={{
-                fontFamily: "Montserrat, sans-serif",
+                fontFamily: "Inter, sans-serif",
                 fontSize: "clamp(1.8rem, 4vw, 3.4rem)",
                 fontWeight: 800,
                 marginBottom: 20,
@@ -813,7 +813,7 @@ function CTASection() {
                 cursor: "pointer",
                 boxShadow: "0 12px 40px rgba(255,184,0,0.3)",
                 transition: "transform .2s",
-                fontFamily: "Montserrat, sans-serif",
+                fontFamily: "Inter, sans-serif",
               }}
               onMouseEnter={(e) =>
                 (e.currentTarget.style.transform = "scale(1.05)")
@@ -841,7 +841,7 @@ export default function OtherCompliancesPage() {
         <link rel="canonical" href="https://www.riskman.in/services/data-privacy/other" />
       </Helmet>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         @keyframes fadeSlide {
           from { opacity: 0; transform: translateY(-6px); }
           to { opacity: 1; transform: translateY(0); }

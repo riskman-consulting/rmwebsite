@@ -46,10 +46,10 @@
 //       <div className="container">
 //         {/* Section Header */}
 //         <div className="max-w-3xl mx-auto mb-16 text-center">
-//           <h2 className="mb-6 text-3xl font-bold sm:text-4xl lg:text-5xl font-heading text-brandDark dark:text-white">
+//           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //             Comprehensive Vendor Inventory and Classification
 //           </h2>
-//           <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+//           <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
 //             We establish a centralized inventory of all third parties, documenting data access types and system integrations. By applying a rigorous criticality methodology, we classify vendors from low to high risk to prioritize your oversight efforts.
 //           </p>
 //         </div>
@@ -71,7 +71,7 @@
 //                 </div>
 
 //                 {/* Title */}
-//                 <h3 className="mb-3 text-xl font-bold font-heading text-brandDark dark:text-white">
+//                 <h3 className="mb-3 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
 //                   {feature.title}
 //                 </h3>
 
@@ -123,10 +123,10 @@ const Inventory = () => {
     <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
       <div className="container">
         <div className="max-w-3xl mx-auto mb-16 text-center">
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Comprehensive Vendor Inventory and Classification
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
+          <p className="text-base text-gray-600 dark:text-gray-300">
             We establish a centralized inventory of all third parties, documenting data access types and system integrations. By applying a rigorous criticality methodology, we classify vendors from low to high risk to prioritize your oversight efforts.
           </p>
         </div>
@@ -137,7 +137,7 @@ const Inventory = () => {
               <div className="inline-block p-4 mb-6 transition-colors duration-300 bg-white rounded-full shadow-md group-hover:bg-brandNavy group-hover:text-white dark:bg-surfaceDark">
                 {feature.icon}
               </div>
-              <h3 className="mb-3 text-xl font-bold text-brandDark dark:text-white">{feature.title}</h3>
+              <h3 className="mb-3 text-lg md:text-xl font-bold text-brandDark dark:text-white">{feature.title}</h3>
               <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>
             </div>
           ))}

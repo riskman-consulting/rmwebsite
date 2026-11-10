@@ -34,13 +34,13 @@ function HeroSection() {
           </div>
 
           {/* Heading */}
-          <h1 className="mb-6 text-5xl font-bold leading-tight font-heading lg:text-7xl">
+          <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading ">
             The Gold Standard for{" "}
             <span className="text-brandAccent">Automotive Security</span>
           </h1>
 
           {/* Description */}
-          <p className="max-w-2xl mb-10 text-lg leading-relaxed text-gray-300 lg:text-xl">
+          <p className="max-w-2xl mb-10 text-base md:text-lg leading-relaxed text-gray-300 ">
             RiskMan provides expert guidance for TISAX compliance, ensuring your
             information security practices meet the rigorous and specific
             demands of the global automotive supply chain.

@@ -9,7 +9,7 @@ function InternationalSection() {
             <div className="absolute right-0 top-0 w-1/2 h-full bg-brandPrimary/5 skew-x-12 translate-x-1/2"></div>
             <div className="grid lg:grid-cols-2 gap-16 relative z-10 items-center">
               <div>
-                <h2 className="font-heading text-3xl lg:text-4xl font-bold mb-6">International Data Sovereignty</h2>
+                <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-6">International Data Sovereignty</h2>
                 <p className="text-gray-400 mb-8 leading-relaxed">Managing data flows across borders requires sophisticated legal and technical safeguards to ensure equivalent protection levels.</p>
                 <div className="space-y-6">
                   {[

@@ -47,13 +47,13 @@ export default function HeroSection() {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-3xl font-bold tracking-tight text-white font-heading md:text-4xl lg:text-5xl">
+            <h1 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-white font-heading ">
               Control Self-Assessment{' '}
               <span className="text-brandAccent">(CSA)</span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg font-light leading-relaxed md:text-xl lg:text-2xl text-slate-300">
+            <p className="text-base md:text-lg font-light leading-relaxed text-slate-300">
               Transforming Risk Governance Through{' '}
               <span className="font-medium text-brandAccent">Embedded Accountability</span>
             </p>

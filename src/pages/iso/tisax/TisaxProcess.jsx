@@ -45,7 +45,7 @@ const TisaxProcess = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-3xl font-bold font-heading text-brandDark dark:text-white md:text-4xl"
+                        className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white "
                     >
                         The TISAX Process <span className="text-brandAccent">Roadmap</span>
                     </motion.h2>
@@ -54,7 +54,7 @@ const TisaxProcess = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="mt-6 text-lg text-slate-600 dark:text-slate-400"
+                        className="mt-6 text-base text-slate-600 dark:text-slate-400"
                     >
                         Navigating the automotive security landscape requires a dedicated focus on the assessment of exchange mechanisms and industry-specific security protocols.
                     </motion.p>
@@ -75,7 +75,7 @@ const TisaxProcess = () => {
                                     <step.icon className="h-7 w-7" />
                                 </div>
 
-                                <h3 className="mb-4 text-xl font-bold font-heading text-brandDark dark:text-white">
+                                <h3 className="mb-4 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
                                     {step.title}
                                 </h3>
 

@@ -31,7 +31,7 @@ const TisaxCTA = () => {
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        className="mb-6 text-3xl font-bold text-white font-heading md:text-4xl"
+                        className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading "
                     >
                         Secure Your Automotive <br />
                         <span className="text-brandAccent">Partnerships</span>
@@ -41,7 +41,7 @@ const TisaxCTA = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="max-w-2xl mx-auto mb-12 text-xl text-gray-200"
+                        className="max-w-2xl mx-auto mb-12 text-base md:text-lg text-gray-200"
                     >
                         Don't let non-compliance stall your growth—partner with RiskMan for a streamlined and successful TISAX journey.
                     </motion.p>

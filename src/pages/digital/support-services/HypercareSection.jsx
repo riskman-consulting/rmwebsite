@@ -15,7 +15,7 @@ const HypercareCard = ({ icon: Icon, title, description }) =>{
         <Icon className="w-5 h-5 text-brandDark dark:text-brandAccent" />
       </div>
       <div>
-        <h3 className="mb-2 text-lg font-bold text-brandDark dark:text-white">{title}</h3>
+        <h3 className="mb-2 text-lg md:text-xl font-bold text-brandDark dark:text-white">{title}</h3>
         <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-300">{description}</p>
       </div>
     </div>
@@ -48,10 +48,10 @@ export const HypercareSection = () => {
           </motion.div>
           
           <div>
-            <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
               Post Go-Live Hypercare
             </h2>
-            <p className="pl-6 mb-10 text-lg leading-relaxed text-gray-600 border-l-4 dark:text-gray-300 border-brandPrimary">
+            <p className="pl-6 mb-10 text-base leading-relaxed text-gray-600 border-l-4 dark:text-gray-300 border-brandPrimary">
               Provide a safety net for your organization with dedicated support and rapid issue resolution during the critical transition phase.
             </p>
             

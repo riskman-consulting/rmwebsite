@@ -123,7 +123,7 @@
 //     <section className="py-20 bg-gradient-to-br from-brandPrimary via-brandNavy to-brandDark">
 //       <div className="container">
 //         <div className="mb-12 text-center">
-//           <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl font-heading">
+//           <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading">
 //             Sustainability & ESG Service Portfolio
 //           </h2>
 //           <p className="max-w-3xl mx-auto text-gray-200">
@@ -134,7 +134,7 @@
 
 //         <div className="max-w-6xl mx-auto">
 //           <div className="p-8 shadow-2xl bg-white/95 dark:bg-gray-900/95 rounded-3xl md:p-12">
-//             <h3 className="mb-8 text-2xl font-bold text-center font-heading text-brandDark dark:text-white">
+//             <h3 className="mb-8 text-lg md:text-xl font-bold text-center font-heading text-brandDark dark:text-white">
 //               ESG Service Portfolio Architecture
 //             </h3>
 //             <p className="mb-12 text-center text-gray-600 dark:text-gray-400">
@@ -416,7 +416,7 @@ const ESGServicePortfolio = () => {
     <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
       <div className="container">
         <div className="mb-10 text-center">
-          <h2 className="mb-4 text-3xl font-bold text-brandDark dark:text-white md:text-4xl font-heading">
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white font-heading">
             Sustainability & ESG Service Portfolio
           </h2>
           <p className="max-w-3xl mx-auto text-brandPrimary dark:text-white/70">
@@ -426,7 +426,7 @@ const ESGServicePortfolio = () => {
         </div>
 
         <div className="mb-10 text-center">
-          <h3 className="mb-2 text-2xl font-bold text-brandDark dark:text-white font-heading">
+          <h3 className="mb-2 text-lg md:text-xl font-bold text-brandDark dark:text-white font-heading">
             ESG Service Portfolio Architecture
           </h3>
           <p className="text-brandNavy dark:text-white/70">

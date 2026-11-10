@@ -21,7 +21,7 @@ const FAQSection = () => {
               FAQs
             </div>
 
-            <h2 className="text-3xl font-bold font-heading text-brandDark dark:text-brandLight md:text-4xl">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-brandLight ">
               Frequently Asked{" "}
               <span className="text-brandPrimary dark:text-brandAccent">
                 Questions

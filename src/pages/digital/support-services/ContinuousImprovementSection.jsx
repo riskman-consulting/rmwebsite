@@ -21,7 +21,7 @@ const ImprovementItem = ({ icon: Icon, title, description, index }) => (
       )}
     </div>
     <div className="pb-12">
-      <h3 className="mb-3 text-xl font-bold transition-colors text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">{title}</h3>
+      <h3 className="mb-3 text-lg md:text-xl font-bold transition-colors text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">{title}</h3>
       <p className="leading-relaxed text-gray-600 dark:text-gray-300">{description}</p>
     </div>
   </motion.div>
@@ -35,10 +35,10 @@ export const ContinuousImprovementSection = () => {
           
           {/* Left Content - List */}
           <div className="order-2 lg:w-1/2 lg:order-1">
-            <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
               Continuous Improvement
             </h2>
-            <p className="mb-12 text-lg text-gray-600 dark:text-gray-300">
+            <p className="mb-12 text-base text-gray-600 dark:text-gray-300">
               Iterate and evolve your digital landscape through constant feedback, KPI adjustments, and governance-aligned enhancements.
             </p>
             

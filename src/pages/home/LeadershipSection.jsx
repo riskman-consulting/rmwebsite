@@ -80,7 +80,7 @@ export function MemberCard({ member, index, onSelect }) {
         />
       </div>
 
-      <h3 className="mb-1 text-xl font-bold text-center text-brandDark dark:text-white">
+      <h3 className="mb-1 text-lg md:text-xl font-bold text-center text-brandDark dark:text-white">
         {member.name}
       </h3>
 
@@ -133,7 +133,7 @@ export default function LeadershipSection() {
         <div className="mx-auto max-w-7xl">
           <motion.h2
             {...animations.fadeInUp}
-            className="mb-16 text-4xl font-bold text-center md:text-5xl text-brandDark dark:text-white"
+            className="mb-16 text-2xl md:text-3xl lg:text-4xl font-bold text-center text-brandDark dark:text-white"
           >
             Our{" "}
             <span className="text-transparent bg-gradient-to-r from-brandPrimary to-brandGold bg-clip-text">

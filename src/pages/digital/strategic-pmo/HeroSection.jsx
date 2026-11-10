@@ -39,12 +39,12 @@
 
 //         <div className="container relative z-10 px-4 text-center">
 //           <div className="animate-float">
-//             <h1 className="mb-6 text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl font-heading">
+//             <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight text-white font-heading">
 //               Mastering Digital Complexity with{" "}
 //               <span className="text-brandAccent">Strategic PMO</span>
 //             </h1>
 
-//             <p className="max-w-3xl mx-auto mb-10 text-lg leading-relaxed text-gray-200 md:text-xl">
+//             <p className="max-w-3xl mx-auto mb-10 text-base md:text-lg leading-relaxed text-gray-200 ">
 //               RiskMan Consulting drives transformation through governance-led
 //               execution, bridging the gap between strategy and realization with
 //               milestone tracking and rigorous project ownership.

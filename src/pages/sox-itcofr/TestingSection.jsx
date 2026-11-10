@@ -29,12 +29,12 @@ function TestingSection() {
             Continuous Validation
           </motion.div>
 
-          <h2 className="mb-4 text-3xl md:text-4xl font-bold font-heading text-brandDark dark:text-white leading-tight">
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white leading-tight">
             Rigorous Control <br /> 
             <span className="text-brandPrimary dark:text-brandAccent">Testing & Sustenance</span>
           </h2>
 
-          <p className="max-w-2xl text-base md:text-lg text-brandDark/70 dark:text-brandLight/60 leading-relaxed border-l-4 border-brandAccent pl-5">
+          <p className="max-w-2xl text-base text-brandDark/70 dark:text-brandLight/60 leading-relaxed border-l-4 border-brandAccent pl-5">
             RiskMan provides independent validation of your control environment,
             ensuring that IFC, SOX, and ICOFR frameworks operate effectively year-round.
           </p>
@@ -57,7 +57,7 @@ function TestingSection() {
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-bold font-heading text-brandDark dark:text-white mb-1">
+                  <h3 className="text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white mb-1">
                     {item.title}
                   </h3>
                   <p className="text-xs md:text-sm text-brandDark/60 dark:text-brandLight/50 leading-snug">

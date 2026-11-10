@@ -61,10 +61,10 @@ const Services = () => {
       <div className="container relative z-10">
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <h2 className="mb-3 text-sm font-bold tracking-widest uppercase text-brandPrimary dark:text-brandAccent">Our Expertise</h2>
-          <h3 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+          <h3 className="mb-6 text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark dark:text-white">
             AI-Powered Risk Intelligence
           </h3>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
+          <p className="text-base text-gray-600 dark:text-gray-300">
             Transform raw data into strategic foresight with RiskMan's AI ecosystem.
           </p>
         </div>

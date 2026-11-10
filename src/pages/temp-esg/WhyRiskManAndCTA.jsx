@@ -34,7 +34,7 @@ const WhyRiskManAndCTA = () => {
       <div className="container">
         {/* Why RiskMan Section */}
         <div className="max-w-6xl mx-auto mb-20">
-          <h2 className="mb-12 text-4xl font-bold text-center font-heading md:text-5xl text-brandDark dark:text-white">
+          <h2 className="mb-12 text-2xl md:text-3xl lg:text-4xl font-bold text-center font-heading text-brandDark dark:text-white">
             Why RiskMan
           </h2>
 
@@ -45,7 +45,7 @@ const WhyRiskManAndCTA = () => {
                 className="p-6 transition-all duration-300 bg-white border shadow-lg dark:bg-bgDark rounded-xl hover:shadow-2xl hover:-translate-y-1 border-borderLight dark:border-borderDark hover:border-brandPrimary dark:hover:border-brandAccent"
               >
                 <div className="mb-4 text-5xl">{item.icon}</div>
-                <h3 className="mb-3 text-xl font-bold font-heading text-brandDark dark:text-white">
+                <h3 className="mb-3 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
                   {item.title}
                 </h3>
                 <p className="leading-relaxed text-gray-600 dark:text-gray-400">
@@ -60,11 +60,11 @@ const WhyRiskManAndCTA = () => {
         <div className="max-w-4xl mx-auto">
           <div className="overflow-hidden shadow-2xl bg-gradient-to-br from-brandDark via-brandNavy to-brandPrimary dark:from-bgDark dark:via-brandDark dark:to-brandNavy rounded-2xl">
             <div className="p-12 text-center">
-              <h2 className="mb-6 text-4xl font-bold text-white font-heading md:text-5xl">
+              <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading ">
                 Begin Your ESG Transformation
               </h2>
               
-              <p className="mb-8 text-lg leading-relaxed text-brandLight/90">
+              <p className="mb-8 text-base leading-relaxed text-brandLight/90">
                 Whether you are establishing foundational ESG capabilities, advancing toward leading practice, 
                 or navigating complex multi-jurisdictional requirements, RiskMan provides the strategic guidance, 
                 practical expertise, and sustained support to achieve your sustainability objectives.
@@ -126,7 +126,7 @@ const WhyRiskManAndCTA = () => {
         {/* Contact Information */}
         <div className="max-w-2xl mx-auto mt-12 text-center">
           <div className="p-8 bg-white border shadow-lg dark:bg-bgDark rounded-xl border-borderLight dark:border-borderDark">
-            <h3 className="mb-6 text-2xl font-bold font-heading text-brandDark dark:text-white">
+            <h3 className="mb-6 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
               Ready to Transform Your ESG Journey?
             </h3>
             

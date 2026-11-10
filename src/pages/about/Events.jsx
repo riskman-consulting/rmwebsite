@@ -181,7 +181,7 @@ const EventCard = ({ event, onClick }) => (
         </span>
       </div>
       
-      <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brandPrimary transition-colors">
+      <h3 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-brandPrimary transition-colors">
         {event.title}
       </h3>
       <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 line-clamp-2">
@@ -252,7 +252,7 @@ const GalleryModal = ({ event, isOpen, onClose }) => {
             {/* Content Section */}
             <div className="p-10 flex flex-col justify-center border-l border-gray-100 dark:border-white/5">
               <span className="text-brandPrimary font-bold uppercase tracking-tighter text-sm mb-2">{event.type}</span>
-              <h2 className="text-4xl font-black text-gray-900 dark:text-white mb-6 leading-tight">{event.title}</h2>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">{event.title}</h2>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">{event.fullDesc}</p>
               
               <div className="space-y-4">
@@ -317,7 +317,7 @@ export default function Events() {
           <motion.h1 
             initial={{ opacity: 0, y: 20 }} 
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-black text-gray-900 dark:text-white mb-8 tracking-tighter"
+            className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-8 "
           >
             Events & <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandPrimary to-brandAccent">Collective</span> Impact.
           </motion.h1>
@@ -380,7 +380,7 @@ export default function Events() {
         {/* Empty State */}
         {filteredEvents.length === 0 && (
           <div className="py-40 text-center">
-            <h3 className="text-2xl font-bold text-gray-400">No events match your selection.</h3>
+            <h3 className="text-lg md:text-xl font-bold text-gray-400">No events match your selection.</h3>
             <button 
               onClick={() => setFilter({year: "All", type: "All"})}
               className="mt-4 text-brandPrimary font-bold underline"

@@ -11,10 +11,10 @@ function CTASection() {
         </div>
 
         <div className="container relative z-10 text-center">
-          <h2 className="mb-6 text-3xl font-bold text-white font-heading md:text-4xl">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading ">
             Secure Your Financial Future
           </h2>
-          <p className="max-w-3xl mx-auto mb-10 text-xl leading-relaxed md:text-2xl text-white/90">
+          <p className="max-w-3xl mx-auto mb-10 text-base md:text-lg leading-relaxed text-white/90">
             Strengthen your corporate governance and mitigate risks with RiskMan's specialized SOX, ICOFR, and IFC service offerings.
           </p>
           <Link 

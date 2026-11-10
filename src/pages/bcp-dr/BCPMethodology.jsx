@@ -65,7 +65,7 @@
 // //           viewport={{ once: true }}
 // //           className="max-w-4xl mx-auto mb-16 text-center"
 // //         >
-// //           <h2 className="text-3xl font-bold font-heading text-brandDark dark:text-white md:text-4xl lg:text-5xl">
+// //           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white ">
 // //             RiskMan’s Approach Towards{" "}
 // //             <span className="text-brandPrimary dark:text-brandAccent">
 // //               Delivering Excellence
@@ -199,7 +199,7 @@
 //         <div className="max-w-3xl">
 //           <div className="h-1.5 w-20 bg-brandAccent mb-6 rounded-full" />
  
-//           <h2 className="text-3xl font-extrabold md:text-4xl text-brandDark dark:text-white">
+//           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
 //             RiskMan's 7-Phase BCP/DR Delivery Lifecycle
 //           </h2>
  
@@ -221,7 +221,7 @@
 //                 {i + 1}
 //               </div>
  
-//               <h3 className="mt-4 text-xl font-bold text-brandDark dark:text-white">
+//               <h3 className="mt-4 text-lg md:text-xl font-bold text-brandDark dark:text-white">
 //                 Phase {i + 1}: {p.title}
 //               </h3>
  
@@ -263,13 +263,13 @@ const BCPMethodology = () => {
         {/* HEADER */}
         <div className="max-w-3xl mb-12">
           <div className="h-1.5 w-16 bg-brandAccent mb-4 rounded-full" />
-          <h2 className="text-3xl font-bold leading-tight md:text-4xl font-heading text-brandDark dark:text-white">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandDark dark:text-white">
             7-Phase BCP/DR <br />
             <span className="text-brandPrimary dark:text-brandAccent">
               Delivery Lifecycle
             </span>
           </h2>
-          <p className="mt-4 text-base md:text-lg text-brandDark/70 dark:text-brandLight/60">
+          <p className="mt-4 text-base text-brandDark/70 dark:text-brandLight/60">
             Our structured methodology ensures operational resilience through a
             comprehensive lifecycle designed for measurable recovery readiness.
           </p>
@@ -293,7 +293,7 @@ const BCPMethodology = () => {
         </div>
  
         <div>
-          <h3 className="text-lg font-bold transition-colors duration-300 text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
+          <h3 className="text-lg md:text-xl font-bold transition-colors duration-300 text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
             {p.title}
           </h3>
           <p className="mt-2 text-sm leading-relaxed text-brandDark/60 dark:text-brandLight/50">

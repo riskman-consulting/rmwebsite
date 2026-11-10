@@ -164,7 +164,7 @@ const AnimatedCounter = ({ end, label, prefix = "", suffix = "" }) => {
 
   return (
     <div ref={ref} style={{ textAlign: "center" }}>
-      <p style={{ fontSize: 42, fontWeight: 900, color: theme.brandAccent, fontFamily: "Montserrat, sans-serif", lineHeight: 1 }}>
+      <p style={{ fontSize: 42, fontWeight: 900, color: theme.brandAccent, fontFamily: "Inter, sans-serif", lineHeight: 1 }}>
         {prefix}{count}{suffix}
       </p>
       <p style={{ fontSize: 11, letterSpacing: 3, textTransform: "uppercase", color: "rgba(255,255,255,0.5)", marginTop: 8 }}>{label}</p>
@@ -238,11 +238,11 @@ export default function USAssurancePage() {
         <link rel="canonical" href="https://www.riskman.in/services/cpa-us-assurance" />
       </Helmet>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         /* Scoped to .cpa-page so these resets don't leak into the global header, sub-nav and footer.
            .container is left to the site-wide rule so content lines up with the sub-nav. */
         :where(.cpa-page, .cpa-page *) { margin: 0; padding: 0; box-sizing: border-box; }
-        .heading { font-family: Montserrat, sans-serif; }
+        .heading { font-family: Inter, sans-serif; }
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
         @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
         @keyframes pulse-ring { 0% { transform: scale(0.9); opacity: 0.5; } 50% { transform: scale(1.05); opacity: 0.2; } 100% { transform: scale(0.9); opacity: 0.5; } }
@@ -275,7 +275,7 @@ export default function USAssurancePage() {
               </FadeIn>
 
               <FadeIn delay={0.15}>
-                <h1 className="heading" style={{ fontSize: "clamp(36px, 5vw, 72px)", fontWeight: 900, lineHeight: 1.05, color: "white", marginBottom: 28, maxWidth: 800 }}>
+                <h1 className="text-[1.75rem] md:text-4xl lg:text-5xl heading" style={{ fontWeight: 900, lineHeight: 1.05, color: "white", marginBottom: 28, maxWidth: 800 }}>
                   Advanced Assurance Solutions for{" "}
                   <span style={{ color: theme.brandAccent, position: "relative" }}>
                     Modern Organizations
@@ -294,7 +294,7 @@ export default function USAssurancePage() {
 
               <FadeIn delay={0.45}>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 16 }}>
-                  <button onClick={() => navigate("/services")} className="cta-btn" style={{ background: theme.brandAccent, color: theme.brandDark, padding: "18px 40px", borderRadius: 6, fontWeight: 800, fontSize: 15, border: "none", cursor: "pointer", fontFamily: "Montserrat, sans-serif", boxShadow: "0 8px 32px rgba(255,192,0,0.3)" }}>
+                  <button onClick={() => navigate("/services")} className="cta-btn" style={{ background: theme.brandAccent, color: theme.brandDark, padding: "18px 40px", borderRadius: 6, fontWeight: 800, fontSize: 15, border: "none", cursor: "pointer", fontFamily: "Inter, sans-serif", boxShadow: "0 8px 32px rgba(255,192,0,0.3)" }}>
                     Explore Our Services →
                   </button>
                   <button onClick={() => navigate("/contact")} style={{ background: "rgba(255,255,255,0.05)", color: "white", padding: "18px 40px", borderRadius: 6, fontWeight: 700, fontSize: 15, border: "1px solid rgba(255,255,255,0.15)", cursor: "pointer", fontFamily: "Inter, sans-serif", backdropFilter: "blur(8px)" }}>
@@ -319,7 +319,7 @@ export default function USAssurancePage() {
           <FadeIn>
             <div style={{ textAlign: "center", maxWidth: 640, margin: "0 auto 64px" }}>
               <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: 3, textTransform: "uppercase", color: theme.brandPrimary, marginBottom: 12 }}>What We Do</p>
-              <h2 className="heading" style={{ fontSize: "clamp(28px, 3vw, 42px)", fontWeight: 900, marginBottom: 16, color: theme.brandDark }}>Integrated Service Overview</h2>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl heading" style={{ fontWeight: 900, marginBottom: 16, color: theme.brandDark }}>Integrated Service Overview</h2>
               <p style={{ fontSize: 16, color: "#6B7280", lineHeight: 1.7 }}>A holistic ecosystem of assurance services designed to mitigate complexity and fortify corporate governance across all operational layers.</p>
             </div>
           </FadeIn>
@@ -351,7 +351,7 @@ export default function USAssurancePage() {
             <FadeIn direction="right">
               <div>
                 <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: 3, textTransform: "uppercase", color: theme.brandPrimary, marginBottom: 12 }}>Our Process</p>
-                <h2 className="heading" style={{ fontSize: "clamp(28px, 3vw, 42px)", fontWeight: 900, marginBottom: 20, color: theme.brandDark }}>How We Deliver Assurance Excellence</h2>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl heading" style={{ fontWeight: 900, marginBottom: 20, color: theme.brandDark }}>How We Deliver Assurance Excellence</h2>
                 <p style={{ fontSize: 16, color: "#6B7280", lineHeight: 1.7, marginBottom: 48 }}>
                   Our proven methodology transforms complex compliance requirements into streamlined, actionable governance frameworks tailored to your organization.
                 </p>
@@ -401,13 +401,13 @@ export default function USAssurancePage() {
             <div style={{ position: "relative", zIndex: 10, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }}>
               <FadeIn>
                 <div>
-                  <h2 className="heading" style={{ fontSize: "clamp(28px, 3.5vw, 48px)", fontWeight: 900, color: "white", lineHeight: 1.1, marginBottom: 24 }}>
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl heading" style={{ fontWeight: 900, color: "white", lineHeight: 1.1, marginBottom: 24 }}>
                     Strengthen Your Governance Framework
                   </h2>
                   <p style={{ fontSize: 17, color: "rgba(255,255,255,0.5)", lineHeight: 1.75, marginBottom: 48 }}>
                     Partner with RiskMan to transform your assurance processes into a strategic asset for sustainable growth. We move beyond simple verification to provide enterprise-wide clarity.
                   </p>
-                  <button onClick={() => navigate("/contact")} className="cta-btn" style={{ background: theme.brandAccent, color: theme.brandDark, padding: "20px 48px", borderRadius: 6, fontWeight: 900, fontSize: 16, border: "none", cursor: "pointer", fontFamily: "Montserrat, sans-serif", boxShadow: "0 8px 32px rgba(255,192,0,0.25)" }}>
+                  <button onClick={() => navigate("/contact")} className="cta-btn" style={{ background: theme.brandAccent, color: theme.brandDark, padding: "20px 48px", borderRadius: 6, fontWeight: 900, fontSize: 16, border: "none", cursor: "pointer", fontFamily: "Inter, sans-serif", boxShadow: "0 8px 32px rgba(255,192,0,0.25)" }}>
                     Request A Comprehensive Review
                   </button>
                 </div>
@@ -440,7 +440,7 @@ export default function USAssurancePage() {
           <FadeIn>
             <div style={{ textAlign: "center", marginBottom: 56 }}>
               <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: 3, textTransform: "uppercase", color: theme.brandPrimary, marginBottom: 12 }}>FAQ</p>
-              <h2 className="heading" style={{ fontSize: "clamp(28px, 3vw, 38px)", fontWeight: 900, color: theme.brandDark }}>Assurance FAQ</h2>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl heading" style={{ fontWeight: 900, color: theme.brandDark }}>Assurance FAQ</h2>
             </div>
           </FadeIn>
 
@@ -475,9 +475,9 @@ export default function USAssurancePage() {
         <div style={{ position: "absolute", inset: 0, opacity: 0.08, backgroundImage: `radial-gradient(circle at 30% 50%, ${theme.brandDark} 2px, transparent 2px)`, backgroundSize: "30px 30px" }} />
         <div className="container" style={{ textAlign: "center", position: "relative" }}>
           <FadeIn>
-            <h2 className="heading" style={{ fontSize: "clamp(24px, 3vw, 36px)", fontWeight: 900, color: theme.brandDark, marginBottom: 8 }}>Safeguard Your Institutional Integrity Today</h2>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl heading" style={{ fontWeight: 900, color: theme.brandDark, marginBottom: 8 }}>Safeguard Your Institutional Integrity Today</h2>
             <p style={{ fontSize: 16, color: "rgba(0,31,63,0.6)", marginBottom: 32, maxWidth: 500, margin: "0 auto 32px" }}>Take the first step toward enterprise-wide assurance clarity with a confidential consultation.</p>
-            <button onClick={() => navigate("/contact")} className="cta-btn" style={{ background: theme.brandDark, color: "white", padding: "20px 56px", borderRadius: 50, fontWeight: 800, fontSize: 16, border: "none", cursor: "pointer", fontFamily: "Montserrat, sans-serif", boxShadow: "0 12px 40px rgba(0,31,63,0.3)", transition: "all 0.3s ease" }}>
+            <button onClick={() => navigate("/contact")} className="cta-btn" style={{ background: theme.brandDark, color: "white", padding: "20px 56px", borderRadius: 50, fontWeight: 800, fontSize: 16, border: "none", cursor: "pointer", fontFamily: "Inter, sans-serif", boxShadow: "0 12px 40px rgba(0,31,63,0.3)", transition: "all 0.3s ease" }}>
               Contact A Specialist
             </button>
           </FadeIn>

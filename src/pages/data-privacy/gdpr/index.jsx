@@ -188,7 +188,7 @@ function HeroSection() {
 
             <h1
               style={{
-                fontFamily: "Montserrat, sans-serif",
+                fontFamily: "Inter, sans-serif",
                 fontSize: "clamp(2.5rem, 5vw, 4.2rem)",
                 fontWeight: 800,
                 lineHeight: 1.1,
@@ -265,7 +265,7 @@ function FrameworkSection() {
             >
               Core Services
             </div>
-            <h2 style={{ fontFamily: "Montserrat, sans-serif", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 800, color: "#001F3F", marginBottom: "1rem" }}>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl" style={{ fontFamily: "Inter, sans-serif", fontWeight: 800, color: "#001F3F", marginBottom: "1rem" }}>
               Advanced Regulatory Frameworks
             </h2>
             <p style={{ color: "#666", lineHeight: 1.7 }}>
@@ -324,7 +324,7 @@ function FrameworkSection() {
                   </div>
                   <h3
                     style={{
-                      fontFamily: "Montserrat, sans-serif",
+                      fontFamily: "Inter, sans-serif",
                       fontSize: "1.15rem",
                       fontWeight: 700,
                       color: "#001F3F",
@@ -391,7 +391,7 @@ function InternationalSection() {
               </div>
               <h2
                 style={{
-                  fontFamily: "Montserrat, sans-serif",
+                  fontFamily: "Inter, sans-serif",
                   fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
                   fontWeight: 800,
                   color: "#fff",
@@ -460,7 +460,7 @@ function SubjectSection() {
               </div>
               <h2
                 style={{
-                  fontFamily: "Montserrat, sans-serif",
+                  fontFamily: "Inter, sans-serif",
                   fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
                   fontWeight: 800,
                   color: "#001F3F",
@@ -505,7 +505,7 @@ function SubjectSection() {
                         <div>
                           <h4
                             style={{
-                              fontFamily: "Montserrat, sans-serif",
+                              fontFamily: "Inter, sans-serif",
                               fontWeight: 700,
                               fontSize: "1.05rem",
                               color: "#001F3F",
@@ -581,7 +581,7 @@ function FAQSection() {
             </div>
             <h2
               style={{
-                fontFamily: "Montserrat, sans-serif",
+                fontFamily: "Inter, sans-serif",
                 fontSize: "clamp(1.8rem, 3vw, 2.3rem)",
                 fontWeight: 800,
                 color: "#001F3F",
@@ -684,7 +684,7 @@ function CTASection() {
             <div className="relative z-10">
               <h2
                 style={{
-                  fontFamily: "Montserrat, sans-serif",
+                  fontFamily: "Inter, sans-serif",
                   fontSize: "clamp(1.8rem, 4vw, 3rem)",
                   fontWeight: 800,
                   color: "#fff",
@@ -746,7 +746,7 @@ export default function GDPRCompliancePage() {
         <link rel="canonical" href="https://www.riskman.in/services/data-privacy/gdpr" />
       </Helmet>
       <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
         rel="stylesheet"
       />
       <HeroSection />

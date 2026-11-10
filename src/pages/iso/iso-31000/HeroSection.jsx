@@ -25,12 +25,12 @@ const Hero = () => {
             <span className="text-sm font-medium tracking-wide text-brandLight">ISO 31000 Risk Management Consulting</span>
           </div>
           
-          <h1 className="text-5xl font-bold leading-tight text-white md:text-6xl lg:text-7xl font-heading">
+          <h1 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight text-white font-heading">
             Transform Uncertainty into <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandGold to-brandAccent">Strategic Opportunity</span>
           </h1>
           
-          <p className="text-lg leading-relaxed text-gray-300 md:text-xl">
+          <p className="text-base md:text-lg leading-relaxed text-gray-300 ">
             RiskMan implements ISO 31000 principles to help your organization manage risks effectively, protecting value and supporting informed decision-making at every level of the enterprise.
           </p>
           

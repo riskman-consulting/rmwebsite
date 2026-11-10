@@ -25,11 +25,11 @@ const HeroSection = () => {
             <span className="text-xs font-bold tracking-wider uppercase text-brandAccent">ISO 22301 Business Continuity</span>
           </div>
           
-          <h1 className="text-4xl font-bold leading-tight text-white lg:text-5xl font-heading">
+          <h1 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight text-white font-heading">
             Guarantee <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandAccent to-brandGold">Operational Resilience</span> and Continuity
           </h1>
           
-          <p className="max-w-xl text-lg leading-relaxed text-gray-300">
+          <p className="max-w-xl text-base leading-relaxed text-gray-300">
             RiskMan specializes in ISO 22301 frameworks, helping your organization prepare for, respond to, and recover from disruptive incidents efficiently and with minimal impact.
           </p>
           

@@ -67,7 +67,7 @@ const CompetitiveAdvantages = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
-                            className="text-3xl font-bold font-heading text-brandDark dark:text-white sm:text-4xl lg:text-5xl"
+                            className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white "
                         >
                             Competitive Advantages of Compliance
                         </motion.h2>
@@ -76,7 +76,7 @@ const CompetitiveAdvantages = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.2 }}
-                            className="mt-6 text-lg text-slate-600 dark:text-slate-400"
+                            className="mt-6 text-base text-slate-600 dark:text-slate-400"
                         >
                             Achieving recognized international standards provides measurable value that extends beyond simple regulatory checkboxes.
                         </motion.p>
@@ -125,7 +125,7 @@ const CompetitiveAdvantages = () => {
 
                                     {/* Content */}
                                     <div className="p-6 bg-white dark:bg-surfaceDark">
-                                        <h3 className="mb-2 text-xl font-bold font-heading text-brandDark dark:text-white">
+                                        <h3 className="mb-2 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
                                             {item.title}
                                         </h3>
                                         <p className="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400">

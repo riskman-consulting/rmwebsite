@@ -17,7 +17,7 @@ const SectionHeading = ({ tag, title, subtitle, centered = false }) => (
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-6 text-4xl font-black leading-tight md:text-6xl font-heading"
+            className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading"
         >
             {title}
         </motion.h2>
@@ -27,7 +27,7 @@ const SectionHeading = ({ tag, title, subtitle, centered = false }) => (
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-3xl text-lg leading-relaxed text-brandDark/70 dark:text-brandLight/70 md:text-xl"
+                className="max-w-3xl text-base md:text-lg leading-relaxed text-brandDark/70 dark:text-brandLight/70 "
                 style={{ margin: centered ? '0 auto' : '0' }}
             >
                 {subtitle}
@@ -53,16 +53,16 @@ const GovernancePyramid = () => (
 
             <motion.g initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
                 <path d="M250,20 L330,120 L170,120 Z" fill="url(#p-navy)" className="stroke-brandAccent" strokeWidth="1" />
-                <text x="250" y="85" textAnchor="middle" fill="#fff" fontSize="14" fontWeight="800" fontFamily="Montserrat">BOARD INTENT</text>
+                <text x="250" y="85" textAnchor="middle" fill="#fff" fontSize="14" fontWeight="800" fontFamily="Inter, sans-serif">BOARD INTENT</text>
 
                 <path d="M165,130 L335,130 L385,220 L115,220 Z" className="fill-brandNavy stroke-brandAccent" strokeWidth="0.5" opacity="0.9" />
-                <text x="250" y="185" textAnchor="middle" fill="#fff" fontSize="14" fontWeight="800" fontFamily="Montserrat">POLICIES</text>
+                <text x="250" y="185" textAnchor="middle" fill="#fff" fontSize="14" fontWeight="800" fontFamily="Inter, sans-serif">POLICIES</text>
 
                 <path d="M110,230 L390,230 L440,320 L60,320 Z" className="fill-brandPrimary stroke-brandAccent" strokeWidth="0.5" opacity="0.8" />
-                <text x="250" y="285" textAnchor="middle" fill="#fff" fontSize="14" fontWeight="800" fontFamily="Montserrat">SOPs & PROCEDURES</text>
+                <text x="250" y="285" textAnchor="middle" fill="#fff" fontSize="14" fontWeight="800" fontFamily="Inter, sans-serif">SOPs & PROCEDURES</text>
 
                 <rect x="30" y="330" width="440" height="50" rx="8" fill="url(#p-gold)" />
-                <text x="250" y="362" textAnchor="middle" fill="#000" fontSize="14" fontWeight="900" fontFamily="Montserrat">DAY-TO-DAY EXECUTION</text>
+                <text x="250" y="362" textAnchor="middle" fill="#000" fontSize="14" fontWeight="900" fontFamily="Inter, sans-serif">DAY-TO-DAY EXECUTION</text>
             </motion.g>
         </svg>
     </div>
@@ -87,8 +87,8 @@ const LifecycleWheel = () => {
             </defs>
             <circle cx={cx} cy={cy} r={r + 30} fill="none" className="stroke-brandAccent/20" strokeWidth="1" strokeDasharray="6,4" />
             <circle cx={cx} cy={cy} r="45" fill="url(#lcg)" className="stroke-brandAccent" strokeWidth="2" />
-            <text x={cx} y={cy - 5} textAnchor="middle" className="fill-brandAccent" fontSize="10" fontWeight="900" fontFamily="Montserrat">POLICY</text>
-            <text x={cx} y={cy + 12} textAnchor="middle" className="fill-brandAccent" fontSize="10" fontWeight="900" fontFamily="Montserrat">LIFECYCLE</text>
+            <text x={cx} y={cy - 5} textAnchor="middle" className="fill-brandAccent" fontSize="10" fontWeight="900" fontFamily="Inter, sans-serif">POLICY</text>
+            <text x={cx} y={cy + 12} textAnchor="middle" className="fill-brandAccent" fontSize="10" fontWeight="900" fontFamily="Inter, sans-serif">LIFECYCLE</text>
             {phases.map((p, i) => {
                 const rad = (p.angle * Math.PI) / 180;
                 const x = cx + r * Math.cos(rad);
@@ -107,7 +107,7 @@ const LifecycleWheel = () => {
                         <text x={x} y={y - 2} textAnchor="middle" fill="#fff" fontSize="9" fontWeight="700" fontFamily="Inter">
                             {p.label.split("\n").map((l, j) => <tspan key={j} x={x} dy={j === 0 ? 0 : 12}>{l}</tspan>)}
                         </text>
-                        <text x={x} y={y - 24} textAnchor="middle" className="fill-brandAccent" fontSize="14" fontWeight="900" fontFamily="Montserrat">{`0${i + 1}`}</text>
+                        <text x={x} y={y - 24} textAnchor="middle" className="fill-brandAccent" fontSize="14" fontWeight="900" fontFamily="Inter, sans-serif">{`0${i + 1}`}</text>
                     </g>
                 );
             })}

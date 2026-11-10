@@ -18,7 +18,7 @@ const CTASection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-6 text-3xl font-bold font-heading text-brandAccent md:text-4xl"
+          className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandAccent "
         >
           Ready to Secure Your Future?
         </motion.h2>
@@ -29,7 +29,7 @@ const CTASection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="max-w-3xl mx-auto mb-10 text-lg text-white/80"
+          className="max-w-3xl mx-auto mb-10 text-base text-white/80"
         >
           Don&apos;t let uncertainty dictate your strategy. Partner with RiskMan to turn
           potential threats into a competitive advantage.

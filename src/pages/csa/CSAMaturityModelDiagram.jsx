@@ -581,7 +581,7 @@ export default function CSAMaturityModel() {
     <div className="flex flex-col w-full p-4 overflow-hidden font-sans rounded-2xl bg-bgLight dark:bg-bgDark">
       {/* Title */}
       <div className="flex-shrink-0 mb-2 text-center">
-        <h3 className="text-2xl font-bold tracking-tight text-brandDark dark:text-white">
+        <h3 className="text-lg md:text-xl font-bold text-brandDark dark:text-white">
           CSA Maturity Model
         </h3>
         <p className="mt-1 text-sm text-brandNavy dark:text-white/70">

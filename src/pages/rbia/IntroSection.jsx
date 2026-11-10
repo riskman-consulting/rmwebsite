@@ -22,7 +22,7 @@ const RBIALandscape = () => {
             </div>
 
             {/* Heading */}
-            <h2 className="text-3xl md:text-4xl font-heading font-bold leading-tight text-brandDark dark:text-white">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold leading-tight text-brandDark dark:text-white">
               Strategic Assessment of{" "}
               <span className="text-brandPrimary dark:text-brandGold block">
                 Organizational
@@ -31,7 +31,7 @@ const RBIALandscape = () => {
             </h2>
 
             {/* Body Text */}
-            <p className="mt-6 text-lg md:text-xl leading-relaxed text-brandNavy/70 dark:text-white/60 max-w-2xl">
+            <p className="mt-6 text-base md:text-lg leading-relaxed text-brandNavy/70 dark:text-white/60 max-w-2xl">
               Every Organization’s mission relies on <span className="text-brandDark dark:text-white font-bold underline decoration-brandAccent decoration-2 underline-offset-4">trust and speed</span>. 
               We provide proactive assurance across financial and operational areas to mitigate emerging threats.
             </p>

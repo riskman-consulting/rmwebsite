@@ -12,7 +12,7 @@ const FeatureCard = ({ icon: Icon, title, description, className = "" }) => {
             <div className="flex items-center justify-center w-12 h-12 mb-4 bg-brandPrimary/10 dark:bg-brandAccent/10 rounded-xl">
                 <Icon className="w-6 h-6 text-brandPrimary dark:text-brandAccent" />
             </div>
-            <h3 className="mb-2 text-xl font-bold text-brandDark dark:text-white">{title}</h3>
+            <h3 className="mb-2 text-lg md:text-xl font-bold text-brandDark dark:text-white">{title}</h3>
             <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-300">{description}</p>
         </motion.div>
     )
@@ -32,10 +32,10 @@ export const DevTestingSection = () => {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6 }}
                             >
-                                <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+                                <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
                                     Development Testing & UAT
                                 </h2>
-                                <p className="mb-8 text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+                                <p className="mb-8 text-base leading-relaxed text-gray-600 dark:text-gray-300">
                                     Guarantee system reliability through comprehensive scenario-based validation and rigorous defect management protocols. We ensure your software is robust, secure, and ready for deployment.
                                 </p>
 

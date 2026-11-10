@@ -137,14 +137,14 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
       <div className="container relative px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
         <div className="max-w-3xl p-8 border shadow-2xl rounded-xl bg-white/10 backdrop-blur-md border-white/20">
           
-          <h1 className="mb-6 text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
+          <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight text-white ">
             Accelerating Value Realization with{" "}
             <span className="text-brandGold">
               Implementation Excellence
             </span>
           </h1>
 
-          <p className="mb-10 text-lg leading-relaxed text-white/90 md:text-xl">
+          <p className="mb-10 text-base md:text-lg leading-relaxed text-white/90 ">
             RiskMan delivers implementation excellence through rigorous tool
             optimization, process re-engineering, and structured data migration
             frameworks to ensure your digital transformation succeeds.
@@ -168,10 +168,10 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
       <section className="bg-white py-14 md:py-20 dark:bg-surfaceDark">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="mb-16 text-center">
-            <h2 className="mb-4 text-4xl font-black font-heading md:text-5xl">
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
               Tool Evaluation & <span className="text-brandPrimary dark:text-brandGold">Optimization</span>
             </h2>
-            <p className="max-w-3xl mx-auto text-lg opacity-70">
+            <p className="max-w-3xl mx-auto text-base opacity-70">
               Select and refine your digital ecosystem through data-backed assessment and strategic feasibility analysis.
             </p>
           </div>
@@ -213,7 +213,7 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
                 {/* Icon */}
                 <div className="mb-4 text-4xl">{item.icon}</div>
                 
-                <h3 className="mb-3 text-xl font-bold text-brandPrimary dark:text-brandGold">
+                <h3 className="mb-3 text-lg md:text-xl font-bold text-brandPrimary dark:text-brandGold">
                   {item.title}
                 </h3>
                 <p className="text-sm leading-relaxed opacity-70">
@@ -241,8 +241,8 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
               <div className="inline-block px-4 py-1 mb-4 text-sm font-semibold rounded-full bg-brandLight text-brandPrimary">
                 Efficiency First
               </div>
-              <h2 className="mb-6 text-2xl md:text-3xl text-brandDark dark:text-brandAccent">Business Process Re-engineering</h2>
-              <p className="mb-8 text-lg text-brandNavy dark:text-white/70">
+              <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl text-brandDark dark:text-brandAccent">Business Process Re-engineering</h2>
+              <p className="mb-8 text-base text-brandNavy dark:text-white/70">
                 Redesign core workflows to eliminate bottlenecks and maximize the efficiency of your digital operations.
               </p>
 
@@ -258,7 +258,7 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
                       <CheckCircle className="w-6 h-6 text-brandAccent" />
                     </div>
                     <div>
-                      <h3 className="mb-1 text-lg font-bold">{item.title}</h3>
+                      <h3 className="mb-1 text-lg md:text-xl font-bold">{item.title}</h3>
                       <p className="text-sm text-brandNavy dark:text-white/70">{item.desc}</p>
                     </div>
                   </div>
@@ -273,10 +273,10 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
       {/* <section className="py-24 bg-white dark:bg-brandNavy">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="mb-16 text-center">
-            <h2 className="mb-4 text-4xl font-black font-heading md:text-5xl">
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
               BRD & <span className="text-brandPrimary dark:text-brandGold">Solution Design</span>
             </h2>
-            <p className="max-w-2xl mx-auto text-lg opacity-70">
+            <p className="max-w-2xl mx-auto text-base opacity-70">
               Comprehensive documentation that transforms business needs into technical reality
             </p>
           </div>
@@ -288,10 +288,10 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
                 <div className="inline-block px-4 py-2 mb-4 text-xs font-bold tracking-wider uppercase rounded-full bg-brandGold/20 text-brandPrimary dark:text-brandGold">
                   Core Documentation
                 </div>
-                <h3 className="mb-6 text-3xl font-black text-brandPrimary dark:text-brandGold">
+                <h3 className="mb-6 text-xl md:text-2xl lg:text-3xl font-bold text-brandPrimary dark:text-brandGold">
                   Functional Documentation
                 </h3>
-                <p className="mb-8 text-lg leading-relaxed opacity-80">
+                <p className="mb-8 text-base leading-relaxed opacity-80">
                   Draft structured requirements covering both functional and non-functional needs to provide a clear technical roadmap.
                 </p>
                 <ul className="space-y-3">
@@ -317,7 +317,7 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
           
             <div className="relative p-8 overflow-hidden transition-all duration-300 border group bg-bgLight dark:bg-bgDark rounded-3xl border-borderLight dark:border-borderDark hover:border-brandGold">
               <div className="mb-4 text-5xl">👥</div>
-              <h3 className="mb-4 text-2xl font-bold text-brandPrimary dark:text-brandGold">
+              <h3 className="mb-4 text-lg md:text-xl font-bold text-brandPrimary dark:text-brandGold">
                 Stakeholder Walkthroughs
               </h3>
               <p className="leading-relaxed opacity-70">
@@ -352,10 +352,10 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
             <div className="inline-block px-6 py-2 mb-4 text-sm font-bold tracking-wider uppercase border-2 rounded-full border-brandGold/30 bg-brandGold/10">
               Strategic Framework
             </div>
-            <h2 className="mb-4 text-4xl font-black font-heading md:text-5xl">
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
               BRD <span className="text-brandGold">Finalization Approach</span>
             </h2>
-            <p className="max-w-3xl mx-auto text-xl opacity-90">
+            <p className="max-w-3xl mx-auto text-base md:text-lg opacity-90">
               We ensure every RiskMan implementation starts with a well-defined and fully approved Business Requirements Document (BRD) that aligns all stakeholders.
             </p>
           </div>
@@ -406,7 +406,7 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
                     <div className="mb-2 text-sm font-bold tracking-wider uppercase opacity-60">
                       Step {index + 1}
                     </div>
-                    <h3 className="mb-3 text-lg font-bold text-brandGold">
+                    <h3 className="mb-3 text-lg md:text-xl font-bold text-brandGold">
                       {item.title}
                     </h3>
                     <p className="text-sm leading-relaxed opacity-80">
@@ -432,8 +432,8 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
               />
             </div>
             <div className="lg:w-1/2">
-              <h2 className="mb-6 text-3xl md:text-4xl">BRD & Solution Design</h2>
-              <p className="mb-8 text-lg text-brandNavy dark:text-white/70">
+              <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl ">BRD & Solution Design</h2>
+              <p className="mb-8 text-base text-brandNavy dark:text-white/70">
                 Bridge the gap between business needs and technical execution through structured requirements and validation.
               </p>
 
@@ -446,7 +446,7 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
                 ].map((item, idx) => (
                   <div key={idx} className="p-6 border shadow-sm rounded-lig border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark">
                     <FileText className="w-6 h-6 mb-3 text-brandPrimary dark:text-brandAccent" />
-                    <h3 className="mb-2 text-lg font-bold">{item.title}</h3>
+                    <h3 className="mb-2 text-lg md:text-xl font-bold">{item.title}</h3>
                     <p className="text-sm text-brandPrimary dark:text-white/70">{item.desc}</p>
                   </div>
                 ))}
@@ -460,10 +460,10 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
       <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="mx-auto mb-16 text-center ">
-            <h2 className="mb-4 text-3xl font-black font-heading md:text-4xl">
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
               Data Management & <span className="text-brandPrimary dark:text-brandGold">Migration</span>
             </h2>
-            <p className="max-w-2xl text-lg opacity-70">
+            <p className="max-w-2xl text-base opacity-70">
               Ensure data integrity and seamless transitions with structured cleansing, mapping, and validation frameworks.
             </p>
           </div>
@@ -540,10 +540,10 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
             <div className="inline-block px-6 py-2 mb-4 text-sm font-bold tracking-wider uppercase border-2 rounded-full border-brandPrimary dark:border-brandGold text-brandPrimary dark:text-brandGold">
               Migration Excellence
             </div>
-            <h2 className="mb-4 text-4xl font-black font-heading md:text-5xl">
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
               Master Data <span className="text-brandPrimary dark:text-brandGold">Migration Approach</span>
             </h2>
-            <p className="max-w-3xl mx-auto text-xl opacity-70">
+            <p className="max-w-3xl mx-auto text-base md:text-lg opacity-70">
               We follow a structured, governed methodology to migrate legacy data into RiskMan with accuracy, integrity, and traceability.
             </p>
           </div>
@@ -607,7 +607,7 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
                       <span className="text-2xl">{item.icon}</span>
-                      <h3 className="text-xl font-bold text-brandPrimary dark:text-brandGold">
+                      <h3 className="text-lg md:text-xl font-bold text-brandPrimary dark:text-brandGold">
                         {item.title}
                       </h3>
                     </div>
@@ -651,7 +651,7 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
           <div className="grid gap-16 lg:grid-cols-2">
            
             <div>
-              <h3 className="inline-block pb-2 mb-6 text-2xl font-bold border-b-2 text-brandPrimary dark:text-brandAccent border-brandAccent">BRD Finalization Approach</h3>
+              <h3 className="inline-block pb-2 mb-6 text-lg md:text-xl font-bold border-b-2 text-brandPrimary dark:text-brandAccent border-brandAccent">BRD Finalization Approach</h3>
               <p className="mb-8 text-brandNavy dark:text-white/70">We ensure every RiskMan implementation starts with a well‑defined and fully approved Business Requirements Document (BRD) that aligns all stakeholders.</p>
               
               <div className="relative pl-8 space-y-6 border-l-2 border-gray-200">
@@ -674,7 +674,7 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
             </div>
 
             <div>
-              <h3 className="inline-block pb-2 mb-6 text-2xl font-bold border-b-2 text-brandPrimary dark:text-brandAccent border-brandAccent">Master Data Migration Approach</h3>
+              <h3 className="inline-block pb-2 mb-6 text-lg md:text-xl font-bold border-b-2 text-brandPrimary dark:text-brandAccent border-brandAccent">Master Data Migration Approach</h3>
               <p className="mb-8 text-brandPrimary dark:text-white/70">We follow a structured, governed methodology to migrate legacy data into RiskMan with accuracy, integrity, and traceability.</p>
               
               <div className="relative pl-8 space-y-6 border-l-2 border-gray-200">
@@ -712,7 +712,7 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white"
+                        className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white"
                     >
                         Implementation Methodology
                     </motion.h2>
@@ -721,7 +721,7 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-lg text-slate-600 dark:text-slate-300"
+                        className="text-base text-slate-600 dark:text-slate-300"
                     >
                         We ensure every RiskMan implementation starts with a structured, governed approach to requirements and data.
                     </motion.p>
@@ -819,12 +819,12 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
                 Get Started Today
               </div>
               
-              <h2 className="mb-6 text-4xl font-black font-heading md:text-5xl lg:text-6xl">
+              <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
                 Ready to Optimize Your <br className="hidden md:block" />
                 <span className="text-brandGold dark:text-white">Implementation?</span>
               </h2>
               
-              <p className="max-w-2xl mx-auto mb-10 text-xl opacity-90">
+              <p className="max-w-2xl mx-auto mb-10 text-base md:text-lg opacity-90">
                 Drive measurable impact with RiskMan's Accelerating Value Realization framework. Let's transform your business together.
               </p>
               
@@ -861,10 +861,10 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
       <section className="py-16 bg-white dark:bg-brandDark">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="mb-16 text-center">
-            <h2 className="mb-4 text-4xl font-black font-heading md:text-5xl">
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
               Frequently Asked <span className="text-brandPrimary dark:text-brandGold">Questions</span>
             </h2>
-            <p className="max-w-2xl mx-auto text-lg opacity-70">
+            <p className="max-w-2xl mx-auto text-base opacity-70">
               Get answers to common questions about our implementation excellence services
             </p>
           </div>
@@ -992,7 +992,7 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
 
           {/* Additional Help CTA */}
           <div className="max-w-4xl p-8 mx-auto mt-12 text-center border bg-gradient-to-r from-brandGold/5 to-brandPrimary/5 dark:from-brandGold/10 dark:to-brandPrimary/5 rounded-2xl border-brandGold/20">
-            <h3 className="mb-3 text-2xl font-bold text-brandPrimary dark:text-brandGold">
+            <h3 className="mb-3 text-lg md:text-xl font-bold text-brandPrimary dark:text-brandGold">
               Still have questions?
             </h3>
             <p className="mb-6 opacity-70">

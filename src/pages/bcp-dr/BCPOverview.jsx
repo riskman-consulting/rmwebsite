@@ -7,7 +7,7 @@ const BCPOverview = () => {
     <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
       <div className="container grid items-center lg:grid-cols-2 gap-14">
         <div>
-          <h2 className="text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Resilient Business Continuity & Disaster Recovery
           </h2>
  

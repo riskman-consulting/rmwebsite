@@ -96,7 +96,7 @@ const TechIntegration = () => {
           <div className="w-full lg:w-5/12">
             <div className="mb-10">
               <h2 className="mb-3 text-sm font-bold tracking-widest uppercase text-brandAccent">Future-Ready Infrastructure</h2>
-              <h3 className="text-3xl font-bold leading-tight text-white md:text-4xl font-heading">
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight text-white font-heading">
                 Advanced Technology Integration
               </h3>
             </div>
@@ -184,7 +184,7 @@ const TechIntegration = () => {
                       <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-brandAccent/10 text-brandAccent">
                         {feature.icon}
                       </div>
-                      <h3 className="text-xl font-bold leading-tight text-white md:text-2xl">{feature.fullTitle}</h3>
+                      <h3 className="text-lg md:text-xl font-bold leading-tight text-white ">{feature.fullTitle}</h3>
                     </div>
                     
                     <p className="mb-6 text-sm leading-relaxed text-gray-300 md:text-base">

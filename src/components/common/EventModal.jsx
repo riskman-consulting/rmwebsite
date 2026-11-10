@@ -105,11 +105,11 @@
 //               </span>
 //             </div>
 
-//             <h2 className="text-3xl lg:text-4xl font-bold text-stone-900 mb-6 tracking-tight leading-tight font-serif">
+//             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-stone-900 mb-6 leading-tight font-serif">
 //               {event.title}
 //             </h2>
 
-//             <p className="text-stone-600 leading-relaxed mb-10 text-base lg:text-lg">
+//             <p className="text-stone-600 leading-relaxed mb-10 text-base ">
 //               {event.fullDesc}
 //             </p>
 
@@ -118,7 +118,7 @@
 //               <div className="absolute -top-3 left-6 flex items-center gap-2 px-4 py-1.5 bg-amber-600 text-white text-[10px] font-black uppercase tracking-[0.15em] rounded-full shadow-lg">
 //                 <Sparkles size={12} /> Highlight
 //               </div>
-//               <p className="text-stone-700 italic text-lg lg:text-xl leading-relaxed font-serif relative z-10 mt-2">
+//               <p className="text-stone-700 italic text-base md:text-lg leading-relaxed font-serif relative z-10 mt-2">
 //                 &ldquo;{event.shortDesc}&rdquo;
 //               </p>
 //             </div>
@@ -260,11 +260,11 @@
 //                 </span>
 //               </div>
 
-//               <h2 className="text-3xl lg:text-4xl font-bold text-stone-900 mb-6 tracking-tight leading-tight font-serif">
+//               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-stone-900 mb-6 leading-tight font-serif">
 //                 {event.title}
 //               </h2>
 
-//               <p className="text-stone-600 leading-relaxed mb-10 text-base lg:text-lg">
+//               <p className="text-stone-600 leading-relaxed mb-10 text-base ">
 //                 {event.fullDesc}
 //               </p>
 
@@ -273,7 +273,7 @@
 //                 <div className="absolute -top-3 left-6 flex items-center gap-2 px-4 py-1.5 bg-amber-600 text-white text-[10px] font-black uppercase tracking-[0.15em] rounded-full shadow-lg">
 //                   <Sparkles size={12} /> Highlight
 //                 </div>
-//                 <p className="text-stone-700 italic text-lg lg:text-xl leading-relaxed font-serif relative z-10 mt-2">
+//                 <p className="text-stone-700 italic text-base md:text-lg leading-relaxed font-serif relative z-10 mt-2">
 //                   &ldquo;{event.shortDesc}&rdquo;
 //                 </p>
 //               </div>
@@ -490,7 +490,7 @@ export function EventModal({ event, onClose }) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.25 }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-900 mb-5 sm:mb-7 tracking-tight leading-[1.15] font-serif"
+                className="text-2xl md:text-3xl lg:text-4xl font-bold text-stone-900 mb-5 sm:mb-7 leading-[1.15] font-serif"
               >
                 {event.title}
               </motion.h2>
@@ -500,7 +500,7 @@ export function EventModal({ event, onClose }) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-stone-600 leading-relaxed mb-8 sm:mb-10 text-base sm:text-lg font-light"
+                className="text-stone-600 leading-relaxed mb-8 sm:mb-10 text-base font-light"
               >
                 {event.fullDesc}
               </motion.p>
@@ -524,7 +524,7 @@ export function EventModal({ event, onClose }) {
                   <Sparkles size={12} strokeWidth={2.5} /> Featured
                 </motion.div>
                 
-                <p className="text-stone-800 italic text-lg sm:text-xl lg:text-2xl leading-relaxed font-serif relative z-10 mt-3">
+                <p className="text-stone-800 italic text-base md:text-lg leading-relaxed font-serif relative z-10 mt-3">
                   <span className="text-amber-600 text-3xl sm:text-4xl leading-none">&ldquo;</span>
                   {event.shortDesc}
                   <span className="text-amber-600 text-3xl sm:text-4xl leading-none">&rdquo;</span>

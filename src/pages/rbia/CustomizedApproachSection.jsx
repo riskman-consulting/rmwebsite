@@ -93,10 +93,10 @@ export default function CustomizedApproachSection() {
           >
             Operational Cycle
           </motion.span>
-          <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl text-brandDark dark:text-white font-heading">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white font-heading">
             Our <span className="text-brandPrimary dark:text-brandAccent italic">Customized</span> Approach
           </h2>
-          <p className="text-lg text-slate-500 dark:text-slate-400 font-light leading-relaxed">
+          <p className="text-base text-slate-500 dark:text-slate-400 font-light leading-relaxed">
             A tailored methodology to evaluate risks and enhance operational effectiveness across your organization's unique landscape.
           </p>
         </div>
@@ -189,10 +189,10 @@ export default function CustomizedApproachSection() {
                   <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r ${PHASES[activeIndex].color} text-white mb-8 text-[10px] font-bold uppercase tracking-widest`}>
                     Step 0{PHASES[activeIndex].step}
                   </div>
-                  <h3 className="text-3xl lg:text-4xl font-bold text-brandDark dark:text-white mb-6 leading-tight">
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-brandDark dark:text-white mb-6 leading-tight">
                     {PHASES[activeIndex].title}
                   </h3>
-                  <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-10">
+                  <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed mb-10">
                     {PHASES[activeIndex].description}
                   </p>
                   

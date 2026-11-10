@@ -19,7 +19,7 @@ const Feature = ({ icon: Icon, title, description, isRight, delay }) => (
     <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-xl bg-brandPrimary/10 dark:bg-brandAccent/20">
       <Icon className="w-6 h-6 text-brandPrimary dark:text-brandAccent" />
     </div>
-    <h3 className="mb-2 text-xl font-bold text-brandDark dark:text-white">
+    <h3 className="mb-2 text-lg md:text-xl font-bold text-brandDark dark:text-white">
       {title}
     </h3>
     <p className="text-sm leading-relaxed text-brandNavy/70 dark:text-white/60 max-w-[280px]">
@@ -59,11 +59,11 @@ export default function WhyChooseRiskMan() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-6 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white"
+            className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white"
           >
             Why <span className="text-brandPrimary dark:text-brandAccent">Choose</span> RiskMan?
           </motion.h2>
-          <p className="text-lg text-brandNavy/70 dark:text-white/70">
+          <p className="text-base text-brandNavy/70 dark:text-white/70">
             Strategic risk management led by industry veterans to ensure your
             business remains resilient, compliant, and ahead of the curve.
           </p>

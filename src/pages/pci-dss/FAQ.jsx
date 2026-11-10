@@ -57,7 +57,7 @@ const FAQ = () => {
       <div className="container">
         <div className="max-w-3xl mx-auto">
           <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
               Frequently Asked Questions
             </h2>
             <p className="text-gray-600 dark:text-gray-400">

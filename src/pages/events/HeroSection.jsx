@@ -175,7 +175,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-6xl sm:text-7xl md:text-8xl font-heading font-black leading-[0.95] tracking-tight mb-4"
+          className="text-[1.75rem] md:text-4xl lg:text-5xl font-heading font-bold leading-[0.95] mb-4"
         >
           <span   className="text-brandDark dark:text-white drop-shadow-lg">
             Our Journey
@@ -187,7 +187,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mb-12 font-serif text-4xl italic sm:text-5xl md:text-6xl text-brandGold drop-shadow-md"
+          className="mb-12 font-serif text-2xl md:text-3xl lg:text-4xl italic text-brandGold drop-shadow-md"
         >
           Our Milestones
         </motion.h2>

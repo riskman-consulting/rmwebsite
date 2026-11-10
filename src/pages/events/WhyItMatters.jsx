@@ -48,10 +48,10 @@ const WhyItMatters = () => {
             <span className="text-[10px] font-black text-brandGold uppercase tracking-[0.3em] mb-4 block">
               Core Value
             </span>
-            <h2 className="mb-6 font-heading text-3xl md:text-4xl font-bold tracking-tighter">
+            <h2 className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold ">
               <span className="text-brandDark dark:text-white">Why our presence</span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandGold to-brandAccent italic font-serif">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandGold to-brandAccent">
                 matters to the community
               </span>
             </h2>
@@ -75,7 +75,7 @@ const WhyItMatters = () => {
               <div className="w-16 h-16 bg-brandDark/5 dark:bg-white/5 text-brandGold text-2xl flex items-center justify-center rounded-2xl mb-8 group-hover:bg-gradient-to-br group-hover:from-brandGold group-hover:to-brandAccent group-hover:text-brandDark group-hover:scale-110 transition-all duration-500 shadow-inner">
                 {item.icon}
               </div>
-              <h3 className="text-xl font-black text-brandDark dark:text-white mb-4 tracking-tight uppercase tracking-wider">
+              <h3 className="text-lg md:text-xl font-bold text-brandDark dark:text-white mb-4 uppercase ">
                 {item.title}
               </h3>
               <p className="text-brandDark/70 dark:text-white/70 leading-relaxed text-sm font-medium">
@@ -96,7 +96,7 @@ const WhyItMatters = () => {
           <div className="absolute top-0 right-0 w-64 h-64 bg-brandAccent/10 rounded-full blur-[80px]"></div>
           
           <div className="relative z-10 mb-10 text-center md:mb-0 md:mr-10 md:text-left">
-            <h3 className="mb-4 text-3xl font-bold tracking-tighter md:text-4xl">
+            <h3 className="mb-4 text-xl md:text-2xl lg:text-3xl font-bold ">
               Ready to elevate your <span className="text-brandAccent">career?</span>
             </h3>
             <p className="max-w-lg text-lg italic font-light leading-relaxed text-white/60">

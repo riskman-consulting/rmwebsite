@@ -16,7 +16,7 @@ export default function FAQSection({ data }) {
           viewport={{ once: true }}
           className="mb-16 text-center"
         >
-          <h2 className="text-4xl font-bold md:text-5xl text-brandDark dark:text-white">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
             Frequently Asked{" "}
             <span className="text-brandPrimary dark:text-brandAccent">
               Questions

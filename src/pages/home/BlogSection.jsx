@@ -26,14 +26,14 @@ const BlogSection = () => {
             Insights
           </p>
 
-          <h2 className="mb-6 text-3xl font-bold md:text-5xl text-brandDark dark:text-white">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
             Latest from Our{" "}
             <span className="text-brandGold dark:text-brandAccent">
               Experts
             </span>
           </h2>
 
-          <p className="max-w-3xl text-lg text-brandNavy dark:text-white/70">
+          <p className="max-w-3xl text-base text-brandNavy dark:text-white/70">
             Stay updated with the latest insights, trends, and best practices in
             audit, risk management, and compliance.
           </p>
@@ -69,7 +69,7 @@ const BlogSection = () => {
                 </p>
 
                 <h3
-                  className="mb-3 text-xl font-bold transition-colors text-brandDark dark:text-white group-hover:text-brandGold dark:group-hover:text-brandAccent"
+                  className="mb-3 text-lg md:text-xl font-bold transition-colors text-brandDark dark:text-white group-hover:text-brandGold dark:group-hover:text-brandAccent"
                 >
                   {blog.title}
                 </h3>

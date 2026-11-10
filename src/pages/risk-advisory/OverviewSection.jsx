@@ -40,7 +40,7 @@ const OverviewSection = ({ data }) => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
             >
-              <h2 className="font-heading text-3xl font-bold leading-tight text-brandDark dark:text-brandLight md:text-4xl">
+              <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-brandDark dark:text-brandLight ">
                 {data.title}
               </h2>
             </motion.div>

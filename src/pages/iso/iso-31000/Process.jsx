@@ -39,10 +39,10 @@ const Process = () => {
       <div className="container relative z-10">
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <p className="mb-3 text-sm font-semibold tracking-wide uppercase text-brandGold">How We Work</p>
-          <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl font-heading">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading">
             RiskMan’s Strategic Process
           </h2>
-          <p className="text-lg text-gray-300">
+          <p className="text-base text-gray-300">
             We help organizations build a culture of risk awareness that permeates every department, ensuring long-term stability and sustainable growth.
           </p>
         </div>
@@ -54,7 +54,7 @@ const Process = () => {
                 {process.icon}
               </div>
               <div>
-                <h3 className="mb-3 text-xl font-bold text-white">{process.title}</h3>
+                <h3 className="mb-3 text-lg md:text-xl font-bold text-white">{process.title}</h3>
                 <p className="leading-relaxed text-gray-300">{process.description}</p>
               </div>
             </div>

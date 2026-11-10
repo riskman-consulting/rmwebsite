@@ -104,7 +104,7 @@ export const ServiceCardCompact = ({ service, index }) => {
             </motion.span>
 
             <motion.h3 
-              className="mb-4 text-2xl font-bold tracking-tight transition-colors duration-300 text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent"
+              className="mb-4 text-lg md:text-xl font-bold transition-colors duration-300 text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

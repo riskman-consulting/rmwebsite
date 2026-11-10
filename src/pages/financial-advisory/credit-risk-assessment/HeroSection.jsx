@@ -25,11 +25,11 @@ const Hero = () => {
               <span className="text-sm font-medium tracking-wide uppercase text-brandAccent">Financial Advisory</span>
             </div>
             
-            <h1 className="text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl font-heading">
+            <h1 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight text-white font-heading">
               Advanced <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandAccent to-brandGold">Credit Risk</span> Assessment
             </h1>
             
-            <p className="max-w-xl text-lg leading-relaxed text-gray-200 md:text-xl">
+            <p className="max-w-xl text-base md:text-lg leading-relaxed text-gray-200 ">
               We provide quantitative and qualitative evaluations of creditworthiness to mitigate default probability and secure your institution against potential loss.
             </p>
             

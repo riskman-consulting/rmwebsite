@@ -68,11 +68,11 @@ const ValuePropositionSection = () => {
           <span className="text-xs font-bold tracking-[4px] uppercase text-brandPrimary dark:text-brandGold mb-4 block">
             Impact Framework
           </span>
-          <h2 className="mb-8 text-4xl font-black leading-tight uppercase font-heading text-brandDark dark:text-white lg:text-6xl">
+          <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase font-heading text-brandDark dark:text-white ">
             Driving Measurable <br /> 
             <span className="underline text-brandPrimary decoration-brandAccent underline-offset-8">Enterprise Value</span>
           </h2>
-          <p className="font-sans text-lg leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
+          <p className="font-sans text-base leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
             RiskMan's ESG integration methodology moves organizations beyond compliance 
             to create a dual-track value engine.
           </p>
@@ -114,7 +114,7 @@ const ValuePropositionSection = () => {
                       {section.icon}
                     </div>
                     <div>
-                      <h3 className="text-2xl font-black leading-tight uppercase text-brandDark dark:text-white">
+                      <h3 className="text-lg md:text-xl font-bold leading-tight uppercase text-brandDark dark:text-white">
                         {section.title}
                       </h3>
                       <div className="w-12 h-1 mt-2 bg-brandAccent" />

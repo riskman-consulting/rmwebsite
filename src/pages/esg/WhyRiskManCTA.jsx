@@ -44,7 +44,7 @@ const WhyRiskManCTA = () => {
             <span className="text-xs font-bold tracking-[4px] uppercase text-brandPrimary dark:text-brandGold mb-4 block">
               The RiskMan Advantage
             </span>
-            <h2 className="text-3xl font-bold leading-tight font-heading text-brandDark dark:text-white md:text-4xl">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandDark dark:text-white ">
               Why Partner With <span className="text-brandPrimary dark:text-brandGold">RiskMan?</span>
             </h2>
           </div>
@@ -77,10 +77,10 @@ const WhyRiskManCTA = () => {
 
             <div className="relative z-10 flex flex-col items-center justify-between gap-12 lg:flex-row">
               <div className="text-center lg:w-3/5 lg:text-left">
-                <h3 className="mb-6 text-3xl font-black leading-tight text-white uppercase font-heading md:text-5xl">
+                <h3 className="mb-6 text-xl md:text-2xl lg:text-3xl font-bold leading-tight text-white uppercase font-heading ">
                   Begin Your <span className="text-brandGold">ESG Transformation</span> Today
                 </h3>
-                <p className="mb-8 font-sans text-lg leading-relaxed text-white/70">
+                <p className="mb-8 font-sans text-base leading-relaxed text-white/70">
                   Connect with our experts to assess your organization's maturity and develop a 
                   strategic roadmap that drives long-term enterprise value.
                 </p>

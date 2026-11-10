@@ -47,7 +47,7 @@
 
 //             {/* Right Column - Content */}
 //             <div className="space-y-8">
-//               <p className="text-base leading-relaxed md:text-xl text-brandNavy dark:text-white/80">
+//               <p className="text-base md:text-lg leading-relaxed text-brandNavy dark:text-white/80">
 //                 At{" "}
 //                 <span className="font-semibold text-brandDark dark:text-brandAccent">
 //                   RiskMan Consulting
@@ -99,7 +99,7 @@
 //           {/* Bottom Statement */}
 //           <div className="max-w-4xl mx-auto mt-16">
 //             <div className="relative p-8 border-l-4 md:p-10 bg-bgLight dark:bg-bgDark border-brandGold dark:border-brandAccent">
-//               <p className="text-lg leading-relaxed md:text-xl text-brandNavy dark:text-white/80">
+//               <p className="text-base md:text-lg leading-relaxed text-brandNavy dark:text-white/80">
 //                 Our approach integrates governance, risk, compliance, financial
 //                 discipline, and digital assurance into a{" "}
 //                 <span className="font-bold text-brandDark dark:text-brandAccent">
@@ -119,7 +119,7 @@
 //               <div className="mb-3 text-4xl font-bold text-brandGold dark:text-brandAccent">
 //                 360°
 //               </div>
-//               <h3 className="mb-2 text-lg font-bold text-brandDark dark:text-white">
+//               <h3 className="mb-2 text-lg md:text-xl font-bold text-brandDark dark:text-white">
 //                 Holistic Approach
 //               </h3>
 //               <p className="text-sm text-brandNavy/70 dark:text-white/60">
@@ -131,7 +131,7 @@
 //               <div className="mb-3 text-4xl font-bold text-brandGold dark:text-brandAccent">
 //                 24/7
 //               </div>
-//               <h3 className="mb-2 text-lg font-bold text-brandDark dark:text-white">
+//               <h3 className="mb-2 text-lg md:text-xl font-bold text-brandDark dark:text-white">
 //                 Continuous Support
 //               </h3>
 //               <p className="text-sm text-brandNavy/70 dark:text-white/60">
@@ -143,7 +143,7 @@
 //               <div className="mb-3 text-4xl font-bold text-brandGold dark:text-brandAccent">
 //                 100%
 //               </div>
-//               <h3 className="mb-2 text-lg font-bold text-brandDark dark:text-white">
+//               <h3 className="mb-2 text-lg md:text-xl font-bold text-brandDark dark:text-white">
 //                 Tailored Solutions
 //               </h3>
 //               <p className="text-sm text-brandNavy/70 dark:text-white/60">
@@ -221,7 +221,7 @@ const StrategicSection = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-heading text-3xl md:text-4xl font-bold leading-tight"
+              className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold leading-tight"
             >
               Strategic Risk
               <br />
@@ -258,13 +258,13 @@ const StrategicSection = () => {
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-xl font-medium leading-relaxed md:text-2xl text-brandNavy dark:text-white/90"
+              className="text-base md:text-lg font-medium leading-relaxed text-brandNavy dark:text-white/90"
             >
               At <span className="font-semibold text-brandGold">RiskMan</span>, we deliver customized
               solutions that empower leadership to navigate uncertainty and unlock sustainable growth.
             </motion.p>
  
-            <p className="text-lg leading-relaxed text-brandNavy/70 dark:text-white/70">
+            <p className="text-base leading-relaxed text-brandNavy/70 dark:text-white/70">
               Our team combines deep industry expertise with an entrepreneurial mindset, ensuring that strategic advisory
               is not just a service, but a value driver for your resilience.
             </p>

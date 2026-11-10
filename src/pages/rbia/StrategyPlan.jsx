@@ -44,14 +44,14 @@ export default function StrategyPlanSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-3xl md:text-4xl font-bold font-heading text-brandDark dark:text-white mb-6"
+            className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white mb-6"
           >
             Risk-Based <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandPrimary to-brandNavy dark:from-brandGold dark:to-brandAccent">Internal Audit</span> Plan
           </motion.h2>
           
           <div className="w-24 h-1 rounded-full bg-gradient-to-r from-brandAccent to-brandGold mb-6" />
           
-          <p className="max-w-2xl text-lg text-brandDark/70 dark:text-brandLight/70 leading-relaxed">
+          <p className="max-w-2xl text-base text-brandDark/70 dark:text-brandLight/70 leading-relaxed">
             Transitioning to RBIA drives deeper organizational value through proactive risk management and strategic alignment.
           </p>
         </div>
@@ -76,7 +76,7 @@ export default function StrategyPlanSection() {
                   <span className="text-[10px] uppercase tracking-tighter font-bold text-brandAccent/80">
                     {point.subtitle}
                   </span>
-                  <h3 className="text-2xl font-bold text-brandDark dark:text-white leading-tight">
+                  <h3 className="text-lg md:text-xl font-bold text-brandDark dark:text-white leading-tight">
                     {point.title}
                   </h3>
                 </div>

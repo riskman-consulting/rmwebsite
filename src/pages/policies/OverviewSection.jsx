@@ -46,10 +46,10 @@ const GovernancePyramid = () => (
       <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="0.6s" fill="freeze" />
     </rect>
     {/* Labels */}
-    <text x="250" y="85" textAnchor="middle" fill="#fff" fontSize="13" fontWeight="700" fontFamily="Montserrat, sans-serif">BOARD</text>
-    <text x="250" y="183" textAnchor="middle" fill="#fff" fontSize="13" fontWeight="700" fontFamily="Montserrat, sans-serif">POLICIES</text>
-    <text x="250" y="283" textAnchor="middle" fill="#fff" fontSize="13" fontWeight="700" fontFamily="Montserrat, sans-serif">SOPs & PROCEDURES</text>
-    <text x="250" y="356" textAnchor="middle" fill="#fff" fontSize="13" fontWeight="700" fontFamily="Montserrat, sans-serif">DAY-TO-DAY EXECUTION</text>
+    <text x="250" y="85" textAnchor="middle" fill="#fff" fontSize="13" fontWeight="700" fontFamily="Inter, sans-serif">BOARD</text>
+    <text x="250" y="183" textAnchor="middle" fill="#fff" fontSize="13" fontWeight="700" fontFamily="Inter, sans-serif">POLICIES</text>
+    <text x="250" y="283" textAnchor="middle" fill="#fff" fontSize="13" fontWeight="700" fontFamily="Inter, sans-serif">SOPs & PROCEDURES</text>
+    <text x="250" y="356" textAnchor="middle" fill="#fff" fontSize="13" fontWeight="700" fontFamily="Inter, sans-serif">DAY-TO-DAY EXECUTION</text>
     {/* Side labels */}
     <text x="20" y="85" className="fill-brandPrimary dark:fill-brandAccent" fontSize="10" fontFamily="Inter, sans-serif">Strategic</text>
     <text x="20" y="356" className="fill-brandPrimary dark:fill-brandAccent" fontSize="10" fontFamily="Inter, sans-serif">Operational</text>

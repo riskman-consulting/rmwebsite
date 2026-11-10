@@ -193,10 +193,10 @@ const UpcomingEventsSection = ({ isPage = false }) => {
     return (
       <div id="upcoming-events" className="py-20 bg-bgLight dark:bg-bgDark">
         <div className="container text-center">
-          <h1 className="mb-6 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
+          <h1 className="mb-6 font-heading text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-brandDark dark:text-white">
             Upcoming <span className="text-brandGold">Events</span>
           </h1>
-          <p className="max-w-2xl mx-auto text-lg text-slate-600 dark:text-slate-400">
+          <p className="max-w-2xl mx-auto text-base text-slate-600 dark:text-slate-400">
             There are no upcoming events scheduled right now. Please check back soon.
           </p>
         </div>
@@ -247,7 +247,7 @@ const UpcomingEventsSection = ({ isPage = false }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="max-w-2xl mx-auto text-lg leading-relaxed lg:text-xl text-slate-600 dark:text-slate-400"
+            className="max-w-2xl mx-auto text-base md:text-lg leading-relaxed text-slate-600 dark:text-slate-400"
           >
             Advance your career and stay ahead of global audit trends by joining
             our premier conferences and executive forums across the nation.

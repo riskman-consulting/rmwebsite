@@ -7,7 +7,7 @@ const FAQ = () => {
 
         {/* SECTION HEADER */}
         <div className="max-w-3xl mb-12">
-          <h2 className="mb-4 text-2xl font-semibold font-heading md:text-3xl text-brandDark dark:text-brandAccent">
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-brandAccent">
             Frequently Asked Questions
           </h2>
           <p className="font-sans text-base leading-relaxed md:text-lg text-brandNavy dark:text-brandLight">

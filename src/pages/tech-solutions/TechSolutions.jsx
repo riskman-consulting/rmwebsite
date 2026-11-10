@@ -92,7 +92,7 @@ const FeatureScreenshotCard = ({ label, title, description, image, delay = 0 }) 
       
       {/* Title and CTA below card */}
       <div className="mt-6">
-        <h3 className="mb-3 text-xl font-bold font-heading text-brandDark dark:text-white">{description}</h3>
+        <h3 className="mb-3 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">{description}</h3>
         <button className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold transition-colors duration-300 rounded-full bg-brandAccent text-brandDark hover:bg-brandGold hover:shadow-lg hover:shadow-brandAccent/30">
           Try it now
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -115,7 +115,7 @@ const BentoCard = ({ variant = 'light', title, description, image, buttonText,..
   
   return (
     <div {...other} className={`${bgClass} rounded-3xl p-8 lg:p-10 h-full flex flex-col`}>
-      <h3 className={`text-2xl lg:text-3xl font-heading font-bold ${textClass} mb-4`}>
+      <h3 className={`text-xl md:text-2xl lg:text-3xl font-heading font-bold ${textClass} mb-4`}>
         {title}
       </h3>
       <p className={`${variant === 'light' ? 'text-brandDark/70 dark:text-white/70' : 'text-white/70'} mb-6 leading-relaxed`}>
@@ -180,7 +180,7 @@ const ScreenshotShowcase = ({ image, title, description, features, reverse = fal
         ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
     >
       <div className={`${reverse ? 'lg:order-2' : ''}`}>
-        <h3 className="mb-4 text-3xl font-bold font-heading text-brandDark dark:text-white">{title}</h3>
+        <h3 className="mb-4 text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark dark:text-white">{title}</h3>
         <p className="mb-6 leading-relaxed text-brandDark/70 dark:text-white/70">{description}</p>
         <ul className="space-y-3">
           {features.map((feature, i) => (
@@ -310,12 +310,12 @@ export default function IntegritatSolutionPage() {
                 <span className="text-sm font-medium text-brandPrimary dark:text-brandAccent">Audit Management Platform</span>
               </div>
               
-              <h1 className="mb-6 text-5xl font-bold leading-tight lg:text-6xl xl:text-7xl font-heading text-brandDark dark:text-white">
+              <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading text-brandDark dark:text-white">
                 Streamline Your{' '}
                 <span className="text-brandPrimary dark:text-brandAccent">Audit Workflow</span>
               </h1>
               
-              <p className="max-w-lg mb-8 text-xl leading-relaxed text-brandDark/70 dark:text-white/70">
+              <p className="max-w-lg mb-8 text-base md:text-lg leading-relaxed text-brandDark/70 dark:text-white/70">
                 CPA firms can automate document collection, tracking, and review — 
                 everything in between from within Integritat.
               </p>
@@ -362,11 +362,11 @@ export default function IntegritatSolutionPage() {
       <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
         <div className="container">
           <div className="max-w-3xl mx-auto mb-16 text-center">
-            <h2 className="mb-6 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
+            <h2 className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
               Complete Audit Workflow in{' '}
               <span className="text-brandPrimary dark:text-brandAccent">8 Simple Steps</span>
             </h2>
-            <p className="text-lg text-brandDark/70 dark:text-white/70">
+            <p className="text-base text-brandDark/70 dark:text-white/70">
               From client onboarding to governance dashboard — manage your entire audit lifecycle seamlessly
             </p>
           </div>
@@ -532,11 +532,11 @@ export default function IntegritatSolutionPage() {
       {/* <section className="py-20 bg-bgLight dark:bg-bgDark">
         <div className="container">
           <div className="max-w-3xl mx-auto mb-16 text-center">
-            <h2 className="mb-6 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
+            <h2 className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
               We've got you covered throughout the{' '}
               <span className="text-brandPrimary dark:text-brandAccent">audit lifecycle</span>
             </h2>
-            <p className="text-lg text-brandDark/70 dark:text-white/70">
+            <p className="text-base text-brandDark/70 dark:text-white/70">
               CPA firms can automate client onboarding, document collection, and review processes —
               everything in between from within Integritat.
             </p>
@@ -608,10 +608,10 @@ export default function IntegritatSolutionPage() {
             <span className="inline-block px-4 py-2 mb-6 text-sm font-medium text-white rounded-full bg-white/10">
               Solutions
             </span>
-            <h2 className="mb-6 font-heading text-3xl md:text-4xl font-bold text-white">
+            <h2 className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-white">
               End-to-End Audit Management Solutions
             </h2>
-            <p className="max-w-2xl mx-auto text-lg text-white/60">
+            <p className="max-w-2xl mx-auto text-base text-white/60">
               Offers a unified platform that fosters collaboration while providing end-to-end audit management.
             </p>
           </div>
@@ -672,7 +672,7 @@ export default function IntegritatSolutionPage() {
             </button>
           </div>
 
-          <h3 className="mb-8 text-2xl font-bold font-heading text-brandDark dark:text-white">
+          <h3 className="mb-8 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
             What every plan gets you
           </h3>
 
@@ -704,7 +704,7 @@ export default function IntegritatSolutionPage() {
       {/* ==================== FAQ ==================== */}
       <section className="py-16 bg-bgLight dark:bg-bgDark">
         <div className="container">
-          <h2 className="mb-12 font-heading text-3xl md:text-4xl font-bold text-center text-brandDark dark:text-white">
+          <h2 className="mb-12 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-center text-brandDark dark:text-white">
             Frequently Asked Questions
           </h2>
 
@@ -744,11 +744,11 @@ export default function IntegritatSolutionPage() {
             <span className="inline-block px-4 py-2 mb-6 text-sm font-medium border rounded-full border-borderLight dark:border-borderDark text-brandDark dark:text-white">
               Get started today!
             </span>
-            <h2 className="mb-6 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
+            <h2 className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
               Seamless integration with your{' '}
               <span className="text-brandPrimary dark:text-brandAccent">existing workflow</span>
             </h2>
-            <p className="mb-8 text-lg text-brandDark/70 dark:text-white/70">
+            <p className="mb-8 text-base text-brandDark/70 dark:text-white/70">
               See how we help your team solve today's biggest audit challenges.
             </p>
             <button onClick={()=>navigator("/contact")} className="px-10 py-5 text-lg font-semibold transition-all duration-300 rounded-full shadow-xl text-brandDark bg-brandAccent hover:bg-brandGold shadow-brandAccent/30">

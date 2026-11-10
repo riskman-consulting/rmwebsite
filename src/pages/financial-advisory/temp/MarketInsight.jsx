@@ -35,12 +35,12 @@ const MarketInsight = () => {
           
           {/* Left Side: Problem Statement */}
           <div>
-            <h2 className="mb-8 text-3xl font-bold leading-tight font-heading md:text-4xl">
+            <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading ">
               Why Expert Financial Advisory is <br />
               <span className="text-brandPrimary dark:text-brandGold">More Critical Than Ever</span>
             </h2>
             
-            <p className="mb-8 font-sans text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+            <p className="mb-8 font-sans text-base leading-relaxed text-gray-600 dark:text-gray-300">
               Expert corporate financial advisory has become increasingly important due to the complex and rapidly 
               changing business environment, both in the domestic & global fronts. 
             </p>

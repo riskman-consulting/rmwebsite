@@ -16,7 +16,7 @@ const App = () => {
     <div className="container flex flex-col items-center">
       {/* Header Area */}
       <div className="w-full mb-10 text-center select-none">
-        <h2 className="text-3xl font-bold tracking-tight text-center font-heading md:text-4xl text-slate-800 dark:text-white">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center font-heading text-slate-800 dark:text-white">
         ESG Stakeholder Ecosystem
         </h2>
         <p className="text-slate-500 dark:text-slate-400 text-center font-bold tracking-[0.2em] uppercase text-[10px] md:text-xs mt-2">

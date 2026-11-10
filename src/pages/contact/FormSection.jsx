@@ -121,7 +121,7 @@ export default function ContactForm() {
         <div className="absolute top-0 right-0 w-32 h-32 bg-brandAccent/10 rounded-full -mr-16 -mt-16 blur-3xl" />
 
         <header className="relative mb-10">
-          <h2 className="text-4xl font-heading font-extrabold text-brandDark dark:text-white mb-2">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-brandDark dark:text-white mb-2">
             Get in <span className="text-brandGold">Touch</span>
           </h2>
           <p className="text-brandNavy dark:text-gray-400">

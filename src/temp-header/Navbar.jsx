@@ -80,7 +80,7 @@ export const Navbar = ({
          NAVBAR
       ======================= */}
       <nav className="fixed top-[43px] left-0 right-0 z-50 h-20 border-b bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark">
-        <div className="flex items-center w-full h-full px-6 mx-auto lg:px-20 max-w-screen">
+        <div className="flex items-center w-full h-full px-6 mx-auto lg:px-6 xl:px-20 max-w-screen">
 
           {/* LEFT CLUSTER */}
           <div className="flex items-center h-full">
@@ -138,7 +138,7 @@ export const Navbar = ({
                     <Link
                       to={item.path}
                       className={`
-                        flex items-center gap-1.5 px-5 py-2 rounded-lg
+                        flex items-center gap-1.5 px-2.5 xl:px-5 py-2 rounded-lg
                         text-[13px] font-medium transition-all whitespace-nowrap
                         ${isActive
                           ? "bg-brandAccent/15 text-brandPrimary dark:text-brandGold"
@@ -206,11 +206,12 @@ export const Navbar = ({
                 narrower desktop widths, which wrapped the label onto two lines. */}
             <Link
               to="/contact"
-              className="hidden lg:flex shrink-0 whitespace-nowrap items-center gap-2 h-[42px] px-5 text-[14px] font-semibold text-white rounded-full bg-brandDark dark:bg-brandGold hover:bg-brandNavy shadow-md transition"
+              aria-label="Get Started"
+              className="hidden lg:flex shrink-0 whitespace-nowrap items-center justify-center gap-2 h-[42px] w-[42px] xl:w-auto xl:px-5 text-[14px] font-semibold text-white rounded-full bg-brandDark dark:bg-brandGold hover:bg-brandNavy shadow-md transition"
             >
               <Phone size={12} className="shrink-0" />
-              <span className="text-[12px] leading-none">Get Started</span>
-              <ArrowRight size={12} className="shrink-0" />
+              <span className="hidden xl:inline text-[12px] leading-none">Get Started</span>
+              <ArrowRight size={12} className="hidden xl:block shrink-0" />
             </Link>
 
             {/* MOBILE MENU */}

@@ -16,7 +16,7 @@ const RelatedGroups = ({ currentSlug }) => {
             <span className="inline-block mb-3 text-xs font-black tracking-[0.2em] uppercase text-brandPrimary dark:text-brandGold">
               The rest of the practice
             </span>
-            <h2 className="text-3xl font-bold font-heading md:text-4xl text-brandDark dark:text-white">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
               Other FAAS services
             </h2>
           </div>

@@ -27,7 +27,7 @@ const DetailsCard = ({ stakeholder, onClear }) => {
           {stakeholder.iconText || stakeholder.name?.[0] || '?'}
         </div>
         <div className="flex-1 pt-2">
-          <h3 className="mb-2 text-2xl font-black leading-tight capitalize text-slate-900 dark:text-white">
+          <h3 className="mb-2 text-lg md:text-xl font-bold leading-tight capitalize text-slate-900 dark:text-white">
             {stakeholder.name}
           </h3>
           <p className="capitalize text-slate-500 dark:text-slate-400">

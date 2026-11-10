@@ -40,12 +40,12 @@ function HeroSection() {
           </div>
 
           <div className="space-y-8">
-            <h1 className="font-heading text-5xl md:text-7xl font-bold text-white leading-[1.1]">
+            <h1 className="font-heading text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-white leading-[1.1]">
               Governance and <br />
               <span className="text-brandGold">Compliance Excellence</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-brandLight/80 leading-relaxed max-w-2xl animate-[fadeInUp_0.8s_ease-out_0.2s_both]">
+            <p className="text-base md:text-lg text-brandLight/80 leading-relaxed max-w-2xl animate-[fadeInUp_0.8s_ease-out_0.2s_both]">
               RiskMan delivers comprehensive SOX, ICOFR, and IFC solutions, strengthening internal controls and ensuring regulatory compliance through expert risk-based assessments and testing.
             </p>
 

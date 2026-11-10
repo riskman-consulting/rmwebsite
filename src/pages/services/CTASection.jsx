@@ -34,7 +34,7 @@ export const CTASection = () => {
           </div>
 
           {/* Title: Fixed text color (Dark mode: White, Light mode: Dark Navy) */}
-          <h2 className="text-3xl md:text-4xl font-bold text-brandDark dark:text-white leading-[1.15] mb-8 font-heading">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white leading-[1.15] mb-8 font-heading">
             Partner with RiskMan for <br className="hidden md:block" />
             <span className="text-brandPrimary dark:text-brandAccent">Unmatched Excellence</span>
           </h2>

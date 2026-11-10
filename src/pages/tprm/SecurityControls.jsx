@@ -60,10 +60,10 @@
 
 //           {/* Right - Content */}
 //           <div className="order-1 lg:order-2">
-//             <h2 className="mb-6 text-3xl font-bold sm:text-4xl lg:text-5xl font-heading text-brandDark dark:text-white">
+//             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //               Advanced Information Security and Cyber Risk Controls
 //             </h2>
-//             <p className="mb-8 text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+//             <p className="mb-8 text-base leading-relaxed text-gray-600 dark:text-gray-300">
 //               Cyber threats often enter through the supply chain. We assess vendor incident response capabilities and evaluate encryption controls for data at rest and in transit. Our audits review patch management and vulnerability practices to ensure your data remains secure within the vendor's ecosystem.
 //             </p>
 
@@ -107,10 +107,10 @@ const Security = () => {
     <section className="py-16 bg-bgLight dark:bg-bgDark">
       <div className="container">
         <div className="max-w-4xl mx-auto mb-12 text-center">
-          <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Advanced Information Security and Cyber Risk Controls
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
+          <p className="text-base text-gray-600 dark:text-gray-300">
             Cyber threats often enter through the supply chain. We assess vendor incident response capabilities and evaluate encryption controls for data at rest and in transit. Our audits review patch management and vulnerability practices to ensure your data remains secure within the vendor’s ecosystem.
           </p>
         </div>
@@ -125,7 +125,7 @@ const Security = () => {
                     <Shield className="w-8 h-8" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-brandDark dark:text-white">Incident Response</h3>
+                    <h3 className="text-lg md:text-xl font-bold text-brandDark dark:text-white">Incident Response</h3>
                     <p className="text-gray-500 dark:text-gray-400">Assess vendor capabilities</p>
                   </div>
                 </div>
@@ -134,7 +134,7 @@ const Security = () => {
                     <Lock className="w-8 h-8" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-brandDark dark:text-white">Encryption Controls</h3>
+                    <h3 className="text-lg md:text-xl font-bold text-brandDark dark:text-white">Encryption Controls</h3>
                     <p className="text-gray-500 dark:text-gray-400">Data at rest and in transit</p>
                   </div>
                 </div>
@@ -143,7 +143,7 @@ const Security = () => {
                     <Server className="w-8 h-8" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-brandDark dark:text-white">Patch Management</h3>
+                    <h3 className="text-lg md:text-xl font-bold text-brandDark dark:text-white">Patch Management</h3>
                     <p className="text-gray-500 dark:text-gray-400">Vulnerability practices review</p>
                   </div>
                 </div>

@@ -15,7 +15,7 @@ export default function RiskAnalysisSection({ data }) {
           viewport={{ once: true }}
           className="mb-16 text-center"
         >
-          <h2 className="text-4xl font-bold md:text-5xl text-brandDark dark:text-white">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
             Our <span className="text-brandPrimary dark:text-brandAccent">Approach</span>
           </h2>
         </motion.div>
@@ -40,7 +40,7 @@ export default function RiskAnalysisSection({ data }) {
               </div>
 
               {/* Text */}
-              <p className="text-lg font-semibold text-brandDark dark:text-white">
+              <p className="text-base font-semibold text-brandDark dark:text-white">
                 {item}
               </p>
             </motion.div>

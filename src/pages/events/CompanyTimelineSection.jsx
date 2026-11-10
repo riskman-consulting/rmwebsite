@@ -137,7 +137,7 @@
 //             <Clock className="w-3.5 h-3.5 text-brandGold" />
 //             <span className="text-[10px] font-black tracking-widest uppercase text-brandGold">Our Journey</span>
 //           </div>
-//           <h2 className="text-3xl font-black md:text-5xl text-brandDark dark:text-white">
+//           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
 //             5 Years of <span className="text-brandGold">Growth</span>
 //           </h2>
 //         </div>
@@ -400,7 +400,7 @@ const Timeline = () => {
                   <h2 className="flex items-center gap-3 mb-4 text-2xl font-bold md:text-3xl font-heading text-brandNavy dark:text-brandLight">
                     {activeEvent.title}
                   </h2>
-                  <p className="max-w-xl mb-8 text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                  <p className="max-w-xl mb-8 text-base leading-relaxed text-gray-600 dark:text-gray-400">
                     {activeEvent.description}
                   </p>
                  

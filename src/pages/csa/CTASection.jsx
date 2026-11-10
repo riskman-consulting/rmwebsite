@@ -7,10 +7,10 @@ export default function Footer() {
       {/* Partner CTA Section */}
       <section className="py-16 text-white bg-brandDark">
         <div className="container text-center">
-          <h2 className="mb-6 text-3xl font-bold font-heading md:text-4xl">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
             Partner with RiskMan
           </h2>
-          <p className="max-w-3xl mx-auto mb-8 text-lg leading-relaxed md:text-xl text-white/80">
+          <p className="max-w-3xl mx-auto mb-8 text-base md:text-lg leading-relaxed text-white/80">
             Transform your Control Self-Assessment program from a compliance necessity into a 
             strategic governance capability that drives risk intelligence, operational resilience, 
             and sustainable competitive advantage.

@@ -17,7 +17,7 @@ const StrategicERMFrameworkSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-4 text-3xl font-bold text-center font-heading text-brandDark dark:text-brandLight md:text-4xl"
+          className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold text-center font-heading text-brandDark dark:text-brandLight "
         >
         Our Scope and Deliverables
         </motion.h2>
@@ -37,7 +37,7 @@ const StrategicERMFrameworkSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="max-w-4xl mx-auto mb-16 text-lg text-center text-gray-600 dark:text-brandLight/70"
+          className="max-w-4xl mx-auto mb-16 text-base text-center text-gray-600 dark:text-brandLight/70"
         >
           RiskMan partners with your organization to build a resilient future by implementing a
           comprehensive Enterprise Risk Management framework that identifies, assesses, and
@@ -54,7 +54,7 @@ const StrategicERMFrameworkSection = () => {
             transition={{ duration: 0.6 }}
             className="h-full p-8 border shadow-sm rounded-2xl border-borderLight bg-bgLight dark:border-borderDark dark:bg-bgDark"
           >
-            <h3 className="mb-4 text-xl font-semibold text-brandDark dark:text-brandLight">
+            <h3 className="mb-4 text-lg md:text-xl font-bold text-brandDark dark:text-brandLight">
               Scope of Services
             </h3>
 
@@ -88,7 +88,7 @@ const StrategicERMFrameworkSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="h-full p-8 border shadow-sm rounded-2xl border-borderLight bg-bgLight dark:border-borderDark dark:bg-bgDark"
           >
-            <h3 className="mb-4 text-xl font-semibold text-brandDark dark:text-brandLight">
+            <h3 className="mb-4 text-lg md:text-xl font-bold text-brandDark dark:text-brandLight">
               Key Deliverables
             </h3>
 

@@ -58,7 +58,7 @@ export default function NotFound() {
       <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl">
         {/* Main Pages */}
         <div className="bg-white rounded-2xl border border-gray-200 px-8 py-8">
-          <h3 className="text-[#1a3a6b] font-bold text-lg mb-6">Main Pages</h3>
+          <h3 className="text-[#1a3a6b] font-bold text-lg md:text-xl mb-6">Main Pages</h3>
           <ul className="space-y-4">
             {mainPages.map((link) => (
               <li key={link.to}>
@@ -72,7 +72,7 @@ export default function NotFound() {
 
         {/* Company */}
         <div className="bg-white rounded-2xl border border-gray-200 px-8 py-8">
-          <h3 className="text-[#1a3a6b] font-bold text-lg mb-6">Company</h3>
+          <h3 className="text-[#1a3a6b] font-bold text-lg md:text-xl mb-6">Company</h3>
           <ul className="space-y-4">
             {companyLinks.map((link) => (
               <li key={link.to}>
@@ -86,7 +86,7 @@ export default function NotFound() {
 
         {/* Popular Services */}
         <div className="bg-white rounded-2xl border border-gray-200 px-8 py-8">
-          <h3 className="text-[#1a3a6b] font-bold text-lg mb-6">Popular Services</h3>
+          <h3 className="text-[#1a3a6b] font-bold text-lg md:text-xl mb-6">Popular Services</h3>
           <ul className="space-y-4">
             {popularServices.map((link) => (
               <li key={link.to}>

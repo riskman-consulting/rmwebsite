@@ -13,10 +13,10 @@ const CTA = () => {
           <div className="absolute bottom-0 right-0 w-64 h-64 translate-x-1/2 translate-y-1/2 rounded-full bg-brandGold/10 blur-3xl"></div>
           
           <div className="relative z-10 max-w-3xl mx-auto">
-            <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl font-heading">
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading">
               Ready to Secure Your Compliance Future?
             </h2>
-            <p className="mb-10 text-lg leading-relaxed text-gray-200 dark:text-gray-300">
+            <p className="mb-10 text-base leading-relaxed text-gray-200 dark:text-gray-300">
               Achieve full PCI DSS validation with RiskMan's expert guidance and technical implementation.
             </p>
             

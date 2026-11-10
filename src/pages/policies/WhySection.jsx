@@ -36,7 +36,7 @@ export default function WhySection() {
           <div className="relative overflow-hidden text-center shadow-xl bg-gradient-to-br from-brandNavy to-brandPrimary rounded-2xl p-14">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,_rgba(255,192,0,0.1)_0%,_transparent_60%)] pointer-events-none" />
             <div className="relative z-10">
-              <h3 className="font-heading text-[clamp(24px,3vw,34px)] font-bold text-white mb-4">
+              <h3 className="font-heading text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4">
                 Ready to Strengthen Your Governance Foundation?
               </h3>
               <p className="text-[15px] text-brandLight/80 max-w-xl mx-auto mb-7 leading-relaxed">

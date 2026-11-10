@@ -69,10 +69,10 @@ const ESGFrameworksSection = () => {
               Global Standards
             </span>
           </div>
-          <h2 className="mb-8 text-4xl font-black leading-tight font-heading text-brandDark dark:text-surfaceLight lg:text-6xl">
+          <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandDark dark:text-surfaceLight ">
             Foundational ESG <br /> & Sustainability Frameworks
           </h2>
-          <p className="max-w-4xl mx-auto font-sans text-xl leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
+          <p className="max-w-4xl mx-auto font-sans text-base md:text-lg leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
             Effective ESG programs are built upon globally recognized frameworks that provide structure, comparability, and credibility.
           </p>
         </div>
@@ -85,7 +85,7 @@ const ESGFrameworksSection = () => {
             <div className="relative z-10 flex flex-col items-start gap-12 lg:flex-row">
               <div className="lg:w-1/3">
                 <div className="mb-6 text-6xl animate-bounce">🎯</div>
-                <h3 className="mb-4 text-3xl font-bold font-heading text-brandDark dark:text-surfaceLight">
+                <h3 className="mb-4 text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark dark:text-surfaceLight">
                   United Nations Sustainable Development Goals (SDGs)
                 </h3>
                 <p className="leading-relaxed text-brandDark/60 dark:text-surfaceLight/60">
@@ -113,7 +113,7 @@ const ESGFrameworksSection = () => {
         <div className="mb-20">
           <div className="flex flex-col items-end justify-between gap-6 mb-12 md:flex-row">
             <div className="max-w-2xl">
-              <h3 className="mb-4 text-3xl font-black font-heading text-brandDark dark:text-surfaceLight lg:text-4xl">
+              <h3 className="mb-4 text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark dark:text-surfaceLight ">
                 GHG Accounting & Climate Measurement
               </h3>
               <p className="text-brandDark/60 dark:text-surfaceLight/60">

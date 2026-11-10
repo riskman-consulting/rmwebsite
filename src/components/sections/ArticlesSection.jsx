@@ -16,12 +16,12 @@ export default function ArticlesSection({ data }) {
           viewport={{ once: true }}
           className="mb-16 text-center"
         >
-          <h2 className="mb-4 text-4xl font-bold md:text-5xl text-brandDark dark:text-white">
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
             {data.title}
           </h2>
 
           {data.description && (
-            <p className="max-w-3xl mx-auto text-lg text-brandNavy dark:text-gray-400">
+            <p className="max-w-3xl mx-auto text-base text-brandNavy dark:text-gray-400">
               {data.description}
             </p>
           )}
@@ -54,7 +54,7 @@ export default function ArticlesSection({ data }) {
                 </div>
 
                 {/* Title */}
-                <h3 className="mb-3 text-lg font-bold transition-colors duration-300 text-brandDark dark:text-white line-clamp-2 group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
+                <h3 className="mb-3 text-lg md:text-xl font-bold transition-colors duration-300 text-brandDark dark:text-white line-clamp-2 group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
                   {article.title}
                 </h3>
 

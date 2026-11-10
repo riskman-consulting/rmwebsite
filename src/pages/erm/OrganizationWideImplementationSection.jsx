@@ -17,7 +17,7 @@ const OrganizationWideImplementationSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-4 text-3xl font-bold text-center font-heading text-brandDark dark:text-brandLight md:text-4xl"
+          className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold text-center font-heading text-brandDark dark:text-brandLight "
         >
           Our Organization-wide Implementation Approach
         </motion.h2>
@@ -37,7 +37,7 @@ const OrganizationWideImplementationSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="max-w-4xl mx-auto mb-16 text-lg text-center text-gray-600 dark:text-brandLight/70"
+          className="max-w-4xl mx-auto mb-16 text-base text-center text-gray-600 dark:text-brandLight/70"
         >
           RiskMan ensures that ERM is not a siloed exercise but a deeply embedded culture that
           empowers every level of your organization to manage risks proactively.
@@ -89,7 +89,7 @@ const OrganizationWideImplementationSection = () => {
               {/* Hover accent */}
               <div className="absolute inset-x-0 top-0 h-1 transition opacity-0 bg-brandPrimary group-hover:opacity-100 dark:bg-brandAccent" />
 
-              <h3 className="mb-3 text-lg font-semibold text-brandDark dark:text-brandLight">
+              <h3 className="mb-3 text-lg md:text-xl font-bold text-brandDark dark:text-brandLight">
                 {card.title}
               </h3>
 

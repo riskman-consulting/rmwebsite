@@ -12,7 +12,7 @@ const ImplementationExcellence = () => {
     return (
         <div className="min-h-screen font-sans transition-colors duration-300 bg-bgLight dark:bg-bgDark text-brandDark dark:text-brandLight">
             <Helmet>
-              <title>Digital Transformation Implementation Excellence | RiskMan Consulting</title>
+              <title>Digital Transformation Implementation | RiskMan Consulting</title>
               <meta name="description" content="RiskMan Consulting guides organizations through digital transformation implementation with tool evaluation, BPR, data management, and structured methodology for successful technology adoption." />
               <link rel="canonical" href="https://www.riskman.in/services/digital-transformation/implementation" />
             </Helmet>

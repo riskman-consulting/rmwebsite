@@ -54,14 +54,14 @@ const HeroSection = () => {
             </div>
 
             {/* Heading */}
-            <h1 className="mb-6 text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl font-heading">
+            <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading">
               Build Trust with{" "}
               <span className="text-brandAccent">ISO 27001</span>{" "}
               Security Excellence
             </h1>
 
             {/* Description */}
-            <p className="max-w-2xl mb-10 text-lg leading-relaxed text-gray-200 sm:text-xl">
+            <p className="max-w-2xl mb-10 text-base md:text-lg leading-relaxed text-gray-200 ">
               Establish a robust Information Security Management System (ISMS),
               manage information security risks, and demonstrate accountability
               in protecting data across your organization.

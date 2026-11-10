@@ -20,8 +20,8 @@ const BusinessProcessReengineering = () => {
               <div className="inline-block px-4 py-1 mb-4 text-sm font-semibold rounded-full bg-brandLight text-brandPrimary dark:bg-white/10 dark:text-brandGold">
                 Efficiency First
               </div>
-              <h2 className="mb-6 text-3xl font-bold font-heading md:text-4xl text-brandDark dark:text-white">Business Process Re-engineering</h2>
-              <p className="mb-8 text-lg text-brandNavy dark:text-white/70">
+              <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">Business Process Re-engineering</h2>
+              <p className="mb-8 text-base text-brandNavy dark:text-white/70">
                 Redesign core workflows to eliminate bottlenecks and maximize the efficiency of your digital operations.
               </p>
 
@@ -37,7 +37,7 @@ const BusinessProcessReengineering = () => {
                       <CheckCircle className="w-6 h-6 text-brandAccent" />
                     </div>
                     <div>
-                      <h3 className="mb-1 text-lg font-bold">{item.title}</h3>
+                      <h3 className="mb-1 text-lg md:text-xl font-bold">{item.title}</h3>
                       <p className="text-sm text-brandNavy dark:text-white/70">{item.desc}</p>
                     </div>
                   </div>

@@ -15,7 +15,7 @@ const ISO27701CTA = () => {
                         <div className="flex items-center justify-center w-16 h-16 mx-auto mb-6 shadow-lg rounded-2xl bg-brandAccent shadow-brandAccent/30">
                             <Lock className="w-8 h-8 text-brandDark" />
                         </div>
-                        <h2 className="text-3xl font-bold text-white font-heading md:text-4xl">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading ">
                             Protect Your Data Subjects Today
                         </h2>
                         <p className="max-w-xl mx-auto mt-4 text-gray-200 sm:text-lg">

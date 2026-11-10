@@ -89,7 +89,7 @@ export const EventCTASection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="mb-6 font-heading text-3xl md:text-4xl font-bold text-brandLight leading-[1.1] tracking-tight drop-shadow-2xl"
+          className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandLight leading-[1.1] drop-shadow-2xl"
         >
           Elevate Your <br className="hidden md:block" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandLight via-brandAccent to-brandGold">
@@ -103,7 +103,7 @@ export const EventCTASection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="max-w-2xl mb-12 text-lg font-light leading-relaxed md:text-xl text-brandLight/90 drop-shadow-md"
+          className="max-w-2xl mb-12 text-base md:text-lg font-light leading-relaxed text-brandLight/90 drop-shadow-md"
         >
           Join our auditing workshops and events in Mumbai. Learn from practitioners 
           and connect with peers across risk, audit and compliance.

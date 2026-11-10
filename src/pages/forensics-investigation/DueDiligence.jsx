@@ -9,10 +9,10 @@ const DueDiligenceSection = () => {
     <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
       <div className="container">
         <div className="max-w-3xl mx-auto mb-16 text-center">
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl font-heading text-brandNavy dark:text-white">
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandNavy dark:text-white">
             Integrity Due Diligence and Compliance
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
+          <p className="text-base text-gray-600 dark:text-gray-300">
             We help Organizations navigate complex regulatory landscapes by providing deep insights into partners, vendors, and high-value transactions.
           </p>
         </div>
@@ -44,7 +44,7 @@ const DueDiligenceSection = () => {
                 />
               </div>
               <div className="flex flex-col flex-1 p-8">
-                <h3 className="mb-3 text-xl font-bold transition-colors text-brandNavy dark:text-white group-hover:text-brandGold">
+                <h3 className="mb-3 text-lg md:text-xl font-bold transition-colors text-brandNavy dark:text-white group-hover:text-brandGold">
                   {card.title}
                 </h3>
                 <p className="flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">

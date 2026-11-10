@@ -70,7 +70,7 @@ const ServiceDetails = () => {
                     {service.icon}
                   </div>
                   <div className="flex-1">
-                    <h3 className="mb-3 text-2xl font-bold font-heading text-brandDark dark:text-white">
+                    <h3 className="mb-3 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
                       {service.title}
                     </h3>
                     <p className="mb-4 leading-relaxed text-gray-700 dark:text-gray-300">
@@ -99,7 +99,7 @@ const ServiceDetails = () => {
                 🌍
               </div>
               <div>
-                <h3 className="mb-4 text-2xl font-bold md:text-3xl font-heading">
+                <h3 className="mb-4 text-xl md:text-2xl lg:text-3xl font-bold font-heading">
                   Multi-Country, Multi-Regulation Execution
                 </h3>
                 <p className="leading-relaxed text-brandNavy dark:text-white/70">

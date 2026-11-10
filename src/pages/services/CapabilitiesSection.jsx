@@ -64,7 +64,7 @@ export const CapabilitiesSection = () => {
               </span>
             </div>
             {/* Responsive Heading: 3xl on mobile, 4xl on tablet, 5xl on desktop */}
-            <h2 className="text-3xl md:text-4xl font-bold text-brandDark dark:text-white leading-tight font-heading">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white leading-tight font-heading">
               Proven <span className="text-brandPrimary dark:text-brandAccent">Capabilities</span>
             </h2>
           </motion.div>
@@ -103,7 +103,7 @@ export const CapabilitiesSection = () => {
 
                 {/* Content */}
                 <div className="space-y-2 md:space-y-3">
-                  <h3 className="text-lg md:text-xl font-bold text-brandDark dark:text-white tracking-tight group-hover:text-brandPrimary dark:group-hover:text-brandAccent transition-colors">
+                  <h3 className="text-lg md:text-xl font-bold text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-xs md:text-sm text-brandNavy/60 dark:text-slate-400 leading-relaxed line-clamp-3">

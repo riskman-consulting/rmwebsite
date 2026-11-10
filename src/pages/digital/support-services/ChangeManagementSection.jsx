@@ -44,10 +44,10 @@ export const ChangeManagementSection = () => {
           
           {/* Left Content - Tabs */}
           <div className="lg:w-1/2">
-            <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
               Change Management & Adoption
             </h2>
-            <p className="mb-10 text-lg text-gray-600 dark:text-gray-300">
+            <p className="mb-10 text-base text-gray-600 dark:text-gray-300">
               Empower your workforce and drive high adoption rates through structured impact analysis and continuous engagement.
             </p>
 
@@ -81,8 +81,8 @@ export const ChangeManagementSection = () => {
                       exit={{ opacity: 0, x: -20 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <h3 className="mb-4 text-2xl font-bold text-brandDark dark:text-white">{tab.title}</h3>
-                      <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+                      <h3 className="mb-4 text-lg md:text-xl font-bold text-brandDark dark:text-white">{tab.title}</h3>
+                      <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
                         {tab.description}
                       </p>
                     </motion.div>
@@ -110,7 +110,7 @@ export const ChangeManagementSection = () => {
               {/* Overlay Text */}
               <div className="absolute bottom-0 left-0 p-8">
                 <div className="inline-block p-4 border bg-black/50 backdrop-blur-md border-white/20 rounded-xl">
-                  <p className="text-lg font-bold text-white">
+                  <p className="text-base font-bold text-white">
                     {tabs.find(t => t.id === activeTab)?.label} Focus
                   </p>
                 </div>

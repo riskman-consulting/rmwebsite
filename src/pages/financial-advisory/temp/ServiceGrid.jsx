@@ -44,7 +44,7 @@ const ServiceCatalog = () => {
     <section className="py-16 bg-bgLight dark:bg-bgDark">
       <div className="container">
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-3xl font-bold font-heading md:text-4xl text-brandDark dark:text-white">
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Our Financial <span className="text-brandPrimary dark:text-brandGold">Advisory Solutions</span>
           </h2>
           <div className="w-24 h-1 mx-auto bg-brandAccent"></div>
@@ -61,7 +61,7 @@ const ServiceCatalog = () => {
                   {service.icon}
                 </div>
                 <div>
-                  <h3 className="mb-4 text-2xl font-bold font-heading text-brandDark dark:text-white">
+                  <h3 className="mb-4 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
                     {service.title}
                   </h3>
                   <p className="font-sans leading-relaxed text-gray-600 dark:text-gray-400">

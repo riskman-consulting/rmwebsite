@@ -6,7 +6,7 @@ function WhenItSection() {
     
     <section className="py-16 bg-brandLight dark:bg-brandDark/50">
         <div className="container">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-10 text-center">When SOC 3 Adds Most Value</h2>
+          <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-10 text-center">When SOC 3 Adds Most Value</h2>
           <div className="flex flex-col lg:flex-row gap-6">
             {[
               "High-volume digital products where detailed reports are impractical.",

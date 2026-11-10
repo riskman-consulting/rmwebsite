@@ -66,10 +66,10 @@ const ESGValueCreation = () => {
           <span className="text-xs font-bold tracking-[4px] uppercase text-brandPrimary dark:text-brandGold mb-4 block">
             Value Creation Framework
           </span>
-          <h2 className="mb-6 text-3xl font-bold leading-tight font-heading text-brandDark dark:text-surfaceLight md:text-4xl">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandDark dark:text-surfaceLight ">
             The RiskMan Value Proposition
           </h2>
-          <p className="max-w-3xl mx-auto font-sans text-xl leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
+          <p className="max-w-3xl mx-auto font-sans text-base md:text-lg leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
             RiskMan delivers measurable, sustainable value through an integrated approach 
             to ESG advisory, implementation, and reporting.
           </p>

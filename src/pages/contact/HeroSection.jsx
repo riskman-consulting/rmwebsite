@@ -15,11 +15,11 @@ function HeroSection() {
      
             <div className="container relative z-10 max-w-6xl mx-auto">
               <div className="text-center">
-                <p className="mb-4 text-lg font-semibold tracking-wide uppercase text-brandPrimary dark:text-brandAccent">
+                <p className="mb-4 text-base font-semibold tracking-wide uppercase text-brandPrimary dark:text-brandAccent">
                   Get in Touch
                 </p>
      
-                <h1 className="mb-6 text-5xl font-bold leading-tight md:text-7xl text-brandDark dark:text-white">
+                <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight text-brandDark dark:text-white">
                   Contact
                   <br />
                   <span className="text-brandPrimary dark:text-brandAccent">
@@ -27,7 +27,7 @@ function HeroSection() {
                   </span>
                 </h1>
      
-                <p className="max-w-3xl mx-auto text-xl leading-relaxed md:text-2xl text-brandNavy dark:text-gray-400">
+                <p className="max-w-3xl mx-auto text-base md:text-lg leading-relaxed text-brandNavy dark:text-gray-400">
                   Ready to strengthen your business resilience? Let's discuss your unique challenges and craft tailored solutions
                 </p>
               </div>

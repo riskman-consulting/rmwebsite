@@ -6,7 +6,7 @@ function TestingSection() {
     <section className="py-16 bg-bgLight dark:bg-bgDark">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">Advanced Fieldwork & Testing</h2>
+            <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Advanced Fieldwork & Testing</h2>
             <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">We use data analytics to test transactions in greater depth and in less time than manual sampling allows.</p>
           </div>
           <div className="grid lg:grid-cols-3 gap-8">

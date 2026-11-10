@@ -8,7 +8,7 @@ export default function CSALifecycleSection() {
   return (
     <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
       <div className="container">
-        <h2 className="mb-8 text-3xl font-bold text-center font-heading md:text-4xl text-brandDark dark:text-white">
+        <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold text-center font-heading text-brandDark dark:text-white">
           Visual Framework: CSA Lifecycle
         </h2>
 

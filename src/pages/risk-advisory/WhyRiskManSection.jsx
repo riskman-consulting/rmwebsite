@@ -23,11 +23,11 @@ const WhyRiskManSection = ({ data }) => {
               Why Choose Us
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-bold text-brandDark dark:text-brandLight mb-6 font-heading">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-brandLight mb-6 font-heading">
               {data.title}
             </h2>
 
-            <p className="text-lg md:text-xl text-brandDark/70 dark:text-brandLight/70 max-w-3xl mx-auto">
+            <p className="text-base md:text-lg text-brandDark/70 dark:text-brandLight/70 max-w-3xl mx-auto">
               {data.description}
             </p>
           </motion.div>
@@ -48,7 +48,7 @@ const WhyRiskManSection = ({ data }) => {
                     <CheckCircle className="w-6 h-6 text-brandPrimary dark:text-brandAccent" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-brandDark dark:text-brandLight mb-3 group-hover:text-brandPrimary dark:group-hover:text-brandAccent transition-colors duration-300">
+                    <h3 className="text-lg md:text-xl font-bold text-brandDark dark:text-brandLight mb-3 group-hover:text-brandPrimary dark:group-hover:text-brandAccent transition-colors duration-300">
                       {item.title}
                     </h3>
                     <p className="text-brandDark/70 dark:text-brandLight/70 leading-relaxed">

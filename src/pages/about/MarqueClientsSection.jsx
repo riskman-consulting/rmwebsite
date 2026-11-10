@@ -25,7 +25,7 @@ export default function MarqueeClientsSection({ title = "Our Marquee Clients", b
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="mb-12 font-heading text-3xl font-bold text-start md:text-4xl"
+          className="mb-12 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-start "
         >
           {title.split(" ")[0] + " "}
           {/* <br /> */}

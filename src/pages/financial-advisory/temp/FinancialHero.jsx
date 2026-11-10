@@ -25,11 +25,11 @@ const FinancialHero = () => {
               RiskMan Consulting
             </span>
             
-            <h1 className="mb-6 text-3xl font-extrabold leading-tight text-white font-heading md:text-4xl lg:text-5xl">
+            <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight text-white font-heading ">
               Secure Your <span className="text-brandGold">Financial Future</span> and Mitigate Risk
             </h1>
             
-            <p className="max-w-2xl mb-8 font-sans text-lg leading-relaxed text-gray-300 md:text-xl">
+            <p className="max-w-2xl mb-8 font-sans text-base md:text-lg leading-relaxed text-gray-300 ">
               {/* Our Financial Advisory Services provide guidance to corporates and business entities to navigate funding sources, 
               optimise borrowings, and adopt actionable financial strategies including capex management. */}
 
@@ -50,7 +50,7 @@ const FinancialHero = () => {
           {/* Key Value Propositions Box */}
           <div className="lg:col-span-5">
             <div className="relative p-8 border shadow-2xl bg-surfaceDark/80 backdrop-blur-md rounded-2xl border-white/10">
-              <h3 className="flex items-center mb-6 text-xl font-bold text-white font-heading">
+              <h3 className="flex items-center mb-6 text-lg md:text-xl font-bold text-white font-heading">
                 <span className="w-8 h-1 mr-3 bg-brandAccent"></span>
                 Why Choose Us
               </h3>

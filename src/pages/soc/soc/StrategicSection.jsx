@@ -6,7 +6,7 @@ function StrategicSection() {
     
     <section className="py-16 bg-bgLight dark:bg-bgDark">
         <div className="container">
-          <h2 className="font-heading text-3xl font-bold mb-12 text-center lg:text-left">Why SOC Matters for Your Organization?</h2>
+          <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-12 text-center lg:text-left">Why SOC Matters for Your Organization?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { icon: <Users />, text: "Strengthen customer and regulator confidence in your control environment." },

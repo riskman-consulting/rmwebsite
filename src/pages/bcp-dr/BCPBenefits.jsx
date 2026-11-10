@@ -39,7 +39,7 @@ const BCPBenefitsGrid = () => {
         {/* Header */}
         <div className="max-w-3xl">
           <div className="h-1.5 w-20 bg-brandAccent mb-6 rounded-full" />
-          <h2 className="text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             How BCP Ensures Business Continuity
           </h2>
           <p className="mt-4 text-gray-600 dark:text-gray-300">
@@ -60,7 +60,7 @@ const BCPBenefitsGrid = () => {
                 ✓
               </div>
  
-              <h3 className="text-lg font-bold text-brandDark dark:text-white">
+              <h3 className="text-lg md:text-xl font-bold text-brandDark dark:text-white">
                 {item.title}
               </h3>
  

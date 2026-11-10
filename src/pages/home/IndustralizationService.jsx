@@ -39,7 +39,7 @@ export function IndustryGrid() {
               <span className="w-2 h-2 bg-brandPrimary rounded-full dark:bg-brandAccent animate-pulse" />
               Specialized Sectors
             </div>
-            <h2 className="mb-6 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
+            <h2 className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
               Built for <span className="text-transparent bg-gradient-to-r from-brandAccent to-brandGold bg-clip-text">Critical</span> Industries
             </h2>
           </div>

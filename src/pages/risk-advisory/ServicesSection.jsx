@@ -27,7 +27,7 @@ const ServicesSection = ({ data }) => {
               Services
             </div>
 
-            <h2 className="font-heading text-3xl font-bold text-brandDark dark:text-brandLight md:text-4xl">
+            <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-brandLight ">
               Comprehensive{" "}
               <span className="text-brandPrimary dark:text-brandAccent">
                 Risk Advisory

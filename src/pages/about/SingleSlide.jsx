@@ -33,7 +33,7 @@ export default function SingleSlide() {
       <div className="container relative z-10">
         <div className="max-w-3xl">
           {/* Headline - Styled like the image */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-[1.1] tracking-tight">
+          <h1 className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-white leading-[1.1] ">
             RiskMan Assurance and Advisory <br />
             <span className="font-medium opacity-90 text-brandAccent">
               Your Partner in Sustainable Growth
@@ -41,7 +41,7 @@ export default function SingleSlide() {
           </h1>
  
           {/* Body Text */}
-          <p className="max-w-xl mt-8 text-lg leading-relaxed md:text-xl text-white/80">
+          <p className="max-w-xl mt-8 text-base md:text-lg leading-relaxed text-white/80">
             Strategic risk advisory driven by <strong className="text-white">propreneurs</strong>.
             We deliver customized solutions that secure sustainable growth and
             create enduring value for global enterprises.

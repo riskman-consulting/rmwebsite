@@ -11,10 +11,10 @@ const CTA = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-brandDark/50 to-brandDark"></div>
 
       <div className="container relative z-10 text-center">
-        <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl font-heading">
+        <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading">
           Master Your Risk Landscape
         </h2>
-        <p className="max-w-2xl mx-auto mb-10 text-xl text-gray-300">
+        <p className="max-w-2xl mx-auto mb-10 text-base md:text-lg text-gray-300">
           Partner with RiskMan to build a culture of risk awareness that protects your future and drives organizational performance.
         </p>
         

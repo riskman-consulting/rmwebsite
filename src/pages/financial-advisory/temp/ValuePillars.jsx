@@ -28,10 +28,10 @@ const ValuePillars = () => {
     <section className="py-16 transition-colors duration-300 bg-surfaceLight dark:bg-surfaceDark">
       <div className="container">
         <div className="max-w-3xl mb-16">
-          <h2 className="mb-6 text-3xl font-bold font-heading md:text-4xl text-brandDark dark:text-white">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             The Foundation of Our <span className="text-brandPrimary dark:text-brandGold">Advisory Excellence</span>
           </h2>
-          <p className="font-sans text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+          <p className="font-sans text-base leading-relaxed text-gray-600 dark:text-gray-400">
             In the business journey of exploring resources and funding options at optimum cost, evaluating M&A and divestment strategies, or trying out expansions—our team delivers most meaningful solutions.
           </p>
         </div>
@@ -47,7 +47,7 @@ const ValuePillars = () => {
                   {index + 1}
                 </span>
               </div>
-              <h3 className="mb-4 text-xl font-bold font-heading text-brandDark dark:text-white">
+              <h3 className="mb-4 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
                 {pillar.title}
               </h3>
               <p className="font-sans leading-relaxed text-gray-600 dark:text-gray-400">

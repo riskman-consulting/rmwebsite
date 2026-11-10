@@ -40,7 +40,7 @@ const CoreComponents = () => {
                     <span className="text-sm font-semibold tracking-widest uppercase font-heading text-brandPrimary dark:text-brandAccent">
                         Framework
                     </span>
-                    <h2 className="mt-3 text-3xl font-bold font-heading text-brandDark dark:text-white md:text-4xl">
+                    <h2 className="mt-3 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white ">
                         Core Components of ISO 27701
                     </h2>
                     <p className="max-w-2xl mx-auto mt-4 text-slate-600 dark:text-slate-400 sm:text-lg">
@@ -62,7 +62,7 @@ const CoreComponents = () => {
                             >
                                 <item.icon className="text-white h-7 w-7 dark:text-brandDark" />
                             </div>
-                            <h3 className="mt-5 text-xl font-bold font-heading text-brandDark dark:text-white">
+                            <h3 className="mt-5 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
                                 {item.title}
                             </h3>
                             <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">

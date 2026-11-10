@@ -39,7 +39,7 @@ const ServiceCard = ({ service, index }) => {
       </div>
 
       {/* Title */}
-      <h3 className="mb-4 text-xl font-bold text-brandDark transition-colors duration-300 group-hover:text-brandPrimary dark:text-brandLight dark:group-hover:text-brandAccent">
+      <h3 className="mb-4 text-lg md:text-xl font-bold text-brandDark transition-colors duration-300 group-hover:text-brandPrimary dark:text-brandLight dark:group-hover:text-brandAccent">
         {service.title}
       </h3>
 

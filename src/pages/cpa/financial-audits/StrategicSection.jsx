@@ -8,8 +8,8 @@ function StrategicSection() {
         <div className="container">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2">
-              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">Strategic Audit Planning</h2>
-              <p className="text-gray-600 dark:text-gray-300 mb-10 text-lg">Organizations require a meticulously scoped audit process that identifies material risks before they impact the bottom line.</p>
+              <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-6">Strategic Audit Planning</h2>
+              <p className="text-gray-600 dark:text-gray-300 mb-10 text-base">Organizations require a meticulously scoped audit process that identifies material risks before they impact the bottom line.</p>
               <div className="space-y-6">
                 {auditPlanning.map((plan, i) => (
                   <div key={i} className="flex gap-4 p-6 bg-brandLight dark:bg-bgDark rounded-xl border-l-4 border-brandPrimary">
@@ -26,7 +26,7 @@ function StrategicSection() {
                 <div className="p-2 bg-gray-100 dark:bg-bgDark rounded-3xl">
                     <div className="bg-brandNavy p-12 rounded-[1.4rem] text-center">
                         <BarChart3 size={64} className="text-brandAccent mx-auto mb-6" />
-                        <h3 className="text-white text-2xl font-bold mb-4">Material Risk Identification</h3>
+                        <h3 className="text-white text-lg md:text-xl font-bold mb-4">Material Risk Identification</h3>
                         <div className="h-1 w-20 bg-brandAccent mx-auto mb-6"></div>
                         <p className="text-gray-400 text-sm leading-relaxed">
                             "A successful audit is built on the foundation of exhaustive planning and risk-focused resource deployment."

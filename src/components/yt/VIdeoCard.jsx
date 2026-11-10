@@ -18,7 +18,7 @@ export default function HeroSection() {
               </span>
             </div>
 
-            <h2 className="max-w-[620px] font-heading text-4xl font-extrabold leading-[1.05] tracking-[-0.03em] text-brandDark transition-colors duration-300 dark:text-white sm:text-5xl lg:text-6xl">
+            <h2 className="max-w-[620px] font-heading text-2xl md:text-3xl lg:text-4xl font-bold leading-[1.05] text-brandDark transition-colors duration-300 dark:text-white ">
               RiskMan&apos;s{" "}
               <span className="text-brandGold">Vision</span>
               <br />
@@ -52,7 +52,7 @@ export default function HeroSection() {
 
           {/* Right */}
           <div className="lg:pt-5">
-            <p className="max-w-[640px] text-base leading-8 text-slate-600 transition-colors duration-300 dark:text-slate-300 sm:text-lg">
+            <p className="max-w-[640px] text-base leading-8 text-slate-600 transition-colors duration-300 dark:text-slate-300 ">
               Step inside our process and see how RiskMan protects what
               matters most. From proactive planning to rapid response,
               we are the dedicated partner you can trust to secure your

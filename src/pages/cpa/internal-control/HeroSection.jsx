@@ -22,11 +22,11 @@ function HeroSection() {
               <Zap size={14} className="animate-pulse" /> Operational Excellence
             </div>
 
-            <h1 className="font-heading text-5xl lg:text-7xl font-bold leading-tight mb-6">
+            <h1 className="font-heading text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
               Optimizing Institutional <span className="text-brandAccent">Control Environments</span>
             </h1>
 
-            <p className="text-lg lg:text-xl text-gray-300 mb-10 leading-relaxed">
+            <p className="text-base md:text-lg text-gray-300 mb-10 leading-relaxed">
               RiskMan empowers Organizations to identify structural vulnerabilities and implement robust control activities that prevent fraud and enhance operational performance.
             </p>
 

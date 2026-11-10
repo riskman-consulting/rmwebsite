@@ -147,8 +147,8 @@ export default function IndustriesTemplate() {
       <div className="flex items-center justify-center min-h-screen px-4 text-center bg-bgLight dark:bg-bgDark">
         <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="max-w-xl p-12 border shadow-2xl bg-surfaceLight dark:bg-surfaceDark rounded-2xl border-borderLight dark:border-borderDark">
           <div className="mb-8 text-8xl">🔍</div>
-          <h1 className="mb-6 text-4xl font-bold font-heading text-brandDark dark:text-white">Industry Not Found</h1>
-          <p className="mb-10 text-lg font-medium text-brandNavy/60 dark:text-gray-400">The requested industry page could not be located. Please return to the main industries gallery.</p>
+          <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold font-heading text-brandDark dark:text-white">Industry Not Found</h1>
+          <p className="mb-10 text-base font-medium text-brandNavy/60 dark:text-gray-400">The requested industry page could not be located. Please return to the main industries gallery.</p>
           <Link to="/industries" className="inline-flex items-center gap-3 px-10 py-5 text-sm font-black tracking-widest text-white uppercase transition-all rounded-full shadow-xl bg-brandPrimary hover:scale-105">
             <FaHome /> Back to Industries
           </Link>
@@ -193,7 +193,7 @@ export default function IndustriesTemplate() {
                   <div className="w-2 h-2 rounded-full bg-brandAccent" />
                   {heroSection.tag}
                 </motion.div>
-                <motion.h1 variants={fadeInUp} className="mb-8 text-4xl font-bold md:text-6xl leading-[1.1] tracking-tight font-heading text-white">
+                <motion.h1 variants={fadeInUp} className="mb-8 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-[1.1] font-heading text-white">
                   {heroSection.title}
                 </motion.h1>
                 <motion.p variants={fadeInUp} className="max-w-2xl py-2 pl-6 mb-12 text-base font-medium leading-relaxed md:text-lg text-white/80 border-l-[4px] border-brandAccent">
@@ -227,7 +227,7 @@ export default function IndustriesTemplate() {
             <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-brandAccent text-xs mb-6 tracking-[0.4em] uppercase font-black">
               {industry.heroTagline || "Industry Insight"}
             </motion.p>
-            <motion.h1 initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="text-4xl font-bold leading-none tracking-tight text-white md:text-6xl font-heading">
+            <motion.h1 initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-none text-white font-heading">
               {industry.title}
             </motion.h1>
           </div>
@@ -242,7 +242,7 @@ export default function IndustriesTemplate() {
               <motion.div variants={fadeInLeft} initial="initial" whileInView="animate" viewport={{ once: true }}>
                 <div className="mb-10">
                   <span className="text-brandPrimary dark:text-brandAccent font-black text-[10px] uppercase tracking-[0.4em] mb-4 block">The Strategic Landscape</span>
-                  <h2 className="text-3xl font-bold leading-tight tracking-tight md:text-4xl font-heading">{challengeSection.title}</h2>
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading">{challengeSection.title}</h2>
                 </div>
                 <p className="mb-10 text-base font-medium leading-relaxed text-slate-600 dark:text-slate-300">{challengeSection.description}</p>
                 <div className="mb-12 space-y-4">
@@ -258,7 +258,7 @@ export default function IndustriesTemplate() {
                       <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 transition-all duration-500 rounded-xl bg-brandPrimary/10 dark:bg-brandAccent/10 text-brandPrimary dark:text-brandAccent group-hover:bg-brandPrimary dark:group-hover:bg-brandAccent group-hover:text-white dark:group-hover:text-brandDark">
                         <FaCheck className="text-sm" />
                       </div>
-                      <p className="text-lg font-bold leading-relaxed text-slate-700 dark:text-slate-200">{c}</p>
+                      <p className="text-base font-bold leading-relaxed text-slate-700 dark:text-slate-200">{c}</p>
                     </motion.div>
                   ))}
                 </div>
@@ -286,7 +286,7 @@ export default function IndustriesTemplate() {
           <div className="flex flex-col justify-between gap-8 mb-16 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <span className="text-brandPrimary dark:text-brandAccent font-black text-[10px] uppercase tracking-[0.4em] mb-4 block">Our Solutions Architecture</span>
-              <h2 className="mb-3 text-3xl font-bold leading-tight tracking-tight md:text-4xl font-heading">
+              <h2 className="mb-3 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading">
                 {solutionsSection?.title || "Strategic Execution"}
               </h2>
             </div>
@@ -304,7 +304,7 @@ export default function IndustriesTemplate() {
                     {item.id}
                   </div>
                   <div className="relative z-10 flex flex-col h-full">
-                    <h3 className="mb-4 text-xl font-bold leading-tight transition-colors group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
+                    <h3 className="mb-4 text-lg md:text-xl font-bold leading-tight transition-colors group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
                       {item.title}
                     </h3>
                     <p className="flex-1 text-sm font-medium leading-relaxed text-slate-600 dark:text-slate-400">
@@ -338,9 +338,9 @@ export default function IndustriesTemplate() {
         <div className="container">
           <div className="mb-20 text-center">
             <span className="text-brandPrimary dark:text-brandAccent font-black text-[10px] uppercase tracking-[0.4em] mb-6 block">Excellence in Risk Management</span>
-            <h2 className="mb-8 text-3xl font-bold leading-tight tracking-tight md:text-4xl font-heading">{whyRiskMan?.title || "Why RiskMan"}</h2>
+            <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading">{whyRiskMan?.title || "Why RiskMan"}</h2>
             {whyRiskMan?.description && (
-              <p className="max-w-4xl mx-auto text-lg font-medium leading-relaxed text-slate-600 dark:text-slate-400">
+              <p className="max-w-4xl mx-auto text-base font-medium leading-relaxed text-slate-600 dark:text-slate-400">
                 {whyRiskMan.description}
               </p>
             )}
@@ -361,7 +361,7 @@ export default function IndustriesTemplate() {
                   <div className="absolute flex items-center justify-center w-16 h-16 text-white shadow-xl -top-8 left-8 rounded-2xl bg-brandDark dark:bg-brandAccent dark:text-brandDark">
                     <IconComponent className="text-3xl" />
                   </div>
-                  <h3 className="mb-4 text-lg font-bold leading-tight transition-colors group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
+                  <h3 className="mb-4 text-lg md:text-xl font-bold leading-tight transition-colors group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
                     {item.title}
                   </h3>
                   <p className="text-sm font-medium leading-relaxed text-slate-600 dark:text-slate-400">{item.description}</p>
@@ -377,9 +377,9 @@ export default function IndustriesTemplate() {
         <section className="relative py-16 overflow-hidden bg-bgLight dark:bg-bgDark">
           <div className="container relative z-10">
             <div className="max-w-4xl mb-16">
-              <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl font-heading text-brandDark dark:text-white">{trustedBrands.title}</h2>
+              <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">{trustedBrands.title}</h2>
               {trustedBrands.description && (
-                <p className="max-w-2xl text-lg font-medium leading-relaxed text-slate-500 dark:text-white/60">{trustedBrands.description}</p>
+                <p className="max-w-2xl text-base font-medium leading-relaxed text-slate-500 dark:text-white/60">{trustedBrands.description}</p>
               )}
             </div>
             <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
@@ -416,7 +416,7 @@ export default function IndustriesTemplate() {
           <div className="container">
             <div className="mb-16 text-center">
               <span className="text-brandPrimary dark:text-brandAccent font-black text-[10px] uppercase tracking-[0.4em] mb-6 block">Insights & Intelligence</span>
-              <h2 className="text-3xl font-bold leading-tight tracking-tight md:text-4xl font-heading">Frequently Asked Questions</h2>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading">Frequently Asked Questions</h2>
             </div>
             <div className="grid items-start gap-6 lg:grid-cols-2">
               <div className="space-y-6">
@@ -439,7 +439,7 @@ export default function IndustriesTemplate() {
         <div className="container relative z-10 text-center">
           <div className="max-w-4xl mx-auto">
             <span className="text-brandAccent font-black text-[10px] uppercase tracking-[0.4em] mb-8 block">Unparalleled Resilience</span>
-            <h2 className="mb-10 text-3xl font-bold leading-tight tracking-tight md:text-4xl font-heading">{ctaSection?.title || "Establish Your Governance"}</h2>
+            <h2 className="mb-10 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading">{ctaSection?.title || "Establish Your Governance"}</h2>
             <Link to={ctaSection?.cta?.action || "/contact"} className="inline-flex items-center gap-6 px-10 py-5 font-black transition-all duration-500 rounded-full shadow-2xl group text-brandDark bg-brandAccent hover:bg-white">
               <span className="text-base tracking-tight uppercase">{ctaSection?.cta?.text || "Engage Our Expertise"}</span>
               <FaArrowRight className="text-lg transition-transform duration-500 group-hover:translate-x-2" />

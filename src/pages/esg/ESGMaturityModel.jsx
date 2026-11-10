@@ -84,10 +84,10 @@
 //             <span className="text-xs font-bold tracking-[4px] uppercase text-brandPrimary dark:text-brandGold mb-4 block">
 //               Phase 1: ESG Maturity Assessment
 //             </span>
-//             <h2 className="mb-6 text-4xl font-black leading-tight font-heading text-brandDark dark:text-surfaceLight lg:text-5xl">
+//             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandDark dark:text-surfaceLight ">
 //               Assessing Your Organization's <br /> Sustainability Journey
 //             </h2>
-//             <p className="max-w-3xl mx-auto font-sans text-lg text-brandDark/70 dark:text-surfaceLight/70">
+//             <p className="max-w-3xl mx-auto font-sans text-base text-brandDark/70 dark:text-surfaceLight/70">
 //               Every engagement begins with a comprehensive assessment of your current ESG position across five critical dimensions to establish a clear baseline.
 //             </p>
 //           </div>
@@ -116,7 +116,7 @@
 //           <div className="p-10 border shadow-2xl bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark rounded-[40px] relative overflow-hidden">
 //             <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-slate-400 via-brandPrimary to-brandGold" />
             
-//             <h3 className="mb-16 text-xl font-bold text-center font-heading text-brandDark dark:text-white uppercase tracking-[3px]">
+//             <h3 className="mb-16 text-lg md:text-xl font-bold text-center font-heading text-brandDark dark:text-white uppercase ">
 //               ESG Maturity Progression
 //             </h3>
 
@@ -172,7 +172,7 @@
 //             <div className="absolute top-0 right-0 w-64 h-64 transition-transform duration-700 translate-x-1/2 -translate-y-1/2 rounded-full bg-brandGold/10 blur-3xl group-hover:scale-125" />
             
 //             <div className="relative z-10">
-//               <h3 className="mb-4 text-2xl font-black tracking-widest uppercase font-heading">
+//               <h3 className="mb-4 text-lg md:text-xl font-bold uppercase font-heading">
 //                 Phase 2: Customized ESG Roadmap
 //               </h3>
 //               <p className="max-w-4xl mb-10 leading-relaxed text-white/80">
@@ -279,7 +279,7 @@ const ESGMaturityModel = () => {
 
               {/* Left content */}
               <div className="lg:w-1/2">
-                <h3 className="mb-4 text-2xl font-black tracking-wider text-white uppercase">
+                <h3 className="mb-4 text-lg md:text-xl font-bold text-white uppercase">
                   Phase 1: ESG Baseline Assessment
                 </h3>
                 <p className="text-sm leading-relaxed text-white/70">
@@ -365,7 +365,7 @@ const ESGMaturityModel = () => {
           <div className="relative px-10 py-12 bg-brandDark/40 backdrop-blur-3xl rounded-2xl">
             <div className="relative z-10 flex flex-col items-center gap-8 lg:flex-row">
               <div className="lg:w-1/2">
-                <h3 className="mb-4 text-2xl font-black tracking-wider text-white uppercase">Phase 2: Customized ESG Roadmap</h3>
+                <h3 className="mb-4 text-lg md:text-xl font-bold text-white uppercase">Phase 2: Customized ESG Roadmap</h3>
                 <p className="text-sm leading-relaxed text-white/70">
                   Based on findings, we develop a tailored roadmap balancing ambition with practicality—addressing resource needs and milestones.
                 </p>

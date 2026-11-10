@@ -5,7 +5,7 @@ function SupportSection() {
   return (
     <section className="py-16 bg-bgLight dark:bg-bgDark">
         <div className="container">
-          <h2 className="font-heading text-3xl font-bold mb-12">How RiskMan Supports SOC</h2>
+          <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-12">How RiskMan Supports SOC</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { icon: <Search />, title: "Readiness", desc: "Gap assessment against SOC 1, SOC 2, and SOC 3 expectations." },
@@ -17,7 +17,7 @@ function SupportSection() {
                 <div className="absolute -left-[11px] top-0 bg-brandGold rounded-full p-1 text-brandDark">
                   <CheckCircle2 size={16} />
                 </div>
-                <h3 className="font-bold text-xl mb-3">{step.title}</h3>
+                <h3 className="font-bold text-lg md:text-xl mb-3">{step.title}</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{step.desc}</p>
               </div>
             ))}

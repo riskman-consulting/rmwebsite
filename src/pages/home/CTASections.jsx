@@ -38,13 +38,13 @@ const CTASection = () => {
           <p className="mb-4 text-sm font-bold tracking-[0.2em] uppercase text-brandNavy dark:text-brandAccent">
             Get Started
           </p>
-          <h2 className="mb-6 font-heading text-3xl md:text-4xl font-bold leading-tight text-brandDark dark:text-white">
+          <h2 className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-brandDark dark:text-white">
             Create Your <span className="text-transparent bg-gradient-to-r from-brandAccent to-brandGold bg-clip-text">Scalable Success</span>
           </h2>
         </div>
  
         {/* DESCRIPTION - Matches FAQ answer text size */}
-        <p className="max-w-3xl mx-auto mb-12 text-lg leading-relaxed text-center text-brandNavy dark:text-white/70">
+        <p className="max-w-3xl mx-auto mb-12 text-base leading-relaxed text-center text-brandNavy dark:text-white/70">
           Leverage the collective wisdom of partners who have successfully navigated the complexities of global markets and regulatory landscapes. At RiskMan, we don't just offer advice; we provide a blueprint for resilience. Benefit from personalized guidance rooted in decades of experience building high-growth service lines and safeguarding multi-national enterprises.
         </p>
  
@@ -80,7 +80,7 @@ const CTASection = () => {
                
                 {member.featured && (
                   <div className="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/80 via-transparent to-transparent">
-                    <h3 className="mb-1 text-lg font-black text-white">
+                    <h3 className="mb-1 text-lg md:text-xl font-bold text-white">
                       {member.name}
                     </h3>
                     <p className="text-xs font-bold tracking-wider uppercase text-white/80">

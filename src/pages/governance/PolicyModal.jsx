@@ -15,7 +15,7 @@ const PolicyModal = ({ policy, onClose, contentRef, toc, scrollToSection }) => {
                             <policy.icon size={28} strokeWidth={1.5} />
                         </div>
                         <div>
-                            <h3 className="text-xl font-bold leading-tight md:text-2xl text-brandDark dark:text-white">{policy.title}</h3>
+                            <h3 className="text-lg md:text-xl font-bold leading-tight text-brandDark dark:text-white">{policy.title}</h3>
                             <div className="flex items-center mt-1 space-x-2 text-sm text-gray-500 dark:text-gray-400">
                                 <span className="px-2 py-0.5 rounded bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-xs font-medium uppercase tracking-wide">
                                     {policy.category}
@@ -124,7 +124,7 @@ const PolicyModal = ({ policy, onClose, contentRef, toc, scrollToSection }) => {
                         ) : (
                             <div className="flex flex-col items-center justify-center h-full text-center opacity-50">
                                 <FileText size={64} className="mb-6 text-gray-200 dark:text-gray-700" />
-                                <p className="text-lg font-medium text-gray-400">Full content preview not available.</p>
+                                <p className="text-base font-medium text-gray-400">Full content preview not available.</p>
                                 <p className="mt-2 text-sm text-gray-400">Please download the document to read more.</p>
                             </div>
                         )}

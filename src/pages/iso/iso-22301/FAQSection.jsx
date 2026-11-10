@@ -49,7 +49,7 @@ const FaqItem = ({ question, answer, isOpen, toggle, index }) => {
                         transition={{ duration: 0.4, ease: "circOut" }}
                     >
                         <div className="px-8 py-8 mt-2 border-l-2 ml-14 border-slate-100 dark:border-white/10">
-                            <p className="text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+                            <p className="text-base leading-relaxed text-slate-600 dark:text-slate-400">
                                 {answer}
                             </p>
                         </div>
@@ -107,11 +107,11 @@ const ISO22301FAQ = () => {
                                 <HelpCircle className="w-4 h-4 text-brandPrimary dark:text-brandAccent" />
                                 <span className="text-sm font-black tracking-widest uppercase font-heading text-brandPrimary dark:text-brandAccent">Expert Guide</span>
                             </div>
-                            <h2 className="text-3xl font-bold leading-tight font-heading text-brandDark dark:text-white md:text-4xl">
+                            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandDark dark:text-white ">
                                 Frequently Asked <br />
                                 <span className="text-brandPrimary dark:text-brandAccent">Questions</span>
                             </h2>
-                            <p className="mt-6 text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+                            <p className="mt-6 text-base leading-relaxed text-slate-600 dark:text-slate-400">
                                 Get clear, expert answers to common questions about Business Continuity Management and ISO 22301 implementation.
                             </p>
 
@@ -122,7 +122,7 @@ const ISO22301FAQ = () => {
                                         <MessageSquare className="h-7 w-7 text-brandDark" />
                                     </div>
                                     <div>
-                                        <p className="text-lg font-bold text-brandDark dark:text-white">Still have questions?</p>
+                                        <p className="text-base font-bold text-brandDark dark:text-white">Still have questions?</p>
                                         <p className="text-sm text-slate-500 dark:text-slate-400">Contact our resilience experts</p>
                                     </div>
                                 </div>

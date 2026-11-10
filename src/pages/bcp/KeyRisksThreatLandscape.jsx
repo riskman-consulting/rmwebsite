@@ -7,7 +7,7 @@ const KeyRisksThreatLandscape = () => {
 
         {/* SECTION HEADER */}
         <div className="max-w-3xl mb-14">
-          <h2 className="mb-4 text-2xl font-semibold font-heading md:text-3xl text-brandDark dark:text-brandAccent">
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-brandAccent">
             Key Risks &amp; Threat Landscape
           </h2>
           <p className="font-sans text-base leading-relaxed md:text-lg text-brandNavy dark:text-brandLight">
@@ -23,7 +23,7 @@ const KeyRisksThreatLandscape = () => {
 
           {/* IT & NETWORK RISKS */}
           <div className="p-6 border rounded-2xl border-borderLight dark:border-borderDark bg-bgLight dark:bg-bgDark">
-            <h3 className="mb-4 text-lg font-semibold font-heading text-brandDark dark:text-brandAccent">
+            <h3 className="mb-4 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-brandAccent">
               IT &amp; Network Risks
             </h3>
             <ul className="space-y-2 text-sm text-brandPrimary dark:text-brandLight/80">
@@ -36,7 +36,7 @@ const KeyRisksThreatLandscape = () => {
 
           {/* INFRASTRUCTURE & FACILITY RISKS */}
           <div className="p-6 border rounded-2xl border-borderLight dark:border-borderDark bg-bgLight dark:bg-bgDark">
-            <h3 className="mb-4 text-lg font-semibold font-heading text-brandDark dark:text-brandAccent">
+            <h3 className="mb-4 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-brandAccent">
               Infrastructure &amp; Facility Risks
             </h3>
             <ul className="space-y-2 text-sm text-brandPrimary dark:text-brandLight/80">
@@ -49,7 +49,7 @@ const KeyRisksThreatLandscape = () => {
 
           {/* CYBER & SYSTEMIC RISKS */}
           <div className="p-6 border rounded-2xl border-borderLight dark:border-borderDark bg-bgLight dark:bg-bgDark">
-            <h3 className="mb-4 text-lg font-semibold font-heading text-brandDark dark:text-brandAccent">
+            <h3 className="mb-4 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-brandAccent">
               Cyber &amp; Systemic Risks
             </h3>
             <ul className="space-y-2 text-sm text-brandPrimary dark:text-brandLight/80">
@@ -62,7 +62,7 @@ const KeyRisksThreatLandscape = () => {
 
           {/* SUPPLIER & THIRD-PARTY RISKS */}
           <div className="p-6 border rounded-2xl border-borderLight dark:border-borderDark bg-bgLight dark:bg-bgDark">
-            <h3 className="mb-4 text-lg font-semibold font-heading text-brandDark dark:text-brandAccent">
+            <h3 className="mb-4 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-brandAccent">
               Supplier &amp; Third-Party Risks
             </h3>
             <ul className="space-y-2 text-sm text-brandPrimary dark:text-brandLight/80">
@@ -74,7 +74,7 @@ const KeyRisksThreatLandscape = () => {
 
           {/* PEOPLE & OPERATIONAL RISKS */}
           <div className="p-6 border rounded-2xl border-borderLight dark:border-borderDark bg-bgLight dark:bg-bgDark">
-            <h3 className="mb-4 text-lg font-semibold font-heading text-brandDark dark:text-brandAccent">
+            <h3 className="mb-4 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-brandAccent">
               People &amp; Operational Risks
             </h3>
             <ul className="space-y-2 text-sm text-brandPrimary dark:text-brandLight/80">
@@ -86,7 +86,7 @@ const KeyRisksThreatLandscape = () => {
 
           {/* NATURAL & EXTERNAL EVENTS */}
           <div className="p-6 border rounded-2xl border-borderLight dark:border-borderDark bg-bgLight dark:bg-bgDark">
-            <h3 className="mb-4 text-lg font-semibold font-heading text-brandDark dark:text-brandAccent">
+            <h3 className="mb-4 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-brandAccent">
               Natural &amp; External Events
             </h3>
             <ul className="space-y-2 text-sm text-brandPrimary dark:text-brandLight/80">

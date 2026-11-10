@@ -47,7 +47,7 @@ const TisaxBenefits = () => {
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            className="mt-4 text-3xl font-bold font-heading text-brandDark dark:text-white md:text-4xl"
+                            className="mt-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white "
                         >
                             Essential Benefits <br />
                             <span className="text-slate-400">of Compliance</span>
@@ -57,7 +57,7 @@ const TisaxBenefits = () => {
                         <motion.p
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
-                            className="text-lg text-slate-500 dark:text-slate-400"
+                            className="text-base text-slate-500 dark:text-slate-400"
                         >
                             Organizations that achieve TISAX compliance gain immediate credibility within the global automotive network, unlocking new and lucrative partnership opportunities.
                         </motion.p>
@@ -87,7 +87,7 @@ const TisaxBenefits = () => {
                                 <div className="inline-flex items-center justify-center w-12 h-12 mb-4 transition-colors rounded-xl bg-brandAccent/20 backdrop-blur-md text-brandAccent group-hover:bg-brandAccent group-hover:text-brandDark">
                                     <benefit.icon className="w-6 h-6" />
                                 </div>
-                                <h3 className="mb-2 text-2xl font-black text-white">{benefit.title}</h3>
+                                <h3 className="mb-2 text-lg md:text-xl font-bold text-white">{benefit.title}</h3>
                                 <p className="max-w-sm text-sm transition-all duration-300 transform translate-y-4 opacity-0 text-white/70 group-hover:translate-y-0 group-hover:opacity-100">
                                     {benefit.desc}
                                 </p>

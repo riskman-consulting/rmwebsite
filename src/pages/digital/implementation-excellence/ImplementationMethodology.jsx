@@ -100,7 +100,7 @@
 //                         initial={{ opacity: 0, y: 20 }}
 //                         whileInView={{ opacity: 1, y: 0 }}
 //                         viewport={{ once: true }}
-//                         className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white"
+//                         className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white"
 //                     >
 //                         Implementation Methodology
 //                     </motion.h2>
@@ -109,7 +109,7 @@
 //                         whileInView={{ opacity: 1, y: 0 }}
 //                         viewport={{ once: true }}
 //                         transition={{ delay: 0.2 }}
-//                         className="text-lg text-slate-600 dark:text-slate-300"
+//                         className="text-base text-slate-600 dark:text-slate-300"
 //                     >
 //                         We ensure every RiskMan implementation starts with a structured, governed approach to requirements and data.
 //                     </motion.p>
@@ -298,10 +298,10 @@ const ImplementationMethodology = () => {
       <section className="relative py-16 overflow-hidden bg-bgLight dark:bg-bgDark">
             <div className="container relative z-10">
                 <div className="max-w-4xl mx-auto mb-16 text-center">
-                    <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+                    <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
                         Implementation Methodology
                     </h2>
-                    <p className="text-lg text-slate-600 dark:text-slate-300">
+                    <p className="text-base text-slate-600 dark:text-slate-300">
                         A structured approach ensures project success and minimizes risk.
                     </p>
                 </div>
@@ -428,11 +428,11 @@ const ImplementationMethodology = () => {
                                         Step {String(activeIndex + 1).padStart(2, '0')}
                                     </div>
 
-                                    <h3 className="mb-6 text-3xl font-bold leading-tight md:text-4xl text-brandDark dark:text-white">
+                                    <h3 className="mb-6 text-xl md:text-2xl lg:text-3xl font-bold leading-tight text-brandDark dark:text-white">
                                         {activeSteps[activeIndex].title}
                                     </h3>
 
-                                    <p className="mb-10 text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+                                    <p className="mb-10 text-base leading-relaxed text-slate-600 dark:text-slate-300">
                                         {activeSteps[activeIndex].desc}
                                     </p>
 
@@ -462,7 +462,7 @@ const ImplementationMethodology = () => {
                             onClick={() => setActiveIndex(idx)}
                         >
                             <div className="flex items-center justify-between mb-4">
-                                <h3 className={`text-xl font-bold ${activeIndex === idx ? 'text-white' : 'text-brandDark dark:text-white'}`}>
+                                <h3 className={`text-lg md:text-xl font-bold ${activeIndex === idx ? 'text-white' : 'text-brandDark dark:text-white'}`}>
                                     {step.title}
                                 </h3>
                                 <span className={`text-2xl font-black opacity-20 ${activeIndex === idx ? 'text-white' : 'text-brandPrimary'}`}>

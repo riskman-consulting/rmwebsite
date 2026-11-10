@@ -25,14 +25,14 @@ export const AllServicesGridSection = () => {
             Complete Portfolio
           </div>
 
-          <h2 className="mb-6 text-3xl font-bold md:text-4xl text-brandDark dark:text-white font-heading">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white font-heading">
             All{" "}
             <span className="text-brandPrimary dark:text-brandAccent">
               Services & Solutions
             </span>
           </h2>
 
-          <p className="max-w-3xl mx-auto text-lg text-brandNavy dark:text-gray-400">
+          <p className="max-w-3xl mx-auto text-base text-brandNavy dark:text-gray-400">
             Comprehensive risk management, compliance, and advisory services tailored to your industry
           </p>
         </motion.div>

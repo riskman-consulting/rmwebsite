@@ -5,7 +5,7 @@ function WhySoc2() {
     <section className="py-16 bg-brandDark text-white">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-12 text-center underline decoration-brandGold decoration-4 underline-offset-8">
+            <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-12 text-center underline decoration-brandGold decoration-4 underline-offset-8">
               Why SOC 2 Is Now a Sales Prerequisite
             </h2>
             <div className="grid md:grid-cols-2 gap-8">

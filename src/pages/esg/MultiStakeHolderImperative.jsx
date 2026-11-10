@@ -92,10 +92,10 @@
 //           <span className="text-xs font-bold tracking-[4px] uppercase text-brandPrimary dark:text-brandGold mb-4 block">
 //             Market Dynamics
 //           </span>
-//           <h3 className="mb-6 text-4xl font-black lg:text-5xl font-heading text-brandDark dark:text-surfaceLight">
+//           <h3 className="mb-6 text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark dark:text-surfaceLight">
 //             The Multi-Stakeholder Imperative
 //           </h3>
-//           <p className="max-w-2xl mx-auto text-lg text-brandDark/70 dark:text-surfaceLight/70">
+//           <p className="max-w-2xl mx-auto text-base text-brandDark/70 dark:text-surfaceLight/70">
 //             Multiple market forces are converging to make ESG excellence a core business necessity.
 //           </p>
 //         </div>
@@ -120,7 +120,7 @@
 
         
 //         <div className="mb-16 text-center">
-//           <h3 className="mb-4 text-3xl font-black lg:text-4xl font-heading text-brandDark dark:text-surfaceLight">
+//           <h3 className="mb-4 text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark dark:text-surfaceLight">
 //             ESG Maturity Ladder
 //           </h3>
 //           <p className="max-w-2xl mx-auto font-medium text-brandDark/60 dark:text-surfaceLight/60">
@@ -175,7 +175,7 @@
 //                       <div className="flex-1 text-center md:text-left">
 //                         <h4 className={`text-3xl font-black uppercase mb-1 ${data.textColor}`}>Level {data.level}: {data.title}</h4>
 //                         <p className="text-brandDark/40 dark:text-surfaceLight/40 text-xs font-bold uppercase tracking-[4px] mb-4">{data.subtitle}</p>
-//                         <p className="text-lg italic leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
+//                         <p className="text-base italic leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
 //                           "{data.description}"
 //                         </p>
 //                       </div>
@@ -223,10 +223,10 @@ const MultiStakeholderImperative = () => {
         
         {/* Minimalist Header */}
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight font-heading text-gray-900 md:text-4xl dark:text-white">
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-gray-900 dark:text-white">
             ESG Maturity <span className="text-brandPrimary dark:text-brandGold">Model</span>
           </h2>
-          <p className="max-w-2xl mx-auto text-lg text-gray-500 dark:text-gray-400">
+          <p className="max-w-2xl mx-auto text-base text-gray-500 dark:text-gray-400">
             A structured pathway for organizations evolving from basic compliance to transformative industry leadership.
           </p>
         </div>
@@ -275,10 +275,10 @@ const MultiStakeholderImperative = () => {
                 <span className="inline-block px-4 py-1 mb-4 text-sm font-bold tracking-widest text-brandPrimary dark:text-brandGold uppercase rounded-full bg-brandPrimary/10 dark:bg-brandGold/10">
                   {m.subtitle}
                 </span>
-                <h3 className="mb-6 text-4xl font-black text-gray-900 dark:text-white">
+                <h3 className="mb-6 text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white">
                   {m.title}
                 </h3>
-                <p className="text-xl leading-relaxed text-gray-600 dark:text-gray-300">
+                <p className="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300">
                   {m.desc}
                 </p>
               </div>

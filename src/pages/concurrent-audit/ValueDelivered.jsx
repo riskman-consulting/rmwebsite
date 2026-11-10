@@ -19,12 +19,12 @@
 //                     Value Delivered
 //                 </div>
 
-//                 <h2 className="mb-6 text-3xl font-extrabold leading-tight font-heading md:text-4xl text-brandLight">
+//                 <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandLight">
 //                     Impact Beyond Compliance
 //                 </h2>
 //                 <hr className="w-12 h-[2px] border-none bg-gradient-to-r from-brandGold to-brandAccent mb-8" />
 
-//                 <p className="text-lg font-light text-brandLight/70 mb-16 leading-relaxed max-w-[800px] font-sans">
+//                 <p className="text-base font-light text-brandLight/70 mb-16 leading-relaxed max-w-[800px] font-sans">
 //                     RiskMan's Concurrent Audit programs deliver measurable financial and operational impact. We transform assurance from a "check-the-box" requirement into a strategic lever for organizational efficiency and risk resilience.
 //                 </p>
 
@@ -104,12 +104,12 @@ const ValueDelivered = () => {
                     Value Delivered
                 </div>
 
-                <h2 className="mb-6 text-3xl font-bold leading-tight font-heading md:text-4xl text-brandDark dark:text-brandLight">
+                <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandDark dark:text-brandLight">
                     Impact Beyond Compliance
                 </h2>
                 <hr className="w-12 h-[2px] border-none bg-gradient-to-r from-brandGold to-brandAccent mb-8" />
 
-                <p className="text-lg text-brandNavy dark:text-white/70 mb-16 leading-relaxed max-w-[800px] font-sans">
+                <p className="text-base text-brandNavy dark:text-white/70 mb-16 leading-relaxed max-w-[800px] font-sans">
                     RiskMan's Concurrent Audit programs deliver measurable financial and operational impact. We transform assurance from a "check-the-box" requirement into a strategic lever for organizational efficiency and risk resilience.
                 </p>
 

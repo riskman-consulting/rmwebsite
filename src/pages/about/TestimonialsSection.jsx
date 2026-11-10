@@ -143,7 +143,7 @@ export default function TestimonialsSection() {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="mb-4 text-4xl font-bold text-start md:text-5xl text-stone-900 dark:text-white"
+          className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold text-start text-stone-900 dark:text-white"
         >
           Client
           <br />

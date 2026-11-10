@@ -28,8 +28,8 @@ const IntroductionSection = () => {
               About RiskMan
             </span>
 
-            <h2 className="mb-8 font-heading text-3xl md:text-4xl font-bold leading-tight text-brandDark dark:text-white">
-              <span className="font-serif italic font-medium text-brandGold">
+            <h2 className="mb-8 font-heading text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-brandDark dark:text-white">
+              <span className="text-brandGold">
                 Who
               </span>{" "}
               We Are

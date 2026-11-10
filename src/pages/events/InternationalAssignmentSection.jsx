@@ -144,11 +144,11 @@ export default function InternationalAssignments() {
               </span>
             </div>
 
-            <h2 className="mb-4 text-4xl font-bold md:text-5xl text-brandDark dark:text-white">
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
               International Assignments
             </h2>
 
-            <p className="max-w-2xl mx-auto text-lg text-brandNavy dark:text-white/70">
+            <p className="max-w-2xl mx-auto text-base text-brandNavy dark:text-white/70">
               A visual directory of consultant visits and strategic engagements.
             </p>
           </div>
@@ -187,7 +187,7 @@ export default function InternationalAssignments() {
                         <User className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-2xl font-bold text-brandDark dark:text-white">
+                        <h3 className="text-lg md:text-xl font-bold text-brandDark dark:text-white">
                           {active.person}
                         </h3>
                         <div className="flex items-center gap-2 text-sm font-medium text-brandNavy dark:text-brandAccent">
@@ -222,7 +222,7 @@ export default function InternationalAssignments() {
                   <h4 className="mb-3 text-xl font-bold text-brandDark dark:text-brandAccent">
                     {active.title}
                   </h4>
-                  <p className="text-lg leading-relaxed text-brandNavy dark:text-white/70">
+                  <p className="text-base leading-relaxed text-brandNavy dark:text-white/70">
                     {active.story}
                   </p>
                 </div>
@@ -318,7 +318,7 @@ function ImageGalleryModal({ images, onClose }) {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="sticky top-0 z-10 flex items-center justify-between px-6 py-4 border-b bg-surfaceLight dark:bg-surfaceDark">
-          <h3 className="text-lg font-bold text-brandDark dark:text-white">
+          <h3 className="text-lg md:text-xl font-bold text-brandDark dark:text-white">
             Engagement Gallery
           </h3>
           <button

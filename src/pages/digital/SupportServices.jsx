@@ -8,10 +8,10 @@
 //       <section className="relative py-20 lg:py-32 bg-gradient-to-b from-brandLight to-bgLight dark:from-surfaceDark dark:to-bgDark">
 //         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
 //           <div className="max-w-4xl">
-//             <h1 className="mb-6 text-4xl font-bold leading-tight font-heading md:text-5xl lg:text-6xl">
+//             <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading ">
 //               Sustaining Long-Term Success with <span className="text-brandPrimary dark:text-brandGold">Support Services</span> 
 //             </h1>
-//             <p className="mb-10 text-lg leading-relaxed md:text-xl opacity-90">
+//             <p className="mb-10 text-base md:text-lg leading-relaxed opacity-90">
 //               RiskMan ensures seamless transitions through rigorous testing, proactive change management, and continuous process optimization to maximize the lasting value of your digital investments. 
 //             </p>
 //             <div className="flex flex-wrap gap-4">
@@ -31,7 +31,7 @@
 //         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
 //           <div className="flex flex-col gap-12 lg:flex-row">
 //             <div className="lg:w-1/3">
-//               <h2 className="mb-4 text-3xl font-bold font-heading">Development Testing & UAT </h2>
+//               <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading">Development Testing & UAT </h2>
 //               <p className="opacity-80">Guarantee system reliability through comprehensive scenario-based validation and rigorous defect management protocols. </p>
 //             </div>
 //             <div className="grid grid-cols-1 gap-8 lg:w-2/3 md:grid-cols-2">
@@ -59,7 +59,7 @@
 //       {/* SECTION 3: CHANGE MANAGEMENT & ADOPTION */}
 //       <section className="py-20 bg-surfaceLight dark:bg-surfaceDark">
 //         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
-//           <h2 className="mb-4 text-3xl font-bold text-center font-heading">Change Management & Adoption </h2>
+//           <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold text-center font-heading">Change Management & Adoption </h2>
 //           <p className="max-w-3xl mx-auto mb-12 text-center opacity-80">Empower your workforce and drive high adoption rates through structured impact analysis and continuous engagement. </p>
           
 //           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -83,7 +83,7 @@
 //         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
 //           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
 //             <div>
-//               <h2 className="mb-8 text-3xl font-bold font-heading">Post Go-Live Hypercare </h2>
+//               <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold font-heading">Post Go-Live Hypercare </h2>
 //               <div className="space-y-8">
 //                 <div className="flex gap-4">
 //                   <div className="w-1 h-12 bg-brandGold"></div>
@@ -96,7 +96,7 @@
 //               </div>
 //             </div>
 //             <div>
-//               <h2 className="mb-8 text-3xl font-bold font-heading">Continuous Improvement </h2>
+//               <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold font-heading">Continuous Improvement </h2>
 //               <div className="space-y-8">
 //                 <div className="flex gap-4">
 //                   <div className="w-1 h-12 bg-brandAccent"></div>
@@ -115,8 +115,8 @@
 //       {/* SECTION 5: CTA */}
 //       <section className="py-20 text-center">
 //         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
-//           <h2 className="mb-6 text-3xl font-bold font-heading md:text-5xl">Ready to Sustain Your Success? </h2>
-//           <p className="mb-10 text-xl opacity-80">Ensure a smooth digital future with RiskMan’s dedicated Support Services.</p>
+//           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">Ready to Sustain Your Success? </h2>
+//           <p className="mb-10 text-base md:text-lg opacity-80">Ensure a smooth digital future with RiskMan’s dedicated Support Services.</p>
 //           <button className="px-12 py-4 font-bold transition-transform rounded-md shadow-xl bg-brandGold hover:bg-brandAccent text-brandDark hover:scale-105">
 //            Partner with Us 
 //           </button>
@@ -126,7 +126,7 @@
 //       {/* SECTION 6: FAQ */}
 //       <section className="py-20 border-t bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark">
 //         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
-//           <h2 className="mb-12 text-3xl font-bold font-heading">Frequently Asked Questions</h2>
+//           <h2 className="mb-12 text-2xl md:text-3xl lg:text-4xl font-bold font-heading">Frequently Asked Questions</h2>
 //           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
 //             {[
 //               { q: "How do you ensure high user adoption?", a: "Through role-based impact analysis, targeted training, and constant monitoring of adoption KPIs." },
@@ -164,10 +164,10 @@ const SupportServices = () => {
       {/* <section className="relative py-20 lg:py-32 bg-gradient-to-b from-brandLight to-bgLight dark:from-surfaceDark dark:to-bgDark">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="max-w-4xl">
-            <h1 className="mb-6 text-4xl font-bold leading-tight font-heading md:text-5xl lg:text-6xl">
+            <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading ">
               Sustaining Long-Term Success with <span className="text-brandPrimary dark:text-brandGold">Support Services</span> 
             </h1>
-            <p className="mb-10 text-lg leading-relaxed md:text-xl opacity-90">
+            <p className="mb-10 text-base md:text-lg leading-relaxed opacity-90">
               RiskMan ensures seamless transitions through rigorous testing, proactive change management, and continuous process optimization to maximize the lasting value of your digital investments. 
             </p>
             <div className="flex flex-wrap gap-4">
@@ -192,12 +192,12 @@ const SupportServices = () => {
       <div className="container relative px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
         <div className="max-w-3xl p-8 border shadow-2xl bg-white/10 backdrop-blur-md rounded-xl border-white/20">
           
-          <h1 className="mb-6 text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
+          <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight text-white ">
             Sustaining Long-Term Success with{" "}
             <span className="text-brandGold">Support Services</span>
           </h1>
 
-          <p className="mb-10 text-lg leading-relaxed text-white/90 md:text-xl">
+          <p className="mb-10 text-base md:text-lg leading-relaxed text-white/90 ">
             RiskMan ensures seamless transitions through rigorous testing,
             proactive change management, and continuous process optimization
             to maximize the lasting value of your digital investments.
@@ -222,7 +222,7 @@ const SupportServices = () => {
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="flex flex-col gap-12 lg:flex-row">
             <div className="lg:w-1/3">
-              <h2 className="mb-4 text-3xl font-bold font-heading">Development Testing & UAT</h2>
+              <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading">Development Testing & UAT</h2>
               <p className="opacity-80">Guarantee system reliability through comprehensive scenario-based validation and rigorous defect management protocols.</p>
             </div>
             <div className="grid grid-cols-1 gap-8 lg:w-2/3 md:grid-cols-2">
@@ -251,10 +251,10 @@ const SupportServices = () => {
       <section className="py-16 bg-gradient-to-br from-surfaceLight to-bgLight dark:from-surfaceDark dark:to-bgDark">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="mb-16 text-center">
-            <h2 className="mb-4 text-3xl font-bold font-heading md:text-4xl">
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
               Our <span className="text-brandPrimary dark:text-brandGold">UAT Approach</span> for Development Testing
             </h2>
-            <p className="max-w-3xl mx-auto text-lg opacity-80">
+            <p className="max-w-3xl mx-auto text-base opacity-80">
               We structure User Acceptance Testing to validate that RiskMan meets business requirements and is ready for real‑world use.
             </p>
           </div>
@@ -310,7 +310,7 @@ const SupportServices = () => {
                     <div className="absolute flex items-center justify-center w-12 h-12 font-bold text-white rounded-full shadow-lg -top-4 -left-4 bg-gradient-to-br from-brandPrimary to-brandGold">
                       {item.num}
                     </div>
-                    <h3 className="mb-3 text-xl font-bold text-brandNavy dark:text-brandGold group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
+                    <h3 className="mb-3 text-lg md:text-xl font-bold text-brandNavy dark:text-brandGold group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
                       {item.title}
                     </h3>
                     <p className="leading-relaxed opacity-80">
@@ -333,7 +333,7 @@ const SupportServices = () => {
       {/* SECTION 3: CHANGE MANAGEMENT & ADOPTION */}
       <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
-          <h2 className="mb-4 text-3xl font-bold text-center font-heading">Change Management & Adoption</h2>
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold text-center font-heading">Change Management & Adoption</h2>
           <p className="max-w-3xl mx-auto mb-12 text-center opacity-80">Empower your workforce and drive high adoption rates through structured impact analysis and continuous engagement.</p>
           
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -356,10 +356,10 @@ const SupportServices = () => {
       <section className="py-16 border-y border-borderLight dark:border-borderDark">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="mb-16 text-center">
-            <h2 className="mb-4 text-3xl font-bold font-heading md:text-4xl">
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
               Our <span className="text-brandPrimary dark:text-brandGold">Change Management</span> Approach
             </h2>
-            <p className="max-w-3xl mx-auto text-lg opacity-80">
+            <p className="max-w-3xl mx-auto text-base opacity-80">
               We manage the people side of change so RiskMan is adopted smoothly and delivers sustained value across the organization.
             </p>
           </div>
@@ -413,7 +413,7 @@ const SupportServices = () => {
                     {item.icon}
                   </div>
                   
-                  <h3 className="mb-4 text-xl font-bold text-brandNavy dark:text-brandGold group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
+                  <h3 className="mb-4 text-lg md:text-xl font-bold text-brandNavy dark:text-brandGold group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
                     {item.title}
                   </h3>
                   
@@ -435,7 +435,7 @@ const SupportServices = () => {
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
             <div>
-              <h2 className="mb-8 text-3xl font-bold font-heading">Post Go-Live Hypercare</h2>
+              <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold font-heading">Post Go-Live Hypercare</h2>
               <div className="space-y-8">
                 <div className="flex gap-4">
                   <div className="w-1 h-12 bg-brandGold"></div>
@@ -448,7 +448,7 @@ const SupportServices = () => {
               </div>
             </div>
             <div>
-              <h2 className="mb-8 text-3xl font-bold font-heading">Continuous Improvement</h2>
+              <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold font-heading">Continuous Improvement</h2>
               <div className="space-y-8">
                 <div className="flex gap-4">
                   <div className="w-1 h-12 bg-brandAccent"></div>
@@ -467,8 +467,8 @@ const SupportServices = () => {
       {/* SECTION 5: CTA */}
       <section className="py-16 text-center">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
-          <h2 className="mb-6 text-3xl font-bold font-heading md:text-5xl">Ready to Sustain Your Success?</h2>
-          <p className="mb-10 text-xl opacity-80">Ensure a smooth digital future with RiskMan's dedicated Support Services.</p>
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">Ready to Sustain Your Success?</h2>
+          <p className="mb-10 text-base md:text-lg opacity-80">Ensure a smooth digital future with RiskMan's dedicated Support Services.</p>
           <button className="px-12 py-4 font-bold transition-transform rounded-md shadow-xl bg-brandGold hover:bg-brandAccent text-brandDark hover:scale-105">
             Partner with Us 
           </button>
@@ -478,7 +478,7 @@ const SupportServices = () => {
       {/* SECTION 6: FAQ */}
       <section className="py-16 border-t bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
-          <h2 className="mb-12 text-3xl font-bold font-heading">Frequently Asked Questions</h2>
+          <h2 className="mb-12 text-2xl md:text-3xl lg:text-4xl font-bold font-heading">Frequently Asked Questions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
             {[
               { q: "How do you ensure high user adoption?", a: "Through role-based impact analysis, targeted training, and constant monitoring of adoption KPIs." },
@@ -532,11 +532,11 @@ export default SupportServices;
 //             <Shield className="w-4 h-4" />
 //             Enterprise Support Solutions
 //           </div>
-//           <h1 className="mb-6 text-4xl font-extrabold leading-[1.1] tracking-tight text-primary-foreground font-heading md:text-5xl lg:text-6xl">
+//           <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-[1.1] text-primary-foreground font-heading ">
 //             Sustaining Long-Term Success with{" "}
 //             <span className="brand-gradient-text">Support Services</span>
 //           </h1>
-//           <p className="mb-10 text-lg leading-relaxed md:text-xl text-primary-foreground/70">
+//           <p className="mb-10 text-base md:text-lg leading-relaxed text-primary-foreground/70">
 //             RiskMan ensures seamless transitions through rigorous testing,
 //             proactive change management, and continuous process optimization.
 //           </p>
@@ -592,10 +592,10 @@ export default SupportServices;
 //             <span className="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-widest uppercase rounded-full bg-accent/10 text-accent-foreground">
 //               Quality Assurance
 //             </span>
-//             <h2 className="mb-4 text-3xl font-bold font-heading lg:text-4xl text-foreground">
+//             <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-foreground">
 //               Development Testing & UAT
 //             </h2>
-//             <p className="text-lg leading-relaxed text-muted-foreground">
+//             <p className="text-base leading-relaxed text-muted-foreground">
 //               Guarantee system reliability through comprehensive scenario-based
 //               validation and rigorous defect management protocols.
 //             </p>
@@ -636,7 +636,7 @@ export default SupportServices;
 //               <div className="flex items-center justify-center w-12 h-12 mb-5 transition-colors duration-300 rounded-xl bg-accent/10 text-brand-gold group-hover:bg-accent group-hover:text-accent-foreground">
 //                 <item.icon className="w-6 h-6" />
 //               </div>
-//               <h3 className="mb-2 text-lg font-bold font-heading text-foreground">
+//               <h3 className="mb-2 text-lg md:text-xl font-bold font-heading text-foreground">
 //                 {item.title}
 //               </h3>
 //               <p className="text-sm leading-relaxed text-muted-foreground">
@@ -657,10 +657,10 @@ export default SupportServices;
 //         <span className="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-widest uppercase rounded-full bg-accent/10 text-accent-foreground">
 //           Methodology
 //         </span>
-//         <h2 className="mb-4 text-3xl font-bold font-heading lg:text-4xl text-foreground">
+//         <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-foreground">
 //           Our UAT Approach
 //         </h2>
-//         <p className="max-w-2xl mx-auto text-lg text-muted-foreground">
+//         <p className="max-w-2xl mx-auto text-base text-muted-foreground">
 //           Structured validation to ensure RiskMan meets business requirements
 //           and is ready for real-world use.
 //         </p>
@@ -712,7 +712,7 @@ export default SupportServices;
 //             <div className="mb-4 text-5xl font-extrabold transition-colors font-heading text-accent/20 group-hover:text-accent/40">
 //               {item.num}
 //             </div>
-//             <h3 className="mb-3 text-lg font-bold font-heading text-foreground">
+//             <h3 className="mb-3 text-lg md:text-xl font-bold font-heading text-foreground">
 //               {item.title}
 //             </h3>
 //             <p className="text-sm leading-relaxed text-muted-foreground">
@@ -733,10 +733,10 @@ export default SupportServices;
 //         <span className="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-widest uppercase rounded-full bg-accent/10 text-accent-foreground">
 //           People & Process
 //         </span>
-//         <h2 className="mb-4 text-3xl font-bold font-heading lg:text-4xl text-foreground">
+//         <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-foreground">
 //           Change Management & Adoption
 //         </h2>
-//         <p className="max-w-2xl mx-auto text-lg text-muted-foreground">
+//         <p className="max-w-2xl mx-auto text-base text-muted-foreground">
 //           Empower your workforce and drive high adoption rates through
 //           structured impact analysis.
 //         </p>
@@ -795,10 +795,10 @@ export default SupportServices;
 //         <span className="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-widest uppercase border rounded-full bg-brand-gold/10 text-brand-gold border-brand-gold/20">
 //           Framework
 //         </span>
-//         <h2 className="mb-4 text-3xl font-bold font-heading lg:text-4xl">
+//         <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
 //           Our Change Management Approach
 //         </h2>
-//         <p className="max-w-2xl mx-auto text-lg text-primary-foreground/60">
+//         <p className="max-w-2xl mx-auto text-base text-primary-foreground/60">
 //           Managing the people side of change so RiskMan delivers sustained
 //           value.
 //         </p>
@@ -850,7 +850,7 @@ export default SupportServices;
 //             <div className="flex items-center justify-center mb-6 transition-colors w-14 h-14 rounded-xl bg-brand-gold/10 group-hover:bg-brand-gold/20">
 //               <item.icon className="w-7 h-7 text-brand-gold" />
 //             </div>
-//             <h3 className="mb-3 text-lg font-bold font-heading text-primary-foreground">
+//             <h3 className="mb-3 text-lg md:text-xl font-bold font-heading text-primary-foreground">
 //               {item.title}
 //             </h3>
 //             <p className="text-sm leading-relaxed text-primary-foreground/60">
@@ -869,7 +869,7 @@ export default SupportServices;
 //       <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
 //         {/* Hypercare */}
 //         <div className="p-10 rounded-3xl bg-brand-dark text-primary-foreground">
-//           <h2 className="mb-8 text-3xl font-bold font-heading">
+//           <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold font-heading">
 //             Post Go-Live Hypercare
 //           </h2>
 //           <div className="space-y-6">
@@ -905,7 +905,7 @@ export default SupportServices;
 
 //         {/* Continuous Improvement */}
 //         <div className="p-10 border rounded-3xl bg-card border-border">
-//           <h2 className="mb-8 text-3xl font-bold font-heading text-foreground">
+//           <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-foreground">
 //             Continuous Improvement
 //           </h2>
 //           <div className="space-y-6">
@@ -949,10 +949,10 @@ export default SupportServices;
 //       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-brand-gold blur-[200px]" />
 //     </div>
 //     <div className="container relative text-center">
-//       <h2 className="mb-6 text-3xl font-bold font-heading text-primary-foreground md:text-5xl">
+//       <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-primary-foreground ">
 //         Ready to Sustain Your Success?
 //       </h2>
-//       <p className="mb-10 text-xl text-primary-foreground/60">
+//       <p className="mb-10 text-base md:text-lg text-primary-foreground/60">
 //         Ensure a smooth digital future with RiskMan's dedicated Support
 //         Services.
 //       </p>
@@ -994,7 +994,7 @@ export default SupportServices;
 //     <section className="py-20 lg:py-28 bg-secondary">
 //       <div className="container">
 //         <div className="max-w-3xl mx-auto">
-//           <h2 className="mb-12 text-3xl font-bold text-center font-heading text-foreground">
+//           <h2 className="mb-12 text-2xl md:text-3xl lg:text-4xl font-bold text-center font-heading text-foreground">
 //             Frequently Asked Questions
 //           </h2>
 //           <div className="space-y-4">

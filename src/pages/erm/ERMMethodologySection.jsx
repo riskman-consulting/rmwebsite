@@ -46,7 +46,7 @@ const ERMMethodologySection = () => {
           viewport={{ once: true }}
           className="mb-8 text-center"
         >
-          <h2 className="text-3xl font-bold font-heading text-brandDark dark:text-brandLight md:text-4xl">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-brandLight ">
             Our <span className="text-brandPrimary dark:text-brandAccent">ERM Methodology</span>
           </h2>
           <p className="max-w-3xl mx-auto mt-6 text-brandNavy/70 dark:text-brandLight/70">

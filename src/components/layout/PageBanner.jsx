@@ -43,11 +43,11 @@
 //         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/80">
 //           {title.split(' ')[0]}
 //         </p>
-//         <h1 className="mt-4 text-4xl font-extrabold leading-tight md:text-5xl lg:text-6xl">
+//         <h1 className="mt-4 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight ">
 //           {title}
 //         </h1>
 //         {subheading && (
-//           <p className="max-w-3xl mx-auto mt-6 text-lg md:text-xl text-white/90">
+//           <p className="max-w-3xl mx-auto mt-6 text-base md:text-lg text-white/90">
 //             {subheading}
 //           </p>
 //         )}
@@ -127,12 +127,12 @@ export default function PageBanner({
           {title.split(" ")[0]}
         </p>
 
-        <h1 className="mt-4 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
+        <h1 className="mt-4 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight ">
           {title}
         </h1>
 
         {subheading && (
-          <p className="max-w-3xl mx-auto mt-6 text-lg md:text-xl text-slate-600 dark:text-slate-300">
+          <p className="max-w-3xl mx-auto mt-6 text-base md:text-lg text-slate-600 dark:text-slate-300">
             {subheading}
           </p>
         )}

@@ -26,12 +26,12 @@
 //                         viewport={{ once: true }}
 //                         transition={{ duration: 0.8 }}
 //                     >
-//                         <h2 className="mb-6 text-3xl font-extrabold leading-tight font-heading md:text-4xl text-brandLight">
+//                         <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandLight">
 //                             Assurance Powered by Analytics
 //                         </h2>
 //                         <hr className="w-12 h-[2px] border-none bg-gradient-to-r from-brandGold to-brandAccent mb-8" />
 
-//                         <p className="mb-8 font-sans text-lg font-light leading-relaxed text-brandLight/70">
+//                         <p className="mb-8 font-sans text-base font-light leading-relaxed text-brandLight/70">
 //                             While our methodology is people-driven, our execution is technology-enabled. RiskMan leverages advanced data analytics and continuous monitoring tools to gain 100% visibility into transaction universes — moving beyond sampling to comprehensive oversight.
 //                         </p>
 
@@ -113,7 +113,7 @@ const TechnologyEnablement = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="mb-6 text-3xl font-bold leading-tight font-heading md:text-4xl text-brandDark dark:text-white">
+                        <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandDark dark:text-white">
                             Assurance Powered by Analytics
                         </h2>
                         <hr className="w-12 h-[2px] border-none bg-gradient-to-r from-brandGold to-brandAccent mb-8" />

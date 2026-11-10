@@ -17,12 +17,12 @@ export default function PartnerSection({ data }) {
           viewport={{ once: true }}
           className="mb-12 text-center"
         >
-          <h2 className="mb-6 text-4xl font-bold md:text-5xl text-brandDark dark:text-white">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
             {data.title}
           </h2>
 
           {data.description && (
-            <p className="max-w-3xl mx-auto text-lg leading-relaxed text-brandNavy dark:text-gray-400">
+            <p className="max-w-3xl mx-auto text-base leading-relaxed text-brandNavy dark:text-gray-400">
               {data.description}
             </p>
           )}
@@ -46,7 +46,7 @@ export default function PartnerSection({ data }) {
               </div>
 
               {/* Title */}
-              <h3 className="mb-3 text-lg font-bold transition-colors duration-300 text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
+              <h3 className="mb-3 text-lg md:text-xl font-bold transition-colors duration-300 text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
                 {service.name}
               </h3>
 

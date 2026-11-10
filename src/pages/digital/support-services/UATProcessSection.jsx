@@ -20,7 +20,7 @@
 
 //       <div className="container relative z-10 px-4 mx-auto sm:px-6 lg:px-8">
 //         <div className="mb-16 text-center">
-//           <h2 className="mb-4 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+//           <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //             UAT Approach
 //           </h2>
 //           <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
@@ -50,7 +50,7 @@
 //                 <div className="flex items-center justify-center w-16 h-16 mb-6 text-xl font-bold transition-all duration-300 bg-white border-4 rounded-full shadow-lg dark:bg-surfaceDark border-brandLight dark:border-gray-700 text-brandPrimary dark:text-brandAccent group-hover:border-brandPrimary dark:group-hover:border-brandAccent group-hover:scale-110">
 //                   {step.number}
 //                 </div>
-//                 <h3 className="px-2 mb-3 text-lg font-bold text-brandDark dark:text-white">{step.title}</h3>
+//                 <h3 className="px-2 mb-3 text-lg md:text-xl font-bold text-brandDark dark:text-white">{step.title}</h3>
 //                 <p className="px-2 text-sm text-gray-600 dark:text-gray-400">{step.description}</p>
 //               </div>
 //             </motion.div>
@@ -71,7 +71,7 @@
 //               <div className="absolute -left-[21px] top-0 w-10 h-10 rounded-full bg-white dark:bg-surfaceDark border-4 border-brandPrimary flex items-center justify-center text-sm font-bold text-brandPrimary dark:text-brandAccent shadow-md">
 //                 {step.number}
 //               </div>
-//               <h3 className="mb-2 text-xl font-bold text-brandDark dark:text-white">{step.title}</h3>
+//               <h3 className="mb-2 text-lg md:text-xl font-bold text-brandDark dark:text-white">{step.title}</h3>
 //               <p className="text-gray-600 dark:text-gray-300">{step.description}</p>
 //             </motion.div>
 //           ))}
@@ -190,7 +190,7 @@ const ApproachSection = () => {
           <div className="grid gap-16 lg:grid-cols-2">
         
             <div>
-              <h3 className="inline-block pb-2 mb-6 text-2xl font-bold border-b-2 text-brandPrimary dark:text-brandAccent border-brandAccent">
+              <h3 className="inline-block pb-2 mb-6 text-lg md:text-xl font-bold border-b-2 text-brandPrimary dark:text-brandAccent border-brandAccent">
                 BRD Finalization Approach
               </h3>
               <p className="mb-8 text-brandNavy dark:text-white/70">
@@ -233,7 +233,7 @@ const ApproachSection = () => {
 
             
             <div>
-              <h3 className="inline-block pb-2 mb-6 text-2xl font-bold border-b-2 text-brandPrimary dark:text-brandAccent border-brandAccent">
+              <h3 className="inline-block pb-2 mb-6 text-lg md:text-xl font-bold border-b-2 text-brandPrimary dark:text-brandAccent border-brandAccent">
                 Master Data Migration Approach
               </h3>
               <p className="mb-8 text-brandNavy dark:text-white/70">
@@ -283,7 +283,7 @@ const ApproachSection = () => {
           {/* Header */}
           <div className="flex items-center mb-12 md:mb-16">
             <div className="w-1.5 h-14 md:h-16 bg-brandPrimary dark:bg-brandAccent mr-4"></div>
-            <h2 className="text-3xl font-bold font-heading md:text-4xl text-brandPrimary dark:text-brandAccent">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandPrimary dark:text-brandAccent">
               UAT Approach
             </h2>
           </div>

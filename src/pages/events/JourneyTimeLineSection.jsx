@@ -46,7 +46,7 @@ const RiskManTimeline = () => {
             Professional Journey
           </motion.div>
  
-          <h1 className="mb-8 text-6xl font-black tracking-tighter md:text-7xl text-brandDark dark:text-brandLight font-heading">
+          <h1 className="mb-8 text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-brandDark dark:text-brandLight font-heading">
             How it <span className="italic text-brandPrimary dark:text-brandAccent">Began</span>
           </h1>
  
@@ -103,7 +103,7 @@ const RiskManTimeline = () => {
                   <span className="text-[10px] font-black uppercase tracking-tighter text-brandPrimary dark:text-brandAccent block mb-1">
                     {item.title}
                   </span>
-                  <h2 className="text-5xl font-black leading-none text-brandDark dark:text-brandLight font-heading">
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-none text-brandDark dark:text-brandLight font-heading">
                     {item.year.split('-')[0]}
                   </h2>
                 </div>

@@ -7,8 +7,8 @@ function DefinitionSection() {
       <div className="container">
         <div className="grid items-start gap-16 lg:grid-cols-2">
           <div>
-            <h2 className="mb-6 text-3xl font-bold font-heading">What Is SOC Compliance?</h2>
-            <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading">What Is SOC Compliance?</h2>
+            <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
               SOC compliance is an AICPA-based framework where independent CPAs assess whether your internal controls are properly designed and, where required, operate effectively. It converts control quality into a reusable, recognized assurance asset for customers, auditors, and regulators.
             </p>
           </div>

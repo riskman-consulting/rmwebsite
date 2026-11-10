@@ -96,7 +96,7 @@ const ComplianceSolutions = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-3xl font-bold font-heading text-brandDark dark:text-white sm:text-4xl lg:text-5xl"
+                        className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white "
                     >
                         Comprehensive Compliance Solutions
                     </motion.h2>
@@ -105,7 +105,7 @@ const ComplianceSolutions = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="max-w-3xl mx-auto mt-6 text-lg text-slate-600 dark:text-slate-400"
+                        className="max-w-3xl mx-auto mt-6 text-base text-slate-600 dark:text-slate-400"
                     >
                         RiskMan provides a suite of specialized services designed to fortify your security posture and meet stringent international standards.
                     </motion.p>
@@ -151,7 +151,7 @@ const ComplianceSolutions = () => {
 
                                 {/* Content section */}
                                 <div className="p-6">
-                                    <h3 className="text-xl font-bold transition-colors font-heading text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
+                                    <h3 className="text-lg md:text-xl font-bold transition-colors font-heading text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
                                         {service.title}
                                     </h3>
 

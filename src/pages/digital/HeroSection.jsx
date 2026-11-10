@@ -13,13 +13,13 @@
 //           <span className="inline-block px-4 py-1.5 mb-4 text-sm font-bold tracking-widest uppercase bg-brandPrimary/10 dark:bg-brandAccent/20 text-brandPrimary dark:text-brandAccent rounded-full border border-brandPrimary/20 dark:border-brandAccent/30">
 //             Digital Evolution
 //           </span>
-//           <h1 className="mb-6 text-2xl font-extrabold leading-tight md:text-3xl lg:text-4xl text-brandDark dark:text-brandLight">
+//           <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight text-brandDark dark:text-brandLight">
 //             Elevate Your Enterprise Through{" "}
 //             <span className="text-brandPrimary dark:text-brandAccent">
 //               Digital Evolution
 //             </span>
 //           </h1>
-//           <p className="max-w-2xl mx-auto mb-10 text-lg leading-relaxed md:text-xl text-brandNavy/70 dark:text-brandLight/70 lg:mx-0">
+//           <p className="max-w-2xl mx-auto mb-10 text-base md:text-lg leading-relaxed text-brandNavy/70 dark:text-brandLight/70 lg:mx-0">
 //             RiskMan empowers your transformation journey by combining
 //             governance-driven execution with technical implementation excellence
 //             to deliver measurable business impact.

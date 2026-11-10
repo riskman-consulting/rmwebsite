@@ -6,14 +6,14 @@ export default function RegulatorySection() {
     <section className="py-16 bg-bgLight dark:bg-bgDark">
         <div className="container">
           <div className="max-w-3xl mb-16">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">Regulatory Landscape Mapping</h2>
-            <p className="text-gray-600 dark:text-gray-300 text-lg">Organizations must navigate a dense web of overlapping regulations that vary by industry and geographic location.</p>
+            <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-6">Regulatory Landscape Mapping</h2>
+            <p className="text-gray-600 dark:text-gray-300 text-base">Organizations must navigate a dense web of overlapping regulations that vary by industry and geographic location.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {landscapeMapping.map((item, idx) => (
               <div key={idx} className="h-full p-8 border border-borderLight dark:border-borderDark rounded-2xl hover:border-brandPrimary transition-all bg-surfaceLight dark:bg-surfaceDark">
                 <div className="mb-6">{item.icon}</div>
-                <h3 className="font-heading text-xl font-bold mb-3">{item.title}</h3>
+                <h3 className="font-heading text-lg md:text-xl font-bold mb-3">{item.title}</h3>
                 <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}

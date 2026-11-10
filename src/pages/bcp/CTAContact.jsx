@@ -9,7 +9,7 @@ const CTAContact = () => {
 
           {/* LEFT – MESSAGE */}
           <div>
-            <h2 className="mb-4 text-2xl font-semibold text-white font-heading md:text-3xl dark:text-brandAccent">
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading dark:text-brandAccent">
               Strengthen Your Business Continuity Readiness
             </h2>
             <p className="mb-6 font-sans text-base leading-relaxed md:text-lg text-brandLight">

@@ -995,7 +995,7 @@ export default function BlogTemplate({ blog }) {
           <div className="text-6xl text-brandPrimary dark:text-brandAccent">
             !
           </div>
-          <p className="text-lg font-semibold text-brandNavy dark:text-gray-400">
+          <p className="text-base font-semibold text-brandNavy dark:text-gray-400">
             Insights article not found.
           </p>
           <Link
@@ -1092,7 +1092,7 @@ export default function BlogTemplate({ blog }) {
           )}
 
           {/* Title */}
-          <h1 className="mb-4 text-xl md:text-2xl lg:text-3xl font-bold font-heading leading-[1.2] text-brandDark dark:text-white">
+          <h1 className="mb-4 text-[1.75rem] md:text-4xl lg:text-5xl font-bold font-heading leading-[1.2] text-brandDark dark:text-white">
             {blog.title}
           </h1>
 

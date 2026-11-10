@@ -23,12 +23,12 @@
 //                     Operating Model
 //                 </div>
 
-//                 <h2 className="mb-6 text-3xl font-extrabold leading-tight font-heading md:text-4xl text-brandLight">
+//                 <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandLight">
 //                     How RiskMan Designs & Delivers
 //                 </h2>
 //                 <hr className="w-12 h-[2px] border-none bg-gradient-to-r from-brandGold to-brandAccent mb-8" />
 
-//                 <p className="text-lg font-light text-brandLight/70 mb-16 leading-relaxed max-w-[800px] font-sans">
+//                 <p className="text-base font-light text-brandLight/70 mb-16 leading-relaxed max-w-[800px] font-sans">
 //                     RiskMan's Concurrent Audit operating model is designed for scalability, precision, and global applicability. Each engagement follows a structured lifecycle — ensuring that audit programs evolve with the organization's risk profile.
 //                 </p>
 
@@ -114,12 +114,12 @@ const OperatingModel = () => {
                     Operating Model
                 </div>
 
-                <h2 className="mb-6 text-3xl font-bold leading-tight font-heading md:text-4xl text-brandDark dark:text-brandLight">
+                <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandDark dark:text-brandLight">
                     How RiskMan Designs & Delivers
                 </h2>
                 <hr className="w-12 h-[2px] border-none bg-gradient-to-r from-brandGold to-brandAccent mb-8" />
 
-                <p className="text-lg font-light text-brandNavy dark:text-white/70 mb-16 leading-relaxed max-w-[800px] font-sans">
+                <p className="text-base font-light text-brandNavy dark:text-white/70 mb-16 leading-relaxed max-w-[800px] font-sans">
                     RiskMan's Concurrent Audit operating model is designed for scalability, precision, and global applicability. Each engagement follows a structured lifecycle — ensuring that audit programs evolve with the organization's risk profile.
                 </p>
 

@@ -55,7 +55,7 @@ export default function CareersPage() {
             Join the Team
           </motion.span>
 
-          <h1 className="mb-8 text-5xl font-bold tracking-tight md:text-7xl">
+          <h1 className="mb-8 text-[1.75rem] md:text-4xl lg:text-5xl font-bold ">
             Work that <span className="text-brandDark dark:text-brandAccent">matters.</span>
           </h1>
 
@@ -99,7 +99,7 @@ export default function CareersPage() {
                   </Link>
                 </div>
 
-                <h3 className="mb-2 text-xl font-bold transition-colors group-hover:text-brandPrimary">
+                <h3 className="mb-2 text-lg md:text-xl font-bold transition-colors group-hover:text-brandPrimary">
                   <Link to={getJobPath(job)} onClick={(e) => e.stopPropagation()}>
                     {job.title}
                   </Link>
@@ -166,7 +166,7 @@ export default function CareersPage() {
                   <FaChevronLeft /> BACK TO OPPORTUNITIES
                 </button>
 
-                <h2 className="mb-4 text-3xl font-black md:text-4xl">
+                <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold ">
                   {selectedJob.title}
                 </h2>
 

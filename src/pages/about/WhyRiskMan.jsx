@@ -60,14 +60,14 @@ const WhyRiskman = () => {
             Our Advantage
           </span>
           
-          <h2 className="mb-6 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
+          <h2 className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
             Why{" "}
-            <span className="font-serif italic font-medium text-brandGold">
+            <span className="text-brandGold">
               RiskMan
             </span>
           </h2>
           
-          <p className="text-lg leading-relaxed text-brandDark/70 dark:text-white/70">
+          <p className="text-base leading-relaxed text-brandDark/70 dark:text-white/70">
             We operate with a singular focus on performance and integrity, guided
             by the following principles to meet the complex needs of modern
             organizations.
@@ -93,7 +93,7 @@ const WhyRiskman = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="mb-3 text-xl font-bold text-brandDark dark:text-white">
+                <h3 className="mb-3 text-lg md:text-xl font-bold text-brandDark dark:text-white">
                   {item.title}
                 </h3>
                 <p className="leading-relaxed text-brandDark/70 dark:text-white/70">

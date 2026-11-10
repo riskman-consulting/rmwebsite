@@ -36,7 +36,7 @@ export default function FAQSection() {
             Common Questions
           </div>
 
-          <h2 className="mb-6 text-3xl font-bold leading-tight md:text-4xl font-heading text-brandDark dark:text-white">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandDark dark:text-white">
             Frequently Asked Questions
           </h2>
 

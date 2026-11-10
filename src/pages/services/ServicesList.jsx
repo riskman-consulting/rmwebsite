@@ -137,7 +137,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mb-6 text-5xl font-bold leading-tight text-white md:text-7xl font-heading"
+          className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight text-white font-heading"
         >
           Comprehensive{" "}
           <span className="text-brandAccent">
@@ -150,7 +150,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="max-w-2xl mx-auto mb-8 text-lg leading-relaxed text-white/80 md:text-xl"
+          className="max-w-2xl mx-auto mb-8 text-base md:text-lg leading-relaxed text-white/80 "
         >
           Enterprise-grade advisory across risk management, compliance, cybersecurity, and strategic assurance
         </motion.p>
@@ -223,7 +223,7 @@ const StickyServicesSection = () => {
               </div>
 
               {/* Title */}
-              <h2 className="text-4xl font-bold leading-tight md:text-5xl lg:text-6xl text-brandDark dark:text-white font-heading">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-brandDark dark:text-white font-heading">
                 Services That{" "}
                 <span className="text-brandPrimary dark:text-brandAccent">
                   Drive Results
@@ -231,7 +231,7 @@ const StickyServicesSection = () => {
               </h2>
 
               {/* Description */}
-              <p className="text-lg leading-relaxed text-brandNavy dark:text-gray-400">
+              <p className="text-base leading-relaxed text-brandNavy dark:text-gray-400">
                 From comprehensive risk assessments to cutting-edge cybersecurity solutions, we deliver tailored services that protect and empower your organization.
               </p>
 
@@ -405,7 +405,7 @@ const ServiceCardLarge = ({ service, index }) => {
             </div>
 
             {/* Title - Smaller */}
-            <h3 className="text-xl font-bold text-brandDark dark:text-white font-heading">
+            <h3 className="text-lg md:text-xl font-bold text-brandDark dark:text-white font-heading">
               {service.title}
             </h3>
 
@@ -449,14 +449,14 @@ const AllServicesGrid = () => {
             Complete Portfolio
           </div>
 
-          <h2 className="mb-6 text-4xl font-bold md:text-5xl text-brandDark dark:text-white font-heading">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white font-heading">
             All{" "}
             <span className="text-brandPrimary dark:text-brandAccent">
               Services & Solutions
             </span>
           </h2>
 
-          <p className="max-w-3xl mx-auto text-lg text-brandNavy dark:text-gray-400">
+          <p className="max-w-3xl mx-auto text-base text-brandNavy dark:text-gray-400">
             Comprehensive risk management, compliance, and advisory services tailored to your industry
           </p>
         </motion.div>
@@ -533,7 +533,7 @@ const ServiceCardCompact = ({ service, index }) => {
             </motion.div>
 
             {/* Title */}
-            <h3 className="text-xl font-bold text-brandDark dark:text-white font-heading">
+            <h3 className="text-lg md:text-xl font-bold text-brandDark dark:text-white font-heading">
               {service.title}
             </h3>
 
@@ -615,12 +615,12 @@ const CapabilitiesSection = () => {
             Our Capabilities
           </div>
 
-          <h2 className="mb-6 text-4xl font-bold text-white md:text-5xl font-heading">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading">
             Why Choose{" "}
             <span className="text-brandAccent">RiskMan</span>
           </h2>
 
-          <p className="max-w-3xl mx-auto text-lg text-white/80">
+          <p className="max-w-3xl mx-auto text-base text-white/80">
             Industry-leading expertise backed by proven methodologies and cutting-edge technology
           </p>
         </motion.div>
@@ -650,7 +650,7 @@ const CapabilitiesSection = () => {
               </div>
 
               {/* Title */}
-              <h3 className="mb-3 text-xl font-bold text-white font-heading">
+              <h3 className="mb-3 text-lg md:text-xl font-bold text-white font-heading">
                 {item.title}
               </h3>
 
@@ -692,13 +692,13 @@ const CTASection = () => {
           className="space-y-8"
         >
           {/* Title */}
-          <h2 className="text-4xl font-bold text-white md:text-6xl font-heading">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading">
             Ready to Strengthen Your{" "}
             <span className="text-brandAccent">Risk Posture?</span>
           </h2>
 
           {/* Description */}
-          <p className="max-w-3xl mx-auto text-lg leading-relaxed text-white/80 md:text-xl">
+          <p className="max-w-3xl mx-auto text-base md:text-lg leading-relaxed text-white/80 ">
             Partner with RiskMan for proven frameworks, pragmatic execution, and measurable resilience
           </p>
 

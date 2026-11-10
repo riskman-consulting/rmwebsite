@@ -102,7 +102,7 @@ const IndustryCard = ({ industry, index }) => {
             {/* Orange circle bullet + Title */}
             <div className="flex items-center gap-3">
               <div className="flex-shrink-0 w-3 h-3 rounded-full bg-brandGold dark:bg-brandAccent" />
-              <h3 className="text-2xl font-bold text-brandDark dark:text-white">
+              <h3 className="text-lg md:text-xl font-bold text-brandDark dark:text-white">
                 {industry.title}
               </h3>
             </div>
@@ -175,7 +175,7 @@ export default function IndustriesList() {
             {/* Main Heading */}
             <motion.h1
               variants={fadeInUp}
-              className="mb-8 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl font-heading text-brandDark dark:text-white"
+              className="mb-8 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading text-brandDark dark:text-white"
             >
               Tailored to Your <span className="text-brandPrimary dark:text-brandAccent">Industry</span>
             </motion.h1>
@@ -183,7 +183,7 @@ export default function IndustriesList() {
             {/* Description */}
             <motion.p
               variants={fadeInUp}
-              className="max-w-3xl text-lg leading-relaxed md:text-xl text-brandNavy dark:text-gray-300"
+              className="max-w-3xl text-base md:text-lg leading-relaxed text-brandNavy dark:text-gray-300"
             >
               RiskMan Consulting delivers specialized risk advisory, compliance, and ESG services across Banking, Manufacturing, Healthcare, Technology, Retail, and more industry sectors.
             </motion.p>
@@ -233,11 +233,11 @@ export default function IndustriesList() {
               </p>
             </div>
  
-            <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
               Deep Sector Knowledge, Seamless Execution.
             </h2>
  
-            <p className="text-lg leading-relaxed text-brandNavy dark:text-gray-400">
+            <p className="text-base leading-relaxed text-brandNavy dark:text-gray-400">
               In complex risk management, one size never fits all. By focusing on your industry's unique requirements - regulatory standards, compliance protocols, operational frameworks, and sector-specific challenges - we ensure compliance, reduce risk, and optimize outcomes. Our teams speak your language and anticipate challenges before they arise.
             </p>
           </motion.div>
@@ -258,11 +258,11 @@ export default function IndustriesList() {
               Specialized by Sector
             </p>
  
-            <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
               Tailored Industry Solutions
             </h2>
  
-            <p className="max-w-3xl mx-auto text-lg text-brandNavy dark:text-gray-400">
+            <p className="max-w-3xl mx-auto text-base text-brandNavy dark:text-gray-400">
               Designed for sector-specific regulatory, operational, and strategic challenges
             </p>
           </motion.div>
@@ -289,7 +289,7 @@ export default function IndustriesList() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
               Industry-Specific Excellence
             </h2>
           </motion.div>
@@ -324,7 +324,7 @@ export default function IndustriesList() {
                   {item.icon}
                 </div>
  
-                <h3 className="mb-4 text-xl font-bold text-brandDark dark:text-white">
+                <h3 className="mb-4 text-lg md:text-xl font-bold text-brandDark dark:text-white">
                   {item.title}
                 </h3>
  
@@ -346,11 +346,11 @@ export default function IndustriesList() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h2 className="text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
               Ready to Transform Your Industry Resilience?
             </h2>
  
-            <p className="max-w-3xl mx-auto text-xl text-brandNavy dark:text-gray-400">
+            <p className="max-w-3xl mx-auto text-base md:text-lg text-brandNavy dark:text-gray-400">
               Partner with RiskMan for industry-leading risk management and compliance solutions
             </p>
  

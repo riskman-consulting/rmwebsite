@@ -17,10 +17,10 @@ const Governance = () => {
 
           <div>
             <p className="mb-3 text-sm font-semibold tracking-wide uppercase text-brandPrimary dark:text-brandGold">Value Proposition</p>
-            <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
               Why Risk Governance Matters
             </h2>
-            <p className="mb-8 text-lg text-gray-600 dark:text-gray-400">
+            <p className="mb-8 text-base text-gray-600 dark:text-gray-400">
               By adopting a formal risk framework, organizations can reduce the frequency of crises and improve their overall decision-making accuracy.
             </p>
 
@@ -28,21 +28,21 @@ const Governance = () => {
               <div className="flex gap-4">
                 <CheckCircle2 className="w-6 h-6 mt-1 text-brandGold shrink-0" />
                 <div>
-                  <h3 className="mb-2 text-xl font-bold text-brandDark dark:text-white">Improved Governance</h3>
+                  <h3 className="mb-2 text-lg md:text-xl font-bold text-brandDark dark:text-white">Improved Governance</h3>
                   <p className="text-gray-600 dark:text-gray-400">Ensures that risk management is integrated into all organizational activities and strategic planning.</p>
                 </div>
               </div>
               <div className="flex gap-4">
                 <CheckCircle2 className="w-6 h-6 mt-1 text-brandGold shrink-0" />
                 <div>
-                  <h3 className="mb-2 text-xl font-bold text-brandDark dark:text-white">Increased Success Rate</h3>
+                  <h3 className="mb-2 text-lg md:text-xl font-bold text-brandDark dark:text-white">Increased Success Rate</h3>
                   <p className="text-gray-600 dark:text-gray-400">Minimizes negative surprises and improves the likelihood of achieving your core business goals.</p>
                 </div>
               </div>
               <div className="flex gap-4">
                 <CheckCircle2 className="w-6 h-6 mt-1 text-brandGold shrink-0" />
                 <div>
-                  <h3 className="mb-2 text-xl font-bold text-brandDark dark:text-white">Enhanced Resilience</h3>
+                  <h3 className="mb-2 text-lg md:text-xl font-bold text-brandDark dark:text-white">Enhanced Resilience</h3>
                   <p className="text-gray-600 dark:text-gray-400">Prepares the organization to respond effectively to rapid changes and market disruptions.</p>
                 </div>
               </div>

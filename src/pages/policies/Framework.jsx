@@ -19,8 +19,8 @@
 //       </defs>
 //       <circle cx={cx} cy={cy} r={r + 30} fill="none" className="stroke-brandPrimary dark:stroke-[#004080]" strokeWidth="2" strokeDasharray="6,4" opacity="0.4" />
 //       <circle cx={cx} cy={cy} r="38" className="fill-brandPrimary dark:fill-[url(#lcg)]" />
-//       <text x={cx} y={cy - 5} textAnchor="middle" className="fill-white dark:fill-brandAccent" fontSize="10" fontWeight="700" fontFamily="Montserrat, sans-serif">POLICY</text>
-//       <text x={cx} y={cy + 10} textAnchor="middle" className="fill-white dark:fill-brandAccent" fontSize="10" fontWeight="700" fontFamily="Montserrat, sans-serif">LIFECYCLE</text>
+//       <text x={cx} y={cy - 5} textAnchor="middle" className="fill-white dark:fill-brandAccent" fontSize="10" fontWeight="700" fontFamily="Inter, sans-serif">POLICY</text>
+//       <text x={cx} y={cy + 10} textAnchor="middle" className="fill-white dark:fill-brandAccent" fontSize="10" fontWeight="700" fontFamily="Inter, sans-serif">LIFECYCLE</text>
 //       {phases.map((p, i) => {
 //         const rad = (p.angle * Math.PI) / 180;
 //         const x = cx + r * Math.cos(rad);
@@ -33,10 +33,10 @@
 //             <circle cx={x} cy={y} r="34" className="fill-brandNavy dark:fill-brandDark stroke-brandPrimary dark:stroke-brandAccent" strokeWidth="1.5">
 //               <animate attributeName="r" from="0" to="34" dur="0.5s" begin={`${i * 0.12}s`} fill="freeze" />
 //             </circle>
-//             <text x={x} y={y - 5} textAnchor="middle" fill="#fff" fontSize="9" fontWeight="600" fontFamily="Montserrat, sans-serif">
+//             <text x={x} y={y - 5} textAnchor="middle" fill="#fff" fontSize="9" fontWeight="600" fontFamily="Inter, sans-serif">
 //               {p.label.split("\n").map((l, j) => <tspan key={j} x={x} dy={j === 0 ? 0 : 12}>{l}</tspan>)}
 //             </text>
-//             <text x={x} y={y - 22} textAnchor="middle" className="fill-brandAccent" fontSize="18" fontWeight="700" fontFamily="Montserrat, sans-serif">{`0${i + 1}`}</text>
+//             <text x={x} y={y - 22} textAnchor="middle" className="fill-brandAccent" fontSize="18" fontWeight="700" fontFamily="Inter, sans-serif">{`0${i + 1}`}</text>
 //           </g>
 //         );
 //       })}
@@ -139,16 +139,16 @@ const GovernancePyramid = () => (
 
             <motion.g initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
                 <path d="M250,20 L330,120 L170,120 Z" fill="url(#p-navy)" className="stroke-brandAccent" strokeWidth="1" />
-                <text x="250" y="85" textAnchor="middle" fill="#fff" fontSize="14" fontWeight="800" fontFamily="Montserrat">BOARD INTENT</text>
+                <text x="250" y="85" textAnchor="middle" fill="#fff" fontSize="14" fontWeight="800" fontFamily="Inter, sans-serif">BOARD INTENT</text>
 
                 <path d="M165,130 L335,130 L385,220 L115,220 Z" className="fill-brandNavy stroke-brandAccent" strokeWidth="0.5" opacity="0.9" />
-                <text x="250" y="185" textAnchor="middle" fill="#fff" fontSize="14" fontWeight="800" fontFamily="Montserrat">POLICIES</text>
+                <text x="250" y="185" textAnchor="middle" fill="#fff" fontSize="14" fontWeight="800" fontFamily="Inter, sans-serif">POLICIES</text>
 
                 <path d="M110,230 L390,230 L440,320 L60,320 Z" className="fill-brandPrimary stroke-brandAccent" strokeWidth="0.5" opacity="0.8" />
-                <text x="250" y="285" textAnchor="middle" fill="#fff" fontSize="14" fontWeight="800" fontFamily="Montserrat">SOPs & PROCEDURES</text>
+                <text x="250" y="285" textAnchor="middle" fill="#fff" fontSize="14" fontWeight="800" fontFamily="Inter, sans-serif">SOPs & PROCEDURES</text>
 
                 <rect x="30" y="330" width="440" height="50" rx="8" fill="url(#p-gold)" />
-                <text x="250" y="362" textAnchor="middle" fill="#000" fontSize="14" fontWeight="900" fontFamily="Montserrat">DAY-TO-DAY EXECUTION</text>
+                <text x="250" y="362" textAnchor="middle" fill="#000" fontSize="14" fontWeight="900" fontFamily="Inter, sans-serif">DAY-TO-DAY EXECUTION</text>
             </motion.g>
         </svg>
     </div>
@@ -173,8 +173,8 @@ const LifecycleWheel = () => {
             </defs>
             <circle cx={cx} cy={cy} r={r + 30} fill="none" className="stroke-brandPrimary" strokeWidth="2" strokeDasharray="6,4" opacity="0.4" />
             <circle cx={cx} cy={cy} r="38" className="fill-brandPrimary dark:fill-[url(#lcg)]" />
-            <text x={cx} y={cy - 5} textAnchor="middle" className="fill-white dark:fill-brandAccent" fontSize="10" fontWeight="700" fontFamily="Montserrat, sans-serif">POLICY</text>
-            <text x={cx} y={cy + 10} textAnchor="middle" className="fill-white dark:fill-brandAccent" fontSize="10" fontWeight="700" fontFamily="Montserrat, sans-serif">LIFECYCLE</text>
+            <text x={cx} y={cy - 5} textAnchor="middle" className="fill-white dark:fill-brandAccent" fontSize="10" fontWeight="700" fontFamily="Inter, sans-serif">POLICY</text>
+            <text x={cx} y={cy + 10} textAnchor="middle" className="fill-white dark:fill-brandAccent" fontSize="10" fontWeight="700" fontFamily="Inter, sans-serif">LIFECYCLE</text>
             {phases.map((p, i) => {
                 const rad = (p.angle * Math.PI) / 180;
                 const x = cx + r * Math.cos(rad);
@@ -193,10 +193,10 @@ const LifecycleWheel = () => {
                             strokeWidth="1.5"
                         />
                         {/* Adjusted y and dy for better centering in larger circle */}
-                        <text x={x} y={y - 2} textAnchor="middle" fill="#fff" fontSize="8.5" fontWeight="600" fontFamily="Montserrat, sans-serif">
+                        <text x={x} y={y - 2} textAnchor="middle" fill="#fff" fontSize="8.5" fontWeight="600" fontFamily="Inter, sans-serif">
                             {p.label.split("\n").map((l, j) => <tspan key={j} x={x} dy={j === 0 ? 0 : 11}>{l}</tspan>)}
                         </text>
-                        <text x={x} y={y - 24} textAnchor="middle" className="fill-brandAccent" fontSize="18" fontWeight="700" fontFamily="Montserrat, sans-serif">{`0${i + 1}`}</text>
+                        <text x={x} y={y - 24} textAnchor="middle" className="fill-brandAccent" fontSize="18" fontWeight="700" fontFamily="Inter, sans-serif">{`0${i + 1}`}</text>
                     </g>
                 );
             })}

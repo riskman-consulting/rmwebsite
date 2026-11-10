@@ -32,7 +32,7 @@ const EventsStorySection = ({ events }) => {
                   {event.type || "Experience"}
                 </span>
 
-                <h2 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight text-white md:text-6xl">
+                <h2 className="max-w-4xl text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white ">
                   {event.title}
                 </h2>
 

@@ -149,7 +149,7 @@ export default function TestimonialsSection() {
 
         {/* Heading */}
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-5xl font-bold md:text-6xl font-heading">
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading">
             <span className="text-[#001F3F] dark:text-white">
               What people are saying
             </span>
@@ -170,7 +170,7 @@ export default function TestimonialsSection() {
               <p className="text-[#001F3F]/70 dark:text-white/80 text-base leading-relaxed mb-6">
                 "{testimonial.text}"
               </p>
-              <p className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFB800] to-[#FFC000] font-semibold text-lg">
+              <p className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFB800] to-[#FFC000] font-semibold text-base">
                 {testimonial.name}
               </p>
             </div>

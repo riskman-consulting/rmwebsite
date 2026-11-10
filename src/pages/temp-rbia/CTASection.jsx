@@ -6,10 +6,10 @@ const CTASection = () => {
     <section className="py-16 lg:py-24 bg-gradient-to-br from-brandAccent via-brandGold to-brandAccent">
       <div className="container">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="mb-6 text-3xl font-bold font-heading md:text-4xl text-brandDark">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark">
             Ready to Strengthen Your Governance?
           </h2>
-          <p className="mb-8 text-lg leading-relaxed text-brandDark/80">
+          <p className="mb-8 text-base leading-relaxed text-brandDark/80">
             Partner with us to implement a risk-based audit plan that protects revenue and optimizes your internal controls effectively.
           </p>
           <a 

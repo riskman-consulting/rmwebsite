@@ -31,7 +31,7 @@ const HeroSection = () => {
             </div>
             
             {/* Two-Line Title with Premium Styling */}
-            <h1 className="font-heading text-4xl md:text-4xl lg:text-5xl font-extrabold mb-8 leading-[1.1] text-brandDark dark:text-white tracking-tight">
+            <h1 className="font-heading text-[1.75rem] md:text-4xl lg:text-5xl font-bold mb-8 leading-[1.1] text-brandDark dark:text-white ">
               Public Proof of Your <br />
               <span className="relative inline-block">
                 <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-brandPrimary to-brandNavy dark:from-brandGold dark:to-brandAccent">
@@ -42,7 +42,7 @@ const HeroSection = () => {
               to the Market.
             </h1>
             
-            <p className="max-w-xl mb-10 text-xl font-medium leading-relaxed text-gray-600 dark:text-gray-300">
+            <p className="max-w-xl mb-10 text-base md:text-lg font-medium leading-relaxed text-gray-600 dark:text-gray-300">
               Share an independent, high-level SOC 3 report to signal strong controls to the market without exposing sensitive internal details.
             </p>
             

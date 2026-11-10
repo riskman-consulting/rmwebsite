@@ -237,7 +237,7 @@ const SOPDeliverables = () => {
                                 transition={{ delay: idx * 0.1 }}
                                 className="p-6 transition-all bg-white border shadow-sm dark:bg-slate-800/50 rounded-2xl border-slate-100 dark:border-white/5 hover:shadow-md group"
                             >
-                                <h3 className="mb-2 text-lg font-black tracking-tight transition-transform text-brandPrimary dark:text-brandAccent group-hover:translate-x-1">{card.title}</h3>
+                                <h3 className="mb-2 text-lg md:text-xl font-bold transition-transform text-brandPrimary dark:text-brandAccent group-hover:translate-x-1">{card.title}</h3>
                                 <p className="text-sm font-semibold leading-relaxed text-slate-600 dark:text-slate-400">{card.desc}</p>
                             </motion.div>
                         ))}

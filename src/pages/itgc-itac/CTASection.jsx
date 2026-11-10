@@ -12,10 +12,10 @@
 
 //       <div className="container relative z-10">
 //         <div className="max-w-4xl mx-auto text-center">
-//           <h2 className="mb-6 text-3xl font-bold font-heading md:text-4xl lg:text-5xl">
+//           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
 //             Optimize Your ITGC and ITAC Risk Strategy
 //           </h2>
-//           <p className="mb-10 text-lg leading-relaxed md:text-xl text-white/90">
+//           <p className="mb-10 text-base md:text-lg leading-relaxed text-white/90">
 //             Partner with RiskMan to transform technical audits into strategic business advantages.
 //           </p>
 //           <a 
@@ -52,10 +52,10 @@ const CTASection = () => {
       </div>
       
       <div className="container relative z-10 text-center">
-        <h2 className="mb-6 text-3xl font-bold text-white font-heading md:text-4xl">
+        <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading ">
           Optimize Your ITGC and ITAC Risk Strategy
         </h2>
-        <p className="max-w-2xl mx-auto mb-10 text-xl text-slate-200">
+        <p className="max-w-2xl mx-auto mb-10 text-base md:text-lg text-slate-200">
           Partner with RiskMan to transform technical audits into strategic business advantages.
         </p>
         <Link to="/contact" className="inline-block px-10 py-4 text-lg font-bold transition-all transform rounded-full shadow-2xl bg-brandGold text-brandNavy hover:bg-brandAccent hover:-translate-y-1 shadow-brandGold/30">

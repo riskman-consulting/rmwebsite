@@ -43,7 +43,7 @@ const StatsSection = () => {
             Our Impact
           </p>
 
-          <h2 className="text-3xl font-bold md:text-4xl text-brandDark dark:text-white">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
             Trusted by{" "}
             <span className="text-brandGold dark:text-brandAccent">
               Global Enterprises

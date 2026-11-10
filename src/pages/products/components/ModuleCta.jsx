@@ -8,8 +8,8 @@ const ModuleCta = ({ mod }) => (
     <div className="container py-12 md:py-16">
       <div className="grid grid-cols-1 gap-6 p-6 border-l-[3px] md:p-8 lg:grid-cols-12 lg:items-center lg:gap-12 bg-surfaceLight dark:bg-surfaceDark border-brandAccent rounded-r-lg">
         <div className="lg:col-span-8">
-          <h2 className="text-xl font-bold leading-snug md:text-2xl text-brandDark dark:text-white">
-            See {mod.shortName} applied to your organisation
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold leading-snug text-brandDark dark:text-white">
+            See {mod.shortName} Applied to Your Organisation
           </h2>
           <p className="mt-2 text-[15px] leading-relaxed text-gray-800 dark:text-white/80">
             Schedule a one-hour session with our team. We will demonstrate
@@ -22,13 +22,13 @@ const ModuleCta = ({ mod }) => (
             to="/contact"
             className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold transition-colors rounded-md bg-brandPrimary dark:bg-brandGold text-white dark:text-brandDark hover:bg-brandNavy dark:hover:bg-brandAccent"
           >
-            Book a walkthrough
+            Book a Walkthrough
           </Link>
           <Link
             to="/contact"
             className="inline-flex items-center justify-center gap-1.5 px-2 py-2.5 text-sm font-semibold transition-colors text-brandPrimary dark:text-brandGold hover:underline underline-offset-4"
           >
-            Ask a question
+            Ask a Question
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

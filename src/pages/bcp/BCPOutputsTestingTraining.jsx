@@ -7,7 +7,7 @@ const BCPOutputsTestingTraining = () => {
 
         {/* SECTION HEADER */}
         <div className="max-w-3xl mb-14">
-          <h2 className="mb-4 text-2xl font-semibold font-heading md:text-3xl text-brandDark dark:text-brandAccent">
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-brandAccent">
             BCP Outputs, Testing &amp; Training
           </h2>
           <p className="font-sans text-base leading-relaxed md:text-lg text-brandNavy dark:text-brandLight">
@@ -23,7 +23,7 @@ const BCPOutputsTestingTraining = () => {
 
           {/* OUTPUTS */}
           <div className="p-6 border rounded-2xl border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark">
-            <h3 className="mb-3 text-lg font-semibold font-heading text-brandDark dark:text-brandAccent">
+            <h3 className="mb-3 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-brandAccent">
               BCP Outputs &amp; Documentation
             </h3>
             <ul className="space-y-2 text-sm text-brandPrimary dark:text-brandLight/80">
@@ -37,7 +37,7 @@ const BCPOutputsTestingTraining = () => {
 
           {/* DASHBOARDING */}
           <div className="p-6 border rounded-2xl border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark">
-            <h3 className="mb-3 text-lg font-semibold font-heading text-brandDark dark:text-brandAccent">
+            <h3 className="mb-3 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-brandAccent">
               Dashboarding &amp; Metrics
             </h3>
             <ul className="space-y-2 text-sm text-brandPrimary dark:text-brandLight/80">
@@ -49,7 +49,7 @@ const BCPOutputsTestingTraining = () => {
 
           {/* TESTING */}
           <div className="p-6 border rounded-2xl border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark">
-            <h3 className="mb-3 text-lg font-semibold font-heading text-brandDark dark:text-brandAccent">
+            <h3 className="mb-3 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-brandAccent">
               Exercising &amp; Testing
             </h3>
             <ul className="space-y-2 text-sm text-brandPrimary dark:text-brandLight/80">
@@ -61,7 +61,7 @@ const BCPOutputsTestingTraining = () => {
 
           {/* TRAINING */}
           <div className="p-6 border rounded-2xl border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark">
-            <h3 className="mb-3 text-lg font-semibold font-heading text-brandDark dark:text-brandAccent">
+            <h3 className="mb-3 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-brandAccent">
               Training &amp; Awareness
             </h3>
             <ul className="space-y-2 text-sm text-brandPrimary dark:text-brandLight/80">
@@ -73,7 +73,7 @@ const BCPOutputsTestingTraining = () => {
 
           {/* SCENARIO TESTING */}
           <div className="p-6 border rounded-2xl border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark">
-            <h3 className="mb-3 text-lg font-semibold font-heading text-brandDark dark:text-brandAccent">
+            <h3 className="mb-3 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-brandAccent">
               Scenario-Based Testing
             </h3>
             <ul className="space-y-2 text-sm text-brandPrimary dark:text-brandLight/80">
@@ -85,7 +85,7 @@ const BCPOutputsTestingTraining = () => {
 
           {/* MAINTENANCE */}
           <div className="p-6 border rounded-2xl border-borderLight dark:border-borderDark bg-surfaceLight dark:bg-surfaceDark">
-            <h3 className="mb-3 text-lg font-semibold font-heading text-brandDark dark:text-brandAccent">
+            <h3 className="mb-3 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-brandAccent">
               Annual Maintenance &amp; Review
             </h3>
             <ul className="space-y-2 text-sm text-brandPrimary dark:text-brandLight/80">

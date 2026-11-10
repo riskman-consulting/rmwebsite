@@ -138,7 +138,7 @@ const App = () => {
 
       {/* ===================== HERO ===================== */}
       <section className="pt-48 pb-24 text-center bg-brandLight dark:bg-bgDark">
-        <h1 className="mb-8 text-6xl font-black md:text-8xl text-brandDark dark:text-white">
+        <h1 className="mb-8 text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-brandDark dark:text-white">
           Moments That{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandGold to-brandAccent">
             Matter
@@ -214,7 +214,7 @@ const App = () => {
                         {photo.category}
                       </span>
                     </div>
-                    <h3 className="text-xl font-black text-white">
+                    <h3 className="text-lg md:text-xl font-bold text-white">
                       {photo.title}
                     </h3>
                     <p className="text-xs text-white/60">{photo.date}</p>

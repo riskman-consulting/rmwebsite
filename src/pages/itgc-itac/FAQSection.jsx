@@ -37,7 +37,7 @@
 //         <div className="max-w-4xl mx-auto">
 //           {/* Section Header */}
 //           <div className="mb-12 text-center md:mb-16">
-//             <h2 className="mb-4 text-3xl font-bold font-heading md:text-4xl lg:text-5xl text-brandDark dark:text-white">
+//             <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //               Frequently Asked Questions
 //             </h2>
 //           </div>
@@ -53,7 +53,7 @@
 //                   onClick={() => toggleFAQ(index)}
 //                   className="flex items-center justify-between w-full p-6 text-left transition-colors duration-300 md:p-8 hover:bg-brandLight/50 dark:hover:bg-brandDark/30"
 //                 >
-//                   <h3 className="pr-4 text-lg font-semibold font-heading md:text-xl text-brandDark dark:text-white">
+//                   <h3 className="pr-4 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
 //                     {faq.question}
 //                   </h3>
 //                   <ChevronDown 
@@ -145,7 +145,7 @@ const FAQSection = () => {
       <div className="container max-w-4xl">
         {/* Section Header */}
         <div className="mb-12 text-center">
-          <h2 className="relative inline-block mb-4 text-3xl font-bold font-heading md:text-4xl text-brandNavy dark:text-white">
+          <h2 className="relative inline-block mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandNavy dark:text-white">
             Frequently Asked Questions
             <span className="absolute left-0 w-1/2 h-1 rounded-full -bottom-2 bg-brandGold"></span>
           </h2>

@@ -41,7 +41,7 @@ const ServiceGroupsSection = () => (
                   <Icon className="transition-colors duration-300 w-7 h-7 text-brandPrimary dark:text-brandGold group-hover:text-brandDark" />
                 </span>
                 <div className="min-w-0">
-                  <h3 className="mb-1.5 text-lg font-bold leading-snug font-heading sm:text-xl md:text-2xl text-brandDark dark:text-white">
+                  <h3 className="mb-1.5 text-lg md:text-xl font-bold leading-snug font-heading text-brandDark dark:text-white">
                     {group.title}
                   </h3>
                   <p className="text-sm leading-relaxed text-brandNavy/70 dark:text-white/60">

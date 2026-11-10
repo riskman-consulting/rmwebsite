@@ -27,7 +27,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="mb-6 text-4xl font-bold leading-tight md:text-5xl font-heading text-brandDark dark:text-white"
+              className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading text-brandDark dark:text-white"
             >
               Secure Your <br/>
               <span className="text-brandPrimary dark:text-brandGold">Payment Ecosystem</span>
@@ -37,7 +37,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="max-w-xl mb-8 text-lg leading-relaxed text-gray-600 dark:text-gray-300"
+              className="max-w-xl mb-8 text-base leading-relaxed text-gray-600 dark:text-gray-300"
             >
               RiskMan helps you scope your cardholder data environment, close control gaps and prepare for your PCI DSS assessment across all six control objectives.
             </motion.p>

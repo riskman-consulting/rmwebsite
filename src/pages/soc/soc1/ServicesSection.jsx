@@ -8,7 +8,7 @@ function ServicesSection() {
         <div className="container relative z-10">
           <div className="grid lg:grid-cols-2 gap-16">
             <div>
-              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-8">RiskMan SOC 1 Services</h2>
+              <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-8">RiskMan SOC 1 Services</h2>
               <div className="space-y-6">
                 {[
                   { t: "Scope Definition", d: "Aligned to financial reporting impact and customer expectations." },
@@ -28,7 +28,7 @@ function ServicesSection() {
             </div>
             <div className="flex flex-col justify-center">
               <div className="p-10 rounded-3xl bg-brandNavy border border-white/10 relative">
-                <h3 className="font-heading text-2xl font-bold mb-4 text-brandGold">Outcomes You Can Expect</h3>
+                <h3 className="font-heading text-lg md:text-xl font-bold mb-4 text-brandGold">Outcomes You Can Expect</h3>
                 <p className="text-lg text-gray-300 leading-relaxed italic">
                   "A mature SOC 1 posture translates into lower audit friction, higher confidence from customer finance leaders, and stronger positioning in competitive RFPs."
                 </p>

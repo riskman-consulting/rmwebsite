@@ -20,7 +20,7 @@ const ServiceCard = ({ title, description, image, features, index }) => {
       </div>
 
       <div className="flex flex-col flex-1 p-6">
-        <h3 className="mb-3 text-xl font-bold text-brandDark dark:text-white">
+        <h3 className="mb-3 text-lg md:text-xl font-bold text-brandDark dark:text-white">
           {title}
         </h3>
 

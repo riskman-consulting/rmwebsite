@@ -36,7 +36,7 @@ const HeroSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-2xl font-bold leading-tight font-heading text-brandDark dark:text-white md:text-3xl lg:text-4xl"
+              className="text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading text-brandDark dark:text-white"
             >
               Building Financial Strength
               <br />
@@ -58,7 +58,7 @@ const HeroSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="max-w-xl mt-10 text-lg leading-relaxed text-slate-600 dark:text-brandLight/70 md:text-xl"
+              className="max-w-xl mt-10 text-base md:text-lg leading-relaxed text-slate-600 dark:text-brandLight/70 "
             >
               Our advisory approach focuses on helping businesses make informed
               financial decisions through structured analysis, risk awareness,

@@ -63,11 +63,11 @@ const ValueDifferentiators = () => {
             Our Strengths
           </p>
 
-          <h2 className="mb-6 text-4xl font-bold leading-tight md:text-5xl text-brandDark dark:text-white">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-brandDark dark:text-white">
             Our Value <span className="text-brandGold dark:text-brandAccent">Differentiators</span>
           </h2>
 
-          <p className="max-w-3xl text-lg text-brandNavy dark:text-white/70">
+          <p className="max-w-3xl text-base text-brandNavy dark:text-white/70">
             Discover what sets us apart and makes us the trusted partner for your business transformation journey
           </p>
 
@@ -138,7 +138,7 @@ const ValueDifferentiators = () => {
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-2xl font-bold font-heading text-brandDark dark:text-brandLight mb-3 relative z-10">
+                  <h3 className="text-lg md:text-xl font-bold font-heading text-brandDark dark:text-brandLight mb-3 relative z-10">
                     {value.title}
                   </h3>
                   

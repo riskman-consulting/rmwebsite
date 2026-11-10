@@ -45,10 +45,10 @@ export default function TeamTestimonials() {
 
         {/* Header */}
         <div className="max-w-3xl mx-auto mb-16 text-center text-brandDark dark:text-brandAccent">
-          <h2 className="mb-5 font-heading text-3xl md:text-4xl font-bold">
+          <h2 className="mb-5 font-heading text-2xl md:text-3xl lg:text-4xl font-bold">
             Voices from Our Team
           </h2>
-          <p className="text-lg opacity-70 text-brandNavy dark:text-white">
+          <p className="text-base opacity-70 text-brandNavy dark:text-white">
             Experiences that reflect growth, trust, and shared success.
           </p>
         </div>
@@ -89,7 +89,7 @@ export default function TeamTestimonials() {
 
               {/* Right Side */}
               <div className="flex-1">
-                <p className="text-lg italic leading-relaxed text-brandPrimary dark:text-white/70">
+                <p className="text-base italic leading-relaxed text-brandPrimary dark:text-white/70">
                   {t.quote}
                 </p>
 
@@ -106,14 +106,14 @@ export default function TeamTestimonials() {
           {/* Navigation */}
           <button
             onClick={prev}
-            className="absolute flex items-center justify-center w-12 h-12 transition -translate-y-1/2 border rounded-full shadow -left-6 top-1/2 bg-white/90 dark:bg-brandAccent hover:scale-105"
+            className="absolute flex items-center justify-center w-12 h-12 transition -translate-y-1/2 border rounded-full shadow left-1 xl:-left-6 top-1/2 bg-white/90 dark:bg-brandAccent hover:scale-105"
           >
             <ChevronLeft />
           </button>
 
           <button
             onClick={next}
-            className="absolute flex items-center justify-center w-12 h-12 transition -translate-y-1/2 border rounded-full shadow -right-6 top-1/2 bg-white/90 dark:bg-brandAccent hover:scale-105"
+            className="absolute flex items-center justify-center w-12 h-12 transition -translate-y-1/2 border rounded-full shadow right-1 xl:-right-6 top-1/2 bg-white/90 dark:bg-brandAccent hover:scale-105"
           >
             <ChevronRight />
           </button>

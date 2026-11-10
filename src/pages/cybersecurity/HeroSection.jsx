@@ -60,7 +60,7 @@ const HeroSection = () => {
     //       </div>
 
        
-    //       <h1 className="mb-8 text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-7xl font-heading">
+    //       <h1 className="mb-8 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight text-white font-heading">
     //         Empowering{' '}
     //         <span className="relative inline-block">
     //           <span className="text-brandAccent">Resilience</span>
@@ -72,7 +72,7 @@ const HeroSection = () => {
     //       </h1>
 
           
-    //       <p className="max-w-3xl mb-10 text-xl leading-relaxed text-gray-200">
+    //       <p className="max-w-3xl mb-10 text-base md:text-lg leading-relaxed text-gray-200">
     //         RiskMan delivers standardized, rigorous cybersecurity audits to detect vulnerabilities, ensure regulatory compliance, and strengthen your organization's overall security posture.
     //       </p>
 
@@ -145,10 +145,10 @@ const HeroSection = () => {
               </span>
               Elite Cybersecurity Services
             </div>
-            <h1 className="mb-6 text-4xl font-bold leading-tight lg:text-6xl font-heading">
+            <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading">
               Empowering <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandAccent to-brandGold">Resilience</span> Through Proactive Defense
             </h1>
-            <p className="max-w-xl mb-8 text-lg leading-relaxed text-gray-300">
+            <p className="max-w-xl mb-8 text-base leading-relaxed text-gray-300">
               RiskMan delivers standardized, rigorous cybersecurity audits to detect vulnerabilities, ensure regulatory compliance, and strengthen your organization's overall security posture.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">

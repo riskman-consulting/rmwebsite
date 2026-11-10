@@ -12,8 +12,8 @@ const ValueSection = () => {
         <div className="grid items-center gap-16 lg:grid-cols-2">
           <div>
             <p className="mb-3 text-sm font-bold tracking-wider uppercase text-brandAccent">Why It Matters</p>
-            <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl font-heading">The Value of Continuity Planning</h2>
-            <p className="mb-10 text-lg leading-relaxed text-gray-300">
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading">The Value of Continuity Planning</h2>
+            <p className="mb-10 text-base leading-relaxed text-gray-300">
               Organizations that prioritize resilience are better positioned to protect their market share and maintain client confidence during periods of global or local instability.
             </p>
 

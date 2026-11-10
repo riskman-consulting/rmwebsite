@@ -38,7 +38,7 @@ const TisaxChallenges = () => {
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        className="text-3xl font-bold font-heading text-brandDark dark:text-white md:text-4xl"
+                        className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white "
                     >
                         Addressing TISAX <span className="text-brandAccent">Challenges</span>
                     </motion.h2>
@@ -46,7 +46,7 @@ const TisaxChallenges = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="mt-6 text-lg text-slate-500 dark:text-slate-400"
+                        className="mt-6 text-base text-slate-500 dark:text-slate-400"
                     >
                         RiskMan helps organizations overcome the common hurdles associated with automotive security assessments through expert resource allocation and strategic planning.
                     </motion.p>
@@ -66,7 +66,7 @@ const TisaxChallenges = () => {
                                 <challenge.icon className="w-10 h-10 text-brandPrimary dark:text-brandAccent" />
                             </div>
 
-                            <h3 className="mb-4 text-2xl font-bold transition-colors text-brandDark dark:text-white group-hover:text-brandAccent">
+                            <h3 className="mb-4 text-lg md:text-xl font-bold transition-colors text-brandDark dark:text-white group-hover:text-brandAccent">
                                 {challenge.title}
                             </h3>
 

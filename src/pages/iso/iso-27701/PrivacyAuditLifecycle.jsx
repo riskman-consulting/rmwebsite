@@ -39,7 +39,7 @@ const PrivacyAuditLifecycle = () => {
                     <span className="text-sm font-semibold tracking-widest uppercase font-heading text-brandAccent">
                         Process
                     </span>
-                    <h2 className="mt-3 text-3xl font-bold text-white font-heading md:text-4xl">
+                    <h2 className="mt-3 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading ">
                         The Privacy Audit Lifecycle
                     </h2>
                     <p className="max-w-2xl mx-auto mt-4 text-gray-300 dark:text-slate-400 sm:text-lg">
@@ -62,7 +62,7 @@ const PrivacyAuditLifecycle = () => {
                                     {item.step}
                                 </span>
                             </div>
-                            <h3 className="mt-5 text-lg font-bold text-white font-heading">
+                            <h3 className="mt-5 text-lg md:text-xl font-bold text-white font-heading">
                                 {item.title}
                             </h3>
                             <p className="mt-3 text-sm leading-relaxed text-gray-400 dark:text-slate-400">

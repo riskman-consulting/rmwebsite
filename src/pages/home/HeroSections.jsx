@@ -184,12 +184,12 @@ export default function HeroSection() {
                 </div>
 
                 {/* Two-Line Heading */}
-                <h1 className="mb-5">
-                  <span className="block text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-[1.15] text-brandLight tracking-tight mb-2">
+                <h1 className="mb-5 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-[1.15]">
+                  <span className="block text-brandLight mb-2">
                     {slide.titleLine1}
                   </span>
                   <span
-                    className="block text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-[1.15] tracking-tight"
+                    className="block"
                     style={{
                       background: "linear-gradient(90deg, #FFC000, #FFB800, #FFD44D)",
                       WebkitBackgroundClip: "text",

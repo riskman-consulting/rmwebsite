@@ -351,7 +351,7 @@ const InfoPanel = ({ selectedZone, onClose, mode }) => {
             />
           </svg>
         </div>
-        <h3 className="mb-2 text-lg font-bold text-brandDark dark:text-brandAccent">
+        <h3 className="mb-2 text-lg md:text-xl font-bold text-brandDark dark:text-brandAccent">
           Model Explorer
         </h3>
         <p className="text-sm leading-relaxed text-brandNavy dark:text-white">
@@ -376,7 +376,7 @@ const InfoPanel = ({ selectedZone, onClose, mode }) => {
         className={`${content.color} px-6 py-4 flex items-center justify-between`}
       >
         <div className="text-white">
-          <h3 className="text-lg font-bold leading-tight">{content.title}</h3>
+          <h3 className="text-lg md:text-xl font-bold leading-tight">{content.title}</h3>
           <p className="text-xs font-medium tracking-widest uppercase opacity-80">
             {content.subtitle}
           </p>

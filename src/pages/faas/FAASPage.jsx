@@ -10,7 +10,7 @@ const FAASPage = () => {
     <div className="min-h-screen bg-bgLight dark:bg-bgDark">
       <Helmet>
         <title>
-          Financial Accounting and Advisory Services (FAAS) | RiskMan Consulting
+          Financial Accounting & Advisory (FAAS) | RiskMan Consulting
         </title>
         <meta
           name="description"
@@ -19,7 +19,7 @@ const FAASPage = () => {
         <link rel="canonical" href="https://www.riskman.in/services/faas" />
         <meta
           property="og:title"
-          content="Financial Accounting and Advisory Services (FAAS) | RiskMan Consulting"
+          content="Financial Accounting & Advisory (FAAS) | RiskMan Consulting"
         />
         <meta
           property="og:description"

@@ -34,7 +34,7 @@ const RBIAHero = () => {
             </div>
 
             {/* MAIN HEADING */}
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold text-brandDark dark:text-white leading-[1.1] tracking-tight">
+            <h1 className="font-heading text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-brandDark dark:text-white leading-[1.1] ">
               Mastering Risk,{" "}
               <span className="block text-brandPrimary dark:text-brandAccent">
                 Empowering Success
@@ -42,7 +42,7 @@ const RBIAHero = () => {
             </h1>
 
             {/* DESCRIPTION */}
-            <p className="max-w-xl mt-8 font-sans text-lg font-medium leading-relaxed text-brandNavy/90 md:text-xl dark:text-gray-300">
+            <p className="max-w-xl mt-8 font-sans text-base md:text-lg font-medium leading-relaxed text-brandNavy/90 dark:text-gray-300">
               We deliver customized risk advisory solutions, creating enduring
               value through expert strategic partnerships and independent
               internal audit services.

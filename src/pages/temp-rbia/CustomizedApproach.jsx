@@ -39,10 +39,10 @@ const CustomizedApproach = () => {
     <section className="py-16 lg:py-24 bg-bgLight dark:bg-bgDark">
       <div className="container">
         <div className="max-w-5xl mx-auto">
-          <h2 className="mb-4 text-3xl font-bold text-center font-heading md:text-4xl text-brandDark dark:text-white">
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold text-center font-heading text-brandDark dark:text-white">
             Our Customized Approach for Your Needs
           </h2>
-          <p className="max-w-3xl mx-auto mb-16 text-lg text-center text-gray-700 dark:text-gray-300">
+          <p className="max-w-3xl mx-auto mb-16 text-base text-center text-gray-700 dark:text-gray-300">
             This approach provides a tailored methodology to evaluate risks and enhance operational effectiveness across your organization's unique landscape.
           </p>
 
@@ -63,7 +63,7 @@ const CustomizedApproach = () => {
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-3">
                         <Icon className="w-6 h-6 text-brandAccent" />
-                        <h3 className="text-2xl font-bold font-heading text-brandDark dark:text-white">
+                        <h3 className="text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
                           Phase {phase.number}: {phase.title}
                         </h3>
                       </div>

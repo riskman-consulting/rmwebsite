@@ -7,7 +7,7 @@ function FAQSection() {
   return (
     <section className="py-16 bg-bgLight">
         <div className="container max-w-3xl">
-          <h2 className="font-heading text-3xl font-bold mb-10 text-center">Global Privacy FAQ</h2>
+          <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-10 text-center">Global Privacy FAQ</h2>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
               <div key={idx} className="bg-white rounded-xl shadow-sm border border-borderLight overflow-hidden">

@@ -39,10 +39,10 @@ const QuantitativeMetrics = () => {
       <div className="container">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto mb-16 text-center">
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Quantitative Metric Analysis
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
+          <p className="text-base text-gray-600 dark:text-gray-300">
             RiskMan evaluates the fundamental technicalities of credit exposure to ensure portfolio resilience and precise financial forecasting.
           </p>
         </div>
@@ -61,7 +61,7 @@ const QuantitativeMetrics = () => {
               </div>
 
               {/* Content */}
-              <h3 className="mb-3 text-xl font-bold transition-colors font-heading text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
+              <h3 className="mb-3 text-lg md:text-xl font-bold transition-colors font-heading text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
                 {metric.title}
               </h3>
               

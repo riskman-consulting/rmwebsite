@@ -7,7 +7,7 @@ function IndependentSection() {
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-               <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">Independent Opinion & Reporting</h2>
+               <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Independent Opinion & Reporting</h2>
                <p className="text-gray-600 dark:text-gray-300">RiskMan delivers definitive audit opinions that serve as a bedrock of trust for investors and regulatory bodies.</p>
             </div>
             <div className="grid md:grid-cols-3 gap-12">

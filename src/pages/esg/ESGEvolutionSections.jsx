@@ -45,10 +45,10 @@
 //       <div className="container">
 //         {/* Section Header */}
 //         <div className="mb-16 text-center">
-//           <h3 className="mb-4 text-4xl font-black font-heading text-brandDark dark:text-surfaceLight">
+//           <h3 className="mb-4 text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark dark:text-surfaceLight">
 //             ESG Evolution Timeline
 //           </h3>
-//           <p className="max-w-2xl mx-auto font-sans text-lg text-brandDark/70 dark:text-surfaceLight/70">
+//           <p className="max-w-2xl mx-auto font-sans text-base text-brandDark/70 dark:text-surfaceLight/70">
 //             The three distinct phases of ESG evolution, moving from a necessity of compliance to a powerful driver of enterprise value.
 //           </p>
 //         </div>
@@ -184,10 +184,10 @@
 //       <div className="container px-4 mx-auto max-w-7xl">
 //         {/* Section Header */}
 //         <div className="mb-20 text-center">
-//           <h3 className="mb-4 text-4xl font-black font-heading text-brandDark dark:text-surfaceLight">
+//           <h3 className="mb-4 text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark dark:text-surfaceLight">
 //             ESG Evolution Timeline
 //           </h3>
-//           <p className="max-w-2xl mx-auto font-sans text-lg text-gray-600 dark:text-surfaceLight/70">
+//           <p className="max-w-2xl mx-auto font-sans text-base text-gray-600 dark:text-surfaceLight/70">
 //             The three distinct phases of ESG evolution, moving from a necessity of compliance to a powerful driver of enterprise value.
 //           </p>
 //         </div>
@@ -543,10 +543,10 @@ const ESGEvolutionTimeline = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
-                        <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl font-heading text-brandDark dark:text-surfaceLight">
+                        <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-surfaceLight">
                             The Evolution of ESG
                         </h2>
-                        <p className="max-w-2xl mx-auto text-xl leading-relaxed text-slate-600 dark:text-slate-400">
+                        <p className="max-w-2xl mx-auto text-base md:text-lg leading-relaxed text-slate-600 dark:text-slate-400">
                             From mandatory compliance to a core driver of
                             <span className="font-semibold text-brandPrimary dark:text-brandGold"> strategic value</span>.
                         </p>
@@ -606,7 +606,7 @@ const ESGEvolutionTimeline = () => {
                                             <span className="mb-2 text-sm font-bold tracking-wider uppercase text-slate-500 dark:text-slate-400">
                                                 {item.period}
                                             </span>
-                                            <h3 className={`text-2xl font-bold ${item.colorClass} font-heading`}>
+                                            <h3 className={`text-lg md:text-xl font-bold ${item.colorClass} font-heading`}>
                                                 {item.phase}
                                             </h3>
                                         </div>

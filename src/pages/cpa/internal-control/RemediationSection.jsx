@@ -9,8 +9,8 @@ function RemediationSection() {
         <div className="container">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2">
-              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">Risk Assessment & Remediation</h2>
-              <p className="text-gray-600 dark:text-gray-300 text-lg mb-8 leading-relaxed">Organizations must proactively evolve their controls to meet the challenges of a rapidly changing digital landscape.</p>
+              <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-6">Risk Assessment & Remediation</h2>
+              <p className="text-gray-600 dark:text-gray-300 text-base mb-8 leading-relaxed">Organizations must proactively evolve their controls to meet the challenges of a rapidly changing digital landscape.</p>
               <div className="grid gap-4">
                 {[
                   { t: "Gap Identification", d: "Pinpointing weaknesses in current structures.", icon: <Search className="text-brandPrimary" size={20}/> },
@@ -29,7 +29,7 @@ function RemediationSection() {
             </div>
             <div className="lg:w-1/2 w-full">
               <div className="bg-brandLight dark:bg-bgDark p-12 rounded-[3rem] border-2 border-dashed border-brandPrimary/20 text-center">
-                 <h3 className="font-heading text-2xl font-bold text-brandDark dark:text-white mb-4 italic">Competitive Operational Advantage</h3>
+                 <h3 className="font-heading text-lg md:text-xl font-bold text-brandDark dark:text-white mb-4 italic">Competitive Operational Advantage</h3>
                  <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-8">
                    "We transform internal controls from a necessary compliance burden into a tool for sustainable institutional growth."
                  </p>

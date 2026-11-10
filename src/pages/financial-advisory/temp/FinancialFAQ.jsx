@@ -32,7 +32,7 @@ const FinancialFAQ = () => {
       <div className="container">
       <div className="max-w-4xl mx-auto">
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-3xl font-bold font-heading md:text-4xl text-brandDark dark:text-white">
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Financial Advisory <span className="text-brandPrimary dark:text-brandGold">FAQ</span>
           </h2>
           <p className="font-sans text-gray-600 dark:text-gray-400">
@@ -74,7 +74,7 @@ const FinancialFAQ = () => {
         </div>
 
         <div className="p-8 mt-16 text-center text-white shadow-lg bg-brandPrimary dark:bg-brandNavy rounded-2xl">
-          <h3 className="mb-2 text-xl font-bold font-heading">Still have questions?</h3>
+          <h3 className="mb-2 text-lg md:text-xl font-bold font-heading">Still have questions?</h3>
           <p className="mb-6 font-sans text-white/80">
             Our team of experts is ready to help you navigate your financial journey.
           </p>

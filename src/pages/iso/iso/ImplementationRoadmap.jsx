@@ -68,7 +68,7 @@ const ImplementationRoadmap = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-3xl font-bold font-heading text-brandDark dark:text-white sm:text-4xl lg:text-5xl"
+                        className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white "
                     >
                         The RiskMan Implementation Roadmap
                     </motion.h2>
@@ -77,7 +77,7 @@ const ImplementationRoadmap = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="max-w-2xl mx-auto mt-6 text-lg text-slate-600 dark:text-slate-400"
+                        className="max-w-2xl mx-auto mt-6 text-base text-slate-600 dark:text-slate-400"
                     >
                         Our structured methodology ensures seamless transition from assessment to compliance.
                     </motion.p>
@@ -168,7 +168,7 @@ const ImplementationRoadmap = () => {
                                                 : 'bg-white/50 dark:bg-white/5 border-slate-100 dark:border-white/10'
                                             }`}
                                     >
-                                        <h3 className="mb-2 text-lg font-bold text-center font-heading text-brandDark dark:text-white">
+                                        <h3 className="mb-2 text-lg md:text-xl font-bold text-center font-heading text-brandDark dark:text-white">
                                             {step.title}
                                         </h3>
                                         <p className="mb-4 text-sm text-center text-slate-600 dark:text-slate-400">

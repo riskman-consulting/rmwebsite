@@ -24,10 +24,10 @@ const product = PRODUCTS[0];
  * module has them they open the page, above these links.
  */
 const buildSections = (mod) => [
-  { id: "why", label: "The challenge" },
+  { id: "why", label: "The Challenge" },
   { id: "capabilities", label: "Capabilities" },
   ...(mod.screens?.length ? [{ id: "screens", label: "Screens" }] : []),
-  { id: "how-it-works", label: "How it works" },
+  { id: "how-it-works", label: "How It Works" },
   { id: "outputs", label: "Outputs" },
   { id: "who", label: "Roles" },
   { id: "faqs", label: "FAQs" },

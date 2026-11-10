@@ -4,7 +4,7 @@ import React from 'react'
 function FaqSection() {
   return (
     <section className="container max-w-4xl py-16">
-        <h2 className="flex items-center mb-12 text-4xl font-bold font-heading">
+        <h2 className="flex items-center mb-12 text-2xl md:text-3xl lg:text-4xl font-bold font-heading">
           <HelpCircle className="mr-4 text-brandGold" /> Frequently Asked Questions
         </h2>
         <div className="space-y-4">

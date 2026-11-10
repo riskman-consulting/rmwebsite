@@ -19,8 +19,8 @@ export const ChangeApproachSection = () => {
       
       <div className="container relative z-10">
         <div className="mb-16 text-center">
-          <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading">Change Management Approach</h2>
-          <p className="max-w-2xl mx-auto text-lg leading-relaxed text-gray-300">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading">Change Management Approach</h2>
+          <p className="max-w-2xl mx-auto text-base leading-relaxed text-gray-300">
             We manage the people side of change so RiskMan is adopted smoothly and delivers sustained value across the organization.
           </p>
         </div>
@@ -36,7 +36,7 @@ export const ChangeApproachSection = () => {
               whileHover={{ scale: 1.02 }}
               className={`h-full bg-white/5 backdrop-blur-lg p-8 rounded-2xl border border-white/10 hover:bg-white/10 hover:border-brandAccent/50 transition-all duration-300 ${item.colSpan}`}
             >
-              <h3 className="mb-4 text-2xl font-bold text-brandAccent">{item.title}</h3>
+              <h3 className="mb-4 text-lg md:text-xl font-bold text-brandAccent">{item.title}</h3>
               <p className="leading-relaxed text-gray-300">{item.desc}</p>
             </motion.div>
           ))}

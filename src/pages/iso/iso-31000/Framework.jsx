@@ -38,10 +38,10 @@ const Framework = () => {
       <div className="container">
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <p className="mb-3 text-sm font-semibold tracking-wide uppercase text-brandPrimary dark:text-brandGold">Our Methodology</p>
-          <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             The Risk Management Framework
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400">
+          <p className="text-base text-gray-600 dark:text-gray-400">
             Effective risk management involves a systematic approach to identifying threats and converting them into actionable business intelligence for organizations.
           </p>
         </div>
@@ -62,7 +62,7 @@ const Framework = () => {
                   {step.icon}
                 </div>
                 
-                <h3 className="mb-2 text-lg font-bold transition-colors text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandGold">
+                <h3 className="mb-2 text-lg md:text-xl font-bold transition-colors text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandGold">
                   {step.title}
                 </h3>
                 

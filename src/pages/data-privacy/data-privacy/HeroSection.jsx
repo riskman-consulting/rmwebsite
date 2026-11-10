@@ -29,12 +29,12 @@ function HeroSection() {
             <span className="text-sm font-bold tracking-wider uppercase text-brandAccent">Next-Gen Privacy Control</span>
           </div>
           
-          <h1 className="mb-8 text-5xl font-bold leading-tight font-heading lg:text-7xl drop-shadow-lg">
+          <h1 className="mb-8 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading drop-shadow-lg">
             Strategic Data Privacy{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandAccent to-brandGold">Governance</span>
           </h1>
 
-          <p className="max-w-2xl mb-12 text-lg leading-relaxed text-gray-200 lg:text-xl drop-shadow-md">
+          <p className="max-w-2xl mb-12 text-base md:text-lg leading-relaxed text-gray-200 drop-shadow-md">
             Empower your enterprise with robust privacy frameworks that transform
             regulatory requirements into a sustainable competitive advantage and
             digital consumer trust.

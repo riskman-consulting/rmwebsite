@@ -12,8 +12,8 @@ const ModuleOutputs = ({ mod }) => (
     title="Outputs and compliance alignment"
     lead="The records the module produces, and the regulations and frameworks they support."
   >
-    <h3 className="mb-4 text-base font-bold text-brandDark dark:text-white">
-      Reports and records
+    <h3 className="text-lg md:text-xl font-heading mb-4 font-bold text-brandDark dark:text-white">
+      Reports and Records
     </h3>
     <ul className="grid grid-cols-1 gap-x-8 gap-y-2.5 sm:grid-cols-2">
       {mod.deliverables.map((item) => (
@@ -30,8 +30,8 @@ const ModuleOutputs = ({ mod }) => (
       ))}
     </ul>
 
-    <h3 className="mt-10 mb-3 text-base font-bold text-brandDark dark:text-white">
-      Built around
+    <h3 className="text-lg md:text-xl font-heading mt-10 mb-3 font-bold text-brandDark dark:text-white">
+      Built Around
     </h3>
     <dl className="border-t divide-y border-borderLight dark:border-borderDark divide-borderLight dark:divide-borderDark">
       {mod.standards.map((standard) => (

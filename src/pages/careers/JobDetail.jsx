@@ -72,7 +72,7 @@ export default function JobDetailPage() {
           <title>Position Not Found | RiskMan Consulting</title>
           <meta name="robots" content="noindex, follow" />
         </Helmet>
-        <h1 className="mb-4 text-3xl font-black">This role is no longer listed</h1>
+        <h1 className="mb-4 text-[1.75rem] md:text-4xl lg:text-5xl font-bold">This role is no longer listed</h1>
         <p className="max-w-md mb-8 text-sm text-zinc-500">
           The position you are looking for has been filled or removed. Explore our
           current openings instead.
@@ -173,7 +173,7 @@ export default function JobDetailPage() {
               </span>
             )}
 
-            <h1 className="mt-5 mb-6 text-4xl font-black tracking-tight md:text-5xl">
+            <h1 className="mt-5 mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold ">
               {job.title}
             </h1>
 
@@ -270,7 +270,7 @@ export default function JobDetailPage() {
               />
             ) : (
               <div className="text-center">
-                <h3 className="mb-3 text-xl font-bold">Applications closed</h3>
+                <h3 className="mb-3 text-lg md:text-xl font-bold">Applications closed</h3>
                 <p className="mb-8 text-sm leading-relaxed text-zinc-500">
                   The deadline for this position
                   {job.lastDate ? ` (${formatJobDate(job.lastDate)})` : ""} has

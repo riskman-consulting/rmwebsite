@@ -72,15 +72,15 @@ export default function AlliancePartnersSection() {
             <Handshake size={32} className="text-brandAccent" />
           </div>
 
-          <h2 className="mb-6 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
+          <h2 className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
             Our CPA{" "}
-            <span className="font-serif italic font-medium text-brandGold">
+            <span className="text-brandGold">
               Alliance
             </span>{" "}
             Partners
           </h2>
 
-          <p className="text-lg leading-relaxed text-brandDark/70 dark:text-white/70">
+          <p className="text-base leading-relaxed text-brandDark/70 dark:text-white/70">
             Collaborating with leading global CPA firms to deliver comprehensive Assurance engagements as per US GAAP, and AICPA standards.
           </p>
         </motion.div>
@@ -115,7 +115,7 @@ export default function AlliancePartnersSection() {
                 </div>
 
                 {/* Content */}
-                <h3 className="mb-2 text-2xl font-bold transition-colors lg:text-3xl text-brandDark dark:text-white group-hover:text-brandAccent dark:group-hover:text-brandGold">
+                <h3 className="mb-2 text-xl md:text-2xl lg:text-3xl font-bold transition-colors text-brandDark dark:text-white group-hover:text-brandAccent dark:group-hover:text-brandGold">
                   {partner.shortName}
                 </h3>
 
@@ -372,7 +372,7 @@ export default function AlliancePartnersSection() {
                     alt={selectedPartner.name}
                   />
                   <div className="text-center md:text-left">
-                    <h2 className="mb-3 text-3xl font-bold leading-tight md:text-4xl text-brandDark dark:text-white">
+                    <h2 className="mb-3 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-brandDark dark:text-white">
                       {selectedPartner.name}
                     </h2>
                     <span className="inline-block px-4 py-1 text-xs font-bold tracking-widest uppercase rounded-lg bg-brandAccent text-brandDark">

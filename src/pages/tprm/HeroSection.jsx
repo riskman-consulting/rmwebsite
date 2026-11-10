@@ -25,10 +25,10 @@ const Hero = () => {
           <Shield className="w-4 h-4" />
           Third-Party Risk Management
         </div>
-        <h1 className="mb-6 text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl font-heading">
+        <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading">
           Audit-Ready <span className="text-brandAccent">Third-Party Risk Management</span>
         </h1>
-        <p className="max-w-3xl mb-10 text-lg leading-relaxed text-gray-300 sm:text-xl">
+        <p className="max-w-3xl mb-10 text-base md:text-lg leading-relaxed text-gray-300 ">
           Build evidence-driven TPRM frameworks that satisfy regulators. We move beyond "checkbox compliance" to provide deep visibility into vendor lifecycles.
         </p>
         <div className="flex flex-col w-full gap-4 sm:flex-row sm:w-auto">

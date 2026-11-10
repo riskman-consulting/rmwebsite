@@ -37,7 +37,7 @@
 
 //       <section className="py-12 bg-white dark:bg-slate-900">
 //         <div className="container px-6 mx-auto">
-//           <h2 className="mb-8 text-3xl font-bold text-center text-slate-800 dark:text-white">
+//           <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold text-center text-slate-800 dark:text-white">
 //             Visual Framework: Global Operating Model Architecture
 //           </h2>
 //           <GlobalOperatingModelDiagram />
@@ -48,7 +48,7 @@
 
 //       <section className="py-12 bg-white dark:bg-slate-900">
 //         <div className="container px-6 mx-auto">
-//           <h2 className="mb-8 text-3xl font-bold text-center text-slate-800 dark:text-white">
+//           <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold text-center text-slate-800 dark:text-white">
 //             Visual Framework: CSA Maturity Model
 //           </h2>
 //           <CSAMaturityModelDiagram />
@@ -109,7 +109,7 @@ export default function CSAPage() {
 
         <section className="py-16 bg-bgLight dark:bg-bgDark">
         <div className="container">
-          <h2 className="mb-8 text-3xl font-bold text-center font-heading md:text-4xl text-brandDark dark:text-white">
+          <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold text-center font-heading text-brandDark dark:text-white">
             Visual Framework: Global Operating Model Architecture
           </h2>
           <GlobalOperatingModelDiagram />
@@ -120,7 +120,7 @@ export default function CSAPage() {
       {/* <section className="py-14 md:py-20 bg-surfaceLight dark:bg-surfaceDark">
         <div className="container max-w-6xl px-6 mx-auto">
           <div className="p-8 shadow-md bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-900 rounded-xl">
-            <h3 className="mb-4 text-2xl font-bold text-brandDark dark:text-brandAccent">
+            <h3 className="mb-4 text-lg md:text-xl font-bold text-brandDark dark:text-brandAccent">
               Technology & GRC Integration
             </h3>
             <p className="mb-6 leading-relaxed text-brandNavy dark:text-white">
@@ -181,7 +181,7 @@ export default function CSAPage() {
       <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
         <div className="container">
       <div className="p-8 border shadow-md bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark rounded-2xl">
-          <h2 className="mb-4 text-3xl font-bold font-heading md:text-4xl text-brandDark dark:text-white">
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Technology & GRC Integration
           </h2>
           <p className="mb-6 leading-relaxed text-brandNavy dark:text-white">
@@ -243,7 +243,7 @@ export default function CSAPage() {
 
         <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
         <div className="container">
-          <h2 className="mb-8 text-3xl font-bold text-center font-heading md:text-4xl text-brandDark dark:text-white">
+          <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold text-center font-heading text-brandDark dark:text-white">
             Visual Framework: CSA Maturity Model
           </h2>
           <CSAMaturityModelDiagram />

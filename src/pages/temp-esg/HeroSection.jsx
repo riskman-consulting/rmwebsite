@@ -18,17 +18,17 @@ const HeroSection = () => {
       <div className="container relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           {/* Main Heading */}
-          <h1 className="mb-6 text-5xl font-bold leading-tight text-white font-heading md:text-6xl lg:text-7xl">
+          <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight text-white font-heading ">
             <span className="block">Sustainability & ESG</span>
           </h1>
           
           {/* Subheading */}
-          <h2 className="mb-4 text-2xl font-semibold font-heading md:text-3xl lg:text-4xl text-brandAccent">
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandAccent">
             Advisory, Implementation & Training Excellence
           </h2>
           
           {/* Tagline */}
-          <p className="mb-12 text-xl italic md:text-2xl text-brandLight/90">
+          <p className="mb-12 text-base md:text-lg italic text-brandLight/90">
             Transforming Organizations for a Sustainable Future
           </p>
 
@@ -59,7 +59,7 @@ const HeroSection = () => {
                 className={`bg-gradient-to-br ${pillar.color} backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:scale-105 transition-all duration-300 hover:border-brandAccent/50`}
               >
                 <div className="mb-4 text-5xl">{pillar.icon}</div>
-                <h3 className="mb-2 text-xl font-bold text-white font-heading">{pillar.title}</h3>
+                <h3 className="mb-2 text-lg md:text-xl font-bold text-white font-heading">{pillar.title}</h3>
                 <p className="text-sm text-brandLight/80">{pillar.subtitle}</p>
               </div>
             ))}

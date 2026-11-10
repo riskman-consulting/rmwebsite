@@ -24,14 +24,14 @@ export default function RbiaRiskAdvisorySection() {
             Core Service
           </motion.div>
 
-          <h2 className="mb-6 text-3xl font-bold leading-tight md:text-4xl font-heading text-brandDark dark:text-white">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandDark dark:text-white">
             Risk-Based Internal Audit <br className="hidden md:block" /> 
             <span className="text-brandPrimary dark:text-brandAccent">(RBIA)</span> under Risk Advisory
           </h2>
 
           <div className="w-24 h-1.5 mx-auto mb-8 rounded-full bg-gradient-to-r from-brandAccent to-brandGold" />
 
-          <p className="max-w-3xl mx-auto text-lg leading-relaxed text-brandDark/80 dark:text-brandLight/80">
+          <p className="max-w-3xl mx-auto text-base leading-relaxed text-brandDark/80 dark:text-brandLight/80">
             We act as a value-adding partner to management by protecting revenue, strengthening internal controls, and ensuring rigorous statutory compliance through practical, risk-based insights.
           </p>
         </div>
@@ -50,11 +50,11 @@ export default function RbiaRiskAdvisorySection() {
               Methodology
             </div>
 
-            <h3 className="text-3xl font-bold leading-tight md:text-4xl font-heading text-brandDark dark:text-white">
+            <h3 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight font-heading text-brandDark dark:text-white">
               Proven ‘Risk-Based’ <br /> Internal Audit Framework
             </h3>
 
-            <p className="text-base md:text-lg leading-relaxed text-brandDark/70 dark:text-brandLight/70">
+            <p className="text-base leading-relaxed text-brandDark/70 dark:text-brandLight/70">
               Our methodology is field-tested and derived from global best practices, consistent with the <span className="font-semibold text-brandPrimary dark:text-brandAccent">International Standards for the Professional Practice of Internal Auditing</span>.
             </p>
 

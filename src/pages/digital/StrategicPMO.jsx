@@ -37,10 +37,10 @@ const StrategicPMO = () => {
       {/* <section  className="relative py-20 lg:py-32">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="max-w-4xl">
-            <h1 className="mb-6 text-4xl font-bold leading-tight font-heading md:text-5xl lg:text-6xl">
+            <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading ">
               Mastering Digital Complexity with <span className="text-brandPrimary dark:text-brandGold">Strategic PMO</span>
             </h1>
-            <p className="mb-8 text-lg leading-relaxed md:text-xl opacity-90">
+            <p className="mb-8 text-base md:text-lg leading-relaxed opacity-90">
               RiskMan Consulting drives transformation through governance-led execution, bridging the gap between strategy and realization with milestone tracking and rigorous project ownership.
             </p>
           </div>
@@ -61,11 +61,11 @@ const StrategicPMO = () => {
 
   <div className="container relative z-10 px-4 text-center">
     <div className="animate-float">
-      <h1 className="mb-6 text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl font-heading">
+      <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight text-white font-heading">
         Mastering Digital Complexity with{" "}
         <span className="text-brandAccent">Strategic PMO</span>
       </h1>
-      <p className="max-w-3xl mx-auto mb-10 text-lg leading-relaxed text-gray-200 md:text-xl">
+      <p className="max-w-3xl mx-auto mb-10 text-base md:text-lg leading-relaxed text-gray-200 ">
         RiskMan Consulting drives transformation through governance-led
         execution, bridging the gap between strategy and realization with
         milestone tracking and rigorous project ownership.
@@ -103,12 +103,12 @@ const StrategicPMO = () => {
             Digital Transformation
           </div>
 
-          <h1 className="mb-6 text-4xl font-bold leading-tight text-white font-heading md:text-5xl lg:text-6xl">
+          <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight text-white font-heading ">
             Mastering Digital Complexity with{" "}
             <span className="text-brandGold">Strategic PMO</span>
           </h1>
 
-          <p className="mb-8 text-lg leading-relaxed text-white/90 md:text-xl">
+          <p className="mb-8 text-base md:text-lg leading-relaxed text-white/90 ">
             RiskMan Consulting drives transformation through governance-led
             execution, bridging the gap between strategy and realization with
             milestone tracking and rigorous project ownership.
@@ -138,8 +138,8 @@ const StrategicPMO = () => {
       {/* SECTION 2: GOVERNANCE MANAGEMENT */}
       <section className="py-16 bg-surfaceLight dark:bg-surfaceDark border-y border-borderLight dark:border-borderDark">
         <div className="container">
-          <h2 className="mb-4 text-3xl font-bold font-heading md:text-4xl">Governance Management</h2>
-          <p className="mb-12 text-lg opacity-80">Establish structural integrity and proactive control through systematic oversight and defined protocols.</p>
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">Governance Management</h2>
+          <p className="mb-12 text-base opacity-80">Establish structural integrity and proactive control through systematic oversight and defined protocols.</p>
           
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
             <div className="h-full p-6 border-l-4 shadow-sm rounded-2xl border-brandPrimary dark:border-brandGold bg-bgLight dark:bg-bgDark">
@@ -165,35 +165,35 @@ const StrategicPMO = () => {
       {/* SECTION 3: PROJECT LIFECYCLE OWNERSHIP */}
       {/* <section className="py-20">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
-          <h2 className="mb-4 text-3xl font-bold font-heading">Project Lifecycle Ownership</h2>
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading">Project Lifecycle Ownership</h2>
           <p className="max-w-2xl mb-10 opacity-80">Maintain end-to-end accountability from initial concept to formal closure for consistent value delivery.</p>
           
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <div className="flex gap-4 p-6 border rounded-lg bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark">
               <span className="text-3xl font-bold text-brandPrimary dark:text-brandGold font-heading">01</span>
               <div>
-                <h3 className="mb-2 text-xl font-bold text-brandNavy dark:text-brandGold">Concept-to-Close Governance</h3>
+                <h3 className="mb-2 text-lg md:text-xl font-bold text-brandNavy dark:text-brandGold">Concept-to-Close Governance</h3>
                 <p className="opacity-80">Drive seamless execution through every phase, ensuring total accountability from project initiation through formal sign-off.</p>
               </div>
             </div>
             <div className="flex gap-4 p-6 border rounded-lg bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark">
               <span className="text-3xl font-bold text-brandPrimary dark:text-brandGold font-heading">02</span>
               <div>
-                <h3 className="mb-2 text-xl font-bold text-brandNavy dark:text-brandGold">Milestone Health Tracking</h3>
+                <h3 className="mb-2 text-lg md:text-xl font-bold text-brandNavy dark:text-brandGold">Milestone Health Tracking</h3>
                 <p className="opacity-80">Monitor delivery of velocity by tracking project health against key milestones to identify and mitigate delays early.</p>
               </div>
             </div>
             <div className="flex gap-4 p-6 border rounded-lg bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark">
               <span className="text-3xl font-bold text-brandPrimary dark:text-brandGold font-heading">03</span>
               <div>
-                <h3 className="mb-2 text-xl font-bold text-brandNavy dark:text-brandGold">Integrated Performance Monitoring</h3>
+                <h3 className="mb-2 text-lg md:text-xl font-bold text-brandNavy dark:text-brandGold">Integrated Performance Monitoring</h3>
                 <p className="opacity-80">Synchronize timeline, cost, and scope tracking to provide a holistic view of project integrity and performance.</p>
               </div>
             </div>
             <div className="flex gap-4 p-6 border rounded-lg bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark">
               <span className="text-3xl font-bold text-brandPrimary dark:text-brandGold font-heading">04</span>
               <div>
-                <h3 className="mb-2 text-xl font-bold text-brandNavy dark:text-brandGold">Closure & Documentation</h3>
+                <h3 className="mb-2 text-lg md:text-xl font-bold text-brandNavy dark:text-brandGold">Closure & Documentation</h3>
                 <p className="opacity-80">Systematically capture lessons learned and finalize closure documentation to preserve institutional knowledge for future digital initiatives.</p>
               </div>
             </div>
@@ -229,8 +229,8 @@ const StrategicPMO = () => {
             </div>
 
             <div className="lg:w-1/2">
-              <h2 className="mb-6 text-3xl font-bold font-heading md:text-4xl text-brandDark dark:text-white">Project Lifecycle Ownership</h2>
-              <p className="mb-10 text-lg text-brandPrimary dark:text-white/70 ">
+              <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">Project Lifecycle Ownership</h2>
+              <p className="mb-10 text-base text-brandPrimary dark:text-white/70 ">
                 Maintain end-to-end accountability from initial concept to formal closure for consistent value delivery.
               </p>
 
@@ -260,7 +260,7 @@ const StrategicPMO = () => {
                       </div>
                     </div>
                     <div>
-                      <h3 className="mb-2 text-xl font-bold text-brandNavy dark:text-brandAccent">{item.title}</h3>
+                      <h3 className="mb-2 text-lg md:text-xl font-bold text-brandNavy dark:text-brandAccent">{item.title}</h3>
                       <p className="text-brandNavy dark:text-white/70">{item.desc}</p>
                     </div>
                   </div>
@@ -276,7 +276,7 @@ const StrategicPMO = () => {
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
             <div>
-              <h2 className="mb-6 text-3xl font-bold font-heading">Resource Planning & Tracking</h2>
+              <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading">Resource Planning & Tracking</h2>
               <div className="space-y-6">
                 <div>
                   <h4 className="font-bold text-brandGold">Role-Based Allocation Matrix</h4>
@@ -289,7 +289,7 @@ const StrategicPMO = () => {
               </div>
             </div>
             <div>
-              <h2 className="mb-6 text-3xl font-bold font-heading text-brandGold">Risk Mitigation Strategies</h2>
+              <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandGold">Risk Mitigation Strategies</h2>
               <div className="space-y-6">
                 <div>
                   <h4 className="font-bold">Scoring & Prioritization Models</h4>
@@ -309,9 +309,9 @@ const StrategicPMO = () => {
       <section className="relative py-16 text-white bg-brandDark">
         <div className="container relative z-10">
           <div className="mb-16 text-center">
-            <h2 className="mb-4 text-3xl font-bold text-white font-heading md:text-4xl">Resource Planning & Tracking</h2>
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading ">Resource Planning & Tracking</h2>
             <div className="w-24 h-1 mx-auto mb-6 bg-brandAccent"></div>
-            <p className="max-w-2xl mx-auto text-lg text-gray-300">
+            <p className="max-w-2xl mx-auto text-base text-gray-300">
               Optimize human capital through data-driven allocation and strategic capacity forecasting.
             </p>
           </div>
@@ -337,7 +337,7 @@ const StrategicPMO = () => {
                 }
               ].map((item, idx) => (
                 <div key={idx} className="p-6 transition-colors border bg-white/5 rounded-2xl border-white/10 hover:bg-white/10">
-                  <h3 className="mb-2 text-xl font-bold text-brandAccent">{item.title}</h3>
+                  <h3 className="mb-2 text-lg md:text-xl font-bold text-brandAccent">{item.title}</h3>
                   <p className="text-gray-300">{item.desc}</p>
                 </div>
               ))}
@@ -375,8 +375,8 @@ const StrategicPMO = () => {
             </div>
 
             <div className="lg:w-1/2">
-              <h2 className="mb-6 text-3xl font-bold font-heading md:text-4xl text-brandDark dark:text-white">Risk Mitigation Strategies</h2>
-              <p className="mb-10 text-lg text-brandNavy dark:text-white/70">
+              <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">Risk Mitigation Strategies</h2>
+              <p className="mb-10 text-base text-brandNavy dark:text-white/70">
                 Proactively safeguard transformation success with actionable insights and real-time leadership visibility.
               </p>
 
@@ -405,7 +405,7 @@ const StrategicPMO = () => {
                 ].map((item, idx) => (
                   <div key={idx} className="h-full p-6 transition-shadow border bg-bgLight dark:bg-bgDark rounded-2xl border-borderLight dark:border-borderDark hover:shadow-md">
                     <div className="mb-4">{item.icon}</div>
-                    <h3 className="mb-2 text-lg font-bold dark:text-brandAccent text-brandNavy">{item.title}</h3>
+                    <h3 className="mb-2 text-lg md:text-xl font-bold dark:text-brandAccent text-brandNavy">{item.title}</h3>
                     <p className="text-sm text-brandPrimary dark:text-white/70">{item.desc}</p>
                   </div>
                 ))}
@@ -419,7 +419,7 @@ const StrategicPMO = () => {
 
         <section className="py-16 bg-bgLight dark:bg-bgDark">
         <div className="container">
-          <h2 className="mb-12 text-3xl font-bold text-center font-heading md:text-4xl">Strategic PMO FAQ</h2>
+          <h2 className="mb-12 text-2xl md:text-3xl lg:text-4xl font-bold text-center font-heading ">Strategic PMO FAQ</h2>
           <div className="max-w-3xl mx-auto space-y-4">
             {[
               { q: "How does RAID management work?", a: "It centrally tracks Risks, Assumptions, Issues, and Dependencies for proactive resolution." },
@@ -442,8 +442,8 @@ const StrategicPMO = () => {
       {/* SECTION 5: CTA */}
       {/* <section className="py-20 text-center">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
-          <h2 className="mb-6 text-3xl font-bold font-heading md:text-4xl">Ready to Elevate Your Strategy?</h2>
-          <p className="mb-10 text-xl opacity-80">Bridge the execution gap with RiskMan's governance-driven expertise.</p>
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">Ready to Elevate Your Strategy?</h2>
+          <p className="mb-10 text-base md:text-lg opacity-80">Bridge the execution gap with RiskMan's governance-driven expertise.</p>
           <button className="px-12 py-4 font-bold transition-transform rounded-md shadow-lg bg-brandGold hover:bg-brandAccent text-brandDark hover:scale-105">
             Schedule a Consultation
           </button>
@@ -457,8 +457,8 @@ const StrategicPMO = () => {
         </div>
         
         <div className="container relative z-10 text-center">
-          <h2 className="mb-6 text-3xl font-bold text-white font-heading md:text-4xl">Ready to Elevate Your Strategy?</h2>
-          <p className="max-w-2xl mx-auto mb-10 text-xl text-gray-300">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading ">Ready to Elevate Your Strategy?</h2>
+          <p className="max-w-2xl mx-auto mb-10 text-base md:text-lg text-gray-300">
             Bridge the execution gap with RiskMan’s governance-driven expertise. Let's transform your vision into reality.
           </p>
           <Link

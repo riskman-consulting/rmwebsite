@@ -12,12 +12,12 @@ function Framework() {
             Control Architecture
           </div>
           
-          <h2 className="mb-6 text-3xl font-bold font-heading md:text-4xl text-brandDark dark:text-white leading-tight">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white leading-tight">
             Internal Financial Controls <br />
             <span className="text-brandPrimary dark:text-brandAccent">IFC Framework Design</span>
           </h2>
           
-          <p className="max-w-2xl text-lg md:text-xl leading-relaxed text-brandDark/70 dark:text-brandLight/70">
+          <p className="max-w-2xl text-base md:text-lg leading-relaxed text-brandDark/70 dark:text-brandLight/70">
             Building robust control environments through systematic documentation and gap identification to ensure total financial integrity.
           </p>
         </div>
@@ -65,7 +65,7 @@ function Framework() {
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-bold font-heading text-brandDark dark:text-white mb-2 group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
+                    <h3 className="text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white mb-2 group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
                       {feature.title}
                     </h3>
                     <p className="text-sm text-brandDark/60 dark:text-brandLight/60 leading-relaxed">

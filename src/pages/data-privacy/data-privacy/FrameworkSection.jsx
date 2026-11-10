@@ -15,10 +15,10 @@ function FrameworkSection() {
               <div className="inline-block mb-4">
                 <span className="text-brandPrimary dark:text-brandAccent font-bold tracking-widest uppercase text-sm">Comprehensive Coverage</span>
               </div>
-              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-brandDark dark:text-white leading-tight">
+              <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-brandDark dark:text-white leading-tight">
                 Integrated Compliance <span className="text-brandPrimary dark:text-brandAccent">Frameworks</span>
               </h2>
-              <p className="text-gray-600 dark:text-gray-300 text-lg mb-10 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-300 text-base mb-10 leading-relaxed">
                 A unified approach to privacy, ensuring organizations remain resilient across multiple legal jurisdictions and evolving technological landscapes. We simplify the complex.
               </p>
               
@@ -32,7 +32,7 @@ function FrameworkSection() {
                     </div>
                     <div>
                       <div className="flex items-center gap-3 mb-2">
-                        <h3 className="font-heading text-xl font-bold text-brandDark dark:text-white">{card.title}</h3>
+                        <h3 className="font-heading text-lg md:text-xl font-bold text-brandDark dark:text-white">{card.title}</h3>
                         <span className="text-[10px] font-black uppercase tracking-widest text-brandPrimary bg-brandPrimary/10 px-2 py-1 rounded-full">{card.tag}</span>
                       </div>
                       <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">{card.desc}</p>

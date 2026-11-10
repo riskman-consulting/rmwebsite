@@ -19,7 +19,7 @@ const BCPDROverview = () => {
 
           {/* RIGHT – CONTENT */}
           <div className="order-1 lg:order-2">
-            <h2 className="mb-6 text-2xl font-semibold font-heading md:text-3xl text-brandDark dark:text-brandAccent">
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-brandAccent">
               Business Continuity &amp; Disaster Recovery Overview
             </h2>
 

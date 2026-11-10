@@ -109,7 +109,7 @@ const ISOTISAXFAQ = () => {
                                     FAQ
                                 </span>
                             </div>
-                            <h2 className="text-3xl font-bold font-heading text-brandDark dark:text-white sm:text-4xl">
+                            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white ">
                                 Frequently Asked Questions
                             </h2>
                             <p className="mt-4 text-slate-600 dark:text-slate-400">

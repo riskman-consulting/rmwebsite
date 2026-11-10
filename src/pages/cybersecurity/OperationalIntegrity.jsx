@@ -59,10 +59,10 @@ const OperationalIntegrity = () => {
     //   <div className="container relative">
     //     {/* Section Header */}
     //     <div className="max-w-3xl mx-auto mb-16 text-center">
-    //       <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl lg:text-5xl font-heading">
+    //       <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading">
     //         Operational Integrity and Governance
     //       </h2>
-    //       <p className="text-xl leading-relaxed text-gray-200">
+    //       <p className="text-base md:text-lg leading-relaxed text-gray-200">
     //         We maintain the highest standards of independence and objectivity to build trust and ensure audit credibility. Our process provides clear communication to those charged with IT governance.
     //       </p>
     //     </div>
@@ -84,7 +84,7 @@ const OperationalIntegrity = () => {
     //             </div>
 
     //             {/* Title */}
-    //             <h3 className="mb-4 text-xl font-bold text-white font-heading">
+    //             <h3 className="mb-4 text-lg md:text-xl font-bold text-white font-heading">
     //               {feature.title}
     //             </h3>
 
@@ -110,7 +110,7 @@ const OperationalIntegrity = () => {
       <section className="py-16 bg-surfaceLight dark:bg-surfaceDark">
         <div className="container text-center">
           <p className="mb-2 font-bold tracking-wider uppercase text-brandPrimary dark:text-brandAccent">Trust & Governance</p>
-          <h2 className="mb-16 text-3xl md:text-4xl font-bold font-heading text-brandDark dark:text-white">Operational Integrity and Governance</h2>
+          <h2 className="mb-16 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">Operational Integrity and Governance</h2>
           
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
@@ -123,7 +123,7 @@ const OperationalIntegrity = () => {
                 <div className="flex items-center justify-center w-16 h-16 mx-auto mb-6 text-2xl font-bold text-white rounded-full shadow-lg bg-brandPrimary shadow-brandPrimary/30">
                   {idx + 1}
                 </div>
-                <h3 className="mb-4 text-xl font-bold text-brandDark dark:text-white">{item.title}</h3>
+                <h3 className="mb-4 text-lg md:text-xl font-bold text-brandDark dark:text-white">{item.title}</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-300">{item.desc}</p>
               </div>
             ))}

@@ -20,7 +20,7 @@ const ERMPage = () => {
   return (
     <main className="w-full overflow-hidden bg-bgLight dark:bg-bgDark">
 <Helmet>
-  <title>Risk-Based Internal Audit (RBIA) Services | RiskMan Consulting</title>
+  <title>Risk-Based Internal Audit (RBIA) | RiskMan Consulting</title>
   <meta
     name="description"
     content='Secure your future with RiskMan Consulting’s customized RBIA services. Our team delivers strategic insight and enduring value for your business.'

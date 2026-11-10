@@ -6,7 +6,7 @@ function ComplianceSection() {
     <section className="py-16 bg-white">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="font-heading text-3xl lg:text-4xl font-bold mb-4">Integrity Due Diligence</h2>
+            <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-4">Integrity Due Diligence</h2>
             <p className="text-gray-600">Navigate complex regulatory landscapes by providing deep insights into partners, vendors, and high-value transactions.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-12">

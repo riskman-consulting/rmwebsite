@@ -42,11 +42,11 @@ export const HeroSection = ({ heroRef, y, opacity }) => (
           </p>
         </motion.div>
 
-        <motion.h1 variants={fadeInUp} className="mb-8 text-5xl font-bold leading-tight md:text-6xl lg:text-7xl text-brandDark dark:text-white">
+        <motion.h1 variants={fadeInUp} className="mb-8 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight text-brandDark dark:text-white">
           Industry-Focused Solutions That Drive Impact
         </motion.h1>
 
-        <motion.p variants={fadeInUp} className="max-w-4xl mx-auto text-lg leading-relaxed md:text-xl text-brandNavy dark:text-gray-300">
+        <motion.p variants={fadeInUp} className="max-w-4xl mx-auto text-base md:text-lg leading-relaxed text-brandNavy dark:text-gray-300">
           We serve a wide range of industries with tailored risk, compliance, and advisory services...
         </motion.p>
       </motion.div>

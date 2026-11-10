@@ -62,7 +62,7 @@ export const IndustryCard = ({ industry, index }) => {
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-2xl font-extrabold tracking-tight text-brandDark dark:text-white group-hover:text-brandGold dark:group-hover:text-brandAccent transition-colors duration-300">
+              <h3 className="text-lg md:text-xl font-bold text-brandDark dark:text-white group-hover:text-brandGold dark:group-hover:text-brandAccent transition-colors duration-300">
                 {industry.title}
               </h3>
               

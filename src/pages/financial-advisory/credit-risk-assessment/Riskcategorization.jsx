@@ -51,10 +51,10 @@
 //       <div className="container">
 //         {/* Section Header */}
 //         <div className="max-w-3xl mx-auto mb-16 text-center">
-//           <h2 className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl font-heading text-brandDark dark:text-white">
+//           <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //             Risk Categorization & Ring-Fencing
 //           </h2>
-//           <p className="text-lg text-gray-600 dark:text-gray-300">
+//           <p className="text-base text-gray-600 dark:text-gray-300">
 //             We identify and quantify risks across the entire spectrum, implementing measures to protect your capital from both internal and external volatility.
 //           </p>
 //         </div>
@@ -93,7 +93,7 @@
 //             {activeTab === 'external' && (
 //               <div className="space-y-6 animate-fadeIn">
 //                 <div className="mb-8">
-//                   <h3 className="mb-2 text-2xl font-bold font-heading text-brandDark dark:text-white">
+//                   <h3 className="mb-2 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
 //                     External Risk Management
 //                   </h3>
 //                   <p className="text-gray-600 dark:text-gray-400">
@@ -132,7 +132,7 @@
 //             {activeTab === 'internal' && (
 //               <div className="space-y-6 animate-fadeIn">
 //                 <div className="mb-8">
-//                   <h3 className="mb-2 text-2xl font-bold font-heading text-brandDark dark:text-white">
+//                   <h3 className="mb-2 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
 //                     Internal Risk Mitigation
 //                   </h3>
 //                   <p className="text-gray-600 dark:text-gray-400">
@@ -190,10 +190,10 @@
 
 //               {/* Content */}
 //               <div className="flex-1 text-center md:text-left">
-//                 <h3 className="mb-3 text-2xl font-bold text-white md:text-3xl font-heading">
+//                 <h3 className="mb-3 text-xl md:text-2xl lg:text-3xl font-bold text-white font-heading">
 //                   Independent Analysis
 //                 </h3>
-//                 <p className="text-lg leading-relaxed text-gray-300">
+//                 <p className="text-base leading-relaxed text-gray-300">
 //                   Delivering objective severity and frequency quantification to enhance overall client creditworthiness and portfolio protection.
 //                 </p>
 //               </div>
@@ -244,10 +244,10 @@ const Risk = () => {
       <div className="container relative z-10">
         <div className="max-w-3xl mx-auto mb-16 text-center">
           <p className="mb-3 text-sm font-bold tracking-wider uppercase text-brandAccent">Protection</p>
-          <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl font-heading">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading">
             Risk Categorization & Ring-Fencing
           </h2>
-          <p className="text-lg text-gray-300">
+          <p className="text-base text-gray-300">
             We identify and quantify risks across the entire spectrum, implementing measures to protect your capital from both internal and external volatility.
           </p>
         </div>

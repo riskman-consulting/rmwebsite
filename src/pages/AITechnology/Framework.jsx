@@ -35,8 +35,8 @@ const Framework = () => {
       <div className="container">
         <div className="max-w-3xl mx-auto mb-20 text-center">
           <h2 className="mb-3 text-sm font-bold tracking-widest uppercase text-brandPrimary dark:text-brandAccent">Compliance & Standards</h2>
-          <h3 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">NIST-Aligned Framework</h3>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
+          <h3 className="mb-6 text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark dark:text-white">NIST-Aligned Framework</h3>
+          <p className="text-base text-gray-600 dark:text-gray-300">
             RiskMan operationalizes NIST AI RMF for trustworthy deployments, delivering compliance and innovation for CXO strategies.
           </p>
         </div>
@@ -85,7 +85,7 @@ const Framework = () => {
           
           <div className="relative z-10 grid gap-12 lg:grid-cols-3">
             <div className="lg:col-span-1">
-              <h3 className="mb-6 text-3xl font-bold">Why NIST Alignment Matters?</h3>
+              <h3 className="mb-6 text-xl md:text-2xl lg:text-3xl font-bold">Why NIST Alignment Matters?</h3>
               <p className="mb-8 leading-relaxed text-gray-300">
                 Adhering to NIST standards ensures your AI systems are not just powerful, but ethical, safe, and globally compliant.
               </p>

@@ -143,7 +143,7 @@ const cx = {
   section: (bg = "#fff") => ({ background: bg, padding: "5rem 0", position: "relative", overflow: "hidden" }),
   container: { maxWidth: 1200, margin: "0 auto", padding: "0 16px" },
   heading: (color = "#001F3F") => ({
-    fontFamily: "Montserrat, sans-serif",
+    fontFamily: "Inter, sans-serif",
     fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
     fontWeight: 800,
     color,
@@ -206,7 +206,7 @@ function HeroSection() {
 
             <h1
               style={{
-                fontFamily: "Montserrat, sans-serif",
+                fontFamily: "Inter, sans-serif",
                 fontSize: "clamp(2.5rem, 5vw, 4.2rem)",
                 fontWeight: 800,
                 lineHeight: 1.08,
@@ -334,7 +334,7 @@ function DataFiduciarySection() {
                         <Icon size={24} style={{ color: "#FFC000" }} />
                       </div>
                       <div>
-                        <h4 style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 700, fontSize: "1rem", color: "#001F3F", marginBottom: "0.25rem" }}>
+                        <h4 style={{ fontFamily: "Inter, sans-serif", fontWeight: 700, fontSize: "1rem", color: "#001F3F", marginBottom: "0.25rem" }}>
                           {item.title}
                         </h4>
                         <p style={{ color: "#888", fontSize: "0.85rem", lineHeight: 1.6 }}>{item.desc}</p>
@@ -424,7 +424,7 @@ function EmpowermentSection() {
                   border: "1px solid rgba(255,192,0,0.15)",
                 }}
               >
-                <div style={{ color: "#FFC000", fontFamily: "Montserrat, sans-serif", fontWeight: 700, fontSize: "0.85rem", marginBottom: "0.4rem" }}>
+                <div style={{ color: "#FFC000", fontFamily: "Inter, sans-serif", fontWeight: 700, fontSize: "0.85rem", marginBottom: "0.4rem" }}>
                   India Mandate
                 </div>
                 <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.9rem", fontStyle: "italic", lineHeight: 1.6 }}>
@@ -498,7 +498,7 @@ function OperationSection() {
                   >
                     <Icon size={26} style={{ color: "#FFC000" }} />
                   </div>
-                  <h4 style={{ fontFamily: "Montserrat, sans-serif", fontWeight: 700, fontSize: "1.1rem", color: "#fff", marginBottom: "0.75rem" }}>
+                  <h4 style={{ fontFamily: "Inter, sans-serif", fontWeight: 700, fontSize: "1.1rem", color: "#fff", marginBottom: "0.75rem" }}>
                     {item.t}
                   </h4>
                   <p style={{ color: "rgba(255,255,255,0.45)", fontSize: "0.875rem", lineHeight: 1.7 }}>{item.d}</p>
@@ -591,7 +591,7 @@ function CTASection() {
             <div className="relative z-10">
               <h2
                 style={{
-                  fontFamily: "Montserrat, sans-serif",
+                  fontFamily: "Inter, sans-serif",
                   fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
                   fontWeight: 900,
                   color: "#001F3F",
@@ -656,7 +656,7 @@ export default function DPDPCompliancePage() {
         <link rel="canonical" href="https://www.riskman.in/services/data-privacy/dpdp" />
       </Helmet>
       <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
         rel="stylesheet"
       />
       <HeroSection />

@@ -54,7 +54,7 @@ export const JourneyTimeline = () => {
                     <span className="text-brandPrimary text-[10px] font-bold uppercase tracking-[0.2em]">
                         Our Story
                     </span>
-                    <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white mt-2 mb-4 tracking-tight">
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-zinc-900 dark:text-white mt-2 mb-4 ">
                         {getCompanyYearsPhrase()} of Excellence
                     </h2>
                     <p className="text-zinc-500 dark:text-zinc-400 text-base leading-relaxed">
@@ -90,7 +90,7 @@ export const JourneyTimeline = () => {
                                         <span className="text-[11px] font-bold text-brandPrimary mb-1 block">
                                             {milestone.year}
                                         </span>
-                                        <h3 className="text-lg font-bold text-zinc-900 dark:text-white mb-1">
+                                        <h3 className="text-lg md:text-xl font-bold text-zinc-900 dark:text-white mb-1">
                                             {milestone.title}
                                         </h3>
                                         <p className="text-zinc-500 dark:text-zinc-400 text-xs leading-normal">

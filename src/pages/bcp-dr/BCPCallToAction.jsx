@@ -11,11 +11,11 @@ const BCPCallToAction = () => {
       <div className="container relative z-10">
         <div className="max-w-4xl mx-auto text-center">
 
-          <h2 className="mb-6 text-3xl font-bold leading-tight text-white md:text-4xl font-heading">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white font-heading">
             Protect Your Organization’s Future
           </h2>
 
-          <p className="mb-10 text-base md:text-lg text-white/85">
+          <p className="mb-10 text-base text-white/85">
             Contact us today to build a culture of resilience within your organization
           </p>
 

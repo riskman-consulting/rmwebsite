@@ -32,10 +32,10 @@ const CyberSection = () => {
               </div>
               <h3 className="text-sm font-bold tracking-wider uppercase text-brandGold">Cyber Intelligence</h3>
             </div>
-            <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading">
+            <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading">
               Digital Forensics and Cyber Incident Response
             </h2>
-            <p className="mb-8 text-lg text-gray-300">
+            <p className="mb-8 text-base text-gray-300">
               In an era of data-centric operations, our team secures critical evidence from digital environments to mitigate high-tech risks.
             </p>
             

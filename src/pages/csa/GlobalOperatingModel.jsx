@@ -32,11 +32,11 @@ export default function GlobalOperatingModel() {
     <section className="py-16 bg-bgLight dark:bg-bgDark">
       <div className="container">
         {/* Section Header */}
-        <h2 className="mb-8 text-3xl font-bold font-heading md:text-4xl text-brandDark dark:text-white">
+        <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
           RiskMan's Global CSA Operating Model
         </h2>
 
-        <p className="mb-12 text-lg leading-relaxed text-brandNavy dark:text-white/70">
+        <p className="mb-12 text-base leading-relaxed text-brandNavy dark:text-white/70">
           RiskMan has developed a proven, scalable CSA operating model specifically designed for 
           complex global organizations operating across multiple geographies, regulatory regimes, 
           and business models. Our approach balances global consistency with local adaptability—ensuring 
@@ -45,7 +45,7 @@ export default function GlobalOperatingModel() {
 
         {/* Centralized Governance */}
         <div className="mb-12">
-          <h3 className="mb-4 text-2xl font-bold text-brandDark dark:text-brandAccent">
+          <h3 className="mb-4 text-lg md:text-xl font-bold text-brandDark dark:text-brandAccent">
             Centralized Governance, Localized Execution
           </h3>
           <p className="mb-6 leading-relaxed text-brandNavy dark:text-white/70">
@@ -91,7 +91,7 @@ export default function GlobalOperatingModel() {
 
         {/* End-to-End CSA Lifecycle */}
         {/* <div className="mb-12">
-          <h3 className="mb-4 text-2xl font-bold text-brandDark dark:text-brandAccent">
+          <h3 className="mb-4 text-lg md:text-xl font-bold text-brandDark dark:text-brandAccent">
             End-to-End CSA Lifecycle
           </h3>
           <p className="mb-6 leading-relaxed text-brandDark dark:text-white/70">
@@ -127,7 +127,7 @@ export default function GlobalOperatingModel() {
 
         {/* Technology & GRC Integration */}
         {/* <div className="p-8 shadow-md bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-900 rounded-xl">
-          <h3 className="mb-4 text-2xl font-bold text-brandDark dark:text-brandAccent">
+          <h3 className="mb-4 text-lg md:text-xl font-bold text-brandDark dark:text-brandAccent">
             Technology & GRC Integration
           </h3>
           <p className="mb-6 leading-relaxed text-brandNavy dark:text-white">

@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <>
       {/* <Helmet>
-        <title>RiskMan Consulting | Strategic Risk Advisory, IT GRC & ESG Consulting Solutions</title>
+        <title>RiskMan Consulting | Risk Advisory, IT GRC & ESG Consulting</title>
         <meta 
           name="description" 
           content="RiskMan offers "Propreneurial" partnership—senior-led expertise with an owner's commitment. Experience 100% on-time execution, fixed-price predictability, and bespoke Risk, IT GRC, and ESG strategies. Contact us today." 
@@ -42,7 +42,7 @@ export default function Home() {
       </Helmet> */}
 
       <Helmet>
-  <title>RiskMan Consulting | Strategic Risk Advisory, IT GRC & ESG Consulting Solutions</title>
+  <title>RiskMan Consulting | Risk Advisory, IT GRC & ESG Consulting</title>
   <meta 
     name="description" 
     content="RiskMan offers &quot;Propreneurial&quot; partnership—senior-led expertise with an owner's commitment. Experience 100% on-time execution, fixed-price predictability, and bespoke Risk, IT GRC, and ESG strategies. Contact us today." 

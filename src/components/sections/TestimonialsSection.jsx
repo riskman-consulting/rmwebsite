@@ -22,7 +22,7 @@ export default function TestimonialsSection({ data }) {
             </p>
           )}
 
-          <h2 className="text-4xl font-bold md:text-5xl text-brandDark dark:text-white">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
             {data.title}
           </h2>
         </motion.div>

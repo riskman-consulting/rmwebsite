@@ -11,8 +11,8 @@ function CTASection() {
             <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-brandPrimary/20 to-transparent"></div>
             <div className="relative z-10">
               <AlertCircle className="mx-auto mb-6 text-brandAccent opacity-50" size={48} />
-              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">Eliminate Regulatory Uncertainty</h2>
-              <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-medium">
+              <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-6">Eliminate Regulatory Uncertainty</h2>
+              <p className="text-base md:text-lg text-gray-300 mb-10 max-w-2xl mx-auto font-medium">
                 Identify and close gaps before they escalate. Secure your license to operate with a professional RiskMan audit.
               </p>
               <button onClick={() => navigate("/contact")} className="bg-brandAccent text-brandDark px-12 py-5 rounded-md font-black text-xl hover:bg-brandGold transition-all shadow-xl hover:-translate-y-1">

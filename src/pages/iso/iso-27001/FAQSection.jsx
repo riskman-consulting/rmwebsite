@@ -36,10 +36,10 @@ const FAQ = () => {
       <div className="container">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto mb-16 text-center">
-          <h2 className="mb-6 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
+          <p className="text-base text-gray-600 dark:text-gray-300">
             Get answers to common questions about ISO 27001 certification
           </p>
         </div>

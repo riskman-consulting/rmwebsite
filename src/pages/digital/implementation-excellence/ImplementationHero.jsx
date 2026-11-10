@@ -23,14 +23,14 @@ const ImplementationHero = () => {
                     Digital Transformation
                   </div>
                   
-                  <h1 className="mb-6 text-4xl font-bold leading-tight text-white font-heading md:text-5xl lg:text-6xl">
+                  <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight text-white font-heading ">
                     Accelerating Value Realization with{" "}
                     <span className="text-brandGold">
                       Implementation Excellence
                     </span>
                   </h1>
         
-                  <p className="mb-10 text-lg leading-relaxed text-white/90 md:text-xl">
+                  <p className="mb-10 text-base md:text-lg leading-relaxed text-white/90 ">
                     RiskMan delivers implementation excellence through rigorous tool
                     optimization, process re-engineering, and structured data migration
                     frameworks to ensure your digital transformation succeeds.

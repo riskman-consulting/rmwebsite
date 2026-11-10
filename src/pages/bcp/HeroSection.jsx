@@ -8,7 +8,7 @@ const HeroIntroduction = () => {
           
           {/* LEFT CONTENT */}
           <div>
-            <h1 className="mb-6 text-3xl font-semibold leading-tight font-heading md:text-4xl lg:text-5xl text-brandDark dark:text-brandAccent">
+            <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading text-brandDark dark:text-brandAccent">
               Business Continuity Planning &amp; <br />
               Disaster Recovery Implementation
             </h1>

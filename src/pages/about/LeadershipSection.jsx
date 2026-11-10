@@ -49,8 +49,8 @@ function LeadershipModal({ leader, onClose }) {
                   />
                 )}
                 <div>
-                  <h2 className="font-heading text-2xl md:text-[1.75rem] font-bold leading-tight mb-1
-                                 text-brandDark dark:text-white">
+                  <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-1
+ text-brandDark dark:text-white">
                     {leader.name}
                   </h2>
                   <p className="text-sm font-semibold mb-2 text-brandPrimary dark:text-brandAccent">
@@ -264,7 +264,7 @@ function MemberCard({ member, index, onSelect, isSelected }) {
         )}
       </div>
 
-      <h3 className="font-heading text-xl font-bold text-center mb-1 text-brandDark dark:text-white">
+      <h3 className="font-heading text-lg md:text-xl font-bold text-center mb-1 text-brandDark dark:text-white">
         {member.name}
       </h3>
       <p className="text-sm font-semibold text-center mb-2 text-brandPrimary dark:text-brandAccent">

@@ -65,7 +65,7 @@ const ERMAdvantagesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="mb-4 text-3xl font-bold leading-tight font-heading text-brandDark dark:text-brandLight md:text-4xl"
+              className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandDark dark:text-brandLight "
             >
               Enterprise Risk Assessment <span className="text-brandPrimary dark:text-brandAccent">Advantages</span>
             </motion.h2>
@@ -84,7 +84,7 @@ const ERMAdvantagesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.15 }}
-              className="max-w-xl text-lg leading-relaxed text-brandNavy/80 dark:text-brandLight/70"
+              className="max-w-xl text-base leading-relaxed text-brandNavy/80 dark:text-brandLight/70"
             >
               A robust Enterprise Risk Assessment serves as a cornerstone for organizational
               resilience, transforming potential threats into structured pathways for sustainable growth.
@@ -125,7 +125,7 @@ const ERMAdvantagesSection = () => {
               {/* Hover accent */}
               <div className="absolute inset-x-0 top-0 h-1 transition opacity-0 bg-brandAccent group-hover:opacity-100 dark:bg-brandAccent" />
 
-              <h3 className="mb-3 text-lg font-semibold font-heading text-brandDark dark:text-brandLight">
+              <h3 className="mb-3 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-brandLight">
                 {item.title}
               </h3>
 

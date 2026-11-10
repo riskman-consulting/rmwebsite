@@ -53,15 +53,15 @@ const RiskManTeams = () => {
             Our Team
           </span>
 
-          <h2 className="mb-6 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
+          <h2 className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
             Meet the{" "}
-            <span className="font-serif italic font-medium text-brandGold">
+            <span className="text-brandGold">
               RiskMan
             </span>{" "}
             Team
           </h2>
 
-          <p className="max-w-2xl mx-auto text-lg leading-relaxed text-brandDark/70 dark:text-white/70">
+          <p className="max-w-2xl mx-auto text-base leading-relaxed text-brandDark/70 dark:text-white/70">
             Our diverse team of professionals brings together expertise, innovation,
             and dedication to deliver exceptional results for our clients.
           </p>

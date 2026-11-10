@@ -22,7 +22,7 @@ export default function CTASection() {
             Let’s Get Started
           </div>
 
-          <h2 className="mb-6 text-3xl font-bold leading-tight text-white md:text-4xl font-heading">
+          <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white font-heading">
             Strengthen Your Internal Controls with Risk-Based Auditing
           </h2>
 

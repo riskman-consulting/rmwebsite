@@ -42,10 +42,10 @@ export default function KeyServices() {
 
         {/* Header */}
         <div className="max-w-3xl mx-auto mb-16 text-center">
-          <h2 className="mb-6 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
+          <h2 className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
             {keyServices?.title}
           </h2>
-          <p className="text-lg leading-relaxed text-brandNavy dark:text-white/70">
+          <p className="text-base leading-relaxed text-brandNavy dark:text-white/70">
             {keyServices?.subtitle}
           </p>
         </div>
@@ -78,7 +78,7 @@ export default function KeyServices() {
                   {service.id}
                 </span>
 
-                <h3 className="mb-3 text-xl font-bold text-brandDark dark:text-white">
+                <h3 className="mb-3 text-lg md:text-xl font-bold text-brandDark dark:text-white">
                   {service.title}
                 </h3>
 

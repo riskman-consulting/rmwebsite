@@ -163,11 +163,11 @@ export default function Privacy() {
 
         <div className="container relative z-10 max-w-6xl mx-auto">
           <div className="text-center">
-            <p className="mb-4 text-lg font-semibold tracking-wide uppercase text-brandPrimary dark:text-brandAccent">
+            <p className="mb-4 text-base font-semibold tracking-wide uppercase text-brandPrimary dark:text-brandAccent">
               Your Data Protection
             </p>
 
-            <h1 className="mb-6 text-5xl font-bold leading-tight md:text-7xl text-brandDark dark:text-white">
+            <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight text-brandDark dark:text-white">
               Privacy
               <br />
               <span className="text-brandPrimary dark:text-brandAccent">
@@ -175,7 +175,7 @@ export default function Privacy() {
               </span>
             </h1>
 
-            <p className="max-w-3xl mx-auto text-xl leading-relaxed md:text-2xl text-brandNavy dark:text-gray-400">
+            <p className="max-w-3xl mx-auto text-base md:text-lg leading-relaxed text-brandNavy dark:text-gray-400">
               How we collect, use, and protect your information with transparency and integrity
             </p>
           </div>
@@ -186,10 +186,10 @@ export default function Privacy() {
       <section className="relative py-16 isolate">
         <div className="container">
           <div className="mb-16 text-center">
-            <h2 className="mb-6 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
+            <h2 className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
               Our Commitment to <span className="text-brandPrimary dark:text-brandAccent">Your Privacy</span>
             </h2>
-            <p className="max-w-3xl mx-auto text-lg text-brandNavy dark:text-gray-400">
+            <p className="max-w-3xl mx-auto text-base text-brandNavy dark:text-gray-400">
               At RiskMan, we take data protection seriously. This policy outlines how we handle
               your personal information with the highest standards of security and compliance.
             </p>
@@ -210,7 +210,7 @@ export default function Privacy() {
                     <section.icon className="w-7 h-7" />
                   </div>
 
-                  <h3 className="mb-4 text-2xl font-bold transition-colors duration-300 text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
+                  <h3 className="mb-4 text-lg md:text-xl font-bold transition-colors duration-300 text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandAccent">
                     {section.title}
                   </h3>
 
@@ -227,7 +227,7 @@ export default function Privacy() {
       {/* ================= CTA ================= */}
       <section className="py-16 text-center bg-surfaceLight dark:bg-surfaceDark">
         <div className="container">
-        <h2 className="mb-6 font-heading text-3xl md:text-4xl font-bold text-brandDark dark:text-white">
+        <h2 className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
           Need Privacy or
           <br />
           <span className="text-brandPrimary dark:text-brandAccent">
@@ -235,7 +235,7 @@ export default function Privacy() {
           </span>?
         </h2>
 
-        <p className="max-w-2xl mx-auto mb-8 text-xl text-brandNavy dark:text-gray-400">
+        <p className="max-w-2xl mx-auto mb-8 text-base md:text-lg text-brandNavy dark:text-gray-400">
           RiskMan assists organizations with privacy frameworks, governance,
           risk, and enterprise compliance programs
         </p>

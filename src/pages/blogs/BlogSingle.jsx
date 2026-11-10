@@ -50,7 +50,7 @@ const StateScreen = ({ icon, title, message, accent = false }) => (
       >
         {icon}
       </div>
-      <h1 className="mb-4 text-3xl font-bold md:text-4xl font-heading text-brandDark dark:text-white">
+      <h1 className="mb-4 text-[1.75rem] md:text-4xl lg:text-5xl font-bold font-heading text-brandDark dark:text-white">
         {title}
       </h1>
       <p className="mb-10 text-brandNavy/70 dark:text-gray-400">{message}</p>
