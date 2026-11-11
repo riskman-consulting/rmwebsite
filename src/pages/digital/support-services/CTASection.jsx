@@ -22,7 +22,7 @@ export const CTASection = () => {
                     <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white font-heading">
                         Ready to Sustain <br /> Your Success?
                     </h2>
-                    <p className="max-w-2xl mx-auto mb-12 text-base md:text-lg leading-relaxed text-white/80">
+                    <p className="max-w-2xl mx-auto mb-12 text-base leading-relaxed text-white/80">
                         Ensure a smooth digital future with RiskMan’s dedicated Support Services. Let's build a resilient foundation for your growth.
                     </p>
                     <Link

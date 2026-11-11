@@ -42,7 +42,7 @@ const CustomizedApproach = () => {
           <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold text-center font-heading text-brandDark dark:text-white">
             Our Customized Approach for Your Needs
           </h2>
-          <p className="max-w-3xl mx-auto mb-16 text-base text-center text-gray-700 dark:text-gray-300">
+          <p className="max-w-3xl mx-auto mb-16 text-[15px] text-center text-gray-700 dark:text-gray-300">
             This approach provides a tailored methodology to evaluate risks and enhance operational effectiveness across your organization's unique landscape.
           </p>
 

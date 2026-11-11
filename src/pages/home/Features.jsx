@@ -47,7 +47,7 @@
 
 //             {/* Right Column - Content */}
 //             <div className="space-y-8">
-//               <p className="text-base md:text-lg leading-relaxed text-brandNavy dark:text-white/80">
+//               <p className="text-base leading-relaxed text-brandNavy dark:text-white/80">
 //                 At{" "}
 //                 <span className="font-semibold text-brandDark dark:text-brandAccent">
 //                   RiskMan Consulting
@@ -57,7 +57,7 @@
 //                 growth.
 //               </p>
 
-//               <p className="text-base leading-relaxed md:text-lg text-brandNavy dark:text-white/70">
+//               <p className="text-base leading-relaxed text-brandNavy dark:text-white/70">
 //                 Our team of seasoned professionals combines deep industry
 //                 expertise with an entrepreneurial mindset to provide strategic
 //                 advisory services that drive value and resilience.
@@ -67,7 +67,7 @@
 //               <div className="pt-6 space-y-4">
 //                 <div className="flex items-start gap-4">
 //                   <div className="mt-1 w-1.5 h-1.5 rounded-full bg-brandGold dark:bg-brandAccent flex-shrink-0" />
-//                   <p className="text-base leading-relaxed text-brandNavy/80 dark:text-white/70">
+//                   <p className="text-[15px] leading-relaxed text-brandNavy/80 dark:text-white/70">
 //                     <span className="font-semibold text-brandDark dark:text-white">
 //                       Governance & Compliance:
 //                     </span>{" "}
@@ -76,7 +76,7 @@
 //                 </div>
 //                 <div className="flex items-start gap-4">
 //                   <div className="mt-1 w-1.5 h-1.5 rounded-full bg-brandGold dark:bg-brandAccent flex-shrink-0" />
-//                   <p className="text-base leading-relaxed text-brandNavy/80 dark:text-white/70">
+//                   <p className="text-[15px] leading-relaxed text-brandNavy/80 dark:text-white/70">
 //                     <span className="font-semibold text-brandDark dark:text-white">
 //                       Financial Discipline:
 //                     </span>{" "}
@@ -85,7 +85,7 @@
 //                 </div>
 //                 <div className="flex items-start gap-4">
 //                   <div className="mt-1 w-1.5 h-1.5 rounded-full bg-brandGold dark:bg-brandAccent flex-shrink-0" />
-//                   <p className="text-base leading-relaxed text-brandNavy/80 dark:text-white/70">
+//                   <p className="text-[15px] leading-relaxed text-brandNavy/80 dark:text-white/70">
 //                     <span className="font-semibold text-brandDark dark:text-white">
 //                       Digital Assurance:
 //                     </span>{" "}
@@ -99,7 +99,7 @@
 //           {/* Bottom Statement */}
 //           <div className="max-w-4xl mx-auto mt-16">
 //             <div className="relative p-8 border-l-4 md:p-10 bg-bgLight dark:bg-bgDark border-brandGold dark:border-brandAccent">
-//               <p className="text-base md:text-lg leading-relaxed text-brandNavy dark:text-white/80">
+//               <p className="text-base leading-relaxed text-brandNavy dark:text-white/80">
 //                 Our approach integrates governance, risk, compliance, financial
 //                 discipline, and digital assurance into a{" "}
 //                 <span className="font-bold text-brandDark dark:text-brandAccent">
@@ -258,13 +258,13 @@ const StrategicSection = () => {
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-base md:text-lg font-medium leading-relaxed text-brandNavy dark:text-white/90"
+              className="text-base font-medium leading-relaxed text-brandNavy dark:text-white/90"
             >
               At <span className="font-semibold text-brandGold">RiskMan</span>, we deliver customized
               solutions that empower leadership to navigate uncertainty and unlock sustainable growth.
             </motion.p>
  
-            <p className="text-base leading-relaxed text-brandNavy/70 dark:text-white/70">
+            <p className="text-[15px] leading-relaxed text-brandNavy/70 dark:text-white/70">
               Our team combines deep industry expertise with an entrepreneurial mindset, ensuring that strategic advisory
               is not just a service, but a value driver for your resilience.
             </p>
@@ -306,7 +306,7 @@ const StrategicSection = () => {
  
             <div className="absolute left-0 top-0 h-full w-1.5 bg-brandGold rounded-l-3xl" />
  
-            <p className="text-lg italic leading-relaxed md:text-xl text-brandNavy dark:text-white/80">
+            <p className="text-base italic leading-relaxed md:text-lg text-brandNavy dark:text-white/80">
               "Our approach integrates governance, risk, compliance, and digital assurance into a
               <span className="font-semibold text-brandDark dark:text-brandGold"> cohesive framework</span>
               — enabling leadership teams to make confident, informed decisions in a complex regulatory and economic environment."

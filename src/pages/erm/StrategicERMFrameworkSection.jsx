@@ -37,7 +37,7 @@ const StrategicERMFrameworkSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="max-w-4xl mx-auto mb-16 text-base text-center text-gray-600 dark:text-brandLight/70"
+          className="max-w-4xl mx-auto mb-16 text-[15px] text-center text-gray-600 dark:text-brandLight/70"
         >
           RiskMan partners with your organization to build a resilient future by implementing a
           comprehensive Enterprise Risk Management framework that identifies, assesses, and
@@ -62,7 +62,7 @@ const StrategicERMFrameworkSection = () => {
               RiskMan to be engaged for the following:
             </p>
 
-            <ul className="pl-5 space-y-2 list-disc text-gray-600 dark:text-brandLight/70">
+            <ul className="pl-5 space-y-2 list-disc text-[15px] leading-relaxed text-gray-600 dark:text-brandLight/70">
               <li>Develop ERM policy</li>
               <li>Advise to develop risk assessment criteria</li>
               <li>
@@ -96,7 +96,7 @@ const StrategicERMFrameworkSection = () => {
               We provide the following deliverables for your services:
             </p>
 
-            <ul className="pl-5 space-y-2 list-disc text-gray-600 dark:text-brandLight/70">
+            <ul className="pl-5 space-y-2 list-disc text-[15px] leading-relaxed text-gray-600 dark:text-brandLight/70">
               <li>Proposed ERM framework and manual</li>
               <li>
                 List of enterprise level key risks (i.e., Risks that Matter)

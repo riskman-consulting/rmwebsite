@@ -51,7 +51,7 @@ export default function HelpUsSection({ data }) {
               </h3>
 
               {/* Description */}
-              <p className="mb-6 text-base leading-relaxed text-brandNavy dark:text-gray-400">
+              <p className="mb-6 text-[15px] leading-relaxed text-brandNavy dark:text-gray-400">
                 {item.description}
               </p>
 

@@ -72,7 +72,7 @@ function HeroSection() {
           </h1>
 
           {/* Description */}
-          <p className="mb-10 text-base md:text-lg leading-relaxed text-gray-300 ">
+          <p className="mb-10 text-base leading-relaxed text-gray-300 ">
             Translating Board intent into operational discipline. RiskMan designs, implements, and sustains 
            governance frameworks that drive consistency, accountability, and control across entities and geographies.
           </p>

@@ -31,7 +31,7 @@
 //                         </h2>
 //                         <hr className="w-12 h-[2px] border-none bg-gradient-to-r from-brandGold to-brandAccent mb-8" />
 
-//                         <p className="mb-8 font-sans text-base font-light leading-relaxed text-brandLight/70">
+//                         <p className="mb-8 font-sans text-[15px] font-light leading-relaxed text-brandLight/70">
 //                             While our methodology is people-driven, our execution is technology-enabled. RiskMan leverages advanced data analytics and continuous monitoring tools to gain 100% visibility into transaction universes — moving beyond sampling to comprehensive oversight.
 //                         </p>
 

@@ -150,7 +150,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="max-w-2xl mx-auto mb-8 text-base md:text-lg leading-relaxed text-white/80 "
+          className="max-w-2xl mx-auto mb-8 text-base leading-relaxed text-white/80 "
         >
           Enterprise-grade advisory across risk management, compliance, cybersecurity, and strategic assurance
         </motion.p>
@@ -231,7 +231,7 @@ const StickyServicesSection = () => {
               </h2>
 
               {/* Description */}
-              <p className="text-base leading-relaxed text-brandNavy dark:text-gray-400">
+              <p className="text-[15px] leading-relaxed text-brandNavy dark:text-gray-400">
                 From comprehensive risk assessments to cutting-edge cybersecurity solutions, we deliver tailored services that protect and empower your organization.
               </p>
 
@@ -456,7 +456,7 @@ const AllServicesGrid = () => {
             </span>
           </h2>
 
-          <p className="max-w-3xl mx-auto text-base text-brandNavy dark:text-gray-400">
+          <p className="max-w-3xl mx-auto text-[15px] text-brandNavy dark:text-gray-400">
             Comprehensive risk management, compliance, and advisory services tailored to your industry
           </p>
         </motion.div>
@@ -620,7 +620,7 @@ const CapabilitiesSection = () => {
             <span className="text-brandAccent">RiskMan</span>
           </h2>
 
-          <p className="max-w-3xl mx-auto text-base text-white/80">
+          <p className="max-w-3xl mx-auto text-[15px] text-white/80">
             Industry-leading expertise backed by proven methodologies and cutting-edge technology
           </p>
         </motion.div>
@@ -698,7 +698,7 @@ const CTASection = () => {
           </h2>
 
           {/* Description */}
-          <p className="max-w-3xl mx-auto text-base md:text-lg leading-relaxed text-white/80 ">
+          <p className="max-w-3xl mx-auto text-base leading-relaxed text-white/80 ">
             Partner with RiskMan for proven frameworks, pragmatic execution, and measurable resilience
           </p>
 

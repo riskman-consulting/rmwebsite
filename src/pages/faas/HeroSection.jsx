@@ -52,7 +52,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.18 }}
-              className="max-w-2xl mt-5 text-base md:text-lg leading-relaxed text-brandNavy/70 dark:text-white/60"
+              className="max-w-2xl mt-5 text-base leading-relaxed text-brandNavy/70 dark:text-white/60"
             >
               From running the day-to-day finance function to standing up a CFO
               office, closing the books, and getting you audit- and deal-ready —

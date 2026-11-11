@@ -13,7 +13,7 @@ const HeroIntroduction = () => {
               Disaster Recovery Implementation
             </h1>
 
-            <p className="mb-6 font-sans text-base leading-relaxed md:text-lg text-brandNavy dark:text-brandLight">
+            <p className="mb-6 font-sans text-base leading-relaxed text-brandNavy dark:text-brandLight">
               RiskMan supports MG Motors Pvt. Ltd. in strengthening organizational
               resilience through structured Business Continuity Planning (BCP)
               and Disaster Recovery (DR). In an environment of increasing

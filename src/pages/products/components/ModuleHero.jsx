@@ -31,17 +31,17 @@ const ModuleHero = ({ product, mod, sections, belowVideoHero = false }) => {
               className={` text-brandDark dark:text-white ${
                 belowVideoHero
                   ? "text-2xl lg:text-[1.75rem] font-heading font-bold leading-tight"
-                  : "text-[1.75rem] md:text-4xl lg:text-5xl font-heading font-bold leading-[1.15]"
+                  : "text-[1.75rem] md:text-[2rem] xl:text-[2.5rem] font-heading font-bold leading-[1.15]"
               }`}
             >
               {mod.name}
             </Heading>
 
-            <p className="mt-3 max-w-[62ch] text-base md:text-lg font-medium leading-snug [text-wrap:balance] text-brandPrimary dark:text-brandGold">
+            <p className="mt-3 max-w-[62ch] text-base font-medium leading-snug [text-wrap:balance] text-brandPrimary dark:text-brandGold">
               {mod.tagline}
             </p>
 
-            <p className="mt-4 max-w-[62ch] text-base leading-relaxed text-gray-800 dark:text-white/80">
+            <p className="mt-4 max-w-[62ch] text-sm leading-relaxed text-gray-600 dark:text-white/70">
               {mod.overview}
             </p>
 

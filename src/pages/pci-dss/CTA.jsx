@@ -16,7 +16,7 @@ const CTA = () => {
             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading">
               Ready to Secure Your Compliance Future?
             </h2>
-            <p className="mb-10 text-base leading-relaxed text-gray-200 dark:text-gray-300">
+            <p className="mb-10 text-[15px] leading-relaxed text-gray-200 dark:text-gray-300">
               Achieve full PCI DSS validation with RiskMan's expert guidance and technical implementation.
             </p>
             

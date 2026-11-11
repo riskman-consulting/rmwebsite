@@ -10,7 +10,7 @@ function StrategicFoundation() {
         </h2>
 
         {/* Introduction */}
-        <p className="mb-8 text-base leading-relaxed text-brandNavy dark:text-white/70">
+        <p className="mb-8 text-[15px] leading-relaxed text-brandNavy dark:text-white/70">
           In an era defined by regulatory complexity, operational volatility, and heightened 
           stakeholder expectations, Control Self-Assessment (CSA) has emerged as a cornerstone 
           of modern risk governance. Far more than a compliance exercise, CSA represents a 

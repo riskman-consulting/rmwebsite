@@ -14,7 +14,7 @@ const HeroSection = () => {
             <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading ">
               Mastering Risk, Empowering Success
             </h1>
-            <p className="mb-8 text-base md:text-lg leading-relaxed text-white/90">
+            <p className="mb-8 text-base leading-relaxed text-white/90">
               We deliver customized risk advisory solutions, creating enduring value through expert strategic partnerships and independent internal audit services.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">

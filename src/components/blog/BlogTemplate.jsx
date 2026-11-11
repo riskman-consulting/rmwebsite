@@ -86,7 +86,7 @@ export default function BlogTemplate({ blog }) {
                         key={i}
                         className="p-6 border shadow-sm rounded-xl bg-gray-50"
                       >
-                        <p className="text-base md:text-lg font-semibold">❓ {faq.question}</p>
+                        <p className="text-base font-semibold">❓ {faq.question}</p>
                         <p className="mt-2 leading-relaxed text-gray-700">
                           {faq.answer}
                         </p>

@@ -124,7 +124,7 @@ const PolicyModal = ({ policy, onClose, contentRef, toc, scrollToSection }) => {
                         ) : (
                             <div className="flex flex-col items-center justify-center h-full text-center opacity-50">
                                 <FileText size={64} className="mb-6 text-gray-200 dark:text-gray-700" />
-                                <p className="text-base font-medium text-gray-400">Full content preview not available.</p>
+                                <p className="text-[15px] font-medium text-gray-400">Full content preview not available.</p>
                                 <p className="mt-2 text-sm text-gray-400">Please download the document to read more.</p>
                             </div>
                         )}

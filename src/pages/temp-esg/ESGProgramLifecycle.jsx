@@ -64,7 +64,7 @@ const ESGProgramLifecycle = () => {
           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             RiskMan's Global ESG Program Methodology
           </h2>
-          <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
+          <p className="text-[15px] leading-relaxed text-gray-700 dark:text-gray-300">
             RiskMan delivers enterprise-grade ESG programs that combine strategic vision with practical execution 
             excellence. Our methodology has been refined through engagements with multinational organizations across 
             diverse industries and regulatory environments.

@@ -80,7 +80,7 @@ export default function AlliancePartnersSection() {
             Partners
           </h2>
 
-          <p className="text-base leading-relaxed text-brandDark/70 dark:text-white/70">
+          <p className="text-[15px] leading-relaxed text-brandDark/70 dark:text-white/70">
             Collaborating with leading global CPA firms to deliver comprehensive Assurance engagements as per US GAAP, and AICPA standards.
           </p>
         </motion.div>

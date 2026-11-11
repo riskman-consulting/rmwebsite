@@ -61,7 +61,7 @@ export default function VideoHighlightsSection() {
             Video Highlights
           </h2>
 
-          <p className="text-base text-brandDark/70 dark:text-white/60">
+          <p className="text-[15px] text-brandDark/70 dark:text-white/60">
             Experience our journey through moments captured on camera.
           </p>
         </div>

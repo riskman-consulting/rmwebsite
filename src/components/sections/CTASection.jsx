@@ -33,7 +33,7 @@ export default function CTASection({ data }) {
           </h2>
 
           {/* Description */}
-          <p className="max-w-3xl mx-auto text-base md:text-lg leading-relaxed text-white/80">
+          <p className="max-w-3xl mx-auto text-base leading-relaxed text-white/80">
             {data.description}
           </p>
 

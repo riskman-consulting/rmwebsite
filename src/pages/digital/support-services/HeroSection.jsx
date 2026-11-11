@@ -33,7 +33,7 @@
 //               </span>
 //             </h1>
             
-//             <p className="max-w-lg mb-8 text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+//             <p className="max-w-lg mb-8 text-base leading-relaxed text-gray-600 dark:text-gray-300">
 //               RiskMan ensures seamless transitions through rigorous testing, proactive change management, and continuous process optimization.
 //             </p>
             
@@ -96,7 +96,7 @@
 //                 </div>
 //                 <div>
 //                   <p className="text-sm text-gray-500 dark:text-gray-400">System Reliability</p>
-//                   <p className="text-base font-bold text-brandDark dark:text-white">99.9% Guaranteed</p>
+//                   <p className="text-[15px] font-bold text-brandDark dark:text-white">99.9% Guaranteed</p>
 //                 </div>
 //               </div>
 //             </motion.div>
@@ -135,7 +135,7 @@ function HeroSection() {
             <span className="text-brandGold">Support Services</span>
           </h1>
 
-          <p className="mb-10 text-base md:text-lg leading-relaxed text-white/90 ">
+          <p className="mb-10 text-base leading-relaxed text-white/90 ">
             RiskMan ensures seamless transitions through rigorous testing,
             proactive change management, and continuous process optimization
             to maximize the lasting value of your digital investments.

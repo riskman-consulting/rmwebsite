@@ -7,7 +7,7 @@ export default function RegulatorySection() {
         <div className="container">
           <div className="max-w-3xl mb-16">
             <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-6">Regulatory Landscape Mapping</h2>
-            <p className="text-gray-600 dark:text-gray-300 text-base">Organizations must navigate a dense web of overlapping regulations that vary by industry and geographic location.</p>
+            <p className="text-gray-600 dark:text-gray-300 text-[15px]">Organizations must navigate a dense web of overlapping regulations that vary by industry and geographic location.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {landscapeMapping.map((item, idx) => (

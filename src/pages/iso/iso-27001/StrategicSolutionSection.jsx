@@ -63,7 +63,7 @@ const StrategicSolutions = () => {
           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Strategic ISO 27001 Readiness Solutions
           </h2>
-          <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
+          <p className="text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
             Strengthen your organization's resilience by aligning with global standards through our comprehensive, executive-led ISO 27001 readiness framework.
           </p>
         </div>

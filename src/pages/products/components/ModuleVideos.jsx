@@ -62,10 +62,10 @@ const ModuleVideos = ({ product, mod, videos }) => (
             See It in Action
           </p>
           {/* Same title style as ModuleHero */}
-          <h1 className="text-[1.75rem] md:text-4xl lg:text-5xl font-heading font-bold leading-[1.15] text-brandDark dark:text-white">
+          <h1 className="text-[1.75rem] md:text-[2rem] xl:text-[2.5rem] font-heading font-bold leading-[1.15] text-brandDark dark:text-white">
             {toTitleCase(mod.videoSection?.title || `${mod.shortName} Walkthrough`)}
           </h1>
-          <p className="mt-4 max-w-[62ch] text-base leading-relaxed text-gray-800 dark:text-white/80">
+          <p className="mt-4 max-w-[62ch] text-sm leading-relaxed text-gray-600 dark:text-white/70">
             {mod.videoSection?.lead ||
               "A short tour of the module, recorded on the working product."}
           </p>

@@ -114,7 +114,7 @@ const EventModal = ({ event, onClose }) => {
                           className="flex items-start gap-3 group"
                         >
                           <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#FFB800] to-[#FFC000] mt-2 group-hover:scale-150 transition-transform duration-300" />
-                          <p className="text-[#001F3F]/80 dark:text-white/80 leading-relaxed text-base group-hover:text-[#001F3F] dark:group-hover:text-white transition-colors duration-300">
+                          <p className="text-[#001F3F]/80 dark:text-white/80 leading-relaxed text-[15px] group-hover:text-[#001F3F] dark:group-hover:text-white transition-colors duration-300">
                             {point}
                           </p>
                         </motion.div>

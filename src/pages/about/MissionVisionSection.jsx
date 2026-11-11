@@ -105,7 +105,7 @@ export default function MissionVisionSection() {
               <h3 className="mb-3 text-base font-bold text-brandDark dark:text-brandAccent">
                 Our Mission:
               </h3>
-              <p className="text-base leading-relaxed text-brandNavy dark:text-white/70">
+              <p className="text-[15px] leading-relaxed text-brandNavy dark:text-white/70">
                 We aim to deliver compassionate, high-quality healthcare that prioritizes patient well-being, promotes preventive care, and enhances every individual's journey toward lasting wellness.
               </p>
             </div> */}
@@ -115,7 +115,7 @@ export default function MissionVisionSection() {
               <h3 className="mb-3 text-base font-bold text-brandDark dark:text-brandAccent">
                 Our Vision:
               </h3>
-              <p className="text-base leading-relaxed text-brandNavy dark:text-white/70">
+              <p className="text-[15px] leading-relaxed text-brandNavy dark:text-white/70">
                 To redefine modern healthcare through innovation, empathy, and expertise—empowering individuals to lead healthier, more fulfilling lives with trust and transparency.
               </p>
             </div> */}
@@ -125,7 +125,7 @@ export default function MissionVisionSection() {
               <h3 className="mb-3 text-base font-bold text-brandDark dark:text-brandAccent">
                 Future Goals:
               </h3>
-              <p className="text-base leading-relaxed text-brandNavy dark:text-white/70">
+              <p className="text-[15px] leading-relaxed text-brandNavy dark:text-white/70">
                 We strive to expand our medical services, integrate advanced technologies, and build accessible care networks that serve communities with compassion and excellence.
               </p>
             </div> */}
@@ -151,11 +151,11 @@ export default function MissionVisionSection() {
     <h3 className="mb-3 text-base font-bold text-brandDark dark:text-brandAccent">
       Our Mission:
     </h3>
-    <p className="mb-4 text-base leading-relaxed text-brandNavy dark:text-white/70">
+    <p className="mb-4 text-[15px] leading-relaxed text-brandNavy dark:text-white/70">
       Our mission is to achieve sustainable growth and build a better future for all.
       We believe in:
     </p>
-    <ul className="space-y-2 text-base text-brandNavy dark:text-white/70">
+    <ul className="space-y-2 text-[15px] leading-relaxed text-brandNavy dark:text-white/70">
       <li className="flex items-start gap-3">
         <span className="mt-1 text-brandAccent">▪</span>
         <span>Embracing technology and innovation</span>
@@ -180,7 +180,7 @@ export default function MissionVisionSection() {
     <h3 className="mb-3 text-base font-bold text-brandDark dark:text-brandAccent">
       Our Vision:
     </h3>
-    <p className="text-base leading-relaxed text-brandNavy dark:text-white/70">
+    <p className="text-[15px] leading-relaxed text-brandNavy dark:text-white/70">
       Our vision is to become a leading Risk Assurance and Advisory firm in India and globally by
       rendering sustainable, high-quality services fully aligned with our mission.
     </p>
@@ -191,7 +191,7 @@ export default function MissionVisionSection() {
     <h3 className="mb-3 text-base font-bold text-brandDark dark:text-brandAccent">
       Our Focus:
     </h3>
-    <p className="text-base leading-relaxed text-brandNavy dark:text-white/70">
+    <p className="text-[15px] leading-relaxed text-brandNavy dark:text-white/70">
       We focus on maximizing performance, ensuring reliability through customized
       agreements, and enhancing service productivity while minimizing operational costs.
     </p>

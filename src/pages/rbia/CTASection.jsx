@@ -26,7 +26,7 @@ export default function CTASection() {
             Strengthen Your Internal Controls with Risk-Based Auditing
           </h2>
 
-          <p className="mb-10 text-base leading-relaxed md:text-lg text-white/85">
+          <p className="mb-10 text-base leading-relaxed text-white/85">
             Partner with us to protect value, ensure compliance, and gain confidence through a robust RBIA framework.
           </p>
 

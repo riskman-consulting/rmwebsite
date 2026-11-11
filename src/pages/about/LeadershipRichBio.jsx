@@ -23,7 +23,7 @@ export function PrasenPalRichBio() {
 
         {/* Professional Summary */}
         <div className="p-6 border-l-4 rounded-r-xl bg-brandPrimary/5 dark:bg-brandPrimary/10 border-brandGold">
-          <p className="text-base leading-relaxed text-brandDark/90 dark:text-white/90">
+          <p className="text-[15px] leading-relaxed text-brandDark/90 dark:text-white/90">
             A seasoned professional with over{" "}
             <span className="font-bold text-brandPrimary dark:text-brandAccent">
               18 years of distinguished experience
@@ -189,7 +189,7 @@ export function SukantaNagRichBio() {
 
         {/* Professional Summary */}
         <div className="p-6 border-l-4 rounded-r-xl bg-brandPrimary/5 dark:bg-brandPrimary/10 border-brandGold">
-          <p className="mb-4 text-base leading-relaxed text-brandDark/90 dark:text-white/90">
+          <p className="mb-4 text-[15px] leading-relaxed text-brandDark/90 dark:text-white/90">
             A distinguished professional with over{" "}
             <span className="font-bold text-brandPrimary dark:text-brandAccent">
               41 years of unparalleled experience
@@ -352,7 +352,7 @@ export function ArpitGargRichBio() {
 
         {/* Professional Summary */}
         <div className="p-6 border-l-4 rounded-r-xl bg-brandPrimary/5 dark:bg-brandPrimary/10 border-brandGold">
-          <p className="mb-4 text-base leading-relaxed text-brandDark/90 dark:text-white/90">
+          <p className="mb-4 text-[15px] leading-relaxed text-brandDark/90 dark:text-white/90">
             A dynamic professional with over{" "}
             <span className="font-bold text-brandPrimary dark:text-brandAccent">
               14 years of specialized experience

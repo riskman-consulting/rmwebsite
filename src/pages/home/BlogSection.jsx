@@ -33,7 +33,7 @@ const BlogSection = () => {
             </span>
           </h2>
 
-          <p className="max-w-3xl text-base text-brandNavy dark:text-white/70">
+          <p className="max-w-3xl text-[15px] text-brandNavy dark:text-white/70">
             Stay updated with the latest insights, trends, and best practices in
             audit, risk management, and compliance.
           </p>

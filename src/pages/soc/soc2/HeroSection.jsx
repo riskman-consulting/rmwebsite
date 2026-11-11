@@ -42,7 +42,7 @@ const HeroSection = () => {
               to Enterprise Buyers.
             </h1>
             
-            <p className="max-w-xl mb-10 text-base md:text-lg font-medium leading-relaxed text-gray-600 dark:text-gray-300">
+            <p className="max-w-xl mb-10 text-base font-medium leading-relaxed text-gray-600 dark:text-gray-300">
               Show that your cloud and SaaS platforms operate with strong, tested controls across security, availability, confidentiality, and related trust principles.
             </p>
             

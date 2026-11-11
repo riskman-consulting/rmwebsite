@@ -8,7 +8,7 @@ function OverviewSection() {
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
               <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-6">SOC 1 In One View</h2>
-              <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed mb-8">
+              <p className="text-gray-600 dark:text-gray-300 text-[15px] leading-relaxed mb-8">
                 SOC 1 focuses on controls that impact our customers’ financial reporting. Typical users include CFOs, controllers, and external auditors of our clients.
               </p>
               <div className="space-y-4">

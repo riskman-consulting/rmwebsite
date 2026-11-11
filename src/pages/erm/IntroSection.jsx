@@ -40,7 +40,7 @@ const IntroSection = () => {
           {/* Accent line */}
           <div className="w-20 h-1 mx-auto mt-4 rounded-full bg-brandGold dark:bg-white/70 md:mx-0" />
 
-          <p className="mt-8 text-base leading-relaxed text-gray-600 dark:text-brandLight/70">
+          <p className="mt-8 text-[15px] leading-relaxed text-gray-600 dark:text-brandLight/70">
             RiskMan helps leadership teams identify, assess and respond to the risks that matter
             most to their business. We work alongside your people to build a risk framework that
             supports better decisions, not just compliance.

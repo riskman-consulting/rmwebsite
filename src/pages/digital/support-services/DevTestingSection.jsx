@@ -35,7 +35,7 @@ export const DevTestingSection = () => {
                                 <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
                                     Development Testing & UAT
                                 </h2>
-                                <p className="mb-8 text-base leading-relaxed text-gray-600 dark:text-gray-300">
+                                <p className="mb-8 text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
                                     Guarantee system reliability through comprehensive scenario-based validation and rigorous defect management protocols. We ensure your software is robust, secure, and ready for deployment.
                                 </p>
 

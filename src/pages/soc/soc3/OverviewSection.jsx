@@ -7,7 +7,7 @@ function OverviewSection() {
           <div className="bg-surfaceLight dark:bg-surfaceDark rounded-[2rem] p-8 lg:p-16 border border-borderLight dark:border-borderDark shadow-sm flex flex-col lg:flex-row gap-12 items-center">
             <div className="lg:w-1/2">
               <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-6">SOC 3 In One View</h2>
-              <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-6">
+              <p className="text-gray-600 dark:text-gray-400 text-[15px] leading-relaxed mb-6">
                 SOC 3 is for general use; public reports are based on the Trust Services Criteria. It uses high-level, non-technical language suitable for broad audiences and is often derived from underlying SOC 2 examinations.
               </p>
               <div className="flex flex-wrap gap-3">

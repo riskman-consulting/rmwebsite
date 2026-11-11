@@ -52,7 +52,7 @@ export default function HeroSection() {
 
           {/* Right */}
           <div className="lg:pt-5">
-            <p className="max-w-[640px] text-base leading-8 text-slate-600 transition-colors duration-300 dark:text-slate-300 ">
+            <p className="max-w-[640px] text-[15px] leading-relaxed text-slate-600 transition-colors duration-300 dark:text-slate-300 ">
               Step inside our process and see how RiskMan protects what
               matters most. From proactive planning to rapid response,
               we are the dedicated partner you can trust to secure your

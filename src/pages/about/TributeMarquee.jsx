@@ -42,7 +42,7 @@ export default function TributeMarquee() {
           <span className="text-lg text-brandAccent/40">•</span>
 
           {/* Tribute */}
-          <p className="max-w-xs text-base text-brandNavy/80 dark:text-white/80">
+          <p className="max-w-xs text-[15px] text-brandNavy/80 dark:text-white/80">
             Honoring his vision and mentorship that shaped the foundation of RiskMan.
           </p>
 

@@ -69,7 +69,7 @@
 //                   }`}
 //                 >
 //                   <div className="p-6 pt-0 md:p-8 md:pt-0">
-//                     <p className="text-base leading-relaxed text-brandNavy/70 dark:text-white/60 md:text-lg">
+//                     <p className="text-base leading-relaxed text-brandNavy/70 dark:text-white/60">
 //                       {faq.answer}
 //                     </p>
 //                   </div>

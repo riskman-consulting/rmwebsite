@@ -44,7 +44,7 @@
 //               <span className="text-brandAccent">Strategic PMO</span>
 //             </h1>
 
-//             <p className="max-w-3xl mx-auto mb-10 text-base md:text-lg leading-relaxed text-gray-200 ">
+//             <p className="max-w-3xl mx-auto mb-10 text-base leading-relaxed text-gray-200 ">
 //               RiskMan Consulting drives transformation through governance-led
 //               execution, bridging the gap between strategy and realization with
 //               milestone tracking and rigorous project ownership.

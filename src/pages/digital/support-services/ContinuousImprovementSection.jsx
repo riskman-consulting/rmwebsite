@@ -38,7 +38,7 @@ export const ContinuousImprovementSection = () => {
             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
               Continuous Improvement
             </h2>
-            <p className="mb-12 text-base text-gray-600 dark:text-gray-300">
+            <p className="mb-12 text-[15px] text-gray-600 dark:text-gray-300">
               Iterate and evolve your digital landscape through constant feedback, KPI adjustments, and governance-aligned enhancements.
             </p>
             

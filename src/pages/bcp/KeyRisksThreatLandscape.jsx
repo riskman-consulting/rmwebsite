@@ -10,7 +10,7 @@ const KeyRisksThreatLandscape = () => {
           <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-brandAccent">
             Key Risks &amp; Threat Landscape
           </h2>
-          <p className="font-sans text-base leading-relaxed md:text-lg text-brandNavy dark:text-brandLight">
+          <p className="font-sans text-base leading-relaxed text-brandNavy dark:text-brandLight">
             Automotive organizations are exposed to a wide range of operational,
             technology, people, and external risks that can disrupt critical
             business functions. The following risks have been identified as key

@@ -42,7 +42,7 @@ const RBIAHero = () => {
             </h1>
 
             {/* DESCRIPTION */}
-            <p className="max-w-xl mt-8 font-sans text-base md:text-lg font-medium leading-relaxed text-brandNavy/90 dark:text-gray-300">
+            <p className="max-w-xl mt-8 font-sans text-base font-medium leading-relaxed text-brandNavy/90 dark:text-gray-300">
               We deliver customized risk advisory solutions, creating enduring
               value through expert strategic partnerships and independent
               internal audit services.

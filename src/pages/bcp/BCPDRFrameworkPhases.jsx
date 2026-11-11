@@ -10,7 +10,7 @@ const BCPDRFrameworkPhases = () => {
           <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-brandAccent">
             BCP / DR Framework &amp; Implementation Phases
           </h2>
-          <p className="font-sans text-base leading-relaxed md:text-lg text-brandNavy dark:text-brandLight">
+          <p className="font-sans text-base leading-relaxed text-brandNavy dark:text-brandLight">
             The Business Continuity and Disaster Recovery framework follows a
             structured, phased approach to ensure systematic identification,
             mitigation, and recovery of critical business functions.

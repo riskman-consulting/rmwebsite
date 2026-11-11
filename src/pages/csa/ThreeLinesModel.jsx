@@ -9,7 +9,7 @@ export default function ThreeLinesModel() {
           CSA Within the Three Lines Model
         </h2>
 
-        <p className="mb-12 text-base leading-relaxed text-brandNavy dark:text-white/70">
+        <p className="mb-12 text-[15px] leading-relaxed text-brandNavy dark:text-white/70">
           The IIA's Three Lines Model provides the foundational governance architecture within 
           which effective CSA programs operate. RiskMan's approach ensures that CSA is not merely 
           a compliance activity but a strategic enabler of integrated risk governance across all 

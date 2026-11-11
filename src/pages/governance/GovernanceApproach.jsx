@@ -27,7 +27,7 @@ const SectionHeading = ({ tag, title, subtitle, centered = false }) => (
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="max-w-3xl text-base md:text-lg leading-relaxed text-brandDark/70 dark:text-brandLight/70 "
+                className="max-w-3xl text-base leading-relaxed text-brandDark/70 dark:text-brandLight/70 "
                 style={{ margin: centered ? '0 auto' : '0' }}
             >
                 {subtitle}

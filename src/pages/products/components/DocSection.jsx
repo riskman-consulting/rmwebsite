@@ -22,7 +22,7 @@ const DocSection = ({ id, title, lead, wide = false, children }) => (
               {toTitleCase(title)}
             </h2>
             {lead && (
-              <p className="mt-3 text-base leading-relaxed text-gray-600 dark:text-white/65">
+              <p className="mt-3 text-[15px] leading-relaxed text-gray-600 dark:text-white/65">
                 {lead}
               </p>
             )}
@@ -37,7 +37,7 @@ const DocSection = ({ id, title, lead, wide = false, children }) => (
                 {toTitleCase(title)}
               </h2>
               {lead && (
-                <p className="mt-3 text-base leading-relaxed text-gray-600 dark:text-white/65">
+                <p className="mt-3 text-[15px] leading-relaxed text-gray-600 dark:text-white/65">
                   {lead}
                 </p>
               )}

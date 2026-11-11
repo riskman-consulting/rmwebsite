@@ -63,7 +63,7 @@ const AdvisorySolutionsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mx-auto mt-8 text-base leading-relaxed text-slate-600 dark:text-brandLight/70"
+            className="mx-auto mt-8 text-[15px] leading-relaxed text-slate-600 dark:text-brandLight/70"
           >
             Our financial advisory solutions are designed to address practical
             financial decision challenges faced by organisations across growth,

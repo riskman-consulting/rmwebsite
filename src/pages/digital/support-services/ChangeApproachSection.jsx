@@ -20,7 +20,7 @@ export const ChangeApproachSection = () => {
       <div className="container relative z-10">
         <div className="mb-16 text-center">
           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading">Change Management Approach</h2>
-          <p className="max-w-2xl mx-auto text-base leading-relaxed text-gray-300">
+          <p className="max-w-2xl mx-auto text-[15px] leading-relaxed text-gray-300">
             We manage the people side of change so RiskMan is adopted smoothly and delivers sustained value across the organization.
           </p>
         </div>

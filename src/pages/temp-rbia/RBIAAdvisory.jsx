@@ -8,7 +8,7 @@ const RBIAAdvisory = () => {
           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Risk-Based Internal Audit (RBIA) under Risk Advisory
           </h2>
-          <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
+          <p className="text-[15px] leading-relaxed text-gray-700 dark:text-gray-300">
             Our RBIA services provide independent, risk-based assurance and practical insights across financial, operational, and compliance areas. We act as a value-adding partner to management by protecting revenue, strengthening internal controls, and ensuring rigorous statutory compliance.
           </p>
         </div>

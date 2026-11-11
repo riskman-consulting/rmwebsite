@@ -17,7 +17,7 @@ function Framework() {
             <span className="text-brandPrimary dark:text-brandAccent">IFC Framework Design</span>
           </h2>
           
-          <p className="max-w-2xl text-base md:text-lg leading-relaxed text-brandDark/70 dark:text-brandLight/70">
+          <p className="max-w-2xl text-base leading-relaxed text-brandDark/70 dark:text-brandLight/70">
             Building robust control environments through systematic documentation and gap identification to ensure total financial integrity.
           </p>
         </div>

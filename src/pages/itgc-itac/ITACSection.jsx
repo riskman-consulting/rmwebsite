@@ -29,7 +29,7 @@
 //             <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //               Application Architecture & Security (ITAC)
 //             </h2>
-//             <p className="max-w-3xl mx-auto text-base md:text-lg text-brandNavy/80 dark:text-white/70">
+//             <p className="max-w-3xl mx-auto text-base text-brandNavy/80 dark:text-white/70">
 //               RiskMan deep-dives into specific application layers to ensure design integrity and vulnerability resilience.
 //             </p>
 //           </div>
@@ -102,7 +102,7 @@ const ITACSection = () => {
                 Application Architecture & Security (ITAC)
               </h2>
               <div className="w-20 h-1 mb-6 rounded-full bg-brandGold"></div>
-              <p className="text-base leading-relaxed text-slate-600 dark:text-slate-300">
+              <p className="text-[15px] leading-relaxed text-slate-600 dark:text-slate-300">
                 RiskMan deep-dives into specific application layers to ensure design integrity and vulnerability resilience.
               </p>
             </div>

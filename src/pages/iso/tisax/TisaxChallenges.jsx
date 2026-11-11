@@ -46,7 +46,7 @@ const TisaxChallenges = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="mt-6 text-base text-slate-500 dark:text-slate-400"
+                        className="mt-6 text-[15px] text-slate-500 dark:text-slate-400"
                     >
                         RiskMan helps organizations overcome the common hurdles associated with automotive security assessments through expert resource allocation and strategic planning.
                     </motion.p>

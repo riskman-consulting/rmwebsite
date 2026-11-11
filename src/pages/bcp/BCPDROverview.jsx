@@ -23,7 +23,7 @@ const BCPDROverview = () => {
               Business Continuity &amp; Disaster Recovery Overview
             </h2>
 
-            <p className="mb-5 font-sans text-base leading-relaxed md:text-lg text-brandNavy dark:text-brandLight">
+            <p className="mb-5 font-sans text-base leading-relaxed text-brandNavy dark:text-brandLight">
               Business Continuity Planning (BCP) and Disaster Recovery (DR) are
               structured disciplines designed to ensure the continuity and
               stability of business operations during and after disruptive

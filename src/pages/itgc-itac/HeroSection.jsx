@@ -41,7 +41,7 @@ const HeroSection = () => {
     //       <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading ">
     //         Comprehensive IT Auditing with ITGC & ITAC Excellence
     //       </h1>
-    //       <p className="mb-10 text-base md:text-lg leading-relaxed text-white/90">
+    //       <p className="mb-10 text-base leading-relaxed text-white/90">
     //         Empower your enterprise with expert IT General and Application Controls auditing to mitigate risks, ensure compliance, and drive operational excellence.
     //       </p>
     //       <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -76,7 +76,7 @@ const HeroSection = () => {
          Comprehensive IT Auditing with <span className="text-brandGold">ITGC & ITAC</span>
       </h1>
 
-      <p className="max-w-2xl mb-10 text-base md:text-lg leading-relaxed text-gray-300 ">
+      <p className="max-w-2xl mb-10 text-base leading-relaxed text-gray-300 ">
        Empower your enterprise with expert IT General and Application Controls auditing to mitigate risks, ensure compliance, and drive operational excellence.
       </p>
 

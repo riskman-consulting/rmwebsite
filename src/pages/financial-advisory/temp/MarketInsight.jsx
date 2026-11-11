@@ -40,7 +40,7 @@ const MarketInsight = () => {
               <span className="text-brandPrimary dark:text-brandGold">More Critical Than Ever</span>
             </h2>
             
-            <p className="mb-8 font-sans text-base leading-relaxed text-gray-600 dark:text-gray-300">
+            <p className="mb-8 font-sans text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
               Expert corporate financial advisory has become increasingly important due to the complex and rapidly 
               changing business environment, both in the domestic & global fronts. 
             </p>

@@ -45,7 +45,7 @@ const WhyRiskManSection = () => {
                 Why Global Leaders <br /> <span className="underline text-brandPrimary decoration-brandAccent underline-offset-8">Trust RiskMan</span>
               </h2>
             </div>
-            <p className="max-w-md font-sans text-base text-brandDark/60 dark:text-surfaceLight/60 lg:text-right">
+            <p className="max-w-md font-sans text-[15px] text-brandDark/60 dark:text-surfaceLight/60 lg:text-right">
               We bridge the gap between strategic sustainability ambition and operational execution excellence.
             </p>
           </div>

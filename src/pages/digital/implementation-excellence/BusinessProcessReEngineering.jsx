@@ -21,7 +21,7 @@ const BusinessProcessReengineering = () => {
                 Efficiency First
               </div>
               <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">Business Process Re-engineering</h2>
-              <p className="mb-8 text-base text-brandNavy dark:text-white/70">
+              <p className="mb-8 text-[15px] text-brandNavy dark:text-white/70">
                 Redesign core workflows to eliminate bottlenecks and maximize the efficiency of your digital operations.
               </p>
 

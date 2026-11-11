@@ -34,7 +34,7 @@ const GovernanceHero = ({ containerRef }) => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="max-w-3xl mx-auto mb-16 text-base md:text-lg font-light leading-relaxed text-white/70"
+                    className="max-w-3xl mx-auto mb-16 text-base font-light leading-relaxed text-white/70"
                 >
                     The silent backbone of enterprise excellence. Translating boardroom vision into frontline reality through structured, auditable discipline.
                 </motion.p>

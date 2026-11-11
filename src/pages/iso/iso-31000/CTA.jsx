@@ -14,7 +14,7 @@ const CTA = () => {
         <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading">
           Master Your Risk Landscape
         </h2>
-        <p className="max-w-2xl mx-auto mb-10 text-base md:text-lg text-gray-300">
+        <p className="max-w-2xl mx-auto mb-10 text-base text-gray-300">
           Partner with RiskMan to build a culture of risk awareness that protects your future and drives organizational performance.
         </p>
         

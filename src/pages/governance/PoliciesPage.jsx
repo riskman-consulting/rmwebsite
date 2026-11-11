@@ -81,7 +81,7 @@ const PoliciesPage = () => {
                         <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
                             Policies <span className="text-brandAccent">&</span> Frameworks
                         </h2>
-                        <p className="max-w-2xl mx-auto text-base md:text-lg font-light leading-relaxed text-gray-600 dark:text-gray-400">
+                        <p className="max-w-2xl mx-auto text-base font-light leading-relaxed text-gray-600 dark:text-gray-400">
                             Our comprehensive suite of policies ensures we operate with the highest standards of conduct and compliance.
                         </p>
                     </div>
@@ -109,7 +109,7 @@ const PoliciesPage = () => {
                                 <Search className="w-12 h-12 text-gray-300 dark:text-gray-600" />
                             </div>
                             <h3 className="mb-4 text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white">No policies match your criteria</h3>
-                            <p className="mb-10 text-base md:text-lg font-light text-gray-500 dark:text-gray-400">Try adjusting your search terms or filters.</p>
+                            <p className="mb-10 text-base font-light text-gray-500 dark:text-gray-400">Try adjusting your search terms or filters.</p>
                             <button
                                 onClick={() => { setSearchTerm(""); setActiveCategory("All"); }}
                                 className="px-10 py-4 font-black transition-all duration-300 shadow-xl rounded-2xl bg-brandAccent text-brandDark hover:scale-105"
@@ -128,7 +128,7 @@ const PoliciesPage = () => {
                         <div className="absolute inset-0 hero-grid opacity-10" />
                         <div className="relative z-10 max-w-3xl mx-auto">
                             <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-white mb-10 text-balance leading-[0.9]">READY TO <span className="text-brandAccent">GOVERN?</span></h2>
-                            <p className="max-w-2xl mx-auto mb-16 text-base md:text-lg font-light leading-relaxed text-white/60">Let's build a foundation that eliminates ambiguity and drives enterprise maturity.</p>
+                            <p className="max-w-2xl mx-auto mb-16 text-base font-light leading-relaxed text-white/60">Let's build a foundation that eliminates ambiguity and drives enterprise maturity.</p>
                             <div className="flex flex-wrap justify-center gap-6">
                                 <Link to="/contact" className="px-12 py-6 text-xl font-black transition-all bg-brandAccent text-brandDark rounded-3xl hover:scale-105 shadow-3xl">Book a Governance Audit</Link>
                                 <button className="px-12 py-6 text-xl font-black text-white transition-all border bg-white/5 border-white/20 rounded-3xl hover:bg-white/10">View Case Studies</button>

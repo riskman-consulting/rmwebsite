@@ -10,7 +10,7 @@ const ISO22301BCMAlignment = () => {
           <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-brandAccent">
             ISO 22301 Alignment &amp; Business Continuity Management
           </h2>
-          <p className="font-sans text-base leading-relaxed md:text-lg text-brandNavy dark:text-brandLight">
+          <p className="font-sans text-base leading-relaxed text-brandNavy dark:text-brandLight">
             The Business Continuity approach is aligned with global best practices
             and ISO 22301 standards, ensuring a structured, auditable, and
             continuously improving Business Continuity Management System (BCMS).

@@ -76,7 +76,7 @@ const FoundationalFrameworks = () => {
           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Foundational ESG & Sustainability Frameworks
           </h2>
-          <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
+          <p className="text-[15px] leading-relaxed text-gray-700 dark:text-gray-300">
             Effective ESG programs are built upon globally recognized frameworks that provide structure, 
             comparability, and credibility. RiskMan's approach integrates these foundational standards to 
             deliver comprehensive, internationally aligned sustainability solutions.

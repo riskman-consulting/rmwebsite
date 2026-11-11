@@ -152,7 +152,7 @@ export default function ServiceLeadersSection({ setSelectedLeader }) {
             Our <span className="text-brandGold">Associate Partners</span> and{" "}
             <span className="text-brandAccent">Client Leads</span>
           </h2>
-          <p className="max-w-2xl mx-auto text-base text-brandNavy dark:text-white/70">
+          <p className="max-w-2xl mx-auto text-[15px] text-brandNavy dark:text-white/70">
             Meet our experienced team of professionals dedicated to delivering excellence
           </p>
         </motion.div>

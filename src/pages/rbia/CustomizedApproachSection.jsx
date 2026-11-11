@@ -96,7 +96,7 @@ export default function CustomizedApproachSection() {
           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white font-heading">
             Our <span className="text-brandPrimary dark:text-brandAccent italic">Customized</span> Approach
           </h2>
-          <p className="text-base text-slate-500 dark:text-slate-400 font-light leading-relaxed">
+          <p className="text-[15px] text-slate-500 dark:text-slate-400 font-light leading-relaxed">
             A tailored methodology to evaluate risks and enhance operational effectiveness across your organization's unique landscape.
           </p>
         </div>
@@ -192,7 +192,7 @@ export default function CustomizedApproachSection() {
                   <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-brandDark dark:text-white mb-6 leading-tight">
                     {PHASES[activeIndex].title}
                   </h3>
-                  <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed mb-10">
+                  <p className="text-[15px] text-slate-600 dark:text-slate-400 leading-relaxed mb-10">
                     {PHASES[activeIndex].description}
                   </p>
                   

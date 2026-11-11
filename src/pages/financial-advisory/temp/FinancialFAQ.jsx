@@ -65,7 +65,7 @@ const FinancialFAQ = () => {
                   openIndex === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
-                <div className="p-6 pt-0 mt-4 font-sans leading-relaxed text-gray-600 border-t dark:text-gray-400 border-borderLight dark:border-borderDark">
+                <div className="p-6 pt-0 mt-4 font-sans text-[15px] leading-relaxed text-gray-600 border-t dark:text-gray-400 border-borderLight dark:border-borderDark">
                   {faq.answer}
                 </div>
               </div>

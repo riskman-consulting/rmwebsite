@@ -40,7 +40,7 @@ export const CTASection = () => {
           </h2>
 
           {/* Description: Adaptive Text Color */}
-          <p className="max-w-3xl mx-auto text-sm md:text-lg leading-relaxed text-brandNavy/70 dark:text-white/60 mb-12">
+          <p className="max-w-3xl mx-auto text-sm md:text-base leading-relaxed text-brandNavy/70 dark:text-white/60 mb-12">
             Empowering global enterprises with tailored risk management, compliance, and cybersecurity services. 
             We transform operational complexity into sustainable growth and resilience.
           </p>

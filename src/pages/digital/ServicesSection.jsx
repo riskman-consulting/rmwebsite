@@ -29,7 +29,7 @@ const ServiceCard = ({ service, index }) => {
             {service.title}
           </h3>
           
-          <p className="text-base leading-relaxed text-gray-600">
+          <p className="text-[15px] leading-relaxed text-gray-600">
             {service.description}
           </p>
 
@@ -117,7 +117,7 @@ const ServicesSection = () => {
           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark">
             Explore Our Core Digital Transformation Offerings
           </h2>
-          <p className="text-base md:text-lg leading-relaxed text-gray-600 ">
+          <p className="text-base leading-relaxed text-gray-600 ">
             RiskMan Consulting bridges the gap between strategy and execution through governance-led PMO, implementation excellence, and comprehensive support. The services we offer are the following:
           </p>
         </div>

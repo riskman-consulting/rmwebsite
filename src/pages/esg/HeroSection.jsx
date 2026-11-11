@@ -36,12 +36,12 @@ const HeroSection = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="mb-4 font-serif text-base md:text-lg italic font-light leading-relaxed text-white/90 ">
+          <p className="mb-4 font-serif text-base italic font-light leading-relaxed text-white/90 ">
             Advisory, Implementation
           </p>
 
           {/* Tagline */}
-          <p className="mb-10 text-base md:text-lg font-light leading-relaxed text-white/85 ">
+          <p className="mb-10 text-base font-light leading-relaxed text-white/85 ">
             Transforming Organizations for a Sustainable Future
           </p>
 

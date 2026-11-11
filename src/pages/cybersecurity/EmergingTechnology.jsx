@@ -53,7 +53,7 @@
 //           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //             Emerging Technology and Supply Chain Security
 //           </h2>
-//           <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
+//           <p className="text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
 //             RiskMan offers specialized audits for modern digital environments, including AI systems and blockchain infrastructure, to ensure resilience. We identify supply chain risks to safeguard your broader ecosystem.
 //           </p>
 //         </div>

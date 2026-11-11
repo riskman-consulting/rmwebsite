@@ -56,7 +56,7 @@ export default function FAQSection() {
               </span>
             </h2>
             
-            <p className="text-base leading-relaxed text-brandDark/70 dark:text-white/70">
+            <p className="text-[15px] leading-relaxed text-brandDark/70 dark:text-white/70">
               Find answers to common questions about RiskMan's services, approach, and how we can help your organization achieve sustainable growth.
             </p>
 

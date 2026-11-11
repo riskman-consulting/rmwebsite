@@ -41,7 +41,7 @@ export default function FinancialAdvisory() {
         <motion.p
           {...fadeUp}
           transition={{ delay: 0.1 }}
-          className="max-w-3xl mt-6 text-base opacity-85"
+          className="max-w-3xl mt-6 text-[15px] opacity-85"
         >
           At RiskMan Consulting, our Financial Advisory Services are designed to
           provide guidances and advisories to corporates and other business

@@ -81,7 +81,7 @@ const Lightbox = ({ photo, onClose, onPrev, onNext }) => {
             {photo.date}
           </p>
 
-          <p className="text-base font-medium leading-loose text-white/60">
+          <p className="text-[15px] font-medium leading-relaxed text-white/60">
             {photo.description}
           </p>
         </div>

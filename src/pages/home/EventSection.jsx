@@ -103,7 +103,7 @@ export const EventCTASection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="max-w-2xl mb-12 text-base md:text-lg font-light leading-relaxed text-brandLight/90 drop-shadow-md"
+          className="max-w-2xl mb-12 text-base font-light leading-relaxed text-brandLight/90 drop-shadow-md"
         >
           Join our auditing workshops and events in Mumbai. Learn from practitioners 
           and connect with peers across risk, audit and compliance.

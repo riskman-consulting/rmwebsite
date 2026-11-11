@@ -33,7 +33,7 @@ const CTASection = ({
           <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-white">
             {heading || "Not sure which group you need?"}
           </h2>
-          <p className="mb-8 text-base leading-relaxed text-white/70">
+          <p className="mb-8 text-[15px] leading-relaxed text-white/70">
             {body ||
               "Most engagements start with a short review of your current close, controls and reporting. We will tell you where the gaps are before you commit to anything."}
           </p>

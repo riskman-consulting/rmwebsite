@@ -41,7 +41,7 @@ export default function SingleSlide() {
           </h1>
  
           {/* Body Text */}
-          <p className="max-w-xl mt-8 text-base md:text-lg leading-relaxed text-white/80">
+          <p className="max-w-xl mt-8 text-base leading-relaxed text-white/80">
             Strategic risk advisory driven by <strong className="text-white">propreneurs</strong>.
             We deliver customized solutions that secure sustainable growth and
             create enduring value for global enterprises.

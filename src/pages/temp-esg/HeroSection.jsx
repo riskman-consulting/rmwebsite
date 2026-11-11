@@ -28,7 +28,7 @@ const HeroSection = () => {
           </h2>
           
           {/* Tagline */}
-          <p className="mb-12 text-base md:text-lg italic text-brandLight/90">
+          <p className="mb-12 text-base italic text-brandLight/90">
             Transforming Organizations for a Sustainable Future
           </p>
 
@@ -70,7 +70,7 @@ const HeroSection = () => {
             <p className="mb-2 text-sm font-semibold tracking-widest uppercase text-brandLight/70">
               RiskMan Consulting LLP
             </p>
-            <p className="text-base font-medium text-brandAccent">
+            <p className="text-[15px] font-medium text-brandAccent">
               Global ESG & Sustainability Practice
             </p>
           </div>

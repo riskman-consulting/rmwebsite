@@ -61,7 +61,7 @@ const RiskManTeams = () => {
             Team
           </h2>
 
-          <p className="max-w-2xl mx-auto text-base leading-relaxed text-brandDark/70 dark:text-white/70">
+          <p className="max-w-2xl mx-auto text-[15px] leading-relaxed text-brandDark/70 dark:text-white/70">
             Our diverse team of professionals brings together expertise, innovation,
             and dedication to deliver exceptional results for our clients.
           </p>

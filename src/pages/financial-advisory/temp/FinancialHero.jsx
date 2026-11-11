@@ -29,7 +29,7 @@ const FinancialHero = () => {
               Secure Your <span className="text-brandGold">Financial Future</span> and Mitigate Risk
             </h1>
             
-            <p className="max-w-2xl mb-8 font-sans text-base md:text-lg leading-relaxed text-gray-300 ">
+            <p className="max-w-2xl mb-8 font-sans text-base leading-relaxed text-gray-300 ">
               {/* Our Financial Advisory Services provide guidance to corporates and business entities to navigate funding sources, 
               optimise borrowings, and adopt actionable financial strategies including capex management. */}
 

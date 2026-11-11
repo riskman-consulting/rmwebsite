@@ -45,7 +45,7 @@ export default function KeyServices() {
           <h2 className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
             {keyServices?.title}
           </h2>
-          <p className="text-base leading-relaxed text-brandNavy dark:text-white/70">
+          <p className="text-[15px] leading-relaxed text-brandNavy dark:text-white/70">
             {keyServices?.subtitle}
           </p>
         </div>

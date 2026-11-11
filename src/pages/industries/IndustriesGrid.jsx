@@ -9,7 +9,7 @@ export const IndustriesGrid = () => (
       <motion.div className="mb-16 text-center" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
         <p className="mb-4 text-sm font-semibold tracking-wider uppercase text-brandDark/60 dark:text-white/60">Specialized by Sector</p>
         <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">Tailored Industry Solutions</h2>
-        <p className="max-w-3xl mx-auto text-base text-brandNavy dark:text-gray-400">
+        <p className="max-w-3xl mx-auto text-[15px] text-brandNavy dark:text-gray-400">
           Designed for sector-specific regulatory, operational, and strategic challenges
         </p>
       </motion.div>

@@ -31,7 +31,7 @@ const RBIALandscape = () => {
             </h2>
 
             {/* Body Text */}
-            <p className="mt-6 text-base md:text-lg leading-relaxed text-brandNavy/70 dark:text-white/60 max-w-2xl">
+            <p className="mt-6 text-base leading-relaxed text-brandNavy/70 dark:text-white/60 max-w-2xl">
               Every Organization’s mission relies on <span className="text-brandDark dark:text-white font-bold underline decoration-brandAccent decoration-2 underline-offset-4">trust and speed</span>. 
               We provide proactive assurance across financial and operational areas to mitigate emerging threats.
             </p>

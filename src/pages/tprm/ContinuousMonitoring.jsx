@@ -34,7 +34,7 @@
 //             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //               Continuous Monitoring and Risk Mitigation
 //             </h2>
-//             <p className="max-w-3xl mx-auto text-base leading-relaxed text-gray-600 dark:text-gray-300">
+//             <p className="max-w-3xl mx-auto text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
 //               Risk management is not a one-time event. We implement annual reassessments for high-risk vendors and maintain detailed audit trails of all activities. Our strategy includes performance reviews against SLAs and coordinated incident response plans to mitigate breaches immediately if they occur.
 //             </p>
 //           </div>
@@ -98,7 +98,7 @@ const Monitoring = () => {
             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
               Continuous Monitoring and Risk Mitigation
             </h2>
-            <p className="mb-8 text-base text-gray-600 dark:text-gray-300">
+            <p className="mb-8 text-[15px] text-gray-600 dark:text-gray-300">
               Risk management is not a one-time event. We implement annual reassessments for high-risk vendors and maintain detailed audit trails of all activities. Our strategy includes performance reviews against SLAs and coordinated incident response plans to mitigate breaches immediately if they occur.
             </p>
             

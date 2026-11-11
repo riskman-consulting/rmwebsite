@@ -13,7 +13,7 @@ const ImplementationFAQ = () => {
                     <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
                         Frequently Asked <span className="text-brandPrimary dark:text-brandGold">Questions</span>
                     </h2>
-                    <p className="max-w-2xl mx-auto text-base opacity-70">
+                    <p className="max-w-2xl mx-auto text-[15px] opacity-70">
                         Get answers to common questions about our implementation excellence services
                     </p>
                 </div>

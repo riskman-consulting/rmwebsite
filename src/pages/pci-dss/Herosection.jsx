@@ -37,7 +37,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="max-w-xl mb-8 text-base leading-relaxed text-gray-600 dark:text-gray-300"
+              className="max-w-xl mb-8 text-[15px] leading-relaxed text-gray-600 dark:text-gray-300"
             >
               RiskMan helps you scope your cardholder data environment, close control gaps and prepare for your PCI DSS assessment across all six control objectives.
             </motion.p>

@@ -167,10 +167,10 @@ export default function TestimonialsSection() {
               key={idx}
               className="bg-white dark:bg-[#001A33] rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-[#003366]/5 dark:border-[#FFC000]/15"
             >
-              <p className="text-[#001F3F]/70 dark:text-white/80 text-base leading-relaxed mb-6">
+              <p className="text-[#001F3F]/70 dark:text-white/80 text-[15px] leading-relaxed mb-6">
                 "{testimonial.text}"
               </p>
-              <p className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFB800] to-[#FFC000] font-semibold text-base">
+              <p className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFB800] to-[#FFC000] font-semibold text-[15px]">
                 {testimonial.name}
               </p>
             </div>

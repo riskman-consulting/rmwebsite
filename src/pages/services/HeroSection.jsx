@@ -42,7 +42,7 @@ export const HeroSection = () => {
           </h1>
 
           {/* Sub-headline */}
-          <p className="mb-10 text-base md:text-lg leading-relaxed text-gray-200 ">
+          <p className="mb-10 text-base leading-relaxed text-gray-200 ">
             Navigating complexity with precision. We provide CXOs with the foresight to mitigate risk, the clarity to ensure compliance, and the strategy to drive sustainable growth.
           </p>
 

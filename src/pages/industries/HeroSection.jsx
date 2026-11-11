@@ -46,7 +46,7 @@ export const HeroSection = ({ heroRef, y, opacity }) => (
           Industry-Focused Solutions That Drive Impact
         </motion.h1>
 
-        <motion.p variants={fadeInUp} className="max-w-4xl mx-auto text-base md:text-lg leading-relaxed text-brandNavy dark:text-gray-300">
+        <motion.p variants={fadeInUp} className="max-w-4xl mx-auto text-base leading-relaxed text-brandNavy dark:text-gray-300">
           We serve a wide range of industries with tailored risk, compliance, and advisory services...
         </motion.p>
       </motion.div>

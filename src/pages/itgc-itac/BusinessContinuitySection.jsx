@@ -24,7 +24,7 @@
 //             <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //               Business Continuity & Statutory Compliance
 //             </h2>
-//             <p className="max-w-3xl mx-auto text-base md:text-lg text-brandNavy/80 dark:text-white/70">
+//             <p className="max-w-3xl mx-auto text-base text-brandNavy/80 dark:text-white/70">
 //               We align your IT strategy with legal requirements and disaster recovery readiness.
 //             </p>
 //           </div>
@@ -45,7 +45,7 @@
 //                     <h3 className="mb-4 text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark dark:text-white">
 //                       {feature.title}
 //                     </h3>
-//                     <p className="text-base leading-relaxed text-brandNavy/70 dark:text-white/60">
+//                     <p className="text-[15px] leading-relaxed text-brandNavy/70 dark:text-white/60">
 //                       {feature.description}
 //                     </p>
 //                   </div>
@@ -76,7 +76,7 @@ const BusinessContinuitySection = () => {
             Business Continuity & Statutory Compliance
             <span className="absolute left-0 w-1/2 h-1 rounded-full -bottom-2 bg-brandGold"></span>
           </h2>
-          <p className="max-w-2xl mx-auto mt-4 text-base text-slate-600 dark:text-slate-300">
+          <p className="max-w-2xl mx-auto mt-4 text-[15px] text-slate-600 dark:text-slate-300">
             We align your IT strategy with legal requirements and disaster recovery readiness.
           </p>
         </div>

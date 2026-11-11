@@ -41,7 +41,7 @@ const StrategicImperative = () => {
           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-center font-heading text-brandDark dark:text-white">
             Sustainability & ESG: The Strategic Imperative
           </h2>
-          <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
+          <p className="text-[15px] leading-relaxed text-gray-700 dark:text-gray-300">
             Sustainability is no longer a peripheral concern—it has become a core determinant of enterprise value, 
             competitive resilience, and long-term business viability. Environmental, Social, and Governance (ESG) criteria 
             now fundamentally shape how organizations are evaluated by investors, regulators, customers, and society at large.

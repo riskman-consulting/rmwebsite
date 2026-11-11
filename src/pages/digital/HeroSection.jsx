@@ -19,7 +19,7 @@
 //               Digital Evolution
 //             </span>
 //           </h1>
-//           <p className="max-w-2xl mx-auto mb-10 text-base md:text-lg leading-relaxed text-brandNavy/70 dark:text-brandLight/70 lg:mx-0">
+//           <p className="max-w-2xl mx-auto mb-10 text-base leading-relaxed text-brandNavy/70 dark:text-brandLight/70 lg:mx-0">
 //             RiskMan empowers your transformation journey by combining
 //             governance-driven execution with technical implementation excellence
 //             to deliver measurable business impact.

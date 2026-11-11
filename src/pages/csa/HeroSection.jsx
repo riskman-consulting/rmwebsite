@@ -53,7 +53,7 @@ export default function HeroSection() {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-base md:text-lg font-light leading-relaxed text-slate-300">
+            <p className="text-base font-light leading-relaxed text-slate-300">
               Transforming Risk Governance Through{' '}
               <span className="font-medium text-brandAccent">Embedded Accountability</span>
             </p>

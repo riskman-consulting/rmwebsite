@@ -38,7 +38,7 @@ function HeroSection() {
             <span className="text-brandAccent">Built for Certification</span>
           </h1>
  
-          <p className="max-w-2xl mb-10 text-base md:text-lg leading-relaxed text-gray-300 ">
+          <p className="max-w-2xl mb-10 text-base leading-relaxed text-gray-300 ">
             RiskMan takes you from gap assessment to certification audit for
             ISO 27001, ISO 27701, ISO 22301 and ISO 42001, aligns your risk
             management with ISO 31000, and prepares automotive suppliers for

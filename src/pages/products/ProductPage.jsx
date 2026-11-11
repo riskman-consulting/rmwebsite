@@ -100,13 +100,13 @@ const ProductPage = () => {
           <div className="grid items-center grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
             <div className="lg:col-span-5">
               <p className="mb-3 text-sm text-brandNavy/55 dark:text-white/45">Products</p>
-              <h1 className="text-[1.75rem] md:text-4xl lg:text-5xl font-heading font-bold leading-tight text-brandDark dark:text-white">
+              <h1 className="text-[1.75rem] md:text-[2rem] xl:text-[2.5rem] font-heading font-bold leading-tight text-brandDark dark:text-white">
                 {product.name}
               </h1>
-              <p className="mt-3 text-base md:text-lg font-medium leading-snug text-brandPrimary dark:text-brandGold [text-wrap:balance]">
+              <p className="mt-3 text-base font-medium leading-snug text-brandPrimary dark:text-brandGold [text-wrap:balance]">
                 {product.tagline}
               </p>
-              <p className="mt-4 max-w-[62ch] text-base leading-relaxed text-gray-800 dark:text-white/80">
+              <p className="mt-4 max-w-[62ch] text-sm leading-relaxed text-gray-600 dark:text-white/70">
                 {product.summary}
               </p>
 

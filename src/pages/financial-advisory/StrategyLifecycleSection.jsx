@@ -59,7 +59,7 @@ const StrategyLifecycleSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mx-auto mt-8 text-base leading-relaxed text-slate-600 dark:text-brandLight/70"
+            className="mx-auto mt-8 text-[15px] leading-relaxed text-slate-600 dark:text-brandLight/70"
           >
             Financial priorities evolve as businesses move through different
             growth stages. Our advisory framework is designed to support

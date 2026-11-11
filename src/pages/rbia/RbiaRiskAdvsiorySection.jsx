@@ -31,7 +31,7 @@ export default function RbiaRiskAdvisorySection() {
 
           <div className="w-24 h-1.5 mx-auto mb-8 rounded-full bg-gradient-to-r from-brandAccent to-brandGold" />
 
-          <p className="max-w-3xl mx-auto text-base leading-relaxed text-brandDark/80 dark:text-brandLight/80">
+          <p className="max-w-3xl mx-auto text-[15px] leading-relaxed text-brandDark/80 dark:text-brandLight/80">
             We act as a value-adding partner to management by protecting revenue, strengthening internal controls, and ensuring rigorous statutory compliance through practical, risk-based insights.
           </p>
         </div>
@@ -54,7 +54,7 @@ export default function RbiaRiskAdvisorySection() {
               Proven ‘Risk-Based’ <br /> Internal Audit Framework
             </h3>
 
-            <p className="text-base leading-relaxed text-brandDark/70 dark:text-brandLight/70">
+            <p className="text-[15px] leading-relaxed text-brandDark/70 dark:text-brandLight/70">
               Our methodology is field-tested and derived from global best practices, consistent with the <span className="font-semibold text-brandPrimary dark:text-brandAccent">International Standards for the Professional Practice of Internal Auditing</span>.
             </p>
 

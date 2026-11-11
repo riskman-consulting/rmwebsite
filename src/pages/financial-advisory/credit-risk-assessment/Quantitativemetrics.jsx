@@ -42,7 +42,7 @@ const QuantitativeMetrics = () => {
           <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Quantitative Metric Analysis
           </h2>
-          <p className="text-base text-gray-600 dark:text-gray-300">
+          <p className="text-[15px] text-gray-600 dark:text-gray-300">
             RiskMan evaluates the fundamental technicalities of credit exposure to ensure portfolio resilience and precise financial forecasting.
           </p>
         </div>

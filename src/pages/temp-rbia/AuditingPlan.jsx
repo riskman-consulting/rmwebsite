@@ -9,7 +9,7 @@ const AuditingPlan = () => {
           <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold text-center font-heading text-brandDark dark:text-white">
             Our Risk-based Internal Auditing Plan
           </h2>
-          <p className="max-w-3xl mx-auto mb-16 text-base text-center text-gray-700 dark:text-gray-300">
+          <p className="max-w-3xl mx-auto mb-16 text-[15px] text-center text-gray-700 dark:text-gray-300">
             The transition from traditional methods to a Risk-Based Internal Audit (RBIA) framework is driven by the need for deeper organizational value and proactive risk management.
           </p>
 

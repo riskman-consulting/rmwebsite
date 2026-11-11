@@ -30,7 +30,7 @@ function HeroSection() {
             Advanced Assurance Solutions for <span className="text-brandAccent">Modern Organizations</span>
           </h1>
 
-          <p className="text-base md:text-lg text-gray-300 mb-10 leading-relaxed max-w-2xl">
+          <p className="text-base text-gray-300 mb-10 leading-relaxed max-w-2xl">
             RiskMan delivers high-fidelity assurance frameworks, integrating real-time oversight and rigorous standards to safeguard institutional integrity and enhance stakeholder confidence.
           </p>
 

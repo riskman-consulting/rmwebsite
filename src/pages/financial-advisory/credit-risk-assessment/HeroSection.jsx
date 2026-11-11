@@ -29,7 +29,7 @@ const Hero = () => {
               Advanced <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandAccent to-brandGold">Credit Risk</span> Assessment
             </h1>
             
-            <p className="max-w-xl text-base md:text-lg leading-relaxed text-gray-200 ">
+            <p className="max-w-xl text-base leading-relaxed text-gray-200 ">
               We provide quantitative and qualitative evaluations of creditworthiness to mitigate default probability and secure your institution against potential loss.
             </p>
             

@@ -10,7 +10,7 @@ function RemediationSection() {
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2">
               <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-6">Risk Assessment & Remediation</h2>
-              <p className="text-gray-600 dark:text-gray-300 text-base mb-8 leading-relaxed">Organizations must proactively evolve their controls to meet the challenges of a rapidly changing digital landscape.</p>
+              <p className="text-gray-600 dark:text-gray-300 text-[15px] mb-8 leading-relaxed">Organizations must proactively evolve their controls to meet the challenges of a rapidly changing digital landscape.</p>
               <div className="grid gap-4">
                 {[
                   { t: "Gap Identification", d: "Pinpointing weaknesses in current structures.", icon: <Search className="text-brandPrimary" size={20}/> },

@@ -63,7 +63,7 @@ export default function WhyChooseRiskMan() {
           >
             Why <span className="text-brandPrimary dark:text-brandAccent">Choose</span> RiskMan?
           </motion.h2>
-          <p className="text-base text-brandNavy/70 dark:text-white/70">
+          <p className="text-[15px] text-brandNavy/70 dark:text-white/70">
             Strategic risk management led by industry veterans to ensure your
             business remains resilient, compliant, and ahead of the curve.
           </p>

@@ -77,7 +77,7 @@ const ImplementationRoadmap = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="max-w-2xl mx-auto mt-6 text-base text-slate-600 dark:text-slate-400"
+                        className="max-w-2xl mx-auto mt-6 text-[15px] text-slate-600 dark:text-slate-400"
                     >
                         Our structured methodology ensures seamless transition from assessment to compliance.
                     </motion.p>

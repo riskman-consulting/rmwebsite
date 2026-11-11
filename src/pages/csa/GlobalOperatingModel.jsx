@@ -36,7 +36,7 @@ export default function GlobalOperatingModel() {
           RiskMan's Global CSA Operating Model
         </h2>
 
-        <p className="mb-12 text-base leading-relaxed text-brandNavy dark:text-white/70">
+        <p className="mb-12 text-[15px] leading-relaxed text-brandNavy dark:text-white/70">
           RiskMan has developed a proven, scalable CSA operating model specifically designed for 
           complex global organizations operating across multiple geographies, regulatory regimes, 
           and business models. Our approach balances global consistency with local adaptability—ensuring 

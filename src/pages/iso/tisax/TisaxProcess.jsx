@@ -54,7 +54,7 @@ const TisaxProcess = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="mt-6 text-base text-slate-600 dark:text-slate-400"
+                        className="mt-6 text-[15px] text-slate-600 dark:text-slate-400"
                     >
                         Navigating the automotive security landscape requires a dedicated focus on the assessment of exchange mechanisms and industry-specific security protocols.
                     </motion.p>

@@ -135,7 +135,7 @@
 //               Advanced Forensics and{" "}
 //               <span className="text-[#FFC000]">Investigation</span> Services
 //             </h1>
-//             <p className="max-w-2xl mb-10 text-base md:text-lg leading-relaxed text-gray-300 ">
+//             <p className="max-w-2xl mb-10 text-base leading-relaxed text-gray-300 ">
 //               Protect organizational integrity through rigorous investigative
 //               protocols. We provide the clarity and evidence needed to resolve
 //               complex internal and external threats.
@@ -195,7 +195,7 @@
 //           >
 //             Strategic Investigative Solutions
 //           </h2>
-//           <p className="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+//           <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
 //             Organizations today face sophisticated threats that demand more than
 //             just standard oversight. RiskMan delivers high-stakes investigative
 //             expertise to identify vulnerabilities and resolve misconduct with
@@ -213,7 +213,7 @@
 //             />
 //             <div className="absolute inset-0 bg-gradient-to-r from-[#001F3F]/70 to-transparent" />
 //             <div className="absolute bottom-0 left-0 right-0 p-8">
-//               <p className="text-base font-bold text-white" style={{ fontFamily: "Inter, sans-serif" }}>
+//               <p className="text-[15px] font-bold text-white" style={{ fontFamily: "Inter, sans-serif" }}>
 //                 20+ Years of Elite Investigation
 //               </p>
 //               <p className="mt-1 text-sm text-gray-300">
@@ -293,7 +293,7 @@
 //               <p className="text-[#FFC000] text-sm font-bold uppercase tracking-widest mb-2">
 //                 Financial Intelligence
 //               </p>
-//               <p className="text-base md:text-lg font-bold text-white " style={{ fontFamily: "Inter, sans-serif" }}>
+//               <p className="text-base font-bold text-white " style={{ fontFamily: "Inter, sans-serif" }}>
 //                 Every dollar tells a story. Our forensic accountants read between the lines.
 //               </p>
 //             </div>
@@ -403,7 +403,7 @@
 //             <div className="absolute bottom-6 left-6 right-6">
 //               <div className="p-5 border bg-white/10 backdrop-blur-md rounded-xl border-white/20">
 //                 <Scale className="text-[#FFC000] mb-3" size={28} />
-//                 <p className="text-base font-bold text-white" style={{ fontFamily: "Inter, sans-serif" }}>
+//                 <p className="text-[15px] font-bold text-white" style={{ fontFamily: "Inter, sans-serif" }}>
 //                   Regulatory Confidence
 //                 </p>
 //                 <p className="mt-1 text-sm text-gray-300">
@@ -534,7 +534,7 @@
 //             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold " style={{ fontFamily: "Inter, sans-serif" }}>
 //               Protect Your Organization
 //             </h2>
-//             <p className="max-w-2xl mx-auto mb-10 text-base md:text-lg font-medium text-gray-300">
+//             <p className="max-w-2xl mx-auto mb-10 text-base font-medium text-gray-300">
 //               Implement proactive safeguards and reactive excellence for all
 //               investigative requirements.
 //             </p>

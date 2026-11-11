@@ -26,7 +26,7 @@ export default function SampleIASection() {
 
           <div className="w-20 h-1 mx-auto mb-6 rounded-full bg-gradient-to-r from-brandAccent to-brandGold" />
 
-          <p className="max-w-3xl mx-auto text-base leading-relaxed md:text-lg text-brandDark/90 dark:text-brandLight/90">
+          <p className="max-w-3xl mx-auto text-base leading-relaxed text-brandDark/90 dark:text-brandLight/90">
             Our sample plan identifies high-risk areas like revenue and payroll, providing tailored audit programs to strengthen controls, ensure compliance, and others that are based on your business needs.
           </p>
         </div>

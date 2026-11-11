@@ -108,7 +108,7 @@ const IndustryCard = ({ industry, index }) => {
             </div>
  
             {/* Subtitle */}
-            <p className="text-base leading-relaxed text-brandNavy dark:text-gray-400">
+            <p className="text-[15px] leading-relaxed text-brandNavy dark:text-gray-400">
               {industry.summary}
             </p>
  
@@ -183,7 +183,7 @@ export default function IndustriesList() {
             {/* Description */}
             <motion.p
               variants={fadeInUp}
-              className="max-w-3xl text-base md:text-lg leading-relaxed text-brandNavy dark:text-gray-300"
+              className="max-w-3xl text-base leading-relaxed text-brandNavy dark:text-gray-300"
             >
               RiskMan Consulting delivers specialized risk advisory, compliance, and ESG services across Banking, Manufacturing, Healthcare, Technology, Retail, and more industry sectors.
             </motion.p>
@@ -237,7 +237,7 @@ export default function IndustriesList() {
               Deep Sector Knowledge, Seamless Execution.
             </h2>
  
-            <p className="text-base leading-relaxed text-brandNavy dark:text-gray-400">
+            <p className="text-[15px] leading-relaxed text-brandNavy dark:text-gray-400">
               In complex risk management, one size never fits all. By focusing on your industry's unique requirements - regulatory standards, compliance protocols, operational frameworks, and sector-specific challenges - we ensure compliance, reduce risk, and optimize outcomes. Our teams speak your language and anticipate challenges before they arise.
             </p>
           </motion.div>
@@ -262,7 +262,7 @@ export default function IndustriesList() {
               Tailored Industry Solutions
             </h2>
  
-            <p className="max-w-3xl mx-auto text-base text-brandNavy dark:text-gray-400">
+            <p className="max-w-3xl mx-auto text-[15px] text-brandNavy dark:text-gray-400">
               Designed for sector-specific regulatory, operational, and strategic challenges
             </p>
           </motion.div>
@@ -350,7 +350,7 @@ export default function IndustriesList() {
               Ready to Transform Your Industry Resilience?
             </h2>
  
-            <p className="max-w-3xl mx-auto text-base md:text-lg text-brandNavy dark:text-gray-400">
+            <p className="max-w-3xl mx-auto text-base text-brandNavy dark:text-gray-400">
               Partner with RiskMan for industry-leading risk management and compliance solutions
             </p>
  

@@ -49,7 +49,7 @@ const FaqItem = ({ question, answer, isOpen, toggle, index }) => {
                         transition={{ duration: 0.4, ease: "circOut" }}
                     >
                         <div className="px-8 py-8 mt-2 border-l-2 ml-14 border-slate-100 dark:border-white/10">
-                            <p className="text-base leading-relaxed text-slate-600 dark:text-slate-400">
+                            <p className="text-[15px] leading-relaxed text-slate-600 dark:text-slate-400">
                                 {answer}
                             </p>
                         </div>
@@ -111,7 +111,7 @@ const ISO22301FAQ = () => {
                                 Frequently Asked <br />
                                 <span className="text-brandPrimary dark:text-brandAccent">Questions</span>
                             </h2>
-                            <p className="mt-6 text-base leading-relaxed text-slate-600 dark:text-slate-400">
+                            <p className="mt-6 text-[15px] leading-relaxed text-slate-600 dark:text-slate-400">
                                 Get clear, expert answers to common questions about Business Continuity Management and ISO 22301 implementation.
                             </p>
 
@@ -122,7 +122,7 @@ const ISO22301FAQ = () => {
                                         <MessageSquare className="h-7 w-7 text-brandDark" />
                                     </div>
                                     <div>
-                                        <p className="text-base font-bold text-brandDark dark:text-white">Still have questions?</p>
+                                        <p className="text-[15px] font-bold text-brandDark dark:text-white">Still have questions?</p>
                                         <p className="text-sm text-slate-500 dark:text-slate-400">Contact our resilience experts</p>
                                     </div>
                                 </div>

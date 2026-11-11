@@ -382,7 +382,7 @@ export default function BlogList() {
 
             <motion.p
               variants={fadeInUp}
-              className="max-w-2xl mx-auto text-base leading-relaxed md:text-lg text-brandNavy/75 dark:text-gray-400"
+              className="max-w-2xl mx-auto text-base leading-relaxed text-brandNavy/75 dark:text-gray-400"
             >
               Expert views on risk management, regulatory compliance,
               cybersecurity, and strategic resilience — distilled into actionable

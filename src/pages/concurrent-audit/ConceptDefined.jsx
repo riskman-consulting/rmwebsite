@@ -32,7 +32,7 @@
 //                 </h2>
 //                 <hr className="w-12 h-[2px] border-none bg-gradient-to-r from-brandGold to-brandAccent mb-8" />
 
-//                 <p className="text-base font-light text-brandLight/70 mb-12 leading-relaxed max-w-[800px] font-sans">
+//                 <p className="text-[15px] font-light text-brandLight/70 mb-12 leading-relaxed max-w-[800px] font-sans">
 //                     A Concurrent Audit is the systematic, real-time or near-real-time review of transactions, processes, and controls as they occur within an organization's operating cycle. Unlike traditional audits, which examine historical records after period-end close, concurrent audits operate alongside business processes — catching errors, policy violations, and control gaps before they translate into financial losses or compliance exposure.
 //                 </p>
 
@@ -135,7 +135,7 @@ const ConceptDefined = () => {
                 </h2>
                 <hr className="w-12 h-[2px] border-none bg-gradient-to-r from-brandGold to-brandAccent mb-8" />
 
-                <p className="text-base text-brandNavy dark:text-white/70 mb-12 leading-relaxed max-w-[800px] font-sans">
+                <p className="text-[15px] text-brandNavy dark:text-white/70 mb-12 leading-relaxed max-w-[800px] font-sans">
                     A Concurrent Audit is the systematic, real-time or near-real-time review of transactions, processes, and controls as they occur within an organization's operating cycle. Unlike traditional audits, which examine historical records after period-end close, concurrent audits operate alongside business processes — catching errors, policy violations, and control gaps before they translate into financial losses or compliance exposure.
                 </p>
 

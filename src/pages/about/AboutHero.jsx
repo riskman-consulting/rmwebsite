@@ -186,7 +186,7 @@
 
 //                 {/* Description */}
 //                 <p
-//                   className={`max-w-2xl mx-auto mb-10 text-base md:text-lg leading-relaxed text-white/80 transition-all duration-700 delay-300 ${
+//                   className={`max-w-2xl mx-auto mb-10 text-base leading-relaxed text-white/80 transition-all duration-700 delay-300 ${
 // index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
 //                   }`}
 //                 >

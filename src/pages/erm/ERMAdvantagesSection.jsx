@@ -84,7 +84,7 @@ const ERMAdvantagesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.15 }}
-              className="max-w-xl text-base leading-relaxed text-brandNavy/80 dark:text-brandLight/70"
+              className="max-w-xl text-[15px] leading-relaxed text-brandNavy/80 dark:text-brandLight/70"
             >
               A robust Enterprise Risk Assessment serves as a cornerstone for organizational
               resilience, transforming potential threats into structured pathways for sustainable growth.

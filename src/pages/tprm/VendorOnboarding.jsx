@@ -53,7 +53,7 @@
 //           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //             Strategic Vendor Onboarding and Due Diligence
 //           </h2>
-//           <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
+//           <p className="text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
 //             Our process involves pre-engagement risk assessments and detailed due diligence before any contract is signed. We evaluate financial stability, regulatory compliance, and security postures to ensure your partners meet your high standards.
 //           </p>
 //         </div>
@@ -141,7 +141,7 @@ const Onboarding = () => {
             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading">
               Strategic Vendor Onboarding and Due Diligence
             </h2>
-            <p className="mb-10 text-base leading-relaxed text-gray-300">
+            <p className="mb-10 text-[15px] leading-relaxed text-gray-300">
               Our process involves pre-engagement risk assessments and detailed due diligence before any contract is signed. We evaluate financial stability, regulatory compliance, and security postures to ensure your partners meet your high standards.
             </p>
             

@@ -27,7 +27,7 @@ const WhyRiskManSection = ({ data }) => {
               {data.title}
             </h2>
 
-            <p className="text-base md:text-lg text-brandDark/70 dark:text-brandLight/70 max-w-3xl mx-auto">
+            <p className="text-base text-brandDark/70 dark:text-brandLight/70 max-w-3xl mx-auto">
               {data.description}
             </p>
           </motion.div>

@@ -34,7 +34,7 @@ function HeroSection() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandAccent to-brandGold">Governance</span>
           </h1>
 
-          <p className="max-w-2xl mb-12 text-base md:text-lg leading-relaxed text-gray-200 drop-shadow-md">
+          <p className="max-w-2xl mb-12 text-base leading-relaxed text-gray-200 drop-shadow-md">
             Empower your enterprise with robust privacy frameworks that transform
             regulatory requirements into a sustainable competitive advantage and
             digital consumer trust.

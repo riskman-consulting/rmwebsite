@@ -64,7 +64,7 @@ const WhyRiskManAndCTA = () => {
                 Begin Your ESG Transformation
               </h2>
               
-              <p className="mb-8 text-base leading-relaxed text-brandLight/90">
+              <p className="mb-8 text-[15px] leading-relaxed text-brandLight/90">
                 Whether you are establishing foundational ESG capabilities, advancing toward leading practice, 
                 or navigating complex multi-jurisdictional requirements, RiskMan provides the strategic guidance, 
                 practical expertise, and sustained support to achieve your sustainability objectives.

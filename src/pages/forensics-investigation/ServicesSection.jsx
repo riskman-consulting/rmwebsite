@@ -10,7 +10,7 @@ const ServicesSection = () => {
             Strategic Investigative Solutions
           </h2>
           <div className="w-24 h-1.5 bg-brandGold mx-auto mb-8 rounded-full"></div>
-          <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
+          <p className="text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
             Organizations today face sophisticated threats that demand more than just standard oversight. RiskMan delivers high-stakes investigative expertise to identify vulnerabilities and resolve misconduct with absolute precision.
           </p>
         </div>

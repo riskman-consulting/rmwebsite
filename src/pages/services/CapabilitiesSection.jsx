@@ -75,7 +75,7 @@ export const CapabilitiesSection = () => {
             viewport={{ once: true }}
             className="max-w-md"
           >
-            <p className="text-sm md:text-base text-brandNavy/70 dark:text-slate-400 leading-relaxed">
+            <p className="text-sm md:text-[15px] text-brandNavy/70 dark:text-slate-400 leading-relaxed">
               Experienced practitioners, proven methodologies and practical technology for enterprises in India and abroad.
             </p>
           </motion.div>

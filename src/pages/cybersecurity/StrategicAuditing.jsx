@@ -84,7 +84,7 @@ import auditImage from "../../assets/images/cybersecurity/audit-analysis.png"
 //           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //             Strategic Cyber Security Auditing
 //           </h2>
-//           <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
+//           <p className="text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
 //             We provide a systematic and independent assessment of your organization's security controls and policies. Our process evaluates the effectiveness of your protections against evolving cyber threats to ensure data integrity.
 //           </p>
 //         </div>
@@ -198,7 +198,7 @@ return (
             <div className="order-1 lg:order-2">
               <p className="mb-2 font-bold tracking-wider uppercase text-brandPrimary dark:text-brandAccent">Our Process</p>
               <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">Strategic Cyber Security Auditing</h2>
-              <p className="mb-8 text-base text-gray-600 dark:text-gray-300">
+              <p className="mb-8 text-[15px] text-gray-600 dark:text-gray-300">
                 We provide a systematic and independent assessment of your organization's security controls and policies. Our process evaluates the effectiveness of your protections against evolving cyber threats to ensure data integrity.
               </p>
               

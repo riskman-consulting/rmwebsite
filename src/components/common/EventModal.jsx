@@ -109,7 +109,7 @@
 //               {event.title}
 //             </h2>
 
-//             <p className="text-stone-600 leading-relaxed mb-10 text-base ">
+//             <p className="text-stone-600 leading-relaxed mb-10 text-[15px] ">
 //               {event.fullDesc}
 //             </p>
 
@@ -118,7 +118,7 @@
 //               <div className="absolute -top-3 left-6 flex items-center gap-2 px-4 py-1.5 bg-amber-600 text-white text-[10px] font-black uppercase tracking-[0.15em] rounded-full shadow-lg">
 //                 <Sparkles size={12} /> Highlight
 //               </div>
-//               <p className="text-stone-700 italic text-base md:text-lg leading-relaxed font-serif relative z-10 mt-2">
+//               <p className="text-stone-700 italic text-base leading-relaxed font-serif relative z-10 mt-2">
 //                 &ldquo;{event.shortDesc}&rdquo;
 //               </p>
 //             </div>
@@ -264,7 +264,7 @@
 //                 {event.title}
 //               </h2>
 
-//               <p className="text-stone-600 leading-relaxed mb-10 text-base ">
+//               <p className="text-stone-600 leading-relaxed mb-10 text-[15px] ">
 //                 {event.fullDesc}
 //               </p>
 
@@ -273,7 +273,7 @@
 //                 <div className="absolute -top-3 left-6 flex items-center gap-2 px-4 py-1.5 bg-amber-600 text-white text-[10px] font-black uppercase tracking-[0.15em] rounded-full shadow-lg">
 //                   <Sparkles size={12} /> Highlight
 //                 </div>
-//                 <p className="text-stone-700 italic text-base md:text-lg leading-relaxed font-serif relative z-10 mt-2">
+//                 <p className="text-stone-700 italic text-base leading-relaxed font-serif relative z-10 mt-2">
 //                   &ldquo;{event.shortDesc}&rdquo;
 //                 </p>
 //               </div>
@@ -500,7 +500,7 @@ export function EventModal({ event, onClose }) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-stone-600 leading-relaxed mb-8 sm:mb-10 text-base font-light"
+                className="text-stone-600 leading-relaxed mb-8 sm:mb-10 text-[15px] font-light"
               >
                 {event.fullDesc}
               </motion.p>
@@ -524,7 +524,7 @@ export function EventModal({ event, onClose }) {
                   <Sparkles size={12} strokeWidth={2.5} /> Featured
                 </motion.div>
                 
-                <p className="text-stone-800 italic text-base md:text-lg leading-relaxed font-serif relative z-10 mt-3">
+                <p className="text-stone-800 italic text-base leading-relaxed font-serif relative z-10 mt-3">
                   <span className="text-amber-600 text-3xl sm:text-4xl leading-none">&ldquo;</span>
                   {event.shortDesc}
                   <span className="text-amber-600 text-3xl sm:text-4xl leading-none">&rdquo;</span>

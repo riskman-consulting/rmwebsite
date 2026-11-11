@@ -95,7 +95,7 @@
 //           <h3 className="mb-6 text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark dark:text-surfaceLight">
 //             The Multi-Stakeholder Imperative
 //           </h3>
-//           <p className="max-w-2xl mx-auto text-base text-brandDark/70 dark:text-surfaceLight/70">
+//           <p className="max-w-2xl mx-auto text-[15px] text-brandDark/70 dark:text-surfaceLight/70">
 //             Multiple market forces are converging to make ESG excellence a core business necessity.
 //           </p>
 //         </div>
@@ -175,7 +175,7 @@
 //                       <div className="flex-1 text-center md:text-left">
 //                         <h4 className={`text-3xl font-black uppercase mb-1 ${data.textColor}`}>Level {data.level}: {data.title}</h4>
 //                         <p className="text-brandDark/40 dark:text-surfaceLight/40 text-xs font-bold uppercase tracking-[4px] mb-4">{data.subtitle}</p>
-//                         <p className="text-base italic leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
+//                         <p className="text-[15px] italic leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
 //                           "{data.description}"
 //                         </p>
 //                       </div>
@@ -226,7 +226,7 @@ const MultiStakeholderImperative = () => {
           <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-gray-900 dark:text-white">
             ESG Maturity <span className="text-brandPrimary dark:text-brandGold">Model</span>
           </h2>
-          <p className="max-w-2xl mx-auto text-base text-gray-500 dark:text-gray-400">
+          <p className="max-w-2xl mx-auto text-[15px] text-gray-500 dark:text-gray-400">
             A structured pathway for organizations evolving from basic compliance to transformative industry leadership.
           </p>
         </div>
@@ -278,7 +278,7 @@ const MultiStakeholderImperative = () => {
                 <h3 className="mb-6 text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white">
                   {m.title}
                 </h3>
-                <p className="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+                <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
                   {m.desc}
                 </p>
               </div>

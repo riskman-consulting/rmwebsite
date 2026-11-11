@@ -25,7 +25,7 @@ function HeroSection() {
               Elevating Standards Through <span className="text-brandAccent">Quality Assurance</span>
             </h1>
 
-            <p className="text-base md:text-lg text-gray-300 mb-10 leading-relaxed max-w-2xl">
+            <p className="text-base text-gray-300 mb-10 leading-relaxed max-w-2xl">
               RiskMan provides Organizations with the validation and oversight necessary to maintain peak operational performance and consistent service delivery across the enterprise.
             </p>
 

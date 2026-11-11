@@ -59,7 +59,7 @@ function FAQSection() {
               >
                 <div className="overflow-hidden">
                   <div className="px-6 sm:px-8 pb-6">
-                    <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
+                    <p className="text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
                       {faq.answer}
                     </p>
                   </div>

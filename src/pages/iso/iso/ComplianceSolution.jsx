@@ -105,7 +105,7 @@ const ComplianceSolutions = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="max-w-3xl mx-auto mt-6 text-base text-slate-600 dark:text-slate-400"
+                        className="max-w-3xl mx-auto mt-6 text-[15px] text-slate-600 dark:text-slate-400"
                     >
                         RiskMan provides a suite of specialized services designed to fortify your security posture and meet stringent international standards.
                     </motion.p>

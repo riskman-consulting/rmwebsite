@@ -39,7 +39,7 @@ const FAQ = () => {
           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Frequently Asked Questions
           </h2>
-          <p className="text-base text-gray-600 dark:text-gray-300">
+          <p className="text-[15px] text-gray-600 dark:text-gray-300">
             Get answers to the most common questions about our cybersecurity services
           </p>
         </div>

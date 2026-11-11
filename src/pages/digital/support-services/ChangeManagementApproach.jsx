@@ -6,7 +6,7 @@
             <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
               Our <span className="text-brandPrimary dark:text-brandGold">Change Management</span> Approach
             </h2>
-            <p className="max-w-3xl mx-auto text-base opacity-80">
+            <p className="max-w-3xl mx-auto text-[15px] opacity-80">
               We manage the people side of change so RiskMan is adopted smoothly and delivers sustained value across the organization.
             </p>
           </div>

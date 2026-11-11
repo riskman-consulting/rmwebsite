@@ -140,7 +140,7 @@ const FAQItem = ({ question, answer, isOpen, toggleFAQ }) => {
         }`}
       >
         <div className="px-6 pb-6 lg:px-8">
-          <p className="text-base leading-relaxed text-gray-600 ">
+          <p className="text-[15px] leading-relaxed text-gray-600 ">
             {answer}
           </p>
         </div>

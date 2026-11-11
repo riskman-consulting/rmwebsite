@@ -21,7 +21,7 @@ const BRDSolutionDesign = () => {
                     </div>
                     <div className="lg:w-1/2">
                       <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">BRD & Solution Design</h2>
-                      <p className="mb-8 text-base text-brandNavy dark:text-white/70">
+                      <p className="mb-8 text-[15px] text-brandNavy dark:text-white/70">
                         Bridge the gap between business needs and technical execution through structured requirements and validation.
                       </p>
 

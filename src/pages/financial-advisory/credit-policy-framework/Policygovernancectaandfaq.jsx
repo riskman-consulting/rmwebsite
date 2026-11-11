@@ -23,7 +23,7 @@ const PolicyGovernance = () => {
           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading">
             Policy Governance & Evolution
           </h2>
-          <p className="text-base text-gray-300">
+          <p className="text-[15px] text-gray-300">
             RiskMan provides handholding support to ensure your policies remain dynamic, responding to socio-economic shifts and regulatory mandates.
           </p>
         </div>
@@ -73,7 +73,7 @@ export const PolicyCTA = () => {
           <div className="absolute top-0 right-0 w-64 h-64 transform translate-x-1/2 -translate-y-1/2 rounded-full bg-white/5 blur-3xl"></div>
           <div className="relative z-10">
             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading">Optimize Your Credit Governance</h2>
-            <p className="max-w-2xl mx-auto mb-8 text-base text-gray-200">
+            <p className="max-w-2xl mx-auto mb-8 text-[15px] text-gray-200">
               Establish a structured approach to identify, monitor, and control your institutional credit risks.
             </p>
             <Link to="/contact" className="inline-block px-8 py-4 font-bold transition-colors bg-white rounded-full shadow-lg text-brandDark hover:bg-brandAccent">

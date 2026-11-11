@@ -35,7 +35,7 @@ const HeroSection = () => {
             </span>
           </h1>
           
-          <p className="max-w-xl pl-6 text-base md:text-lg leading-relaxed text-gray-600 border-l-4 dark:text-gray-300 border-brandGold">
+          <p className="max-w-xl pl-6 text-base leading-relaxed text-gray-600 border-l-4 dark:text-gray-300 border-brandGold">
             Protect organizational integrity through rigorous investigative protocols. We provide the clarity and evidence needed to resolve complex internal and external threats.
           </p>
           

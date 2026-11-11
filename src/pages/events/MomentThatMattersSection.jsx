@@ -216,7 +216,7 @@ export default function MomentsThatMatter({ isPage = false }) {
           <Heading className="mb-4 font-heading text-3xl md:text-4xl font-bold text-transparent bg-gradient-to-r from-brandPrimary to-brandNavy dark:from-brandGold dark:to-brandAccent bg-clip-text">
             Moments That Matter
           </Heading>
-          <p className="text-base text-brandPrimary/70 dark:text-white/70">Capturing our journey of excellence and growth</p>
+          <p className="text-[15px] text-brandPrimary/70 dark:text-white/70">Capturing our journey of excellence and growth</p>
         </motion.div>
 
         {/* SEARCH BAR */}

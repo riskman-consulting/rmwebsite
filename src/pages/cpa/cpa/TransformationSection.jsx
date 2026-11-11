@@ -10,7 +10,7 @@ function TransformationSection() {
             <div className="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
               <div>
                 <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-6">Strengthen Your Governance Framework</h2>
-                <p className="text-gray-400 text-base mb-10 leading-relaxed">
+                <p className="text-gray-400 text-[15px] mb-10 leading-relaxed">
                   Partner with RiskMan to transform your assurance processes into a strategic asset for sustainable growth. We move beyond simple verification to provide enterprise-wide clarity.
                 </p>
                 <button className="bg-brandAccent text-brandDark px-10 py-5 rounded-md font-black text-lg hover:bg-brandGold transition-all">

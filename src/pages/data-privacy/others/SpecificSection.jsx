@@ -8,7 +8,7 @@ function SpecificSection() {
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2">
               <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-brandGold">Industry-Specific Data Standards</h2>
-              <p className="text-gray-300 mb-10 text-base">Specialized controls for healthcare and finance that go beyond general privacy mandates.</p>
+              <p className="text-gray-300 mb-10 text-[15px]">Specialized controls for healthcare and finance that go beyond general privacy mandates.</p>
               <div className="grid gap-6">
                 {[
                   { t: "HIPAA Safeguards", d: "Technical controls to protect Electronic Protected Health Information (ePHI).", icon: <Stethoscope className="text-brandAccent" /> },

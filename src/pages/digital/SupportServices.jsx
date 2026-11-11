@@ -11,7 +11,7 @@
 //             <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading ">
 //               Sustaining Long-Term Success with <span className="text-brandPrimary dark:text-brandGold">Support Services</span> 
 //             </h1>
-//             <p className="mb-10 text-base md:text-lg leading-relaxed opacity-90">
+//             <p className="mb-10 text-base leading-relaxed opacity-90">
 //               RiskMan ensures seamless transitions through rigorous testing, proactive change management, and continuous process optimization to maximize the lasting value of your digital investments. 
 //             </p>
 //             <div className="flex flex-wrap gap-4">
@@ -116,7 +116,7 @@
 //       <section className="py-20 text-center">
 //         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
 //           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">Ready to Sustain Your Success? </h2>
-//           <p className="mb-10 text-base md:text-lg opacity-80">Ensure a smooth digital future with RiskMan’s dedicated Support Services.</p>
+//           <p className="mb-10 text-base opacity-80">Ensure a smooth digital future with RiskMan’s dedicated Support Services.</p>
 //           <button className="px-12 py-4 font-bold transition-transform rounded-md shadow-xl bg-brandGold hover:bg-brandAccent text-brandDark hover:scale-105">
 //            Partner with Us 
 //           </button>
@@ -167,7 +167,7 @@ const SupportServices = () => {
             <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading ">
               Sustaining Long-Term Success with <span className="text-brandPrimary dark:text-brandGold">Support Services</span> 
             </h1>
-            <p className="mb-10 text-base md:text-lg leading-relaxed opacity-90">
+            <p className="mb-10 text-base leading-relaxed opacity-90">
               RiskMan ensures seamless transitions through rigorous testing, proactive change management, and continuous process optimization to maximize the lasting value of your digital investments. 
             </p>
             <div className="flex flex-wrap gap-4">
@@ -197,7 +197,7 @@ const SupportServices = () => {
             <span className="text-brandGold">Support Services</span>
           </h1>
 
-          <p className="mb-10 text-base md:text-lg leading-relaxed text-white/90 ">
+          <p className="mb-10 text-base leading-relaxed text-white/90 ">
             RiskMan ensures seamless transitions through rigorous testing,
             proactive change management, and continuous process optimization
             to maximize the lasting value of your digital investments.
@@ -254,7 +254,7 @@ const SupportServices = () => {
             <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
               Our <span className="text-brandPrimary dark:text-brandGold">UAT Approach</span> for Development Testing
             </h2>
-            <p className="max-w-3xl mx-auto text-base opacity-80">
+            <p className="max-w-3xl mx-auto text-[15px] opacity-80">
               We structure User Acceptance Testing to validate that RiskMan meets business requirements and is ready for real‑world use.
             </p>
           </div>
@@ -359,7 +359,7 @@ const SupportServices = () => {
             <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
               Our <span className="text-brandPrimary dark:text-brandGold">Change Management</span> Approach
             </h2>
-            <p className="max-w-3xl mx-auto text-base opacity-80">
+            <p className="max-w-3xl mx-auto text-[15px] opacity-80">
               We manage the people side of change so RiskMan is adopted smoothly and delivers sustained value across the organization.
             </p>
           </div>
@@ -468,7 +468,7 @@ const SupportServices = () => {
       <section className="py-16 text-center">
         <div className="container px-5 mx-auto sm:px-8 lg:px-12 xl:px-14">
           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">Ready to Sustain Your Success?</h2>
-          <p className="mb-10 text-base md:text-lg opacity-80">Ensure a smooth digital future with RiskMan's dedicated Support Services.</p>
+          <p className="mb-10 text-base opacity-80">Ensure a smooth digital future with RiskMan's dedicated Support Services.</p>
           <button className="px-12 py-4 font-bold transition-transform rounded-md shadow-xl bg-brandGold hover:bg-brandAccent text-brandDark hover:scale-105">
             Partner with Us 
           </button>
@@ -536,7 +536,7 @@ export default SupportServices;
 //             Sustaining Long-Term Success with{" "}
 //             <span className="brand-gradient-text">Support Services</span>
 //           </h1>
-//           <p className="mb-10 text-base md:text-lg leading-relaxed text-primary-foreground/70">
+//           <p className="mb-10 text-base leading-relaxed text-primary-foreground/70">
 //             RiskMan ensures seamless transitions through rigorous testing,
 //             proactive change management, and continuous process optimization.
 //           </p>
@@ -595,7 +595,7 @@ export default SupportServices;
 //             <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-foreground">
 //               Development Testing & UAT
 //             </h2>
-//             <p className="text-base leading-relaxed text-muted-foreground">
+//             <p className="text-[15px] leading-relaxed text-muted-foreground">
 //               Guarantee system reliability through comprehensive scenario-based
 //               validation and rigorous defect management protocols.
 //             </p>
@@ -660,7 +660,7 @@ export default SupportServices;
 //         <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-foreground">
 //           Our UAT Approach
 //         </h2>
-//         <p className="max-w-2xl mx-auto text-base text-muted-foreground">
+//         <p className="max-w-2xl mx-auto text-[15px] text-muted-foreground">
 //           Structured validation to ensure RiskMan meets business requirements
 //           and is ready for real-world use.
 //         </p>
@@ -736,7 +736,7 @@ export default SupportServices;
 //         <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-foreground">
 //           Change Management & Adoption
 //         </h2>
-//         <p className="max-w-2xl mx-auto text-base text-muted-foreground">
+//         <p className="max-w-2xl mx-auto text-[15px] text-muted-foreground">
 //           Empower your workforce and drive high adoption rates through
 //           structured impact analysis.
 //         </p>
@@ -798,7 +798,7 @@ export default SupportServices;
 //         <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
 //           Our Change Management Approach
 //         </h2>
-//         <p className="max-w-2xl mx-auto text-base text-primary-foreground/60">
+//         <p className="max-w-2xl mx-auto text-[15px] text-primary-foreground/60">
 //           Managing the people side of change so RiskMan delivers sustained
 //           value.
 //         </p>
@@ -952,7 +952,7 @@ export default SupportServices;
 //       <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-primary-foreground ">
 //         Ready to Sustain Your Success?
 //       </h2>
-//       <p className="mb-10 text-base md:text-lg text-primary-foreground/60">
+//       <p className="mb-10 text-base text-primary-foreground/60">
 //         Ensure a smooth digital future with RiskMan's dedicated Support
 //         Services.
 //       </p>

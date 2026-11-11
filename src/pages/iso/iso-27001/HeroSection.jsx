@@ -61,7 +61,7 @@ const HeroSection = () => {
             </h1>
 
             {/* Description */}
-            <p className="max-w-2xl mb-10 text-base md:text-lg leading-relaxed text-gray-200 ">
+            <p className="max-w-2xl mb-10 text-base leading-relaxed text-gray-200 ">
               Establish a robust Information Security Management System (ISMS),
               manage information security risks, and demonstrate accountability
               in protecting data across your organization.

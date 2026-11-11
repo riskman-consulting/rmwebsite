@@ -30,7 +30,7 @@ function HeroSection() {
             Global GDPR Governance for <span className="text-brandAccent">Resilient Organizations</span>
           </h1>
 
-          <p className="max-w-2xl mb-10 text-base md:text-lg leading-relaxed text-gray-300 ">
+          <p className="max-w-2xl mb-10 text-base leading-relaxed text-gray-300 ">
             Ensure seamless compliance with the EU’s gold standard for privacy through expert consulting, impact assessments, and cross-border transfer strategies.
           </p>
 

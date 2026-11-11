@@ -48,7 +48,7 @@ const Testimonials = () => {
               What Our <span className="text-transparent bg-gradient-to-r from-brandGold to-brandAccent bg-clip-text">Clients</span> Say
             </h2>
 
-            <p className="mb-10 text-base leading-relaxed text-brandNavy dark:text-white/70">
+            <p className="mb-10 text-[15px] leading-relaxed text-brandNavy dark:text-white/70">
               We don't just identify gaps; we build the bridges to fill them.
               Our clients' feedback reflects our commitment to excellence and
               strategic transformation.
@@ -154,7 +154,7 @@ const Testimonials = () => {
                     </div>
 
                     {/* Text */}
-                    <p className={`mb-6 md:mb-8 text-base font-medium leading-relaxed ${item.textColor} opacity-90`}>
+                    <p className={`mb-6 md:mb-8 text-[15px] font-medium leading-relaxed ${item.textColor} opacity-90`}>
                       "{item.text}"
                     </p>
 

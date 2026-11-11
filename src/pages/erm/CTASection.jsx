@@ -29,7 +29,7 @@ const CTASection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="max-w-3xl mx-auto mb-10 text-base text-white/80"
+          className="max-w-3xl mx-auto mb-10 text-[15px] text-white/80"
         >
           Don&apos;t let uncertainty dictate your strategy. Partner with RiskMan to turn
           potential threats into a competitive advantage.

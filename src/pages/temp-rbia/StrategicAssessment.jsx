@@ -8,7 +8,7 @@ const StrategicAssessment = () => {
           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Strategic Assessment of the Media Industry Risk Landscape
           </h2>
-          <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
+          <p className="text-[15px] leading-relaxed text-gray-700 dark:text-gray-300">
             PTI's mission relies on trust and speed, facing risks like cybersecurity and editorial integrity. Risk-Based Internal Audit (RBIA) provides proactive, independent assurance across financial and operational areas. This focus protects revenue and strengthens governance, aligning audit efforts with PTI's unique risk landscape and strategic objectives.
           </p>
         </div>

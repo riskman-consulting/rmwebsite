@@ -169,7 +169,7 @@
  
 //                   {/* Right Side: Description (Span 8) */}
 //                   <div className="md:col-span-8">
-//                     <p className="mb-6 text-base leading-relaxed text-brandDark/70 dark:text-white/60">
+//                     <p className="mb-6 text-[15px] leading-relaxed text-brandDark/70 dark:text-white/60">
 //                       {activeEvent.description}
 //                     </p>
 //                     <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
@@ -400,7 +400,7 @@ const Timeline = () => {
                   <h2 className="flex items-center gap-3 mb-4 text-2xl font-bold md:text-3xl font-heading text-brandNavy dark:text-brandLight">
                     {activeEvent.title}
                   </h2>
-                  <p className="max-w-xl mb-8 text-base leading-relaxed text-gray-600 dark:text-gray-400">
+                  <p className="max-w-xl mb-8 text-[15px] leading-relaxed text-gray-600 dark:text-gray-400">
                     {activeEvent.description}
                   </p>
                  

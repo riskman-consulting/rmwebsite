@@ -45,7 +45,7 @@ function HeroSection() {
               <span className="text-brandGold">Compliance Excellence</span>
             </h1>
 
-            <p className="text-base md:text-lg text-brandLight/80 leading-relaxed max-w-2xl animate-[fadeInUp_0.8s_ease-out_0.2s_both]">
+            <p className="text-base text-brandLight/80 leading-relaxed max-w-2xl animate-[fadeInUp_0.8s_ease-out_0.2s_both]">
               RiskMan delivers comprehensive SOX, ICOFR, and IFC solutions, strengthening internal controls and ensuring regulatory compliance through expert risk-based assessments and testing.
             </p>
 

@@ -213,7 +213,7 @@ function LeadershipModal({ leader, onClose }) {
                       <p
                         key={i}
                         className={`text-sm leading-relaxed italic text-brandDark/80 dark:text-white/75
-                                    ${i < leader.philosophyBlocks.length - 1 ? "mb-3" : ""}`}
+ ${i < leader.philosophyBlocks.length - 1 ? "mb-3" : ""}`}
                       >
                         {p}
                       </p>

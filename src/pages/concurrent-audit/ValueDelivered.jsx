@@ -24,7 +24,7 @@
 //                 </h2>
 //                 <hr className="w-12 h-[2px] border-none bg-gradient-to-r from-brandGold to-brandAccent mb-8" />
 
-//                 <p className="text-base font-light text-brandLight/70 mb-16 leading-relaxed max-w-[800px] font-sans">
+//                 <p className="text-[15px] font-light text-brandLight/70 mb-16 leading-relaxed max-w-[800px] font-sans">
 //                     RiskMan's Concurrent Audit programs deliver measurable financial and operational impact. We transform assurance from a "check-the-box" requirement into a strategic lever for organizational efficiency and risk resilience.
 //                 </p>
 
@@ -109,7 +109,7 @@ const ValueDelivered = () => {
                 </h2>
                 <hr className="w-12 h-[2px] border-none bg-gradient-to-r from-brandGold to-brandAccent mb-8" />
 
-                <p className="text-base text-brandNavy dark:text-white/70 mb-16 leading-relaxed max-w-[800px] font-sans">
+                <p className="text-[15px] text-brandNavy dark:text-white/70 mb-16 leading-relaxed max-w-[800px] font-sans">
                     RiskMan's Concurrent Audit programs deliver measurable financial and operational impact. We transform assurance from a "check-the-box" requirement into a strategic lever for organizational efficiency and risk resilience.
                 </p>
 

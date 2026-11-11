@@ -32,7 +32,7 @@ function HeroSection() {
           </h1>
 
           {/* Description */}
-          <p className="mb-10 text-base md:text-lg leading-relaxed text-gray-300 ">
+          <p className="mb-10 text-base leading-relaxed text-gray-300 ">
             RiskMan provides comprehensive ISO 27701 consulting to integrate
             privacy management into your existing security posture, protecting
             personally identifiable information and building stakeholder trust.

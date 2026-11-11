@@ -67,7 +67,7 @@ const ValueDifferentiators = () => {
             Our Value <span className="text-brandGold dark:text-brandAccent">Differentiators</span>
           </h2>
 
-          <p className="max-w-3xl text-base text-brandNavy dark:text-white/70">
+          <p className="max-w-3xl text-[15px] text-brandNavy dark:text-white/70">
             Discover what sets us apart and makes us the trusted partner for your business transformation journey
           </p>
 

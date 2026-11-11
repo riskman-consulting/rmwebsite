@@ -551,7 +551,7 @@ const basePortableTextComponents = {
       return (
         <p
           className={`text-sm leading-[1.75] text-brandNavy/85 dark:text-gray-300 ${
-            align || ""
+ align || ""
           }`}
         >
           {children}
@@ -995,7 +995,7 @@ export default function BlogTemplate({ blog }) {
           <div className="text-6xl text-brandPrimary dark:text-brandAccent">
             !
           </div>
-          <p className="text-base font-semibold text-brandNavy dark:text-gray-400">
+          <p className="text-[15px] font-semibold text-brandNavy dark:text-gray-400">
             Insights article not found.
           </p>
           <Link

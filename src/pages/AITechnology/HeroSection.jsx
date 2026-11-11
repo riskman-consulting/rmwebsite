@@ -57,7 +57,7 @@ const AiTechnology = () => {
             </span>
           </h1>
           
-          <p className="max-w-xl pl-6 text-base leading-relaxed text-gray-300 border-l-4 border-brandAccent">
+          <p className="max-w-xl pl-6 text-[15px] leading-relaxed text-gray-300 border-l-4 border-brandAccent">
             Elevate your risk strategy with RiskMan's AI-driven technology solutions. Achieve precision, foresight, and compliance in a dynamic threat landscape seamlessly integrated for your organization.
           </p>
           
