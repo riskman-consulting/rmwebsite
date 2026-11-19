@@ -1147,9 +1147,9 @@ export const PRODUCTS = [
         name: "Action Taken Report",
         navLabel: "Action Taken Report",
         shortName: "ATR",
-        seoTitle: "Audit Findings & Remediation Tracking Software (ATR)",
+        seoTitle: "Action Taken Report (ATR) Software for Internal Audit",
         seoDescription:
-          "Audit remediation software that tracks every audit finding to closure, with named owners, target dates, reminders, evidence and audit-reviewed sign-off.",
+          "Action taken report software for internal audit: track every audit finding to closure with owners, target dates, reminders, evidence and audit sign-off.",
         heading: "Action Taken Report (ATR) and Audit Remediation Software",
         // Other names buyers search for. Shown on the page ("Also known as"),
         // so list only names that describe what the software really does.
@@ -1370,6 +1370,10 @@ export const PRODUCTS = [
           {
             q: "What is an Action Taken Report (ATR)?",
             a: "An Action Taken Report records what management has done about each audit observation: the agreed action plan, the owner, the target date, the current status and the evidence of completion. It supports the Audit Committee's review of how internal audit findings are followed up. In RiskMan GRC, it is drawn from the tracked actions themselves, so it is current whenever it is opened.",
+          },
+          {
+            q: "How is the Action Taken Report used in internal audit?",
+            a: "After an internal audit report is released, each observation needs an agreed management action and evidence that it was completed. The ATR module creates those actions automatically from the released internal audit report, tracks them to closure, and gives the Head of Internal Audit an up-to-date action taken report for the Audit Committee, in line with the ICAI Standards on Internal Audit and the follow-up the Companies Act expects the Audit Committee to review.",
           },
           {
             q: "Is this audit issue management and remediation tracking software?",

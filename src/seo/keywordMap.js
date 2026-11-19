@@ -82,7 +82,7 @@ export const KEYWORD_MAP = {
     ],
   },
   [`${GRC}/action-taken-report`]: {
-    primary: ["audit remediation software", "audit findings", "action taken report"],
+    primary: ["action taken report", "audit remediation software", "audit findings"],
     alternatives: [
       "Audit issue management software",
       "Audit finding tracking system",
