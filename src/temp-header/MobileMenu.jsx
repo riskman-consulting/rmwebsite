@@ -57,13 +57,17 @@ export const MobileMenu = ({ isOpen, onClose }) => {
             <div className="flex items-center w-[140px] h-[36px]">
               <img
                 src="/riskman-logo-white.svg"
-                alt="RiskMan"
+    width="1903"
+    height="331"
+                alt="RiskMan Consulting"
                 className="hidden object-contain w-auto h-full dark:block"
                 draggable={false}
               />
               <img
                 src="/rm.png"
-                alt="RiskMan"
+    width="1500"
+    height="400"
+                alt="RiskMan Consulting"
                 className="block object-contain w-auto h-full dark:hidden"
                 draggable={false}
               />

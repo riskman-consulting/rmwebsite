@@ -2,9 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-/** The rest of the suite, from inside a module page, as a plain link list. */
+/**
+ * The rest of the suite, from inside a module page, as a plain link list —
+ * then the advisory services that cover the same subject, so the software
+ * page and the consulting page link to each other.
+ */
 const RelatedModules = ({ product, currentSlug }) => {
   const others = product.modules.filter((m) => m.slug !== currentSlug);
+  const services = product.modules.find((m) => m.slug === currentSlug)?.relatedServices || [];
 
   return (
     <section className="border-t bg-surfaceLight dark:bg-surfaceDark border-borderLight dark:border-borderDark">
@@ -42,6 +47,23 @@ const RelatedModules = ({ product, currentSlug }) => {
             </li>
           ))}
         </ul>
+
+        {services.length > 0 && (
+          <p className="mt-6 text-sm leading-relaxed text-gray-800 dark:text-white/80">
+            <span className="text-brandNavy/60 dark:text-white/50">Related advisory services: </span>
+            {services.map((service, index) => (
+              <React.Fragment key={service.path}>
+                {index > 0 && <span aria-hidden="true"> · </span>}
+                <Link
+                  to={service.path}
+                  className="font-semibold text-brandPrimary dark:text-brandGold hover:underline underline-offset-4"
+                >
+                  {service.label}
+                </Link>
+              </React.Fragment>
+            ))}
+          </p>
+        )}
       </div>
     </section>
   );

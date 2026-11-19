@@ -5,7 +5,11 @@
     { "source": "/erm", "destination": "/services/risk-advisory/erm", "permanent": true },
     { "source": "/rbia", "destination": "/services/risk-advisory/rbia", "permanent": true },
     { "source": "/risk-assurance-and-advisory", "destination": "/services/risk-advisory", "permanent": true },
-    { "source": "/digital-transformation", "destination": "/services/digital-transformation", "permanent": true }
+    { "source": "/digital-transformation", "destination": "/services/digital-transformation", "permanent": true },
+    { "source": "/industries/banking", "destination": "/industries/banking-insurance", "permanent": true },
+    { "source": "/industries/energy", "destination": "/industries/energy-utilities", "permanent": true },
+    { "source": "/industries/retail", "destination": "/industries/retail-consumer", "permanent": true },
+    { "source": "/industries/technology", "destination": "/industries", "permanent": true }
   ],
   "rewrites": [
     { "source": "/blog/:slug", "destination": "/index.html" },

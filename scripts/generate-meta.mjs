@@ -5,7 +5,9 @@
  *   the <Helmet><title>/<meta description>/<link canonical> from each page's
  *   source file and bakes it into a per-route dist/<route>/index.html.
  *
- * - Dynamic routes (blog posts, industries): fetched from Sanity at build time.
+ * - Dynamic routes: blog posts and job openings fetched from Sanity at build
+ *   time; industry pages read from src/data/industries/*.json, the files the
+ *   industry page itself renders.
  *
  * - Data-driven routes (RiskMan GRC product and module pages, FAAS groups):
  *   their pages build the title from a data file, so the meta is built here
@@ -279,14 +281,6 @@ const POSTS_QUERY = `*[_type == "post" && defined(slug.current)]{
   secondaryKeywords,
   tags,
   author->{ name }
-}`;
-
-const INDUSTRIES_QUERY = `*[_type == "industry" && defined(slug.current)]{
-  "slug": slug.current,
-  title,
-  subtitle,
-  description,
-  "headerImage": headerImage.asset->url
 }`;
 
 const CAREER_JOBS_QUERY = `*[_type == "careerPage"][0].jobOpenings[]{
@@ -793,16 +787,101 @@ const htmlFiles = (dir) => {
 };
 
 const decode = (str = "") =>
-  str.replace(/&quot;/g, '"').replace(/&#39;|&apos;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
+  str
+    .replace(/&quot;/g, '"')
+    .replace(/&#x27;|&#39;|&apos;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&");
+
+/** Visible text of a piece of markup. */
+const textOf = (html = "") =>
+  decode(
+    html
+      .replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<svg[\s\S]*?<\/svg>/g, " ")
+      .replace(/<[^>]+>/g, " ")
+  )
+    .replace(/\s+/g, " ")
+    .trim();
+
+/** Lower case, hyphens and slashes as spaces, "&" as "and" — so "Risk-Based" matches "risk based". */
+const normalise = (str = "") =>
+  ` ${String(str)
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[‐‑–—\-/]/g, " ")
+    .replace(/[^a-z0-9 ]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()} `;
+
+const STOP = new Set(["a", "an", "and", "the", "of", "for", "to", "in", "on", "with"]);
+const tokens = (str) => normalise(str).trim().split(" ").filter((t) => t && !STOP.has(t));
+
+/** Every word of the term appears in the text (order free) — for titles, descriptions and h1s. */
+const hasTerm = (text, term) => {
+  const have = new Set(tokens(text));
+  return tokens(term).every((t) => have.has(t));
+};
+
+/** Times the exact phrase appears in the text. */
+const countPhrase = (text, term) => {
+  const hay = normalise(text);
+  const needle = normalise(term);
+  if (needle.trim() === "") return 0;
+  let n = 0;
+  for (let i = hay.indexOf(needle); i !== -1; i = hay.indexOf(needle, i + needle.length - 1)) n++;
+  return n;
+};
+
+const capitalise = (s = "") => s.charAt(0).toUpperCase() + s.slice(1);
+
+/** "Enterprise Risk Management Software" from "enterprise risk management software", keeping acronyms. */
+const titleCaseTerm = (term = "") =>
+  term
+    .split(" ")
+    .map((w) => (w === w.toUpperCase() ? w : STOP.has(w) ? w : capitalise(w)))
+    .join(" ");
+
+/** Redirect sources from vercel.json: a link to one costs a hop and should point to the target. */
+function readRedirects() {
+  try {
+    const config = JSON.parse(fsSync.readFileSync(path.join(ROOT, "vercel.json"), "utf8"));
+    return new Map((config.redirects || []).map((r) => [r.source, r.destination]));
+  } catch {
+    return new Map();
+  }
+}
+
+/** Keyword map (src/seo/keywordMap.js) — plain data, loaded directly. */
+async function readKeywordMap() {
+  try {
+    const mod = await import(pathToFileURL(path.join(SRC, "seo", "keywordMap.js")).href);
+    return mod.KEYWORD_MAP || {};
+  } catch (e) {
+    console.warn(`[generate-meta] Keyword map not loaded: ${e.message}`);
+    return {};
+  }
+}
+
+/** Routes that render in the browser only and are not written as files. */
+const APP_ONLY_LINK = /^\/(cms|studio)(\/|$)/;
 
 /**
  * Checks every page this build wrote and saves dist/seo-report.json: one row
  * per page with what a search engine reads from it, and the issues found.
  * Severity: "error" breaks indexing or the result snippet, "warning" costs
  * ranking or clicks, "info" is worth knowing but often intended.
+ *
+ * Every issue carries `group` (one name per kind of issue, for the Studio's
+ * "What to fix" list) and `fix` (what to change, with suggested text where
+ * the build can write it).
  */
 async function writeSeoReport(sitemap) {
+  const keywordMap = await readKeywordMap();
+  const redirects = readRedirects();
   const pages = [];
+
   for (const file of htmlFiles(DIST)) {
     const rel = path.relative(DIST, file).replace(/\\/g, "/");
     if (rel === "404.html") continue;
@@ -813,20 +892,28 @@ async function writeSeoReport(sitemap) {
     const canonical = (html.match(/<link rel="canonical" href="([^"]*)"/) || [])[1] || "";
     const noindex = /<meta name="robots" content="noindex/.test(html);
     const body = html.includes('<div id="root"></div>') ? "" : html.split('<div id="root">')[1] || "";
-    const schemas = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
-      .map((m) => {
-        try {
-          return JSON.parse(m[1])["@type"];
-        } catch {
-          return null;
-        }
-      })
-      .filter(Boolean);
-    const words = body
-      .replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, " ")
-      .replace(/<[^>]+>/g, " ")
-      .split(/\s+/)
-      .filter(Boolean).length;
+
+    const schemas = [];
+    const schemaErrors = [];
+    for (const m of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+      try {
+        const data = JSON.parse(m[1]);
+        if (!data["@context"] || !data["@type"]) schemaErrors.push("a block has no @context or @type");
+        else schemas.push(data["@type"]);
+        if (data["@type"] === "FAQPage" && !(data.mainEntity || []).length) schemaErrors.push("FAQPage has no questions");
+        if (data["@type"] === "BreadcrumbList" && !(data.itemListElement || []).length) schemaErrors.push("BreadcrumbList is empty");
+      } catch {
+        schemaErrors.push("a JSON-LD block is not valid JSON");
+      }
+    }
+
+    const text = body ? textOf(body) : "";
+    const h1s = [...body.matchAll(/<h1[\s>][\s\S]*?<\/h1>/g)].map((m) => textOf(m[0]));
+    const images = [...body.matchAll(/<img\b[^>]*>/g)].map((m) => m[0]);
+    const links = [...body.matchAll(/<a\b[^>]*href="([^"]+)"/g)]
+      .map((m) => decode(m[1]))
+      .filter((href) => href.startsWith("/") && !href.startsWith("//"))
+      .map((href) => href.split(/[?#]/)[0].replace(/\/$/, "") || "/");
 
     pages.push({
       route,
@@ -837,12 +924,42 @@ async function writeSeoReport(sitemap) {
       noindex,
       inSitemap: sitemap.has(canonical),
       prerendered: Boolean(body),
-      h1: (body.match(/<h1[\s>]/g) || []).length,
-      words: body ? words : null,
+      h1: h1s.length,
+      h1Text: h1s[0] || "",
+      h2: (body.match(/<h2[\s>]/g) || []).length,
+      words: body ? text.split(" ").filter(Boolean).length : null,
       schemas,
+      schemaErrors,
+      faq: schemas.includes("FAQPage") || /frequently asked|\bfaqs?\b/i.test(text),
+      images: images.length,
+      imagesNoAlt: images.filter((img) => !/\salt=/.test(img)).map((img) => (img.match(/src="([^"]+)"/) || [])[1] || "?"),
+      imagesNoSize: images.filter((img) => !/\swidth=/.test(img) || !/\sheight=/.test(img)).length,
+      links: [...new Set(links)],
+      text,
       ogImage: /property="og:image"/.test(html),
     });
   }
+
+  // Which URLs exist, and which pages link to which
+  const known = new Set(pages.map((p) => p.route));
+  const inbound = new Map();
+  for (const page of pages) {
+    for (const href of page.links) {
+      if (href !== page.route) inbound.set(href, (inbound.get(href) || 0) + 1);
+    }
+  }
+  // Posts, industries and jobs come from Sanity. When none of a kind was
+  // written (the fetch failed), links to that kind cannot be checked.
+  const dynamicPrefixes = ["/blog/", "/insights/", "/industries/", "/careers/"];
+  const unchecked = (href) =>
+    dynamicPrefixes.some((prefix) => href.startsWith(prefix) && ![...known].some((r) => r.startsWith(prefix)));
+  const fileExists = (href) => {
+    try {
+      return fsSync.existsSync(path.join(DIST, decodeURIComponent(href)));
+    } catch {
+      return false;
+    }
+  };
 
   // Duplicates only matter between pages that each claim to be the original
   const indexable = pages.filter((p) => p.selfCanonical && !p.noindex);
@@ -853,46 +970,236 @@ async function writeSeoReport(sitemap) {
 
   for (const page of pages) {
     const issues = [];
-    const add = (severity, text) => issues.push({ severity, text });
+    const add = (severity, group, text, fix) => issues.push({ severity, group, text, ...(fix ? { fix } : {}) });
     // A noindex page is not judged on anything else: search engines skip it
     if (page.noindex) {
-      add("info", "Hidden from search (noindex) — placeholder page");
+      add(
+        "info",
+        "Hidden from search (noindex)",
+        "Hidden from search (noindex) — placeholder page",
+        "Remove the route from NOINDEX_ROUTES in generate-meta.mjs once the page has real content."
+      );
       page.issues = issues;
       continue;
     }
-    if (!page.title) add("error", "No title");
-    else if (page.title.length > 60) add("warning", `Title is ${page.title.length} characters; Google shows about 60`);
-    else if (page.title.length < 25) add("warning", `Title is only ${page.title.length} characters`);
-    if (!page.description) add("error", "No meta description");
-    else if (page.description.length < 70) add("warning", `Description is only ${page.description.length} characters`);
-    if (!page.canonical) add("error", "No canonical URL");
-    if (!page.selfCanonical) add("info", `Duplicate of ${page.canonical.replace(SITE_URL, "")}`);
-    else {
-      if (!page.inSitemap) add("warning", "Not in the sitemap");
-      if (titleCount.get(page.title) > 1) add("warning", "Same title as another page");
-      if (descCount.get(page.description) > 1) add("warning", "Same description as another page");
-      if (!page.prerendered) add("info", "Text loads in the browser (content comes from Sanity)");
-      if (page.prerendered && page.h1 !== 1) add("warning", page.h1 ? `${page.h1} main headings (h1); use one` : "No main heading (h1)");
-      if (page.prerendered && page.words < 300) add("warning", `Only ${page.words} words of text`);
-      if (!page.schemas.length) add("info", "No structured data");
+    const kw = keywordMap[page.route];
+    const primary = kw?.primary?.[0];
+
+    /* --- Metadata ----------------------------------------------------- */
+    if (!page.title) add("error", "No title", "No title", "Add a <title> in the page's <Helmet>.");
+    else if (page.title.length > 60)
+      add(
+        "warning",
+        "Title longer than 60 characters",
+        `Title is ${page.title.length} characters; Google shows about 60`,
+        "Shorten to 60 characters or fewer, keeping the main term first. Drop the brand suffix if needed."
+      );
+    else if (page.title.length < 25)
+      add(
+        "warning",
+        "Title shorter than 25 characters",
+        `Title is only ${page.title.length} characters`,
+        primary ? `Name the subject, e.g. "${titleCaseTerm(primary)} | RiskMan Consulting".` : "Name what the page offers before the brand."
+      );
+    if (!page.description)
+      add("error", "No meta description", "No meta description", 'Add <meta name="description"> in the page\'s <Helmet>: 120–160 characters that say what the page offers.');
+    else if (page.description.length < 70)
+      add(
+        "warning",
+        "Description shorter than 70 characters",
+        `Description is only ${page.description.length} characters`,
+        "Extend to 120–160 characters: what the page offers, for whom, and one differentiator."
+      );
+    else if (page.description.length > 160)
+      add("warning", "Description longer than 160 characters", `Description is ${page.description.length} characters`, "Cut to 160 characters so the snippet is not truncated.");
+    if (!page.canonical) add("error", "No canonical URL", "No canonical URL", `Add <link rel="canonical" href="${SITE_URL}${page.route}" />.`);
+    if (!page.selfCanonical) {
+      add("info", "Duplicate of another page (canonical points elsewhere)", `Duplicate of ${page.canonical.replace(SITE_URL, "")}`);
+      page.issues = issues;
+      continue;
     }
+    if (!page.inSitemap)
+      add("warning", "Not in the sitemap", "Not in the sitemap", "Add the route to STATIC_ROUTES in generate-meta.mjs so it is written to sitemap.xml.");
+    if (titleCount.get(page.title) > 1)
+      add("warning", "Same title as another page", "Same title as another page", "Give each page a title that names its own subject.");
+    if (descCount.get(page.description) > 1)
+      add("warning", "Same description as another page", "Same description as another page", "Write a description specific to this page.");
+
+    /* --- Technical ---------------------------------------------------- */
+    for (const err of page.schemaErrors)
+      add("error", "Invalid structured data", `Structured data: ${err}`, "Fix the JSON-LD so it parses, then check it with Google's Rich Results Test.");
+    if (!page.schemas.length)
+      add(
+        "info",
+        "No structured data",
+        "No structured data",
+        "Add JSON-LD for the page type (Service, WebPage, Article, SoftwareApplication) — generate-meta does this for routes in its lists."
+      );
+    if (!page.prerendered)
+      add(
+        "info",
+        "Text loads in the browser (content comes from Sanity)",
+        "Text loads in the browser (content comes from Sanity)",
+        "Google renders it, but other crawlers and link previews see an empty page. Prerender once the content can be fetched at build time."
+      );
+    if (!inbound.get(page.route) && page.route !== "/")
+      add(
+        "warning",
+        "No internal links point here",
+        "No other page links here",
+        "Link to it from a related page, its parent section or the menu, with descriptive anchor text."
+      );
+
+    /* --- Content ------------------------------------------------------ */
+    if (page.prerendered) {
+      if (page.h1 !== 1)
+        add(
+          "warning",
+          page.h1 ? "More than one main heading (h1)" : "No main heading (h1)",
+          page.h1 ? `${page.h1} main headings (h1); use one` : "No main heading (h1)",
+          page.h1
+            ? "Keep one h1 that names the page's subject; make the others h2."
+            : `Add one h1 that names the page's subject${primary ? `, e.g. "${titleCaseTerm(primary)}"` : ""}.`
+        );
+      if (!page.h2)
+        add("warning", "No section headings (h2)", "No section headings (h2)", "Organise the main sections under h2 headings that describe them.");
+      if (page.words < 300)
+        add(
+          "warning",
+          "Under 300 words of text",
+          `Only ${page.words} words of text`,
+          "Explain what the service or product is, who it is for, how it works and the outcomes — 300 words at the least."
+        );
+      if (page.imagesNoAlt.length)
+        add(
+          "warning",
+          "Images without alt text",
+          `${page.imagesNoAlt.length} image${page.imagesNoAlt.length > 1 ? "s" : ""} without alt text`,
+          `Describe each image in its alt attribute (alt="" if purely decorative): ${page.imagesNoAlt.slice(0, 3).join(", ")}`
+        );
+      if (page.imagesNoSize)
+        add(
+          "info",
+          "Images without width and height",
+          `${page.imagesNoSize} image${page.imagesNoSize > 1 ? "s" : ""} without width/height`,
+          "Set width and height on each <img> so the layout does not shift as images load (CLS)."
+        );
+      for (const href of page.links) {
+        if (known.has(href) || APP_ONLY_LINK.test(href)) continue;
+        if (redirects.has(href)) {
+          add("info", "Links to a redirect", `Links to ${href}, which redirects`, `Point the link straight to ${redirects.get(href)}.`);
+        } else if (/\.[a-z0-9]{2,5}$/i.test(href)) {
+          if (!fileExists(href)) add("warning", "Broken internal link", `Links to ${href}, which does not exist`, "Fix or remove the link.");
+        } else if (!unchecked(href)) {
+          add("warning", "Broken internal link", `Links to ${href}, which does not exist`, "Fix the path or remove the link.");
+        }
+      }
+    }
+
+    /* --- Keywords (pages listed in src/seo/keywordMap.js) ------------- */
+    if (kw?.primary?.length) {
+      const inAny = (str) => kw.primary.some((term) => hasTerm(str, term));
+      if (!inAny(page.title))
+        add(
+          "warning",
+          "Primary keyword missing from title",
+          `Title does not contain "${primary}"`,
+          `Lead with the term, e.g. "${trimTo(`${titleCaseTerm(primary)} | ${page.title.split(" | ").pop()}`, 60)}".`
+        );
+      if (!inAny(page.description))
+        add(
+          "warning",
+          "Primary keyword missing from description",
+          `Description does not contain "${primary}"`,
+          `Work the term into the first sentence, e.g. "${capitalise(primary)} that …".`
+        );
+      if (page.prerendered && page.h1 && !inAny(page.h1Text))
+        add(
+          "warning",
+          "Primary keyword missing from h1",
+          `Main heading "${page.h1Text}" does not contain "${primary}"`,
+          `Use an h1 such as "${titleCaseTerm(primary)}".`
+        );
+      if (page.prerendered) {
+        if (!kw.primary.some((term) => countPhrase(page.text, term)))
+          add(
+            "warning",
+            "Primary keyword missing from content",
+            `Page text never uses "${primary}"`,
+            "Use the term naturally in the opening paragraph and in an FAQ answer."
+          );
+        for (const term of kw.primary) {
+          const n = countPhrase(page.text, term);
+          const size = tokens(term).length;
+          const density = (n * size) / Math.max(page.words, 1);
+          // A one-word acronym ("SOC", "ESG") is the page's subject name and
+          // recurs naturally, so it gets a higher bar than a phrase.
+          if (n >= 8 && density > (size === 1 ? 0.08 : 0.04))
+            add(
+              "warning",
+              "Keyword stuffing",
+              `"${term}" appears ${n} times (${(density * 100).toFixed(1)}% of words)`,
+              "Replace some repetitions with synonyms or pronouns; write for the reader."
+            );
+        }
+        const missing = (kw.alternatives || []).filter((term) => !countPhrase(page.text, term));
+        if (missing.length > kw.alternatives.length / 2)
+          add(
+            "info",
+            "Few alternative keywords in content",
+            `${kw.alternatives.length - missing.length} of ${kw.alternatives.length} alternative terms used`,
+            `Where accurate, cover: ${missing.slice(0, 5).join(", ")}.`
+          );
+        if (!page.faq)
+          add("info", "No FAQ section", "No FAQ section", `Answer the questions buyers search for, e.g. "What is ${primary}?", in an FAQ section.`);
+      }
+    }
+
     page.issues = issues;
   }
 
+  /* --- Site-wide checks ----------------------------------------------- */
+  const siteIssues = [];
+  const robotsPath = path.join(DIST, "robots.txt");
+  if (!fsSync.existsSync(robotsPath)) siteIssues.push({ severity: "error", text: "No robots.txt", fix: "Add public/robots.txt." });
+  else {
+    const robots = fsSync.readFileSync(robotsPath, "utf8");
+    if (!/^sitemap:\s*https?:\/\//im.test(robots))
+      siteIssues.push({ severity: "warning", text: "robots.txt does not name the sitemap", fix: `Add "Sitemap: ${SITE_URL}/sitemap.xml".` });
+    if (/user-agent:\s*\*\s*[\r\n]+(?:allow:[^\n]*[\r\n]+)*disallow:\s*\/\s*$/im.test(robots))
+      siteIssues.push({ severity: "error", text: "robots.txt blocks the whole site", fix: 'Remove "Disallow: /" under User-agent: *.' });
+  }
+  if (!sitemap.size) siteIssues.push({ severity: "error", text: "Sitemap is empty", fix: "Check the generate-meta build log." });
+  siteIssues.push({
+    severity: "info",
+    text: "Search Console data is not part of this report",
+    fix: "Verify www.riskman.in in Google Search Console, submit /sitemap.xml, and use its Performance report for real queries, clicks and positions.",
+  });
+
   const scored = pages.filter((p) => p.selfCanonical && !p.noindex);
   const clean = scored.filter((p) => !p.issues.some((i) => i.severity !== "info")).length;
+  // The page text and link list were only needed for the checks
+  for (const page of pages) {
+    delete page.text;
+    delete page.links;
+  }
+  const countSeverity = (severity) =>
+    pages.reduce((n, p) => n + p.issues.filter((i) => i.severity === severity).length, 0) +
+    siteIssues.filter((i) => i.severity === severity).length;
   const report = {
     generatedAt: new Date().toISOString(),
     site: SITE_URL,
     score: scored.length ? Math.round((clean / scored.length) * 100) : 0,
+    siteIssues,
     totals: {
       pages: pages.length,
       indexable: scored.length,
       inSitemap: sitemap.size,
       prerendered: pages.filter((p) => p.prerendered).length,
       withStructuredData: scored.filter((p) => p.schemas.length).length,
-      errors: pages.reduce((n, p) => n + p.issues.filter((i) => i.severity === "error").length, 0),
-      warnings: pages.reduce((n, p) => n + p.issues.filter((i) => i.severity === "warning").length, 0),
+      withKeywords: scored.filter((p) => keywordMap[p.route]).length,
+      errors: countSeverity("error"),
+      warnings: countSeverity("warning"),
     },
     pages: pages.sort((a, b) => a.route.localeCompare(b.route)),
   };
@@ -1119,25 +1426,6 @@ async function main() {
       console.error(`[generate-meta] Blog fetch failed: ${e.message}`);
     }
 
-    // 3) Dynamic routes — industries
-    try {
-      const industries = await client.fetch(INDUSTRIES_QUERY);
-      for (const industry of industries || []) {
-        if (!industry?.slug) continue;
-        const head = buildIndustryHead(industry);
-        sitemap.add(`${SITE_URL}/industries/${industry.slug}`);
-        const outFile = path.join(DIST, "industries", industry.slug, "index.html");
-        await fs.mkdir(path.dirname(outFile), { recursive: true });
-        await fs.writeFile(outFile, injectMeta(template, head), "utf8");
-        written++;
-      }
-      console.log(
-        `[generate-meta] Prerendered ${industries?.length || 0} industry pages`
-      );
-    } catch (e) {
-      console.error(`[generate-meta] Industries fetch failed: ${e.message}`);
-    }
-
     // 3b) Dynamic routes — job openings (/careers/<slug>). Expired roles are
     //     skipped: their page renders an "applications closed" state anyway.
     try {
@@ -1159,6 +1447,39 @@ async function main() {
     } catch (e) {
       console.error(`[generate-meta] Career jobs fetch failed: ${e.message}`);
     }
+  }
+
+  // 3c) Industry pages (/industries/<slug>). The page renders from
+  //     src/data/industries/<slug>.json (IndustriesTemplate), so the meta and
+  //     the sitemap come from the same files — not from Sanity, whose industry
+  //     slugs ("banking", "retail") have no page and showed "Industry Not Found".
+  try {
+    const dir = path.join(SRC, "data", "industries");
+    // Sector names from the industries grid; some hero titles are slogans
+    const names = new Map(
+      JSON.parse(fsSync.readFileSync(path.join(SRC, "data", "industries-master-list.json"), "utf8")).map((i) => [i.id, i.title])
+    );
+    const files = fsSync.readdirSync(dir).filter((f) => f.endsWith(".json"));
+    for (const file of files) {
+      const slug = file.replace(/\.json$/, "");
+      const data = JSON.parse(fsSync.readFileSync(path.join(dir, file), "utf8"));
+      const hero = data.heroSection || {};
+      if (!hero.title) continue;
+      const head = buildIndustryHead({
+        slug,
+        title: names.get(slug) || hero.title,
+        description: hero.description,
+        headerImage: hero.heroImage?.src,
+      });
+      sitemap.add(`${SITE_URL}/industries/${slug}`);
+      const outFile = path.join(DIST, "industries", slug, "index.html");
+      await fs.mkdir(path.dirname(outFile), { recursive: true });
+      await fs.writeFile(outFile, injectMeta(template, head), "utf8");
+      written++;
+    }
+    console.log(`[generate-meta] Prerendered ${files.length} industry pages`);
+  } catch (e) {
+    console.error(`[generate-meta] Industry pages failed: ${e.message}`);
   }
 
   // 4) 404 page — Vercel serves dist/404.html when no other route matches.

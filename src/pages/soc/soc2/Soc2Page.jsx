@@ -7,6 +7,7 @@ import TypeSection from './TypeSection';
 import SupportSection from './SupportSection';
 import FaqSection from './FaqSection';
 import CtaSection from './ctaSection';
+import RelatedLinks from "../../../components/sections/RelatedLinks";
 
 const SOC2Page = () => {
   return (
@@ -36,6 +37,14 @@ const SOC2Page = () => {
 
       {/* 7. FAQ SECTION */}
      <FaqSection/>
+
+      <RelatedLinks
+        intro="Further reading on SOC 2 from the RiskMan blog."
+        links={[
+          { label: "How to ensure SOC 2 compliance: a complete guide", path: "/blog/soc-2-compliance-guide" },
+          { label: "SOC 1 vs SOC 2 vs SOC 3 compared", path: "/blog/soc-1-vs-soc-2-vs-soc-3" },
+        ]}
+      />
 
       {/* 8. FINAL CTA SECTION */}
       <CtaSection/>

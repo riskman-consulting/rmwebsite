@@ -143,11 +143,13 @@ const HeroSection = () => {
                 <span className="absolute inline-flex w-full h-full rounded-full opacity-75 animate-ping bg-brandAccent"></span>
                 <span className="relative inline-flex w-3 h-3 rounded-full bg-brandAccent"></span>
               </span>
-              Elite Cybersecurity Services
+              {/* The page h1: names the service people search for. Inherits the
+                  badge's type so it looks as it did as plain text. */}
+              <h1 style={{ font: "inherit" }}>Elite Cybersecurity Services</h1>
             </div>
-            <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading">
+            <p className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-tight font-heading">
               Empowering <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandAccent to-brandGold">Resilience</span> Through Proactive Defense
-            </h1>
+            </p>
             <p className="max-w-xl mb-8 text-[15px] leading-relaxed text-gray-300">
               RiskMan delivers standardized, rigorous cybersecurity audits to detect vulnerabilities, ensure regulatory compliance, and strengthen your organization's overall security posture.
             </p>

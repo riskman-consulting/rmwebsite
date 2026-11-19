@@ -6,6 +6,7 @@ import CTASection from "./CTASection";
 import FAQSection from "./FAQSection";
 
 import { Helmet } from "react-helmet-async";
+import RelatedLinks from "../../components/sections/RelatedLinks";
 
 
 
@@ -134,6 +135,13 @@ export default function RiskAdvisoryPage() {
       <ServicesSection data={pageData.ServicesSection} />
       <WhyRiskManSection data={pageData.whyRiskmanSection} />
       <FAQSection data={pageData.faqSection} />
+      <RelatedLinks
+        intro="Alongside our advisory services, RiskMan GRC brings enterprise risk management, internal audit, control testing, SOX compliance, policy management and audit remediation onto one platform."
+        links={[
+          { label: "RiskMan GRC software", path: "/products/riskman-grc" },
+        ]}
+      />
+
       <CTASection data={pageData.ctaSection} />
     </div>
   );

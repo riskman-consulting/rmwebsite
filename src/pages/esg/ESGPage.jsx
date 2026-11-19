@@ -57,6 +57,7 @@ import ESGServicePortfolio from './ESGServicePortfolio';
 import ServiceDetails from './ServiceDetail';
 import WhyRiskManAndCTA from './WhyRiskManCTA';
 import { Helmet } from "react-helmet-async";
+import RelatedLinks from "../../components/sections/RelatedLinks";
 
 function App() {
   return (
@@ -101,6 +102,14 @@ function App() {
 
       {/* Detailed Service Offerings */}
       <ServiceDetails />
+
+      <RelatedLinks
+        intro="Further reading on ESG and sustainability from the RiskMan blog."
+        links={[
+          { label: "How sustainability reporting drives long-term business value", path: "/blog/how-sustainability-reporting-drives-long-term-business-value" },
+          { label: "Climate risk resilience with GHG accounting", path: "/blog/make-your-business-resilient-from-climate-risk-with-ghg-accounting" },
+        ]}
+      />
 
       {/* Why RiskMan & CTA */}
       <WhyRiskManAndCTA />

@@ -43,16 +43,16 @@ import {
 // Product screenshots. Only the modules with artwork carry a `screens` array —
 // `ModuleScreens` is skipped entirely for the ones that do not, so a module
 // without a screenshot still renders as a finished page.
-import rbiaPlanOverview from "../../assets/products/riskman-grc/rbia/project-dashboard.png";
-import controlTestingProject from "../../assets/products/riskman-grc/control-testing/project-dashboard.png";
-import ermOverview from "../../assets/products/riskman-grc/erm/dashboard-01-overview.png";
-import ermRiskProfile from "../../assets/products/riskman-grc/erm/dashboard-02-risk-profile.png";
-import ermDistribution from "../../assets/products/riskman-grc/erm/dashboard-03-distribution.png";
-import ermOverdue from "../../assets/products/riskman-grc/erm/dashboard-04-overdue.png";
-import ermOwners from "../../assets/products/riskman-grc/erm/dashboard-05-owners.png";
-import atrAnalytics from "../../assets/products/riskman-grc/atr/dashboard-01-analytics.png";
-import atrOverdue from "../../assets/products/riskman-grc/atr/dashboard-02-overdue-summary.png";
-import policyAcknowledgements from "../../assets/products/riskman-grc/policy-sop/dashboard-acknowledgements.png";
+import rbiaPlanOverview from "../../assets/products/riskman-grc/rbia/project-dashboard.webp";
+import controlTestingProject from "../../assets/products/riskman-grc/control-testing/project-dashboard.webp";
+import ermOverview from "../../assets/products/riskman-grc/erm/dashboard-01-overview.webp";
+import ermRiskProfile from "../../assets/products/riskman-grc/erm/dashboard-02-risk-profile.webp";
+import ermDistribution from "../../assets/products/riskman-grc/erm/dashboard-03-distribution.webp";
+import ermOverdue from "../../assets/products/riskman-grc/erm/dashboard-04-overdue.webp";
+import ermOwners from "../../assets/products/riskman-grc/erm/dashboard-05-owners.webp";
+import atrAnalytics from "../../assets/products/riskman-grc/atr/dashboard-01-analytics.webp";
+import atrOverdue from "../../assets/products/riskman-grc/atr/dashboard-02-overdue-summary.webp";
+import policyAcknowledgements from "../../assets/products/riskman-grc/policy-sop/dashboard-acknowledgements.webp";
 
 export const PRODUCTS_BASE_PATH = "/products";
 
@@ -82,10 +82,55 @@ export const PRODUCTS = [
     path: `${PRODUCTS_BASE_PATH}/riskman-grc`,
     name: "RiskMan GRC",
     shortName: "RiskMan GRC",
-    seoTitle: "RiskMan GRC: Governance, Risk and Compliance Software",
+    seoTitle: "RiskMan GRC: GRC Software for Risk, Audit & Compliance",
+    // Search snippet. Written for the query, not cut from `summary`.
+    seoDescription:
+      "GRC software that connects enterprise risk management, internal audit, control testing, SOX compliance, policy management and audit remediation on one platform.",
+    // Second line of the h1 — names the category for people who search for it
+    // generically rather than by product name.
+    headingSuffix: "Governance, Risk and Compliance (GRC) Software",
+    // Other names buyers search for. Shown on the page ("Also known as"),
+    // so list only names that describe what the software really does.
+    alsoKnownAs: {
+      text:
+        "Also described as a GRC platform, integrated GRC software, GRC management software or risk and compliance management software. RiskMan GRC is built for enterprise GRC programmes that span several entities: audit, risk and compliance work sit on one platform and share the same entities, processes, users and approvals.",
+      terms: [
+        "GRC platform",
+        "Governance, risk and compliance software",
+        "GRC management software",
+        "Enterprise GRC software",
+        "Integrated GRC software",
+        "Risk and compliance management software",
+        "Audit, risk and compliance software",
+      ],
+    },
     tagline: "One connected system for governance, risk and compliance, with AI-enabled workflows",
     summary:
       "Connect policies, procedures, risks and controls on a single platform across every entity and business process. Evidence is captured as the work is done, with a complete trail of activity, while AI-enabled workflows generate test plans, surface insights and feed dashboards configured for your organisation.",
+    // Overview-page FAQs. Each answer restates what the modules below do —
+    // keep them in step when a module changes.
+    faqs: [
+      {
+        q: "What is GRC software?",
+        a: "GRC (governance, risk and compliance) software brings the records behind governance, risk management and compliance into one system: policies and procedures, the risk register, internal controls and their testing, internal audits, and the actions that follow from them. RiskMan GRC holds these in six connected modules that share your entities, processes, users and approval configuration.",
+      },
+      {
+        q: "What does governance, risk and compliance mean?",
+        a: "Governance is how an organisation sets direction and holds people accountable, including through its policies and approvals. Risk management identifies, assesses and treats the risks to its objectives. Compliance shows that laws, regulations and internal policies are being followed. All three depend on the same underlying records, which is why many organisations manage them on one GRC platform.",
+      },
+      {
+        q: "Which modules are included in RiskMan GRC?",
+        a: "Six: Enterprise Risk Management (risk register, risk scoring and mitigation tracking), Risk Based Internal Audit (audit universe, risk-based annual plan and audit execution), Control Testing (internal control testing against the Risk and Control Matrix), Action Taken Report (audit findings and remediation tracking), Policy and SOP (policy lifecycle, approvals and acknowledgements) and Global SOX (SOX compliance across multiple entities).",
+      },
+      {
+        q: "What are the benefits of an integrated GRC platform?",
+        a: "Plans, risks, controls and actions sit in one place, so every stakeholder works from the same version. Every review and sign-off is recorded with the approver and the date, evidence is attached to the control or action it supports, and dashboards are drawn from the live record. Because the modules are connected, observations from an internal audit report or a control testing report become tracked actions automatically instead of being re-keyed.",
+      },
+      {
+        q: "Who uses RiskMan GRC?",
+        a: "Chief Audit Executives and internal audit teams, CFOs and SOX or IFC teams, Chief Risk Officers and risk owners, Company Secretaries and compliance teams, and the process and control owners who respond to requests, upload evidence and close actions.",
+      },
+    ],
     modules: [
       /* ---------------------------------------------------------------- */
       /* 1. Enterprise Risk Management                                     */
@@ -96,6 +141,33 @@ export const PRODUCTS = [
         navLabel: "Enterprise Risk Management",
         shortName: "ERM",
         seoTitle: "Enterprise Risk Management (ERM) Software",
+        seoDescription:
+          "ERM software with a live risk register, automated inherent and residual risk scoring, approval workflows, mitigation tracking and periodic owner confirmation.",
+        heading: "Enterprise Risk Management (ERM) Software",
+        // Other names buyers search for. Shown on the page ("Also known as"),
+        // so list only names that describe what the software really does.
+        alsoKnownAs: {
+          text:
+            "Teams look for this under several names: risk management software, a risk management system, risk register software or a risk assessment tool. The module covers each of them: enterprise risk assessment against your own published scoring guideline, risk analysis through the heat map and distribution views, risk monitoring through periodic owner confirmation, and risk mitigation through tracked plans that become controls once complete.",
+          terms: [
+            "Risk management software",
+            "Risk management system",
+            "Risk register software",
+            "Risk assessment software",
+            "Enterprise risk assessment software",
+            "Risk analysis software",
+            "Risk monitoring software",
+            "Risk mitigation software",
+            "Corporate risk management software",
+            "Business risk management software",
+            "Risk management tool",
+          ],
+        },
+        // The consulting service for the same subject, linked from this page
+        relatedServices: [
+          { label: "Enterprise risk management consulting", path: "/services/risk-advisory/erm" },
+          { label: "ISO 31000 risk management framework", path: "/services/iso-certifications/iso-31000" },
+        ],
         icon: Layers,
         summary:
           "A live risk register with named owners, scores based on your own guideline, approval for every change and periodic owner confirmation.",
@@ -199,6 +271,8 @@ export const PRODUCTS = [
         screens: [
           {
             image: ermOverview,
+            width: 1549,
+            height: 372,
             tab: "Overview",
             alt: "RiskMan GRC ERM dashboard header with department, category, status and owner filters and tiles for total risks, active risks and risks awaiting acknowledgement",
             title: "Register overview",
@@ -207,6 +281,8 @@ export const PRODUCTS = [
           },
           {
             image: ermRiskProfile,
+            width: 1549,
+            height: 528,
             tab: "Risk profile",
             alt: "Risks by department and category table alongside an impact versus probability risk heat map with low, medium, high and critical bands",
             title: "Risk profile",
@@ -215,6 +291,8 @@ export const PRODUCTS = [
           },
           {
             image: ermDistribution,
+            width: 1549,
+            height: 880,
             tab: "Distribution",
             alt: "Department-wise and category-wise risk distribution bar charts above a mitigation plan timeline chart across the year",
             title: "Risk distribution and mitigation timeline",
@@ -223,6 +301,8 @@ export const PRODUCTS = [
           },
           {
             image: ermOverdue,
+            width: 1549,
+            height: 910,
             tab: "Overdue",
             alt: "Overdue mitigation plans table listing control, owner, due date and ageing band, beside a periodic confirmation panel",
             title: "Overdue items",
@@ -231,6 +311,8 @@ export const PRODUCTS = [
           },
           {
             image: ermOwners,
+            width: 1549,
+            height: 840,
             tab: "Owners",
             alt: "Risk owner-wise and control owner-wise distribution bar charts showing active risks and controls per owner",
             title: "Accountability by owner",
@@ -339,6 +421,18 @@ export const PRODUCTS = [
             q: "How often do owners review their risks?",
             a: "At the frequency your organisation defines: monthly, quarterly, half-yearly, yearly or on custom dates. Owners confirm each risk or propose a change, and late confirmations are flagged.",
           },
+          {
+            q: "What is enterprise risk management software?",
+            a: "Enterprise risk management (ERM) software is a system for identifying, assessing, treating and monitoring an organisation's risks in one place. In RiskMan GRC, that means a single risk register scored against your own published guideline, approval for every new risk and every change, tracked controls and mitigation plans, and dashboards drawn from the same record.",
+          },
+          {
+            q: "Can it be used as risk register software or a risk assessment tool?",
+            a: "Yes. The risk register is at the centre of the module: risks are imported from Excel or added individually, each with an entity, department, category, owner and controls. Risk assessment is built in, with inherent scores (impact multiplied by probability), residual scores that reflect the controls in place, and a heat map for analysis.",
+          },
+          {
+            q: "How does it support risk monitoring and mitigation?",
+            a: "Every mitigation plan has an owner and a due date. Owners upload evidence as the work progresses, reminders and escalations are sent before and after each due date, and the dashboard shows overdue items and owner workload. A completed plan is converted into a control.",
+          },
         ],
       },
 
@@ -350,7 +444,33 @@ export const PRODUCTS = [
         name: "Risk Based Internal Audit",
         navLabel: "Risk Based Internal Audit",
         shortName: "RBIA",
-        seoTitle: "Risk Based Internal Audit (RBIA) Software",
+        seoTitle: "Risk-Based Internal Audit (RBIA) Software",
+        seoDescription:
+          "Internal audit management software for risk-based audit planning: score the audit universe, get CAE approval for the plan and run audits to the final report.",
+        heading: "Risk-Based Internal Audit (RBIA) Software",
+        // Other names buyers search for. Shown on the page ("Also known as"),
+        // so list only names that describe what the software really does.
+        alsoKnownAs: {
+          text:
+            "Also used as internal audit software, internal audit management software or an audit management system. Audit planning starts from the audit universe and ends with a CAE-approved annual plan. Audit execution then runs process by process through a defined audit workflow of document requests, testing, review and reporting, with each audit programme built in the module and every audit tracked against the approved plan.",
+          terms: [
+            "Internal audit software",
+            "Internal audit management software",
+            "Audit management software",
+            "Audit management system",
+            "Internal audit system",
+            "Audit planning software",
+            "Audit universe management software",
+            "Audit execution software",
+            "Audit workflow software",
+            "Audit tracking software",
+            "Audit programme management software",
+          ],
+        },
+        relatedServices: [
+          { label: "Risk-based internal audit services", path: "/services/risk-advisory/rbia" },
+          { label: "Concurrent audit services", path: "/services/risk-advisory/concurrent-audits" },
+        ],
         icon: ClipboardCheck,
         summary:
           "Score the audit universe on risk, obtain CAE approval for the annual plan, and execute each audit from request to final report.",
@@ -467,6 +587,8 @@ export const PRODUCTS = [
         screens: [
           {
             image: rbiaPlanOverview,
+            width: 1456,
+            height: 892,
             alt: "RiskMan GRC internal audit plan overview showing scored universe objects, risk profile by band, plan disposition and a risk heat map by quarter",
             title: "Approved plan overview",
             caption:
@@ -736,6 +858,18 @@ export const PRODUCTS = [
             a: "Largely, yes. After planning, each process moves through an audit programme, information requests, testing, management response and a final report. Internal audit adds an Audit Manager approval before the request is issued and a process owner approval of the management response.",
           },
           {
+            q: "What is risk-based internal audit?",
+            a: "Risk-based internal audit (RBIA) is an approach in which the internal audit plan is driven by risk. Auditable areas are assessed against defined risk factors, and audit effort and frequency follow from that assessment rather than from last year's plan. RiskMan GRC records the scores, the weights and the CAE's approval, so the basis for including each area is documented.",
+          },
+          {
+            q: "How is RBIA different from a traditional internal audit plan?",
+            a: "A traditional, cyclical plan typically audits areas on a fixed rotation or because they were audited before. In RBIA, each area in the audit universe is scored against weighted risk factors, and that score sets its risk band and audit frequency, so higher-risk areas receive more audit attention.",
+          },
+          {
+            q: "Is this internal audit management software or only a planning tool?",
+            a: "Both. Audit planning covers the audit universe, risk scoring and the CAE-approved annual plan. Once approved, the plan becomes an audit project in which each process moves through document requests, testing, reviews, management responses and the final report. Observations then move to the Action Taken Report module for follow-up.",
+          },
+          {
             q: "What happens to observations after the report is issued?",
             a: "When the final report is released, the failed items and their management responses move to the Action Taken Report module, where they are tracked to closure.",
           },
@@ -750,7 +884,32 @@ export const PRODUCTS = [
         name: "Control Testing",
         navLabel: "Control Testing",
         shortName: "Control Testing",
-        seoTitle: "Internal Control Testing Software for IFC and ICFR",
+        seoTitle: "Internal Control Testing Software for RCM, IFC and ICFR",
+        seoDescription:
+          "Internal control testing software: load your Risk and Control Matrix (RCM), request evidence, test controls and route results and responses for approval.",
+        heading: "Internal Control Testing Software",
+        // Other names buyers search for. Shown on the page ("Also known as"),
+        // so list only names that describe what the software really does.
+        alsoKnownAs: {
+          text:
+            "Also known as controls testing software, control assessment software or risk and control matrix (RCM) software. The RCM is managed inside each project, each control is evaluated against the evidence its owner provides and concluded as passed or failed, and the same workflow supports internal financial control (IFC) testing and SOX control testing, giving a documented view of control effectiveness.",
+          terms: [
+            "Controls testing software",
+            "Internal controls management software",
+            "Control assessment software",
+            "Control evaluation software",
+            "Risk and control matrix (RCM) software",
+            "RCM management software",
+            "Internal financial control (IFC) testing software",
+            "SOX control testing software",
+            "Control effectiveness testing software",
+          ],
+        },
+        relatedServices: [
+          { label: "SOX, ICOFR and IFC compliance services", path: "/services/risk-advisory/sox-icofr-ifc" },
+          { label: "Control self-assessment (CSA) services", path: "/services/risk-advisory/csa" },
+          { label: "ITGC and ITAC review services", path: "/services/itgc-itac" },
+        ],
         icon: ShieldCheck,
         summary:
           "Manage each testing project end to end, covering the RCM, information requests, testing, approvals, management responses and the final report.",
@@ -849,6 +1008,8 @@ export const PRODUCTS = [
         screens: [
           {
             image: controlTestingProject,
+            width: 1596,
+            height: 922,
             alt: "RiskMan GRC control testing project showing RCM controls, IDR fields, report and analytics tabs with testing progress, pass rate and open findings",
             title: "Inside a testing project",
             caption:
@@ -948,6 +1109,14 @@ export const PRODUCTS = [
         ],
         faqs: [
           {
+            q: "What is internal control testing software?",
+            a: "It is a system for planning and documenting the testing of internal controls: which controls are in scope, what evidence each control owner must provide, how each control was tested and concluded, and who approved the result. RiskMan GRC holds all of this in a single project, from the Risk and Control Matrix (RCM) to the final report.",
+          },
+          {
+            q: "Can it be used for IFC, ICFR and SOX control testing?",
+            a: "Yes. The module is designed around testing internal financial controls, with reference to the Companies Act 2013 IFC requirements, the ICAI Guidance Note on ICFR, COSO and SOX Section 404. Groups that test the same SOX controls across several entities would typically use the Global SOX module, which adds a shared control library and annual scope approval.",
+          },
+          {
             q: "What is the IDR step?",
             a: "The Information and Document Request (IDR) lists what each control owner must provide. The Staff Auditor prepares it, the Audit Manager approves it, and it is then released by email. Responses are tracked against each request item.",
           },
@@ -978,7 +1147,32 @@ export const PRODUCTS = [
         name: "Action Taken Report",
         navLabel: "Action Taken Report",
         shortName: "ATR",
-        seoTitle: "Action Taken Report (ATR) and Audit Issue Tracking Software",
+        seoTitle: "Audit Findings & Remediation Tracking Software (ATR)",
+        seoDescription:
+          "Audit remediation software that tracks every audit finding to closure, with named owners, target dates, reminders, evidence and audit-reviewed sign-off.",
+        heading: "Action Taken Report (ATR) and Audit Remediation Software",
+        // Other names buyers search for. Shown on the page ("Also known as"),
+        // so list only names that describe what the software really does.
+        alsoKnownAs: {
+          text:
+            "Also used as audit issue management software, audit follow-up software or an audit finding tracking system. Every audit observation and recommendation becomes a tracked action with a management action plan. Owners carry out the corrective action and upload evidence, and the audit team reviews it before closure, so remediation management, from finding to closure, is recorded in one place.",
+          terms: [
+            "Audit issue management software",
+            "Audit finding tracking system",
+            "Audit observation management software",
+            "Audit follow-up software",
+            "Remediation management software",
+            "Corrective action tracking software",
+            "Action plan management software",
+            "Audit recommendation tracking software",
+            "Audit closure management software",
+            "Finding closure tracking software",
+          ],
+        },
+        relatedServices: [
+          { label: "Risk-based internal audit services", path: "/services/risk-advisory/rbia" },
+          { label: "Internal control review services", path: "/services/cpa-us-assurance/internal-control-reviews" },
+        ],
         icon: ListChecks,
         summary:
           "Track every audit observation through to closure, with a named owner, a target date and evidence reviewed by the audit team.",
@@ -1074,6 +1268,8 @@ export const PRODUCTS = [
         screens: [
           {
             image: atrAnalytics,
+            width: 1812,
+            height: 862,
             tab: "Analytics",
             alt: "Remediation analytics dashboard with tiles for total, closed, open and overdue actions and closure rate, above a distribution by process, an ageing chart of overdue actions and a breakdown by risk",
             title: "Remediation status at a glance",
@@ -1082,6 +1278,8 @@ export const PRODUCTS = [
           },
           {
             image: atrOverdue,
+            width: 1812,
+            height: 710,
             tab: "Overdue summary",
             alt: "Overdue summary table listing project and process, observation, management response, point of contact, risk, priority and the number of days each action is past its deadline",
             title: "Every action past its deadline",
@@ -1170,6 +1368,14 @@ export const PRODUCTS = [
         ],
         faqs: [
           {
+            q: "What is an Action Taken Report (ATR)?",
+            a: "An Action Taken Report records what management has done about each audit observation: the agreed action plan, the owner, the target date, the current status and the evidence of completion. It supports the Audit Committee's review of how internal audit findings are followed up. In RiskMan GRC, it is drawn from the tracked actions themselves, so it is current whenever it is opened.",
+          },
+          {
+            q: "Is this audit issue management and remediation tracking software?",
+            a: "Yes. Each audit observation becomes an action with a management action plan, a priority, an owner and a target date. Owners are reminded before and after the deadline and upload evidence of remediation, and the action is closed only after the audit team has reviewed that evidence, so every audit finding has a recorded follow-up and closure.",
+          },
+          {
             q: "Where do the actions come from?",
             a: "Most actions are created automatically. When an internal audit report is released, the failed items become actions grouped by process. When the CAE gives final approval to a control testing report, controls with gaps and their management responses also become actions. Findings from other reviews can be added using the ATR Excel template.",
           },
@@ -1197,6 +1403,30 @@ export const PRODUCTS = [
         navLabel: "Policy and SOP",
         shortName: "Policy and SOP",
         seoTitle: "Policy and SOP Management Software",
+        seoDescription:
+          "Policy management software for policies and SOPs: review and approval workflows, version control, scheduled publishing and employee acknowledgements.",
+        heading: "Policy and SOP Management Software",
+        // Other names buyers search for. Shown on the page ("Also known as"),
+        // so list only names that describe what the software really does.
+        alsoKnownAs: {
+          text:
+            "Also known as a policy management system, SOP management software or procedure management software. It covers the full policy lifecycle: drafting, a policy approval workflow, scheduled policy review, version control with every previous version retained, and acknowledgement tracking that shows policy compliance across the people each policy or standard operating procedure applies to.",
+          terms: [
+            "Policy management system",
+            "Policy lifecycle management software",
+            "Standard operating procedure (SOP) management software",
+            "Procedure management software",
+            "Policy approval workflow software",
+            "Policy review software",
+            "Policy version control software",
+            "Policy compliance software",
+            "Policy governance software",
+          ],
+        },
+        relatedServices: [
+          { label: "Policy and SOP formulation services", path: "/services/risk-advisory/formulation-of-policies-and-sops" },
+          { label: "Governance and compliance policies", path: "/governance" },
+        ],
         icon: FileText,
         summary:
           "A single library for policies and SOPs, with recorded review and approval, version control and employee-level acknowledgement tracking.",
@@ -1288,6 +1518,8 @@ export const PRODUCTS = [
         screens: [
           {
             image: policyAcknowledgements,
+            width: 1572,
+            height: 890,
             tab: "Acknowledgements",
             alt: "Policy and SOP acknowledgement dashboard showing total assigned, acknowledged and pending tiles above a list of policies awaiting acknowledgement and a department progress panel",
             title: "Acknowledgement status at a glance",
@@ -1376,6 +1608,14 @@ export const PRODUCTS = [
         ],
         faqs: [
           {
+            q: "What is policy management software?",
+            a: "Policy management software holds an organisation's policies and procedures in one controlled library and manages their lifecycle: drafting, review, approval, publication, acknowledgement by the people they apply to, periodic review and retention of previous versions. RiskMan GRC records each of these steps against the document.",
+          },
+          {
+            q: "Does it manage standard operating procedures (SOPs) as well as policies?",
+            a: "Yes. Policies and SOPs sit in the same library, each with its own reference number, owner, reviewers, audience and review frequency, and both follow the same review, approval and acknowledgement workflow.",
+          },
+          {
             q: "How are documents numbered?",
             a: "The system assigns each document a reference number by type, for example POL-2026-001 or SOP-2026-001, ensuring that numbers are unique and consistent.",
           },
@@ -1407,6 +1647,30 @@ export const PRODUCTS = [
         navLabel: "Global SOX",
         shortName: "Global SOX",
         seoTitle: "Global SOX Compliance Software for Multi-Entity Groups",
+        seoDescription:
+          "SOX compliance software for groups: one risk and control library across entities, CAE-approved scope, SOX 404 control testing and signed-off reports.",
+        heading: "Global SOX Compliance Software",
+        // Other names buyers search for. Shown on the page ("Also known as"),
+        // so list only names that describe what the software really does.
+        alsoKnownAs: {
+          text:
+            "Also used as SOX management software, SOX audit software or Sarbanes-Oxley compliance software. It supports SOX 404 testing of internal control over financial reporting across entities: SOX control testing against one library, SOX evidence management through information requests and Additional Data Requests, and the approval trail the external auditor reviews.",
+          terms: [
+            "SOX compliance management system",
+            "SOX management software",
+            "SOX audit software",
+            "SOX testing software",
+            "SOX control testing software",
+            "SOX 404 compliance software",
+            "Sarbanes-Oxley compliance software",
+            "SOX evidence management software",
+            "Financial compliance software",
+          ],
+        },
+        relatedServices: [
+          { label: "SOX, ICOFR and IFC compliance services", path: "/services/risk-advisory/sox-icofr-ifc" },
+          { label: "ITGC and ITAC review services", path: "/services/itgc-itac" },
+        ],
         icon: Globe,
         summary:
           "Designed for groups that test the same SOX controls across multiple entities. A single control library, an approved scope, and testing projects that conclude in a signed-off report.",
@@ -1617,6 +1881,14 @@ export const PRODUCTS = [
           },
         ],
         faqs: [
+          {
+            q: "What is SOX compliance software?",
+            a: "SOX compliance software supports the work the Sarbanes-Oxley Act requires, particularly Section 404 testing of internal control over financial reporting (ICFR): maintaining the Risk and Control Matrix, scoping entities, collecting evidence, testing controls, documenting failed controls and management responses, and reporting. Global SOX covers each of these steps across multiple entities.",
+          },
+          {
+            q: "How is SOX evidence collected and tracked?",
+            a: "Each control has an Information and Document Request (IDR). Control owners upload files against it, and Staff Auditors accept them, return them or raise an Additional Data Request. The evidence stays with the control and its workpaper, ready for review by the Audit Manager, the CAE and the external auditor.",
+          },
           {
             q: "Why is the module called Global SOX?",
             a: "It is designed for groups. Your organisation maintains a single set of risks and controls and rolls it out to every entity, sub-entity and division that uses it. A single project and a single report can cover multiple entities.",

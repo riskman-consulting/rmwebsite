@@ -5,6 +5,7 @@ import { moduleSeo } from "../productsSeo";
 import { useModuleVideoStore } from "../../../store/moduleVideo";
 import ModuleHero from "./ModuleHero";
 import ModuleChallenges from "./ModuleChallenges";
+import ModuleAlsoKnownAs from "./ModuleAlsoKnownAs";
 import ModuleCapabilities from "./ModuleCapabilities";
 import ModuleScreens from "./ModuleScreens";
 import ModuleVideos from "./ModuleVideos";
@@ -31,6 +32,7 @@ const buildSections = (mod) => [
   { id: "outputs", label: "Outputs" },
   { id: "who", label: "Roles" },
   { id: "faqs", label: "FAQs" },
+  ...(mod.alsoKnownAs?.terms?.length ? [{ id: "also-known-as", label: "Also Known As" }] : []),
 ];
 
 /**
@@ -86,6 +88,7 @@ const ModulePage = ({ slug }) => {
       <ModuleOutputs mod={mod} />
       <ModuleRoles mod={mod} />
       <ModuleFaqs mod={mod} />
+      <ModuleAlsoKnownAs mod={mod} />
       <ModuleCta mod={mod} />
       <RelatedModules product={product} currentSlug={mod.slug} />
     </div>

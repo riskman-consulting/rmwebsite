@@ -34,16 +34,17 @@ function HeroSection() {
           {/* Top Label */}
           <div className="flex items-center gap-3 mb-6 animate-[fadeInLeft_0.8s_ease-out]">
             <div className="w-10 h-[2px] bg-brandAccent" />
-            <span className="text-brandAccent text-xs font-black uppercase tracking-[0.3em]">
-              Risk Advisory Specialist
-            </span>
+            {/* The page h1: names the service people search for */}
+            <h1 className="text-brandAccent text-xs font-black uppercase tracking-[0.3em]">
+              SOX, ICOFR &amp; IFC Compliance
+            </h1>
           </div>
 
           <div className="space-y-8">
-            <h1 className="font-heading text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-white leading-[1.1]">
+            <p className="font-heading text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-white leading-[1.1]">
               Governance and <br />
               <span className="text-brandGold">Compliance Excellence</span>
-            </h1>
+            </p>
 
             <p className="text-base text-brandLight/80 leading-relaxed max-w-2xl animate-[fadeInUp_0.8s_ease-out_0.2s_both]">
               RiskMan delivers comprehensive SOX, ICOFR, and IFC solutions, strengthening internal controls and ensuring regulatory compliance through expert risk-based assessments and testing.

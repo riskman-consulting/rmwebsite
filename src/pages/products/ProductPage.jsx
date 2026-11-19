@@ -6,11 +6,13 @@ import { PRODUCTS } from "./productsData";
 import { productSeo } from "./productsSeo";
 import DocSection from "./components/DocSection";
 import ModuleCta from "./components/ModuleCta";
+import ModuleFaqs from "./components/ModuleFaqs";
+import ModuleAlsoKnownAs from "./components/ModuleAlsoKnownAs";
 
 // Real product screens for the hero: a testing project behind, the action
 // tracker in front
-import heroBack from "../../assets/products/riskman-grc/control-testing/project-dashboard.png";
-import heroFront from "../../assets/products/riskman-grc/atr/dashboard-01-analytics.png";
+import heroBack from "../../assets/products/riskman-grc/control-testing/project-dashboard.webp";
+import heroFront from "../../assets/products/riskman-grc/atr/dashboard-01-analytics.webp";
 import { toTitleCase } from "../../utils/titleCase";
 
 const product = PRODUCTS[0];
@@ -102,6 +104,10 @@ const ProductPage = () => {
               <p className="mb-3 text-sm text-brandNavy/55 dark:text-white/45">Products</p>
               <h1 className="text-[1.75rem] md:text-[2rem] xl:text-[2.5rem] font-heading font-bold leading-tight text-brandDark dark:text-white">
                 {product.name}
+                {/* Names the category for generic "GRC software" searches */}
+                <span className="block mt-2 text-lg md:text-xl font-semibold leading-snug text-brandNavy/80 dark:text-white/80">
+                  {product.headingSuffix}
+                </span>
               </h1>
               <p className="mt-3 text-base font-medium leading-snug text-brandPrimary dark:text-brandGold [text-wrap:balance]">
                 {product.tagline}
@@ -149,7 +155,7 @@ const ProductPage = () => {
       {/* Modules */}
       <DocSection
         id="modules"
-        title="The modules"
+        title="RiskMan GRC modules"
         lead="Six modules on a single platform, sharing your entities, processes, users and approval configuration."
       >
         <ul className="border-t border-borderLight dark:border-borderDark">
@@ -161,7 +167,7 @@ const ProductPage = () => {
                   <Icon aria-hidden="true" className="flex-shrink-0 w-5 h-5 mt-0.5 text-brandPrimary dark:text-brandGold" />
                   <span className="flex-1">
                     <span className="block text-base font-heading font-semibold text-brandDark dark:text-white group-hover:text-brandPrimary dark:group-hover:text-brandGold">
-                      {mod.name}
+                      {mod.heading || mod.name}
                     </span>
                     <span className="block mt-1 text-[15px] leading-relaxed text-gray-800 dark:text-white/80">
                       {mod.summary}
@@ -205,6 +211,10 @@ const ProductPage = () => {
           ))}
         </dl>
       </DocSection>
+
+      {/* Same component as the module pages; reads `faqs` from the product */}
+      <ModuleFaqs mod={product} />
+      <ModuleAlsoKnownAs mod={product} />
 
       <ModuleCta mod={ctaFor} />
     </div>

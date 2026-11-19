@@ -392,9 +392,14 @@ const Overview = ({ view, range, color }) => {
 
 const SEVERITY_TONE = { error: 'critical', warning: 'caution', info: 'default' }
 
-/** One name per kind of issue, so pages with "61" and "79" characters group together. */
-const issueGroup = (text) =>
+/**
+ * One name per kind of issue, so pages with "61" and "79" characters group
+ * together. Reports from this build name the group; older ones are matched.
+ */
+const issueGroup = (issue) =>
+  issue.group ||
   [
+
     [/^Title is \d+ characters/, 'Title longer than 60 characters'],
     [/^Title is only/, 'Title shorter than 25 characters'],
     [/^Description is only/, 'Description shorter than 70 characters'],
@@ -402,7 +407,7 @@ const issueGroup = (text) =>
     [/^No main heading/, 'No main heading (h1)'],
     [/^Only \d+ words/, 'Under 300 words of text'],
     [/^Duplicate of/, 'Duplicate of another page (canonical points elsewhere)'],
-  ].find(([re]) => re.test(text))?.[1] || text
+  ].find(([re]) => re.test(issue.text))?.[1] || issue.text
 
 /** Same-origin on the live Studio; from the live site when the Studio runs locally. */
 const loadReport = async () => {
@@ -492,7 +497,7 @@ const Seo = ({ report, posts, landings, color }) => {
   const issueGroups = {}
   for (const page of report.pages) {
     for (const issue of page.issues) {
-      const key = issueGroup(issue.text)
+      const key = issueGroup(issue)
       issueGroups[key] ||= { severity: issue.severity, label: key, pages: 0 }
       issueGroups[key].pages++
     }
@@ -504,7 +509,7 @@ const Seo = ({ report, posts, landings, color }) => {
   const pages = report.pages.filter((p) => {
     if (query && !`${p.route} ${p.title}`.toLowerCase().includes(query.toLowerCase())) return false
     if (issueFilter)
-      return p.issues.some((i) => issueGroup(i.text) === issueFilter)
+      return p.issues.some((i) => issueGroup(i) === issueFilter)
     if (filter === 'issues') return p.issues.some((i) => i.severity !== 'info')
     return true
   })
@@ -577,6 +582,23 @@ const Seo = ({ report, posts, landings, color }) => {
                     {g.pages} {g.pages === 1 ? 'page' : 'pages'}
                   </Text>
                 </Flex>
+              </Card>
+            ))}
+            {(report.siteIssues || []).map((issue) => (
+              <Card key={issue.text} padding={3} radius={2} border>
+                <Stack space={2}>
+                  <Inline space={2}>
+                    <Badge tone={SEVERITY_TONE[issue.severity]} fontSize={0}>
+                      site
+                    </Badge>
+                    <Text size={1}>{issue.text}</Text>
+                  </Inline>
+                  {issue.fix && (
+                    <Text size={1} muted>
+                      {issue.fix}
+                    </Text>
+                  )}
+                </Stack>
               </Card>
             ))}
           </Stack>
@@ -654,13 +676,21 @@ const Seo = ({ report, posts, landings, color }) => {
                   {p.words !== null ? ` · ${number(p.words)} words · ${p.h1} h1` : ''}
                 </Text>
                 {p.issues.length > 0 && (
-                  <Inline space={1}>
+                  <Stack space={2}>
                     {p.issues.map((issue) => (
-                      <Badge key={issue.text} tone={SEVERITY_TONE[issue.severity]} fontSize={0}>
-                        {issue.text}
-                      </Badge>
+                      <Flex key={issue.text} gap={2} align="flex-start" wrap="wrap">
+                        <Badge tone={SEVERITY_TONE[issue.severity]} fontSize={0}>
+                          {issue.text}
+                        </Badge>
+                        {/* What to change, with suggested text where the build could write it */}
+                        {issue.fix && (
+                          <Text size={1} muted style={{ flex: '1 1 20rem' }}>
+                            {issue.fix}
+                          </Text>
+                        )}
+                      </Flex>
                     ))}
-                  </Inline>
+                  </Stack>
                 )}
               </Stack>
             </Card>

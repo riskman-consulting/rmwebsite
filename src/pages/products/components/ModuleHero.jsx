@@ -10,11 +10,12 @@ import { toTitleCase } from "../../../utils/titleCase";
  * below act as the page's contents.
  *
  * `belowVideoHero`: the module has Sanity videos, so ModuleVideos opens the
- * page instead. That section owns the breadcrumb and the page's h1, so this
- * one drops the breadcrumb and steps its title down to h2.
+ * page instead. That section owns the breadcrumb, so this one drops it and
+ * uses the smaller title size. The title stays the page's h1 either way: it
+ * carries `mod.heading`, the software category ("… Software") people search
+ * for, while the video title is generic.
  */
 const ModuleHero = ({ product, mod, sections, belowVideoHero = false }) => {
-  const Heading = belowVideoHero ? "h2" : "h1";
 
   return (
     <section className="bg-bgLight dark:bg-bgDark">
@@ -27,15 +28,15 @@ const ModuleHero = ({ product, mod, sections, belowVideoHero = false }) => {
 
         <div className="grid items-start grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-7">
-            <Heading
+            <h1
               className={` text-brandDark dark:text-white ${
                 belowVideoHero
                   ? "text-2xl lg:text-[1.75rem] font-heading font-bold leading-tight"
                   : "text-[1.75rem] md:text-[2rem] xl:text-[2.5rem] font-heading font-bold leading-[1.15]"
               }`}
             >
-              {mod.name}
-            </Heading>
+              {mod.heading || mod.name}
+            </h1>
 
             <p className="mt-3 max-w-[62ch] text-base font-medium leading-snug [text-wrap:balance] text-brandPrimary dark:text-brandGold">
               {mod.tagline}

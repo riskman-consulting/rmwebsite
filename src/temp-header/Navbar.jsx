@@ -105,12 +105,16 @@ export const Navbar = ({
   <img
     className="object-contain w-full h-full dark:hidden"
     src="/rm.png"
-    alt="Riskman"
+    width="1500"
+    height="400"
+    alt="RiskMan Consulting"
   />
   <img
     className="hidden object-contain w-full h-full dark:block"
     src="/riskman-logo-white.svg"
-    alt="Riskman"
+    width="1903"
+    height="331"
+    alt="RiskMan Consulting"
   />
 </Link>
 
@@ -166,9 +170,12 @@ export const Navbar = ({
                       )}
                     </Link>
 
-                    {isMega && activeMegaKey === item.key && (
+                    {/* Always mounted, hidden until hovered: the menu's links
+                        must be in the HTML for search engines to find the
+                        pages they lead to (crawlers never hover). */}
+                    {isMega && (
                       <div
-                        className="absolute left-0 z-50 top-full"
+                        className={`absolute left-0 z-50 top-full ${activeMegaKey === item.key ? "" : "hidden"}`}
                         onMouseEnter={() => handleMouseEnter(item.key)}
                         onMouseLeave={handleMouseLeave}
                       >

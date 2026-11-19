@@ -45,7 +45,7 @@ export default function Home() {
   <title>RiskMan Consulting | Risk Advisory, IT GRC & ESG Consulting</title>
   <meta 
     name="description" 
-    content="RiskMan offers &quot;Propreneurial&quot; partnership—senior-led expertise with an owner's commitment. Experience 100% on-time execution, fixed-price predictability, and bespoke Risk, IT GRC, and ESG strategies. Contact us today." 
+    content="Senior-led risk advisory, internal audit, IT GRC and ESG consulting from RiskMan, plus the RiskMan GRC software platform. On-time, fixed-price delivery."
   />
   <link rel="canonical" href="https://www.riskman.in/" />
 </Helmet>

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // ─── THEME TOKENS (from tailwind config, applied via inline + CSS vars) ───
 const theme = {
@@ -327,7 +327,8 @@ export default function USAssurancePage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 28 }}>
             {services.map((service, i) => (
               <FadeIn key={i} delay={i * 0.1}>
-                <div className="service-card" onClick={() => navigate(service.path)} style={{ display: "flex", flexDirection: "column", padding: 36, border: `1px solid ${theme.borderLight}`, borderRadius: 20, background: "white", transition: "all 0.4s ease", cursor: "pointer", height: "100%" }}>
+                {/* A real link (not an onClick div) so search engines can follow it */}
+                <Link to={service.path} className="service-card" style={{ display: "flex", flexDirection: "column", padding: 36, border: `1px solid ${theme.borderLight}`, borderRadius: 20, background: "white", transition: "all 0.4s ease", cursor: "pointer", height: "100%", color: "inherit", textDecoration: "none" }}>
                   <div className="service-icon" style={{ marginBottom: 24, transition: "transform 0.3s ease" }}>
                     <ServiceIcon type={service.iconType} />
                   </div>
@@ -337,7 +338,7 @@ export default function USAssurancePage() {
                     Learn More
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
                   </div>
-                </div>
+                </Link>
               </FadeIn>
             ))}
           </div>

@@ -9,6 +9,7 @@ import EmergingTechnology from './EmergingTechnology';
 import OperationalIntegrity from './OperationalIntegrity';
 import CTASection from './CTASection';
 import FAQ from './FAQ';
+import RelatedLinks from "../../components/sections/RelatedLinks";
 
 const Cybersecurity = () => {
   useEffect(() => {
@@ -38,6 +39,13 @@ const Cybersecurity = () => {
       <EmergingTechnology />
       <OperationalIntegrity />
        <FAQ />
+      <RelatedLinks
+        intro="Further reading on cybersecurity from the RiskMan blog."
+        links={[
+          { label: "Cyber security and artificial intelligence: threats and opportunities", path: "/blog/cyber-security-and-artificial-intelligence-intersection-threats-and-opportunities" },
+        ]}
+      />
+
       <CTASection />
     </main>
   );

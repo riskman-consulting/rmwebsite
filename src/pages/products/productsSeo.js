@@ -11,6 +11,7 @@ export const SITE_URL = "https://www.riskman.in";
 
 const ORGANIZATION = {
   "@type": "Organization",
+  "@id": `${SITE_URL}/#organization`,
   name: "RiskMan Consulting",
   url: SITE_URL,
   logo: `${SITE_URL}/rm.png`,
@@ -28,6 +29,22 @@ const trimTo = (text, max = 160) => {
 const withBrand = (title, brand) =>
   `${title} | ${brand}`.length <= 60 ? `${title} | ${brand}` : title;
 
+/** FAQPage markup for questions that are visible on the page. */
+const faqPage = (faqs = []) =>
+  faqs.length
+    ? [
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.q,
+            acceptedAnswer: { "@type": "Answer", text: faq.a },
+          })),
+        },
+      ]
+    : [];
+
 const breadcrumb = (items) => ({
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -41,7 +58,7 @@ const breadcrumb = (items) => ({
 
 export const productSeo = (product) => {
   const canonical = `${SITE_URL}${product.path}`;
-  const description = trimTo(product.summary);
+  const description = trimTo(product.seoDescription || product.summary);
 
   return {
     title: withBrand(product.seoTitle || product.name, "RiskMan Consulting"),
@@ -56,6 +73,7 @@ export const productSeo = (product) => {
         operatingSystem: "Web",
         description,
         url: canonical,
+        featureList: product.modules.map((mod) => mod.heading || mod.name),
         publisher: ORGANIZATION,
       },
       breadcrumb([
@@ -63,13 +81,14 @@ export const productSeo = (product) => {
         { name: "Products", url: `${SITE_URL}/products` },
         { name: product.name, url: canonical },
       ]),
+      ...faqPage(product.faqs),
     ],
   };
 };
 
 export const moduleSeo = (product, mod) => {
   const canonical = `${SITE_URL}${product.path}/${mod.slug}`;
-  const description = trimTo(`${mod.summary} ${mod.description}`);
+  const description = trimTo(mod.seoDescription || `${mod.summary} ${mod.description}`);
 
   return {
     title: withBrand(mod.seoTitle || mod.name, product.name),
@@ -95,15 +114,7 @@ export const moduleSeo = (product, mod) => {
       ]),
       // The questions are already on the page, so marking them up costs
       // nothing and keeps the page eligible for the FAQ treatment.
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: mod.faqs.map((faq) => ({
-          "@type": "Question",
-          name: faq.q,
-          acceptedAnswer: { "@type": "Answer", text: faq.a },
-        })),
-      },
+      ...faqPage(mod.faqs),
     ],
   };
 };
