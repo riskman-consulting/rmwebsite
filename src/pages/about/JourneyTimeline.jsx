@@ -57,7 +57,7 @@ export const JourneyTimeline = () => {
                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-zinc-900 dark:text-white mt-2 mb-4 ">
                         {getCompanyYearsPhrase()} of Excellence
                     </h2>
-                    <p className="text-zinc-500 dark:text-zinc-400 text-base leading-relaxed">
+                    <p className="text-zinc-500 dark:text-zinc-400 text-[15px] leading-relaxed">
                         The journey that shaped Riskman's authority in risk and compliance advisory.
                     </p>
                 </motion.div>

@@ -148,7 +148,7 @@ export default function InternationalAssignments() {
               International Assignments
             </h2>
 
-            <p className="max-w-2xl mx-auto text-base text-brandNavy dark:text-white/70">
+            <p className="max-w-2xl mx-auto text-[15px] text-brandNavy dark:text-white/70">
               A visual directory of consultant visits and strategic engagements.
             </p>
           </div>
@@ -222,7 +222,7 @@ export default function InternationalAssignments() {
                   <h4 className="mb-3 text-xl font-bold text-brandDark dark:text-brandAccent">
                     {active.title}
                   </h4>
-                  <p className="text-base leading-relaxed text-brandNavy dark:text-white/70">
+                  <p className="text-[15px] leading-relaxed text-brandNavy dark:text-white/70">
                     {active.story}
                   </p>
                 </div>

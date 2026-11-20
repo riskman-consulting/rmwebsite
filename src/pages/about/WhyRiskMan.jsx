@@ -67,7 +67,7 @@ const WhyRiskman = () => {
             </span>
           </h2>
           
-          <p className="text-base leading-relaxed text-brandDark/70 dark:text-white/70">
+          <p className="text-[15px] leading-relaxed text-brandDark/70 dark:text-white/70">
             We operate with a singular focus on performance and integrity, guided
             by the following principles to meet the complex needs of modern
             organizations.

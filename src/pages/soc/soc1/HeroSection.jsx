@@ -42,7 +42,7 @@ const HeroSection = () => {
               Reliability.
             </h1>
             
-            <p className="max-w-xl mb-10 text-base md:text-lg font-medium leading-relaxed text-gray-600 dark:text-gray-300">
+            <p className="max-w-xl mb-10 text-base font-medium leading-relaxed text-gray-600 dark:text-gray-300">
               Reassure customer CFOs and auditors that outsourced processes supporting financial statements are controlled, tested, and independently verified.
             </p>
             

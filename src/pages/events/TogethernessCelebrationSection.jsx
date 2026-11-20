@@ -77,7 +77,7 @@ export default function TogethernessCelebration() {
             5 Years of Togetherness
           </h2>
 
-          <p className="text-base leading-relaxed text-brandDark/70 dark:text-white/60">
+          <p className="text-[15px] leading-relaxed text-brandDark/70 dark:text-white/60">
             Celebrating milestones, memories, and the bonds that make RiskMan a
             family.
           </p>

@@ -37,7 +37,7 @@ const OrganizationWideImplementationSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="max-w-4xl mx-auto mb-16 text-base text-center text-gray-600 dark:text-brandLight/70"
+          className="max-w-4xl mx-auto mb-16 text-[15px] text-center text-gray-600 dark:text-brandLight/70"
         >
           RiskMan ensures that ERM is not a siloed exercise but a deeply embedded culture that
           empowers every level of your organization to manage risks proactively.

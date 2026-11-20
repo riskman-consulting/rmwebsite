@@ -45,7 +45,7 @@ export default function TestimonialsSection({ data }) {
               </div>
 
               {/* Quote */}
-              <p className="mb-6 text-base leading-relaxed text-brandNavy dark:text-gray-400">
+              <p className="mb-6 text-[15px] leading-relaxed text-brandNavy dark:text-gray-400">
                 “{testimonial.quote}”
               </p>
 

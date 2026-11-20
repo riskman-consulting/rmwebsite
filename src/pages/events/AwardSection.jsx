@@ -60,7 +60,7 @@ export default function AwardsSection() {
             Awards & Recognition
           </h2>
 
-          <p className="text-base leading-relaxed text-brandDark/70 dark:text-white/60">
+          <p className="text-[15px] leading-relaxed text-brandDark/70 dark:text-white/60">
             Celebrating excellence, trust, and achievements that define our
             professional journey.
           </p>

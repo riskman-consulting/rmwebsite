@@ -48,7 +48,7 @@ function FAQSection() {
                   activeFaq === idx ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
                 }`}>
                   <div className="overflow-hidden">
-                    <div className="px-6 pb-8 text-gray-600 dark:text-gray-300 leading-relaxed border-t border-dashed border-gray-100 dark:border-white/10 pt-4">
+                    <div className="px-6 pb-8 text-[15px] text-gray-600 dark:text-gray-300 leading-relaxed border-t border-dashed border-gray-100 dark:border-white/10 pt-4">
                       {faq.a}
                     </div>
                   </div>

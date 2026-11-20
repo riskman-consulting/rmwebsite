@@ -134,7 +134,7 @@ export default function ExpertiseSection() {
             <h2 className="mb-3 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
               Areas of Expertise
             </h2>
-            <p className="text-base text-brandDark/70 dark:text-white/60">
+            <p className="text-[15px] text-brandDark/70 dark:text-white/60">
               Experience across audit, compliance, and digital transformation
             </p>
           </div>

@@ -71,7 +71,7 @@ const HeroSection = () => {
           </span>
         </h1>
         
-        <p className="max-w-2xl mb-10 text-base md:text-lg leading-relaxed text-gray-200 ">
+        <p className="max-w-2xl mb-10 text-base leading-relaxed text-gray-200 ">
           RiskMan helps organizations implement ISO 42001, the world’s first AI management system standard, ensuring ethical, transparent, and secure AI development across the entire enterprise.
         </p>
         
@@ -128,7 +128,7 @@ const PillarsSection = () => {
           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             AI Management Pillars
           </h2>
-          <p className="text-base text-gray-600 dark:text-gray-300">
+          <p className="text-[15px] text-gray-600 dark:text-gray-300">
             Managing Artificial Intelligence requires a specialized framework that addresses the unique risks, transparency needs, and ethical considerations of the technology.
           </p>
         </div>
@@ -214,7 +214,7 @@ const RoadmapSection = () => {
             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
               The Implementation Roadmap
             </h2>
-            <p className="mb-8 text-base text-gray-600 dark:text-gray-300">
+            <p className="mb-8 text-[15px] text-gray-600 dark:text-gray-300">
               RiskMan simplifies the complex task of AI governance by breaking it down into manageable stages of development and organizational oversight.
             </p>
             <div className="relative overflow-hidden border-4 border-white shadow-2xl rounded-2xl dark:border-brandDark/50">
@@ -282,7 +282,7 @@ const BenefitsSection = () => {
           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Strategic Benefits for Organizations
           </h2>
-          <p className="text-base text-gray-600 dark:text-gray-300">
+          <p className="text-[15px] text-gray-600 dark:text-gray-300">
             Responsible AI governance allows organizations to innovate with confidence while protecting themselves from the unique pitfalls of automated technologies.
           </p>
         </div>
@@ -327,7 +327,7 @@ const CTASection = () => {
         <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading">
           Future-Proof Your AI Initiatives
         </h2>
-        <p className="max-w-2xl mx-auto mb-10 text-base md:text-lg text-gray-200">
+        <p className="max-w-2xl mx-auto mb-10 text-base text-gray-200">
           Implement a robust AI Management System with RiskMan and lead your industry in responsible and secure innovation.
         </p>
         <button onClick={()=>navigator("/contact")} className="px-10 py-4 bg-brandAccent text-brandDark font-bold text-lg rounded-full hover:bg-brandGold hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,192,0,0.5)]">

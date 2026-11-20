@@ -29,7 +29,7 @@
 //             <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //               Change Management & Lifecycle Governance
 //             </h2>
-//             <p className="max-w-3xl mx-auto text-base md:text-lg text-brandNavy/80 dark:text-white/70">
+//             <p className="max-w-3xl mx-auto text-base text-brandNavy/80 dark:text-white/70">
 //               RiskMan audits the lifecycle of system changes to prevent unauthorized modifications or outages.
 //             </p>
 //           </div>
@@ -51,7 +51,7 @@
 //                       <h3 className="mb-2 text-lg md:text-xl font-bold font-heading text-brandDark dark:text-white">
 //                         {feature.title}
 //                       </h3>
-//                       <p className="text-base leading-relaxed text-brandNavy/70 dark:text-white/60">
+//                       <p className="text-[15px] leading-relaxed text-brandNavy/70 dark:text-white/60">
 //                         {feature.description}
 //                       </p>
 //                     </div>
@@ -103,7 +103,7 @@ const ChangeManagementSection = () => {
                 Change Management & Lifecycle Governance
               </h2>
               <div className="w-20 h-1 mb-6 rounded-full bg-brandGold"></div>
-              <p className="text-base leading-relaxed text-slate-600 dark:text-slate-300">
+              <p className="text-[15px] leading-relaxed text-slate-600 dark:text-slate-300">
                 RiskMan audits the lifecycle of system changes to prevent unauthorized modifications or outages.
               </p>
             </div>

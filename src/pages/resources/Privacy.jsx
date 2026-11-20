@@ -163,7 +163,7 @@ export default function Privacy() {
 
         <div className="container relative z-10 max-w-6xl mx-auto">
           <div className="text-center">
-            <p className="mb-4 text-base font-semibold tracking-wide uppercase text-brandPrimary dark:text-brandAccent">
+            <p className="mb-4 text-[15px] font-semibold tracking-wide uppercase text-brandPrimary dark:text-brandAccent">
               Your Data Protection
             </p>
 
@@ -175,7 +175,7 @@ export default function Privacy() {
               </span>
             </h1>
 
-            <p className="max-w-3xl mx-auto text-base md:text-lg leading-relaxed text-brandNavy dark:text-gray-400">
+            <p className="max-w-3xl mx-auto text-base leading-relaxed text-brandNavy dark:text-gray-400">
               How we collect, use, and protect your information with transparency and integrity
             </p>
           </div>
@@ -189,7 +189,7 @@ export default function Privacy() {
             <h2 className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
               Our Commitment to <span className="text-brandPrimary dark:text-brandAccent">Your Privacy</span>
             </h2>
-            <p className="max-w-3xl mx-auto text-base text-brandNavy dark:text-gray-400">
+            <p className="max-w-3xl mx-auto text-[15px] text-brandNavy dark:text-gray-400">
               At RiskMan, we take data protection seriously. This policy outlines how we handle
               your personal information with the highest standards of security and compliance.
             </p>
@@ -235,7 +235,7 @@ export default function Privacy() {
           </span>?
         </h2>
 
-        <p className="max-w-2xl mx-auto mb-8 text-base md:text-lg text-brandNavy dark:text-gray-400">
+        <p className="max-w-2xl mx-auto mb-8 text-base text-brandNavy dark:text-gray-400">
           RiskMan assists organizations with privacy frameworks, governance,
           risk, and enterprise compliance programs
         </p>

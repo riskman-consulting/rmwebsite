@@ -55,7 +55,7 @@ const AdvisoryOverviewSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mx-auto mt-8 text-base leading-relaxed text-slate-600 dark:text-brandLight/70"
+            className="mx-auto mt-8 text-[15px] leading-relaxed text-slate-600 dark:text-brandLight/70"
           >
             Our financial advisory services are built to address practical
             business challenges rather than theoretical models. We work closely

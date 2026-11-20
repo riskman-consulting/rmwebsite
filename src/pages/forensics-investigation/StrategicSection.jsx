@@ -6,7 +6,7 @@ function StrategicSection() {
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-brandDark ">Strategic Investigative Solutions</h2>
-            <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+            <p className="text-base text-gray-600 leading-relaxed">
               Organizations today face sophisticated threats that demand more than just standard oversight. RiskMan delivers high-stakes investigative expertise to identify vulnerabilities and resolve misconduct with absolute precision.
             </p>
           </div>

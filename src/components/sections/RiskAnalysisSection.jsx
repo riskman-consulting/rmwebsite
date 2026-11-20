@@ -40,7 +40,7 @@ export default function RiskAnalysisSection({ data }) {
               </div>
 
               {/* Text */}
-              <p className="text-base font-semibold text-brandDark dark:text-white">
+              <p className="text-[15px] font-semibold text-brandDark dark:text-white">
                 {item}
               </p>
             </motion.div>

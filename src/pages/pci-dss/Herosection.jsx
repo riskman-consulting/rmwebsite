@@ -20,10 +20,11 @@ const Hero = () => {
               className="inline-flex items-center gap-2 px-4 py-2 mb-6 border rounded-full bg-brandLight dark:bg-white/10 border-brandPrimary/10 dark:border-white/10"
             >
               <ShieldCheck className="w-5 h-5 text-brandPrimary dark:text-brandGold" />
-              <span className="text-sm font-bold tracking-wide uppercase text-brandPrimary dark:text-brandGold">PCI DSS Compliance</span>
+              {/* The page h1: names the service people search for */}
+              <h1 className="text-sm font-bold tracking-wide uppercase text-brandPrimary dark:text-brandGold">PCI DSS Compliance Services</h1>
             </motion.div>
             
-            <motion.h1 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -31,13 +32,13 @@ const Hero = () => {
             >
               Secure Your <br/>
               <span className="text-brandPrimary dark:text-brandGold">Payment Ecosystem</span>
-            </motion.h1>
+            </motion.p>
             
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="max-w-xl mb-8 text-base leading-relaxed text-gray-600 dark:text-gray-300"
+              className="max-w-xl mb-8 text-[15px] leading-relaxed text-gray-600 dark:text-gray-300"
             >
               RiskMan helps you scope your cardholder data environment, close control gaps and prepare for your PCI DSS assessment across all six control objectives.
             </motion.p>

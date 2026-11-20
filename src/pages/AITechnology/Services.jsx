@@ -64,7 +64,7 @@ const Services = () => {
           <h3 className="mb-6 text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark dark:text-white">
             AI-Powered Risk Intelligence
           </h3>
-          <p className="text-base text-gray-600 dark:text-gray-300">
+          <p className="text-[15px] text-gray-600 dark:text-gray-300">
             Transform raw data into strategic foresight with RiskMan's AI ecosystem.
           </p>
         </div>

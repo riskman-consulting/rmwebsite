@@ -13,7 +13,7 @@ const CTASection = () => {
             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white ">
               Ready to Future-Proof Your Business?
             </h2>
-            <p className="mb-10 text-base text-white/70">
+            <p className="mb-10 text-[15px] text-white/70">
               Partner with RiskMan to bridge the gap between strategy and
               execution.
             </p>

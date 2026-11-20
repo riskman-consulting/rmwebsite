@@ -42,7 +42,7 @@ const Process = () => {
           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading">
             RiskMan’s Strategic Process
           </h2>
-          <p className="text-base text-gray-300">
+          <p className="text-[15px] text-gray-300">
             We help organizations build a culture of risk awareness that permeates every department, ensuring long-term stability and sustainable growth.
           </p>
         </div>

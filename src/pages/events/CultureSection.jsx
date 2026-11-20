@@ -62,7 +62,7 @@ export default function CultureSection() {
             Culture at RiskMan
           </h2>
 
-          <p className="text-base leading-relaxed text-brandDark/70 dark:text-white/60">
+          <p className="text-[15px] leading-relaxed text-brandDark/70 dark:text-white/60">
             A culture that shapes confident professionals through ownership,
             learning, and meaningful collaboration.
           </p>

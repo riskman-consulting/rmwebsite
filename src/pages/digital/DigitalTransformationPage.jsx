@@ -139,7 +139,7 @@ function DigitalTransformationPage() {
               {/* accent divider */}
               <div className="w-24 h-1 mb-6 rounded bg-brandGold" />
 
-              <p className="mb-10 text-base md:text-lg leading-relaxed text-white/90">
+              <p className="mb-10 text-base leading-relaxed text-white/90">
                 RiskMan empowers your transformation journey by combining
                 governance-driven execution with technical implementation
                 excellence to deliver measurable business impact.
@@ -177,7 +177,7 @@ function DigitalTransformationPage() {
               <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
                 Explore Our Core Digital Transformation Offerings
               </h2>
-              <p className="max-w-3xl mx-auto text-base leading-relaxed text-gray-600 dark:text-gray-300">
+              <p className="max-w-3xl mx-auto text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
                 Our comprehensive suite of services is designed to guide your organization through every phase of digital transformation, from strategic planning to ongoing optimization.
               </p>
             </motion.div>
@@ -266,7 +266,7 @@ function DigitalTransformationPage() {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <div className="px-6 pb-5 leading-relaxed text-gray-600 dark:text-gray-300">
+                      <div className="px-6 pb-5 text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
                         {faq.answer}
                       </div>
                     </motion.div>
@@ -290,7 +290,7 @@ function DigitalTransformationPage() {
               <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading ">
                 Ready to Future-Proof Your Business?
               </h2>
-              <p className="mb-8 text-base md:text-lg leading-relaxed text-gray-200 ">
+              <p className="mb-8 text-base leading-relaxed text-gray-200 ">
                 Partner with RiskMan Consulting to navigate your digital transformation journey with confidence. Our expert team is ready to help you unlock new opportunities and achieve sustainable competitive advantage.
               </p>
               <Link

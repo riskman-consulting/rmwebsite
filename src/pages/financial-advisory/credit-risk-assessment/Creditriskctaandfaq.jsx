@@ -51,7 +51,7 @@ const CreditRiskCTAandFAQ = () => {
               Ready To Secure Your Portfolio?
             </h2>
             
-            <p className="mb-10 text-base md:text-lg leading-relaxed text-gray-300 ">
+            <p className="mb-10 text-base leading-relaxed text-gray-300 ">
               Expert credit assessment protects your bottom line from unforeseen financial defaults.
             </p>
 
@@ -100,7 +100,7 @@ const CreditRiskCTAandFAQ = () => {
               <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
                 Frequently Asked Questions
               </h2>
-              <p className="text-base text-gray-600 dark:text-gray-300">
+              <p className="text-[15px] text-gray-600 dark:text-gray-300">
                 Get answers to common questions about our credit risk assessment services
               </p>
             </div>

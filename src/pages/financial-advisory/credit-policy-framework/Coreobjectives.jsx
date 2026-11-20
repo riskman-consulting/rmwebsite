@@ -56,7 +56,7 @@
 //           <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //             Core Objectives of Credit Policy
 //           </h2>
-//           <p className="text-base text-gray-600 dark:text-gray-300">
+//           <p className="text-[15px] text-gray-600 dark:text-gray-300">
 //             A well-defined framework acts as the blueprint for asset quality, guiding every stage of the credit lifecycle toward profitability.
 //           </p>
 //         </div>
@@ -214,7 +214,7 @@ const PolicyObjectives = () => {
           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Core Objectives of Credit Policy
           </h2>
-          <p className="text-base text-gray-600 dark:text-gray-300">
+          <p className="text-[15px] text-gray-600 dark:text-gray-300">
             A well-defined framework acts as the blueprint for asset quality, guiding every stage of the credit lifecycle toward profitability.
           </p>
         </div>

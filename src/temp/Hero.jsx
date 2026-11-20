@@ -68,7 +68,7 @@
 //             initial={{ opacity: 0, y: 20 }}
 //             animate={{ opacity: 1, y: 0 }}
 //             transition={{ duration: 0.8, delay: 0.4 }}
-//             className="max-w-lg md:max-w-xl text-white/70 text-base md:text-lg leading-relaxed mb-10 font-light italic"
+//             className="max-w-lg md:max-w-xl text-white/70 text-base leading-relaxed mb-10 font-light italic"
 //           >
 //             "{featuredEvent?.shortDesc || 'Redefining the boundaries of excellence.'}"
 //           </motion.p>
@@ -529,7 +529,7 @@
                 
 //                 <div className="relative z-10 text-left">
 //                   <p className="text-[11px] text-[#FFC000] font-black uppercase tracking-[0.5em] mb-3 opacity-60 group-hover:opacity-100 transition-opacity">{card.label}</p>
-//                   <p className="text-white font-bold text-base md:text-lg tracking-tight leading-tight group-hover:text-white transition-colors">{card.val}</p>
+//                   <p className="text-white font-bold text-base tracking-tight leading-tight group-hover:text-white transition-colors">{card.val}</p>
 //                 </div>
 
 //                 <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-[1500ms] bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none" />
@@ -1129,7 +1129,7 @@ const Hero = () => {
                 
                 <div className="relative z-10 text-left">
                   <p className="text-[11px] text-[#FFC000] font-black uppercase tracking-[0.5em] mb-3 opacity-60 group-hover:opacity-100 transition-opacity">{card.label}</p>
-                  <p className="text-white font-bold text-base md:text-lg tracking-tight leading-tight group-hover:text-white transition-colors">{card.val}</p>
+                  <p className="text-white font-bold text-base tracking-tight leading-tight group-hover:text-white transition-colors">{card.val}</p>
                 </div>
 
                 <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-[1500ms] bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none" />

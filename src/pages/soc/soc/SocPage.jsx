@@ -9,6 +9,7 @@ import SupportSection from './SupportSection';
 import BusinessSection from './BusinessSection';
 import FaqSection from './FaqSection';
 import CTASection from './CtaSection';
+import RelatedLinks from "../../../components/sections/RelatedLinks";
 
 const SOCOverview = () => {
   return (
@@ -38,6 +39,14 @@ const SOCOverview = () => {
 
       {/* 7. FAQ SECTION */}
       <FaqSection/>
+
+      <RelatedLinks
+        intro="Further reading on SOC reports from the RiskMan blog."
+        links={[
+          { label: "SOC 1 vs SOC 2 vs SOC 3: which report you need", path: "/blog/soc-1-vs-soc-2-vs-soc-3" },
+          { label: "How to ensure SOC 2 compliance", path: "/blog/soc-2-compliance-guide" },
+        ]}
+      />
 
       {/* 8. FINAL CTA */}
       <CTASection/>

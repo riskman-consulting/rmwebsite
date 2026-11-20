@@ -36,7 +36,7 @@ const GlobalDelivery = () => {
                 </h2>
                 <hr className="w-12 h-[2px] border-none bg-gradient-to-r from-brandGold to-brandAccent mb-8" />
 
-                <p className="text-base font-light text-brandLight/70 mb-16 leading-relaxed max-w-[800px] font-sans">
+                <p className="text-[15px] font-light text-brandLight/70 mb-16 leading-relaxed max-w-[800px] font-sans">
                     RiskMan's Concurrent Audit programs are built for global deployment — standardized in methodology, yet flexible enough to accommodate local regulatory requirements. Our hub-and-spoke delivery architecture enables centralized governance with localized execution.
                 </p>
 

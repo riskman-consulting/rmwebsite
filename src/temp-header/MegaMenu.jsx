@@ -133,9 +133,10 @@ export const MegaMenu = ({ menuKey }) => {
                       )}
                     </div>
 
-                    {/* SubMenu rendering logic */}
-                    {hasSubmenus && isSubmenuOpen && (
-                      <ul className="pl-4 mt-3 space-y-2 duration-200 origin-top border-l-2 border-brandPrimary/20 dark:border-brandGold/20 animate-in fade-in zoom-in-95">
+                    {/* SubMenu: always rendered, hidden until opened, so its
+                        links are in the HTML search engines read */}
+                    {hasSubmenus && (
+                      <ul className={`pl-4 mt-3 space-y-2 duration-200 origin-top border-l-2 border-brandPrimary/20 dark:border-brandGold/20 animate-in fade-in zoom-in-95 ${isSubmenuOpen ? "" : "hidden"}`}>
                         {item.submenus.map((sub) => {
                           const isSubUrlActive = location.pathname === sub.path || (location.pathname + location.hash) === sub.path;
                           return (

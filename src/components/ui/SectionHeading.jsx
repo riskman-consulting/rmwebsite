@@ -28,7 +28,7 @@ const SectionHeading = ({ eyebrow, title, lead, align = "left", children }) => (
       {title}
     </h2>
     {lead && (
-      <p className="mt-4 text-base leading-relaxed text-brandNavy/70 dark:text-white/60">
+      <p className="mt-4 text-[15px] leading-relaxed text-brandNavy/70 dark:text-white/60">
         {lead}
       </p>
     )}

@@ -27,7 +27,7 @@ export default function WeHelpSection({ data }) {
               viewport={{ once: true }}
             >
               {idx === 0 && (
-                <p className="max-w-5xl mx-auto text-base md:text-lg text-center">
+                <p className="max-w-5xl mx-auto text-base text-center">
                   {item.content}
                 </p>
               )}
@@ -46,7 +46,7 @@ export default function WeHelpSection({ data }) {
                     <h3 className="mb-6 text-xl md:text-2xl lg:text-3xl font-bold">
                       {item.title}
                     </h3>
-                    <p className="text-base">{item.content}</p>
+                    <p className="text-[15px]">{item.content}</p>
                   </div>
                 </div>
               )}

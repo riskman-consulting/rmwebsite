@@ -87,7 +87,7 @@
 //             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandDark dark:text-surfaceLight ">
 //               Assessing Your Organization's <br /> Sustainability Journey
 //             </h2>
-//             <p className="max-w-3xl mx-auto font-sans text-base text-brandDark/70 dark:text-surfaceLight/70">
+//             <p className="max-w-3xl mx-auto font-sans text-[15px] text-brandDark/70 dark:text-surfaceLight/70">
 //               Every engagement begins with a comprehensive assessment of your current ESG position across five critical dimensions to establish a clear baseline.
 //             </p>
 //           </div>

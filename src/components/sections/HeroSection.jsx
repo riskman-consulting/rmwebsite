@@ -43,7 +43,7 @@ export default function HeroSection({ data }) {
 
           <motion.p
             variants={fadeInUp}
-            className="max-w-3xl mx-auto mb-8 text-base md:text-lg leading-relaxed text-white/90"
+            className="max-w-3xl mx-auto mb-8 text-base leading-relaxed text-white/90"
           >
             {data.description}
           </motion.p>

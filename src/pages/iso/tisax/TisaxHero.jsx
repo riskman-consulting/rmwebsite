@@ -40,7 +40,7 @@ function HeroSection() {
           </h1>
 
           {/* Description */}
-          <p className="max-w-2xl mb-10 text-base md:text-lg leading-relaxed text-gray-300 ">
+          <p className="max-w-2xl mb-10 text-base leading-relaxed text-gray-300 ">
             RiskMan provides expert guidance for TISAX compliance, ensuring your
             information security practices meet the rigorous and specific
             demands of the global automotive supply chain.

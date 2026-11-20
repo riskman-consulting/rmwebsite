@@ -19,10 +19,10 @@ export default function ServicePage() {
           SEO META TAGS
       ========================== */}
       <Helmet>
-        <title>Riskman Consulting | Our Holistic Service List</title>
+        <title>Risk Advisory & Compliance Services | RiskMan Consulting</title>
         <meta
           name="description"
-          content="Partner with Riskman Consulting for elite Enterprise and IT Risk management. Our team delivers SOC 2, ESG, and Forensic Advisory to ensure your organization leads with integrity and global resilience."
+          content="RiskMan Consulting services: risk advisory, internal audit, SOX and IFC, SOC reports, ISO certification, cybersecurity, data privacy, ESG and forensics."
         />
          <link rel="canonical" href="https://www.riskman.in/services" />
       </Helmet>

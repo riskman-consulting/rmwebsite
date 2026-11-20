@@ -6,6 +6,7 @@ import NoteSection from './NoteSection';
 import TestingSection from './TestingSection';
 import CTASection from './CTASection';
 import FAQSection from './FAQSection';
+import RelatedLinks from "../../components/sections/RelatedLinks";
 
 const SoxIcofrIfc = () => {
   return (
@@ -29,6 +30,14 @@ const SoxIcofrIfc = () => {
 
       {/* FAQ */}
       <FAQSection />
+
+      <RelatedLinks
+        intro="RiskMan GRC runs SOX, ICFR and IFC testing as software: one risk and control library, evidence requests, workpapers, approvals and management responses in a single project."
+        links={[
+          { label: "Global SOX compliance software", path: "/products/riskman-grc/global-sox" },
+          { label: "Internal control testing software", path: "/products/riskman-grc/control-testing" },
+        ]}
+      />
 
       {/* CTA */}
       <CTASection />

@@ -98,7 +98,7 @@ const ServicePortfolio = () => {
           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading ">
             Sustainability & ESG Service Portfolio
           </h2>
-          <p className="text-base leading-relaxed text-brandLight/90">
+          <p className="text-[15px] leading-relaxed text-brandLight/90">
             RiskMan offers a comprehensive, modular service portfolio that can be deployed individually or as 
             integrated solutions. Our services are designed to be scalable and globally deployable.
           </p>

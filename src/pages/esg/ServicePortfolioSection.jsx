@@ -110,7 +110,7 @@ const ServicePortfolioSection = () => {
             Sustainability & ESG Service Portfolio
           </h2>
           
-          <p className="max-w-4xl mx-auto font-serif text-base md:text-lg leading-relaxed text-white/90">
+          <p className="max-w-4xl mx-auto font-serif text-base leading-relaxed text-white/90">
             RiskMan offers a comprehensive, modular service portfolio that can be deployed individually or as integrated solutions.
           </p>
         </div>

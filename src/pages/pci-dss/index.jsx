@@ -4,6 +4,7 @@ import Hero from './Herosection';
 import ServicesSection from './Services';
 import CTA from './CTA';
 import FAQ from './FAQ';
+import RelatedLinks from "../../components/sections/RelatedLinks";
 
 
 function App() {
@@ -18,6 +19,13 @@ function App() {
         <Hero />
         <ServicesSection />
         <FAQ />
+        <RelatedLinks
+          intro="Further reading on PCI DSS from the RiskMan blog."
+          links={[
+            { label: "7 ways to reduce your PCI DSS compliance scope", path: "/blog/ways-to-reduce-your-pci-dss-compliance-scope" },
+          ]}
+        />
+
         <CTA />
       </main>
    

@@ -41,7 +41,7 @@ const TisaxCTA = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="max-w-2xl mx-auto mb-12 text-base md:text-lg text-gray-200"
+                        className="max-w-2xl mx-auto mb-12 text-base text-gray-200"
                     >
                         Don't let non-compliance stall your growth—partner with RiskMan for a streamlined and successful TISAX journey.
                     </motion.p>

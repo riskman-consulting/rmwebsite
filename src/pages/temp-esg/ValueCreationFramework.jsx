@@ -92,7 +92,7 @@ const ValueCreationFramework = () => {
           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             The RiskMan Value Proposition
           </h2>
-          <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
+          <p className="text-[15px] leading-relaxed text-gray-700 dark:text-gray-300">
             RiskMan delivers measurable, sustainable value to global organizations through our integrated ESG 
             advisory, implementation, and capabilities.
           </p>

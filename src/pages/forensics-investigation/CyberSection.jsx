@@ -35,7 +35,7 @@ const CyberSection = () => {
             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading">
               Digital Forensics and Cyber Incident Response
             </h2>
-            <p className="mb-8 text-base text-gray-300">
+            <p className="mb-8 text-[15px] text-gray-300">
               In an era of data-centric operations, our team secures critical evidence from digital environments to mitigate high-tech risks.
             </p>
             

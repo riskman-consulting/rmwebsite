@@ -142,7 +142,7 @@ export function LeadershipModal({ leader, onClose }) {
                     </p>
                   )}
                   {bioParagraphs.map((para, i) => (
-                    <p key={i} className="text-base leading-relaxed text-gray-700 md:text-lg dark:text-gray-300">
+                    <p key={i} className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
                       {para}
                     </p>
                   ))}

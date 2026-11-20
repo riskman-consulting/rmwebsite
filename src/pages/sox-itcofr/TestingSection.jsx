@@ -34,7 +34,7 @@ function TestingSection() {
             <span className="text-brandPrimary dark:text-brandAccent">Testing & Sustenance</span>
           </h2>
 
-          <p className="max-w-2xl text-base text-brandDark/70 dark:text-brandLight/60 leading-relaxed border-l-4 border-brandAccent pl-5">
+          <p className="max-w-2xl text-[15px] text-brandDark/70 dark:text-brandLight/60 leading-relaxed border-l-4 border-brandAccent pl-5">
             RiskMan provides independent validation of your control environment,
             ensuring that IFC, SOX, and ICOFR frameworks operate effectively year-round.
           </p>

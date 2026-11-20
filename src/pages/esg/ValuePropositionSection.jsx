@@ -72,7 +72,7 @@ const ValuePropositionSection = () => {
             Driving Measurable <br /> 
             <span className="underline text-brandPrimary decoration-brandAccent underline-offset-8">Enterprise Value</span>
           </h2>
-          <p className="font-sans text-base leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
+          <p className="font-sans text-[15px] leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
             RiskMan's ESG integration methodology moves organizations beyond compliance 
             to create a dual-track value engine.
           </p>

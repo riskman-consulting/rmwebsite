@@ -48,7 +48,7 @@
 //           <h3 className="mb-4 text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark dark:text-surfaceLight">
 //             ESG Evolution Timeline
 //           </h3>
-//           <p className="max-w-2xl mx-auto font-sans text-base text-brandDark/70 dark:text-surfaceLight/70">
+//           <p className="max-w-2xl mx-auto font-sans text-[15px] text-brandDark/70 dark:text-surfaceLight/70">
 //             The three distinct phases of ESG evolution, moving from a necessity of compliance to a powerful driver of enterprise value.
 //           </p>
 //         </div>
@@ -187,7 +187,7 @@
 //           <h3 className="mb-4 text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark dark:text-surfaceLight">
 //             ESG Evolution Timeline
 //           </h3>
-//           <p className="max-w-2xl mx-auto font-sans text-base text-gray-600 dark:text-surfaceLight/70">
+//           <p className="max-w-2xl mx-auto font-sans text-[15px] text-gray-600 dark:text-surfaceLight/70">
 //             The three distinct phases of ESG evolution, moving from a necessity of compliance to a powerful driver of enterprise value.
 //           </p>
 //         </div>
@@ -546,7 +546,7 @@ const ESGEvolutionTimeline = () => {
                         <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-surfaceLight">
                             The Evolution of ESG
                         </h2>
-                        <p className="max-w-2xl mx-auto text-base md:text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+                        <p className="max-w-2xl mx-auto text-base leading-relaxed text-slate-600 dark:text-slate-400">
                             From mandatory compliance to a core driver of
                             <span className="font-semibold text-brandPrimary dark:text-brandGold"> strategic value</span>.
                         </p>

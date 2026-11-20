@@ -61,7 +61,7 @@
 //           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //             Specialized Technical Testing
 //           </h2>
-//           <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
+//           <p className="text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
 //             Our experts conduct active testing of individual components or entire applications to identify and exploit potential vulnerabilities. This simulated adversary approach ensures your infrastructure can withstand sophisticated attacks.
 //           </p>
 //         </div>
@@ -148,7 +148,7 @@ import testingImage from "../../assets/images/cybersecurity/testing-image.png"
             <div>
               <p className="mb-2 font-bold tracking-wider uppercase text-brandPrimary dark:text-brandAccent">Offensive Security</p>
               <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">Specialized Technical Testing</h2>
-              <p className="mb-8 text-base text-gray-600 dark:text-gray-300">
+              <p className="mb-8 text-[15px] text-gray-600 dark:text-gray-300">
                 Our experts conduct active testing of individual components or entire applications to identify and exploit potential vulnerabilities. This simulated adversary approach ensures your infrastructure can withstand sophisticated attacks.
               </p>
 

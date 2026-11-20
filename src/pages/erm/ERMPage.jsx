@@ -16,15 +16,16 @@ import RiskMaturitySection from "./RiskMaturitySection";
 import FAQSection from "./FAQSection";
 import CTASection from "./CTASection";
 import { Helmet } from "react-helmet-async";
+import RelatedLinks from "../../components/sections/RelatedLinks";
 
 const ERMPage = () => {
   return (
     <main className="w-full overflow-hidden bg-bgLight dark:bg-bgDark">
 <Helmet>
-  <title>Enterprise Risk Management (ERM) | RiskMan Consulting</title>
+  <title>ERM Consulting & Advisory Services | RiskMan Consulting</title>
   <meta
     name="description"
-    content='Transform uncertainty into opportunity with RiskMan Consulting’s ERM services. We identify "Risks That Matter" to build organizational resilience, drive growth, and ensure long-term sustainability.'
+    content="Enterprise risk management consulting: ERM frameworks, risk assessments and risk registers that surface the risks that matter and build resilience."
   />
   <link rel="canonical" href="https://www.riskman.in/services/risk-advisory/erm" />
 </Helmet>
@@ -53,6 +54,13 @@ const ERMPage = () => {
 
       {/* 8. FAQs */}
       <FAQSection />
+
+      <RelatedLinks
+        intro="Prefer to run your risk register on software? RiskMan GRC's enterprise risk management module keeps a live risk register with automated inherent and residual scoring, approval workflows and periodic owner confirmation."
+        links={[
+          { label: "Enterprise risk management (ERM) software", path: "/products/riskman-grc/enterprise-risk-management" },
+        ]}
+      />
 
       {/* 9. Final CTA */}
       <CTASection />

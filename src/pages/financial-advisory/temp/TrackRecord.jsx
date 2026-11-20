@@ -22,7 +22,7 @@ const TrackRecord = () => {
               <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
                 Our <span className="text-brandPrimary dark:text-brandGold">Accomplishments</span>
               </h2>
-              <p className="mb-8 font-sans text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+              <p className="mb-8 font-sans text-base leading-relaxed text-gray-600 dark:text-gray-300">
                 RiskMan, over the last five years, has successfully completed multiple financial advisory assignments and received commendations from counterparties. 
               </p>
               

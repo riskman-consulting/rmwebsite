@@ -55,7 +55,7 @@
 //               The Strategic Imperative
 //             </span>
 //           </h2>
-//           <p className="max-w-3xl mx-auto font-sans text-base md:text-lg leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
+//           <p className="max-w-3xl mx-auto font-sans text-base leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
 //             ESG has evolved from a discretionary "nice-to-have" or a pure compliance exercise 
 //             into a fundamental pillar of modern corporate strategy and long-term enterprise value.
 //           </p>
@@ -85,7 +85,7 @@
 //                     {card.title}
 //                   </h4>
                   
-//                   <p className="text-base leading-relaxed text-brandDark/60 dark:text-surfaceLight/60">
+//                   <p className="text-[15px] leading-relaxed text-brandDark/60 dark:text-surfaceLight/60">
 //                     {card.description}
 //                   </p>
 //                 </div>

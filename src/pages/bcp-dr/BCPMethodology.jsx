@@ -269,7 +269,7 @@ const BCPMethodology = () => {
               Delivery Lifecycle
             </span>
           </h2>
-          <p className="mt-4 text-base text-brandDark/70 dark:text-brandLight/60">
+          <p className="mt-4 text-[15px] text-brandDark/70 dark:text-brandLight/60">
             Our structured methodology ensures operational resilience through a
             comprehensive lifecycle designed for measurable recovery readiness.
           </p>

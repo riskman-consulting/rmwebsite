@@ -34,7 +34,7 @@
 //             <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //               IT General Controls (ITGC) Framework
 //             </h2>
-//             <p className="max-w-3xl mx-auto text-base md:text-lg text-brandNavy/80 dark:text-white/70">
+//             <p className="max-w-3xl mx-auto text-base text-brandNavy/80 dark:text-white/70">
 //               We evaluate the foundational policies that support the reliability of your entire IT environment.
 //             </p>
 //           </div>
@@ -113,7 +113,7 @@ const ITGCSection = () => {
                 IT General Controls (ITGC) Framework
               </h2>
               <div className="w-20 h-1 mb-6 rounded-full bg-brandGold"></div>
-              <p className="text-base leading-relaxed text-slate-600 dark:text-slate-300">
+              <p className="text-[15px] leading-relaxed text-slate-600 dark:text-slate-300">
                 We evaluate the foundational policies that support the reliability of your entire IT environment.
               </p>
             </div>

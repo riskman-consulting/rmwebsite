@@ -16,7 +16,7 @@ function HighSection() {
         <div className="container relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-6">High-Value Privacy Outcomes</h2>
-            <p className="text-gray-300 text-base leading-relaxed">
+            <p className="text-gray-300 text-[15px] leading-relaxed">
               Move beyond checklist compliance to create an evidence-based privacy culture that mitigates risk and drives business value.
             </p>
           </div>

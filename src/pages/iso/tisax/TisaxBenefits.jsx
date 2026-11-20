@@ -57,7 +57,7 @@ const TisaxBenefits = () => {
                         <motion.p
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
-                            className="text-base text-slate-500 dark:text-slate-400"
+                            className="text-[15px] text-slate-500 dark:text-slate-400"
                         >
                             Organizations that achieve TISAX compliance gain immediate credibility within the global automotive network, unlocking new and lucrative partnership opportunities.
                         </motion.p>

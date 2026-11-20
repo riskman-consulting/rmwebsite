@@ -21,7 +21,7 @@ function FutureProofSection() {
                   Future-Proof Your <br/>
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandPrimary to-brandAccent">Data Strategy</span>
                 </h2>
-                <p className="mb-10 text-base leading-relaxed text-gray-600 dark:text-gray-300">
+                <p className="mb-10 text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
                   Don't just react to regulations. Proactively build a privacy-first architecture that scales with your business. Contact RiskMan today to elevate your privacy program from a cost center to a strategic business enabler.
                 </p>
                 

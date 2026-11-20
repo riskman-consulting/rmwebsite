@@ -82,6 +82,7 @@ import GlobalOperatingModelDiagram from "./GlobalOperatingModelDiagram";
 import CSAMaturityModelDiagram from "./CSAMaturityModelDiagram";
 
 import CTASection from "./CTASection";
+import RelatedLinks from "../../components/sections/RelatedLinks";
 
 // import Footer from "./Footer";
 
@@ -250,6 +251,13 @@ export default function CSAPage() {
         </div>
       </section>
 
+
+      <RelatedLinks
+        intro="Control owners and auditors can record evidence, testing and approvals for each control in RiskMan GRC, from the Risk and Control Matrix to the final report."
+        links={[
+          { label: "Internal control testing software", path: "/products/riskman-grc/control-testing" },
+        ]}
+      />
 
       <CTASection/>
 

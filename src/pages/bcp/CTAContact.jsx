@@ -12,7 +12,7 @@ const CTAContact = () => {
             <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading dark:text-brandAccent">
               Strengthen Your Business Continuity Readiness
             </h2>
-            <p className="mb-6 font-sans text-base leading-relaxed md:text-lg text-brandLight">
+            <p className="mb-6 font-sans text-base leading-relaxed text-brandLight">
               A structured Business Continuity framework helps organizations
               respond effectively to disruptions, protect critical operations,
               and meet regulatory and audit expectations. RiskMan supports

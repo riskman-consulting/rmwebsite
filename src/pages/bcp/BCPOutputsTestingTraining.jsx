@@ -10,7 +10,7 @@ const BCPOutputsTestingTraining = () => {
           <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-brandAccent">
             BCP Outputs, Testing &amp; Training
           </h2>
-          <p className="font-sans text-base leading-relaxed md:text-lg text-brandNavy dark:text-brandLight">
+          <p className="font-sans text-base leading-relaxed text-brandNavy dark:text-brandLight">
             Effective Business Continuity is supported by clearly defined
             deliverables, regular testing, and ongoing training to ensure plans
             remain current, practical, and executable during real-world

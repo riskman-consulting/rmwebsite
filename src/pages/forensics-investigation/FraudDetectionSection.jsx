@@ -63,7 +63,7 @@ const FraudSection = () => {
             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandNavy dark:text-white">
               Corporate Fraud and Misconduct Detection
             </h2>
-            <p className="mb-8 text-base text-gray-600 dark:text-gray-300">
+            <p className="mb-8 text-[15px] text-gray-600 dark:text-gray-300">
               We deploy advanced methodologies to uncover financial irregularities and unethical behavior that threaten your operational stability.
             </p>
             

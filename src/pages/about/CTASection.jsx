@@ -28,7 +28,7 @@ export default function CTASection() {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="max-w-2xl mx-auto mb-8 text-base md:text-lg text-gray-600 dark:text-gray-400"
+          className="max-w-2xl mx-auto mb-8 text-base text-gray-600 dark:text-gray-400"
         >
           Strengthen governance, manage risk and drive sustainable growth with
           confidence.

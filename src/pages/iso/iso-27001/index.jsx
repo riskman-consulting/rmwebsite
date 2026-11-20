@@ -5,6 +5,7 @@ import HeroSection from './HeroSection';
 import StrategicSolutions from './StrategicSolutionSection';
 import CTASection from './CTASection';
 import FAQ from './FAQSection';
+import RelatedLinks from "../../../components/sections/RelatedLinks";
 
 
 const ISO27001 = () => {
@@ -31,6 +32,13 @@ const ISO27001 = () => {
       <HeroSection />
       <StrategicSolutions />
       <FAQ />
+      <RelatedLinks
+        intro="Further reading on ISO 27001 from the RiskMan blog."
+        links={[
+          { label: "5 important ISO 27001 audit steps", path: "/blog/important-iso-27001-audit-steps" },
+        ]}
+      />
+
       <CTASection />
     </main>
   );

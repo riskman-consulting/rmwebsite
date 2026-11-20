@@ -14,7 +14,7 @@ function CTASection() {
           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading ">
             Secure Your Financial Future
           </h2>
-          <p className="max-w-3xl mx-auto mb-10 text-base md:text-lg leading-relaxed text-white/90">
+          <p className="max-w-3xl mx-auto mb-10 text-base leading-relaxed text-white/90">
             Strengthen your corporate governance and mitigate risks with RiskMan's specialized SOX, ICOFR, and IFC service offerings.
           </p>
           <Link 

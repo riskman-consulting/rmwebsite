@@ -12,7 +12,7 @@ const ModuleCta = ({ mod }) => (
             See {mod.shortName} Applied to Your Organisation
           </h2>
           <p className="mt-2 text-[15px] leading-relaxed text-gray-800 dark:text-white/80">
-            Schedule a one-hour session with our team. We will demonstrate
+            Schedule a one-hour session with our team. We will demonstrate{" "}
             {mod.shortName} using your own processes and controls, so you can
             assess how a complete cycle would work for your organisation.
           </p>

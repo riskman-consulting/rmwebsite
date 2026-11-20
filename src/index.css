@@ -218,14 +218,14 @@ img, video, canvas, svg {
      h2 section title    24px     30px        36px   text-2xl md:text-3xl lg:text-4xl
      h3 sub-section      20px     24px        30px   text-xl md:text-2xl lg:text-3xl
      h3 card title       18px     20px        20px   text-lg md:text-xl
-     p  lead             16px     18px        18px   text-base md:text-lg
-     p  body             16px     16px        16px   text-base
+     p  lead             16px     16px        16px   text-base
+     p  body             15px     15px        15px   text-[15px] leading-relaxed
    Kept in the base layer so any text-* utility on the element still wins.
 ===================== */
 @layer base {
   h1 { @apply text-[1.75rem] md:text-4xl lg:text-5xl; }
   h2 { @apply text-2xl md:text-3xl lg:text-4xl; }
-  p  { @apply text-base; }
+  p  { @apply text-[15px] leading-relaxed; }
 }
  
 .footer-heading {

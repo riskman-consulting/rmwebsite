@@ -32,7 +32,7 @@ function HeroSection() {
             Unified Compliance for <span className="text-brandAccent">Global Privacy Mandates</span>
           </h1>
 
-          <p className="max-w-2xl mb-10 text-base md:text-lg leading-relaxed text-gray-300 ">
+          <p className="max-w-2xl mb-10 text-base leading-relaxed text-gray-300 ">
             Streamline your international regulatory obligations by integrating CCPA, HIPAA, and regional data laws into a single, high-performance privacy management system.
           </p>
 

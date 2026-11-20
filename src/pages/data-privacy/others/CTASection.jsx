@@ -10,7 +10,7 @@ function CTASection() {
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-brandAccent/20 via-transparent to-transparent"></div>
             <div className="relative z-10">
               <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">Simplify Your International Compliance</h2>
-              <p className="max-w-2xl mx-auto mb-12 text-base md:text-lg text-blue-100">
+              <p className="max-w-2xl mx-auto mb-12 text-base text-blue-100">
                 Turn global regulatory fragmentation into a unified business advantage with RiskMan’s cross-border privacy expertise.
               </p>
               <button onClick={()=>navigator("/contact")} className="px-12 py-5 text-xl font-black transition-all rounded-md shadow-xl bg-brandGold text-brandDark hover:scale-105">

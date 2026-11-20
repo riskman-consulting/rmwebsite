@@ -9,7 +9,7 @@ const CTASection = () => {
           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark">
             Ready to Strengthen Your Governance?
           </h2>
-          <p className="mb-8 text-base leading-relaxed text-brandDark/80">
+          <p className="mb-8 text-[15px] leading-relaxed text-brandDark/80">
             Partner with us to implement a risk-based audit plan that protects revenue and optimizes your internal controls effectively.
           </p>
           <a 

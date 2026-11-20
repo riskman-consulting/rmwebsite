@@ -30,7 +30,7 @@ function HeroSection() {
             Strategic DPDP Compliance for <span className="text-brandAccent">Indian Operations</span>
           </h1>
 
-          <p className="max-w-2xl mb-10 text-base md:text-lg leading-relaxed text-gray-300 ">
+          <p className="max-w-2xl mb-10 text-base leading-relaxed text-gray-300 ">
             Align your enterprise with India’s primary data mandate through automated consent frameworks, fiduciary accountability, and resilient data principal rights management.
           </p>
 

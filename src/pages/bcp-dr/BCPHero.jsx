@@ -17,7 +17,7 @@ const BCPHero = () => {
               <span className="text-brandPrimary dark:text-brandAccent">BCP & DR Services</span>
             </h1>
 
-            <p className="mt-6 text-base text-gray-700 dark:text-gray-300">
+            <p className="mt-6 text-[15px] text-gray-700 dark:text-gray-300">
               Operational resilience is essential for sustainable growth. Our
               Business Continuity and Disaster Recovery services help reduce risk,
               ensure uptime, and keep your organization prepared for disruption.

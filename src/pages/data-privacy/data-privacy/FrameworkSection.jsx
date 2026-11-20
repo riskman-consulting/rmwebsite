@@ -18,7 +18,7 @@ function FrameworkSection() {
               <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-brandDark dark:text-white leading-tight">
                 Integrated Compliance <span className="text-brandPrimary dark:text-brandAccent">Frameworks</span>
               </h2>
-              <p className="text-gray-600 dark:text-gray-300 text-base mb-10 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-300 text-[15px] mb-10 leading-relaxed">
                 A unified approach to privacy, ensuring organizations remain resilient across multiple legal jurisdictions and evolving technological landscapes. We simplify the complex.
               </p>
               

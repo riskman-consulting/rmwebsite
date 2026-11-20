@@ -125,7 +125,7 @@ export default function NewsletterList() {
 
             <motion.p
               variants={fadeInUp}
-              className="max-w-2xl text-base md:text-lg leading-relaxed text-brandNavy/80 dark:text-gray-400"
+              className="max-w-2xl text-base leading-relaxed text-brandNavy/80 dark:text-gray-400"
             >
               Curated stories, regulatory updates, and industry highlights
               delivered straight from the RiskMan team.
@@ -274,7 +274,7 @@ export default function NewsletterList() {
                 <h2 className="mb-5 font-heading text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white">
                   Get the next issue in your inbox.
                 </h2>
-                <p className="text-base text-white/70 md:text-lg">
+                <p className="text-base text-white/70">
                   One email a month. No spam, no fluff — just the regulatory,
                   cyber, and ESG signals that actually matter to your business.
                 </p>

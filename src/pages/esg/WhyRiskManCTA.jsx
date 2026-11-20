@@ -80,7 +80,7 @@ const WhyRiskManCTA = () => {
                 <h3 className="mb-6 text-xl md:text-2xl lg:text-3xl font-bold leading-tight text-white uppercase font-heading ">
                   Begin Your <span className="text-brandGold">ESG Transformation</span> Today
                 </h3>
-                <p className="mb-8 font-sans text-base leading-relaxed text-white/70">
+                <p className="mb-8 font-sans text-[15px] leading-relaxed text-white/70">
                   Connect with our experts to assess your organization's maturity and develop a 
                   strategic roadmap that drives long-term enterprise value.
                 </p>

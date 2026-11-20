@@ -63,7 +63,7 @@ const IndustryCoverageSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mx-auto mt-8 text-base leading-relaxed text-slate-600 dark:text-brandLight/70"
+            className="mx-auto mt-8 text-[15px] leading-relaxed text-slate-600 dark:text-brandLight/70"
           >
             Different industries face unique financial challenges. Our advisory
             approach is tailored to sector-specific operating models, capital

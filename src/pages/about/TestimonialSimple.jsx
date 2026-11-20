@@ -101,7 +101,7 @@ export default function TestimonialsSimple() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="max-w-2xl mx-auto text-base text-brandNavy dark:text-gray-400"
+            className="max-w-2xl mx-auto text-[15px] text-brandNavy dark:text-gray-400"
           >
             Hear what our clients say about working with RiskMan
           </motion.p>

@@ -41,7 +41,7 @@ const Framework = () => {
           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             The Risk Management Framework
           </h2>
-          <p className="text-base text-gray-600 dark:text-gray-400">
+          <p className="text-[15px] text-gray-600 dark:text-gray-400">
             Effective risk management involves a systematic approach to identifying threats and converting them into actionable business intelligence for organizations.
           </p>
         </div>

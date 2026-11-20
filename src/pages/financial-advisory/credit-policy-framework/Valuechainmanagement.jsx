@@ -66,7 +66,7 @@
 //           <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //             Value Chain Management
 //           </h2>
-//           <p className="mb-6 text-base text-gray-600 dark:text-gray-300">
+//           <p className="mb-6 text-[15px] text-gray-600 dark:text-gray-300">
 //             Our framework covers the entire spectrum of credit operations to prevent the deterioration of borrower creditworthiness and reporting.
 //           </p>
           
@@ -252,7 +252,7 @@ const PolicyValueChain = () => {
             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
               Value Chain Management
             </h2>
-            <p className="mb-10 text-base text-gray-600 dark:text-gray-300">
+            <p className="mb-10 text-[15px] text-gray-600 dark:text-gray-300">
               Our framework covers the entire spectrum of credit operations to prevent the deterioration of borrower creditworthiness and reporting.
             </p>
 

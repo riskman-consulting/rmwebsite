@@ -47,7 +47,7 @@
 //           {title}
 //         </h1>
 //         {subheading && (
-//           <p className="max-w-3xl mx-auto mt-6 text-base md:text-lg text-white/90">
+//           <p className="max-w-3xl mx-auto mt-6 text-base text-white/90">
 //             {subheading}
 //           </p>
 //         )}
@@ -120,9 +120,9 @@ export default function PageBanner({
       <div className="relative max-w-[1280px] mx-auto px-6 sm:px-8 md:px-10 lg:px-12 py-16 md:py-20 text-center">
         <p
           className="
-            text-sm font-semibold uppercase tracking-[0.18em]
-            text-slate-500 dark:text-slate-400
-          "
+ text-sm font-semibold uppercase tracking-[0.18em]
+ text-slate-500 dark:text-slate-400
+ "
         >
           {title.split(" ")[0]}
         </p>
@@ -132,7 +132,7 @@ export default function PageBanner({
         </h1>
 
         {subheading && (
-          <p className="max-w-3xl mx-auto mt-6 text-base md:text-lg text-slate-600 dark:text-slate-300">
+          <p className="max-w-3xl mx-auto mt-6 text-base text-slate-600 dark:text-slate-300">
             {subheading}
           </p>
         )}

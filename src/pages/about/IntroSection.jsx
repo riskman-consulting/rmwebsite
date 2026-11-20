@@ -58,7 +58,7 @@ const IntroductionSection = () => {
               className="relative p-6 mt-10 border shadow-xl lg:p-8 rounded-2xl bg-bgLight dark:bg-brandNavy/30 backdrop-blur-xl border-brandGold/30 dark:border-brandAccent/30"
             >
               <div className="absolute top-0 left-0 w-1 h-16 rounded-r-full bg-brandGold" />
-              <p className="text-sm italic font-semibold leading-snug lg:text-xl text-brandDark dark:text-white/90">
+              <p className="text-sm italic font-semibold leading-snug lg:text-lg text-brandDark dark:text-white/90">
                 "RiskMan is the trusted partner in your sustainable growth journey."
               </p>
             </motion.div>

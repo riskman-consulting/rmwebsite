@@ -21,7 +21,7 @@ export default function ArticlesSection({ data }) {
           </h2>
 
           {data.description && (
-            <p className="max-w-3xl mx-auto text-base text-brandNavy dark:text-gray-400">
+            <p className="max-w-3xl mx-auto text-[15px] text-brandNavy dark:text-gray-400">
               {data.description}
             </p>
           )}

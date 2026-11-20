@@ -42,7 +42,7 @@ const HeroSection = () => {
               to the Market.
             </h1>
             
-            <p className="max-w-xl mb-10 text-base md:text-lg font-medium leading-relaxed text-gray-600 dark:text-gray-300">
+            <p className="max-w-xl mb-10 text-base font-medium leading-relaxed text-gray-600 dark:text-gray-300">
               Share an independent, high-level SOC 3 report to signal strong controls to the market without exposing sensitive internal details.
             </p>
             

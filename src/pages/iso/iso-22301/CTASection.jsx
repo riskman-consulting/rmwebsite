@@ -14,7 +14,7 @@ const CTASection = () => {
               <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading">
                 Prepare Your Business for the Unexpected
               </h2>
-              <p className="mb-10 text-base leading-relaxed text-gray-200">
+              <p className="mb-10 text-[15px] leading-relaxed text-gray-200">
                 Build a resilient organization that thrives under pressure with RiskMan’s expert continuity and recovery consulting.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row">

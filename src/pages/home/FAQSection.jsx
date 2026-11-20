@@ -49,7 +49,7 @@ const FAQSection = () => {
               Frequently Asked Questions
             </h2>
  
-            <p className="max-w-md text-base leading-relaxed text-brandNavy dark:text-white/70">
+            <p className="max-w-md text-[15px] leading-relaxed text-brandNavy dark:text-white/70">
               Discover how RiskMan's "Propreneurial" (Professionals with an entrepreneurial) approach transforms regulatory complexities into strategic opportunities for your organization.
             </p>
           </div>
@@ -110,7 +110,7 @@ const FAQSection = () => {
                   >
                     <div className="px-5 pb-6 md:px-6">
                       <div className="pt-4 border-t border-gray-100 dark:border-borderDark">
-                        <p className="text-sm leading-relaxed text-gray-600 md:text-base dark:text-white/70">
+                        <p className="text-sm leading-relaxed text-gray-600 md:text-[15px] dark:text-white/70">
                           {faq.answer}
                         </p>
                       </div>

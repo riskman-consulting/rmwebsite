@@ -62,7 +62,7 @@ export default function TeamTestimonials() {
           <h2 className="mb-5 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Voices from Our Team
           </h2>
-          <p className="text-base text-brandDark/70 dark:text-white/60">
+          <p className="text-[15px] text-brandDark/70 dark:text-white/60">
             Experiences that reflect growth, trust, and shared success at
             RiskMan.
           </p>
@@ -112,7 +112,7 @@ export default function TeamTestimonials() {
 
               {/* Content */}
               <div className="flex-1">
-                <p className="mb-6 text-base md:text-lg italic leading-relaxed text-brandDark/80 dark:text-white/70">
+                <p className="mb-6 text-base italic leading-relaxed text-brandDark/80 dark:text-white/70">
                   {testimonials[currentSlide].quote}
                 </p>
 

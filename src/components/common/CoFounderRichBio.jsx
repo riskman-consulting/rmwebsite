@@ -29,7 +29,7 @@ export function CoFounderRichBio({
         {/* Summary Blocks */}
         {summaryBlocks.map((text, i) => (
           <div key={i} className="p-6 border-l-4 rounded-r-xl bg-brandPrimary/5 dark:bg-brandPrimary/10 border-brandGold">
-            <p className="text-base leading-relaxed text-brandDark/90 dark:text-white/90">
+            <p className="text-[15px] leading-relaxed text-brandDark/90 dark:text-white/90">
               {text}
             </p>
           </div>

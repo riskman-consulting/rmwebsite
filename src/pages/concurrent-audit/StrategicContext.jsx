@@ -47,7 +47,7 @@
 //                     >
 //                         <div className="relative group">
 //                             <div className="absolute inset-0 transition-colors duration-500 bg-brandGold/10 rounded-2xl blur-xl group-hover:bg-brandGold/20" />
-//                             <p className="relative py-4 pl-8 text-base md:text-lg italic font-medium leading-relaxed border-l-4 font-heading text-brandLight border-brandGold bg-surfaceDark/40 backdrop-blur-sm rounded-r-2xl">
+//                             <p className="relative py-4 pl-8 text-base italic font-medium leading-relaxed border-l-4 font-heading text-brandLight border-brandGold bg-surfaceDark/40 backdrop-blur-sm rounded-r-2xl">
 //                                 "Traditional audits tell you what <em className="not-italic text-brandGold">happened</em>. Concurrent Audits ensure the right thing <em className="not-italic font-bold text-brandAccent">is happening</em> — in real time, at every transaction touchpoint."
 //                             </p>
 //                         </div>

@@ -7,7 +7,7 @@
 //         <div className="container">
 //           <div className="bg-brandDark rounded-[3rem] p-12 lg:p-24 text-center text-white relative shadow-2xl overflow-hidden border-b-8 border-brandAccent">
 //             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">Protect Your Organization</h2>
-//             <p className="max-w-2xl mx-auto mb-10 text-base md:text-lg font-medium text-gray-300">
+//             <p className="max-w-2xl mx-auto mb-10 text-base font-medium text-gray-300">
 //               Implement proactive safeguards and reactive excellence for all investigative requirements.
 //             </p>
 //             <button className="flex items-center gap-3 px-12 py-5 mx-auto text-xl font-black transition-all rounded-md shadow-xl bg-brandAccent text-brandDark hover:bg-brandGold">
@@ -36,7 +36,7 @@ const CtaSection = () => {
         <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading">
           Protect Your Organization from Evolving Threats
         </h2>
-        <p className="max-w-2xl mx-auto mb-10 text-base md:text-lg text-gray-300">
+        <p className="max-w-2xl mx-auto mb-10 text-base text-gray-300">
           Partner with RiskMan to implement proactive safeguards and reactive excellence for all investigative requirements.
         </p>
         <button onClick={()=>navigator("/contact")} className="px-10 py-4 text-lg font-bold transition-all transform rounded-full shadow-2xl bg-brandGold hover:bg-white hover:text-brandNavy text-brandDark hover:-translate-y-1">

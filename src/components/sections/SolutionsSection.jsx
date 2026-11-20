@@ -26,7 +26,7 @@ export default function SolutionsSection({ data }) {
           </h2>
 
           {data.description && (
-            <p className="max-w-3xl mx-auto mt-4 text-base text-brandNavy dark:text-gray-400">
+            <p className="max-w-3xl mx-auto mt-4 text-[15px] text-brandNavy dark:text-gray-400">
               {data.description}
             </p>
           )}

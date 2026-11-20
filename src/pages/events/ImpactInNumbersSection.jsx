@@ -112,7 +112,7 @@ export default function ImpactSection() {
           <h2 className="mb-5 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Our Impact in Numbers
           </h2>
-          <p className="text-base leading-relaxed text-brandDark/70 dark:text-white/60">
+          <p className="text-[15px] leading-relaxed text-brandDark/70 dark:text-white/60">
             {getCompanyYearsWordCapitalized()} years of dedication, growth, and measurable
             excellence across industries and geographies.
           </p>

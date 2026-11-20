@@ -37,7 +37,7 @@ const RiskMaturitySection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="max-w-4xl mx-auto mb-16 text-base text-center text-gray-600 dark:text-brandLight/70"
+          className="max-w-4xl mx-auto mb-16 text-[15px] text-center text-gray-600 dark:text-brandLight/70"
         >
           Our commitment extends beyond initial implementation to ensure your ERM framework
           evolves alongside your business and the changing global landscape.

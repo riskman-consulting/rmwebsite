@@ -84,7 +84,7 @@ export default function Contact() {
             <h2 className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-white">
               Expertise Across <span className="text-brandGold">India</span>
             </h2>
-            <p className="max-w-2xl mx-auto text-base text-gray-300">
+            <p className="max-w-2xl mx-auto text-[15px] text-gray-300">
               Connect with our regional leaders for localized risk management solutions tailored to your market.
             </p>
           </div>

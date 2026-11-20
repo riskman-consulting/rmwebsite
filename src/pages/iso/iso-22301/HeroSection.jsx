@@ -29,7 +29,7 @@ const HeroSection = () => {
             Guarantee <span className="text-transparent bg-clip-text bg-gradient-to-r from-brandAccent to-brandGold">Operational Resilience</span> and Continuity
           </h1>
           
-          <p className="max-w-xl text-base leading-relaxed text-gray-300">
+          <p className="max-w-xl text-[15px] leading-relaxed text-gray-300">
             RiskMan specializes in ISO 22301 frameworks, helping your organization prepare for, respond to, and recover from disruptive incidents efficiently and with minimal impact.
           </p>
           

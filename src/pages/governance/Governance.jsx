@@ -124,7 +124,7 @@ const scrollToSection = (id) => {
           <h1 className="mb-6 text-[1.75rem] md:text-4xl lg:text-5xl font-bold font-heading text-brandGold drop-shadow-2xl">
             Governance & Ethics
           </h1>
-          <p className="max-w-3xl mx-auto text-base md:text-lg font-light leading-relaxed text-brandLight/90">
+          <p className="max-w-3xl mx-auto text-base font-light leading-relaxed text-brandLight/90">
             Our commitment to integrity, transparency, and ethical leadership is the foundation of our trust.
           </p>
         </div>
@@ -140,7 +140,7 @@ const scrollToSection = (id) => {
               Our Governance Approach
               <span className="absolute bottom-0 left-0 w-1/2 h-1.5 bg-brandAccent rounded-full"></span>
             </h2>
-            <p className="mb-8 text-base leading-relaxed text-gray-700 dark:text-gray-300">
+            <p className="mb-8 text-[15px] leading-relaxed text-gray-700 dark:text-gray-300">
               RiskMan’s governance philosophy is founded on integrity, ethical leadership, and prudent risk management. 
               We recognize that strong governance is essential to maintaining client trust, regulatory confidence, and sustainable growth.
             </p>
@@ -194,7 +194,7 @@ const scrollToSection = (id) => {
             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
               Policies & Frameworks
             </h2>
-            <p className="max-w-2xl mx-auto text-base text-gray-600 dark:text-gray-400">
+            <p className="max-w-2xl mx-auto text-[15px] text-gray-600 dark:text-gray-400">
               Our comprehensive suite of policies ensures we operate with the highest standards of conduct and compliance.
             </p>
           </div>
@@ -291,7 +291,7 @@ const scrollToSection = (id) => {
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
         <div className="container relative z-10 px-5 mx-auto">
           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading">Commitment to Excellence</h2>
-          <p className="max-w-2xl mx-auto mb-10 text-base text-brandLight/80">
+          <p className="max-w-2xl mx-auto mb-10 text-[15px] text-brandLight/80">
             We continuously review and update our governance frameworks to align with global best practices and regulatory requirements.
           </p>
           <Link to="/contact" className="px-10 py-4 font-bold transition-all duration-200 transform rounded-full shadow-xl bg-brandGold text-brandDark hover:bg-white hover:text-brandNavy hover:scale-105 ring-4 ring-brandGold/20">
@@ -421,7 +421,7 @@ const scrollToSection = (id) => {
                 ) : (
                   <div className="flex flex-col items-center justify-center h-full text-center opacity-50">
                     <FileText size={64} className="mb-6 text-gray-200 dark:text-gray-700" />
-                    <p className="text-base font-medium text-gray-400">Full content preview not available.</p>
+                    <p className="text-[15px] font-medium text-gray-400">Full content preview not available.</p>
                     <p className="mt-2 text-sm text-gray-400">Please download the document to read more.</p>
                   </div>
                 )}

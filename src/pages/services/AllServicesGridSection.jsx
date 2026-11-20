@@ -32,7 +32,7 @@ export const AllServicesGridSection = () => {
             </span>
           </h2>
 
-          <p className="max-w-3xl mx-auto text-base text-brandNavy dark:text-gray-400">
+          <p className="max-w-3xl mx-auto text-[15px] text-brandNavy dark:text-gray-400">
             Comprehensive risk management, compliance, and advisory services tailored to your industry
           </p>
         </motion.div>

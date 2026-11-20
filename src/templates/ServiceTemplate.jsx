@@ -186,7 +186,7 @@ export default function NewServiceTemplate() {
 
                 <motion.p
                   variants={fadeInUp}
-                  className="max-w-2xl text-base md:text-lg font-medium leading-relaxed text-white/60"
+                  className="max-w-2xl text-base font-medium leading-relaxed text-white/60"
                 >
                   {heroSection.description}
                 </motion.p>
@@ -231,7 +231,7 @@ export default function NewServiceTemplate() {
                         <h3 className="text-lg md:text-xl italic font-bold leading-tight text-white">
                           {heroSection.highlightBox.title || "Strategic Assurance"}
                         </h3>
-                        <p className="text-base font-medium leading-relaxed text-white/50">
+                        <p className="text-[15px] font-medium leading-relaxed text-white/50">
                           {heroSection.highlightBox.text}
                         </p>
                       </div>
@@ -421,7 +421,7 @@ export default function NewServiceTemplate() {
               <h3 className="mt-8 text-xl md:text-2xl lg:text-3xl italic font-bold uppercase">
                 {statisticsSection.title}
               </h3>
-              <p className="mt-6 text-base font-medium leading-relaxed opacity-70">
+              <p className="mt-6 text-[15px] font-medium leading-relaxed opacity-70">
                 {statisticsSection.description}
               </p>
             </motion.div>
@@ -473,7 +473,7 @@ export default function NewServiceTemplate() {
                 {service.valueSection.title}
               </h2>
 
-              <p className="text-base md:text-lg italic font-medium leading-relaxed text-slate-500 dark:text-gray-400">
+              <p className="text-base italic font-medium leading-relaxed text-slate-500 dark:text-gray-400">
                 {service.valueSection.description}
               </p>
 
@@ -568,7 +568,7 @@ export default function NewServiceTemplate() {
             <div className="max-w-4xl mb-16">
               <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">{service.trustedBy.title}</h2>
               {service.trustedBy.description && (
-                <p className="max-w-2xl text-base font-medium leading-relaxed text-slate-500 dark:text-white/50">{service.trustedBy.description}</p>
+                <p className="max-w-2xl text-[15px] font-medium leading-relaxed text-slate-500 dark:text-white/50">{service.trustedBy.description}</p>
               )}
             </div>
             <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
@@ -875,7 +875,7 @@ export default function NewServiceTemplate() {
                             {item.title}
                           </h3>
                         )}
-                        <p className="text-base md:text-lg italic font-bold leading-relaxed text-slate-500 dark:text-gray-400">
+                        <p className="text-base italic font-bold leading-relaxed text-slate-500 dark:text-gray-400">
                           {item.content}
                         </p>
                         <div className="pt-6">
@@ -930,7 +930,7 @@ export default function NewServiceTemplate() {
                       {solution.name}
                     </h3>
 
-                    <p className="text-base italic font-bold leading-relaxed text-slate-500 dark:text-gray-400">
+                    <p className="text-[15px] italic font-bold leading-relaxed text-slate-500 dark:text-gray-400">
                       {solution.description}
                     </p>
                   </div>
@@ -981,7 +981,7 @@ export default function NewServiceTemplate() {
                       {parService.name}
                     </h3>
 
-                    <p className="text-base italic font-bold leading-relaxed text-slate-500 dark:text-gray-400 line-clamp-4">
+                    <p className="text-[15px] italic font-bold leading-relaxed text-slate-500 dark:text-gray-400 line-clamp-4">
                       {parService.description}
                     </p>
 
@@ -1018,7 +1018,7 @@ export default function NewServiceTemplate() {
               <h2 className="text-2xl md:text-3xl lg:text-4xl italic font-bold leading-tight text-brandDark dark:text-white">
                 {experienceSection.title}
               </h2>
-              <p className="max-w-xl text-base md:text-lg italic font-bold leading-relaxed text-slate-500 dark:text-gray-400">
+              <p className="max-w-xl text-base italic font-bold leading-relaxed text-slate-500 dark:text-gray-400">
                 {experienceSection.description}
               </p>
 
@@ -1069,7 +1069,7 @@ export default function NewServiceTemplate() {
               <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-none text-brandDark dark:text-white">
                 {servicesOverview.title}
               </h2>
-              <p className="max-w-3xl mx-auto text-base md:text-lg italic font-bold leading-relaxed text-slate-500 dark:text-gray-400">
+              <p className="max-w-3xl mx-auto text-base italic font-bold leading-relaxed text-slate-500 dark:text-gray-400">
                 {servicesOverview.description}
               </p>
             </motion.div>
@@ -1089,7 +1089,7 @@ export default function NewServiceTemplate() {
                     <h3 className="text-xl md:text-2xl lg:text-3xl font-bold transition-colors text-brandDark dark:text-white group-hover:text-brandPrimary">
                       {s.title}
                     </h3>
-                    <p className="text-base italic font-bold leading-relaxed text-slate-500 dark:text-gray-400">
+                    <p className="text-[15px] italic font-bold leading-relaxed text-slate-500 dark:text-gray-400">
                       {s.description}
                     </p>
                     <div className="pt-4">
@@ -1125,7 +1125,7 @@ export default function NewServiceTemplate() {
                   <h3 className="text-4xl italic font-black leading-none tracking-tighter md:text-6xl text-brandDark dark:text-white">
                     {uc.title}
                   </h3>
-                  <p className="py-2 pl-8 text-base md:text-lg italic font-bold leading-relaxed border-l-4 text-slate-500 dark:text-gray-400 border-brandAccent">
+                  <p className="py-2 pl-8 text-base italic font-bold leading-relaxed border-l-4 text-slate-500 dark:text-gray-400 border-brandAccent">
                     {uc.description}
                   </p>
                   <div className="pt-4 space-y-4">
@@ -1194,7 +1194,7 @@ export default function NewServiceTemplate() {
                       <h4 className="mb-2 text-2xl font-black tracking-tight transition-colors text-brandDark dark:text-white group-hover:text-brandPrimary">
                         {s.title}
                       </h4>
-                      <p className="max-w-md text-base italic font-bold leading-relaxed text-slate-500 dark:text-gray-400">
+                      <p className="max-w-md text-[15px] italic font-bold leading-relaxed text-slate-500 dark:text-gray-400">
                         {s.description}
                       </p>
                     </div>
@@ -1264,7 +1264,7 @@ export default function NewServiceTemplate() {
                       <h3 className="text-lg md:text-xl font-bold leading-tight transition-colors text-brandDark dark:text-white group-hover:text-brandPrimary">
                         {item.title}
                       </h3>
-                      <p className="text-base italic font-bold leading-relaxed text-slate-500 dark:text-gray-400">
+                      <p className="text-[15px] italic font-bold leading-relaxed text-slate-500 dark:text-gray-400">
                         {item.description}
                       </p>
                     </div>
@@ -1304,7 +1304,7 @@ export default function NewServiceTemplate() {
                 <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold leading-none text-brandDark dark:text-white">
                   {proActiveSection.title}
                 </h2>
-                <p className="py-2 pl-8 text-base md:text-lg italic font-bold leading-relaxed border-l-4 text-slate-500 dark:text-gray-400 border-brandAccent">
+                <p className="py-2 pl-8 text-base italic font-bold leading-relaxed border-l-4 text-slate-500 dark:text-gray-400 border-brandAccent">
                   {proActiveSection.description}
                 </p>
                 <div className="pt-8">
@@ -1389,7 +1389,7 @@ export default function NewServiceTemplate() {
               <h2 className="text-2xl md:text-3xl lg:text-4xl italic font-bold text-brandDark dark:text-white">
                 {articalSection.title}
               </h2>
-              <p className="max-w-3xl mx-auto mt-6 text-base md:text-lg italic font-bold text-slate-500 dark:text-gray-400">
+              <p className="max-w-3xl mx-auto mt-6 text-base italic font-bold text-slate-500 dark:text-gray-400">
                 {articalSection.description}
               </p>
             </motion.div>
@@ -1409,7 +1409,7 @@ export default function NewServiceTemplate() {
                     <h3 className="text-lg md:text-xl font-bold leading-tight underline transition-colors text-brandDark dark:text-white group-hover:text-brandPrimary decoration-brandAccent/30 decoration-2 underline-offset-4">
                       {a.title}
                     </h3>
-                    <p className="text-base italic font-bold leading-relaxed text-slate-500 dark:text-gray-400 line-clamp-4">
+                    <p className="text-[15px] italic font-bold leading-relaxed text-slate-500 dark:text-gray-400 line-clamp-4">
                       {a.excerpt}
                     </p>
                     <div className="pt-4">
@@ -1459,7 +1459,7 @@ export default function NewServiceTemplate() {
                       <FaChevronDown className="text-xs text-brandPrimary" />
                     </div>
                   </summary>
-                  <p className="pt-8 mt-8 text-base italic font-bold leading-relaxed border-t text-slate-500 dark:text-gray-400 border-borderLight dark:border-borderDark">
+                  <p className="pt-8 mt-8 text-[15px] italic font-bold leading-relaxed border-t text-slate-500 dark:text-gray-400 border-borderLight dark:border-borderDark">
                     {f.answer}
                   </p>
                 </motion.details>
@@ -1561,7 +1561,7 @@ export default function NewServiceTemplate() {
                     {card.title}
                   </h3>
 
-                  <p className="text-base italic font-bold leading-relaxed text-white/50">
+                  <p className="text-[15px] italic font-bold leading-relaxed text-white/50">
                     {card.description}
                   </p>
                 </motion.div>

@@ -49,7 +49,7 @@
 //           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //             Comprehensive Vendor Inventory and Classification
 //           </h2>
-//           <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
+//           <p className="text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
 //             We establish a centralized inventory of all third parties, documenting data access types and system integrations. By applying a rigorous criticality methodology, we classify vendors from low to high risk to prioritize your oversight efforts.
 //           </p>
 //         </div>
@@ -126,7 +126,7 @@ const Inventory = () => {
           <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Comprehensive Vendor Inventory and Classification
           </h2>
-          <p className="text-base text-gray-600 dark:text-gray-300">
+          <p className="text-[15px] text-gray-600 dark:text-gray-300">
             We establish a centralized inventory of all third parties, documenting data access types and system integrations. By applying a rigorous criticality methodology, we classify vendors from low to high risk to prioritize your oversight efforts.
           </p>
         </div>

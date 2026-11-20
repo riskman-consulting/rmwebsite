@@ -73,7 +73,7 @@ const ESGMethodologySection = () => {
           <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandDark dark:text-surfaceLight ">
             RiskMan's Global ESG <br /> Program Methodology
           </h2>
-          <p className="max-w-3xl mx-auto font-sans text-base md:text-lg leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
+          <p className="max-w-3xl mx-auto font-sans text-base leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
             We deliver enterprise-grade ESG programs that combine strategic vision with practical execution excellence.
           </p>
         </div>

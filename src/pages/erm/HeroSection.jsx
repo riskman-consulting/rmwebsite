@@ -27,7 +27,7 @@
 //             initial={{ opacity: 0, y: 24 }}
 //             animate={{ opacity: 1, y: 0 }}
 //             transition={{ duration: 0.7 }}
-//             className="max-w-2xl mt-6 text-base text-white/80"
+//             className="max-w-2xl mt-6 text-[15px] text-white/80"
 //           >
 //             We partner with you to identify the &apos;Risks That Matter,&apos; building a resilient,
 //             customized ERM framework that protects your reputation and fuels sustainable long-term growth.
@@ -112,7 +112,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="max-w-2xl mt-6 text-base text-white/80 "
+            className="max-w-2xl mt-6 text-[15px] text-white/80 "
           >
             We partner with you to identify the &apos;Risks That Matter,&apos; building a resilient,
             customized ERM framework that protects your reputation and fuels sustainable long-term growth.

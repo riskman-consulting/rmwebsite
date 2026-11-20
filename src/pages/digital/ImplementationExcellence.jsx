@@ -144,7 +144,7 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
             </span>
           </h1>
 
-          <p className="mb-10 text-base md:text-lg leading-relaxed text-white/90 ">
+          <p className="mb-10 text-base leading-relaxed text-white/90 ">
             RiskMan delivers implementation excellence through rigorous tool
             optimization, process re-engineering, and structured data migration
             frameworks to ensure your digital transformation succeeds.
@@ -171,7 +171,7 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
             <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
               Tool Evaluation & <span className="text-brandPrimary dark:text-brandGold">Optimization</span>
             </h2>
-            <p className="max-w-3xl mx-auto text-base opacity-70">
+            <p className="max-w-3xl mx-auto text-[15px] opacity-70">
               Select and refine your digital ecosystem through data-backed assessment and strategic feasibility analysis.
             </p>
           </div>
@@ -242,7 +242,7 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
                 Efficiency First
               </div>
               <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl text-brandDark dark:text-brandAccent">Business Process Re-engineering</h2>
-              <p className="mb-8 text-base text-brandNavy dark:text-white/70">
+              <p className="mb-8 text-[15px] text-brandNavy dark:text-white/70">
                 Redesign core workflows to eliminate bottlenecks and maximize the efficiency of your digital operations.
               </p>
 
@@ -276,7 +276,7 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
             <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
               BRD & <span className="text-brandPrimary dark:text-brandGold">Solution Design</span>
             </h2>
-            <p className="max-w-2xl mx-auto text-base opacity-70">
+            <p className="max-w-2xl mx-auto text-[15px] opacity-70">
               Comprehensive documentation that transforms business needs into technical reality
             </p>
           </div>
@@ -291,7 +291,7 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
                 <h3 className="mb-6 text-xl md:text-2xl lg:text-3xl font-bold text-brandPrimary dark:text-brandGold">
                   Functional Documentation
                 </h3>
-                <p className="mb-8 text-base leading-relaxed opacity-80">
+                <p className="mb-8 text-[15px] leading-relaxed opacity-80">
                   Draft structured requirements covering both functional and non-functional needs to provide a clear technical roadmap.
                 </p>
                 <ul className="space-y-3">
@@ -355,7 +355,7 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
             <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
               BRD <span className="text-brandGold">Finalization Approach</span>
             </h2>
-            <p className="max-w-3xl mx-auto text-base md:text-lg opacity-90">
+            <p className="max-w-3xl mx-auto text-base opacity-90">
               We ensure every RiskMan implementation starts with a well-defined and fully approved Business Requirements Document (BRD) that aligns all stakeholders.
             </p>
           </div>
@@ -433,7 +433,7 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
             </div>
             <div className="lg:w-1/2">
               <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl ">BRD & Solution Design</h2>
-              <p className="mb-8 text-base text-brandNavy dark:text-white/70">
+              <p className="mb-8 text-[15px] text-brandNavy dark:text-white/70">
                 Bridge the gap between business needs and technical execution through structured requirements and validation.
               </p>
 
@@ -463,7 +463,7 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
             <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
               Data Management & <span className="text-brandPrimary dark:text-brandGold">Migration</span>
             </h2>
-            <p className="max-w-2xl text-base opacity-70">
+            <p className="max-w-2xl text-[15px] opacity-70">
               Ensure data integrity and seamless transitions with structured cleansing, mapping, and validation frameworks.
             </p>
           </div>
@@ -543,7 +543,7 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
             <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
               Master Data <span className="text-brandPrimary dark:text-brandGold">Migration Approach</span>
             </h2>
-            <p className="max-w-3xl mx-auto text-base md:text-lg opacity-70">
+            <p className="max-w-3xl mx-auto text-base opacity-70">
               We follow a structured, governed methodology to migrate legacy data into RiskMan with accuracy, integrity, and traceability.
             </p>
           </div>
@@ -721,7 +721,7 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-base text-slate-600 dark:text-slate-300"
+                        className="text-[15px] text-slate-600 dark:text-slate-300"
                     >
                         We ensure every RiskMan implementation starts with a structured, governed approach to requirements and data.
                     </motion.p>
@@ -824,7 +824,7 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
                 <span className="text-brandGold dark:text-white">Implementation?</span>
               </h2>
               
-              <p className="max-w-2xl mx-auto mb-10 text-base md:text-lg opacity-90">
+              <p className="max-w-2xl mx-auto mb-10 text-base opacity-90">
                 Drive measurable impact with RiskMan's Accelerating Value Realization framework. Let's transform your business together.
               </p>
               
@@ -864,7 +864,7 @@ import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
             <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
               Frequently Asked <span className="text-brandPrimary dark:text-brandGold">Questions</span>
             </h2>
-            <p className="max-w-2xl mx-auto text-base opacity-70">
+            <p className="max-w-2xl mx-auto text-[15px] opacity-70">
               Get answers to common questions about our implementation excellence services
             </p>
           </div>

@@ -75,7 +75,7 @@ const GroupHero = ({ group }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.12 }}
-              className="mt-4 text-base md:text-lg font-semibold leading-snug font-heading text-brandPrimary dark:text-brandGold"
+              className="mt-4 text-base font-semibold leading-snug font-heading text-brandPrimary dark:text-brandGold"
             >
               {group.summary}
             </motion.p>
@@ -84,7 +84,7 @@ const GroupHero = ({ group }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.18 }}
-              className="mt-5 text-base leading-relaxed text-brandNavy/70 dark:text-white/60"
+              className="mt-5 text-[15px] leading-relaxed text-brandNavy/70 dark:text-white/60"
             >
               {group.intro}
             </motion.p>

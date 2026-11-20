@@ -22,6 +22,7 @@
     "@sanity/table": "^2.0.1",
     "@sanity/vision": "^4.22.1",
     "@studio-freight/lenis": "^1.0.42",
+    "@vercel/analytics": "^2.0.1",
     "aos": "^2.3.4",
     "axios": "^1.13.5",
     "clsx": "^2.1.1",

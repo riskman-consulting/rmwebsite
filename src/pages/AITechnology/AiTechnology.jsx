@@ -184,7 +184,7 @@
 //             <h1 className="font-heading text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight animate-[fadeInUp_0.8s_ease-out_0.1s_both]">
 //               Harness AI for Enterprise Risk Mastery
 //             </h1>
-//             <p className="text-base md:text-lg text-white/90 mb-10 leading-relaxed max-w-3xl animate-[fadeInUp_0.8s_ease-out_0.2s_both]">
+//             <p className="text-base text-white/90 mb-10 leading-relaxed max-w-3xl animate-[fadeInUp_0.8s_ease-out_0.2s_both]">
 //               Elevate your risk strategy with RiskMan's AI-driven technology solutions. Achieve precision, foresight, and compliance in a dynamic threat landscape seamlessly integrated for your organization.
 //             </p>
 //             <div className="flex flex-wrap gap-4 animate-[fadeInUp_0.8s_ease-out_0.3s_both]">
@@ -231,7 +231,7 @@
 //             </span>
 //           </h1>
           
-//           <p className="max-w-xl pl-6 text-base leading-relaxed text-gray-300 border-l-4 border-brandAccent">
+//           <p className="max-w-xl pl-6 text-[15px] leading-relaxed text-gray-300 border-l-4 border-brandAccent">
 //             Elevate your risk strategy with RiskMan's AI-driven technology solutions. Achieve precision, foresight, and compliance in a dynamic threat landscape seamlessly integrated for your organization.
 //           </p>
           
@@ -308,7 +308,7 @@
 //             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //               AI-Powered Risk Intelligence
 //             </h2>
-//             <p className="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+//             <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
 //               Transform raw data into strategic foresight with RiskMan's AI ecosystem, empowering CXOs to lead with precision.
 //             </p>
 //           </div>
@@ -353,7 +353,7 @@
 //             <h3 className="mb-4 text-xl md:text-2xl lg:text-3xl font-bold text-white font-heading ">
 //               Strategic Outcomes
 //             </h3>
-//             <p className="max-w-4xl mx-auto text-base md:text-lg text-white/90">
+//             <p className="max-w-4xl mx-auto text-base text-white/90">
 //               Gain unified visibility, regulatory agility, and proven ROI, positioning your organization as a risk management leader.
 //             </p>
 //           </div>
@@ -367,7 +367,7 @@
 //             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //               Advanced Technology Integration
 //             </h2>
-//             <p className="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+//             <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
 //               Embed cutting-edge tech into your risk framework with RiskMan, driving agility and resilience for global enterprises.
 //             </p>
 //           </div>
@@ -410,7 +410,7 @@
 //             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //               AI Risk Management Framework (NIST-Aligned)
 //             </h2>
-//             <p className="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+//             <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
 //               RiskMan operationalizes NIST AI RMF for trustworthy deployments, delivering compliance and innovation for CXO strategies.
 //             </p>
 //           </div>
@@ -445,7 +445,7 @@
 //               <h3 className="mb-3 text-xl md:text-2xl lg:text-3xl font-bold font-heading text-brandDark dark:text-white">
 //                 Proven Impact
 //               </h3>
-//               <p className="max-w-2xl text-base text-gray-600 dark:text-gray-300">
+//               <p className="max-w-2xl text-[15px] text-gray-600 dark:text-gray-300">
 //                 Mitigate vulnerabilities, build trust, and accelerate innovation with audit-ready, NIST-validated AI risk mastery.
 //               </p>
 //             </div>
@@ -465,7 +465,7 @@
 //           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading ">
 //             Accelerate Your AI Risk Transformation
 //           </h2>
-//           <p className="max-w-3xl mx-auto mb-10 text-base md:text-lg leading-relaxed text-white/90">
+//           <p className="max-w-3xl mx-auto mb-10 text-base leading-relaxed text-white/90">
 //             Unlock enterprise-wide resilience with RiskMan's AI and Technology expertise.
 //           </p>
 //           <a 
@@ -507,7 +507,7 @@
 //                   className={`transition-all duration-300 overflow-hidden ${openFaq === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
 //                 >
 //                   <div className="px-8 pt-2 pb-6">
-//                     <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
+//                     <p className="text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
 //                       {faq.answer}
 //                     </p>
 //                   </div>

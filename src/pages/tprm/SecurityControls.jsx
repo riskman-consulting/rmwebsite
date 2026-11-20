@@ -63,7 +63,7 @@
 //             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //               Advanced Information Security and Cyber Risk Controls
 //             </h2>
-//             <p className="mb-8 text-base leading-relaxed text-gray-600 dark:text-gray-300">
+//             <p className="mb-8 text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
 //               Cyber threats often enter through the supply chain. We assess vendor incident response capabilities and evaluate encryption controls for data at rest and in transit. Our audits review patch management and vulnerability practices to ensure your data remains secure within the vendor's ecosystem.
 //             </p>
 
@@ -110,7 +110,7 @@ const Security = () => {
           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             Advanced Information Security and Cyber Risk Controls
           </h2>
-          <p className="text-base text-gray-600 dark:text-gray-300">
+          <p className="text-[15px] text-gray-600 dark:text-gray-300">
             Cyber threats often enter through the supply chain. We assess vendor incident response capabilities and evaluate encryption controls for data at rest and in transit. Our audits review patch management and vulnerability practices to ensure your data remains secure within the vendor’s ecosystem.
           </p>
         </div>

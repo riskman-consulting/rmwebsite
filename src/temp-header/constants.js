@@ -102,7 +102,7 @@ export const NAVIGATION_DATA = {
                     "label": "AI & Technology",
                     "path": "/services/ai-technology",
                     "submenus": [
-                        { "id": "ai-rmf-nist", "title": "AI RMF by NIST", "path":"/services/ai-technology/ai-rmf-nist"}
+                        { "id": "ai-rmf-nist", "title": "AI RMF by NIST", "path":"/services/ai-technology#framework"}
                     ]
                 },
                 {
@@ -145,7 +145,7 @@ export const NAVIGATION_DATA = {
                     "submenus": [
                         { "id": "dpdp", "title": "DPDP Compliance", "path":"/services/data-privacy/dpdp"},
                         { "id": "gdpr", "title": "GDPR Compliance" ,"path":"/services/data-privacy/gdpr"},
-                        { "id": "regulatory", "title": "Other Regulatory Compliances", "path":"/services/data-privacy/regulatory"}
+                        { "id": "regulatory", "title": "Other Regulatory Compliances", "path":"/services/data-privacy/other"}
                     ]
                 }
             ]

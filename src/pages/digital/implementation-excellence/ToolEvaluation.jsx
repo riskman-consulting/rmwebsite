@@ -10,7 +10,7 @@ const ToolEvaluation = () => {
             <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading ">
               Tool Evaluation & <span className="text-brandPrimary dark:text-brandGold">Optimization</span>
             </h2>
-            <p className="max-w-3xl mx-auto text-base opacity-70">
+            <p className="max-w-3xl mx-auto text-[15px] opacity-70">
               Select and refine your digital ecosystem through data-backed assessment and strategic feasibility analysis.
             </p>
           </div>

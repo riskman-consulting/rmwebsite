@@ -44,7 +44,7 @@ const CTASection = () => {
         </div>
  
         {/* DESCRIPTION - Matches FAQ answer text size */}
-        <p className="max-w-3xl mx-auto mb-12 text-base leading-relaxed text-center text-brandNavy dark:text-white/70">
+        <p className="max-w-3xl mx-auto mb-12 text-[15px] leading-relaxed text-center text-brandNavy dark:text-white/70">
           Leverage the collective wisdom of partners who have successfully navigated the complexities of global markets and regulatory landscapes. At RiskMan, we don't just offer advice; we provide a blueprint for resilience. Benefit from personalized guidance rooted in decades of experience building high-growth service lines and safeguarding multi-national enterprises.
         </p>
  

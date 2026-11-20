@@ -133,7 +133,8 @@ import PCIDSSPage from './pages/pci-dss'
 
 // forensics-investigation
 import ForensicsInvestigationPage from "./pages/forensics-investigation"
-
+// Web Analytics
+import {Analytics} from "@vercel/analytics/react"
 //CPA
 import CPAPage from "./pages/cpa/cpa"
 import FinancialStatementPage from "./pages/cpa/financial-audits"
@@ -321,7 +322,9 @@ function SiteShell() {
 
           <Route path="/governance" element={<GovernancePage/>} />
           <Route path="*" element={<NotFound />} />
+
         </Routes>
+        <Analytics /> 
       </main>
 
       <Footer />

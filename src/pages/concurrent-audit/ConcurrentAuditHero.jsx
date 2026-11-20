@@ -49,7 +49,7 @@
 //                             initial={{ opacity: 0, y: 24 }}
 //                             animate={{ opacity: 1, y: 0 }}
 //                             transition={{ duration: 0.8, delay: 0.3 }}
-//                             className="text-base font-light leading-relaxed text-brandNavy dark:text-white/70 max-w-[620px] mb-10 font-sans"
+//                             className="text-[15px] font-light leading-relaxed text-brandNavy dark:text-white/70 max-w-[620px] mb-10 font-sans"
 //                         >
 //                             Transform your control environment from retrospective review to real-time risk mitigation. RiskMan's Concurrent Audit programs embed proactive oversight directly into your operational cycles, catching exceptions before they become liabilities.
 //                         </motion.p>
@@ -153,7 +153,7 @@ const ConcurrentAuditHero = () => {
                             initial={{ opacity: 0, y: 24 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.3 }}
-                            className="text-base font-light leading-relaxed text-brandNavy dark:text-white/70 max-w-[620px] mb-10 font-sans"
+                            className="text-[15px] font-light leading-relaxed text-brandNavy dark:text-white/70 max-w-[620px] mb-10 font-sans"
                         >
                             Transform your control environment from retrospective review to real-time risk mitigation. RiskMan's Concurrent Audit programs embed proactive oversight directly into your operational cycles, catching exceptions before they become liabilities.
                         </motion.p>

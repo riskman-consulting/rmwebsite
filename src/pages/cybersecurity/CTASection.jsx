@@ -38,7 +38,7 @@ const CTASection = () => {
               </h2>
 
               {/* Description */}
-              <p className="max-w-2xl mx-auto mb-10 text-base md:text-lg leading-relaxed text-gray-200">
+              <p className="max-w-2xl mx-auto mb-10 text-base leading-relaxed text-gray-200">
                 RiskMan provides the independent oversight and technical expertise needed to protect your mission-critical infrastructure from cyber threats.
               </p>
 

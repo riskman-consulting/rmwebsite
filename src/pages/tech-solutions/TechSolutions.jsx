@@ -315,7 +315,7 @@ export default function IntegritatSolutionPage() {
                 <span className="text-brandPrimary dark:text-brandAccent">Audit Workflow</span>
               </h1>
               
-              <p className="max-w-lg mb-8 text-base md:text-lg leading-relaxed text-brandDark/70 dark:text-white/70">
+              <p className="max-w-lg mb-8 text-base leading-relaxed text-brandDark/70 dark:text-white/70">
                 CPA firms can automate document collection, tracking, and review — 
                 everything in between from within Integritat.
               </p>
@@ -366,7 +366,7 @@ export default function IntegritatSolutionPage() {
               Complete Audit Workflow in{' '}
               <span className="text-brandPrimary dark:text-brandAccent">8 Simple Steps</span>
             </h2>
-            <p className="text-base text-brandDark/70 dark:text-white/70">
+            <p className="text-[15px] text-brandDark/70 dark:text-white/70">
               From client onboarding to governance dashboard — manage your entire audit lifecycle seamlessly
             </p>
           </div>
@@ -536,7 +536,7 @@ export default function IntegritatSolutionPage() {
               We've got you covered throughout the{' '}
               <span className="text-brandPrimary dark:text-brandAccent">audit lifecycle</span>
             </h2>
-            <p className="text-base text-brandDark/70 dark:text-white/70">
+            <p className="text-[15px] text-brandDark/70 dark:text-white/70">
               CPA firms can automate client onboarding, document collection, and review processes —
               everything in between from within Integritat.
             </p>
@@ -611,7 +611,7 @@ export default function IntegritatSolutionPage() {
             <h2 className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-white">
               End-to-End Audit Management Solutions
             </h2>
-            <p className="max-w-2xl mx-auto text-base text-white/60">
+            <p className="max-w-2xl mx-auto text-[15px] text-white/60">
               Offers a unified platform that fosters collaboration while providing end-to-end audit management.
             </p>
           </div>
@@ -748,7 +748,7 @@ export default function IntegritatSolutionPage() {
               Seamless integration with your{' '}
               <span className="text-brandPrimary dark:text-brandAccent">existing workflow</span>
             </h2>
-            <p className="mb-8 text-base text-brandDark/70 dark:text-white/70">
+            <p className="mb-8 text-[15px] text-brandDark/70 dark:text-white/70">
               See how we help your team solve today's biggest audit challenges.
             </p>
             <button onClick={()=>navigator("/contact")} className="px-10 py-5 text-lg font-semibold transition-all duration-300 rounded-full shadow-xl text-brandDark bg-brandAccent hover:bg-brandGold shadow-brandAccent/30">

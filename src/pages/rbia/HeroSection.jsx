@@ -27,22 +27,22 @@ const RBIAHero = () => {
           {/* LEFT CONTENT */}
           <div className="lg:col-span-7 xl:col-span-6">
             
-            {/* TOP BADGE */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-xs font-bold tracking-widest uppercase border rounded-full bg-brandAccent/10 border-brandAccent/30 text-brandPrimary dark:text-brandAccent">
+            {/* TOP BADGE — the page h1: names the service people search for */}
+            <h1 className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-xs font-bold tracking-widest uppercase border rounded-full bg-brandAccent/10 border-brandAccent/30 text-brandPrimary dark:text-brandAccent">
               <span className="w-2 h-2 rounded-full bg-brandAccent animate-pulse" />
-              Strategic Risk Advisory
-            </div>
+              Risk-Based Internal Audit (RBIA)
+            </h1>
 
             {/* MAIN HEADING */}
-            <h1 className="font-heading text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-brandDark dark:text-white leading-[1.1] ">
+            <p className="font-heading text-[1.75rem] md:text-4xl lg:text-5xl font-bold text-brandDark dark:text-white leading-[1.1] ">
               Mastering Risk,{" "}
               <span className="block text-brandPrimary dark:text-brandAccent">
                 Empowering Success
               </span>
-            </h1>
+            </p>
 
             {/* DESCRIPTION */}
-            <p className="max-w-xl mt-8 font-sans text-base md:text-lg font-medium leading-relaxed text-brandNavy/90 dark:text-gray-300">
+            <p className="max-w-xl mt-8 font-sans text-base font-medium leading-relaxed text-brandNavy/90 dark:text-gray-300">
               We deliver customized risk advisory solutions, creating enduring
               value through expert strategic partnerships and independent
               internal audit services.

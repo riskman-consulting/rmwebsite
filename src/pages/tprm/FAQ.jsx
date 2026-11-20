@@ -35,7 +35,7 @@
 //           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
 //             Frequently Asked Questions
 //           </h2>
-//           <p className="text-base text-gray-600 dark:text-gray-300">
+//           <p className="text-[15px] text-gray-600 dark:text-gray-300">
 //             Common questions about our TPRM services and framework
 //           </p>
 //         </div>

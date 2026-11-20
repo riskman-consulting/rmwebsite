@@ -26,7 +26,7 @@ function HeroSection() {
               Precision In <span className="text-brandAccent">Financial Statement</span> Auditing
             </h1>
 
-            <p className="text-base md:text-lg text-gray-300 mb-10 leading-relaxed">
+            <p className="text-base text-gray-300 mb-10 leading-relaxed">
               RiskMan provides Organizations with comprehensive financial verification, ensuring every disclosure reflects the highest standards of accuracy and regulatory compliance.
             </p>
 

@@ -29,7 +29,7 @@
 //                         </span>
 //                     </h2>
 
-//                     <p className="max-w-2xl mx-auto mb-12 font-sans text-base font-light leading-relaxed text-brandLight/60">
+//                     <p className="max-w-2xl mx-auto mb-12 font-sans text-[15px] font-light leading-relaxed text-brandLight/60">
 //                         Ready to explore how RiskMan's Concurrent Audit programs can transform your control environment? Schedule a diagnostic session with our risk advisory leadership.
 //                     </p>
 
@@ -95,7 +95,7 @@ const ConcurrentAuditCTA = () => {
                         </span>
                     </h2>
 
-                    <p className="max-w-2xl mx-auto mb-12 font-sans text-base font-light leading-relaxed text-brandLight/60">
+                    <p className="max-w-2xl mx-auto mb-12 font-sans text-[15px] font-light leading-relaxed text-brandLight/60">
                         Ready to explore how RiskMan's Concurrent Audit programs can transform your control environment? Schedule a diagnostic session with our risk advisory leadership.
                     </p>
 

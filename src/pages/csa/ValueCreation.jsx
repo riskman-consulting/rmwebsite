@@ -9,7 +9,7 @@ export default function ValueCreation() {
           Tangible Value Creation
         </h2>
 
-        <p className="mb-12 text-base leading-relaxed text-brandNavy dark:text-white/70">
+        <p className="mb-12 text-[15px] leading-relaxed text-brandNavy dark:text-white/70">
           RiskMan's CSA services are designed to deliver measurable, sustainable value that extends 
           far beyond compliance. Our clients consistently realize significant improvements across 
           multiple dimensions of their risk and control environment.

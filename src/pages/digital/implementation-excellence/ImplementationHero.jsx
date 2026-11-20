@@ -30,7 +30,7 @@ const ImplementationHero = () => {
                     </span>
                   </h1>
         
-                  <p className="mb-10 text-base md:text-lg leading-relaxed text-white/90 ">
+                  <p className="mb-10 text-base leading-relaxed text-white/90 ">
                     RiskMan delivers implementation excellence through rigorous tool
                     optimization, process re-engineering, and structured data migration
                     frameworks to ensure your digital transformation succeeds.

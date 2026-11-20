@@ -8,7 +8,7 @@ function SupportSection() {
           <div className="relative">
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-brandGold/20 rounded-full blur-3xl" />
             <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-8 relative">How SOC 3 Supports <br/><span className="text-brandGold">Go-To-Market</span></h2>
-            <p className="text-base text-gray-300 leading-relaxed">
+            <p className="text-[15px] text-gray-300 leading-relaxed">
               A SOC 3 seal or report on your website, trust center, and sales materials reduces early-stage security friction and reassures potential customers before formal due diligence. It becomes an easy, visible shorthand for independently tested controls.
             </p>
           </div>

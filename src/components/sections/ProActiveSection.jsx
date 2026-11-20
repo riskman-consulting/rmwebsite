@@ -20,7 +20,7 @@ export default function ProActiveSection({ data }) {
               {data.title}
             </h2>
 
-            <p className="text-base leading-relaxed text-brandNavy dark:text-gray-400">
+            <p className="text-[15px] leading-relaxed text-brandNavy dark:text-gray-400">
               {data.description}
             </p>
           </motion.div>

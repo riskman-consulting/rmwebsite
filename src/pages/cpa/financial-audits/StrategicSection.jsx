@@ -9,7 +9,7 @@ function StrategicSection() {
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2">
               <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-6">Strategic Audit Planning</h2>
-              <p className="text-gray-600 dark:text-gray-300 mb-10 text-base">Organizations require a meticulously scoped audit process that identifies material risks before they impact the bottom line.</p>
+              <p className="text-gray-600 dark:text-gray-300 mb-10 text-[15px]">Organizations require a meticulously scoped audit process that identifies material risks before they impact the bottom line.</p>
               <div className="space-y-6">
                 {auditPlanning.map((plan, i) => (
                   <div key={i} className="flex gap-4 p-6 bg-brandLight dark:bg-bgDark rounded-xl border-l-4 border-brandPrimary">

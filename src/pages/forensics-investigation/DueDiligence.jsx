@@ -12,7 +12,7 @@ const DueDiligenceSection = () => {
           <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandNavy dark:text-white">
             Integrity Due Diligence and Compliance
           </h2>
-          <p className="text-base text-gray-600 dark:text-gray-300">
+          <p className="text-[15px] text-gray-600 dark:text-gray-300">
             We help Organizations navigate complex regulatory landscapes by providing deep insights into partners, vendors, and high-value transactions.
           </p>
         </div>

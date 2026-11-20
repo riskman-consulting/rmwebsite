@@ -72,7 +72,7 @@ const ESGFrameworksSection = () => {
           <h2 className="mb-8 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight font-heading text-brandDark dark:text-surfaceLight ">
             Foundational ESG <br /> & Sustainability Frameworks
           </h2>
-          <p className="max-w-4xl mx-auto font-sans text-base md:text-lg leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
+          <p className="max-w-4xl mx-auto font-sans text-base leading-relaxed text-brandDark/70 dark:text-surfaceLight/70">
             Effective ESG programs are built upon globally recognized frameworks that provide structure, comparability, and credibility.
           </p>
         </div>

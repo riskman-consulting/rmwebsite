@@ -48,7 +48,7 @@ export default function TeamTestimonials() {
           <h2 className="mb-5 font-heading text-2xl md:text-3xl lg:text-4xl font-bold">
             Voices from Our Team
           </h2>
-          <p className="text-base opacity-70 text-brandNavy dark:text-white">
+          <p className="text-[15px] opacity-70 text-brandNavy dark:text-white">
             Experiences that reflect growth, trust, and shared success.
           </p>
         </div>
@@ -89,7 +89,7 @@ export default function TeamTestimonials() {
 
               {/* Right Side */}
               <div className="flex-1">
-                <p className="text-base italic leading-relaxed text-brandPrimary dark:text-white/70">
+                <p className="text-[15px] italic leading-relaxed text-brandPrimary dark:text-white/70">
                   {t.quote}
                 </p>
 

@@ -45,7 +45,7 @@ export const StickyServicesSection = () => {
             transition={{ delay: 0.2 }}
             className="max-w-xl "
           >
-            <p className="text-base md:text-lg font-light leading-relaxed text-brandNavy/70 dark:text-slate-400">
+            <p className="text-base font-light leading-relaxed text-brandNavy/70 dark:text-slate-400">
               Our Enterprise Services provide a high-impact suite of risk, financial, and operational solutions designed to bolster resilience and ensure regulatory excellence for global organizations.
             </p>
           </motion.div>

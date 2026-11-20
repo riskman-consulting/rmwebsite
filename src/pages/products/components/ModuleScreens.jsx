@@ -17,6 +17,8 @@ const Frame = ({ screen }) => (
     <img
       src={screen.image}
       alt={screen.alt}
+      width={screen.width}
+      height={screen.height}
       loading="lazy"
       decoding="async"
       className="block w-full h-auto"

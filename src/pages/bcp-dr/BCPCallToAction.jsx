@@ -15,7 +15,7 @@ const BCPCallToAction = () => {
             Protect Your Organization’s Future
           </h2>
 
-          <p className="mb-10 text-base text-white/85">
+          <p className="mb-10 text-[15px] text-white/85">
             Contact us today to build a culture of resilience within your organization
           </p>
 

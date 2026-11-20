@@ -130,7 +130,7 @@ export default function RiskmanAuditCarousel() {
             Our Key Services
           </span>
 
-          <p className="text-base leading-relaxed text-brandNavy dark:text-white/70">
+          <p className="text-[15px] leading-relaxed text-brandNavy dark:text-white/70">
             At RiskMan, we don't just identify gaps; we build the bridges to fill
             them. Our services are designed to align with global standards while
             addressing the unique operational realities of your enterprise.

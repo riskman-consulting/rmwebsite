@@ -20,7 +20,7 @@ const SMEAdvisory = () => {
               <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading ">
                 Support for <span className="text-brandAccent">Small Businesses</span>
               </h2>
-              <p className="font-sans text-base leading-relaxed text-brandLight/80">
+              <p className="font-sans text-[15px] leading-relaxed text-brandLight/80">
                 Financial advisory services are highly beneficial for small businesses as well. We provide the expertise needed to navigate both challenges and opportunities.
               </p>
             </div>

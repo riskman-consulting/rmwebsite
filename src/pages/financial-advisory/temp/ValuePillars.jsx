@@ -31,7 +31,7 @@ const ValuePillars = () => {
           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
             The Foundation of Our <span className="text-brandPrimary dark:text-brandGold">Advisory Excellence</span>
           </h2>
-          <p className="font-sans text-base leading-relaxed text-gray-600 dark:text-gray-400">
+          <p className="font-sans text-[15px] leading-relaxed text-gray-600 dark:text-gray-400">
             In the business journey of exploring resources and funding options at optimum cost, evaluating M&A and divestment strategies, or trying out expansions—our team delivers most meaningful solutions.
           </p>
         </div>

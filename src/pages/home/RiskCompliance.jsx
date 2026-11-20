@@ -71,7 +71,7 @@ const RiskCompliance = () => {
               Compliance
             </h2>
  
-            <p className="mb-12 text-base leading-relaxed text-brandNavy dark:text-white/70">
+            <p className="mb-12 text-[15px] leading-relaxed text-brandNavy dark:text-white/70">
               Explore tailored risk and compliance solutions that safeguard
               operations, meet regulations, and strengthen enterprise-wide
               accountability and control.

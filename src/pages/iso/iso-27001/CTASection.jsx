@@ -32,7 +32,7 @@ const CTASection = () => {
           </h2>
 
           {/* Description */}
-          <p className="max-w-2xl mx-auto mb-10 text-base md:text-lg leading-relaxed text-gray-200 ">
+          <p className="max-w-2xl mx-auto mb-10 text-base leading-relaxed text-gray-200 ">
             Ready to achieve global information security standards and enhance your organizational resilience?
           </p>
 

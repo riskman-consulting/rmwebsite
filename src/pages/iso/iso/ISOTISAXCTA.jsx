@@ -41,7 +41,7 @@ const ISOTISAXCTA = () => {
                             Secure Your Competitive Edge Today
                         </h2>
 
-                        <p className="mt-6 text-base leading-relaxed text-gray-200">
+                        <p className="mt-6 text-[15px] leading-relaxed text-gray-200">
                             Partner with RiskMan to transform your compliance requirements into a strategic and sustainable business advantage.
                         </p>
 

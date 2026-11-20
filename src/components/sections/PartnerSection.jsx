@@ -22,7 +22,7 @@ export default function PartnerSection({ data }) {
           </h2>
 
           {data.description && (
-            <p className="max-w-3xl mx-auto text-base leading-relaxed text-brandNavy dark:text-gray-400">
+            <p className="max-w-3xl mx-auto text-[15px] leading-relaxed text-brandNavy dark:text-gray-400">
               {data.description}
             </p>
           )}

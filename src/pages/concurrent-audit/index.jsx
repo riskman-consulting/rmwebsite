@@ -9,6 +9,7 @@ import TechnologyEnablement from './TechnologyEnablement';
 import ValueDelivered from './ValueDelivered';
 import WhyRiskMan from './WhyRiskMan';
 import ConcurrentAuditCTA from './ConcurrentAuditCTA';
+import RelatedLinks from "../../components/sections/RelatedLinks";
 
 const ConcurrentAuditPage = () => {
     useEffect(() => {
@@ -30,6 +31,14 @@ const ConcurrentAuditPage = () => {
             <TechnologyEnablement />
             <ValueDelivered />
             <WhyRiskMan />
+            <RelatedLinks
+              intro="RiskMan GRC records audit plans, fieldwork, reports and the follow-up of every observation on one platform."
+              links={[
+                { label: "Internal audit management software", path: "/products/riskman-grc/risk-based-internal-audit" },
+                { label: "Audit findings and remediation tracking", path: "/products/riskman-grc/action-taken-report" },
+              ]}
+            />
+
             <ConcurrentAuditCTA />
         </div>
     );

@@ -207,7 +207,7 @@
             {
               "id": "ai-rmf-nist",
               "title": "AI RMF by NIST",
-              "path": "/services/ai-technology/ai-rmf-nist"
+              "path": "/services/ai-technology#framework"
             }
           ]
         },
@@ -310,7 +310,7 @@
             {
               "id": "regulatory",
               "title": "Other Regulatory Compliances",
-              "path": "/services/data-privacy/regulatory"
+              "path": "/services/data-privacy/other"
             }
           ]
         }

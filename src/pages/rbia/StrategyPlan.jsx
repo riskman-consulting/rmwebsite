@@ -51,7 +51,7 @@ export default function StrategyPlanSection() {
           
           <div className="w-24 h-1 rounded-full bg-gradient-to-r from-brandAccent to-brandGold mb-6" />
           
-          <p className="max-w-2xl text-base text-brandDark/70 dark:text-brandLight/70 leading-relaxed">
+          <p className="max-w-2xl text-[15px] text-brandDark/70 dark:text-brandLight/70 leading-relaxed">
             Transitioning to RBIA drives deeper organizational value through proactive risk management and strategic alignment.
           </p>
         </div>

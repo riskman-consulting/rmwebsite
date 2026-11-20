@@ -62,7 +62,7 @@ const OperationalIntegrity = () => {
     //       <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading">
     //         Operational Integrity and Governance
     //       </h2>
-    //       <p className="text-base md:text-lg leading-relaxed text-gray-200">
+    //       <p className="text-base leading-relaxed text-gray-200">
     //         We maintain the highest standards of independence and objectivity to build trust and ensure audit credibility. Our process provides clear communication to those charged with IT governance.
     //       </p>
     //     </div>

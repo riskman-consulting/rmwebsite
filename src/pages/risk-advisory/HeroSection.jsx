@@ -14,19 +14,19 @@ const HeroSection = ({ data }) => {
 
           {/* LEFT: Content */}
           <div>
-            {/* Badge */}
-            <motion.div
+            {/* Badge — the page h1: names the service people search for */}
+            <motion.h1
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               className="inline-flex items-center gap-2 px-5 py-2 mb-6 text-xs font-bold tracking-widest uppercase border rounded-full border-brandAccent/30 bg-brandAccent/10 text-brandAccent"
             >
               <Shield className="w-4 h-4" />
-              Risk Advisory
-            </motion.div>
+              Risk Advisory Services
+            </motion.h1>
 
-            {/* Title */}
-            <motion.h1
+            {/* Title — styled as before; the badge above is the h1 */}
+            <motion.p
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -36,14 +36,14 @@ const HeroSection = ({ data }) => {
               {data.highlight && (
                 <span className="text-brandAccent">{data.highlight}</span>
               )}
-            </motion.h1>
+            </motion.p>
 
             {/* Description */}
             <motion.p
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="max-w-xl mb-10 text-base md:text-lg leading-relaxed text-white/85 "
+              className="max-w-xl mb-10 text-base leading-relaxed text-white/85 "
             >
               {data.description}
             </motion.p>

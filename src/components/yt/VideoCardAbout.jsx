@@ -34,7 +34,7 @@ export default function VideoAboutSection() {
               The RiskMan Approach
             </h2>
 
-            <p className="mt-6 max-w-xl text-base leading-8 text-slate-600 dark:text-slate-300 ">
+            <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-slate-600 dark:text-slate-300 ">
               Take a look behind the scenes of our process to see how we defend what you’ve built.
               From preventative planning to agile intervention, we are the committed partner you
               can count on to keep your organization secure.

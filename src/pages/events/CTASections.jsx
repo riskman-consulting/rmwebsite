@@ -27,7 +27,7 @@ export default function CTASections() {
             Let’s Stay in Touch
           </h2>
 
-          <p className="text-base text-brandDark/70 dark:text-white/60">
+          <p className="text-[15px] text-brandDark/70 dark:text-white/60">
             Subscribe or follow us to stay updated with RiskMan’s journey,
             insights, and milestones.
           </p>
@@ -46,7 +46,7 @@ export default function CTASections() {
               Stay Updated
             </h3>
 
-            <p className="mb-6 text-base text-brandDark/60 dark:text-white/60">
+            <p className="mb-6 text-[15px] text-brandDark/60 dark:text-white/60">
               Read our newsletter for updates on events, insights, and milestones.
             </p>
 
@@ -68,7 +68,7 @@ export default function CTASections() {
               Follow Our Journey
             </h3>
 
-            <p className="mb-6 text-base text-brandDark/60 dark:text-white/60">
+            <p className="mb-6 text-[15px] text-brandDark/60 dark:text-white/60">
               Join us on LinkedIn for professional insights, events, and stories
               from our journey.
             </p>

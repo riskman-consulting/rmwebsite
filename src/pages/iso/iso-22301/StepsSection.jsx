@@ -43,7 +43,7 @@
 //               />
 //             </div>
 //             <div className="absolute hidden max-w-xs p-8 text-white shadow-xl -bottom-6 -right-6 bg-brandPrimary rounded-xl md:block">
-//               <p className="mb-2 text-base font-bold font-heading">Expert Guidance</p>
+//               <p className="mb-2 text-[15px] font-bold font-heading">Expert Guidance</p>
 //               <p className="text-sm text-white/80">We work closely with leadership to ensure plans are practical and actionable.</p>
 //             </div>
 //           </div>
@@ -159,7 +159,7 @@ const ImplementationSteps = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="max-w-2xl mx-auto mt-6 text-base text-slate-600 dark:text-slate-400"
+                        className="max-w-2xl mx-auto mt-6 text-[15px] text-slate-600 dark:text-slate-400"
                     >
                         We work closely with leadership to ensure that continuity plans are practical, actionable, and integrated into the daily culture of organizations.
                     </motion.p>

@@ -29,7 +29,7 @@ const CTASection = ({ data }) => {
           </h2>
 
           {/* Description */}
-          <p className="mx-auto mb-10 max-w-3xl text-base md:text-lg leading-relaxed text-white/85 ">
+          <p className="mx-auto mb-10 max-w-3xl text-base leading-relaxed text-white/85 ">
             {data.description}
           </p>
 

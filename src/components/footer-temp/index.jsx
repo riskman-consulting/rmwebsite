@@ -26,12 +26,16 @@ const Footer = () => {
               <img
                 className="object-contain w-full h-full dark:hidden"
                 src="/rm.png"
-                alt="Riskman"
+    width="1500"
+    height="400"
+                alt="RiskMan Consulting"
               />
               <img
                 className="hidden object-contain w-full h-full dark:block"
                 src="/riskman-logo-white.svg"
-                alt="Riskman"
+    width="1903"
+    height="331"
+                alt="RiskMan Consulting"
               />
             </Link>
 
@@ -120,6 +124,10 @@ const Footer = () => {
             </Link>
             <Link to="/contact" className="footer-link">
               Contact
+            </Link>
+            {/* The industries pages have no menu entry; this keeps them reachable */}
+            <Link to="/industries" className="footer-link">
+              Industries
             </Link>
           </div>
         </div>

@@ -80,7 +80,7 @@ const Offerings = () => {
           <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-brandLight">
             Explore Our Core Digital Transformation Offerings
           </h2>
-          <p className="text-base text-brandNavy/70 dark:text-brandLight/70">
+          <p className="text-[15px] text-brandNavy/70 dark:text-brandLight/70">
             RiskMan Consulting bridges the gap between strategy and execution
             through governance-led PMO, implementation excellence, and
             comprehensive support. The services we offer are the following:

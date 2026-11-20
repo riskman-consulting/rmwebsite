@@ -20,7 +20,7 @@ const Governance = () => {
             <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-brandDark dark:text-white">
               Why Risk Governance Matters
             </h2>
-            <p className="mb-8 text-base text-gray-600 dark:text-gray-400">
+            <p className="mb-8 text-[15px] text-gray-600 dark:text-gray-400">
               By adopting a formal risk framework, organizations can reduce the frequency of crises and improve their overall decision-making accuracy.
             </p>
 

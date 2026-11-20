@@ -34,7 +34,7 @@
 //           </h2>
 
 //           {/* Description */}
-//           <p className="max-w-2xl mx-auto mb-10 text-base md:text-lg leading-relaxed text-gray-200">
+//           <p className="max-w-2xl mx-auto mb-10 text-base leading-relaxed text-gray-200">
 //             Protect your business from third-party vulnerabilities with our expert TPRM audit and implementation services.
 //           </p>
 
@@ -94,7 +94,7 @@ const SupplyChain = () => {
         <h2 className="mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-white font-heading">
           Strengthen Your Supply Chain Integrity
         </h2>
-        <p className="max-w-2xl mx-auto mb-10 text-base md:text-lg text-white/80">
+        <p className="max-w-2xl mx-auto mb-10 text-base text-white/80">
           Protect your business from third-party vulnerabilities with our expert TPRM audit and implementation services.
         </p>
         <Link to="/contact" className="inline-flex items-center gap-2 px-10 py-4 mx-auto text-lg font-bold transition-all duration-300 transform rounded-full shadow-lg bg-brandAccent text-brandDark hover:bg-brandGold hover:shadow-2xl hover:-translate-y-1">

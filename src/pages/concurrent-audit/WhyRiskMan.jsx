@@ -30,7 +30,7 @@
 //                         </h2>
 //                         <hr className="w-12 h-[2px] border-none bg-gradient-to-r from-brandGold to-brandAccent mb-8" />
 
-//                         <p className="mb-10 font-sans text-base font-light leading-relaxed text-brandLight/70">
+//                         <p className="mb-10 font-sans text-[15px] font-light leading-relaxed text-brandLight/70">
 //                             Deploying a concurrent audit program requires more than just tools; it requires a partner who understands the nuance of global operations and the rigor of assurance standards. RiskMan brings a combined 18 years of specialized experience in audit and advisory.
 //                         </p>
 
