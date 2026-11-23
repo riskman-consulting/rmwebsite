@@ -1,7 +1,7 @@
 import React from 'react';
 import { ShieldCheck, ArrowRight, Activity } from 'lucide-react';
 
-import forensicImg from "../../assets/images/forensic/forensic.png"
+import forensicImg from "../../assets/images/forensic/forensic.webp"
 import { useNavigate } from 'react-router-dom';
 
 const HeroSection = () => {

@@ -1,5 +1,5 @@
 import { SectionWrapper, SectionTag, SectionTitle } from "../../components/ui/SectionComponents";
-import sopImg from "../../assets/images/policies/sop-document.png"
+import sopImg from "../../assets/images/policies/sop-document.webp"
 
 export default function SOPSection() {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Shield } from 'lucide-react';
-import rbiaImg from "../../assets/images/rbia/rbia-risk-advisory.png"
+import rbiaImg from "../../assets/images/rbia/rbia-risk-advisory.webp"
 
 const FrameworkSection = () => {
   return (

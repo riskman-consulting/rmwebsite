@@ -10,16 +10,16 @@ import authPage from "../../assets/tech-solutions/auth-page.webp";
 import adminDashboard from "../../assets/tech-solutions/my-dashboard.webp";
 
 // Workflow sequence images
-import clientOnboarding1 from "../../assets/tech-solutions/Client Onboarding 1.png";
+import clientOnboarding1 from "../../assets/tech-solutions/Client Onboarding 1.webp";
 import clientOnboarding2 from "../../assets/tech-solutions/Client Onboarding 2.png";
 import projectCodeCreation from "../../assets/tech-solutions/Project Code Creation.png";
-import projectCreation from "../../assets/tech-solutions/Project Creation.png";
-import prebuiltWorkflow1 from "../../assets/tech-solutions/Pre-built workflow for Audit 1.png";
-import prebuiltWorkflow2 from "../../assets/tech-solutions/Pre-built workflow for Audit 2.png";
-import clientPortal from "../../assets/tech-solutions/Client Portal.png";
-import projectTracking from "../../assets/tech-solutions/Project Tracking.png";
-import qualityAssessment from "../../assets/tech-solutions/Quality Assessment.png";
-import governanceDashboard from "../../assets/tech-solutions/Governance Dashboard.png";
+import projectCreation from "../../assets/tech-solutions/Project Creation.webp";
+import prebuiltWorkflow1 from "../../assets/tech-solutions/Pre-built workflow for Audit 1.webp";
+import prebuiltWorkflow2 from "../../assets/tech-solutions/Pre-built workflow for Audit 2.webp";
+import clientPortal from "../../assets/tech-solutions/Client Portal.webp";
+import projectTracking from "../../assets/tech-solutions/Project Tracking.webp";
+import qualityAssessment from "../../assets/tech-solutions/Quality Assessment.webp";
+import governanceDashboard from "../../assets/tech-solutions/Governance Dashboard.webp";
 
 const SCREENSHOTS = {
   hero: authPage,

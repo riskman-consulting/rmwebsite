@@ -243,7 +243,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import bcp_approach from "../../assets/images/bcp/bcp_approach.png";
+import bcp_approach from "../../assets/images/bcp/bcp_approach.webp";
  
 const phases = [
   { title: "Initiation", desc: "Establish project scope, secure support, and identify stakeholders." },

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Activity, Database, ShieldAlert, RefreshCw } from 'lucide-react';
-import pillarsImage from "../../../assets/images/iso/resilence.png"
+import pillarsImage from "../../../assets/images/iso/resilence.webp"
 
 const PillarsSection = () => {
   const pillars = [

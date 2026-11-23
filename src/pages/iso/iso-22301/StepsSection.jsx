@@ -1,6 +1,6 @@
 // import React from 'react';
 // import { ClipboardList, Users, FileText, PlayCircle } from 'lucide-react';
-// import stepsImage from "../../../assets/images/iso/steps.png"
+// import stepsImage from "../../../assets/images/iso/steps.webp"
 
 // const StepsSection = () => {
 //   const steps = [
@@ -88,7 +88,7 @@
 import React, { useState } from 'react';
 import { Target, HardDrive, FileText, Activity, CheckCircle2, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import stepsImage from "../../../assets/images/iso/steps.png"
+import stepsImage from "../../../assets/images/iso/steps.webp"
 
 const ImplementationSteps = () => {
     const [activeStep, setActiveStep] = useState(0);

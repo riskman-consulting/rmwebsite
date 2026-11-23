@@ -1101,7 +1101,7 @@ export default function BlogTemplate({ blog }) {
             <div className="flex items-center gap-2.5">
               <div className="flex items-center justify-center w-9 h-9 p-1 overflow-hidden border rounded-full bg-white border-borderLight dark:border-borderDark shadow-sm">
                 <img
-                  src={authorImage || "/rm.png"}
+                  src={authorImage || "/rm-logo.webp"}
                   alt={authorName}
                   className="object-contain w-full h-full"
                 />
@@ -1276,7 +1276,7 @@ export default function BlogTemplate({ blog }) {
             <div className="flex flex-col items-start gap-5 p-6 sm:flex-row md:p-8">
               <div className="flex items-center justify-center flex-shrink-0 w-16 h-16 p-2 overflow-hidden border rounded-full bg-white border-borderLight dark:border-borderDark shadow-sm">
                 <img
-                  src={authorImage || "/rm.png"}
+                  src={authorImage || "/rm-logo.webp"}
                   alt={authorName}
                   className="object-contain w-full h-full"
                 />

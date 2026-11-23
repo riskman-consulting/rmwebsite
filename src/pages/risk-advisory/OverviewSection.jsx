@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Eye } from "lucide-react";
-import DEFAULT_IMAGE from "../../assets/images/risk-advisory/overview.png";
+import DEFAULT_IMAGE from "../../assets/images/risk-advisory/overview.webp";
 
 
 const OverviewSection = ({ data }) => {

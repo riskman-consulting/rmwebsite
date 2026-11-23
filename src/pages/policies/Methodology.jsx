@@ -1,5 +1,5 @@
 import { SectionWrapper, SectionTag, SectionTitle } from "../../components/ui/SectionComponents";
-import methodologyImg from "../../assets/images/policies/methodology-framework.png";
+import methodologyImg from "../../assets/images/policies/methodology-framework.webp";
 
 export default function MethodologySection() {
   return (

@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { ArrowRight, Compass, Target, Shield } from 'lucide-react';
-import compassImg from "../../../assets/images/financial-advisory/strategic-compass.jpg"
+import compassImg from "../../../assets/images/financial-advisory/strategic-compass.webp"
 import { useNavigate } from 'react-router-dom';
 
 const PolicyHero = () => {

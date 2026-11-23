@@ -13,9 +13,25 @@
       } catch (e) {}
     </script>
 
+    <!-- Inter font: loaded without blocking first paint (it used to be a CSS
+         @import, which held up rendering until Google Fonts answered). -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://%VITE_SANITY_PROJECT_ID%.apicdn.sanity.io" crossorigin />
+    <link rel="preconnect" href="https://cdn.sanity.io" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" />
+    </noscript>
+
     <!-- Favicons -->
-    <link rel="icon" type="image/png" href="/rm.png" />
-    <link rel="apple-touch-icon" href="/rm.png" />
+    <link rel="icon" type="image/png" href="/rm-icon.png" />
+    <link rel="apple-touch-icon" href="/rm-icon.png" />
 
     <!-- Primary SEO -->
     <title>RiskMan Consulting | Risk Advisory, Compliance & Resilience</title>

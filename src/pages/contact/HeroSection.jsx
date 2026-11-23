@@ -1,5 +1,5 @@
 import React from 'react'
-import contact from "../../assets/images/hero-section/contact/contact.png"
+import contact from "../../assets/images/hero-section/contact/contact.webp"
 
 function HeroSection() {
   return (

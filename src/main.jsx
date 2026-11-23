@@ -2,12 +2,14 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { HelmetProvider } from 'react-helmet-async'
 import './index.css'
-import App from './App.jsx'
+import App, { preloadRoute } from './App.jsx'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { ThemeProvider } from './components/context/ThemeContext.jsx'
+import { startHeadTagDedupe } from './utils/dedupeHeadTags.js'
 
 AOS.init()
+startHeadTagDedupe()
 
 const rootEl = document.getElementById('root')
 
@@ -26,4 +28,9 @@ const tree = (
 // hydrate: the browser-only state (saved theme, fetched data) can differ from
 // the build-time render, and React 18 does not patch attribute mismatches
 // during hydration. createRoot replaces the markup in a single commit.
-createRoot(rootEl).render(tree)
+//
+// The page's code is split into its own chunk: fetch it first, so the
+// prerendered markup is swapped straight for the finished page.
+preloadRoute(window.location.pathname).finally(() => {
+  createRoot(rootEl).render(tree)
+})

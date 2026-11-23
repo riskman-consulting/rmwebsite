@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { ArrowRight, ChevronRight, ChevronLeft } from "lucide-react";
-import heroItRisk from "../../assets/images/hero-section/home/hero-it-risk.png";
+import heroItRisk from "../../assets/images/hero-section/home/hero-it-risk.webp";
 import HeroRiskAdvisory from "../../assets/images/hero-section/home/hero-risk-advisory.webp";
 import HeroConsulting from "../../assets/images/hero-section/home/hero-consulting.webp";
 import {useHomePage} from "../../store/home"
@@ -44,6 +44,8 @@ const SLIDES = [
     category: "consulting"
   }
 ];
+
+const SlideHeading = ({ level: Tag, ...props }) => <Tag {...props} />;
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -184,7 +186,10 @@ export default function HeroSection() {
                 </div>
 
                 {/* Two-Line Heading */}
-                <h1 className="mb-5 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-[1.15]">
+                {/* One <h1> per page: every slide is in the DOM (only one is
+                    visible), so the first slide carries the h1 and the rest
+                    use h2 with identical styling. */}
+                <SlideHeading level={index === 0 ? "h1" : "h2"} className="mb-5 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-[1.15]">
                   <span className="block text-brandLight mb-2">
                     {slide.titleLine1}
                   </span>
@@ -199,7 +204,7 @@ export default function HeroSection() {
                   >
                     {slide.titleLine2}
                   </span>
-                </h1>
+                </SlideHeading>
 
                 {/* Description */}
                 <p className="max-w-xl mb-8 text-sm leading-relaxed md:text-base" style={{ color: "rgba(245,245,245,0.6)" }}>
@@ -283,9 +288,15 @@ export default function HeroSection() {
                 index === currentSlide ? "opacity-100 z-10 scale-100" : "opacity-0 z-0 scale-110"
               }`}
             >
-              <div
-                className={`absolute inset-0 bg-cover bg-center ${index === currentSlide ? "ken-burns" : ""}`}
-                style={{ backgroundImage: `url(${slide.img})` }}
+              {/* <img> (not a CSS background) so the browser finds the first
+                  slide immediately and fetches it first — it is the LCP image. */}
+              <img
+                src={slide.img}
+                alt=""
+                aria-hidden="true"
+                decoding="async"
+                fetchpriority={index === 0 ? "high" : "low"}
+                className={`absolute inset-0 w-full h-full object-cover object-center ${index === currentSlide ? "ken-burns" : ""}`}
               />
               {/* Brand-palette gradient overlay: deep navy → transparent */}
               <div className="absolute inset-0 hero-gradient-overlay" />

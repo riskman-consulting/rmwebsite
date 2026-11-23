@@ -153,7 +153,7 @@ const FeaturedPostCard = ({ post }) => {
             <div className="flex items-center gap-2">
               <div className="flex items-center justify-center w-9 h-9 p-1 overflow-hidden border rounded-full bg-white border-borderLight dark:border-borderDark shadow-sm">
                 <img
-                  src={post.author?.image || "/rm.png"}
+                  src={post.author?.image || "/rm-logo.webp"}
                   alt={post.author?.name || "Riskman"}
                   className="object-contain w-full h-full"
                 />

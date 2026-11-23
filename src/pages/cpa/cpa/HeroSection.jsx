@@ -1,6 +1,6 @@
 import { Building2 } from 'lucide-react'
 import React from 'react'
-import bg from "../../../assets/images/cpa/cpa/hero.png"
+import bg from "../../../assets/images/cpa/cpa/hero.webp"
 
 function HeroSection() {
   return (

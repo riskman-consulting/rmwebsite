@@ -158,8 +158,8 @@ export default function Header() {
                   //   <text x="10" y="30" fill="#FFC000" fontSize="22" fontWeight="bold">RiskMan</text>
                   // </svg>
                 ) : (
-                  // Light theme logo - replace with: <img src="/rm.png" alt="RiskMan" className="object-contain w-full h-full" />
-                  <img src="/rm.png" alt="RiskMan" className="object-contain w-full h-full" />
+                  // Light theme logo - replace with: <img src="/rm-logo.webp" alt="RiskMan" className="object-contain w-full h-full" />
+                  <img src="/rm-logo.webp" alt="RiskMan" className="object-contain w-full h-full" />
                   // <svg viewBox="0 0 160 42" className="w-full h-full">
                   //   <text x="10" y="30" fill="#004080" fontSize="22" fontWeight="bold">RiskMan</text>
                   // </svg>
@@ -180,7 +180,7 @@ export default function Header() {
                 ) : (
                   // Light theme logo
                   <img 
-                    src="/rm.png" 
+                    src="/rm-logo.webp" 
                     alt="RiskMan" 
                     className="object-contain w-full h-full"
                     style={{ maxWidth: '180px', maxHeight: '50px' }}

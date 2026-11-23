@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Cloud, Database, Wifi, Share2, Lock, Server, ArrowRight, Circle } from 'lucide-react';
 
-import tech1Img from "../../assets/images/ai-technology/tech-1.jpg";
-import tech2Img from "../../assets/images/ai-technology/tech-2.jpg";
-import tech3Img from "../../assets/images/ai-technology/tech-3.png";
-import tech4Img from "../../assets/images/ai-technology/tech-4.jpg";
-import tech5Img from "../../assets/images/ai-technology/tech-5.jpg";
-import tech6Img from "../../assets/images/ai-technology/tech-6.jpg";
+import tech1Img from "../../assets/images/ai-technology/tech-1.webp";
+import tech2Img from "../../assets/images/ai-technology/tech-2.webp";
+import tech3Img from "../../assets/images/ai-technology/tech-3.webp";
+import tech4Img from "../../assets/images/ai-technology/tech-4.webp";
+import tech5Img from "../../assets/images/ai-technology/tech-5.webp";
+import tech6Img from "../../assets/images/ai-technology/tech-6.webp";
 
 const TechIntegration = () => {
   const [activeIndex, setActiveIndex] = useState(0);

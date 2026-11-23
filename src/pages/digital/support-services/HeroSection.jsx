@@ -1,7 +1,7 @@
 // import React from 'react';
 // import { motion } from 'framer-motion';
 // import { ArrowRight, CheckCircle } from 'lucide-react';
-// import heroImage from "../../../assets/images/digital/herosection.png";
+// import heroImage from "../../../assets/images/digital/herosection.webp";
 
 // export const HeroSection = () => {
 //   return (
@@ -112,7 +112,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import bg from "../../../assets/images/digital/support-service.png";
+import bg from "../../../assets/images/digital/support-service.webp";
 
 function HeroSection() {
   return (

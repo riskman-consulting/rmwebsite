@@ -1,7 +1,7 @@
 import { ArrowLeft, Zap } from 'lucide-react'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import image from "../../../assets/images/cpa/internal-control/hero.png"
+import image from "../../../assets/images/cpa/internal-control/hero.webp"
 
 function HeroSection() {
   const navigate = useNavigate()

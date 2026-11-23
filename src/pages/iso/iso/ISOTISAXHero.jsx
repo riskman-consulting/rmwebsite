@@ -1,6 +1,6 @@
 import { ArrowLeft, ShieldCheck } from 'lucide-react'
 import React from 'react'
-import bg from "../../../assets/images/iso/isohero.png"
+import bg from "../../../assets/images/iso/isohero.webp"
 import { useNavigate } from 'react-router-dom'
  
 function HeroSection() {

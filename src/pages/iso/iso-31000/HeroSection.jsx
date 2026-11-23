@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
 
-import iso31000Img from "../../../assets/images/iso/iso31000hero.png"
+import iso31000Img from "../../../assets/images/iso/iso31000hero.webp"
 import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {

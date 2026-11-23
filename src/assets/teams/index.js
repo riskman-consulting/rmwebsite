@@ -4,7 +4,7 @@
 // Filenames & extensions exactly match the folder
 
 import Angel from "./Angel.webp";
-import Anirban from "./Anirban.png";
+import Anirban from "./Anirban.webp";
 import Artika from "./Artika.webp";
 import Pranshul from "./Pranshul.webp";
 import Ayush from "./Ayush.webp";
@@ -16,7 +16,7 @@ import MayukhDhar from "./Mayukh Dhar.webp";
 import Vipul from "./Vipul.jpg";
 import NishanAgarwal from "./Nishan Agarwal.webp";
 import Palak from "./Palak.webp";
-import Pawan from "./Pawan.png";
+import Pawan from "./Pawan.webp";
 import priyanshu from "./priyanshu.webp";
 import Priyanshibisht from "./priyanshibhist.webp";
 import RishbhaJain from "./Rishbha Jain.webp";
@@ -35,16 +35,16 @@ import VishalSharma from "./Vishal Sharma.webp";
 import Yashvi from "./Yashvi.webp";
 import Yugmita from "./Yugmita.webp";
 import Jay from "./jay.webp"
-import Debolina from "./debolina.png";
-import Shreya from "./Shreya.png";
+import Debolina from "./debolina.webp";
+import Shreya from "./Shreya.webp";
 import Arif from "./arif.webp"
 import Harsh from "./Harsh.webp"
 import Kiran from "./Kiiran.png"
 import monica from "./Monika.jpg"
 
 import pranshu from "./pranshu.jpg";
-import arpitSir from "./arpitSir.png"
-import sukantaSir from "./sukantSir.png"
+import arpitSir from "./arpitSir.webp"
+import sukantaSir from "./sukantSir.webp"
 import vishalSharma from "./Vishal Sharma.jpg";
 
 

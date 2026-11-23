@@ -1,6 +1,6 @@
 import React from 'react';
 import { CheckCircle2, TrendingUp, ShieldCheck } from 'lucide-react';
-import valueImage from "../../../assets/images/iso/handshake.png";
+import valueImage from "../../../assets/images/iso/handshake.webp";
 
 const ValueSection = () => {
   return (

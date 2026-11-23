@@ -152,7 +152,7 @@
 
 
 import React from 'react';
-import bg from "../../assets/images/digital/support-service.png"
+import bg from "../../assets/images/digital/support-service.webp"
 import {Link} from "react-router-dom"
 
 

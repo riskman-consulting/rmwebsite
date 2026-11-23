@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import bg from "../../../assets/images/digital/implementation.png";
+import bg from "../../../assets/images/digital/implementation.webp";
 
 const ImplementationHero = () => {
     return (

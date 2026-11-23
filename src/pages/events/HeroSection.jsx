@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Calendar, ArrowRight, Image, Globe, Users, Award, TrendingUp } from "lucide-react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
-import bg1 from "../../assets/images/hero-section/events/bg1.png"
-import bg2 from "../../assets/images/hero-section/events/bg2.png"
-import bg3 from "../../assets/images/hero-section/events/bg3.png"
-import bg4 from "../../assets/images/hero-section/events/bg4.png"
-import bg5 from "../../assets/images/hero-section/events/bg5.png"
+import bg1 from "../../assets/images/hero-section/events/bg1.webp"
+import bg2 from "../../assets/images/hero-section/events/bg2.webp"
+import bg3 from "../../assets/images/hero-section/events/bg3.webp"
+import bg4 from "../../assets/images/hero-section/events/bg4.webp"
+import bg5 from "../../assets/images/hero-section/events/bg5.webp"
 import { useNavigate } from "react-router-dom";
 import { FOUNDING_YEAR, getCompanyYearsPhrase, getCurrentYear } from "../../utils/companyAge";
 

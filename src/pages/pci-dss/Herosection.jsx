@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
 import { motion } from 'framer-motion';
-import heroImg from "../../assets/images/pci-dss/hero-security.png"
+import heroImg from "../../assets/images/pci-dss/hero-security.webp"
 import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {

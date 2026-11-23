@@ -83,7 +83,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Award, Users, Search, Briefcase } from 'lucide-react';
-import image from "../../assets/images/concurrent-audit/why_risk.png"
+import image from "../../assets/images/concurrent-audit/why_risk.webp"
 
 const WhyRiskMan = () => {
     const differentiators = [

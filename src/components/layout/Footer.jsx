@@ -18,7 +18,7 @@ const Footer = () => {
             <Link to="/" className="flex w-[140px] h-[48px]">
               <img
                 className="object-contain w-full h-full dark:hidden"
-                src="/rm.png"
+                src="/rm-logo.webp"
                 alt="Riskman"
               />
               <img
@@ -48,7 +48,7 @@ const Footer = () => {
           {/* Services */}
           <div className="md:col-span-1 lg:col-span-4 grid grid-cols-2 gap-8">
             <div>
-              <h4 className="footer-heading">Enterprise Services</h4>
+              <h3 className="footer-heading">Enterprise Services</h3>
               <ul className="space-y-3">
                 {ENTERPRISE_SERVICES.map((s, idx) => (
                   <li key={idx}>
@@ -61,7 +61,7 @@ const Footer = () => {
             </div>
 
             <div>
-              <h4 className="footer-heading">IT Risk Management</h4>
+              <h3 className="footer-heading">IT Risk Management</h3>
               <ul className="space-y-3">
                 {IT_RISK_SERVICES.map((s, idx) => (
                   <li key={idx}>

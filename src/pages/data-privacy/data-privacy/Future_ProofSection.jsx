@@ -1,6 +1,6 @@
 import { Database, Zap } from 'lucide-react'
 import React from 'react'
-import futureBg from '../../../assets/images/data-privacy/data-privacy/future-proof-bg.jpg'
+import futureBg from '../../../assets/images/data-privacy/data-privacy/future-proof-bg.webp'
 import { useNavigate } from 'react-router-dom'
 
 function FutureProofSection() {

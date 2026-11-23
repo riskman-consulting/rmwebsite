@@ -8,17 +8,17 @@ import image7 from "./team-dinner-december-2023​.webp"
 import image8 from "./team-dinner-feb-2022​.webp"
 import image9 from "./team-dinner-october_2021_1.webp"
 import image10 from "./team-dinner-october-2021.webp"
-import image11 from "./team-lunch-january-2026.jpeg"
+import image11 from "./team-lunch-january-2026.webp"
 import image12 from "./team-lunch-january-2026_1.jpeg"
 import image13 from "./team-lunch-january-2026_2.jpeg"
 import image14 from "./team_lunch_1.jpeg"
-import image15 from "./team_lunch_2.jpeg"
-import image16 from "./team_lunch_3.jpeg"
+import image15 from "./team_lunch_2.webp"
+import image16 from "./team_lunch_3.webp"
 
-import image17 from "./team_birthday.jpeg";
+import image17 from "./team_birthday.webp";
 import image18 from "./team_birthday_1.jpeg";
-import image19 from "./team_birthday_2.jpeg";
-import image20 from "./team_birthday_3.jpeg";
+import image19 from "./team_birthday_2.webp";
+import image20 from "./team_birthday_3.webp";
 
 import image21 from "./ganesh_chaturthi.jpeg";
 

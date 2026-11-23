@@ -1,5 +1,5 @@
-import image1 from "./image1.jpg"
-import image2 from "./image2.jpg"
+import image1 from "./image1.webp"
+import image2 from "./image2.webp"
 
 
 

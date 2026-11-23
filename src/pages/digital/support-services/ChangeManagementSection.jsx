@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Users, MessageSquare, CheckCircle, BarChart3 } from 'lucide-react';
-import changeMgmtImage from "../../../assets/images/digital/continuous-improvement.png";
+import changeMgmtImage from "../../../assets/images/digital/continuous-improvement.webp";
 
 const tabs = [
   {

@@ -5,7 +5,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import image from "../../assets/images/financial-advisory/financial-advisory.png";
+import image from "../../assets/images/financial-advisory/financial-advisory.webp";
 
 const HeroSection = () => {
   return (

@@ -1,26 +1,28 @@
 import { BrowserRouter as Router, StaticRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { useState, useEffect, lazy, Suspense } from 'react'
+import { matchRoutes, createRoutesFromChildren } from 'react-router-dom'
+import { lazyPage } from './utils/lazyPage'
 import Header from './components/layout/Header'
 
 import Home from './pages/home/Home'
 // import ServicesList from './pages/services/ServicesList'
-import IndustriesList from './pages/industries/IndustriesList'
-import IndustriesTemplate from './templates/IndustriesTemplate'
-import ServicesTemplate from './templates/ServiceTemplate'
-import Contact from './pages/contact/Contact'
-import About from './pages/about/About'
-import Careers from './pages/careers';
-import JobDetail from './pages/careers/JobDetail';
+const IndustriesList = lazyPage(() => import('./pages/industries/IndustriesList'))
+const IndustriesTemplate = lazyPage(() => import('./templates/IndustriesTemplate'))
+const ServicesTemplate = lazyPage(() => import('./templates/ServiceTemplate'))
+const Contact = lazyPage(() => import('./pages/contact/Contact'))
+const About = lazyPage(() => import('./pages/about/About'))
+const Careers = lazyPage(() => import('./pages/careers'))
+const JobDetail = lazyPage(() => import('./pages/careers/JobDetail'))
 import Footer from './components/footer-temp'
-import BlogList from './pages/blogs/BlogList'
-import BlogTemplate from './templates/BlogTemplate'
-import PrivacyPolicy from './pages/resources/Privacy'
-import Terms from './pages/resources/Terms'
-import BlogSingle from './pages/blogs/BlogSingle'
-import NewsletterList from './pages/newsletter/NewsletterList'
+const BlogList = lazyPage(() => import('./pages/blogs/BlogList'))
+const BlogTemplate = lazyPage(() => import('./templates/BlogTemplate'))
+const PrivacyPolicy = lazyPage(() => import('./pages/resources/Privacy'))
+const Terms = lazyPage(() => import('./pages/resources/Terms'))
+const BlogSingle = lazyPage(() => import('./pages/blogs/BlogSingle'))
+const NewsletterList = lazyPage(() => import('./pages/newsletter/NewsletterList'))
 import './index.css'
-import ConcurrentAuditPage from './pages/concurrent-audit'
-import PoliciesPage from "./pages/policies";
+const ConcurrentAuditPage = lazyPage(() => import('./pages/concurrent-audit'))
+const PoliciesPage = lazyPage(() => import('./pages/policies'))
 
 import { Toaster } from 'react-hot-toast'
 import ScrollToTop from './components/common/ScrollToTop'
@@ -29,120 +31,120 @@ import PageViewTracker from './components/common/PageViewTracker'
 const StudioPage = lazy(() => import('./pages/studio/StudioPage'))
 import ThemeToggle from './components/common/ThemeToggle'
 // import Events from './temp/MainEvent'
-import Events from './pages/events/Events'
-import ServicePage from './pages/services/Services'
+const Events = lazyPage(() => import('./pages/events/Events'))
+const ServicePage = lazyPage(() => import('./pages/services/Services'))
 import HeaderTemp from './temp-header/Header'
-import TechSolutions from "./pages/tech-solutions/TechSolutions"
-import RiskAdvisoryPage from './pages/risk-advisory/RiskAdvisoryPage'
-import FinancialAdvisoryPage from './pages/financial-advisory/temp/FinancialAdvisoryPage'
-import ERMPage from './pages/erm/ERMPage'
+const TechSolutions = lazyPage(() => import('./pages/tech-solutions/TechSolutions'))
+const RiskAdvisoryPage = lazyPage(() => import('./pages/risk-advisory/RiskAdvisoryPage'))
+const FinancialAdvisoryPage = lazyPage(() => import('./pages/financial-advisory/temp/FinancialAdvisoryPage'))
+const ERMPage = lazyPage(() => import('./pages/erm/ERMPage'))
 // import RBIAPage from './pages/rbia/RBIAPage'
-import RBIAPage from './pages/rbia/RBIAPage'
-import BCPPage from "./pages/bcp-dr/BCPPage"
-import CSAPage from "./pages/csa/CSAPage"
+const RBIAPage = lazyPage(() => import('./pages/rbia/RBIAPage'))
+const BCPPage = lazyPage(() => import('./pages/bcp-dr/BCPPage'))
+const CSAPage = lazyPage(() => import('./pages/csa/CSAPage'))
 
 // Digital Transformation
-import DigitalTransformation from './pages/digital/DigitalTransformationPage'
-import StrategicPMO from './pages/digital/StrategicPMO'
-import ImplementationExcellence from './pages/digital/implementation-excellence'
-import SupportServices from './pages/digital/support-services'
+const DigitalTransformation = lazyPage(() => import('./pages/digital/DigitalTransformationPage'))
+const StrategicPMO = lazyPage(() => import('./pages/digital/StrategicPMO'))
+const ImplementationExcellence = lazyPage(() => import('./pages/digital/implementation-excellence'))
+const SupportServices = lazyPage(() => import('./pages/digital/support-services'))
 
 // import ESGPage from "./pages/esg/ESGPage"
 
-import ISO27001 from './pages/iso/iso-27001'
-import IsoLayout from './pages/iso/IsoLayout'
-import TPRM from './pages/tprm/TPRMPage'
-import CybersecurityPage from './pages/cybersecurity/CybersecurityPage'
-import ITGCITACPage from './pages/itgc-itac/ITGCITACPage'
+const ISO27001 = lazyPage(() => import('./pages/iso/iso-27001'))
+const IsoLayout = lazyPage(() => import('./pages/iso/IsoLayout'))
+const TPRM = lazyPage(() => import('./pages/tprm/TPRMPage'))
+const CybersecurityPage = lazyPage(() => import('./pages/cybersecurity/CybersecurityPage'))
+const ITGCITACPage = lazyPage(() => import('./pages/itgc-itac/ITGCITACPage'))
 
 // soc
-import SOCPage from "./pages/soc/soc/SocPage"
-import SOC1Page from "./pages/soc/soc1/Soc1Page"
-import SOC2Page from "./pages/soc/soc2/Soc2Page"
-import SOC3Page from "./pages/soc/soc3/Soc3Page"
+const SOCPage = lazyPage(() => import('./pages/soc/soc/SocPage'))
+const SOC1Page = lazyPage(() => import('./pages/soc/soc1/Soc1Page'))
+const SOC2Page = lazyPage(() => import('./pages/soc/soc2/Soc2Page'))
+const SOC3Page = lazyPage(() => import('./pages/soc/soc3/Soc3Page'))
 
 /// ISO Pages
-import ISOPage from "./pages/iso/iso"
-import ISO27701Page from "./pages/iso/iso-27701/"
-import ISO22301Page from "./pages/iso/iso-22301"
-import ISO31000Page from "./pages/iso/iso-31000"
-import ISO42001Page from "./pages/iso/iso-42001"
+const ISOPage = lazyPage(() => import('./pages/iso/iso'))
+const ISO27701Page = lazyPage(() => import('./pages/iso/iso-27701'))
+const ISO22301Page = lazyPage(() => import('./pages/iso/iso-22301'))
+const ISO31000Page = lazyPage(() => import('./pages/iso/iso-31000'))
+const ISO42001Page = lazyPage(() => import('./pages/iso/iso-42001'))
 
 // Layout 
-import SocLayout from "./pages/soc/SocLayout"
-import DigitalLayout from "./pages/digital/Layout"
-import RiskAdvisoryLayout from "./pages/risk-advisory/Layout"
-import ESGLayout from "./pages/esg/Layout"
-import FinancialAdvisoryLayout from "./pages/financial-advisory/Layout"
-import DataPrivacyLayout from "./pages/data-privacy/Layout"
-import EventLayout from "./pages/events/EventLayout";
-import CPALayout from "./pages/cpa/Layout"
+const SocLayout = lazyPage(() => import('./pages/soc/SocLayout'))
+const DigitalLayout = lazyPage(() => import('./pages/digital/Layout'))
+const RiskAdvisoryLayout = lazyPage(() => import('./pages/risk-advisory/Layout'))
+const ESGLayout = lazyPage(() => import('./pages/esg/Layout'))
+const FinancialAdvisoryLayout = lazyPage(() => import('./pages/financial-advisory/Layout'))
+const DataPrivacyLayout = lazyPage(() => import('./pages/data-privacy/Layout'))
+const EventLayout = lazyPage(() => import('./pages/events/EventLayout'))
+const CPALayout = lazyPage(() => import('./pages/cpa/Layout'))
 
 // ESG Pages
-import ESGPage from "./pages/esg/ESGPage"
-import ESGStrategyRoadmapPage from "./pages/esg/strategy-roadmap"
-import ESGReportingDisclosurePage from "./pages/esg/reporting-disclosure"
-import ESGCarbonFootprintPage from "./pages/esg/carbon-footprint"
-import ESGSustainabilityAssurancePage from "./pages/esg/sustainability-assurance"
+const ESGPage = lazyPage(() => import('./pages/esg/ESGPage'))
+const ESGStrategyRoadmapPage = lazyPage(() => import('./pages/esg/strategy-roadmap'))
+const ESGReportingDisclosurePage = lazyPage(() => import('./pages/esg/reporting-disclosure'))
+const ESGCarbonFootprintPage = lazyPage(() => import('./pages/esg/carbon-footprint'))
+const ESGSustainabilityAssurancePage = lazyPage(() => import('./pages/esg/sustainability-assurance'))
 
 // Financial Pages
-import FinancialPage from "./pages/financial-advisory/temp/FinancialAdvisoryPage"
-import FinancialCreditRisk from "./pages/financial-advisory/credit-risk-assessment/CreditRiskAssessmentPage"
-import FinancialCreditPortfolio from "./pages/financial-advisory/credit-portfolio-management"
-import FinancialLoanReview from "./pages/financial-advisory/loan-review-monitoring"
-import FinancialCreditPolicy from "./pages/financial-advisory/credit-policy-framework/CreditPolicyFrameworkPage"
+const FinancialPage = lazyPage(() => import('./pages/financial-advisory/temp/FinancialAdvisoryPage'))
+const FinancialCreditRisk = lazyPage(() => import('./pages/financial-advisory/credit-risk-assessment/CreditRiskAssessmentPage'))
+const FinancialCreditPortfolio = lazyPage(() => import('./pages/financial-advisory/credit-portfolio-management'))
+const FinancialLoanReview = lazyPage(() => import('./pages/financial-advisory/loan-review-monitoring'))
+const FinancialCreditPolicy = lazyPage(() => import('./pages/financial-advisory/credit-policy-framework/CreditPolicyFrameworkPage'))
 
 // Data Privacy
-import DataPrivacyPage from "./pages/data-privacy/data-privacy"
-import DPPDCompliancePage from "./pages/data-privacy/dpdp"
-import GDPRCompliancePage from "./pages/data-privacy/gdpr"
-import OtherRegulatoryCompliance from './pages/data-privacy/others'
+const DataPrivacyPage = lazyPage(() => import('./pages/data-privacy/data-privacy'))
+const DPPDCompliancePage = lazyPage(() => import('./pages/data-privacy/dpdp'))
+const GDPRCompliancePage = lazyPage(() => import('./pages/data-privacy/gdpr'))
+const OtherRegulatoryCompliance = lazyPage(() => import('./pages/data-privacy/others'))
 
-import SOXICOFRPage from "./pages/sox-itcofr"
-import AiTechnology from './pages/AITechnology/AiTechnology'
-import ProductsLayout from './pages/products/Layout'
-import ProductPage from './pages/products/ProductPage'
-import GrcRiskBasedInternalAudit from './pages/products/riskman-grc/risk-based-internal-audit'
-import GrcControlTesting from './pages/products/riskman-grc/control-testing'
-import GrcPolicy from './pages/products/riskman-grc/policy'
-import GrcActionTakenReport from './pages/products/riskman-grc/action-taken-report'
-import GrcEnterpriseRiskManagement from './pages/products/riskman-grc/enterprise-risk-management'
-import GrcGlobalSox from './pages/products/riskman-grc/global-sox'
-import FAASLayout from './pages/faas/Layout'
-import FAASPage from './pages/faas/FAASPage'
-import FAASManagedServices from './pages/faas/managed-services'
-import FAASStrategicLeadership from './pages/faas/strategic-leadership'
-import FAASFinancialAdvisory from './pages/faas/financial-advisory'
-import FAASTransactionAuditReadiness from './pages/faas/transaction-audit-readiness'
-import FAASCostingPlantFinance from './pages/faas/costing-plant-finance'
-import FAASComplianceAssurance from './pages/faas/compliance-assurance'
+const SOXICOFRPage = lazyPage(() => import('./pages/sox-itcofr'))
+const AiTechnology = lazyPage(() => import('./pages/AITechnology/AiTechnology'))
+const ProductsLayout = lazyPage(() => import('./pages/products/Layout'))
+const ProductPage = lazyPage(() => import('./pages/products/ProductPage'))
+const GrcRiskBasedInternalAudit = lazyPage(() => import('./pages/products/riskman-grc/risk-based-internal-audit'))
+const GrcControlTesting = lazyPage(() => import('./pages/products/riskman-grc/control-testing'))
+const GrcPolicy = lazyPage(() => import('./pages/products/riskman-grc/policy'))
+const GrcActionTakenReport = lazyPage(() => import('./pages/products/riskman-grc/action-taken-report'))
+const GrcEnterpriseRiskManagement = lazyPage(() => import('./pages/products/riskman-grc/enterprise-risk-management'))
+const GrcGlobalSox = lazyPage(() => import('./pages/products/riskman-grc/global-sox'))
+const FAASLayout = lazyPage(() => import('./pages/faas/Layout'))
+const FAASPage = lazyPage(() => import('./pages/faas/FAASPage'))
+const FAASManagedServices = lazyPage(() => import('./pages/faas/managed-services'))
+const FAASStrategicLeadership = lazyPage(() => import('./pages/faas/strategic-leadership'))
+const FAASFinancialAdvisory = lazyPage(() => import('./pages/faas/financial-advisory'))
+const FAASTransactionAuditReadiness = lazyPage(() => import('./pages/faas/transaction-audit-readiness'))
+const FAASCostingPlantFinance = lazyPage(() => import('./pages/faas/costing-plant-finance'))
+const FAASComplianceAssurance = lazyPage(() => import('./pages/faas/compliance-assurance'))
 
 
 
-import EventAccomplshments from "./pages/events/accomplishment"
-import EventCompanyJourney from "./pages/events/CompanyTimelineSection"
-import EventMedia from './pages/events/media-coverage'
-import EventPastEvent from "./pages/events/past-events"
-import EventUpcomingEvent from "./pages/events/upcoming-events"
+const EventAccomplshments = lazyPage(() => import('./pages/events/accomplishment'))
+const EventCompanyJourney = lazyPage(() => import('./pages/events/CompanyTimelineSection'))
+const EventMedia = lazyPage(() => import('./pages/events/media-coverage'))
+const EventPastEvent = lazyPage(() => import('./pages/events/past-events'))
+const EventUpcomingEvent = lazyPage(() => import('./pages/events/upcoming-events'))
 
-import GovernancePage from "./pages/governance/Governance";
-import TisaxPage from './pages/iso/tisax'
+const GovernancePage = lazyPage(() => import('./pages/governance/Governance'))
+const TisaxPage = lazyPage(() => import('./pages/iso/tisax'))
 
-import PCIDSSPage from './pages/pci-dss'
+const PCIDSSPage = lazyPage(() => import('./pages/pci-dss'))
 
 
 // forensics-investigation
-import ForensicsInvestigationPage from "./pages/forensics-investigation"
+const ForensicsInvestigationPage = lazyPage(() => import('./pages/forensics-investigation'))
 // Web Analytics
 import {Analytics} from "@vercel/analytics/react"
 //CPA
-import CPAPage from "./pages/cpa/cpa"
-import FinancialStatementPage from "./pages/cpa/financial-audits"
-import InternalControlReview from "./pages/cpa/internal-control"
-import ComplianceAudit from "./pages/cpa/compliance-audits"
-import QualityAssurancePage from './pages/cpa/quality-assurance'
+const CPAPage = lazyPage(() => import('./pages/cpa/cpa'))
+const FinancialStatementPage = lazyPage(() => import('./pages/cpa/financial-audits'))
+const InternalControlReview = lazyPage(() => import('./pages/cpa/internal-control'))
+const ComplianceAudit = lazyPage(() => import('./pages/cpa/compliance-audits'))
+const QualityAssurancePage = lazyPage(() => import('./pages/cpa/quality-assurance'))
 import { useHomePage } from './store/home'
-import NotFound from './pages/NotFound'
+const NotFound = lazyPage(() => import('./pages/NotFound'))
  
 
 
@@ -151,29 +153,7 @@ import NotFound from './pages/NotFound'
 
 
 
-function SiteShell() {
-  const { pathname } = useLocation()
-
-  // Sanity Studio owns the whole viewport under /cms - no site header/footer.
-  if (pathname === '/cms' || pathname.startsWith('/cms/')) {
-    return (
-      <Suspense fallback={<div style={{ padding: '2rem', fontFamily: 'system-ui' }}>Loading Studio…</div>}>
-        <StudioPage />
-      </Suspense>
-    )
-  }
-
-  return (
-    <>
-      <HeaderTemp />
-      <Toaster position="top-right" />
-
-      {/* CRITICAL FIX: Add pt-[123px] to account for fixed header 
-          - Announcement banner: 43px (top-0)
-          - Navbar: 80px (top-[43px])
-          - Total: 123px
-      */}
-      <main className="pt-[123px]">
+const ROUTES = (
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<ServicePage />} />
@@ -324,6 +304,48 @@ function SiteShell() {
           <Route path="*" element={<NotFound />} />
 
         </Routes>
+)
+
+/**
+ * Loads the code for the page(s) matching `pathname`. main.jsx waits for this
+ * before the first render, so the prerendered markup is replaced by the real
+ * page directly, without a loading state in between.
+ */
+export function preloadRoute(pathname) {
+  const matches = matchRoutes(createRoutesFromChildren(ROUTES.props.children), pathname) || []
+  return Promise.all(
+    matches.map((m) => m.route.element?.type?.preload?.()).filter(Boolean)
+  ).catch(() => {})
+}
+
+function SiteShell() {
+  const { pathname } = useLocation()
+
+  // Sanity Studio owns the whole viewport under /cms - no site header/footer.
+  if (pathname === '/cms' || pathname.startsWith('/cms/')) {
+    return (
+      <Suspense fallback={<div style={{ padding: '2rem', fontFamily: 'system-ui' }}>Loading Studio…</div>}>
+        <StudioPage />
+      </Suspense>
+    )
+  }
+
+  return (
+    <>
+      <HeaderTemp />
+      <Toaster position="top-right" />
+
+      {/* CRITICAL FIX: Add pt-[123px] to account for fixed header 
+          - Announcement banner: 43px (top-0)
+          - Navbar: 80px (top-[43px])
+          - Total: 123px
+      */}
+      <main className="pt-[123px]">
+        {/* Pages load on demand. On navigation the current page stays on
+            screen until the next one's chunk arrives (router transitions). */}
+        <Suspense fallback={<div className="min-h-screen" />}>
+          {ROUTES}
+        </Suspense>
         <Analytics /> 
       </main>
 

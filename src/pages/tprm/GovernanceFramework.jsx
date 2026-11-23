@@ -47,7 +47,7 @@
 
 import React from 'react';
 import { FileText, Users, Eye, Gavel } from 'lucide-react';
-import governanceImg from "../../assets/images/tprm/governance.jpg";
+import governanceImg from "../../assets/images/tprm/governance.webp";
 
 const Governance = () => {
   return (

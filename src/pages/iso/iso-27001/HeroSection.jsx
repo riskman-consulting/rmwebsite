@@ -1,7 +1,7 @@
 // Hero.jsx
 import React from "react";
 import { Link } from "react-router-dom";
-import bg from "../../../assets/images/iso/iso27001hero.png"
+import bg from "../../../assets/images/iso/iso27001hero.webp"
 
 const HeroSection = () => {
   return (

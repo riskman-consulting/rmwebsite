@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-import image from "../../assets/images/csa/image.png"
+import image from "../../assets/images/csa/image.webp"
 
 export default function HeroSection() {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import ctaImage from "../../../assets/images/iso/CTA.png";
+import ctaImage from "../../../assets/images/iso/CTA.webp";
 import { useNavigate } from 'react-router-dom';
 
 const CTASection = () => {

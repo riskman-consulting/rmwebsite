@@ -204,7 +204,7 @@
 import React from 'react';
 import { Users, Landmark, Globe } from 'lucide-react';
 
-import meetingImg from "../../../assets/images/financial-advisory/strategic-meeting.png";
+import meetingImg from "../../../assets/images/financial-advisory/strategic-meeting.webp";
 
 const Framework = () => {
   const pillars = [

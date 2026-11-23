@@ -35,9 +35,9 @@ import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 import {motion,AnimatePresence} from 'framer-motion';
 
-import bg from "../../assets/images/digital/implementation.png";
-import businessImg from "../../assets/images/digital/business-process-re-engineering.jpg"
-import brdImg from "../../assets/images/digital/brd-solution-design.jpg";
+import bg from "../../assets/images/digital/implementation.webp";
+import businessImg from "../../assets/images/digital/business-process-re-engineering.webp"
+import brdImg from "../../assets/images/digital/brd-solution-design.webp";
 
 
 
