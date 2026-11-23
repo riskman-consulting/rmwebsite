@@ -1,5 +1,5 @@
 import React from 'react';
-import bg from "../../assets/esg/esg-herosection-image.png";
+import bg from "../../assets/esg/esg-herosection-image.webp";
 import { useNavigate } from 'react-router-dom';
 
 

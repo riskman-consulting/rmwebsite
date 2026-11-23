@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import heroImg from "../../assets/images/rbia/rbia-heroImg.png"
+import heroImg from "../../assets/images/rbia/rbia-heroImg.webp"
 const HeroSection = () => {
   return (
     <section className="relative overflow-hidden text-white bg-gradient-to-br from-brandDark via-brandNavy to-brandPrimary">

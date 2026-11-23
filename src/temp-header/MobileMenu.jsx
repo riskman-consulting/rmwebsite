@@ -64,7 +64,7 @@ export const MobileMenu = ({ isOpen, onClose }) => {
                 draggable={false}
               />
               <img
-                src="/rm.png"
+                src="/rm-logo.webp"
     width="1500"
     height="400"
                 alt="RiskMan Consulting"

@@ -40,7 +40,7 @@
 
 import { ArrowLeft, ShieldCheck } from "lucide-react";
 import React from "react";
-import bg from "../../assets/images/policies/policies.png"
+import bg from "../../assets/images/policies/policies.webp"
 import { useNavigate } from "react-router-dom";
 
 function HeroSection() {

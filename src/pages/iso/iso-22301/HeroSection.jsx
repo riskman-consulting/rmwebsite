@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight, Shield } from 'lucide-react';
-import heroImage from "../../../assets/images/iso/ISO22301.png";
+import heroImage from "../../../assets/images/iso/ISO22301.webp";
 import { useNavigate } from 'react-router-dom';
 
 

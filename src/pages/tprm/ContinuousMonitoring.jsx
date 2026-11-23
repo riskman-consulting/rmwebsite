@@ -80,7 +80,7 @@
 
 import React from 'react';
 import { RefreshCw, FileSearch, TrendingUp, AlertOctagon } from 'lucide-react';
-import monitoringImg from "../../assets/images/tprm/monitoring.jpg"
+import monitoringImg from "../../assets/images/tprm/monitoring.webp"
 
 const Monitoring = () => {
   return (

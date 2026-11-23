@@ -148,7 +148,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 
-import emergingImage from "../../assets/images/cybersecurity/ai-security.png"
+import emergingImage from "../../assets/images/cybersecurity/ai-security.webp"
 
 
  const EmergingTechnology = () => {

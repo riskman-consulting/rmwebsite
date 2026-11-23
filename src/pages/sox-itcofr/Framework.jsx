@@ -1,6 +1,6 @@
 import React from 'react';
 import { features } from './data';
-import Ifc_Image from "../../assets/images/sox/internal-ifc.png";
+import Ifc_Image from "../../assets/images/sox/internal-ifc.webp";
 
 function Framework() {
   return (

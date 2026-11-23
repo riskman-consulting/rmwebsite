@@ -15,7 +15,7 @@ import transactionReadinessImg from "../../assets/images/hero-section/about/abou
 import costingPlantFinanceImg from "../../assets/images/hero-section/industry/manufacturing.webp";
 // Sourced from Unsplash (Unsplash License — free for commercial use, no
 // attribution required). Swap for RiskMan's own photography when available.
-import managedServicesImg from "../../assets/images/faas/managed-services.jpg";
+import managedServicesImg from "../../assets/images/faas/managed-services.webp";
 import financialAdvisoryImg from "../../assets/images/faas/financial-advisory.jpg";
 import complianceAssuranceImg from "../../assets/images/faas/compliance-assurance.jpg";
 

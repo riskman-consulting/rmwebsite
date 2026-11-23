@@ -1,7 +1,7 @@
 import { ArrowLeft, Car } from "lucide-react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import bg from "../../../assets/images/tisax/hero.png";
+import bg from "../../../assets/images/tisax/hero.webp";
 
 function HeroSection() {
   const navigator = useNavigate();

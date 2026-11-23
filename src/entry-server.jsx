@@ -3,6 +3,10 @@ import { renderToString } from 'react-dom/server'
 import { HelmetProvider } from 'react-helmet-async'
 import App from './App.jsx'
 import { ThemeProvider } from './components/context/ThemeContext.jsx'
+import { preloadAllPages } from './utils/lazyPage.jsx'
+
+/** Pages are code-split; load them all once before rendering any route. */
+export const preload = preloadAllPages
 
 /**
  * Build-time renderer. `scripts/generate-meta.mjs` calls this for every route

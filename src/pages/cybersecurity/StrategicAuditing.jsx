@@ -21,7 +21,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 
-import auditImage from "../../assets/images/cybersecurity/audit-analysis.png"
+import auditImage from "../../assets/images/cybersecurity/audit-analysis.webp"
 
 
 // const auditFeatures = [

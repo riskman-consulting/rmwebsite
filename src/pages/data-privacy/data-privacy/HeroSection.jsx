@@ -1,5 +1,5 @@
 import React from 'react'
-import bg from "../../../assets/images/data-privacy/data-privacy/hero.png"
+import bg from "../../../assets/images/data-privacy/data-privacy/hero.webp"
 import { useNavigate } from 'react-router-dom'
 
 function HeroSection() {

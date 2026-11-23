@@ -89,7 +89,7 @@ export const Navbar = ({
                         {/* <Link to="/" className="flex items-center flex-shrink-0 h-16 w-36">
               <img
                 className="object-contain h-12 dark:hidden"
-                src="/rm.png"
+                src="/rm-logo.webp"
                 alt="Riskman"
               />
               <img
@@ -104,7 +104,7 @@ export const Navbar = ({
 <Link to="/" className="flex items-center flex-shrink-0 w-[140px] h-[48px]">
   <img
     className="object-contain w-full h-full dark:hidden"
-    src="/rm.png"
+    src="/rm-logo.webp"
     width="1500"
     height="400"
     alt="RiskMan Consulting"
@@ -194,6 +194,7 @@ export const Navbar = ({
             {/* THEME TOGGLE */}
             <button
               onClick={toggleTheme}
+              aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
               className="flex items-center justify-center w-10 h-10 transition rounded-full bg-brandPrimary/10 dark:bg-brandAccent/10 hover:scale-110"
             >
               {theme === "dark" ? (
@@ -224,6 +225,7 @@ export const Navbar = ({
             {/* MOBILE MENU */}
             <button
               onClick={onToggleMobileMenu}
+              aria-label="Open menu"
               className="p-2 rounded-lg lg:hidden text-brandDark dark:text-brandLight hover:bg-brandPrimary/10"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor">

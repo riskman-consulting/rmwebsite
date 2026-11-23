@@ -12,8 +12,8 @@
     { "source": "/industries/technology", "destination": "/industries", "permanent": true }
   ],
   "rewrites": [
-    { "source": "/blog/:slug", "destination": "/index.html" },
-    { "source": "/insights/:slug", "destination": "/index.html" },
+    { "source": "/blog/:slug", "destination": "/api/blog?slug=:slug" },
+    { "source": "/insights/:slug", "destination": "/api/blog?slug=:slug" },
     { "source": "/industries/:id", "destination": "/index.html" },
     { "source": "/careers/:jobId", "destination": "/index.html" },
     { "source": "/events/emerging-awards", "destination": "/index.html" },

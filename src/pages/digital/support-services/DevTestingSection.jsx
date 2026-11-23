@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ShieldCheck, Target, BarChart3, RefreshCw } from 'lucide-react';
-import devTestingImage from "../../../assets/images/digital/dev-testing.png";
+import devTestingImage from "../../../assets/images/digital/dev-testing.webp";
 
 const FeatureCard = ({ icon: Icon, title, description, className = "" }) => {
     return (

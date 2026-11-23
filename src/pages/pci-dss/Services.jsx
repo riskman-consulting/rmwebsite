@@ -1,12 +1,12 @@
 import React from 'react';
 import ServiceCard from './ServiceCard';
 
-import networkSecurityImg from "../../assets/images/pci-dss/network-security.png"
-import dataprotectImg from "../../assets/images/pci-dss/data-protect.png"
-import vulnerabilityImg from "../../assets/images/pci-dss/vulnerability.png"
-import accessControlImg from "../../assets/images/pci-dss/access-control.png"
-import monitoringImg from "../../assets/images/pci-dss/monitoring.png"
-import policyImg from "../../assets/images/pci-dss/policy-compliance.png"
+import networkSecurityImg from "../../assets/images/pci-dss/network-security.webp"
+import dataprotectImg from "../../assets/images/pci-dss/data-protect.webp"
+import vulnerabilityImg from "../../assets/images/pci-dss/vulnerability.webp"
+import accessControlImg from "../../assets/images/pci-dss/access-control.webp"
+import monitoringImg from "../../assets/images/pci-dss/monitoring.webp"
+import policyImg from "../../assets/images/pci-dss/policy-compliance.webp"
 
 
 

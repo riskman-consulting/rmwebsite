@@ -1,4 +1,4 @@
-import image1 from "../germany/prasen_pal_germany.jpeg"
+import image1 from "../germany/prasen_pal_germany.webp"
 import image2 from "../germany/prasen_pal_germany_1.jpeg"
 import image3 from "../germany/prasen_pal_germany_2.jpeg"
 

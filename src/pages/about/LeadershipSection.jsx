@@ -319,6 +319,27 @@ export default function LeadershipSection() {
 
   return (
     <section className="py-16 bg-surfaceLight dark:bg-surfaceDark font-sans">
+      {/* Header — same style as the "Meet the RiskMan Team" section */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        className="container mb-12 text-center"
+      >
+        <span className="inline-block px-4 py-1 mb-6 rounded-full bg-brandAccent/10 border border-brandAccent/20 text-brandAccent text-[10px] font-black uppercase tracking-[0.3em]">
+          Leadership
+        </span>
+
+        <h2 className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
+          Our <span className="text-brandGold">Leadership</span> Team
+        </h2>
+
+        <p className="max-w-2xl mx-auto text-[15px] leading-relaxed text-brandDark/70 dark:text-white/70">
+          Meet the visionary leaders driving RiskMan&apos;s mission forward
+        </p>
+      </motion.div>
+
       {loading && leadership.length === 0 ? (
         <div className="flex justify-center items-center py-20">
           <div className="w-8 h-8 border-4 border-brandPrimary border-t-transparent rounded-full animate-spin" />

@@ -2,7 +2,7 @@ import { ArrowRight, CheckCircle2, Star, Play, Shield, Lock } from 'lucide-react
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import soc2Img from "../../../assets/images/soc/soc2/soc2.png"
+import soc2Img from "../../../assets/images/soc/soc2/soc2.webp"
 
 const HeroSection = () => {
   const navigator = useNavigate();

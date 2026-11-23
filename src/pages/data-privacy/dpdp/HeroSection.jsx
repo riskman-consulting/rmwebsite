@@ -1,6 +1,6 @@
 import { ArrowLeft } from 'lucide-react'
 import React from 'react'
-import bg from "../../../assets/images/data-privacy/dpdp/hero.png"
+import bg from "../../../assets/images/data-privacy/dpdp/hero.webp"
 import { useNavigate } from 'react-router-dom'
 
 function HeroSection() {

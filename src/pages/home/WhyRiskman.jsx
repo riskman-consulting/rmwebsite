@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Globe, Briefcase, Zap, Shield } from "lucide-react";
 // Using 'bg' as imported from your assets
-import whyRiskMan from "../../assets/images/home/whyRiskMan/why.png";
+import whyRiskMan from "../../assets/images/home/whyRiskMan/why.webp";
 import { useHomePage } from "../../store/home";
 
 const Feature = ({ icon: Icon, title, description, isRight, delay }) => (

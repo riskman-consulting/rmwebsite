@@ -1,7 +1,7 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
-import businessImg from "../../../assets/images/digital/business-process-re-engineering.jpg"
+import businessImg from "../../../assets/images/digital/business-process-re-engineering.webp"
 
 
 const BusinessProcessReengineering = () => {

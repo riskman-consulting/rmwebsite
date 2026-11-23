@@ -18,11 +18,11 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-import heroBg from "../../assets/images/digital/strategies.png";
-import governanceImg from "../../assets/images/digital/governance.jpg";
-// import resourceDashboardImg from "../../assets/images/digital/risk-planning.jpg";
-import teamMeetingImg from "../../assets/images/digital/risk-planning.jpg";
-import riskDashboardImg from "../../assets/images/digital/risk-mitigation.jpg"
+import heroBg from "../../assets/images/digital/strategies.webp";
+import governanceImg from "../../assets/images/digital/governance.webp";
+// import resourceDashboardImg from "../../assets/images/digital/risk-planning.webp";
+import teamMeetingImg from "../../assets/images/digital/risk-planning.webp";
+import riskDashboardImg from "../../assets/images/digital/risk-mitigation.webp"
 
 const StrategicPMO = () => {
   return (

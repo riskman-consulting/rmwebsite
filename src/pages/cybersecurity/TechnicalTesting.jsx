@@ -138,7 +138,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 
-import testingImage from "../../assets/images/cybersecurity/testing-image.png"
+import testingImage from "../../assets/images/cybersecurity/testing-image.webp"
 
   const TechnicalTesting = () => {
   return (

@@ -2,7 +2,7 @@ import React from 'react'
 import { complianceCards } from './data'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import frameworkBg from '../../../assets/images/data-privacy/data-privacy/framework-bg.jpg'
+import frameworkBg from '../../../assets/images/data-privacy/data-privacy/framework-bg.webp'
 
 function FrameworkSection() {
   return (

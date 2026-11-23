@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import image from "../../../assets/images/cpa/quality-assurance/hero.png"
+import image from "../../../assets/images/cpa/quality-assurance/hero.webp"
 
 function HeroSection() {
   const navigate = useNavigate()

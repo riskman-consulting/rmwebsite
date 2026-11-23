@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import bg from "../../assets/images/bcp/bcp-overview.png"
+import bg from "../../assets/images/bcp/bcp-overview.webp"
 
 const BCPHero = () => {
   const navigator=useNavigate()

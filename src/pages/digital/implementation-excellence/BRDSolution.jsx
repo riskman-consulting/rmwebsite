@@ -1,7 +1,7 @@
 import React from 'react';
 import { FileText } from 'lucide-react';
 
-import brdImg from "../../../assets/images/digital/brd-solution-design.jpg";
+import brdImg from "../../../assets/images/digital/brd-solution-design.webp";
 
 
 

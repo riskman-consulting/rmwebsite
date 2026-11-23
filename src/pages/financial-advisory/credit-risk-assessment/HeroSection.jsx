@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
-import buildingImg from "../../../assets/images/financial-advisory/building.png"
+import buildingImg from "../../../assets/images/financial-advisory/building.webp"
 import { useNavigate } from 'react-router-dom';
 
 const Hero = () => { 

@@ -9,7 +9,7 @@ const grc = PRODUCTS[0];
 
 const FooterColumn = ({ title, children }) => (
   <div>
-    <h4 className="footer-heading">{title}</h4>
+    <h3 className="footer-heading">{title}</h3>
     <ul className="space-y-2.5">{children}</ul>
   </div>
 );
@@ -25,7 +25,7 @@ const Footer = () => {
             <Link to="/" className="flex w-[130px] h-[44px]">
               <img
                 className="object-contain w-full h-full dark:hidden"
-                src="/rm.png"
+                src="/rm-logo.webp"
     width="1500"
     height="400"
                 alt="RiskMan Consulting"

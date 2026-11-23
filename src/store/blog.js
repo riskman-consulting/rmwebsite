@@ -122,6 +122,11 @@ const POST_DETAIL_PROJECTION = `{
   }
 }`;
 
+// A post with a future publishedDate is scheduled: it stays hidden (lists and
+// direct URL) until that date/time arrives. Posts without a date show as before.
+const IS_PUBLISHED = `(!defined(publishedDate) || dateTime(publishedDate) <= dateTime(now()))`;
+const NEWEST_FIRST = `order(coalesce(publishedDate, _createdAt) desc)`;
+
 export const useBlogStore = create((set) => ({
 
   // ================= STATE =================
@@ -138,7 +143,7 @@ export const useBlogStore = create((set) => ({
       set({ loading: true, error: null });
 
       const data = await sanityClient.fetch(`
-        *[_type == "post"] | order(_createdAt desc) ${POST_LIST_PROJECTION}
+        *[_type == "post" && ${IS_PUBLISHED}] | ${NEWEST_FIRST} ${POST_LIST_PROJECTION}
       `);
 
       set({ posts: data || [], loading: false });
@@ -153,7 +158,7 @@ export const useBlogStore = create((set) => ({
       set({ loading: true, error: null, singlePost: null });
 
       const data = await sanityClient.fetch(
-        `*[_type == "post" && slug.current == $slug][0] ${POST_DETAIL_PROJECTION}`,
+        `*[_type == "post" && slug.current == $slug && ${IS_PUBLISHED}][0] ${POST_DETAIL_PROJECTION}`,
         { slug }
       );
 
@@ -169,7 +174,7 @@ export const useBlogStore = create((set) => ({
       set({ loading: true, error: null });
 
       const data = await sanityClient.fetch(
-        `*[_type == "post" && contentType == $contentType] | order(_createdAt desc) ${POST_LIST_PROJECTION}`,
+        `*[_type == "post" && contentType == $contentType && ${IS_PUBLISHED}] | ${NEWEST_FIRST} ${POST_LIST_PROJECTION}`,
         { contentType }
       );
 
@@ -185,7 +190,7 @@ export const useBlogStore = create((set) => ({
       set({ loading: true, error: null });
 
       const data = await sanityClient.fetch(
-        `*[_type == "post" && funnelStage == $funnelStage] | order(_createdAt desc) ${POST_LIST_PROJECTION}`,
+        `*[_type == "post" && funnelStage == $funnelStage && ${IS_PUBLISHED}] | ${NEWEST_FIRST} ${POST_LIST_PROJECTION}`,
         { funnelStage }
       );
 

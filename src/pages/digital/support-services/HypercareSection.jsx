@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { LifeBuoy, BarChart3, ShieldCheck, MessageSquare } from 'lucide-react';
-import hypercareImage from "../../../assets/images/digital/hypercare.png";
+import hypercareImage from "../../../assets/images/digital/hypercare.webp";
 
 const HypercareCard = ({ icon: Icon, title, description }) =>{
 

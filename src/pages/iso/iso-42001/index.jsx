@@ -17,11 +17,11 @@ import {
 } from 'lucide-react';
 
 // Import generated images
-import heroImage from "../../../assets/images/iso/hero-ai.png"
-import governanceImage from '../../../assets/images/iso/governance-meeting.png';
-import riskImage from '../../../assets/images/iso/risk-security.png';
-import dataImage from '../../../assets/images/iso/data-charts.png';
-import innovationImage from '../../../assets/images/iso/innovation-future.png';
+import heroImage from "../../../assets/images/iso/hero-ai.webp"
+import governanceImage from '../../../assets/images/iso/governance-meeting.webp';
+import riskImage from '../../../assets/images/iso/risk-security.webp';
+import dataImage from '../../../assets/images/iso/data-charts.webp';
+import innovationImage from '../../../assets/images/iso/innovation-future.webp';
 import { useNavigate } from 'react-router-dom';
 
 const ISO42001 = () => {

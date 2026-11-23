@@ -1,5 +1,5 @@
 import React from "react";
-import bg from "../../assets/images/rbia/empower.png";
+import bg from "../../assets/images/rbia/empower.webp";
 import { useNavigate } from "react-router-dom";
 
 const RBIAHero = () => {

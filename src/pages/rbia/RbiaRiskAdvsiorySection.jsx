@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import rbiaRiskAdvisoryImage from "../../assets/images/rbia/rbia-risk-advisory.png";
+import rbiaRiskAdvisoryImage from "../../assets/images/rbia/rbia-risk-advisory.webp";
 
 export default function RbiaRiskAdvisorySection() {
   return (

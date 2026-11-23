@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ExternalLink, Handshake, ArrowUpRight } from "lucide-react";
 
-import integritatImg from "../../assets/images/logo/integritat.png";
+import integritatImg from "../../assets/images/logo/integritat.webp";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },

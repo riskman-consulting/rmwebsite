@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { RefreshCw, Target, BarChart3, ShieldCheck } from 'lucide-react';
-import continuousImpImage from "../../../assets/images/digital/continuous-improvement.png";
+import continuousImpImage from "../../../assets/images/digital/continuous-improvement.webp";
 
 const ImprovementItem = ({ icon: Icon, title, description, index }) => (
   <motion.div 

@@ -1,7 +1,7 @@
 import { Scale } from 'lucide-react'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import image from "../../../assets/images/cpa/financial-audits/hero.png"
+import image from "../../../assets/images/cpa/financial-audits/hero.webp"
 
 function HeroSection() {
   const navigate = useNavigate()

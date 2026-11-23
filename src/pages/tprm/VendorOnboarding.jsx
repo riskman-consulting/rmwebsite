@@ -102,7 +102,7 @@
 
 import React from 'react';
 import { ClipboardCheck, Award, GitPullRequest, AlertTriangle } from 'lucide-react';
-import onboardingImg from "../../assets/images/tprm/onboarding.png"
+import onboardingImg from "../../assets/images/tprm/onboarding.webp"
 
 const Onboarding = () => {
   const steps = [

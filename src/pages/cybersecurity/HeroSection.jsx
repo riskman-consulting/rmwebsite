@@ -22,7 +22,7 @@ import {
 } from 'lucide-react';
 
 
-import heroImage from "../../assets/images/cybersecurity/herosection-image.png";
+import heroImage from "../../assets/images/cybersecurity/herosection-image.webp";
 
 const HeroSection = () => {
   return (

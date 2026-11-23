@@ -1,5 +1,5 @@
 import React from 'react';
-import bg from "../../assets/images/sox/hero.png";
+import bg from "../../assets/images/sox/hero.webp";
 import { Link } from 'react-router-dom';
 
 function HeroSection() {

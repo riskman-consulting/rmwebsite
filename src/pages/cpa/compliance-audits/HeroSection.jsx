@@ -1,7 +1,7 @@
 import { ArrowLeft } from 'lucide-react'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import bg from '../../../assets/images/cpa/compliance-audits/hero.png'
+import bg from '../../../assets/images/cpa/compliance-audits/hero.webp'
 
 function HeroSection() {
   const navigate = useNavigate()
