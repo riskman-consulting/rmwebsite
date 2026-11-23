@@ -217,7 +217,7 @@ const StrategicSection = () => {
  
           {/* LEFT */}
           <div className="space-y-8 lg:col-span-5">
-            <motion.h2
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -226,7 +226,7 @@ const StrategicSection = () => {
               Strategic Risk
               <br />
               <span className="text-brandGold">Management</span> Services
-            </motion.h2>
+            </motion.h1>
  
             <div className="w-20 h-1.5 bg-brandGold rounded-full" />
  

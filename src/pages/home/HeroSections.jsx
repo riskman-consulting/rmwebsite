@@ -186,10 +186,9 @@ export default function HeroSection() {
                 </div>
 
                 {/* Two-Line Heading */}
-                {/* One <h1> per page: every slide is in the DOM (only one is
-                    visible), so the first slide carries the h1 and the rest
-                    use h2 with identical styling. */}
-                <SlideHeading level={index === 0 ? "h1" : "h2"} className="mb-5 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-[1.15]">
+                {/* All hero slides use h2; the page's single <h1> is the
+                    "Strategic Risk Management Services" heading in Features. */}
+                <SlideHeading level="h2" className="mb-5 text-[1.75rem] md:text-4xl lg:text-5xl font-bold leading-[1.15]">
                   <span className="block text-brandLight mb-2">
                     {slide.titleLine1}
                   </span>
