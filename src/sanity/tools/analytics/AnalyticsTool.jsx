@@ -48,6 +48,48 @@ const countryName = (code) => {
   }
 }
 
+const languageNames = typeof Intl.DisplayNames === 'function' ? new Intl.DisplayNames(['en'], { type: 'language' }) : null
+const languageName = (code) => {
+  try {
+    return languageNames?.of(code) || code
+  } catch {
+    return code
+  }
+}
+
+/** "Mumbai|IN" (as api/track.js stores it) → "Mumbai, India". */
+const cityLabel = (value) => {
+  const [city, country] = String(value).split('|')
+  return country ? `${city}, ${countryName(country)}` : city
+}
+
+const percent = (part, whole) => (whole ? Math.round((part / whole) * 100) : 0)
+
+/** 95 → "1m 35s" */
+const duration = (seconds) => {
+  const s = Math.round(seconds || 0)
+  return s < 60 ? `${s}s` : `${Math.floor(s / 60)}m ${String(s % 60).padStart(2, '0')}s`
+}
+
+// Same edges as TIME_EDGES in api/track.js
+const TIME_BUCKETS = [
+  ['t_le_10', 'Under 10 seconds'],
+  ['t_le_30', '10–30 seconds'],
+  ['t_le_60', '30 seconds – 1 minute'],
+  ['t_le_180', '1–3 minutes'],
+  ['t_le_600', '3–10 minutes'],
+  ['t_over', 'Over 10 minutes'],
+]
+const SCROLL_BUCKETS = [
+  ['q_0', 'Under 25%'],
+  ['q_25', '25–49%'],
+  ['q_50', '50–74%'],
+  ['q_75', '75–99%'],
+  ['q_100', 'Bottom of the page'],
+]
+/** Rows in a fixed order (for buckets), keeping empty ones so the scale reads right. */
+const orderedRows = (map, buckets) => buckets.map(([key, label]) => ({ label, value: map[key] || 0 }))
+
 const number = (n) => new Intl.NumberFormat('en-IN').format(Math.round(n || 0))
 const shortDate = (key) => new Date(`${key}T00:00:00`).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })
 const dateTime = (iso) => new Date(iso).toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' })
@@ -159,6 +201,60 @@ const RankList = ({ rows, color, empty = 'No data yet' }) => {
             <div style={{ width: `${(row.value / max) * 100}%`, height: '100%', borderRadius: 2, background: color }} />
           </div>
         </Stack>
+      ))}
+    </Stack>
+  )
+}
+
+/** Bucket list: every bucket shown, bars against the largest. */
+const BucketList = ({ rows, color, empty = 'No data yet' }) =>
+  rows.some((r) => r.value) ? (
+    <RankList rows={rows} color={color} />
+  ) : (
+    <Text size={1} muted>
+      {empty}
+    </Text>
+  )
+
+/** Per page: how long people stay and how many reach the end. */
+const EngagementTable = ({ rows }) => {
+  if (!rows.length)
+    return (
+      <Text size={1} muted>
+        No data yet
+      </Text>
+    )
+  return (
+    <Stack space={3}>
+      <Flex gap={3}>
+        <Text size={1} muted style={{ flex: 1 }}>
+          Page
+        </Text>
+        <Text size={1} muted style={{ width: 90, textAlign: 'right' }}>
+          Avg. time
+        </Text>
+        <Text size={1} muted style={{ width: 110, textAlign: 'right' }}>
+          Read to 75%+
+        </Text>
+        <Text size={1} muted style={{ width: 70, textAlign: 'right' }}>
+          Views
+        </Text>
+      </Flex>
+      {rows.map((row) => (
+        <Flex key={row.label} gap={3}>
+          <Text size={1} textOverflow="ellipsis" style={{ flex: 1, minWidth: 0 }}>
+            {row.label}
+          </Text>
+          <Text size={1} weight="semibold" style={{ width: 90, textAlign: 'right' }}>
+            {duration(row.avg)}
+          </Text>
+          <Text size={1} style={{ width: 110, textAlign: 'right' }}>
+            {row.deep}%
+          </Text>
+          <Text size={1} muted style={{ width: 70, textAlign: 'right' }}>
+            {number(row.reads)}
+          </Text>
+        </Flex>
       ))}
     </Stack>
   )
@@ -304,6 +400,51 @@ const Overview = ({ view, range, color }) => {
             </Text>
           }
         />
+        <StatTile
+          label="Bounce rate"
+          value={view.bounce === null ? '—' : `${view.bounce}%`}
+          sub={
+            <Text size={1} muted>
+              Visits that saw only one page
+            </Text>
+          }
+        />
+        <StatTile
+          label="Pages per visit"
+          value={now.sessions ? (now.views / now.sessions).toFixed(1) : '—'}
+          sub={
+            <Text size={1} muted>
+              Page views ÷ visits
+            </Text>
+          }
+        />
+        <StatTile
+          label="Avg. time on a page"
+          value={view.avgTime ? duration(view.avgTime) : '—'}
+          sub={
+            <Text size={1} muted>
+              While the tab was open and visible
+            </Text>
+          }
+        />
+        <StatTile
+          label="Returning visitors"
+          value={number(now.returning)}
+          sub={
+            <Text size={1} muted>
+              {percent(now.returning, now.visitors)}% of visitors had come before
+            </Text>
+          }
+        />
+        <StatTile
+          label="Forms sent"
+          value={number(view.forms.contact + view.forms.jobs)}
+          sub={
+            <Text size={1} muted>
+              {number(view.forms.contact)} contact · {number(view.forms.jobs)} job applications
+            </Text>
+          }
+        />
       </Grid>
 
       <Panel
@@ -361,6 +502,46 @@ const Overview = ({ view, range, color }) => {
         </Panel>
       </Grid>
 
+      <Grid columns={[1, 1, 3]} gap={3}>
+        <Panel title="Referring sites" hint="Visits — the site a visit came from (domain only)">
+          <RankList rows={view.referrers} color={color} empty="No visits from other sites yet" />
+        </Panel>
+        <Panel title="Campaigns" hint="Visits from links with utm_source / utm_medium / utm_campaign">
+          <RankList rows={view.campaigns} color={color} empty="No campaign links used yet" />
+        </Panel>
+        <Panel title="Actions" hint="Forms sent and contact links clicked">
+          <RankList rows={view.events} color={color} empty="No actions yet" />
+        </Panel>
+      </Grid>
+
+      <Grid columns={[1, 1, 3]} gap={3}>
+        <Panel title="Cities" hint="Visitors — approximate, from the network">
+          <RankList rows={view.cities} color={color} />
+        </Panel>
+        <Panel title="Browsers" hint="Visitors">
+          <RankList rows={view.browsers} color={color} />
+        </Panel>
+        <Panel title="Operating systems" hint="Visitors">
+          <RankList rows={view.systems} color={color} />
+        </Panel>
+      </Grid>
+
+      <Grid columns={[1, 1, 3]} gap={3}>
+        <Panel title="Time on a page" hint="Page views, by time spent">
+          <BucketList rows={view.engageTime} color={color} />
+        </Panel>
+        <Panel title="How far people scroll" hint="Page views, by deepest point reached">
+          <BucketList rows={view.scrollDepth} color={color} />
+        </Panel>
+        <Panel title="Languages" hint="Visitors — the browser's language">
+          <RankList rows={view.languages} color={color} />
+        </Panel>
+      </Grid>
+
+      <Panel title="Engagement by page" hint="Most viewed pages — average time spent and the share of views that scrolled to 75% or more">
+        <EngagementTable rows={view.engagement} />
+      </Panel>
+
       <Grid columns={[1, 1, 2]} gap={3}>
         <Panel title="Busiest hours" hint="Page views by hour of the day, India time">
           <BarChart
@@ -379,9 +560,14 @@ const Overview = ({ view, range, color }) => {
         </Panel>
       </Grid>
 
-      <Panel title="Entry pages" hint="The first page of each visit">
-        <RankList rows={view.landings} color={color} />
-      </Panel>
+      <Grid columns={[1, 1, 2]} gap={3}>
+        <Panel title="Entry pages" hint="The first page of each visit">
+          <RankList rows={view.landings} color={color} />
+        </Panel>
+        <Panel title="Exit pages" hint="The last page of each visit — where people leave">
+          <RankList rows={view.exits} color={color} />
+        </Panel>
+      </Grid>
     </Stack>
   )
 }
@@ -1082,13 +1268,28 @@ export function AnalyticsTool() {
     const paths = Object.assign({}, ...current.map((d) => d.paths || {}))
     const pathLabel = (key) => paths[key] || stripPrefix(key)
 
+    const labels = Object.assign({}, ...current.map((d) => d.labels || {}))
+    const labelOf = (key) => labels[key] || stripPrefix(key)
+
     const totals = (set) => ({
       views: sumField(set, 'views'),
       visitors: sumField(set, 'visitors'),
       sessions: sumField(set, 'sessions'),
+      engaged: sumField(set, 'engagedSessions'),
+      returning: sumField(set, 'returning'),
       search: set.reduce((n, d) => n + (d.sources?.s_Search || 0), 0),
     })
     const hourTotals = sumMaps(current, 'hours')
+    const events = sumMaps(current, 'events')
+
+    // Engagement only exists for days after it was added; average over those
+    const pageTime = sumMaps(current, 'pageTime')
+    const pageReads = sumMaps(current, 'pageReads')
+    const pageDeep = sumMaps(current, 'pageDeep')
+    const reads = Object.values(pageReads).reduce((a, b) => a + b, 0)
+    const time = Object.values(pageTime).reduce((a, b) => a + b, 0)
+    // Bounce rate only from days that record it, so older days don't read as 100%
+    const engagedDays = current.filter((d) => d.engagedSessions !== undefined)
 
     return {
       days,
@@ -1103,6 +1304,32 @@ export function AnalyticsTool() {
       sources: toRows(sumMaps(current, 'sources'), stripPrefix),
       devices: toRows(sumMaps(current, 'devices'), stripPrefix),
       countries: toRows(sumMaps(current, 'countries'), (key) => countryName(key.replace(/^c_/, ''))),
+      cities: toRows(sumMaps(current, 'cities'), (key) => cityLabel(labelOf(key)), 10),
+      browsers: toRows(sumMaps(current, 'browsers'), stripPrefix),
+      systems: toRows(sumMaps(current, 'systems'), stripPrefix),
+      languages: toRows(sumMaps(current, 'languages'), (key) => languageName(key.replace(/^l_/, ''))),
+      referrers: toRows(sumMaps(current, 'referrers'), labelOf, 10),
+      campaigns: toRows(sumMaps(current, 'campaigns'), labelOf, 10),
+      events: toRows(events, stripPrefix, 10),
+      forms: { contact: events['e_Contact_form_sent'] || 0, jobs: events['e_Job_application_sent'] || 0 },
+      exits: toRows(sumMaps(current, 'exits'), pathLabel, 8),
+      engageTime: orderedRows(sumMaps(current, 'engageTime'), TIME_BUCKETS),
+      scrollDepth: orderedRows(sumMaps(current, 'scrollDepth'), SCROLL_BUCKETS),
+      avgTime: reads ? time / reads : 0,
+      bounce: (() => {
+        const sessions = sumField(engagedDays, 'sessions')
+        return sessions ? 100 - percent(sumField(engagedDays, 'engagedSessions'), sessions) : null
+      })(),
+      engagement: Object.entries(pageReads)
+        .filter(([, n]) => n > 0)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 10)
+        .map(([key, n]) => ({
+          label: pathLabel(key),
+          reads: n,
+          avg: (pageTime[key] || 0) / n,
+          deep: percent(pageDeep[key] || 0, n),
+        })),
       hours: Array.from({ length: 24 }, (_, h) => {
         const key = String(h).padStart(2, '0')
         return { key, value: hourTotals[`h_${key}`] || 0 }

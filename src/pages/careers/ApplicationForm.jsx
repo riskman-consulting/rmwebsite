@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaUpload, FaCheckCircle, FaFilePdf } from "react-icons/fa";
+import { trackEvent } from "../../components/common/PageViewTracker";
 
 const ZOHO_URL = import.meta.env.VITE_ZOHO_CAREER_APPLICATION;
 
@@ -76,6 +77,8 @@ export default function ApplicationForm({ jobTitle, renderSuccessAction }) {
       });
 
       setOk(true);
+      // Counts that a form was sent — nothing that was typed
+      trackEvent("Job application sent");
     } catch (err) {
       console.error("Zoho submit failed", err);
     } finally {
