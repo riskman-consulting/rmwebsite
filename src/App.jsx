@@ -24,6 +24,7 @@ import './index.css'
 const ConcurrentAuditPage = lazyPage(() => import('./pages/concurrent-audit'))
 const PoliciesPage = lazyPage(() => import('./pages/policies'))
 
+
 import { Toaster } from 'react-hot-toast'
 import ScrollToTop from './components/common/ScrollToTop'
 import PageViewTracker from './components/common/PageViewTracker'
