@@ -137,6 +137,8 @@ const PCIDSSPage = lazyPage(() => import('./pages/pci-dss'))
 const ForensicsInvestigationPage = lazyPage(() => import('./pages/forensics-investigation'))
 // Web Analytics
 import {Analytics} from "@vercel/analytics/react"
+// Speed Insights (real-visitor Core Web Vitals in the Vercel dashboard)
+import { SpeedInsights } from "@vercel/speed-insights/react"
 //CPA
 const CPAPage = lazyPage(() => import('./pages/cpa/cpa'))
 const FinancialStatementPage = lazyPage(() => import('./pages/cpa/financial-audits'))
@@ -346,7 +348,8 @@ function SiteShell() {
         <Suspense fallback={<div className="min-h-screen" />}>
           {ROUTES}
         </Suspense>
-        <Analytics /> 
+        <Analytics />
+        <SpeedInsights />
       </main>
 
       <Footer />

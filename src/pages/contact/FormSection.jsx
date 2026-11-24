@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { trackEvent } from "../../components/common/PageViewTracker";
 
 const ZOHO_URL =  import.meta.env.VITE_ZOHO_API_URL
 
@@ -91,6 +92,8 @@ export default function ContactForm() {
       });
 
       setOk(true);
+      // Counts that a form was sent — nothing that was typed
+      trackEvent("Contact form sent");
       setForm({
         Name_First: "",
         Name_Last: "",
