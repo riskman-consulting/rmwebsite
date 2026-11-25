@@ -6,7 +6,7 @@ import bg2 from "../../assets/images/hero-section/events/bg2.webp"
 import bg3 from "../../assets/images/hero-section/events/bg3.webp"
 import bg4 from "../../assets/images/hero-section/events/bg4.webp"
 import bg5 from "../../assets/images/hero-section/events/bg5.webp"
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FOUNDING_YEAR, getCompanyYearsPhrase, getCurrentYear } from "../../utils/companyAge";
 
 
@@ -93,7 +93,6 @@ export default function HeroSection() {
   const [currentBg, setCurrentBg] = useState(0);
   const { scrollY } = useScroll();
   const bgY = useTransform(scrollY, [0, 1000], [0, 300]);
-  const navigator = useNavigate()
 
 
   const milestones = [
@@ -199,13 +198,13 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="flex flex-wrap justify-center gap-6 mb-20"
         >
-          <button onClick={()=>navigator("/events/past-events")} className="px-10 py-4 rounded-xl bg-gradient-to-r from-brandGold to-brandAccent text-brandDark font-black tracking-widest uppercase shadow-[0_10px_30px_rgba(255,184,0,0.3)] hover:scale-105 transition-transform duration-300 border border-white/20">
+          <Link to="/events/past-events" className="px-10 py-4 rounded-xl bg-gradient-to-r from-brandGold to-brandAccent text-brandDark font-black tracking-widest uppercase shadow-[0_10px_30px_rgba(255,184,0,0.3)] hover:scale-105 transition-transform duration-300 border border-white/20">
             Explore Journey
-          </button>
+          </Link>
 
-          <button onClick={()=>navigator("/events/media-coverage")} className="px-10 py-4 font-bold tracking-widest uppercase transition-colors duration-300 border shadow-lg rounded-xl bg-brandDark/90 dark:bg-surfaceDark/80 border-brandGold text-brandGold hover:bg-brandDark">
+          <Link to="/events/media-coverage" className="px-10 py-4 font-bold tracking-widest uppercase transition-colors duration-300 border shadow-lg rounded-xl bg-brandDark/90 dark:bg-surfaceDark/80 border-brandGold text-brandGold hover:bg-brandDark">
             View Gallery
-          </button>
+          </Link>
         </motion.div>
 
         {/* Stats Grid */}

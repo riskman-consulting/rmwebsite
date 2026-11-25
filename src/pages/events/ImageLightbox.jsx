@@ -3,6 +3,7 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function ImageLightbox({
   images,
+  title = "Event photo",
   currentIndex,
   onClose,
   onNavigate
@@ -29,6 +30,7 @@ export default function ImageLightbox({
       {/* Close */}
       <button
         onClick={onClose}
+        aria-label="Close"
         className="absolute text-white top-6 right-6 hover:opacity-70"
       >
         <X size={28} />
@@ -37,6 +39,7 @@ export default function ImageLightbox({
       {/* Prev */}
       <button
         onClick={() => onNavigate("prev")}
+        aria-label="Previous photo"
         className="absolute text-white left-4 md:left-10 hover:opacity-70"
       >
         <ChevronLeft size={40} />
@@ -45,7 +48,7 @@ export default function ImageLightbox({
       {/* Image */}
       <img
         src={images[currentIndex]}
-        alt=""
+        alt={`${title}, photo ${currentIndex + 1} of ${images.length}`}
         className="max-h-[90vh] max-w-[90vw] object-contain rounded-xl shadow-2xl"
       />
 

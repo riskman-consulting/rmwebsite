@@ -102,7 +102,8 @@ const IIALogo = () => (
   </div>
 )
 
-const EventCard = ({ event, index }) => (
+// headingLevel: "h2" when the card sits directly under the page's h1
+const EventCard = ({ event, index, headingLevel: Title = "h3" }) => (
   <motion.div
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -125,9 +126,9 @@ const EventCard = ({ event, index }) => (
       </div>
 
       {/* Title */}
-      <h3 className="mb-5 text-[15px] md:text-[17px] font-black leading-tight transition-colors duration-300 text-slate-900 dark:text-white group-hover:text-brandGold">
+      <Title className="mb-5 text-[15px] md:text-[17px] font-black leading-tight transition-colors duration-300 text-slate-900 dark:text-white group-hover:text-brandGold">
         {event.title}
-      </h3>
+      </Title>
 
       {/* Date & Location */}
       <div className="space-y-3 mb-6">
@@ -261,6 +262,7 @@ const UpcomingEventsSection = ({ isPage = false }) => {
               key={event._id}
               event={event}
               index={idx}
+              headingLevel={isPage ? "h2" : "h3"}
             />
           ))}
         </div>

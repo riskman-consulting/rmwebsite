@@ -9,7 +9,9 @@ import { PortableText } from "@portabletext/react";
 const builder = imageUrlBuilder(sanityClient);
 const urlFor = (source) => builder.image(source);
 
-export default function EventCard({ event }) {
+// headingLevel: "h2" when the card sits directly under the page's h1
+export default function EventCard({ event, headingLevel = "h3" }) {
+  const Title = headingLevel;
   
 
   // ✅ Correct gallery mapping
@@ -65,6 +67,10 @@ export default function EventCard({ event }) {
             <img
               src={activeImg}
               alt={event.title}
+              width="400"
+              height="208"
+              loading="lazy"
+              decoding="async"
               onClick={() => openLightbox(0)}
               className="object-cover object-top w-full h-full transition-transform duration-700 cursor-zoom-in group-hover:scale-110"
             />
@@ -77,6 +83,7 @@ export default function EventCard({ event }) {
 
             <button
               onClick={() => scroll("left")}
+              aria-label="Scroll photos left"
               className="absolute left-0 z-10 p-1 bg-white/80 dark:bg-slate-800/80"
             >
               <ChevronLeft size={16} />
@@ -100,7 +107,11 @@ export default function EventCard({ event }) {
                   <img
                     src={img}
                     className="object-cover w-full h-full"
-                    alt=""
+                    alt={`${event.title}, photo ${i + 1}`}
+                    width="48"
+                    height="36"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </button>
               ))}
@@ -117,6 +128,7 @@ export default function EventCard({ event }) {
 
             <button
               onClick={() => scroll("right")}
+              aria-label="Scroll photos right"
               className="absolute right-0 z-10 p-1 bg-white/80 dark:bg-slate-800/80"
             >
               <ChevronRight size={16} />
@@ -135,9 +147,9 @@ export default function EventCard({ event }) {
             </span>
           </div>
 
-          <h3 className="mb-2 text-base font-bold text-slate-900 dark:text-white">
+          <Title className="mb-2 text-base font-bold text-slate-900 dark:text-white">
             {event.title}
-          </h3>
+          </Title>
 
           {/* Portable Text Description */}
           <div className="text-xs text-slate-600 dark:text-slate-400 line-clamp-2 [&_p]:text-xs [&_p]:leading-relaxed">
@@ -150,6 +162,7 @@ export default function EventCard({ event }) {
       {lightboxOpen && (
         <ImageLightbox
           images={gallery}
+          title={event.title}
           currentIndex={currentIndex}
           onClose={() => setLightboxOpen(false)}
           onNavigate={navigate}

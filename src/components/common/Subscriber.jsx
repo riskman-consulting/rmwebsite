@@ -19,9 +19,9 @@ export default function InsightsSubscribe() {
   return (
     <div className="grid w-full grid-cols-1 gap-4 lg:grid-cols-12 lg:items-center lg:gap-10">
       <div className="lg:col-span-5">
-        <h3 className="text-[15px] font-semibold text-brandDark dark:text-white">
+        <p className="text-[15px] font-semibold text-brandDark dark:text-white">
           Get our newsletter
-        </h3>
+        </p>
         <p className="mt-1 text-sm leading-relaxed text-brandNavy/70 dark:text-brandLight/60">
           Risk alerts and compliance updates, once in a while. No spam.
         </p>

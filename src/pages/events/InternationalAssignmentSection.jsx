@@ -256,7 +256,7 @@ export default function InternationalAssignments() {
               >
                 <img
                   src={active.images[0]}
-                  alt=""
+                  alt={`${active.title}, ${active.country}`}
                   className="object-cover w-full h-full transition-transform duration-700 hover:scale-110"
                 />
 
@@ -338,7 +338,8 @@ function ImageGalleryModal({ images, onClose }) {
               >
                 <img
                   src={img}
-                  alt=""
+                  alt={`International assignment photo ${i + 1}`}
+                  loading="lazy"
                   className="absolute inset-0 object-cover w-full h-full transition-transform duration-500 hover:scale-110"
                 />
               </div>

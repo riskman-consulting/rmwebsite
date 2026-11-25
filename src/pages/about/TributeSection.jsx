@@ -12,7 +12,8 @@ export default function TributeSection() {
           <img
             src="https://res.cloudinary.com/dwbcjcqdt/image/upload/v1768904398/prabir-sengupta_kopgl7.webp"
             className="relative h-[420px] w-full object-cover rounded-2xl grayscale hover:grayscale-0 transition"
-            alt=""
+            alt="Prabir Sen Gupta"
+            loading="lazy"
           />
         </div>
 

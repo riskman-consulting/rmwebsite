@@ -75,9 +75,9 @@ export const MegaMenu = ({ menuKey }) => {
             className="transition-opacity duration-300 max-w-[190px] xl:max-w-[260px]"
           >
             {section.title && (
-              <h3 className="mb-4 text-xs font-black tracking-widest uppercase text-brandPrimary/80 dark:text-brandGold/80">
+              <p className="mb-4 text-xs font-black tracking-widest uppercase text-brandPrimary/80 dark:text-brandGold/80">
                 {section.title}
-              </h3>
+              </p>
             )}
 
             <ul className="space-y-3">

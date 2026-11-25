@@ -82,7 +82,8 @@ const EventsStorySection = ({ events }) => {
                     >
                       <img
                         src={img}
-                        alt=""
+                        alt={`${event.title}, photo ${i + 1}`}
+                        loading="lazy"
                         className="object-cover w-full h-full"
                       />
                     </motion.div>
