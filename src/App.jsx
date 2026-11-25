@@ -2,9 +2,7 @@ import { BrowserRouter as Router, StaticRouter, Routes, Route, Navigate, useLoca
 import { useState, useEffect, lazy, Suspense } from 'react'
 import { matchRoutes, createRoutesFromChildren } from 'react-router-dom'
 import { lazyPage } from './utils/lazyPage'
-import Header from './components/layout/Header'
 
-import Home from './pages/home/Home'
 // import ServicesList from './pages/services/ServicesList'
 const IndustriesList = lazyPage(() => import('./pages/industries/IndustriesList'))
 const IndustriesTemplate = lazyPage(() => import('./templates/IndustriesTemplate'))
@@ -16,6 +14,8 @@ const JobDetail = lazyPage(() => import('./pages/careers/JobDetail'))
 import Footer from './components/footer-temp'
 const BlogList = lazyPage(() => import('./pages/blogs/BlogList'))
 const BlogTemplate = lazyPage(() => import('./templates/BlogTemplate'))
+// Lazy like every other page, so its sections are not in the bundle every page loads
+const Home = lazyPage(() => import('./pages/home/Home'))
 const PrivacyPolicy = lazyPage(() => import('./pages/resources/Privacy'))
 const Terms = lazyPage(() => import('./pages/resources/Terms'))
 const BlogSingle = lazyPage(() => import('./pages/blogs/BlogSingle'))
@@ -30,7 +30,6 @@ import ScrollToTop from './components/common/ScrollToTop'
 import PageViewTracker from './components/common/PageViewTracker'
 // Studio is a large bundle - keep it out of the main site chunk.
 const StudioPage = lazy(() => import('./pages/studio/StudioPage'))
-import ThemeToggle from './components/common/ThemeToggle'
 // import Events from './temp/MainEvent'
 const Events = lazyPage(() => import('./pages/events/Events'))
 const ServicePage = lazyPage(() => import('./pages/services/Services'))
@@ -111,6 +110,7 @@ const GrcPolicy = lazyPage(() => import('./pages/products/riskman-grc/policy'))
 const GrcActionTakenReport = lazyPage(() => import('./pages/products/riskman-grc/action-taken-report'))
 const GrcEnterpriseRiskManagement = lazyPage(() => import('./pages/products/riskman-grc/enterprise-risk-management'))
 const GrcGlobalSox = lazyPage(() => import('./pages/products/riskman-grc/global-sox'))
+const GrcGias = lazyPage(() => import('./pages/products/riskman-grc/gias'))
 const FAASLayout = lazyPage(() => import('./pages/faas/Layout'))
 const FAASPage = lazyPage(() => import('./pages/faas/FAASPage'))
 const FAASManagedServices = lazyPage(() => import('./pages/faas/managed-services'))
@@ -146,7 +146,6 @@ const FinancialStatementPage = lazyPage(() => import('./pages/cpa/financial-audi
 const InternalControlReview = lazyPage(() => import('./pages/cpa/internal-control'))
 const ComplianceAudit = lazyPage(() => import('./pages/cpa/compliance-audits'))
 const QualityAssurancePage = lazyPage(() => import('./pages/cpa/quality-assurance'))
-import { useHomePage } from './store/home'
 const NotFound = lazyPage(() => import('./pages/NotFound'))
  
 
@@ -220,6 +219,7 @@ const ROUTES = (
             <Route path="riskman-grc/action-taken-report" element={<GrcActionTakenReport />} />
             <Route path="riskman-grc/enterprise-risk-management" element={<GrcEnterpriseRiskManagement />} />
             <Route path="riskman-grc/global-sox" element={<GrcGlobalSox />} />
+            <Route path="riskman-grc/gias" element={<GrcGias />} />
           </Route>
 
           {/* Financial Accounting and Advisory Services (FAAS) Nested Routes */}
@@ -364,7 +364,6 @@ function App({ location }) {
   const [theme, setTheme] = useState(() =>
     (typeof window !== "undefined" && localStorage.getItem("theme")) || "light"
   );
-  const {heroSlides,fetchHomePage} = useHomePage()
 
   // Apply theme to document
   useEffect(() => {

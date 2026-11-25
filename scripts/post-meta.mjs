@@ -206,6 +206,18 @@ export function injectMeta(template, headHtml, bodyHtml = null) {
   ];
   for (const re of tagsToStrip) html = html.replace(re, "");
   html = html.replace(/<\/head>/i, `${headHtml}\n  </head>`);
+  // The page's priority image (the LCP image, marked fetchpriority="high") is
+  // preloaded from the top of <head>, so it downloads alongside the CSS and
+  // paints from the HTML before the JavaScript re-renders the page.
+  const lcpImage = bodyHtml?.match(/<img\b[^>]*\bfetchpriority="high"[^>]*>/i)?.[0];
+  const lcpSrc = lcpImage?.match(/\ssrc="([^"]+)"/)?.[1];
+  if (lcpSrc) {
+    const preload = `<link rel="preload" as="image" href="${lcpSrc}" fetchpriority="high" />`;
+    // After charset and viewport, which must come first
+    html = /<meta\s+name="viewport"[^>]*>/i.test(html)
+      ? html.replace(/<meta\s+name="viewport"[^>]*>/i, (m) => `${m}\n    ${preload}`)
+      : html.replace(/<head>/i, () => `<head>\n    ${preload}`);
+  }
   // A function replacement, so "$&" or "$1" in page text is not read as a pattern
   if (bodyHtml) html = html.replace('<div id="root"></div>', () => `<div id="root">${bodyHtml}</div>`);
   return html;

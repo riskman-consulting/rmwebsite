@@ -38,6 +38,7 @@ import {
   MessagesSquare,
   Send,
   CalendarCheck,
+  BadgeCheck,
 } from "lucide-react";
 
 // Product screenshots. Only the modules with artwork carry a `screens` array —
@@ -85,7 +86,7 @@ export const PRODUCTS = [
     seoTitle: "RiskMan GRC: GRC Software for Risk, Audit & Compliance",
     // Search snippet. Written for the query, not cut from `summary`.
     seoDescription:
-      "GRC software that connects enterprise risk management, internal audit, control testing, SOX compliance, policy management and audit remediation on one platform.",
+      "GRC software that connects enterprise risk management, internal audit, control testing, SOX compliance, policy management, audit remediation and IIA Standards conformance on one platform.",
     // Second line of the h1 — names the category for people who search for it
     // generically rather than by product name.
     headingSuffix: "Governance, Risk and Compliance (GRC) Software",
@@ -112,7 +113,7 @@ export const PRODUCTS = [
     faqs: [
       {
         q: "What is GRC software?",
-        a: "GRC (governance, risk and compliance) software brings the records behind governance, risk management and compliance into one system: policies and procedures, the risk register, internal controls and their testing, internal audits, and the actions that follow from them. RiskMan GRC holds these in six connected modules that share your entities, processes, users and approval configuration.",
+        a: "GRC (governance, risk and compliance) software brings the records behind governance, risk management and compliance into one system: policies and procedures, the risk register, internal controls and their testing, internal audits, and the actions that follow from them. RiskMan GRC holds these in seven connected modules that share your entities, processes, users and approval configuration.",
       },
       {
         q: "What does governance, risk and compliance mean?",
@@ -120,7 +121,7 @@ export const PRODUCTS = [
       },
       {
         q: "Which modules are included in RiskMan GRC?",
-        a: "Six: Enterprise Risk Management (risk register, risk scoring and mitigation tracking), Risk Based Internal Audit (audit universe, risk-based annual plan and audit execution), Control Testing (internal control testing against the Risk and Control Matrix), Action Taken Report (audit findings and remediation tracking), Policy and SOP (policy lifecycle, approvals and acknowledgements) and Global SOX (SOX compliance across multiple entities).",
+        a: "Seven: Enterprise Risk Management (risk register, risk scoring and mitigation tracking), Risk Based Internal Audit (audit universe, risk-based annual plan and audit execution), Control Testing (internal control testing against the Risk and Control Matrix), Action Taken Report (audit findings and remediation tracking), Policy and SOP (policy lifecycle, approvals and acknowledgements), Global SOX (SOX compliance across multiple entities) and GIAS by IIA Global (internal assessment of conformance with the IIA Global Internal Audit Standards).",
       },
       {
         q: "What are the benefits of an integrated GRC platform?",
@@ -128,7 +129,7 @@ export const PRODUCTS = [
       },
       {
         q: "Who uses RiskMan GRC?",
-        a: "Chief Audit Executives and internal audit teams, CFOs and SOX or IFC teams, Chief Risk Officers and risk owners, Company Secretaries and compliance teams, and the process and control owners who respond to requests, upload evidence and close actions.",
+        a: "Chief Audit Executives, internal audit and quality assurance teams, CFOs and SOX or IFC teams, Chief Risk Officers and risk owners, Company Secretaries and compliance teams, and the process and control owners who respond to requests, upload evidence and close actions.",
       },
     ],
     modules: [
@@ -884,10 +885,10 @@ export const PRODUCTS = [
         name: "Control Testing",
         navLabel: "Control Testing",
         shortName: "Control Testing",
-        seoTitle: "Internal Control Testing Software for RCM, IFC and ICFR",
+        seoTitle: "Control Testing Software for RCM, IFC and ICFR",
         seoDescription:
-          "Internal control testing software: load your Risk and Control Matrix (RCM), request evidence, test controls and route results and responses for approval.",
-        heading: "Internal Control Testing Software",
+          "Control testing software: load your Risk and Control Matrix (RCM), request evidence, test controls and route results and responses for approval.",
+        heading: "Control Testing Software",
         // Other names buyers search for. Shown on the page ("Also known as"),
         // so list only names that describe what the software really does.
         alsoKnownAs: {
@@ -1912,6 +1913,240 @@ export const PRODUCTS = [
           {
             q: "Why do management responses not open immediately?",
             a: "This ensures management sees the complete picture. Responses open once every control in the project has been tested and approved, and all failed controls are then sent together.",
+          },
+        ],
+      },
+
+      /* ---------------------------------------------------------------- */
+      /* 7. GIAS by IIA Global                                             */
+      /* ---------------------------------------------------------------- */
+      {
+        slug: "gias",
+        name: "GIAS by IIA Global",
+        navLabel: "GIAS",
+        shortName: "GIAS",
+        seoTitle: "GIAS Conformance Software: IIA Standards Self-Assessment",
+        seoDescription:
+          "Assess your internal audit function against the IIA Global Internal Audit Standards: evidence by standard, rated conformance, action plans and a Board QAIP report.",
+        heading: "Global Internal Audit Standards (GIAS) Conformance Software",
+        // Other names buyers search for. Shown on the page ("Also known as"),
+        // so list only names that describe what the software really does.
+        alsoKnownAs: {
+          text:
+            "Also used as QAIP software, internal audit quality assessment software or IIA Standards conformance software. It runs the internal assessments of a Quality Assurance and Improvement Programme (QAIP) against the Global Internal Audit Standards: evidence collected by standard, rated by a reviewer, rolled up to principles and domains, and reported to the Board.",
+          terms: [
+            "GIAS conformance software",
+            "QAIP software",
+            "Internal audit quality assessment software",
+            "IIA Standards conformance software",
+            "Internal audit self-assessment software",
+            "Pre-EQA readiness software",
+          ],
+        },
+        relatedServices: [
+          { label: "Risk-based internal audit services", path: "/services/risk-advisory/rbia" },
+        ],
+        icon: BadgeCheck,
+        summary:
+          "The internal audit function's own self-check against the Global Internal Audit Standards. Evidence is gathered and rated for every standard, gaps become action plans, and the results go to the Board in a QAIP report.",
+        tagline: "Conformance with the Global Internal Audit Standards, evidenced standard by standard",
+        description:
+          "Run periodic and ongoing internal assessments against the 2024 Standards. Collect evidence once, rate it, roll the ratings up to principles and domains, and report conformance to the Board.",
+        overview:
+          "The Global Internal Audit Standards ask every internal audit function to assess its own conformance and report the results to the Board. Most teams do this in a spreadsheet with a column for each standard and a folder of documents beside it. GIAS replaces both. The standards library is built in, with all 5 domains, 15 principles and 52 standards. An assessment creates evidence tasks for the people who hold each document, a reviewer rates what they submit, and the ratings roll up from evidence to standard, principle and domain. Gaps become action plans with an owner and a target date. The assessment ends with a Board QAIP report that is frozen as final when the assessment closes.",
+        atAGlance: [
+          { label: "Built for", value: "Chief Audit Executives, audit managers and quality teams" },
+          { label: "Replaces", value: "Conformance spreadsheets and folders of evidence kept by hand" },
+          { label: "Runs as", value: "Periodic, ongoing and pre-EQA internal assessments" },
+          { label: "Ends with", value: "A Board QAIP report, frozen when the assessment closes" },
+        ],
+        challenges: [
+          {
+            title: "New Standards, more to evidence",
+            text: "The 2024 Standards reorganised the requirements into domains, principles and standards, and added new ones. A conformance checklist written for the old framework no longer maps cleanly.",
+          },
+          {
+            title: "The same document, uploaded many times",
+            text: "The audit charter or the annual plan supports several standards. In a spreadsheet it is attached or referenced separately for each one, and the copies drift apart.",
+          },
+          {
+            title: "Ratings that cannot be traced",
+            text: "A standard is marked Generally Conforms, but nobody can show which evidence the rating rests on or who reviewed it.",
+          },
+          {
+            title: "A Board report assembled by hand",
+            text: "Each year the QAIP results are rebuilt in slides from the spreadsheet, with no record of what changed since the last assessment.",
+          },
+        ],
+        outcomes: [
+          "Every standard carries the evidence its rating is based on",
+          "One upload counts for every standard it confirms",
+          "Ratings roll up from evidence to standard, principle and domain",
+          "Gaps are tracked as action plans until they are closed",
+          "The Board receives a QAIP report with the change since the last assessment",
+        ],
+        capabilities: [
+          {
+            icon: BookOpen,
+            title: "Built-in Standards library",
+            text: "All 5 domains, 15 principles and 52 standards of the Global Internal Audit Standards, with their Essential Conditions for the Board and senior management. Standards introduced in 2024 are marked as new, and you can add requirements from local regulation alongside them.",
+            points: [
+              "Browse as a table, as a tree or as the full requirement text",
+              "The library is versioned: your organisation chooses when to adopt a new version, and running assessments stay on theirs",
+            ],
+          },
+          {
+            icon: Database,
+            title: "Evidence master",
+            text: "68 evidence items, each linked to the standards it confirms and collected at its own frequency. One upload counts for every standard it confirms, so the audit charter is provided once rather than for each requirement.",
+          },
+          {
+            icon: CalendarCheck,
+            title: "Periodic, ongoing and pre-EQA assessments",
+            text: "A periodic assessment covers Domains I to IV for the whole function. An ongoing assessment covers Domain V, rated project by project on the engagements you sample. A pre-EQA assessment covers every domain, including the evidence collected once every five years, so you can check readiness before an external quality assessment.",
+          },
+          {
+            icon: Send,
+            title: "Evidence tasks",
+            text: "Starting an assessment creates an evidence task for each owner, based on its scope and the frequency of each item. Owners upload files or link a record that already exists in another RiskMan GRC module, state whether the evidence is available, and submit.",
+            points: [
+              "Link records from Risk Based Internal Audit, ERM, Global SOX, Control Testing and Policy and SOP",
+              "Bulk upload and Excel import",
+            ],
+          },
+          {
+            icon: ClipboardCheck,
+            title: "Review and rating",
+            text: "The reviewer rates each piece of evidence as Generally Conforms, Partially Conforms, Non-Conformance or Not Applicable, or returns it with a reason. Ratings roll up to each standard by the rule you choose, weakest evidence or majority, and can be set manually where judgement is needed.",
+            points: [
+              "Principles and domains rated Generally, Partially or Not Achieved",
+              "An internal assessment score: GC 100, PC 50, NC 0, with N/A left out",
+            ],
+          },
+          {
+            icon: ListChecks,
+            title: "Observations and action plans",
+            text: "Record each gap as a minor or significant opportunity for continuous improvement, or as a recommendation, and raise an action plan with an owner, priority and target date. The owner updates its implementation status, audit reviews it, and an action that has not been implemented cannot be closed.",
+          },
+          {
+            icon: MessagesSquare,
+            title: "Stakeholder surveys",
+            text: "Send stakeholder and post-engagement surveys to business heads, process owners and control owners. Each survey has five questions scored from 1 to 5 with room for comments, and the averages feed the dashboard and the Board report.",
+          },
+          {
+            icon: BarChart3,
+            title: "Dashboard and Board QAIP report",
+            text: "See domain ratings, a principle heat map, a standards scorecard, evidence completeness, open actions by age and the trend against the previous assessment, overall or one assessment at a time. The Board QAIP report covers the conclusions, results, action plans, nonconformance disclosures, Board oversight, stakeholder feedback and the change since last time.",
+            points: [
+              "Download the report as a PDF; the copy made at close is kept as final",
+              "Export any list to Excel",
+            ],
+          },
+          {
+            icon: Bell,
+            title: "Reminders and escalation",
+            text: "Owners are notified when tasks are assigned, when evidence is due or returned, and when action plans need attention. Overdue items are escalated after the number of days your administrator sets.",
+          },
+        ],
+        lifecycle: [
+          {
+            title: "Adopt the library",
+            text: "Adopt the current version of the Standards library and add any local requirements.",
+          },
+          {
+            title: "Create the assessment",
+            text: "Choose a periodic, ongoing or pre-EQA assessment, its scope and its evidence owners.",
+          },
+          {
+            title: "Collect evidence",
+            text: "Owners upload files or link existing records, and submit them for review.",
+          },
+          {
+            title: "Rate the evidence",
+            text: "The reviewer rates each item or returns it with a reason.",
+          },
+          {
+            title: "Roll up the ratings",
+            text: "Standard, principle and domain ratings are derived from the evidence and confirmed by the assessment owner.",
+          },
+          {
+            title: "Raise action plans",
+            text: "Each gap becomes an action plan with an owner, priority and target date.",
+          },
+          {
+            title: "Approve and report",
+            text: "The assessment is approved, the Board QAIP report is issued, and the assessment is closed.",
+          },
+        ],
+        deliverables: [
+          "Conformance rating for every standard, principle and domain",
+          "Evidence register, showing the standards each item confirms",
+          "Observations and action plans with owners and target dates",
+          "Nonconformance disclosures",
+          "Stakeholder and post-engagement survey results",
+          "Board QAIP report (PDF), frozen at close",
+          "Trend against the previous assessment",
+        ],
+        standards: [
+          {
+            name: "Global Internal Audit Standards (2024), The IIA",
+            note: "The library follows the Standards' 5 domains, 15 principles and 52 standards, including the Essential Conditions for the Board and senior management.",
+          },
+          {
+            name: "Principle 12: Enhance Quality",
+            note: "Supports the internal assessments of the Quality Assurance and Improvement Programme and their communication to the Board.",
+          },
+          {
+            name: "External Quality Assessment",
+            note: "The pre-EQA assessment checks readiness across every domain before the external assessment required at least once every five years.",
+          },
+        ],
+        roles: [
+          {
+            role: "Chief Audit Executive",
+            text: "Sees every assessment and its results, is notified when one closes, and can run assessments of their own.",
+          },
+          {
+            role: "Audit Manager",
+            text: "Creates assessments and, as their owner, reviews the evidence, sets the final ratings, approves and closes them.",
+          },
+          {
+            role: "Staff Auditor",
+            text: "Provides the evidence assigned to them.",
+          },
+          {
+            role: "Business Heads, Process Owners and Control Owners",
+            text: "Answer stakeholder and post-engagement surveys. Business Heads also see the summary dashboard.",
+          },
+        ],
+        faqs: [
+          {
+            q: "What are the Global Internal Audit Standards?",
+            a: "The Global Internal Audit Standards are issued by The Institute of Internal Auditors (IIA) and took effect on 9 January 2025. They organise the requirements for internal auditing into 5 domains, 15 principles and 52 standards, and they require each internal audit function to assess its conformance through a Quality Assurance and Improvement Programme.",
+          },
+          {
+            q: "What is GIAS conformance software?",
+            a: "Software that helps an internal audit function show how it conforms with the Standards: which evidence supports each standard, how it was rated and by whom, which gaps remain and what is being done about them. RiskMan GRC's GIAS module does this and produces the QAIP report for the Board.",
+          },
+          {
+            q: "What is the difference between periodic and ongoing assessments?",
+            a: "A periodic assessment covers Domains I to IV and looks at the function as a whole. An ongoing assessment covers Domain V, Performing Internal Audit Services, and is rated project by project on the engagements you sample.",
+          },
+          {
+            q: "Can we prepare for an external quality assessment?",
+            a: "Yes. A pre-EQA assessment covers every domain, including evidence that is collected only once every five years, so you can find and close gaps before the external assessors arrive.",
+          },
+          {
+            q: "How are ratings calculated?",
+            a: "Each piece of evidence is rated Generally Conforms, Partially Conforms, Non-Conformance or Not Applicable. The rating rolls up to the standard by the rule you choose, weakest evidence or majority, or is set manually, and then to principles and domains. The labels can be changed to match your methodology.",
+          },
+          {
+            q: "Can we reuse evidence from other RiskMan GRC modules?",
+            a: "Yes. Evidence owners can link a record that already exists in Risk Based Internal Audit, Enterprise Risk Management, Global SOX, Control Testing or Policy and SOP instead of uploading it again.",
+          },
+          {
+            q: "What happens when the IIA updates the Standards?",
+            a: "The library is versioned. When a new version is published, your organisation chooses when to adopt it, and assessments already running stay on the version they started with.",
           },
         ],
       },

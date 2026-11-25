@@ -35,7 +35,7 @@ const SoxIcofrIfc = () => {
         intro="RiskMan GRC runs SOX, ICFR and IFC testing as software: one risk and control library, evidence requests, workpapers, approvals and management responses in a single project."
         links={[
           { label: "Global SOX compliance software", path: "/products/riskman-grc/global-sox" },
-          { label: "Internal control testing software", path: "/products/riskman-grc/control-testing" },
+          { label: "Control testing software", path: "/products/riskman-grc/control-testing" },
         ]}
       />
 

@@ -7,17 +7,13 @@ import HeroSection from "./HeroSections";
 
 
 // sections
-import Features from "./Features";
-import RiskCompliance from "./RiskCompliance";
 import KeyServices from "./KeyServices";
 import IndustralizationService from "./IndustralizationService";
-import ValueDifferentiators from "./ValueDifferentiators";
 import WhyRiskman from "./WhyRiskman";
 // import StatsSection from "./StatsSection";
 import Testimonials from "./Testimonials";
 import FAQSection from "./FAQSection";
 // import BlogSection from "./BlogSection";
-import AuditService from "./AuditService";
 import CTASection from "./CTASections";
 import ClientSection from "./ClientsSection";
 import StrategicSection from "./Features";

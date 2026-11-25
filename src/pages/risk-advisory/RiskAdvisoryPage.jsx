@@ -136,7 +136,7 @@ export default function RiskAdvisoryPage() {
       <WhyRiskManSection data={pageData.whyRiskmanSection} />
       <FAQSection data={pageData.faqSection} />
       <RelatedLinks
-        intro="Alongside our advisory services, RiskMan GRC brings enterprise risk management, internal audit, control testing, SOX compliance, policy management and audit remediation onto one platform."
+        intro="Alongside our advisory services, RiskMan GRC brings enterprise risk management, internal audit, control testing, SOX compliance, policy management, audit remediation and IIA Standards conformance onto one platform."
         links={[
           { label: "RiskMan GRC software", path: "/products/riskman-grc" },
         ]}

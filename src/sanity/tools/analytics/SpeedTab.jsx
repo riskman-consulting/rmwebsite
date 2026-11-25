@@ -37,6 +37,7 @@ const PAGES = [
   ['/products/riskman-grc/action-taken-report', 'Module — Action Taken Report'],
   ['/products/riskman-grc/policy', 'Module — Policy and SOP'],
   ['/products/riskman-grc/global-sox', 'Module — Global SOX'],
+  ['/products/riskman-grc/gias', 'Module — GIAS'],
   ['/industries', 'Industries'],
   ['/blogs', 'Blog'],
   ['/careers', 'Careers'],

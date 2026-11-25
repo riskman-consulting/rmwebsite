@@ -6,6 +6,9 @@ import { sanityClient } from "../api/sanity";
 // stray draft alongside it.
 const BASE = `*[_type == "homePage" && _id == "homePage"][0]`;
 
+// The fetchHomePage request in flight, shared by the sections that call it
+let homePageRequest = null;
+
 export const useHomePage = create((set) => ({
 
   // ================= STATE =================
@@ -26,7 +29,11 @@ export const useHomePage = create((set) => ({
   error: null,
 
   // ================= MASTER FETCH =================
-  fetchHomePage: async () => {
+  fetchHomePage: () => {
+    // Several homepage sections ask for this when they mount; they share one
+    // request instead of each sending the same query.
+    if (homePageRequest) return homePageRequest;
+    homePageRequest = (async () => {
     try {
       set({ loading: true, error: null });
 
@@ -159,6 +166,10 @@ export const useHomePage = create((set) => ({
     } catch (e) {
       set({ error: e.message, loading: false });
     }
+    })().finally(() => {
+      homePageRequest = null;
+    });
+    return homePageRequest;
   },
   fetchIndustries: async () => {
     try {

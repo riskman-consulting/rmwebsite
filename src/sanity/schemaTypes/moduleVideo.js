@@ -14,6 +14,7 @@ const GRC_MODULES = [
     { title: 'Action Taken Report', value: 'action-taken-report' },
     { title: 'Policy and SOP', value: 'policy' },
     { title: 'Global SOX', value: 'global-sox' },
+    { title: 'GIAS by IIA Global', value: 'gias' },
 ]
 
 export const moduleVideo = defineType({

@@ -728,7 +728,8 @@ async function writeSeoReport(sitemap) {
 
   for (const file of htmlFiles(DIST)) {
     const rel = path.relative(DIST, file).replace(/\\/g, "/");
-    if (rel === "404.html") continue;
+    // Not pages: the 404 page and the empty app shell (see main)
+    if (rel === "404.html" || rel === "app-shell.html") continue;
     const route = `/${rel.replace(/(^|\/)index\.html$/, "")}`.replace(/\/$/, "") || "/";
     const html = fsSync.readFileSync(file, "utf8");
     const title = decode((html.match(/<title>([^<]*)<\/title>/) || [])[1] || "");
@@ -1061,11 +1062,14 @@ async function writeSeoReport(sitemap) {
  * Routes whose content comes from Sanity. Rendered at build time they would
  * carry their empty state ("No insights found", "Article not found") into the
  * HTML, so they keep the empty root and render in the browser as before.
- * "/" must stay here: dist/index.html is also the fallback page that Vercel
- * serves for blog, industry and job URLs created after the build.
+ *
+ * "/" is prerendered: its hero has built-in copy and the sections that wait
+ * for Sanity render nothing until it answers, so the homepage paints from the
+ * HTML instead of after the JavaScript. The empty app shell that Vercel and
+ * api/blog.js serve for URLs created after the build is written separately,
+ * to dist/app-shell.html.
  */
 const CLIENT_ONLY_ROUTES = [
-  /^\/$/,
   /^\/about$/,
   /^\/services$/,
   /^\/blogs?(\/|$)/,
@@ -1130,6 +1134,10 @@ async function main() {
     console.error(`[generate-meta] dist/index.html not found. Did vite build run?`);
     process.exit(1);
   }
+
+  // The empty shell, before index.html is overwritten with the homepage. Served
+  // for job, industry and /cms URLs (vercel.json) and by api/blog.js.
+  await fs.writeFile(path.join(DIST, "app-shell.html"), template, "utf8");
 
   let written = 0;
   let skipped = 0;
