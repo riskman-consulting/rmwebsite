@@ -68,7 +68,7 @@ export const KEYWORD_MAP = {
     ],
   },
   [`${GRC}/control-testing`]: {
-    primary: ["internal control testing software", "control testing software"],
+    primary: ["control testing software", "internal control testing software"],
     alternatives: [
       "Controls testing software",
       "Internal controls management software",
@@ -124,9 +124,20 @@ export const KEYWORD_MAP = {
       "Financial compliance software",
     ],
   },
+  [`${GRC}/gias`]: {
+    primary: ["GIAS conformance software", "Global Internal Audit Standards"],
+    alternatives: [
+      "QAIP software",
+      "Internal audit quality assessment software",
+      "IIA Standards conformance software",
+      "Internal audit self-assessment software",
+      "Pre-EQA readiness software",
+      "Quality Assurance and Improvement Programme",
+    ],
+  },
 
   /* ------------------------------------------------------------------ */
-  /* Advisory services                                                   */
+  /* Advisory services                                                  */
   /* ------------------------------------------------------------------ */
   "/": {
     primary: ["risk advisory", "RiskMan Consulting"],

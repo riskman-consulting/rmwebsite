@@ -45,6 +45,11 @@ export const blockContent = defineType({
                                 title: 'URL',
                                 name: 'href',
                                 type: 'url',
+                                description: 'Full address (https://…) or a page on this site (/services/…).',
+                                validation: (Rule) =>
+                                    Rule.required()
+                                        .error('Add the URL, or remove the link from this text')
+                                        .uri({ allowRelative: true, scheme: ['http', 'https', 'mailto', 'tel'] }),
                             },
                         ],
                     },
@@ -58,6 +63,7 @@ export const blockContent = defineType({
                                 name: 'reference',
                                 type: 'reference',
                                 to: [{ type: 'post' }, { type: 'category' }],
+                                validation: (Rule) => Rule.required().error('Choose the post or category to link to'),
                             }),
                         ],
                     },

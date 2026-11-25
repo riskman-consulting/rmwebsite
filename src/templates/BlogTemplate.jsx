@@ -338,7 +338,7 @@ const TableBlock = ({ value }) => {
               {headRow.cells.map((cell, i) => (
                 <th
                   key={i}
-                  className="px-4 py-3 font-bold border-b border-borderLight dark:border-borderDark text-brandDark dark:text-white"
+                  className="px-4 py-3 font-bold whitespace-pre-line border-b border-borderLight dark:border-borderDark text-brandDark dark:text-white"
                 >
                   {cell}
                 </th>
@@ -355,7 +355,7 @@ const TableBlock = ({ value }) => {
               {row?.cells?.map((cell, ci) => (
                 <td
                   key={ci}
-                  className="px-4 py-3 border-b border-borderLight/50 dark:border-borderDark/50 text-brandNavy/85 dark:text-gray-300"
+                  className="px-4 py-3 whitespace-pre-line border-b border-borderLight/50 dark:border-borderDark/50 text-brandNavy/85 dark:text-gray-300"
                 >
                   {cell}
                 </td>
@@ -626,16 +626,34 @@ const basePortableTextComponents = {
         {children}
       </code>
     ),
-    link: ({ value, children }) => (
-      <a
-        href={value?.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="font-medium underline transition-all decoration-brandPrimary/30 dark:decoration-brandAccent/30 underline-offset-4 text-brandPrimary dark:text-brandAccent hover:decoration-brandPrimary dark:hover:decoration-brandAccent"
-      >
-        {children}
-      </a>
-    ),
+    link: ({ value, children }) => {
+      const href = (value?.href || "").trim();
+      // A link saved without a URL renders as plain text, not a dead anchor
+      if (!href) return <>{children}</>;
+      const className =
+        "font-medium underline transition-all decoration-brandPrimary/30 dark:decoration-brandAccent/30 underline-offset-4 text-brandPrimary dark:text-brandAccent hover:decoration-brandPrimary dark:hover:decoration-brandAccent";
+      // A jump to a heading on this page
+      if (href.startsWith("#"))
+        return (
+          <a href={href} className={className}>
+            {children}
+          </a>
+        );
+      // Links to our own pages stay in the same tab and use the router
+      const internal = href.match(/^(?:https?:\/\/(?:www\.)?riskman\.in)?(\/[^\s]*)?$/i);
+      if (internal) {
+        return (
+          <Link to={internal[1] || "/"} className={className}>
+            {children}
+          </Link>
+        );
+      }
+      return (
+        <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
+          {children}
+        </a>
+      );
+    },
     internalLink: ({ value, children }) => {
       const ref = value?.reference;
       const type = ref?._type;

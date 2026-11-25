@@ -111,6 +111,7 @@ const GrcPolicy = lazyPage(() => import('./pages/products/riskman-grc/policy'))
 const GrcActionTakenReport = lazyPage(() => import('./pages/products/riskman-grc/action-taken-report'))
 const GrcEnterpriseRiskManagement = lazyPage(() => import('./pages/products/riskman-grc/enterprise-risk-management'))
 const GrcGlobalSox = lazyPage(() => import('./pages/products/riskman-grc/global-sox'))
+const GrcGias = lazyPage(() => import('./pages/products/riskman-grc/gias'))
 const FAASLayout = lazyPage(() => import('./pages/faas/Layout'))
 const FAASPage = lazyPage(() => import('./pages/faas/FAASPage'))
 const FAASManagedServices = lazyPage(() => import('./pages/faas/managed-services'))
@@ -220,6 +221,7 @@ const ROUTES = (
             <Route path="riskman-grc/action-taken-report" element={<GrcActionTakenReport />} />
             <Route path="riskman-grc/enterprise-risk-management" element={<GrcEnterpriseRiskManagement />} />
             <Route path="riskman-grc/global-sox" element={<GrcGlobalSox />} />
+            <Route path="riskman-grc/gias" element={<GrcGias />} />
           </Route>
 
           {/* Financial Accounting and Advisory Services (FAAS) Nested Routes */}

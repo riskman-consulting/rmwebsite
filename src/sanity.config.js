@@ -1,3 +1,4 @@
+import { createElement } from "react";
 import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
 import { visionTool } from "@sanity/vision";
@@ -6,6 +7,7 @@ import { table } from "@sanity/table";
 import { projectId, dataset, apiVersion } from "./sanity/env";
 import { schemaTypes } from "./sanity/schemaTypes";
 import { OptimizedImageInput } from "./sanity/components/OptimizedImageInput";
+import { BlogTableInput } from "./sanity/components/BlogTableInput";
 import { BarChartIcon } from "@sanity/icons";
 import { AnalyticsTool } from "./sanity/tools/analytics/AnalyticsTool";
 
@@ -134,7 +136,10 @@ export default defineConfig({
   // button. All other fields render unchanged.
   form: {
     components: {
-      input: OptimizedImageInput,
+      // Tables use our own editor (keeps focus after switching windows,
+      // multi-line cells, paste from Excel/Word); see BlogTableInput.
+      input: (props) =>
+        createElement(props.schemaType?.name === "table" ? BlogTableInput : OptimizedImageInput, props),
     },
   },
 
