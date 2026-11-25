@@ -207,7 +207,7 @@ const StrategicSection = () => {
           className="flex items-center gap-4 mb-12"
         >
           <div className="h-px w-14 bg-brandGold" />
-          <span className="text-xs font-extrabold tracking-[0.3em] uppercase text-[#8A6500] dark:text-brandGold">
+          <span className="text-xs font-extrabold tracking-[0.3em] uppercase text-brandGold">
             Strategic Advisory
           </span>
         </motion.div>
@@ -223,9 +223,10 @@ const StrategicSection = () => {
               viewport={{ once: true }}
               className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold leading-tight"
             >
-              Strategic Risk
+              {/* Names the homepage's main search term, "risk advisory" */}
+              Strategic <span className="text-brandGold">Risk Assurance</span>
               <br />
-              <span className="text-[#8A6500] dark:text-brandGold">Management</span> Services
+              <span className="text-brandGold">&amp; Advisory</span> Services
             </motion.h1>
  
             <div className="w-20 h-1.5 bg-brandGold rounded-full" />

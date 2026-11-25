@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { buildData } from "../utils/buildData";
 import { sanityClient } from "../api/sanity";
 
 const IMAGE_PROJECTION = `{
@@ -127,10 +128,10 @@ const POST_DETAIL_PROJECTION = `{
 const IS_PUBLISHED = `(!defined(publishedDate) || dateTime(publishedDate) <= dateTime(now()))`;
 const NEWEST_FIRST = `order(coalesce(publishedDate, _createdAt) desc)`;
 
-export const useBlogStore = create((set) => ({
+export const useBlogStore = create((set, get) => ({
 
   // ================= STATE =================
-  posts: [],
+  posts: buildData("posts", []),
   singlePost: null,
 
   loading: false,
@@ -140,7 +141,8 @@ export const useBlogStore = create((set) => ({
 
   fetchPosts: async () => {
     try {
-      set({ loading: true, error: null });
+      // A list already on screen (from the build) stays while it refreshes
+      set({ loading: get().posts.length === 0, error: null });
 
       const data = await sanityClient.fetch(`
         *[_type == "post" && ${IS_PUBLISHED}] | ${NEWEST_FIRST} ${POST_LIST_PROJECTION}

@@ -18,14 +18,14 @@ export default function HeroSection() {
             <div className="mb-6 flex items-center gap-3">
               <div className="h-[2px] w-14 bg-brandGold" />
 
-              <span className="font-heading text-xs font-semibold uppercase tracking-[0.35em] text-[#8A6500] dark:text-brandGold">
+              <span className="font-heading text-xs font-semibold uppercase tracking-[0.35em] text-brandGold">
                 RiskMan Insights
               </span>
             </div>
 
             <h2 className="max-w-[620px] font-heading text-2xl md:text-3xl lg:text-4xl font-bold leading-[1.05] text-brandDark transition-colors duration-300 dark:text-white ">
               RiskMan&apos;s{" "}
-              <span className="text-[#8A6500] dark:text-brandGold">Vision</span>
+              <span className="text-brandGold">Vision</span>
               <br />
               in Motion
             </h2>

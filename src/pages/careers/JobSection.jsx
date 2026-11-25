@@ -99,11 +99,12 @@ export default function CareersPage() {
                   </Link>
                 </div>
 
-                <h3 className="mb-2 text-lg md:text-xl font-bold transition-colors group-hover:text-brandPrimary">
+                {/* h2: the job cards sit directly under the page's h1 */}
+                <h2 className="mb-2 text-lg md:text-xl font-bold transition-colors group-hover:text-brandPrimary">
                   <Link to={getJobPath(job)} onClick={(e) => e.stopPropagation()}>
                     {job.title}
                   </Link>
-                </h3>
+                </h2>
 
                 <p className="mb-6 text-sm font-medium text-zinc-500">
                   RiskMan Consulting
