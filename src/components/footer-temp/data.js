@@ -45,7 +45,10 @@ export const ENTERPRISE_SERVICES = [
   {name:"Sustainability & ESG",path:"/services/esg"},
   {name:"Financial Accounting and Advisory Services (FAAS)",path:"/services/faas"},
   {name:"AI & Technology",path:"/services/ai-technology"},
-  {name:"Forensics and Investigation",path:"/services/forensics-investigation"}
+  {name:"Forensics and Investigation",path:"/services/forensics-investigation"},
+  // Not in the mega menu; linked here so the pages are reachable and crawled
+  {name:"Credit Risk Advisory",path:"/services/financial-advisory"},
+  {name:"Technology Solutions",path:"/solutions"}
 ];
 
 export const IT_RISK_SERVICES = [

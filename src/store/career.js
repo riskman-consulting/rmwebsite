@@ -1,11 +1,12 @@
 import { create } from "zustand";
 import { sanityClient } from "../api/sanity";
 import { isJobOpen } from "../utils/jobSlug";
+import { buildData } from "../utils/buildData";
 
 
 export const useCareerStore = create((set) => ({
   testimonials: [],
-  jobOpenings: [],
+  jobOpenings: buildData("jobOpenings", []),
   // Unfiltered list — a shared link to a closed role must still resolve so the
   // page can say "applications closed" instead of 404-ing.
   allJobOpenings: [],

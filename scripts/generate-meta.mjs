@@ -1080,7 +1080,14 @@ const CLIENT_ONLY_ROUTES = [
   /^\/industries\//,
 ];
 
-const isClientOnly = (route) => CLIENT_ONLY_ROUTES.some((re) => re.test(route));
+// Listing pages rendered with data fetched at build time (see prefetch in
+// src/entry-server.jsx) — only when that data arrived.
+let prefetched = { posts: 0, jobs: 0 };
+const isClientOnly = (route) => {
+  if (route === "/blogs" && prefetched.posts > 0) return false;
+  if (route === "/careers" && prefetched.jobs > 0) return false;
+  return CLIENT_ONLY_ROUTES.some((re) => re.test(route));
+};
 
 /** Loads the server build, or returns null so the script still writes meta. */
 async function loadRenderer() {
@@ -1090,9 +1097,17 @@ async function loadRenderer() {
     return null;
   }
   try {
-    const { render, preload } = await import(pathToFileURL(entry).href);
+    const { render, preload, prefetch } = await import(pathToFileURL(entry).href);
     // Pages are code-split; renderToString can only render ones already loaded
     if (preload) await preload();
+    if (prefetch) {
+      try {
+        prefetched = await prefetch();
+        console.log(`[generate-meta] Listing data: ${prefetched.posts} posts, ${prefetched.jobs} open jobs`);
+      } catch (e) {
+        console.warn(`[generate-meta] Listing data not fetched (${e.message}); /blogs and /careers render in the browser.`);
+      }
+    }
     return render;
   } catch (e) {
     console.error(`[generate-meta] Could not load the server build: ${e.message}`);
@@ -1205,9 +1220,17 @@ async function main() {
 
     const body = renderBody(render, route);
     if (body) bodies++;
+    // A listing rendered from build-time data carries that data, so the
+    // browser's first render matches the HTML (see src/utils/buildData.js)
+    const listing = body && prefetched.data?.[route];
+    // "<" escaped, so text such as "</script>" inside the data cannot end the tag
+    const dataScript = listing
+      ? `
+    <script>window.__RM_DATA__=${JSON.stringify(listing).replace(/</g, "\\u003c")}</script>`
+      : "";
 
     await fs.mkdir(path.dirname(outFile), { recursive: true });
-    await fs.writeFile(outFile, injectMeta(template, head, body), "utf8");
+    await fs.writeFile(outFile, injectMeta(template, head + dataScript, body), "utf8");
     written++;
   }
 

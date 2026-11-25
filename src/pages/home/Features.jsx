@@ -223,9 +223,10 @@ const StrategicSection = () => {
               viewport={{ once: true }}
               className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold leading-tight"
             >
+              {/* Names the homepage's main search term, "risk advisory" */}
               Strategic Risk
               <br />
-              <span className="text-[#8A6500] dark:text-brandGold">Management</span> Services
+              <span className="text-[#B87F00] dark:text-brandGold">Advisory</span> Services
             </motion.h1>
  
             <div className="w-20 h-1.5 bg-brandGold rounded-full" />

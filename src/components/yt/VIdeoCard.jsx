@@ -25,7 +25,7 @@ export default function HeroSection() {
 
             <h2 className="max-w-[620px] font-heading text-2xl md:text-3xl lg:text-4xl font-bold leading-[1.05] text-brandDark transition-colors duration-300 dark:text-white ">
               RiskMan&apos;s{" "}
-              <span className="text-[#8A6500] dark:text-brandGold">Vision</span>
+              <span className="text-[#B87F00] dark:text-brandGold">Vision</span>
               <br />
               in Motion
             </h2>
