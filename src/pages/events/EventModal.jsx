@@ -142,7 +142,7 @@ const EventModal = ({ event, onClose }) => {
                               : 'border-transparent hover:border-[#FFC000]/30'
                           }`}
                         >
-                          <img src={img} className="object-cover w-full h-full" alt="preview" />
+                          <img src={img} className="object-cover w-full h-full" alt={`${event.title}, photo ${idx + 1}`} loading="lazy" />
                         </button>
                       ))}
                     </div>

@@ -162,10 +162,10 @@ export const MobileMenu = ({ isOpen, onClose }) => {
                     {getSections(item.key || "").map((section, sIdx) => (
                       <div key={sIdx} className="space-y-4">
                         {section.title && (
-                          <h4 className="text-[10px] font-black uppercase tracking-widest
+                          <p className="text-[10px] font-black uppercase tracking-widest
                             text-brandDark/50 dark:text-brandLight/50">
                             {section.title}
-                          </h4>
+                          </p>
                         )}
 
                         <div className="space-y-4">

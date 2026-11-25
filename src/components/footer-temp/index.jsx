@@ -9,7 +9,7 @@ const grc = PRODUCTS[0];
 
 const FooterColumn = ({ title, children }) => (
   <div>
-    <h3 className="footer-heading">{title}</h3>
+    <p className="footer-heading">{title}</p>
     <ul className="space-y-2.5">{children}</ul>
   </div>
 );

@@ -9,6 +9,7 @@ const NAV_ITEMS = [
   { to: `${BASE}/past-events`, label: "Past Events" },
   { to: `${BASE}/accomplishments`, label: "Awards" },
   { to: `${BASE}/media-coverage`, label: "Culture At RiskMan" },
+  { to: `${BASE}/company-journey`, label: "Company Journey" },
 ];
 
 function Layout() {

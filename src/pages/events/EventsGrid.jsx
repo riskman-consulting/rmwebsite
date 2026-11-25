@@ -87,7 +87,7 @@ export default function EventsGrid({ isPage = false }) {
           <div className="flex-1">
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {filteredEvents?.map((event,idx)=> (
-                <EventCard key={idx} event={event} />
+                <EventCard key={idx} event={event} headingLevel={isPage ? "h2" : "h3"} />
               ))}
             </div>
           </div>

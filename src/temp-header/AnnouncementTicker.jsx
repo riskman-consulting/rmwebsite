@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { PRODUCTS } from "../pages/products/productsData";
 
 const product = PRODUCTS[0];
@@ -59,6 +59,45 @@ const AnnouncementTicker = () => {
   }, [index, reduceMotion]);
 
   const visible = index % modules.length;
+  const n = modules.length;
+
+  // Jump to `from` with the transition off, then slide to `to` on the next frame
+  const jumpThenSlide = (from, to) => {
+    setAnimate(false);
+    setIndex(from);
+    requestAnimationFrame(() =>
+      requestAnimationFrame(() => {
+        setAnimate(true);
+        setIndex(to);
+      })
+    );
+  };
+
+  const goNext = () => {
+    if (reduceMotion) {
+      setAnimate(false);
+      setIndex((visible + 1) % n);
+    } else if (index >= n) {
+      jumpThenSlide(0, 1);
+    } else {
+      setAnimate(true);
+      setIndex(index + 1);
+    }
+  };
+
+  // Going back from the first module slides down from the repeated copy of it
+  const goPrev = () => {
+    if (reduceMotion) {
+      setAnimate(false);
+      setIndex((visible + n - 1) % n);
+    } else if (visible === 0) {
+      jumpThenSlide(n, n - 1);
+    } else {
+      setAnimate(true);
+      setIndex(index - 1);
+    }
+  };
+
   const slides = [...modules, modules[0]];
 
   return (
@@ -116,10 +155,31 @@ const AnnouncementTicker = () => {
         </ul>
       </nav>
 
-      {/* Which of the six is showing */}
-      <span className="flex-shrink-0 hidden pr-6 text-[12px] tabular-nums text-white/50 sm:inline dark:text-brandDark/50">
-        {visible + 1} / {modules.length}
-      </span>
+      {/* Previous / next module, and which of the six is showing */}
+      <div className="flex items-center flex-shrink-0 gap-1 pr-3 sm:pr-5">
+        <button
+          type="button"
+          onClick={goPrev}
+          aria-label="Previous module"
+          className="flex items-center justify-center w-7 h-7 rounded-full text-white/70 hover:text-brandGold hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brandGold dark:text-brandDark/70 dark:hover:text-brandPrimary dark:hover:bg-brandDark/10"
+        >
+          <ChevronLeft className="w-4 h-4" />
+        </button>
+        <span
+          aria-live="polite"
+          className="hidden px-1 text-[12px] tabular-nums text-white/50 sm:inline dark:text-brandDark/50"
+        >
+          {visible + 1} / {modules.length}
+        </span>
+        <button
+          type="button"
+          onClick={goNext}
+          aria-label="Next module"
+          className="flex items-center justify-center w-7 h-7 rounded-full text-white/70 hover:text-brandGold hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brandGold dark:text-brandDark/70 dark:hover:text-brandPrimary dark:hover:bg-brandDark/10"
+        >
+          <ChevronRight className="w-4 h-4" />
+        </button>
+      </div>
     </div>
   );
 };

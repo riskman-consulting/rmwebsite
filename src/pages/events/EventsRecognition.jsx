@@ -172,7 +172,9 @@ export default function EventRecognition({ isPage = false }) {
               >
                 <img
                   src={item?.image?.asset?.url}
-                  alt="Achievement"
+                  alt={item?.title || item?.eventName || `RiskMan award and recognition ${index + 1}`}
+                  loading="lazy"
+                  decoding="async"
                   className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 flex items-center justify-center transition-opacity opacity-0 bg-black/40 group-hover:opacity-100">
@@ -223,7 +225,7 @@ export default function EventRecognition({ isPage = false }) {
               >
                 <img
                   src={processedItems[selectedIndex]?.image?.asset.url}
-                  alt="Enlarged achievement"
+                  alt={processedItems[selectedIndex]?.title || processedItems[selectedIndex]?.eventName || `RiskMan award and recognition ${selectedIndex + 1}`}
                   className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
                 />
                 <div className="px-4 py-1 mt-4 font-mono text-sm tracking-wider rounded-full text-white/60 bg-black/50">

@@ -558,7 +558,7 @@ export function EventModal({ event, onClose }) {
                           : "opacity-60 hover:opacity-100 shadow-md hover:shadow-lg"
                       }`}
                     >
-                      <img src={img} alt="" className="w-full h-full object-cover" />
+                      <img src={img} alt={`${event.title}, photo ${i + 1}`} loading="lazy" className="w-full h-full object-cover" />
                     </motion.button>
                   ))}
                 </div>

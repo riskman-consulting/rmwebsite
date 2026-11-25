@@ -27,7 +27,7 @@ export default function BlogTemplate({ blog }) {
       <div className="max-w-4xl px-6 mx-auto mt-10">
         <img
           src={blog.featuredImage}
-          alt=""
+          alt={blog.title}
           className="w-full shadow rounded-xl"
         />
       </div>
@@ -69,7 +69,7 @@ export default function BlogTemplate({ blog }) {
             case "image":
               return (
                 <div key={index} className="my-8">
-                  <img src={block.url} alt="" className="shadow rounded-xl" />
+                  <img src={block.url} alt={block.alt || block.caption || blog.title} loading="lazy" className="shadow rounded-xl" />
                   {block.caption && (
                     <p className="mt-2 text-sm text-gray-500">{block.caption}</p>
                   )}

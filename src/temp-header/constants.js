@@ -230,11 +230,12 @@ export const NAVIGATION_DATA = {
     "eventsMegaMenu": [
         {
             "items": [
-                { "label": "Accomplishment", "path": "/events/#accomplishment" },
-                // {"label":"","path":"/events/#emerging-risk-assurance"},
-                { "label": "Upcoming Events", "path": "/events/#upcoming-events" },
-                {"label":"Past Events","path":"/events/#past-events"},
-                { "label": "Culture at RiskMan", "path": "/events/#moment-that-matters" }
+                // Each item opens its own page, so crawlers can follow the menu to it
+                { "label": "Accomplishments", "path": "/events/accomplishments" },
+                { "label": "Upcoming Events", "path": "/events/upcoming-events" },
+                { "label": "Past Events", "path": "/events/past-events" },
+                { "label": "Culture at RiskMan", "path": "/events/media-coverage" },
+                { "label": "Company Journey", "path": "/events/company-journey" }
             ]
         }
     ],

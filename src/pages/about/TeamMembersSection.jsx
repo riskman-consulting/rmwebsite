@@ -135,7 +135,8 @@ const RiskManTeams = () => {
                 >
                   <img
                     src={item?.image?.asset.url}
-                    alt=""
+                    alt={item?.name || item?.title || "RiskMan team member"}
+                    loading="lazy"
                     className="object-cover object-top w-full h-full"
                   />
 
