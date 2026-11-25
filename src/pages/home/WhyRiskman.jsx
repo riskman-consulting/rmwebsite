@@ -101,11 +101,15 @@ export default function WhyChooseRiskMan() {
               <div className="absolute -inset-4 border-2 border-dashed border-brandPrimary/20 rounded-[40px] animate-[spin_20s_linear_infinite]" />
               
               <div className="relative w-[280px] h-[380px] md:w-[320px] md:h-[420px] rounded-[32px] overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
-                <img
-                  src={whyRiskManImage?.asset.url}
-                  alt="Risk Management Strategy"
-                  className="object-cover object-top w-full h-full"
-                />
+                {whyRiskManImage?.asset?.url && (
+                  <img
+                    src={whyRiskManImage.asset.url}
+                    alt="Risk Management Strategy"
+                    loading="lazy"
+                    decoding="async"
+                    className="object-cover object-top w-full h-full"
+                  />
+                )}
               </div>
             </motion.div>
           </div>

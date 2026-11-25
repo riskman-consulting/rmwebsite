@@ -11,11 +11,11 @@ const SLIDES = [
     badge: "Risk Assurance & Advisory",
     titleLine1: "Master the Landscape of",
     titleLine2: "Enterprise Uncertainty",
-    desc: "Risk-based internal audits and robust ERM frameworks based on COSO standards to identify blind spots and ensure sustainable growth.",
+    description: "Risk-based internal audits and robust ERM frameworks based on COSO standards to identify blind spots and ensure sustainable growth.",
     img: HeroRiskAdvisory,
-    btn1: "Strengthen Governance",
+    btn1Text: "Strengthen Governance",
     btn1Link: "/services/risk-advisory",
-    btn2: "Consult Expert",
+    btn2Text: "Consult Expert",
     btn2Link: "/contact",
     category: "advisory"
   },
@@ -23,11 +23,11 @@ const SLIDES = [
     badge: "IT Risk Management",
     titleLine1: "Securing the Digital Frontier",
     titleLine2: "with Strategic Assurance",
-    desc: "SOC 1/2/3 assurance and NIST-aligned security frameworks to protect your enterprise and turn IT risk into a driver of digital trust.",
+    description: "SOC 1/2/3 assurance and NIST-aligned security frameworks to protect your enterprise and turn IT risk into a driver of digital trust.",
     img: heroItRisk,
-    btn1: "Explore Solutions",
+    btn1Text: "Explore Solutions",
     btn1Link: "/services",
-    btn2: "Get Assessment",
+    btn2Text: "Get Assessment",
     btn2Link: "/contact",
     category: "security"
   },
@@ -35,11 +35,11 @@ const SLIDES = [
     badge: "Business Consulting",
     titleLine1: "Architecting Sustainable",
     titleLine2: "Value & Financial Precision",
-    desc: "Expert ESG reporting, GHG accounting, and credit rating advisory to optimize your capital structure and protect organizational integrity.",
+    description: "Expert ESG reporting, GHG accounting, and credit rating advisory to optimize your capital structure and protect organizational integrity.",
     img: HeroConsulting,
-    btn1: "Drive Growth",
+    btn1Text: "Drive Growth",
     btn1Link: "/services/esg",
-    btn2: "Book Call",
+    btn2Text: "Book Call",
     btn2Link: "/contact",
     category: "consulting"
   }
@@ -51,6 +51,16 @@ export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const timerRef = useRef(null);
   const {heroSlides,fetchHomePage} = useHomePage()
+  // The built-in copy matches the Sanity slides; it shows until they load, so
+  // the hero text is in the prerendered HTML and paints without waiting.
+  const slides = heroSlides.length ? heroSlides : SLIDES
+  // Only the first slide's image is needed for the first paint; the others
+  // (about 180 KB) load a moment later, well before the first slide change.
+  const [loadAllImages, setLoadAllImages] = useState(false)
+  useEffect(() => {
+    const t = setTimeout(() => setLoadAllImages(true), 2500)
+    return () => clearTimeout(t)
+  }, [])
 
   
 
@@ -166,7 +176,7 @@ export default function HeroSection() {
 
           {/* SLIDE CONTENT WRAPPER */}
           <div className="relative w-full max-w-2xl md:h-full">
-            {heroSlides.map((slide, index) => (
+            {slides.map((slide, index) => (
               <div
                 key={`text-${index}`}
                 className={`
@@ -235,18 +245,20 @@ export default function HeroSection() {
                       <button
                         key={i}
                         onClick={() => { setCurrentSlide(i); startAutoSlide(); }}
-                        className={`h-1 transition-all duration-500 rounded-full ${
-                          i === currentSlide ? "indicator-active" : "indicator-inactive"
-                        }`}
-                        style={{
-                          width: i === currentSlide ? "3rem" : "1rem",
-                          backgroundColor: i === currentSlide ? "#FFC000" : "rgba(255,192,0,0.2)"
-                        }}
+                        className="flex items-center h-6 min-w-[24px]"
                         aria-label={`Go to slide ${i + 1}`}
-                      />
+                      >
+                        <span
+                          className="block h-1 transition-all duration-500 rounded-full"
+                          style={{
+                            width: i === currentSlide ? "3rem" : "1rem",
+                            backgroundColor: i === currentSlide ? "#FFC000" : "rgba(255,192,0,0.2)"
+                          }}
+                        />
+                      </button>
                     ))}
                   </div>
-                  <div className="text-[10px] font-black tracking-widest uppercase" style={{ color: "rgba(255,192,0,0.4)" }}>
+                  <div className="text-[10px] font-black tracking-widest uppercase" style={{ color: "rgba(255,192,0,0.75)" }}>
                     0{currentSlide + 1} / 0{SLIDES.length}
                   </div>
                 </div>
@@ -262,16 +274,20 @@ export default function HeroSection() {
                 <button
                   key={i}
                   onClick={() => { setCurrentSlide(i); startAutoSlide(); }}
-                  className="h-1 transition-all duration-500 rounded-full"
-                  style={{
-                    width: i === currentSlide ? "3rem" : "1rem",
-                    backgroundColor: i === currentSlide ? "#FFC000" : "rgba(255,192,0,0.2)"
-                  }}
+                  className="flex items-center h-6 min-w-[24px]"
                   aria-label={`Go to slide ${i + 1}`}
-                />
+                >
+                  <span
+                    className="block h-1 transition-all duration-500 rounded-full"
+                    style={{
+                      width: i === currentSlide ? "3rem" : "1rem",
+                      backgroundColor: i === currentSlide ? "#FFC000" : "rgba(255,192,0,0.2)"
+                    }}
+                  />
+                </button>
               ))}
             </div>
-            <div className="text-[10px] font-black tracking-widest uppercase" style={{ color: "rgba(255,192,0,0.4)" }}>
+            <div className="text-[10px] font-black tracking-widest uppercase" style={{ color: "rgba(255,192,0,0.75)" }}>
               0{currentSlide + 1} / 0{SLIDES.length}
             </div>
           </div>
@@ -289,6 +305,7 @@ export default function HeroSection() {
             >
               {/* <img> (not a CSS background) so the browser finds the first
                   slide immediately and fetches it first — it is the LCP image. */}
+              {(index === 0 || index === currentSlide || loadAllImages) && (
               <img
                 src={slide.img}
                 alt=""
@@ -297,6 +314,7 @@ export default function HeroSection() {
                 fetchpriority={index === 0 ? "high" : "low"}
                 className={`absolute inset-0 w-full h-full object-cover object-center ${index === currentSlide ? "ken-burns" : ""}`}
               />
+              )}
               {/* Brand-palette gradient overlay: deep navy → transparent */}
               <div className="absolute inset-0 hero-gradient-overlay" />
               {/* Bottom navy fade */}

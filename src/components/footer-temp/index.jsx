@@ -112,7 +112,7 @@ const Footer = () => {
 
         {/* Bottom bar */}
         <div className="flex flex-col gap-3 pt-6 pb-20 text-sm border-t md:pb-6 md:flex-row md:items-center md:justify-between border-borderLight dark:border-borderDark">
-          <p className="text-sm text-brandNavy/55 dark:text-brandLight/45">
+          <p className="text-sm text-brandNavy/75 dark:text-brandLight/60">
             © {new Date().getFullYear()} RiskMan Consulting. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-x-6 gap-y-2">

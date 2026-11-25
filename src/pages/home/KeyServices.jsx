@@ -42,9 +42,12 @@ export default function KeyServices() {
 
         {/* Header */}
         <div className="max-w-3xl mx-auto mb-16 text-center">
-          <h2 className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
-            {keyServices?.title}
-          </h2>
+          {/* Only once Sanity has answered: no empty heading before that */}
+          {keyServices?.title && (
+            <h2 className="mb-6 font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-brandDark dark:text-white">
+              {keyServices.title}
+            </h2>
+          )}
           <p className="text-[15px] leading-relaxed text-brandNavy dark:text-white/70">
             {keyServices?.subtitle}
           </p>

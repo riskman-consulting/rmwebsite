@@ -4,7 +4,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowRight, Calendar, MapPin } from "lucide-react";
 
 // Image Imports
@@ -24,16 +24,36 @@ const IIA_Bombay_2026_images_slide = [
 export const EventCTASection = () => {
   const navigate = useNavigate();
   const [index, setIndex] = useState(0);
+  // The background photos (200-380 KB each) load only once the section is
+  // near the screen, and the slideshow only runs then, so they are not part
+  // of the homepage's first load.
+  const sectionRef = useRef(null);
+  const [inView, setInView] = useState(false);
 
   useEffect(() => {
+    const el = sectionRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") {
+      setInView(true);
+      return undefined;
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { rootMargin: "300px 0px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!inView) return undefined;
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % IIA_Bombay_2026_images_slide.length);
     }, 6000);
     return () => clearInterval(interval);
-  }, []);
+  }, [inView]);
 
   return (
-    <section className="relative h-[85vh] min-h-[600px] w-full overflow-hidden bg-bgLight dark:bg-bgDark flex items-center justify-center font-sans transition-colors duration-300">
+    <section ref={sectionRef} className="relative h-[85vh] min-h-[600px] w-full overflow-hidden bg-bgLight dark:bg-bgDark flex items-center justify-center font-sans transition-colors duration-300">
       
       {/* BACKGROUND IMAGE CAROUSEL - Better Positioning */}
       <AnimatePresence mode="popLayout">
@@ -48,7 +68,7 @@ export const EventCTASection = () => {
           <div 
             className="absolute inset-0 bg-no-repeat bg-cover opacity-40"
             style={{ 
-              backgroundImage: `url(${IIA_Bombay_2026_images_slide[index]})`,
+              backgroundImage: inView ? `url(${IIA_Bombay_2026_images_slide[index]})` : undefined,
               backgroundPosition: 'center 40%',
               backgroundSize: 'cover'
             }}
@@ -158,7 +178,7 @@ export const EventCTASection = () => {
             key={i}
             onClick={() => setIndex(i)}
             aria-label={`Go to slide ${i + 1}`}
-            className="relative py-2 group"
+            className="relative flex items-center justify-center min-w-[24px] h-6 group"
           >
             <span className={`block h-1 rounded-full transition-all duration-500 ${
               index === i 

@@ -259,6 +259,10 @@ function MemberCard({ member, index, onSelect, isSelected }) {
           <img
             src={imageUrl}
             alt={member.name}
+            loading="lazy"
+            decoding="async"
+            width="112"
+            height="112"
             className="w-full h-full object-cover object-top"
           />
         )}

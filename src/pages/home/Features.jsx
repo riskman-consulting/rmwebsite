@@ -207,7 +207,7 @@ const StrategicSection = () => {
           className="flex items-center gap-4 mb-12"
         >
           <div className="h-px w-14 bg-brandGold" />
-          <span className="text-xs font-extrabold tracking-[0.3em] uppercase text-brandGold">
+          <span className="text-xs font-extrabold tracking-[0.3em] uppercase text-[#8A6500] dark:text-brandGold">
             Strategic Advisory
           </span>
         </motion.div>
@@ -225,7 +225,7 @@ const StrategicSection = () => {
             >
               Strategic Risk
               <br />
-              <span className="text-brandGold">Management</span> Services
+              <span className="text-[#8A6500] dark:text-brandGold">Management</span> Services
             </motion.h1>
  
             <div className="w-20 h-1.5 bg-brandGold rounded-full" />
@@ -237,11 +237,15 @@ const StrategicSection = () => {
               viewport={{ once: true }}
               className="relative overflow-hidden border shadow-2xl rounded-2xl border-black/5 dark:border-white/10 group"
             >
-              <img
-                src={strategiesSection?.image.asset.url}
-                alt="Strategic Risk Management"
-                className="w-full h-[360px] md:h-[420px] object-cover transition duration-700 group-hover:scale-105"
-              />
+              {strategiesSection?.image?.asset?.url && (
+                <img
+                  src={strategiesSection.image.asset.url}
+                  alt="Strategic Risk Management"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-[360px] md:h-[420px] object-cover transition duration-700 group-hover:scale-105"
+                />
+              )}
  
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent" />
  

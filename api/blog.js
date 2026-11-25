@@ -21,11 +21,16 @@ const API_VERSION = process.env.VITE_SANITY_API_VERSION || "2024-01-01";
 
 let templateCache = null;
 
-/** The deployed app shell (dist/index.html), fetched once per function instance. */
+/**
+ * The deployed app shell, fetched once per function instance. app-shell.html
+ * is the empty shell (dist/index.html now carries the prerendered homepage);
+ * index.html is the fallback for a deploy made before it existed.
+ */
 async function getTemplate(origin) {
   if (templateCache) return templateCache;
-  const res = await fetch(`${origin}/index.html`);
-  if (!res.ok) throw new Error(`index.html: HTTP ${res.status}`);
+  let res = await fetch(`${origin}/app-shell.html`);
+  if (!res.ok) res = await fetch(`${origin}/index.html`);
+  if (!res.ok) throw new Error(`app shell: HTTP ${res.status}`);
   templateCache = await res.text();
   return templateCache;
 }
